@@ -1,0 +1,593 @@
+\section{Referência da Classe S\+A\+C\+R\+Scenario}
+\label{class_s_a_c_r_scenario}\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+
+
+{\ttfamily \#include $<$S\+A\+C\+R\+Scenario.\+h$>$}
+
+
+
+Herdeiro de {\bf Hidro\+Scenario}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+A\+C\+R\+Scenario} ({\bf S\+A\+C\+R\+Model} $\ast$parent, {\bf Date} interval\+Begin, {\bf Date} interval\+End)
+\item 
+{\bf $\sim$\+S\+A\+C\+R\+Scenario} ()
+\item 
+bool {\bf empty} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix} {\bf unit\+Hid}
+\item 
+{\bf Serie} $\ast$ {\bf P\+ET}
+\item 
+{\bf Serie} $\ast$ {\bf prec}
+\item 
+wx\+String {\bf P\+E\+T\+File\+Name}
+\item 
+wx\+String {\bf prec\+File\+Name}
+\item 
+wx\+String {\bf unit\+Hid\+File\+Name}
+\item 
+double {\bf uztwm}
+\item 
+double {\bf uzfwm}
+\item 
+double {\bf uzk}
+\item 
+double {\bf pctim}
+\item 
+double {\bf adimp}
+\item 
+double {\bf riva}
+\item 
+double {\bf zperc}
+\item 
+double {\bf rexp}
+\item 
+double {\bf lztwm}
+\item 
+double {\bf lzfsm}
+\item 
+double {\bf lzfpm}
+\item 
+double {\bf lzsk}
+\item 
+double {\bf lzpk}
+\item 
+double {\bf pfree}
+\item 
+double {\bf rserv}
+\item 
+double {\bf side}
+\item 
+double {\bf pxmlt}
+\item 
+double {\bf pemlt}
+\item 
+double {\bf mpemlt} [12]
+\item 
+double {\bf etmin}
+\item 
+double {\bf etshp}
+\item 
+double {\bf etrng}
+\item 
+double {\bf uztwc}
+\item 
+double {\bf uzfwc}
+\item 
+double {\bf lztwc}
+\item 
+double {\bf lzfsc}
+\item 
+double {\bf lzfpc}
+\item 
+double {\bf adimc}
+\item 
+double {\bf dt}
+\item 
+double {\bf pxv}
+\item 
+double {\bf ep}
+\item 
+double {\bf epdist}
+\item 
+double {\bf tlci}
+\item 
+{\bf Serie} $\ast$ {\bf tci\+\_\+in}
+\item 
+{\bf Serie} $\ast$ {\bf tci\+\_\+out}
+\item 
+double {\bf UH} [19]
+\item 
+double {\bf U\+H\+\_\+nord}
+\item 
+double {\bf tlci\+\_\+flows} [7]
+\item 
+double {\bf srot}
+\item 
+double {\bf simpvt}
+\item 
+double {\bf srodt}
+\item 
+double {\bf srost}
+\item 
+double {\bf sintft}
+\item 
+double {\bf sgwfp}
+\item 
+double {\bf sgwfs}
+\item 
+double {\bf srecht}
+\item 
+double {\bf sett}
+\item 
+double {\bf se1}
+\item 
+double {\bf se3}
+\item 
+double {\bf se4}
+\item 
+double {\bf se5}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 13 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{S\+A\+C\+R\+Scenario(\+S\+A\+C\+R\+Model $\ast$parent, Date interval\+Begin, Date interval\+End)}]{\setlength{\rightskip}{0pt plus 5cm}S\+A\+C\+R\+Scenario\+::\+S\+A\+C\+R\+Scenario (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+A\+C\+R\+Model} $\ast$}]{parent, }
+\item[{{\bf Date}}]{interval\+Begin, }
+\item[{{\bf Date}}]{interval\+End}
+\end{DoxyParamCaption}
+)}\label{class_s_a_c_r_scenario_ae54610fdf0bd9f180bdfaaf7611b45c8}
+Construtor \index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!````~S\+A\+C\+R\+Scenario@{$\sim$\+S\+A\+C\+R\+Scenario}}
+\index{````~S\+A\+C\+R\+Scenario@{$\sim$\+S\+A\+C\+R\+Scenario}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{$\sim$\+S\+A\+C\+R\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}S\+A\+C\+R\+Scenario\+::$\sim$\+S\+A\+C\+R\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_a_c_r_scenario_aab304bdd534d93910d22310971dcf655}
+Destruidor 
+
+\subsection{Métodos}
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+A\+C\+R\+Scenario\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_s_a_c_r_scenario_adb153df2b014f3739d7f9a6e0736759b}
+Avalia se todas as informa��es importantes para o modelo formam informadas 
+\begin{DoxyParams}{Parâmetros}
+{\em dialog} & Caixa de dialogo onde os erros ser�o apresentados \\
+\hline
+\end{DoxyParams}
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!empty@{empty}}
+\index{empty@{empty}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+A\+C\+R\+Scenario\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_a_c_r_scenario_a58e9b36733c678ee5d43663d493aa402}
+retorna se existe algum valor no modelo 
+
+\subsection{Atributos}
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!adimc@{adimc}}
+\index{adimc@{adimc}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{adimc}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::adimc}\label{class_s_a_c_r_scenario_ae945bd10d8d8f81da4562e765e566493}
+
+
+Definição na linha 35 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!adimp@{adimp}}
+\index{adimp@{adimp}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{adimp}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::adimp}\label{class_s_a_c_r_scenario_ad5e8e5e646f8ce29eb883ea4b24ad8b7}
+
+
+Definição na linha 31 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!dt@{dt}}
+\index{dt@{dt}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{dt}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::dt}\label{class_s_a_c_r_scenario_a3815622b53053d64d5309dabe585dbcd}
+
+
+Definição na linha 36 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!ep@{ep}}
+\index{ep@{ep}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{ep}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::ep}\label{class_s_a_c_r_scenario_ad1822f4c50c0ae4c6f812507c4746c0d}
+
+
+Definição na linha 36 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!epdist@{epdist}}
+\index{epdist@{epdist}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{epdist}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::epdist}\label{class_s_a_c_r_scenario_a4c4afa047c6a844f9a3eec2342cd3f54}
+
+
+Definição na linha 36 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!etmin@{etmin}}
+\index{etmin@{etmin}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{etmin}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::etmin}\label{class_s_a_c_r_scenario_ab4da753e012d8ea0797076d18491f8c3}
+
+
+Definição na linha 34 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!etrng@{etrng}}
+\index{etrng@{etrng}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{etrng}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::etrng}\label{class_s_a_c_r_scenario_ad9d494046b02ba0f53d0615da6d0d14c}
+
+
+Definição na linha 34 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!etshp@{etshp}}
+\index{etshp@{etshp}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{etshp}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::etshp}\label{class_s_a_c_r_scenario_a34341336cdafb92f8d20cbda78174c53}
+
+
+Definição na linha 34 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!lzfpc@{lzfpc}}
+\index{lzfpc@{lzfpc}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{lzfpc}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::lzfpc}\label{class_s_a_c_r_scenario_afec516c947242d9c7e2ed712e259216b}
+
+
+Definição na linha 35 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!lzfpm@{lzfpm}}
+\index{lzfpm@{lzfpm}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{lzfpm}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::lzfpm}\label{class_s_a_c_r_scenario_ae0ee51d659602cb0c1f9507a2cb19262}
+
+
+Definição na linha 32 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!lzfsc@{lzfsc}}
+\index{lzfsc@{lzfsc}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{lzfsc}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::lzfsc}\label{class_s_a_c_r_scenario_af398985169bfb540b21b563c4623d2ab}
+
+
+Definição na linha 35 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!lzfsm@{lzfsm}}
+\index{lzfsm@{lzfsm}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{lzfsm}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::lzfsm}\label{class_s_a_c_r_scenario_a4141ae4d6c74c93c5d996b32d269e001}
+
+
+Definição na linha 32 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!lzpk@{lzpk}}
+\index{lzpk@{lzpk}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{lzpk}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::lzpk}\label{class_s_a_c_r_scenario_a10da3fe93c4e9e6621f7089c49bdffa0}
+
+
+Definição na linha 32 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!lzsk@{lzsk}}
+\index{lzsk@{lzsk}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{lzsk}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::lzsk}\label{class_s_a_c_r_scenario_a9e46ae1e371a5848818f567d1816dc1c}
+
+
+Definição na linha 32 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!lztwc@{lztwc}}
+\index{lztwc@{lztwc}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{lztwc}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::lztwc}\label{class_s_a_c_r_scenario_a35aed479bd9cd88d90c3040d1a469afe}
+
+
+Definição na linha 35 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!lztwm@{lztwm}}
+\index{lztwm@{lztwm}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{lztwm}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::lztwm}\label{class_s_a_c_r_scenario_a5ee81328f6d06ab52be1fe4682fd2ae2}
+
+
+Definição na linha 32 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!mpemlt@{mpemlt}}
+\index{mpemlt@{mpemlt}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{mpemlt}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::mpemlt[12]}\label{class_s_a_c_r_scenario_aaed1ac367546d8013fba7014a7a6b6ab}
+
+
+Definição na linha 33 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!pctim@{pctim}}
+\index{pctim@{pctim}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{pctim}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::pctim}\label{class_s_a_c_r_scenario_a6be6586cf59900df7fe7707a7ba8c9fe}
+
+
+Definição na linha 31 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!pemlt@{pemlt}}
+\index{pemlt@{pemlt}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{pemlt}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::pemlt}\label{class_s_a_c_r_scenario_a81ad6d8cc0f6181f7e36e790bc6f77a5}
+
+
+Definição na linha 33 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!P\+ET@{P\+ET}}
+\index{P\+ET@{P\+ET}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{P\+ET}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ S\+A\+C\+R\+Scenario\+::\+P\+ET}\label{class_s_a_c_r_scenario_ab8e6fceaf61a2c08371d76bd39942ff2}
+Series de entrada 
+
+Definição na linha 24 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!P\+E\+T\+File\+Name@{P\+E\+T\+File\+Name}}
+\index{P\+E\+T\+File\+Name@{P\+E\+T\+File\+Name}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{P\+E\+T\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+A\+C\+R\+Scenario\+::\+P\+E\+T\+File\+Name}\label{class_s_a_c_r_scenario_aa514da64eee73f2ff927da5b6ffb24c5}
+
+
+Definição na linha 25 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!pfree@{pfree}}
+\index{pfree@{pfree}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{pfree}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::pfree}\label{class_s_a_c_r_scenario_ad0610eb3dbd8c7ab82aef344f7f075b1}
+
+
+Definição na linha 32 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!prec@{prec}}
+\index{prec@{prec}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{prec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie} $\ast$ S\+A\+C\+R\+Scenario\+::prec}\label{class_s_a_c_r_scenario_afbc30c69dcd92fcce28496f97622507a}
+
+
+Definição na linha 24 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!prec\+File\+Name@{prec\+File\+Name}}
+\index{prec\+File\+Name@{prec\+File\+Name}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{prec\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+A\+C\+R\+Scenario\+::prec\+File\+Name}\label{class_s_a_c_r_scenario_a982656547762eae9b6fe9e5d72a34009}
+
+
+Definição na linha 25 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!pxmlt@{pxmlt}}
+\index{pxmlt@{pxmlt}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{pxmlt}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::pxmlt}\label{class_s_a_c_r_scenario_a5925e48e7c806fd0e7ef94294b784716}
+
+
+Definição na linha 33 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!pxv@{pxv}}
+\index{pxv@{pxv}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{pxv}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::pxv}\label{class_s_a_c_r_scenario_a2ea7a8637fffdae6752b3379859d35a9}
+
+
+Definição na linha 36 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!rexp@{rexp}}
+\index{rexp@{rexp}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{rexp}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::rexp}\label{class_s_a_c_r_scenario_a6bbd1757fb66239ff46d045a78e6adcd}
+
+
+Definição na linha 31 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!riva@{riva}}
+\index{riva@{riva}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{riva}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::riva}\label{class_s_a_c_r_scenario_ac8e74068bc725b0d69f6da25b01ded73}
+
+
+Definição na linha 31 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!rserv@{rserv}}
+\index{rserv@{rserv}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{rserv}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::rserv}\label{class_s_a_c_r_scenario_a1db7e4eca0e61eaeebcbd907012b0ad3}
+
+
+Definição na linha 32 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!se1@{se1}}
+\index{se1@{se1}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{se1}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::se1}\label{class_s_a_c_r_scenario_aa279f0654c99818a6cb25befa09cc92f}
+
+
+Definição na linha 47 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!se3@{se3}}
+\index{se3@{se3}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{se3}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::se3}\label{class_s_a_c_r_scenario_ac3a28a89cfff3815102380e0703d7e72}
+
+
+Definição na linha 47 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!se4@{se4}}
+\index{se4@{se4}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{se4}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::se4}\label{class_s_a_c_r_scenario_a1d03f73ebb1d8d616f80e77d5b027c02}
+
+
+Definição na linha 47 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!se5@{se5}}
+\index{se5@{se5}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{se5}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::se5}\label{class_s_a_c_r_scenario_aab1846c01095349e6bf40587b8a00fdc}
+
+
+Definição na linha 47 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!sett@{sett}}
+\index{sett@{sett}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{sett}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::sett}\label{class_s_a_c_r_scenario_a3674b2f708500ed72cc10d8645e38c26}
+
+
+Definição na linha 47 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!sgwfp@{sgwfp}}
+\index{sgwfp@{sgwfp}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{sgwfp}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::sgwfp}\label{class_s_a_c_r_scenario_a50ede2ae6c8a38ca787e11d25f640128}
+
+
+Definição na linha 46 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!sgwfs@{sgwfs}}
+\index{sgwfs@{sgwfs}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{sgwfs}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::sgwfs}\label{class_s_a_c_r_scenario_aca4b89c100d6ba16cd097ddf6ca4d685}
+
+
+Definição na linha 46 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!side@{side}}
+\index{side@{side}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{side}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::side}\label{class_s_a_c_r_scenario_afabb7fcc761d9a18ba3b060f60a0fd2a}
+
+
+Definição na linha 32 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!simpvt@{simpvt}}
+\index{simpvt@{simpvt}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{simpvt}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::simpvt}\label{class_s_a_c_r_scenario_ac269eacdf9624ae2c0d294a883f2b8d5}
+
+
+Definição na linha 46 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!sintft@{sintft}}
+\index{sintft@{sintft}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{sintft}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::sintft}\label{class_s_a_c_r_scenario_a9b4e8ad2a83e39dfc9a1927216bc7785}
+
+
+Definição na linha 46 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!srecht@{srecht}}
+\index{srecht@{srecht}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{srecht}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::srecht}\label{class_s_a_c_r_scenario_a2abd61b721c416093ceb794c714bc4ce}
+
+
+Definição na linha 47 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!srodt@{srodt}}
+\index{srodt@{srodt}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{srodt}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::srodt}\label{class_s_a_c_r_scenario_a239a338cb3377b6b1a5605281db69edc}
+
+
+Definição na linha 46 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!srost@{srost}}
+\index{srost@{srost}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{srost}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::srost}\label{class_s_a_c_r_scenario_af7ec0664dded35d640f668fe84c3608c}
+
+
+Definição na linha 46 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!srot@{srot}}
+\index{srot@{srot}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{srot}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::srot}\label{class_s_a_c_r_scenario_a6122d945453ad14852a0cd72e00f419b}
+
+
+Definição na linha 46 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!tci\+\_\+in@{tci\+\_\+in}}
+\index{tci\+\_\+in@{tci\+\_\+in}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{tci\+\_\+in}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ S\+A\+C\+R\+Scenario\+::tci\+\_\+in}\label{class_s_a_c_r_scenario_af39f2559b3a4d389cfdf41016b1bc2c5}
+
+
+Definição na linha 37 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!tci\+\_\+out@{tci\+\_\+out}}
+\index{tci\+\_\+out@{tci\+\_\+out}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{tci\+\_\+out}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie} $\ast$ S\+A\+C\+R\+Scenario\+::tci\+\_\+out}\label{class_s_a_c_r_scenario_a833d4edfd78a5cf27bd93590a384fc30}
+
+
+Definição na linha 37 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!tlci@{tlci}}
+\index{tlci@{tlci}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{tlci}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::tlci}\label{class_s_a_c_r_scenario_a5a0f749cadb303f36d89abbec3f6fa58}
+
+
+Definição na linha 36 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!tlci\+\_\+flows@{tlci\+\_\+flows}}
+\index{tlci\+\_\+flows@{tlci\+\_\+flows}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{tlci\+\_\+flows}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::tlci\+\_\+flows[7]}\label{class_s_a_c_r_scenario_ad76473a442a0264cb1da6e7b005f7775}
+
+
+Definição na linha 43 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!UH@{UH}}
+\index{UH@{UH}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{UH}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::\+UH[19]}\label{class_s_a_c_r_scenario_a1db1b6757c14df9295315b553266cbd4}
+
+
+Definição na linha 43 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!U\+H\+\_\+nord@{U\+H\+\_\+nord}}
+\index{U\+H\+\_\+nord@{U\+H\+\_\+nord}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{U\+H\+\_\+nord}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::\+U\+H\+\_\+nord}\label{class_s_a_c_r_scenario_a02e24b0fd56f684d2a8a446c6aaac24d}
+
+
+Definição na linha 43 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!unit\+Hid@{unit\+Hid}}
+\index{unit\+Hid@{unit\+Hid}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{unit\+Hid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} S\+A\+C\+R\+Scenario\+::unit\+Hid}\label{class_s_a_c_r_scenario_a8634ace599f7f729e30ee3eb5f665355}
+Hidrograma unitario 
+
+Definição na linha 20 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!unit\+Hid\+File\+Name@{unit\+Hid\+File\+Name}}
+\index{unit\+Hid\+File\+Name@{unit\+Hid\+File\+Name}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{unit\+Hid\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+A\+C\+R\+Scenario\+::unit\+Hid\+File\+Name}\label{class_s_a_c_r_scenario_a549991ba1765d323aae986d720d1d69f}
+
+
+Definição na linha 25 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!uzfwc@{uzfwc}}
+\index{uzfwc@{uzfwc}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{uzfwc}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::uzfwc}\label{class_s_a_c_r_scenario_a9c442f07516baffb8706cc79bae8e7a5}
+
+
+Definição na linha 35 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!uzfwm@{uzfwm}}
+\index{uzfwm@{uzfwm}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{uzfwm}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::uzfwm}\label{class_s_a_c_r_scenario_a5ebec743c4b63c8de50f14b2ce169399}
+
+
+Definição na linha 31 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!uzk@{uzk}}
+\index{uzk@{uzk}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{uzk}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::uzk}\label{class_s_a_c_r_scenario_a628e35ab88a38c736b673621a945da59}
+
+
+Definição na linha 31 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!uztwc@{uztwc}}
+\index{uztwc@{uztwc}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{uztwc}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::uztwc}\label{class_s_a_c_r_scenario_a93dcc2afa32dec4d19850702fb8a4137}
+
+
+Definição na linha 35 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!uztwm@{uztwm}}
+\index{uztwm@{uztwm}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{uztwm}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::uztwm}\label{class_s_a_c_r_scenario_aaad5c7635d063b38f7ac9bfb9cfbb367}
+Parametros 
+
+Definição na linha 31 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+\index{S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}!zperc@{zperc}}
+\index{zperc@{zperc}!S\+A\+C\+R\+Scenario@{S\+A\+C\+R\+Scenario}}
+\subsubsection[{zperc}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Scenario\+::zperc}\label{class_s_a_c_r_scenario_a3f591bd936ebf407dccd21b6382eb729}
+
+
+Definição na linha 31 do arquivo S\+A\+C\+R\+Scenario.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+A\+C\+R\+Scenario.\+h}\end{DoxyCompactItemize}

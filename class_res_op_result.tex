@@ -1,0 +1,341 @@
+\section{Referência da Classe Res\+Op\+Result}
+\label{class_res_op_result}\index{Res\+Op\+Result@{Res\+Op\+Result}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Result.\+h$>$}
+
+
+
+Superclasse de {\bf Basin\+Result}, {\bf Basin\+Result}, {\bf Demand\+Result}, {\bf Demand\+Result}, {\bf Junction\+Result}, {\bf Junction\+Result}, {\bf Link\+Result}, {\bf Link\+Result}, {\bf Reservoir\+Result} e {\bf Reservoir\+Result}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Result} ({\bf Date} interval\+Start, {\bf Date} interval\+End)
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Result} ()
+\item 
+{\bf Res\+Op\+Result} (Number\+Date interval\+Start, Number\+Date interval\+End)
+\item 
+{\bf $\sim$\+Res\+Op\+Result} ()
+\item 
+{\bf Res\+Op\+Result} ({\bf Date} interval\+Start, {\bf Date} interval\+End)
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Result} ()
+\item 
+{\bf Res\+Op\+Result} $\ast$ {\bf copy\+Result} ()
+\item 
+virtual void {\bf on\+Init\+Results} ()
+\item 
+virtual string {\bf get\+Results\+String} (string a\+\_\+prefix)
+\item 
+{\bf Res\+Op\+Result} (Number\+Date interval\+Start, Number\+Date interval\+End)
+\item 
+{\bf $\sim$\+Res\+Op\+Result} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Serie} $\ast$ {\bf inflow}
+\item 
+{\bf Serie} $\ast$ {\bf outflow}
+\item 
+{\bf Interval} {\bf interval}
+\item 
+{\bf Serie} $\ast$ {\bf q\+Vert}
+\item 
+{\bf Serie} $\ast$ {\bf vol}
+\item 
+{\bf Serie} $\ast$ {\bf faults}
+\item 
+{\bf Serie} $\ast$ {\bf release}
+\item 
+{\bf Serie} $\ast$ {\bf qup}
+\item 
+double {\bf garantia}
+\item 
+bool {\bf recreate\+Inter}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf Res\+Op\+Result} $\ast$ {\bf do\+Copy} ()=0
+\item 
+string {\bf serie\+String} ({\bf Serie} $\ast$a\+\_\+serie)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 7 do arquivo Models/\+Res\+Op\+Result.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Result@{Res\+Op\+Result}!Res\+Op\+Result@{Res\+Op\+Result}}
+\index{Res\+Op\+Result@{Res\+Op\+Result}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{Res\+Op\+Result(\+Date interval\+Start, Date interval\+End)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Result\+::\+Res\+Op\+Result (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{interval\+Start, }
+\item[{{\bf Date}}]{interval\+End}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_op_result_ac4f6421735977ad3e818a1ef77eddc38}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em initial\+Date} & Inicio do intervalo \\
+\hline
+{\em final\+Date} & Final do Intervalo \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 31 do arquivo Models/\+Res\+Op\+Result.\+h.
+
+\index{Res\+Op\+Result@{Res\+Op\+Result}!````~Res\+Op\+Result@{$\sim$\+Res\+Op\+Result}}
+\index{````~Res\+Op\+Result@{$\sim$\+Res\+Op\+Result}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{$\sim$\+Res\+Op\+Result()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Result\+::$\sim$\+Res\+Op\+Result (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_res_op_result_aa48a588803d808975356267bdd25089d}
+Destrutor 
+
+Definição na linha 36 do arquivo Models/\+Res\+Op\+Result.\+h.
+
+\index{Res\+Op\+Result@{Res\+Op\+Result}!Res\+Op\+Result@{Res\+Op\+Result}}
+\index{Res\+Op\+Result@{Res\+Op\+Result}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{Res\+Op\+Result(\+Number\+Date interval\+Start, Number\+Date interval\+End)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Result\+::\+Res\+Op\+Result (
+\begin{DoxyParamCaption}
+\item[{Number\+Date}]{interval\+Start, }
+\item[{Number\+Date}]{interval\+End}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_op_result_aca35b1cb35aa3625e30efe79e986e9a8}
+Construtor 
+
+Definição na linha 49 do arquivo Res\+Op\+Result.\+h.
+
+\index{Res\+Op\+Result@{Res\+Op\+Result}!````~Res\+Op\+Result@{$\sim$\+Res\+Op\+Result}}
+\index{````~Res\+Op\+Result@{$\sim$\+Res\+Op\+Result}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{$\sim$\+Res\+Op\+Result()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Result\+::$\sim$\+Res\+Op\+Result (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_op_result_a0ceef381ccf50cd816263a2849dcb09a}
+Destrutor 
+
+Definição na linha 71 do arquivo Res\+Op\+Result.\+h.
+
+\index{Res\+Op\+Result@{Res\+Op\+Result}!Res\+Op\+Result@{Res\+Op\+Result}}
+\index{Res\+Op\+Result@{Res\+Op\+Result}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{Res\+Op\+Result(\+Date interval\+Start, Date interval\+End)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Result\+::\+Res\+Op\+Result (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{interval\+Start, }
+\item[{{\bf Date}}]{interval\+End}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_op_result_ac4f6421735977ad3e818a1ef77eddc38}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em initial\+Date} & Inicio do intervalo \\
+\hline
+{\em final\+Date} & Final do Intervalo \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 68 do arquivo /\+Models/\+Res\+Op\+Result.\+h.
+
+\index{Res\+Op\+Result@{Res\+Op\+Result}!````~Res\+Op\+Result@{$\sim$\+Res\+Op\+Result}}
+\index{````~Res\+Op\+Result@{$\sim$\+Res\+Op\+Result}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{$\sim$\+Res\+Op\+Result()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Result\+::$\sim$\+Res\+Op\+Result (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_res_op_result_aa48a588803d808975356267bdd25089d}
+Destrutor 
+
+Definição na linha 73 do arquivo /\+Models/\+Res\+Op\+Result.\+h.
+
+\index{Res\+Op\+Result@{Res\+Op\+Result}!Res\+Op\+Result@{Res\+Op\+Result}}
+\index{Res\+Op\+Result@{Res\+Op\+Result}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{Res\+Op\+Result(\+Number\+Date interval\+Start, Number\+Date interval\+End)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Result\+::\+Res\+Op\+Result (
+\begin{DoxyParamCaption}
+\item[{Number\+Date}]{interval\+Start, }
+\item[{Number\+Date}]{interval\+End}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_op_result_aca35b1cb35aa3625e30efe79e986e9a8}
+Construtor 
+
+Definição na linha 54 do arquivo /\+Res\+Op\+Result.\+h.
+
+\index{Res\+Op\+Result@{Res\+Op\+Result}!````~Res\+Op\+Result@{$\sim$\+Res\+Op\+Result}}
+\index{````~Res\+Op\+Result@{$\sim$\+Res\+Op\+Result}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{$\sim$\+Res\+Op\+Result()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Result\+::$\sim$\+Res\+Op\+Result (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_op_result_a0ceef381ccf50cd816263a2849dcb09a}
+Destrutor 
+
+Definição na linha 76 do arquivo /\+Res\+Op\+Result.\+h.
+
+
+
+\subsection{Métodos}
+\index{Res\+Op\+Result@{Res\+Op\+Result}!copy\+Result@{copy\+Result}}
+\index{copy\+Result@{copy\+Result}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{copy\+Result()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Result}$\ast$ Res\+Op\+Result\+::copy\+Result (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_op_result_a0c0538c544c5f865719d4f0ec159a48a}
+
+
+Definição na linha 75 do arquivo /\+Models/\+Res\+Op\+Result.\+h.
+
+\index{Res\+Op\+Result@{Res\+Op\+Result}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{do\+Copy()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Res\+Op\+Result}$\ast$ Res\+Op\+Result\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{class_res_op_result_a933ee6cf6d11a625cd3f94502d15c629}
+Copia o resultado 
+
+Implementado por {\bf Demand\+Result} \doxyref{}{pag.}{class_demand_result_a63283fe3a43e83c8c9834be066fefb2b}, {\bf Junction\+Result} \doxyref{}{pag.}{class_junction_result_ac4c4bc7306948796313fc8f43e02b19c}, {\bf Reservoir\+Result} \doxyref{}{pag.}{class_reservoir_result_a643b01f67b2a41fb8ea6c4311386cbab}, {\bf Wnd\+Reservoir\+Result} \doxyref{}{pag.}{class_wnd_reservoir_result_ab3376ad6b0b12b9d5059ed244899c815}, {\bf Basin\+Result} \doxyref{}{pag.}{class_basin_result_aef63c4aa9fd442b40d911c241dee2a3b} e {\bf Link\+Result} \doxyref{}{pag.}{class_link_result_a879e4383d19752a1eb02d374727215fd}.
+
+\index{Res\+Op\+Result@{Res\+Op\+Result}!get\+Results\+String@{get\+Results\+String}}
+\index{get\+Results\+String@{get\+Results\+String}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{get\+Results\+String(string a\+\_\+prefix)}]{\setlength{\rightskip}{0pt plus 5cm}virtual string Res\+Op\+Result\+::get\+Results\+String (
+\begin{DoxyParamCaption}
+\item[{string}]{a\+\_\+prefix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_res_op_result_aed1449e89c33fed0215cf3db8a54ab61}
+string of series 
+\begin{DoxyParams}{Parâmetros}
+{\em prefix} & that will concatenated with the serie string \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado por {\bf Reservoir\+Result} \doxyref{}{pag.}{class_reservoir_result_a2c8573dfb9f3db2179e60af5815736b5} e {\bf Demand\+Result} \doxyref{}{pag.}{class_demand_result_aad92ed4b747048487d4c5b72e03c024e}.
+
+
+
+Definição na linha 89 do arquivo /\+Models/\+Res\+Op\+Result.\+h.
+
+\index{Res\+Op\+Result@{Res\+Op\+Result}!on\+Init\+Results@{on\+Init\+Results}}
+\index{on\+Init\+Results@{on\+Init\+Results}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{on\+Init\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Result\+::on\+Init\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_res_op_result_ab30b63dc23273e97ec73304417f0fb06}
+
+
+Reimplementado por {\bf Wnd\+Reservoir\+Result} \doxyref{}{pag.}{class_wnd_reservoir_result_ad64ecd514089ac8550ab554286e5c81f}, {\bf Reservoir\+Result} \doxyref{}{pag.}{class_reservoir_result_a1c776256f5601668cbaf79e2c32c3deb}, {\bf Reservoir\+Result} \doxyref{}{pag.}{class_reservoir_result_afdc7956713c71ab9c362497f51738516}, {\bf Demand\+Result} \doxyref{}{pag.}{class_demand_result_ae39459dd39d028524125191fca10ea10}, {\bf Basin\+Result} \doxyref{}{pag.}{class_basin_result_a216e4c08ddaca13bd6959a42f332a59d}, {\bf Link\+Result} \doxyref{}{pag.}{class_link_result_a8b4c7a5aa729badd912777259e1bd0fb}, {\bf Demand\+Result} \doxyref{}{pag.}{class_demand_result_ae39459dd39d028524125191fca10ea10}, {\bf Junction\+Result} \doxyref{}{pag.}{class_junction_result_a892cad40d95cde08e8c76f70759d584d}, {\bf Link\+Result} \doxyref{}{pag.}{class_link_result_a8b4c7a5aa729badd912777259e1bd0fb}, {\bf Junction\+Result} \doxyref{}{pag.}{class_junction_result_a892cad40d95cde08e8c76f70759d584d} e {\bf Basin\+Result} \doxyref{}{pag.}{class_basin_result_a216e4c08ddaca13bd6959a42f332a59d}.
+
+
+
+Definição na linha 80 do arquivo /\+Models/\+Res\+Op\+Result.\+h.
+
+\index{Res\+Op\+Result@{Res\+Op\+Result}!serie\+String@{serie\+String}}
+\index{serie\+String@{serie\+String}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{serie\+String(\+Serie $\ast$a\+\_\+serie)}]{\setlength{\rightskip}{0pt plus 5cm}string Res\+Op\+Result\+::serie\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie} $\ast$}]{a\+\_\+serie}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}\label{class_res_op_result_ae4dd11d497c41a5f8fbceeeba8d27e4d}
+default format of serie string 
+\begin{DoxyParams}{Parâmetros}
+{\em Time} & \doxyref{Serie}{pag.}{class_serie} \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 29 do arquivo /\+Models/\+Res\+Op\+Result.\+h.
+
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Result@{Res\+Op\+Result}!faults@{faults}}
+\index{faults@{faults}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{faults}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie} $\ast$ Res\+Op\+Result\+::faults}\label{class_res_op_result_ae0857fff3d129ea15cfa42f84e2e3556}
+S�rie de falhas 
+
+Definição na linha 29 do arquivo Res\+Op\+Result.\+h.
+
+\index{Res\+Op\+Result@{Res\+Op\+Result}!garantia@{garantia}}
+\index{garantia@{garantia}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{garantia}]{\setlength{\rightskip}{0pt plus 5cm}double Res\+Op\+Result\+::garantia}\label{class_res_op_result_a44d20d7e3d4d554aa454d8f123711daf}
+Garantia 
+
+Definição na linha 44 do arquivo Res\+Op\+Result.\+h.
+
+\index{Res\+Op\+Result@{Res\+Op\+Result}!inflow@{inflow}}
+\index{inflow@{inflow}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{inflow}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie} $\ast$ Res\+Op\+Result\+::inflow}\label{class_res_op_result_acffcbf5481977b93d879e421c5c91f36}
+Vazão de entrada
+
+Vaz�o de entrada 
+
+Definição na linha 14 do arquivo Models/\+Res\+Op\+Result.\+h.
+
+\index{Res\+Op\+Result@{Res\+Op\+Result}!interval@{interval}}
+\index{interval@{interval}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Res\+Op\+Result\+::interval}\label{class_res_op_result_a271176cd08df8444e760546250c1e21d}
+Intervalo de tempo para cálculo
+
+Intervalo de tempo para c�lculo 
+
+Definição na linha 24 do arquivo Models/\+Res\+Op\+Result.\+h.
+
+\index{Res\+Op\+Result@{Res\+Op\+Result}!outflow@{outflow}}
+\index{outflow@{outflow}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{outflow}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie} $\ast$ Res\+Op\+Result\+::outflow}\label{class_res_op_result_a2a0eada2a481cb4fcefd666cdd948bc8}
+Vazão de saída
+
+Vaz�o de sa�da 
+
+Definição na linha 19 do arquivo Models/\+Res\+Op\+Result.\+h.
+
+\index{Res\+Op\+Result@{Res\+Op\+Result}!qup@{qup}}
+\index{qup@{qup}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{qup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie} $\ast$ Res\+Op\+Result\+::qup}\label{class_res_op_result_a1c59f099a1926e74206af0a9f52d85ea}
+Vaz�o de contribui��o dos reservat�rios a montante 
+
+Definição na linha 39 do arquivo Res\+Op\+Result.\+h.
+
+\index{Res\+Op\+Result@{Res\+Op\+Result}!q\+Vert@{q\+Vert}}
+\index{q\+Vert@{q\+Vert}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{q\+Vert}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie} $\ast$ Res\+Op\+Result\+::q\+Vert}\label{class_res_op_result_a181cc3de5de4bc0a6d94be66c7e9dfbd}
+S�rie de vertimentos 
+
+Definição na linha 19 do arquivo Res\+Op\+Result.\+h.
+
+\index{Res\+Op\+Result@{Res\+Op\+Result}!recreate\+Inter@{recreate\+Inter}}
+\index{recreate\+Inter@{recreate\+Inter}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{recreate\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Result\+::recreate\+Inter}\label{class_res_op_result_a24f73a53c6466da07df0e493862546f8}
+Tem valor true quando os resultados so (re)inicializados 
+
+Definição na linha 46 do arquivo /\+Models/\+Res\+Op\+Result.\+h.
+
+\index{Res\+Op\+Result@{Res\+Op\+Result}!release@{release}}
+\index{release@{release}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie} $\ast$ Res\+Op\+Result\+::release}\label{class_res_op_result_a24010c29f69fbf69f15fcaf14d58b952}
+Vaz�o regularizada 
+
+Definição na linha 34 do arquivo Res\+Op\+Result.\+h.
+
+\index{Res\+Op\+Result@{Res\+Op\+Result}!vol@{vol}}
+\index{vol@{vol}!Res\+Op\+Result@{Res\+Op\+Result}}
+\subsubsection[{vol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie} $\ast$ Res\+Op\+Result\+::vol}\label{class_res_op_result_aa1d1e88e440756f44efcd997617f3e35}
+S�rie de volumes 
+
+Definição na linha 24 do arquivo Res\+Op\+Result.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Models/\+Res\+Op\+Result.\+h}\end{DoxyCompactItemize}

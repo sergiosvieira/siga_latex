@@ -1,0 +1,498 @@
+\section{Referência da Classe G\+D\+A\+L\+Raster}
+\label{class_g_d_a_l_raster}\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+
+
+{\ttfamily \#include $<$gdalraster.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf G\+D\+A\+L\+Raster} ()
+\item 
+{\bf G\+D\+A\+L\+Raster} (wx\+String raster\+File\+Name)
+\item 
+virtual {\bf $\sim$\+G\+D\+A\+L\+Raster} ()
+\item 
+void {\bf init} ()
+\item 
+wx\+String {\bf get\+Raster\+File} ()
+\item 
+void {\bf set\+Raster\+File} (wx\+String raster\+File\+Name)
+\item 
+G\+D\+A\+L\+Dataset $\ast$ {\bf create\+Classification\+Dataset} (wx\+String name, G\+D\+A\+L\+Data\+Type type)
+\item 
+bool {\bf open} ()
+\item 
+void {\bf close} ()
+\item 
+wx\+String {\bf get\+Projection\+Ref} ()
+\item 
+int {\bf get\+X\+Size} ()
+\item 
+int {\bf get\+Y\+Size} ()
+\item 
+int {\bf get\+Count} ()
+\item 
+double {\bf get\+X\+Origin} ()
+\item 
+double {\bf get\+Y\+Origin} ()
+\item 
+wx\+Real\+Point {\bf pixel\+To\+Lat\+Lon} (int x, int y)
+\item 
+wx\+Point {\bf Lat\+Lon\+To\+Pixel} (double x, double y)
+\item 
+wx\+Point {\bf position} ()
+\item 
+double {\bf get\+X\+End} ()
+\item 
+double {\bf get\+Y\+End} ()
+\item 
+double {\bf get\+X\+Pixel\+Size} ()
+\item 
+double {\bf get\+Y\+Pixel\+Size} ()
+\item 
+G\+D\+A\+L\+Driver $\ast$ {\bf get\+Driver} ()
+\item 
+G\+D\+A\+L\+Raster\+Band $\ast$ {\bf get\+Band} (int i)
+\item 
+wx\+Bitmap $\ast$ {\bf get\+Bitmap} ()
+\item 
+wx\+Bitmap $\ast$ {\bf get\+Bitmap} (int width, int height)
+\item 
+wx\+Bitmap $\ast$ {\bf get\+Portion\+Bitmap} (int x, int y, int width, int height)
+\item 
+wx\+Bitmap $\ast$ {\bf get\+Portion\+Bitmap} (double x, double y, double width, double height)
+\item 
+wx\+Bitmap $\ast$ {\bf get\+Portion\+Bitmap} ({\bf Real\+Rect} world\+Window, wx\+Rect viewport, wx\+Point \&bitmap\+Draw\+Position)
+\item 
+wx\+Bitmap $\ast$ {\bf get\+Portion\+Bitmap\+Mercator} ({\bf Real\+Rect} world\+Window, wx\+Rect viewport, wx\+Point \&bitmap\+Draw\+Position, double lat1, double lon1, double lat2, double lon2)
+\item 
+wx\+Bitmap $\ast$ {\bf get\+Portion\+Bitmap} (int x, int y, int width, int height, int pixels\+Width, int pixels\+Height)
+\item 
+bool {\bf is\+Ok} ()
+\item 
+vector$<$ {\bf Attr\+Table\+Column} $>$ {\bf get\+Feature\+From\+Layer} ()
+\item 
+char {\bf get\+R\+GB} (int x, int y)
+\item 
+wx\+Image {\bf get\+Portion\+M\+S\+G\+Image} (int x\+Start, int y\+Start, int width, int height, int pixels\+Width, int pixels\+Height)
+\item 
+wx\+Image {\bf get\+Portion\+M\+S\+G\+Image\+R\+GB} (wx\+String raster\+FileG, wx\+String raster\+FileB, int x\+Start, int y\+Start, int width, int height, int pixels\+Width, int pixels\+Height)
+\item 
+wx\+Image {\bf get\+Portion\+M\+S\+G\+Mercator} (int x\+Start, int y\+Start, int width, int height, int pixels\+Width, double lat1, double lon1, double lat2, double lon2)
+\item 
+wx\+Image {\bf get\+M\+S\+G2\+Img} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static bool {\bf clip} (O\+G\+R\+Polygon $\ast$polygon, wx\+String in\+Raster\+File, wx\+String out\+Raster\+File)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Image {\bf get\+I\+M\+G\+Img} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+String {\bf raster\+File}
+\item 
+G\+D\+A\+L\+Dataset $\ast$ {\bf m\+\_\+dataset}
+\item 
+double {\bf geo\+Transform} [6]
+\item 
+bool {\bf geo\+Tranf\+Loaded}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 14 do arquivo gdalraster.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{G\+D\+A\+L\+Raster()}]{\setlength{\rightskip}{0pt plus 5cm}G\+D\+A\+L\+Raster\+::\+G\+D\+A\+L\+Raster (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_ade405cf327bcad0310d1671987e47a60}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{G\+D\+A\+L\+Raster(wx\+String raster\+File\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}G\+D\+A\+L\+Raster\+::\+G\+D\+A\+L\+Raster (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{raster\+File\+Name}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_ab33b4dd9bec5053d4215f7ac89447b62}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!````~G\+D\+A\+L\+Raster@{$\sim$\+G\+D\+A\+L\+Raster}}
+\index{````~G\+D\+A\+L\+Raster@{$\sim$\+G\+D\+A\+L\+Raster}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{$\sim$\+G\+D\+A\+L\+Raster()}]{\setlength{\rightskip}{0pt plus 5cm}virtual G\+D\+A\+L\+Raster\+::$\sim$\+G\+D\+A\+L\+Raster (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_d_a_l_raster_a9d5786d331d1699d00ff3d150c6eb31a}
+
+
+\subsection{Métodos}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!clip@{clip}}
+\index{clip@{clip}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{clip(\+O\+G\+R\+Polygon $\ast$polygon, wx\+String in\+Raster\+File, wx\+String out\+Raster\+File)}]{\setlength{\rightskip}{0pt plus 5cm}static bool G\+D\+A\+L\+Raster\+::clip (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Polygon $\ast$}]{polygon, }
+\item[{wx\+String}]{in\+Raster\+File, }
+\item[{wx\+String}]{out\+Raster\+File}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_g_d_a_l_raster_a1a7bf348a336effaa657ca44d39b4559}
+Clipa um raster com uma m�scara de pol�gono (shape) 
+\begin{DoxyParams}{Parâmetros}
+{\em polygon} & -\/ Pol�gono que ser� usado como m�scara \\
+\hline
+{\em in\+Raster\+File} & -\/ Nome do raster que vai ser clipado \\
+\hline
+{\em out\+Raster\+File} & -\/ Nome do subraster de sa�da \\
+\hline
+\end{DoxyParams}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!close@{close}}
+\index{close@{close}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{close()}]{\setlength{\rightskip}{0pt plus 5cm}void G\+D\+A\+L\+Raster\+::close (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_aa6e9d6d0062bc945ff3b90ef7ec25551}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!create\+Classification\+Dataset@{create\+Classification\+Dataset}}
+\index{create\+Classification\+Dataset@{create\+Classification\+Dataset}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{create\+Classification\+Dataset(wx\+String name, G\+D\+A\+L\+Data\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}G\+D\+A\+L\+Dataset$\ast$ G\+D\+A\+L\+Raster\+::create\+Classification\+Dataset (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name, }
+\item[{G\+D\+A\+L\+Data\+Type}]{type}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_ab5b95b4e7ad0c7edc024e9939486d92c}
+Copia a estrutura do dataset original em um novo dataset que armazenar� a classifica��o (high,mid ou low-\/land) 
+\begin{DoxyParams}{Parâmetros}
+{\em G\+D\+A\+L\+Data\+Type} & type -\/ tipo dos valores das bands \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+G\+D\+A\+L\+Dataset -\/ o novo dataset 
+\end{DoxyReturn}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+Band@{get\+Band}}
+\index{get\+Band@{get\+Band}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+Band(int i)}]{\setlength{\rightskip}{0pt plus 5cm}G\+D\+A\+L\+Raster\+Band$\ast$ G\+D\+A\+L\+Raster\+::get\+Band (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_aab282db30d0fc509a8067a97ae1f1967}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+Bitmap@{get\+Bitmap}}
+\index{get\+Bitmap@{get\+Bitmap}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+Bitmap()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap$\ast$ G\+D\+A\+L\+Raster\+::get\+Bitmap (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_abb1a68a3a0d45a6db8b03a8b7300e85d}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+Bitmap@{get\+Bitmap}}
+\index{get\+Bitmap@{get\+Bitmap}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+Bitmap(int width, int height)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap$\ast$ G\+D\+A\+L\+Raster\+::get\+Bitmap (
+\begin{DoxyParamCaption}
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_a472a0ec810fdf89e0b4e0be753b7f7a7}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+Count@{get\+Count}}
+\index{get\+Count@{get\+Count}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+Count()}]{\setlength{\rightskip}{0pt plus 5cm}int G\+D\+A\+L\+Raster\+::get\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_a93198fa9bbf9fc18eb35e8b70a8165a1}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+Driver@{get\+Driver}}
+\index{get\+Driver@{get\+Driver}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+Driver()}]{\setlength{\rightskip}{0pt plus 5cm}G\+D\+A\+L\+Driver$\ast$ G\+D\+A\+L\+Raster\+::get\+Driver (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_a716a5ef494f8de8b608c2b6fc92a8302}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+Feature\+From\+Layer@{get\+Feature\+From\+Layer}}
+\index{get\+Feature\+From\+Layer@{get\+Feature\+From\+Layer}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+Feature\+From\+Layer()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Attr\+Table\+Column}$>$ G\+D\+A\+L\+Raster\+::get\+Feature\+From\+Layer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_a522a06623057c56a887ea5e41f7a6c66}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+I\+M\+G\+Img@{get\+I\+M\+G\+Img}}
+\index{get\+I\+M\+G\+Img@{get\+I\+M\+G\+Img}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+I\+M\+G\+Img()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Image G\+D\+A\+L\+Raster\+::get\+I\+M\+G\+Img (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_g_d_a_l_raster_a364f2d904f50c760be3ab4f69a5e49ec}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+M\+S\+G2\+Img@{get\+M\+S\+G2\+Img}}
+\index{get\+M\+S\+G2\+Img@{get\+M\+S\+G2\+Img}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+M\+S\+G2\+Img()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Image G\+D\+A\+L\+Raster\+::get\+M\+S\+G2\+Img (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_aef46a6e83fce5b572e3ab528c92f55fc}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+Portion\+Bitmap@{get\+Portion\+Bitmap}}
+\index{get\+Portion\+Bitmap@{get\+Portion\+Bitmap}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+Portion\+Bitmap(int x, int y, int width, int height)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap$\ast$ G\+D\+A\+L\+Raster\+::get\+Portion\+Bitmap (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{width, }
+\item[{int}]{height}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_af2321affb13aad3bd50972e022980aa4}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+Portion\+Bitmap@{get\+Portion\+Bitmap}}
+\index{get\+Portion\+Bitmap@{get\+Portion\+Bitmap}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+Portion\+Bitmap(double x, double y, double width, double height)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap$\ast$ G\+D\+A\+L\+Raster\+::get\+Portion\+Bitmap (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{width, }
+\item[{double}]{height}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_acd1c63204f74c26e463bb73f24203432}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+Portion\+Bitmap@{get\+Portion\+Bitmap}}
+\index{get\+Portion\+Bitmap@{get\+Portion\+Bitmap}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+Portion\+Bitmap(\+Real\+Rect world\+Window, wx\+Rect viewport, wx\+Point \&bitmap\+Draw\+Position)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap$\ast$ G\+D\+A\+L\+Raster\+::get\+Portion\+Bitmap (
+\begin{DoxyParamCaption}
+\item[{{\bf Real\+Rect}}]{world\+Window, }
+\item[{wx\+Rect}]{viewport, }
+\item[{wx\+Point \&}]{bitmap\+Draw\+Position}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_a5841c65695013cbac7303149a31aebfe}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+Portion\+Bitmap@{get\+Portion\+Bitmap}}
+\index{get\+Portion\+Bitmap@{get\+Portion\+Bitmap}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+Portion\+Bitmap(int x, int y, int width, int height, int pixels\+Width, int pixels\+Height)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap$\ast$ G\+D\+A\+L\+Raster\+::get\+Portion\+Bitmap (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{pixels\+Width, }
+\item[{int}]{pixels\+Height}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_ad3b365d716b07581e92842cd5bd0e832}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+Portion\+Bitmap\+Mercator@{get\+Portion\+Bitmap\+Mercator}}
+\index{get\+Portion\+Bitmap\+Mercator@{get\+Portion\+Bitmap\+Mercator}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+Portion\+Bitmap\+Mercator(\+Real\+Rect world\+Window, wx\+Rect viewport, wx\+Point \&bitmap\+Draw\+Position, double lat1, double lon1, double lat2, double lon2)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap$\ast$ G\+D\+A\+L\+Raster\+::get\+Portion\+Bitmap\+Mercator (
+\begin{DoxyParamCaption}
+\item[{{\bf Real\+Rect}}]{world\+Window, }
+\item[{wx\+Rect}]{viewport, }
+\item[{wx\+Point \&}]{bitmap\+Draw\+Position, }
+\item[{double}]{lat1, }
+\item[{double}]{lon1, }
+\item[{double}]{lat2, }
+\item[{double}]{lon2}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_af4cbc7acd2de670d613f6015051f7ca9}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+Portion\+M\+S\+G\+Image@{get\+Portion\+M\+S\+G\+Image}}
+\index{get\+Portion\+M\+S\+G\+Image@{get\+Portion\+M\+S\+G\+Image}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+Portion\+M\+S\+G\+Image(int x\+Start, int y\+Start, int width, int height, int pixels\+Width, int pixels\+Height)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Image G\+D\+A\+L\+Raster\+::get\+Portion\+M\+S\+G\+Image (
+\begin{DoxyParamCaption}
+\item[{int}]{x\+Start, }
+\item[{int}]{y\+Start, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{pixels\+Width, }
+\item[{int}]{pixels\+Height}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_aa0e4f61dbd936fa43192b84aba911686}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+Portion\+M\+S\+G\+Image\+R\+GB@{get\+Portion\+M\+S\+G\+Image\+R\+GB}}
+\index{get\+Portion\+M\+S\+G\+Image\+R\+GB@{get\+Portion\+M\+S\+G\+Image\+R\+GB}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+Portion\+M\+S\+G\+Image\+R\+G\+B(wx\+String raster\+File\+G, wx\+String raster\+File\+B, int x\+Start, int y\+Start, int width, int height, int pixels\+Width, int pixels\+Height)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Image G\+D\+A\+L\+Raster\+::get\+Portion\+M\+S\+G\+Image\+R\+GB (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{raster\+FileG, }
+\item[{wx\+String}]{raster\+FileB, }
+\item[{int}]{x\+Start, }
+\item[{int}]{y\+Start, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{pixels\+Width, }
+\item[{int}]{pixels\+Height}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_af2967175fa6ccea26e49141d2f00b0ed}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+Portion\+M\+S\+G\+Mercator@{get\+Portion\+M\+S\+G\+Mercator}}
+\index{get\+Portion\+M\+S\+G\+Mercator@{get\+Portion\+M\+S\+G\+Mercator}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+Portion\+M\+S\+G\+Mercator(int x\+Start, int y\+Start, int width, int height, int pixels\+Width, double lat1, double lon1, double lat2, double lon2)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Image G\+D\+A\+L\+Raster\+::get\+Portion\+M\+S\+G\+Mercator (
+\begin{DoxyParamCaption}
+\item[{int}]{x\+Start, }
+\item[{int}]{y\+Start, }
+\item[{int}]{width, }
+\item[{int}]{height, }
+\item[{int}]{pixels\+Width, }
+\item[{double}]{lat1, }
+\item[{double}]{lon1, }
+\item[{double}]{lat2, }
+\item[{double}]{lon2}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_a34693add1d81af23a515e35b3b595dbf}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+Projection\+Ref@{get\+Projection\+Ref}}
+\index{get\+Projection\+Ref@{get\+Projection\+Ref}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+Projection\+Ref()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String G\+D\+A\+L\+Raster\+::get\+Projection\+Ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_a26767cef768d3fda1f119bbe6a005b24}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+Raster\+File@{get\+Raster\+File}}
+\index{get\+Raster\+File@{get\+Raster\+File}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+Raster\+File()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String G\+D\+A\+L\+Raster\+::get\+Raster\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_a28b124252faaaa898ac1d9452ba8a0d6}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+R\+GB@{get\+R\+GB}}
+\index{get\+R\+GB@{get\+R\+GB}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+R\+G\+B(int x, int y)}]{\setlength{\rightskip}{0pt plus 5cm}char G\+D\+A\+L\+Raster\+::get\+R\+GB (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_a5fc3f6b65a3ff7de0d6c0a97039942a0}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+X\+End@{get\+X\+End}}
+\index{get\+X\+End@{get\+X\+End}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+X\+End()}]{\setlength{\rightskip}{0pt plus 5cm}double G\+D\+A\+L\+Raster\+::get\+X\+End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_aae0bee0add6d4553d9c9f944d0d7de86}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+X\+Origin@{get\+X\+Origin}}
+\index{get\+X\+Origin@{get\+X\+Origin}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+X\+Origin()}]{\setlength{\rightskip}{0pt plus 5cm}double G\+D\+A\+L\+Raster\+::get\+X\+Origin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_a3f2a1405e3baaefbbb615492719610ff}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+X\+Pixel\+Size@{get\+X\+Pixel\+Size}}
+\index{get\+X\+Pixel\+Size@{get\+X\+Pixel\+Size}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+X\+Pixel\+Size()}]{\setlength{\rightskip}{0pt plus 5cm}double G\+D\+A\+L\+Raster\+::get\+X\+Pixel\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_a3fbe6ae1b8c15613abd654647d35c0f8}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+X\+Size@{get\+X\+Size}}
+\index{get\+X\+Size@{get\+X\+Size}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+X\+Size()}]{\setlength{\rightskip}{0pt plus 5cm}int G\+D\+A\+L\+Raster\+::get\+X\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_a1a639143fda9343ff4aed2aa497684c1}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+Y\+End@{get\+Y\+End}}
+\index{get\+Y\+End@{get\+Y\+End}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+Y\+End()}]{\setlength{\rightskip}{0pt plus 5cm}double G\+D\+A\+L\+Raster\+::get\+Y\+End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_acf8f54f51863aee9752609beaf531081}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+Y\+Origin@{get\+Y\+Origin}}
+\index{get\+Y\+Origin@{get\+Y\+Origin}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+Y\+Origin()}]{\setlength{\rightskip}{0pt plus 5cm}double G\+D\+A\+L\+Raster\+::get\+Y\+Origin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_a1ea667f5db2c6e4645e010d738b3080c}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+Y\+Pixel\+Size@{get\+Y\+Pixel\+Size}}
+\index{get\+Y\+Pixel\+Size@{get\+Y\+Pixel\+Size}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+Y\+Pixel\+Size()}]{\setlength{\rightskip}{0pt plus 5cm}double G\+D\+A\+L\+Raster\+::get\+Y\+Pixel\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_a714a0fa70aa8feb5aa77e75d6aa5b23b}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!get\+Y\+Size@{get\+Y\+Size}}
+\index{get\+Y\+Size@{get\+Y\+Size}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{get\+Y\+Size()}]{\setlength{\rightskip}{0pt plus 5cm}int G\+D\+A\+L\+Raster\+::get\+Y\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_a487527f6d24e6ad77df4f68066593cd9}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!init@{init}}
+\index{init@{init}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{init()}]{\setlength{\rightskip}{0pt plus 5cm}void G\+D\+A\+L\+Raster\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_a4e57e43a00a1654bbc967625b1205149}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!is\+Ok@{is\+Ok}}
+\index{is\+Ok@{is\+Ok}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{is\+Ok()}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+D\+A\+L\+Raster\+::is\+Ok (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_afbfd53887ebaf8da08aeccecb5f63a42}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!Lat\+Lon\+To\+Pixel@{Lat\+Lon\+To\+Pixel}}
+\index{Lat\+Lon\+To\+Pixel@{Lat\+Lon\+To\+Pixel}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{Lat\+Lon\+To\+Pixel(double x, double y)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point G\+D\+A\+L\+Raster\+::\+Lat\+Lon\+To\+Pixel (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_aa2bc5dd5030a517bc8db189cf1b475cd}
+Recebe coordenadas georreferenciadas e transforma em pixel/line \index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!open@{open}}
+\index{open@{open}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{open()}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+D\+A\+L\+Raster\+::open (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_ace0c32af59748c3332f31280a8a239f2}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!pixel\+To\+Lat\+Lon@{pixel\+To\+Lat\+Lon}}
+\index{pixel\+To\+Lat\+Lon@{pixel\+To\+Lat\+Lon}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{pixel\+To\+Lat\+Lon(int x, int y)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Real\+Point G\+D\+A\+L\+Raster\+::pixel\+To\+Lat\+Lon (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_a34c108a713774d1758568e8ccdb221a9}
+Recebe pixel/line e transforma em coordenadas georreferenciadas \index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!position@{position}}
+\index{position@{position}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{position()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point G\+D\+A\+L\+Raster\+::position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_adb842559c6dd37c5bc47547c583c4098}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!set\+Raster\+File@{set\+Raster\+File}}
+\index{set\+Raster\+File@{set\+Raster\+File}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{set\+Raster\+File(wx\+String raster\+File\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+D\+A\+L\+Raster\+::set\+Raster\+File (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{raster\+File\+Name}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_raster_a391a0fc741bf64551294420448c79807}
+
+
+\subsection{Atributos}
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!geo\+Tranf\+Loaded@{geo\+Tranf\+Loaded}}
+\index{geo\+Tranf\+Loaded@{geo\+Tranf\+Loaded}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{geo\+Tranf\+Loaded}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+D\+A\+L\+Raster\+::geo\+Tranf\+Loaded\hspace{0.3cm}{\ttfamily [protected]}}\label{class_g_d_a_l_raster_af24ad40dd02ac461a3339c93211ea74f}
+
+
+Definição na linha 97 do arquivo gdalraster.\+h.
+
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!geo\+Transform@{geo\+Transform}}
+\index{geo\+Transform@{geo\+Transform}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{geo\+Transform}]{\setlength{\rightskip}{0pt plus 5cm}double G\+D\+A\+L\+Raster\+::geo\+Transform[6]\hspace{0.3cm}{\ttfamily [protected]}}\label{class_g_d_a_l_raster_a97bce717c143a0de7c439890e08fbcee}
+
+
+Definição na linha 96 do arquivo gdalraster.\+h.
+
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!m\+\_\+dataset@{m\+\_\+dataset}}
+\index{m\+\_\+dataset@{m\+\_\+dataset}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{m\+\_\+dataset}]{\setlength{\rightskip}{0pt plus 5cm}G\+D\+A\+L\+Dataset$\ast$ G\+D\+A\+L\+Raster\+::m\+\_\+dataset\hspace{0.3cm}{\ttfamily [protected]}}\label{class_g_d_a_l_raster_a7b4cc07ba06e4588114868eba71cec74}
+
+
+Definição na linha 95 do arquivo gdalraster.\+h.
+
+\index{G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}!raster\+File@{raster\+File}}
+\index{raster\+File@{raster\+File}!G\+D\+A\+L\+Raster@{G\+D\+A\+L\+Raster}}
+\subsubsection[{raster\+File}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String G\+D\+A\+L\+Raster\+::raster\+File\hspace{0.3cm}{\ttfamily [protected]}}\label{class_g_d_a_l_raster_acbb63dffbcff9223fb3e63e19b914bcf}
+
+
+Definição na linha 94 do arquivo gdalraster.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf gdalraster.\+h}\end{DoxyCompactItemize}

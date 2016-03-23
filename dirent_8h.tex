@@ -1,0 +1,503 @@
+\section{Referência do Arquivo dirent.\+h}
+\label{dirent_8h}\index{dirent.\+h@{dirent.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdarg.\+h$>$}\\*
+{\ttfamily \#include $<$windef.\+h$>$}\\*
+{\ttfamily \#include $<$winbase.\+h$>$}\\*
+{\ttfamily \#include $<$wchar.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$malloc.\+h$>$}\\*
+{\ttfamily \#include $<$sys/types.\+h$>$}\\*
+{\ttfamily \#include $<$sys/stat.\+h$>$}\\*
+{\ttfamily \#include $<$errno.\+h$>$}\\*
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf \+\_\+wdirent}
+\item 
+struct {\bf \+\_\+\+W\+D\+IR}
+\item 
+struct {\bf dirent}
+\item 
+struct {\bf D\+IR}
+\end{DoxyCompactItemize}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf \+\_\+\+D\+I\+R\+E\+N\+T\+\_\+\+H\+A\+V\+E\+\_\+\+D\+\_\+\+T\+Y\+PE}
+\item 
+\#define {\bf \+\_\+\+D\+I\+R\+E\+N\+T\+\_\+\+H\+A\+V\+E\+\_\+\+D\+\_\+\+N\+A\+M\+L\+EN}
+\item 
+\#define {\bf F\+I\+L\+E\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+V\+I\+CE}~0x40
+\item 
+\#define {\bf S\+\_\+\+I\+F\+MT}~\+\_\+\+S\+\_\+\+I\+F\+MT                     /$\ast$ File type mask $\ast$/
+\item 
+\#define {\bf S\+\_\+\+I\+F\+D\+IR}~\+\_\+\+S\+\_\+\+I\+F\+D\+IR                    /$\ast$ Directory $\ast$/
+\item 
+\#define {\bf S\+\_\+\+I\+F\+C\+HR}~\+\_\+\+S\+\_\+\+I\+F\+C\+HR                    /$\ast$ Character device $\ast$/
+\item 
+\#define {\bf S\+\_\+\+I\+F\+F\+I\+FO}~\+\_\+\+S\+\_\+\+I\+F\+F\+I\+FO                   /$\ast$ Pipe $\ast$/
+\item 
+\#define {\bf S\+\_\+\+I\+F\+R\+EG}~\+\_\+\+S\+\_\+\+I\+F\+R\+EG                    /$\ast$ Regular file $\ast$/
+\item 
+\#define {\bf S\+\_\+\+I\+R\+E\+AD}~\+\_\+\+S\+\_\+\+I\+R\+E\+AD                    /$\ast$ Read permission $\ast$/
+\item 
+\#define {\bf S\+\_\+\+I\+W\+R\+I\+TE}~\+\_\+\+S\+\_\+\+I\+W\+R\+I\+TE                   /$\ast$ Write permission $\ast$/
+\item 
+\#define {\bf S\+\_\+\+I\+E\+X\+EC}~\+\_\+\+S\+\_\+\+I\+E\+X\+EC                    /$\ast$ Execute permission $\ast$/
+\item 
+\#define {\bf S\+\_\+\+I\+F\+I\+FO}~\+\_\+\+S\+\_\+\+I\+F\+I\+FO                     /$\ast$ Pipe $\ast$/
+\item 
+\#define {\bf S\+\_\+\+I\+F\+B\+LK}~0                          /$\ast$ Block device $\ast$/
+\item 
+\#define {\bf S\+\_\+\+I\+F\+L\+NK}~0                          /$\ast$ {\bf Link} $\ast$/
+\item 
+\#define {\bf S\+\_\+\+I\+F\+S\+O\+CK}~0                          /$\ast$ Socket $\ast$/
+\item 
+\#define {\bf P\+A\+T\+H\+\_\+\+M\+AX}~M\+A\+X\+\_\+\+P\+A\+TH
+\item 
+\#define {\bf F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+M\+AX}~M\+A\+X\+\_\+\+P\+A\+TH
+\item 
+\#define {\bf N\+A\+M\+E\+\_\+\+M\+AX}~{\bf F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+M\+AX}
+\item 
+\#define {\bf D\+T\+\_\+\+U\+N\+K\+N\+O\+WN}~0
+\item 
+\#define {\bf D\+T\+\_\+\+R\+EG}~{\bf S\+\_\+\+I\+F\+R\+EG}
+\item 
+\#define {\bf D\+T\+\_\+\+D\+IR}~{\bf S\+\_\+\+I\+F\+D\+IR}
+\item 
+\#define {\bf D\+T\+\_\+\+F\+I\+FO}~{\bf S\+\_\+\+I\+F\+I\+FO}
+\item 
+\#define {\bf D\+T\+\_\+\+S\+O\+CK}~{\bf S\+\_\+\+I\+F\+S\+O\+CK}
+\item 
+\#define {\bf D\+T\+\_\+\+C\+HR}~{\bf S\+\_\+\+I\+F\+C\+HR}
+\item 
+\#define {\bf D\+T\+\_\+\+B\+LK}~{\bf S\+\_\+\+I\+F\+B\+LK}
+\item 
+\#define {\bf D\+T\+\_\+\+L\+NK}~{\bf S\+\_\+\+I\+F\+L\+NK}
+\item 
+\#define {\bf I\+F\+T\+O\+DT}(mode)~((mode) \& {\bf S\+\_\+\+I\+F\+MT})
+\item 
+\#define {\bf D\+T\+T\+O\+IF}(type)~(type)
+\item 
+\#define {\bf S\+\_\+\+I\+S\+F\+I\+FO}(mode)~(((mode) \& {\bf S\+\_\+\+I\+F\+MT}) == {\bf S\+\_\+\+I\+F\+I\+FO})
+\item 
+\#define {\bf S\+\_\+\+I\+S\+D\+IR}(mode)~(((mode) \& {\bf S\+\_\+\+I\+F\+MT}) == {\bf S\+\_\+\+I\+F\+D\+IR})
+\item 
+\#define {\bf S\+\_\+\+I\+S\+R\+EG}(mode)~(((mode) \& {\bf S\+\_\+\+I\+F\+MT}) == {\bf S\+\_\+\+I\+F\+R\+EG})
+\item 
+\#define {\bf S\+\_\+\+I\+S\+L\+NK}(mode)~(((mode) \& {\bf S\+\_\+\+I\+F\+MT}) == {\bf S\+\_\+\+I\+F\+L\+NK})
+\item 
+\#define {\bf S\+\_\+\+I\+S\+S\+O\+CK}(mode)~(((mode) \& {\bf S\+\_\+\+I\+F\+MT}) == {\bf S\+\_\+\+I\+F\+S\+O\+CK})
+\item 
+\#define {\bf S\+\_\+\+I\+S\+C\+HR}(mode)~(((mode) \& {\bf S\+\_\+\+I\+F\+MT}) == {\bf S\+\_\+\+I\+F\+C\+HR})
+\item 
+\#define {\bf S\+\_\+\+I\+S\+B\+LK}(mode)~(((mode) \& {\bf S\+\_\+\+I\+F\+MT}) == {\bf S\+\_\+\+I\+F\+B\+LK})
+\item 
+\#define {\bf \+\_\+\+D\+\_\+\+E\+X\+A\+C\+T\+\_\+\+N\+A\+M\+L\+EN}(p)~((p)-\/$>$d\+\_\+namlen)
+\item 
+\#define {\bf \+\_\+\+D\+\_\+\+A\+L\+L\+O\+C\+\_\+\+N\+A\+M\+L\+EN}(p)~({\bf P\+A\+T\+H\+\_\+\+M\+AX})
+\item 
+\#define {\bf wdirent}~{\bf \+\_\+wdirent}
+\item 
+\#define {\bf W\+D\+IR}~{\bf \+\_\+\+W\+D\+IR}
+\item 
+\#define {\bf wopendir}~\+\_\+wopendir
+\item 
+\#define {\bf wreaddir}~\+\_\+wreaddir
+\item 
+\#define {\bf wclosedir}~\+\_\+wclosedir
+\item 
+\#define {\bf wrewinddir}~\+\_\+wrewinddir
+\end{DoxyCompactItemize}
+\subsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct {\bf \+\_\+wdirent} {\bf \+\_\+wdirent}
+\item 
+typedef struct {\bf \+\_\+\+W\+D\+IR} {\bf \+\_\+\+W\+D\+IR}
+\item 
+typedef struct {\bf dirent} {\bf dirent}
+\item 
+typedef struct {\bf D\+IR} {\bf D\+IR}
+\end{DoxyCompactItemize}
+
+
+\subsection{Definições e macros}
+\index{dirent.\+h@{dirent.\+h}!\+\_\+\+D\+\_\+\+A\+L\+L\+O\+C\+\_\+\+N\+A\+M\+L\+EN@{\+\_\+\+D\+\_\+\+A\+L\+L\+O\+C\+\_\+\+N\+A\+M\+L\+EN}}
+\index{\+\_\+\+D\+\_\+\+A\+L\+L\+O\+C\+\_\+\+N\+A\+M\+L\+EN@{\+\_\+\+D\+\_\+\+A\+L\+L\+O\+C\+\_\+\+N\+A\+M\+L\+EN}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{\+\_\+\+D\+\_\+\+A\+L\+L\+O\+C\+\_\+\+N\+A\+M\+L\+EN}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+D\+\_\+\+A\+L\+L\+O\+C\+\_\+\+N\+A\+M\+L\+EN(
+\begin{DoxyParamCaption}
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~({\bf P\+A\+T\+H\+\_\+\+M\+AX})}\label{dirent_8h_a4e4e85e0a5552ee80184cb4150464fa2}
+
+
+Definição na linha 158 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!\+\_\+\+D\+\_\+\+E\+X\+A\+C\+T\+\_\+\+N\+A\+M\+L\+EN@{\+\_\+\+D\+\_\+\+E\+X\+A\+C\+T\+\_\+\+N\+A\+M\+L\+EN}}
+\index{\+\_\+\+D\+\_\+\+E\+X\+A\+C\+T\+\_\+\+N\+A\+M\+L\+EN@{\+\_\+\+D\+\_\+\+E\+X\+A\+C\+T\+\_\+\+N\+A\+M\+L\+EN}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{\+\_\+\+D\+\_\+\+E\+X\+A\+C\+T\+\_\+\+N\+A\+M\+L\+EN}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+D\+\_\+\+E\+X\+A\+C\+T\+\_\+\+N\+A\+M\+L\+EN(
+\begin{DoxyParamCaption}
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~((p)-\/$>$d\+\_\+namlen)}\label{dirent_8h_a51769eed69c4f256aeae3beb4c91c5ae}
+
+
+Definição na linha 155 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!\+\_\+\+D\+I\+R\+E\+N\+T\+\_\+\+H\+A\+V\+E\+\_\+\+D\+\_\+\+N\+A\+M\+L\+EN@{\+\_\+\+D\+I\+R\+E\+N\+T\+\_\+\+H\+A\+V\+E\+\_\+\+D\+\_\+\+N\+A\+M\+L\+EN}}
+\index{\+\_\+\+D\+I\+R\+E\+N\+T\+\_\+\+H\+A\+V\+E\+\_\+\+D\+\_\+\+N\+A\+M\+L\+EN@{\+\_\+\+D\+I\+R\+E\+N\+T\+\_\+\+H\+A\+V\+E\+\_\+\+D\+\_\+\+N\+A\+M\+L\+EN}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{\+\_\+\+D\+I\+R\+E\+N\+T\+\_\+\+H\+A\+V\+E\+\_\+\+D\+\_\+\+N\+A\+M\+L\+EN}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+D\+I\+R\+E\+N\+T\+\_\+\+H\+A\+V\+E\+\_\+\+D\+\_\+\+N\+A\+M\+L\+EN}\label{dirent_8h_ae1c648e7f1fc47b1262f98d6f8ee4ea0}
+
+
+Definição na linha 58 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!\+\_\+\+D\+I\+R\+E\+N\+T\+\_\+\+H\+A\+V\+E\+\_\+\+D\+\_\+\+T\+Y\+PE@{\+\_\+\+D\+I\+R\+E\+N\+T\+\_\+\+H\+A\+V\+E\+\_\+\+D\+\_\+\+T\+Y\+PE}}
+\index{\+\_\+\+D\+I\+R\+E\+N\+T\+\_\+\+H\+A\+V\+E\+\_\+\+D\+\_\+\+T\+Y\+PE@{\+\_\+\+D\+I\+R\+E\+N\+T\+\_\+\+H\+A\+V\+E\+\_\+\+D\+\_\+\+T\+Y\+PE}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{\+\_\+\+D\+I\+R\+E\+N\+T\+\_\+\+H\+A\+V\+E\+\_\+\+D\+\_\+\+T\+Y\+PE}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+D\+I\+R\+E\+N\+T\+\_\+\+H\+A\+V\+E\+\_\+\+D\+\_\+\+T\+Y\+PE}\label{dirent_8h_a1e6aefd9b3e29578655bcdf140e43fda}
+
+
+Definição na linha 55 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!D\+T\+\_\+\+B\+LK@{D\+T\+\_\+\+B\+LK}}
+\index{D\+T\+\_\+\+B\+LK@{D\+T\+\_\+\+B\+LK}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{D\+T\+\_\+\+B\+LK}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+T\+\_\+\+B\+LK~{\bf S\+\_\+\+I\+F\+B\+LK}}\label{dirent_8h_a212cebbaad682bc6c3bf798c8749abc5}
+
+
+Definição na linha 133 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!D\+T\+\_\+\+C\+HR@{D\+T\+\_\+\+C\+HR}}
+\index{D\+T\+\_\+\+C\+HR@{D\+T\+\_\+\+C\+HR}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{D\+T\+\_\+\+C\+HR}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+T\+\_\+\+C\+HR~{\bf S\+\_\+\+I\+F\+C\+HR}}\label{dirent_8h_a7d0095c3caf2c334bf222608d02576d7}
+
+
+Definição na linha 132 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!D\+T\+\_\+\+D\+IR@{D\+T\+\_\+\+D\+IR}}
+\index{D\+T\+\_\+\+D\+IR@{D\+T\+\_\+\+D\+IR}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{D\+T\+\_\+\+D\+IR}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+T\+\_\+\+D\+IR~{\bf S\+\_\+\+I\+F\+D\+IR}}\label{dirent_8h_a1dcee67486bc4238096ecb61e2d9ffd1}
+
+
+Definição na linha 129 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!D\+T\+\_\+\+F\+I\+FO@{D\+T\+\_\+\+F\+I\+FO}}
+\index{D\+T\+\_\+\+F\+I\+FO@{D\+T\+\_\+\+F\+I\+FO}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{D\+T\+\_\+\+F\+I\+FO}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+T\+\_\+\+F\+I\+FO~{\bf S\+\_\+\+I\+F\+I\+FO}}\label{dirent_8h_a6fabe696c35bf34daa67931b4c245c7d}
+
+
+Definição na linha 130 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!D\+T\+\_\+\+L\+NK@{D\+T\+\_\+\+L\+NK}}
+\index{D\+T\+\_\+\+L\+NK@{D\+T\+\_\+\+L\+NK}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{D\+T\+\_\+\+L\+NK}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+T\+\_\+\+L\+NK~{\bf S\+\_\+\+I\+F\+L\+NK}}\label{dirent_8h_aa70b5cb1d9c30b1830cb6a5e835231c6}
+
+
+Definição na linha 134 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!D\+T\+\_\+\+R\+EG@{D\+T\+\_\+\+R\+EG}}
+\index{D\+T\+\_\+\+R\+EG@{D\+T\+\_\+\+R\+EG}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{D\+T\+\_\+\+R\+EG}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+T\+\_\+\+R\+EG~{\bf S\+\_\+\+I\+F\+R\+EG}}\label{dirent_8h_a9973595cf6775b1b29d7274ab4c0d623}
+
+
+Definição na linha 128 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!D\+T\+\_\+\+S\+O\+CK@{D\+T\+\_\+\+S\+O\+CK}}
+\index{D\+T\+\_\+\+S\+O\+CK@{D\+T\+\_\+\+S\+O\+CK}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{D\+T\+\_\+\+S\+O\+CK}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+T\+\_\+\+S\+O\+CK~{\bf S\+\_\+\+I\+F\+S\+O\+CK}}\label{dirent_8h_aaa6ed2fc54836a2c7d9b698923705f5e}
+
+
+Definição na linha 131 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!D\+T\+\_\+\+U\+N\+K\+N\+O\+WN@{D\+T\+\_\+\+U\+N\+K\+N\+O\+WN}}
+\index{D\+T\+\_\+\+U\+N\+K\+N\+O\+WN@{D\+T\+\_\+\+U\+N\+K\+N\+O\+WN}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{D\+T\+\_\+\+U\+N\+K\+N\+O\+WN}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+T\+\_\+\+U\+N\+K\+N\+O\+WN~0}\label{dirent_8h_a293ce58a2d39f35c52f7f4516a857057}
+
+
+Definição na linha 127 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!D\+T\+T\+O\+IF@{D\+T\+T\+O\+IF}}
+\index{D\+T\+T\+O\+IF@{D\+T\+T\+O\+IF}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{D\+T\+T\+O\+IF}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+T\+T\+O\+IF(
+\begin{DoxyParamCaption}
+\item[{}]{type}
+\end{DoxyParamCaption}
+)~(type)}\label{dirent_8h_a74d60eb436b31daadb1fa753c65f024a}
+
+
+Definição na linha 138 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!F\+I\+L\+E\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+V\+I\+CE@{F\+I\+L\+E\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+V\+I\+CE}}
+\index{F\+I\+L\+E\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+V\+I\+CE@{F\+I\+L\+E\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+V\+I\+CE}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{F\+I\+L\+E\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+V\+I\+CE}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+L\+E\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+E\+V\+I\+CE~0x40}\label{dirent_8h_aacf8e3610f58598b1cb40df6d3e216a9}
+
+
+Definição na linha 62 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+M\+AX@{F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+M\+AX}}
+\index{F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+M\+AX@{F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+M\+AX}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+M\+AX}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+M\+AX~M\+A\+X\+\_\+\+P\+A\+TH}\label{dirent_8h_aada6f64b4a36eb39c9b4cfd44eef7b36}
+
+
+Definição na linha 120 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!I\+F\+T\+O\+DT@{I\+F\+T\+O\+DT}}
+\index{I\+F\+T\+O\+DT@{I\+F\+T\+O\+DT}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{I\+F\+T\+O\+DT}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+F\+T\+O\+DT(
+\begin{DoxyParamCaption}
+\item[{}]{mode}
+\end{DoxyParamCaption}
+)~((mode) \& {\bf S\+\_\+\+I\+F\+MT})}\label{dirent_8h_af862352847d1b389ef162ec1222130a8}
+
+
+Definição na linha 137 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!N\+A\+M\+E\+\_\+\+M\+AX@{N\+A\+M\+E\+\_\+\+M\+AX}}
+\index{N\+A\+M\+E\+\_\+\+M\+AX@{N\+A\+M\+E\+\_\+\+M\+AX}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{N\+A\+M\+E\+\_\+\+M\+AX}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+A\+M\+E\+\_\+\+M\+AX~{\bf F\+I\+L\+E\+N\+A\+M\+E\+\_\+\+M\+AX}}\label{dirent_8h_ac64541bdd81c961304b9babef1402640}
+
+
+Definição na linha 123 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!P\+A\+T\+H\+\_\+\+M\+AX@{P\+A\+T\+H\+\_\+\+M\+AX}}
+\index{P\+A\+T\+H\+\_\+\+M\+AX@{P\+A\+T\+H\+\_\+\+M\+AX}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{P\+A\+T\+H\+\_\+\+M\+AX}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+A\+T\+H\+\_\+\+M\+AX~M\+A\+X\+\_\+\+P\+A\+TH}\label{dirent_8h_ae688d728e1acdfe5988c7db45d6f0166}
+
+
+Definição na linha 117 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!S\+\_\+\+I\+E\+X\+EC@{S\+\_\+\+I\+E\+X\+EC}}
+\index{S\+\_\+\+I\+E\+X\+EC@{S\+\_\+\+I\+E\+X\+EC}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{S\+\_\+\+I\+E\+X\+EC}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+\_\+\+I\+E\+X\+EC~\+\_\+\+S\+\_\+\+I\+E\+X\+EC                    /$\ast$ Execute permission $\ast$/}\label{dirent_8h_a49a6665b56f38f52ee9b157cefcf4d68}
+
+
+Definição na linha 88 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!S\+\_\+\+I\+F\+B\+LK@{S\+\_\+\+I\+F\+B\+LK}}
+\index{S\+\_\+\+I\+F\+B\+LK@{S\+\_\+\+I\+F\+B\+LK}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{S\+\_\+\+I\+F\+B\+LK}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+\_\+\+I\+F\+B\+LK~0                          /$\ast$ Block device $\ast$/}\label{dirent_8h_a5c5b74a1cb1a1ae83572500b94e1938f}
+
+
+Definição na linha 94 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!S\+\_\+\+I\+F\+C\+HR@{S\+\_\+\+I\+F\+C\+HR}}
+\index{S\+\_\+\+I\+F\+C\+HR@{S\+\_\+\+I\+F\+C\+HR}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{S\+\_\+\+I\+F\+C\+HR}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+\_\+\+I\+F\+C\+HR~\+\_\+\+S\+\_\+\+I\+F\+C\+HR                    /$\ast$ Character device $\ast$/}\label{dirent_8h_aef3a1d1ba22c83e30b5c834dd343b2a8}
+
+
+Definição na linha 73 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!S\+\_\+\+I\+F\+D\+IR@{S\+\_\+\+I\+F\+D\+IR}}
+\index{S\+\_\+\+I\+F\+D\+IR@{S\+\_\+\+I\+F\+D\+IR}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{S\+\_\+\+I\+F\+D\+IR}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+\_\+\+I\+F\+D\+IR~\+\_\+\+S\+\_\+\+I\+F\+D\+IR                    /$\ast$ Directory $\ast$/}\label{dirent_8h_a11fb0652b963a735f3377eb1c9239f2d}
+
+
+Definição na linha 70 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!S\+\_\+\+I\+F\+F\+I\+FO@{S\+\_\+\+I\+F\+F\+I\+FO}}
+\index{S\+\_\+\+I\+F\+F\+I\+FO@{S\+\_\+\+I\+F\+F\+I\+FO}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{S\+\_\+\+I\+F\+F\+I\+FO}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+\_\+\+I\+F\+F\+I\+FO~\+\_\+\+S\+\_\+\+I\+F\+F\+I\+FO                   /$\ast$ Pipe $\ast$/}\label{dirent_8h_ad764ca408f6c7de6840f58da5d58c076}
+
+
+Definição na linha 76 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!S\+\_\+\+I\+F\+I\+FO@{S\+\_\+\+I\+F\+I\+FO}}
+\index{S\+\_\+\+I\+F\+I\+FO@{S\+\_\+\+I\+F\+I\+FO}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{S\+\_\+\+I\+F\+I\+FO}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+\_\+\+I\+F\+I\+FO~\+\_\+\+S\+\_\+\+I\+F\+I\+FO                     /$\ast$ Pipe $\ast$/}\label{dirent_8h_a4966f25d9f03a7a06bc47ac729fd86cf}
+
+
+Definição na linha 91 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!S\+\_\+\+I\+F\+L\+NK@{S\+\_\+\+I\+F\+L\+NK}}
+\index{S\+\_\+\+I\+F\+L\+NK@{S\+\_\+\+I\+F\+L\+NK}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{S\+\_\+\+I\+F\+L\+NK}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+\_\+\+I\+F\+L\+NK~0                          /$\ast$ {\bf Link} $\ast$/}\label{dirent_8h_afef163ce62372757e84bd9fc88c07aad}
+
+
+Definição na linha 97 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!S\+\_\+\+I\+F\+MT@{S\+\_\+\+I\+F\+MT}}
+\index{S\+\_\+\+I\+F\+MT@{S\+\_\+\+I\+F\+MT}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{S\+\_\+\+I\+F\+MT}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+\_\+\+I\+F\+MT~\+\_\+\+S\+\_\+\+I\+F\+MT                     /$\ast$ File type mask $\ast$/}\label{dirent_8h_ab5bee51e9ee68b83ab11d4b340f7200b}
+
+
+Definição na linha 67 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!S\+\_\+\+I\+F\+R\+EG@{S\+\_\+\+I\+F\+R\+EG}}
+\index{S\+\_\+\+I\+F\+R\+EG@{S\+\_\+\+I\+F\+R\+EG}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{S\+\_\+\+I\+F\+R\+EG}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+\_\+\+I\+F\+R\+EG~\+\_\+\+S\+\_\+\+I\+F\+R\+EG                    /$\ast$ Regular file $\ast$/}\label{dirent_8h_a1aaa48b192a5dd3b6d7ee91fc98cd17d}
+
+
+Definição na linha 79 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!S\+\_\+\+I\+F\+S\+O\+CK@{S\+\_\+\+I\+F\+S\+O\+CK}}
+\index{S\+\_\+\+I\+F\+S\+O\+CK@{S\+\_\+\+I\+F\+S\+O\+CK}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{S\+\_\+\+I\+F\+S\+O\+CK}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+\_\+\+I\+F\+S\+O\+CK~0                          /$\ast$ Socket $\ast$/}\label{dirent_8h_a28e80cd43106882904be148b2a397d42}
+
+
+Definição na linha 100 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!S\+\_\+\+I\+R\+E\+AD@{S\+\_\+\+I\+R\+E\+AD}}
+\index{S\+\_\+\+I\+R\+E\+AD@{S\+\_\+\+I\+R\+E\+AD}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{S\+\_\+\+I\+R\+E\+AD}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+\_\+\+I\+R\+E\+AD~\+\_\+\+S\+\_\+\+I\+R\+E\+AD                    /$\ast$ Read permission $\ast$/}\label{dirent_8h_a96c6486aa02a821aa4199525f5e79f60}
+
+
+Definição na linha 82 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!S\+\_\+\+I\+S\+B\+LK@{S\+\_\+\+I\+S\+B\+LK}}
+\index{S\+\_\+\+I\+S\+B\+LK@{S\+\_\+\+I\+S\+B\+LK}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{S\+\_\+\+I\+S\+B\+LK}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+\_\+\+I\+S\+B\+LK(
+\begin{DoxyParamCaption}
+\item[{}]{mode}
+\end{DoxyParamCaption}
+)~(((mode) \& {\bf S\+\_\+\+I\+F\+MT}) == {\bf S\+\_\+\+I\+F\+B\+LK})}\label{dirent_8h_a8b86a24d84c3cfce39cc832a017656ba}
+
+
+Definição na linha 152 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!S\+\_\+\+I\+S\+C\+HR@{S\+\_\+\+I\+S\+C\+HR}}
+\index{S\+\_\+\+I\+S\+C\+HR@{S\+\_\+\+I\+S\+C\+HR}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{S\+\_\+\+I\+S\+C\+HR}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+\_\+\+I\+S\+C\+HR(
+\begin{DoxyParamCaption}
+\item[{}]{mode}
+\end{DoxyParamCaption}
+)~(((mode) \& {\bf S\+\_\+\+I\+F\+MT}) == {\bf S\+\_\+\+I\+F\+C\+HR})}\label{dirent_8h_aae33be85d242a1317f972cf2b189f03d}
+
+
+Definição na linha 151 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!S\+\_\+\+I\+S\+D\+IR@{S\+\_\+\+I\+S\+D\+IR}}
+\index{S\+\_\+\+I\+S\+D\+IR@{S\+\_\+\+I\+S\+D\+IR}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{S\+\_\+\+I\+S\+D\+IR}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+\_\+\+I\+S\+D\+IR(
+\begin{DoxyParamCaption}
+\item[{}]{mode}
+\end{DoxyParamCaption}
+)~(((mode) \& {\bf S\+\_\+\+I\+F\+MT}) == {\bf S\+\_\+\+I\+F\+D\+IR})}\label{dirent_8h_a3746cdc5aac871e6f6504fbcbd29ef1d}
+
+
+Definição na linha 147 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!S\+\_\+\+I\+S\+F\+I\+FO@{S\+\_\+\+I\+S\+F\+I\+FO}}
+\index{S\+\_\+\+I\+S\+F\+I\+FO@{S\+\_\+\+I\+S\+F\+I\+FO}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{S\+\_\+\+I\+S\+F\+I\+FO}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+\_\+\+I\+S\+F\+I\+FO(
+\begin{DoxyParamCaption}
+\item[{}]{mode}
+\end{DoxyParamCaption}
+)~(((mode) \& {\bf S\+\_\+\+I\+F\+MT}) == {\bf S\+\_\+\+I\+F\+I\+FO})}\label{dirent_8h_a8ae224a2b1fa6eba69bb2bc34b864a24}
+
+
+Definição na linha 146 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!S\+\_\+\+I\+S\+L\+NK@{S\+\_\+\+I\+S\+L\+NK}}
+\index{S\+\_\+\+I\+S\+L\+NK@{S\+\_\+\+I\+S\+L\+NK}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{S\+\_\+\+I\+S\+L\+NK}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+\_\+\+I\+S\+L\+NK(
+\begin{DoxyParamCaption}
+\item[{}]{mode}
+\end{DoxyParamCaption}
+)~(((mode) \& {\bf S\+\_\+\+I\+F\+MT}) == {\bf S\+\_\+\+I\+F\+L\+NK})}\label{dirent_8h_a765eef536bcb3bd7bacdd675dc2fba13}
+
+
+Definição na linha 149 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!S\+\_\+\+I\+S\+R\+EG@{S\+\_\+\+I\+S\+R\+EG}}
+\index{S\+\_\+\+I\+S\+R\+EG@{S\+\_\+\+I\+S\+R\+EG}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{S\+\_\+\+I\+S\+R\+EG}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+\_\+\+I\+S\+R\+EG(
+\begin{DoxyParamCaption}
+\item[{}]{mode}
+\end{DoxyParamCaption}
+)~(((mode) \& {\bf S\+\_\+\+I\+F\+MT}) == {\bf S\+\_\+\+I\+F\+R\+EG})}\label{dirent_8h_aad0f32c2c182238f2ff71c83e6ab65a0}
+
+
+Definição na linha 148 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!S\+\_\+\+I\+S\+S\+O\+CK@{S\+\_\+\+I\+S\+S\+O\+CK}}
+\index{S\+\_\+\+I\+S\+S\+O\+CK@{S\+\_\+\+I\+S\+S\+O\+CK}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{S\+\_\+\+I\+S\+S\+O\+CK}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+\_\+\+I\+S\+S\+O\+CK(
+\begin{DoxyParamCaption}
+\item[{}]{mode}
+\end{DoxyParamCaption}
+)~(((mode) \& {\bf S\+\_\+\+I\+F\+MT}) == {\bf S\+\_\+\+I\+F\+S\+O\+CK})}\label{dirent_8h_a397ddd128980f1ee034653da2e9d8f6e}
+
+
+Definição na linha 150 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!S\+\_\+\+I\+W\+R\+I\+TE@{S\+\_\+\+I\+W\+R\+I\+TE}}
+\index{S\+\_\+\+I\+W\+R\+I\+TE@{S\+\_\+\+I\+W\+R\+I\+TE}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{S\+\_\+\+I\+W\+R\+I\+TE}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+\_\+\+I\+W\+R\+I\+TE~\+\_\+\+S\+\_\+\+I\+W\+R\+I\+TE                   /$\ast$ Write permission $\ast$/}\label{dirent_8h_a40eb4ad4bcc675d265615042657c37b7}
+
+
+Definição na linha 85 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!wclosedir@{wclosedir}}
+\index{wclosedir@{wclosedir}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{wclosedir}]{\setlength{\rightskip}{0pt plus 5cm}\#define wclosedir~\+\_\+wclosedir}\label{dirent_8h_a783634d83dcc99d8a393b22893acfe66}
+
+
+Definição na linha 196 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!W\+D\+IR@{W\+D\+IR}}
+\index{W\+D\+IR@{W\+D\+IR}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{W\+D\+IR}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\+D\+IR~{\bf \+\_\+\+W\+D\+IR}}\label{dirent_8h_aa97efcb21eb4eb1172ca3ac581309f09}
+
+
+Definição na linha 193 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!wdirent@{wdirent}}
+\index{wdirent@{wdirent}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{wdirent}]{\setlength{\rightskip}{0pt plus 5cm}\#define wdirent~{\bf \+\_\+wdirent}}\label{dirent_8h_acced66b96e07a03662493638658986f4}
+
+
+Definição na linha 192 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!wopendir@{wopendir}}
+\index{wopendir@{wopendir}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{wopendir}]{\setlength{\rightskip}{0pt plus 5cm}\#define wopendir~\+\_\+wopendir}\label{dirent_8h_a728bb1173e923c1ae0801c1d91370c0e}
+
+
+Definição na linha 194 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!wreaddir@{wreaddir}}
+\index{wreaddir@{wreaddir}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{wreaddir}]{\setlength{\rightskip}{0pt plus 5cm}\#define wreaddir~\+\_\+wreaddir}\label{dirent_8h_a53e09ee78c993b9feebaf49cb47146f1}
+
+
+Definição na linha 195 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!wrewinddir@{wrewinddir}}
+\index{wrewinddir@{wrewinddir}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{wrewinddir}]{\setlength{\rightskip}{0pt plus 5cm}\#define wrewinddir~\+\_\+wrewinddir}\label{dirent_8h_a8de41b9888772577edbb17b85dce573e}
+
+
+Definição na linha 197 do arquivo dirent.\+h.
+
+
+
+\subsection{Definições dos tipos}
+\index{dirent.\+h@{dirent.\+h}!\+\_\+\+W\+D\+IR@{\+\_\+\+W\+D\+IR}}
+\index{\+\_\+\+W\+D\+IR@{\+\_\+\+W\+D\+IR}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{\+\_\+\+W\+D\+IR}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+\+W\+D\+IR} {\bf \+\_\+\+W\+D\+IR}}\label{dirent_8h_a29ac3d7a7c3ecfd3db9de331f5b71279}
+
+
+Definição na linha 183 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!\+\_\+wdirent@{\+\_\+wdirent}}
+\index{\+\_\+wdirent@{\+\_\+wdirent}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{\+\_\+wdirent}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf \+\_\+wdirent} {\bf \+\_\+wdirent}}\label{dirent_8h_a7083dcfe4c262f51d7b4e065df46ebc5}
+
+
+Definição na linha 174 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!D\+IR@{D\+IR}}
+\index{D\+IR@{D\+IR}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{D\+IR}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf D\+IR} {\bf D\+IR}}\label{dirent_8h_a805632179a707f8794b35f089c940cb3}
+
+
+Definição na linha 214 do arquivo dirent.\+h.
+
+\index{dirent.\+h@{dirent.\+h}!dirent@{dirent}}
+\index{dirent@{dirent}!dirent.\+h@{dirent.\+h}}
+\subsubsection[{dirent}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf dirent} {\bf dirent}}\label{dirent_8h_ae50c911db67dfb4b55fbfc97a557f6f2}
+
+
+Definição na linha 208 do arquivo dirent.\+h.
+

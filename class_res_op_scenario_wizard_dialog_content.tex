@@ -1,0 +1,153 @@
+\section{Referência da Classe Res\+Op\+Scenario\+Wizard\+Dialog\+Content}
+\label{class_res_op_scenario_wizard_dialog_content}\index{Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Scenario\+Wizard\+Dialog\+Content.\+h$>$}
+
+
+
+Herdeiro de {\bf S\+I\+G\+A\+Dialog\+Content}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Scenario\+Wizard\+Dialog\+Content} ({\bf S\+I\+G\+A\+Dialog} $\ast$a\+\_\+dialog, int a\+\_\+options={\bf B\+U\+T\+T\+O\+N\+S\+\_\+\+D\+I\+A\+L\+OG})
+\item 
+{\bf Res\+Op\+Scenario\+Wizard\+Dialog\+Content} (unsigned int a\+\_\+scenario\+\_\+id, {\bf S\+I\+G\+A\+Dialog} $\ast$a\+\_\+dialog, int a\+\_\+options={\bf B\+U\+T\+T\+O\+N\+S\+\_\+\+D\+I\+A\+L\+OG})
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Scenario\+Wizard\+Dialog\+Content} ()
+\item 
+const std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ $\ast$const {\bf get\+Elements\+Map} ()
+\item 
+const {\bf Res\+Op\+Scenario} $\ast$const {\bf get\+Scenario} ()
+\item 
+int {\bf get\+Scenario\+Index} ()
+\item 
+void {\bf show\+Exec\+Interface} ()
+\item 
+void {\bf set\+Exec\+Interfaces} ({\bf Res\+Op\+Sequential\+Interface} $\ast$a\+\_\+seq\+\_\+interface, {\bf Res\+Op\+Sequential\+Wnd\+Interface} $\ast$a\+\_\+seq\+\_\+wnd\+\_\+interface, {\bf Res\+Op\+Sequential\+Opt\+Interface} $\ast$a\+\_\+opt\+\_\+interface, {\bf Res\+Op\+Network\+Flow\+Interface} $\ast$a\+\_\+network\+\_\+flow\+\_\+interface, {\bf Res\+Op\+Network\+Flow\+Wnd\+Interface} $\ast$a\+\_\+network\+\_\+flow\+\_\+wnd\+\_\+interface)
+\item 
+{\bf Res\+Op\+Element} $\ast$ {\bf get\+Selected\+Element} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Net\+Canvas} $\ast$ {\bf m\+\_\+net\+\_\+canvas}
+\item 
+{\bf Res\+Op\+Ctrl} $\ast$ {\bf m\+\_\+res\+\_\+op\+\_\+ctrl}
+\item 
+std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ $\ast$ {\bf m\+\_\+elements\+\_\+map}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 20 do arquivo Res\+Op\+Scenario\+Wizard\+Dialog\+Content.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}!Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}}
+\index{Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}!Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}}
+\subsubsection[{Res\+Op\+Scenario\+Wizard\+Dialog\+Content(\+S\+I\+G\+A\+Dialog $\ast$a\+\_\+dialog, int a\+\_\+options=\+B\+U\+T\+T\+O\+N\+S\+\_\+\+D\+I\+A\+L\+O\+G)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Scenario\+Wizard\+Dialog\+Content\+::\+Res\+Op\+Scenario\+Wizard\+Dialog\+Content (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Dialog} $\ast$}]{a\+\_\+dialog, }
+\item[{int}]{a\+\_\+options = {\ttfamily {\bf B\+U\+T\+T\+O\+N\+S\+\_\+\+D\+I\+A\+L\+OG}}}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_wizard_dialog_content_a84ffa7d7f442e38056035bd94b1edcdb}
+\index{Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}!Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}}
+\index{Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}!Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}}
+\subsubsection[{Res\+Op\+Scenario\+Wizard\+Dialog\+Content(unsigned int a\+\_\+scenario\+\_\+id, S\+I\+G\+A\+Dialog $\ast$a\+\_\+dialog, int a\+\_\+options=\+B\+U\+T\+T\+O\+N\+S\+\_\+\+D\+I\+A\+L\+O\+G)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Scenario\+Wizard\+Dialog\+Content\+::\+Res\+Op\+Scenario\+Wizard\+Dialog\+Content (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{a\+\_\+scenario\+\_\+id, }
+\item[{{\bf S\+I\+G\+A\+Dialog} $\ast$}]{a\+\_\+dialog, }
+\item[{int}]{a\+\_\+options = {\ttfamily {\bf B\+U\+T\+T\+O\+N\+S\+\_\+\+D\+I\+A\+L\+OG}}}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_wizard_dialog_content_a563772b8f42793a8bfd851f05411fc7c}
+\index{Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}!````~Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{$\sim$\+Res\+Op\+Scenario\+Wizard\+Dialog\+Content}}
+\index{````~Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{$\sim$\+Res\+Op\+Scenario\+Wizard\+Dialog\+Content}!Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}}
+\subsubsection[{$\sim$\+Res\+Op\+Scenario\+Wizard\+Dialog\+Content()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Scenario\+Wizard\+Dialog\+Content\+::$\sim$\+Res\+Op\+Scenario\+Wizard\+Dialog\+Content (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_scenario_wizard_dialog_content_a9ddc9a30a969bbae2a3ec32eef003e4b}
+
+
+\subsection{Métodos}
+\index{Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}!get\+Elements\+Map@{get\+Elements\+Map}}
+\index{get\+Elements\+Map@{get\+Elements\+Map}!Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}}
+\subsubsection[{get\+Elements\+Map()}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$$\ast$ const Res\+Op\+Scenario\+Wizard\+Dialog\+Content\+::get\+Elements\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_wizard_dialog_content_ad951ff4b3fb2bc51b0726371cfa820e4}
+\index{Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}!get\+Scenario@{get\+Scenario}}
+\index{get\+Scenario@{get\+Scenario}!Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}}
+\subsubsection[{get\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Res\+Op\+Scenario}$\ast$ const Res\+Op\+Scenario\+Wizard\+Dialog\+Content\+::get\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_wizard_dialog_content_a8cda35383a0ff546fd22b50d1cdbbc6f}
+\index{Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}!get\+Scenario\+Index@{get\+Scenario\+Index}}
+\index{get\+Scenario\+Index@{get\+Scenario\+Index}!Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}}
+\subsubsection[{get\+Scenario\+Index()}]{\setlength{\rightskip}{0pt plus 5cm}int Res\+Op\+Scenario\+Wizard\+Dialog\+Content\+::get\+Scenario\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_wizard_dialog_content_abe14108e8e9d9d9c3718402ecdde0fd1}
+\index{Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}!get\+Selected\+Element@{get\+Selected\+Element}}
+\index{get\+Selected\+Element@{get\+Selected\+Element}!Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}}
+\subsubsection[{get\+Selected\+Element()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Element}$\ast$ Res\+Op\+Scenario\+Wizard\+Dialog\+Content\+::get\+Selected\+Element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_wizard_dialog_content_af548f2076328caba4839a35bafcfb64a}
+\index{Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}!set\+Exec\+Interfaces@{set\+Exec\+Interfaces}}
+\index{set\+Exec\+Interfaces@{set\+Exec\+Interfaces}!Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}}
+\subsubsection[{set\+Exec\+Interfaces(\+Res\+Op\+Sequential\+Interface $\ast$a\+\_\+seq\+\_\+interface, Res\+Op\+Sequential\+Wnd\+Interface $\ast$a\+\_\+seq\+\_\+wnd\+\_\+interface, Res\+Op\+Sequential\+Opt\+Interface $\ast$a\+\_\+opt\+\_\+interface, Res\+Op\+Network\+Flow\+Interface $\ast$a\+\_\+network\+\_\+flow\+\_\+interface, Res\+Op\+Network\+Flow\+Wnd\+Interface $\ast$a\+\_\+network\+\_\+flow\+\_\+wnd\+\_\+interface)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Wizard\+Dialog\+Content\+::set\+Exec\+Interfaces (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Interface} $\ast$}]{a\+\_\+seq\+\_\+interface, }
+\item[{{\bf Res\+Op\+Sequential\+Wnd\+Interface} $\ast$}]{a\+\_\+seq\+\_\+wnd\+\_\+interface, }
+\item[{{\bf Res\+Op\+Sequential\+Opt\+Interface} $\ast$}]{a\+\_\+opt\+\_\+interface, }
+\item[{{\bf Res\+Op\+Network\+Flow\+Interface} $\ast$}]{a\+\_\+network\+\_\+flow\+\_\+interface, }
+\item[{{\bf Res\+Op\+Network\+Flow\+Wnd\+Interface} $\ast$}]{a\+\_\+network\+\_\+flow\+\_\+wnd\+\_\+interface}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_wizard_dialog_content_aae5ec61854fa00eaa3999bfd5ce15cc8}
+\index{Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}!show\+Exec\+Interface@{show\+Exec\+Interface}}
+\index{show\+Exec\+Interface@{show\+Exec\+Interface}!Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}}
+\subsubsection[{show\+Exec\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Wizard\+Dialog\+Content\+::show\+Exec\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_wizard_dialog_content_a45854fbf7c7777858e22f62b510b8afd}
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}!m\+\_\+elements\+\_\+map@{m\+\_\+elements\+\_\+map}}
+\index{m\+\_\+elements\+\_\+map@{m\+\_\+elements\+\_\+map}!Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}}
+\subsubsection[{m\+\_\+elements\+\_\+map}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element}$\ast$ $>$$\ast$ Res\+Op\+Scenario\+Wizard\+Dialog\+Content\+::m\+\_\+elements\+\_\+map\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_wizard_dialog_content_a0a8ee182641f33ec8093f0a56870deb4}
+
+
+Definição na linha 26 do arquivo Res\+Op\+Scenario\+Wizard\+Dialog\+Content.\+h.
+
+\index{Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}!m\+\_\+net\+\_\+canvas@{m\+\_\+net\+\_\+canvas}}
+\index{m\+\_\+net\+\_\+canvas@{m\+\_\+net\+\_\+canvas}!Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}}
+\subsubsection[{m\+\_\+net\+\_\+canvas}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Net\+Canvas}$\ast$ Res\+Op\+Scenario\+Wizard\+Dialog\+Content\+::m\+\_\+net\+\_\+canvas\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_wizard_dialog_content_a4511b75a57643241b7a9dfd7f5978fa4}
+
+
+Definição na linha 24 do arquivo Res\+Op\+Scenario\+Wizard\+Dialog\+Content.\+h.
+
+\index{Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}!m\+\_\+res\+\_\+op\+\_\+ctrl@{m\+\_\+res\+\_\+op\+\_\+ctrl}}
+\index{m\+\_\+res\+\_\+op\+\_\+ctrl@{m\+\_\+res\+\_\+op\+\_\+ctrl}!Res\+Op\+Scenario\+Wizard\+Dialog\+Content@{Res\+Op\+Scenario\+Wizard\+Dialog\+Content}}
+\subsubsection[{m\+\_\+res\+\_\+op\+\_\+ctrl}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Ctrl}$\ast$ Res\+Op\+Scenario\+Wizard\+Dialog\+Content\+::m\+\_\+res\+\_\+op\+\_\+ctrl\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_wizard_dialog_content_aa4de370cd5e70770590b871d09f7a779}
+
+
+Definição na linha 25 do arquivo Res\+Op\+Scenario\+Wizard\+Dialog\+Content.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Scenario\+Wizard\+Dialog\+Content.\+h}\end{DoxyCompactItemize}

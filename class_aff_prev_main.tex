@@ -1,0 +1,354 @@
+\section{Refer√™ncia da Classe Aff\+Prev\+Main}
+\label{class_aff_prev_main}\index{Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+
+
+{\ttfamily \#include $<$Aff\+Prev\+Main.\+h$>$}
+
+
+
+Herdeiro de {\bf Component}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf on\+Init} ({\bf S\+I\+GA} $\ast${\bf main}, wx\+Frame $\ast${\bf frame}, wx\+Window $\ast$parent)
+\item 
+virtual void {\bf update\+Tree\+Item} ({\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$)
+\item 
+virtual void {\bf on\+Select\+Nodes} ()
+\item 
+virtual void {\bf on\+Changed\+Component} ()
+\item 
+virtual void {\bf on\+Changing\+Component} ()
+\item 
+virtual void {\bf on\+Delete\+Nodes} (vector$<$ unsigned int $>$ node\+Ids)
+\item 
+virtual void {\bf on\+Delete\+Links} (vector$<$ unsigned int $>$ link\+Ids)
+\item 
+virtual void {\bf on\+Select\+Links} ()
+\item 
+void {\bf create\+Model} ({\bf Draw\+Node} $\ast$node)
+\item 
+void {\bf create\+Model\+Main} ()
+\item 
+{\bf Aff\+Prev\+Model\+Main} $\ast$ {\bf get\+Model\+Main} ()
+\item 
+{\bf Aff\+Prev\+Model} $\ast$ {\bf get\+Model} (unsigned int id\+Node)
+\item 
+{\bf Aff\+Prev\+Model} $\ast$ {\bf get\+Model} ({\bf aff\+Prev\+Model} type)
+\item 
+{\bf Aff\+Prev\+Model} $\ast$ {\bf get\+Model} ({\bf aff\+Prev\+Model} type, unsigned int id\+Node)
+\item 
+{\bf Aff\+Prev\+Model} $\ast$ {\bf get\+Model} ()
+\item 
+void {\bf on\+Changing\+Time\+Interval} ({\bf Date\+::\+Time\+Interval} time\+Interval)
+\item 
+void {\bf on\+Changing\+Element\+Type} (vector$<$ unsigned int $>$ element\+Ids)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf clear} ()
+\end{DoxyCompactItemize}
+\subsection*{M√©todos P√∫blicos Est√°ticos}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Aff\+Prev\+Main} \& {\bf Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Frame $\ast$ {\bf frame}
+\item 
+{\bf Draw\+Node} $\ast$ {\bf selected\+Node}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 13 do arquivo Aff\+Prev\+Main.\+h.
+
+
+
+\subsection{M√©todos}
+\index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!clear@{clear}}
+\index{clear@{clear}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Main\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_main_a0c75580e83fc7a87c2ef2c3548c66f0f}
+Chama o metodo clear de cada \doxyref{Hidro\+Model\+Main}{pag.}{class_hidro_model_main} 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a3155a0112bacea4b0af7b131c0e3f011}.
+
+\index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!create\+Model@{create\+Model}}
+\index{create\+Model@{create\+Model}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{create\+Model(\+Draw\+Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Main\+::create\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_main_a1b9f2fab497c2bca9d2fdf2b9d0dd647}
+Cria o modelo caso ele ainda n„o exista para o nÛ selecionado. 
+\begin{DoxyParams}{Par√¢metros}
+{\em node} & NÛ para criar o modelo \\
+\hline
+\end{DoxyParams}
+\index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!create\+Model\+Main@{create\+Model\+Main}}
+\index{create\+Model\+Main@{create\+Model\+Main}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{create\+Model\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Main\+::create\+Model\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_main_a7916af44582cfd32b55f05b4954bbbd1}
+Cria o objeto principal de cada tipo de modelo. O\+BS\+: Garanta que este metodo ser· chamado na ordem do enum hidro\+Model\+Type 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo do mÛdelo Hidrologico \\
+\hline
+\end{DoxyParams}
+\index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{get\+Model(unsigned int id\+Node)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Aff\+Prev\+Model}$\ast$ Aff\+Prev\+Main\+::get\+Model (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{id\+Node}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_main_a67674f2122f96d98df89ca6802dcca62}
+Retorna a inst‚ncia do \doxyref{Hidro\+Model}{pag.}{class_hidro_model} correspondente ao id do nÛ fornecido do modelo utilizado no momento. 
+\begin{DoxyParams}{Par√¢metros}
+{\em id\+Node} & Id do nÛ selecionado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Hidro\+Model}{pag.}{class_hidro_model} 
+\end{DoxyReturn}
+\index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{get\+Model(aff\+Prev\+Model type)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Aff\+Prev\+Model}$\ast$ Aff\+Prev\+Main\+::get\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf aff\+Prev\+Model}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_main_af27da3394fade6e11cfb2a863e3bf399}
+Retorna a inst‚ncia do \doxyref{Hidro\+Model}{pag.}{class_hidro_model} correspondente ao id do nÛ fornecido do modelo utilizado no momento. 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo de modelo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Hidro\+Model}{pag.}{class_hidro_model} 
+\end{DoxyReturn}
+\index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{get\+Model(aff\+Prev\+Model type, unsigned int id\+Node)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Aff\+Prev\+Model}$\ast$ Aff\+Prev\+Main\+::get\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf aff\+Prev\+Model}}]{type, }
+\item[{unsigned int}]{id\+Node}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_main_a0191c97c73ebddad35d90aff50a5a3f6}
+Retorna a inst‚ncia do \doxyref{Hidro\+Model}{pag.}{class_hidro_model} correspondente ao id do nÛ fornecido do modelo utilizado no momento. 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo de modelo \\
+\hline
+{\em id\+Node} & Id do nÛ selecionado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Hidro\+Model}{pag.}{class_hidro_model} 
+\end{DoxyReturn}
+\index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{get\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Aff\+Prev\+Model}$\ast$ Aff\+Prev\+Main\+::get\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_main_a89678a702ea50436ecf235fb4c3c8e35}
+Retorna a inst‚ncia do modelo correspondente ao tipo de modelo utilizado para o nÛ selecionado. \begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Hidro\+Model}{pag.}{class_hidro_model} 
+\end{DoxyReturn}
+\index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!get\+Model\+Main@{get\+Model\+Main}}
+\index{get\+Model\+Main@{get\+Model\+Main}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{get\+Model\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Aff\+Prev\+Model\+Main}$\ast$ Aff\+Prev\+Main\+::get\+Model\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_aff_prev_main_a88a4b8c39115669ae24f7785f2c9e788}
+Retorna a inst‚ncia do \doxyref{Hidro\+Model\+Main}{pag.}{class_hidro_model_main} correspondente ao tipo de modelo fornecido. 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo do mÛdelo Hidrologico \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia \doxyref{Hidro\+Model\+Main}{pag.}{class_hidro_model_main} 
+\end{DoxyReturn}
+
+
+Defini√ß√£o na linha 90 do arquivo Aff\+Prev\+Main.\+h.
+
+\index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!Instance@{Instance}}
+\index{Instance@{Instance}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{Instance()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Aff\+Prev\+Main}\& Aff\+Prev\+Main\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_aff_prev_main_a6b2989a70783f0f55077df9ef7119fe5}
+Recupera a inst‚ncia da classe \index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!on\+Changed\+Component@{on\+Changed\+Component}}
+\index{on\+Changed\+Component@{on\+Changed\+Component}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{on\+Changed\+Component()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Aff\+Prev\+Main\+::on\+Changed\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_main_a196d3370a726b3798c4f38e20b60f360}
+Evento de mudanÁa para o modelo 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a528080e8ef4be5f15e8a268ef8a06bd6}.
+
+\index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!on\+Changing\+Component@{on\+Changing\+Component}}
+\index{on\+Changing\+Component@{on\+Changing\+Component}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{on\+Changing\+Component()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Aff\+Prev\+Main\+::on\+Changing\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_main_a58794e21373359c3ab2a373268ff256f}
+Evento de saida do modelo 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a86d6778195457395b75c8995e98075f1}.
+
+\index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}}
+\index{on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{on\+Changing\+Element\+Type(vector$<$ unsigned int $>$ element\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Main\+::on\+Changing\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ unsigned int $>$}]{element\+Ids}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_main_a85b4a468dd91b323ddcde9ea5d7658ba}
+\index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}}
+\index{on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{on\+Changing\+Time\+Interval(\+Date\+::\+Time\+Interval time\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Main\+::on\+Changing\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_main_ae9bdd166968a0f02a766f715793c8572}
+Evento chamado quando o sistema muda de intervalo de tempo O modulo adapta os modelos de acordo com o intervalo de tempo definido 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a3e49742b76123d86cd3fec640ba57dd8}.
+
+\index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!on\+Delete\+Links@{on\+Delete\+Links}}
+\index{on\+Delete\+Links@{on\+Delete\+Links}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{on\+Delete\+Links(vector$<$ unsigned int $>$ link\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Aff\+Prev\+Main\+::on\+Delete\+Links (
+\begin{DoxyParamCaption}
+\item[{vector$<$ unsigned int $>$}]{link\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_main_a5e0cd1e52b25a77c8f84de1d0a7b6234}
+\index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!on\+Delete\+Nodes@{on\+Delete\+Nodes}}
+\index{on\+Delete\+Nodes@{on\+Delete\+Nodes}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{on\+Delete\+Nodes(vector$<$ unsigned int $>$ node\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Aff\+Prev\+Main\+::on\+Delete\+Nodes (
+\begin{DoxyParamCaption}
+\item[{vector$<$ unsigned int $>$}]{node\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_main_a4e2b5a63887278335327c5a1785316ce}
+Chamado quando algum nÛ È deletado 
+\begin{DoxyParams}{Par√¢metros}
+{\em node\+Ids} & Vetor com os nÛs selecionados. \\
+\hline
+\end{DoxyParams}
+\index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!on\+Init@{on\+Init}}
+\index{on\+Init@{on\+Init}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{on\+Init(\+S\+I\+G\+A $\ast$main, wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Main\+::on\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+GA} $\ast$}]{main, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_main_a48f76f846449f23aa7af85f3643ba1c0}
+Inicializa a instancia do \doxyref{Hidro\+Main}{pag.}{class_hidro_main} 
+\begin{DoxyParams}{Par√¢metros}
+{\em main} & Classe base \\
+\hline
+{\em frame} & Janela onde a interface ser· inserida \\
+\hline
+{\em parent} & Componente onde a interface sera inserida \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_aa781bddb43637778a628acbe21a78a01}.
+
+\index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Main\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_main_ac5d89d3599a8e8264affbd91505f2246}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a755c932409c320f6a057abf6c4ebc5e4}.
+
+\index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Main\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_main_a14afae1738bae5d073ccce05f4b52190}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_ad6ccdceebf942b62e75f0255319c9fab}.
+
+\index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!on\+Select\+Links@{on\+Select\+Links}}
+\index{on\+Select\+Links@{on\+Select\+Links}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{on\+Select\+Links()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Aff\+Prev\+Main\+::on\+Select\+Links (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_main_a68985c885ced2c7e07f11080f5c274eb}
+Chamado quando algum trecho È selecionado \index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!on\+Select\+Nodes@{on\+Select\+Nodes}}
+\index{on\+Select\+Nodes@{on\+Select\+Nodes}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{on\+Select\+Nodes()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Aff\+Prev\+Main\+::on\+Select\+Nodes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_main_a05d426427a052bcb3b87fecb351298a4}
+Chamado quando algum nÛ È selecionado \index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!update\+Tree\+Item@{update\+Tree\+Item}}
+\index{update\+Tree\+Item@{update\+Tree\+Item}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{update\+Tree\+Item(\+S\+I\+G\+A\+Tree\+Ctrl $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Aff\+Prev\+Main\+::update\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_main_a7fada3f6f40be28eec24a46af08b89ad}
+Atualiza os ponteiros das suas series no Tree\+Ctrl de integraÁ„o 
+
+Reimplementa√ß√£o de {\bf Component} \doxyref{}{pag.}{class_component_a29b14a3db0650e8c62711bb9edea68a1}.
+
+
+
+\subsection{Atributos}
+\index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!frame@{frame}}
+\index{frame@{frame}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{frame}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Frame$\ast$ Aff\+Prev\+Main\+::frame}\label{class_aff_prev_main_a959a8247d094958fa2469bf70e60f488}
+Frame que contÈm a interface 
+
+Defini√ß√£o na linha 32 do arquivo Aff\+Prev\+Main.\+h.
+
+\index{Aff\+Prev\+Main@{Aff\+Prev\+Main}!selected\+Node@{selected\+Node}}
+\index{selected\+Node@{selected\+Node}!Aff\+Prev\+Main@{Aff\+Prev\+Main}}
+\subsubsection[{selected\+Node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Node}$\ast$ Aff\+Prev\+Main\+::selected\+Node}\label{class_aff_prev_main_ad985eab2ad7a602ae48aba8de17ea238}
+Ponteiro para o nÛ selecionado (vem do \doxyref{Net\+Canvas}{pag.}{class_net_canvas}) 
+
+Defini√ß√£o na linha 36 do arquivo Aff\+Prev\+Main.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Aff\+Prev\+Main.\+h}\end{DoxyCompactItemize}

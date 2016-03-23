@@ -1,0 +1,232 @@
+\section{Referência da Template de Classe Info\+Matrix$<$ T $>$}
+\label{class_info_matrix}\index{Info\+Matrix$<$ T $>$@{Info\+Matrix$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Info\+Matrix.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Info\+Matrix} (unsigned int n, unsigned int m, const wx\+String \&{\bf name}=wx\+Empty\+String, const wx\+String \&{\bf token}=wx\+Empty\+String)
+\item 
+{\bf Info\+Matrix} (const {\bf S\+Matrix}$<$ T $>$ \&original\+Matrix, const wx\+String \&{\bf name}=wx\+Empty\+String, const wx\+String \&{\bf token}=wx\+Empty\+String)
+\item 
+virtual {\bf $\sim$\+Info\+Matrix} ()
+\item 
+const {\bf S\+Matrix}$<$ T $>$ \& {\bf get\+Matrix} () const 
+\item 
+const wx\+String \& {\bf get\+Name} () const 
+\item 
+const vector$<$ {\bf Column\+Info} $>$ \& {\bf get\+Cols\+Info} () const 
+\item 
+const wx\+String \& {\bf get\+Token} () const 
+\item 
+void {\bf set\+Matrix} (const {\bf S\+Matrix}$<$ T $>$ \&new\+Matrix)
+\item 
+void {\bf set\+Name} (const wx\+String \&new\+Name)
+\item 
+void {\bf set\+Cols\+Info} (const vector$<$ {\bf Column\+Info} $>$ \&new\+Cols\+Info)
+\item 
+void {\bf set\+Token} (const wx\+String \&new\+Token)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+Matrix}$<$ T $>$ $\ast$ {\bf matrix}
+\item 
+wx\+String {\bf name}
+\item 
+vector$<$ {\bf Column\+Info} $>$ {\bf cols\+Info}
+\item 
+wx\+String {\bf token}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+\subsubsection*{template$<$class T = double$>$\\*
+class Info\+Matrix$<$ T $>$}
+
+
+
+Definição na linha 18 do arquivo Info\+Matrix.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Info\+Matrix@{Info\+Matrix}!Info\+Matrix@{Info\+Matrix}}
+\index{Info\+Matrix@{Info\+Matrix}!Info\+Matrix@{Info\+Matrix}}
+\subsubsection[{Info\+Matrix(unsigned int n, unsigned int m, const wx\+String \&name=wx\+Empty\+String, const wx\+String \&token=wx\+Empty\+String)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ {\bf Info\+Matrix}$<$ T $>$\+::{\bf Info\+Matrix} (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{n, }
+\item[{unsigned int}]{m, }
+\item[{const wx\+String \&}]{name = {\ttfamily wxEmptyString}, }
+\item[{const wx\+String \&}]{token = {\ttfamily wxEmptyString}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_info_matrix_addc0904bb3b9ec15e42cda7703cc9b61}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em n} & Numero de linhas da matriz \\
+\hline
+{\em m} & Numero de colunas da matriz \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 39 do arquivo Info\+Matrix.\+h.
+
+\index{Info\+Matrix@{Info\+Matrix}!Info\+Matrix@{Info\+Matrix}}
+\index{Info\+Matrix@{Info\+Matrix}!Info\+Matrix@{Info\+Matrix}}
+\subsubsection[{Info\+Matrix(const S\+Matrix$<$ T $>$ \&original\+Matrix, const wx\+String \&name=wx\+Empty\+String, const wx\+String \&token=wx\+Empty\+String)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ {\bf Info\+Matrix}$<$ T $>$\+::{\bf Info\+Matrix} (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+Matrix}$<$ T $>$ \&}]{original\+Matrix, }
+\item[{const wx\+String \&}]{name = {\ttfamily wxEmptyString}, }
+\item[{const wx\+String \&}]{token = {\ttfamily wxEmptyString}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_info_matrix_a11755c1d198fdf445ab4caba8e96381e}
+Construtor Constroe uma \doxyref{Info\+Matrix}{pag.}{class_info_matrix} a partir de uma copia de uma matriz fornecida 
+\begin{DoxyParams}{Parâmetros}
+{\em original\+Matrix} & Matriz da \doxyref{Info\+Matrix}{pag.}{class_info_matrix} \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 50 do arquivo Info\+Matrix.\+h.
+
+\index{Info\+Matrix@{Info\+Matrix}!````~Info\+Matrix@{$\sim$\+Info\+Matrix}}
+\index{````~Info\+Matrix@{$\sim$\+Info\+Matrix}!Info\+Matrix@{Info\+Matrix}}
+\subsubsection[{$\sim$\+Info\+Matrix()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ virtual {\bf Info\+Matrix}$<$ T $>$\+::$\sim${\bf Info\+Matrix} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_info_matrix_a477c1e1cad7fe747fe0500887573be0d}
+
+
+Definição na linha 57 do arquivo Info\+Matrix.\+h.
+
+
+
+\subsection{Métodos}
+\index{Info\+Matrix@{Info\+Matrix}!get\+Cols\+Info@{get\+Cols\+Info}}
+\index{get\+Cols\+Info@{get\+Cols\+Info}!Info\+Matrix@{Info\+Matrix}}
+\subsubsection[{get\+Cols\+Info() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ const vector$<${\bf Column\+Info}$>$\& {\bf Info\+Matrix}$<$ T $>$\+::get\+Cols\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_info_matrix_a4c08b32fafe6a80febadc4c4c7490ae7}
+
+
+Definição na linha 65 do arquivo Info\+Matrix.\+h.
+
+\index{Info\+Matrix@{Info\+Matrix}!get\+Matrix@{get\+Matrix}}
+\index{get\+Matrix@{get\+Matrix}!Info\+Matrix@{Info\+Matrix}}
+\subsubsection[{get\+Matrix() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ const {\bf S\+Matrix}$<$T$>$\& {\bf Info\+Matrix}$<$ T $>$\+::get\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_info_matrix_a74cf176d1e98f6a99d8bc9b88bc58319}
+
+
+Definição na linha 63 do arquivo Info\+Matrix.\+h.
+
+\index{Info\+Matrix@{Info\+Matrix}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Info\+Matrix@{Info\+Matrix}}
+\subsubsection[{get\+Name() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ const wx\+String\& {\bf Info\+Matrix}$<$ T $>$\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_info_matrix_a1987242e23a6f5e47352f345599f6ad6}
+
+
+Definição na linha 64 do arquivo Info\+Matrix.\+h.
+
+\index{Info\+Matrix@{Info\+Matrix}!get\+Token@{get\+Token}}
+\index{get\+Token@{get\+Token}!Info\+Matrix@{Info\+Matrix}}
+\subsubsection[{get\+Token() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ const wx\+String\& {\bf Info\+Matrix}$<$ T $>$\+::get\+Token (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_info_matrix_a43b9965bdd16bc5fe6aff5a07bd677a1}
+
+
+Definição na linha 66 do arquivo Info\+Matrix.\+h.
+
+\index{Info\+Matrix@{Info\+Matrix}!set\+Cols\+Info@{set\+Cols\+Info}}
+\index{set\+Cols\+Info@{set\+Cols\+Info}!Info\+Matrix@{Info\+Matrix}}
+\subsubsection[{set\+Cols\+Info(const vector$<$ Column\+Info $>$ \&new\+Cols\+Info)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf Info\+Matrix}$<$ T $>$\+::set\+Cols\+Info (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ {\bf Column\+Info} $>$ \&}]{new\+Cols\+Info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_info_matrix_a6565619e7a08a76c1114f37c60d1fca0}
+
+
+Definição na linha 71 do arquivo Info\+Matrix.\+h.
+
+\index{Info\+Matrix@{Info\+Matrix}!set\+Matrix@{set\+Matrix}}
+\index{set\+Matrix@{set\+Matrix}!Info\+Matrix@{Info\+Matrix}}
+\subsubsection[{set\+Matrix(const S\+Matrix$<$ T $>$ \&new\+Matrix)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf Info\+Matrix}$<$ T $>$\+::set\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+Matrix}$<$ T $>$ \&}]{new\+Matrix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_info_matrix_a52823229d5a1de4c972eb1ce100edc2d}
+
+
+Definição na linha 69 do arquivo Info\+Matrix.\+h.
+
+\index{Info\+Matrix@{Info\+Matrix}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!Info\+Matrix@{Info\+Matrix}}
+\subsubsection[{set\+Name(const wx\+String \&new\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf Info\+Matrix}$<$ T $>$\+::set\+Name (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{new\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_info_matrix_a2e2400bf47fa564dbe4cb78bcdab4c9a}
+
+
+Definição na linha 70 do arquivo Info\+Matrix.\+h.
+
+\index{Info\+Matrix@{Info\+Matrix}!set\+Token@{set\+Token}}
+\index{set\+Token@{set\+Token}!Info\+Matrix@{Info\+Matrix}}
+\subsubsection[{set\+Token(const wx\+String \&new\+Token)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf Info\+Matrix}$<$ T $>$\+::set\+Token (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{new\+Token}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_info_matrix_adadf3cd9e135b710175a43c2be36173a}
+
+
+Definição na linha 76 do arquivo Info\+Matrix.\+h.
+
+
+
+\subsection{Atributos}
+\index{Info\+Matrix@{Info\+Matrix}!cols\+Info@{cols\+Info}}
+\index{cols\+Info@{cols\+Info}!Info\+Matrix@{Info\+Matrix}}
+\subsubsection[{cols\+Info}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ vector$<${\bf Column\+Info}$>$ {\bf Info\+Matrix}$<$ T $>$\+::cols\+Info\hspace{0.3cm}{\ttfamily [protected]}}\label{class_info_matrix_afbb5f21b919cdcabad1a3220a4ded560}
+
+
+Definição na linha 28 do arquivo Info\+Matrix.\+h.
+
+\index{Info\+Matrix@{Info\+Matrix}!matrix@{matrix}}
+\index{matrix@{matrix}!Info\+Matrix@{Info\+Matrix}}
+\subsubsection[{matrix}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ {\bf S\+Matrix}$<$T$>$$\ast$ {\bf Info\+Matrix}$<$ T $>$\+::matrix\hspace{0.3cm}{\ttfamily [protected]}}\label{class_info_matrix_ae342e4645bebce63c61f6d2ab649add9}
+
+
+Definição na linha 22 do arquivo Info\+Matrix.\+h.
+
+\index{Info\+Matrix@{Info\+Matrix}!name@{name}}
+\index{name@{name}!Info\+Matrix@{Info\+Matrix}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ wx\+String {\bf Info\+Matrix}$<$ T $>$\+::name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_info_matrix_a0cdeb6821c87d35f834a6c95c0998e82}
+
+
+Definição na linha 25 do arquivo Info\+Matrix.\+h.
+
+\index{Info\+Matrix@{Info\+Matrix}!token@{token}}
+\index{token@{token}!Info\+Matrix@{Info\+Matrix}}
+\subsubsection[{token}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ wx\+String {\bf Info\+Matrix}$<$ T $>$\+::token\hspace{0.3cm}{\ttfamily [protected]}}\label{class_info_matrix_aaca6c6fb985fe41f863269c86a987240}
+
+
+Definição na linha 31 do arquivo Info\+Matrix.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Info\+Matrix.\+h}\end{DoxyCompactItemize}

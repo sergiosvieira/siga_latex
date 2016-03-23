@@ -1,0 +1,197 @@
+\section{Referência da Classe Zones\+Priority\+Rule}
+\label{class_zones_priority_rule}\index{Zones\+Priority\+Rule@{Zones\+Priority\+Rule}}
+
+
+{\ttfamily \#include $<$Zones\+Priority\+Rule.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Rule}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Zones\+Priority\+Rule} ({\bf Node} $\ast${\bf node})
+\item 
+virtual {\bf $\sim$\+Zones\+Priority\+Rule} ()
+\item 
+virtual double {\bf get\+Release} ({\bf Date} date, {\bf Res\+Op\+Element} $\ast$model={\bf N\+U\+LL})
+\item 
+int {\bf get\+Priority} (double volume)
+\item 
+virtual unsigned int {\bf get\+Number\+Of\+Variables} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog={\bf N\+U\+LL})
+\item 
+virtual void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String)
+\item 
+virtual void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ double $>$ {\bf zones}
+\item 
+vector$<$ int $>$ {\bf priorities}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Rule} $\ast$ {\bf do\+Copy} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 11 do arquivo Zones\+Priority\+Rule.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Zones\+Priority\+Rule@{Zones\+Priority\+Rule}!Zones\+Priority\+Rule@{Zones\+Priority\+Rule}}
+\index{Zones\+Priority\+Rule@{Zones\+Priority\+Rule}!Zones\+Priority\+Rule@{Zones\+Priority\+Rule}}
+\subsubsection[{Zones\+Priority\+Rule(\+Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}Zones\+Priority\+Rule\+::\+Zones\+Priority\+Rule (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_zones_priority_rule_a28489b5dcf7788ab023aad01a2b3fc95}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em node} & N� \\
+\hline
+\end{DoxyParams}
+\index{Zones\+Priority\+Rule@{Zones\+Priority\+Rule}!````~Zones\+Priority\+Rule@{$\sim$\+Zones\+Priority\+Rule}}
+\index{````~Zones\+Priority\+Rule@{$\sim$\+Zones\+Priority\+Rule}!Zones\+Priority\+Rule@{Zones\+Priority\+Rule}}
+\subsubsection[{$\sim$\+Zones\+Priority\+Rule()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Zones\+Priority\+Rule\+::$\sim$\+Zones\+Priority\+Rule (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_zones_priority_rule_afaf5c97fe94af55b1f2a89261199ff4b}
+Destrutor 
+
+\subsection{Métodos}
+\index{Zones\+Priority\+Rule@{Zones\+Priority\+Rule}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Zones\+Priority\+Rule@{Zones\+Priority\+Rule}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog=\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}bool Zones\+Priority\+Rule\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_zones_priority_rule_afbc5d118266cb0457cec4d02c0a242a5}
+Verifica se todas as informa��es necess�rias foram fornecidas 
+\begin{DoxyParams}{Parâmetros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_a92c1f57de54c45ae7e2d754b2eb2814c}.
+
+\index{Zones\+Priority\+Rule@{Zones\+Priority\+Rule}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!Zones\+Priority\+Rule@{Zones\+Priority\+Rule}}
+\subsubsection[{do\+Copy()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Rule}$\ast$ Zones\+Priority\+Rule\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_zones_priority_rule_a14db23fd267675298260bbba6f681c9e}
+Copia a regra 
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_a0612d8b6a8607563b24ae0fb163e537e}.
+
+\index{Zones\+Priority\+Rule@{Zones\+Priority\+Rule}!get\+Number\+Of\+Variables@{get\+Number\+Of\+Variables}}
+\index{get\+Number\+Of\+Variables@{get\+Number\+Of\+Variables}!Zones\+Priority\+Rule@{Zones\+Priority\+Rule}}
+\subsubsection[{get\+Number\+Of\+Variables()}]{\setlength{\rightskip}{0pt plus 5cm}virtual unsigned int Zones\+Priority\+Rule\+::get\+Number\+Of\+Variables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_zones_priority_rule_ad294e68312543afb3d1adbfef8433c67}
+Retorna o n�mero de variaveis de decis�o 
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_acc94bc0a231a0b68eed13fc9cd5d9f76}.
+
+
+
+Definição na linha 58 do arquivo Zones\+Priority\+Rule.\+h.
+
+\index{Zones\+Priority\+Rule@{Zones\+Priority\+Rule}!get\+Priority@{get\+Priority}}
+\index{get\+Priority@{get\+Priority}!Zones\+Priority\+Rule@{Zones\+Priority\+Rule}}
+\subsubsection[{get\+Priority(double volume)}]{\setlength{\rightskip}{0pt plus 5cm}int Zones\+Priority\+Rule\+::get\+Priority (
+\begin{DoxyParamCaption}
+\item[{double}]{volume}
+\end{DoxyParamCaption}
+)}\label{class_zones_priority_rule_a2de13a9bff89b7ca911d61f068dcfa88}
+Retorna valor da prioridade \index{Zones\+Priority\+Rule@{Zones\+Priority\+Rule}!get\+Release@{get\+Release}}
+\index{get\+Release@{get\+Release}!Zones\+Priority\+Rule@{Zones\+Priority\+Rule}}
+\subsubsection[{get\+Release(\+Date date, Res\+Op\+Element $\ast$model=\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}virtual double Zones\+Priority\+Rule\+::get\+Release (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{date, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{model = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_zones_priority_rule_a240508e6c7f978275a0f5a2af27e720e}
+Retorna valor da libera��o para a data fornecida 
+\begin{DoxyParams}{Parâmetros}
+{\em date} & Data de pesquisa \\
+\hline
+{\em model} & Modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_ad90bdc6f396abae2110a1093f9b8570d}.
+
+\index{Zones\+Priority\+Rule@{Zones\+Priority\+Rule}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Zones\+Priority\+Rule@{Zones\+Priority\+Rule}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Zones\+Priority\+Rule\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_zones_priority_rule_adeb7824d70524b400afb1d143dcb4d7d}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_a30647c2585e5b4c83b8301e5d954fa7d}.
+
+\index{Zones\+Priority\+Rule@{Zones\+Priority\+Rule}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Zones\+Priority\+Rule@{Zones\+Priority\+Rule}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Zones\+Priority\+Rule\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_zones_priority_rule_a6ddab3c74695a1c63de138dffadd9bd1}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_af5abd8c4a528a9fd23c101bb216aa3f4}.
+
+
+
+\subsection{Atributos}
+\index{Zones\+Priority\+Rule@{Zones\+Priority\+Rule}!priorities@{priorities}}
+\index{priorities@{priorities}!Zones\+Priority\+Rule@{Zones\+Priority\+Rule}}
+\subsubsection[{priorities}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ Zones\+Priority\+Rule\+::priorities}\label{class_zones_priority_rule_a5e8956fe8bcfbe86b31a245e8fd40efa}
+Prioridades das zonas 
+
+Definição na linha 30 do arquivo Zones\+Priority\+Rule.\+h.
+
+\index{Zones\+Priority\+Rule@{Zones\+Priority\+Rule}!zones@{zones}}
+\index{zones@{zones}!Zones\+Priority\+Rule@{Zones\+Priority\+Rule}}
+\subsubsection[{zones}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ Zones\+Priority\+Rule\+::zones}\label{class_zones_priority_rule_a84821bc15e6320c4004cec53f1f4edcc}
+Faixas de armazenamento 
+
+Definição na linha 25 do arquivo Zones\+Priority\+Rule.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Zones\+Priority\+Rule.\+h}\end{DoxyCompactItemize}

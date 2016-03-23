@@ -1,0 +1,288 @@
+\section{Referência da Classe Generic\+Model}
+\label{class_generic_model}\index{Generic\+Model@{Generic\+Model}}
+
+
+{\ttfamily \#include $<$Generic\+Model.\+h$>$}
+
+
+
+Herdeiro de {\bf Hidro\+Model}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Generic\+Model} ({\bf Node} $\ast${\bf node}, wx\+String {\bf name})
+\item 
+{\bf Generic\+Model} ({\bf Link} $\ast${\bf link}, wx\+String {\bf name})
+\item 
+virtual {\bf $\sim$\+Generic\+Model} ()
+\item 
+{\bf Hidro\+Model} $\ast$ {\bf copy} ()
+\item 
+bool {\bf run} ()
+\item 
+bool {\bf run\+Acc} ()
+\item 
+bool {\bf run\+Acc\+Node} ()
+\item 
+bool {\bf run\+Acc\+Link} ()
+\item 
+bool {\bf run\+Acc} (int scen)
+\item 
+bool {\bf run\+Acc\+Node} (int scen)
+\item 
+bool {\bf run\+Acc\+Link} (int scen)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf create\+Results} ({\bf Interval} interval)
+\item 
+bool {\bf empty} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+bool {\bf is\+Dependent} ({\bf Element\+ID} idF, {\bf Element\+ID} idS)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf obs\+Type}
+\item 
+int {\bf element\+Id}
+\item 
+{\bf Serie} $\ast$ {\bf q\+Obs}
+\item 
+double {\bf correction\+Factor}
+\item 
+wx\+String {\bf q\+Obs\+File\+Name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 11 do arquivo Generic\+Model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Generic\+Model@{Generic\+Model}!Generic\+Model@{Generic\+Model}}
+\index{Generic\+Model@{Generic\+Model}!Generic\+Model@{Generic\+Model}}
+\subsubsection[{Generic\+Model(\+Node $\ast$node, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}Generic\+Model\+::\+Generic\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_generic_model_afc79380809664fa134ad91354a20c45c}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em interval\+Begin} & Dia de inicio \\
+\hline
+{\em interval\+End} & Dia de fim \\
+\hline
+{\em node} & N� \\
+\hline
+\end{DoxyParams}
+\index{Generic\+Model@{Generic\+Model}!Generic\+Model@{Generic\+Model}}
+\index{Generic\+Model@{Generic\+Model}!Generic\+Model@{Generic\+Model}}
+\subsubsection[{Generic\+Model(\+Link $\ast$link, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}Generic\+Model\+::\+Generic\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_generic_model_a6c5d3e6f84ede2c43cf8b8b0991c8667}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em interval\+Begin} & Dia de inicio \\
+\hline
+{\em interval\+End} & Dia de fim \\
+\hline
+{\em link} & Trecho \\
+\hline
+\end{DoxyParams}
+\index{Generic\+Model@{Generic\+Model}!````~Generic\+Model@{$\sim$\+Generic\+Model}}
+\index{````~Generic\+Model@{$\sim$\+Generic\+Model}!Generic\+Model@{Generic\+Model}}
+\subsubsection[{$\sim$\+Generic\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Generic\+Model\+::$\sim$\+Generic\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_generic_model_acb3e2163c6096b71ed509852a0e33eb6}
+Destrutor 
+
+\subsection{Métodos}
+\index{Generic\+Model@{Generic\+Model}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Generic\+Model@{Generic\+Model}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Generic\+Model\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_generic_model_a13096a045128200f1c03ad0e05648606}
+Checa se os campos da interface est�o preenchidos de forma correta 
+\begin{DoxyParams}{Parâmetros}
+{\em dialog} & Caixa de dialogo onde seram mostrados os erros encontrados \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a9da83995bb3c4c4ab6eb3abe7dfcb431}.
+
+\index{Generic\+Model@{Generic\+Model}!clear@{clear}}
+\index{clear@{clear}!Generic\+Model@{Generic\+Model}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Generic\+Model\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_generic_model_aaf8b6ccbcc3c838e2828fb26b8ca689b}
+Retorna o valor das variaveis para o estado p�s-\/constru��o 
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a7a59ac6ccde3e96019caa55bb9f3f859}.
+
+\index{Generic\+Model@{Generic\+Model}!copy@{copy}}
+\index{copy@{copy}!Generic\+Model@{Generic\+Model}}
+\subsubsection[{copy()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hidro\+Model}$\ast$ Generic\+Model\+::copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_generic_model_a2595603a7b58bc88794589cce7d9d0db}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_afef4c70600b8f9224c4ad0040363c5dc}.
+
+\index{Generic\+Model@{Generic\+Model}!create\+Results@{create\+Results}}
+\index{create\+Results@{create\+Results}!Generic\+Model@{Generic\+Model}}
+\subsubsection[{create\+Results(\+Interval interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Generic\+Model\+::create\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_generic_model_a28db8d92b491f60d50af74ed76b2b244}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a8ba135e8d5c7e454fa3278355e2d6a92}.
+
+\index{Generic\+Model@{Generic\+Model}!empty@{empty}}
+\index{empty@{empty}!Generic\+Model@{Generic\+Model}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool Generic\+Model\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_generic_model_a13410df98219339b592a8a5a5c97dce0}
+retorna se existe algum valor no modelo 
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_aac45c150ea104ed44e2d3349b83fbd40}.
+
+\index{Generic\+Model@{Generic\+Model}!is\+Dependent@{is\+Dependent}}
+\index{is\+Dependent@{is\+Dependent}!Generic\+Model@{Generic\+Model}}
+\subsubsection[{is\+Dependent(\+Element\+I\+D id\+F, Element\+I\+D id\+S)}]{\setlength{\rightskip}{0pt plus 5cm}bool Generic\+Model\+::is\+Dependent (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{idF, }
+\item[{{\bf Element\+ID}}]{idS}
+\end{DoxyParamCaption}
+)}\label{class_generic_model_ad4de4dd787bbba5394665b0ea353157a}
+\index{Generic\+Model@{Generic\+Model}!run@{run}}
+\index{run@{run}!Generic\+Model@{Generic\+Model}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}bool Generic\+Model\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_generic_model_a28005670a047430f226123a6bb052137}
+Executar o modelo G\+W\+LF 
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_ac4b3587518c76af9ad3200646e28a367}.
+
+\index{Generic\+Model@{Generic\+Model}!run\+Acc@{run\+Acc}}
+\index{run\+Acc@{run\+Acc}!Generic\+Model@{Generic\+Model}}
+\subsubsection[{run\+Acc()}]{\setlength{\rightskip}{0pt plus 5cm}bool Generic\+Model\+::run\+Acc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_generic_model_a732a453dc9e4521c80f7fa0c8ddf0c8d}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a41ed38d63fb34c6a08badaee94e38dbe}.
+
+\index{Generic\+Model@{Generic\+Model}!run\+Acc@{run\+Acc}}
+\index{run\+Acc@{run\+Acc}!Generic\+Model@{Generic\+Model}}
+\subsubsection[{run\+Acc(int scen)}]{\setlength{\rightskip}{0pt plus 5cm}bool Generic\+Model\+::run\+Acc (
+\begin{DoxyParamCaption}
+\item[{int}]{scen}
+\end{DoxyParamCaption}
+)}\label{class_generic_model_a3672049d30ee41715a626ae560e02703}
+\index{Generic\+Model@{Generic\+Model}!run\+Acc\+Link@{run\+Acc\+Link}}
+\index{run\+Acc\+Link@{run\+Acc\+Link}!Generic\+Model@{Generic\+Model}}
+\subsubsection[{run\+Acc\+Link()}]{\setlength{\rightskip}{0pt plus 5cm}bool Generic\+Model\+::run\+Acc\+Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_generic_model_a027dbaa258585ca588d4b2d83a91d9f7}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a6f35f954579dbbe3216d270e2406437a}.
+
+\index{Generic\+Model@{Generic\+Model}!run\+Acc\+Link@{run\+Acc\+Link}}
+\index{run\+Acc\+Link@{run\+Acc\+Link}!Generic\+Model@{Generic\+Model}}
+\subsubsection[{run\+Acc\+Link(int scen)}]{\setlength{\rightskip}{0pt plus 5cm}bool Generic\+Model\+::run\+Acc\+Link (
+\begin{DoxyParamCaption}
+\item[{int}]{scen}
+\end{DoxyParamCaption}
+)}\label{class_generic_model_ab695f201336e4ac5cacffb358680382b}
+\index{Generic\+Model@{Generic\+Model}!run\+Acc\+Node@{run\+Acc\+Node}}
+\index{run\+Acc\+Node@{run\+Acc\+Node}!Generic\+Model@{Generic\+Model}}
+\subsubsection[{run\+Acc\+Node()}]{\setlength{\rightskip}{0pt plus 5cm}bool Generic\+Model\+::run\+Acc\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_generic_model_ac9843eeb552e5cc21b29d30340c00b17}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a40997d872a7e0224915f2f8a92212d84}.
+
+\index{Generic\+Model@{Generic\+Model}!run\+Acc\+Node@{run\+Acc\+Node}}
+\index{run\+Acc\+Node@{run\+Acc\+Node}!Generic\+Model@{Generic\+Model}}
+\subsubsection[{run\+Acc\+Node(int scen)}]{\setlength{\rightskip}{0pt plus 5cm}bool Generic\+Model\+::run\+Acc\+Node (
+\begin{DoxyParamCaption}
+\item[{int}]{scen}
+\end{DoxyParamCaption}
+)}\label{class_generic_model_a6c983745d1585ddf2312bca67c32ce44}
+
+
+\subsection{Atributos}
+\index{Generic\+Model@{Generic\+Model}!correction\+Factor@{correction\+Factor}}
+\index{correction\+Factor@{correction\+Factor}!Generic\+Model@{Generic\+Model}}
+\subsubsection[{correction\+Factor}]{\setlength{\rightskip}{0pt plus 5cm}double Generic\+Model\+::correction\+Factor}\label{class_generic_model_ac22c140bfea8f98ef4266e35938fb6fb}
+Fator de ajuste da serie de entrada 
+
+Definição na linha 35 do arquivo Generic\+Model.\+h.
+
+\index{Generic\+Model@{Generic\+Model}!element\+Id@{element\+Id}}
+\index{element\+Id@{element\+Id}!Generic\+Model@{Generic\+Model}}
+\subsubsection[{element\+Id}]{\setlength{\rightskip}{0pt plus 5cm}int Generic\+Model\+::element\+Id}\label{class_generic_model_adc0153e0dd62e5dceb7ff3c1ae092c9e}
+Identificador do elemento que usara a serie de vaz�o observada 
+
+Definição na linha 24 do arquivo Generic\+Model.\+h.
+
+\index{Generic\+Model@{Generic\+Model}!obs\+Type@{obs\+Type}}
+\index{obs\+Type@{obs\+Type}!Generic\+Model@{Generic\+Model}}
+\subsubsection[{obs\+Type}]{\setlength{\rightskip}{0pt plus 5cm}int Generic\+Model\+::obs\+Type}\label{class_generic_model_a13186e6209d9a313b714aea640f983db}
+Origem da serie observada 
+
+Definição na linha 19 do arquivo Generic\+Model.\+h.
+
+\index{Generic\+Model@{Generic\+Model}!q\+Obs@{q\+Obs}}
+\index{q\+Obs@{q\+Obs}!Generic\+Model@{Generic\+Model}}
+\subsubsection[{q\+Obs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ Generic\+Model\+::q\+Obs}\label{class_generic_model_a05743fbd5b1764764e8aaa893f044aaf}
+\doxyref{Serie}{pag.}{class_serie} com a vaz�o incremental da bacia. Essa pode ter sido calculada por outro programa ou advinda de dados experimentais 
+
+Definição na linha 30 do arquivo Generic\+Model.\+h.
+
+\index{Generic\+Model@{Generic\+Model}!q\+Obs\+File\+Name@{q\+Obs\+File\+Name}}
+\index{q\+Obs\+File\+Name@{q\+Obs\+File\+Name}!Generic\+Model@{Generic\+Model}}
+\subsubsection[{q\+Obs\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Generic\+Model\+::q\+Obs\+File\+Name}\label{class_generic_model_ae2ecb6506f9b632093435adaa650e44b}
+Local onde fica a serie 
+
+Definição na linha 40 do arquivo Generic\+Model.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Generic\+Model.\+h}\end{DoxyCompactItemize}

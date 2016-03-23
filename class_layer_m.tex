@@ -1,0 +1,183 @@
+\section{Referência da Classe LayerM}
+\label{class_layer_m}\index{LayerM@{LayerM}}
+
+
+{\ttfamily \#include $<$layer\+M.\+h$>$}
+
+
+
+Superclasse de {\bf Raster\+Layer} e {\bf Vector\+LayerM}.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Layer\+Type} \{ {\bf V\+E\+C\+T\+O\+R\+L\+A\+Y\+E\+R\+\_\+M}, 
+{\bf R\+A\+S\+T\+E\+R\+L\+A\+Y\+E\+R\+\_\+M}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf LayerM} ()
+\item 
+virtual {\bf $\sim$\+LayerM} ()
+\item 
+{\bf Layer\+Type} {\bf type} () const 
+\item 
+bool {\bf is\+Visible} () const 
+\item 
+void {\bf visible} (bool a\+\_\+value)
+\item 
+{\bf Real\+Rect} {\bf bounding\+Box} ()
+\item 
+virtual bool {\bf is\+Ok} ()=0
+\item 
+virtual {\bf Projection\+Unit} {\bf projection\+Unit} ()=0
+\item 
+virtual O\+G\+R\+Spatial\+Reference $\ast$ {\bf spatial\+Reference} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Layer\+Type} {\bf m\+\_\+type}
+\item 
+{\bf Real\+Rect} {\bf m\+\_\+bounding\+Box}
+\item 
+bool {\bf m\+\_\+visible} = true
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Classe base do shapefile e do raster 
+
+Definição na linha 16 do arquivo layer\+M.\+h.
+
+
+
+\subsection{Enumerações}
+\index{LayerM@{LayerM}!Layer\+Type@{Layer\+Type}}
+\index{Layer\+Type@{Layer\+Type}!LayerM@{LayerM}}
+\subsubsection[{Layer\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Layer\+M\+::\+Layer\+Type}}\label{class_layer_m_a5b91bd1bcf1ea1750fe8baab2d24e7bf}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{V\+E\+C\+T\+O\+R\+L\+A\+Y\+E\+R\+\_\+M@{V\+E\+C\+T\+O\+R\+L\+A\+Y\+E\+R\+\_\+M}!LayerM@{LayerM}}\index{LayerM@{LayerM}!V\+E\+C\+T\+O\+R\+L\+A\+Y\+E\+R\+\_\+M@{V\+E\+C\+T\+O\+R\+L\+A\+Y\+E\+R\+\_\+M}}\item[{\em 
+V\+E\+C\+T\+O\+R\+L\+A\+Y\+E\+R\+\_\+M\label{class_layer_m_a5b91bd1bcf1ea1750fe8baab2d24e7bfae87caf2cb466e300fdc10fac2cdef2ef}
+}]\index{R\+A\+S\+T\+E\+R\+L\+A\+Y\+E\+R\+\_\+M@{R\+A\+S\+T\+E\+R\+L\+A\+Y\+E\+R\+\_\+M}!LayerM@{LayerM}}\index{LayerM@{LayerM}!R\+A\+S\+T\+E\+R\+L\+A\+Y\+E\+R\+\_\+M@{R\+A\+S\+T\+E\+R\+L\+A\+Y\+E\+R\+\_\+M}}\item[{\em 
+R\+A\+S\+T\+E\+R\+L\+A\+Y\+E\+R\+\_\+M\label{class_layer_m_a5b91bd1bcf1ea1750fe8baab2d24e7bfa257478150b271b81c5f53a7f8ffc7f90}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 19 do arquivo layer\+M.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{LayerM@{LayerM}!LayerM@{LayerM}}
+\index{LayerM@{LayerM}!LayerM@{LayerM}}
+\subsubsection[{Layer\+M()}]{\setlength{\rightskip}{0pt plus 5cm}Layer\+M\+::\+LayerM (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_layer_m_ad2e8f3f5516f556fdc47b1eac3f41c3e}
+\index{LayerM@{LayerM}!````~LayerM@{$\sim$\+LayerM}}
+\index{````~LayerM@{$\sim$\+LayerM}!LayerM@{LayerM}}
+\subsubsection[{$\sim$\+Layer\+M()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Layer\+M\+::$\sim$\+LayerM (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_layer_m_aa63451e28946c13c9b1a9300826b4ce5}
+
+
+\subsection{Métodos}
+\index{LayerM@{LayerM}!bounding\+Box@{bounding\+Box}}
+\index{bounding\+Box@{bounding\+Box}!LayerM@{LayerM}}
+\subsubsection[{bounding\+Box()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Real\+Rect} Layer\+M\+::bounding\+Box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_layer_m_aebfdcbfad28f86f17b2bab8e08c335f6}
+\index{LayerM@{LayerM}!is\+Ok@{is\+Ok}}
+\index{is\+Ok@{is\+Ok}!LayerM@{LayerM}}
+\subsubsection[{is\+Ok()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Layer\+M\+::is\+Ok (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_layer_m_abd6d06ea13da9592fd09c6dd274fc09d}
+Verifica se um shape ou raster foi carregado corretamente 
+
+Implementado por {\bf Vector\+LayerM} \doxyref{}{pag.}{class_vector_layer_m_a2af3437d86b4bf472939a9ad0a5930ff} e {\bf Raster\+Layer} \doxyref{}{pag.}{class_raster_layer_a6a59c7238a279f64e22b14ae71502598}.
+
+\index{LayerM@{LayerM}!is\+Visible@{is\+Visible}}
+\index{is\+Visible@{is\+Visible}!LayerM@{LayerM}}
+\subsubsection[{is\+Visible() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Layer\+M\+::is\+Visible (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_layer_m_a6613c463812c095688bbb9b14a4e018b}
+\index{LayerM@{LayerM}!projection\+Unit@{projection\+Unit}}
+\index{projection\+Unit@{projection\+Unit}!LayerM@{LayerM}}
+\subsubsection[{projection\+Unit()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Projection\+Unit} Layer\+M\+::projection\+Unit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_layer_m_ae36e3daa042e3cf0a556a5693aba26b3}
+
+
+Implementado por {\bf Vector\+LayerM} \doxyref{}{pag.}{class_vector_layer_m_a7c033378b554e25240d1f6965579a9ea} e {\bf Raster\+Layer} \doxyref{}{pag.}{class_raster_layer_ae54a7e5948fc00ad6d184228f9c0daea}.
+
+\index{LayerM@{LayerM}!spatial\+Reference@{spatial\+Reference}}
+\index{spatial\+Reference@{spatial\+Reference}!LayerM@{LayerM}}
+\subsubsection[{spatial\+Reference()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual O\+G\+R\+Spatial\+Reference$\ast$ Layer\+M\+::spatial\+Reference (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_layer_m_a43ddb12a64dbb2483e7d8192feca4611}
+
+
+Implementado por {\bf Vector\+LayerM} \doxyref{}{pag.}{class_vector_layer_m_a5c2ccaadd32db60ec78a05a2d4bb4dd2} e {\bf Raster\+Layer} \doxyref{}{pag.}{class_raster_layer_a68eeeb8a1b58ec5e2a002271a53c5f56}.
+
+\index{LayerM@{LayerM}!type@{type}}
+\index{type@{type}!LayerM@{LayerM}}
+\subsubsection[{type() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Layer\+Type} Layer\+M\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_layer_m_aa6cbbbc1dc64921bd91921dac23da665}
+\index{LayerM@{LayerM}!visible@{visible}}
+\index{visible@{visible}!LayerM@{LayerM}}
+\subsubsection[{visible(bool a\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+M\+::visible (
+\begin{DoxyParamCaption}
+\item[{bool}]{a\+\_\+value}
+\end{DoxyParamCaption}
+)}\label{class_layer_m_a1171d2c754ac9af856f6bd9136177947}
+
+
+\subsection{Atributos}
+\index{LayerM@{LayerM}!m\+\_\+bounding\+Box@{m\+\_\+bounding\+Box}}
+\index{m\+\_\+bounding\+Box@{m\+\_\+bounding\+Box}!LayerM@{LayerM}}
+\subsubsection[{m\+\_\+bounding\+Box}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Real\+Rect} Layer\+M\+::m\+\_\+bounding\+Box\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_m_ada3ecb179dcf7da5496c88660d1d1fc1}
+
+
+Definição na linha 36 do arquivo layer\+M.\+h.
+
+\index{LayerM@{LayerM}!m\+\_\+type@{m\+\_\+type}}
+\index{m\+\_\+type@{m\+\_\+type}!LayerM@{LayerM}}
+\subsubsection[{m\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Layer\+Type} Layer\+M\+::m\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_m_a673c04aa3d832054762bdf2d2723929e}
+
+
+Definição na linha 35 do arquivo layer\+M.\+h.
+
+\index{LayerM@{LayerM}!m\+\_\+visible@{m\+\_\+visible}}
+\index{m\+\_\+visible@{m\+\_\+visible}!LayerM@{LayerM}}
+\subsubsection[{m\+\_\+visible}]{\setlength{\rightskip}{0pt plus 5cm}bool Layer\+M\+::m\+\_\+visible = true\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_m_a7339260a0a38096421644e290a4a7d90}
+
+
+Definição na linha 37 do arquivo layer\+M.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf layer\+M.\+h}\end{DoxyCompactItemize}

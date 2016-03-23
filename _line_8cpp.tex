@@ -1,0 +1,240 @@
+\section{Referência do Arquivo Line.\+cpp}
+\label{_line_8cpp}\index{Line.\+cpp@{Line.\+cpp}}
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Line.\+h\char`\"{}}\\*
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf tag\+V\+E\+C\+T\+O\+R2D}
+\item 
+struct {\bf tag\+P\+R\+O\+J\+E\+C\+T\+I\+ON}
+\item 
+struct {\bf tag\+P\+O\+I\+N\+T\+N\+O\+R\+M\+AL}
+\item 
+struct {\bf tag\+P\+O\+I\+NT}
+\end{DoxyCompactItemize}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf M\+P\+O\+I\+N\+T2\+P\+O\+I\+NT}(mpt,  pt)  ~((pt).x = (mpt).x, (pt).y = (mpt).y)
+\item 
+\#define {\bf P\+O\+I\+N\+T2\+M\+P\+O\+I\+NT}(pt,  mpt)  ~((mpt).x = (S\+H\+O\+RT)(pt).x, (mpt).y = (S\+H\+O\+RT)(pt).y)
+\item 
+\#define {\bf P\+O\+I\+N\+T\+S2\+V\+E\+C\+T\+O\+R2D}(pt0,  pt1,  vect)
+\end{DoxyCompactItemize}
+\subsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct {\bf tag\+V\+E\+C\+T\+O\+R2D} {\bf V\+E\+C\+T\+O\+R2D}
+\item 
+typedef struct {\bf tag\+V\+E\+C\+T\+O\+R2D} $\ast$ {\bf P\+V\+E\+C\+T\+O\+R2D}
+\item 
+typedef struct {\bf tag\+P\+R\+O\+J\+E\+C\+T\+I\+ON} {\bf P\+R\+O\+J\+E\+C\+T\+I\+ON}
+\item 
+typedef struct {\bf tag\+P\+R\+O\+J\+E\+C\+T\+I\+ON} $\ast$ {\bf P\+P\+R\+O\+J\+E\+C\+T\+I\+ON}
+\item 
+typedef struct {\bf tag\+P\+O\+I\+N\+T\+N\+O\+R\+M\+AL} {\bf P\+O\+I\+N\+T\+N\+O\+R\+M\+AL}
+\item 
+typedef struct {\bf tag\+P\+O\+I\+N\+T\+N\+O\+R\+M\+AL} $\ast$ {\bf P\+P\+O\+I\+N\+T\+N\+O\+R\+M\+AL}
+\item 
+typedef struct {\bf tag\+P\+O\+I\+NT} {\bf P\+O\+I\+NT}
+\item 
+typedef struct {\bf tag\+P\+O\+I\+NT} $\ast$ {\bf P\+P\+O\+I\+NT}
+\item 
+typedef struct {\bf tag\+P\+O\+I\+NT} $\ast$ {\bf L\+P\+P\+O\+I\+NT}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf v\+Dot\+Product} ({\bf P\+V\+E\+C\+T\+O\+R2D} v0, {\bf P\+V\+E\+C\+T\+O\+R2D} v1)
+\item 
+{\bf P\+V\+E\+C\+T\+O\+R2D} {\bf v\+Subtract\+Vectors} ({\bf P\+V\+E\+C\+T\+O\+R2D} v0, {\bf P\+V\+E\+C\+T\+O\+R2D} v1, {\bf P\+V\+E\+C\+T\+O\+R2D} v)
+\item 
+double {\bf v\+Vector\+Squared} ({\bf P\+V\+E\+C\+T\+O\+R2D} v0)
+\item 
+double {\bf v\+Vector\+Magnitude} ({\bf P\+V\+E\+C\+T\+O\+R2D} v0)
+\item 
+double {\bf vertical\+Length\+Of\+Normal} ({\bf P\+V\+E\+C\+T\+O\+R2D} a, {\bf P\+V\+E\+C\+T\+O\+R2D} b)
+\item 
+void {\bf v\+Project\+And\+Resolve} ({\bf P\+V\+E\+C\+T\+O\+R2D} v0, {\bf P\+V\+E\+C\+T\+O\+R2D} v1, {\bf P\+P\+R\+O\+J\+E\+C\+T\+I\+ON} pp\+Proj)
+\item 
+double {\bf v\+Dist\+From\+Point\+To\+Line} ({\bf L\+P\+P\+O\+I\+NT} pt0, {\bf L\+P\+P\+O\+I\+NT} pt1, {\bf L\+P\+P\+O\+I\+NT} pt\+Test)
+\item 
+bool {\bf Hit\+Test\+Line} ({\bf P\+O\+I\+NT} pt0, {\bf P\+O\+I\+NT} pt1, {\bf P\+O\+I\+NT} pt\+Mouse, int n\+Width)
+\end{DoxyCompactItemize}
+
+
+\subsection{Definições e macros}
+\index{Line.\+cpp@{Line.\+cpp}!M\+P\+O\+I\+N\+T2\+P\+O\+I\+NT@{M\+P\+O\+I\+N\+T2\+P\+O\+I\+NT}}
+\index{M\+P\+O\+I\+N\+T2\+P\+O\+I\+NT@{M\+P\+O\+I\+N\+T2\+P\+O\+I\+NT}!Line.\+cpp@{Line.\+cpp}}
+\subsubsection[{M\+P\+O\+I\+N\+T2\+P\+O\+I\+NT}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+P\+O\+I\+N\+T2\+P\+O\+I\+NT(
+\begin{DoxyParamCaption}
+\item[{}]{mpt, }
+\item[{}]{pt}
+\end{DoxyParamCaption}
+)~((pt).x = (mpt).x, (pt).y = (mpt).y)}\label{_line_8cpp_a8c1a03e863f306daf74143dbf411c613}
+
+
+Definição na linha 4 do arquivo Line.\+cpp.
+
+\index{Line.\+cpp@{Line.\+cpp}!P\+O\+I\+N\+T2\+M\+P\+O\+I\+NT@{P\+O\+I\+N\+T2\+M\+P\+O\+I\+NT}}
+\index{P\+O\+I\+N\+T2\+M\+P\+O\+I\+NT@{P\+O\+I\+N\+T2\+M\+P\+O\+I\+NT}!Line.\+cpp@{Line.\+cpp}}
+\subsubsection[{P\+O\+I\+N\+T2\+M\+P\+O\+I\+NT}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+O\+I\+N\+T2\+M\+P\+O\+I\+NT(
+\begin{DoxyParamCaption}
+\item[{}]{pt, }
+\item[{}]{mpt}
+\end{DoxyParamCaption}
+)~((mpt).x = (S\+H\+O\+RT)(pt).x, (mpt).y = (S\+H\+O\+RT)(pt).y)}\label{_line_8cpp_af1242357e261ed65489b8140a6224882}
+
+
+Definição na linha 5 do arquivo Line.\+cpp.
+
+\index{Line.\+cpp@{Line.\+cpp}!P\+O\+I\+N\+T\+S2\+V\+E\+C\+T\+O\+R2D@{P\+O\+I\+N\+T\+S2\+V\+E\+C\+T\+O\+R2D}}
+\index{P\+O\+I\+N\+T\+S2\+V\+E\+C\+T\+O\+R2D@{P\+O\+I\+N\+T\+S2\+V\+E\+C\+T\+O\+R2D}!Line.\+cpp@{Line.\+cpp}}
+\subsubsection[{P\+O\+I\+N\+T\+S2\+V\+E\+C\+T\+O\+R2D}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+O\+I\+N\+T\+S2\+V\+E\+C\+T\+O\+R2D(
+\begin{DoxyParamCaption}
+\item[{}]{pt0, }
+\item[{}]{pt1, }
+\item[{}]{vect}
+\end{DoxyParamCaption}
+)}\label{_line_8cpp_a57350efa370beb1cb44244347126e620}
+{\bfseries Valor\+:}
+\begin{DoxyCode}
+((vect).x = (\textcolor{keywordtype}{double})((pt1).x - (pt0).x), \(\backslash\)
+                                         (vect).y = (double)((pt1).y - (pt0).y))
+\end{DoxyCode}
+
+
+Definição na linha 6 do arquivo Line.\+cpp.
+
+
+
+\subsection{Definições dos tipos}
+\index{Line.\+cpp@{Line.\+cpp}!L\+P\+P\+O\+I\+NT@{L\+P\+P\+O\+I\+NT}}
+\index{L\+P\+P\+O\+I\+NT@{L\+P\+P\+O\+I\+NT}!Line.\+cpp@{Line.\+cpp}}
+\subsubsection[{L\+P\+P\+O\+I\+NT}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tag\+P\+O\+I\+NT} $\ast$ {\bf L\+P\+P\+O\+I\+NT}}\label{_line_8cpp_af031e81a404911f62f064398b4133c51}
+\index{Line.\+cpp@{Line.\+cpp}!P\+O\+I\+NT@{P\+O\+I\+NT}}
+\index{P\+O\+I\+NT@{P\+O\+I\+NT}!Line.\+cpp@{Line.\+cpp}}
+\subsubsection[{P\+O\+I\+NT}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tag\+P\+O\+I\+NT}  {\bf P\+O\+I\+NT}}\label{_line_8cpp_a08c8fe00ee2e7aa6bca4de0773582cd7}
+\index{Line.\+cpp@{Line.\+cpp}!P\+O\+I\+N\+T\+N\+O\+R\+M\+AL@{P\+O\+I\+N\+T\+N\+O\+R\+M\+AL}}
+\index{P\+O\+I\+N\+T\+N\+O\+R\+M\+AL@{P\+O\+I\+N\+T\+N\+O\+R\+M\+AL}!Line.\+cpp@{Line.\+cpp}}
+\subsubsection[{P\+O\+I\+N\+T\+N\+O\+R\+M\+AL}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tag\+P\+O\+I\+N\+T\+N\+O\+R\+M\+AL}  {\bf P\+O\+I\+N\+T\+N\+O\+R\+M\+AL}}\label{_line_8cpp_ae5f92678cd7271165ebcd4aabd61f28d}
+\index{Line.\+cpp@{Line.\+cpp}!P\+P\+O\+I\+NT@{P\+P\+O\+I\+NT}}
+\index{P\+P\+O\+I\+NT@{P\+P\+O\+I\+NT}!Line.\+cpp@{Line.\+cpp}}
+\subsubsection[{P\+P\+O\+I\+NT}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tag\+P\+O\+I\+NT} $\ast$ {\bf P\+P\+O\+I\+NT}}\label{_line_8cpp_af57e2741e99739d440b0ee5f788ce348}
+\index{Line.\+cpp@{Line.\+cpp}!P\+P\+O\+I\+N\+T\+N\+O\+R\+M\+AL@{P\+P\+O\+I\+N\+T\+N\+O\+R\+M\+AL}}
+\index{P\+P\+O\+I\+N\+T\+N\+O\+R\+M\+AL@{P\+P\+O\+I\+N\+T\+N\+O\+R\+M\+AL}!Line.\+cpp@{Line.\+cpp}}
+\subsubsection[{P\+P\+O\+I\+N\+T\+N\+O\+R\+M\+AL}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tag\+P\+O\+I\+N\+T\+N\+O\+R\+M\+AL} $\ast$ {\bf P\+P\+O\+I\+N\+T\+N\+O\+R\+M\+AL}}\label{_line_8cpp_a1231db3c9cf135d4d4c4b8d0d44abe83}
+\index{Line.\+cpp@{Line.\+cpp}!P\+P\+R\+O\+J\+E\+C\+T\+I\+ON@{P\+P\+R\+O\+J\+E\+C\+T\+I\+ON}}
+\index{P\+P\+R\+O\+J\+E\+C\+T\+I\+ON@{P\+P\+R\+O\+J\+E\+C\+T\+I\+ON}!Line.\+cpp@{Line.\+cpp}}
+\subsubsection[{P\+P\+R\+O\+J\+E\+C\+T\+I\+ON}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tag\+P\+R\+O\+J\+E\+C\+T\+I\+ON} $\ast$ {\bf P\+P\+R\+O\+J\+E\+C\+T\+I\+ON}}\label{_line_8cpp_a417b7d1c3557aee9136ff230780ee9e7}
+\index{Line.\+cpp@{Line.\+cpp}!P\+R\+O\+J\+E\+C\+T\+I\+ON@{P\+R\+O\+J\+E\+C\+T\+I\+ON}}
+\index{P\+R\+O\+J\+E\+C\+T\+I\+ON@{P\+R\+O\+J\+E\+C\+T\+I\+ON}!Line.\+cpp@{Line.\+cpp}}
+\subsubsection[{P\+R\+O\+J\+E\+C\+T\+I\+ON}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tag\+P\+R\+O\+J\+E\+C\+T\+I\+ON}  {\bf P\+R\+O\+J\+E\+C\+T\+I\+ON}}\label{_line_8cpp_a680f75f3daac7fd350f44884ec189a0e}
+\index{Line.\+cpp@{Line.\+cpp}!P\+V\+E\+C\+T\+O\+R2D@{P\+V\+E\+C\+T\+O\+R2D}}
+\index{P\+V\+E\+C\+T\+O\+R2D@{P\+V\+E\+C\+T\+O\+R2D}!Line.\+cpp@{Line.\+cpp}}
+\subsubsection[{P\+V\+E\+C\+T\+O\+R2D}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tag\+V\+E\+C\+T\+O\+R2D} $\ast$ {\bf P\+V\+E\+C\+T\+O\+R2D}}\label{_line_8cpp_ac1a2057c104a9990c4880b9993f631c1}
+\index{Line.\+cpp@{Line.\+cpp}!V\+E\+C\+T\+O\+R2D@{V\+E\+C\+T\+O\+R2D}}
+\index{V\+E\+C\+T\+O\+R2D@{V\+E\+C\+T\+O\+R2D}!Line.\+cpp@{Line.\+cpp}}
+\subsubsection[{V\+E\+C\+T\+O\+R2D}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf tag\+V\+E\+C\+T\+O\+R2D}  {\bf V\+E\+C\+T\+O\+R2D}}\label{_line_8cpp_a5835b332a4218d4946a72dd8715bc8cb}
+
+
+\subsection{Funções}
+\index{Line.\+cpp@{Line.\+cpp}!Hit\+Test\+Line@{Hit\+Test\+Line}}
+\index{Hit\+Test\+Line@{Hit\+Test\+Line}!Line.\+cpp@{Line.\+cpp}}
+\subsubsection[{Hit\+Test\+Line(\+P\+O\+I\+N\+T pt0, P\+O\+I\+N\+T pt1, P\+O\+I\+N\+T pt\+Mouse, int n\+Width)}]{\setlength{\rightskip}{0pt plus 5cm}bool Hit\+Test\+Line (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+O\+I\+NT}}]{pt0, }
+\item[{{\bf P\+O\+I\+NT}}]{pt1, }
+\item[{{\bf P\+O\+I\+NT}}]{pt\+Mouse, }
+\item[{int}]{n\+Width}
+\end{DoxyParamCaption}
+)}\label{_line_8cpp_afc2fadb5dfb1fa14a0fe08568725f250}
+
+
+Definição na linha 180 do arquivo Line.\+cpp.
+
+\index{Line.\+cpp@{Line.\+cpp}!v\+Dist\+From\+Point\+To\+Line@{v\+Dist\+From\+Point\+To\+Line}}
+\index{v\+Dist\+From\+Point\+To\+Line@{v\+Dist\+From\+Point\+To\+Line}!Line.\+cpp@{Line.\+cpp}}
+\subsubsection[{v\+Dist\+From\+Point\+To\+Line(\+L\+P\+P\+O\+I\+N\+T pt0, L\+P\+P\+O\+I\+N\+T pt1, L\+P\+P\+O\+I\+N\+T pt\+Test)}]{\setlength{\rightskip}{0pt plus 5cm}double v\+Dist\+From\+Point\+To\+Line (
+\begin{DoxyParamCaption}
+\item[{{\bf L\+P\+P\+O\+I\+NT}}]{pt0, }
+\item[{{\bf L\+P\+P\+O\+I\+NT}}]{pt1, }
+\item[{{\bf L\+P\+P\+O\+I\+NT}}]{pt\+Test}
+\end{DoxyParamCaption}
+)}\label{_line_8cpp_a6a39e9ee3dc49d2b27ad534b715c0d31}
+
+
+Definição na linha 166 do arquivo Line.\+cpp.
+
+\index{Line.\+cpp@{Line.\+cpp}!v\+Dot\+Product@{v\+Dot\+Product}}
+\index{v\+Dot\+Product@{v\+Dot\+Product}!Line.\+cpp@{Line.\+cpp}}
+\subsubsection[{v\+Dot\+Product(\+P\+V\+E\+C\+T\+O\+R2\+D v0, P\+V\+E\+C\+T\+O\+R2\+D v1)}]{\setlength{\rightskip}{0pt plus 5cm}double v\+Dot\+Product (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+V\+E\+C\+T\+O\+R2D}}]{v0, }
+\item[{{\bf P\+V\+E\+C\+T\+O\+R2D}}]{v1}
+\end{DoxyParamCaption}
+)}\label{_line_8cpp_af8d8c27a886aac697016980145d06b4c}
+
+
+Definição na linha 54 do arquivo Line.\+cpp.
+
+\index{Line.\+cpp@{Line.\+cpp}!vertical\+Length\+Of\+Normal@{vertical\+Length\+Of\+Normal}}
+\index{vertical\+Length\+Of\+Normal@{vertical\+Length\+Of\+Normal}!Line.\+cpp@{Line.\+cpp}}
+\subsubsection[{vertical\+Length\+Of\+Normal(\+P\+V\+E\+C\+T\+O\+R2\+D a, P\+V\+E\+C\+T\+O\+R2\+D b)}]{\setlength{\rightskip}{0pt plus 5cm}double vertical\+Length\+Of\+Normal (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+V\+E\+C\+T\+O\+R2D}}]{a, }
+\item[{{\bf P\+V\+E\+C\+T\+O\+R2D}}]{b}
+\end{DoxyParamCaption}
+)}\label{_line_8cpp_ad517d30d437c3f3b5a029c57c16e61b4}
+
+
+Definição na linha 111 do arquivo Line.\+cpp.
+
+\index{Line.\+cpp@{Line.\+cpp}!v\+Project\+And\+Resolve@{v\+Project\+And\+Resolve}}
+\index{v\+Project\+And\+Resolve@{v\+Project\+And\+Resolve}!Line.\+cpp@{Line.\+cpp}}
+\subsubsection[{v\+Project\+And\+Resolve(\+P\+V\+E\+C\+T\+O\+R2\+D v0, P\+V\+E\+C\+T\+O\+R2\+D v1, P\+P\+R\+O\+J\+E\+C\+T\+I\+O\+N pp\+Proj)}]{\setlength{\rightskip}{0pt plus 5cm}void v\+Project\+And\+Resolve (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+V\+E\+C\+T\+O\+R2D}}]{v0, }
+\item[{{\bf P\+V\+E\+C\+T\+O\+R2D}}]{v1, }
+\item[{{\bf P\+P\+R\+O\+J\+E\+C\+T\+I\+ON}}]{pp\+Proj}
+\end{DoxyParamCaption}
+)}\label{_line_8cpp_a7462c5e31ff6a28eab7f3f6002da6331}
+
+
+Definição na linha 132 do arquivo Line.\+cpp.
+
+\index{Line.\+cpp@{Line.\+cpp}!v\+Subtract\+Vectors@{v\+Subtract\+Vectors}}
+\index{v\+Subtract\+Vectors@{v\+Subtract\+Vectors}!Line.\+cpp@{Line.\+cpp}}
+\subsubsection[{v\+Subtract\+Vectors(\+P\+V\+E\+C\+T\+O\+R2\+D v0, P\+V\+E\+C\+T\+O\+R2\+D v1, P\+V\+E\+C\+T\+O\+R2\+D v)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+V\+E\+C\+T\+O\+R2D} v\+Subtract\+Vectors (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+V\+E\+C\+T\+O\+R2D}}]{v0, }
+\item[{{\bf P\+V\+E\+C\+T\+O\+R2D}}]{v1, }
+\item[{{\bf P\+V\+E\+C\+T\+O\+R2D}}]{v}
+\end{DoxyParamCaption}
+)}\label{_line_8cpp_a216fc1447b2fc467fe5208425afd04fa}
+
+
+Definição na linha 63 do arquivo Line.\+cpp.
+
+\index{Line.\+cpp@{Line.\+cpp}!v\+Vector\+Magnitude@{v\+Vector\+Magnitude}}
+\index{v\+Vector\+Magnitude@{v\+Vector\+Magnitude}!Line.\+cpp@{Line.\+cpp}}
+\subsubsection[{v\+Vector\+Magnitude(\+P\+V\+E\+C\+T\+O\+R2\+D v0)}]{\setlength{\rightskip}{0pt plus 5cm}double v\+Vector\+Magnitude (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+V\+E\+C\+T\+O\+R2D}}]{v0}
+\end{DoxyParamCaption}
+)}\label{_line_8cpp_aa21f3f3af9810c28c2cc85d3695d5cfc}
+
+
+Definição na linha 95 do arquivo Line.\+cpp.
+
+\index{Line.\+cpp@{Line.\+cpp}!v\+Vector\+Squared@{v\+Vector\+Squared}}
+\index{v\+Vector\+Squared@{v\+Vector\+Squared}!Line.\+cpp@{Line.\+cpp}}
+\subsubsection[{v\+Vector\+Squared(\+P\+V\+E\+C\+T\+O\+R2\+D v0)}]{\setlength{\rightskip}{0pt plus 5cm}double v\+Vector\+Squared (
+\begin{DoxyParamCaption}
+\item[{{\bf P\+V\+E\+C\+T\+O\+R2D}}]{v0}
+\end{DoxyParamCaption}
+)}\label{_line_8cpp_a8365abd6d59df3c2477e7c71a5f81f30}
+
+
+Definição na linha 79 do arquivo Line.\+cpp.
+

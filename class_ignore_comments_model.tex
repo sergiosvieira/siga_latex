@@ -1,0 +1,195 @@
+\section{Referência da Classe Ignore\+Comments\+Model}
+\label{class_ignore_comments_model}\index{Ignore\+Comments\+Model@{Ignore\+Comments\+Model}}
+
+
+{\ttfamily \#include $<$ignore-\/comments-\/model.\+h$>$}
+
+
+
+Herdeiro de {\bf Interface\+Model}.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf k\+Symbols} \{ {\bf H\+A\+S\+H\+T\+AG}, 
+{\bf D\+O\+U\+B\+L\+E\+\_\+\+S\+L\+A\+SH}, 
+{\bf O\+T\+H\+ER}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Ignore\+Comments\+Model} ()
+\item 
+void {\bf selected\+Symbols} (std\+::vector$<$ std\+::string $>$ \&a\+\_\+result)
+\item 
+void {\bf select\+Symbol} ({\bf k\+Symbols} a\+\_\+type, std\+::string a\+\_\+symbol=\char`\"{}\char`\"{})
+\item 
+void {\bf unselect\+Symbol} ({\bf k\+Symbols} a\+\_\+type)
+\item 
+bool {\bf is\+Selected} ({\bf k\+Symbols} a\+\_\+type)
+\item 
+std\+::string {\bf symbol} ({\bf k\+Symbols} a\+\_\+type)
+\item 
+void {\bf number\+Of\+Skipped\+Lines} (const int \&a\+\_\+value)
+\item 
+int {\bf number\+Of\+Skipped\+Lines} () const 
+\item 
+Json\+::\+Value {\bf json} ()
+\item 
+void {\bf load} (Json\+::\+Value \&a\+\_\+value)
+\item 
+const char $\ast$ {\bf root} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Estáticos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ {\bf k\+Root}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ {\bf k\+Symbols}, bool $>$ {\bf m\+\_\+selected\+Symbols}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+S\+TL Extends Class used on \doxyref{Import\+Window}{pag.}{class_import_window} Class 
+
+Definição na linha 18 do arquivo ignore-\/comments-\/model.\+h.
+
+
+
+\subsection{Enumerações}
+\index{Ignore\+Comments\+Model@{Ignore\+Comments\+Model}!k\+Symbols@{k\+Symbols}}
+\index{k\+Symbols@{k\+Symbols}!Ignore\+Comments\+Model@{Ignore\+Comments\+Model}}
+\subsubsection[{k\+Symbols}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Ignore\+Comments\+Model\+::k\+Symbols}}\label{class_ignore_comments_model_aae88cf180a2b12ad359e08969f985c20}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{H\+A\+S\+H\+T\+AG@{H\+A\+S\+H\+T\+AG}!Ignore\+Comments\+Model@{Ignore\+Comments\+Model}}\index{Ignore\+Comments\+Model@{Ignore\+Comments\+Model}!H\+A\+S\+H\+T\+AG@{H\+A\+S\+H\+T\+AG}}\item[{\em 
+H\+A\+S\+H\+T\+AG\label{class_ignore_comments_model_aae88cf180a2b12ad359e08969f985c20a89dfa185a859a7522ee12041eedb3ea4}
+}]\index{D\+O\+U\+B\+L\+E\+\_\+\+S\+L\+A\+SH@{D\+O\+U\+B\+L\+E\+\_\+\+S\+L\+A\+SH}!Ignore\+Comments\+Model@{Ignore\+Comments\+Model}}\index{Ignore\+Comments\+Model@{Ignore\+Comments\+Model}!D\+O\+U\+B\+L\+E\+\_\+\+S\+L\+A\+SH@{D\+O\+U\+B\+L\+E\+\_\+\+S\+L\+A\+SH}}\item[{\em 
+D\+O\+U\+B\+L\+E\+\_\+\+S\+L\+A\+SH\label{class_ignore_comments_model_aae88cf180a2b12ad359e08969f985c20ab62dc507b55210edfe1478e2c17a478a}
+}]\index{O\+T\+H\+ER@{O\+T\+H\+ER}!Ignore\+Comments\+Model@{Ignore\+Comments\+Model}}\index{Ignore\+Comments\+Model@{Ignore\+Comments\+Model}!O\+T\+H\+ER@{O\+T\+H\+ER}}\item[{\em 
+O\+T\+H\+ER\label{class_ignore_comments_model_aae88cf180a2b12ad359e08969f985c20af0aae6a68f3448c2b4c5a68b8bf3ba36}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 21 do arquivo ignore-\/comments-\/model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Ignore\+Comments\+Model@{Ignore\+Comments\+Model}!Ignore\+Comments\+Model@{Ignore\+Comments\+Model}}
+\index{Ignore\+Comments\+Model@{Ignore\+Comments\+Model}!Ignore\+Comments\+Model@{Ignore\+Comments\+Model}}
+\subsubsection[{Ignore\+Comments\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Ignore\+Comments\+Model\+::\+Ignore\+Comments\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_ignore_comments_model_aba8e397a6fb4c848ba112c86ec359cbc}
+
+
+\subsection{Métodos}
+\index{Ignore\+Comments\+Model@{Ignore\+Comments\+Model}!is\+Selected@{is\+Selected}}
+\index{is\+Selected@{is\+Selected}!Ignore\+Comments\+Model@{Ignore\+Comments\+Model}}
+\subsubsection[{is\+Selected(k\+Symbols a\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}bool Ignore\+Comments\+Model\+::is\+Selected (
+\begin{DoxyParamCaption}
+\item[{{\bf k\+Symbols}}]{a\+\_\+type}
+\end{DoxyParamCaption}
+)}\label{class_ignore_comments_model_a7cf8c02446a59c5f2d079fe4cfba03bf}
+\index{Ignore\+Comments\+Model@{Ignore\+Comments\+Model}!json@{json}}
+\index{json@{json}!Ignore\+Comments\+Model@{Ignore\+Comments\+Model}}
+\subsubsection[{json()}]{\setlength{\rightskip}{0pt plus 5cm}Json\+::\+Value Ignore\+Comments\+Model\+::json (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_ignore_comments_model_ab251f1181cf526994b0bcb4a739afcb5}
+Exemplo \{ \char`\"{}comma\char`\"{} \+: false, \char`\"{}other\char`\"{} \+: \{ \char`\"{}checked\char`\"{} \+: false \}, \char`\"{}semicolon\char`\"{} \+: false, \char`\"{}space\char`\"{} \+: true, \char`\"{}tab\char`\"{} \+: true, \char`\"{}value\char`\"{} \+: \char`\"{}\char`\"{}, \char`\"{}skipped\+\_\+lines\char`\"{}\+: 0 \} \index{Ignore\+Comments\+Model@{Ignore\+Comments\+Model}!load@{load}}
+\index{load@{load}!Ignore\+Comments\+Model@{Ignore\+Comments\+Model}}
+\subsubsection[{load(\+Json\+::\+Value \&a\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}void Ignore\+Comments\+Model\+::load (
+\begin{DoxyParamCaption}
+\item[{Json\+::\+Value \&}]{a\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_ignore_comments_model_ab8c4668c93dfbc6bea5ce386dd440174}
+
+
+Implementa {\bf Interface\+Model} \doxyref{}{pag.}{class_interface_model_aabefd64dd681b6adf84eeaa3ba35e381}.
+
+\index{Ignore\+Comments\+Model@{Ignore\+Comments\+Model}!number\+Of\+Skipped\+Lines@{number\+Of\+Skipped\+Lines}}
+\index{number\+Of\+Skipped\+Lines@{number\+Of\+Skipped\+Lines}!Ignore\+Comments\+Model@{Ignore\+Comments\+Model}}
+\subsubsection[{number\+Of\+Skipped\+Lines(const int \&a\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}void Ignore\+Comments\+Model\+::number\+Of\+Skipped\+Lines (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{a\+\_\+value}
+\end{DoxyParamCaption}
+)}\label{class_ignore_comments_model_a1d4d6ad06ebd6ec21735906e5519d40a}
+\index{Ignore\+Comments\+Model@{Ignore\+Comments\+Model}!number\+Of\+Skipped\+Lines@{number\+Of\+Skipped\+Lines}}
+\index{number\+Of\+Skipped\+Lines@{number\+Of\+Skipped\+Lines}!Ignore\+Comments\+Model@{Ignore\+Comments\+Model}}
+\subsubsection[{number\+Of\+Skipped\+Lines() const }]{\setlength{\rightskip}{0pt plus 5cm}int Ignore\+Comments\+Model\+::number\+Of\+Skipped\+Lines (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_ignore_comments_model_aff9b820d3a2d27721cd013d34128b4f3}
+\index{Ignore\+Comments\+Model@{Ignore\+Comments\+Model}!root@{root}}
+\index{root@{root}!Ignore\+Comments\+Model@{Ignore\+Comments\+Model}}
+\subsubsection[{root()}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Ignore\+Comments\+Model\+::root (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_ignore_comments_model_a51103368158295b845f908228735e7a4}
+
+
+Implementa {\bf Interface\+Model} \doxyref{}{pag.}{class_interface_model_a48cdeaf2173330586130269911a91596}.
+
+\index{Ignore\+Comments\+Model@{Ignore\+Comments\+Model}!selected\+Symbols@{selected\+Symbols}}
+\index{selected\+Symbols@{selected\+Symbols}!Ignore\+Comments\+Model@{Ignore\+Comments\+Model}}
+\subsubsection[{selected\+Symbols(std\+::vector$<$ std\+::string $>$ \&a\+\_\+result)}]{\setlength{\rightskip}{0pt plus 5cm}void Ignore\+Comments\+Model\+::selected\+Symbols (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$ \&}]{a\+\_\+result}
+\end{DoxyParamCaption}
+)}\label{class_ignore_comments_model_a2994dc0039043c235274e7c81e8467df}
+\index{Ignore\+Comments\+Model@{Ignore\+Comments\+Model}!select\+Symbol@{select\+Symbol}}
+\index{select\+Symbol@{select\+Symbol}!Ignore\+Comments\+Model@{Ignore\+Comments\+Model}}
+\subsubsection[{select\+Symbol(k\+Symbols a\+\_\+type, std\+::string a\+\_\+symbol="""")}]{\setlength{\rightskip}{0pt plus 5cm}void Ignore\+Comments\+Model\+::select\+Symbol (
+\begin{DoxyParamCaption}
+\item[{{\bf k\+Symbols}}]{a\+\_\+type, }
+\item[{std\+::string}]{a\+\_\+symbol = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_ignore_comments_model_acdbb44bbc79b0838e40dfc0a32039e92}
+\index{Ignore\+Comments\+Model@{Ignore\+Comments\+Model}!symbol@{symbol}}
+\index{symbol@{symbol}!Ignore\+Comments\+Model@{Ignore\+Comments\+Model}}
+\subsubsection[{symbol(k\+Symbols a\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Ignore\+Comments\+Model\+::symbol (
+\begin{DoxyParamCaption}
+\item[{{\bf k\+Symbols}}]{a\+\_\+type}
+\end{DoxyParamCaption}
+)}\label{class_ignore_comments_model_a5c4de51ce270360c4786a17adece4484}
+\index{Ignore\+Comments\+Model@{Ignore\+Comments\+Model}!unselect\+Symbol@{unselect\+Symbol}}
+\index{unselect\+Symbol@{unselect\+Symbol}!Ignore\+Comments\+Model@{Ignore\+Comments\+Model}}
+\subsubsection[{unselect\+Symbol(k\+Symbols a\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}void Ignore\+Comments\+Model\+::unselect\+Symbol (
+\begin{DoxyParamCaption}
+\item[{{\bf k\+Symbols}}]{a\+\_\+type}
+\end{DoxyParamCaption}
+)}\label{class_ignore_comments_model_a0698ff6549a939e3dfc9a2303d28f62c}
+
+
+\subsection{Atributos}
+\index{Ignore\+Comments\+Model@{Ignore\+Comments\+Model}!k\+Root@{k\+Root}}
+\index{k\+Root@{k\+Root}!Ignore\+Comments\+Model@{Ignore\+Comments\+Model}}
+\subsubsection[{k\+Root}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Ignore\+Comments\+Model\+::k\+Root\hspace{0.3cm}{\ttfamily [static]}}\label{class_ignore_comments_model_a36448e9125c256bee0c7d6ed2cf40112}
+
+
+Definição na linha 27 do arquivo ignore-\/comments-\/model.\+h.
+
+\index{Ignore\+Comments\+Model@{Ignore\+Comments\+Model}!m\+\_\+selected\+Symbols@{m\+\_\+selected\+Symbols}}
+\index{m\+\_\+selected\+Symbols@{m\+\_\+selected\+Symbols}!Ignore\+Comments\+Model@{Ignore\+Comments\+Model}}
+\subsubsection[{m\+\_\+selected\+Symbols}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<${\bf k\+Symbols}, bool$>$ Ignore\+Comments\+Model\+::m\+\_\+selected\+Symbols\hspace{0.3cm}{\ttfamily [protected]}}\label{class_ignore_comments_model_a32b076990d1596128b9258d722d7cb9e}
+
+
+Definição na linha 56 do arquivo ignore-\/comments-\/model.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf ignore-\/comments-\/model.\+h}\end{DoxyCompactItemize}

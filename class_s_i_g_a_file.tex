@@ -1,0 +1,147 @@
+\section{Referência da Classe S\+I\+G\+A\+File}
+\label{class_s_i_g_a_file}\index{S\+I\+G\+A\+File@{S\+I\+G\+A\+File}}
+
+
+{\ttfamily \#include $<$S\+I\+G\+A\+File.\+h$>$}
+
+
+
+Superclasse de {\bf Matrix\+File}, {\bf Serie\+File} e {\bf Vector\+File}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+G\+A\+File} (const wx\+String \&{\bf name}, void $\ast$element)
+\item 
+{\bf $\sim$\+S\+I\+G\+A\+File} ()
+\item 
+bool {\bf save} ()
+\item 
+bool {\bf load} ()
+\item 
+void {\bf trim} (wx\+String $\ast$str)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+String {\bf name}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf make\+Save} (wx\+Output\+Stream $\ast$out, wx\+Text\+Output\+Stream $\ast$file)=0
+\item 
+virtual bool {\bf make\+Load} (wx\+Input\+Stream $\ast$in, wx\+Text\+Input\+Stream $\ast$file)=0
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ {\bf m\+\_\+void\+Pointer\+To\+Element}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf S\+I\+G\+A\+Project}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 13 do arquivo S\+I\+G\+A\+File.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{S\+I\+G\+A\+File@{S\+I\+G\+A\+File}!S\+I\+G\+A\+File@{S\+I\+G\+A\+File}}
+\index{S\+I\+G\+A\+File@{S\+I\+G\+A\+File}!S\+I\+G\+A\+File@{S\+I\+G\+A\+File}}
+\subsubsection[{S\+I\+G\+A\+File(const wx\+String \&name, void $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}S\+I\+G\+A\+File\+::\+S\+I\+G\+A\+File (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{name, }
+\item[{void $\ast$}]{element}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_file_a728425d363dee6bc2d6d1f67a0c62dcc}
+\index{S\+I\+G\+A\+File@{S\+I\+G\+A\+File}!````~S\+I\+G\+A\+File@{$\sim$\+S\+I\+G\+A\+File}}
+\index{````~S\+I\+G\+A\+File@{$\sim$\+S\+I\+G\+A\+File}!S\+I\+G\+A\+File@{S\+I\+G\+A\+File}}
+\subsubsection[{$\sim$\+S\+I\+G\+A\+File()}]{\setlength{\rightskip}{0pt plus 5cm}S\+I\+G\+A\+File\+::$\sim$\+S\+I\+G\+A\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_file_a086e4d46b1174218817b9d782787971b}
+
+
+\subsection{Métodos}
+\index{S\+I\+G\+A\+File@{S\+I\+G\+A\+File}!load@{load}}
+\index{load@{load}!S\+I\+G\+A\+File@{S\+I\+G\+A\+File}}
+\subsubsection[{load()}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+File\+::load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_file_aa319dbaaba5e98388bce0e868f9cf570}
+\index{S\+I\+G\+A\+File@{S\+I\+G\+A\+File}!make\+Load@{make\+Load}}
+\index{make\+Load@{make\+Load}!S\+I\+G\+A\+File@{S\+I\+G\+A\+File}}
+\subsubsection[{make\+Load(wx\+Input\+Stream $\ast$in, wx\+Text\+Input\+Stream $\ast$file)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool S\+I\+G\+A\+File\+::make\+Load (
+\begin{DoxyParamCaption}
+\item[{wx\+Input\+Stream $\ast$}]{in, }
+\item[{wx\+Text\+Input\+Stream $\ast$}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{class_s_i_g_a_file_a1857077f4fdcdeb1ca93d0e5fcd70dfe}
+\index{S\+I\+G\+A\+File@{S\+I\+G\+A\+File}!make\+Save@{make\+Save}}
+\index{make\+Save@{make\+Save}!S\+I\+G\+A\+File@{S\+I\+G\+A\+File}}
+\subsubsection[{make\+Save(wx\+Output\+Stream $\ast$out, wx\+Text\+Output\+Stream $\ast$file)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+I\+G\+A\+File\+::make\+Save (
+\begin{DoxyParamCaption}
+\item[{wx\+Output\+Stream $\ast$}]{out, }
+\item[{wx\+Text\+Output\+Stream $\ast$}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{class_s_i_g_a_file_a0ac8df6e755802c3382b03ab72864da5}
+\index{S\+I\+G\+A\+File@{S\+I\+G\+A\+File}!save@{save}}
+\index{save@{save}!S\+I\+G\+A\+File@{S\+I\+G\+A\+File}}
+\subsubsection[{save()}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+File\+::save (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_file_a8f48fe440e74efc71f1f432bfbb94fd3}
+\index{S\+I\+G\+A\+File@{S\+I\+G\+A\+File}!trim@{trim}}
+\index{trim@{trim}!S\+I\+G\+A\+File@{S\+I\+G\+A\+File}}
+\subsubsection[{trim(wx\+String $\ast$str)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+File\+::trim (
+\begin{DoxyParamCaption}
+\item[{wx\+String $\ast$}]{str}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_file_ab5a98bf62660c1da41d5108549873a3a}
+Remover os espa�os em branco do in�cio e do final da str e troca espa�os em branco por /t 
+\begin{DoxyParams}{Parâmetros}
+{\em str} & wx\+String recebida \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Amigas e Funções Relacionadas}
+\index{S\+I\+G\+A\+File@{S\+I\+G\+A\+File}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!S\+I\+G\+A\+File@{S\+I\+G\+A\+File}}
+\subsubsection[{S\+I\+G\+A\+Project}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf S\+I\+G\+A\+Project}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_i_g_a_file_a1cd9954f0d975ab99a08e9fbf505e632}
+
+
+Definição na linha 66 do arquivo S\+I\+G\+A\+File.\+h.
+
+
+
+\subsection{Atributos}
+\index{S\+I\+G\+A\+File@{S\+I\+G\+A\+File}!m\+\_\+void\+Pointer\+To\+Element@{m\+\_\+void\+Pointer\+To\+Element}}
+\index{m\+\_\+void\+Pointer\+To\+Element@{m\+\_\+void\+Pointer\+To\+Element}!S\+I\+G\+A\+File@{S\+I\+G\+A\+File}}
+\subsubsection[{m\+\_\+void\+Pointer\+To\+Element}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ S\+I\+G\+A\+File\+::m\+\_\+void\+Pointer\+To\+Element\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_file_acb7f9754b5fe0ed296575ecf61bd2bd8}
+
+
+Definição na linha 29 do arquivo S\+I\+G\+A\+File.\+h.
+
+\index{S\+I\+G\+A\+File@{S\+I\+G\+A\+File}!name@{name}}
+\index{name@{name}!S\+I\+G\+A\+File@{S\+I\+G\+A\+File}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+File\+::name}\label{class_s_i_g_a_file_ab191ca75532a39d2241dd7c48696a0db}
+
+
+Definição na linha 34 do arquivo S\+I\+G\+A\+File.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+G\+A\+File.\+h}\end{DoxyCompactItemize}

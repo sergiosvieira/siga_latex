@@ -1,0 +1,396 @@
+\section{ReferÃªncia da Classe Obj\+Function}
+\label{class_obj_function}\index{Obj\+Function@{Obj\+Function}}
+
+
+{\ttfamily \#include $<$Obj\+Function.\+h$>$}
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ {\bf get\+Name} ({\bf Obj\+Func} obj)
+\item 
+char $\ast$ {\bf get\+Unit} ({\bf Obj\+Func} obj)
+\item 
+{\bf Matrix} {\bf run} ({\bf Matrix} \&swarm, {\bf Opt\+Model} $\ast$model={\bf N\+U\+LL})
+\item 
+{\bf Matrix} {\bf run\+Test} ({\bf Matrix} \&swarm)
+\item 
+double {\bf run\+Function} ({\bf Obj\+Func} obj)
+\item 
+{\bf Serie} $\ast$ {\bf run\+Model} ({\bf Matrix} \&swarm\+Line)
+\item 
+bool {\bf Check\+Limits} ({\bf Matrix} \&swarm\+Line)
+\item 
+double {\bf Nash\+Sutcliffe} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf N\+S\+CP} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf N\+S\+Picos} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf N\+S\+VolM} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf N\+S\+VolA} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf N\+S\+Above\+Median} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf N\+S\+Below\+Median} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf U1} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf U2} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf U3} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf U4} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf U5} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf U6} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf U8} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf U9} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf U10} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf U11} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf U12} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf O\+F2} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf O\+F3} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf O\+F4} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf O\+F5} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+double {\bf O\+F6} ({\bf Interval} interval, {\bf Serie} $\ast$obs, {\bf Serie} $\ast$calc)
+\item 
+{\bf Obj\+Function} ()
+\item 
+virtual {\bf $\sim$\+Obj\+Function} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ {\bf Obj\+Func} $>$ {\bf sel\+Func}
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+Classe abstrata para funções objetivo 
+
+DefiniÃ§Ã£o na linha 48 do arquivo Obj\+Function.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Obj\+Function@{Obj\+Function}!Obj\+Function@{Obj\+Function}}
+\index{Obj\+Function@{Obj\+Function}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{Obj\+Function()}]{\setlength{\rightskip}{0pt plus 5cm}Obj\+Function\+::\+Obj\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_a3195c38bc116a08148c498b53c6ba1b1}
+Construtor \index{Obj\+Function@{Obj\+Function}!````~Obj\+Function@{$\sim$\+Obj\+Function}}
+\index{````~Obj\+Function@{$\sim$\+Obj\+Function}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{$\sim$\+Obj\+Function()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Obj\+Function\+::$\sim$\+Obj\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_obj_function_a9d0aab188e673d92674acaa6e7e921c9}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{Obj\+Function@{Obj\+Function}!Check\+Limits@{Check\+Limits}}
+\index{Check\+Limits@{Check\+Limits}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{Check\+Limits(\+Matrix \&swarm\+Line)}]{\setlength{\rightskip}{0pt plus 5cm}bool Obj\+Function\+::\+Check\+Limits (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{swarm\+Line}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_ae24f87d6dcfec8fe8637d6095d785099}
+Verifica se swarm\+Line estoura os limites (0 $<$= swarm\+Line[i] $<$= 1) \index{Obj\+Function@{Obj\+Function}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{get\+Name(\+Obj\+Func obj)}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Obj\+Function\+::get\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf Obj\+Func}}]{obj}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_ac9b483d1578789fa4d28e11534b00553}
+Captura o modelo em uso \index{Obj\+Function@{Obj\+Function}!get\+Unit@{get\+Unit}}
+\index{get\+Unit@{get\+Unit}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{get\+Unit(\+Obj\+Func obj)}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Obj\+Function\+::get\+Unit (
+\begin{DoxyParamCaption}
+\item[{{\bf Obj\+Func}}]{obj}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_a0d53738a2abbbc8392c207c1510977a7}
+Retorna a unidade da função \index{Obj\+Function@{Obj\+Function}!Nash\+Sutcliffe@{Nash\+Sutcliffe}}
+\index{Nash\+Sutcliffe@{Nash\+Sutcliffe}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{Nash\+Sutcliffe(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+Nash\+Sutcliffe (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_a5b6d2501be8b935fe8d5619a48291095}
+Funções Objetivo 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em interval} & Intervalo de simulação \\
+\hline
+{\em obs} & \doxyref{Serie}{pag.}{class_serie} observada \\
+\hline
+{\em calc} & \doxyref{Serie}{pag.}{class_serie} prevista \\
+\hline
+\end{DoxyParams}
+\index{Obj\+Function@{Obj\+Function}!N\+S\+Above\+Median@{N\+S\+Above\+Median}}
+\index{N\+S\+Above\+Median@{N\+S\+Above\+Median}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{N\+S\+Above\+Median(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+N\+S\+Above\+Median (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_aa7002c714c9905e8d0e8369c43043669}
+\index{Obj\+Function@{Obj\+Function}!N\+S\+Below\+Median@{N\+S\+Below\+Median}}
+\index{N\+S\+Below\+Median@{N\+S\+Below\+Median}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{N\+S\+Below\+Median(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+N\+S\+Below\+Median (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_a90b718ef80f772c11949de2a91abbbd6}
+\index{Obj\+Function@{Obj\+Function}!N\+S\+CP@{N\+S\+CP}}
+\index{N\+S\+CP@{N\+S\+CP}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{N\+S\+C\+P(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+N\+S\+CP (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_af63deb822655f4ec5819a411fb276fed}
+\index{Obj\+Function@{Obj\+Function}!N\+S\+Picos@{N\+S\+Picos}}
+\index{N\+S\+Picos@{N\+S\+Picos}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{N\+S\+Picos(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+N\+S\+Picos (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_ab2f42bba25b0839927b4f788af8737eb}
+\index{Obj\+Function@{Obj\+Function}!N\+S\+VolA@{N\+S\+VolA}}
+\index{N\+S\+VolA@{N\+S\+VolA}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{N\+S\+Vol\+A(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+N\+S\+VolA (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_a0a0669a5f59d0cd53b6bb4c3e55fae5a}
+\index{Obj\+Function@{Obj\+Function}!N\+S\+VolM@{N\+S\+VolM}}
+\index{N\+S\+VolM@{N\+S\+VolM}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{N\+S\+Vol\+M(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+N\+S\+VolM (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_aba7745ae41199f0a415c746dc82e17b2}
+\index{Obj\+Function@{Obj\+Function}!O\+F2@{O\+F2}}
+\index{O\+F2@{O\+F2}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{O\+F2(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+O\+F2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_a8b72a60466c6396b112ae2fa77a3b107}
+\index{Obj\+Function@{Obj\+Function}!O\+F3@{O\+F3}}
+\index{O\+F3@{O\+F3}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{O\+F3(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+O\+F3 (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_a79d3c1fd4c21fa1c3710ec81efd83248}
+\index{Obj\+Function@{Obj\+Function}!O\+F4@{O\+F4}}
+\index{O\+F4@{O\+F4}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{O\+F4(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+O\+F4 (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_acf748dfee56fc4b5e8fe9e76260e791f}
+\index{Obj\+Function@{Obj\+Function}!O\+F5@{O\+F5}}
+\index{O\+F5@{O\+F5}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{O\+F5(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+O\+F5 (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_ac22164409ba188b8c928b3c963562d7f}
+\index{Obj\+Function@{Obj\+Function}!O\+F6@{O\+F6}}
+\index{O\+F6@{O\+F6}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{O\+F6(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+O\+F6 (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_aa39e51577e1e785cba6eedee76444126}
+\index{Obj\+Function@{Obj\+Function}!run@{run}}
+\index{run@{run}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{run(\+Matrix \&swarm, Opt\+Model $\ast$model=\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Obj\+Function\+::run (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{swarm, }
+\item[{{\bf Opt\+Model} $\ast$}]{model = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_a034a049669c35290c019e55f016ee693}
+Executa a função objetivo (abstrato) \index{Obj\+Function@{Obj\+Function}!run\+Function@{run\+Function}}
+\index{run\+Function@{run\+Function}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{run\+Function(\+Obj\+Func obj)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::run\+Function (
+\begin{DoxyParamCaption}
+\item[{{\bf Obj\+Func}}]{obj}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_a060bd8076f39de7273ac686da38e453d}
+Executa a função objetivo (abstrato) \index{Obj\+Function@{Obj\+Function}!run\+Model@{run\+Model}}
+\index{run\+Model@{run\+Model}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{run\+Model(\+Matrix \&swarm\+Line)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ Obj\+Function\+::run\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{swarm\+Line}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_a31ac0a3953970546508d42af02ba8c1a}
+Executa o modelo \index{Obj\+Function@{Obj\+Function}!run\+Test@{run\+Test}}
+\index{run\+Test@{run\+Test}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{run\+Test(\+Matrix \&swarm)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Obj\+Function\+::run\+Test (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{swarm}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_aba2b9dd800126445d0a5fc875f2e8cd5}
+Função de teste usado no M\+O\+P\+SO para checar se a geração da frente de pareto está OK.
+
+
+\begin{DoxyParams}{ParÃ¢metros}
+{\em swarm} & \doxyref{Matrix}{pag.}{class_matrix} de valores aleatórios entre 0 e 1. Swarm tem que ter dimensões N por 2 (M[n][2]). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+fwarm \doxyref{Matrix}{pag.}{class_matrix} com resultados das funções objetivo de teste para o swarm de entrada 
+\end{DoxyReturn}
+\index{Obj\+Function@{Obj\+Function}!U1@{U1}}
+\index{U1@{U1}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{U1(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+U1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_a903e3cb9693e53324ab5d63c259930b7}
+\index{Obj\+Function@{Obj\+Function}!U10@{U10}}
+\index{U10@{U10}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{U10(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+U10 (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_ad77e700519b009d3109e6511f79eb247}
+\index{Obj\+Function@{Obj\+Function}!U11@{U11}}
+\index{U11@{U11}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{U11(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+U11 (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_a6ba0137b0731db3df0751f212ae2de85}
+\index{Obj\+Function@{Obj\+Function}!U12@{U12}}
+\index{U12@{U12}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{U12(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+U12 (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_a8af4f28b7a7ac6bf8115a990184c67ca}
+\index{Obj\+Function@{Obj\+Function}!U2@{U2}}
+\index{U2@{U2}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{U2(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+U2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_ac8def76666c0ac4bf3456427d9be0192}
+\index{Obj\+Function@{Obj\+Function}!U3@{U3}}
+\index{U3@{U3}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{U3(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+U3 (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_afe8787766eb6104f9c3c75c2f28cd231}
+\index{Obj\+Function@{Obj\+Function}!U4@{U4}}
+\index{U4@{U4}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{U4(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+U4 (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_a14649cfaf6fe6661dd9cce60b41de939}
+\index{Obj\+Function@{Obj\+Function}!U5@{U5}}
+\index{U5@{U5}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{U5(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+U5 (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_a27b94e23beaccab12b9ea10407c4520e}
+\index{Obj\+Function@{Obj\+Function}!U6@{U6}}
+\index{U6@{U6}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{U6(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+U6 (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_aae90f88a8c5ba5d1f2b91cdbb38f40b4}
+\index{Obj\+Function@{Obj\+Function}!U8@{U8}}
+\index{U8@{U8}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{U8(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+U8 (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_a976941a6241f7c35e2a5a072111310e1}
+\index{Obj\+Function@{Obj\+Function}!U9@{U9}}
+\index{U9@{U9}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{U9(\+Interval interval, Serie $\ast$obs, Serie $\ast$calc)}]{\setlength{\rightskip}{0pt plus 5cm}double Obj\+Function\+::\+U9 (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Serie} $\ast$}]{obs, }
+\item[{{\bf Serie} $\ast$}]{calc}
+\end{DoxyParamCaption}
+)}\label{class_obj_function_a9249d100642b1f5ed27623077fa32913}
+
+
+\subsection{Atributos}
+\index{Obj\+Function@{Obj\+Function}!sel\+Func@{sel\+Func}}
+\index{sel\+Func@{sel\+Func}!Obj\+Function@{Obj\+Function}}
+\subsubsection[{sel\+Func}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Obj\+Func}$>$ Obj\+Function\+::sel\+Func}\label{class_obj_function_a0f5258002b99f766418e3867f108638c}
+Funções Selecionadas 
+
+DefiniÃ§Ã£o na linha 70 do arquivo Obj\+Function.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Obj\+Function.\+h}\end{DoxyCompactItemize}

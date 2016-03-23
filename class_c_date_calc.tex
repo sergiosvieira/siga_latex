@@ -1,0 +1,107 @@
+\section{Referência da Classe C\+Date\+Calc}
+\label{class_c_date_calc}\index{C\+Date\+Calc@{C\+Date\+Calc}}
+
+
+{\ttfamily \#include $<$cdatecalc.\+h$>$}
+
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf DateS}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bf Set\+Pivot\+Year} ({\bf Int32} pivot\+Year)
+\item 
+static {\bf Int32} {\bf Get\+Pivot\+Year} ()
+\item 
+static {\bf Int32} {\bf Ensure\+Year\+With\+Century} ({\bf Int32} year)
+\item 
+static {\bf Int32} {\bf Calc\+Julian\+Period} ({\bf Int32} year, {\bf Int32} month, {\bf Int32} day)
+\item 
+static {\bf Int32} {\bf Calc\+Julian\+Period} ({\bf Int32} year, {\bf Int32} day\+Of\+Year)
+\item 
+static void {\bf Calculate\+Date} ({\bf Int32} julian\+Period, {\bf DateS} \&date\+Details, bool want\+Week\+Details=true)
+\item 
+static {\bf Int32} {\bf Days\+In\+Month} ({\bf Int32} month, bool is\+Leap\+Year)
+\item 
+static {\bf Int32} {\bf Is\+Leap\+Year} ({\bf Int32} year)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 70 do arquivo cdatecalc.\+h.
+
+
+
+\subsection{Métodos}
+\index{C\+Date\+Calc@{C\+Date\+Calc}!Calc\+Julian\+Period@{Calc\+Julian\+Period}}
+\index{Calc\+Julian\+Period@{Calc\+Julian\+Period}!C\+Date\+Calc@{C\+Date\+Calc}}
+\subsubsection[{Calc\+Julian\+Period(\+Int32 year, Int32 month, Int32 day)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Int32} C\+Date\+Calc\+::\+Calc\+Julian\+Period (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{year, }
+\item[{{\bf Int32}}]{month, }
+\item[{{\bf Int32}}]{day}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_c_date_calc_a5a61cc3e801c1212646bbb25534e59b8}
+\index{C\+Date\+Calc@{C\+Date\+Calc}!Calc\+Julian\+Period@{Calc\+Julian\+Period}}
+\index{Calc\+Julian\+Period@{Calc\+Julian\+Period}!C\+Date\+Calc@{C\+Date\+Calc}}
+\subsubsection[{Calc\+Julian\+Period(\+Int32 year, Int32 day\+Of\+Year)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Int32} C\+Date\+Calc\+::\+Calc\+Julian\+Period (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{year, }
+\item[{{\bf Int32}}]{day\+Of\+Year}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_c_date_calc_ab91244758ddca6f3e61876208530ff88}
+\index{C\+Date\+Calc@{C\+Date\+Calc}!Calculate\+Date@{Calculate\+Date}}
+\index{Calculate\+Date@{Calculate\+Date}!C\+Date\+Calc@{C\+Date\+Calc}}
+\subsubsection[{Calculate\+Date(\+Int32 julian\+Period, Date\+S \&date\+Details, bool want\+Week\+Details=true)}]{\setlength{\rightskip}{0pt plus 5cm}static void C\+Date\+Calc\+::\+Calculate\+Date (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{julian\+Period, }
+\item[{{\bf DateS} \&}]{date\+Details, }
+\item[{bool}]{want\+Week\+Details = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_c_date_calc_a366ab7fe68ca8c4d1924556b83506e66}
+\index{C\+Date\+Calc@{C\+Date\+Calc}!Days\+In\+Month@{Days\+In\+Month}}
+\index{Days\+In\+Month@{Days\+In\+Month}!C\+Date\+Calc@{C\+Date\+Calc}}
+\subsubsection[{Days\+In\+Month(\+Int32 month, bool is\+Leap\+Year)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Int32} C\+Date\+Calc\+::\+Days\+In\+Month (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{month, }
+\item[{bool}]{is\+Leap\+Year}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_c_date_calc_a8b91e7a9a5694de90d38c81bed05bb1e}
+\index{C\+Date\+Calc@{C\+Date\+Calc}!Ensure\+Year\+With\+Century@{Ensure\+Year\+With\+Century}}
+\index{Ensure\+Year\+With\+Century@{Ensure\+Year\+With\+Century}!C\+Date\+Calc@{C\+Date\+Calc}}
+\subsubsection[{Ensure\+Year\+With\+Century(\+Int32 year)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Int32} C\+Date\+Calc\+::\+Ensure\+Year\+With\+Century (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{year}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_c_date_calc_a53ed1406d1968d250006becb70fe4f27}
+\index{C\+Date\+Calc@{C\+Date\+Calc}!Get\+Pivot\+Year@{Get\+Pivot\+Year}}
+\index{Get\+Pivot\+Year@{Get\+Pivot\+Year}!C\+Date\+Calc@{C\+Date\+Calc}}
+\subsubsection[{Get\+Pivot\+Year()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Int32} C\+Date\+Calc\+::\+Get\+Pivot\+Year (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_c_date_calc_aa815cdaf6ad2bf061e541f2ce7a7f23e}
+\index{C\+Date\+Calc@{C\+Date\+Calc}!Is\+Leap\+Year@{Is\+Leap\+Year}}
+\index{Is\+Leap\+Year@{Is\+Leap\+Year}!C\+Date\+Calc@{C\+Date\+Calc}}
+\subsubsection[{Is\+Leap\+Year(\+Int32 year)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Int32} C\+Date\+Calc\+::\+Is\+Leap\+Year (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{year}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_c_date_calc_aa3617b66a76631ecb13aef6f96b69a4c}
+\index{C\+Date\+Calc@{C\+Date\+Calc}!Set\+Pivot\+Year@{Set\+Pivot\+Year}}
+\index{Set\+Pivot\+Year@{Set\+Pivot\+Year}!C\+Date\+Calc@{C\+Date\+Calc}}
+\subsubsection[{Set\+Pivot\+Year(\+Int32 pivot\+Year)}]{\setlength{\rightskip}{0pt plus 5cm}static void C\+Date\+Calc\+::\+Set\+Pivot\+Year (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{pivot\+Year}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_c_date_calc_a07cc850788808ae51f7b99129dfd8ab3}
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf cdatecalc.\+h}\end{DoxyCompactItemize}

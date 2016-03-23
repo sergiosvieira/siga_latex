@@ -1,0 +1,264 @@
+\section{Referência da Classe G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}
+\label{class_g_w_l_f_basin_w_q_model_main}\index{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}}
+
+
+{\ttfamily \#include $<$G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main.\+h$>$}
+
+
+
+Herdeiro de {\bf Quality\+Model\+Main}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main} ({\bf Quality\+Interface} $\ast${\bf main\+Inter})
+\item 
+virtual {\bf $\sim$\+G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main} ()
+\item 
+void {\bf on\+Choice\+Model} ()
+\item 
+virtual void {\bf set\+Info} ()
+\item 
+void {\bf update\+Tree\+Item} ({\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$)
+\item 
+{\bf W\+Q\+Model} $\ast$ {\bf create\+Model} ({\bf Draw\+Element} $\ast$element)
+\item 
+void {\bf show\+Results} (bool change=false)
+\item 
+void {\bf set\+Default\+Values} (char $\ast$file\+Name)
+\item 
+void {\bf save\+Default\+Values} (char $\ast$file\+Name)
+\item 
+virtual void {\bf on\+Changing\+Time\+Interval} ({\bf Date\+::\+Time\+Interval} time\+Interval)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf enable\+Model\+Interface} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf selected\+Scenario}
+\item 
+{\bf gwlf\+Pollutant\+Type} {\bf selected\+Pollutant}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 7 do arquivo G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}!G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}!G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}}
+\subsubsection[{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main(\+Quality\+Interface $\ast$main\+Inter)}]{\setlength{\rightskip}{0pt plus 5cm}G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main\+::\+G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main (
+\begin{DoxyParamCaption}
+\item[{{\bf Quality\+Interface} $\ast$}]{main\+Inter}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_basin_w_q_model_main_ab668f09272fdf0c4586202e8ec19984d}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em main\+Inter} & Interface \\
+\hline
+\end{DoxyParams}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}!````~G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{$\sim$\+G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}}
+\index{````~G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{$\sim$\+G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}!G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}}
+\subsubsection[{$\sim$\+G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}virtual G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main\+::$\sim$\+G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_basin_w_q_model_main_a756d88a5eef1000a80af2b2ceba71d06}
+destrutor 
+
+\subsection{Métodos}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}!create\+Model@{create\+Model}}
+\index{create\+Model@{create\+Model}!G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}}
+\subsubsection[{create\+Model(\+Draw\+Element $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+Q\+Model}$\ast$ G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main\+::create\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_basin_w_q_model_main_abe9a890144613f1405d2f4ca8b9446e0}
+Cria um modelo para um elemento 
+\begin{DoxyParams}{Parâmetros}
+{\em element} & elemento \\
+\hline
+\end{DoxyParams}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}!enable\+Model\+Interface@{enable\+Model\+Interface}}
+\index{enable\+Model\+Interface@{enable\+Model\+Interface}!G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}}
+\subsubsection[{enable\+Model\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}void G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main\+::enable\+Model\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_basin_w_q_model_main_ab2fba8f5808119921644f6a4864138ac}
+Abilita ou desabilita sua interface 
+
+Reimplementação de {\bf Quality\+Model\+Main} \doxyref{}{pag.}{class_quality_model_main_aaf9dbf58cb5ab79ac8eddb9fa521ec11}.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}!on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}}
+\index{on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}!G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}}
+\subsubsection[{on\+Changing\+Time\+Interval(\+Date\+::\+Time\+Interval time\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main\+::on\+Changing\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_basin_w_q_model_main_aa3971a9fa66d570e6447c37e264d3efc}
+Executa o modelo 
+\begin{DoxyParams}{Parâmetros}
+{\em node} & N�S\\
+\hline
+\end{DoxyParams}
+virtual bool run(\+Node$\ast$ node, unsigned int pollutant); 
+
+Implementa {\bf Quality\+Model\+Main} \doxyref{}{pag.}{class_quality_model_main_ae3b9579a006273fb4a627f20bb7600cc}.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}!on\+Choice\+Model@{on\+Choice\+Model}}
+\index{on\+Choice\+Model@{on\+Choice\+Model}!G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}}
+\subsubsection[{on\+Choice\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}void G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main\+::on\+Choice\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_basin_w_q_model_main_a766ffa7c54f53c3dcd76545b43ce2845}
+Evento de mudan�a de modelo 
+
+Reimplementação de {\bf Quality\+Model\+Main} \doxyref{}{pag.}{class_quality_model_main_aff6775123ae0267b61ce86097d17afad}.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_basin_w_q_model_main_a1459f4524b2e427317d97cafdb9ba33d}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Quality\+Model\+Main} \doxyref{}{pag.}{class_quality_model_main_afba3483d930bf899d041840f944aec37}.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_basin_w_q_model_main_ae90f1130dc329172b2067a2a2fd8b96d}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Quality\+Model\+Main} \doxyref{}{pag.}{class_quality_model_main_acb46815e597066b3841fdfb5b9c2ec2c}.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}!save\+Default\+Values@{save\+Default\+Values}}
+\index{save\+Default\+Values@{save\+Default\+Values}!G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}}
+\subsubsection[{save\+Default\+Values(char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main\+::save\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_basin_w_q_model_main_a941fa6b47c5d20c8f6d576067990a309}
+Salva informa��es em um arquivo 
+\begin{DoxyParams}{Parâmetros}
+{\em file\+Name} & Nome do arquivo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Quality\+Model\+Main} \doxyref{}{pag.}{class_quality_model_main_a3589117ef1789e3b9cef3896ae647a72}.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}!set\+Default\+Values@{set\+Default\+Values}}
+\index{set\+Default\+Values@{set\+Default\+Values}!G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}}
+\subsubsection[{set\+Default\+Values(char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main\+::set\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_basin_w_q_model_main_a2662ccc0966499a0ae150d215bae2757}
+Recebe informa��es de um arquivo 
+\begin{DoxyParams}{Parâmetros}
+{\em file\+Name} & Nome do arquivo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Quality\+Model\+Main} \doxyref{}{pag.}{class_quality_model_main_ad70de3c9dd61112372f6d21a7df86a23}.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_basin_w_q_model_main_aece833a77290810c947d6a03f810e271}
+Insere informa�oes na interface 
+\begin{DoxyParams}{Parâmetros}
+{\em node} & N� \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Quality\+Model\+Main} \doxyref{}{pag.}{class_quality_model_main_af1172adf8afc6b492ac5dfd05ebf2856}.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}}
+\subsubsection[{show\+Results(bool change=false)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main\+::show\+Results (
+\begin{DoxyParamCaption}
+\item[{bool}]{change = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_basin_w_q_model_main_a46bf783ae07230caaa5777ac580244d7}
+Destroi um modelo de um no que nao importa mais (deletado, por exemplo) 
+\begin{DoxyParams}{Parâmetros}
+{\em node\+Id} & Identificador do n�\\
+\hline
+\end{DoxyParams}
+virtual void remove\+Model(unsigned int id); Apresenta resultados 
+\begin{DoxyParams}{Parâmetros}
+{\em node} & N� \\
+\hline
+{\em change} & Boleano que define mostrar/esconder ou criar janela de visualiza��o de resultados \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Quality\+Model\+Main} \doxyref{}{pag.}{class_quality_model_main_a4490ca873d4397cc4420a14290a5d2d0}.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}!update\+Tree\+Item@{update\+Tree\+Item}}
+\index{update\+Tree\+Item@{update\+Tree\+Item}!G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}}
+\subsubsection[{update\+Tree\+Item(\+S\+I\+G\+A\+Tree\+Ctrl $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main\+::update\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_basin_w_q_model_main_ac8f1f44148707d5e70880fe113dce8de}
+Atualiza os ponteiros das suas series no Tree\+Ctrl de integra��o 
+
+Implementa {\bf Quality\+Model\+Main} \doxyref{}{pag.}{class_quality_model_main_af04d77b05c16827f1efe571a5cb3b04e}.
+
+
+
+\subsection{Atributos}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}!selected\+Pollutant@{selected\+Pollutant}}
+\index{selected\+Pollutant@{selected\+Pollutant}!G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}}
+\subsubsection[{selected\+Pollutant}]{\setlength{\rightskip}{0pt plus 5cm}{\bf gwlf\+Pollutant\+Type} G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main\+::selected\+Pollutant}\label{class_g_w_l_f_basin_w_q_model_main_ae412994e5aca476168dfc2f38ba98260}
+Tipo de poluente 
+
+Definição na linha 17 do arquivo G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main.\+h.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}!selected\+Scenario@{selected\+Scenario}}
+\index{selected\+Scenario@{selected\+Scenario}!G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main@{G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}}
+\subsubsection[{selected\+Scenario}]{\setlength{\rightskip}{0pt plus 5cm}int G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main\+::selected\+Scenario}\label{class_g_w_l_f_basin_w_q_model_main_aadee930f9049dcff66fc342b4ac75491}
+Cenario selecionado 
+
+Definição na linha 13 do arquivo G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main.\+h}\end{DoxyCompactItemize}

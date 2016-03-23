@@ -1,0 +1,89 @@
+\section{ReferÃªncia da Classe Lin\+Solver}
+\label{class_lin_solver}\index{Lin\+Solver@{Lin\+Solver}}
+
+
+{\ttfamily \#include $<$Lin\+Solver.\+h$>$}
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Lin\+Solver} ()
+\item 
+{\bf $\sim$\+Lin\+Solver} ()
+\item 
+vector$<$ double $>$ {\bf solve} ({\bf Matrix} A, vector$<$ double $>$ b)
+\item 
+vector$<$ double $>$ {\bf re\+Solve} (vector$<$ double $>$ b)
+\item 
+vector$<$ double $>$ {\bf get\+Solution} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 12 do arquivo Lin\+Solver.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Lin\+Solver@{Lin\+Solver}!Lin\+Solver@{Lin\+Solver}}
+\index{Lin\+Solver@{Lin\+Solver}!Lin\+Solver@{Lin\+Solver}}
+\subsubsection[{Lin\+Solver()}]{\setlength{\rightskip}{0pt plus 5cm}Lin\+Solver\+::\+Lin\+Solver (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_lin_solver_a87c3730489ba32761be1373c7a31b72b}
+Construtor \index{Lin\+Solver@{Lin\+Solver}!````~Lin\+Solver@{$\sim$\+Lin\+Solver}}
+\index{````~Lin\+Solver@{$\sim$\+Lin\+Solver}!Lin\+Solver@{Lin\+Solver}}
+\subsubsection[{$\sim$\+Lin\+Solver()}]{\setlength{\rightskip}{0pt plus 5cm}Lin\+Solver\+::$\sim$\+Lin\+Solver (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_lin_solver_ad0a540b6b1b8ada74bb352b5ed6b3a07}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{Lin\+Solver@{Lin\+Solver}!get\+Solution@{get\+Solution}}
+\index{get\+Solution@{get\+Solution}!Lin\+Solver@{Lin\+Solver}}
+\subsubsection[{get\+Solution()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ Lin\+Solver\+::get\+Solution (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_lin_solver_aadd6cc74c7378c2dee8636c4a8264354}
+Retorna o vetor resposta 
+
+DefiniÃ§Ã£o na linha 42 do arquivo Lin\+Solver.\+h.
+
+\index{Lin\+Solver@{Lin\+Solver}!re\+Solve@{re\+Solve}}
+\index{re\+Solve@{re\+Solve}!Lin\+Solver@{Lin\+Solver}}
+\subsubsection[{re\+Solve(vector$<$ double $>$ b)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ Lin\+Solver\+::re\+Solve (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{b}
+\end{DoxyParamCaption}
+)}\label{class_lin_solver_ae2a153b2637a6901abfc65fe565b73aa}
+Utiliza a matriz A armazenada para recalcular o vetor solução x Deve ser usada quando quando, para a mesma matrix A, quizer obter resposta para diferentes vetores b Chame-\/a para cada vetor b 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em b} & Vetor do lado direito \\
+\hline
+\end{DoxyParams}
+\index{Lin\+Solver@{Lin\+Solver}!solve@{solve}}
+\index{solve@{solve}!Lin\+Solver@{Lin\+Solver}}
+\subsubsection[{solve(\+Matrix A, vector$<$ double $>$ b)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ Lin\+Solver\+::solve (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{A, }
+\item[{vector$<$ double $>$}]{b}
+\end{DoxyParamCaption}
+)}\label{class_lin_solver_a1881fa19f50ff6e219256057983abf76}
+Retorna o vetor x da solução da equação linear A . x = b Usa fatoração LU quando A for quadadrada e fatoração QR caso contrario 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em A} & Matriz dos coeficientes \\
+\hline
+{\em b} & Vetor do lado direito \\
+\hline
+\end{DoxyParams}
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Lin\+Solver.\+h}\end{DoxyCompactItemize}

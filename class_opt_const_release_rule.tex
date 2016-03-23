@@ -1,0 +1,209 @@
+\section{Referência da Classe Opt\+Const\+Release\+Rule}
+\label{class_opt_const_release_rule}\index{Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}}
+
+
+{\ttfamily \#include $<$Opt\+Const\+Release\+Rule.\+h$>$}
+
+
+
+Herdeiro de {\bf Const\+Release\+Rule}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Const\+Release\+Rule} ({\bf Node} $\ast${\bf node})
+\item 
+virtual {\bf $\sim$\+Opt\+Const\+Release\+Rule} ()
+\item 
+unsigned int {\bf get\+Number\+Of\+Variables} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog={\bf N\+U\+LL})
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String)
+\item 
+void {\bf set\+Variables} ({\bf Matrix} \&swarm\+Line, int i, int j)
+\item 
+bool {\bf check\+Limits} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf to\+Opt}
+\item 
+double {\bf release\+Inf}
+\item 
+double {\bf release\+Sup}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Rule} $\ast$ {\bf do\+Copy} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 11 do arquivo Opt\+Const\+Release\+Rule.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}!Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}}
+\index{Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}!Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}}
+\subsubsection[{Opt\+Const\+Release\+Rule(\+Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}Opt\+Const\+Release\+Rule\+::\+Opt\+Const\+Release\+Rule (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_opt_const_release_rule_a9591de426416f023b427c9521436a3b7}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em node} & N� \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}!````~Opt\+Const\+Release\+Rule@{$\sim$\+Opt\+Const\+Release\+Rule}}
+\index{````~Opt\+Const\+Release\+Rule@{$\sim$\+Opt\+Const\+Release\+Rule}!Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}}
+\subsubsection[{$\sim$\+Opt\+Const\+Release\+Rule()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Opt\+Const\+Release\+Rule\+::$\sim$\+Opt\+Const\+Release\+Rule (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_const_release_rule_a02ce0e684afda907e8d922ada43809e1}
+Destrutor 
+
+\subsection{Métodos}
+\index{Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog=\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}bool Opt\+Const\+Release\+Rule\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_const_release_rule_ab802498d44f4f7a9ef1d5ef6ae0f0a65}
+Verifica se todas as informa��es necess�rias foram fornecidas 
+\begin{DoxyParams}{Parâmetros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_a4c22e4ecf8da985c05b66189aff69dab}.
+
+\index{Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}!check\+Limits@{check\+Limits}}
+\index{check\+Limits@{check\+Limits}!Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}}
+\subsubsection[{check\+Limits()}]{\setlength{\rightskip}{0pt plus 5cm}bool Opt\+Const\+Release\+Rule\+::check\+Limits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_const_release_rule_a97a3f4eb541548d5b18607a54864b6f2}
+Verifica se os limites das vari�veis est�o corretos 
+
+Reimplementação de {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_a03010403e3b7b7d6b9f57e5adc11d4f0}.
+
+\index{Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}}
+\subsubsection[{do\+Copy()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Rule}$\ast$ Opt\+Const\+Release\+Rule\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_opt_const_release_rule_a8e697ebf9f4375bf59076bdff4e5742e}
+Copia a regra 
+
+Reimplementação de {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_a941b2b979a5b2f5414ea9b808af5b90d}.
+
+\index{Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}!get\+Number\+Of\+Variables@{get\+Number\+Of\+Variables}}
+\index{get\+Number\+Of\+Variables@{get\+Number\+Of\+Variables}!Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}}
+\subsubsection[{get\+Number\+Of\+Variables()}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Opt\+Const\+Release\+Rule\+::get\+Number\+Of\+Variables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_const_release_rule_a63d413785f32a211054d02870325f922}
+Retorna o n�mero de variaveis de decis�o 
+
+Reimplementação de {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_a23768fd8e92c7c5fbcf7c3df0e04ca10}.
+
+\index{Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Const\+Release\+Rule\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_const_release_rule_a81136173c9562ec6cc322fd84752c165}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_ab0cf365139280489663e8cb57b15e071}.
+
+\index{Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Const\+Release\+Rule\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_const_release_rule_a843e91d8f8cfdf7dd8a5d5c0bbdcf99e}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_aec85f10f5a83b795fa1331db854de5af}.
+
+\index{Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}!set\+Variables@{set\+Variables}}
+\index{set\+Variables@{set\+Variables}!Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}}
+\subsubsection[{set\+Variables(\+Matrix \&swarm\+Line, int i, int j)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Const\+Release\+Rule\+::set\+Variables (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{swarm\+Line, }
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_const_release_rule_a462e399d4185fa40dda8831862fc58c0}
+Atribui solu��es as vari�veis de decis�o 
+\begin{DoxyParams}{Parâmetros}
+{\em swarm\+Line} & \\
+\hline
+{\em i} & \\
+\hline
+{\em j} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_ada018446842a6f0a81cb41210d714b31}.
+
+
+
+\subsection{Atributos}
+\index{Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}!release\+Inf@{release\+Inf}}
+\index{release\+Inf@{release\+Inf}!Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}}
+\subsubsection[{release\+Inf}]{\setlength{\rightskip}{0pt plus 5cm}double Opt\+Const\+Release\+Rule\+::release\+Inf}\label{class_opt_const_release_rule_a4056a932cab947771f003fd7cd907a02}
+Limite inferior do intervalo da otimiza��o 
+
+Definição na linha 31 do arquivo Opt\+Const\+Release\+Rule.\+h.
+
+\index{Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}!release\+Sup@{release\+Sup}}
+\index{release\+Sup@{release\+Sup}!Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}}
+\subsubsection[{release\+Sup}]{\setlength{\rightskip}{0pt plus 5cm}double Opt\+Const\+Release\+Rule\+::release\+Sup}\label{class_opt_const_release_rule_a9c1c4a195f086a4acee6f43f1901c56d}
+Limite superior do intervalo da otimiza��o 
+
+Definição na linha 35 do arquivo Opt\+Const\+Release\+Rule.\+h.
+
+\index{Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}!to\+Opt@{to\+Opt}}
+\index{to\+Opt@{to\+Opt}!Opt\+Const\+Release\+Rule@{Opt\+Const\+Release\+Rule}}
+\subsubsection[{to\+Opt}]{\setlength{\rightskip}{0pt plus 5cm}bool Opt\+Const\+Release\+Rule\+::to\+Opt}\label{class_opt_const_release_rule_a6c37d1179adb9a22f02486bd96dd7a8f}
+Deve ser otimizado 
+
+Definição na linha 26 do arquivo Opt\+Const\+Release\+Rule.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Const\+Release\+Rule.\+h}\end{DoxyCompactItemize}

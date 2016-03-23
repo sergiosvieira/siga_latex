@@ -1,0 +1,174 @@
+\section{Referência da Template de Classe Date\+Serie$<$ Value\+Type $>$}
+\label{class_date_serie}\index{Date\+Serie$<$ Value\+Type $>$@{Date\+Serie$<$ Value\+Type $>$}}
+
+
+{\ttfamily \#include $<$Date\+Serie\+Impl.\+h$>$}
+
+
+
+Herdeiro de {\bf Serie\+X$<$ Date\+X, Value\+Type $>$}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Date\+Serie} ()
+\item 
+{\bf Date\+Serie} ({\bf Interval\+Type} type, std\+::string {\bf name}, std\+::string value\+\_\+col\+\_\+name, {\bf Unit} unit={\bf Unit\+::\+No\+Unit}, std\+::string date\+\_\+col\+\_\+name=\char`\"{}Data\char`\"{})
+\item 
+{\bf Date\+Serie} (const {\bf Date\+Serie} \&date\+\_\+serie)
+\item 
+{\bf Interval\+Type} {\bf interval\+Type} ()
+\item 
+void {\bf set\+Interval\+Type} ({\bf Interval\+Type} type)
+\item 
+bool {\bf value} ({\bf DateX} \&date, Value\+Type \&result)
+\item 
+bool {\bf remove\+Value} ({\bf DateX} \&date)
+\item 
+void {\bf set\+Value} ({\bf DateX} \&date, Value\+Type \&{\bf value})
+\item 
+uint64\+\_\+t {\bf length} ()
+\item 
+void {\bf set\+Collumn\+Name} (uint32\+\_\+t collumn, std\+::string {\bf name})
+\item 
+void {\bf clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+\subsubsection*{template$<$class Value\+Type$>$\\*
+class Date\+Serie$<$ Value\+Type $>$}
+
+
+
+Definição na linha 26 do arquivo Date\+Serie\+Impl.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Date\+Serie@{Date\+Serie}!Date\+Serie@{Date\+Serie}}
+\index{Date\+Serie@{Date\+Serie}!Date\+Serie@{Date\+Serie}}
+\subsubsection[{Date\+Serie()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Value\+Type $>$ {\bf Date\+Serie}$<$ Value\+Type $>$\+::{\bf Date\+Serie} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_date_serie_aef92b9d81a9059cd0e5fdece5b333d0a}
+
+
+Definição na linha 4 do arquivo Date\+Serie\+Impl.\+cpp.
+
+\index{Date\+Serie@{Date\+Serie}!Date\+Serie@{Date\+Serie}}
+\index{Date\+Serie@{Date\+Serie}!Date\+Serie@{Date\+Serie}}
+\subsubsection[{Date\+Serie(\+Interval\+Type type, std\+::string name, std\+::string value\+\_\+col\+\_\+name, Unit unit=\+Unit\+::\+No\+Unit, std\+::string date\+\_\+col\+\_\+name=""Data"")}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Value\+Type $>$ {\bf Date\+Serie}$<$ Value\+Type $>$\+::{\bf Date\+Serie} (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval\+Type}}]{type, }
+\item[{std\+::string}]{name, }
+\item[{std\+::string}]{value\+\_\+col\+\_\+name, }
+\item[{{\bf Unit}}]{unit = {\ttfamily {\bf Unit\+::\+No\+Unit}}, }
+\item[{std\+::string}]{date\+\_\+col\+\_\+name = {\ttfamily \char`\"{}Data\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_date_serie_a05af2d8c230d97754e2be11c1e648a0b}
+
+
+Definição na linha 14 do arquivo Date\+Serie\+Impl.\+cpp.
+
+\index{Date\+Serie@{Date\+Serie}!Date\+Serie@{Date\+Serie}}
+\index{Date\+Serie@{Date\+Serie}!Date\+Serie@{Date\+Serie}}
+\subsubsection[{Date\+Serie(const Date\+Serie \&date\+\_\+serie)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Value\+Type $>$ {\bf Date\+Serie}$<$ Value\+Type $>$\+::{\bf Date\+Serie} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Date\+Serie}$<$ Value\+Type $>$ \&}]{date\+\_\+serie}
+\end{DoxyParamCaption}
+)}\label{class_date_serie_a67b4a038559a7f4801346707428c8877}
+
+
+Definição na linha 24 do arquivo Date\+Serie\+Impl.\+cpp.
+
+
+
+\subsection{Métodos}
+\index{Date\+Serie@{Date\+Serie}!clear@{clear}}
+\index{clear@{clear}!Date\+Serie@{Date\+Serie}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Value\+Type $>$ void {\bf Date\+Serie}$<$ Value\+Type $>$\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_date_serie_ac0b0ee7a16d1c7ba558072be7cbe6c79}
+
+
+Definição na linha 53 do arquivo Date\+Serie\+Impl.\+cpp.
+
+\index{Date\+Serie@{Date\+Serie}!interval\+Type@{interval\+Type}}
+\index{interval\+Type@{interval\+Type}!Date\+Serie@{Date\+Serie}}
+\subsubsection[{interval\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Value\+Type $>$ {\bf Interval\+Type} {\bf Date\+Serie}$<$ Value\+Type $>$\+::interval\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_date_serie_a5e18cda9c494fcfb1ae149dc2e2fbbba}
+
+
+Definição na linha 58 do arquivo Date\+Serie\+Impl.\+cpp.
+
+\index{Date\+Serie@{Date\+Serie}!length@{length}}
+\index{length@{length}!Date\+Serie@{Date\+Serie}}
+\subsubsection[{length()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Value\+Type$>$ uint64\+\_\+t {\bf Date\+Serie}$<$ Value\+Type $>$\+::length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_date_serie_a02e111e41c86af5a8c352c9000a0bd90}
+\index{Date\+Serie@{Date\+Serie}!remove\+Value@{remove\+Value}}
+\index{remove\+Value@{remove\+Value}!Date\+Serie@{Date\+Serie}}
+\subsubsection[{remove\+Value(\+Date\+X \&date)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Value\+Type $>$ bool {\bf Date\+Serie}$<$ Value\+Type $>$\+::remove\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf DateX} \&}]{date}
+\end{DoxyParamCaption}
+)}\label{class_date_serie_aec4bdd424fdcc94629d070d38398fec6}
+
+
+Definição na linha 41 do arquivo Date\+Serie\+Impl.\+cpp.
+
+\index{Date\+Serie@{Date\+Serie}!set\+Collumn\+Name@{set\+Collumn\+Name}}
+\index{set\+Collumn\+Name@{set\+Collumn\+Name}!Date\+Serie@{Date\+Serie}}
+\subsubsection[{set\+Collumn\+Name(uint32\+\_\+t collumn, std\+::string name)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Value\+Type$>$ void {\bf Date\+Serie}$<$ Value\+Type $>$\+::set\+Collumn\+Name (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{collumn, }
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+)}\label{class_date_serie_a80d7d368b387bf024b77b7ce6a54d18c}
+\index{Date\+Serie@{Date\+Serie}!set\+Interval\+Type@{set\+Interval\+Type}}
+\index{set\+Interval\+Type@{set\+Interval\+Type}!Date\+Serie@{Date\+Serie}}
+\subsubsection[{set\+Interval\+Type(\+Interval\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Value\+Type $>$ void {\bf Date\+Serie}$<$ Value\+Type $>$\+::set\+Interval\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_date_serie_a8485a4339c5aa139260c96e448a71e10}
+
+
+Definição na linha 63 do arquivo Date\+Serie\+Impl.\+cpp.
+
+\index{Date\+Serie@{Date\+Serie}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!Date\+Serie@{Date\+Serie}}
+\subsubsection[{set\+Value(\+Date\+X \&date, Value\+Type \&value)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Value\+Type$>$ void {\bf Date\+Serie}$<$ Value\+Type $>$\+::set\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf DateX} \&}]{date, }
+\item[{Value\+Type \&}]{value}
+\end{DoxyParamCaption}
+)}\label{class_date_serie_a45d3a308670b2fd64156832e2a30769d}
+\index{Date\+Serie@{Date\+Serie}!value@{value}}
+\index{value@{value}!Date\+Serie@{Date\+Serie}}
+\subsubsection[{value(\+Date\+X \&date, Value\+Type \&result)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Value\+Type $>$ bool {\bf Date\+Serie}$<$ Value\+Type $>$\+::value (
+\begin{DoxyParamCaption}
+\item[{{\bf DateX} \&}]{date, }
+\item[{Value\+Type \&}]{result}
+\end{DoxyParamCaption}
+)}\label{class_date_serie_a20e60051f8e13ff6f0a1b01f7149d9b3}
+
+
+Definição na linha 29 do arquivo Date\+Serie\+Impl.\+cpp.
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Date\+Serie\+Impl.\+h}\item 
+{\bf Date\+Serie\+Impl.\+cpp}\end{DoxyCompactItemize}

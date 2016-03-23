@@ -1,0 +1,384 @@
+\section{Referência da Classe Layer\+Manager}
+\label{class_layer_manager}\index{Layer\+Manager@{Layer\+Manager}}
+
+
+\doxyref{Layer\+Manager}{pag.}{class_layer_manager}\+: A class to manipulate layers (raster and shapefiles)  
+
+
+
+
+{\ttfamily \#include $<$Layer\+Manager.\+h$>$}
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::map$<$ std\+::string, {\bf LayerM} $\ast$ $>$\+::iterator {\bf Layer\+Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf $\sim$\+Layer\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void {\bf push\+\_\+back} (const std\+::string \&a\+\_\+key, {\bf LayerM} $\ast$a\+\_\+layer)
+\begin{DoxyCompactList}\small\item\em Adds a layers pointer on vector back. \end{DoxyCompactList}\item 
+void {\bf push\+\_\+front} (const std\+::string \&a\+\_\+key, {\bf LayerM} $\ast$a\+\_\+layer)
+\begin{DoxyCompactList}\small\item\em Adds a layers pointer on vector front. \end{DoxyCompactList}\item 
+void {\bf remove} (const std\+::string \&a\+\_\+key)
+\begin{DoxyCompactList}\small\item\em Remove layer. \end{DoxyCompactList}\item 
+void {\bf remove\+At} (int a\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Remove layer at. \end{DoxyCompactList}\item 
+{\bf LayerM} $\ast$ {\bf layer} (const std\+::string \&a\+\_\+key)
+\begin{DoxyCompactList}\small\item\em Get layer with key. \end{DoxyCompactList}\item 
+{\bf LayerM} $\ast$ {\bf layer\+At} (int a\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Get layer at position. \end{DoxyCompactList}\item 
+void {\bf move\+Up} (int a\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Move layer at index position to up position. \end{DoxyCompactList}\item 
+void {\bf move\+Down} (int a\+\_\+index)
+\begin{DoxyCompactList}\small\item\em Move layer at index position to down position. \end{DoxyCompactList}\item 
+void {\bf swap} (int a\+\_\+first\+Index, int a\+\_\+second\+Index)
+\begin{DoxyCompactList}\small\item\em Swap layer\textquotesingle{}s positions. \end{DoxyCompactList}\item 
+int {\bf size} () const 
+\begin{DoxyCompactList}\small\item\em Get stored layer size. \end{DoxyCompactList}\item 
+{\bf Layer\+Iterator} \& {\bf begin} ()
+\begin{DoxyCompactList}\small\item\em Begin iterator. \end{DoxyCompactList}\item 
+{\bf Layer\+Iterator} \& {\bf end} ()
+\begin{DoxyCompactList}\small\item\em End iterator. \end{DoxyCompactList}\item 
+{\bf LayerM} $\ast$ {\bf front} ()
+\begin{DoxyCompactList}\small\item\em Get first stored \doxyref{LayerM}{pag.}{class_layer_m} Object. \end{DoxyCompactList}\item 
+{\bf LayerM} $\ast$ {\bf back} ()
+\begin{DoxyCompactList}\small\item\em Get layer stored \doxyref{LayerM}{pag.}{class_layer_m} Object. \end{DoxyCompactList}\item 
+{\bf Layer\+Iterator} \& {\bf operator++} ()
+\begin{DoxyCompactList}\small\item\em operator++ overloading \end{DoxyCompactList}\item 
+void {\bf clear} ()
+\begin{DoxyCompactList}\small\item\em Clear all layers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Layer\+Manager} \& {\bf instance} ()
+\begin{DoxyCompactList}\small\item\em Get singleton instance of the \doxyref{Layer\+Manager}{pag.}{class_layer_manager} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Tipos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ std\+::string $>$ {\bf Vector\+Of\+String}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Vector\+Of\+String} {\bf m\+\_\+layers\+Position}
+\item 
+std\+::map$<$ std\+::string, {\bf LayerM} $\ast$ $>$ {\bf m\+\_\+layers}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+\doxyref{Layer\+Manager}{pag.}{class_layer_manager}\+: A class to manipulate layers (raster and shapefiles) 
+
+This singleton class has the responsibility to treat all layers added on siga 
+
+Definição na linha 17 do arquivo Layer\+Manager.\+h.
+
+
+
+\subsection{Definições de Tipos}
+\index{Layer\+Manager@{Layer\+Manager}!Layer\+Iterator@{Layer\+Iterator}}
+\index{Layer\+Iterator@{Layer\+Iterator}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{Layer\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<$std\+::string, {\bf LayerM}$\ast$$>$\+::iterator {\bf Layer\+Manager\+::\+Layer\+Iterator}}\label{class_layer_manager_ab737889f5172b5678179b8509829e75a}
+
+
+Definição na linha 22 do arquivo Layer\+Manager.\+h.
+
+\index{Layer\+Manager@{Layer\+Manager}!Vector\+Of\+String@{Vector\+Of\+String}}
+\index{Vector\+Of\+String@{Vector\+Of\+String}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{Vector\+Of\+String}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::vector$<$std\+::string$>$ {\bf Layer\+Manager\+::\+Vector\+Of\+String}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_manager_aa70620c52a496ee29e6cb252fcc4d445}
+
+
+Definição na linha 83 do arquivo Layer\+Manager.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Layer\+Manager@{Layer\+Manager}!````~Layer\+Manager@{$\sim$\+Layer\+Manager}}
+\index{````~Layer\+Manager@{$\sim$\+Layer\+Manager}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{$\sim$\+Layer\+Manager()}]{\setlength{\rightskip}{0pt plus 5cm}Layer\+Manager\+::$\sim$\+Layer\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_layer_manager_afa43f2ec578a8f3bb0e670305d5fe12e}
+
+
+Destructor. 
+
+
+
+\subsection{Métodos}
+\index{Layer\+Manager@{Layer\+Manager}!back@{back}}
+\index{back@{back}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{back()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LayerM}$\ast$ Layer\+Manager\+::back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_layer_manager_ad97464406e8db450cc1fd89a8c48257a}
+
+
+Get layer stored \doxyref{LayerM}{pag.}{class_layer_m} Object. 
+
+\index{Layer\+Manager@{Layer\+Manager}!begin@{begin}}
+\index{begin@{begin}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{begin()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Layer\+Iterator}\& Layer\+Manager\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_layer_manager_ada39cf559664869da7a91226bac843f9}
+
+
+Begin iterator. 
+
+\index{Layer\+Manager@{Layer\+Manager}!clear@{clear}}
+\index{clear@{clear}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Manager\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_layer_manager_a8d6aa2ca6278e62e4ee32973cc407404}
+
+
+Clear all layers. 
+
+\index{Layer\+Manager@{Layer\+Manager}!end@{end}}
+\index{end@{end}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{end()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Layer\+Iterator}\& Layer\+Manager\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_layer_manager_a037f60fbcd39e5ad466e340ec6713caa}
+
+
+End iterator. 
+
+\index{Layer\+Manager@{Layer\+Manager}!front@{front}}
+\index{front@{front}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{front()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LayerM}$\ast$ Layer\+Manager\+::front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_layer_manager_a535aafb8927491d551749e1efca4a6ee}
+
+
+Get first stored \doxyref{LayerM}{pag.}{class_layer_m} Object. 
+
+\index{Layer\+Manager@{Layer\+Manager}!instance@{instance}}
+\index{instance@{instance}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{instance()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Layer\+Manager}\& Layer\+Manager\+::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_layer_manager_a141f4b71c94b322eccf961b7f89295c4}
+
+
+Get singleton instance of the \doxyref{Layer\+Manager}{pag.}{class_layer_manager} class. 
+
+
+
+Definição na linha 77 do arquivo Layer\+Manager.\+h.
+
+\index{Layer\+Manager@{Layer\+Manager}!layer@{layer}}
+\index{layer@{layer}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{layer(const std\+::string \&a\+\_\+key)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LayerM}$\ast$ Layer\+Manager\+::layer (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+\_\+key}
+\end{DoxyParamCaption}
+)}\label{class_layer_manager_a1a9ed7c154f683b66dcb6a0072bd6cb7}
+
+
+Get layer with key. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em const} & std\+::string\& a\+\_\+key \\
+\hline
+\end{DoxyParams}
+\index{Layer\+Manager@{Layer\+Manager}!layer\+At@{layer\+At}}
+\index{layer\+At@{layer\+At}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{layer\+At(int a\+\_\+index)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf LayerM}$\ast$ Layer\+Manager\+::layer\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+index}
+\end{DoxyParamCaption}
+)}\label{class_layer_manager_a91d0d7dfd84f6ec32e14fb2b8cfa17e6}
+
+
+Get layer at position. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em int} & a\+\_\+index \\
+\hline
+\end{DoxyParams}
+\index{Layer\+Manager@{Layer\+Manager}!move\+Down@{move\+Down}}
+\index{move\+Down@{move\+Down}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{move\+Down(int a\+\_\+index)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Manager\+::move\+Down (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+index}
+\end{DoxyParamCaption}
+)}\label{class_layer_manager_a86c77353f348e055f51978241ae75178}
+
+
+Move layer at index position to down position. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em int} & a\+\_\+index \\
+\hline
+\end{DoxyParams}
+\index{Layer\+Manager@{Layer\+Manager}!move\+Up@{move\+Up}}
+\index{move\+Up@{move\+Up}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{move\+Up(int a\+\_\+index)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Manager\+::move\+Up (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+index}
+\end{DoxyParamCaption}
+)}\label{class_layer_manager_a274201f0ceda0d2e33656cfd6ea0e58a}
+
+
+Move layer at index position to up position. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em int} & a\+\_\+index \\
+\hline
+\end{DoxyParams}
+\index{Layer\+Manager@{Layer\+Manager}!operator++@{operator++}}
+\index{operator++@{operator++}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{operator++()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Layer\+Iterator}\& Layer\+Manager\+::operator++ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_layer_manager_aaa9c9e95a9e8714f2c623ffbae716ad5}
+
+
+operator++ overloading 
+
+
+
+Definição na linha 68 do arquivo Layer\+Manager.\+h.
+
+\index{Layer\+Manager@{Layer\+Manager}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{push\+\_\+back(const std\+::string \&a\+\_\+key, Layer\+M $\ast$a\+\_\+layer)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Manager\+::push\+\_\+back (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+\_\+key, }
+\item[{{\bf LayerM} $\ast$}]{a\+\_\+layer}
+\end{DoxyParamCaption}
+)}\label{class_layer_manager_a51133dedecbda64ae8f82ff3212e0437}
+
+
+Adds a layers pointer on vector back. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em const} & std\+::string\& a\+\_\+key \\
+\hline
+{\em Layer\+M$\ast$} & a\+\_\+layer \\
+\hline
+\end{DoxyParams}
+\index{Layer\+Manager@{Layer\+Manager}!push\+\_\+front@{push\+\_\+front}}
+\index{push\+\_\+front@{push\+\_\+front}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{push\+\_\+front(const std\+::string \&a\+\_\+key, Layer\+M $\ast$a\+\_\+layer)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Manager\+::push\+\_\+front (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+\_\+key, }
+\item[{{\bf LayerM} $\ast$}]{a\+\_\+layer}
+\end{DoxyParamCaption}
+)}\label{class_layer_manager_a07e1aa32f09f5bb14df6f926fc50f2f9}
+
+
+Adds a layers pointer on vector front. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em const} & std\+::string\& a\+\_\+key \\
+\hline
+{\em Layer\+M$\ast$} & a\+\_\+layer \\
+\hline
+\end{DoxyParams}
+\index{Layer\+Manager@{Layer\+Manager}!remove@{remove}}
+\index{remove@{remove}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{remove(const std\+::string \&a\+\_\+key)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Manager\+::remove (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+\_\+key}
+\end{DoxyParamCaption}
+)}\label{class_layer_manager_a9012bdaf7eca3a3f3d8a72e10228d588}
+
+
+Remove layer. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em const} & std\+::string\& a\+\_\+key \\
+\hline
+\end{DoxyParams}
+\index{Layer\+Manager@{Layer\+Manager}!remove\+At@{remove\+At}}
+\index{remove\+At@{remove\+At}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{remove\+At(int a\+\_\+index)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Manager\+::remove\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+index}
+\end{DoxyParamCaption}
+)}\label{class_layer_manager_a30980ee99e896ce26f06892cd5c297e7}
+
+
+Remove layer at. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em int} & a\+\_\+index \\
+\hline
+\end{DoxyParams}
+\index{Layer\+Manager@{Layer\+Manager}!size@{size}}
+\index{size@{size}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{size() const }]{\setlength{\rightskip}{0pt plus 5cm}int Layer\+Manager\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_layer_manager_a56e7715162bbe0e2794c6d226aa19774}
+
+
+Get stored layer size. 
+
+\index{Layer\+Manager@{Layer\+Manager}!swap@{swap}}
+\index{swap@{swap}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{swap(int a\+\_\+first\+Index, int a\+\_\+second\+Index)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Manager\+::swap (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+first\+Index, }
+\item[{int}]{a\+\_\+second\+Index}
+\end{DoxyParamCaption}
+)}\label{class_layer_manager_a7b1499365fc43a496ba23c713b79e482}
+
+
+Swap layer\textquotesingle{}s positions. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em int} & a\+\_\+first\+Index \\
+\hline
+{\em int} & a\+\_\+second\+Index \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{Layer\+Manager@{Layer\+Manager}!m\+\_\+layers@{m\+\_\+layers}}
+\index{m\+\_\+layers@{m\+\_\+layers}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{m\+\_\+layers}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$std\+::string, {\bf LayerM}$\ast$$>$ Layer\+Manager\+::m\+\_\+layers\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_manager_a8d346da1d4f9d5104e130995b96f7350}
+Map to identify layers 
+
+Definição na linha 85 do arquivo Layer\+Manager.\+h.
+
+\index{Layer\+Manager@{Layer\+Manager}!m\+\_\+layers\+Position@{m\+\_\+layers\+Position}}
+\index{m\+\_\+layers\+Position@{m\+\_\+layers\+Position}!Layer\+Manager@{Layer\+Manager}}
+\subsubsection[{m\+\_\+layers\+Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector\+Of\+String} Layer\+Manager\+::m\+\_\+layers\+Position\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_manager_ab0a040c6e8584d65ee66be7f42588149}
+Store layers positions 
+
+Definição na linha 84 do arquivo Layer\+Manager.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Layer\+Manager.\+h}\end{DoxyCompactItemize}

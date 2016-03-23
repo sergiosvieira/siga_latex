@@ -1,0 +1,316 @@
+\section{Referência da Classe Element}
+\label{class_element}\index{Element@{Element}}
+
+
+{\ttfamily \#include $<$Element.\+h$>$}
+
+
+
+Superclasse de {\bf Link} e {\bf Node}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Element\+ID} {\bf id} ()
+\begin{DoxyCompactList}\small\item\em get element id \end{DoxyCompactList}\item 
+double {\bf slope} ()
+\begin{DoxyCompactList}\small\item\em get slope \end{DoxyCompactList}\item 
+void {\bf set\+Slope} (double {\bf slope})
+\begin{DoxyCompactList}\small\item\em set slope \end{DoxyCompactList}\item 
+double {\bf volume} ()
+\begin{DoxyCompactList}\small\item\em get volume \end{DoxyCompactList}\item 
+void {\bf set\+Volume} (double {\bf volume})
+\item 
+std\+::string {\bf name} ()
+\item 
+void {\bf set\+Name} (std\+::string {\bf name})
+\item 
+{\bf Element\+Type} {\bf element\+Type} ()
+\begin{DoxyCompactList}\small\item\em get element type \end{DoxyCompactList}\item 
+bool {\bf module\+Element\+Info} (std\+::pair$<$ {\bf Module\+ID}, {\bf Module\+Scenario\+ID} $>$ \&key, {\bf Module\+Element\+Info} $\ast$\&result)
+\item 
+const std\+::map$<$ std\+::pair$<$ {\bf Module\+ID}, {\bf Module\+Scenario\+ID} $>$, {\bf Module\+Element\+Info} $\ast$ $>$ \& {\bf module\+Element\+Info\+Map} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Element} ({\bf Element\+ID} {\bf id}, std\+::string {\bf name}, double {\bf volume}, double {\bf slope}, {\bf Element\+Type} type)
+\item 
+virtual {\bf $\sim$\+Element} ()
+\item 
+void {\bf set\+Module\+Element\+Info} (std\+::pair$<$ {\bf Module\+ID}, {\bf Module\+Scenario\+ID} $>$ \&key, {\bf Module\+Element\+Info} \&info)
+\item 
+bool {\bf remove\+Module\+Element\+Info} (std\+::pair$<$ {\bf Module\+ID}, {\bf Module\+Scenario\+ID} $>$ \&key)
+\item 
+void {\bf set\+ID} ({\bf Element\+ID} {\bf id})
+\begin{DoxyCompactList}\small\item\em set element id \end{DoxyCompactList}\item 
+bool {\bf set\+Element\+Type} ({\bf Element\+Type} new\+\_\+type)
+\begin{DoxyCompactList}\small\item\em set element type \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Element\+ID} {\bf m\+\_\+id}
+\begin{DoxyCompactList}\small\item\em \doxyref{Element}{pag.}{class_element}\textquotesingle{}s identificator. \end{DoxyCompactList}\item 
+double {\bf m\+\_\+slope}
+\begin{DoxyCompactList}\small\item\em slope (declividade) \end{DoxyCompactList}\item 
+double {\bf m\+\_\+volume}
+\begin{DoxyCompactList}\small\item\em Volume. \end{DoxyCompactList}\item 
+std\+::string {\bf m\+\_\+name}
+\begin{DoxyCompactList}\small\item\em \doxyref{Element}{pag.}{class_element} name. \end{DoxyCompactList}\item 
+{\bf Element\+Type} {\bf m\+\_\+element\+\_\+type}
+\begin{DoxyCompactList}\small\item\em \doxyref{Element}{pag.}{class_element} type. \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::pair$<$ {\bf Module\+ID}, {\bf Module\+Scenario\+ID} $>$, {\bf Module\+Element\+Info} $\ast$ $>$ {\bf m\+\_\+module\+\_\+element\+\_\+info\+\_\+map}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Network}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 13 do arquivo Core/\+Element.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Element@{Element}!Element@{Element}}
+\index{Element@{Element}!Element@{Element}}
+\subsubsection[{Element(\+Element\+I\+D id, std\+::string name, double volume, double slope, Element\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}Element\+::\+Element (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{std\+::string}]{name, }
+\item[{double}]{volume, }
+\item[{double}]{slope, }
+\item[{{\bf Element\+Type}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_element_a8293e01ef60b7d64e3d0e0018e2f83e4}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em id} & Identificador do link \\
+\hline
+{\em slope} & Declividade \\
+\hline
+{\em volume} & Volume \\
+\hline
+\end{DoxyParams}
+\index{Element@{Element}!````~Element@{$\sim$\+Element}}
+\index{````~Element@{$\sim$\+Element}!Element@{Element}}
+\subsubsection[{$\sim$\+Element()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Element\+::$\sim$\+Element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_element_ab4fc182292f44e46acba9c55662237bf}
+
+
+\subsection{Métodos}
+\index{Element@{Element}!element\+Type@{element\+Type}}
+\index{element\+Type@{element\+Type}!Element@{Element}}
+\subsubsection[{element\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Element\+Type} Element\+::element\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_element_addbfb01a26a02fe3033f1111b0659e99}
+
+
+get element type 
+
+\index{Element@{Element}!id@{id}}
+\index{id@{id}!Element@{Element}}
+\subsubsection[{id()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Element\+ID} Element\+::id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_element_ae462b4f30e6e9a2056e63f0af4503619}
+
+
+get element id 
+
+\index{Element@{Element}!module\+Element\+Info@{module\+Element\+Info}}
+\index{module\+Element\+Info@{module\+Element\+Info}!Element@{Element}}
+\subsubsection[{module\+Element\+Info(std\+::pair$<$ Module\+I\+D, Module\+Scenario\+I\+D $>$ \&key, Module\+Element\+Info $\ast$\&result)}]{\setlength{\rightskip}{0pt plus 5cm}bool Element\+::module\+Element\+Info (
+\begin{DoxyParamCaption}
+\item[{std\+::pair$<$ {\bf Module\+ID}, {\bf Module\+Scenario\+ID} $>$ \&}]{key, }
+\item[{{\bf Module\+Element\+Info} $\ast$\&}]{result}
+\end{DoxyParamCaption}
+)}\label{class_element_a065f317db96203b0b7b39acff4658ad3}
+\index{Element@{Element}!module\+Element\+Info\+Map@{module\+Element\+Info\+Map}}
+\index{module\+Element\+Info\+Map@{module\+Element\+Info\+Map}!Element@{Element}}
+\subsubsection[{module\+Element\+Info\+Map()}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::map$<$ std\+::pair$<$ {\bf Module\+ID}, {\bf Module\+Scenario\+ID} $>$, {\bf Module\+Element\+Info}$\ast$ $>$\& Element\+::module\+Element\+Info\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_element_a86f63b1c63d528baf3dd2b161e520e42}
+\index{Element@{Element}!name@{name}}
+\index{name@{name}!Element@{Element}}
+\subsubsection[{name()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Element\+::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_element_a3902f1860b27e3502d88ff3328777389}
+\index{Element@{Element}!remove\+Module\+Element\+Info@{remove\+Module\+Element\+Info}}
+\index{remove\+Module\+Element\+Info@{remove\+Module\+Element\+Info}!Element@{Element}}
+\subsubsection[{remove\+Module\+Element\+Info(std\+::pair$<$ Module\+I\+D, Module\+Scenario\+I\+D $>$ \&key)}]{\setlength{\rightskip}{0pt plus 5cm}bool Element\+::remove\+Module\+Element\+Info (
+\begin{DoxyParamCaption}
+\item[{std\+::pair$<$ {\bf Module\+ID}, {\bf Module\+Scenario\+ID} $>$ \&}]{key}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_element_afae909c4b728592a6c365ee08646d001}
+\index{Element@{Element}!set\+Element\+Type@{set\+Element\+Type}}
+\index{set\+Element\+Type@{set\+Element\+Type}!Element@{Element}}
+\subsubsection[{set\+Element\+Type(\+Element\+Type new\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}bool Element\+::set\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+Type}}]{new\+\_\+type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_element_a12c6dc2e441c5ba805f954ac2269484f}
+
+
+set element type 
+
+\index{Element@{Element}!set\+ID@{set\+ID}}
+\index{set\+ID@{set\+ID}!Element@{Element}}
+\subsubsection[{set\+I\+D(\+Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}void Element\+::set\+ID (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_element_a9e0abdc81a9ec8d45e919dcf6a36838d}
+
+
+set element id 
+
+\index{Element@{Element}!set\+Module\+Element\+Info@{set\+Module\+Element\+Info}}
+\index{set\+Module\+Element\+Info@{set\+Module\+Element\+Info}!Element@{Element}}
+\subsubsection[{set\+Module\+Element\+Info(std\+::pair$<$ Module\+I\+D, Module\+Scenario\+I\+D $>$ \&key, Module\+Element\+Info \&info)}]{\setlength{\rightskip}{0pt plus 5cm}void Element\+::set\+Module\+Element\+Info (
+\begin{DoxyParamCaption}
+\item[{std\+::pair$<$ {\bf Module\+ID}, {\bf Module\+Scenario\+ID} $>$ \&}]{key, }
+\item[{{\bf Module\+Element\+Info} \&}]{info}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_element_ac08589164a3cf4e3c9bb1a7c022c60ac}
+\index{Element@{Element}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!Element@{Element}}
+\subsubsection[{set\+Name(std\+::string name)}]{\setlength{\rightskip}{0pt plus 5cm}void Element\+::set\+Name (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+)}\label{class_element_af4e7f72270c6d58bc1c8ad5ea5b182ca}
+\index{Element@{Element}!set\+Slope@{set\+Slope}}
+\index{set\+Slope@{set\+Slope}!Element@{Element}}
+\subsubsection[{set\+Slope(double slope)}]{\setlength{\rightskip}{0pt plus 5cm}void Element\+::set\+Slope (
+\begin{DoxyParamCaption}
+\item[{double}]{slope}
+\end{DoxyParamCaption}
+)}\label{class_element_a69ed3de420fd24906fad80b14e9b74e4}
+
+
+set slope 
+
+\index{Element@{Element}!set\+Volume@{set\+Volume}}
+\index{set\+Volume@{set\+Volume}!Element@{Element}}
+\subsubsection[{set\+Volume(double volume)}]{\setlength{\rightskip}{0pt plus 5cm}void Element\+::set\+Volume (
+\begin{DoxyParamCaption}
+\item[{double}]{volume}
+\end{DoxyParamCaption}
+)}\label{class_element_aceb6131a4e3e776daabff683bd410e42}
+\index{Element@{Element}!slope@{slope}}
+\index{slope@{slope}!Element@{Element}}
+\subsubsection[{slope()}]{\setlength{\rightskip}{0pt plus 5cm}double Element\+::slope (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_element_affae76e7f722b6c20d8d4a513d94c2ff}
+
+
+get slope 
+
+\index{Element@{Element}!volume@{volume}}
+\index{volume@{volume}!Element@{Element}}
+\subsubsection[{volume()}]{\setlength{\rightskip}{0pt plus 5cm}double Element\+::volume (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_element_a25e1cebdfd1e99c445d89dc8f90ba9c8}
+
+
+get volume 
+
+
+
+\subsection{Amigas e Funções Relacionadas}
+\index{Element@{Element}!Network@{Network}}
+\index{Network@{Network}!Element@{Element}}
+\subsubsection[{Network}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Network}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_element_a88b59289ffd793fecd040d32e397b1e9}
+
+
+Definição na linha 14 do arquivo Core/\+Element.\+h.
+
+
+
+\subsection{Atributos}
+\index{Element@{Element}!m\+\_\+element\+\_\+type@{m\+\_\+element\+\_\+type}}
+\index{m\+\_\+element\+\_\+type@{m\+\_\+element\+\_\+type}!Element@{Element}}
+\subsubsection[{m\+\_\+element\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Element\+Type} Element\+::m\+\_\+element\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_element_a6a639d845a4caaa474877c788718d3f1}
+
+
+\doxyref{Element}{pag.}{class_element} type. 
+
+
+
+Definição na linha 54 do arquivo Core/\+Element.\+h.
+
+\index{Element@{Element}!m\+\_\+id@{m\+\_\+id}}
+\index{m\+\_\+id@{m\+\_\+id}!Element@{Element}}
+\subsubsection[{m\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Element\+ID} Element\+::m\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}\label{class_element_a8df713ff69af03f5d56b836b4ec542a1}
+
+
+\doxyref{Element}{pag.}{class_element}\textquotesingle{}s identificator. 
+
+
+
+Definição na linha 49 do arquivo Core/\+Element.\+h.
+
+\index{Element@{Element}!m\+\_\+module\+\_\+element\+\_\+info\+\_\+map@{m\+\_\+module\+\_\+element\+\_\+info\+\_\+map}}
+\index{m\+\_\+module\+\_\+element\+\_\+info\+\_\+map@{m\+\_\+module\+\_\+element\+\_\+info\+\_\+map}!Element@{Element}}
+\subsubsection[{m\+\_\+module\+\_\+element\+\_\+info\+\_\+map}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ std\+::pair$<$ {\bf Module\+ID}, {\bf Module\+Scenario\+ID} $>$, {\bf Module\+Element\+Info}$\ast$ $>$ Element\+::m\+\_\+module\+\_\+element\+\_\+info\+\_\+map\hspace{0.3cm}{\ttfamily [protected]}}\label{class_element_a1031d8f5ac5275a2387850852cf73633}
+
+
+Definição na linha 56 do arquivo Core/\+Element.\+h.
+
+\index{Element@{Element}!m\+\_\+name@{m\+\_\+name}}
+\index{m\+\_\+name@{m\+\_\+name}!Element@{Element}}
+\subsubsection[{m\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Element\+::m\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_element_adfc3aac9c2e9c9e313c7200a7e6a3c48}
+
+
+\doxyref{Element}{pag.}{class_element} name. 
+
+
+
+Definição na linha 53 do arquivo Core/\+Element.\+h.
+
+\index{Element@{Element}!m\+\_\+slope@{m\+\_\+slope}}
+\index{m\+\_\+slope@{m\+\_\+slope}!Element@{Element}}
+\subsubsection[{m\+\_\+slope}]{\setlength{\rightskip}{0pt plus 5cm}double Element\+::m\+\_\+slope\hspace{0.3cm}{\ttfamily [protected]}}\label{class_element_a37845ff7e3007d78e76d3261604c3fa4}
+
+
+slope (declividade) 
+
+
+
+Definição na linha 50 do arquivo Core/\+Element.\+h.
+
+\index{Element@{Element}!m\+\_\+volume@{m\+\_\+volume}}
+\index{m\+\_\+volume@{m\+\_\+volume}!Element@{Element}}
+\subsubsection[{m\+\_\+volume}]{\setlength{\rightskip}{0pt plus 5cm}double Element\+::m\+\_\+volume\hspace{0.3cm}{\ttfamily [protected]}}\label{class_element_ad726e28307c81ab4205f757a361de372}
+
+
+Volume. 
+
+
+
+Definição na linha 51 do arquivo Core/\+Element.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Core/\+Element.\+h}\end{DoxyCompactItemize}

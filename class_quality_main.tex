@@ -1,0 +1,557 @@
+\section{Referência da Classe Quality\+Main}
+\label{class_quality_main}\index{Quality\+Main@{Quality\+Main}}
+
+
+{\ttfamily \#include $<$Quality\+Main.\+h$>$}
+
+
+
+Herdeiro de {\bf Component}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf on\+Init} ({\bf S\+I\+GA} $\ast${\bf main}, wx\+Frame $\ast$frame, wx\+Window $\ast$parent)
+\item 
+void {\bf update\+Tree\+Item} ({\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$)
+\item 
+void {\bf on\+Select\+Element} ()
+\item 
+void {\bf on\+Changed\+Component} ()
+\item 
+void {\bf on\+Changing\+Component} ()
+\item 
+void {\bf on\+Delete\+Nodes} (vector$<$ unsigned int $>$ node\+Ids)
+\item 
+void {\bf on\+Delete\+Links} (vector$<$ unsigned int $>$ link\+Ids)
+\item 
+int {\bf change\+Model\+Type} (int elem\+Id, {\bf quality\+Model\+Type} type)
+\item 
+int {\bf change\+Model\+Type} ({\bf quality\+Model\+Type} type)
+\item 
+int {\bf change\+Model\+Type} ()
+\item 
+void {\bf create\+Model\+Main} ({\bf quality\+Model\+Type} type)
+\item 
+{\bf Quality\+Model\+Main} $\ast$ {\bf get\+Model\+Main} ({\bf quality\+Model\+Type} type)
+\item 
+{\bf Quality\+Model\+Main} $\ast$ {\bf get\+Model\+Main} ()
+\item 
+{\bf W\+Q\+Model} $\ast$ {\bf get\+Model} (int scen, unsigned int id\+Node)
+\item 
+{\bf W\+Q\+Model} $\ast$ {\bf get\+Model} (int elem\+Id)
+\item 
+{\bf W\+Q\+Model} $\ast$ {\bf get\+Model} ()
+\item 
+void {\bf on\+Changing\+Time\+Interval} ({\bf Date\+::\+Time\+Interval} time\+Interval)
+\item 
+void {\bf on\+Changing\+Element\+Type} (vector$<$ unsigned int $>$ element\+Ids)
+\item 
+void {\bf on\+Changed\+Element\+Type} (vector$<$ unsigned int $>$ elemet\+Ids)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf add\+Scenario} (const wx\+String \&{\bf name}, bool copy=false)
+\item 
+void {\bf remove\+Scenario} (bool recreate=true)
+\item 
+void {\bf remove\+All\+Scenarios} ()
+\item 
+void {\bf create\+Missing\+Models} ()
+\item 
+void {\bf set\+Selected\+Model\+Type} ({\bf quality\+Model\+Type} type)
+\item 
+void {\bf set\+Selected\+Scenario} (wx\+String scen)
+\item 
+void {\bf set\+Selected\+Scenario} (unsigned int scen)
+\item 
+int {\bf get\+Selected\+Scenario} ()
+\item 
+{\bf Quality\+Scenario} $\ast$ {\bf get\+Scenario} (int scen)
+\item 
+{\bf Quality\+Scenario} $\ast$ {\bf get\+Scenario} ()
+\item 
+int {\bf get\+Scenario\+Seed} ()
+\item 
+const map$<$ unsigned int, wx\+String $>$ \& {\bf get\+Scenario\+Name} ()
+\item 
+wx\+String {\bf get\+Scenario\+Name} (int scen)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Quality\+Main} \& {\bf Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf quality\+Model\+Type} {\bf selected\+Model\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf selected\+Scenario}
+\item 
+unsigned int {\bf scenario\+Seed}
+\item 
+map$<$ unsigned int, {\bf Quality\+Scenario} $\ast$ $>$ {\bf scenarios}
+\item 
+map$<$ unsigned int, wx\+String $>$ {\bf scenario\+Name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 27 do arquivo Quality\+Main.\+h.
+
+
+
+\subsection{Métodos}
+\index{Quality\+Main@{Quality\+Main}!add\+Scenario@{add\+Scenario}}
+\index{add\+Scenario@{add\+Scenario}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{add\+Scenario(const wx\+String \&name, bool copy=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Main\+::add\+Scenario (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{name, }
+\item[{bool}]{copy = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_quality_main_ac1fd857bd84a96c1871afac3ebb4d172}
+Adiciona um cen�rio 
+\begin{DoxyParams}{Parâmetros}
+{\em copy} & valor boleano que indica se o cen�rio a ser adicionado � uma c�pia do cen�rio selecionado \\
+\hline
+\end{DoxyParams}
+\index{Quality\+Main@{Quality\+Main}!change\+Model\+Type@{change\+Model\+Type}}
+\index{change\+Model\+Type@{change\+Model\+Type}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{change\+Model\+Type(int elem\+Id, quality\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}int Quality\+Main\+::change\+Model\+Type (
+\begin{DoxyParamCaption}
+\item[{int}]{elem\+Id, }
+\item[{{\bf quality\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_quality_main_abdc409982b9330ce25c69cea74a14373}
+Cria o modelo caso ele ainda nao exista para o no selecionado 
+\begin{DoxyParams}{Parâmetros}
+{\em node} & N�\\
+\hline
+\end{DoxyParams}
+void create\+Model(\+Draw\+Node$\ast$ node); Cria o modelo caso ele ainda nao exista para o no selecionado 
+\begin{DoxyParams}{Parâmetros}
+{\em link} & Trecho\\
+\hline
+\end{DoxyParams}
+void create\+Model(\+Draw\+Link$\ast$ link); Modifica o tipo do modelo do elemento \index{Quality\+Main@{Quality\+Main}!change\+Model\+Type@{change\+Model\+Type}}
+\index{change\+Model\+Type@{change\+Model\+Type}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{change\+Model\+Type(quality\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}int Quality\+Main\+::change\+Model\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf quality\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_quality_main_a5eb0ea56dd9be44de3a81b585534a8db}
+\index{Quality\+Main@{Quality\+Main}!change\+Model\+Type@{change\+Model\+Type}}
+\index{change\+Model\+Type@{change\+Model\+Type}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{change\+Model\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}int Quality\+Main\+::change\+Model\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_quality_main_add60d6fb101f80a14b902aa80b2d8aa2}
+\index{Quality\+Main@{Quality\+Main}!clear@{clear}}
+\index{clear@{clear}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Main\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quality_main_a08ed1af8235b7325ba6047f983a900d9}
+Limpa os valores e retorna ao estado p�s-\/constru��o 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a3155a0112bacea4b0af7b131c0e3f011}.
+
+\index{Quality\+Main@{Quality\+Main}!create\+Missing\+Models@{create\+Missing\+Models}}
+\index{create\+Missing\+Models@{create\+Missing\+Models}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{create\+Missing\+Models()}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Main\+::create\+Missing\+Models (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_quality_main_ac70c8055b5cd2948a09cd5587e533f84}
+Cria os modelos dos elementos que ainda n�o possuem \index{Quality\+Main@{Quality\+Main}!create\+Model\+Main@{create\+Model\+Main}}
+\index{create\+Model\+Main@{create\+Model\+Main}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{create\+Model\+Main(quality\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Main\+::create\+Model\+Main (
+\begin{DoxyParamCaption}
+\item[{{\bf quality\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_quality_main_a3b7148c549fb8d4e00560cb8fd63808d}
+Cria o objeto principal de cada tipo de modelo O\+BS\+: Garanta que este metodo ser� chamado na ordem do enum hidro\+Model\+Type 
+\begin{DoxyParams}{Parâmetros}
+{\em type} & Tipo \\
+\hline
+\end{DoxyParams}
+\index{Quality\+Main@{Quality\+Main}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{get\+Model(int scen, unsigned int id\+Node)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+Q\+Model}$\ast$ Quality\+Main\+::get\+Model (
+\begin{DoxyParamCaption}
+\item[{int}]{scen, }
+\item[{unsigned int}]{id\+Node}
+\end{DoxyParamCaption}
+)}\label{class_quality_main_a83751360694ae0ef4a4ca80651ac41ba}
+\index{Quality\+Main@{Quality\+Main}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{get\+Model(int elem\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+Q\+Model}$\ast$ Quality\+Main\+::get\+Model (
+\begin{DoxyParamCaption}
+\item[{int}]{elem\+Id}
+\end{DoxyParamCaption}
+)}\label{class_quality_main_a78bc8a81802d81e78e49ccdebb09a3f2}
+/$\ast$$\ast$ Retorna o modelo de acordo com o tipo e o identificador do n� 
+\begin{DoxyParams}{Parâmetros}
+{\em type} & Tipo \\
+\hline
+{\em id\+Node} & Identificador do n�\\
+\hline
+\end{DoxyParams}
+W\+Q\+Model$\ast$ get\+Model(quality\+Model\+Type type, int elem\+Id); Retorna o modelo de acordo com o identificador do n� 
+\begin{DoxyParams}{Parâmetros}
+{\em id\+Node} & Identificador do n� \\
+\hline
+\end{DoxyParams}
+\index{Quality\+Main@{Quality\+Main}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{get\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+Q\+Model}$\ast$ Quality\+Main\+::get\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_quality_main_a908dcbef17085d82c8f512b284a37cb6}
+Retorna o modelo de acordo com o tipo 
+\begin{DoxyParams}{Parâmetros}
+{\em type} & Tipo\\
+\hline
+\end{DoxyParams}
+W\+Q\+Model$\ast$ get\+Model(quality\+Model\+Type type); Retorna o modelo para o n� selecionado \index{Quality\+Main@{Quality\+Main}!get\+Model\+Main@{get\+Model\+Main}}
+\index{get\+Model\+Main@{get\+Model\+Main}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{get\+Model\+Main(quality\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quality\+Model\+Main}$\ast$ Quality\+Main\+::get\+Model\+Main (
+\begin{DoxyParamCaption}
+\item[{{\bf quality\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quality_main_a6e983e9a245ac0f6a3156a4dd2bb04b8}
+Retorna um \doxyref{Quality\+Model\+Main}{pag.}{class_quality_model_main} de acordo com o tipo 
+\begin{DoxyParams}{Parâmetros}
+{\em type} & Tipo \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 130 do arquivo Quality\+Main.\+h.
+
+\index{Quality\+Main@{Quality\+Main}!get\+Model\+Main@{get\+Model\+Main}}
+\index{get\+Model\+Main@{get\+Model\+Main}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{get\+Model\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quality\+Model\+Main}$\ast$ Quality\+Main\+::get\+Model\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quality_main_a6e9dc2b80beaf1a8c2e8a1d6461d7c4e}
+Retorna um \doxyref{Quality\+Model\+Main}{pag.}{class_quality_model_main} do n� selecionado 
+
+Definição na linha 134 do arquivo Quality\+Main.\+h.
+
+\index{Quality\+Main@{Quality\+Main}!get\+Scenario@{get\+Scenario}}
+\index{get\+Scenario@{get\+Scenario}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{get\+Scenario(int scen)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quality\+Scenario}$\ast$ Quality\+Main\+::get\+Scenario (
+\begin{DoxyParamCaption}
+\item[{int}]{scen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quality_main_a0f2d5704a7c7c730cfa24bbcdb5950e2}
+
+
+Definição na linha 215 do arquivo Quality\+Main.\+h.
+
+\index{Quality\+Main@{Quality\+Main}!get\+Scenario@{get\+Scenario}}
+\index{get\+Scenario@{get\+Scenario}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{get\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quality\+Scenario}$\ast$ Quality\+Main\+::get\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quality_main_a295f090dd1f06938cfe0984df2d168f6}
+
+
+Definição na linha 222 do arquivo Quality\+Main.\+h.
+
+\index{Quality\+Main@{Quality\+Main}!get\+Scenario\+Name@{get\+Scenario\+Name}}
+\index{get\+Scenario\+Name@{get\+Scenario\+Name}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{get\+Scenario\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}const map$<$ unsigned int, wx\+String $>$\& Quality\+Main\+::get\+Scenario\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quality_main_ab402fd43975547de0bf3e3ac1982cdc0}
+
+
+Definição na linha 232 do arquivo Quality\+Main.\+h.
+
+\index{Quality\+Main@{Quality\+Main}!get\+Scenario\+Name@{get\+Scenario\+Name}}
+\index{get\+Scenario\+Name@{get\+Scenario\+Name}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{get\+Scenario\+Name(int scen)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Quality\+Main\+::get\+Scenario\+Name (
+\begin{DoxyParamCaption}
+\item[{int}]{scen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quality_main_aea142525631d59bc388f3d519cfb1163}
+
+
+Definição na linha 237 do arquivo Quality\+Main.\+h.
+
+\index{Quality\+Main@{Quality\+Main}!get\+Scenario\+Seed@{get\+Scenario\+Seed}}
+\index{get\+Scenario\+Seed@{get\+Scenario\+Seed}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{get\+Scenario\+Seed()}]{\setlength{\rightskip}{0pt plus 5cm}int Quality\+Main\+::get\+Scenario\+Seed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quality_main_a796e89a0eff331195dac589b252e305f}
+
+
+Definição na linha 227 do arquivo Quality\+Main.\+h.
+
+\index{Quality\+Main@{Quality\+Main}!get\+Selected\+Scenario@{get\+Selected\+Scenario}}
+\index{get\+Selected\+Scenario@{get\+Selected\+Scenario}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{get\+Selected\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}int Quality\+Main\+::get\+Selected\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quality_main_ad9861cc846e7e0f5c65ba61d578542b6}
+
+
+Definição na linha 210 do arquivo Quality\+Main.\+h.
+
+\index{Quality\+Main@{Quality\+Main}!Instance@{Instance}}
+\index{Instance@{Instance}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{Instance()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Quality\+Main}\& Quality\+Main\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_quality_main_a233f019fed8c828a4cea216fb4cd84ca}
+Recupera a instancia da classe \index{Quality\+Main@{Quality\+Main}!on\+Changed\+Component@{on\+Changed\+Component}}
+\index{on\+Changed\+Component@{on\+Changed\+Component}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{on\+Changed\+Component()}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Main\+::on\+Changed\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quality_main_a4ccc4ba4f317dbc15a85ff4b8fbcae38}
+Evento de entrada do modulo 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a528080e8ef4be5f15e8a268ef8a06bd6}.
+
+\index{Quality\+Main@{Quality\+Main}!on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}}
+\index{on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{on\+Changed\+Element\+Type(vector$<$ unsigned int $>$ elemet\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Main\+::on\+Changed\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ unsigned int $>$}]{elemet\+Ids}
+\end{DoxyParamCaption}
+)}\label{class_quality_main_aeea0b2fef955b5d94276755a40da6650}
+\index{Quality\+Main@{Quality\+Main}!on\+Changing\+Component@{on\+Changing\+Component}}
+\index{on\+Changing\+Component@{on\+Changing\+Component}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{on\+Changing\+Component()}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Main\+::on\+Changing\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quality_main_a4aebe2540c3bc00d2e5eeb701090f1ce}
+Evento de saida do modulo 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a86d6778195457395b75c8995e98075f1}.
+
+\index{Quality\+Main@{Quality\+Main}!on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}}
+\index{on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{on\+Changing\+Element\+Type(vector$<$ unsigned int $>$ element\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Main\+::on\+Changing\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ unsigned int $>$}]{element\+Ids}
+\end{DoxyParamCaption}
+)}\label{class_quality_main_a723326f0464e5e6db68c1840a76136c3}
+\index{Quality\+Main@{Quality\+Main}!on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}}
+\index{on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{on\+Changing\+Time\+Interval(\+Date\+::\+Time\+Interval time\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Main\+::on\+Changing\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quality_main_a00881a297543e48193afb144116a8952}
+Evento chamado quando o sistema muda de intervalo de tempo O modulo adapta os modelos de acordo com o intervalo de tempo definido 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a3e49742b76123d86cd3fec640ba57dd8}.
+
+\index{Quality\+Main@{Quality\+Main}!on\+Delete\+Links@{on\+Delete\+Links}}
+\index{on\+Delete\+Links@{on\+Delete\+Links}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{on\+Delete\+Links(vector$<$ unsigned int $>$ link\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Main\+::on\+Delete\+Links (
+\begin{DoxyParamCaption}
+\item[{vector$<$ unsigned int $>$}]{link\+Ids}
+\end{DoxyParamCaption}
+)}\label{class_quality_main_a5d616966897ee7e4e305b39e01715441}
+Chamado quando algum no eh deletado 
+\begin{DoxyParams}{Parâmetros}
+{\em link\+Ids} & Identificador dos trechos deletados \\
+\hline
+\end{DoxyParams}
+\index{Quality\+Main@{Quality\+Main}!on\+Delete\+Nodes@{on\+Delete\+Nodes}}
+\index{on\+Delete\+Nodes@{on\+Delete\+Nodes}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{on\+Delete\+Nodes(vector$<$ unsigned int $>$ node\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Main\+::on\+Delete\+Nodes (
+\begin{DoxyParamCaption}
+\item[{vector$<$ unsigned int $>$}]{node\+Ids}
+\end{DoxyParamCaption}
+)}\label{class_quality_main_a0305b9de15e57d423ee9040d140df5dd}
+Chamado quando algum no eh deletado 
+\begin{DoxyParams}{Parâmetros}
+{\em node\+Ids} & Identificador dos n� deletados \\
+\hline
+\end{DoxyParams}
+\index{Quality\+Main@{Quality\+Main}!on\+Init@{on\+Init}}
+\index{on\+Init@{on\+Init}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{on\+Init(\+S\+I\+G\+A $\ast$main, wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Main\+::on\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+GA} $\ast$}]{main, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quality_main_ad833494330f49e840a3cf6c5371a96e4}
+Inicializa a instancia do \doxyref{Quality\+Main}{pag.}{class_quality_main} 
+\begin{DoxyParams}{Parâmetros}
+{\em main} & Classe base \\
+\hline
+{\em frame} & Janela onde a interface ser� inserida \\
+\hline
+{\em parent} & Componente onde a interface sera inserida \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_aa781bddb43637778a628acbe21a78a01}.
+
+\index{Quality\+Main@{Quality\+Main}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Main\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quality_main_a6df6e48e08ac8d97676eeb3a7d0f18c4}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a755c932409c320f6a057abf6c4ebc5e4}.
+
+\index{Quality\+Main@{Quality\+Main}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Main\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quality_main_a427eb2125d72f1b3cec942af1bed875c}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_ad6ccdceebf942b62e75f0255319c9fab}.
+
+\index{Quality\+Main@{Quality\+Main}!on\+Select\+Element@{on\+Select\+Element}}
+\index{on\+Select\+Element@{on\+Select\+Element}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{on\+Select\+Element()}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Main\+::on\+Select\+Element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quality_main_a08e390fbbd56a215dc613b00f208cf0d}
+Chamado quando algum no eh selecionado 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a886fc9240f1faf7948ad00aec78c50c3}.
+
+\index{Quality\+Main@{Quality\+Main}!remove\+All\+Scenarios@{remove\+All\+Scenarios}}
+\index{remove\+All\+Scenarios@{remove\+All\+Scenarios}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{remove\+All\+Scenarios()}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Main\+::remove\+All\+Scenarios (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_quality_main_a99c4ec16ba315e412f93038e99f9f8e5}
+Remove todos dos cen�rios existentes \index{Quality\+Main@{Quality\+Main}!remove\+Scenario@{remove\+Scenario}}
+\index{remove\+Scenario@{remove\+Scenario}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{remove\+Scenario(bool recreate=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Main\+::remove\+Scenario (
+\begin{DoxyParamCaption}
+\item[{bool}]{recreate = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_quality_main_ac2618a9f70384dc24e7f7f62496aa808}
+Remove o cen�rio selecionado de cada modelo \index{Quality\+Main@{Quality\+Main}!set\+Selected\+Model\+Type@{set\+Selected\+Model\+Type}}
+\index{set\+Selected\+Model\+Type@{set\+Selected\+Model\+Type}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{set\+Selected\+Model\+Type(quality\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Main\+::set\+Selected\+Model\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf quality\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quality_main_a35daee6c866a3f156bc9912fa1af4812}
+
+
+Definição na linha 203 do arquivo Quality\+Main.\+h.
+
+\index{Quality\+Main@{Quality\+Main}!set\+Selected\+Scenario@{set\+Selected\+Scenario}}
+\index{set\+Selected\+Scenario@{set\+Selected\+Scenario}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{set\+Selected\+Scenario(wx\+String scen)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Main\+::set\+Selected\+Scenario (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{scen}
+\end{DoxyParamCaption}
+)}\label{class_quality_main_aed2a5bc2a6c19b847b590eae6fe445cd}
+\index{Quality\+Main@{Quality\+Main}!set\+Selected\+Scenario@{set\+Selected\+Scenario}}
+\index{set\+Selected\+Scenario@{set\+Selected\+Scenario}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{set\+Selected\+Scenario(unsigned int scen)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Main\+::set\+Selected\+Scenario (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{scen}
+\end{DoxyParamCaption}
+)}\label{class_quality_main_a0c5c85980f6eadc71ff69d24ef1a1777}
+\index{Quality\+Main@{Quality\+Main}!update\+Tree\+Item@{update\+Tree\+Item}}
+\index{update\+Tree\+Item@{update\+Tree\+Item}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{update\+Tree\+Item(\+S\+I\+G\+A\+Tree\+Ctrl $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Main\+::update\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quality_main_ac75a7ad4013448dbff98cc6f2d42eea2}
+Atualiza os ponteiros das suas series no Tree\+Ctrl de integra��o 
+
+Reimplementação de {\bf Component} \doxyref{}{pag.}{class_component_a29b14a3db0650e8c62711bb9edea68a1}.
+
+
+
+\subsection{Atributos}
+\index{Quality\+Main@{Quality\+Main}!scenario\+Name@{scenario\+Name}}
+\index{scenario\+Name@{scenario\+Name}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{scenario\+Name}]{\setlength{\rightskip}{0pt plus 5cm}map$<$ unsigned int, wx\+String $>$ Quality\+Main\+::scenario\+Name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_quality_main_a560cd421b501dbd64129a79c5ff63b14}
+
+
+Definição na linha 42 do arquivo Quality\+Main.\+h.
+
+\index{Quality\+Main@{Quality\+Main}!scenarios@{scenarios}}
+\index{scenarios@{scenarios}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{scenarios}]{\setlength{\rightskip}{0pt plus 5cm}map$<$ unsigned int, {\bf Quality\+Scenario}$\ast$ $>$ Quality\+Main\+::scenarios\hspace{0.3cm}{\ttfamily [protected]}}\label{class_quality_main_acff502b90880803eeb106a8fac938f13}
+Mapa para os cen�rios do modelo 
+
+Definição na linha 40 do arquivo Quality\+Main.\+h.
+
+\index{Quality\+Main@{Quality\+Main}!scenario\+Seed@{scenario\+Seed}}
+\index{scenario\+Seed@{scenario\+Seed}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{scenario\+Seed}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Quality\+Main\+::scenario\+Seed\hspace{0.3cm}{\ttfamily [protected]}}\label{class_quality_main_a84aee44861938152972e4876010ddb1f}
+Identificador dos cenarios 
+
+Definição na linha 36 do arquivo Quality\+Main.\+h.
+
+\index{Quality\+Main@{Quality\+Main}!selected\+Model\+Type@{selected\+Model\+Type}}
+\index{selected\+Model\+Type@{selected\+Model\+Type}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{selected\+Model\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf quality\+Model\+Type} Quality\+Main\+::selected\+Model\+Type}\label{class_quality_main_af95cbe28ff52ca6038792a901699b4eb}
+Guarda qual o tipo de modelo que esta sendo utilizado no momento 
+
+Definição na linha 62 do arquivo Quality\+Main.\+h.
+
+\index{Quality\+Main@{Quality\+Main}!selected\+Scenario@{selected\+Scenario}}
+\index{selected\+Scenario@{selected\+Scenario}!Quality\+Main@{Quality\+Main}}
+\subsubsection[{selected\+Scenario}]{\setlength{\rightskip}{0pt plus 5cm}int Quality\+Main\+::selected\+Scenario\hspace{0.3cm}{\ttfamily [protected]}}\label{class_quality_main_a8c47c2681954d433b9dca7236dcd8097}
+Cen�rio selacionado 
+
+Definição na linha 32 do arquivo Quality\+Main.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Quality\+Main.\+h}\end{DoxyCompactItemize}

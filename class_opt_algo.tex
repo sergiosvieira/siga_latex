@@ -1,0 +1,158 @@
+\section{Refer√™ncia da Classe Opt\+Algo}
+\label{class_opt_algo}\index{Opt\+Algo@{Opt\+Algo}}
+
+
+{\ttfamily \#include $<$Opt\+Algo.\+h$>$}
+
+
+
+Superclasse de {\bf H\+B\+M\+M\+O\+Algo} e {\bf M\+O\+P\+S\+O\+Algo}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Algo} ({\bf Node} $\ast${\bf node})
+\item 
+virtual {\bf $\sim$\+Opt\+Algo} ()
+\item 
+virtual bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)=0
+\item 
+virtual bool {\bf run} ()=0
+\item 
+bool {\bf run\+Val} ()
+\item 
+virtual void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)=0
+\item 
+virtual void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)=0
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Result} $\ast$ {\bf results}
+\item 
+{\bf Node} $\ast$ {\bf node}
+\item 
+{\bf Obj\+Function} $\ast$ {\bf function}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+Cada instancia de modelo eh feita para um nÛ especÌfico 
+
+Defini√ß√£o na linha 21 do arquivo Opt\+Algo.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Opt\+Algo@{Opt\+Algo}!Opt\+Algo@{Opt\+Algo}}
+\index{Opt\+Algo@{Opt\+Algo}!Opt\+Algo@{Opt\+Algo}}
+\subsubsection[{Opt\+Algo(\+Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}Opt\+Algo\+::\+Opt\+Algo (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_opt_algo_ab56e0cc2ebb0eb8a93d41f0b5eacd985}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em node} & NÛ \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Algo@{Opt\+Algo}!````~Opt\+Algo@{$\sim$\+Opt\+Algo}}
+\index{````~Opt\+Algo@{$\sim$\+Opt\+Algo}!Opt\+Algo@{Opt\+Algo}}
+\subsubsection[{$\sim$\+Opt\+Algo()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Opt\+Algo\+::$\sim$\+Opt\+Algo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_algo_a81ae15b38b69e0771380cc2f16d17e2f}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Opt\+Algo@{Opt\+Algo}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Opt\+Algo@{Opt\+Algo}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Opt\+Algo\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_opt_algo_aabc7e1153b2660f512d8edbb70d57330}
+Verifica se todos os dados foram preenchidos de maneira correta 
+
+Implementado por {\bf H\+B\+M\+M\+O\+Algo} \doxyref{}{pag.}{class_h_b_m_m_o_algo_a829d611f6939182e74e8851b3bbf48aa} e {\bf M\+O\+P\+S\+O\+Algo} \doxyref{}{pag.}{class_m_o_p_s_o_algo_a4fd7becf08aad9c4225cffc40d2a8fb8}.
+
+\index{Opt\+Algo@{Opt\+Algo}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Opt\+Algo@{Opt\+Algo}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Algo\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_opt_algo_a09e7258470be1fa588994a69269e68eb}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf H\+B\+M\+M\+O\+Algo} \doxyref{}{pag.}{class_h_b_m_m_o_algo_a0cedb19e2e107f3a063d98c89263101e} e {\bf M\+O\+P\+S\+O\+Algo} \doxyref{}{pag.}{class_m_o_p_s_o_algo_a41fd1b2e5449af717354a65e07f5a109}.
+
+\index{Opt\+Algo@{Opt\+Algo}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Opt\+Algo@{Opt\+Algo}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Algo\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_opt_algo_a91fbc45d16961652337fff0c02eb0bdd}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf H\+B\+M\+M\+O\+Algo} \doxyref{}{pag.}{class_h_b_m_m_o_algo_a9cac306996fefe2b5092f02c71bdc462} e {\bf M\+O\+P\+S\+O\+Algo} \doxyref{}{pag.}{class_m_o_p_s_o_algo_aefecabcc91869c4f4c946bd157d00687}.
+
+\index{Opt\+Algo@{Opt\+Algo}!run@{run}}
+\index{run@{run}!Opt\+Algo@{Opt\+Algo}}
+\subsubsection[{run()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Opt\+Algo\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_opt_algo_aee3a5a4a437ef1b60537456ca46ec8ee}
+Executa CalibraÁ„o 
+
+Implementado por {\bf H\+B\+M\+M\+O\+Algo} \doxyref{}{pag.}{class_h_b_m_m_o_algo_abf451f3631bc0f92f9b810a39d982471} e {\bf M\+O\+P\+S\+O\+Algo} \doxyref{}{pag.}{class_m_o_p_s_o_algo_a15d56b9c209a3642369dfaaeb4997663}.
+
+\index{Opt\+Algo@{Opt\+Algo}!run\+Val@{run\+Val}}
+\index{run\+Val@{run\+Val}!Opt\+Algo@{Opt\+Algo}}
+\subsubsection[{run\+Val()}]{\setlength{\rightskip}{0pt plus 5cm}bool Opt\+Algo\+::run\+Val (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_opt_algo_a8b9188d952670e3e32447b4622e61f00}
+Executa ValidaÁ„o 
+
+\subsection{Atributos}
+\index{Opt\+Algo@{Opt\+Algo}!function@{function}}
+\index{function@{function}!Opt\+Algo@{Opt\+Algo}}
+\subsubsection[{function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Obj\+Function}$\ast$ Opt\+Algo\+::function}\label{class_opt_algo_a68adf5ce61306c3c0ee489be905b21e2}
+Ponteiro para Classe de funÁıes objetivo 
+
+Defini√ß√£o na linha 35 do arquivo Opt\+Algo.\+h.
+
+\index{Opt\+Algo@{Opt\+Algo}!node@{node}}
+\index{node@{node}!Opt\+Algo@{Opt\+Algo}}
+\subsubsection[{node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ Opt\+Algo\+::node}\label{class_opt_algo_a22de7d9045d5ef739f3b2d2925c20203}
+NÛ de interesse 
+
+Defini√ß√£o na linha 31 do arquivo Opt\+Algo.\+h.
+
+\index{Opt\+Algo@{Opt\+Algo}!results@{results}}
+\index{results@{results}!Opt\+Algo@{Opt\+Algo}}
+\subsubsection[{results}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Opt\+Result}$\ast$ Opt\+Algo\+::results}\label{class_opt_algo_a25a0c03e3f6ddf5c25e25256dd92c466}
+Ponteiro de resultados de cada nÛ da rede que foi calculado 
+
+Defini√ß√£o na linha 27 do arquivo Opt\+Algo.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Algo.\+h}\end{DoxyCompactItemize}

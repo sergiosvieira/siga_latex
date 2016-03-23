@@ -1,0 +1,552 @@
+\section{Refer√™ncia da Classe Res\+Op\+Ctrl}
+\label{class_res_op_ctrl}\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Ctrl.\+h$>$}
+
+
+
+Herdeiro de {\bf Component}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf update\+Current\+Scenario\+Page\+Networks} ()
+\item 
+void {\bf on\+Changed\+Component} ()
+\item 
+void {\bf on\+Changing\+Component} ()
+\item 
+void {\bf on\+Select\+Element} ()
+\item 
+void {\bf on\+Delete\+Elements} (vector$<$ {\bf Element\+ID} $>$ \&element\+\_\+ids\+\_\+vector)
+\item 
+void {\bf clear} ()
+\item 
+{\bf Res\+Op\+Scenario\+Ctrl} $\ast$ {\bf get\+Scenario\+Ctrl} ()
+\item 
+{\bf Res\+Op\+Scenario} $\ast$ {\bf get\+Scenario} (unsigned int scen)
+\item 
+{\bf Res\+Op\+Scenario} $\ast$ {\bf get\+Scenario} ()
+\item 
+int {\bf get\+Scenario\+Seed} ()
+\item 
+int {\bf get\+Selected\+Scenario} ()
+\item 
+{\bf Res\+Op\+Model\+Ctrl} $\ast$ {\bf get\+Model\+Ctrl} ({\bf Res\+Op\+Model\+Type} type)
+\item 
+{\bf Res\+Op\+Model\+Ctrl} $\ast$ {\bf get\+Model\+Ctrl} ()
+\item 
+{\bf Res\+Op\+Element} $\ast$ {\bf get\+Element} (unsigned int scen, {\bf Element\+ID} id)
+\item 
+{\bf Res\+Op\+Element} $\ast$ {\bf get\+Element} ({\bf Element\+ID} id)
+\item 
+{\bf Res\+Op\+Element} $\ast$ {\bf get\+Element} ()
+\item 
+{\bf Res\+Op\+Model\+Ctrl} $\ast$ {\bf get\+Tecnique\+Main} ({\bf Res\+Op\+Algorithm\+Type})
+\item 
+{\bf Res\+Op\+Algorithm} $\ast$ {\bf get\+Tecnique} ({\bf Res\+Op\+Algorithm\+Type} type)
+\item 
+{\bf Res\+Op\+Algorithm} $\ast$ {\bf get\+Tecnique} ()
+\item 
+void {\bf create\+Obj\+Function\+Main} ()
+\item 
+{\bf Res\+Op\+Obj\+Function\+Ctrl} $\ast$ {\bf get\+Obj\+Function\+Main} ()
+\item 
+void {\bf on\+Changing\+Time\+Interval} ({\bf Date\+::\+Time\+Interval} time\+Interval)
+\item 
+void {\bf on\+Changing\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ element\+Ids)
+\item 
+void {\bf on\+Changed\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ elemet\+Ids)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf run} ()
+\item 
+void {\bf run\+Isolated} (std\+::vector$<$ {\bf Element\+ID} $>$ element\+\_\+ids, std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Element\+ID} $>$ $>$ dependency\+\_\+map, {\bf Element\+ID} network\+\_\+id)
+\item 
+void {\bf add\+Scenario} (wx\+String scen\+Name, bool copy=false)
+\item 
+void {\bf add\+Batch\+Scenario} (wx\+String scen\+Name, bool copy)
+\item 
+void {\bf remove\+Scenario} (unsigned int scen)
+\item 
+void {\bf set\+Selected\+Scenario} (int scen)
+\item 
+void {\bf create\+Missing\+Elements} (int scen, bool ignore\+Old=true)
+\item 
+void {\bf create\+Missing\+Elements} (bool ignore\+Old=true)
+\item 
+void {\bf create\+Missing\+Element} ({\bf Element\+ID} element\+Id, unsigned int scenario\+Id)
+\item 
+void {\bf on\+Init} ({\bf S\+I\+GA} $\ast${\bf main}, wx\+Frame $\ast$frame, wx\+Window $\ast$parent)
+\begin{DoxyCompactList}\small\item\em Initializes the resop model ctrls. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{M√©todos P√∫blicos Est√°ticos}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Res\+Op\+Ctrl} \& {\bf Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Element\+ID} {\bf m\+\_\+selected\+\_\+element\+\_\+id}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 25 do arquivo Res\+Op\+Ctrl.\+h.
+
+
+
+\subsection{M√©todos}
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!add\+Batch\+Scenario@{add\+Batch\+Scenario}}
+\index{add\+Batch\+Scenario@{add\+Batch\+Scenario}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{add\+Batch\+Scenario(wx\+String scen\+Name, bool copy)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::add\+Batch\+Scenario (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{scen\+Name, }
+\item[{bool}]{copy}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_a6f6aeacdd0642d421a295e0cb22ef8ab}
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!add\+Scenario@{add\+Scenario}}
+\index{add\+Scenario@{add\+Scenario}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{add\+Scenario(wx\+String scen\+Name, bool copy=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::add\+Scenario (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{scen\+Name, }
+\item[{bool}]{copy = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_aa9fb0668651b85976831a4c8e0628a39}
+Cria um cenario 
+\begin{DoxyParams}{Par√¢metros}
+{\em scen\+Name} & Nome do cenario \\
+\hline
+{\em copy} & Deve ser copiado se true \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!clear@{clear}}
+\index{clear@{clear}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_ctrl_aadb197431d65fda8c38447cec4c6582a}
+Chama o metodo clear de cada \doxyref{Hidro\+Model\+Main}{pag.}{class_hidro_model_main} 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a3155a0112bacea4b0af7b131c0e3f011}.
+
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!create\+Missing\+Element@{create\+Missing\+Element}}
+\index{create\+Missing\+Element@{create\+Missing\+Element}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{create\+Missing\+Element(\+Element\+I\+D element\+Id, unsigned int scenario\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::create\+Missing\+Element (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{element\+Id, }
+\item[{unsigned int}]{scenario\+Id}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_ac18bc00bf0b1fd677e823af445679657}
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!create\+Missing\+Elements@{create\+Missing\+Elements}}
+\index{create\+Missing\+Elements@{create\+Missing\+Elements}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{create\+Missing\+Elements(int scen, bool ignore\+Old=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::create\+Missing\+Elements (
+\begin{DoxyParamCaption}
+\item[{int}]{scen, }
+\item[{bool}]{ignore\+Old = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_ac53438b57056b58369160e44ee685a55}
+Cria os elementos do cenario desejado 
+\begin{DoxyParams}{Par√¢metros}
+{\em scen} & Cenario \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!create\+Missing\+Elements@{create\+Missing\+Elements}}
+\index{create\+Missing\+Elements@{create\+Missing\+Elements}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{create\+Missing\+Elements(bool ignore\+Old=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::create\+Missing\+Elements (
+\begin{DoxyParamCaption}
+\item[{bool}]{ignore\+Old = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_aa0ea03035a84132de943a0b405dc7a39}
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!create\+Obj\+Function\+Main@{create\+Obj\+Function\+Main}}
+\index{create\+Obj\+Function\+Main@{create\+Obj\+Function\+Main}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{create\+Obj\+Function\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::create\+Obj\+Function\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_a87af4be41ffa39284389ad16b4167947}
+Cria classe \doxyref{Res\+Op\+Obj\+Function\+Ctrl}{pag.}{class_res_op_obj_function_ctrl} caso ela ainda nao exista \index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!get\+Element@{get\+Element}}
+\index{get\+Element@{get\+Element}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{get\+Element(unsigned int scen, Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Element}$\ast$ Res\+Op\+Ctrl\+::get\+Element (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{scen, }
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_a9bbdc5b20f5e3ada69999e8c89dda126}
+Retorna a inst‚ncia do \doxyref{Res\+Op\+Element}{pag.}{class_res_op_element} correspondente ao id do nÛ fornecido do modelo utilizado no momento. 
+\begin{DoxyParams}{Par√¢metros}
+{\em scen} & Identificador do cenerario desejado \\
+\hline
+{\em id} & Identificador do nÛ selecionado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Ponteiro para \doxyref{Res\+Op\+Element}{pag.}{class_res_op_element} 
+\end{DoxyReturn}
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!get\+Element@{get\+Element}}
+\index{get\+Element@{get\+Element}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{get\+Element(\+Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Element}$\ast$ Res\+Op\+Ctrl\+::get\+Element (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_a16dd21dd9b144b05b8ca715feb4019ed}
+Retorna a inst‚ncia do \doxyref{Res\+Op\+Element}{pag.}{class_res_op_element} correspondente ao id do nÛ fornecido do modelo utilizado no momento. 
+\begin{DoxyParams}{Par√¢metros}
+{\em scen} & Identificador do cenerario desejado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Ponteiro para \doxyref{Res\+Op\+Element}{pag.}{class_res_op_element}
+\end{DoxyReturn}
+Res\+Op\+Element$\ast$ get\+Element(unsigned int scen); Retorna a inst‚ncia do \doxyref{Res\+Op\+Element}{pag.}{class_res_op_element} correspondente ao id do nÛ fornecido do modelo utilizado no momento. 
+\begin{DoxyParams}{Par√¢metros}
+{\em id} & Identificador do elemento selecionado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Ponteiro para \doxyref{Res\+Op\+Element}{pag.}{class_res_op_element} 
+\end{DoxyReturn}
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!get\+Element@{get\+Element}}
+\index{get\+Element@{get\+Element}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{get\+Element()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Element}$\ast$ Res\+Op\+Ctrl\+::get\+Element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_a0789ddd74a56f76cfb77723dd8b98f87}
+Retorna a inst‚ncia do modelo correspondente ao tipo de modelo utilizado para o nÛ selecionado. \begin{DoxyReturn}{Retorna}
+Ponteiro para \doxyref{Res\+Op\+Element}{pag.}{class_res_op_element} 
+\end{DoxyReturn}
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!get\+Model\+Ctrl@{get\+Model\+Ctrl}}
+\index{get\+Model\+Ctrl@{get\+Model\+Ctrl}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{get\+Model\+Ctrl(\+Res\+Op\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Model\+Ctrl}$\ast$ Res\+Op\+Ctrl\+::get\+Model\+Ctrl (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_a7eacac3817ed8b7e1ff20b7973c12c2d}
+Retorna a inst‚ncia do \doxyref{Res\+Op\+Model\+Main}{pag.}{class_res_op_model_main} correspondente ao tipo de modelo que esta sendo utilizado no momento. 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Modelo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia \doxyref{Res\+Op\+Model\+Main}{pag.}{class_res_op_model_main} 
+\end{DoxyReturn}
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!get\+Model\+Ctrl@{get\+Model\+Ctrl}}
+\index{get\+Model\+Ctrl@{get\+Model\+Ctrl}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{get\+Model\+Ctrl()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Model\+Ctrl}$\ast$ Res\+Op\+Ctrl\+::get\+Model\+Ctrl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_a8ad37061c0f911dd1783930159cab43a}
+Retorna a inst‚ncia do \doxyref{Res\+Op\+Model\+Main}{pag.}{class_res_op_model_main} correspondente ao tipo de modelo que esta sendo utilizado no momento. \begin{DoxyReturn}{Retorna}
+Inst‚ncia \doxyref{Res\+Op\+Model\+Main}{pag.}{class_res_op_model_main} 
+\end{DoxyReturn}
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!get\+Obj\+Function\+Main@{get\+Obj\+Function\+Main}}
+\index{get\+Obj\+Function\+Main@{get\+Obj\+Function\+Main}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{get\+Obj\+Function\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Obj\+Function\+Ctrl}$\ast$ Res\+Op\+Ctrl\+::get\+Obj\+Function\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_op_ctrl_ae087897c189490c856998b660571d06e}
+Retorna a inst‚ncia do \doxyref{Res\+Op\+Obj\+Function\+Ctrl}{pag.}{class_res_op_obj_function_ctrl} \begin{DoxyReturn}{Retorna}
+Inst‚ncia \doxyref{Res\+Op\+Obj\+Function\+Ctrl}{pag.}{class_res_op_obj_function_ctrl} 
+\end{DoxyReturn}
+
+
+Defini√ß√£o na linha 157 do arquivo Res\+Op\+Ctrl.\+h.
+
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!get\+Scenario@{get\+Scenario}}
+\index{get\+Scenario@{get\+Scenario}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{get\+Scenario(unsigned int scen)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Scenario}$\ast$ Res\+Op\+Ctrl\+::get\+Scenario (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{scen}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_a4a0c3cbd6b068fdb7728d074048b89e3}
+Retorna o cenario desejado 
+\begin{DoxyParams}{Par√¢metros}
+{\em scen} & Cenario desejado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Cenario 
+\end{DoxyReturn}
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!get\+Scenario@{get\+Scenario}}
+\index{get\+Scenario@{get\+Scenario}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{get\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Scenario}$\ast$ Res\+Op\+Ctrl\+::get\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_abdc7f2938cd9477d429af7c75b99eeba}
+Retorna o cenario selecionado \begin{DoxyReturn}{Retorna}
+Cenario 
+\end{DoxyReturn}
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!get\+Scenario\+Ctrl@{get\+Scenario\+Ctrl}}
+\index{get\+Scenario\+Ctrl@{get\+Scenario\+Ctrl}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{get\+Scenario\+Ctrl()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Scenario\+Ctrl}$\ast$ Res\+Op\+Ctrl\+::get\+Scenario\+Ctrl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_acb4e4d6f4e92faad39af31ae1eb3adbe}
+Retorna o controlador de cenarios \index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!get\+Scenario\+Seed@{get\+Scenario\+Seed}}
+\index{get\+Scenario\+Seed@{get\+Scenario\+Seed}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{get\+Scenario\+Seed()}]{\setlength{\rightskip}{0pt plus 5cm}int Res\+Op\+Ctrl\+::get\+Scenario\+Seed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_a2743eab83318f62e30d8629b5e23357b}
+Retorna o seed dos cenarios \index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!get\+Selected\+Scenario@{get\+Selected\+Scenario}}
+\index{get\+Selected\+Scenario@{get\+Selected\+Scenario}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{get\+Selected\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}int Res\+Op\+Ctrl\+::get\+Selected\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_a861ee86b9d5b1eadf5a2f1d3cef8dbcb}
+Retorna a posiÁ„o do cenario selecionado \index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!get\+Tecnique@{get\+Tecnique}}
+\index{get\+Tecnique@{get\+Tecnique}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{get\+Tecnique(\+Res\+Op\+Algorithm\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Algorithm}$\ast$ Res\+Op\+Ctrl\+::get\+Tecnique (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Algorithm\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_af3f52905056c7efaf93994b9cedc6bc9}
+Retorna a inst‚ncia do \doxyref{Res\+Op\+Model\+Ctrl}{pag.}{class_res_op_model_ctrl} correspondente ao tipo de tecnica que esta sendo utilizado no momento. \begin{DoxyReturn}{Retorna}
+Inst‚ncia \doxyref{Res\+Op\+Model\+Ctrl}{pag.}{class_res_op_model_ctrl}
+\end{DoxyReturn}
+Res\+Op\+Model\+Ctrl$\ast$ \doxyref{get\+Tecnique\+Main()}{pag.}{class_res_op_ctrl_a6742aa43e9b2747ff20b41245323bd77}\{ return get\+Tecnique\+Main(this-\/$>$selected\+Tecnique\+Type); \}; Retorna a inst‚ncia do \doxyref{Res\+Op\+Algorithm}{pag.}{class_res_op_algorithm} correspondente ao tipo do tecnica fornecida 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo do tecnica de otimizacao \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Res\+Op\+Algorithm}{pag.}{class_res_op_algorithm} 
+\end{DoxyReturn}
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!get\+Tecnique@{get\+Tecnique}}
+\index{get\+Tecnique@{get\+Tecnique}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{get\+Tecnique()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Algorithm}$\ast$ Res\+Op\+Ctrl\+::get\+Tecnique (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_ae52ef44b4a5348bab80f9304fa2a48e9}
+Retorna a inst‚ncia do modelo correspondente ao tipo de tecnica utilizada no momento \begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Res\+Op\+Algorithm}{pag.}{class_res_op_algorithm} 
+\end{DoxyReturn}
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!get\+Tecnique\+Main@{get\+Tecnique\+Main}}
+\index{get\+Tecnique\+Main@{get\+Tecnique\+Main}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{get\+Tecnique\+Main(\+Res\+Op\+Algorithm\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Model\+Ctrl}$\ast$ Res\+Op\+Ctrl\+::get\+Tecnique\+Main (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Algorithm\+Type}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_op_ctrl_a6742aa43e9b2747ff20b41245323bd77}
+Retorna a inst‚ncia do \doxyref{Res\+Op\+Model\+Ctrl}{pag.}{class_res_op_model_ctrl} correspondente ao tipo de tecnica fornecida. 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo do tecnica de operaÁ„o \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia \doxyref{Res\+Op\+Model\+Ctrl}{pag.}{class_res_op_model_ctrl} 
+\end{DoxyReturn}
+
+
+Defini√ß√£o na linha 127 do arquivo Res\+Op\+Ctrl.\+h.
+
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!Instance@{Instance}}
+\index{Instance@{Instance}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{Instance()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Res\+Op\+Ctrl}\& Res\+Op\+Ctrl\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_res_op_ctrl_aa89248f09860372ed2a2ed2abb57f7b6}
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!on\+Changed\+Component@{on\+Changed\+Component}}
+\index{on\+Changed\+Component@{on\+Changed\+Component}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{on\+Changed\+Component()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::on\+Changed\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_ctrl_a3aaaf6f89329035fbf2d356263b91289}
+Chamado quando entra no modelo 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a528080e8ef4be5f15e8a268ef8a06bd6}.
+
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}}
+\index{on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{on\+Changed\+Element\+Type(vector$<$ Element\+I\+D $>$ elemet\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::on\+Changed\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{elemet\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_ctrl_a2023c0b2fc80da9dd8a71565b42cd67b}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a49dc89aa957ef7a7fdb37c6b55041261}.
+
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!on\+Changing\+Component@{on\+Changing\+Component}}
+\index{on\+Changing\+Component@{on\+Changing\+Component}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{on\+Changing\+Component()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::on\+Changing\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_ctrl_a253ecc7a46f1bc53c36e74bda51450d3}
+Chamado quando sai do modelo 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a86d6778195457395b75c8995e98075f1}.
+
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}}
+\index{on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{on\+Changing\+Element\+Type(vector$<$ Element\+I\+D $>$ element\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::on\+Changing\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{element\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_ctrl_a36ea73331e0bfe17cc3c16c03c370be8}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a959af092622ea87958a2858d0e2d0ce1}.
+
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}}
+\index{on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{on\+Changing\+Time\+Interval(\+Date\+::\+Time\+Interval time\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::on\+Changing\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_ctrl_a1934e5de040c468c08a317a7e2af3c95}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a3e49742b76123d86cd3fec640ba57dd8}.
+
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!on\+Delete\+Elements@{on\+Delete\+Elements}}
+\index{on\+Delete\+Elements@{on\+Delete\+Elements}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{on\+Delete\+Elements(vector$<$ Element\+I\+D $>$ \&element\+\_\+ids\+\_\+vector)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::on\+Delete\+Elements (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$ \&}]{elements\+\_\+ids\+\_\+vector}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_ctrl_af6c42f81c5bf7549b2f4cadea57b3f68}
+Apaga os dados do(s) nÛ(s) selecionados Deve ser reimplementado no mÛdulo se deseja realizar algo 
+\begin{DoxyParams}{Par√¢metros}
+{\em node\+Ids} & Identificador do(s) nÛ(s) selecionado(s) \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_ad77e22c15657b1a02cf967a59ddbc2cd}.
+
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!on\+Init@{on\+Init}}
+\index{on\+Init@{on\+Init}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{on\+Init(\+S\+I\+G\+A $\ast$main, wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::on\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+GA} $\ast$}]{main, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_ctrl_a55316a5718ad1148d5df7aa8a2766f5f}
+
+
+Initializes the resop model ctrls. 
+
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_aa781bddb43637778a628acbe21a78a01}.
+
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_ctrl_a9b844808c259f63d9db4884ff78eba5e}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a755c932409c320f6a057abf6c4ebc5e4}.
+
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_ctrl_a79864de203926ad35d0139989ff3442a}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_ad6ccdceebf942b62e75f0255319c9fab}.
+
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!on\+Select\+Element@{on\+Select\+Element}}
+\index{on\+Select\+Element@{on\+Select\+Element}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{on\+Select\+Element()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::on\+Select\+Element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_ctrl_adee463c6940c6f21e145496a2790192d}
+Chamado quando algum nÛ eh selecionado 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a886fc9240f1faf7948ad00aec78c50c3}.
+
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!remove\+Scenario@{remove\+Scenario}}
+\index{remove\+Scenario@{remove\+Scenario}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{remove\+Scenario(unsigned int scen)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::remove\+Scenario (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{scen}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_ac7c9243b482dafacbfc4b0feaf115ae5}
+Remove um scenario 
+\begin{DoxyParams}{Par√¢metros}
+{\em scen} & Cenario a ser removido \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!run@{run}}
+\index{run@{run}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_a0625d22ad339364838216e37e5df4439}
+Executa a rede \index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!run\+Isolated@{run\+Isolated}}
+\index{run\+Isolated@{run\+Isolated}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{run\+Isolated(std\+::vector$<$ Element\+I\+D $>$ element\+\_\+ids, std\+::map$<$ Element\+I\+D, std\+::vector$<$ Element\+I\+D $>$ $>$ dependency\+\_\+map, Element\+I\+D network\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::run\+Isolated (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Element\+ID} $>$}]{element\+\_\+ids, }
+\item[{std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Element\+ID} $>$ $>$}]{dependency\+\_\+map, }
+\item[{{\bf Element\+ID}}]{network\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_ac744aa32fa129384fd6b4e61870c5b5b}
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!set\+Selected\+Scenario@{set\+Selected\+Scenario}}
+\index{set\+Selected\+Scenario@{set\+Selected\+Scenario}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{set\+Selected\+Scenario(int scen)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::set\+Selected\+Scenario (
+\begin{DoxyParamCaption}
+\item[{int}]{scen}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_afce5ac764509770647c2a790b14392ae}
+Define o cen·rio selecionando \index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!update\+Current\+Scenario\+Page\+Networks@{update\+Current\+Scenario\+Page\+Networks}}
+\index{update\+Current\+Scenario\+Page\+Networks@{update\+Current\+Scenario\+Page\+Networks}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{update\+Current\+Scenario\+Page\+Networks()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Ctrl\+::update\+Current\+Scenario\+Page\+Networks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_ctrl_ad8954d6685375ca0d65524f965ba74b2}
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Ctrl@{Res\+Op\+Ctrl}!m\+\_\+selected\+\_\+element\+\_\+id@{m\+\_\+selected\+\_\+element\+\_\+id}}
+\index{m\+\_\+selected\+\_\+element\+\_\+id@{m\+\_\+selected\+\_\+element\+\_\+id}!Res\+Op\+Ctrl@{Res\+Op\+Ctrl}}
+\subsubsection[{m\+\_\+selected\+\_\+element\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Element\+ID} Res\+Op\+Ctrl\+::m\+\_\+selected\+\_\+element\+\_\+id}\label{class_res_op_ctrl_a6f76b6bba1f93d4694bee2b95569537e}
+
+
+Defini√ß√£o na linha 217 do arquivo Res\+Op\+Ctrl.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Ctrl.\+h}\end{DoxyCompactItemize}

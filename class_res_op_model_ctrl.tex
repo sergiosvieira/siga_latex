@@ -1,0 +1,332 @@
+\section{Refer√™ncia da Classe Res\+Op\+Model\+Ctrl}
+\label{class_res_op_model_ctrl}\index{Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Model\+Ctrl.\+h$>$}
+
+
+
+Superclasse de {\bf Network\+Flow\+Model\+Ctrl}, {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main} e {\bf Sequential\+Model\+Ctrl}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Model\+Ctrl} ({\bf Res\+Op\+Interface} $\ast${\bf main\+Inter})
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Model\+Ctrl} ()
+\item 
+virtual void {\bf set\+Default\+Values} (const wx\+String \&file\+Name, {\bf Res\+Op\+Element} $\ast$element)=0
+\item 
+virtual void {\bf save\+Default\+Values} (const wx\+String \&file\+Name, {\bf Res\+Op\+Element} $\ast$element)=0
+\item 
+virtual bool {\bf run} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, {\bf Res\+Op\+Scenario} $\ast$scen)=0
+\item 
+virtual bool {\bf run\+Isolated} (std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&dependency\+\_\+map, {\bf Res\+Op\+Scenario} $\ast$scen, {\bf Element\+ID} network\+\_\+id)
+\item 
+virtual bool {\bf check\+Completeness} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, {\bf Res\+Op\+Scenario} $\ast$scen)=0
+\item 
+virtual bool {\bf empty} ({\bf Res\+Op\+Element} $\ast$data)=0
+\item 
+virtual void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, {\bf Res\+Op\+Element} $\ast$, wx\+String)=0
+\item 
+virtual void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, {\bf Res\+Op\+Element} $\ast$, wx\+String)=0
+\item 
+virtual {\bf Matrix} {\bf calc\+Fitness} ({\bf Matrix}, {\bf Res\+Op\+Scenario} $\ast$)
+\item 
+virtual {\bf Matrix} {\bf calc\+Fitness} ({\bf Matrix}, {\bf Res\+Op\+Scenario} $\ast$, map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&dependency\+\_\+map, {\bf Element\+ID} network\+\_\+id)
+\item 
+virtual void {\bf update\+Results\+Series} ({\bf Res\+Op\+Element} $\ast$element, const wx\+String \&scenario\+Name)=0
+\item 
+virtual void {\bf update\+Results\+Series\+In} ({\bf Res\+Op\+Element} $\ast$element, const wx\+String \&scenario\+Name)=0
+\item 
+virtual void {\bf update\+Results\+Series\+Out} ({\bf Res\+Op\+Element} $\ast$element, const wx\+String \&scenario\+Name)=0
+\item 
+virtual void {\bf remove\+Results\+Series\+Out} ({\bf Res\+Op\+Element} $\ast$element, const wx\+String \&scenario\+Name)=0
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Component\+Interface} $\ast$ {\bf inter}
+\item 
+{\bf Res\+Op\+Interface} $\ast$ {\bf main\+Inter}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf check\+Execution\+Interval} (const {\bf Interval} \&exec\+Interval, vector$<$ {\bf Interval} $\ast$ $>$ \&intervals, vector$<$ string $>$ \&error\+Messages, {\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$error\+Dialog, bool windowed=false)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 28 do arquivo Res\+Op\+Model\+Ctrl.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}!Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}}
+\index{Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}!Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}}
+\subsubsection[{Res\+Op\+Model\+Ctrl(\+Res\+Op\+Interface $\ast$main\+Inter)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Model\+Ctrl\+::\+Res\+Op\+Model\+Ctrl (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Interface} $\ast$}]{main\+Inter}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_ctrl_aeff71faebbe8b57e9cdd9d3dc7b8b6aa}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em main\+Inter} & Interface da classe principal \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}!````~Res\+Op\+Model\+Ctrl@{$\sim$\+Res\+Op\+Model\+Ctrl}}
+\index{````~Res\+Op\+Model\+Ctrl@{$\sim$\+Res\+Op\+Model\+Ctrl}!Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}}
+\subsubsection[{$\sim$\+Res\+Op\+Model\+Ctrl()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Model\+Ctrl\+::$\sim$\+Res\+Op\+Model\+Ctrl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_model_ctrl_aef2fb56efe4d1ac62f74c04627a7ad93}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}!calc\+Fitness@{calc\+Fitness}}
+\index{calc\+Fitness@{calc\+Fitness}!Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}}
+\subsubsection[{calc\+Fitness(\+Matrix, Res\+Op\+Scenario $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Matrix} Res\+Op\+Model\+Ctrl\+::calc\+Fitness (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_res_op_model_ctrl_abe53ef873929d103dffabab60703ae13}
+C\+Alcula o fitness para ser usado nos algoritimos de otimizaÁ„o 
+
+Reimplementado por {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_abb27ef7a3448488141c4c85a8225c429}.
+
+
+
+Defini√ß√£o na linha 128 do arquivo Res\+Op\+Model\+Ctrl.\+h.
+
+\index{Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}!calc\+Fitness@{calc\+Fitness}}
+\index{calc\+Fitness@{calc\+Fitness}!Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}}
+\subsubsection[{calc\+Fitness(\+Matrix, Res\+Op\+Scenario $\ast$, map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, std\+::map$<$ Element\+I\+D, std\+::vector$<$ Res\+Op\+Element $\ast$ $>$ $>$ \&dependency\+\_\+map, Element\+I\+D network\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Matrix} Res\+Op\+Model\+Ctrl\+::calc\+Fitness (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{, }
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&}]{dependency\+\_\+map, }
+\item[{{\bf Element\+ID}}]{network\+\_\+id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_res_op_model_ctrl_a7c80e7dd5289c4b75cc19fbd15fd7888}
+
+
+Reimplementado por {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_adf5bef7b5862d7a64684c078b5e88ee5}.
+
+
+
+Defini√ß√£o na linha 130 do arquivo Res\+Op\+Model\+Ctrl.\+h.
+
+\index{Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}}
+\subsubsection[{check\+Completeness(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, Res\+Op\+Scenario $\ast$scen)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+Model\+Ctrl\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_model_ctrl_ad7995a59b64d8b31ea54d206059ebd50}
+MÈtodo que checa se as informaÁıes necess·rias foram preenchidas. 
+\begin{DoxyParams}{Par√¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_ab6466b9954061cd8406ee93748bf7c81}, {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl_a69a37247e2dfdea0eaf31aa3ef5db3f1}, {\bf Wnd\+Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_network_flow_model_ctrl_ae93f1a99a8a30bc9093f3677f8777d9f} e {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_a4fbf4835a35acbdb2ed8ebef1749f67d}.
+
+\index{Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}!check\+Execution\+Interval@{check\+Execution\+Interval}}
+\index{check\+Execution\+Interval@{check\+Execution\+Interval}!Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}}
+\subsubsection[{check\+Execution\+Interval(const Interval \&exec\+Interval, vector$<$ Interval $\ast$ $>$ \&intervals, vector$<$ string $>$ \&error\+Messages, S\+I\+G\+A\+Errors\+Dialog $\ast$error\+Dialog, bool windowed=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Model\+Ctrl\+::check\+Execution\+Interval (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interval} \&}]{exec\+Interval, }
+\item[{vector$<$ {\bf Interval} $\ast$ $>$ \&}]{intervals, }
+\item[{vector$<$ string $>$ \&}]{error\+Messages, }
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{error\+Dialog, }
+\item[{bool}]{windowed = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_model_ctrl_aa280f96ec89921d1e2539995af992437}
+Checa se o intervalo de execuÁ„o È v·lido. Ele ser· v·lido se ele estiver dentro da faixa de todos os intervalos do vetor 
+\begin{DoxyParams}{Par√¢metros}
+{\em intervalo} & que ser· checado \\
+\hline
+{\em vetor} & de intervalos \\
+\hline
+{\em vetor} & de mensagens de erro \\
+\hline
+{\em ponteiro} & para janela de mensagem de erro \\
+\hline
+{\em considera} & simulaÁ„o por janelas de intervalo. Valor falso por defeito. \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}!empty@{empty}}
+\index{empty@{empty}!Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}}
+\subsubsection[{empty(\+Res\+Op\+Element $\ast$data)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+Model\+Ctrl\+::empty (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_model_ctrl_a26d579005471dadbb2cb789aa79a58c1}
+retorna se existe algum valor no elemento 
+
+Implementado por {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a157f6c227a3c1ff640077f9146a9a636} e {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl_a543f964b77c32e5bc571f2b7e60b5d61}.
+
+\index{Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$, Res\+Op\+Element $\ast$, wx\+String)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Model\+Ctrl\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{, }
+\item[{wx\+String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_model_ctrl_af3faee21b4277854398b93b7fa53d0e2}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a95c27eb2fadc30bc4125b6b98d98af60}, {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl_abbd5b9f90de5526b1ae204dbdb591a6d}, {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_ab7fc34ed404d7c8c3c0f406f63392201}, {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_a78ddbd6c33c6dc7410d72cb732437779} e {\bf Wnd\+Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_network_flow_model_ctrl_abe5da58a5753d9e526e9ddf942b6873c}.
+
+\index{Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$, Res\+Op\+Element $\ast$, wx\+String)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Model\+Ctrl\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{, }
+\item[{wx\+String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_model_ctrl_a11e561f391bee1bb76fc130a459736fb}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a3c069ea2a8bd558a51b1263debd4be21}, {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl_a1b6b5c0bb247ca33ec47e60ed2bf9127}, {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_a2bd6a4409aa1e6fc4309d94739057320}, {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_a6effdf6b3d93ea38a9cda73600e8e6a7} e {\bf Wnd\+Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_network_flow_model_ctrl_a52927e4927da8747b1fef5e6db029905}.
+
+\index{Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}!remove\+Results\+Series\+Out@{remove\+Results\+Series\+Out}}
+\index{remove\+Results\+Series\+Out@{remove\+Results\+Series\+Out}!Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}}
+\subsubsection[{remove\+Results\+Series\+Out(\+Res\+Op\+Element $\ast$element, const wx\+String \&scenario\+Name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Model\+Ctrl\+::remove\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_model_ctrl_a4de02f0f247b0c826dfe26ed09b812e7}
+
+
+Implementado por {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a09317165d8a530334c8a6ab6a6bf04f3}, {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl_a808263e193fc5af13b7271fbc245ae85}, {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_a73f5d120df88fe7ee22890fd84223e36}, {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_a6e16c42baf0b2cf8e1a90cc54e79be07} e {\bf Wnd\+Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_network_flow_model_ctrl_a12b2f8c6b5b40292d20b2d3e48d911e5}.
+
+\index{Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}!run@{run}}
+\index{run@{run}!Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}}
+\subsubsection[{run(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, Res\+Op\+Scenario $\ast$scen)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+Model\+Ctrl\+::run (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_model_ctrl_aeaad0950868750f122df1dc2e37d06e7}
+MÈtodo abstrato que executa a tecnica 
+
+Implementado por {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a6473739febbf5714e21fc9d84bf5dc1b}, {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl_ad8d0cff475350a66f2276ce1a1f8c942}, {\bf Wnd\+Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_network_flow_model_ctrl_aeb4fd0c93e63c1ea42c3eac3b8a8a1b9}, {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_a56d5ddd6f0c281a4f57d5f92e05d0ad2} e {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_a038eac23adc538863fab0df35fe653f4}.
+
+\index{Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}!run\+Isolated@{run\+Isolated}}
+\index{run\+Isolated@{run\+Isolated}!Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}}
+\subsubsection[{run\+Isolated(std\+::map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, std\+::map$<$ Element\+I\+D, std\+::vector$<$ Res\+Op\+Element $\ast$ $>$ $>$ \&dependency\+\_\+map, Res\+Op\+Scenario $\ast$scen, Element\+I\+D network\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+Model\+Ctrl\+::run\+Isolated (
+\begin{DoxyParamCaption}
+\item[{std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&}]{dependency\+\_\+map, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen, }
+\item[{{\bf Element\+ID}}]{network\+\_\+id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_model_ctrl_ac62b6754d919c917c9314afd6cf4f52c}
+
+
+Reimplementado por {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a4df78d34e8be3743175013142b2a7d77}, {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl_a1674c7c7a767bceed235bfdc43bf8424}, {\bf Wnd\+Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_network_flow_model_ctrl_a126eb2fb2fe9ccc4e83a3ef915322c79}, {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_a3e305554e664d10cfb0edafca3dac860} e {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_a31f03d1f715fa51e563ed6455cff455f}.
+
+\index{Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}!save\+Default\+Values@{save\+Default\+Values}}
+\index{save\+Default\+Values@{save\+Default\+Values}!Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}}
+\subsubsection[{save\+Default\+Values(const wx\+String \&file\+Name, Res\+Op\+Element $\ast$element)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Model\+Ctrl\+::save\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Name, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_model_ctrl_a25ac7b64ee885352ea5508abc1afe9e2}
+
+
+Implementado por {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_ab7feb77d29560211d1db65b390b27fb7} e {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl_a5b8183445e43ca125580e1a4f9f793f7}.
+
+\index{Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}!set\+Default\+Values@{set\+Default\+Values}}
+\index{set\+Default\+Values@{set\+Default\+Values}!Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}}
+\subsubsection[{set\+Default\+Values(const wx\+String \&file\+Name, Res\+Op\+Element $\ast$element)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Model\+Ctrl\+::set\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Name, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_model_ctrl_a5bc33ce032ab0c182c73381bc168e30f}
+
+
+Implementado por {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a4e7ede8d0786069e261c700a1a88b13f} e {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl_a1a707b1180965caaa8a3391c5198a7ae}.
+
+\index{Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}!update\+Results\+Series@{update\+Results\+Series}}
+\index{update\+Results\+Series@{update\+Results\+Series}!Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series(\+Res\+Op\+Element $\ast$element, const wx\+String \&scenario\+Name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Model\+Ctrl\+::update\+Results\+Series (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_model_ctrl_a169d6145edeff7dc8e88b7421b99e031}
+Adciona as series que existirem daquele modelo no modulo de Resultados Lembrete\+: Caso haja uma alteraÁ„o no nome ou na unidade da serie ser· necessario mudar neste metodo tambÈm 
+
+Implementado por {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_afcfc82adffa56a447af28a93ffebf676} e {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl_aabcc538c9193565b001bf33c742af89c}.
+
+\index{Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}!update\+Results\+Series\+In@{update\+Results\+Series\+In}}
+\index{update\+Results\+Series\+In@{update\+Results\+Series\+In}!Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+In(\+Res\+Op\+Element $\ast$element, const wx\+String \&scenario\+Name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Model\+Ctrl\+::update\+Results\+Series\+In (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_model_ctrl_a5ab379d0dbc21cf439d0568359b23afd}
+
+
+Implementado por {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a1ee8984ad133648dbd693c30264b0bc8}, {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl_acbdbf8756473e3ea43428b7f95e91536}, {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_a7ee7a528b299901594ead60cd387f7fb}, {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_abdf99a49f3615d9c2602eb51b5d98789} e {\bf Wnd\+Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_network_flow_model_ctrl_abee78fa3ee44cc89a0fcfbf71bf60972}.
+
+\index{Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}!update\+Results\+Series\+Out@{update\+Results\+Series\+Out}}
+\index{update\+Results\+Series\+Out@{update\+Results\+Series\+Out}!Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+Out(\+Res\+Op\+Element $\ast$element, const wx\+String \&scenario\+Name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Model\+Ctrl\+::update\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_model_ctrl_a52d3e5c6017434cea994eb1d85f93769}
+
+
+Implementado por {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a02aeb41e81b93f371c9a8823bd1d7eb2}, {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl_a7f7bded7c5db877619f7ae5fd7486ce4}, {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_a4beaf00655aceb99ae6cbf9544cac1a5}, {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_a874ee7d553fab150e74c72c611345123} e {\bf Wnd\+Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_network_flow_model_ctrl_abb53922d4718191051f35ab73c0e035e}.
+
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}!inter@{inter}}
+\index{inter@{inter}!Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}}
+\subsubsection[{inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component\+Interface}$\ast$ Res\+Op\+Model\+Ctrl\+::inter}\label{class_res_op_model_ctrl_ad5b9d571cd9bbe4563739a18e517e2ef}
+Interface para cada tipo de tecnica Ser· inserida na interface geral do modulo de operaÁ„o de reservatÛrio 
+
+Defini√ß√£o na linha 41 do arquivo Res\+Op\+Model\+Ctrl.\+h.
+
+\index{Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}!main\+Inter@{main\+Inter}}
+\index{main\+Inter@{main\+Inter}!Res\+Op\+Model\+Ctrl@{Res\+Op\+Model\+Ctrl}}
+\subsubsection[{main\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Interface}$\ast$ Res\+Op\+Model\+Ctrl\+::main\+Inter}\label{class_res_op_model_ctrl_a56dfcc9b5c2f29c36b16cab90234fd86}
+Aponta para a classe da interafce principal do modulo 
+
+Defini√ß√£o na linha 46 do arquivo Res\+Op\+Model\+Ctrl.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Model\+Ctrl.\+h}\end{DoxyCompactItemize}

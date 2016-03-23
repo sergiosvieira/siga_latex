@@ -1,0 +1,343 @@
+\section{Referência da Classe Power\+Fit}
+\label{class_power_fit}\index{Power\+Fit@{Power\+Fit}}
+
+
+{\ttfamily \#include $<$Power\+Fit.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Power\+Fit} (vector$<$ double $>$ {\bf x}, vector$<$ double $>$ {\bf y}, wx\+Real\+Point {\bf range}=wx\+Real\+Point({\bf E\+M\+P\+TY}, {\bf E\+M\+P\+TY}), double {\bf dx}=1)
+\item 
+{\bf Power\+Fit} ({\bf Matrix} matrix, int colX, int colY, wx\+Real\+Point {\bf range}=wx\+Real\+Point({\bf E\+M\+P\+TY}, {\bf E\+M\+P\+TY}), double {\bf dx}=1)
+\item 
+{\bf Power\+Fit} (double {\bf alfa}, double {\bf beta})
+\item 
+{\bf $\sim$\+Power\+Fit} ()
+\item 
+void {\bf set\+Alfa} (double value)
+\item 
+double {\bf get\+Alfa} ()
+\item 
+void {\bf set\+Beta} (double value)
+\item 
+double {\bf get\+Beta} ()
+\item 
+void {\bf set\+Dx} (double value)
+\item 
+void {\bf set\+Range} (wx\+Real\+Point power\+Range)
+\item 
+void {\bf fit\+Curve} ()
+\item 
+void {\bf calc\+Curve} ()
+\item 
+double {\bf calc\+Value} (double valueX)
+\item 
+vector$<$ double $>$ {\bf get\+X\+Values} ()
+\item 
+vector$<$ double $>$ {\bf get\+Y\+Values} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bf calc\+Curve} (vector$<$ double $>$ \&x1, vector$<$ double $>$ \&y1, double alfa1, double beta1, wx\+Real\+Point range1, double dx1=1)
+\item 
+static double {\bf calc\+Value} (double {\bf alfa}, double {\bf beta}, double valueX)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf alfa}
+\item 
+double {\bf beta}
+\item 
+double {\bf n}
+\item 
+double {\bf dx}
+\item 
+wx\+Real\+Point {\bf range}
+\item 
+vector$<$ double $>$ {\bf x}
+\item 
+vector$<$ double $>$ {\bf y}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 20 do arquivo Power\+Fit.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Power\+Fit@{Power\+Fit}!Power\+Fit@{Power\+Fit}}
+\index{Power\+Fit@{Power\+Fit}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{Power\+Fit(vector$<$ double $>$ x, vector$<$ double $>$ y, wx\+Real\+Point range=wx\+Real\+Point(\+E\+M\+P\+T\+Y, E\+M\+P\+T\+Y), double dx=1)}]{\setlength{\rightskip}{0pt plus 5cm}Power\+Fit\+::\+Power\+Fit (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{x, }
+\item[{vector$<$ double $>$}]{y, }
+\item[{wx\+Real\+Point}]{range = {\ttfamily wxRealPoint({\bf E\+M\+P\+TY},~{\bf E\+M\+P\+TY})}, }
+\item[{double}]{dx = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\label{class_power_fit_a60d60d483959213bfd98d4456fd72224}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em x} & Vetor contendo os valores de x \\
+\hline
+{\em y} & Vetor contendo os valores de y \\
+\hline
+{\em range} & Valores maximo e minimo da curva de ajuste \\
+\hline
+{\em dx} & Incremento de valor em x. Usado pra calcular a curva de ajuste \\
+\hline
+\end{DoxyParams}
+\index{Power\+Fit@{Power\+Fit}!Power\+Fit@{Power\+Fit}}
+\index{Power\+Fit@{Power\+Fit}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{Power\+Fit(\+Matrix matrix, int col\+X, int col\+Y, wx\+Real\+Point range=wx\+Real\+Point(\+E\+M\+P\+T\+Y, E\+M\+P\+T\+Y), double dx=1)}]{\setlength{\rightskip}{0pt plus 5cm}Power\+Fit\+::\+Power\+Fit (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{matrix, }
+\item[{int}]{colX, }
+\item[{int}]{colY, }
+\item[{wx\+Real\+Point}]{range = {\ttfamily wxRealPoint({\bf E\+M\+P\+TY},~{\bf E\+M\+P\+TY})}, }
+\item[{double}]{dx = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\label{class_power_fit_afc0c63d917257e6aa1e3f83ae6ffd634}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em matrix} & Matriz contendo a curva ser ajustada \\
+\hline
+{\em colX} & Posi��o da coluna para valores de x \\
+\hline
+{\em colY} & Posi��o da coluna para valores de y \\
+\hline
+{\em range} & Valores maximo e minimo da curva de ajuste \\
+\hline
+{\em dx} & Incremento de valor em x. Usado pra calcular a curva de ajuste \\
+\hline
+\end{DoxyParams}
+\index{Power\+Fit@{Power\+Fit}!Power\+Fit@{Power\+Fit}}
+\index{Power\+Fit@{Power\+Fit}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{Power\+Fit(double alfa, double beta)}]{\setlength{\rightskip}{0pt plus 5cm}Power\+Fit\+::\+Power\+Fit (
+\begin{DoxyParamCaption}
+\item[{double}]{alfa, }
+\item[{double}]{beta}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_power_fit_a63186292ddd1b9113c11da731d0db249}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em serie} & \doxyref{Serie}{pag.}{class_serie} contendo a curva a ser ajustada \\
+\hline
+{\em range} & Valores maximo e minimo da curva de ajuste \\
+\hline
+{\em dx} & Incremento de valor em x. Usado pra calcular a curva de ajuste\\
+\hline
+\end{DoxyParams}
+\doxyref{Power\+Fit}{pag.}{class_power_fit}(\doxyref{Serie}{pag.}{class_serie} $\ast$serie, wx\+Real\+Point range = wx\+Real\+Point(\+E\+M\+P\+T\+Y, E\+M\+P\+T\+Y), double dx = 1); Construtor Esse construtor deve ser usado apenas para calcular valor a valor utilizando o alfa e beta enviado 
+\begin{DoxyParams}{Parâmetros}
+{\em alfa} & Valor de alfa \\
+\hline
+{\em beta} & Valor de beta \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 82 do arquivo Power\+Fit.\+h.
+
+\index{Power\+Fit@{Power\+Fit}!````~Power\+Fit@{$\sim$\+Power\+Fit}}
+\index{````~Power\+Fit@{$\sim$\+Power\+Fit}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{$\sim$\+Power\+Fit()}]{\setlength{\rightskip}{0pt plus 5cm}Power\+Fit\+::$\sim$\+Power\+Fit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_power_fit_aafacba6d77da85d1ad05157a8a663e78}
+Destrutor 
+
+\subsection{Métodos}
+\index{Power\+Fit@{Power\+Fit}!calc\+Curve@{calc\+Curve}}
+\index{calc\+Curve@{calc\+Curve}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{calc\+Curve()}]{\setlength{\rightskip}{0pt plus 5cm}void Power\+Fit\+::calc\+Curve (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_power_fit_abb5ed8673cf7fda630ec1aa8d4dc4563}
+Calcula a curva de ajuste \index{Power\+Fit@{Power\+Fit}!calc\+Curve@{calc\+Curve}}
+\index{calc\+Curve@{calc\+Curve}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{calc\+Curve(vector$<$ double $>$ \&x1, vector$<$ double $>$ \&y1, double alfa1, double beta1, wx\+Real\+Point range1, double dx1=1)}]{\setlength{\rightskip}{0pt plus 5cm}static void Power\+Fit\+::calc\+Curve (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$ \&}]{x1, }
+\item[{vector$<$ double $>$ \&}]{y1, }
+\item[{double}]{alfa1, }
+\item[{double}]{beta1, }
+\item[{wx\+Real\+Point}]{range1, }
+\item[{double}]{dx1 = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_power_fit_a2e17202d9ee8bce3e61ce75277aa39fe}
+Calcula a curva de ajuste \index{Power\+Fit@{Power\+Fit}!calc\+Value@{calc\+Value}}
+\index{calc\+Value@{calc\+Value}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{calc\+Value(double value\+X)}]{\setlength{\rightskip}{0pt plus 5cm}double Power\+Fit\+::calc\+Value (
+\begin{DoxyParamCaption}
+\item[{double}]{valueX}
+\end{DoxyParamCaption}
+)}\label{class_power_fit_abf23ff353b779f27f78ba1f9fdc3f71f}
+Calcula e retorna o valor de y com base no alfa e beta da classe \index{Power\+Fit@{Power\+Fit}!calc\+Value@{calc\+Value}}
+\index{calc\+Value@{calc\+Value}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{calc\+Value(double alfa, double beta, double value\+X)}]{\setlength{\rightskip}{0pt plus 5cm}static double Power\+Fit\+::calc\+Value (
+\begin{DoxyParamCaption}
+\item[{double}]{alfa, }
+\item[{double}]{beta, }
+\item[{double}]{valueX}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_power_fit_a14c2c6547cdcd1182678b148019e7a3e}
+Calcula e retorna o valor de y com o alfa e beta enviado \index{Power\+Fit@{Power\+Fit}!fit\+Curve@{fit\+Curve}}
+\index{fit\+Curve@{fit\+Curve}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{fit\+Curve()}]{\setlength{\rightskip}{0pt plus 5cm}void Power\+Fit\+::fit\+Curve (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_power_fit_ace43a4b2720bb92fa4202bb443e8ae28}
+Calcula alfa e beta da fun��o \index{Power\+Fit@{Power\+Fit}!get\+Alfa@{get\+Alfa}}
+\index{get\+Alfa@{get\+Alfa}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{get\+Alfa()}]{\setlength{\rightskip}{0pt plus 5cm}double Power\+Fit\+::get\+Alfa (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_power_fit_a20aa4494ca680cfe9984629deb625419}
+Retorna o coeficiente alfa 
+
+Definição na linha 98 do arquivo Power\+Fit.\+h.
+
+\index{Power\+Fit@{Power\+Fit}!get\+Beta@{get\+Beta}}
+\index{get\+Beta@{get\+Beta}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{get\+Beta()}]{\setlength{\rightskip}{0pt plus 5cm}double Power\+Fit\+::get\+Beta (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_power_fit_aea688c8e3452cb3f4d0e139b8c686323}
+Retorna o coeficiente alfa 
+
+Definição na linha 110 do arquivo Power\+Fit.\+h.
+
+\index{Power\+Fit@{Power\+Fit}!get\+X\+Values@{get\+X\+Values}}
+\index{get\+X\+Values@{get\+X\+Values}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{get\+X\+Values()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Power\+Fit\+::get\+X\+Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_power_fit_a0fc514faed846bfa628e6ad604e4b006}
+Retorna os valores de x 
+
+Definição na linha 139 do arquivo Power\+Fit.\+h.
+
+\index{Power\+Fit@{Power\+Fit}!get\+Y\+Values@{get\+Y\+Values}}
+\index{get\+Y\+Values@{get\+Y\+Values}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{get\+Y\+Values()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Power\+Fit\+::get\+Y\+Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_power_fit_a2a45e4769c92ddd156aebd50a11e4f7e}
+Retorna os valores de y 
+
+Definição na linha 143 do arquivo Power\+Fit.\+h.
+
+\index{Power\+Fit@{Power\+Fit}!set\+Alfa@{set\+Alfa}}
+\index{set\+Alfa@{set\+Alfa}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{set\+Alfa(double value)}]{\setlength{\rightskip}{0pt plus 5cm}void Power\+Fit\+::set\+Alfa (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_power_fit_a027014c50a4f6015eb39f8b9fb3a2d5a}
+Define o coeficiente alfa 
+
+Definição na linha 90 do arquivo Power\+Fit.\+h.
+
+\index{Power\+Fit@{Power\+Fit}!set\+Beta@{set\+Beta}}
+\index{set\+Beta@{set\+Beta}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{set\+Beta(double value)}]{\setlength{\rightskip}{0pt plus 5cm}void Power\+Fit\+::set\+Beta (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_power_fit_a0c05b563a9993792887ad116a1c3a151}
+Define o coeficiente alfa 
+
+Definição na linha 102 do arquivo Power\+Fit.\+h.
+
+\index{Power\+Fit@{Power\+Fit}!set\+Dx@{set\+Dx}}
+\index{set\+Dx@{set\+Dx}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{set\+Dx(double value)}]{\setlength{\rightskip}{0pt plus 5cm}void Power\+Fit\+::set\+Dx (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_power_fit_a5c9e37bc0fa870503c1860c995d9efee}
+Define dx 
+
+Definição na linha 114 do arquivo Power\+Fit.\+h.
+
+\index{Power\+Fit@{Power\+Fit}!set\+Range@{set\+Range}}
+\index{set\+Range@{set\+Range}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{set\+Range(wx\+Real\+Point power\+Range)}]{\setlength{\rightskip}{0pt plus 5cm}void Power\+Fit\+::set\+Range (
+\begin{DoxyParamCaption}
+\item[{wx\+Real\+Point}]{power\+Range}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_power_fit_a35f83a9c8a4c373d02fb675e0092a683}
+
+
+Definição na linha 115 do arquivo Power\+Fit.\+h.
+
+
+
+\subsection{Atributos}
+\index{Power\+Fit@{Power\+Fit}!alfa@{alfa}}
+\index{alfa@{alfa}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{alfa}]{\setlength{\rightskip}{0pt plus 5cm}double Power\+Fit\+::alfa\hspace{0.3cm}{\ttfamily [protected]}}\label{class_power_fit_ae6ccf392ba6d621f232300e650057cc2}
+Coeficiente de produto por x 
+
+Definição na linha 26 do arquivo Power\+Fit.\+h.
+
+\index{Power\+Fit@{Power\+Fit}!beta@{beta}}
+\index{beta@{beta}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{beta}]{\setlength{\rightskip}{0pt plus 5cm}double Power\+Fit\+::beta\hspace{0.3cm}{\ttfamily [protected]}}\label{class_power_fit_a2a171e1f954098f3f085b60a02b75978}
+Expoente de x 
+
+Definição na linha 30 do arquivo Power\+Fit.\+h.
+
+\index{Power\+Fit@{Power\+Fit}!dx@{dx}}
+\index{dx@{dx}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{dx}]{\setlength{\rightskip}{0pt plus 5cm}double Power\+Fit\+::dx\hspace{0.3cm}{\ttfamily [protected]}}\label{class_power_fit_a41c7f03ae7b004eddf99a43b89c363be}
+Varia��o de x 
+
+Definição na linha 38 do arquivo Power\+Fit.\+h.
+
+\index{Power\+Fit@{Power\+Fit}!n@{n}}
+\index{n@{n}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{n}]{\setlength{\rightskip}{0pt plus 5cm}double Power\+Fit\+::n\hspace{0.3cm}{\ttfamily [protected]}}\label{class_power_fit_a84eb71c26ea41f5b9c1071424a37c36c}
+Numero de amostras 
+
+Definição na linha 34 do arquivo Power\+Fit.\+h.
+
+\index{Power\+Fit@{Power\+Fit}!range@{range}}
+\index{range@{range}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{range}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Real\+Point Power\+Fit\+::range\hspace{0.3cm}{\ttfamily [protected]}}\label{class_power_fit_a09de09c6923548f388f0b1c62324c10f}
+Valor minimo e maximo de x 
+
+Definição na linha 42 do arquivo Power\+Fit.\+h.
+
+\index{Power\+Fit@{Power\+Fit}!x@{x}}
+\index{x@{x}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Power\+Fit\+::x\hspace{0.3cm}{\ttfamily [protected]}}\label{class_power_fit_a9c23b68a6f6356679d7c44b0a43549dd}
+Valores ajustados de x 
+
+Definição na linha 46 do arquivo Power\+Fit.\+h.
+
+\index{Power\+Fit@{Power\+Fit}!y@{y}}
+\index{y@{y}!Power\+Fit@{Power\+Fit}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Power\+Fit\+::y\hspace{0.3cm}{\ttfamily [protected]}}\label{class_power_fit_a9d4e243fc65698375a03c08f2415e25c}
+Valores ajustados de y 
+
+Definição na linha 50 do arquivo Power\+Fit.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Power\+Fit.\+h}\end{DoxyCompactItemize}

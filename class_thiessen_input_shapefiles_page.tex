@@ -1,0 +1,171 @@
+\section{Referência da Classe Thiessen\+Input\+Shapefiles\+Page}
+\label{class_thiessen_input_shapefiles_page}\index{Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}}
+
+
+{\ttfamily \#include $<$Thiessen\+Input\+Shapefiles\+Page.\+h$>$}
+
+
+
+Herdeiro de wx\+Wizard\+Page\+Simple.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+P\+O\+L\+Y\+G\+ON}, 
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+P\+O\+L\+Y\+G\+ON}, 
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+P\+O\+I\+NT}, 
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+P\+O\+I\+NT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Thiessen\+Input\+Shapefiles\+Page} (wx\+Wizard $\ast$parent, {\bf Thiessen\+Wizard\+::k\+Thiessen\+Data} $\ast$a\+\_\+thiessen\+Data)
+\item 
+void {\bf on\+Choice\+Polygon\+Shape} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Choice\+Point\+Shape} (wx\+Command\+Event \&event)
+\item 
+void {\bf On\+Wizard\+Page\+Changing} (wx\+Wizard\+Event \&event)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf load\+Columns\+From\+Shape} (wx\+String shape\+Name, wx\+Choice \&column\+Choice)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Choice $\ast$ {\bf choice\+Shape\+Polygon}
+\item 
+wx\+Choice $\ast$ {\bf choice\+Col\+Polygon}
+\item 
+wx\+Choice $\ast$ {\bf choice\+Shape\+Point}
+\item 
+wx\+Choice $\ast$ {\bf choice\+Col\+Point}
+\item 
+std\+::map$<$ wx\+String, {\bf Vector\+LayerM} $\ast$ $>$ {\bf shapes}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Esta classe � usada para definir a primeira p�gina da wizard do \doxyref{Thiessen}{pag.}{class_thiessen}. Ela � respons�vel por pegar oS shapefileS de pol�gonos e pontos e indicar quais colunas, desses shapefiles, s�o relevantes. 
+
+Definição na linha 23 do arquivo Thiessen\+Input\+Shapefiles\+Page.\+h.
+
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{class_thiessen_input_shapefiles_page_abb40f4726ee3979266c11d75e5b6819c}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+P\+O\+L\+Y\+G\+ON@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+P\+O\+L\+Y\+G\+ON}!Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}}\index{Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+P\+O\+L\+Y\+G\+ON@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+P\+O\+L\+Y\+G\+ON}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+P\+O\+L\+Y\+G\+ON\label{class_thiessen_input_shapefiles_page_abb40f4726ee3979266c11d75e5b6819cad8a7f0a8ef5f9deba0be93e4e8a8af42}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+P\+O\+L\+Y\+G\+ON@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+P\+O\+L\+Y\+G\+ON}!Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}}\index{Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+P\+O\+L\+Y\+G\+ON@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+P\+O\+L\+Y\+G\+ON}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+P\+O\+L\+Y\+G\+ON\label{class_thiessen_input_shapefiles_page_abb40f4726ee3979266c11d75e5b6819cab6f9ad08cb9cc5d4fc7de5d2d049ab7e}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+P\+O\+I\+NT@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+P\+O\+I\+NT}!Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}}\index{Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+P\+O\+I\+NT@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+P\+O\+I\+NT}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+P\+O\+I\+NT\label{class_thiessen_input_shapefiles_page_abb40f4726ee3979266c11d75e5b6819ca646b7dcdf57a59f5adef21d80675e925}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+P\+O\+I\+NT@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+P\+O\+I\+NT}!Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}}\index{Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+P\+O\+I\+NT@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+P\+O\+I\+NT}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+P\+O\+I\+NT\label{class_thiessen_input_shapefiles_page_abb40f4726ee3979266c11d75e5b6819ca2263e3ac4a3303fdfe181d0b72d1c799}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 35 do arquivo Thiessen\+Input\+Shapefiles\+Page.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}!Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}}
+\index{Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}!Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}}
+\subsubsection[{Thiessen\+Input\+Shapefiles\+Page(wx\+Wizard $\ast$parent, Thiessen\+Wizard\+::k\+Thiessen\+Data $\ast$a\+\_\+thiessen\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Thiessen\+Input\+Shapefiles\+Page\+::\+Thiessen\+Input\+Shapefiles\+Page (
+\begin{DoxyParamCaption}
+\item[{wx\+Wizard $\ast$}]{parent, }
+\item[{{\bf Thiessen\+Wizard\+::k\+Thiessen\+Data} $\ast$}]{a\+\_\+thiessen\+Data}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_input_shapefiles_page_aab5c64949a3f37fb2b90364aeb55c5c0}
+
+
+\subsection{Métodos}
+\index{Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}!load\+Columns\+From\+Shape@{load\+Columns\+From\+Shape}}
+\index{load\+Columns\+From\+Shape@{load\+Columns\+From\+Shape}!Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}}
+\subsubsection[{load\+Columns\+From\+Shape(wx\+String shape\+Name, wx\+Choice \&column\+Choice)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Input\+Shapefiles\+Page\+::load\+Columns\+From\+Shape (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{shape\+Name, }
+\item[{wx\+Choice \&}]{column\+Choice}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_input_shapefiles_page_a72025fce2a0c14b8da47e313eaf0e19e}
+Esta fun��o pega a lista de colunas na tabela de atributos do shape e povoa um determinado wx\+Choice com o nome delas.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em shape\+Name} & Nome do shape selecionado \\
+\hline
+{\em column\+Choice} & Choice onde ser�o carregados as informa��es das colunas \\
+\hline
+\end{DoxyParams}
+\index{Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}!on\+Choice\+Point\+Shape@{on\+Choice\+Point\+Shape}}
+\index{on\+Choice\+Point\+Shape@{on\+Choice\+Point\+Shape}!Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}}
+\subsubsection[{on\+Choice\+Point\+Shape(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Input\+Shapefiles\+Page\+::on\+Choice\+Point\+Shape (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_input_shapefiles_page_ad96580bb24c2eeec9d32034ade262111}
+\index{Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}!on\+Choice\+Polygon\+Shape@{on\+Choice\+Polygon\+Shape}}
+\index{on\+Choice\+Polygon\+Shape@{on\+Choice\+Polygon\+Shape}!Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}}
+\subsubsection[{on\+Choice\+Polygon\+Shape(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Input\+Shapefiles\+Page\+::on\+Choice\+Polygon\+Shape (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_input_shapefiles_page_a45c7161f6d252a1528a593f599cc2803}
+\index{Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}!On\+Wizard\+Page\+Changing@{On\+Wizard\+Page\+Changing}}
+\index{On\+Wizard\+Page\+Changing@{On\+Wizard\+Page\+Changing}!Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}}
+\subsubsection[{On\+Wizard\+Page\+Changing(wx\+Wizard\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Input\+Shapefiles\+Page\+::\+On\+Wizard\+Page\+Changing (
+\begin{DoxyParamCaption}
+\item[{wx\+Wizard\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_input_shapefiles_page_a805b935bcd5428c4b8b88a5eabef0c94}
+Fun��o para verificar se todos os campos foram preenchidos corretamente e para transferir os dados para seus respectivos lugares 
+
+\subsection{Atributos}
+\index{Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}!choice\+Col\+Point@{choice\+Col\+Point}}
+\index{choice\+Col\+Point@{choice\+Col\+Point}!Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}}
+\subsubsection[{choice\+Col\+Point}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Thiessen\+Input\+Shapefiles\+Page\+::choice\+Col\+Point\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_input_shapefiles_page_a637e73319d176d9889eec127a2727845}
+
+
+Definição na linha 47 do arquivo Thiessen\+Input\+Shapefiles\+Page.\+h.
+
+\index{Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}!choice\+Col\+Polygon@{choice\+Col\+Polygon}}
+\index{choice\+Col\+Polygon@{choice\+Col\+Polygon}!Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}}
+\subsubsection[{choice\+Col\+Polygon}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Thiessen\+Input\+Shapefiles\+Page\+::choice\+Col\+Polygon\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_input_shapefiles_page_a386bbfe262e349357b3d7ab6d8300c52}
+
+
+Definição na linha 44 do arquivo Thiessen\+Input\+Shapefiles\+Page.\+h.
+
+\index{Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}!choice\+Shape\+Point@{choice\+Shape\+Point}}
+\index{choice\+Shape\+Point@{choice\+Shape\+Point}!Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}}
+\subsubsection[{choice\+Shape\+Point}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Thiessen\+Input\+Shapefiles\+Page\+::choice\+Shape\+Point\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_input_shapefiles_page_a9905d71d99436964286f1277ec4f6c7b}
+
+
+Definição na linha 46 do arquivo Thiessen\+Input\+Shapefiles\+Page.\+h.
+
+\index{Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}!choice\+Shape\+Polygon@{choice\+Shape\+Polygon}}
+\index{choice\+Shape\+Polygon@{choice\+Shape\+Polygon}!Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}}
+\subsubsection[{choice\+Shape\+Polygon}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Thiessen\+Input\+Shapefiles\+Page\+::choice\+Shape\+Polygon\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_input_shapefiles_page_aed2df0adc8b6cb32af594069d020457d}
+
+
+Definição na linha 43 do arquivo Thiessen\+Input\+Shapefiles\+Page.\+h.
+
+\index{Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}!shapes@{shapes}}
+\index{shapes@{shapes}!Thiessen\+Input\+Shapefiles\+Page@{Thiessen\+Input\+Shapefiles\+Page}}
+\subsubsection[{shapes}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$wx\+String, {\bf Vector\+LayerM}$\ast$$>$ Thiessen\+Input\+Shapefiles\+Page\+::shapes\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_input_shapefiles_page_ac98b9145b9f9115ed98ed1b03fe63f83}
+
+
+Definição na linha 48 do arquivo Thiessen\+Input\+Shapefiles\+Page.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Thiessen\+Input\+Shapefiles\+Page.\+h}\end{DoxyCompactItemize}

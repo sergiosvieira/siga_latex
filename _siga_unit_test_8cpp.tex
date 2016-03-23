@@ -1,0 +1,766 @@
+\section{Referência do Arquivo Siga\+Unit\+Test.\+cpp}
+\label{_siga_unit_test_8cpp}\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+{\ttfamily \#include \char`\"{}../../include/\+S\+I\+G\+A/string-\/utils.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Voronoi/core/libs/file-\/utils.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Voronoi/core/libs/messages.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Voronoi/core/libs/matrix/rainfall-\/matrix.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Voronoi/core/libs/matrix/rainfall-\/matrix-\/operations.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Voronoi/core/libs/gdal/shapefile.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Voronoi/core/libs/gdal/shapefile-\/utils.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Voronoi/core/libs/numerical/voronoi-\/utils.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+Voronoi/core/hidro/rainfall/rainfall.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../../include/\+S\+I\+G\+A/siga-\/converter.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$direct.\+h$>$}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$ogrsf\+\_\+frmts.\+h$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf Get\+Current\+Dir}~\+\_\+getcwd
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bf current\+Path} (const char $\ast$a\+\_\+filename)
+\item 
+Shapefile $\ast$ {\bf load\+Shapefile} (const char $\ast$a\+\_\+filename, int $\ast$a\+\_\+error)
+\item 
+{\bf T\+E\+ST} (String\+Utils\+Test, trim\+\_\+left)
+\item 
+{\bf T\+E\+ST} (String\+Utils\+Test, trim\+\_\+right)
+\item 
+{\bf T\+E\+ST} (String\+Utils\+Test, trim\+\_\+left\+\_\+right)
+\item 
+{\bf T\+E\+ST} (String\+Utils\+Test, trim\+\_\+space\+\_\+left)
+\item 
+{\bf T\+E\+ST} (String\+Utils\+Test, trim\+\_\+space\+\_\+right)
+\item 
+{\bf T\+E\+ST} (String\+Utils\+Test, trim\+\_\+space\+\_\+left\+\_\+left)
+\item 
+{\bf T\+E\+ST} (String\+Utils\+Test, split\+\_\+simple\+\_\+test)
+\item 
+{\bf T\+E\+ST} (String\+Utils\+Test, split\+\_\+single\+\_\+comma)
+\item 
+{\bf T\+E\+ST} (String\+Utils\+Test, split\+\_\+elements)
+\item 
+{\bf T\+E\+ST} (String\+Utils\+Test, replace\+\_\+single)
+\item 
+{\bf T\+E\+ST} (String\+Utils\+Test, replace\+\_\+text\+\_\+not\+\_\+found)
+\item 
+{\bf T\+E\+ST} (String\+Utils\+Test, replace\+\_\+two\+\_\+replacements)
+\item 
+{\bf T\+E\+ST} (String\+Utils\+Test, creates\+Layer\+Name\+\_\+single\+\_\+test)
+\item 
+{\bf T\+E\+ST} (String\+Utils\+Test, normalize\+\_\+lowercase)
+\item 
+{\bf T\+E\+ST} (String\+Utils\+Test, normalize\+\_\+uppercase)
+\item 
+{\bf T\+E\+ST} (String\+Utils\+Test, basename\+\_\+unix)
+\item 
+{\bf T\+E\+ST} (String\+Utils\+Test, basename\+\_\+windows\+\_\+single\+\_\+escape)
+\item 
+{\bf T\+E\+ST} (String\+Utils\+Test, basename\+\_\+windows\+\_\+double\+\_\+escape)
+\item 
+{\bf T\+E\+ST} (String\+Utils\+Test, join\+\_\+single\+\_\+test)
+\item 
+{\bf T\+E\+ST} (String\+Utils\+Test, join\+\_\+one\+\_\+element)
+\item 
+{\bf T\+E\+ST} (String\+Utils\+Test, concat\+\_\+single\+\_\+test)
+\item 
+{\bf T\+E\+ST} (File\+Utils\+Test, file\+Exists\+\_\+file\+\_\+found)
+\item 
+{\bf T\+E\+ST} (File\+Utils\+Test, file\+Exists\+\_\+file\+\_\+not\+\_\+found)
+\item 
+{\bf T\+E\+ST} (File\+Utils\+Test, delete\+File\+\_\+file\+\_\+found)
+\item 
+{\bf T\+E\+ST} (File\+Utils\+Test, delete\+File\+\_\+file\+\_\+not\+\_\+found)
+\item 
+{\bf T\+E\+ST} (Rainfall\+Matrix\+Test, load\+\_\+single\+\_\+test)
+\item 
+{\bf T\+E\+ST} (Rainfall\+Matrix\+Test, load\+\_\+file\+\_\+not\+\_\+found)
+\item 
+{\bf T\+E\+ST} (Rainfall\+Matrix\+Test, load\+\_\+invalid\+\_\+separator)
+\item 
+{\bf T\+E\+ST} (Rainfall\+Matrix\+Test, load\+\_\+convert\+\_\+error)
+\item 
+{\bf T\+E\+ST} (Rainfall\+Matrix\+Test, load\+\_\+sanity\+\_\+test)
+\item 
+{\bf T\+E\+ST} (Rainfall\+Matrix\+Test, active\+Points\+\_\+simple\+\_\+test)
+\item 
+{\bf T\+E\+ST} (Rainfall\+Matrix\+Test, active\+Points\+Filter\+\_\+simple\+\_\+test)
+\item 
+{\bf T\+E\+ST} (Shape\+File\+Test, shape\+Files\+\_\+sanity\+\_\+test)
+\item 
+{\bf T\+E\+ST} (Shapefile\+Utils\+Test, string\+\_\+and\+\_\+integer\+Features\+\_\+single\+\_\+test)
+\item 
+{\bf T\+E\+ST} (Shapefile\+Utils\+Test, intersection\+\_\+single\+\_\+test)
+\item 
+{\bf T\+E\+ST} (Shapefile\+Utils\+Test, create\+Buffer\+\_\+single\+\_\+test)
+\item 
+{\bf T\+E\+ST} (Shapefile\+Utils\+Test, get\+Points\+\_\+single\+\_\+test)
+\item 
+{\bf T\+E\+ST} (Shapefile\+Utils\+Test, creates\+Bouding\+Box\+\_\+single\+\_\+test)
+\item 
+{\bf T\+E\+ST} (Shapefile\+Utils\+Test, get\+Features\+\_\+single\+\_\+test)
+\item 
+{\bf T\+E\+ST} (Shapefile\+Utils\+Test, features\+\_\+single\+\_\+test)
+\item 
+{\bf T\+E\+ST} (Shapefile\+Utils\+Test, export\+To\+K\+M\+L\+\_\+single\+\_\+test)
+\item 
+{\bf T\+E\+ST} (Shapefile\+Utils\+Test, create\+Data\+Source\+Area\+\_\+single\+\_\+test)
+\item 
+{\bf T\+E\+ST} (Shapefile\+Utils\+Test, creates\+Data\+Source\+Convex\+Buffer\+\_\+single\+\_\+test)
+\item 
+{\bf T\+E\+ST} (Shapefile\+Utils\+Test, creates\+Data\+Source\+Geometry\+Collection\+\_\+single\+\_\+test)
+\item 
+{\bf T\+E\+ST} (Voronoi\+Utils\+Test, voronoi\+Diagram\+\_\+single\+\_\+test)
+\item 
+{\bf T\+E\+ST} (Rainfall\+Test, run\+\_\+simple\+\_\+test)
+\item 
+{\bf T\+E\+ST} (Siga\+Converter\+Test, csv\+To\+Thiessen\+Matrix)
+\item 
+{\bf T\+E\+ST} (Siga\+Converter\+Test, csv\+To\+Serie)
+\end{DoxyCompactItemize}
+
+
+\subsection{Definições e macros}
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!Get\+Current\+Dir@{Get\+Current\+Dir}}
+\index{Get\+Current\+Dir@{Get\+Current\+Dir}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{Get\+Current\+Dir}]{\setlength{\rightskip}{0pt plus 5cm}\#define Get\+Current\+Dir~\+\_\+getcwd}\label{_siga_unit_test_8cpp_af0c0d1034a71f8aa3a08cda83c9d4e7a}
+S\+I\+GA C++ 
+
+Definição na linha 20 do arquivo Siga\+Unit\+Test.\+cpp.
+
+
+
+\subsection{Funções}
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!current\+Path@{current\+Path}}
+\index{current\+Path@{current\+Path}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{current\+Path(const char $\ast$a\+\_\+filename)}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string File\+System\+::current\+Path (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+filename}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_aa0d1b5ff3c6893c791e0d1b08f045824}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- U\+T\+I\+L\+I\+T\+I\+ES -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- 
+
+Definição na linha 33 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!load\+Shapefile@{load\+Shapefile}}
+\index{load\+Shapefile@{load\+Shapefile}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{load\+Shapefile(const char $\ast$a\+\_\+filename, int $\ast$a\+\_\+error)}]{\setlength{\rightskip}{0pt plus 5cm}Shapefile$\ast$ load\+Shapefile (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+filename, }
+\item[{int $\ast$}]{a\+\_\+error}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_aff743e900b228233ed1fe4853863233d}
+
+
+Definição na linha 45 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+String\+Utils\+Test, trim\+\_\+left)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{String\+Utils\+Test}]{, }
+\item[{trim\+\_\+left}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a11dc7089974302833b1638cecf8f258f}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ S\+T\+R\+I\+N\+G\+U\+T\+I\+LS -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ String\+Utils -\/ Trim 
+
+Definição na linha 58 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+String\+Utils\+Test, trim\+\_\+right)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{String\+Utils\+Test}]{, }
+\item[{trim\+\_\+right}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a871834d98a6939fe667dc1808d7d3697}
+
+
+Definição na linha 66 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+String\+Utils\+Test, trim\+\_\+left\+\_\+right)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{String\+Utils\+Test}]{, }
+\item[{trim\+\_\+left\+\_\+right}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_af06f2136c3f8ea3ca6c202618a8beae0}
+
+
+Definição na linha 74 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+String\+Utils\+Test, trim\+\_\+space\+\_\+left)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{String\+Utils\+Test}]{, }
+\item[{trim\+\_\+space\+\_\+left}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_ae5e47425b4acef793de9e17ec77b6274}
+
+
+Definição na linha 82 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+String\+Utils\+Test, trim\+\_\+space\+\_\+right)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{String\+Utils\+Test}]{, }
+\item[{trim\+\_\+space\+\_\+right}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a484d63124b3a474ca8aba50186ca01e6}
+
+
+Definição na linha 90 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+String\+Utils\+Test, trim\+\_\+space\+\_\+left\+\_\+left)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{String\+Utils\+Test}]{, }
+\item[{trim\+\_\+space\+\_\+left\+\_\+left}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a8cb44cfd5fbc581283eeecb9c152a5aa}
+
+
+Definição na linha 98 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+String\+Utils\+Test, split\+\_\+simple\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{String\+Utils\+Test}]{, }
+\item[{split\+\_\+simple\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a008d572388449c873300a45808eafdfb}
+String\+Utils -\/ Split 
+
+Definição na linha 107 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+String\+Utils\+Test, split\+\_\+single\+\_\+comma)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{String\+Utils\+Test}]{, }
+\item[{split\+\_\+single\+\_\+comma}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_aa32792ead0f660b4b7ec70e16003aa9a}
+
+
+Definição na linha 120 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+String\+Utils\+Test, split\+\_\+elements)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{String\+Utils\+Test}]{, }
+\item[{split\+\_\+elements}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_abcf431587c14137ea28b142999c535db}
+
+
+Definição na linha 132 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+String\+Utils\+Test, replace\+\_\+single)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{String\+Utils\+Test}]{, }
+\item[{replace\+\_\+single}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_aae7f9cf547bfbe4a8a1a11b22208ae31}
+String\+Utils -\/ Replace 
+
+Definição na linha 147 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+String\+Utils\+Test, replace\+\_\+text\+\_\+not\+\_\+found)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{String\+Utils\+Test}]{, }
+\item[{replace\+\_\+text\+\_\+not\+\_\+found}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_adbc00e1c380db2138b12b79c810b5ee5}
+
+
+Definição na linha 158 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+String\+Utils\+Test, replace\+\_\+two\+\_\+replacements)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{String\+Utils\+Test}]{, }
+\item[{replace\+\_\+two\+\_\+replacements}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a4583637b583413c0bd53214d52fdc2b8}
+
+
+Definição na linha 169 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+String\+Utils\+Test, creates\+Layer\+Name\+\_\+single\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{String\+Utils\+Test}]{, }
+\item[{creates\+Layer\+Name\+\_\+single\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a546a3ff98ca9fd33dc919a5150d8ba55}
+String\+Utils -\/ Creates Layer Name 
+
+Definição na linha 181 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+String\+Utils\+Test, normalize\+\_\+lowercase)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{String\+Utils\+Test}]{, }
+\item[{normalize\+\_\+lowercase}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a249baed450d13999a1ab59021e79ac8b}
+String\+Utils -\/ Normaliza Text 
+
+Definição na linha 192 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+String\+Utils\+Test, normalize\+\_\+uppercase)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{String\+Utils\+Test}]{, }
+\item[{normalize\+\_\+uppercase}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a684997b9717ecefeb0abdf8982ed5c57}
+
+
+Definição na linha 202 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+String\+Utils\+Test, basename\+\_\+unix)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{String\+Utils\+Test}]{, }
+\item[{basename\+\_\+unix}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_aa1935f68f9c513922892992d2686c928}
+String\+Utils -\/ Base Name 
+
+Definição na linha 213 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+String\+Utils\+Test, basename\+\_\+windows\+\_\+single\+\_\+escape)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{String\+Utils\+Test}]{, }
+\item[{basename\+\_\+windows\+\_\+single\+\_\+escape}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a856f39965b81c59d2146fb990a8e91b2}
+
+
+Definição na linha 221 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+String\+Utils\+Test, basename\+\_\+windows\+\_\+double\+\_\+escape)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{String\+Utils\+Test}]{, }
+\item[{basename\+\_\+windows\+\_\+double\+\_\+escape}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_aad3ae2d1d6b5ec6f29013ae9087e9be5}
+
+
+Definição na linha 231 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+String\+Utils\+Test, join\+\_\+single\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{String\+Utils\+Test}]{, }
+\item[{join\+\_\+single\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a6e967e5e87cf9978dfcaf1872d93a089}
+String\+Utils -\/ Join 
+
+Definição na linha 242 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+String\+Utils\+Test, join\+\_\+one\+\_\+element)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{String\+Utils\+Test}]{, }
+\item[{join\+\_\+one\+\_\+element}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a959fd40710357079db1b43e0856616a4}
+
+
+Definição na linha 257 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+String\+Utils\+Test, concat\+\_\+single\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{String\+Utils\+Test}]{, }
+\item[{concat\+\_\+single\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_ae84c0e2151f6ca82b4d787110d632973}
+String\+Utils -\/ Concatena dois elementos 
+
+Definição na linha 270 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+File\+Utils\+Test, file\+Exists\+\_\+file\+\_\+found)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{File\+Utils\+Test}]{, }
+\item[{file\+Exists\+\_\+file\+\_\+found}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_ab187ed2ced9e264762a2a6c2c482fbb4}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--------- F\+I\+L\+E\+U\+T\+I\+LS -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--------- Criando arquivo
+
+testando 
+
+Definição na linha 281 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+File\+Utils\+Test, file\+Exists\+\_\+file\+\_\+not\+\_\+found)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{File\+Utils\+Test}]{, }
+\item[{file\+Exists\+\_\+file\+\_\+not\+\_\+found}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a8a4c1840e5c959816637899b47907d25}
+
+
+Definição na linha 295 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+File\+Utils\+Test, delete\+File\+\_\+file\+\_\+found)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{File\+Utils\+Test}]{, }
+\item[{delete\+File\+\_\+file\+\_\+found}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_abf4981bcf2d8ef474d6dc42d6ddca248}
+Criando arquivo 
+
+Definição na linha 302 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+File\+Utils\+Test, delete\+File\+\_\+file\+\_\+not\+\_\+found)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{File\+Utils\+Test}]{, }
+\item[{delete\+File\+\_\+file\+\_\+not\+\_\+found}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a4278b0c54fdc26ee8384aff10a86b102}
+
+
+Definição na linha 315 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Rainfall\+Matrix\+Test, load\+\_\+single\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Rainfall\+Matrix\+Test}]{, }
+\item[{load\+\_\+single\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a8eb4c8065fdb2e9307b7fe289b17ea2c}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ R\+A\+I\+N\+F\+A\+LL M\+A\+T\+R\+IX -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ Criando matrix de precipita��o 
+
+Definição na linha 323 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Rainfall\+Matrix\+Test, load\+\_\+file\+\_\+not\+\_\+found)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Rainfall\+Matrix\+Test}]{, }
+\item[{load\+\_\+file\+\_\+not\+\_\+found}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a73302bd08c1b04981b04b6972d786db0}
+
+
+Definição na linha 351 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Rainfall\+Matrix\+Test, load\+\_\+invalid\+\_\+separator)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Rainfall\+Matrix\+Test}]{, }
+\item[{load\+\_\+invalid\+\_\+separator}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_acc53a43aa583a4bd18f2d41ac39a0b43}
+Criando matrix de precipita��o 
+
+Definição na linha 363 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Rainfall\+Matrix\+Test, load\+\_\+convert\+\_\+error)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Rainfall\+Matrix\+Test}]{, }
+\item[{load\+\_\+convert\+\_\+error}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a7219a47bf4306f7518201df5dcc87bb3}
+Criando matrix de precipita��o 
+
+Definição na linha 386 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Rainfall\+Matrix\+Test, load\+\_\+sanity\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Rainfall\+Matrix\+Test}]{, }
+\item[{load\+\_\+sanity\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_acd03bf3421e2f3a6d4d7a4ccdafbbcfd}
+Criando matrix de precipita��o 
+
+Definição na linha 409 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Rainfall\+Matrix\+Test, active\+Points\+\_\+simple\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Rainfall\+Matrix\+Test}]{, }
+\item[{active\+Points\+\_\+simple\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_afc743b7f89c495abc857096ac16af1ce}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ R\+A\+I\+N\+F\+A\+LL M\+A\+T\+R\+IX O\+P\+E\+R\+A\+T\+I\+O\+NS -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ Criando matrix de precipita��o 
+
+Definição na linha 467 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Rainfall\+Matrix\+Test, active\+Points\+Filter\+\_\+simple\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Rainfall\+Matrix\+Test}]{, }
+\item[{active\+Points\+Filter\+\_\+simple\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_ae0148ccc84b6c2141e78117ff45987a2}
+Criando matrix de precipita��o 
+
+Definição na linha 505 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Shape\+File\+Test, shape\+Files\+\_\+sanity\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Shape\+File\+Test}]{, }
+\item[{shape\+Files\+\_\+sanity\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_ad4bf2a30f05242489d2b105709b73720}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ S\+H\+A\+P\+E\+F\+I\+LE -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ Carregar shapefile 
+
+Definição na linha 538 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Shapefile\+Utils\+Test, string\+\_\+and\+\_\+integer\+Features\+\_\+single\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Shapefile\+Utils\+Test}]{, }
+\item[{string\+\_\+and\+\_\+integer\+Features\+\_\+single\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_af4f78924d7d248d330c4f2ccb1caefb6}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ S\+H\+A\+P\+E\+F\+I\+LE U\+T\+I\+LS -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ Carregar shapefile 
+
+Definição na linha 554 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Shapefile\+Utils\+Test, intersection\+\_\+single\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Shapefile\+Utils\+Test}]{, }
+\item[{intersection\+\_\+single\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a1e5aa8c9a9a122c979ad6d9a5709b852}
+Carregar shapefile
+
+intersection 
+
+Definição na linha 590 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Shapefile\+Utils\+Test, create\+Buffer\+\_\+single\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Shapefile\+Utils\+Test}]{, }
+\item[{create\+Buffer\+\_\+single\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a81a28d4d8774cce4d6d46237a0e441b7}
+
+
+Definição na linha 624 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Shapefile\+Utils\+Test, get\+Points\+\_\+single\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Shapefile\+Utils\+Test}]{, }
+\item[{get\+Points\+\_\+single\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_aca78e5212f1722e85400ea715a5199af}
+Carregar shapefile 
+
+Definição na linha 654 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Shapefile\+Utils\+Test, creates\+Bouding\+Box\+\_\+single\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Shapefile\+Utils\+Test}]{, }
+\item[{creates\+Bouding\+Box\+\_\+single\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a3b3ecadb2ac04fd27e77f92fa8c62afe}
+Carregar shapefile 
+
+Definição na linha 673 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Shapefile\+Utils\+Test, get\+Features\+\_\+single\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Shapefile\+Utils\+Test}]{, }
+\item[{get\+Features\+\_\+single\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a1313ea8a3e1de1f8c75b89ed26d6c696}
+Carregar shapefile 
+
+Definição na linha 702 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Shapefile\+Utils\+Test, features\+\_\+single\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Shapefile\+Utils\+Test}]{, }
+\item[{features\+\_\+single\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a8f4652cb3884bb426a91bb8008af9eb3}
+Carregar shapefile 
+
+Definição na linha 720 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Shapefile\+Utils\+Test, export\+To\+K\+M\+L\+\_\+single\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Shapefile\+Utils\+Test}]{, }
+\item[{export\+To\+K\+M\+L\+\_\+single\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a63c6e1ebe8cebce1aa087a4e85cf76c5}
+Carregar shapefile 
+
+Definição na linha 737 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Shapefile\+Utils\+Test, create\+Data\+Source\+Area\+\_\+single\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Shapefile\+Utils\+Test}]{, }
+\item[{create\+Data\+Source\+Area\+\_\+single\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_aa20e4bd2a87ab377ef1125b59c39ae26}
+Carregar shapefile 
+
+Definição na linha 755 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Shapefile\+Utils\+Test, creates\+Data\+Source\+Convex\+Buffer\+\_\+single\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Shapefile\+Utils\+Test}]{, }
+\item[{creates\+Data\+Source\+Convex\+Buffer\+\_\+single\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a72c2808c287d4a410875fe3ae10c4273}
+Carregar shapefile 
+
+Definição na linha 791 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Shapefile\+Utils\+Test, creates\+Data\+Source\+Geometry\+Collection\+\_\+single\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Shapefile\+Utils\+Test}]{, }
+\item[{creates\+Data\+Source\+Geometry\+Collection\+\_\+single\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a74d32ae0c38a4fbefd33b20d71dd1d24}
+Carregar shapefile 
+
+Definição na linha 817 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Voronoi\+Utils\+Test, voronoi\+Diagram\+\_\+single\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Voronoi\+Utils\+Test}]{, }
+\item[{voronoi\+Diagram\+\_\+single\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_ac3cff0a86b40f75e41a2add87906657e}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ V\+O\+R\+O\+N\+OI U\+T\+I\+LS -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ Carregar shapefile 
+
+Definição na linha 847 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Rainfall\+Test, run\+\_\+simple\+\_\+test)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Rainfall\+Test}]{, }
+\item[{run\+\_\+simple\+\_\+test}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_ae9a88847f4b07bffa2c6dad344fc8cb2}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------------ R\+A\+I\+N\+F\+A\+LL -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------------ Carregar Subbacias
+
+convex buffer
+
+rainfall matrix 
+
+Definição na linha 890 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Siga\+Converter\+Test, csv\+To\+Thiessen\+Matrix)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Siga\+Converter\+Test}]{, }
+\item[{csv\+To\+Thiessen\+Matrix}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_ad8c417cda9d23c5efaf8bb06b8839e52}
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ S\+I\+GA C\+O\+N\+V\+E\+R\+T\+ER -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/------ char error\+Code = 0; bool result = Siga\+Converter\+::csv\+To\+Thiessen\+Matrix(Output\+Data\+Model\+::\+D\+A\+I\+L\+Y\+\_\+\+T\+Y\+PE, current\+Path(\char`\"{}input1.\+csv\char`\"{}).c\+\_\+str(), \char`\"{}input1.\+tmtrx\char`\"{}, \&error\+Code);
+
+E\+X\+P\+E\+C\+T\+\_\+\+E\+Q(0, error\+Code); E\+X\+P\+E\+C\+T\+\_\+\+E\+Q(true, result);
+
+Rainfall\+Matrix $\ast$ matrix = new Rainfall\+Matrix();
+
+result = matrix-\/$>$load(current\+Path(\char`\"{}input1.\+tmtrx\char`\"{}).c\+\_\+str());
+
+E\+X\+P\+E\+C\+T\+\_\+\+E\+Q(true, result); E\+X\+P\+E\+C\+T\+\_\+\+EQ(5, matrix-\/$>$cols()); E\+X\+P\+E\+C\+T\+\_\+\+EQ(4, matrix-\/$>$rows());
+
+std\+::map$<$std\+::string, float$>$ row = matrix-\/$>$row\+From\+Date(\char`\"{}02/01/1980\char`\"{}); std\+::vector$<$std\+::string$>$ aux\+Vector;
+
+for (auto it \+: row) \{ aux\+Vector.\+push\+\_\+back(std\+::to\+\_\+string(it.\+second)); \}
+
+E\+X\+P\+E\+C\+T\+\_\+\+EQ(\char`\"{}2.\+600000;3.\+700000;4.\+800000;5.\+900000;6.\+000000\char`\"{}, String\+Utils\+::join(aux\+Vector, \char`\"{};\char`\"{}));
+
+delete matrix;
+
+Definição na linha 968 do arquivo Siga\+Unit\+Test.\+cpp.
+
+\index{Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!Siga\+Unit\+Test.\+cpp@{Siga\+Unit\+Test.\+cpp}}
+\subsubsection[{T\+E\+S\+T(\+Siga\+Converter\+Test, csv\+To\+Serie)}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Siga\+Converter\+Test}]{, }
+\item[{csv\+To\+Serie}]{}
+\end{DoxyParamCaption}
+)}\label{_siga_unit_test_8cpp_a612270af9047ac7512d3957d398d9bb6}
+bool result = Siga\+Converter\+::csv\+To\+Serie(Siga\+Converter\+::\+M\+O\+N\+T\+H\+L\+Y\+\_\+\+T\+Y\+PE, current\+Path(\char`\"{}input2.\+csv\char`\"{}).c\+\_\+str(), \char`\"{}input2.\+srs\char`\"{}, \char`\"{} \char`\"{});
+
+E\+X\+P\+E\+C\+T\+\_\+\+E\+Q(true, result);
+
+Definição na linha 1002 do arquivo Siga\+Unit\+Test.\+cpp.
+

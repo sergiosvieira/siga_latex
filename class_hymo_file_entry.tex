@@ -1,0 +1,228 @@
+\section{Referência da Classe Hymo\+File\+Entry}
+\label{class_hymo_file_entry}\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+
+
+{\ttfamily \#include $<$Hymo\+File\+Entry.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Hymo\+File\+Entry} ()
+\item 
+{\bf Hymo\+File\+Entry} (int {\bf subbasin\+ID}, double {\bf subbasin\+Total\+Area}, const std\+::vector$<$ int $>$ \&{\bf lu\+I\+D\+List}, const std\+::vector$<$ double $>$ \&{\bf lu\+Area\+List})
+\item 
+virtual {\bf $\sim$\+Hymo\+File\+Entry} ()
+\item 
+void {\bf set\+Subbasin\+ID} (int new\+Value)
+\item 
+void {\bf set\+Subbasin\+Total\+Area} (double new\+Value)
+\item 
+void {\bf set\+L\+U\+I\+D\+List} (const std\+::vector$<$ int $>$ \&new\+List)
+\item 
+void {\bf set\+L\+U\+Area\+List} (const std\+::vector$<$ double $>$ \&new\+List)
+\item 
+int {\bf get\+Subbasin\+ID} () const 
+\item 
+double {\bf get\+Subbasin\+Total\+Area} () const 
+\item 
+std\+::vector$<$ int $>$ {\bf get\+L\+U\+I\+D\+List} () const 
+\item 
+std\+::vector$<$ double $>$ {\bf get\+L\+U\+Area\+List} () const 
+\item 
+int {\bf get\+L\+U\+Count} () const 
+\item 
+std\+::vector$<$ double $>$ {\bf get\+L\+U\+Area\+Rate\+List} () const 
+\item 
+void {\bf add\+L\+U\+ID} (int lu\+ID)
+\item 
+void {\bf add\+Area\+Rate} (double area\+Rate)
+\item 
+wx\+String {\bf get\+String} () const 
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static wx\+String {\bf get\+Header} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf subbasin\+ID}
+\item 
+double {\bf subbasin\+Total\+Area}
+\item 
+std\+::vector$<$ int $>$ {\bf lu\+I\+D\+List}
+\item 
+std\+::vector$<$ double $>$ {\bf lu\+Area\+List}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Essa classe apenas representa uma lina do arquivo de entrada \textquotesingle{}hymo.\+dat\textquotesingle{} 
+
+Definição na linha 16 do arquivo Hymo\+File\+Entry.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\subsubsection[{Hymo\+File\+Entry()}]{\setlength{\rightskip}{0pt plus 5cm}Hymo\+File\+Entry\+::\+Hymo\+File\+Entry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_hymo_file_entry_a54fdf5774fbba7429eeb56f41ecadf1c}
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\subsubsection[{Hymo\+File\+Entry(int subbasin\+I\+D, double subbasin\+Total\+Area, const std\+::vector$<$ int $>$ \&lu\+I\+D\+List, const std\+::vector$<$ double $>$ \&lu\+Area\+List)}]{\setlength{\rightskip}{0pt plus 5cm}Hymo\+File\+Entry\+::\+Hymo\+File\+Entry (
+\begin{DoxyParamCaption}
+\item[{int}]{subbasin\+ID, }
+\item[{double}]{subbasin\+Total\+Area, }
+\item[{const std\+::vector$<$ int $>$ \&}]{lu\+I\+D\+List, }
+\item[{const std\+::vector$<$ double $>$ \&}]{lu\+Area\+List}
+\end{DoxyParamCaption}
+)}\label{class_hymo_file_entry_a12a100b9b7d3f7b39fd2c0316d57ee8b}
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!````~Hymo\+File\+Entry@{$\sim$\+Hymo\+File\+Entry}}
+\index{````~Hymo\+File\+Entry@{$\sim$\+Hymo\+File\+Entry}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\subsubsection[{$\sim$\+Hymo\+File\+Entry()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Hymo\+File\+Entry\+::$\sim$\+Hymo\+File\+Entry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_hymo_file_entry_a91fe83e6f19edc8069683143e26481e7}
+
+
+\subsection{Métodos}
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!add\+Area\+Rate@{add\+Area\+Rate}}
+\index{add\+Area\+Rate@{add\+Area\+Rate}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\subsubsection[{add\+Area\+Rate(double area\+Rate)}]{\setlength{\rightskip}{0pt plus 5cm}void Hymo\+File\+Entry\+::add\+Area\+Rate (
+\begin{DoxyParamCaption}
+\item[{double}]{area\+Rate}
+\end{DoxyParamCaption}
+)}\label{class_hymo_file_entry_a77ed3489ee3b9f2041b488199db3cb8d}
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!add\+L\+U\+ID@{add\+L\+U\+ID}}
+\index{add\+L\+U\+ID@{add\+L\+U\+ID}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\subsubsection[{add\+L\+U\+I\+D(int lu\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}void Hymo\+File\+Entry\+::add\+L\+U\+ID (
+\begin{DoxyParamCaption}
+\item[{int}]{lu\+ID}
+\end{DoxyParamCaption}
+)}\label{class_hymo_file_entry_acc58da280a3b70785f6ef6b66cb559e5}
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!get\+Header@{get\+Header}}
+\index{get\+Header@{get\+Header}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\subsubsection[{get\+Header()}]{\setlength{\rightskip}{0pt plus 5cm}static wx\+String Hymo\+File\+Entry\+::get\+Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_hymo_file_entry_a5abb16caaf00604cc056bf71ab315455}
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!get\+L\+U\+Area\+List@{get\+L\+U\+Area\+List}}
+\index{get\+L\+U\+Area\+List@{get\+L\+U\+Area\+List}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\subsubsection[{get\+L\+U\+Area\+List() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Hymo\+File\+Entry\+::get\+L\+U\+Area\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_hymo_file_entry_a6ac203798c444e6ba9f22f0228c082c9}
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!get\+L\+U\+Area\+Rate\+List@{get\+L\+U\+Area\+Rate\+List}}
+\index{get\+L\+U\+Area\+Rate\+List@{get\+L\+U\+Area\+Rate\+List}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\subsubsection[{get\+L\+U\+Area\+Rate\+List() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Hymo\+File\+Entry\+::get\+L\+U\+Area\+Rate\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_hymo_file_entry_a148d1992291eb00b5f7f657ead843ff7}
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!get\+L\+U\+Count@{get\+L\+U\+Count}}
+\index{get\+L\+U\+Count@{get\+L\+U\+Count}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\subsubsection[{get\+L\+U\+Count() const }]{\setlength{\rightskip}{0pt plus 5cm}int Hymo\+File\+Entry\+::get\+L\+U\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_hymo_file_entry_a16f767e46385a29ce499f25e18142dfe}
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!get\+L\+U\+I\+D\+List@{get\+L\+U\+I\+D\+List}}
+\index{get\+L\+U\+I\+D\+List@{get\+L\+U\+I\+D\+List}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\subsubsection[{get\+L\+U\+I\+D\+List() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ Hymo\+File\+Entry\+::get\+L\+U\+I\+D\+List (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_hymo_file_entry_ad0f40ba813648735213a4b78041bdae0}
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\subsubsection[{get\+String() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Hymo\+File\+Entry\+::get\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_hymo_file_entry_aa284c2225c919e8cb8531ab01e3bfafc}
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!get\+Subbasin\+ID@{get\+Subbasin\+ID}}
+\index{get\+Subbasin\+ID@{get\+Subbasin\+ID}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\subsubsection[{get\+Subbasin\+I\+D() const }]{\setlength{\rightskip}{0pt plus 5cm}int Hymo\+File\+Entry\+::get\+Subbasin\+ID (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_hymo_file_entry_a23990bf5f1006572a45f6eeea3bc2332}
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!get\+Subbasin\+Total\+Area@{get\+Subbasin\+Total\+Area}}
+\index{get\+Subbasin\+Total\+Area@{get\+Subbasin\+Total\+Area}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\subsubsection[{get\+Subbasin\+Total\+Area() const }]{\setlength{\rightskip}{0pt plus 5cm}double Hymo\+File\+Entry\+::get\+Subbasin\+Total\+Area (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_hymo_file_entry_adc6261b646850a42791ab6519d8c1674}
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!set\+L\+U\+Area\+List@{set\+L\+U\+Area\+List}}
+\index{set\+L\+U\+Area\+List@{set\+L\+U\+Area\+List}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\subsubsection[{set\+L\+U\+Area\+List(const std\+::vector$<$ double $>$ \&new\+List)}]{\setlength{\rightskip}{0pt plus 5cm}void Hymo\+File\+Entry\+::set\+L\+U\+Area\+List (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ double $>$ \&}]{new\+List}
+\end{DoxyParamCaption}
+)}\label{class_hymo_file_entry_a46ef5b6755a4bc042a73cc709025d694}
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!set\+L\+U\+I\+D\+List@{set\+L\+U\+I\+D\+List}}
+\index{set\+L\+U\+I\+D\+List@{set\+L\+U\+I\+D\+List}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\subsubsection[{set\+L\+U\+I\+D\+List(const std\+::vector$<$ int $>$ \&new\+List)}]{\setlength{\rightskip}{0pt plus 5cm}void Hymo\+File\+Entry\+::set\+L\+U\+I\+D\+List (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ int $>$ \&}]{new\+List}
+\end{DoxyParamCaption}
+)}\label{class_hymo_file_entry_a17ab8ef591862284ee828c557998ed62}
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!set\+Subbasin\+ID@{set\+Subbasin\+ID}}
+\index{set\+Subbasin\+ID@{set\+Subbasin\+ID}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\subsubsection[{set\+Subbasin\+I\+D(int new\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Hymo\+File\+Entry\+::set\+Subbasin\+ID (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Value}
+\end{DoxyParamCaption}
+)}\label{class_hymo_file_entry_ae174b2692591d90ea801a436d64fd98f}
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!set\+Subbasin\+Total\+Area@{set\+Subbasin\+Total\+Area}}
+\index{set\+Subbasin\+Total\+Area@{set\+Subbasin\+Total\+Area}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\subsubsection[{set\+Subbasin\+Total\+Area(double new\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Hymo\+File\+Entry\+::set\+Subbasin\+Total\+Area (
+\begin{DoxyParamCaption}
+\item[{double}]{new\+Value}
+\end{DoxyParamCaption}
+)}\label{class_hymo_file_entry_aab6eb5f1ab6df4911dd83d85e85b4419}
+
+
+\subsection{Atributos}
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!lu\+Area\+List@{lu\+Area\+List}}
+\index{lu\+Area\+List@{lu\+Area\+List}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\subsubsection[{lu\+Area\+List}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Hymo\+File\+Entry\+::lu\+Area\+List\hspace{0.3cm}{\ttfamily [protected]}}\label{class_hymo_file_entry_a9a1fd7d018ad5ae69bc0da175142fa9e}
+
+
+Definição na linha 22 do arquivo Hymo\+File\+Entry.\+h.
+
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!lu\+I\+D\+List@{lu\+I\+D\+List}}
+\index{lu\+I\+D\+List@{lu\+I\+D\+List}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\subsubsection[{lu\+I\+D\+List}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ Hymo\+File\+Entry\+::lu\+I\+D\+List\hspace{0.3cm}{\ttfamily [protected]}}\label{class_hymo_file_entry_aaf68a67adf2dabf65d746ff5475c3dca}
+
+
+Definição na linha 21 do arquivo Hymo\+File\+Entry.\+h.
+
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!subbasin\+ID@{subbasin\+ID}}
+\index{subbasin\+ID@{subbasin\+ID}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\subsubsection[{subbasin\+ID}]{\setlength{\rightskip}{0pt plus 5cm}int Hymo\+File\+Entry\+::subbasin\+ID\hspace{0.3cm}{\ttfamily [protected]}}\label{class_hymo_file_entry_ab56abacf94395c9eacb3f13cdd413233}
+
+
+Definição na linha 19 do arquivo Hymo\+File\+Entry.\+h.
+
+\index{Hymo\+File\+Entry@{Hymo\+File\+Entry}!subbasin\+Total\+Area@{subbasin\+Total\+Area}}
+\index{subbasin\+Total\+Area@{subbasin\+Total\+Area}!Hymo\+File\+Entry@{Hymo\+File\+Entry}}
+\subsubsection[{subbasin\+Total\+Area}]{\setlength{\rightskip}{0pt plus 5cm}double Hymo\+File\+Entry\+::subbasin\+Total\+Area\hspace{0.3cm}{\ttfamily [protected]}}\label{class_hymo_file_entry_a364f54f0303d2760278475396df6aef4}
+
+
+Definição na linha 20 do arquivo Hymo\+File\+Entry.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Hymo\+File\+Entry.\+h}\end{DoxyCompactItemize}

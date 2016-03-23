@@ -1,0 +1,127 @@
+\section{Referência da Classe Siga\+Converter}
+\label{class_siga_converter}\index{Siga\+Converter@{Siga\+Converter}}
+
+
+{\ttfamily \#include $<$siga-\/converter.\+h$>$}
+
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static wx\+String {\bf error\+Message\+From\+Error\+Code} ({\bf Error\+Code} \&a\+\_\+error\+Code)
+\item 
+static bool {\bf convert} ({\bf Time\+Serie\+Tree} \&a\+\_\+tree, const {\bf Options\+Structure} \&a\+\_\+options, {\bf Converter\+Structure} \&a\+\_\+converter)
+\item 
+static void {\bf read\+File} (std\+::vector$<$ std\+::string $>$ \&a\+\_\+vector\+Lines, const char $\ast$a\+\_\+filename, std\+::vector$<$ char $>$ \&a\+\_\+delimiters, char a\+\_\+output\+Delimiter, char $\ast$a\+\_\+error=nullptr, {\bf Progress\+Callback} a\+\_\+callback=nullptr)
+\item 
+static void {\bf read\+From\+File} (csv\+\_\+parser \&a\+\_\+parser, const char $\ast$a\+\_\+filename, std\+::vector$<$ char $>$ \&a\+\_\+delimiters, char a\+\_\+output\+Delimiter, char $\ast$a\+\_\+error=nullptr, {\bf Progress\+Callback} a\+\_\+callback=nullptr)
+\item 
+static const std\+::string {\bf error\+To\+String} ({\bf Error\+Code} a\+\_\+error)
+\item 
+static {\bf Siga\+Converter} \& {\bf get\+Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Estáticos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+static const char {\bf k\+Field\+Terminator}
+\item 
+static const char {\bf k\+Line\+Terminator}
+\item 
+static const char {\bf k\+Enclosure\+Char}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 13 do arquivo siga-\/converter.\+h.
+
+
+
+\subsection{Métodos}
+\index{Siga\+Converter@{Siga\+Converter}!convert@{convert}}
+\index{convert@{convert}!Siga\+Converter@{Siga\+Converter}}
+\subsubsection[{convert(\+Time\+Serie\+Tree \&a\+\_\+tree, const Options\+Structure \&a\+\_\+options, Converter\+Structure \&a\+\_\+converter)}]{\setlength{\rightskip}{0pt plus 5cm}static bool Siga\+Converter\+::convert (
+\begin{DoxyParamCaption}
+\item[{{\bf Time\+Serie\+Tree} \&}]{a\+\_\+tree, }
+\item[{const {\bf Options\+Structure} \&}]{a\+\_\+options, }
+\item[{{\bf Converter\+Structure} \&}]{a\+\_\+converter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_siga_converter_a1f1e3f13d642fdafb01d302c12ec07b9}
+\index{Siga\+Converter@{Siga\+Converter}!error\+Message\+From\+Error\+Code@{error\+Message\+From\+Error\+Code}}
+\index{error\+Message\+From\+Error\+Code@{error\+Message\+From\+Error\+Code}!Siga\+Converter@{Siga\+Converter}}
+\subsubsection[{error\+Message\+From\+Error\+Code(\+Error\+Code \&a\+\_\+error\+Code)}]{\setlength{\rightskip}{0pt plus 5cm}static wx\+String Siga\+Converter\+::error\+Message\+From\+Error\+Code (
+\begin{DoxyParamCaption}
+\item[{{\bf Error\+Code} \&}]{a\+\_\+error\+Code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_siga_converter_aea5f0370990611408079271658e220fa}
+\index{Siga\+Converter@{Siga\+Converter}!error\+To\+String@{error\+To\+String}}
+\index{error\+To\+String@{error\+To\+String}!Siga\+Converter@{Siga\+Converter}}
+\subsubsection[{error\+To\+String(\+Error\+Code a\+\_\+error)}]{\setlength{\rightskip}{0pt plus 5cm}static const std\+::string Siga\+Converter\+::error\+To\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf Error\+Code}}]{a\+\_\+error}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_siga_converter_a97a7189911008c9428a818e9a709422c}
+\index{Siga\+Converter@{Siga\+Converter}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Siga\+Converter@{Siga\+Converter}}
+\subsubsection[{get\+Instance()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Siga\+Converter}\& Siga\+Converter\+::get\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_siga_converter_ad8529f64f0008d060772504958d4f377}
+
+
+Definição na linha 36 do arquivo siga-\/converter.\+h.
+
+\index{Siga\+Converter@{Siga\+Converter}!read\+File@{read\+File}}
+\index{read\+File@{read\+File}!Siga\+Converter@{Siga\+Converter}}
+\subsubsection[{read\+File(std\+::vector$<$ std\+::string $>$ \&a\+\_\+vector\+Lines, const char $\ast$a\+\_\+filename, std\+::vector$<$ char $>$ \&a\+\_\+delimiters, char a\+\_\+output\+Delimiter, char $\ast$a\+\_\+error=nullptr, Progress\+Callback a\+\_\+callback=nullptr)}]{\setlength{\rightskip}{0pt plus 5cm}static void Siga\+Converter\+::read\+File (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$ \&}]{a\+\_\+vector\+Lines, }
+\item[{const char $\ast$}]{a\+\_\+filename, }
+\item[{std\+::vector$<$ char $>$ \&}]{a\+\_\+delimiters, }
+\item[{char}]{a\+\_\+output\+Delimiter, }
+\item[{char $\ast$}]{a\+\_\+error = {\ttfamily nullptr}, }
+\item[{{\bf Progress\+Callback}}]{a\+\_\+callback = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_siga_converter_aef0cb2806af91c1bd6834c2a486e1a98}
+\index{Siga\+Converter@{Siga\+Converter}!read\+From\+File@{read\+From\+File}}
+\index{read\+From\+File@{read\+From\+File}!Siga\+Converter@{Siga\+Converter}}
+\subsubsection[{read\+From\+File(csv\+\_\+parser \&a\+\_\+parser, const char $\ast$a\+\_\+filename, std\+::vector$<$ char $>$ \&a\+\_\+delimiters, char a\+\_\+output\+Delimiter, char $\ast$a\+\_\+error=nullptr, Progress\+Callback a\+\_\+callback=nullptr)}]{\setlength{\rightskip}{0pt plus 5cm}static void Siga\+Converter\+::read\+From\+File (
+\begin{DoxyParamCaption}
+\item[{csv\+\_\+parser \&}]{a\+\_\+parser, }
+\item[{const char $\ast$}]{a\+\_\+filename, }
+\item[{std\+::vector$<$ char $>$ \&}]{a\+\_\+delimiters, }
+\item[{char}]{a\+\_\+output\+Delimiter, }
+\item[{char $\ast$}]{a\+\_\+error = {\ttfamily nullptr}, }
+\item[{{\bf Progress\+Callback}}]{a\+\_\+callback = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_siga_converter_a94be32f34af0f2f3f45247ebd70dc606}
+
+
+\subsection{Atributos}
+\index{Siga\+Converter@{Siga\+Converter}!k\+Enclosure\+Char@{k\+Enclosure\+Char}}
+\index{k\+Enclosure\+Char@{k\+Enclosure\+Char}!Siga\+Converter@{Siga\+Converter}}
+\subsubsection[{k\+Enclosure\+Char}]{\setlength{\rightskip}{0pt plus 5cm}const char Siga\+Converter\+::k\+Enclosure\+Char\hspace{0.3cm}{\ttfamily [static]}}\label{class_siga_converter_ab23c305cf421548ee80e84ee10a2c0a3}
+
+
+Definição na linha 18 do arquivo siga-\/converter.\+h.
+
+\index{Siga\+Converter@{Siga\+Converter}!k\+Field\+Terminator@{k\+Field\+Terminator}}
+\index{k\+Field\+Terminator@{k\+Field\+Terminator}!Siga\+Converter@{Siga\+Converter}}
+\subsubsection[{k\+Field\+Terminator}]{\setlength{\rightskip}{0pt plus 5cm}const char Siga\+Converter\+::k\+Field\+Terminator\hspace{0.3cm}{\ttfamily [static]}}\label{class_siga_converter_a8b2f8a6a7906810f4cdfaef04d27d852}
+
+
+Definição na linha 16 do arquivo siga-\/converter.\+h.
+
+\index{Siga\+Converter@{Siga\+Converter}!k\+Line\+Terminator@{k\+Line\+Terminator}}
+\index{k\+Line\+Terminator@{k\+Line\+Terminator}!Siga\+Converter@{Siga\+Converter}}
+\subsubsection[{k\+Line\+Terminator}]{\setlength{\rightskip}{0pt plus 5cm}const char Siga\+Converter\+::k\+Line\+Terminator\hspace{0.3cm}{\ttfamily [static]}}\label{class_siga_converter_ada9458181a2c98350fae5f6313f9c4c8}
+
+
+Definição na linha 17 do arquivo siga-\/converter.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf siga-\/converter.\+h}\end{DoxyCompactItemize}

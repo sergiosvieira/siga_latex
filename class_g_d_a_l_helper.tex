@@ -1,0 +1,360 @@
+\section{ReferÃªncia da Classe G\+D\+A\+L\+Helper}
+\label{class_g_d_a_l_helper}\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+
+
+{\ttfamily \#include $<$G\+D\+A\+L\+Helper.\+h$>$}
+
+\subsection*{Tipos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Sorting\+Type} \{ {\bf S\+O\+R\+T\+\_\+\+A\+S\+C\+E\+N\+D\+I\+NG}, 
+{\bf S\+O\+R\+T\+\_\+\+D\+E\+S\+C\+E\+N\+D\+I\+NG}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf G\+D\+A\+L\+Helper} ()
+\item 
+virtual {\bf $\sim$\+G\+D\+A\+L\+Helper} ()
+\item 
+O\+G\+R\+Feature $\ast$ {\bf find\+Feature\+By\+Id\+Value} (O\+G\+R\+Data\+Source $\ast$datasource, int id\+Value, int id\+Column\+Index=0) const 
+\item 
+double {\bf get\+Area\+From\+Feature} (O\+G\+R\+Feature $\ast$feature) const 
+\item 
+std\+::map$<$ int, double $>$ {\bf get\+Areas\+Grouped\+By\+Field} (const std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&features, int field\+Index) const 
+\item 
+void {\bf sort\+Features\+By\+Column} (std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&features, int column\+Index, {\bf Sorting\+Type} sorting\+Type={\bf S\+O\+R\+T\+\_\+\+A\+S\+C\+E\+N\+D\+I\+NG}) const 
+\item 
+bool {\bf change\+Field\+From\+Feature} (O\+G\+R\+Layer $\ast$layer, O\+G\+R\+Feature $\ast$feature, int field\+Index, int new\+Value) const 
+\item 
+bool {\bf change\+Field\+From\+Feature} (O\+G\+R\+Layer $\ast$layer, O\+G\+R\+Feature $\ast$feature, int field\+Index, double new\+Value) const 
+\end{DoxyCompactItemize}
+\subsection*{MÃ©todos PÃºblicos EstÃ¡ticos}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bf inflate} (O\+G\+R\+Envelope $\ast$envelope, int perc)
+\item 
+static wx\+Real\+Point {\bf pixel\+To\+Lat\+Long} (int x, int y)
+\item 
+static wx\+String {\bf has\+Repeated\+Positions} (O\+G\+R\+Layer $\ast$o\+Layer)
+\item 
+static int {\bf how\+Many\+Features} ({\bf LayerM} $\ast$layer)
+\item 
+static std\+::vector$<$ std\+::vector$<$ int $>$ $>$ {\bf points\+In\+Each\+Polygon} ({\bf LayerM} $\ast$layer\+Basin, {\bf LayerM} $\ast$layer\+Point, int S\+T\+A\+T\+I\+O\+N\+\_\+\+I\+D\+\_\+\+I\+N\+D\+EX, int inside=0)
+\item 
+static std\+::vector$<$ std\+::vector$<$ int $>$ $>$ {\bf points\+In\+Each\+Polygon\+With\+Convex\+Hull} (O\+G\+R\+Layer $\ast$a\+\_\+basin\+Layer, O\+G\+R\+Layer $\ast$a\+\_\+stations\+Layer, int a\+\_\+station\+Index, double a\+\_\+distance)
+\item 
+static std\+::vector$<$ std\+::vector$<$ int $>$ $>$ {\bf points\+In\+Each\+Polygon} (O\+G\+R\+Layer $\ast$a\+\_\+basin\+Layer, O\+G\+R\+Layer $\ast$a\+\_\+stations\+Layer, int a\+\_\+station\+Index, double a\+\_\+distance)
+\item 
+static std\+::vector$<$ int $>$ {\bf points\+In\+Polygon\+With\+Buffer} (O\+G\+R\+Layer $\ast$a\+\_\+basin\+Layer, O\+G\+R\+Layer $\ast$a\+\_\+stations\+Layer, int a\+\_\+station\+Index, double a\+\_\+distance)
+\item 
+static std\+::vector$<$ O\+G\+R\+Point $\ast$ $>$ {\bf selected\+Points\+With\+Buffer} (O\+G\+R\+Layer $\ast$a\+\_\+basin\+Layer, O\+G\+R\+Layer $\ast$a\+\_\+stations\+Layer, int a\+\_\+station\+Index, double a\+\_\+distance)
+\item 
+static std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ {\bf selected\+Point\+Features\+With\+Buffer} (O\+G\+R\+Layer $\ast$a\+\_\+basin\+Layer, O\+G\+R\+Layer $\ast$a\+\_\+stations\+Layer, int a\+\_\+station\+Index, double a\+\_\+distance)
+\item 
+static int {\bf translate\+Layer} (O\+G\+R\+Data\+Source $\ast$po\+Src\+DS, O\+G\+R\+Layer $\ast$po\+Src\+Layer, O\+G\+R\+Data\+Source $\ast$po\+Dst\+DS, char $\ast$$\ast$papsz\+L\+S\+CO, const char $\ast$psz\+New\+Layer\+Name, int b\+Transform, O\+G\+R\+Spatial\+Reference $\ast$po\+Output\+S\+RS, O\+G\+R\+Spatial\+Reference $\ast$po\+Source\+S\+RS, char $\ast$$\ast$papsz\+Sel\+Fields, int b\+Append, int e\+G\+Type)
+\item 
+static int {\bf translate} (O\+G\+R\+Layer $\ast$a\+\_\+src\+Layer, O\+G\+R\+Data\+Source $\ast$a\+\_\+dst\+Data\+Source, O\+G\+R\+Spatial\+Reference $\ast$a\+\_\+src\+Spatial\+Reference, O\+G\+R\+Spatial\+Reference $\ast$a\+\_\+dst\+Spatial\+Reference)
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 26 do arquivo G\+D\+A\+L\+Helper.\+h.
+
+
+
+\subsection{EnumeraÃ§Ãµes}
+\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!Sorting\+Type@{Sorting\+Type}}
+\index{Sorting\+Type@{Sorting\+Type}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\subsubsection[{Sorting\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf G\+D\+A\+L\+Helper\+::\+Sorting\+Type}}\label{class_g_d_a_l_helper_a3c31ed56b624e2d58f73c0a08cc127cd}
+\begin{Desc}
+\item[Valores de enumeraÃ§Ãµes]\par
+\begin{description}
+\index{S\+O\+R\+T\+\_\+\+A\+S\+C\+E\+N\+D\+I\+NG@{S\+O\+R\+T\+\_\+\+A\+S\+C\+E\+N\+D\+I\+NG}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!S\+O\+R\+T\+\_\+\+A\+S\+C\+E\+N\+D\+I\+NG@{S\+O\+R\+T\+\_\+\+A\+S\+C\+E\+N\+D\+I\+NG}}\item[{\em 
+S\+O\+R\+T\+\_\+\+A\+S\+C\+E\+N\+D\+I\+NG\label{class_g_d_a_l_helper_a3c31ed56b624e2d58f73c0a08cc127cda054e850fc81baab6eafc29eca5b89e1a}
+}]\index{S\+O\+R\+T\+\_\+\+D\+E\+S\+C\+E\+N\+D\+I\+NG@{S\+O\+R\+T\+\_\+\+D\+E\+S\+C\+E\+N\+D\+I\+NG}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!S\+O\+R\+T\+\_\+\+D\+E\+S\+C\+E\+N\+D\+I\+NG@{S\+O\+R\+T\+\_\+\+D\+E\+S\+C\+E\+N\+D\+I\+NG}}\item[{\em 
+S\+O\+R\+T\+\_\+\+D\+E\+S\+C\+E\+N\+D\+I\+NG\label{class_g_d_a_l_helper_a3c31ed56b624e2d58f73c0a08cc127cdab985cbed1529aaa12df9d56856d4e645}
+}]\end{description}
+\end{Desc}
+
+
+DefiniÃ§Ã£o na linha 29 do arquivo G\+D\+A\+L\+Helper.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\subsubsection[{G\+D\+A\+L\+Helper()}]{\setlength{\rightskip}{0pt plus 5cm}G\+D\+A\+L\+Helper\+::\+G\+D\+A\+L\+Helper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_d_a_l_helper_a88a4847cd1af9906c9fd75dd7d829cff}
+\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!````~G\+D\+A\+L\+Helper@{$\sim$\+G\+D\+A\+L\+Helper}}
+\index{````~G\+D\+A\+L\+Helper@{$\sim$\+G\+D\+A\+L\+Helper}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\subsubsection[{$\sim$\+G\+D\+A\+L\+Helper()}]{\setlength{\rightskip}{0pt plus 5cm}virtual G\+D\+A\+L\+Helper\+::$\sim$\+G\+D\+A\+L\+Helper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_d_a_l_helper_a93e5d9384957267130198561cd9fd591}
+
+
+\subsection{MÃ©todos}
+\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!change\+Field\+From\+Feature@{change\+Field\+From\+Feature}}
+\index{change\+Field\+From\+Feature@{change\+Field\+From\+Feature}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\subsubsection[{change\+Field\+From\+Feature(\+O\+G\+R\+Layer $\ast$layer, O\+G\+R\+Feature $\ast$feature, int field\+Index, int new\+Value) const }]{\setlength{\rightskip}{0pt plus 5cm}bool G\+D\+A\+L\+Helper\+::change\+Field\+From\+Feature (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{layer, }
+\item[{O\+G\+R\+Feature $\ast$}]{feature, }
+\item[{int}]{field\+Index, }
+\item[{int}]{new\+Value}
+\end{DoxyParamCaption}
+) const}\label{class_g_d_a_l_helper_a38d9a05c8618caf628f735933ef5406b}
+Dado uma feature em uma certa layer, altera e atualiza a field dessa feature para o novo valor
+
+
+\begin{DoxyParams}{ParÃ¢metros}
+{\em layer} & Layer que contem a feature a ser atualizada \\
+\hline
+{\em feature} & Feature a ser atualizada \\
+\hline
+{\em field\+Index} & Índice da field a ser atualizada \\
+\hline
+{\em new\+Value} & Novo valor a ser usado para a field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+false, caso a atualização falhe. true, cc. 
+\end{DoxyReturn}
+\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!change\+Field\+From\+Feature@{change\+Field\+From\+Feature}}
+\index{change\+Field\+From\+Feature@{change\+Field\+From\+Feature}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\subsubsection[{change\+Field\+From\+Feature(\+O\+G\+R\+Layer $\ast$layer, O\+G\+R\+Feature $\ast$feature, int field\+Index, double new\+Value) const }]{\setlength{\rightskip}{0pt plus 5cm}bool G\+D\+A\+L\+Helper\+::change\+Field\+From\+Feature (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{layer, }
+\item[{O\+G\+R\+Feature $\ast$}]{feature, }
+\item[{int}]{field\+Index, }
+\item[{double}]{new\+Value}
+\end{DoxyParamCaption}
+) const}\label{class_g_d_a_l_helper_a67b04345ee6ba64ab9eb24cfae1e955b}
+\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!find\+Feature\+By\+Id\+Value@{find\+Feature\+By\+Id\+Value}}
+\index{find\+Feature\+By\+Id\+Value@{find\+Feature\+By\+Id\+Value}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\subsubsection[{find\+Feature\+By\+Id\+Value(\+O\+G\+R\+Data\+Source $\ast$datasource, int id\+Value, int id\+Column\+Index=0) const }]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Feature$\ast$ G\+D\+A\+L\+Helper\+::find\+Feature\+By\+Id\+Value (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Data\+Source $\ast$}]{datasource, }
+\item[{int}]{id\+Value, }
+\item[{int}]{id\+Column\+Index = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}\label{class_g_d_a_l_helper_a81b9e3f0fd94da47e01568a78d27e5e4}
+Dado um Data\+Source, busca a feature referente àquele ID. Opcionalmente, você pode especificar qual o indice da coluna a ser buscada. Esta função não supoe que os I\+Ds estejam ordenados na tabela de atributos (caso não exista nenhuma feature com id id\+Value, a função vai procurar por todas as features do datasource mesmo assim.
+
+
+\begin{DoxyParams}{ParÃ¢metros}
+{\em datasource} & Data\+Source onde será feita a busca (usa a layer 0 por padrão) \\
+\hline
+{\em int} & id\+Value valor de ID a ser buscado \\
+\hline
+{\em id\+Column\+Index} & O\+P\+C\+I\+O\+N\+AL Especifica qual o índice da coluna ID a ser examinada\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+A primeira feature que casar com o valor de id \textquotesingle{}id\+Value\textquotesingle{}. Retorna N\+U\+LL caso não encontre. I\+M\+P\+O\+R\+T\+A\+N\+TE\+: D\+E\+P\+O\+IS DE U\+S\+AR A F\+E\+A\+T\+U\+RE, C\+H\+A\+ME O\+G\+R\+Feature\+::\+Destroy\+Feature!!! 
+\end{DoxyReturn}
+\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!get\+Area\+From\+Feature@{get\+Area\+From\+Feature}}
+\index{get\+Area\+From\+Feature@{get\+Area\+From\+Feature}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\subsubsection[{get\+Area\+From\+Feature(\+O\+G\+R\+Feature $\ast$feature) const }]{\setlength{\rightskip}{0pt plus 5cm}double G\+D\+A\+L\+Helper\+::get\+Area\+From\+Feature (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Feature $\ast$}]{feature}
+\end{DoxyParamCaption}
+) const}\label{class_g_d_a_l_helper_a38825f542131623aed9d3bd96f316ef1}
+Calcula a área total da feature, somando-\/se a área de todos os seus polígonos. \index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!get\+Areas\+Grouped\+By\+Field@{get\+Areas\+Grouped\+By\+Field}}
+\index{get\+Areas\+Grouped\+By\+Field@{get\+Areas\+Grouped\+By\+Field}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\subsubsection[{get\+Areas\+Grouped\+By\+Field(const std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&features, int field\+Index) const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$int, double$>$ G\+D\+A\+L\+Helper\+::get\+Areas\+Grouped\+By\+Field (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&}]{features, }
+\item[{int}]{field\+Index}
+\end{DoxyParamCaption}
+) const}\label{class_g_d_a_l_helper_a49f54e0378cbc40101aa797a58e4edb1}
+Dada uma lista de features, esta função calcula a área das features agrupadas pelos valores da coluna \textquotesingle{}field\+Index\textquotesingle{}.
+
+
+\begin{DoxyParams}{ParÃ¢metros}
+{\em features} & Lista de features que serão usadas para o cálculo das áreas \\
+\hline
+{\em field\+Index} & Índice da coluna onde serão usado os valores para agrupar as features \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Um map onde as \textquotesingle{}chaves\textquotesingle{} são os valores da coluna field\+Index e os \textquotesingle{}valores\textquotesingle{} são as áreas acumuladas 
+\end{DoxyReturn}
+\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!has\+Repeated\+Positions@{has\+Repeated\+Positions}}
+\index{has\+Repeated\+Positions@{has\+Repeated\+Positions}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\subsubsection[{has\+Repeated\+Positions(\+O\+G\+R\+Layer $\ast$o\+Layer)}]{\setlength{\rightskip}{0pt plus 5cm}static wx\+String G\+D\+A\+L\+Helper\+::has\+Repeated\+Positions (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{o\+Layer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_g_d_a_l_helper_a331a0d574cd43cd625a6e3cd597388b0}
+Função para verificar se um shapefile de pontos possui pontos na mesma posição 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em o\+Layer} & -\/ Layer de pontos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+\char`\"{}\char`\"{} -\/ se não houver pontos em posições repetidas 
+\end{DoxyReturn}
+\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!how\+Many\+Features@{how\+Many\+Features}}
+\index{how\+Many\+Features@{how\+Many\+Features}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\subsubsection[{how\+Many\+Features(\+Layer\+M $\ast$layer)}]{\setlength{\rightskip}{0pt plus 5cm}static int G\+D\+A\+L\+Helper\+::how\+Many\+Features (
+\begin{DoxyParamCaption}
+\item[{{\bf LayerM} $\ast$}]{layer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_g_d_a_l_helper_a38b1c726ff812cf3c4e17431eb71d6c5}
+Função para retornar quantas features uma layer possui 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em o\+Layer} & -\/ Layer de pontos \\
+\hline
+\end{DoxyParams}
+\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!inflate@{inflate}}
+\index{inflate@{inflate}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\subsubsection[{inflate(\+O\+G\+R\+Envelope $\ast$envelope, int perc)}]{\setlength{\rightskip}{0pt plus 5cm}static void G\+D\+A\+L\+Helper\+::inflate (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Envelope $\ast$}]{envelope, }
+\item[{int}]{perc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_g_d_a_l_helper_a5e6d801b4b9b5e071cbd6344df4a5279}
+Função para inflar/bufferizar a bounding box (extent/envelope) de uma layer) envelope -\/ O\+G\+R\+Envelope a ser modificado perc -\/ Percentagem de inflação. Ex.\+: 10 representa 10\% de inflação em todos os lados da bounding box. \index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!pixel\+To\+Lat\+Long@{pixel\+To\+Lat\+Long}}
+\index{pixel\+To\+Lat\+Long@{pixel\+To\+Lat\+Long}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\subsubsection[{pixel\+To\+Lat\+Long(int x, int y)}]{\setlength{\rightskip}{0pt plus 5cm}static wx\+Real\+Point G\+D\+A\+L\+Helper\+::pixel\+To\+Lat\+Long (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_g_d_a_l_helper_af7d5f049a30fda30ab3dd16e394083d0}
+\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!points\+In\+Each\+Polygon@{points\+In\+Each\+Polygon}}
+\index{points\+In\+Each\+Polygon@{points\+In\+Each\+Polygon}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\subsubsection[{points\+In\+Each\+Polygon(\+Layer\+M $\ast$layer\+Basin, Layer\+M $\ast$layer\+Point, int S\+T\+A\+T\+I\+O\+N\+\_\+\+I\+D\+\_\+\+I\+N\+D\+E\+X, int inside=0)}]{\setlength{\rightskip}{0pt plus 5cm}static std\+::vector$<$std\+::vector$<$int$>$ $>$ G\+D\+A\+L\+Helper\+::points\+In\+Each\+Polygon (
+\begin{DoxyParamCaption}
+\item[{{\bf LayerM} $\ast$}]{layer\+Basin, }
+\item[{{\bf LayerM} $\ast$}]{layer\+Point, }
+\item[{int}]{S\+T\+A\+T\+I\+O\+N\+\_\+\+I\+D\+\_\+\+I\+N\+D\+EX, }
+\item[{int}]{inside = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_g_d_a_l_helper_a92a3447bf901d181413bb5b55fd788b5}
+Função para retornar quais pontos estão em qual sub-\/bacia (independente se o posto está ativo ou não) 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em layer\+Basin} & -\/ Layer de polígonos \\
+\hline
+{\em layer\+Point} & -\/ Layer de pontos \\
+\hline
+{\em S\+T\+A\+T\+I\+O\+N\+\_\+\+I\+D\+\_\+\+I\+N\+D\+EX} & -\/ índice do id da estação \\
+\hline
+{\em inside} & -\/ escolhe somente os pontos dentro do polígono ou somente os pontos dentro da bounding box \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+um vetor de sub-\/bacias, onde cada sub-\/bacia tem um vetor de ids de pontos 
+\end{DoxyReturn}
+\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!points\+In\+Each\+Polygon@{points\+In\+Each\+Polygon}}
+\index{points\+In\+Each\+Polygon@{points\+In\+Each\+Polygon}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\subsubsection[{points\+In\+Each\+Polygon(\+O\+G\+R\+Layer $\ast$a\+\_\+basin\+Layer, O\+G\+R\+Layer $\ast$a\+\_\+stations\+Layer, int a\+\_\+station\+Index, double a\+\_\+distance)}]{\setlength{\rightskip}{0pt plus 5cm}static std\+::vector$<$std\+::vector$<$int$>$ $>$ G\+D\+A\+L\+Helper\+::points\+In\+Each\+Polygon (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{a\+\_\+basin\+Layer, }
+\item[{O\+G\+R\+Layer $\ast$}]{a\+\_\+stations\+Layer, }
+\item[{int}]{a\+\_\+station\+Index, }
+\item[{double}]{a\+\_\+distance}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_g_d_a_l_helper_a3137df70683bb12c995a66ef94d040e1}
+\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!points\+In\+Each\+Polygon\+With\+Convex\+Hull@{points\+In\+Each\+Polygon\+With\+Convex\+Hull}}
+\index{points\+In\+Each\+Polygon\+With\+Convex\+Hull@{points\+In\+Each\+Polygon\+With\+Convex\+Hull}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\subsubsection[{points\+In\+Each\+Polygon\+With\+Convex\+Hull(\+O\+G\+R\+Layer $\ast$a\+\_\+basin\+Layer, O\+G\+R\+Layer $\ast$a\+\_\+stations\+Layer, int a\+\_\+station\+Index, double a\+\_\+distance)}]{\setlength{\rightskip}{0pt plus 5cm}static std\+::vector$<$std\+::vector$<$int$>$ $>$ G\+D\+A\+L\+Helper\+::points\+In\+Each\+Polygon\+With\+Convex\+Hull (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{a\+\_\+basin\+Layer, }
+\item[{O\+G\+R\+Layer $\ast$}]{a\+\_\+stations\+Layer, }
+\item[{int}]{a\+\_\+station\+Index, }
+\item[{double}]{a\+\_\+distance}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_g_d_a_l_helper_a45957d73aac658560658bf3d03d947e9}
+\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!points\+In\+Polygon\+With\+Buffer@{points\+In\+Polygon\+With\+Buffer}}
+\index{points\+In\+Polygon\+With\+Buffer@{points\+In\+Polygon\+With\+Buffer}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\subsubsection[{points\+In\+Polygon\+With\+Buffer(\+O\+G\+R\+Layer $\ast$a\+\_\+basin\+Layer, O\+G\+R\+Layer $\ast$a\+\_\+stations\+Layer, int a\+\_\+station\+Index, double a\+\_\+distance)}]{\setlength{\rightskip}{0pt plus 5cm}static std\+::vector$<$int$>$ G\+D\+A\+L\+Helper\+::points\+In\+Polygon\+With\+Buffer (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{a\+\_\+basin\+Layer, }
+\item[{O\+G\+R\+Layer $\ast$}]{a\+\_\+stations\+Layer, }
+\item[{int}]{a\+\_\+station\+Index, }
+\item[{double}]{a\+\_\+distance}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_g_d_a_l_helper_a10c923ae3bd2a7101f3dea7d06103398}
+\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!selected\+Point\+Features\+With\+Buffer@{selected\+Point\+Features\+With\+Buffer}}
+\index{selected\+Point\+Features\+With\+Buffer@{selected\+Point\+Features\+With\+Buffer}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\subsubsection[{selected\+Point\+Features\+With\+Buffer(\+O\+G\+R\+Layer $\ast$a\+\_\+basin\+Layer, O\+G\+R\+Layer $\ast$a\+\_\+stations\+Layer, int a\+\_\+station\+Index, double a\+\_\+distance)}]{\setlength{\rightskip}{0pt plus 5cm}static std\+::vector$<$O\+G\+R\+Feature$\ast$$>$ G\+D\+A\+L\+Helper\+::selected\+Point\+Features\+With\+Buffer (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{a\+\_\+basin\+Layer, }
+\item[{O\+G\+R\+Layer $\ast$}]{a\+\_\+stations\+Layer, }
+\item[{int}]{a\+\_\+station\+Index, }
+\item[{double}]{a\+\_\+distance}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_g_d_a_l_helper_a57d5c4eef61a9285fa69a245229bd313}
+\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!selected\+Points\+With\+Buffer@{selected\+Points\+With\+Buffer}}
+\index{selected\+Points\+With\+Buffer@{selected\+Points\+With\+Buffer}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\subsubsection[{selected\+Points\+With\+Buffer(\+O\+G\+R\+Layer $\ast$a\+\_\+basin\+Layer, O\+G\+R\+Layer $\ast$a\+\_\+stations\+Layer, int a\+\_\+station\+Index, double a\+\_\+distance)}]{\setlength{\rightskip}{0pt plus 5cm}static std\+::vector$<$O\+G\+R\+Point$\ast$$>$ G\+D\+A\+L\+Helper\+::selected\+Points\+With\+Buffer (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{a\+\_\+basin\+Layer, }
+\item[{O\+G\+R\+Layer $\ast$}]{a\+\_\+stations\+Layer, }
+\item[{int}]{a\+\_\+station\+Index, }
+\item[{double}]{a\+\_\+distance}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_g_d_a_l_helper_a43085fa6e4cdafc271f2bcc63b634d4a}
+\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!sort\+Features\+By\+Column@{sort\+Features\+By\+Column}}
+\index{sort\+Features\+By\+Column@{sort\+Features\+By\+Column}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\subsubsection[{sort\+Features\+By\+Column(std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&features, int column\+Index, Sorting\+Type sorting\+Type=\+S\+O\+R\+T\+\_\+\+A\+S\+C\+E\+N\+D\+I\+N\+G) const }]{\setlength{\rightskip}{0pt plus 5cm}void G\+D\+A\+L\+Helper\+::sort\+Features\+By\+Column (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&}]{features, }
+\item[{int}]{column\+Index, }
+\item[{{\bf Sorting\+Type}}]{sorting\+Type = {\ttfamily {\bf S\+O\+R\+T\+\_\+\+A\+S\+C\+E\+N\+D\+I\+NG}}}
+\end{DoxyParamCaption}
+) const}\label{class_g_d_a_l_helper_acecc5df837ba3a56fe40e45168367eb6}
+Ordena um vetor de features por uma determinada coluna
+
+
+\begin{DoxyParams}{ParÃ¢metros}
+{\em features} & Lista de features a ser ordenada \\
+\hline
+{\em column\+Index} & indice da coluna a ser considerada (deve ser do tipo Inteiro) \\
+\hline
+{\em sorting\+Type} & tipo de ordenação (crescente ou decrescente) \\
+\hline
+\end{DoxyParams}
+\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!translate@{translate}}
+\index{translate@{translate}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\subsubsection[{translate(\+O\+G\+R\+Layer $\ast$a\+\_\+src\+Layer, O\+G\+R\+Data\+Source $\ast$a\+\_\+dst\+Data\+Source, O\+G\+R\+Spatial\+Reference $\ast$a\+\_\+src\+Spatial\+Reference, O\+G\+R\+Spatial\+Reference $\ast$a\+\_\+dst\+Spatial\+Reference)}]{\setlength{\rightskip}{0pt plus 5cm}static int G\+D\+A\+L\+Helper\+::translate (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{a\+\_\+src\+Layer, }
+\item[{O\+G\+R\+Data\+Source $\ast$}]{a\+\_\+dst\+Data\+Source, }
+\item[{O\+G\+R\+Spatial\+Reference $\ast$}]{a\+\_\+src\+Spatial\+Reference, }
+\item[{O\+G\+R\+Spatial\+Reference $\ast$}]{a\+\_\+dst\+Spatial\+Reference}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_g_d_a_l_helper_a7c457f88909ff7af0620016a022ec8bb}
+\index{G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}!translate\+Layer@{translate\+Layer}}
+\index{translate\+Layer@{translate\+Layer}!G\+D\+A\+L\+Helper@{G\+D\+A\+L\+Helper}}
+\subsubsection[{translate\+Layer(\+O\+G\+R\+Data\+Source $\ast$po\+Src\+D\+S, O\+G\+R\+Layer $\ast$po\+Src\+Layer, O\+G\+R\+Data\+Source $\ast$po\+Dst\+D\+S, char $\ast$$\ast$papsz\+L\+S\+C\+O, const char $\ast$psz\+New\+Layer\+Name, int b\+Transform, O\+G\+R\+Spatial\+Reference $\ast$po\+Output\+S\+R\+S, O\+G\+R\+Spatial\+Reference $\ast$po\+Source\+S\+R\+S, char $\ast$$\ast$papsz\+Sel\+Fields, int b\+Append, int e\+G\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}static int G\+D\+A\+L\+Helper\+::translate\+Layer (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Data\+Source $\ast$}]{po\+Src\+DS, }
+\item[{O\+G\+R\+Layer $\ast$}]{po\+Src\+Layer, }
+\item[{O\+G\+R\+Data\+Source $\ast$}]{po\+Dst\+DS, }
+\item[{char $\ast$$\ast$}]{papsz\+L\+S\+CO, }
+\item[{const char $\ast$}]{psz\+New\+Layer\+Name, }
+\item[{int}]{b\+Transform, }
+\item[{O\+G\+R\+Spatial\+Reference $\ast$}]{po\+Output\+S\+RS, }
+\item[{O\+G\+R\+Spatial\+Reference $\ast$}]{po\+Source\+S\+RS, }
+\item[{char $\ast$$\ast$}]{papsz\+Sel\+Fields, }
+\item[{int}]{b\+Append, }
+\item[{int}]{e\+G\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_g_d_a_l_helper_a8373d7a6678d80590a9506dfe5e8f478}
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf G\+D\+A\+L\+Helper.\+h}\end{DoxyCompactItemize}

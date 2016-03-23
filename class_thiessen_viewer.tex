@@ -1,0 +1,256 @@
+\section{Referência da Classe Thiessen\+Viewer}
+\label{class_thiessen_viewer}\index{Thiessen\+Viewer@{Thiessen\+Viewer}}
+
+
+{\ttfamily \#include $<$Thiessen\+Viewer.\+h$>$}
+
+
+
+Herdeiro de {\bf Matrix\+Viewer}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Thiessen\+Viewer} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent}, int options, bool editable, bool manual\+Inserction, bool any\+Matrix=true, bool just\+One=true, bool fit=false, bool draw\+Graph=true)
+\item 
+virtual {\bf $\sim$\+Thiessen\+Viewer} ()
+\item 
+void {\bf insert\+Matrix} ({\bf Matrix} matrix, wx\+String name, map$<$ unsigned int, {\bf Column\+Information} $\ast$ $>$, wx\+String section=\char`\"{}\char`\"{}, unsigned int type=0)
+\item 
+void {\bf insert\+Matrix\+Of\+Actives\+Stations} ({\bf Matrix} matrix, wx\+String name, map$<$ unsigned int, {\bf Column\+Information} $\ast$ $>$, wx\+String section=\char`\"{}\char`\"{}, unsigned int type=0)
+\item 
+bool {\bf remove\+Matrix} ({\bf Matrix} matrix, wx\+String name=\char`\"{}\char`\"{})
+\item 
+void {\bf save\+Conf} ()
+\item 
+void {\bf clear} ()
+\item 
+{\bf Draw\+Matrix} $\ast$ {\bf get\+Selected\+Matrix} ()
+\item 
+void {\bf set\+Fixed\+X\+Axis} (std\+::vector$<$ wx\+String $>$ fixed\+Vector)
+\item 
+std\+::vector$<$ wx\+String $>$ {\bf get\+Fixed\+X\+Axis} ()
+\item 
+{\bf Matrix\+Plan} $\ast$ {\bf get\+Actives\+Stations\+Plan} ()
+\item 
+void {\bf remove\+Actives\+Stations\+Plan} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bf format\+Column\+Label} (std\+::vector$<$ wx\+String $>$ \&name\+Col, {\bf Thiessen\+Dialog\+::\+Dialog\+Type} type)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Thiessen\+Graph} $\ast$ {\bf graph}
+\item 
+{\bf Matrix\+Plan} $\ast$ {\bf plan}
+\item 
+{\bf Matrix\+Plan} $\ast$ {\bf actives\+Stations\+Plan}
+\item 
+std\+::vector$<$ wx\+String $>$ {\bf fixed\+X\+Vector}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+Visualizador de series Possui visualizacao por planilha e por grafico 
+
+Definição na linha 32 do arquivo Thiessen\+Viewer.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Thiessen\+Viewer@{Thiessen\+Viewer}!Thiessen\+Viewer@{Thiessen\+Viewer}}
+\index{Thiessen\+Viewer@{Thiessen\+Viewer}!Thiessen\+Viewer@{Thiessen\+Viewer}}
+\subsubsection[{Thiessen\+Viewer(wx\+Frame $\ast$frame, wx\+Window $\ast$parent, int options, bool editable, bool manual\+Inserction, bool any\+Matrix=true, bool just\+One=true, bool fit=false, bool draw\+Graph=true)}]{\setlength{\rightskip}{0pt plus 5cm}Thiessen\+Viewer\+::\+Thiessen\+Viewer (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{int}]{options, }
+\item[{bool}]{editable, }
+\item[{bool}]{manual\+Inserction, }
+\item[{bool}]{any\+Matrix = {\ttfamily true}, }
+\item[{bool}]{just\+One = {\ttfamily true}, }
+\item[{bool}]{fit = {\ttfamily false}, }
+\item[{bool}]{draw\+Graph = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_viewer_a1174607368fe91b7f8af0a92aa8095dd}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & Frame que contem a interface \\
+\hline
+{\em parent} & Pai da janela \\
+\hline
+{\em options} & Bot�es a serem desenhados \\
+\hline
+\end{DoxyParams}
+\index{Thiessen\+Viewer@{Thiessen\+Viewer}!````~Thiessen\+Viewer@{$\sim$\+Thiessen\+Viewer}}
+\index{````~Thiessen\+Viewer@{$\sim$\+Thiessen\+Viewer}!Thiessen\+Viewer@{Thiessen\+Viewer}}
+\subsubsection[{$\sim$\+Thiessen\+Viewer()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Thiessen\+Viewer\+::$\sim$\+Thiessen\+Viewer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_thiessen_viewer_a4ab67db1b6c69dad152e3e6edebc2a56}
+Destrutor 
+
+\subsection{Métodos}
+\index{Thiessen\+Viewer@{Thiessen\+Viewer}!clear@{clear}}
+\index{clear@{clear}!Thiessen\+Viewer@{Thiessen\+Viewer}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Viewer\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_viewer_adb0b01fbdd92894960dd9d0103a8cbb7}
+Limpa os dados \index{Thiessen\+Viewer@{Thiessen\+Viewer}!format\+Column\+Label@{format\+Column\+Label}}
+\index{format\+Column\+Label@{format\+Column\+Label}!Thiessen\+Viewer@{Thiessen\+Viewer}}
+\subsubsection[{format\+Column\+Label(std\+::vector$<$ wx\+String $>$ \&name\+Col, Thiessen\+Dialog\+::\+Dialog\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}static void Thiessen\+Viewer\+::format\+Column\+Label (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ wx\+String $>$ \&}]{name\+Col, }
+\item[{{\bf Thiessen\+Dialog\+::\+Dialog\+Type}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_thiessen_viewer_a4053bbc50f12277d4856b302786ecfdb}
+Essa fun��o serve para reformatar os labels das colunas da matriz de \doxyref{Thiessen}{pag.}{class_thiessen} \index{Thiessen\+Viewer@{Thiessen\+Viewer}!get\+Actives\+Stations\+Plan@{get\+Actives\+Stations\+Plan}}
+\index{get\+Actives\+Stations\+Plan@{get\+Actives\+Stations\+Plan}!Thiessen\+Viewer@{Thiessen\+Viewer}}
+\subsubsection[{get\+Actives\+Stations\+Plan()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix\+Plan}$\ast$ Thiessen\+Viewer\+::get\+Actives\+Stations\+Plan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_viewer_a0fd16377b77ec4e5c054533459ab6c5f}
+Retorna a matrix\+Plan de postos ativos \index{Thiessen\+Viewer@{Thiessen\+Viewer}!get\+Fixed\+X\+Axis@{get\+Fixed\+X\+Axis}}
+\index{get\+Fixed\+X\+Axis@{get\+Fixed\+X\+Axis}!Thiessen\+Viewer@{Thiessen\+Viewer}}
+\subsubsection[{get\+Fixed\+X\+Axis()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$wx\+String$>$ Thiessen\+Viewer\+::get\+Fixed\+X\+Axis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_viewer_ac69f9722c7eee1109aa05cfa34a90540}
+Retorna o vetor com os valores do eixo X fixo \index{Thiessen\+Viewer@{Thiessen\+Viewer}!get\+Selected\+Matrix@{get\+Selected\+Matrix}}
+\index{get\+Selected\+Matrix@{get\+Selected\+Matrix}!Thiessen\+Viewer@{Thiessen\+Viewer}}
+\subsubsection[{get\+Selected\+Matrix()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Matrix}$\ast$ Thiessen\+Viewer\+::get\+Selected\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_viewer_a9dce5951384f4bfa2e687c182b32b500}
+\index{Thiessen\+Viewer@{Thiessen\+Viewer}!insert\+Matrix@{insert\+Matrix}}
+\index{insert\+Matrix@{insert\+Matrix}!Thiessen\+Viewer@{Thiessen\+Viewer}}
+\subsubsection[{insert\+Matrix(\+Matrix matrix, wx\+String name, map$<$ unsigned int, Column\+Information $\ast$ $>$, wx\+String section="""", unsigned int type=0)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Viewer\+::insert\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{matrix, }
+\item[{wx\+String}]{name, }
+\item[{map$<$ unsigned int, {\bf Column\+Information} $\ast$ $>$}]{, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{unsigned int}]{type = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_viewer_aa808831a41dc6717533b224d5ef15583}
+Insere matriz 
+\begin{DoxyParams}{Parâmetros}
+{\em matrix} & Matriz a ser inserida \\
+\hline
+{\em name} & Nome da matriz inserida \\
+\hline
+{\em infos} & Informa��es sobre as colunas \\
+\hline
+{\em drawdot} & Se deve desenhar os pontos do gr�fico \\
+\hline
+{\em drawline} & Se deve desenhar as linhas entre os pontos do gr�fico \\
+\hline
+\end{DoxyParams}
+\index{Thiessen\+Viewer@{Thiessen\+Viewer}!insert\+Matrix\+Of\+Actives\+Stations@{insert\+Matrix\+Of\+Actives\+Stations}}
+\index{insert\+Matrix\+Of\+Actives\+Stations@{insert\+Matrix\+Of\+Actives\+Stations}!Thiessen\+Viewer@{Thiessen\+Viewer}}
+\subsubsection[{insert\+Matrix\+Of\+Actives\+Stations(\+Matrix matrix, wx\+String name, map$<$ unsigned int, Column\+Information $\ast$ $>$, wx\+String section="""", unsigned int type=0)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Viewer\+::insert\+Matrix\+Of\+Actives\+Stations (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{matrix, }
+\item[{wx\+String}]{name, }
+\item[{map$<$ unsigned int, {\bf Column\+Information} $\ast$ $>$}]{, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{unsigned int}]{type = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_viewer_ac0d84827756834c1746e1a2f6923850b}
+Insere matriz (usada para mostrar a quantidade de postos ativos para cada sub-\/bacia) 
+\begin{DoxyParams}{Parâmetros}
+{\em matrix} & Matriz a ser inserida \\
+\hline
+{\em name} & Nome da matriz inserida \\
+\hline
+{\em infos} & Informa��es sobre as colunas \\
+\hline
+{\em drawdot} & Se deve desenhar os pontos do gr�fico \\
+\hline
+{\em drawline} & Se deve desenhar as linhas entre os pontos do gr�fico \\
+\hline
+\end{DoxyParams}
+\index{Thiessen\+Viewer@{Thiessen\+Viewer}!remove\+Actives\+Stations\+Plan@{remove\+Actives\+Stations\+Plan}}
+\index{remove\+Actives\+Stations\+Plan@{remove\+Actives\+Stations\+Plan}!Thiessen\+Viewer@{Thiessen\+Viewer}}
+\subsubsection[{remove\+Actives\+Stations\+Plan()}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Viewer\+::remove\+Actives\+Stations\+Plan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_viewer_a1fc40db183080f021be781c00c290356}
+Remove a \doxyref{Matrix\+Plan}{pag.}{class_matrix_plan} de postos ativos \index{Thiessen\+Viewer@{Thiessen\+Viewer}!remove\+Matrix@{remove\+Matrix}}
+\index{remove\+Matrix@{remove\+Matrix}!Thiessen\+Viewer@{Thiessen\+Viewer}}
+\subsubsection[{remove\+Matrix(\+Matrix matrix, wx\+String name="""")}]{\setlength{\rightskip}{0pt plus 5cm}bool Thiessen\+Viewer\+::remove\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{matrix, }
+\item[{wx\+String}]{name = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_viewer_a554b68571cb0d2502d0a3d4ce33342aa}
+Remove a Matriz 
+\begin{DoxyParams}{Parâmetros}
+{\em serie} & \doxyref{Serie}{pag.}{class_serie} a ser removida \\
+\hline
+\end{DoxyParams}
+\index{Thiessen\+Viewer@{Thiessen\+Viewer}!save\+Conf@{save\+Conf}}
+\index{save\+Conf@{save\+Conf}!Thiessen\+Viewer@{Thiessen\+Viewer}}
+\subsubsection[{save\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Viewer\+::save\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_thiessen_viewer_ac81939dde6def74708664ace000cdeb2}
+Salva configura��es 
+
+Reimplementação de {\bf Matrix\+Viewer} \doxyref{}{pag.}{class_matrix_viewer_accd506b46e8acc194b7ace7b2f8838b0}.
+
+\index{Thiessen\+Viewer@{Thiessen\+Viewer}!set\+Fixed\+X\+Axis@{set\+Fixed\+X\+Axis}}
+\index{set\+Fixed\+X\+Axis@{set\+Fixed\+X\+Axis}!Thiessen\+Viewer@{Thiessen\+Viewer}}
+\subsubsection[{set\+Fixed\+X\+Axis(std\+::vector$<$ wx\+String $>$ fixed\+Vector)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Viewer\+::set\+Fixed\+X\+Axis (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ wx\+String $>$}]{fixed\+Vector}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_viewer_a17422d717dc6748557647e7049f71ac5}
+Define um vetor com os valores para o eixo x para todas as matrizes que foram e forem inseridas 
+
+\subsection{Atributos}
+\index{Thiessen\+Viewer@{Thiessen\+Viewer}!actives\+Stations\+Plan@{actives\+Stations\+Plan}}
+\index{actives\+Stations\+Plan@{actives\+Stations\+Plan}!Thiessen\+Viewer@{Thiessen\+Viewer}}
+\subsubsection[{actives\+Stations\+Plan}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix\+Plan}$\ast$ Thiessen\+Viewer\+::actives\+Stations\+Plan\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_viewer_a6416fbebf011c04cb58d4f4633e85bcb}
+
+
+Definição na linha 46 do arquivo Thiessen\+Viewer.\+h.
+
+\index{Thiessen\+Viewer@{Thiessen\+Viewer}!fixed\+X\+Vector@{fixed\+X\+Vector}}
+\index{fixed\+X\+Vector@{fixed\+X\+Vector}!Thiessen\+Viewer@{Thiessen\+Viewer}}
+\subsubsection[{fixed\+X\+Vector}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$wx\+String$>$ Thiessen\+Viewer\+::fixed\+X\+Vector\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_viewer_af608591f76088d751bdd295ce5cf44b6}
+Vetor com os valores para o eixo X fixo 
+
+Definição na linha 50 do arquivo Thiessen\+Viewer.\+h.
+
+\index{Thiessen\+Viewer@{Thiessen\+Viewer}!graph@{graph}}
+\index{graph@{graph}!Thiessen\+Viewer@{Thiessen\+Viewer}}
+\subsubsection[{graph}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Thiessen\+Graph}$\ast$ Thiessen\+Viewer\+::graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_viewer_af03128c35322cf7e5face08840d0bf66}
+
+
+Definição na linha 38 do arquivo Thiessen\+Viewer.\+h.
+
+\index{Thiessen\+Viewer@{Thiessen\+Viewer}!plan@{plan}}
+\index{plan@{plan}!Thiessen\+Viewer@{Thiessen\+Viewer}}
+\subsubsection[{plan}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix\+Plan}$\ast$ Thiessen\+Viewer\+::plan\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_viewer_acf5879cb84508ef688ada9c8e6cd5ff5}
+
+
+Definição na linha 42 do arquivo Thiessen\+Viewer.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Thiessen\+Viewer.\+h}\end{DoxyCompactItemize}

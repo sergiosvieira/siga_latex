@@ -1,0 +1,266 @@
+\section{Referência da Classe Quality\+Interface}
+\label{class_quality_interface}\index{Quality\+Interface@{Quality\+Interface}}
+
+
+{\ttfamily \#include $<$Quality\+Interface.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Quality\+Interface} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent})
+\item 
+{\bf $\sim$\+Quality\+Interface} ()
+\item 
+void {\bf add\+Scenario\+Page} (const wx\+String \&name, int event\+Id)
+\item 
+void {\bf remove\+Selected\+Scenario} (size\+\_\+t page)
+\item 
+void {\bf on\+Choice\+Model} (wx\+Choicebook\+Event \&event)
+\item 
+void {\bf on\+Choice\+Sub\+Model} (wx\+Choicebook\+Event \&event)
+\item 
+void {\bf on\+Choice\+Pollutant} (wx\+Notebook\+Event \&event)
+\item 
+void {\bf create\+Model\+Interface} ()
+\item 
+void {\bf show\+Res} (bool change=false)
+\item 
+void {\bf adjust\+Interval\+Range} (const {\bf Interval} \&interval)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Notebook $\ast$ {\bf nb\+Scen}
+\item 
+vector$<$ {\bf Component\+Interface} $\ast$ $>$ {\bf interfaces\+Qual}
+\item 
+vector$<$ vector$<$ {\bf Component\+Interface} $\ast$ $>$ $>$ {\bf interfaces}
+\item 
+wx\+Panel $\ast$ {\bf panel}
+\item 
+wx\+Choicebook $\ast$ {\bf cb\+Model}
+\item 
+wx\+Choicebook $\ast$ {\bf cb\+Basin\+Model}
+\item 
+wx\+Choicebook $\ast$ {\bf cb\+Res\+Model}
+\item 
+wx\+Choicebook $\ast$ {\bf cb\+River\+Model}
+\item 
+wx\+Notebook $\ast$ {\bf cb\+Pollutant}
+\item 
+{\bf S\+I\+GA} $\ast$ {\bf main}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf on\+Add\+Scenario} (wx\+Command\+Event \&)
+\item 
+void {\bf on\+Remove\+Selected\+Scenario} (wx\+Command\+Event \&)
+\item 
+void {\bf on\+Change\+Selected\+Scenario} (wx\+Notebook\+Event \&evento)
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 38 do arquivo Quality\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Quality\+Interface@{Quality\+Interface}!Quality\+Interface@{Quality\+Interface}}
+\index{Quality\+Interface@{Quality\+Interface}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{Quality\+Interface(wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Quality\+Interface\+::\+Quality\+Interface (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_quality_interface_a5540a5a5849a21e5b47edc6bd9b2851a}
+construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & Janela onde a interfase ser� inserida \\
+\hline
+{\em parent} & Componente a que pertence \\
+\hline
+\end{DoxyParams}
+\index{Quality\+Interface@{Quality\+Interface}!````~Quality\+Interface@{$\sim$\+Quality\+Interface}}
+\index{````~Quality\+Interface@{$\sim$\+Quality\+Interface}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{$\sim$\+Quality\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}Quality\+Interface\+::$\sim$\+Quality\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_quality_interface_a47b1bbf40d26552fbe0ce3ad317d2076}
+Destrutor 
+
+\subsection{Métodos}
+\index{Quality\+Interface@{Quality\+Interface}!add\+Scenario\+Page@{add\+Scenario\+Page}}
+\index{add\+Scenario\+Page@{add\+Scenario\+Page}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{add\+Scenario\+Page(const wx\+String \&name, int event\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Interface\+::add\+Scenario\+Page (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{name, }
+\item[{int}]{event\+Id}
+\end{DoxyParamCaption}
+)}\label{class_quality_interface_abb905297600779316a568706e7c1dd77}
+Adi��o de pagina do cenario \index{Quality\+Interface@{Quality\+Interface}!adjust\+Interval\+Range@{adjust\+Interval\+Range}}
+\index{adjust\+Interval\+Range@{adjust\+Interval\+Range}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{adjust\+Interval\+Range(const Interval \&interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Interface\+::adjust\+Interval\+Range (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interval} \&}]{interval}
+\end{DoxyParamCaption}
+)}\label{class_quality_interface_a00fcdca3ce2a234dd7590ef30d810c9c}
+\index{Quality\+Interface@{Quality\+Interface}!create\+Model\+Interface@{create\+Model\+Interface}}
+\index{create\+Model\+Interface@{create\+Model\+Interface}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{create\+Model\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Interface\+::create\+Model\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_quality_interface_a075ce6ac5e11ae2d0d080811d497dfb1}
+Cria um modelo com interface \index{Quality\+Interface@{Quality\+Interface}!on\+Add\+Scenario@{on\+Add\+Scenario}}
+\index{on\+Add\+Scenario@{on\+Add\+Scenario}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{on\+Add\+Scenario(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Interface\+::on\+Add\+Scenario (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_quality_interface_a1aa603fdff644a2662d2fa5f001ad746}
+Evento de adi��o de cenario \index{Quality\+Interface@{Quality\+Interface}!on\+Change\+Selected\+Scenario@{on\+Change\+Selected\+Scenario}}
+\index{on\+Change\+Selected\+Scenario@{on\+Change\+Selected\+Scenario}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{on\+Change\+Selected\+Scenario(wx\+Notebook\+Event \&evento)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Interface\+::on\+Change\+Selected\+Scenario (
+\begin{DoxyParamCaption}
+\item[{wx\+Notebook\+Event \&}]{evento}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_quality_interface_aae7433f38b86d70f4c85dbd60f87c213}
+\index{Quality\+Interface@{Quality\+Interface}!on\+Choice\+Model@{on\+Choice\+Model}}
+\index{on\+Choice\+Model@{on\+Choice\+Model}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{on\+Choice\+Model(wx\+Choicebook\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Interface\+::on\+Choice\+Model (
+\begin{DoxyParamCaption}
+\item[{wx\+Choicebook\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_quality_interface_ae092b577cbb9073e2e0b59d3d9e7a091}
+Fun��o de remo��o e ocultamento de p�ginas
+
+void remove\+Pollutant\+Pages(\+Quality\+Model\+Main$\ast$ old\+Model\+Main); Evento de escolha de modulos \index{Quality\+Interface@{Quality\+Interface}!on\+Choice\+Pollutant@{on\+Choice\+Pollutant}}
+\index{on\+Choice\+Pollutant@{on\+Choice\+Pollutant}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{on\+Choice\+Pollutant(wx\+Notebook\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Interface\+::on\+Choice\+Pollutant (
+\begin{DoxyParamCaption}
+\item[{wx\+Notebook\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_quality_interface_a049be2e8087ba6db684675570d4c3ed6}
+Evento de escolha de variavel de qualidade
+
+void on\+Choice\+Pollutant(wx\+Choicebook\+Event\& event); \index{Quality\+Interface@{Quality\+Interface}!on\+Choice\+Sub\+Model@{on\+Choice\+Sub\+Model}}
+\index{on\+Choice\+Sub\+Model@{on\+Choice\+Sub\+Model}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{on\+Choice\+Sub\+Model(wx\+Choicebook\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Interface\+::on\+Choice\+Sub\+Model (
+\begin{DoxyParamCaption}
+\item[{wx\+Choicebook\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_quality_interface_a976c5ee4db3c914c830a98b0b60d63e3}
+\index{Quality\+Interface@{Quality\+Interface}!on\+Remove\+Selected\+Scenario@{on\+Remove\+Selected\+Scenario}}
+\index{on\+Remove\+Selected\+Scenario@{on\+Remove\+Selected\+Scenario}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{on\+Remove\+Selected\+Scenario(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Interface\+::on\+Remove\+Selected\+Scenario (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_quality_interface_a591abceead2ea02b05d8eb74088f7286}
+Evento de remo��o de cenario \index{Quality\+Interface@{Quality\+Interface}!remove\+Selected\+Scenario@{remove\+Selected\+Scenario}}
+\index{remove\+Selected\+Scenario@{remove\+Selected\+Scenario}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{remove\+Selected\+Scenario(size\+\_\+t page)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Interface\+::remove\+Selected\+Scenario (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{page}
+\end{DoxyParamCaption}
+)}\label{class_quality_interface_a95a3eb21bee05ac9e20efe25fbdbb8d8}
+\index{Quality\+Interface@{Quality\+Interface}!show\+Res@{show\+Res}}
+\index{show\+Res@{show\+Res}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{show\+Res(bool change=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Interface\+::show\+Res (
+\begin{DoxyParamCaption}
+\item[{bool}]{change = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_quality_interface_afb9edc17573bae64cf4da6c76d4f54a8}
+Mostra resultados 
+\begin{DoxyParams}{Parâmetros}
+{\em change} & Boleano para mostrar/esconder ou criar a janela de resultados \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{Quality\+Interface@{Quality\+Interface}!cb\+Basin\+Model@{cb\+Basin\+Model}}
+\index{cb\+Basin\+Model@{cb\+Basin\+Model}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{cb\+Basin\+Model}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choicebook $\ast$ Quality\+Interface\+::cb\+Basin\+Model}\label{class_quality_interface_a4f0c8b273ba49fcad5cd78981bab60bc}
+
+
+Definição na linha 88 do arquivo Quality\+Interface.\+h.
+
+\index{Quality\+Interface@{Quality\+Interface}!cb\+Model@{cb\+Model}}
+\index{cb\+Model@{cb\+Model}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{cb\+Model}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choicebook$\ast$ Quality\+Interface\+::cb\+Model}\label{class_quality_interface_ac399f01a4be8e883121d6d923ee07e7e}
+Choicebooks dos modelos e para escolha dos poluentes 
+
+Definição na linha 88 do arquivo Quality\+Interface.\+h.
+
+\index{Quality\+Interface@{Quality\+Interface}!cb\+Pollutant@{cb\+Pollutant}}
+\index{cb\+Pollutant@{cb\+Pollutant}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{cb\+Pollutant}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Notebook$\ast$ Quality\+Interface\+::cb\+Pollutant}\label{class_quality_interface_aa6841c8ed307f7091378a5a7324a6c4f}
+
+
+Definição na linha 89 do arquivo Quality\+Interface.\+h.
+
+\index{Quality\+Interface@{Quality\+Interface}!cb\+Res\+Model@{cb\+Res\+Model}}
+\index{cb\+Res\+Model@{cb\+Res\+Model}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{cb\+Res\+Model}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choicebook $\ast$ Quality\+Interface\+::cb\+Res\+Model}\label{class_quality_interface_acbc5cba66e0637d3fab8cb409a0ac287}
+
+
+Definição na linha 88 do arquivo Quality\+Interface.\+h.
+
+\index{Quality\+Interface@{Quality\+Interface}!cb\+River\+Model@{cb\+River\+Model}}
+\index{cb\+River\+Model@{cb\+River\+Model}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{cb\+River\+Model}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choicebook $\ast$ Quality\+Interface\+::cb\+River\+Model}\label{class_quality_interface_ab1c0fe6372aa7bff8769da213d7c35e8}
+
+
+Definição na linha 88 do arquivo Quality\+Interface.\+h.
+
+\index{Quality\+Interface@{Quality\+Interface}!interfaces@{interfaces}}
+\index{interfaces@{interfaces}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{interfaces}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$vector$<${\bf Component\+Interface}$\ast$$>$ $>$ Quality\+Interface\+::interfaces}\label{class_quality_interface_a9bd3dcae8f2f2daa6640961d4546ae80}
+
+
+Definição na linha 80 do arquivo Quality\+Interface.\+h.
+
+\index{Quality\+Interface@{Quality\+Interface}!interfaces\+Qual@{interfaces\+Qual}}
+\index{interfaces\+Qual@{interfaces\+Qual}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{interfaces\+Qual}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Component\+Interface}$\ast$$>$ Quality\+Interface\+::interfaces\+Qual}\label{class_quality_interface_a8edc5e703490b89c9a8516cdb8453d7a}
+Vetor que cont�m as interfaces de chuva-\/vaz�o 
+
+Definição na linha 79 do arquivo Quality\+Interface.\+h.
+
+\index{Quality\+Interface@{Quality\+Interface}!main@{main}}
+\index{main@{main}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+GA}$\ast$ Quality\+Interface\+::main}\label{class_quality_interface_a900b914ae13a654ab60c1ee4143b249d}
+Aponta para classe principal 
+
+Definição na linha 93 do arquivo Quality\+Interface.\+h.
+
+\index{Quality\+Interface@{Quality\+Interface}!nb\+Scen@{nb\+Scen}}
+\index{nb\+Scen@{nb\+Scen}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{nb\+Scen}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Notebook$\ast$ Quality\+Interface\+::nb\+Scen}\label{class_quality_interface_ad0f93b668ef8ee6e23d8dfec5b52910c}
+
+
+Definição na linha 75 do arquivo Quality\+Interface.\+h.
+
+\index{Quality\+Interface@{Quality\+Interface}!panel@{panel}}
+\index{panel@{panel}!Quality\+Interface@{Quality\+Interface}}
+\subsubsection[{panel}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel$\ast$ Quality\+Interface\+::panel}\label{class_quality_interface_ac2fc14f8878c333534ff06ea29a3fb7e}
+Painal onde a interface dos cenarios ser� inserida 
+
+Definição na linha 84 do arquivo Quality\+Interface.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Quality\+Interface.\+h}\end{DoxyCompactItemize}

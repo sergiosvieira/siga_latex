@@ -1,0 +1,224 @@
+\section{Referência do Arquivo import-\/types.h}
+\label{import-types_8h}\index{import-\/types.\+h@{import-\/types.\+h}}
+{\ttfamily \#include $<$functional$>$}\\*
+{\ttfamily \#include \char`\"{}csv\+\_\+parser.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Date/cdate.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Voronoi/core/libs/callback-\/utils.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Voronoi/core/libs/matrix/sparse-\/matrix.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Import\+Window/\+Identify/identify-\/model.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Import\+Window/\+Filter/filter-\/model.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Import\+Window/\+Import/import-\/model.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Import\+Window/\+Separators/separator-\/model.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Import\+Window/\+Output/output-\/data-\/model.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Tree/tree.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Import\+Window/period-\/type.\+h\char`\"{}}\\*
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf Output\+Record\+Structure}
+\item 
+struct {\bf Options\+Structure}
+\item 
+struct {\bf Tree\+Node}
+\item 
+struct {\bf find\+\_\+label}
+\item 
+struct {\bf Converter\+Structure}
+\item 
+struct {\bf Save\+Structure}
+\end{DoxyCompactItemize}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf \+\_\+\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+T\+Y\+P\+E\+S\+\_\+\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct {\bf Output\+Record\+Structure} {\bf Output\+Record\+Structure}
+\item 
+typedef struct {\bf Options\+Structure} {\bf Options\+Structure}
+\item 
+typedef enum {\bf Serie\+Data\+Mode} {\bf Serie\+Data\+Mode}
+\item 
+typedef struct {\bf Converter\+Structure} {\bf Converter\+Structure}
+\item 
+typedef struct {\bf Save\+Structure} {\bf Save\+Structure}
+\end{DoxyCompactItemize}
+\subsection*{Enumerações}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Binary\+File} \{ {\bf B\+F\+\_\+\+N\+O\+NE}, 
+{\bf B\+F\+\_\+\+C\+TL}
+ \}
+\item 
+enum {\bf File\+Type} \{ {\bf C\+U\+S\+T\+O\+M\+I\+Z\+ED}, 
+{\bf S\+E\+R\+I\+E\+\_\+\+T\+Y\+PE}, 
+{\bf M\+A\+T\+R\+I\+X\+\_\+\+T\+Y\+PE}, 
+{\bf T\+H\+I\+E\+S\+S\+E\+N\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+T\+Y\+PE}
+ \}
+\item 
+enum {\bf Error\+Code} \{ \\*
+{\bf N\+O\+N\+E\+\_\+\+E\+R\+R\+OR}, 
+{\bf I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+F\+I\+LE}, 
+{\bf I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT}, 
+{\bf I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+A\+T\+E\+\_\+\+F\+O\+R\+M\+AT}, 
+\\*
+{\bf I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+T\+A\+T\+I\+O\+N\+\_\+\+ID}, 
+{\bf V\+A\+L\+U\+E\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+E\+R\+R\+OR}, 
+{\bf E\+R\+R\+O\+R\+\_\+\+S\+A\+V\+I\+N\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE}, 
+{\bf C\+A\+N\+C\+E\+L\+E\+D\+\_\+\+B\+Y\+\_\+\+U\+S\+ER}
+ \}
+\item 
+enum {\bf Fill\+Method\+Type} \{ {\bf N\+U\+L\+L\+\_\+\+M\+E\+T\+H\+OD}, 
+{\bf I\+N\+T\+E\+R\+P\+O\+L\+A\+T\+I\+O\+N\+\_\+\+M\+E\+T\+H\+OD}, 
+{\bf E\+X\+T\+R\+A\+P\+O\+L\+A\+T\+I\+O\+N\+\_\+\+M\+E\+T\+H\+OD}
+ \}
+\item 
+enum {\bf Serie\+Data\+Mode} \{ \\*
+{\bf I\+N\+V\+A\+L\+ID}, 
+{\bf P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+M\+O\+D\+E\+\_\+I}, 
+{\bf L\+A\+N\+S\+C\+A\+P\+E\+\_\+\+M\+O\+D\+E\+\_\+\+II}, 
+{\bf P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+M\+O\+D\+E\+\_\+\+I\+II}, 
+\\*
+{\bf L\+A\+N\+S\+C\+A\+P\+E\+\_\+\+M\+O\+D\+E\+\_\+\+IV}, 
+{\bf P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+M\+O\+D\+E\+\_\+V}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Definições e macros}
+\index{import-\/types.\+h@{import-\/types.\+h}!\+\_\+\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+T\+Y\+P\+E\+S\+\_\+\+\_\+@{\+\_\+\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+T\+Y\+P\+E\+S\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+T\+Y\+P\+E\+S\+\_\+\+\_\+@{\+\_\+\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+T\+Y\+P\+E\+S\+\_\+\+\_\+}!import-\/types.\+h@{import-\/types.\+h}}
+\subsubsection[{\+\_\+\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+T\+Y\+P\+E\+S\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+T\+Y\+P\+E\+S\+\_\+\+\_\+}\label{import-types_8h_a46e31db6bac5da2590c370ce8ac8bc1c}
+C++ Extends \doxyref{S\+I\+GA}{pag.}{class_s_i_g_a} C\+O\+RE Import Window 
+
+Definição na linha 20 do arquivo import-\/types.\+h.
+
+
+
+\subsection{Definições dos tipos}
+\index{import-\/types.\+h@{import-\/types.\+h}!Converter\+Structure@{Converter\+Structure}}
+\index{Converter\+Structure@{Converter\+Structure}!import-\/types.\+h@{import-\/types.\+h}}
+\subsubsection[{Converter\+Structure}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Converter\+Structure}  {\bf Converter\+Structure}}\label{import-types_8h_a2873e2d0271ac93fda7befb1544edc86}
+\index{import-\/types.\+h@{import-\/types.\+h}!Options\+Structure@{Options\+Structure}}
+\index{Options\+Structure@{Options\+Structure}!import-\/types.\+h@{import-\/types.\+h}}
+\subsubsection[{Options\+Structure}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Options\+Structure}  {\bf Options\+Structure}}\label{import-types_8h_a58d1f9330e3b245450562c0b2cd3b7ea}
+\index{import-\/types.\+h@{import-\/types.\+h}!Output\+Record\+Structure@{Output\+Record\+Structure}}
+\index{Output\+Record\+Structure@{Output\+Record\+Structure}!import-\/types.\+h@{import-\/types.\+h}}
+\subsubsection[{Output\+Record\+Structure}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Output\+Record\+Structure}  {\bf Output\+Record\+Structure}}\label{import-types_8h_a677103f276760fe2295ac9dbaa06f9c4}
+\index{import-\/types.\+h@{import-\/types.\+h}!Save\+Structure@{Save\+Structure}}
+\index{Save\+Structure@{Save\+Structure}!import-\/types.\+h@{import-\/types.\+h}}
+\subsubsection[{Save\+Structure}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Save\+Structure}  {\bf Save\+Structure}}\label{import-types_8h_a0073d8d9bce94ea0c0273da9f1d0ca65}
+\index{import-\/types.\+h@{import-\/types.\+h}!Serie\+Data\+Mode@{Serie\+Data\+Mode}}
+\index{Serie\+Data\+Mode@{Serie\+Data\+Mode}!import-\/types.\+h@{import-\/types.\+h}}
+\subsubsection[{Serie\+Data\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf Serie\+Data\+Mode}  {\bf Serie\+Data\+Mode}}\label{import-types_8h_ad360017a93fc91ce909432a9e253c464}
+
+
+\subsection{Enumerações}
+\index{import-\/types.\+h@{import-\/types.\+h}!Binary\+File@{Binary\+File}}
+\index{Binary\+File@{Binary\+File}!import-\/types.\+h@{import-\/types.\+h}}
+\subsubsection[{Binary\+File}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Binary\+File}}\label{import-types_8h_a7b973cc501398a11aef53b30b4e034e2}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{B\+F\+\_\+\+N\+O\+NE@{B\+F\+\_\+\+N\+O\+NE}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!B\+F\+\_\+\+N\+O\+NE@{B\+F\+\_\+\+N\+O\+NE}}\item[{\em 
+B\+F\+\_\+\+N\+O\+NE\label{import-types_8h_a7b973cc501398a11aef53b30b4e034e2a56bcbe6f723de8f81d35d38964aab421}
+}]\index{B\+F\+\_\+\+C\+TL@{B\+F\+\_\+\+C\+TL}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!B\+F\+\_\+\+C\+TL@{B\+F\+\_\+\+C\+TL}}\item[{\em 
+B\+F\+\_\+\+C\+TL\label{import-types_8h_a7b973cc501398a11aef53b30b4e034e2a92f9dfbfedc79baef14e3f0e34f7706e}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 24 do arquivo import-\/types.\+h.
+
+\index{import-\/types.\+h@{import-\/types.\+h}!Error\+Code@{Error\+Code}}
+\index{Error\+Code@{Error\+Code}!import-\/types.\+h@{import-\/types.\+h}}
+\subsubsection[{Error\+Code}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Error\+Code}}\label{import-types_8h_a59e56af19e754a6aa26a612ebf91d05f}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{N\+O\+N\+E\+\_\+\+E\+R\+R\+OR@{N\+O\+N\+E\+\_\+\+E\+R\+R\+OR}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!N\+O\+N\+E\+\_\+\+E\+R\+R\+OR@{N\+O\+N\+E\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+N\+O\+N\+E\+\_\+\+E\+R\+R\+OR\label{import-types_8h_a59e56af19e754a6aa26a612ebf91d05fa5b1552e3fbe595df3b225c9e1e16524e}
+}]\index{I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+F\+I\+LE@{I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+F\+I\+LE}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+F\+I\+LE@{I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+F\+I\+LE}}\item[{\em 
+I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+P\+U\+T\+\_\+\+F\+I\+LE\label{import-types_8h_a59e56af19e754a6aa26a612ebf91d05fa1fab0bf8b5d7af98975b53fae4bcfcba}
+}]\index{I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT@{I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT@{I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT}}\item[{\em 
+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT\label{import-types_8h_a59e56af19e754a6aa26a612ebf91d05fa2b1cd5891b198d73dacd6eb7e53bc147}
+}]\index{I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+A\+T\+E\+\_\+\+F\+O\+R\+M\+AT@{I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+A\+T\+E\+\_\+\+F\+O\+R\+M\+AT}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+A\+T\+E\+\_\+\+F\+O\+R\+M\+AT@{I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+A\+T\+E\+\_\+\+F\+O\+R\+M\+AT}}\item[{\em 
+I\+N\+V\+A\+L\+I\+D\+\_\+\+D\+A\+T\+E\+\_\+\+F\+O\+R\+M\+AT\label{import-types_8h_a59e56af19e754a6aa26a612ebf91d05fa253bda2f68701d25793e0552ebde44ff}
+}]\index{I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+T\+A\+T\+I\+O\+N\+\_\+\+ID@{I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+T\+A\+T\+I\+O\+N\+\_\+\+ID}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+T\+A\+T\+I\+O\+N\+\_\+\+ID@{I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+T\+A\+T\+I\+O\+N\+\_\+\+ID}}\item[{\em 
+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+T\+A\+T\+I\+O\+N\+\_\+\+ID\label{import-types_8h_a59e56af19e754a6aa26a612ebf91d05fa7d1089f8f2453f272f4d91b7b028d64e}
+}]\index{V\+A\+L\+U\+E\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+E\+R\+R\+OR@{V\+A\+L\+U\+E\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+E\+R\+R\+OR}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!V\+A\+L\+U\+E\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+E\+R\+R\+OR@{V\+A\+L\+U\+E\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+V\+A\+L\+U\+E\+\_\+\+C\+O\+N\+V\+E\+R\+S\+I\+O\+N\+\_\+\+E\+R\+R\+OR\label{import-types_8h_a59e56af19e754a6aa26a612ebf91d05fa087b37cff20d64bb486bb91ac89cf3ca}
+}]\index{E\+R\+R\+O\+R\+\_\+\+S\+A\+V\+I\+N\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE@{E\+R\+R\+O\+R\+\_\+\+S\+A\+V\+I\+N\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!E\+R\+R\+O\+R\+\_\+\+S\+A\+V\+I\+N\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE@{E\+R\+R\+O\+R\+\_\+\+S\+A\+V\+I\+N\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE}}\item[{\em 
+E\+R\+R\+O\+R\+\_\+\+S\+A\+V\+I\+N\+G\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE\label{import-types_8h_a59e56af19e754a6aa26a612ebf91d05fa6e5b6101daad6edc8560381e17ce1a27}
+}]\index{C\+A\+N\+C\+E\+L\+E\+D\+\_\+\+B\+Y\+\_\+\+U\+S\+ER@{C\+A\+N\+C\+E\+L\+E\+D\+\_\+\+B\+Y\+\_\+\+U\+S\+ER}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!C\+A\+N\+C\+E\+L\+E\+D\+\_\+\+B\+Y\+\_\+\+U\+S\+ER@{C\+A\+N\+C\+E\+L\+E\+D\+\_\+\+B\+Y\+\_\+\+U\+S\+ER}}\item[{\em 
+C\+A\+N\+C\+E\+L\+E\+D\+\_\+\+B\+Y\+\_\+\+U\+S\+ER\label{import-types_8h_a59e56af19e754a6aa26a612ebf91d05fad5db8d8e4d7ef80f20af3ca3d11f31fa}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 53 do arquivo import-\/types.\+h.
+
+\index{import-\/types.\+h@{import-\/types.\+h}!File\+Type@{File\+Type}}
+\index{File\+Type@{File\+Type}!import-\/types.\+h@{import-\/types.\+h}}
+\subsubsection[{File\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf File\+Type}}\label{import-types_8h_a2c794c5c13ab4dd7e65bad031dbe41c3}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{C\+U\+S\+T\+O\+M\+I\+Z\+ED@{C\+U\+S\+T\+O\+M\+I\+Z\+ED}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!C\+U\+S\+T\+O\+M\+I\+Z\+ED@{C\+U\+S\+T\+O\+M\+I\+Z\+ED}}\item[{\em 
+C\+U\+S\+T\+O\+M\+I\+Z\+ED\label{import-types_8h_a2c794c5c13ab4dd7e65bad031dbe41c3a83fcd200406694cba9cfbbc679c69505}
+}]\index{S\+E\+R\+I\+E\+\_\+\+T\+Y\+PE@{S\+E\+R\+I\+E\+\_\+\+T\+Y\+PE}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!S\+E\+R\+I\+E\+\_\+\+T\+Y\+PE@{S\+E\+R\+I\+E\+\_\+\+T\+Y\+PE}}\item[{\em 
+S\+E\+R\+I\+E\+\_\+\+T\+Y\+PE\label{import-types_8h_a2c794c5c13ab4dd7e65bad031dbe41c3ae257e21487e1d75cdbafcdf13aa3ce41}
+}]\index{M\+A\+T\+R\+I\+X\+\_\+\+T\+Y\+PE@{M\+A\+T\+R\+I\+X\+\_\+\+T\+Y\+PE}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!M\+A\+T\+R\+I\+X\+\_\+\+T\+Y\+PE@{M\+A\+T\+R\+I\+X\+\_\+\+T\+Y\+PE}}\item[{\em 
+M\+A\+T\+R\+I\+X\+\_\+\+T\+Y\+PE\label{import-types_8h_a2c794c5c13ab4dd7e65bad031dbe41c3a4ca3676330c45a8e43113103f2505b24}
+}]\index{T\+H\+I\+E\+S\+S\+E\+N\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+T\+Y\+PE@{T\+H\+I\+E\+S\+S\+E\+N\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+T\+Y\+PE}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!T\+H\+I\+E\+S\+S\+E\+N\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+T\+Y\+PE@{T\+H\+I\+E\+S\+S\+E\+N\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+T\+Y\+PE}}\item[{\em 
+T\+H\+I\+E\+S\+S\+E\+N\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+T\+Y\+PE\label{import-types_8h_a2c794c5c13ab4dd7e65bad031dbe41c3afbe2ec907efbd58765869c8b43be2023}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 30 do arquivo import-\/types.\+h.
+
+\index{import-\/types.\+h@{import-\/types.\+h}!Fill\+Method\+Type@{Fill\+Method\+Type}}
+\index{Fill\+Method\+Type@{Fill\+Method\+Type}!import-\/types.\+h@{import-\/types.\+h}}
+\subsubsection[{Fill\+Method\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Fill\+Method\+Type}}\label{import-types_8h_abd1634e72664b9105676e517e8604d14}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{N\+U\+L\+L\+\_\+\+M\+E\+T\+H\+OD@{N\+U\+L\+L\+\_\+\+M\+E\+T\+H\+OD}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!N\+U\+L\+L\+\_\+\+M\+E\+T\+H\+OD@{N\+U\+L\+L\+\_\+\+M\+E\+T\+H\+OD}}\item[{\em 
+N\+U\+L\+L\+\_\+\+M\+E\+T\+H\+OD\label{import-types_8h_abd1634e72664b9105676e517e8604d14a2f297ad599950d1bc235a2c46cceff82}
+}]\index{I\+N\+T\+E\+R\+P\+O\+L\+A\+T\+I\+O\+N\+\_\+\+M\+E\+T\+H\+OD@{I\+N\+T\+E\+R\+P\+O\+L\+A\+T\+I\+O\+N\+\_\+\+M\+E\+T\+H\+OD}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!I\+N\+T\+E\+R\+P\+O\+L\+A\+T\+I\+O\+N\+\_\+\+M\+E\+T\+H\+OD@{I\+N\+T\+E\+R\+P\+O\+L\+A\+T\+I\+O\+N\+\_\+\+M\+E\+T\+H\+OD}}\item[{\em 
+I\+N\+T\+E\+R\+P\+O\+L\+A\+T\+I\+O\+N\+\_\+\+M\+E\+T\+H\+OD\label{import-types_8h_abd1634e72664b9105676e517e8604d14ab7213acc74b4d17022d5d02f8974262d}
+}]\index{E\+X\+T\+R\+A\+P\+O\+L\+A\+T\+I\+O\+N\+\_\+\+M\+E\+T\+H\+OD@{E\+X\+T\+R\+A\+P\+O\+L\+A\+T\+I\+O\+N\+\_\+\+M\+E\+T\+H\+OD}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!E\+X\+T\+R\+A\+P\+O\+L\+A\+T\+I\+O\+N\+\_\+\+M\+E\+T\+H\+OD@{E\+X\+T\+R\+A\+P\+O\+L\+A\+T\+I\+O\+N\+\_\+\+M\+E\+T\+H\+OD}}\item[{\em 
+E\+X\+T\+R\+A\+P\+O\+L\+A\+T\+I\+O\+N\+\_\+\+M\+E\+T\+H\+OD\label{import-types_8h_abd1634e72664b9105676e517e8604d14adb07ddca78032708a3a87972bcc8586f}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 65 do arquivo import-\/types.\+h.
+
+\index{import-\/types.\+h@{import-\/types.\+h}!Serie\+Data\+Mode@{Serie\+Data\+Mode}}
+\index{Serie\+Data\+Mode@{Serie\+Data\+Mode}!import-\/types.\+h@{import-\/types.\+h}}
+\subsubsection[{Serie\+Data\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Serie\+Data\+Mode}}\label{import-types_8h_ae6080bae2bae1ed2ebc9230aa570c7cc}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+N\+V\+A\+L\+ID@{I\+N\+V\+A\+L\+ID}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!I\+N\+V\+A\+L\+ID@{I\+N\+V\+A\+L\+ID}}\item[{\em 
+I\+N\+V\+A\+L\+ID\label{import-types_8h_ae6080bae2bae1ed2ebc9230aa570c7ccaef2863a469df3ea6871d640e3669a2f2}
+}]\index{P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+M\+O\+D\+E\+\_\+I@{P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+M\+O\+D\+E\+\_\+I}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+M\+O\+D\+E\+\_\+I@{P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+M\+O\+D\+E\+\_\+I}}\item[{\em 
+P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+M\+O\+D\+E\+\_\+I\label{import-types_8h_ae6080bae2bae1ed2ebc9230aa570c7cca8a0c1472c197d540efdc156cbe9aa402}
+}]\index{L\+A\+N\+S\+C\+A\+P\+E\+\_\+\+M\+O\+D\+E\+\_\+\+II@{L\+A\+N\+S\+C\+A\+P\+E\+\_\+\+M\+O\+D\+E\+\_\+\+II}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!L\+A\+N\+S\+C\+A\+P\+E\+\_\+\+M\+O\+D\+E\+\_\+\+II@{L\+A\+N\+S\+C\+A\+P\+E\+\_\+\+M\+O\+D\+E\+\_\+\+II}}\item[{\em 
+L\+A\+N\+S\+C\+A\+P\+E\+\_\+\+M\+O\+D\+E\+\_\+\+II\label{import-types_8h_ae6080bae2bae1ed2ebc9230aa570c7ccad1dc538c1c116de62360647aaf39a8ad}
+}]\index{P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+M\+O\+D\+E\+\_\+\+I\+II@{P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+M\+O\+D\+E\+\_\+\+I\+II}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+M\+O\+D\+E\+\_\+\+I\+II@{P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+M\+O\+D\+E\+\_\+\+I\+II}}\item[{\em 
+P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+M\+O\+D\+E\+\_\+\+I\+II\label{import-types_8h_ae6080bae2bae1ed2ebc9230aa570c7ccad60c5e8a3982cda0a5d5c1d213a97970}
+}]\index{L\+A\+N\+S\+C\+A\+P\+E\+\_\+\+M\+O\+D\+E\+\_\+\+IV@{L\+A\+N\+S\+C\+A\+P\+E\+\_\+\+M\+O\+D\+E\+\_\+\+IV}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!L\+A\+N\+S\+C\+A\+P\+E\+\_\+\+M\+O\+D\+E\+\_\+\+IV@{L\+A\+N\+S\+C\+A\+P\+E\+\_\+\+M\+O\+D\+E\+\_\+\+IV}}\item[{\em 
+L\+A\+N\+S\+C\+A\+P\+E\+\_\+\+M\+O\+D\+E\+\_\+\+IV\label{import-types_8h_ae6080bae2bae1ed2ebc9230aa570c7cca79e18d635388c55f4aeac4983a66caf3}
+}]\index{P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+M\+O\+D\+E\+\_\+V@{P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+M\+O\+D\+E\+\_\+V}!import-\/types.\+h@{import-\/types.\+h}}\index{import-\/types.\+h@{import-\/types.\+h}!P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+M\+O\+D\+E\+\_\+V@{P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+M\+O\+D\+E\+\_\+V}}\item[{\em 
+P\+O\+R\+T\+R\+A\+I\+T\+\_\+\+M\+O\+D\+E\+\_\+V\label{import-types_8h_ae6080bae2bae1ed2ebc9230aa570c7cca68a18fdaebba4bedf4272a32c4289426}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 154 do arquivo import-\/types.\+h.
+

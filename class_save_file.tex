@@ -1,0 +1,98 @@
+\section{Referência da Classe Save\+File}
+\label{class_save_file}\index{Save\+File@{Save\+File}}
+
+
+{\ttfamily \#include $<$Save\+File.\+h$>$}
+
+
+
+Superclasse de {\bf Month\+S\+V\+Save\+File}, {\bf Periodic\+Release\+Save\+File}, {\bf Res\+C\+A\+V\+Save\+File}, {\bf Res\+C\+A\+V\+Save\+File}, {\bf S\+V\+Save\+File} e {\bf Vol\+Dep\+Release\+Save\+File}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Save\+File} (const wx\+String \&{\bf name})
+\item 
+virtual {\bf $\sim$\+Save\+File} ()
+\item 
+bool {\bf save} (void $\ast$element)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf make} (void $\ast$element, ofstream $\ast$fout)=0
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+String {\bf name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 17 do arquivo Save\+File.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Save\+File@{Save\+File}!Save\+File@{Save\+File}}
+\index{Save\+File@{Save\+File}!Save\+File@{Save\+File}}
+\subsubsection[{Save\+File(const wx\+String \&name)}]{\setlength{\rightskip}{0pt plus 5cm}Save\+File\+::\+Save\+File (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{name}
+\end{DoxyParamCaption}
+)}\label{class_save_file_a6f493d7d653499ea9cda079abf2855c6}
+Construtor @ param name Nome do arquivo \index{Save\+File@{Save\+File}!````~Save\+File@{$\sim$\+Save\+File}}
+\index{````~Save\+File@{$\sim$\+Save\+File}!Save\+File@{Save\+File}}
+\subsubsection[{$\sim$\+Save\+File()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Save\+File\+::$\sim$\+Save\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_save_file_a47f205614d88c6671cfd5e6c5d59d964}
+Destrutor 
+
+\subsection{Métodos}
+\index{Save\+File@{Save\+File}!make@{make}}
+\index{make@{make}!Save\+File@{Save\+File}}
+\subsubsection[{make(void $\ast$element, ofstream $\ast$fout)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Save\+File\+::make (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{element, }
+\item[{ofstream $\ast$}]{fout}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{class_save_file_a6fe0c11814fa9da12132709fd205754f}
+realiza a escrita do arquivo 
+\begin{DoxyParams}{Parâmetros}
+{\em element} & Classe de onde as informa��es seram salvas \\
+\hline
+{\em fout} & Stream utilizada para leitura \\
+\hline
+\end{DoxyParams}
+\index{Save\+File@{Save\+File}!save@{save}}
+\index{save@{save}!Save\+File@{Save\+File}}
+\subsubsection[{save(void $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}bool Save\+File\+::save (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{element}
+\end{DoxyParamCaption}
+)}\label{class_save_file_aa3e1116a96960fb5089acdc14b18bae4}
+Escreve o arquivo 
+\begin{DoxyParams}{Parâmetros}
+{\em element} & Classe de onde as informa��es seram salvas \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{Save\+File@{Save\+File}!name@{name}}
+\index{name@{name}!Save\+File@{Save\+File}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Save\+File\+::name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_save_file_aa7bc2e42105702475578ecbd0d9d9375}
+Nome do arquivo 
+
+Definição na linha 23 do arquivo Save\+File.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Save\+File.\+h}\end{DoxyCompactItemize}

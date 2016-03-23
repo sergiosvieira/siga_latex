@@ -1,0 +1,408 @@
+\section{Referência da Classe Res\+C\+A\+V\+Dialog\+Content}
+\label{class_res_c_a_v_dialog_content}\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+
+
+{\ttfamily \#include $<$Res\+C\+A\+V\+Dialog\+Content.\+h$>$}
+
+
+
+Herdeiro de {\bf S\+I\+G\+A\+Dialog\+Content} e {\bf S\+I\+G\+A\+Dialog\+Content}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf is\+Edited} ()
+\item 
+void {\bf reset\+Fit\+Curve} ()
+\item 
+{\bf Res\+C\+A\+V\+Dialog\+Content} ({\bf Res\+C\+AV} $\ast${\bf C\+AV}, {\bf S\+I\+G\+A\+Dialog} $\ast$dialog)
+\item 
+{\bf $\sim$\+Res\+C\+A\+V\+Dialog\+Content} ()
+\item 
+void {\bf on\+Radio} (wx\+Command\+Event \&)
+\item 
+void {\bf on\+Radio} ()
+\item 
+void {\bf on\+Spin} (wx\+Spin\+Event \&)
+\item 
+void {\bf set\+Info} ()
+\item 
+{\bf D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE} ()
+\item 
+bool {\bf is\+Edited} ()
+\item 
+void {\bf reset\+Fit\+Curve} ()
+\item 
+void {\bf select\+All} ()
+\item 
+{\bf Res\+C\+A\+V\+Dialog\+Content} ({\bf Res\+C\+AV} $\ast${\bf C\+AV}, {\bf S\+I\+G\+A\+Dialog} $\ast$dialog, int options={\bf B\+U\+T\+T\+O\+N\+S\+\_\+\+D\+I\+A\+L\+OG}, bool reservoir\+Model=true)
+\item 
+virtual {\bf $\sim$\+Res\+C\+A\+V\+Dialog\+Content} ()
+\item 
+void {\bf on\+Radio} (wx\+Command\+Event \&)
+\item 
+void {\bf on\+Radio} ()
+\item 
+void {\bf on\+Spin} (wx\+Spin\+Event \&)
+\item 
+void {\bf set\+Info} ()
+\item 
+void {\bf import\+C\+A\+V\+From\+DB} (wx\+Command\+Event \&event)
+\item 
+{\bf D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf opened}
+\item 
+{\bf Res\+C\+AV} $\ast$ {\bf C\+AV}
+\item 
+wx\+Radio\+Box $\ast$ {\bf r\+Fit\+Curve}
+\item 
+{\bf Res\+C\+A\+V\+Text\+Ctrl} $\ast$ {\bf tc\+Alfa}
+\item 
+{\bf Res\+C\+A\+V\+Text\+Ctrl} $\ast$ {\bf tc\+Beta}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf spin\+Poly}
+\item 
+wx\+Flex\+Grid\+Sizer $\ast$ {\bf grid\+Ajuste\+Power}
+\item 
+wx\+Flex\+Grid\+Sizer $\ast$ {\bf grid\+Ajuste\+Poly}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Ajuste}
+\item 
+int {\bf total\+Grid\+Rows}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf open\+Conf} ()
+\item 
+void {\bf save\+Conf} ()
+\item 
+void {\bf open\+Conf} ()
+\item 
+void {\bf save\+Conf} ()
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Res\+C\+A\+V\+Dialog}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 62 do arquivo C\+A\+V/\+Res\+C\+A\+V\+Dialog\+Content.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{Res\+C\+A\+V\+Dialog\+Content(\+Res\+C\+A\+V $\ast$\+C\+A\+V, S\+I\+G\+A\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+C\+A\+V\+Dialog\+Content\+::\+Res\+C\+A\+V\+Dialog\+Content (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+C\+AV} $\ast$}]{C\+AV, }
+\item[{{\bf S\+I\+G\+A\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_dialog_content_a5c7f0e2e3831423b3786d75965402f65}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em C\+AV} & Ponteiro para calsse \doxyref{Res\+C\+AV}{pag.}{class_res_c_a_v} \\
+\hline
+{\em dialog} & Caixa de dialogo que o cont�m \\
+\hline
+\end{DoxyParams}
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!````~Res\+C\+A\+V\+Dialog\+Content@{$\sim$\+Res\+C\+A\+V\+Dialog\+Content}}
+\index{````~Res\+C\+A\+V\+Dialog\+Content@{$\sim$\+Res\+C\+A\+V\+Dialog\+Content}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{$\sim$\+Res\+C\+A\+V\+Dialog\+Content()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+C\+A\+V\+Dialog\+Content\+::$\sim$\+Res\+C\+A\+V\+Dialog\+Content (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_dialog_content_ae96212cac96fe08d831d33db6a417d99}
+Destrutor \index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{Res\+C\+A\+V\+Dialog\+Content(\+Res\+C\+A\+V $\ast$\+C\+A\+V, S\+I\+G\+A\+Dialog $\ast$dialog, int options=\+B\+U\+T\+T\+O\+N\+S\+\_\+\+D\+I\+A\+L\+O\+G, bool reservoir\+Model=true)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+C\+A\+V\+Dialog\+Content\+::\+Res\+C\+A\+V\+Dialog\+Content (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+C\+AV} $\ast$}]{C\+AV, }
+\item[{{\bf S\+I\+G\+A\+Dialog} $\ast$}]{dialog, }
+\item[{int}]{options = {\ttfamily {\bf B\+U\+T\+T\+O\+N\+S\+\_\+\+D\+I\+A\+L\+OG}}, }
+\item[{bool}]{reservoir\+Model = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_dialog_content_a997e216f1640937d91436f90b2a7328e}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em C\+AV} & Ponteiro para \doxyref{Res\+C\+AV}{pag.}{class_res_c_a_v} \\
+\hline
+{\em dialog} & Caixa de dialogo que o cont�m \\
+\hline
+\end{DoxyParams}
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!````~Res\+C\+A\+V\+Dialog\+Content@{$\sim$\+Res\+C\+A\+V\+Dialog\+Content}}
+\index{````~Res\+C\+A\+V\+Dialog\+Content@{$\sim$\+Res\+C\+A\+V\+Dialog\+Content}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{$\sim$\+Res\+C\+A\+V\+Dialog\+Content()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+C\+A\+V\+Dialog\+Content\+::$\sim$\+Res\+C\+A\+V\+Dialog\+Content (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_c_a_v_dialog_content_a976a678e7460d7b642608c21dc44be2a}
+Destrutor 
+
+\subsection{Métodos}
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+L\+E()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+C\+A\+V\+Dialog\+Content\+::\+D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_dialog_content_a84a49854ab744918fa7025e237d55620}
+Declara��o de tabela de eventos \index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+L\+E()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+C\+A\+V\+Dialog\+Content\+::\+D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_dialog_content_a84a49854ab744918fa7025e237d55620}
+Declara��o de tabela de eventos \index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!import\+C\+A\+V\+From\+DB@{import\+C\+A\+V\+From\+DB}}
+\index{import\+C\+A\+V\+From\+DB@{import\+C\+A\+V\+From\+DB}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{import\+C\+A\+V\+From\+D\+B(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+Dialog\+Content\+::import\+C\+A\+V\+From\+DB (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_dialog_content_ac872e8d444c4b9ce17238ea9969f22ab}
+Evento chamado ao clicar no bot�o de importar matrix C\+AV de um Banco de Dados ou Servi�o \index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!is\+Edited@{is\+Edited}}
+\index{is\+Edited@{is\+Edited}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{is\+Edited()}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+C\+A\+V\+Dialog\+Content\+::is\+Edited (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_dialog_content_af44df8a8320ea251a189776c60bc4ad2}
+Quando a serie � editada \index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!is\+Edited@{is\+Edited}}
+\index{is\+Edited@{is\+Edited}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{is\+Edited()}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+C\+A\+V\+Dialog\+Content\+::is\+Edited (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_dialog_content_af44df8a8320ea251a189776c60bc4ad2}
+Quando a serie � editada \index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!on\+Radio@{on\+Radio}}
+\index{on\+Radio@{on\+Radio}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{on\+Radio(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+Dialog\+Content\+::on\+Radio (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_dialog_content_ad7025dcd2338606f4c6e89306915864d}
+Se Ajuste Manual for selecionado
+
+void on\+Check\+Ajuste\+Manual(wx\+Command\+Event\&); Evento de mudan�a de tipo de ajuste \index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!on\+Radio@{on\+Radio}}
+\index{on\+Radio@{on\+Radio}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{on\+Radio()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+Dialog\+Content\+::on\+Radio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_dialog_content_a634f4714dae6d2f3c38e0319090551b7}
+Escolhe o tipo de ajuste \index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!on\+Radio@{on\+Radio}}
+\index{on\+Radio@{on\+Radio}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{on\+Radio(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+Dialog\+Content\+::on\+Radio (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_dialog_content_ad7025dcd2338606f4c6e89306915864d}
+Se Ajuste Manual for selecionado
+
+void on\+Check\+Ajuste\+Manual(wx\+Command\+Event\&); Evento de mudan�a de tipo de ajuste \index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!on\+Radio@{on\+Radio}}
+\index{on\+Radio@{on\+Radio}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{on\+Radio()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+Dialog\+Content\+::on\+Radio (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_dialog_content_a634f4714dae6d2f3c38e0319090551b7}
+Escolhe o tipo de ajuste \index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!on\+Spin@{on\+Spin}}
+\index{on\+Spin@{on\+Spin}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{on\+Spin(wx\+Spin\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+Dialog\+Content\+::on\+Spin (
+\begin{DoxyParamCaption}
+\item[{wx\+Spin\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_dialog_content_ae6d0f20d313cca11819770bdb6737fe0}
+Escolje a ordem do polinomio Utilizado no ajuste polinomial \index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!on\+Spin@{on\+Spin}}
+\index{on\+Spin@{on\+Spin}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{on\+Spin(wx\+Spin\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+Dialog\+Content\+::on\+Spin (
+\begin{DoxyParamCaption}
+\item[{wx\+Spin\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_dialog_content_ae6d0f20d313cca11819770bdb6737fe0}
+Escolje a ordem do polinomio Utilizado no ajuste polinomial \index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!open\+Conf@{open\+Conf}}
+\index{open\+Conf@{open\+Conf}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{open\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+Dialog\+Content\+::open\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_c_a_v_dialog_content_aae08390cf11c01429fe14719cfb73d06}
+Abrir Cota x �rea x Volume de arquivo 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abf3660e2c31c95afab763b4b520e26e9}.
+
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!open\+Conf@{open\+Conf}}
+\index{open\+Conf@{open\+Conf}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{open\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+Dialog\+Content\+::open\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_c_a_v_dialog_content_aae08390cf11c01429fe14719cfb73d06}
+Abrir Cota x �rea x Volume de arquivo 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abf3660e2c31c95afab763b4b520e26e9}.
+
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!reset\+Fit\+Curve@{reset\+Fit\+Curve}}
+\index{reset\+Fit\+Curve@{reset\+Fit\+Curve}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{reset\+Fit\+Curve()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+Dialog\+Content\+::reset\+Fit\+Curve (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_dialog_content_a9efcb36171bdc5b7dcda8f2b902f5c30}
+Redefine a curva de ajuste \index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!reset\+Fit\+Curve@{reset\+Fit\+Curve}}
+\index{reset\+Fit\+Curve@{reset\+Fit\+Curve}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{reset\+Fit\+Curve()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+Dialog\+Content\+::reset\+Fit\+Curve (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_dialog_content_a9efcb36171bdc5b7dcda8f2b902f5c30}
+Redefine a curva de ajuste \index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!save\+Conf@{save\+Conf}}
+\index{save\+Conf@{save\+Conf}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{save\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+Dialog\+Content\+::save\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_c_a_v_dialog_content_a74afd562a4b51272bae9914a03d89e8e}
+Salvar Cota x �rea x Volume 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abcef0436251918c1eab033a80b40c626}.
+
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!save\+Conf@{save\+Conf}}
+\index{save\+Conf@{save\+Conf}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{save\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+Dialog\+Content\+::save\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_c_a_v_dialog_content_a74afd562a4b51272bae9914a03d89e8e}
+Salvar Cota x �rea x Volume 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abcef0436251918c1eab033a80b40c626}.
+
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!select\+All@{select\+All}}
+\index{select\+All@{select\+All}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{select\+All()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+Dialog\+Content\+::select\+All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_dialog_content_ad2c077f6be0614f88f5181fe9664b19f}
+Seleciona todos os campos \index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+Dialog\+Content\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_c_a_v_dialog_content_ab944a22e99469cae9576d48aa078e7ae}
+Seta os par�metros 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_aced556e5caf584b7335135d337895154}.
+
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+Dialog\+Content\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_c_a_v_dialog_content_ab944a22e99469cae9576d48aa078e7ae}
+Seta os par�metros 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_aced556e5caf584b7335135d337895154}.
+
+
+
+\subsection{Amigas e Funções Relacionadas}
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!Res\+C\+A\+V\+Dialog@{Res\+C\+A\+V\+Dialog}}
+\index{Res\+C\+A\+V\+Dialog@{Res\+C\+A\+V\+Dialog}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{Res\+C\+A\+V\+Dialog}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+C\+A\+V\+Dialog}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_res_c_a_v_dialog_content_a990de794337faa07d858b89032fa55ef}
+
+
+Definição na linha 64 do arquivo C\+A\+V/\+Res\+C\+A\+V\+Dialog\+Content.\+h.
+
+
+
+\subsection{Atributos}
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!C\+AV@{C\+AV}}
+\index{C\+AV@{C\+AV}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{C\+AV}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+C\+AV} $\ast$ Res\+C\+A\+V\+Dialog\+Content\+::\+C\+AV}\label{class_res_c_a_v_dialog_content_a16f7036e16efb39f2880e896566c3eb1}
+Ponteiro para \doxyref{Res\+C\+AV}{pag.}{class_res_c_a_v} 
+
+Definição na linha 95 do arquivo C\+A\+V/\+Res\+C\+A\+V\+Dialog\+Content.\+h.
+
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!grid\+Ajuste\+Poly@{grid\+Ajuste\+Poly}}
+\index{grid\+Ajuste\+Poly@{grid\+Ajuste\+Poly}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{grid\+Ajuste\+Poly}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Flex\+Grid\+Sizer $\ast$ Res\+C\+A\+V\+Dialog\+Content\+::grid\+Ajuste\+Poly}\label{class_res_c_a_v_dialog_content_a32fcb754cc2c0548ee411803c915d804}
+
+
+Definição na linha 113 do arquivo C\+A\+V/\+Res\+C\+A\+V\+Dialog\+Content.\+h.
+
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!grid\+Ajuste\+Power@{grid\+Ajuste\+Power}}
+\index{grid\+Ajuste\+Power@{grid\+Ajuste\+Power}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{grid\+Ajuste\+Power}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Flex\+Grid\+Sizer $\ast$ Res\+C\+A\+V\+Dialog\+Content\+::grid\+Ajuste\+Power}\label{class_res_c_a_v_dialog_content_a0c9a916d12e66c7fadf2246137bf32ae}
+
+
+Definição na linha 113 do arquivo C\+A\+V/\+Res\+C\+A\+V\+Dialog\+Content.\+h.
+
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!opened@{opened}}
+\index{opened@{opened}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{opened}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+C\+A\+V\+Dialog\+Content\+::opened}\label{class_res_c_a_v_dialog_content_a12b217a0a78aad07f9de8df6990899d1}
+Caso uma serie seja aberta 
+
+Definição na linha 91 do arquivo C\+A\+V/\+Res\+C\+A\+V\+Dialog\+Content.\+h.
+
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!r\+Fit\+Curve@{r\+Fit\+Curve}}
+\index{r\+Fit\+Curve@{r\+Fit\+Curve}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{r\+Fit\+Curve}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box $\ast$ Res\+C\+A\+V\+Dialog\+Content\+::r\+Fit\+Curve}\label{class_res_c_a_v_dialog_content_a83432590fc86577bdd8c47bfd849face}
+Radio\+Box para selecionar o tipo de ajuste a ser utilizado 
+
+Definição na linha 107 do arquivo C\+A\+V/\+Res\+C\+A\+V\+Dialog\+Content.\+h.
+
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!s\+Ajuste@{s\+Ajuste}}
+\index{s\+Ajuste@{s\+Ajuste}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{s\+Ajuste}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Res\+C\+A\+V\+Dialog\+Content\+::s\+Ajuste}\label{class_res_c_a_v_dialog_content_ac25f32f20e8c84270b8f2dc7f0d4845c}
+
+
+Definição na linha 114 do arquivo C\+A\+V/\+Res\+C\+A\+V\+Dialog\+Content.\+h.
+
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!spin\+Poly@{spin\+Poly}}
+\index{spin\+Poly@{spin\+Poly}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{spin\+Poly}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl $\ast$ Res\+C\+A\+V\+Dialog\+Content\+::spin\+Poly}\label{class_res_c_a_v_dialog_content_a9abe7d577d53c58d0a697e5de7634013}
+
+
+Definição na linha 112 do arquivo C\+A\+V/\+Res\+C\+A\+V\+Dialog\+Content.\+h.
+
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!tc\+Alfa@{tc\+Alfa}}
+\index{tc\+Alfa@{tc\+Alfa}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{tc\+Alfa}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+C\+A\+V\+Text\+Ctrl} $\ast$ Res\+C\+A\+V\+Dialog\+Content\+::tc\+Alfa}\label{class_res_c_a_v_dialog_content_af5b7a417c965a63ed2e1f5563f4772b6}
+Controladores de texto para Limites de umidade anterior 
+
+Definição na linha 111 do arquivo C\+A\+V/\+Res\+C\+A\+V\+Dialog\+Content.\+h.
+
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!tc\+Beta@{tc\+Beta}}
+\index{tc\+Beta@{tc\+Beta}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{tc\+Beta}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+C\+A\+V\+Text\+Ctrl} $\ast$ Res\+C\+A\+V\+Dialog\+Content\+::tc\+Beta}\label{class_res_c_a_v_dialog_content_ab32f5fc05d488e1a1a72dc2a54d9e615}
+
+
+Definição na linha 111 do arquivo C\+A\+V/\+Res\+C\+A\+V\+Dialog\+Content.\+h.
+
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!total\+Grid\+Rows@{total\+Grid\+Rows}}
+\index{total\+Grid\+Rows@{total\+Grid\+Rows}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\subsubsection[{total\+Grid\+Rows}]{\setlength{\rightskip}{0pt plus 5cm}int Res\+C\+A\+V\+Dialog\+Content\+::total\+Grid\+Rows}\label{class_res_c_a_v_dialog_content_a0f924c16320ef27aea471d7a95be3d7c}
+
+
+Definição na linha 89 do arquivo /\+C\+A\+V/\+Res\+C\+A\+V\+Dialog\+Content.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf C\+A\+V/\+Res\+C\+A\+V\+Dialog\+Content.\+h}\end{DoxyCompactItemize}

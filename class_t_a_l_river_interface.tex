@@ -1,0 +1,923 @@
+\section{Referência da Classe T\+A\+L\+River\+Interface}
+\label{class_t_a_l_river_interface}\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+
+
+{\ttfamily \#include $<$T\+A\+L\+River\+Interface.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf T\+A\+L\+River\+Interface} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent}, int options={\bf B\+U\+T\+T\+O\+N\+\_\+\+N\+U\+LL})
+\item 
+{\bf $\sim$\+T\+A\+L\+River\+Interface} ()
+\item 
+void {\bf set\+Info} ()
+\item 
+void {\bf radio\+Box} ()
+\item 
+void {\bf set\+Interval} (const {\bf Interval} \&interval)
+\item 
+void {\bf show\+Results} (bool change=false)
+\item 
+void {\bf on\+Set\+Start\+Interval} (wx\+Date\+Event \&event)
+\item 
+void {\bf on\+Set\+End\+Interval} (wx\+Date\+Event \&event)
+\item 
+void {\bf on\+Radio} (wx\+Command\+Event \&event)
+\item 
+void {\bf choice\+Radio} (int selected)
+\item 
+void {\bf on\+Choice\+Class} (wx\+Command\+Event \&event)
+\item 
+void {\bf choice\+Class} (int select)
+\item 
+void {\bf show\+Hide\+Interface} ()
+\item 
+void {\bf on\+Menu\+Options} (wx\+Mouse\+Event \&)
+\item 
+void {\bf on\+Add\+Scenery} (wx\+Command\+Event \&)
+\item 
+void {\bf add\+Scenery\+Page} (wx\+String name=\char`\"{}\char`\"{})
+\item 
+void {\bf on\+Removeselected\+Scenery} (wx\+Command\+Event \&)
+\item 
+void {\bf removeselected\+Scenery} ()
+\item 
+void {\bf on\+Set\+Scenery\+Name} (wx\+Command\+Event \&)
+\item 
+void {\bf set\+Scenery\+Name} (int seleceted, wx\+String change)
+\item 
+unsigned int {\bf get\+Scenery\+Count} ()
+\item 
+void {\bf delete\+Scenery\+Page} (int page)
+\item 
+void {\bf delete\+All\+Scenery\+Pages} ()
+\item 
+void {\bf on\+Choice\+Scenery} (wx\+Choicebook\+Event \&event)
+\item 
+void {\bf choice\+Scenery} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Date\+Picker\+Ctrl $\ast$ {\bf dp\+Start\+Interval}
+\item 
+wx\+Date\+Picker\+Ctrl $\ast$ {\bf dp\+End\+Interval}
+\item 
+wx\+Bitmap {\bf bitmap\+Ok}
+\item 
+wx\+Bitmap {\bf bitmap\+Empty}
+\item 
+wx\+Menu $\ast$ {\bf popup\+Menu}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Class}
+\item 
+wx\+Choicebook $\ast$ {\bf cb\+Scen}
+\item 
+wx\+Panel $\ast$ {\bf panel}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Qin}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Cst}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Path}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Col}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tcN}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tcP}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Dbo}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Od}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Qdem}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Qeflu}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+O\+Deflu}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+D\+B\+Oeflu}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tcpeflu}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Neflu}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Coleflu}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Ret\+Dem}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Col\+Dem}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+N\+Dem}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+P\+Dem}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Dbo\+Dem}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Od\+Dem}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+K1}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+K2}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+K3}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+KP}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+KN}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+K\+Col}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Length}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+N\+Seg}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+CoefV}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+ExpV}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+CoefH}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+ExpH}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+S\+S1}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+S\+S2}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Cmann}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Slope}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Width}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Temper}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Height}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Scen\+Name}
+\item 
+{\bf Serie} $\ast$ {\bf Qin}
+\item 
+{\bf Serie} $\ast$ {\bf temper}
+\item 
+wx\+Button $\ast$ {\bf bt\+Temper}
+\item 
+wx\+Radio\+Box $\ast$ {\bf rb\+Trap}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf bitmap\+Temper}
+\item 
+wx\+Sizer $\ast$ {\bf bs\+Init\+Node}
+\item 
+wx\+Sizer $\ast$ {\bf bs\+Init\+Eflu}
+\item 
+wx\+Sizer $\ast$ {\bf bs\+Link}
+\item 
+wx\+Sizer $\ast$ {\bf bs\+Init\+Dem}
+\item 
+wx\+Sizer $\ast$ {\bf bs\+Qua}
+\item 
+wx\+Sizer $\ast$ {\bf bs\+Class}
+\item 
+wx\+Sizer $\ast$ {\bf bs\+Can}
+\item 
+wx\+Sizer $\ast$ {\bf bs\+Scen}
+\item 
+wx\+Sizer $\ast$ {\bf bs\+Name\+Scen}
+\item 
+wx\+Static\+Box $\ast$ {\bf b\+Con\+Dem}
+\item 
+wx\+Flex\+Grid\+Sizer $\ast$ {\bf grid\+Dem}
+\item 
+wx\+Flex\+Grid\+Sizer $\ast$ {\bf grid\+Eflu}
+\item 
+wx\+Flex\+Grid\+Sizer $\ast$ {\bf grid\+Adim}
+\item 
+wx\+Flex\+Grid\+Sizer $\ast$ {\bf grid\+Trap}
+\item 
+wx\+Flex\+Grid\+Sizer $\ast$ {\bf grid\+Scen}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 126 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{T\+A\+L\+River\+Interface(wx\+Frame $\ast$frame, wx\+Window $\ast$parent, int options=\+B\+U\+T\+T\+O\+N\+\_\+\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}T\+A\+L\+River\+Interface\+::\+T\+A\+L\+River\+Interface (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{int}]{options = {\ttfamily {\bf B\+U\+T\+T\+O\+N\+\_\+\+N\+U\+LL}}}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_a5dbcae486217553e6e9dc2e85496bc3d}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & Janela onde a interface ser� inserida \\
+\hline
+{\em parent} & Componente a que pertence \\
+\hline
+{\em options} & Bot�o(�es) a ser(em) desenhado(s) \\
+\hline
+\end{DoxyParams}
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!````~T\+A\+L\+River\+Interface@{$\sim$\+T\+A\+L\+River\+Interface}}
+\index{````~T\+A\+L\+River\+Interface@{$\sim$\+T\+A\+L\+River\+Interface}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{$\sim$\+T\+A\+L\+River\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}T\+A\+L\+River\+Interface\+::$\sim$\+T\+A\+L\+River\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_a6fa52843ea9629308741a4effa750265}
+Destrutor 
+
+\subsection{Métodos}
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!add\+Scenery\+Page@{add\+Scenery\+Page}}
+\index{add\+Scenery\+Page@{add\+Scenery\+Page}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{add\+Scenery\+Page(wx\+String name="""")}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::add\+Scenery\+Page (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_a360936e9f25962885d179401f487620d}
+Adi��o de pagina do cenario \index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!choice\+Class@{choice\+Class}}
+\index{choice\+Class@{choice\+Class}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{choice\+Class(int select)}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::choice\+Class (
+\begin{DoxyParamCaption}
+\item[{int}]{select}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_a2d2091e4c3cff4a3dbdec5fd6257beb0}
+Modan�a da Classe 
+\begin{DoxyParams}{Parâmetros}
+{\em select} & Classe do Trecho \\
+\hline
+\end{DoxyParams}
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!choice\+Radio@{choice\+Radio}}
+\index{choice\+Radio@{choice\+Radio}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{choice\+Radio(int selected)}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::choice\+Radio (
+\begin{DoxyParamCaption}
+\item[{int}]{selected}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_abe8fb9284988cb125575ee8f278becfa}
+Sele��o do Tipo de \doxyref{Link}{pag.}{class_link} \index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!choice\+Scenery@{choice\+Scenery}}
+\index{choice\+Scenery@{choice\+Scenery}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{choice\+Scenery()}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::choice\+Scenery (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_a3aa7eb955b5912290a4dd5ec000fbd71}
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!delete\+All\+Scenery\+Pages@{delete\+All\+Scenery\+Pages}}
+\index{delete\+All\+Scenery\+Pages@{delete\+All\+Scenery\+Pages}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{delete\+All\+Scenery\+Pages()}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::delete\+All\+Scenery\+Pages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_accab682fda4b6bbb0d3edcee5b768b35}
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!delete\+Scenery\+Page@{delete\+Scenery\+Page}}
+\index{delete\+Scenery\+Page@{delete\+Scenery\+Page}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{delete\+Scenery\+Page(int page)}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::delete\+Scenery\+Page (
+\begin{DoxyParamCaption}
+\item[{int}]{page}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_ad0d20c2860137b122c323e56f6757215}
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!get\+Scenery\+Count@{get\+Scenery\+Count}}
+\index{get\+Scenery\+Count@{get\+Scenery\+Count}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{get\+Scenery\+Count()}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int T\+A\+L\+River\+Interface\+::get\+Scenery\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_a079c39c81d1402a2cbe6b13c774e60ac}
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!on\+Add\+Scenery@{on\+Add\+Scenery}}
+\index{on\+Add\+Scenery@{on\+Add\+Scenery}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{on\+Add\+Scenery(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::on\+Add\+Scenery (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_a3ca3b25aed632e44391b6eec57e21a58}
+Evento de ad��o de cenario \index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!on\+Choice\+Class@{on\+Choice\+Class}}
+\index{on\+Choice\+Class@{on\+Choice\+Class}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{on\+Choice\+Class(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::on\+Choice\+Class (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_ab40c3f18a5c42fc92bd7b9cd5a8ad312}
+Evento de Mudan�a de Classe \index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!on\+Choice\+Scenery@{on\+Choice\+Scenery}}
+\index{on\+Choice\+Scenery@{on\+Choice\+Scenery}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{on\+Choice\+Scenery(wx\+Choicebook\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::on\+Choice\+Scenery (
+\begin{DoxyParamCaption}
+\item[{wx\+Choicebook\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_a92d9118d7262e2a96c1677228c766ac4}
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!on\+Menu\+Options@{on\+Menu\+Options}}
+\index{on\+Menu\+Options@{on\+Menu\+Options}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{on\+Menu\+Options(wx\+Mouse\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::on\+Menu\+Options (
+\begin{DoxyParamCaption}
+\item[{wx\+Mouse\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_a11253606b8313e9e5ef29ea09832f16c}
+Evento de click do popup menu \index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!on\+Radio@{on\+Radio}}
+\index{on\+Radio@{on\+Radio}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{on\+Radio(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::on\+Radio (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_a81a991ef1c0864f461826526347dc21a}
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!on\+Removeselected\+Scenery@{on\+Removeselected\+Scenery}}
+\index{on\+Removeselected\+Scenery@{on\+Removeselected\+Scenery}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{on\+Removeselected\+Scenery(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::on\+Removeselected\+Scenery (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_a727a172e6e173ad807d84667924d2c27}
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!on\+Set\+End\+Interval@{on\+Set\+End\+Interval}}
+\index{on\+Set\+End\+Interval@{on\+Set\+End\+Interval}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{on\+Set\+End\+Interval(wx\+Date\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::on\+Set\+End\+Interval (
+\begin{DoxyParamCaption}
+\item[{wx\+Date\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_a10b7692680d930ee3cf3360c2ebf2a78}
+Evento de mudan�a do intervalo final \index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!on\+Set\+Scenery\+Name@{on\+Set\+Scenery\+Name}}
+\index{on\+Set\+Scenery\+Name@{on\+Set\+Scenery\+Name}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{on\+Set\+Scenery\+Name(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::on\+Set\+Scenery\+Name (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_a3ea22795c10a5ea3513f0050c6213ffa}
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!on\+Set\+Start\+Interval@{on\+Set\+Start\+Interval}}
+\index{on\+Set\+Start\+Interval@{on\+Set\+Start\+Interval}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{on\+Set\+Start\+Interval(wx\+Date\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::on\+Set\+Start\+Interval (
+\begin{DoxyParamCaption}
+\item[{wx\+Date\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_ae750325330d637fe46338c478cbd5f7f}
+Evento de mudan�a do intervalo inicial \index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!radio\+Box@{radio\+Box}}
+\index{radio\+Box@{radio\+Box}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{radio\+Box()}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::radio\+Box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_t_a_l_river_interface_ab545a6eb7fff3360019852ce0238708f}
+
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_a202fd862c10d339ae7d7e83d80b248bd}.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!removeselected\+Scenery@{removeselected\+Scenery}}
+\index{removeselected\+Scenery@{removeselected\+Scenery}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{removeselected\+Scenery()}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::removeselected\+Scenery (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_a87d1bcba8d12b368c49bd981798636b2}
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_t_a_l_river_interface_a80356d0e8e3ed3120e8b3be5c2de5227}
+Insere valores 
+\begin{DoxyParams}{Parâmetros}
+{\em model} & Modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_aced556e5caf584b7335135d337895154}.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!set\+Interval@{set\+Interval}}
+\index{set\+Interval@{set\+Interval}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{set\+Interval(const Interval \&interval)}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::set\+Interval (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interval} \&}]{interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_t_a_l_river_interface_a98950413cf63c283c662719053629fbd}
+
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_ad1498cd36a41f88924a92d1a66f74947}.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!set\+Scenery\+Name@{set\+Scenery\+Name}}
+\index{set\+Scenery\+Name@{set\+Scenery\+Name}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{set\+Scenery\+Name(int seleceted, wx\+String change)}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::set\+Scenery\+Name (
+\begin{DoxyParamCaption}
+\item[{int}]{seleceted, }
+\item[{wx\+String}]{change}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_af51621a17ddd1af665853d94b905ec6c}
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!show\+Hide\+Interface@{show\+Hide\+Interface}}
+\index{show\+Hide\+Interface@{show\+Hide\+Interface}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{show\+Hide\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::show\+Hide\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_ae1d54f6a8455f689d1b33e01bf5290d0}
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{show\+Results(bool change=false)}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+Interface\+::show\+Results (
+\begin{DoxyParamCaption}
+\item[{bool}]{change = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_interface_a88230ce9f2dc221eb83e5e0e193f824c}
+Mostra janela com os resultados 
+\begin{DoxyParams}{Parâmetros}
+{\em change} & Monta a janela de resultados para caso true. False acareta em esconder/mostrar a janela de resultados. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!b\+Con\+Dem@{b\+Con\+Dem}}
+\index{b\+Con\+Dem@{b\+Con\+Dem}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{b\+Con\+Dem}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Box$\ast$ T\+A\+L\+River\+Interface\+::b\+Con\+Dem}\label{class_t_a_l_river_interface_a1df212ec3bb57490be675b67f288aff5}
+
+
+Definição na linha 203 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!bitmap\+Empty@{bitmap\+Empty}}
+\index{bitmap\+Empty@{bitmap\+Empty}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{bitmap\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap T\+A\+L\+River\+Interface\+::bitmap\+Empty}\label{class_t_a_l_river_interface_a35865259148aaea0380b59ffea3105f6}
+
+
+Definição na linha 139 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!bitmap\+Ok@{bitmap\+Ok}}
+\index{bitmap\+Ok@{bitmap\+Ok}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{bitmap\+Ok}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap T\+A\+L\+River\+Interface\+::bitmap\+Ok}\label{class_t_a_l_river_interface_af3a6d620ec680133bf52e645b7493ce1}
+Bitmaps para utilizar em entrada de series; 
+
+Definição na linha 139 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!bitmap\+Temper@{bitmap\+Temper}}
+\index{bitmap\+Temper@{bitmap\+Temper}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{bitmap\+Temper}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ T\+A\+L\+River\+Interface\+::bitmap\+Temper}\label{class_t_a_l_river_interface_a62447819736ea41ce943ae4944669001}
+Bot�o com a figura de s�rie lida e n�o lida para temperatura 
+
+Definição na linha 198 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!bs\+Can@{bs\+Can}}
+\index{bs\+Can@{bs\+Can}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{bs\+Can}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ T\+A\+L\+River\+Interface\+::bs\+Can}\label{class_t_a_l_river_interface_aae1e1503bfd64010b17d4bb6beac7069}
+
+
+Definição na linha 202 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!bs\+Class@{bs\+Class}}
+\index{bs\+Class@{bs\+Class}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{bs\+Class}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ T\+A\+L\+River\+Interface\+::bs\+Class}\label{class_t_a_l_river_interface_ac8937d995bc1f30fa6f29622a71d3f83}
+
+
+Definição na linha 202 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!bs\+Init\+Dem@{bs\+Init\+Dem}}
+\index{bs\+Init\+Dem@{bs\+Init\+Dem}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{bs\+Init\+Dem}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ T\+A\+L\+River\+Interface\+::bs\+Init\+Dem}\label{class_t_a_l_river_interface_af555bc5e29caa764244cd0497564b96e}
+
+
+Definição na linha 202 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!bs\+Init\+Eflu@{bs\+Init\+Eflu}}
+\index{bs\+Init\+Eflu@{bs\+Init\+Eflu}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{bs\+Init\+Eflu}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ T\+A\+L\+River\+Interface\+::bs\+Init\+Eflu}\label{class_t_a_l_river_interface_a06e524f2db34007d3365530de3adced9}
+
+
+Definição na linha 202 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!bs\+Init\+Node@{bs\+Init\+Node}}
+\index{bs\+Init\+Node@{bs\+Init\+Node}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{bs\+Init\+Node}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer$\ast$ T\+A\+L\+River\+Interface\+::bs\+Init\+Node}\label{class_t_a_l_river_interface_a6a65abc3b9c0b0069302ab69b1054224}
+Sizers contendo as diferente interfaces dos elementos da rede 
+
+Definição na linha 202 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!bs\+Link@{bs\+Link}}
+\index{bs\+Link@{bs\+Link}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{bs\+Link}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ T\+A\+L\+River\+Interface\+::bs\+Link}\label{class_t_a_l_river_interface_a07571c5b9d6e0c44ddabdf528a0a5652}
+
+
+Definição na linha 202 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!bs\+Name\+Scen@{bs\+Name\+Scen}}
+\index{bs\+Name\+Scen@{bs\+Name\+Scen}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{bs\+Name\+Scen}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ T\+A\+L\+River\+Interface\+::bs\+Name\+Scen}\label{class_t_a_l_river_interface_ac16ca3511f2b30873d269defef5df6f0}
+
+
+Definição na linha 202 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!bs\+Qua@{bs\+Qua}}
+\index{bs\+Qua@{bs\+Qua}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{bs\+Qua}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ T\+A\+L\+River\+Interface\+::bs\+Qua}\label{class_t_a_l_river_interface_a4779311d2c8d10dcbd499c951c5cae19}
+
+
+Definição na linha 202 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!bs\+Scen@{bs\+Scen}}
+\index{bs\+Scen@{bs\+Scen}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{bs\+Scen}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ T\+A\+L\+River\+Interface\+::bs\+Scen}\label{class_t_a_l_river_interface_aa73732e1fe23c33fc3aab83efd5b6dde}
+
+
+Definição na linha 202 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!bt\+Temper@{bt\+Temper}}
+\index{bt\+Temper@{bt\+Temper}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{bt\+Temper}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ T\+A\+L\+River\+Interface\+::bt\+Temper}\label{class_t_a_l_river_interface_ac2f30164df6b541b8b97de3dd583d9e5}
+Bot�o para serie de temperatura 
+
+Definição na linha 190 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!cb\+Class@{cb\+Class}}
+\index{cb\+Class@{cb\+Class}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{cb\+Class}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ T\+A\+L\+River\+Interface\+::cb\+Class}\label{class_t_a_l_river_interface_ada584f2714c8cecc8aa504ce82f3bc85}
+
+
+Definição na linha 149 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!cb\+Scen@{cb\+Scen}}
+\index{cb\+Scen@{cb\+Scen}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{cb\+Scen}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choicebook$\ast$ T\+A\+L\+River\+Interface\+::cb\+Scen}\label{class_t_a_l_river_interface_a0f076075acd89ceaa8803ddc616768b1}
+Choice\+Book contendo os cen�rios 
+
+Definição na linha 154 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!dp\+End\+Interval@{dp\+End\+Interval}}
+\index{dp\+End\+Interval@{dp\+End\+Interval}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{dp\+End\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Picker\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::dp\+End\+Interval}\label{class_t_a_l_river_interface_a2d69c8fc4b3af1a0dc8ff8d27a066b5d}
+
+
+Definição na linha 134 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!dp\+Start\+Interval@{dp\+Start\+Interval}}
+\index{dp\+Start\+Interval@{dp\+Start\+Interval}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{dp\+Start\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Picker\+Ctrl$\ast$ T\+A\+L\+River\+Interface\+::dp\+Start\+Interval}\label{class_t_a_l_river_interface_a12f59b2d760b19b0674acea813ddb877}
+Quard�o o periodo de simula��o 
+
+Definição na linha 134 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!grid\+Adim@{grid\+Adim}}
+\index{grid\+Adim@{grid\+Adim}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{grid\+Adim}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Flex\+Grid\+Sizer $\ast$ T\+A\+L\+River\+Interface\+::grid\+Adim}\label{class_t_a_l_river_interface_a55e3a82b5b1eac78912c427045c1535a}
+
+
+Definição na linha 208 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!grid\+Dem@{grid\+Dem}}
+\index{grid\+Dem@{grid\+Dem}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{grid\+Dem}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Flex\+Grid\+Sizer$\ast$ T\+A\+L\+River\+Interface\+::grid\+Dem}\label{class_t_a_l_river_interface_aa3de293efa34e4fac856ca37669631e1}
+Sizers flexiveis para os controladores de textos da interface 
+
+Definição na linha 208 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!grid\+Eflu@{grid\+Eflu}}
+\index{grid\+Eflu@{grid\+Eflu}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{grid\+Eflu}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Flex\+Grid\+Sizer $\ast$ T\+A\+L\+River\+Interface\+::grid\+Eflu}\label{class_t_a_l_river_interface_a5ec32708a3e73c8a141ba3fb127896fb}
+
+
+Definição na linha 208 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!grid\+Scen@{grid\+Scen}}
+\index{grid\+Scen@{grid\+Scen}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{grid\+Scen}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Flex\+Grid\+Sizer $\ast$ T\+A\+L\+River\+Interface\+::grid\+Scen}\label{class_t_a_l_river_interface_a29014bef1f6543e4ce74ff579d2324af}
+
+
+Definição na linha 208 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!grid\+Trap@{grid\+Trap}}
+\index{grid\+Trap@{grid\+Trap}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{grid\+Trap}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Flex\+Grid\+Sizer $\ast$ T\+A\+L\+River\+Interface\+::grid\+Trap}\label{class_t_a_l_river_interface_aee84e0432f542580f336d143cdbe8231}
+
+
+Definição na linha 208 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!panel@{panel}}
+\index{panel@{panel}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{panel}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel$\ast$ T\+A\+L\+River\+Interface\+::panel}\label{class_t_a_l_river_interface_a951f6c10612f1816cc96a6a277f9ac37}
+Painal onde a interface dos cenarios ser� inserida 
+
+Definição na linha 158 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!popup\+Menu@{popup\+Menu}}
+\index{popup\+Menu@{popup\+Menu}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{popup\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Menu$\ast$ T\+A\+L\+River\+Interface\+::popup\+Menu}\label{class_t_a_l_river_interface_ab7bd5184c6148138d56573b09878156a}
+Menu de popup 
+
+Definição na linha 144 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!Qin@{Qin}}
+\index{Qin@{Qin}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{Qin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ T\+A\+L\+River\+Interface\+::\+Qin}\label{class_t_a_l_river_interface_a98ac0f007cdd81d44490c6c76e3d4253}
+\doxyref{Serie}{pag.}{class_serie} de vaz�o de entrada e temperatura 
+
+Definição na linha 186 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!rb\+Trap@{rb\+Trap}}
+\index{rb\+Trap@{rb\+Trap}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{rb\+Trap}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box$\ast$ T\+A\+L\+River\+Interface\+::rb\+Trap}\label{class_t_a_l_river_interface_a6c139939a5ec240839d7e5e893eb2cf1}
+Tipo de trecho 
+
+Definição na linha 194 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+Cmann@{tc\+Cmann}}
+\index{tc\+Cmann@{tc\+Cmann}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+Cmann}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+Cmann}\label{class_t_a_l_river_interface_afa2df6387b6df4283547da5961a83eb4}
+
+
+Definição na linha 174 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+CoefH@{tc\+CoefH}}
+\index{tc\+CoefH@{tc\+CoefH}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+CoefH}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+CoefH}\label{class_t_a_l_river_interface_aef75f212e39bae984d759311f9a5173e}
+
+
+Definição na linha 174 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+CoefV@{tc\+CoefV}}
+\index{tc\+CoefV@{tc\+CoefV}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+CoefV}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+CoefV}\label{class_t_a_l_river_interface_a1e3d264396d392501ab8c8819e793e6d}
+
+
+Definição na linha 174 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+Col@{tc\+Col}}
+\index{tc\+Col@{tc\+Col}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+Col}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+Col}\label{class_t_a_l_river_interface_a41e6e105c6de13fc8b4be11956fbcca2}
+
+
+Definição na linha 163 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+Col\+Dem@{tc\+Col\+Dem}}
+\index{tc\+Col\+Dem@{tc\+Col\+Dem}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+Col\+Dem}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+Col\+Dem}\label{class_t_a_l_river_interface_a12007f1df435d4aa440ec42cfd96b671}
+
+
+Definição na linha 168 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+Coleflu@{tc\+Coleflu}}
+\index{tc\+Coleflu@{tc\+Coleflu}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+Coleflu}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+Coleflu}\label{class_t_a_l_river_interface_a78cd171cdf59f68fdbacd02fc590cd43}
+
+
+Definição na linha 168 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+Cst@{tc\+Cst}}
+\index{tc\+Cst@{tc\+Cst}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+Cst}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+Cst}\label{class_t_a_l_river_interface_ab7b6947184ea398d5e65ec49d2c19608}
+
+
+Definição na linha 163 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+Dbo@{tc\+Dbo}}
+\index{tc\+Dbo@{tc\+Dbo}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+Dbo}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+Dbo}\label{class_t_a_l_river_interface_a1dc8a9da47eabc5ff83ba103f33ecb23}
+
+
+Definição na linha 163 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+Dbo\+Dem@{tc\+Dbo\+Dem}}
+\index{tc\+Dbo\+Dem@{tc\+Dbo\+Dem}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+Dbo\+Dem}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+Dbo\+Dem}\label{class_t_a_l_river_interface_acc3f299e041bc6212163b146eb435a10}
+
+
+Definição na linha 168 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+D\+B\+Oeflu@{tc\+D\+B\+Oeflu}}
+\index{tc\+D\+B\+Oeflu@{tc\+D\+B\+Oeflu}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+D\+B\+Oeflu}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+D\+B\+Oeflu}\label{class_t_a_l_river_interface_adad47ee6230abb157edcc3d5321e5506}
+
+
+Definição na linha 168 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+ExpH@{tc\+ExpH}}
+\index{tc\+ExpH@{tc\+ExpH}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+ExpH}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+ExpH}\label{class_t_a_l_river_interface_a1996185ccd7db97a00d6568ada23ce3b}
+
+
+Definição na linha 174 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+ExpV@{tc\+ExpV}}
+\index{tc\+ExpV@{tc\+ExpV}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+ExpV}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+ExpV}\label{class_t_a_l_river_interface_ad9f19ac1d84904529e71ae7c097b2c17}
+
+
+Definição na linha 174 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+Height@{tc\+Height}}
+\index{tc\+Height@{tc\+Height}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+Height}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+Height}\label{class_t_a_l_river_interface_ae2c0ab0fbb838e25621c264377fe9378}
+
+
+Definição na linha 174 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+K1@{tc\+K1}}
+\index{tc\+K1@{tc\+K1}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+K1}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl$\ast$ T\+A\+L\+River\+Interface\+::tc\+K1}\label{class_t_a_l_river_interface_a9405243496d5596e277cefc966cd0be6}
+Controladores de texto para trecho 
+
+Definição na linha 174 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+K2@{tc\+K2}}
+\index{tc\+K2@{tc\+K2}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+K2}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+K2}\label{class_t_a_l_river_interface_a5fe9f9c2ca1ae85d131cc8cb9caefddb}
+
+
+Definição na linha 174 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+K3@{tc\+K3}}
+\index{tc\+K3@{tc\+K3}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+K3}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+K3}\label{class_t_a_l_river_interface_ac188bc0e6f497bdd6fa38cbcfd4ba432}
+
+
+Definição na linha 174 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+K\+Col@{tc\+K\+Col}}
+\index{tc\+K\+Col@{tc\+K\+Col}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+K\+Col}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+K\+Col}\label{class_t_a_l_river_interface_a05daec352873f38382ec6fd64fb75067}
+
+
+Definição na linha 174 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+KN@{tc\+KN}}
+\index{tc\+KN@{tc\+KN}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+KN}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+KN}\label{class_t_a_l_river_interface_a51425ccfeb059818ec1fc2e78c8e810a}
+
+
+Definição na linha 174 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+KP@{tc\+KP}}
+\index{tc\+KP@{tc\+KP}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+KP}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+KP}\label{class_t_a_l_river_interface_a90711c028698c04c3d554aa30df62196}
+
+
+Definição na linha 174 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+Length@{tc\+Length}}
+\index{tc\+Length@{tc\+Length}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+Length}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+Length}\label{class_t_a_l_river_interface_a9c9631fcebd4535a4adc7aba8512db84}
+
+
+Definição na linha 174 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tcN@{tcN}}
+\index{tcN@{tcN}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tcN}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tcN}\label{class_t_a_l_river_interface_a13a18b495693d0213f74b7b261a7c795}
+
+
+Definição na linha 163 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+N\+Dem@{tc\+N\+Dem}}
+\index{tc\+N\+Dem@{tc\+N\+Dem}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+N\+Dem}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+N\+Dem}\label{class_t_a_l_river_interface_a061f53d32159dc4b7cef6fb3e37bfebe}
+
+
+Definição na linha 168 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+Neflu@{tc\+Neflu}}
+\index{tc\+Neflu@{tc\+Neflu}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+Neflu}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+Neflu}\label{class_t_a_l_river_interface_aebf0879fcc16263f2cacdc301138b891}
+
+
+Definição na linha 168 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+N\+Seg@{tc\+N\+Seg}}
+\index{tc\+N\+Seg@{tc\+N\+Seg}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+N\+Seg}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+N\+Seg}\label{class_t_a_l_river_interface_a0fad6ae107fe89c84bcf7a3a6dd496c8}
+
+
+Definição na linha 174 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+Od@{tc\+Od}}
+\index{tc\+Od@{tc\+Od}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+Od}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+Od}\label{class_t_a_l_river_interface_aad1ccfb270ef0be79f9b7fe3ccb805f7}
+
+
+Definição na linha 163 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+Od\+Dem@{tc\+Od\+Dem}}
+\index{tc\+Od\+Dem@{tc\+Od\+Dem}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+Od\+Dem}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+Od\+Dem}\label{class_t_a_l_river_interface_a65fa3666f52f6cc78ecfe9d51f2ff0b2}
+
+
+Definição na linha 168 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+O\+Deflu@{tc\+O\+Deflu}}
+\index{tc\+O\+Deflu@{tc\+O\+Deflu}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+O\+Deflu}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+O\+Deflu}\label{class_t_a_l_river_interface_ab7001cf8f12fa9302a3bea395b1548bf}
+
+
+Definição na linha 168 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tcP@{tcP}}
+\index{tcP@{tcP}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tcP}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tcP}\label{class_t_a_l_river_interface_a151d91a2dc91e8fd86b411a77f2fce90}
+
+
+Definição na linha 163 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+Path@{tc\+Path}}
+\index{tc\+Path@{tc\+Path}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+Path}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+Path}\label{class_t_a_l_river_interface_a45e3ba55b6fb67307842b2b9b42a1bdc}
+
+
+Definição na linha 163 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+P\+Dem@{tc\+P\+Dem}}
+\index{tc\+P\+Dem@{tc\+P\+Dem}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+P\+Dem}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+P\+Dem}\label{class_t_a_l_river_interface_a09a44ca3742523ab620a6c5f93cd156a}
+
+
+Definição na linha 168 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tcpeflu@{tcpeflu}}
+\index{tcpeflu@{tcpeflu}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tcpeflu}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tcpeflu}\label{class_t_a_l_river_interface_ac347a7445a08994fa8a678a3551e5bcd}
+
+
+Definição na linha 168 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+Qdem@{tc\+Qdem}}
+\index{tc\+Qdem@{tc\+Qdem}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+Qdem}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl$\ast$ T\+A\+L\+River\+Interface\+::tc\+Qdem}\label{class_t_a_l_river_interface_a879e4779b6cde095200e1a0dba2fe4f1}
+Controladores de texto para n� demanda, despejo 
+
+Definição na linha 168 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+Qeflu@{tc\+Qeflu}}
+\index{tc\+Qeflu@{tc\+Qeflu}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+Qeflu}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+Qeflu}\label{class_t_a_l_river_interface_ac3fa44977f210670e6c1a8d9fd16cccc}
+
+
+Definição na linha 168 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+Qin@{tc\+Qin}}
+\index{tc\+Qin@{tc\+Qin}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+Qin}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl$\ast$ T\+A\+L\+River\+Interface\+::tc\+Qin}\label{class_t_a_l_river_interface_a33c41354ea4b5af398e595d01ed365ee}
+Controladores de texto para n� padr�o ou jun��o 
+
+Definição na linha 163 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+Ret\+Dem@{tc\+Ret\+Dem}}
+\index{tc\+Ret\+Dem@{tc\+Ret\+Dem}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+Ret\+Dem}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+Ret\+Dem}\label{class_t_a_l_river_interface_ad58ff30eec0a594fff70c1f49fe163e1}
+
+
+Definição na linha 168 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+Scen\+Name@{tc\+Scen\+Name}}
+\index{tc\+Scen\+Name@{tc\+Scen\+Name}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+Scen\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl$\ast$ T\+A\+L\+River\+Interface\+::tc\+Scen\+Name}\label{class_t_a_l_river_interface_a28bd88056107d538ece42ab004d418dd}
+Caixa de texto contendo o nome do cenario 
+
+Definição na linha 181 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+Slope@{tc\+Slope}}
+\index{tc\+Slope@{tc\+Slope}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+Slope}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+Slope}\label{class_t_a_l_river_interface_a9595f0aec957c08de983c00d856296a0}
+
+
+Definição na linha 174 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+S\+S1@{tc\+S\+S1}}
+\index{tc\+S\+S1@{tc\+S\+S1}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+S\+S1}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+S\+S1}\label{class_t_a_l_river_interface_a1fee04cd0aa6789fd61a3005bebd75bc}
+
+
+Definição na linha 174 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+S\+S2@{tc\+S\+S2}}
+\index{tc\+S\+S2@{tc\+S\+S2}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+S\+S2}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+S\+S2}\label{class_t_a_l_river_interface_a78c9335c391a56970637d8ca85ef8123}
+
+
+Definição na linha 174 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+Temper@{tc\+Temper}}
+\index{tc\+Temper@{tc\+Temper}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+Temper}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+Temper}\label{class_t_a_l_river_interface_ae9e8116b016d56fe328ef0246d3b3e52}
+
+
+Definição na linha 174 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!tc\+Width@{tc\+Width}}
+\index{tc\+Width@{tc\+Width}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{tc\+Width}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ T\+A\+L\+River\+Interface\+::tc\+Width}\label{class_t_a_l_river_interface_a7ff07037df9a82ee6cb3ba6adbc19fca}
+
+
+Definição na linha 174 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+\index{T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}!temper@{temper}}
+\index{temper@{temper}!T\+A\+L\+River\+Interface@{T\+A\+L\+River\+Interface}}
+\subsubsection[{temper}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie} $\ast$ T\+A\+L\+River\+Interface\+::temper}\label{class_t_a_l_river_interface_abfa90e8aac5693fc24cb85a65f90f112}
+
+
+Definição na linha 186 do arquivo T\+A\+L\+River\+Interface.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf T\+A\+L\+River\+Interface.\+h}\end{DoxyCompactItemize}

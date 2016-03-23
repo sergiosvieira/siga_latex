@@ -1,0 +1,1354 @@
+\section{Referência da Classe S\+I\+G\+A\+Frame}
+\label{class_s_i_g_a_frame}\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+
+
+{\ttfamily \#include $<$Siga\+Frame.\+h$>$}
+
+
+
+Herdeiro de wx\+Frame.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf update\+Canvas} ()
+\item 
+void {\bf update\+Canvas} (int a\+\_\+width, int a\+\_\+height)
+\item 
+{\bf S\+I\+G\+A\+Frame} ({\bf S\+I\+GA} $\ast$main, const wx\+String \&{\bf title}, const wx\+Point \&pos, const wx\+Size \&size, long style)
+\item 
+virtual {\bf $\sim$\+S\+I\+G\+A\+Frame} ()
+\item 
+void {\bf create\+Recent\+Projects} ()
+\item 
+void {\bf insert\+Recent\+Projects} (unsigned int pos, wx\+String name)
+\item 
+void {\bf create\+Progress\+Dialog} (wx\+String f\+Msg, int m\+Range=100, bool a\+Hide=false, wx\+Window $\ast$a\+\_\+parent=nullptr)
+\item 
+void {\bf add\+Recent\+Project} (wx\+String name)
+\item 
+void {\bf remove\+Progress\+Dialog} ()
+\item 
+void {\bf On\+Quit} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Pane\+Close} (wx\+Aui\+Manager\+Event \&event)
+\item 
+void {\bf on\+View} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Click\+Hide\+Network\+Labels} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Click\+Hide\+Network\+Labels\+Link} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Click\+Hide\+Network\+Labels\+All} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+N\+E\+T\+Toolbar\+Open} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+N\+E\+T\+Toolbar\+Save} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+N\+E\+T\+Toolbar\+Delete} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+N\+E\+T\+Toolbar\+Map} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Export\+Bitmap} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+N\+E\+T\+T\+O\+O\+L\+S\+Scale} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+N\+E\+T\+F\+O\+N\+T\+Scale} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Shape\+Toolbar\+Selection} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Shape\+Toolbar\+Zoom\+In} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Shape\+Toolbar\+Zoom\+Out} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Shape\+Toolbar\+Zoom\+Last} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Shape\+Toolbar\+Zoom\+Next} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Shape\+Toolbar\+Centralize} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Thiessen} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Converter\+Serie\+To\+Thiessen\+Matrix} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+C\+O\+M\+P\+Toolbar\+Open\+Conf} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+C\+O\+M\+P\+Toolbar\+Save\+Conf} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+C\+O\+M\+P\+Toolbar\+Run} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+C\+O\+M\+P\+Toolbar\+Run\+All} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+C\+O\+M\+P\+Toolbar\+Show\+Res} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+C\+O\+M\+P\+Toolbar\+Show\+All\+Results} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Show\+Guarantee\+Curve} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+C\+O\+M\+P\+Toolbar\+SA} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+M\+O\+D\+Toolbar\+Choice} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Splash\+View} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Select\+All} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Select\+All\+Nodes} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Select\+All\+Demand\+Nodes} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Select\+All\+Reservoir\+Nodes} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Select\+All\+Links} (wx\+Command\+Event \&event)
+\item 
+void {\bf On\+About} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Choicebook} (wx\+Choicebook\+Event \&event)
+\item 
+void {\bf on\+Change\+Language} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Interval\+Definition} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Recent\+Project} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Open\+Project} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Join\+Project} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Save\+Project\+As} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Import\+Project} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Save\+Project} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Auto\+Save\+Project} ()
+\item 
+void {\bf on\+Auto\+Recover\+Project} ()
+\item 
+void {\bf remove\+List\+Temp\+Files} ()
+\item 
+void {\bf on\+Close\+Project} (wx\+Command\+Event \&)
+\item 
+void {\bf on\+New\+Project} (wx\+Command\+Event \&)
+\item 
+void {\bf on\+Property\+Project} (wx\+Command\+Event \&)
+\item 
+void {\bf Interval\+Definition} ({\bf Date\+::\+Time\+Interval} interval)
+\item 
+void {\bf on\+Import\+Serie} (wx\+Command\+Event \&)
+\item 
+void {\bf on\+Import\+B\+D\+Serie} (wx\+Command\+Event \&)
+\item 
+void {\bf on\+Import\+Matrix} (wx\+Command\+Event \&)
+\item 
+void {\bf update\+Tree\+Series} ({\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$)
+\item 
+void {\bf changing\+Module} (int id)
+\item 
+void {\bf enable\+Toolbar} (const wx\+String \&toolbar\+Name, bool enable)
+\item 
+bool {\bf enable\+Comp\+Toolbar} (const bool enable\+Options[$\,$], int tam)
+\item 
+bool {\bf enable\+Net\+Toolbar} (const bool enable\+Options[$\,$], int tam)
+\item 
+bool {\bf enable\+Net\+Tools\+Toolbar} (const bool enable\+Options[$\,$], int tam)
+\item 
+wx\+Array\+String {\bf return\+List\+Temp\+Files} ()
+\item 
+void {\bf on\+Import\+All\+Series} (wx\+Command\+Event \&a\+\_\+command\+Event)
+\item 
+void {\bf on\+U\+N\+DO} (wx\+Command\+Event \&a\+\_\+command\+Event)
+\item 
+void {\bf on\+R\+E\+DO} (wx\+Command\+Event \&a\+\_\+command\+Event)
+\item 
+void {\bf on\+Change\+Toolbar} ({\bf Node\+Type} node\+Type)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bf on\+Send\+Analytics} (wx\+String url, wx\+String file)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+String {\bf dir\+Relatice\+Path}
+\item 
+wx\+Tool\+Bar $\ast$ {\bf tb\+S\+I\+GA}
+\item 
+wx\+Tool\+Bar $\ast$ {\bf tb\+Net}
+\item 
+wx\+Tool\+Bar $\ast$ {\bf tb\+Comp}
+\item 
+wx\+Tool\+Bar $\ast$ {\bf tb\+Mod}
+\item 
+wx\+Tool\+Bar $\ast$ {\bf tb\+Net\+Tools}
+\item 
+wx\+Tool\+Bar $\ast$ {\bf tb\+Shape}
+\item 
+wx\+Tool\+Bar $\ast$ {\bf tb\+Net\+Elem}
+\item 
+{\bf S\+I\+G\+A\+Project\+Property} $\ast$ {\bf S\+I\+G\+Aproperty}
+\item 
+vector$<$ wx\+String $>$ {\bf recent\+Projects}
+\item 
+wx\+Menu $\ast$ {\bf language}
+\begin{DoxyCompactList}\small\item\em Menu de Idioma. \end{DoxyCompactList}\item 
+wx\+Menu $\ast$ {\bf interval\+Sub\+Menu}
+\begin{DoxyCompactList}\small\item\em Menu de Intervalo de Tempo. \end{DoxyCompactList}\item 
+wx\+Menu $\ast$ {\bf interval\+Sub\+Menu\+Auto}
+\begin{DoxyCompactList}\small\item\em Menu de Intervalo do Auto Save. \end{DoxyCompactList}\item 
+wx\+Menu $\ast$ {\bf view\+Menu}
+\begin{DoxyCompactList}\small\item\em Menu exibir. \end{DoxyCompactList}\item 
+wx\+Menu $\ast$ {\bf edit\+Menu}
+\item 
+wx\+Menu $\ast$ {\bf file\+Menu}
+\begin{DoxyCompactList}\small\item\em Menu arquivo. \end{DoxyCompactList}\item 
+wx\+Progress\+Dialog $\ast$ {\bf progress\+Dialog}
+\item 
+{\bf Date\+::\+Time\+Interval} {\bf time\+Interval}
+\item 
+bool {\bf splash}
+\item 
+bool {\bf subtitle}
+\item 
+bool {\bf layers}
+\item 
+bool {\bf autosave}
+\item 
+bool {\bf show\+\_\+sub\+\_\+network\+\_\+panel\+\_\+}
+\item 
+bool {\bf siga\+Toolbar}
+\item 
+bool {\bf mod\+Toolbar}
+\item 
+bool {\bf nettoolstoolbar}
+\item 
+bool {\bf shapetoolbar}
+\item 
+wx\+String {\bf title}
+\item 
+wx\+String {\bf author}
+\item 
+wx\+String {\bf normal\+Path}
+\item 
+wx\+String {\bf temp\+Path}
+\item 
+bool {\bf can\+\_\+save} \{ true \}
+\item 
+bool {\bf auto\+Save} \{ false \}
+\item 
+wx\+Choicebook $\ast$ {\bf note\+Components}
+\item 
+wx\+Aui\+Manager {\bf aui\+Manager}
+\item 
+wx\+Aui\+Pane\+Info {\bf default\+Pane\+Info}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf on\+Projection\+Click} (wx\+Command\+Event \&a\+\_\+event)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Menu $\ast$ {\bf recent\+Opened\+Projects}
+\item 
+wx\+Box\+Sizer $\ast$ {\bf m\+\_\+projection\+Sizer} = nullptr
+\item 
+wx\+Status\+Bar $\ast$ {\bf m\+\_\+status\+Bar} = nullptr
+\item 
+wx\+Button $\ast$ {\bf m\+\_\+projection\+Button} = nullptr
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf S\+I\+GA}
+\item 
+class {\bf S\+I\+G\+A\+Conf\+File}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 28 do arquivo Siga\+Frame.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{S\+I\+G\+A\+Frame(\+S\+I\+G\+A $\ast$main, const wx\+String \&title, const wx\+Point \&pos, const wx\+Size \&size, long style)}]{\setlength{\rightskip}{0pt plus 5cm}S\+I\+G\+A\+Frame\+::\+S\+I\+G\+A\+Frame (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+GA} $\ast$}]{main, }
+\item[{const wx\+String \&}]{title, }
+\item[{const wx\+Point \&}]{pos, }
+\item[{const wx\+Size \&}]{size, }
+\item[{long}]{style}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_ac5adc23004e3f7b218688890f323a36c}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em main} & Classe principal \\
+\hline
+{\em title} & Titulo da janela \\
+\hline
+{\em pos} & Posi��o inicial da janela \\
+\hline
+{\em size} & Tamanho inicial da janela \\
+\hline
+{\em style} & Estilo de apresenta��o da janela \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!````~S\+I\+G\+A\+Frame@{$\sim$\+S\+I\+G\+A\+Frame}}
+\index{````~S\+I\+G\+A\+Frame@{$\sim$\+S\+I\+G\+A\+Frame}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{$\sim$\+S\+I\+G\+A\+Frame()}]{\setlength{\rightskip}{0pt plus 5cm}virtual S\+I\+G\+A\+Frame\+::$\sim$\+S\+I\+G\+A\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_i_g_a_frame_a897f08446ff343f7f8eeb76f8aaab0dc}
+Destrutor 
+
+\subsection{Métodos}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!add\+Recent\+Project@{add\+Recent\+Project}}
+\index{add\+Recent\+Project@{add\+Recent\+Project}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{add\+Recent\+Project(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::add\+Recent\+Project (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_ace952ae66a0c0f853ec75069bf186ac1}
+Adiciona novo projeto ao vetor de projetos recentes \index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!changing\+Module@{changing\+Module}}
+\index{changing\+Module@{changing\+Module}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{changing\+Module(int id)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::changing\+Module (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a2b270d5b28fc4f625b2678a77e6820af}
+Chamado quando muda de m�dulo \index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!create\+Progress\+Dialog@{create\+Progress\+Dialog}}
+\index{create\+Progress\+Dialog@{create\+Progress\+Dialog}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{create\+Progress\+Dialog(wx\+String f\+Msg, int m\+Range=100, bool a\+Hide=false, wx\+Window $\ast$a\+\_\+parent=nullptr)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::create\+Progress\+Dialog (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{f\+Msg, }
+\item[{int}]{m\+Range = {\ttfamily 100}, }
+\item[{bool}]{a\+Hide = {\ttfamily false}, }
+\item[{wx\+Window $\ast$}]{a\+\_\+parent = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a09e1c358666a8072ee30fc6737b61407}
+Cria barra de progresso \index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!create\+Recent\+Projects@{create\+Recent\+Projects}}
+\index{create\+Recent\+Projects@{create\+Recent\+Projects}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{create\+Recent\+Projects()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::create\+Recent\+Projects (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a6a966d4f6fd9903e09cee2aec0f1fd69}
+Cria os elementos do menu de projetos recentes \index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!enable\+Comp\+Toolbar@{enable\+Comp\+Toolbar}}
+\index{enable\+Comp\+Toolbar@{enable\+Comp\+Toolbar}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{enable\+Comp\+Toolbar(const bool enable\+Options[], int tam)}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Frame\+::enable\+Comp\+Toolbar (
+\begin{DoxyParamCaption}
+\item[{const bool}]{enable\+Options[$\,$], }
+\item[{int}]{tam}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a27569a33163f53d1c67523684656b731}
+Metodo que desabilita as opcoes especificadas da toolbar Comp\+Toolbar \index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!enable\+Net\+Toolbar@{enable\+Net\+Toolbar}}
+\index{enable\+Net\+Toolbar@{enable\+Net\+Toolbar}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{enable\+Net\+Toolbar(const bool enable\+Options[], int tam)}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Frame\+::enable\+Net\+Toolbar (
+\begin{DoxyParamCaption}
+\item[{const bool}]{enable\+Options[$\,$], }
+\item[{int}]{tam}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a622a3e3a49ced0ec514205eeee6be027}
+Metodo que desabilita as opcoes especificadas da toolbar Net\+Toolbar \index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!enable\+Net\+Tools\+Toolbar@{enable\+Net\+Tools\+Toolbar}}
+\index{enable\+Net\+Tools\+Toolbar@{enable\+Net\+Tools\+Toolbar}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{enable\+Net\+Tools\+Toolbar(const bool enable\+Options[], int tam)}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Frame\+::enable\+Net\+Tools\+Toolbar (
+\begin{DoxyParamCaption}
+\item[{const bool}]{enable\+Options[$\,$], }
+\item[{int}]{tam}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_abd5121d031ec6e96b830665d6aa3d329}
+Metodo que desabilita as opcoes especificadas da toolbar Net\+Tools\+Toolbar \index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!enable\+Toolbar@{enable\+Toolbar}}
+\index{enable\+Toolbar@{enable\+Toolbar}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{enable\+Toolbar(const wx\+String \&toolbar\+Name, bool enable)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::enable\+Toolbar (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{toolbar\+Name, }
+\item[{bool}]{enable}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a168ae29b8c55f4882464947a8f09e34a}
+Metodo que desabilita todas as tools da toolbar especificada \index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!insert\+Recent\+Projects@{insert\+Recent\+Projects}}
+\index{insert\+Recent\+Projects@{insert\+Recent\+Projects}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{insert\+Recent\+Projects(unsigned int pos, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::insert\+Recent\+Projects (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{pos, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a26482659786b82dd55863d00a613fd3f}
+Insere um elemento ao menu de projetos recentes \index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!Interval\+Definition@{Interval\+Definition}}
+\index{Interval\+Definition@{Interval\+Definition}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{Interval\+Definition(\+Date\+::\+Time\+Interval interval)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::\+Interval\+Definition (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{interval}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a6a88bb45a2fb2d64a86c2c3fd38057a2}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!On\+About@{On\+About}}
+\index{On\+About@{On\+About}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{On\+About(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::\+On\+About (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a3340c234e3c25cb8798b499538465ccb}
+Evento de visualiza��o de informa��es sobre vers�o 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Auto\+Recover\+Project@{on\+Auto\+Recover\+Project}}
+\index{on\+Auto\+Recover\+Project@{on\+Auto\+Recover\+Project}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Auto\+Recover\+Project()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Auto\+Recover\+Project (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a1fe7b5a4d5ce825c6f11a80089efc0da}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Auto\+Save\+Project@{on\+Auto\+Save\+Project}}
+\index{on\+Auto\+Save\+Project@{on\+Auto\+Save\+Project}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Auto\+Save\+Project()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Auto\+Save\+Project (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a5b08e0c9282d8e5e3d5337d4187df332}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Change\+Language@{on\+Change\+Language}}
+\index{on\+Change\+Language@{on\+Change\+Language}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Change\+Language(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Change\+Language (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a714a7b788ed0aed247fb44f79ced59ed}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Change\+Toolbar@{on\+Change\+Toolbar}}
+\index{on\+Change\+Toolbar@{on\+Change\+Toolbar}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Change\+Toolbar(\+Node\+Type node\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Change\+Toolbar (
+\begin{DoxyParamCaption}
+\item[{{\bf Node\+Type}}]{node\+Type}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a3b87de85433c395bbfdc4668dba77b82}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Choicebook@{on\+Choicebook}}
+\index{on\+Choicebook@{on\+Choicebook}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Choicebook(wx\+Choicebook\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Choicebook (
+\begin{DoxyParamCaption}
+\item[{wx\+Choicebook\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a6299d30b732994f35919930d06ad8c72}
+Evento de troca de pagina do note\+Components 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Click\+Hide\+Network\+Labels@{on\+Click\+Hide\+Network\+Labels}}
+\index{on\+Click\+Hide\+Network\+Labels@{on\+Click\+Hide\+Network\+Labels}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Click\+Hide\+Network\+Labels(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Click\+Hide\+Network\+Labels (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_ad28439a9ba3aac4466500f1fbc401766}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Click\+Hide\+Network\+Labels\+All@{on\+Click\+Hide\+Network\+Labels\+All}}
+\index{on\+Click\+Hide\+Network\+Labels\+All@{on\+Click\+Hide\+Network\+Labels\+All}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Click\+Hide\+Network\+Labels\+All(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Click\+Hide\+Network\+Labels\+All (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a55b0758adc179053d3b5efc1cf7867d2}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Click\+Hide\+Network\+Labels\+Link@{on\+Click\+Hide\+Network\+Labels\+Link}}
+\index{on\+Click\+Hide\+Network\+Labels\+Link@{on\+Click\+Hide\+Network\+Labels\+Link}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Click\+Hide\+Network\+Labels\+Link(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Click\+Hide\+Network\+Labels\+Link (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_ab3541a66fbe0dd780fc0eb2209ece93f}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Close\+Project@{on\+Close\+Project}}
+\index{on\+Close\+Project@{on\+Close\+Project}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Close\+Project(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Close\+Project (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_ab559016a22462c5a2f47a7bae3705c6c}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+C\+O\+M\+P\+Toolbar\+Open\+Conf@{on\+C\+O\+M\+P\+Toolbar\+Open\+Conf}}
+\index{on\+C\+O\+M\+P\+Toolbar\+Open\+Conf@{on\+C\+O\+M\+P\+Toolbar\+Open\+Conf}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+C\+O\+M\+P\+Toolbar\+Open\+Conf(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+C\+O\+M\+P\+Toolbar\+Open\+Conf (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a7f9168f634fd857de13df71c33548818}
+Evento de abrir configura��es do modelo selecionado 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+C\+O\+M\+P\+Toolbar\+Run@{on\+C\+O\+M\+P\+Toolbar\+Run}}
+\index{on\+C\+O\+M\+P\+Toolbar\+Run@{on\+C\+O\+M\+P\+Toolbar\+Run}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+C\+O\+M\+P\+Toolbar\+Run(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+C\+O\+M\+P\+Toolbar\+Run (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a070c5f98717f25a5a850c68be34f3ee4}
+Evento de rodar o modelo selecionado 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+C\+O\+M\+P\+Toolbar\+Run\+All@{on\+C\+O\+M\+P\+Toolbar\+Run\+All}}
+\index{on\+C\+O\+M\+P\+Toolbar\+Run\+All@{on\+C\+O\+M\+P\+Toolbar\+Run\+All}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+C\+O\+M\+P\+Toolbar\+Run\+All(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+C\+O\+M\+P\+Toolbar\+Run\+All (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a06a0dcdbe652b778a8610bce0bc4f828}
+Evento de rodar os cen�rios 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+C\+O\+M\+P\+Toolbar\+SA@{on\+C\+O\+M\+P\+Toolbar\+SA}}
+\index{on\+C\+O\+M\+P\+Toolbar\+SA@{on\+C\+O\+M\+P\+Toolbar\+SA}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+C\+O\+M\+P\+Toolbar\+S\+A(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+C\+O\+M\+P\+Toolbar\+SA (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a6752ecb590f4f6b503d9408fbe53b8bf}
+Evento de abrir analise de sensibilidade 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+C\+O\+M\+P\+Toolbar\+Save\+Conf@{on\+C\+O\+M\+P\+Toolbar\+Save\+Conf}}
+\index{on\+C\+O\+M\+P\+Toolbar\+Save\+Conf@{on\+C\+O\+M\+P\+Toolbar\+Save\+Conf}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+C\+O\+M\+P\+Toolbar\+Save\+Conf(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+C\+O\+M\+P\+Toolbar\+Save\+Conf (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a0f9db19eec41a5801dd27ec416034422}
+Evento de salvar configura��es do modelo selecionado 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+C\+O\+M\+P\+Toolbar\+Show\+All\+Results@{on\+C\+O\+M\+P\+Toolbar\+Show\+All\+Results}}
+\index{on\+C\+O\+M\+P\+Toolbar\+Show\+All\+Results@{on\+C\+O\+M\+P\+Toolbar\+Show\+All\+Results}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+C\+O\+M\+P\+Toolbar\+Show\+All\+Results(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+C\+O\+M\+P\+Toolbar\+Show\+All\+Results (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a56bc3058f5b844a4716e794eb898bbf0}
+Evento que mostra os resultados de todos os elementos 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+C\+O\+M\+P\+Toolbar\+Show\+Res@{on\+C\+O\+M\+P\+Toolbar\+Show\+Res}}
+\index{on\+C\+O\+M\+P\+Toolbar\+Show\+Res@{on\+C\+O\+M\+P\+Toolbar\+Show\+Res}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+C\+O\+M\+P\+Toolbar\+Show\+Res(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+C\+O\+M\+P\+Toolbar\+Show\+Res (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a513bda2c87aff6f62b6d40ca9a664aec}
+Evento de mostras os resultados do modelo selecionado 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Converter\+Serie\+To\+Thiessen\+Matrix@{on\+Converter\+Serie\+To\+Thiessen\+Matrix}}
+\index{on\+Converter\+Serie\+To\+Thiessen\+Matrix@{on\+Converter\+Serie\+To\+Thiessen\+Matrix}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Converter\+Serie\+To\+Thiessen\+Matrix(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Converter\+Serie\+To\+Thiessen\+Matrix (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_ac8ccbe73b4dc7017c3df59060b0358c5}
+Evento disparado ao clicar em Ferramanetas-\/$>$Conversor otimiza��o 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Export\+Bitmap@{on\+Export\+Bitmap}}
+\index{on\+Export\+Bitmap@{on\+Export\+Bitmap}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Export\+Bitmap(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Export\+Bitmap (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a3a5df87a19f693b9d29f926b2ed2a28e}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Import\+All\+Series@{on\+Import\+All\+Series}}
+\index{on\+Import\+All\+Series@{on\+Import\+All\+Series}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Import\+All\+Series(wx\+Command\+Event \&a\+\_\+command\+Event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Import\+All\+Series (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{a\+\_\+command\+Event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a01f14f3c93a2f9bfb3494317d5fddc5c}
+Abre janela para importa��o de s�ries autor\+: {\tt sergiosvieira@gmail.\+com} \index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Import\+B\+D\+Serie@{on\+Import\+B\+D\+Serie}}
+\index{on\+Import\+B\+D\+Serie@{on\+Import\+B\+D\+Serie}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Import\+B\+D\+Serie(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Import\+B\+D\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_ac08ad2a9bbd5b7e5faa07642550736d2}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Import\+Matrix@{on\+Import\+Matrix}}
+\index{on\+Import\+Matrix@{on\+Import\+Matrix}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Import\+Matrix(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Import\+Matrix (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_aa86ae397e84455634f3f440e2014c70f}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Import\+Project@{on\+Import\+Project}}
+\index{on\+Import\+Project@{on\+Import\+Project}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Import\+Project(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Import\+Project (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a0ea1f59912cc0627b3887178c2648cd2}
+Evento chamado pelo usuario para importar um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Import\+Serie@{on\+Import\+Serie}}
+\index{on\+Import\+Serie@{on\+Import\+Serie}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Import\+Serie(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Import\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a756e8e5f6179e4f1fe50364830baf9fb}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Interval\+Definition@{on\+Interval\+Definition}}
+\index{on\+Interval\+Definition@{on\+Interval\+Definition}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Interval\+Definition(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Interval\+Definition (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_aefeea34b6976dd6cb69bf0df83f1c644}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Join\+Project@{on\+Join\+Project}}
+\index{on\+Join\+Project@{on\+Join\+Project}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Join\+Project(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Join\+Project (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_acbdb9e34a3a957cac1136e01a7190bef}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+M\+O\+D\+Toolbar\+Choice@{on\+M\+O\+D\+Toolbar\+Choice}}
+\index{on\+M\+O\+D\+Toolbar\+Choice@{on\+M\+O\+D\+Toolbar\+Choice}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+M\+O\+D\+Toolbar\+Choice(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+M\+O\+D\+Toolbar\+Choice (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a4a826d5c2bba8d4c13e66fb9074ba6ef}
+Evento responsavel por esconder/mostrar a tela de boas vindas 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+N\+E\+T\+F\+O\+N\+T\+Scale@{on\+N\+E\+T\+F\+O\+N\+T\+Scale}}
+\index{on\+N\+E\+T\+F\+O\+N\+T\+Scale@{on\+N\+E\+T\+F\+O\+N\+T\+Scale}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+N\+E\+T\+F\+O\+N\+T\+Scale(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+N\+E\+T\+F\+O\+N\+T\+Scale (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a58401a2eaa4d8b356755371a81a35743}
+Evento de modifica��o do tamanho da fonte da rede 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+N\+E\+T\+Toolbar\+Delete@{on\+N\+E\+T\+Toolbar\+Delete}}
+\index{on\+N\+E\+T\+Toolbar\+Delete@{on\+N\+E\+T\+Toolbar\+Delete}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+N\+E\+T\+Toolbar\+Delete(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+N\+E\+T\+Toolbar\+Delete (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_ae1e9a5cde7fd54791b608725b278d658}
+Evento de deletar um elemento 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+N\+E\+T\+Toolbar\+Map@{on\+N\+E\+T\+Toolbar\+Map}}
+\index{on\+N\+E\+T\+Toolbar\+Map@{on\+N\+E\+T\+Toolbar\+Map}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+N\+E\+T\+Toolbar\+Map(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+N\+E\+T\+Toolbar\+Map (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_af92ccb91a98fb8f0dd27b092718d2b89}
+Evento de abrir uma figura para background 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+N\+E\+T\+Toolbar\+Open@{on\+N\+E\+T\+Toolbar\+Open}}
+\index{on\+N\+E\+T\+Toolbar\+Open@{on\+N\+E\+T\+Toolbar\+Open}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+N\+E\+T\+Toolbar\+Open(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+N\+E\+T\+Toolbar\+Open (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a2feaa0fbcff04b25738bab48c689857d}
+Evento de abrir uma rede 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+N\+E\+T\+Toolbar\+Save@{on\+N\+E\+T\+Toolbar\+Save}}
+\index{on\+N\+E\+T\+Toolbar\+Save@{on\+N\+E\+T\+Toolbar\+Save}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+N\+E\+T\+Toolbar\+Save(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+N\+E\+T\+Toolbar\+Save (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a8911a6ca461ba7977fcc23033a3d932e}
+Evento de salvar uma rede 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+N\+E\+T\+T\+O\+O\+L\+S\+Scale@{on\+N\+E\+T\+T\+O\+O\+L\+S\+Scale}}
+\index{on\+N\+E\+T\+T\+O\+O\+L\+S\+Scale@{on\+N\+E\+T\+T\+O\+O\+L\+S\+Scale}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+N\+E\+T\+T\+O\+O\+L\+S\+Scale(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+N\+E\+T\+T\+O\+O\+L\+S\+Scale (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_ad65fbaccbe36d2baaa8e1382b132b048}
+Evento de modifica��o do tamanho do elemento 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+New\+Project@{on\+New\+Project}}
+\index{on\+New\+Project@{on\+New\+Project}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+New\+Project(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+New\+Project (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a863f646531ead02187760de28858cacf}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Open\+Project@{on\+Open\+Project}}
+\index{on\+Open\+Project@{on\+Open\+Project}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Open\+Project(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Open\+Project (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_aa93762a6af4df73cd40caa94db67caa0}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Pane\+Close@{on\+Pane\+Close}}
+\index{on\+Pane\+Close@{on\+Pane\+Close}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Pane\+Close(wx\+Aui\+Manager\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Pane\+Close (
+\begin{DoxyParamCaption}
+\item[{wx\+Aui\+Manager\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a0bd0d5b3a9760c85f886bc612a354327}
+Evento responsavel por encerrar o programa 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Projection\+Click@{on\+Projection\+Click}}
+\index{on\+Projection\+Click@{on\+Projection\+Click}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Projection\+Click(wx\+Command\+Event \&a\+\_\+event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Projection\+Click (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{a\+\_\+event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_frame_ad5f91b54e705ffeff018a90954f46f81}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Property\+Project@{on\+Property\+Project}}
+\index{on\+Property\+Project@{on\+Property\+Project}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Property\+Project(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Property\+Project (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a4db01cb780e44c3be03ac739616672f3}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!On\+Quit@{On\+Quit}}
+\index{On\+Quit@{On\+Quit}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{On\+Quit(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::\+On\+Quit (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_af3515eda5f51db965b7ad397ee574765}
+Evento responsavel por encerrar o programa 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Recent\+Project@{on\+Recent\+Project}}
+\index{on\+Recent\+Project@{on\+Recent\+Project}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Recent\+Project(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Recent\+Project (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a453787be5322dd8f8e0c67b11665713d}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+R\+E\+DO@{on\+R\+E\+DO}}
+\index{on\+R\+E\+DO@{on\+R\+E\+DO}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+R\+E\+D\+O(wx\+Command\+Event \&a\+\_\+command\+Event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+R\+E\+DO (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{a\+\_\+command\+Event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_ac2da841d590618c49811cf64c1e0d417}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Save\+Project(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_add510f557e48cda13ee89b260225f2a7}
+Evento chamado pelo usuario para salvar um projeto com a op��o de escolha/substitui��o do nome do projeto a ser salvo 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Save\+Project\+As@{on\+Save\+Project\+As}}
+\index{on\+Save\+Project\+As@{on\+Save\+Project\+As}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Save\+Project\+As(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Save\+Project\+As (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a7c6368fcee2942cb2d904083a8d937fc}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Select\+All@{on\+Select\+All}}
+\index{on\+Select\+All@{on\+Select\+All}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Select\+All(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Select\+All (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_abbf4899e5e507af7ff3d0f14c22772c3}
+Evento responsavel por esconder/mostrar a legenda 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Select\+All\+Demand\+Nodes@{on\+Select\+All\+Demand\+Nodes}}
+\index{on\+Select\+All\+Demand\+Nodes@{on\+Select\+All\+Demand\+Nodes}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Select\+All\+Demand\+Nodes(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Select\+All\+Demand\+Nodes (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a5fa5334f0a3ef48e9668d890c305884c}
+Selecionar todos os N�s de Demanda \index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Select\+All\+Links@{on\+Select\+All\+Links}}
+\index{on\+Select\+All\+Links@{on\+Select\+All\+Links}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Select\+All\+Links(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Select\+All\+Links (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_acdb68eff1fb9092358bbd21fd7ea3dd9}
+Selecionar todos os links \index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Select\+All\+Nodes@{on\+Select\+All\+Nodes}}
+\index{on\+Select\+All\+Nodes@{on\+Select\+All\+Nodes}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Select\+All\+Nodes(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Select\+All\+Nodes (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_afa0334504a3cbe4eac39d3f070bc3a46}
+Selecionar todos os N�s \index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Select\+All\+Reservoir\+Nodes@{on\+Select\+All\+Reservoir\+Nodes}}
+\index{on\+Select\+All\+Reservoir\+Nodes@{on\+Select\+All\+Reservoir\+Nodes}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Select\+All\+Reservoir\+Nodes(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Select\+All\+Reservoir\+Nodes (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a3e098ac77e85b167b043275ce23a1635}
+Selecionar todos os N�s de Reservat�rio \index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Send\+Analytics@{on\+Send\+Analytics}}
+\index{on\+Send\+Analytics@{on\+Send\+Analytics}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Send\+Analytics(wx\+String url, wx\+String file)}]{\setlength{\rightskip}{0pt plus 5cm}static void S\+I\+G\+A\+Frame\+::on\+Send\+Analytics (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{url, }
+\item[{wx\+String}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_i_g_a_frame_a2224c6c44ab450453b60d099b7a12995}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Shape\+Toolbar\+Centralize@{on\+Shape\+Toolbar\+Centralize}}
+\index{on\+Shape\+Toolbar\+Centralize@{on\+Shape\+Toolbar\+Centralize}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Shape\+Toolbar\+Centralize(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Shape\+Toolbar\+Centralize (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_aa56c6069e392575422449057d5fa5270}
+Evento disparado quando o usuario clina na ferramenta de Centralizar para ajustar zoom e pan para que todos os shapes fiquem vis�veis dentro do canvas 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Shape\+Toolbar\+Selection@{on\+Shape\+Toolbar\+Selection}}
+\index{on\+Shape\+Toolbar\+Selection@{on\+Shape\+Toolbar\+Selection}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Shape\+Toolbar\+Selection(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Shape\+Toolbar\+Selection (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_ad04ce20ccee04d1a9f6edb2748fc8785}
+Evento disparado quando o usu�rio clica na ferramenta de sele��o 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Shape\+Toolbar\+Zoom\+In@{on\+Shape\+Toolbar\+Zoom\+In}}
+\index{on\+Shape\+Toolbar\+Zoom\+In@{on\+Shape\+Toolbar\+Zoom\+In}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Shape\+Toolbar\+Zoom\+In(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Shape\+Toolbar\+Zoom\+In (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_afab23ccc2e5f5403d8ea36dde3a73993}
+Evento disparado quando o usuario clica na ferramenta de Zoom In para navega��o no canvas georeferenciado 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Shape\+Toolbar\+Zoom\+Last@{on\+Shape\+Toolbar\+Zoom\+Last}}
+\index{on\+Shape\+Toolbar\+Zoom\+Last@{on\+Shape\+Toolbar\+Zoom\+Last}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Shape\+Toolbar\+Zoom\+Last(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Shape\+Toolbar\+Zoom\+Last (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a9c1bc2a072f4577a7caf8508d28e21e4}
+Evento disparado quando o usuario clica na ferramenta de Zoom Last para navega��o no canvas georeferenciado 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Shape\+Toolbar\+Zoom\+Next@{on\+Shape\+Toolbar\+Zoom\+Next}}
+\index{on\+Shape\+Toolbar\+Zoom\+Next@{on\+Shape\+Toolbar\+Zoom\+Next}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Shape\+Toolbar\+Zoom\+Next(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Shape\+Toolbar\+Zoom\+Next (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_aebe517f876966b666e2687d2ee21130c}
+Evento disparado quando o usuario clica na ferramenta de Zoom Next para navega��o no canvas georeferenciado 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Shape\+Toolbar\+Zoom\+Out@{on\+Shape\+Toolbar\+Zoom\+Out}}
+\index{on\+Shape\+Toolbar\+Zoom\+Out@{on\+Shape\+Toolbar\+Zoom\+Out}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Shape\+Toolbar\+Zoom\+Out(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Shape\+Toolbar\+Zoom\+Out (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_addd199817240516c30b7faeb33531fb2}
+Evento disparado quando o usuario clica na ferramenta de Zoom Out para navega��o no canvas georeferenciado 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Show\+Guarantee\+Curve@{on\+Show\+Guarantee\+Curve}}
+\index{on\+Show\+Guarantee\+Curve@{on\+Show\+Guarantee\+Curve}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Show\+Guarantee\+Curve(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Show\+Guarantee\+Curve (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a85cd820ce6555a4cc0d957d5260e5f26}
+Evento que mostra uma dialog com as curvas das garantias salvas na execu��o do cen�rio, abertos atrav�s de arquivos. 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Splash\+View@{on\+Splash\+View}}
+\index{on\+Splash\+View@{on\+Splash\+View}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Splash\+View(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Splash\+View (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_aef7501f04414c35562a94a45e19d4564}
+Evento responsavel por esconder os m�dulos 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+Thiessen@{on\+Thiessen}}
+\index{on\+Thiessen@{on\+Thiessen}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+Thiessen(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+Thiessen (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a1debc3b5ff6271bc90d961bd64b14cde}
+Evento disparado ao clicar em Ferramentas-\/$>$\doxyref{Thiessen}{pag.}{class_thiessen} 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+U\+N\+DO@{on\+U\+N\+DO}}
+\index{on\+U\+N\+DO@{on\+U\+N\+DO}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+U\+N\+D\+O(wx\+Command\+Event \&a\+\_\+command\+Event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+U\+N\+DO (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{a\+\_\+command\+Event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_acccbf8140179187af3f127c93d5a9720}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!on\+View@{on\+View}}
+\index{on\+View@{on\+View}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{on\+View(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::on\+View (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a1f169e04d8f4926b62d52a24c6d7bfbb}
+Evento responsavel por esconder/mostrar a legenda 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!remove\+List\+Temp\+Files@{remove\+List\+Temp\+Files}}
+\index{remove\+List\+Temp\+Files@{remove\+List\+Temp\+Files}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{remove\+List\+Temp\+Files()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::remove\+List\+Temp\+Files (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a9102f593838e86115fa745da7edc8630}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!remove\+Progress\+Dialog@{remove\+Progress\+Dialog}}
+\index{remove\+Progress\+Dialog@{remove\+Progress\+Dialog}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{remove\+Progress\+Dialog()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::remove\+Progress\+Dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_afb695c92a34febd9332c14cea01b8ea8}
+Remove a barra de progresso \index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!return\+List\+Temp\+Files@{return\+List\+Temp\+Files}}
+\index{return\+List\+Temp\+Files@{return\+List\+Temp\+Files}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{return\+List\+Temp\+Files()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Array\+String S\+I\+G\+A\+Frame\+::return\+List\+Temp\+Files (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_ac982e02d9bb75454fdd742f2f16f5165}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!update\+Canvas@{update\+Canvas}}
+\index{update\+Canvas@{update\+Canvas}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{update\+Canvas()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::update\+Canvas (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a8be62f9d4b53bd3393767c2507356d33}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!update\+Canvas@{update\+Canvas}}
+\index{update\+Canvas@{update\+Canvas}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{update\+Canvas(int a\+\_\+width, int a\+\_\+height)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::update\+Canvas (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+width, }
+\item[{int}]{a\+\_\+height}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_aa0646f18b39e7ceda37b63eae15568c6}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!update\+Tree\+Series@{update\+Tree\+Series}}
+\index{update\+Tree\+Series@{update\+Tree\+Series}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{update\+Tree\+Series(\+S\+I\+G\+A\+Tree\+Ctrl $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Frame\+::update\+Tree\+Series (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_frame_a2885cf6759dad22e77d0d9f2cdcbf7ec}
+Atualiza as series do tc\+Data\+Serie 
+
+\subsection{Amigas e Funções Relacionadas}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!S\+I\+GA@{S\+I\+GA}}
+\index{S\+I\+GA@{S\+I\+GA}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{S\+I\+GA}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf S\+I\+GA}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_i_g_a_frame_aefed483c5256c9cfb8f37c77b14e8ebe}
+
+
+Definição na linha 53 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!S\+I\+G\+A\+Conf\+File@{S\+I\+G\+A\+Conf\+File}}
+\index{S\+I\+G\+A\+Conf\+File@{S\+I\+G\+A\+Conf\+File}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{S\+I\+G\+A\+Conf\+File}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf S\+I\+G\+A\+Conf\+File}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_i_g_a_frame_aa10fc9434866d586ffa1111ca126717a}
+
+
+Definição na linha 54 do arquivo Siga\+Frame.\+h.
+
+
+
+\subsection{Atributos}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!aui\+Manager@{aui\+Manager}}
+\index{aui\+Manager@{aui\+Manager}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{aui\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Aui\+Manager S\+I\+G\+A\+Frame\+::aui\+Manager}\label{class_s_i_g_a_frame_aa0510daad4ff35791edc488cf577aa3e}
+Gerenciado da interface gr�fica avan�ada 
+
+Definição na linha 139 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!author@{author}}
+\index{author@{author}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{author}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Frame\+::author}\label{class_s_i_g_a_frame_a15700a0bbeb3bfc362814b3eaaf4012d}
+
+
+Definição na linha 118 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!autosave@{autosave}}
+\index{autosave@{autosave}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{autosave}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Frame\+::autosave}\label{class_s_i_g_a_frame_a0a3cce6f9be5c6eede97291006f95485}
+
+
+Definição na linha 109 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!auto\+Save@{auto\+Save}}
+\index{auto\+Save@{auto\+Save}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{auto\+Save}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Frame\+::auto\+Save \{ false \}}\label{class_s_i_g_a_frame_a0dc4a453030b4894c591ef4131d42b3b}
+
+
+Definição na linha 127 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!can\+\_\+save@{can\+\_\+save}}
+\index{can\+\_\+save@{can\+\_\+save}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{can\+\_\+save}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Frame\+::can\+\_\+save \{ true \}}\label{class_s_i_g_a_frame_a115ac9c4f9e818a88e55fce041654fe0}
+
+
+Definição na linha 126 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!default\+Pane\+Info@{default\+Pane\+Info}}
+\index{default\+Pane\+Info@{default\+Pane\+Info}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{default\+Pane\+Info}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Aui\+Pane\+Info S\+I\+G\+A\+Frame\+::default\+Pane\+Info}\label{class_s_i_g_a_frame_a8fa69512a88fb4d3e9627ecbc4ecd020}
+Informa��es comuns a maioria dos panes 
+
+Definição na linha 143 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!dir\+Relatice\+Path@{dir\+Relatice\+Path}}
+\index{dir\+Relatice\+Path@{dir\+Relatice\+Path}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{dir\+Relatice\+Path}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Frame\+::dir\+Relatice\+Path}\label{class_s_i_g_a_frame_a12d4f3e52afd1a02e090f68aa088fca2}
+
+
+Definição na linha 67 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!edit\+Menu@{edit\+Menu}}
+\index{edit\+Menu@{edit\+Menu}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{edit\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Menu$\ast$ S\+I\+G\+A\+Frame\+::edit\+Menu}\label{class_s_i_g_a_frame_a8c46705e1797a8aeea14acc9ceca76ed}
+
+
+Definição na linha 86 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!file\+Menu@{file\+Menu}}
+\index{file\+Menu@{file\+Menu}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{file\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Menu$\ast$ S\+I\+G\+A\+Frame\+::file\+Menu}\label{class_s_i_g_a_frame_a95e9f8860fadb6ba2eccd1fcea32ba6e}
+
+
+Menu arquivo. 
+
+
+
+Definição na linha 87 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!interval\+Sub\+Menu@{interval\+Sub\+Menu}}
+\index{interval\+Sub\+Menu@{interval\+Sub\+Menu}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{interval\+Sub\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Menu$\ast$ S\+I\+G\+A\+Frame\+::interval\+Sub\+Menu}\label{class_s_i_g_a_frame_a79769c4f98054e1858705b046b8f2298}
+
+
+Menu de Intervalo de Tempo. 
+
+
+
+Definição na linha 83 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!interval\+Sub\+Menu\+Auto@{interval\+Sub\+Menu\+Auto}}
+\index{interval\+Sub\+Menu\+Auto@{interval\+Sub\+Menu\+Auto}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{interval\+Sub\+Menu\+Auto}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Menu$\ast$ S\+I\+G\+A\+Frame\+::interval\+Sub\+Menu\+Auto}\label{class_s_i_g_a_frame_a7a1729a3c8f96b1111cd52074f1836d9}
+
+
+Menu de Intervalo do Auto Save. 
+
+
+
+Definição na linha 84 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!language@{language}}
+\index{language@{language}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{language}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Menu$\ast$ S\+I\+G\+A\+Frame\+::language}\label{class_s_i_g_a_frame_ae379f2b0289aa2cd819b8603c0df8ab1}
+
+
+Menu de Idioma. 
+
+
+
+Definição na linha 82 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!layers@{layers}}
+\index{layers@{layers}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{layers}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Frame\+::layers}\label{class_s_i_g_a_frame_a65918165ff55fc8df40082194c4b5d40}
+Mostrar ou n�o a A\+UI dos layers ao abrir o \doxyref{S\+I\+GA}{pag.}{class_s_i_g_a} 
+
+Definição na linha 108 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!m\+\_\+projection\+Button@{m\+\_\+projection\+Button}}
+\index{m\+\_\+projection\+Button@{m\+\_\+projection\+Button}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{m\+\_\+projection\+Button}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ S\+I\+G\+A\+Frame\+::m\+\_\+projection\+Button = nullptr\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_frame_a9adb5abe90ce6ea24c8141efbc5d68d5}
+
+
+Definição na linha 62 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!m\+\_\+projection\+Sizer@{m\+\_\+projection\+Sizer}}
+\index{m\+\_\+projection\+Sizer@{m\+\_\+projection\+Sizer}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{m\+\_\+projection\+Sizer}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Box\+Sizer$\ast$ S\+I\+G\+A\+Frame\+::m\+\_\+projection\+Sizer = nullptr\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_frame_a32fc50680709063cefbce1d42ffd15bb}
+
+
+Definição na linha 60 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!m\+\_\+status\+Bar@{m\+\_\+status\+Bar}}
+\index{m\+\_\+status\+Bar@{m\+\_\+status\+Bar}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{m\+\_\+status\+Bar}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Status\+Bar$\ast$ S\+I\+G\+A\+Frame\+::m\+\_\+status\+Bar = nullptr\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_frame_a8aaca1aba28ca8536160929085a1eabd}
+
+
+Definição na linha 61 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!mod\+Toolbar@{mod\+Toolbar}}
+\index{mod\+Toolbar@{mod\+Toolbar}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{mod\+Toolbar}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Frame\+::mod\+Toolbar}\label{class_s_i_g_a_frame_a29760ca580c9efc44deccc8ebdd6bb48}
+
+
+Definição na linha 114 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!nettoolstoolbar@{nettoolstoolbar}}
+\index{nettoolstoolbar@{nettoolstoolbar}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{nettoolstoolbar}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Frame\+::nettoolstoolbar}\label{class_s_i_g_a_frame_addb0af914c9caa39973869076b0a8416}
+
+
+Definição na linha 114 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!normal\+Path@{normal\+Path}}
+\index{normal\+Path@{normal\+Path}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{normal\+Path}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Frame\+::normal\+Path}\label{class_s_i_g_a_frame_a8d1981c0089ef091a62464cf2f395ee4}
+
+
+Definição na linha 124 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!note\+Components@{note\+Components}}
+\index{note\+Components@{note\+Components}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{note\+Components}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choicebook$\ast$ S\+I\+G\+A\+Frame\+::note\+Components}\label{class_s_i_g_a_frame_abc824bb001f3288d6ac61408a9e33aa4}
+Vers�o Choicebook em que suas paginas apontam para interface de cada modelo 
+
+Definição na linha 135 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!progress\+Dialog@{progress\+Dialog}}
+\index{progress\+Dialog@{progress\+Dialog}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{progress\+Dialog}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Progress\+Dialog$\ast$ S\+I\+G\+A\+Frame\+::progress\+Dialog}\label{class_s_i_g_a_frame_a3e0201e4058d150e679c83ab48f9f0d3}
+Barra de progresso 
+
+Definição na linha 92 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!recent\+Opened\+Projects@{recent\+Opened\+Projects}}
+\index{recent\+Opened\+Projects@{recent\+Opened\+Projects}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{recent\+Opened\+Projects}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Menu$\ast$ S\+I\+G\+A\+Frame\+::recent\+Opened\+Projects\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_frame_afa7791b346c9651ee8e3d72c89af0d51}
+Projetos recentes 
+
+Definição na linha 59 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!recent\+Projects@{recent\+Projects}}
+\index{recent\+Projects@{recent\+Projects}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{recent\+Projects}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$wx\+String$>$ S\+I\+G\+A\+Frame\+::recent\+Projects}\label{class_s_i_g_a_frame_a1a4e171d2147d321246aaa47a50950ab}
+Vetor com os 5 projetos recentes 
+
+Definição na linha 80 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!shapetoolbar@{shapetoolbar}}
+\index{shapetoolbar@{shapetoolbar}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{shapetoolbar}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Frame\+::shapetoolbar}\label{class_s_i_g_a_frame_a28b4f7a956718c109d8e5f1287dc35e0}
+
+
+Definição na linha 114 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!show\+\_\+sub\+\_\+network\+\_\+panel\+\_\+@{show\+\_\+sub\+\_\+network\+\_\+panel\+\_\+}}
+\index{show\+\_\+sub\+\_\+network\+\_\+panel\+\_\+@{show\+\_\+sub\+\_\+network\+\_\+panel\+\_\+}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{show\+\_\+sub\+\_\+network\+\_\+panel\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Frame\+::show\+\_\+sub\+\_\+network\+\_\+panel\+\_\+}\label{class_s_i_g_a_frame_a7fd388336f9208063cc7b65c47309aef}
+
+
+Definição na linha 110 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!S\+I\+G\+Aproperty@{S\+I\+G\+Aproperty}}
+\index{S\+I\+G\+Aproperty@{S\+I\+G\+Aproperty}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{S\+I\+G\+Aproperty}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Project\+Property}$\ast$ S\+I\+G\+A\+Frame\+::\+S\+I\+G\+Aproperty}\label{class_s_i_g_a_frame_abbcf0af05c0506636c7928ca82ad09da}
+Propriedades do Projeto do \doxyref{S\+I\+GA}{pag.}{class_s_i_g_a} 
+
+Definição na linha 76 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!siga\+Toolbar@{siga\+Toolbar}}
+\index{siga\+Toolbar@{siga\+Toolbar}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{siga\+Toolbar}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Frame\+::siga\+Toolbar}\label{class_s_i_g_a_frame_a1cef3a708766bfc58d3bfe7b035c6518}
+Mostrar ou n�o o S\+I\+G\+A\+T\+O\+O\+L\+B\+AR / M\+O\+D\+T\+O\+O\+L\+B\+AR / N\+E\+T\+T\+O\+O\+L\+S\+T\+O\+O\+L\+B\+AR / S\+H\+A\+P\+E\+T\+O\+O\+L\+B\+AR 
+
+Definição na linha 114 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!splash@{splash}}
+\index{splash@{splash}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{splash}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Frame\+::splash}\label{class_s_i_g_a_frame_a5c2625bf80cdd02e9198078c3846d87a}
+Mostrar ou n�o a tela de boas vindas 
+
+Definição na linha 100 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!subtitle@{subtitle}}
+\index{subtitle@{subtitle}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{subtitle}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Frame\+::subtitle}\label{class_s_i_g_a_frame_a8c389d158fe8fbb0058446a57ecd445f}
+Mostrar ou n�o a legenda ao abrir o \doxyref{S\+I\+GA}{pag.}{class_s_i_g_a} 
+
+Definição na linha 104 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!tb\+Comp@{tb\+Comp}}
+\index{tb\+Comp@{tb\+Comp}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{tb\+Comp}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tool\+Bar $\ast$ S\+I\+G\+A\+Frame\+::tb\+Comp}\label{class_s_i_g_a_frame_a3fa0a54f30086fce157df14358ce44d5}
+
+
+Definição na linha 71 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!tb\+Mod@{tb\+Mod}}
+\index{tb\+Mod@{tb\+Mod}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{tb\+Mod}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tool\+Bar $\ast$ S\+I\+G\+A\+Frame\+::tb\+Mod}\label{class_s_i_g_a_frame_a934b9fe71cdc3f4ee5cc39ab0886083e}
+
+
+Definição na linha 71 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!tb\+Net@{tb\+Net}}
+\index{tb\+Net@{tb\+Net}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{tb\+Net}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tool\+Bar $\ast$ S\+I\+G\+A\+Frame\+::tb\+Net}\label{class_s_i_g_a_frame_a11d867ad450c36a40d1e420c5803cf1f}
+
+
+Definição na linha 71 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!tb\+Net\+Elem@{tb\+Net\+Elem}}
+\index{tb\+Net\+Elem@{tb\+Net\+Elem}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{tb\+Net\+Elem}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tool\+Bar $\ast$ S\+I\+G\+A\+Frame\+::tb\+Net\+Elem}\label{class_s_i_g_a_frame_add92233fcc5adf36690986b04587058c}
+
+
+Definição na linha 71 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!tb\+Net\+Tools@{tb\+Net\+Tools}}
+\index{tb\+Net\+Tools@{tb\+Net\+Tools}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{tb\+Net\+Tools}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tool\+Bar $\ast$ S\+I\+G\+A\+Frame\+::tb\+Net\+Tools}\label{class_s_i_g_a_frame_a0da0574a4e3dda344dc4109468e00235}
+
+
+Definição na linha 71 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!tb\+Shape@{tb\+Shape}}
+\index{tb\+Shape@{tb\+Shape}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{tb\+Shape}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tool\+Bar $\ast$ S\+I\+G\+A\+Frame\+::tb\+Shape}\label{class_s_i_g_a_frame_a44fb2462e9b98aa71efca9247cb05644}
+
+
+Definição na linha 71 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!tb\+S\+I\+GA@{tb\+S\+I\+GA}}
+\index{tb\+S\+I\+GA@{tb\+S\+I\+GA}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{tb\+S\+I\+GA}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tool\+Bar$\ast$ S\+I\+G\+A\+Frame\+::tb\+S\+I\+GA}\label{class_s_i_g_a_frame_afaa7860f7b0d00670aa7617766baa8c7}
+Barra de ferramentas 
+
+Definição na linha 71 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!temp\+Path@{temp\+Path}}
+\index{temp\+Path@{temp\+Path}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{temp\+Path}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Frame\+::temp\+Path}\label{class_s_i_g_a_frame_a23d6770099b423ef0b5b72aef8640d48}
+
+
+Definição na linha 125 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!time\+Interval@{time\+Interval}}
+\index{time\+Interval@{time\+Interval}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{time\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Date\+::\+Time\+Interval} S\+I\+G\+A\+Frame\+::time\+Interval}\label{class_s_i_g_a_frame_af7747f62d12367eb246a4d221a2d6edc}
+Tipo de intervalo de tempo 
+
+Definição na linha 96 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!title@{title}}
+\index{title@{title}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{title}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Frame\+::title}\label{class_s_i_g_a_frame_afdd5e2c282e72faa89d9b27a6a9ef810}
+Texto para Quardar Titulo e Autor 
+
+Definição na linha 118 do arquivo Siga\+Frame.\+h.
+
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!view\+Menu@{view\+Menu}}
+\index{view\+Menu@{view\+Menu}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\subsubsection[{view\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Menu$\ast$ S\+I\+G\+A\+Frame\+::view\+Menu}\label{class_s_i_g_a_frame_acf7170eeb35cebaadf1252482c0bd901}
+
+
+Menu exibir. 
+
+
+
+Definição na linha 85 do arquivo Siga\+Frame.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Siga\+Frame.\+h}\end{DoxyCompactItemize}

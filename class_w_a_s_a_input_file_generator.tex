@@ -1,0 +1,416 @@
+\section{Refer√™ncia da Classe W\+A\+S\+A\+Input\+File\+Generator}
+\label{class_w_a_s_a_input_file_generator}\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+
+
+{\ttfamily \#include $<$W\+A\+S\+A\+Input\+File\+Generator.\+h$>$}
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf W\+A\+S\+A\+Input\+File\+Generator} (const wx\+String \&{\bf output\+Dir}, O\+G\+R\+Data\+Source $\ast${\bf wasa\+Final\+DS}, O\+G\+R\+Data\+Source $\ast${\bf lu2\+DS})
+\item 
+virtual {\bf $\sim$\+W\+A\+S\+A\+Input\+File\+Generator} ()
+\item 
+bool {\bf generate} ()
+\item 
+void {\bf generate\+Wasa\+Tree} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Est√°ticos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+static const double {\bf M2\+\_\+\+T\+O\+\_\+\+K\+M2\+\_\+\+F\+A\+C\+T\+OR}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf get\+Length\+From\+Feature} (O\+G\+R\+Feature $\ast$feature)
+\item 
+void {\bf get\+L\+Us\+From\+Features} (const std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&basin\+Features, {\bf Hymo\+File\+Entry} \&output\+File\+Entry)
+\item 
+void {\bf get\+T\+Cs\+From\+Features} (const std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&lu\+Features, {\bf Soter\+File\+Entry} \&output\+File\+Entry)
+\item 
+{\bf Hymo\+File\+Entry} {\bf get\+Hymo\+Entry\+From\+Features} (const std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&basin\+Features)
+\item 
+{\bf Soter\+File\+Entry} {\bf get\+Soter\+Entry\+From\+Features} (const std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&lu\+Features, O\+G\+R\+Feature $\ast$lu2\+Feature)
+\item 
+{\bf Terrain\+File\+Entry} {\bf get\+Terrain\+Entry\+From\+Features} (const std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&lu\+Features, std\+::map$<$ int, double $>$ \&lu\+Areas)
+\item 
+{\bf Soil\+Vegetation\+File\+Entry} {\bf get\+Soil\+Vegetation\+Entry\+From\+Features} (std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&tc\+Features, std\+::map$<$ int, double $>$ \&tc\+Areas)
+\item 
+void {\bf generate\+Hymo} ()
+\item 
+void {\bf generate\+Terrain} ()
+\item 
+void {\bf generate\+Soil\+Vegetation} ()
+\item 
+void {\bf collect\+Soter\+File\+Entries} ()
+\item 
+void {\bf collect\+Vegetation\+File\+Entries} ()
+\item 
+void {\bf collect\+Soil\+File\+Entries} ()
+\item 
+void {\bf generate\+Do\+Dat} ()
+\item 
+void {\bf generate\+Soter} ()
+\item 
+void {\bf generate\+Vegetation} ()
+\item 
+void {\bf generate\+Soil} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+String {\bf gen\+Path\+Input}
+\item 
+wx\+String {\bf gen\+Path\+Input\+Hillslope}
+\item 
+wx\+String {\bf output\+Dir}
+\item 
+wx\+String {\bf hymo\+File\+Name}
+\item 
+wx\+String {\bf soter\+File\+Name}
+\item 
+wx\+String {\bf terrain\+File\+Name}
+\item 
+wx\+String {\bf soil\+Vegetation\+File\+Name}
+\item 
+wx\+String {\bf soil\+File\+Name}
+\item 
+wx\+String {\bf vegetation\+File\+Name}
+\item 
+wx\+String {\bf do\+File\+Name}
+\item 
+O\+G\+R\+Data\+Source $\ast$ {\bf wasa\+Final\+DS}
+\item 
+O\+G\+R\+Data\+Source $\ast$ {\bf lu2\+DS}
+\item 
+{\bf W\+A\+S\+A\+Parameter\+Dialog} $\ast$ {\bf parameter\+Dialog}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 22 do arquivo W\+A\+S\+A\+Input\+File\+Generator.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{W\+A\+S\+A\+Input\+File\+Generator(const wx\+String \&output\+Dir, O\+G\+R\+Data\+Source $\ast$wasa\+Final\+D\+S, O\+G\+R\+Data\+Source $\ast$lu2\+D\+S)}]{\setlength{\rightskip}{0pt plus 5cm}W\+A\+S\+A\+Input\+File\+Generator\+::\+W\+A\+S\+A\+Input\+File\+Generator (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{output\+Dir, }
+\item[{O\+G\+R\+Data\+Source $\ast$}]{wasa\+Final\+DS, }
+\item[{O\+G\+R\+Data\+Source $\ast$}]{lu2\+DS}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_input_file_generator_a9cbf39afd527c8fedac3828c4223f5be}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em output\+Dir} & DiretÛrio onde os arquivos de entrada do W\+A\+SA ser„o gerados \\
+\hline
+\end{DoxyParams}
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!````~W\+A\+S\+A\+Input\+File\+Generator@{$\sim$\+W\+A\+S\+A\+Input\+File\+Generator}}
+\index{````~W\+A\+S\+A\+Input\+File\+Generator@{$\sim$\+W\+A\+S\+A\+Input\+File\+Generator}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{$\sim$\+W\+A\+S\+A\+Input\+File\+Generator()}]{\setlength{\rightskip}{0pt plus 5cm}virtual W\+A\+S\+A\+Input\+File\+Generator\+::$\sim$\+W\+A\+S\+A\+Input\+File\+Generator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_input_file_generator_a0898573a76332a812d7ab3a848663dd6}
+Destrutor 
+
+\subsection{M√©todos}
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!collect\+Soil\+File\+Entries@{collect\+Soil\+File\+Entries}}
+\index{collect\+Soil\+File\+Entries@{collect\+Soil\+File\+Entries}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{collect\+Soil\+File\+Entries()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Input\+File\+Generator\+::collect\+Soil\+File\+Entries (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_afc553c7a53806c2d4b4c3293f0ea6d60}
+Recupera as Features necess·rias para gerar a grid do soil e o respectivo arquivo de entrada \index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!collect\+Soter\+File\+Entries@{collect\+Soter\+File\+Entries}}
+\index{collect\+Soter\+File\+Entries@{collect\+Soter\+File\+Entries}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{collect\+Soter\+File\+Entries()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Input\+File\+Generator\+::collect\+Soter\+File\+Entries (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_a6f6cfe6dc50e7a8cce10a61112c27d99}
+Recupera as Features necess·rias para gerar a grid do soter e o respectivo arquivo de entrada \index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!collect\+Vegetation\+File\+Entries@{collect\+Vegetation\+File\+Entries}}
+\index{collect\+Vegetation\+File\+Entries@{collect\+Vegetation\+File\+Entries}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{collect\+Vegetation\+File\+Entries()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Input\+File\+Generator\+::collect\+Vegetation\+File\+Entries (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_acea749bc3488d71cc2b950f826a3fd6d}
+Recupera as Features necess·rias para gerar a grid do vegetation e o respectivo arquivo de entrada \index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!generate@{generate}}
+\index{generate@{generate}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{generate()}]{\setlength{\rightskip}{0pt plus 5cm}bool W\+A\+S\+A\+Input\+File\+Generator\+::generate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_input_file_generator_a4d8e707b0787d86acc0b02f6d7989e59}
+Gera todos os arquivos de entrada do W\+A\+SA no diretÛrio \textquotesingle{}output\+Dir\textquotesingle{} (especificado no construtor). \index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!generate\+Do\+Dat@{generate\+Do\+Dat}}
+\index{generate\+Do\+Dat@{generate\+Do\+Dat}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{generate\+Do\+Dat()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Input\+File\+Generator\+::generate\+Do\+Dat (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_a9375b7c7afdec95e90e627ad87f3e580}
+Gera o arquivo de entrada \textquotesingle{}do.\+dat\textquotesingle{} \index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!generate\+Hymo@{generate\+Hymo}}
+\index{generate\+Hymo@{generate\+Hymo}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{generate\+Hymo()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Input\+File\+Generator\+::generate\+Hymo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_a9e3e658aea2982689f989f7efbd67276}
+Gera o arquivo de entrada \textquotesingle{}hymo.\+dat\textquotesingle{}. \index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!generate\+Soil@{generate\+Soil}}
+\index{generate\+Soil@{generate\+Soil}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{generate\+Soil()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Input\+File\+Generator\+::generate\+Soil (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_aa03cd4f1a2db07689fdbfd805ff6c40d}
+Gera o arquivo de entrada \textquotesingle{}soil.\+dat\textquotesingle{} \index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!generate\+Soil\+Vegetation@{generate\+Soil\+Vegetation}}
+\index{generate\+Soil\+Vegetation@{generate\+Soil\+Vegetation}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{generate\+Soil\+Vegetation()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Input\+File\+Generator\+::generate\+Soil\+Vegetation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_a8a6b5fcb115d5146813abb62cea84767}
+Gera o arquivo de entrada \textquotesingle{}soil\+\_\+vegetation.\+dat\textquotesingle{} \index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!generate\+Soter@{generate\+Soter}}
+\index{generate\+Soter@{generate\+Soter}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{generate\+Soter()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Input\+File\+Generator\+::generate\+Soter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_aa98cb6f832c156bc7f8b47fc1549ed31}
+Gera o arquivo de entrada \textquotesingle{}soter.\+dat\textquotesingle{}. \index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!generate\+Terrain@{generate\+Terrain}}
+\index{generate\+Terrain@{generate\+Terrain}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{generate\+Terrain()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Input\+File\+Generator\+::generate\+Terrain (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_ab531f30774f75b753dd4fdbb6883cd82}
+Gera o arquivo de entrada \textquotesingle{}terrain.\+dat\textquotesingle{}. \index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!generate\+Vegetation@{generate\+Vegetation}}
+\index{generate\+Vegetation@{generate\+Vegetation}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{generate\+Vegetation()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Input\+File\+Generator\+::generate\+Vegetation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_afdbad23063b8f362205ed611092e3fc6}
+Gera o arquivo de entrada \textquotesingle{}vegetation.\+dat\textquotesingle{} \index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!generate\+Wasa\+Tree@{generate\+Wasa\+Tree}}
+\index{generate\+Wasa\+Tree@{generate\+Wasa\+Tree}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{generate\+Wasa\+Tree()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Input\+File\+Generator\+::generate\+Wasa\+Tree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_input_file_generator_a69f2d585f13a6e42ebb15719e330fd58}
+Gera a ¡rvore necess·ria para guradar os dados classificados pelo \doxyref{S\+I\+GA}{pag.}{class_s_i_g_a}. \index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!get\+Hymo\+Entry\+From\+Features@{get\+Hymo\+Entry\+From\+Features}}
+\index{get\+Hymo\+Entry\+From\+Features@{get\+Hymo\+Entry\+From\+Features}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{get\+Hymo\+Entry\+From\+Features(const std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&basin\+Features)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hymo\+File\+Entry} W\+A\+S\+A\+Input\+File\+Generator\+::get\+Hymo\+Entry\+From\+Features (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&}]{basin\+Features}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_a8be1b8f6947e23937da41a81119cfcbf}
+Dado a lista de features de uma mesma bacia, calcula a Entry(linha) referente ao arquivo \textquotesingle{}hymo.\+dat\textquotesingle{}
+
+
+\begin{DoxyParams}{Par√¢metros}
+{\em basin\+Features} & Lista de features de uma mesma bacia, onde ser„o coletados os dados da linha do hymo.\+dat \\
+\hline
+\end{DoxyParams}
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!get\+Length\+From\+Feature@{get\+Length\+From\+Feature}}
+\index{get\+Length\+From\+Feature@{get\+Length\+From\+Feature}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{get\+Length\+From\+Feature(\+O\+G\+R\+Feature $\ast$feature)}]{\setlength{\rightskip}{0pt plus 5cm}double W\+A\+S\+A\+Input\+File\+Generator\+::get\+Length\+From\+Feature (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Feature $\ast$}]{feature}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_a72f66d4b0b2641bbe1513d4d035a2fdc}
+Calcula a mÈdia das Lengths de todos os polÌgonos da feature. Length = ¡rea(p) / PerÌmetro(p), seja p um polÌgono qualquer. \index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!get\+L\+Us\+From\+Features@{get\+L\+Us\+From\+Features}}
+\index{get\+L\+Us\+From\+Features@{get\+L\+Us\+From\+Features}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{get\+L\+Us\+From\+Features(const std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&basin\+Features, Hymo\+File\+Entry \&output\+File\+Entry)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Input\+File\+Generator\+::get\+L\+Us\+From\+Features (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&}]{basin\+Features, }
+\item[{{\bf Hymo\+File\+Entry} \&}]{output\+File\+Entry}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_a445fa70803cf44d82f6679fff278438d}
+Dada a lista de features de uma bacia, este mÈtodo calcula os dados dos LU\textquotesingle{}s e retorna diretamente dentro do objeto hymo\+File\+Entry
+
+
+\begin{DoxyParams}{Par√¢metros}
+{\em basin\+Features} & Lista de features de uma b·cia, de onde ser„o coletados os dados sobre as LU\textquotesingle{}s \\
+\hline
+{\em output\+File\+Entry} & O\+UT objeto onde ser„o jogadas as informaÁıes das LU\textquotesingle{}s \\
+\hline
+\end{DoxyParams}
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!get\+Soil\+Vegetation\+Entry\+From\+Features@{get\+Soil\+Vegetation\+Entry\+From\+Features}}
+\index{get\+Soil\+Vegetation\+Entry\+From\+Features@{get\+Soil\+Vegetation\+Entry\+From\+Features}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{get\+Soil\+Vegetation\+Entry\+From\+Features(std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&tc\+Features, std\+::map$<$ int, double $>$ \&tc\+Areas)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Soil\+Vegetation\+File\+Entry} W\+A\+S\+A\+Input\+File\+Generator\+::get\+Soil\+Vegetation\+Entry\+From\+Features (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&}]{tc\+Features, }
+\item[{std\+::map$<$ int, double $>$ \&}]{tc\+Areas}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_aec6ba1350029a484d677ab2a1a02f391}
+Dado a lista de features de um mesmo TC, calcula a Entry(linha) referente ao arquivo \textquotesingle{}soil\+\_\+vegetation.\+dat\textquotesingle{}
+
+
+\begin{DoxyParams}{Par√¢metros}
+{\em tc\+Features} & Lista de features de um mesmo TC, onde ser„o coletados os dados da linha do \textquotesingle{}soil\+\_\+vegetation.\+dat\textquotesingle{} \\
+\hline
+{\em tc\+Areas} & Map contendo as ·reas das T\+Cs (chave = T\+C\+ID, valores = ·rea) \\
+\hline
+\end{DoxyParams}
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!get\+Soter\+Entry\+From\+Features@{get\+Soter\+Entry\+From\+Features}}
+\index{get\+Soter\+Entry\+From\+Features@{get\+Soter\+Entry\+From\+Features}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{get\+Soter\+Entry\+From\+Features(const std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&lu\+Features, O\+G\+R\+Feature $\ast$lu2\+Feature)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Soter\+File\+Entry} W\+A\+S\+A\+Input\+File\+Generator\+::get\+Soter\+Entry\+From\+Features (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&}]{lu\+Features, }
+\item[{O\+G\+R\+Feature $\ast$}]{lu2\+Feature}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_a01cfe6a95e4b2c12c16c56d6ca322d74}
+Dado a lista de features de um mesmo LU, calcula a Entry(linha) referente ao arquivo \textquotesingle{}soter.\+dat\textquotesingle{}
+
+
+\begin{DoxyParams}{Par√¢metros}
+{\em lu\+Features} & Lista de features de um mesmo LU, onde ser„o coletados os dados da linha do soter.\+dat \\
+\hline
+{\em lu2\+Feature} & Feature do shapefile L\+U2 referente as L\+Us coletadas. \\
+\hline
+\end{DoxyParams}
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!get\+T\+Cs\+From\+Features@{get\+T\+Cs\+From\+Features}}
+\index{get\+T\+Cs\+From\+Features@{get\+T\+Cs\+From\+Features}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{get\+T\+Cs\+From\+Features(const std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&lu\+Features, Soter\+File\+Entry \&output\+File\+Entry)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Input\+File\+Generator\+::get\+T\+Cs\+From\+Features (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&}]{lu\+Features, }
+\item[{{\bf Soter\+File\+Entry} \&}]{output\+File\+Entry}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_a4ca4f19a313d7807cba56ea14b33c72b}
+Dada a lista de features de um LU, este mÈtodo calcula os dados dos TC\textquotesingle{}s e retorna diretamente dentro do objeto soter\+File\+Entry
+
+
+\begin{DoxyParams}{Par√¢metros}
+{\em lu\+Features} & Lista de features de um LU, de onde ser„o coletados os dados sobre as TC\textquotesingle{}s \\
+\hline
+{\em output\+File\+Entry} & O\+UT objeto onde ser„o jogadas as informaÁıes dos TC\textquotesingle{}s \\
+\hline
+\end{DoxyParams}
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!get\+Terrain\+Entry\+From\+Features@{get\+Terrain\+Entry\+From\+Features}}
+\index{get\+Terrain\+Entry\+From\+Features@{get\+Terrain\+Entry\+From\+Features}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{get\+Terrain\+Entry\+From\+Features(const std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&lu\+Features, std\+::map$<$ int, double $>$ \&lu\+Areas)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Terrain\+File\+Entry} W\+A\+S\+A\+Input\+File\+Generator\+::get\+Terrain\+Entry\+From\+Features (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ \&}]{lu\+Features, }
+\item[{std\+::map$<$ int, double $>$ \&}]{lu\+Areas}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_ab7290dd9337e920cb72a5695c614536f}
+Dado a lista de features de um mesmo LU, calcula a Entry(linha) referente ao arquivo \textquotesingle{}terrain.\+dat\textquotesingle{}
+
+
+\begin{DoxyParams}{Par√¢metros}
+{\em lu\+Features} & Lista de features de um mesmo LU, onde ser„o coletados os dados da linha do \textquotesingle{}terrain.\+dat\textquotesingle{}  lu\+Areas Map contendo as ·reas das L\+Us (chave = L\+U\+ID, valores = ·rea) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!do\+File\+Name@{do\+File\+Name}}
+\index{do\+File\+Name@{do\+File\+Name}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{do\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String W\+A\+S\+A\+Input\+File\+Generator\+::do\+File\+Name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_a086835793d729c4dce92d5d9e1c92347}
+
+
+Defini√ß√£o na linha 50 do arquivo W\+A\+S\+A\+Input\+File\+Generator.\+h.
+
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!gen\+Path\+Input@{gen\+Path\+Input}}
+\index{gen\+Path\+Input@{gen\+Path\+Input}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{gen\+Path\+Input}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String W\+A\+S\+A\+Input\+File\+Generator\+::gen\+Path\+Input\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_a7cdc3fccfb72de2460136067cfc25cc1}
+
+
+Defini√ß√£o na linha 27 do arquivo W\+A\+S\+A\+Input\+File\+Generator.\+h.
+
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!gen\+Path\+Input\+Hillslope@{gen\+Path\+Input\+Hillslope}}
+\index{gen\+Path\+Input\+Hillslope@{gen\+Path\+Input\+Hillslope}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{gen\+Path\+Input\+Hillslope}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String W\+A\+S\+A\+Input\+File\+Generator\+::gen\+Path\+Input\+Hillslope\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_a1b61ad7c2915e0a556f7ad64f90edeb8}
+
+
+Defini√ß√£o na linha 28 do arquivo W\+A\+S\+A\+Input\+File\+Generator.\+h.
+
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!hymo\+File\+Name@{hymo\+File\+Name}}
+\index{hymo\+File\+Name@{hymo\+File\+Name}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{hymo\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String W\+A\+S\+A\+Input\+File\+Generator\+::hymo\+File\+Name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_ace750acd450631eea7d2bfb4def8e93e}
+
+
+Defini√ß√£o na linha 32 do arquivo W\+A\+S\+A\+Input\+File\+Generator.\+h.
+
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!lu2\+DS@{lu2\+DS}}
+\index{lu2\+DS@{lu2\+DS}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{lu2\+DS}]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Data\+Source$\ast$ W\+A\+S\+A\+Input\+File\+Generator\+::lu2\+DS\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_abb28fa7f588fdf9d757d920cc145971b}
+
+
+Defini√ß√£o na linha 56 do arquivo W\+A\+S\+A\+Input\+File\+Generator.\+h.
+
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!M2\+\_\+\+T\+O\+\_\+\+K\+M2\+\_\+\+F\+A\+C\+T\+OR@{M2\+\_\+\+T\+O\+\_\+\+K\+M2\+\_\+\+F\+A\+C\+T\+OR}}
+\index{M2\+\_\+\+T\+O\+\_\+\+K\+M2\+\_\+\+F\+A\+C\+T\+OR@{M2\+\_\+\+T\+O\+\_\+\+K\+M2\+\_\+\+F\+A\+C\+T\+OR}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{M2\+\_\+\+T\+O\+\_\+\+K\+M2\+\_\+\+F\+A\+C\+T\+OR}]{\setlength{\rightskip}{0pt plus 5cm}const double W\+A\+S\+A\+Input\+File\+Generator\+::\+M2\+\_\+\+T\+O\+\_\+\+K\+M2\+\_\+\+F\+A\+C\+T\+OR\hspace{0.3cm}{\ttfamily [static]}}\label{class_w_a_s_a_input_file_generator_ac9a76e62baf92d962fc30f6f91171b4f}
+
+
+Defini√ß√£o na linha 170 do arquivo W\+A\+S\+A\+Input\+File\+Generator.\+h.
+
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!output\+Dir@{output\+Dir}}
+\index{output\+Dir@{output\+Dir}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{output\+Dir}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String W\+A\+S\+A\+Input\+File\+Generator\+::output\+Dir\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_ae4edca6c5a42028e8b745b64e33c9cd2}
+
+
+Defini√ß√£o na linha 29 do arquivo W\+A\+S\+A\+Input\+File\+Generator.\+h.
+
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!parameter\+Dialog@{parameter\+Dialog}}
+\index{parameter\+Dialog@{parameter\+Dialog}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{parameter\+Dialog}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+A\+S\+A\+Parameter\+Dialog}$\ast$ W\+A\+S\+A\+Input\+File\+Generator\+::parameter\+Dialog\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_ae1f175f26756094233a7076482fa28c2}
+
+
+Defini√ß√£o na linha 59 do arquivo W\+A\+S\+A\+Input\+File\+Generator.\+h.
+
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!soil\+File\+Name@{soil\+File\+Name}}
+\index{soil\+File\+Name@{soil\+File\+Name}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{soil\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String W\+A\+S\+A\+Input\+File\+Generator\+::soil\+File\+Name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_a594caa635f1c8e177ab4da654c8dced0}
+
+
+Defini√ß√£o na linha 44 do arquivo W\+A\+S\+A\+Input\+File\+Generator.\+h.
+
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!soil\+Vegetation\+File\+Name@{soil\+Vegetation\+File\+Name}}
+\index{soil\+Vegetation\+File\+Name@{soil\+Vegetation\+File\+Name}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{soil\+Vegetation\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String W\+A\+S\+A\+Input\+File\+Generator\+::soil\+Vegetation\+File\+Name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_a05bcf4c7d9c2432da13a6721281926b5}
+
+
+Defini√ß√£o na linha 41 do arquivo W\+A\+S\+A\+Input\+File\+Generator.\+h.
+
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!soter\+File\+Name@{soter\+File\+Name}}
+\index{soter\+File\+Name@{soter\+File\+Name}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{soter\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String W\+A\+S\+A\+Input\+File\+Generator\+::soter\+File\+Name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_aac2cef7297baca3ddb84a5101f1f7ce0}
+
+
+Defini√ß√£o na linha 35 do arquivo W\+A\+S\+A\+Input\+File\+Generator.\+h.
+
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!terrain\+File\+Name@{terrain\+File\+Name}}
+\index{terrain\+File\+Name@{terrain\+File\+Name}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{terrain\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String W\+A\+S\+A\+Input\+File\+Generator\+::terrain\+File\+Name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_aadb7ee13976b3a9ca3dee3f93844f5eb}
+
+
+Defini√ß√£o na linha 38 do arquivo W\+A\+S\+A\+Input\+File\+Generator.\+h.
+
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!vegetation\+File\+Name@{vegetation\+File\+Name}}
+\index{vegetation\+File\+Name@{vegetation\+File\+Name}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{vegetation\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String W\+A\+S\+A\+Input\+File\+Generator\+::vegetation\+File\+Name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_a264ee797ab726855dcdaa9bb2d3bc0a6}
+
+
+Defini√ß√£o na linha 47 do arquivo W\+A\+S\+A\+Input\+File\+Generator.\+h.
+
+\index{W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}!wasa\+Final\+DS@{wasa\+Final\+DS}}
+\index{wasa\+Final\+DS@{wasa\+Final\+DS}!W\+A\+S\+A\+Input\+File\+Generator@{W\+A\+S\+A\+Input\+File\+Generator}}
+\subsubsection[{wasa\+Final\+DS}]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Data\+Source$\ast$ W\+A\+S\+A\+Input\+File\+Generator\+::wasa\+Final\+DS\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_input_file_generator_a115b24b50a0fd93c64b87711680b19b0}
+
+
+Defini√ß√£o na linha 53 do arquivo W\+A\+S\+A\+Input\+File\+Generator.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf W\+A\+S\+A\+Input\+File\+Generator.\+h}\end{DoxyCompactItemize}

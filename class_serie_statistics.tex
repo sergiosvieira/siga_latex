@@ -1,0 +1,201 @@
+\section{ReferÃªncia da Classe Serie\+Statistics}
+\label{class_serie_statistics}\index{Serie\+Statistics@{Serie\+Statistics}}
+
+
+{\ttfamily \#include $<$Serie\+Statistics.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Serie\+Statistics} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent}, {\bf Serie\+Viewer} $\ast${\bf viewer})
+\item 
+virtual {\bf $\sim$\+Serie\+Statistics} ()
+\item 
+void {\bf insert\+Serie} (const {\bf Draw\+Serie} \&d\+Serie)
+\end{DoxyCompactItemize}
+\subsection*{MÃ©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf configure\+General\+Info} ()
+\item 
+void {\bf configure\+Grid} ()
+\item 
+void {\bf show\+Info} (int labels=0)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Serie\+Viewer} $\ast$ {\bf viewer}
+\item 
+wx\+Box\+Sizer $\ast$ {\bf box\+Sizer}
+\item 
+wx\+Static\+Box\+Sizer $\ast$ {\bf sb\+General\+Info}
+\item 
+wx\+Static\+Text $\ast$ {\bf txt\+Qntd\+Vertimentos}
+\item 
+wx\+Static\+Text $\ast$ {\bf txt\+Releases}
+\item 
+wx\+Static\+Text $\ast$ {\bf txt\+Vol\+Min\+Rearched}
+\item 
+wx\+Static\+Text $\ast$ {\bf txt\+Vazao\+Regularizada}
+\item 
+wx\+Static\+Text $\ast$ {\bf txt\+Garantia\+Vazao\+Regl}
+\item 
+wx\+Static\+Box\+Sizer $\ast$ {\bf sb\+Series\+Info}
+\item 
+{\bf S\+I\+G\+A\+Grid} $\ast$ {\bf grid}
+\item 
+int {\bf visible\+Labels}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+Classe que contém informações sobre estatísticas gerais sobre a série (como por exemplo, a soma do volume, a média de liberação, qntd de vertimentos, etc...) 
+
+DefiniÃ§Ã£o na linha 27 do arquivo Serie\+Statistics.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Serie\+Statistics@{Serie\+Statistics}!Serie\+Statistics@{Serie\+Statistics}}
+\index{Serie\+Statistics@{Serie\+Statistics}!Serie\+Statistics@{Serie\+Statistics}}
+\subsubsection[{Serie\+Statistics(wx\+Frame $\ast$frame, wx\+Window $\ast$parent, Serie\+Viewer $\ast$viewer)}]{\setlength{\rightskip}{0pt plus 5cm}Serie\+Statistics\+::\+Serie\+Statistics (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{{\bf Serie\+Viewer} $\ast$}]{viewer}
+\end{DoxyParamCaption}
+)}\label{class_serie_statistics_a6da69ab9a65f21a4df43db13cef3f252}
+\index{Serie\+Statistics@{Serie\+Statistics}!````~Serie\+Statistics@{$\sim$\+Serie\+Statistics}}
+\index{````~Serie\+Statistics@{$\sim$\+Serie\+Statistics}!Serie\+Statistics@{Serie\+Statistics}}
+\subsubsection[{$\sim$\+Serie\+Statistics()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Serie\+Statistics\+::$\sim$\+Serie\+Statistics (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_serie_statistics_aeef243d96cc5fe57e8576979d2a68ba6}
+
+
+\subsection{MÃ©todos}
+\index{Serie\+Statistics@{Serie\+Statistics}!configure\+General\+Info@{configure\+General\+Info}}
+\index{configure\+General\+Info@{configure\+General\+Info}!Serie\+Statistics@{Serie\+Statistics}}
+\subsubsection[{configure\+General\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Statistics\+::configure\+General\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_statistics_a3833b4153c781d90f166b74edddcc90b}
+Método que centraliza as configurações de inicialização da grid \index{Serie\+Statistics@{Serie\+Statistics}!configure\+Grid@{configure\+Grid}}
+\index{configure\+Grid@{configure\+Grid}!Serie\+Statistics@{Serie\+Statistics}}
+\subsubsection[{configure\+Grid()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Statistics\+::configure\+Grid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_statistics_aa4a5e09b9cf0bfae1483a65f9e8fd85d}
+Método que centraliza as configurações de inicialização da grid \index{Serie\+Statistics@{Serie\+Statistics}!insert\+Serie@{insert\+Serie}}
+\index{insert\+Serie@{insert\+Serie}!Serie\+Statistics@{Serie\+Statistics}}
+\subsubsection[{insert\+Serie(const Draw\+Serie \&d\+Serie)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Statistics\+::insert\+Serie (
+\begin{DoxyParamCaption}
+\item[{const {\bf Draw\+Serie} \&}]{d\+Serie}
+\end{DoxyParamCaption}
+)}\label{class_serie_statistics_a979da892f7ed636c62ef62ad5c56215a}
+Adiciona uma série na grid 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em d\+Serie} & \doxyref{Draw\+Serie}{pag.}{class_draw_serie} que contem as informações da série a serem inseridas na grid \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Statistics@{Serie\+Statistics}!show\+Info@{show\+Info}}
+\index{show\+Info@{show\+Info}!Serie\+Statistics@{Serie\+Statistics}}
+\subsubsection[{show\+Info(int labels=0)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Statistics\+::show\+Info (
+\begin{DoxyParamCaption}
+\item[{int}]{labels = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_statistics_ad10af6c47085678b8dff573bae5ba4a7}
+Carrega as informações estatísticas da(s) série(s) para a grid 
+
+\subsection{Atributos}
+\index{Serie\+Statistics@{Serie\+Statistics}!box\+Sizer@{box\+Sizer}}
+\index{box\+Sizer@{box\+Sizer}!Serie\+Statistics@{Serie\+Statistics}}
+\subsubsection[{box\+Sizer}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Box\+Sizer$\ast$ Serie\+Statistics\+::box\+Sizer\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_statistics_afda2a58295461917aca822c83f05ce06}
+
+
+DefiniÃ§Ã£o na linha 36 do arquivo Serie\+Statistics.\+h.
+
+\index{Serie\+Statistics@{Serie\+Statistics}!grid@{grid}}
+\index{grid@{grid}!Serie\+Statistics@{Serie\+Statistics}}
+\subsubsection[{grid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Grid}$\ast$ Serie\+Statistics\+::grid\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_statistics_a9435df8301ca8c65f8614e3112c1f37a}
+
+
+DefiniÃ§Ã£o na linha 52 do arquivo Serie\+Statistics.\+h.
+
+\index{Serie\+Statistics@{Serie\+Statistics}!sb\+General\+Info@{sb\+General\+Info}}
+\index{sb\+General\+Info@{sb\+General\+Info}!Serie\+Statistics@{Serie\+Statistics}}
+\subsubsection[{sb\+General\+Info}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Box\+Sizer$\ast$ Serie\+Statistics\+::sb\+General\+Info\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_statistics_a8e53b23fc26c892d1e7bc63ed9e7e4b1}
+
+
+DefiniÃ§Ã£o na linha 39 do arquivo Serie\+Statistics.\+h.
+
+\index{Serie\+Statistics@{Serie\+Statistics}!sb\+Series\+Info@{sb\+Series\+Info}}
+\index{sb\+Series\+Info@{sb\+Series\+Info}!Serie\+Statistics@{Serie\+Statistics}}
+\subsubsection[{sb\+Series\+Info}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Box\+Sizer$\ast$ Serie\+Statistics\+::sb\+Series\+Info\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_statistics_ad1e47054da81789e9871403ad936e409}
+
+
+DefiniÃ§Ã£o na linha 49 do arquivo Serie\+Statistics.\+h.
+
+\index{Serie\+Statistics@{Serie\+Statistics}!txt\+Garantia\+Vazao\+Regl@{txt\+Garantia\+Vazao\+Regl}}
+\index{txt\+Garantia\+Vazao\+Regl@{txt\+Garantia\+Vazao\+Regl}!Serie\+Statistics@{Serie\+Statistics}}
+\subsubsection[{txt\+Garantia\+Vazao\+Regl}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Serie\+Statistics\+::txt\+Garantia\+Vazao\+Regl\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_statistics_aa8659e8e7de90e5d5047351298787b19}
+
+
+DefiniÃ§Ã£o na linha 46 do arquivo Serie\+Statistics.\+h.
+
+\index{Serie\+Statistics@{Serie\+Statistics}!txt\+Qntd\+Vertimentos@{txt\+Qntd\+Vertimentos}}
+\index{txt\+Qntd\+Vertimentos@{txt\+Qntd\+Vertimentos}!Serie\+Statistics@{Serie\+Statistics}}
+\subsubsection[{txt\+Qntd\+Vertimentos}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Serie\+Statistics\+::txt\+Qntd\+Vertimentos\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_statistics_a7036d1c5843ef1b5587fad76be3b87c9}
+
+
+DefiniÃ§Ã£o na linha 42 do arquivo Serie\+Statistics.\+h.
+
+\index{Serie\+Statistics@{Serie\+Statistics}!txt\+Releases@{txt\+Releases}}
+\index{txt\+Releases@{txt\+Releases}!Serie\+Statistics@{Serie\+Statistics}}
+\subsubsection[{txt\+Releases}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Serie\+Statistics\+::txt\+Releases\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_statistics_ae42284545626f86d396ae4d78a59bb45}
+
+
+DefiniÃ§Ã£o na linha 43 do arquivo Serie\+Statistics.\+h.
+
+\index{Serie\+Statistics@{Serie\+Statistics}!txt\+Vazao\+Regularizada@{txt\+Vazao\+Regularizada}}
+\index{txt\+Vazao\+Regularizada@{txt\+Vazao\+Regularizada}!Serie\+Statistics@{Serie\+Statistics}}
+\subsubsection[{txt\+Vazao\+Regularizada}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Serie\+Statistics\+::txt\+Vazao\+Regularizada\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_statistics_a307d87e2175a7f7b671b8e366ce3b578}
+
+
+DefiniÃ§Ã£o na linha 45 do arquivo Serie\+Statistics.\+h.
+
+\index{Serie\+Statistics@{Serie\+Statistics}!txt\+Vol\+Min\+Rearched@{txt\+Vol\+Min\+Rearched}}
+\index{txt\+Vol\+Min\+Rearched@{txt\+Vol\+Min\+Rearched}!Serie\+Statistics@{Serie\+Statistics}}
+\subsubsection[{txt\+Vol\+Min\+Rearched}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Serie\+Statistics\+::txt\+Vol\+Min\+Rearched\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_statistics_a7546ebc0f67d20a5d51f44edc0d2ef07}
+
+
+DefiniÃ§Ã£o na linha 44 do arquivo Serie\+Statistics.\+h.
+
+\index{Serie\+Statistics@{Serie\+Statistics}!viewer@{viewer}}
+\index{viewer@{viewer}!Serie\+Statistics@{Serie\+Statistics}}
+\subsubsection[{viewer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie\+Viewer}$\ast$ Serie\+Statistics\+::viewer\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_statistics_a8d360cab541a78ad4285a464141e87c8}
+
+
+DefiniÃ§Ã£o na linha 33 do arquivo Serie\+Statistics.\+h.
+
+\index{Serie\+Statistics@{Serie\+Statistics}!visible\+Labels@{visible\+Labels}}
+\index{visible\+Labels@{visible\+Labels}!Serie\+Statistics@{Serie\+Statistics}}
+\subsubsection[{visible\+Labels}]{\setlength{\rightskip}{0pt plus 5cm}int Serie\+Statistics\+::visible\+Labels\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_statistics_a3109a7de1f9f4d218517399ac5a8cc1e}
+
+
+DefiniÃ§Ã£o na linha 55 do arquivo Serie\+Statistics.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Serie\+Statistics.\+h}\end{DoxyCompactItemize}

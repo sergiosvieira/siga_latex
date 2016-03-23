@@ -1,0 +1,319 @@
+\section{ReferÃªncia da Classe Hidro\+Scenario}
+\label{class_hidro_scenario}\index{Hidro\+Scenario@{Hidro\+Scenario}}
+
+
+{\ttfamily \#include $<$Hidro\+Scenario.\+h$>$}
+
+
+
+Superclasse de {\bf C\+N3\+S\+Scenario}, {\bf G\+W\+L\+F\+Scenario}, {\bf H\+Y\+M\+O\+D\+Scenario}, {\bf M\+U\+S\+K\+Scenario}, {\bf S\+A\+C\+R\+Scenario}, {\bf S\+M\+A\+P\+H\+Scenario}, {\bf S\+M\+A\+P\+M\+Scenario}, {\bf S\+M\+A\+P\+Scenario} e {\bf W\+A\+S\+A\+Scenario}.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Hidro\+Scenario} ({\bf Date} interval\+Begin, {\bf Date} interval\+End, wx\+String name, unsigned int idS)
+\item 
+virtual {\bf $\sim$\+Hidro\+Scenario} ()
+\item 
+void {\bf show\+Results} ()
+\item 
+void {\bf create\+Results} ({\bf Element\+ID} {\bf id}={\bf E\+M\+P\+TY})
+\item 
+void {\bf set\+Default\+Values} (char $\ast$file\+Name)
+\item 
+void {\bf set\+Scenario\+Interval} (const {\bf Interval} \&novo\+Intervalo)
+\item 
+void {\bf save\+Default\+Values} (char $\ast$file\+Name)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj)
+\item 
+bool {\bf run} ()
+\item 
+void {\bf check\+Net} ({\bf Element\+ID} {\bf id}, {\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf check\+Net} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf insert\+Model} ({\bf Node} \&node)
+\item 
+void {\bf insert\+Model} ({\bf Link} \&link)
+\item 
+void {\bf remove\+Model} ({\bf Element\+ID} {\bf id})
+\item 
+int {\bf change\+Model\+Type} ({\bf Element\+ID} elem\+Id, enum {\bf hidro\+Model\+Type} type)
+\item 
+void {\bf create\+All\+Models} ()
+\item 
+{\bf Hidro\+Scenario} $\ast$ {\bf copy} (unsigned int idS, wx\+String s\+Name)
+\item 
+wx\+String {\bf get\+Name} ()
+\item 
+void {\bf set\+Name} (wx\+String n\+Name)
+\item 
+void {\bf clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int {\bf id}
+\item 
+map$<$ {\bf Element\+ID}, {\bf Hidro\+Model} $\ast$ $>$ {\bf models}
+\item 
+{\bf Interval} {\bf interval}
+\item 
+{\bf Interval} {\bf interval\+Limit\+Range}
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 19 do arquivo Hidro\+Scenario.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Hidro\+Scenario@{Hidro\+Scenario}!Hidro\+Scenario@{Hidro\+Scenario}}
+\index{Hidro\+Scenario@{Hidro\+Scenario}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{Hidro\+Scenario(\+Date interval\+Begin, Date interval\+End, wx\+String name, unsigned int id\+S)}]{\setlength{\rightskip}{0pt plus 5cm}Hidro\+Scenario\+::\+Hidro\+Scenario (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{interval\+Begin, }
+\item[{{\bf Date}}]{interval\+End, }
+\item[{wx\+String}]{name, }
+\item[{unsigned int}]{idS}
+\end{DoxyParamCaption}
+)}\label{class_hidro_scenario_a361963fc8eb07646fdec821388aa4abe}
+Resultados do modelo hidrológico  Cardinality 0..1
+
+Hidro\+Result$\ast$ results; Construtor \index{Hidro\+Scenario@{Hidro\+Scenario}!````~Hidro\+Scenario@{$\sim$\+Hidro\+Scenario}}
+\index{````~Hidro\+Scenario@{$\sim$\+Hidro\+Scenario}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{$\sim$\+Hidro\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Hidro\+Scenario\+::$\sim$\+Hidro\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_hidro_scenario_aa3bfd01fead42e69387bd2f18612316a}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{Hidro\+Scenario@{Hidro\+Scenario}!change\+Model\+Type@{change\+Model\+Type}}
+\index{change\+Model\+Type@{change\+Model\+Type}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{change\+Model\+Type(\+Element\+I\+D elem\+Id, enum hidro\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}int Hidro\+Scenario\+::change\+Model\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{elem\+Id, }
+\item[{enum {\bf hidro\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_hidro_scenario_aa40df846d11813729e04130ceb3808af}
+\index{Hidro\+Scenario@{Hidro\+Scenario}!check\+Net@{check\+Net}}
+\index{check\+Net@{check\+Net}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{check\+Net(\+Element\+I\+D id, S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Scenario\+::check\+Net (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_hidro_scenario_a566e642e3f0374f83fc0f555c30f0324}
+Checagem da rede toda para execução. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em id} & Identificador dialog Janela de erros \\
+\hline
+\end{DoxyParams}
+\index{Hidro\+Scenario@{Hidro\+Scenario}!check\+Net@{check\+Net}}
+\index{check\+Net@{check\+Net}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{check\+Net(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Scenario\+::check\+Net (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_hidro_scenario_a1f93949fb4d20cf17ce378a2f4687c95}
+\index{Hidro\+Scenario@{Hidro\+Scenario}!clear@{clear}}
+\index{clear@{clear}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Scenario\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_hidro_scenario_a42c42a58e72857f11a5a99953bef5715}
+Apaga os modelos \index{Hidro\+Scenario@{Hidro\+Scenario}!copy@{copy}}
+\index{copy@{copy}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{copy(unsigned int id\+S, wx\+String s\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hidro\+Scenario}$\ast$ Hidro\+Scenario\+::copy (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{idS, }
+\item[{wx\+String}]{s\+Name}
+\end{DoxyParamCaption}
+)}\label{class_hidro_scenario_a8dddb70f103fa4930b4b19a874ad08b8}
+Ajusta o tamanho maximo que o usuario pode fornecer como intervalo de execucao
+
+void adjust\+Interval\+Range(const Interval\& interval); \index{Hidro\+Scenario@{Hidro\+Scenario}!create\+All\+Models@{create\+All\+Models}}
+\index{create\+All\+Models@{create\+All\+Models}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{create\+All\+Models()}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Scenario\+::create\+All\+Models (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_hidro_scenario_aff33e70a11a0e74ba642f0320febdc18}
+\index{Hidro\+Scenario@{Hidro\+Scenario}!create\+Results@{create\+Results}}
+\index{create\+Results@{create\+Results}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{create\+Results(\+Element\+I\+D id=\+E\+M\+P\+T\+Y)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Scenario\+::create\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id = {\ttfamily {\bf E\+M\+P\+TY}}}
+\end{DoxyParamCaption}
+)}\label{class_hidro_scenario_a7baa03e77c38b67023d05e66b695e05e}
+Mostra os resultados correspondentes ao modelo hidrológico G\+W\+LF
+
+
+\begin{DoxyParams}{ParÃ¢metros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\index{Hidro\+Scenario@{Hidro\+Scenario}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{get\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Hidro\+Scenario\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_hidro_scenario_a75931f98d16bc4df94ababb5937bbe4b}
+Retorna o nome do cenario \index{Hidro\+Scenario@{Hidro\+Scenario}!insert\+Model@{insert\+Model}}
+\index{insert\+Model@{insert\+Model}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{insert\+Model(\+Node \&node)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Scenario\+::insert\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} \&}]{node}
+\end{DoxyParamCaption}
+)}\label{class_hidro_scenario_af5466124551890ce1c023c440dd5059c}
+\index{Hidro\+Scenario@{Hidro\+Scenario}!insert\+Model@{insert\+Model}}
+\index{insert\+Model@{insert\+Model}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{insert\+Model(\+Link \&link)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Scenario\+::insert\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} \&}]{link}
+\end{DoxyParamCaption}
+)}\label{class_hidro_scenario_ad49feebb49ae10995365b0b2fb6ff754}
+\index{Hidro\+Scenario@{Hidro\+Scenario}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$proj)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Scenario\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj}
+\end{DoxyParamCaption}
+)}\label{class_hidro_scenario_a79598c9bff11c44bcb0f4eef971cd45f}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{Hidro\+Scenario@{Hidro\+Scenario}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$proj)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Scenario\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj}
+\end{DoxyParamCaption}
+)}\label{class_hidro_scenario_ad6199f7786600d66673cfaad5cee27c5}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{Hidro\+Scenario@{Hidro\+Scenario}!remove\+Model@{remove\+Model}}
+\index{remove\+Model@{remove\+Model}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{remove\+Model(\+Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Scenario\+::remove\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)}\label{class_hidro_scenario_a2e55d0a5d6d97ca236286ff9206327fb}
+\index{Hidro\+Scenario@{Hidro\+Scenario}!run@{run}}
+\index{run@{run}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}bool Hidro\+Scenario\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_hidro_scenario_a053c06650fa10b0e8255adc0e426277b}
+\index{Hidro\+Scenario@{Hidro\+Scenario}!save\+Default\+Values@{save\+Default\+Values}}
+\index{save\+Default\+Values@{save\+Default\+Values}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{save\+Default\+Values(char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Scenario\+::save\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{class_hidro_scenario_a480a323856e676929f4cdaf5ea8fd169}
+Salva os dados do modelo hidrológico G\+W\+LF de um nó para um arquivo 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em file\+Name} & Nome do arquivo \\
+\hline
+\end{DoxyParams}
+\index{Hidro\+Scenario@{Hidro\+Scenario}!set\+Default\+Values@{set\+Default\+Values}}
+\index{set\+Default\+Values@{set\+Default\+Values}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{set\+Default\+Values(char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Scenario\+::set\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{class_hidro_scenario_adc619d9587545d78192abe3aaaf05e70}
+Recebe os dados do modelo hidrológico G\+W\+LF de um arquivo para um nó 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em file\+Name} & Nome do arquivo \\
+\hline
+\end{DoxyParams}
+\index{Hidro\+Scenario@{Hidro\+Scenario}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{set\+Name(wx\+String n\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Scenario\+::set\+Name (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{n\+Name}
+\end{DoxyParamCaption}
+)}\label{class_hidro_scenario_ab8fc9e47ed3a8252c5921f008bcc6cb5}
+Define o nome do cenario \index{Hidro\+Scenario@{Hidro\+Scenario}!set\+Scenario\+Interval@{set\+Scenario\+Interval}}
+\index{set\+Scenario\+Interval@{set\+Scenario\+Interval}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{set\+Scenario\+Interval(const Interval \&novo\+Intervalo)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Scenario\+::set\+Scenario\+Interval (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interval} \&}]{novo\+Intervalo}
+\end{DoxyParamCaption}
+)}\label{class_hidro_scenario_a18d7e000d2c0e5477c004dc01cfa48be}
+Define um novo intervalo do cenario \index{Hidro\+Scenario@{Hidro\+Scenario}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{show\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Scenario\+::show\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_hidro_scenario_ab15c860d9781634b797d7530789c68bf}
+retorna se existe algum valor no modelo
+
+virtual bool empty() = 0; Verifica se as informações do módulo estão completas para que ele possa ser executado
+
+virtual bool check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog) = 0; Mostra os resultados correspondentes ao modelo hidrológico G\+W\+LF 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em node} & Nó \\
+\hline
+{\em change} & Diferencia se a chamada foi feita atraves do botão de visualização ou de rodar o modelo \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{Hidro\+Scenario@{Hidro\+Scenario}!id@{id}}
+\index{id@{id}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Hidro\+Scenario\+::id}\label{class_hidro_scenario_a6f5c73203c2abaf54e98127383d8106e}
+
+
+DefiniÃ§Ã£o na linha 35 do arquivo Hidro\+Scenario.\+h.
+
+\index{Hidro\+Scenario@{Hidro\+Scenario}!interval@{interval}}
+\index{interval@{interval}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Hidro\+Scenario\+::interval}\label{class_hidro_scenario_ab4931be9366c64a911f625a13270bd6c}
+Armazena a área do nó ou trecho com contribuição lateral
+
+double area; Diz se utilizará nó que antececede link com contribuição lateral
+
+bool use\+Node; Intervalo de tempo para cálculo 
+
+DefiniÃ§Ã£o na linha 61 do arquivo Hidro\+Scenario.\+h.
+
+\index{Hidro\+Scenario@{Hidro\+Scenario}!interval\+Limit\+Range@{interval\+Limit\+Range}}
+\index{interval\+Limit\+Range@{interval\+Limit\+Range}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{interval\+Limit\+Range}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Hidro\+Scenario\+::interval\+Limit\+Range}\label{class_hidro_scenario_ac0e1140619260a17969fa2c0e2d4cb06}
+Limite de tempo para definição de datas mínimas e máximas 
+
+DefiniÃ§Ã£o na linha 66 do arquivo Hidro\+Scenario.\+h.
+
+\index{Hidro\+Scenario@{Hidro\+Scenario}!models@{models}}
+\index{models@{models}!Hidro\+Scenario@{Hidro\+Scenario}}
+\subsubsection[{models}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf Element\+ID}, {\bf Hidro\+Model}$\ast$$>$ Hidro\+Scenario\+::models}\label{class_hidro_scenario_a73193ed407d31f58357993f39e4e4708}
+Classe em que está contida Instâncias dos modelos para cada elemento  \doxyref{Hidro\+Model}{pag.}{class_hidro_model} 
+
+DefiniÃ§Ã£o na linha 46 do arquivo Hidro\+Scenario.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Hidro\+Scenario.\+h}\end{DoxyCompactItemize}

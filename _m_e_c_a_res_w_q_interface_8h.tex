@@ -1,0 +1,269 @@
+\section{Referência do Arquivo M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}
+\label{_m_e_c_a_res_w_q_interface_8h}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+S\+I\+G\+A\+Text\+Ctrl.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+S\+I\+G\+A\+Dialog.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Component\+Interface.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Quality/\+M\+E\+C\+A\+Res\+W\+Q\+Model/\+M\+E\+C\+A\+Res\+W\+Q\+Result.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Quality/\+M\+E\+C\+A\+Res\+W\+Q\+Model/\+M\+E\+C\+A\+Res\+W\+Q\+Model.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$wx/choicebk.\+h$>$}\\*
+{\ttfamily \#include $<$wx/datectrl.\+h$>$}\\*
+{\ttfamily \#include $<$wx/dateevt.\+h$>$}\\*
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf M\+E\+C\+A\+Res\+W\+Q\+Text\+Ctrl}
+\item 
+class {\bf M\+E\+C\+A\+Res\+W\+Q\+Interface}
+\end{DoxyCompactItemize}
+\subsection*{Enumerações}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+{\bf I\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL}, 
+{\bf I\+D\+\_\+\+E\+N\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+H\+S\+UP}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+S\+O\+T\+IM}, 
+\\*
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+E\+XT}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+G\+\_\+\+M\+AX}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+R\+A\+\_\+\+M\+AX}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+G\+H\+\_\+\+M\+AX}, 
+\\*
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+R\+H\+\_\+\+M\+AX}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+R\+C\+\_\+\+M\+AX}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+H\+\_\+\+M\+AX}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+G\+C\+\_\+\+M\+AX}, 
+\\*
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+P\+\_\+\+M\+AX}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+D\+C\+\_\+\+M\+AX}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+E\+F\+IH}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+E\+F\+IC}, 
+\\*
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+PA}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+CA}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+PC}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+NC}, 
+\\*
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+NA}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+PS}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+A\+L\+G\+AE}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+H\+E\+RB}, 
+\\*
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+NA}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+A\+M\+\_\+\+NA}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+N\+\_\+\+NI}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+V\+S\+E\+D\+\_\+\+A\+L\+G\+AE}, 
+\\*
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+V\+S\+E\+D\+\_\+\+Car\+Par}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+L\+G\+AE}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+H\+E\+RB}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+C\+A\+RN}, 
+\\*
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+C\+A\+R\+P\+AR}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+C\+A\+R\+D\+IS}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+PS}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+NA}, 
+\\*
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+NI}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+A\+L\+G\+AE}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+H\+E\+RB}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+C\+A\+RN}, 
+\\*
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+Car\+Par}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+C\+A\+R\+D\+IS}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+PS}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+NA}, 
+\\*
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+NI}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+A\+L\+G\+AE}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+H\+E\+RB}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+C\+A\+RN}, 
+\\*
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+Car\+Par}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+C\+A\+R\+D\+IS}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+PS}, 
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+NA}, 
+\\*
+{\bf I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+NI}
+ \}
+\item 
+enum \{ \\*
+{\bf I\+D\+\_\+\+Q\+U\+A\+L\+I\+T\+Y\+\_\+\+N\+O\+T\+E\+\_\+\+P\+O\+L\+L\+U\+T\+A\+N\+T\+\_\+\+E\+U\+T\+RO} = wx\+I\+D\+\_\+\+H\+I\+G\+H\+E\+S\+T+1, 
+{\bf I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+Q\+A\+F\+L\+U\+\_\+\+O\+P\+EN}, 
+{\bf I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+Q\+A\+F\+LU}, 
+{\bf I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+V\+O\+L\+\_\+\+O\+P\+EN}, 
+\\*
+{\bf I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+V\+OL}, 
+{\bf I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+H\+I\+N\+F\+\_\+\+O\+P\+EN}, 
+{\bf I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+H\+I\+NF}, 
+{\bf I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+A\+S\+U\+P\+\_\+\+O\+P\+EN}, 
+\\*
+{\bf I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+A\+S\+UP}, 
+{\bf I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+A\+\_\+\+O\+P\+EN}, 
+{\bf I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RA}, 
+{\bf I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+I\+M\+E\+\_\+\+O\+P\+EN}, 
+\\*
+{\bf I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+I\+ME}, 
+{\bf I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+O\+T\+A\+L\+\_\+\+O\+P\+EN}, 
+{\bf I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+O\+T\+AL}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edd}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{I\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{I\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL}}\item[{\em 
+I\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+I\+N\+T\+E\+R\+V\+AL\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda79a60140a9cc2b642a87ff39482eb961}
+}]\index{I\+D\+\_\+\+E\+N\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{I\+D\+\_\+\+E\+N\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+N\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{I\+D\+\_\+\+E\+N\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL}}\item[{\em 
+I\+D\+\_\+\+E\+N\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda6a1522f072a9590b8779ba0c627b8341}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+H\+S\+UP@{I\+D\+\_\+\+E\+U\+T\+\_\+\+H\+S\+UP}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+H\+S\+UP@{I\+D\+\_\+\+E\+U\+T\+\_\+\+H\+S\+UP}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+H\+S\+UP\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddaaf952a5d63ffe63f8924dbbc45a4ea25}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+S\+O\+T\+IM@{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+S\+O\+T\+IM}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+S\+O\+T\+IM@{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+S\+O\+T\+IM}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+S\+O\+T\+IM\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddaa60d531121f12506e6199d86ebf7a82c}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+E\+XT@{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+E\+XT}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+E\+XT@{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+E\+XT}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+E\+XT\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda94791da9882523190d781cb58fc5b23d}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+G\+\_\+\+M\+AX@{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+G\+\_\+\+M\+AX}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+G\+\_\+\+M\+AX@{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+G\+\_\+\+M\+AX}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+G\+\_\+\+M\+AX\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda7da8b3d9f0c10a208a118839ea16cab2}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+R\+A\+\_\+\+M\+AX@{I\+D\+\_\+\+E\+U\+T\+\_\+\+R\+A\+\_\+\+M\+AX}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+R\+A\+\_\+\+M\+AX@{I\+D\+\_\+\+E\+U\+T\+\_\+\+R\+A\+\_\+\+M\+AX}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+R\+A\+\_\+\+M\+AX\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda6632b8f3fc40e70f8574680ac185c09c}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+G\+H\+\_\+\+M\+AX@{I\+D\+\_\+\+E\+U\+T\+\_\+\+G\+H\+\_\+\+M\+AX}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+G\+H\+\_\+\+M\+AX@{I\+D\+\_\+\+E\+U\+T\+\_\+\+G\+H\+\_\+\+M\+AX}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+G\+H\+\_\+\+M\+AX\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda95e658f961600e93cc393df81942affd}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+R\+H\+\_\+\+M\+AX@{I\+D\+\_\+\+E\+U\+T\+\_\+\+R\+H\+\_\+\+M\+AX}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+R\+H\+\_\+\+M\+AX@{I\+D\+\_\+\+E\+U\+T\+\_\+\+R\+H\+\_\+\+M\+AX}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+R\+H\+\_\+\+M\+AX\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddacc1f72ec00c4422af2a9bd7b1be8f7ad}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+R\+C\+\_\+\+M\+AX@{I\+D\+\_\+\+E\+U\+T\+\_\+\+R\+C\+\_\+\+M\+AX}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+R\+C\+\_\+\+M\+AX@{I\+D\+\_\+\+E\+U\+T\+\_\+\+R\+C\+\_\+\+M\+AX}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+R\+C\+\_\+\+M\+AX\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda7efd0145eb2fc762a1e0f7dfb2714b7a}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+H\+\_\+\+M\+AX@{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+H\+\_\+\+M\+AX}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+H\+\_\+\+M\+AX@{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+H\+\_\+\+M\+AX}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+H\+\_\+\+M\+AX\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda6666a41c7049d8e0ef8e93bd959e6e3e}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+G\+C\+\_\+\+M\+AX@{I\+D\+\_\+\+E\+U\+T\+\_\+\+G\+C\+\_\+\+M\+AX}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+G\+C\+\_\+\+M\+AX@{I\+D\+\_\+\+E\+U\+T\+\_\+\+G\+C\+\_\+\+M\+AX}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+G\+C\+\_\+\+M\+AX\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddadb014e9a3b9ae6131d76c3659ce211d2}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+P\+\_\+\+M\+AX@{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+P\+\_\+\+M\+AX}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+P\+\_\+\+M\+AX@{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+P\+\_\+\+M\+AX}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+P\+\_\+\+M\+AX\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda47fbed519f0b8605c5219e36b8bfd467}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+D\+C\+\_\+\+M\+AX@{I\+D\+\_\+\+E\+U\+T\+\_\+\+D\+C\+\_\+\+M\+AX}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+D\+C\+\_\+\+M\+AX@{I\+D\+\_\+\+E\+U\+T\+\_\+\+D\+C\+\_\+\+M\+AX}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+D\+C\+\_\+\+M\+AX\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddaabf2880315ea30809cccdef3739763b5}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+E\+F\+IH@{I\+D\+\_\+\+E\+U\+T\+\_\+\+E\+F\+IH}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+E\+F\+IH@{I\+D\+\_\+\+E\+U\+T\+\_\+\+E\+F\+IH}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+E\+F\+IH\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddae5de3e7b0104a27bc251558c13b91a22}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+E\+F\+IC@{I\+D\+\_\+\+E\+U\+T\+\_\+\+E\+F\+IC}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+E\+F\+IC@{I\+D\+\_\+\+E\+U\+T\+\_\+\+E\+F\+IC}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+E\+F\+IC\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda2940296e18604de34713a42395626ff6}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+PA@{I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+PA}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+PA@{I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+PA}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+PA\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda65ab7ec39c654e2444c933df1d5f2a93}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+CA@{I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+CA}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+CA@{I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+CA}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+CA\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddafbfb7594f6058aef59022c2344e8a8d1}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+PC@{I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+PC}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+PC@{I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+PC}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+PC\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddae8e7d3edcec7454ab82c9acea8d11e66}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+NC@{I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+NC}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+NC@{I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+NC}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+NC\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda91bbe4275bdc69e4fd48111a59c99558}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+NA@{I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+NA}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+NA@{I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+NA}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+NA\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddad7a7914eaae01956808939f06003e902}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+PS@{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+PS}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+PS@{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+PS}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+PS\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddaf7d715fa3d421a1bef0a6336a45cb0d3}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+A\+L\+G\+AE@{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+A\+L\+G\+AE}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+A\+L\+G\+AE@{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+A\+L\+G\+AE}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+A\+L\+G\+AE\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddacabaf19a9adf9823e24f04269f77cf38}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+H\+E\+RB@{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+H\+E\+RB}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+H\+E\+RB@{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+H\+E\+RB}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+H\+E\+RB\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddab614967b16923fb8367605bd3d386944}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+NA@{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+NA}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+NA@{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+NA}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+S\+\_\+\+NA\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda8ce1c426e45692a3378ef3c3994bcf91}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+A\+M\+\_\+\+NA@{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+A\+M\+\_\+\+NA}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+A\+M\+\_\+\+NA@{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+A\+M\+\_\+\+NA}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+A\+M\+\_\+\+NA\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddabe51a3fe08a4d3c07c16d5e281ca393e}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+N\+\_\+\+NI@{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+N\+\_\+\+NI}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+N\+\_\+\+NI@{I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+N\+\_\+\+NI}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+K\+N\+\_\+\+NI\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddaa94f08d755b5b6b77e9a24b408532d1b}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+V\+S\+E\+D\+\_\+\+A\+L\+G\+AE@{I\+D\+\_\+\+E\+U\+T\+\_\+\+V\+S\+E\+D\+\_\+\+A\+L\+G\+AE}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+V\+S\+E\+D\+\_\+\+A\+L\+G\+AE@{I\+D\+\_\+\+E\+U\+T\+\_\+\+V\+S\+E\+D\+\_\+\+A\+L\+G\+AE}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+V\+S\+E\+D\+\_\+\+A\+L\+G\+AE\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddab6ecdbcf941cb2f0af7a2bbbdc0dbd3f}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+V\+S\+E\+D\+\_\+\+Car\+Par@{I\+D\+\_\+\+E\+U\+T\+\_\+\+V\+S\+E\+D\+\_\+\+Car\+Par}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+V\+S\+E\+D\+\_\+\+Car\+Par@{I\+D\+\_\+\+E\+U\+T\+\_\+\+V\+S\+E\+D\+\_\+\+Car\+Par}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+V\+S\+E\+D\+\_\+\+Car\+Par\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddaf33eacf221bbbe58a2b5d84af74283e1}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+L\+G\+AE@{I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+L\+G\+AE}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+L\+G\+AE@{I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+L\+G\+AE}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+A\+L\+G\+AE\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda173f60a8717c424c87921454135b24ab}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+H\+E\+RB@{I\+D\+\_\+\+E\+U\+T\+\_\+\+H\+E\+RB}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+H\+E\+RB@{I\+D\+\_\+\+E\+U\+T\+\_\+\+H\+E\+RB}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+H\+E\+RB\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda71588c37ecba5072f135b38fce8b5d7d}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+C\+A\+RN@{I\+D\+\_\+\+E\+U\+T\+\_\+\+C\+A\+RN}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+C\+A\+RN@{I\+D\+\_\+\+E\+U\+T\+\_\+\+C\+A\+RN}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+C\+A\+RN\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda73ae64f5e94bc53132a43e6324e0752f}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+C\+A\+R\+P\+AR@{I\+D\+\_\+\+E\+U\+T\+\_\+\+C\+A\+R\+P\+AR}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+C\+A\+R\+P\+AR@{I\+D\+\_\+\+E\+U\+T\+\_\+\+C\+A\+R\+P\+AR}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+C\+A\+R\+P\+AR\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda24c10e828179f961e1e30f59c87cc472}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+C\+A\+R\+D\+IS@{I\+D\+\_\+\+E\+U\+T\+\_\+\+C\+A\+R\+D\+IS}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+C\+A\+R\+D\+IS@{I\+D\+\_\+\+E\+U\+T\+\_\+\+C\+A\+R\+D\+IS}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+C\+A\+R\+D\+IS\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda301d8d20236b5816cfc3660c2db9d017}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+PS@{I\+D\+\_\+\+E\+U\+T\+\_\+\+PS}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+PS@{I\+D\+\_\+\+E\+U\+T\+\_\+\+PS}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+PS\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda3b7511bf2a11837f502c9c5ebaed2a68}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+NA@{I\+D\+\_\+\+E\+U\+T\+\_\+\+NA}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+NA@{I\+D\+\_\+\+E\+U\+T\+\_\+\+NA}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+NA\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda83be35f73ade007bf0dd0f018ce5d562}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+NI@{I\+D\+\_\+\+E\+U\+T\+\_\+\+NI}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+NI@{I\+D\+\_\+\+E\+U\+T\+\_\+\+NI}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+NI\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda273e3ae5cd5f010f4cd8cfa911791e47}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+A\+L\+G\+AE@{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+A\+L\+G\+AE}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+A\+L\+G\+AE@{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+A\+L\+G\+AE}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+A\+L\+G\+AE\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda3e392f193c0830ea9e8b22afacd09370}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+H\+E\+RB@{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+H\+E\+RB}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+H\+E\+RB@{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+H\+E\+RB}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+H\+E\+RB\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda0af82b50a1b5f2545caa89353c96f199}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+C\+A\+RN@{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+C\+A\+RN}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+C\+A\+RN@{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+C\+A\+RN}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+C\+A\+RN\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda4ca8d84a0cf9e7bef8538e718735f261}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+Car\+Par@{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+Car\+Par}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+Car\+Par@{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+Car\+Par}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+Car\+Par\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddacae9e868c1ddcd02ed308de036f2f779}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+C\+A\+R\+D\+IS@{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+C\+A\+R\+D\+IS}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+C\+A\+R\+D\+IS@{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+C\+A\+R\+D\+IS}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+C\+A\+R\+D\+IS\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda0b77f46a01382cd803bb4360fd61702d}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+PS@{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+PS}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+PS@{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+PS}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+PS\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddae93523f12da8609cb0792b8086464440}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+NA@{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+NA}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+NA@{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+NA}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+NA\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddac728b630a683aa8d2d091e90ecf928e7}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+NI@{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+NI}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+NI@{I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+NI}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+I\+N\+P\+\_\+\+NI\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda76926ac2689077f884d3cce7accc31ea}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+A\+L\+G\+AE@{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+A\+L\+G\+AE}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+A\+L\+G\+AE@{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+A\+L\+G\+AE}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+A\+L\+G\+AE\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddae3fe704093209fa6217c61df7f07bd01}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+H\+E\+RB@{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+H\+E\+RB}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+H\+E\+RB@{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+H\+E\+RB}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+H\+E\+RB\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddac6c9d111879b3c5f70ac9fdc42c2f4b0}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+C\+A\+RN@{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+C\+A\+RN}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+C\+A\+RN@{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+C\+A\+RN}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+C\+A\+RN\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda1434a61a6baf982bf0d8691061e18a2f}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+Car\+Par@{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+Car\+Par}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+Car\+Par@{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+Car\+Par}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+Car\+Par\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddaa248a8737d2d27543ea03931122b7ea6}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+C\+A\+R\+D\+IS@{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+C\+A\+R\+D\+IS}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+C\+A\+R\+D\+IS@{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+C\+A\+R\+D\+IS}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+C\+A\+R\+D\+IS\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddac9b1323c082269dc527d6be9ba921281}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+PS@{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+PS}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+PS@{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+PS}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+PS\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda029a2d49e7c1ae848bc1b1e1e342f810}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+NA@{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+NA}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+NA@{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+NA}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+NA\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87edda014c12fb157ad830e5f6c7d4ecaecb34}
+}]\index{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+NI@{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+NI}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+NI@{I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+NI}}\item[{\em 
+I\+D\+\_\+\+E\+U\+T\+\_\+\+O\+B\+S\+\_\+\+NI\label{_m_e_c_a_res_w_q_interface_8h_ac205be2172292384dd687b5471a87eddac95b0768563d76f9354ce89151bc0549}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 18 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h.
+
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_m_e_c_a_res_w_q_interface_8h_a157d5577a5b2f5986037d0d09c7dc77d}
+Enumeradores da s�ries de clima \begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+Q\+U\+A\+L\+I\+T\+Y\+\_\+\+N\+O\+T\+E\+\_\+\+P\+O\+L\+L\+U\+T\+A\+N\+T\+\_\+\+E\+U\+T\+RO@{I\+D\+\_\+\+Q\+U\+A\+L\+I\+T\+Y\+\_\+\+N\+O\+T\+E\+\_\+\+P\+O\+L\+L\+U\+T\+A\+N\+T\+\_\+\+E\+U\+T\+RO}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+Q\+U\+A\+L\+I\+T\+Y\+\_\+\+N\+O\+T\+E\+\_\+\+P\+O\+L\+L\+U\+T\+A\+N\+T\+\_\+\+E\+U\+T\+RO@{I\+D\+\_\+\+Q\+U\+A\+L\+I\+T\+Y\+\_\+\+N\+O\+T\+E\+\_\+\+P\+O\+L\+L\+U\+T\+A\+N\+T\+\_\+\+E\+U\+T\+RO}}\item[{\em 
+I\+D\+\_\+\+Q\+U\+A\+L\+I\+T\+Y\+\_\+\+N\+O\+T\+E\+\_\+\+P\+O\+L\+L\+U\+T\+A\+N\+T\+\_\+\+E\+U\+T\+RO\label{_m_e_c_a_res_w_q_interface_8h_a157d5577a5b2f5986037d0d09c7dc77da38fa445eaff1e584c38f3352157e5e20}
+}]\index{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+Q\+A\+F\+L\+U\+\_\+\+O\+P\+EN@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+Q\+A\+F\+L\+U\+\_\+\+O\+P\+EN}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+Q\+A\+F\+L\+U\+\_\+\+O\+P\+EN@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+Q\+A\+F\+L\+U\+\_\+\+O\+P\+EN}}\item[{\em 
+I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+Q\+A\+F\+L\+U\+\_\+\+O\+P\+EN\label{_m_e_c_a_res_w_q_interface_8h_a157d5577a5b2f5986037d0d09c7dc77da7b2c989b8fc12fb7bbf0272153be9aad}
+}]\index{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+Q\+A\+F\+LU@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+Q\+A\+F\+LU}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+Q\+A\+F\+LU@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+Q\+A\+F\+LU}}\item[{\em 
+I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+Q\+A\+F\+LU\label{_m_e_c_a_res_w_q_interface_8h_a157d5577a5b2f5986037d0d09c7dc77da0e03c80d844da31de08bd7122db0e008}
+}]\index{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+V\+O\+L\+\_\+\+O\+P\+EN@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+V\+O\+L\+\_\+\+O\+P\+EN}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+V\+O\+L\+\_\+\+O\+P\+EN@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+V\+O\+L\+\_\+\+O\+P\+EN}}\item[{\em 
+I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+V\+O\+L\+\_\+\+O\+P\+EN\label{_m_e_c_a_res_w_q_interface_8h_a157d5577a5b2f5986037d0d09c7dc77dac9e20608d328bee84ed4adc41a45cd58}
+}]\index{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+V\+OL@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+V\+OL}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+V\+OL@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+V\+OL}}\item[{\em 
+I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+V\+OL\label{_m_e_c_a_res_w_q_interface_8h_a157d5577a5b2f5986037d0d09c7dc77dafc407a9c4670585e560331d053e849fb}
+}]\index{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+H\+I\+N\+F\+\_\+\+O\+P\+EN@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+H\+I\+N\+F\+\_\+\+O\+P\+EN}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+H\+I\+N\+F\+\_\+\+O\+P\+EN@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+H\+I\+N\+F\+\_\+\+O\+P\+EN}}\item[{\em 
+I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+H\+I\+N\+F\+\_\+\+O\+P\+EN\label{_m_e_c_a_res_w_q_interface_8h_a157d5577a5b2f5986037d0d09c7dc77da54f6b6966ef41ea7920cbe7c1e681db9}
+}]\index{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+H\+I\+NF@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+H\+I\+NF}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+H\+I\+NF@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+H\+I\+NF}}\item[{\em 
+I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+H\+I\+NF\label{_m_e_c_a_res_w_q_interface_8h_a157d5577a5b2f5986037d0d09c7dc77da602c77a99a218146ad739a9abb75e6b3}
+}]\index{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+A\+S\+U\+P\+\_\+\+O\+P\+EN@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+A\+S\+U\+P\+\_\+\+O\+P\+EN}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+A\+S\+U\+P\+\_\+\+O\+P\+EN@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+A\+S\+U\+P\+\_\+\+O\+P\+EN}}\item[{\em 
+I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+A\+S\+U\+P\+\_\+\+O\+P\+EN\label{_m_e_c_a_res_w_q_interface_8h_a157d5577a5b2f5986037d0d09c7dc77dae05c4522b0583c475a261a41e463a95f}
+}]\index{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+A\+S\+UP@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+A\+S\+UP}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+A\+S\+UP@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+A\+S\+UP}}\item[{\em 
+I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+A\+S\+UP\label{_m_e_c_a_res_w_q_interface_8h_a157d5577a5b2f5986037d0d09c7dc77dac95398c85f082f4e41a6240dae8d70e1}
+}]\index{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+A\+\_\+\+O\+P\+EN@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+A\+\_\+\+O\+P\+EN}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+A\+\_\+\+O\+P\+EN@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+A\+\_\+\+O\+P\+EN}}\item[{\em 
+I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+R\+A\+\_\+\+O\+P\+EN\label{_m_e_c_a_res_w_q_interface_8h_a157d5577a5b2f5986037d0d09c7dc77da8d8c689dd52797db4addf2b7cc0b8312}
+}]\index{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RA@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RA}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RA@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RA}}\item[{\em 
+I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RA\label{_m_e_c_a_res_w_q_interface_8h_a157d5577a5b2f5986037d0d09c7dc77da91729ead5e63210f2002e89f540eb350}
+}]\index{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+I\+M\+E\+\_\+\+O\+P\+EN@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+I\+M\+E\+\_\+\+O\+P\+EN}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+I\+M\+E\+\_\+\+O\+P\+EN@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+I\+M\+E\+\_\+\+O\+P\+EN}}\item[{\em 
+I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+I\+M\+E\+\_\+\+O\+P\+EN\label{_m_e_c_a_res_w_q_interface_8h_a157d5577a5b2f5986037d0d09c7dc77da6cc4b58c8126d0198b050c9927ff5cf0}
+}]\index{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+I\+ME@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+I\+ME}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+I\+ME@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+I\+ME}}\item[{\em 
+I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+I\+ME\label{_m_e_c_a_res_w_q_interface_8h_a157d5577a5b2f5986037d0d09c7dc77da9b95c538eb4b1af92656621b72b498ae}
+}]\index{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+O\+T\+A\+L\+\_\+\+O\+P\+EN@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+O\+T\+A\+L\+\_\+\+O\+P\+EN}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+O\+T\+A\+L\+\_\+\+O\+P\+EN@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+O\+T\+A\+L\+\_\+\+O\+P\+EN}}\item[{\em 
+I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+O\+T\+A\+L\+\_\+\+O\+P\+EN\label{_m_e_c_a_res_w_q_interface_8h_a157d5577a5b2f5986037d0d09c7dc77da213e624bf7761bee9c8c67f763d134de}
+}]\index{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+O\+T\+AL@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+O\+T\+AL}!M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}}\index{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h@{M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h}!I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+O\+T\+AL@{I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+O\+T\+AL}}\item[{\em 
+I\+D\+\_\+\+C\+L\+I\+M\+A\+\_\+\+I\+N\+S\+T\+O\+T\+AL\label{_m_e_c_a_res_w_q_interface_8h_a157d5577a5b2f5986037d0d09c7dc77da56c5f982335d53924dd32277e61f4ba4}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 118 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Interface.\+h.
+

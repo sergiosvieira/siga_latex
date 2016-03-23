@@ -1,0 +1,247 @@
+\section{Referência da Classe Res\+Op\+Network\+Flow\+Interface}
+\label{class_res_op_network_flow_interface}\index{Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Network\+Flow\+Interface.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Component\+Interface}.
+
+
+
+Superclasse de {\bf Res\+Op\+Network\+Flow\+Wnd\+Interface}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Network\+Flow\+Interface} ({\bf S\+I\+GA} $\ast${\bf main}, wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent})
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Network\+Flow\+Interface} ()
+\item 
+{\bf Res\+Op\+Rule\+Interface} $\ast$ {\bf get\+Rule\+Interface} ()
+\item 
+virtual void {\bf set\+Info} ()
+\item 
+virtual void {\bf set\+Info} ({\bf Res\+Op\+Element} $\ast$a\+\_\+element)
+\item 
+void {\bf update\+Interface} ({\bf Res\+Op\+Element} $\ast$element, size\+\_\+t pos=0)
+\item 
+void {\bf show\+Results} ()
+\item 
+void {\bf adjust\+Notebook\+For\+Element} ({\bf Res\+Op\+Element} $\ast$element)
+\item 
+virtual void {\bf add\+More\+Pages} (const {\bf Res\+Op\+Element} \&element)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+GA} $\ast$ {\bf main}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf radio\+Box} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Rule\+Interface} $\ast$ {\bf rule\+Inter}
+\item 
+wx\+Notebook $\ast$ {\bf nb\+Main\+Interfaces}
+\item 
+wx\+Panel $\ast$ {\bf p\+Interfaces}
+\item 
+wx\+Panel $\ast$ {\bf p\+Rule}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Rule}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Interfaces}
+\item 
+map$<$ {\bf Res\+Op\+Element\+Type}, {\bf Res\+Op\+Element\+Interface} $\ast$ $>$ {\bf element\+Interfaces}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 20 do arquivo Res\+Op\+Network\+Flow\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}!Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}}
+\index{Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}!Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}}
+\subsubsection[{Res\+Op\+Network\+Flow\+Interface(\+S\+I\+G\+A $\ast$main, wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Network\+Flow\+Interface\+::\+Res\+Op\+Network\+Flow\+Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+GA} $\ast$}]{main, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_res_op_network_flow_interface_a84f6a3b7e37dbabb5c35682a6300bbcf}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em main} & Aplicativo \\
+\hline
+{\em frame} & Janela principal \\
+\hline
+{\em parent} & Janela onde est� contida a interface \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}!````~Res\+Op\+Network\+Flow\+Interface@{$\sim$\+Res\+Op\+Network\+Flow\+Interface}}
+\index{````~Res\+Op\+Network\+Flow\+Interface@{$\sim$\+Res\+Op\+Network\+Flow\+Interface}!Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}}
+\subsubsection[{$\sim$\+Res\+Op\+Network\+Flow\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Network\+Flow\+Interface\+::$\sim$\+Res\+Op\+Network\+Flow\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_network_flow_interface_a7e7d71e357696765894ab4db4de0f3cf}
+Destrutor 
+
+\subsection{Métodos}
+\index{Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}!add\+More\+Pages@{add\+More\+Pages}}
+\index{add\+More\+Pages@{add\+More\+Pages}!Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}}
+\subsubsection[{add\+More\+Pages(const Res\+Op\+Element \&element)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Network\+Flow\+Interface\+::add\+More\+Pages (
+\begin{DoxyParamCaption}
+\item[{const {\bf Res\+Op\+Element} \&}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_network_flow_interface_a725689f1a5c3e18aac893aadcabeb8bf}
+A virtual method used for derived classes to add custom pages for this notebook. This method is called right before adjust\+Notebook\+For\+Element finish. \index{Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}!adjust\+Notebook\+For\+Element@{adjust\+Notebook\+For\+Element}}
+\index{adjust\+Notebook\+For\+Element@{adjust\+Notebook\+For\+Element}!Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}}
+\subsubsection[{adjust\+Notebook\+For\+Element(\+Res\+Op\+Element $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Network\+Flow\+Interface\+::adjust\+Notebook\+For\+Element (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)}\label{class_res_op_network_flow_interface_a4fe0a031da4f6d867f8b924c4f71db53}
+Atualiza a interface deacordo com o elemento selecionado \index{Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}!get\+Rule\+Interface@{get\+Rule\+Interface}}
+\index{get\+Rule\+Interface@{get\+Rule\+Interface}!Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}}
+\subsubsection[{get\+Rule\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Rule\+Interface}$\ast$ Res\+Op\+Network\+Flow\+Interface\+::get\+Rule\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_network_flow_interface_ae97e5c6a6628ecd11d2733d5f9af91bb}
+Retorna a interface da regra \index{Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}!radio\+Box@{radio\+Box}}
+\index{radio\+Box@{radio\+Box}!Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}}
+\subsubsection[{radio\+Box()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Network\+Flow\+Interface\+::radio\+Box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_op_network_flow_interface_a059f7ea61d51047e66ab01a6e4e533e8}
+Evento de mudan�a de interface 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_a202fd862c10d339ae7d7e83d80b248bd}.
+
+\index{Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Network\+Flow\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_network_flow_interface_acafcae50f8c80f8e4ac3d1752fa1f748}
+Carega os dados do elemento na interface 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_aced556e5caf584b7335135d337895154}.
+
+
+
+Reimplementado por {\bf Res\+Op\+Network\+Flow\+Wnd\+Interface} \doxyref{}{pag.}{class_res_op_network_flow_wnd_interface_a38edb908b4f70ea4e8b7c92441ea29e4}.
+
+\index{Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}}
+\subsubsection[{set\+Info(\+Res\+Op\+Element $\ast$a\+\_\+element)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Network\+Flow\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{a\+\_\+element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_network_flow_interface_a2eb888293ff9f129c133c8f7a81e5228}
+
+
+Implementa {\bf Res\+Op\+Component\+Interface} \doxyref{}{pag.}{class_res_op_component_interface_a2b0a17cf42c4fab8d1353b1726e4a278}.
+
+
+
+Reimplementado por {\bf Res\+Op\+Network\+Flow\+Wnd\+Interface} \doxyref{}{pag.}{class_res_op_network_flow_wnd_interface_a74d02a3181cc5aa95baac31630271e46}.
+
+\index{Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}}
+\subsubsection[{show\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Network\+Flow\+Interface\+::show\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_network_flow_interface_a5f6aa56647494b901d3fa0b30ecbccf7}
+Apresenta resultados do modelo para o n� fornecido. (m�todo abstrato) 
+\begin{DoxyParams}{Parâmetros}
+{\em cahnge} & Montar os resultados caso seja true. \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}!update\+Interface@{update\+Interface}}
+\index{update\+Interface@{update\+Interface}!Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}}
+\subsubsection[{update\+Interface(\+Res\+Op\+Element $\ast$element, size\+\_\+t pos=0)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Network\+Flow\+Interface\+::update\+Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{size\+\_\+t}]{pos = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_res_op_network_flow_interface_ad1ab42cd1f456e556124ca93c7568158}
+Atualiza a interface deacordo com o elemento selecionado 
+
+\subsection{Atributos}
+\index{Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}!element\+Interfaces@{element\+Interfaces}}
+\index{element\+Interfaces@{element\+Interfaces}!Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}}
+\subsubsection[{element\+Interfaces}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf Res\+Op\+Element\+Type}, {\bf Res\+Op\+Element\+Interface}$\ast$$>$ Res\+Op\+Network\+Flow\+Interface\+::element\+Interfaces\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_network_flow_interface_a5fdd54348a19a38dc5578811f23ff7e4}
+Interfaces para cada elemento 
+
+Definição na linha 44 do arquivo Res\+Op\+Network\+Flow\+Interface.\+h.
+
+\index{Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}!main@{main}}
+\index{main@{main}!Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+GA}$\ast$ Res\+Op\+Network\+Flow\+Interface\+::main}\label{class_res_op_network_flow_interface_a10b7e0e4cb955f164fa3c33d61191b0e}
+Ponteiro para o aplicativo 
+
+Definição na linha 56 do arquivo Res\+Op\+Network\+Flow\+Interface.\+h.
+
+\index{Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}!nb\+Main\+Interfaces@{nb\+Main\+Interfaces}}
+\index{nb\+Main\+Interfaces@{nb\+Main\+Interfaces}!Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}}
+\subsubsection[{nb\+Main\+Interfaces}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Notebook$\ast$ Res\+Op\+Network\+Flow\+Interface\+::nb\+Main\+Interfaces\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_network_flow_interface_a76b91d4d45ce6c76841be4031bf80690}
+
+
+Definição na linha 31 do arquivo Res\+Op\+Network\+Flow\+Interface.\+h.
+
+\index{Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}!p\+Interfaces@{p\+Interfaces}}
+\index{p\+Interfaces@{p\+Interfaces}!Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}}
+\subsubsection[{p\+Interfaces}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel$\ast$ Res\+Op\+Network\+Flow\+Interface\+::p\+Interfaces\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_network_flow_interface_aefd883fe8494a72cafbbb033023b4c50}
+
+
+Definição na linha 34 do arquivo Res\+Op\+Network\+Flow\+Interface.\+h.
+
+\index{Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}!p\+Rule@{p\+Rule}}
+\index{p\+Rule@{p\+Rule}!Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}}
+\subsubsection[{p\+Rule}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel $\ast$ Res\+Op\+Network\+Flow\+Interface\+::p\+Rule\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_network_flow_interface_a87c71c9923f9022654d447999a39c4f0}
+
+
+Definição na linha 34 do arquivo Res\+Op\+Network\+Flow\+Interface.\+h.
+
+\index{Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}!rule\+Inter@{rule\+Inter}}
+\index{rule\+Inter@{rule\+Inter}!Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}}
+\subsubsection[{rule\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Rule\+Interface}$\ast$ Res\+Op\+Network\+Flow\+Interface\+::rule\+Inter\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_network_flow_interface_a40e8d22c22099bf0fd377aa9a8225ea1}
+Seletor de regras 
+
+Definição na linha 27 do arquivo Res\+Op\+Network\+Flow\+Interface.\+h.
+
+\index{Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}!s\+Interfaces@{s\+Interfaces}}
+\index{s\+Interfaces@{s\+Interfaces}!Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}}
+\subsubsection[{s\+Interfaces}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Res\+Op\+Network\+Flow\+Interface\+::s\+Interfaces\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_network_flow_interface_a89a0bda18bf5612641e261727ace8640}
+
+
+Definição na linha 39 do arquivo Res\+Op\+Network\+Flow\+Interface.\+h.
+
+\index{Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}!s\+Rule@{s\+Rule}}
+\index{s\+Rule@{s\+Rule}!Res\+Op\+Network\+Flow\+Interface@{Res\+Op\+Network\+Flow\+Interface}}
+\subsubsection[{s\+Rule}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer$\ast$ Res\+Op\+Network\+Flow\+Interface\+::s\+Rule\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_network_flow_interface_aae63529edf06f7d5f1237e9e0b38ef75}
+Sizer da regra 
+
+Definição na linha 39 do arquivo Res\+Op\+Network\+Flow\+Interface.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Network\+Flow\+Interface.\+h}\end{DoxyCompactItemize}

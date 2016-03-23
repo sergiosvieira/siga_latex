@@ -1,0 +1,350 @@
+\section{Referência da Classe Fit\+Curve}
+\label{class_fit_curve}\index{Fit\+Curve@{Fit\+Curve}}
+
+
+{\ttfamily \#include $<$Fit\+Curve.\+h$>$}
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf fit\+Type} \{ {\bf F\+I\+T\+\_\+\+N\+O\+NE}, 
+{\bf F\+I\+T\+\_\+\+L\+I\+N\+\_\+\+B\+Y\+\_\+\+P\+O\+I\+NT}, 
+{\bf F\+I\+T\+\_\+\+P\+O\+LY}, 
+{\bf F\+I\+T\+\_\+\+P\+O\+W\+ER}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Fit\+Curve} ({\bf Matrix} matrix, int colX, int colY, wx\+Real\+Point range=wx\+Real\+Point({\bf E\+M\+P\+TY}, {\bf E\+M\+P\+TY}), double dx=1, {\bf fit\+Type} type={\bf F\+I\+T\+\_\+\+N\+O\+NE}, int degree=2, {\bf Matrix} points={\bf Matrix}(0, 3))
+\item 
+{\bf Fit\+Curve} (vector$<$ double $>$ oX, vector$<$ double $>$ oY, wx\+Real\+Point range=wx\+Real\+Point({\bf E\+M\+P\+TY}, {\bf E\+M\+P\+TY}), double dx=1, {\bf fit\+Type} type={\bf F\+I\+T\+\_\+\+N\+O\+NE}, int degree=2, {\bf Matrix} points={\bf Matrix}(0, 3))
+\item 
+virtual {\bf $\sim$\+Fit\+Curve} ()
+\item 
+void {\bf set\+Dx} (double value)
+\item 
+double {\bf get\+Dx} ()
+\item 
+wx\+Real\+Point {\bf get\+Range} ()
+\item 
+void {\bf set\+Lin\+Points} ({\bf Matrix} points)
+\item 
+{\bf Matrix} {\bf get\+Lin\+Points} ()
+\item 
+void {\bf set\+Lin\+Coef} ({\bf Matrix} coef)
+\item 
+{\bf Matrix} {\bf get\+Lin\+Coef} ()
+\item 
+void {\bf set\+Degree} (int value)
+\item 
+double {\bf get\+Degree} ()
+\item 
+void {\bf set\+Alfa} (double value)
+\item 
+double {\bf get\+Alfa} ()
+\item 
+void {\bf set\+Beta} (double value)
+\item 
+double {\bf get\+Beta} ()
+\item 
+void {\bf set\+Selected\+Type} ({\bf fit\+Type} selection)
+\item 
+{\bf fit\+Type} {\bf get\+Selected\+Type} ()
+\item 
+vector$<$ double $>$ {\bf get\+FitX} ()
+\item 
+vector$<$ double $>$ {\bf get\+FitY} ()
+\item 
+vector$<$ double $>$ {\bf get\+OrigX} ()
+\item 
+vector$<$ double $>$ {\bf get\+OrigY} ()
+\item 
+void {\bf set\+Orig\+Values} ({\bf Matrix} matrix, int colX, int colY, wx\+Real\+Point rangeN, double dxN)
+\item 
+void {\bf set\+Orig\+Values} (vector$<$ double $>$ oX, vector$<$ double $>$ oY, wx\+Real\+Point rangeN, double dxN)
+\item 
+double {\bf calc\+Value} (double valueX)
+\item 
+{\bf fit\+Type} {\bf get\+Type} ()
+\item 
+{\bf Fit\+Curve} $\ast$ {\bf copy} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 19 do arquivo Fit\+Curve.\+h.
+
+
+
+\subsection{Enumerações}
+\index{Fit\+Curve@{Fit\+Curve}!fit\+Type@{fit\+Type}}
+\index{fit\+Type@{fit\+Type}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{fit\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Fit\+Curve\+::fit\+Type}}\label{class_fit_curve_af0567aca6ddc4faf1a9c93972f4570e0}
+Identificador de ajuste selecionado \begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{F\+I\+T\+\_\+\+N\+O\+NE@{F\+I\+T\+\_\+\+N\+O\+NE}!Fit\+Curve@{Fit\+Curve}}\index{Fit\+Curve@{Fit\+Curve}!F\+I\+T\+\_\+\+N\+O\+NE@{F\+I\+T\+\_\+\+N\+O\+NE}}\item[{\em 
+F\+I\+T\+\_\+\+N\+O\+NE\label{class_fit_curve_af0567aca6ddc4faf1a9c93972f4570e0a7e4286d9f1b086df6d1cbf331cde8e59}
+}]\index{F\+I\+T\+\_\+\+L\+I\+N\+\_\+\+B\+Y\+\_\+\+P\+O\+I\+NT@{F\+I\+T\+\_\+\+L\+I\+N\+\_\+\+B\+Y\+\_\+\+P\+O\+I\+NT}!Fit\+Curve@{Fit\+Curve}}\index{Fit\+Curve@{Fit\+Curve}!F\+I\+T\+\_\+\+L\+I\+N\+\_\+\+B\+Y\+\_\+\+P\+O\+I\+NT@{F\+I\+T\+\_\+\+L\+I\+N\+\_\+\+B\+Y\+\_\+\+P\+O\+I\+NT}}\item[{\em 
+F\+I\+T\+\_\+\+L\+I\+N\+\_\+\+B\+Y\+\_\+\+P\+O\+I\+NT\label{class_fit_curve_af0567aca6ddc4faf1a9c93972f4570e0a6d15def62b84903abc662709ed9daa12}
+}]\index{F\+I\+T\+\_\+\+P\+O\+LY@{F\+I\+T\+\_\+\+P\+O\+LY}!Fit\+Curve@{Fit\+Curve}}\index{Fit\+Curve@{Fit\+Curve}!F\+I\+T\+\_\+\+P\+O\+LY@{F\+I\+T\+\_\+\+P\+O\+LY}}\item[{\em 
+F\+I\+T\+\_\+\+P\+O\+LY\label{class_fit_curve_af0567aca6ddc4faf1a9c93972f4570e0a592d521897a28f9ef4927c31161eb746}
+}]\index{F\+I\+T\+\_\+\+P\+O\+W\+ER@{F\+I\+T\+\_\+\+P\+O\+W\+ER}!Fit\+Curve@{Fit\+Curve}}\index{Fit\+Curve@{Fit\+Curve}!F\+I\+T\+\_\+\+P\+O\+W\+ER@{F\+I\+T\+\_\+\+P\+O\+W\+ER}}\item[{\em 
+F\+I\+T\+\_\+\+P\+O\+W\+ER\label{class_fit_curve_af0567aca6ddc4faf1a9c93972f4570e0a0ba284fad0e06f5b32099658932b8b13}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 25 do arquivo Fit\+Curve.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Fit\+Curve@{Fit\+Curve}!Fit\+Curve@{Fit\+Curve}}
+\index{Fit\+Curve@{Fit\+Curve}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{Fit\+Curve(\+Matrix matrix, int col\+X, int col\+Y, wx\+Real\+Point range=wx\+Real\+Point(\+E\+M\+P\+T\+Y, E\+M\+P\+T\+Y), double dx=1, fit\+Type type=\+F\+I\+T\+\_\+\+N\+O\+N\+E, int degree=2, Matrix points=\+Matrix(0, 3))}]{\setlength{\rightskip}{0pt plus 5cm}Fit\+Curve\+::\+Fit\+Curve (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{matrix, }
+\item[{int}]{colX, }
+\item[{int}]{colY, }
+\item[{wx\+Real\+Point}]{range = {\ttfamily wxRealPoint({\bf E\+M\+P\+TY},~{\bf E\+M\+P\+TY})}, }
+\item[{double}]{dx = {\ttfamily 1}, }
+\item[{{\bf fit\+Type}}]{type = {\ttfamily {\bf F\+I\+T\+\_\+\+N\+O\+NE}}, }
+\item[{int}]{degree = {\ttfamily 2}, }
+\item[{{\bf Matrix}}]{points = {\ttfamily {\bf Matrix}(0,~3)}}
+\end{DoxyParamCaption}
+)}\label{class_fit_curve_affa8b951b4e15c5ba5526628aa3fe573}
+Construtor \index{Fit\+Curve@{Fit\+Curve}!Fit\+Curve@{Fit\+Curve}}
+\index{Fit\+Curve@{Fit\+Curve}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{Fit\+Curve(vector$<$ double $>$ o\+X, vector$<$ double $>$ o\+Y, wx\+Real\+Point range=wx\+Real\+Point(\+E\+M\+P\+T\+Y, E\+M\+P\+T\+Y), double dx=1, fit\+Type type=\+F\+I\+T\+\_\+\+N\+O\+N\+E, int degree=2, Matrix points=\+Matrix(0, 3))}]{\setlength{\rightskip}{0pt plus 5cm}Fit\+Curve\+::\+Fit\+Curve (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{oX, }
+\item[{vector$<$ double $>$}]{oY, }
+\item[{wx\+Real\+Point}]{range = {\ttfamily wxRealPoint({\bf E\+M\+P\+TY},~{\bf E\+M\+P\+TY})}, }
+\item[{double}]{dx = {\ttfamily 1}, }
+\item[{{\bf fit\+Type}}]{type = {\ttfamily {\bf F\+I\+T\+\_\+\+N\+O\+NE}}, }
+\item[{int}]{degree = {\ttfamily 2}, }
+\item[{{\bf Matrix}}]{points = {\ttfamily {\bf Matrix}(0,~3)}}
+\end{DoxyParamCaption}
+)}\label{class_fit_curve_ad6a2f6bc6e1c54bf4ae3e58f79b16a37}
+Construtor \index{Fit\+Curve@{Fit\+Curve}!````~Fit\+Curve@{$\sim$\+Fit\+Curve}}
+\index{````~Fit\+Curve@{$\sim$\+Fit\+Curve}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{$\sim$\+Fit\+Curve()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Fit\+Curve\+::$\sim$\+Fit\+Curve (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_fit_curve_a89eb43ddfd9be95d396d17d341477077}
+Destrutor 
+
+\subsection{Métodos}
+\index{Fit\+Curve@{Fit\+Curve}!calc\+Value@{calc\+Value}}
+\index{calc\+Value@{calc\+Value}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{calc\+Value(double value\+X)}]{\setlength{\rightskip}{0pt plus 5cm}double Fit\+Curve\+::calc\+Value (
+\begin{DoxyParamCaption}
+\item[{double}]{valueX}
+\end{DoxyParamCaption}
+)}\label{class_fit_curve_a75ac489332c5e6323127b2465fe940d2}
+Retorna o valor ajustado de acordo com o tipo selecionado \index{Fit\+Curve@{Fit\+Curve}!copy@{copy}}
+\index{copy@{copy}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{copy()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Fit\+Curve}$\ast$ Fit\+Curve\+::copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_fit_curve_af9849a54ed1dcc12099ffd68f83e0228}
+Copia de si \index{Fit\+Curve@{Fit\+Curve}!get\+Alfa@{get\+Alfa}}
+\index{get\+Alfa@{get\+Alfa}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{get\+Alfa()}]{\setlength{\rightskip}{0pt plus 5cm}double Fit\+Curve\+::get\+Alfa (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_fit_curve_a9c4d46d41ea5e53f39e631b4d63862c8}
+Retorna o valor de alfa \index{Fit\+Curve@{Fit\+Curve}!get\+Beta@{get\+Beta}}
+\index{get\+Beta@{get\+Beta}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{get\+Beta()}]{\setlength{\rightskip}{0pt plus 5cm}double Fit\+Curve\+::get\+Beta (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_fit_curve_af5f682ee14910afe34b6bc7194623c89}
+Retorna o valor de beta \index{Fit\+Curve@{Fit\+Curve}!get\+Degree@{get\+Degree}}
+\index{get\+Degree@{get\+Degree}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{get\+Degree()}]{\setlength{\rightskip}{0pt plus 5cm}double Fit\+Curve\+::get\+Degree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_fit_curve_a7f5ad154316c72edd58b82d8b0866dce}
+Retorna o valor do grau do ajuste polinomial \index{Fit\+Curve@{Fit\+Curve}!get\+Dx@{get\+Dx}}
+\index{get\+Dx@{get\+Dx}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{get\+Dx()}]{\setlength{\rightskip}{0pt plus 5cm}double Fit\+Curve\+::get\+Dx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_fit_curve_a56e734ba1cd0f2384f9cb1664d2954e7}
+Retorna o valor da varia��o de x \index{Fit\+Curve@{Fit\+Curve}!get\+FitX@{get\+FitX}}
+\index{get\+FitX@{get\+FitX}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{get\+Fit\+X()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Fit\+Curve\+::get\+FitX (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_fit_curve_a645d46f564beb4feba78ba3e2d3b6e5b}
+Retorna os valores de x ajustado pelo tipo selecionado 
+
+Definição na linha 98 do arquivo Fit\+Curve.\+h.
+
+\index{Fit\+Curve@{Fit\+Curve}!get\+FitY@{get\+FitY}}
+\index{get\+FitY@{get\+FitY}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{get\+Fit\+Y()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Fit\+Curve\+::get\+FitY (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_fit_curve_a8618922110256fbbd40c568dc891b3d2}
+Retorna os valores de y ajustado pelo tipo selecionado 
+
+Definição na linha 102 do arquivo Fit\+Curve.\+h.
+
+\index{Fit\+Curve@{Fit\+Curve}!get\+Lin\+Coef@{get\+Lin\+Coef}}
+\index{get\+Lin\+Coef@{get\+Lin\+Coef}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{get\+Lin\+Coef()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Fit\+Curve\+::get\+Lin\+Coef (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_fit_curve_a9d124a2f3561e48af5611d7dfb3ca538}
+\index{Fit\+Curve@{Fit\+Curve}!get\+Lin\+Points@{get\+Lin\+Points}}
+\index{get\+Lin\+Points@{get\+Lin\+Points}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{get\+Lin\+Points()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Fit\+Curve\+::get\+Lin\+Points (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_fit_curve_aa9da7adb2affa3a4b127d6e0f843ffd3}
+\index{Fit\+Curve@{Fit\+Curve}!get\+OrigX@{get\+OrigX}}
+\index{get\+OrigX@{get\+OrigX}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{get\+Orig\+X()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Fit\+Curve\+::get\+OrigX (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_fit_curve_ad4dd8e1c76261d94628564ab274a12c0}
+Retorna os valores de x ajustado pelo tipo selecionado 
+
+Definição na linha 106 do arquivo Fit\+Curve.\+h.
+
+\index{Fit\+Curve@{Fit\+Curve}!get\+OrigY@{get\+OrigY}}
+\index{get\+OrigY@{get\+OrigY}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{get\+Orig\+Y()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Fit\+Curve\+::get\+OrigY (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_fit_curve_a2433f58b7f3ae9367db47eb7ae717ff3}
+Retorna os valores de y ajustado pelo tipo selecionado 
+
+Definição na linha 110 do arquivo Fit\+Curve.\+h.
+
+\index{Fit\+Curve@{Fit\+Curve}!get\+Range@{get\+Range}}
+\index{get\+Range@{get\+Range}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{get\+Range()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Real\+Point Fit\+Curve\+::get\+Range (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_fit_curve_a87a5e6bee8788666123a01ed85d32bf8}
+Retorna o valor da varia��o de x 
+
+Definição na linha 55 do arquivo Fit\+Curve.\+h.
+
+\index{Fit\+Curve@{Fit\+Curve}!get\+Selected\+Type@{get\+Selected\+Type}}
+\index{get\+Selected\+Type@{get\+Selected\+Type}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{get\+Selected\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fit\+Type} Fit\+Curve\+::get\+Selected\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_fit_curve_af48644bad65d4b29c1eb9692a143c4f8}
+Retorna o tipo de ajuste selecionado 
+
+Definição na linha 94 do arquivo Fit\+Curve.\+h.
+
+\index{Fit\+Curve@{Fit\+Curve}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{get\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fit\+Type} Fit\+Curve\+::get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_fit_curve_a77e461371bcafc88164e12e429510f73}
+
+
+Definição na linha 117 do arquivo Fit\+Curve.\+h.
+
+\index{Fit\+Curve@{Fit\+Curve}!set\+Alfa@{set\+Alfa}}
+\index{set\+Alfa@{set\+Alfa}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{set\+Alfa(double value)}]{\setlength{\rightskip}{0pt plus 5cm}void Fit\+Curve\+::set\+Alfa (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_fit_curve_addd954268866edaa53695b2133958338}
+Define alfa \index{Fit\+Curve@{Fit\+Curve}!set\+Beta@{set\+Beta}}
+\index{set\+Beta@{set\+Beta}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{set\+Beta(double value)}]{\setlength{\rightskip}{0pt plus 5cm}void Fit\+Curve\+::set\+Beta (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_fit_curve_a679107790be8c64240c55698961ebe61}
+Define beta \index{Fit\+Curve@{Fit\+Curve}!set\+Degree@{set\+Degree}}
+\index{set\+Degree@{set\+Degree}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{set\+Degree(int value)}]{\setlength{\rightskip}{0pt plus 5cm}void Fit\+Curve\+::set\+Degree (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\label{class_fit_curve_a5b32519bf82b63435a8e4c13c19edc15}
+Define o grau para o ajuste polinomial \index{Fit\+Curve@{Fit\+Curve}!set\+Dx@{set\+Dx}}
+\index{set\+Dx@{set\+Dx}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{set\+Dx(double value)}]{\setlength{\rightskip}{0pt plus 5cm}void Fit\+Curve\+::set\+Dx (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_fit_curve_a400ade7516c006623ad3c0261178c007}
+Define a varia��o de x \index{Fit\+Curve@{Fit\+Curve}!set\+Lin\+Coef@{set\+Lin\+Coef}}
+\index{set\+Lin\+Coef@{set\+Lin\+Coef}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{set\+Lin\+Coef(\+Matrix coef)}]{\setlength{\rightskip}{0pt plus 5cm}void Fit\+Curve\+::set\+Lin\+Coef (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{coef}
+\end{DoxyParamCaption}
+)}\label{class_fit_curve_acdfb9851682c9270c8fe629c4a81ad5d}
+\index{Fit\+Curve@{Fit\+Curve}!set\+Lin\+Points@{set\+Lin\+Points}}
+\index{set\+Lin\+Points@{set\+Lin\+Points}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{set\+Lin\+Points(\+Matrix points)}]{\setlength{\rightskip}{0pt plus 5cm}void Fit\+Curve\+::set\+Lin\+Points (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{points}
+\end{DoxyParamCaption}
+)}\label{class_fit_curve_a7bd13d36023f2d3a596ebbe1ad77b905}
+\index{Fit\+Curve@{Fit\+Curve}!set\+Orig\+Values@{set\+Orig\+Values}}
+\index{set\+Orig\+Values@{set\+Orig\+Values}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{set\+Orig\+Values(\+Matrix matrix, int col\+X, int col\+Y, wx\+Real\+Point range\+N, double dx\+N)}]{\setlength{\rightskip}{0pt plus 5cm}void Fit\+Curve\+::set\+Orig\+Values (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{matrix, }
+\item[{int}]{colX, }
+\item[{int}]{colY, }
+\item[{wx\+Real\+Point}]{rangeN, }
+\item[{double}]{dxN}
+\end{DoxyParamCaption}
+)}\label{class_fit_curve_adb6f5736af0a8c30e5ff70b636fca622}
+\index{Fit\+Curve@{Fit\+Curve}!set\+Orig\+Values@{set\+Orig\+Values}}
+\index{set\+Orig\+Values@{set\+Orig\+Values}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{set\+Orig\+Values(vector$<$ double $>$ o\+X, vector$<$ double $>$ o\+Y, wx\+Real\+Point range\+N, double dx\+N)}]{\setlength{\rightskip}{0pt plus 5cm}void Fit\+Curve\+::set\+Orig\+Values (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{oX, }
+\item[{vector$<$ double $>$}]{oY, }
+\item[{wx\+Real\+Point}]{rangeN, }
+\item[{double}]{dxN}
+\end{DoxyParamCaption}
+)}\label{class_fit_curve_a5863b7f515e6a7b8116586c26ca0eaa2}
+\index{Fit\+Curve@{Fit\+Curve}!set\+Selected\+Type@{set\+Selected\+Type}}
+\index{set\+Selected\+Type@{set\+Selected\+Type}!Fit\+Curve@{Fit\+Curve}}
+\subsubsection[{set\+Selected\+Type(fit\+Type selection)}]{\setlength{\rightskip}{0pt plus 5cm}void Fit\+Curve\+::set\+Selected\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf fit\+Type}}]{selection}
+\end{DoxyParamCaption}
+)}\label{class_fit_curve_aff75fe186c44b411e361beeab76e5767}
+Selecio o tipo de ajuste a ser utilizado 
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Fit\+Curve.\+h}\end{DoxyCompactItemize}

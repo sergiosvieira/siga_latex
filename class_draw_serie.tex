@@ -1,0 +1,247 @@
+\section{Referência da Classe Draw\+Serie}
+\label{class_draw_serie}\index{Draw\+Serie@{Draw\+Serie}}
+
+
+{\ttfamily \#include $<$Serie\+Viewer.\+h$>$}
+
+
+
+Herdeiro de {\bf S\+I\+G\+A\+Tree\+Item\+Data}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Draw\+Serie} ({\bf Serie} $\ast${\bf serie}, int {\bf id}, wx\+Colour {\bf color}, bool {\bf inverse}=false, bool {\bf show\+Plan}=true, bool {\bf show\+Graph}=false, wx\+String {\bf sections}=\char`\"{}\char`\"{}, bool {\bf draw\+Symbols}=true, bool {\bf draw\+Lines}=true, {\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} up\+Type={\bf S\+I\+G\+A\+Tranformation\+::\+T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+A\+DD}, {\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} down\+Type={\bf S\+I\+G\+A\+Tranformation\+::\+T\+R\+A\+N\+S\+\_\+\+D\+O\+W\+N\+\_\+\+D\+IV}, int deltaT=24)
+\item 
+{\bf $\sim$\+Draw\+Serie} ()
+\item 
+bool {\bf empty} ()
+\item 
+{\bf Serie} $\ast$ {\bf get\+Serie} () const 
+\item 
+void {\bf set\+Serie} ({\bf Serie} $\ast$new\+Serie)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+G\+A\+Tranformation} $\ast$ {\bf transformed\+Series}
+\item 
+bool {\bf spline}
+\item 
+bool {\bf draw\+Symbols}
+\item 
+bool {\bf draw\+Lines}
+\item 
+int {\bf id}
+\item 
+wx\+Bitmap {\bf symbol}
+\item 
+int {\bf symbol\+Type}
+\item 
+int {\bf symbol\+Color}
+\item 
+wx\+Plot\+Data {\bf xy\+\_\+data}
+\item 
+wx\+Colour {\bf color}
+\item 
+bool {\bf inverse}
+\item 
+bool {\bf show\+Graph}
+\item 
+bool {\bf show\+Plan}
+\item 
+wx\+String {\bf sections}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Serie} $\ast$ {\bf serie}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 368 do arquivo Serie\+Viewer.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Draw\+Serie@{Draw\+Serie}!Draw\+Serie@{Draw\+Serie}}
+\index{Draw\+Serie@{Draw\+Serie}!Draw\+Serie@{Draw\+Serie}}
+\subsubsection[{Draw\+Serie(\+Serie $\ast$serie, int id, wx\+Colour color, bool inverse=false, bool show\+Plan=true, bool show\+Graph=false, wx\+String sections="""", bool draw\+Symbols=true, bool draw\+Lines=true, S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up up\+Type=\+S\+I\+G\+A\+Tranformation\+::\+T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+A\+D\+D, S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down down\+Type=\+S\+I\+G\+A\+Tranformation\+::\+T\+R\+A\+N\+S\+\_\+\+D\+O\+W\+N\+\_\+\+D\+I\+V, int delta\+T=24)}]{\setlength{\rightskip}{0pt plus 5cm}Draw\+Serie\+::\+Draw\+Serie (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie} $\ast$}]{serie, }
+\item[{int}]{id, }
+\item[{wx\+Colour}]{color, }
+\item[{bool}]{inverse = {\ttfamily false}, }
+\item[{bool}]{show\+Plan = {\ttfamily true}, }
+\item[{bool}]{show\+Graph = {\ttfamily false}, }
+\item[{wx\+String}]{sections = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{bool}]{draw\+Symbols = {\ttfamily true}, }
+\item[{bool}]{draw\+Lines = {\ttfamily true}, }
+\item[{{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up}}]{up\+Type = {\ttfamily {\bf S\+I\+G\+A\+Tranformation\+::\+T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+A\+DD}}, }
+\item[{{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down}}]{down\+Type = {\ttfamily {\bf S\+I\+G\+A\+Tranformation\+::\+T\+R\+A\+N\+S\+\_\+\+D\+O\+W\+N\+\_\+\+D\+IV}}, }
+\item[{int}]{deltaT = {\ttfamily 24}}
+\end{DoxyParamCaption}
+)}\label{class_draw_serie_a19cf66acdd2606a5f16464320a8b74ad}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em serie} & \doxyref{Serie}{pag.}{class_serie} representada \\
+\hline
+{\em color} & Cor da serie \\
+\hline
+{\em inverse} & Se a serie deve ser desenhada invertida \\
+\hline
+{\em show} & Se a serie deve iniciar desenhada \\
+\hline
+\end{DoxyParams}
+\index{Draw\+Serie@{Draw\+Serie}!````~Draw\+Serie@{$\sim$\+Draw\+Serie}}
+\index{````~Draw\+Serie@{$\sim$\+Draw\+Serie}!Draw\+Serie@{Draw\+Serie}}
+\subsubsection[{$\sim$\+Draw\+Serie()}]{\setlength{\rightskip}{0pt plus 5cm}Draw\+Serie\+::$\sim$\+Draw\+Serie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_serie_a1fad6279fbc7dce8e5ddb22c21d7ffac}
+Destrutor 
+
+\subsection{Métodos}
+\index{Draw\+Serie@{Draw\+Serie}!empty@{empty}}
+\index{empty@{empty}!Draw\+Serie@{Draw\+Serie}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool Draw\+Serie\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_draw_serie_aa85e1c861586f30becce71b87b0740aa}
+Diz se h� informa��es armazenadas na matrix 
+
+Reimplementação de {\bf S\+I\+G\+A\+Tree\+Item\+Data} \doxyref{}{pag.}{class_s_i_g_a_tree_item_data_ad2396b72518390c4537d27fd8beb9f73}.
+
+\index{Draw\+Serie@{Draw\+Serie}!get\+Serie@{get\+Serie}}
+\index{get\+Serie@{get\+Serie}!Draw\+Serie@{Draw\+Serie}}
+\subsubsection[{get\+Serie() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ Draw\+Serie\+::get\+Serie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_draw_serie_ab66d9a94355b1587d782d54ce1b9b6bd}
+\index{Draw\+Serie@{Draw\+Serie}!set\+Serie@{set\+Serie}}
+\index{set\+Serie@{set\+Serie}!Draw\+Serie@{Draw\+Serie}}
+\subsubsection[{set\+Serie(\+Serie $\ast$new\+Serie)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Serie\+::set\+Serie (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie} $\ast$}]{new\+Serie}
+\end{DoxyParamCaption}
+)}\label{class_draw_serie_a5af61ad4772377ed9c9415be92ad3d92}
+
+
+\subsection{Atributos}
+\index{Draw\+Serie@{Draw\+Serie}!color@{color}}
+\index{color@{color}!Draw\+Serie@{Draw\+Serie}}
+\subsubsection[{color}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Colour Draw\+Serie\+::color}\label{class_draw_serie_ab606d66042308e6092d4e36b5aa1e4e7}
+Cor com a qual a serie sera desenhada 
+
+Definição na linha 411 do arquivo Serie\+Viewer.\+h.
+
+\index{Draw\+Serie@{Draw\+Serie}!draw\+Lines@{draw\+Lines}}
+\index{draw\+Lines@{draw\+Lines}!Draw\+Serie@{Draw\+Serie}}
+\subsubsection[{draw\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}bool Draw\+Serie\+::draw\+Lines}\label{class_draw_serie_a135207cf61779a10bd5f246be3f631de}
+Desenha as linhas 
+
+Definição na linha 386 do arquivo Serie\+Viewer.\+h.
+
+\index{Draw\+Serie@{Draw\+Serie}!draw\+Symbols@{draw\+Symbols}}
+\index{draw\+Symbols@{draw\+Symbols}!Draw\+Serie@{Draw\+Serie}}
+\subsubsection[{draw\+Symbols}]{\setlength{\rightskip}{0pt plus 5cm}bool Draw\+Serie\+::draw\+Symbols}\label{class_draw_serie_aa837b014b2584bfb50ec6ba07e04bf3f}
+Desenha os pontos 
+
+Definição na linha 382 do arquivo Serie\+Viewer.\+h.
+
+\index{Draw\+Serie@{Draw\+Serie}!id@{id}}
+\index{id@{id}!Draw\+Serie@{Draw\+Serie}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}int Draw\+Serie\+::id}\label{class_draw_serie_acd5ad091d9a81c7d4a64c1b25e197954}
+Identificador da serie 
+
+Definição na linha 390 do arquivo Serie\+Viewer.\+h.
+
+\index{Draw\+Serie@{Draw\+Serie}!inverse@{inverse}}
+\index{inverse@{inverse}!Draw\+Serie@{Draw\+Serie}}
+\subsubsection[{inverse}]{\setlength{\rightskip}{0pt plus 5cm}bool Draw\+Serie\+::inverse}\label{class_draw_serie_a9622e942dbf436e345b4360ee8e3228f}
+Plota a \doxyref{Serie}{pag.}{class_serie} de cima para baixo (Geralmente usado para precipita��o) 
+
+Definição na linha 416 do arquivo Serie\+Viewer.\+h.
+
+\index{Draw\+Serie@{Draw\+Serie}!sections@{sections}}
+\index{sections@{sections}!Draw\+Serie@{Draw\+Serie}}
+\subsubsection[{sections}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Draw\+Serie\+::sections}\label{class_draw_serie_a20c0308182c86ade266759c4dab71fa8}
+Contem as se��es de inser��o 
+
+Definição na linha 428 do arquivo Serie\+Viewer.\+h.
+
+\index{Draw\+Serie@{Draw\+Serie}!serie@{serie}}
+\index{serie@{serie}!Draw\+Serie@{Draw\+Serie}}
+\subsubsection[{serie}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ Draw\+Serie\+::serie\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_serie_ae1e33adcbe583141fe48c176fddf7677}
+\doxyref{Serie}{pag.}{class_serie} que esta \doxyref{Draw\+Serie}{pag.}{class_draw_serie} representa 
+
+Definição na linha 454 do arquivo Serie\+Viewer.\+h.
+
+\index{Draw\+Serie@{Draw\+Serie}!show\+Graph@{show\+Graph}}
+\index{show\+Graph@{show\+Graph}!Draw\+Serie@{Draw\+Serie}}
+\subsubsection[{show\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}bool Draw\+Serie\+::show\+Graph}\label{class_draw_serie_a8c46666416cb8828d87a761fa384e815}
+Mostra a serie no gr�fico 
+
+Definição na linha 420 do arquivo Serie\+Viewer.\+h.
+
+\index{Draw\+Serie@{Draw\+Serie}!show\+Plan@{show\+Plan}}
+\index{show\+Plan@{show\+Plan}!Draw\+Serie@{Draw\+Serie}}
+\subsubsection[{show\+Plan}]{\setlength{\rightskip}{0pt plus 5cm}bool Draw\+Serie\+::show\+Plan}\label{class_draw_serie_a88d6fa8216b50b496ed05b1f451af518}
+Mostra a serie na planilha 
+
+Definição na linha 424 do arquivo Serie\+Viewer.\+h.
+
+\index{Draw\+Serie@{Draw\+Serie}!spline@{spline}}
+\index{spline@{spline}!Draw\+Serie@{Draw\+Serie}}
+\subsubsection[{spline}]{\setlength{\rightskip}{0pt plus 5cm}bool Draw\+Serie\+::spline}\label{class_draw_serie_ac3c16c29640e463d9a5e2370818bd358}
+Desnhar spline 
+
+Definição na linha 378 do arquivo Serie\+Viewer.\+h.
+
+\index{Draw\+Serie@{Draw\+Serie}!symbol@{symbol}}
+\index{symbol@{symbol}!Draw\+Serie@{Draw\+Serie}}
+\subsubsection[{symbol}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Draw\+Serie\+::symbol}\label{class_draw_serie_a8b60a963b26155ddb783504dc2ad2a97}
+Simbolo do gr�fico 
+
+Definição na linha 394 do arquivo Serie\+Viewer.\+h.
+
+\index{Draw\+Serie@{Draw\+Serie}!symbol\+Color@{symbol\+Color}}
+\index{symbol\+Color@{symbol\+Color}!Draw\+Serie@{Draw\+Serie}}
+\subsubsection[{symbol\+Color}]{\setlength{\rightskip}{0pt plus 5cm}int Draw\+Serie\+::symbol\+Color}\label{class_draw_serie_ad1edd2cb876c60a297b60a96d4a9015e}
+Cor do simbolo 
+
+Definição na linha 402 do arquivo Serie\+Viewer.\+h.
+
+\index{Draw\+Serie@{Draw\+Serie}!symbol\+Type@{symbol\+Type}}
+\index{symbol\+Type@{symbol\+Type}!Draw\+Serie@{Draw\+Serie}}
+\subsubsection[{symbol\+Type}]{\setlength{\rightskip}{0pt plus 5cm}int Draw\+Serie\+::symbol\+Type}\label{class_draw_serie_a7b9a460f9f71b4551750a2832fda6f43}
+Tipo de simbolo 
+
+Definição na linha 398 do arquivo Serie\+Viewer.\+h.
+
+\index{Draw\+Serie@{Draw\+Serie}!transformed\+Series@{transformed\+Series}}
+\index{transformed\+Series@{transformed\+Series}!Draw\+Serie@{Draw\+Serie}}
+\subsubsection[{transformed\+Series}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation}$\ast$ Draw\+Serie\+::transformed\+Series}\label{class_draw_serie_a0750e546080c22ad21f5f52903e5623c}
+valores das series di�ria, mensal e anual 
+
+Definição na linha 374 do arquivo Serie\+Viewer.\+h.
+
+\index{Draw\+Serie@{Draw\+Serie}!xy\+\_\+data@{xy\+\_\+data}}
+\index{xy\+\_\+data@{xy\+\_\+data}!Draw\+Serie@{Draw\+Serie}}
+\subsubsection[{xy\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Plot\+Data Draw\+Serie\+::xy\+\_\+data}\label{class_draw_serie_a70e08000275bc0b38e90f8b763a84f77}
+Dados da curva 
+
+Definição na linha 406 do arquivo Serie\+Viewer.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Serie\+Viewer.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,172 @@
+\section{Referência do Arquivo Geo\+Parser.\+h}
+\label{_geo_parser_8h}\index{Geo\+Parser.\+h@{Geo\+Parser.\+h}}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$stack$>$}\\*
+{\ttfamily \#include $<$set$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf Geo\+Parser\+Token}
+\end{DoxyCompactItemize}
+\subsection*{Enumerações}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Geo\+Parser\+Error} \{ \\*
+{\bf P\+E\+\_\+\+N\+O\+NE}, 
+{\bf P\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+L\+UE}, 
+{\bf P\+E\+\_\+\+U\+N\+C\+L\+O\+S\+E\+D\+\_\+\+Q\+U\+O\+T\+ES}, 
+{\bf P\+E\+\_\+\+U\+N\+C\+L\+O\+S\+E\+D\+\_\+\+B\+R\+A\+C\+K\+E\+TS}, 
+\\*
+{\bf P\+E\+\_\+\+S\+Y\+N\+T\+A\+X\+\_\+\+E\+R\+R\+OR}
+ \}
+\item 
+enum {\bf Geo\+Parser\+Type} \{ {\bf P\+T\+\_\+\+A\+R\+R\+AY}, 
+{\bf P\+T\+\_\+\+S\+T\+R\+I\+NG}, 
+{\bf P\+T\+\_\+\+P\+R\+I\+M\+I\+T\+I\+VE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Geo\+Parser\+Token} $\ast$ {\bf create\+Token} ({\bf Geo\+Parser\+Type} a\+\_\+type, const std\+::string \&a\+\_\+label)
+\item 
+void {\bf update\+Token} ({\bf Geo\+Parser\+Token} \&a\+\_\+token, {\bf Geo\+Parser\+Type} a\+\_\+type, const std\+::string \&a\+\_\+label)
+\item 
+bool {\bf skip} (const char \&a\+\_\+char)
+\item 
+{\bf Geo\+Parser\+Error} {\bf process\+Alpha} (std\+::string \&a\+\_\+alpha, std\+::string\+::const\+\_\+iterator \&a\+\_\+it, const std\+::string\+::const\+\_\+iterator \&a\+\_\+end)
+\item 
+{\bf Geo\+Parser\+Error} {\bf process\+Digit} (std\+::string \&a\+\_\+digit, std\+::string\+::const\+\_\+iterator \&a\+\_\+it, const std\+::string\+::const\+\_\+iterator \&a\+\_\+end)
+\item 
+{\bf Geo\+Parser\+Error} {\bf process\+String} (std\+::string \&a\+\_\+string, std\+::string\+::const\+\_\+iterator \&a\+\_\+it, const std\+::string\+::const\+\_\+iterator \&a\+\_\+end)
+\item 
+void {\bf pop\+And\+Push\+Token} (std\+::stack$<$ {\bf Geo\+Parser\+Token} $\ast$ $>$ \&a\+\_\+stack)
+\item 
+{\bf Geo\+Parser\+Error} {\bf geo\+\_\+parser} (const std\+::string a\+\_\+input, {\bf Geo\+Parser\+Token} \&a\+\_\+root)
+\item 
+{\bf Geo\+Parser\+Token} $\ast$ {\bf geo\+\_\+find} ({\bf Geo\+Parser\+Token} $\ast$a\+\_\+node, const std\+::string \&a\+\_\+key)
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumerações}
+\index{Geo\+Parser.\+h@{Geo\+Parser.\+h}!Geo\+Parser\+Error@{Geo\+Parser\+Error}}
+\index{Geo\+Parser\+Error@{Geo\+Parser\+Error}!Geo\+Parser.\+h@{Geo\+Parser.\+h}}
+\subsubsection[{Geo\+Parser\+Error}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Geo\+Parser\+Error}}\label{_geo_parser_8h_abe4b324a1f7ee40d619e15c97f717da0}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{P\+E\+\_\+\+N\+O\+NE@{P\+E\+\_\+\+N\+O\+NE}!Geo\+Parser.\+h@{Geo\+Parser.\+h}}\index{Geo\+Parser.\+h@{Geo\+Parser.\+h}!P\+E\+\_\+\+N\+O\+NE@{P\+E\+\_\+\+N\+O\+NE}}\item[{\em 
+P\+E\+\_\+\+N\+O\+NE\label{_geo_parser_8h_abe4b324a1f7ee40d619e15c97f717da0a8747c301b38b9ab00fe1de039b7da18b}
+}]\index{P\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+L\+UE@{P\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+L\+UE}!Geo\+Parser.\+h@{Geo\+Parser.\+h}}\index{Geo\+Parser.\+h@{Geo\+Parser.\+h}!P\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+L\+UE@{P\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+L\+UE}}\item[{\em 
+P\+E\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+V\+A\+L\+UE\label{_geo_parser_8h_abe4b324a1f7ee40d619e15c97f717da0aaa9862466e40e2dfa968093841234a03}
+}]\index{P\+E\+\_\+\+U\+N\+C\+L\+O\+S\+E\+D\+\_\+\+Q\+U\+O\+T\+ES@{P\+E\+\_\+\+U\+N\+C\+L\+O\+S\+E\+D\+\_\+\+Q\+U\+O\+T\+ES}!Geo\+Parser.\+h@{Geo\+Parser.\+h}}\index{Geo\+Parser.\+h@{Geo\+Parser.\+h}!P\+E\+\_\+\+U\+N\+C\+L\+O\+S\+E\+D\+\_\+\+Q\+U\+O\+T\+ES@{P\+E\+\_\+\+U\+N\+C\+L\+O\+S\+E\+D\+\_\+\+Q\+U\+O\+T\+ES}}\item[{\em 
+P\+E\+\_\+\+U\+N\+C\+L\+O\+S\+E\+D\+\_\+\+Q\+U\+O\+T\+ES\label{_geo_parser_8h_abe4b324a1f7ee40d619e15c97f717da0a07805e7934fbfadd5fe9e5822aadbee0}
+}]\index{P\+E\+\_\+\+U\+N\+C\+L\+O\+S\+E\+D\+\_\+\+B\+R\+A\+C\+K\+E\+TS@{P\+E\+\_\+\+U\+N\+C\+L\+O\+S\+E\+D\+\_\+\+B\+R\+A\+C\+K\+E\+TS}!Geo\+Parser.\+h@{Geo\+Parser.\+h}}\index{Geo\+Parser.\+h@{Geo\+Parser.\+h}!P\+E\+\_\+\+U\+N\+C\+L\+O\+S\+E\+D\+\_\+\+B\+R\+A\+C\+K\+E\+TS@{P\+E\+\_\+\+U\+N\+C\+L\+O\+S\+E\+D\+\_\+\+B\+R\+A\+C\+K\+E\+TS}}\item[{\em 
+P\+E\+\_\+\+U\+N\+C\+L\+O\+S\+E\+D\+\_\+\+B\+R\+A\+C\+K\+E\+TS\label{_geo_parser_8h_abe4b324a1f7ee40d619e15c97f717da0a8830194563ae9dd18a10aadc1a95d4e1}
+}]\index{P\+E\+\_\+\+S\+Y\+N\+T\+A\+X\+\_\+\+E\+R\+R\+OR@{P\+E\+\_\+\+S\+Y\+N\+T\+A\+X\+\_\+\+E\+R\+R\+OR}!Geo\+Parser.\+h@{Geo\+Parser.\+h}}\index{Geo\+Parser.\+h@{Geo\+Parser.\+h}!P\+E\+\_\+\+S\+Y\+N\+T\+A\+X\+\_\+\+E\+R\+R\+OR@{P\+E\+\_\+\+S\+Y\+N\+T\+A\+X\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+P\+E\+\_\+\+S\+Y\+N\+T\+A\+X\+\_\+\+E\+R\+R\+OR\label{_geo_parser_8h_abe4b324a1f7ee40d619e15c97f717da0a8061a84d1f667e1c3e92db2a2ebaa343}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 13 do arquivo Geo\+Parser.\+h.
+
+\index{Geo\+Parser.\+h@{Geo\+Parser.\+h}!Geo\+Parser\+Type@{Geo\+Parser\+Type}}
+\index{Geo\+Parser\+Type@{Geo\+Parser\+Type}!Geo\+Parser.\+h@{Geo\+Parser.\+h}}
+\subsubsection[{Geo\+Parser\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Geo\+Parser\+Type}}\label{_geo_parser_8h_ad3b11c4b59118fc7fd0a9384dfac45c3}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{P\+T\+\_\+\+A\+R\+R\+AY@{P\+T\+\_\+\+A\+R\+R\+AY}!Geo\+Parser.\+h@{Geo\+Parser.\+h}}\index{Geo\+Parser.\+h@{Geo\+Parser.\+h}!P\+T\+\_\+\+A\+R\+R\+AY@{P\+T\+\_\+\+A\+R\+R\+AY}}\item[{\em 
+P\+T\+\_\+\+A\+R\+R\+AY\label{_geo_parser_8h_ad3b11c4b59118fc7fd0a9384dfac45c3a4539c71f7ca5578f79bcfac0544be430}
+}]\index{P\+T\+\_\+\+S\+T\+R\+I\+NG@{P\+T\+\_\+\+S\+T\+R\+I\+NG}!Geo\+Parser.\+h@{Geo\+Parser.\+h}}\index{Geo\+Parser.\+h@{Geo\+Parser.\+h}!P\+T\+\_\+\+S\+T\+R\+I\+NG@{P\+T\+\_\+\+S\+T\+R\+I\+NG}}\item[{\em 
+P\+T\+\_\+\+S\+T\+R\+I\+NG\label{_geo_parser_8h_ad3b11c4b59118fc7fd0a9384dfac45c3a2bd50da1a59fe6894d91a88928bdcbef}
+}]\index{P\+T\+\_\+\+P\+R\+I\+M\+I\+T\+I\+VE@{P\+T\+\_\+\+P\+R\+I\+M\+I\+T\+I\+VE}!Geo\+Parser.\+h@{Geo\+Parser.\+h}}\index{Geo\+Parser.\+h@{Geo\+Parser.\+h}!P\+T\+\_\+\+P\+R\+I\+M\+I\+T\+I\+VE@{P\+T\+\_\+\+P\+R\+I\+M\+I\+T\+I\+VE}}\item[{\em 
+P\+T\+\_\+\+P\+R\+I\+M\+I\+T\+I\+VE\label{_geo_parser_8h_ad3b11c4b59118fc7fd0a9384dfac45c3a06f234a7345306c0c16fbdf038753ec8}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 22 do arquivo Geo\+Parser.\+h.
+
+
+
+\subsection{Funções}
+\index{Geo\+Parser.\+h@{Geo\+Parser.\+h}!create\+Token@{create\+Token}}
+\index{create\+Token@{create\+Token}!Geo\+Parser.\+h@{Geo\+Parser.\+h}}
+\subsubsection[{create\+Token(\+Geo\+Parser\+Type a\+\_\+type, const std\+::string \&a\+\_\+label)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geo\+Parser\+Token}$\ast$ create\+Token (
+\begin{DoxyParamCaption}
+\item[{{\bf Geo\+Parser\+Type}}]{a\+\_\+type, }
+\item[{const std\+::string \&}]{a\+\_\+label}
+\end{DoxyParamCaption}
+)}\label{_geo_parser_8h_a14099cd79d5501fb55f22a852f464fce}
+\index{Geo\+Parser.\+h@{Geo\+Parser.\+h}!geo\+\_\+find@{geo\+\_\+find}}
+\index{geo\+\_\+find@{geo\+\_\+find}!Geo\+Parser.\+h@{Geo\+Parser.\+h}}
+\subsubsection[{geo\+\_\+find(\+Geo\+Parser\+Token $\ast$a\+\_\+node, const std\+::string \&a\+\_\+key)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geo\+Parser\+Token}$\ast$ geo\+\_\+find (
+\begin{DoxyParamCaption}
+\item[{{\bf Geo\+Parser\+Token} $\ast$}]{a\+\_\+node, }
+\item[{const std\+::string \&}]{a\+\_\+key}
+\end{DoxyParamCaption}
+)}\label{_geo_parser_8h_a79275bea0dd8c1a089d9626773a8031b}
+\index{Geo\+Parser.\+h@{Geo\+Parser.\+h}!geo\+\_\+parser@{geo\+\_\+parser}}
+\index{geo\+\_\+parser@{geo\+\_\+parser}!Geo\+Parser.\+h@{Geo\+Parser.\+h}}
+\subsubsection[{geo\+\_\+parser(const std\+::string a\+\_\+input, Geo\+Parser\+Token \&a\+\_\+root)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geo\+Parser\+Error} geo\+\_\+parser (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{a\+\_\+input, }
+\item[{{\bf Geo\+Parser\+Token} \&}]{a\+\_\+root}
+\end{DoxyParamCaption}
+)}\label{_geo_parser_8h_ad312106b8bd1f94c37f58570974d6860}
+\index{Geo\+Parser.\+h@{Geo\+Parser.\+h}!pop\+And\+Push\+Token@{pop\+And\+Push\+Token}}
+\index{pop\+And\+Push\+Token@{pop\+And\+Push\+Token}!Geo\+Parser.\+h@{Geo\+Parser.\+h}}
+\subsubsection[{pop\+And\+Push\+Token(std\+::stack$<$ Geo\+Parser\+Token $\ast$ $>$ \&a\+\_\+stack)}]{\setlength{\rightskip}{0pt plus 5cm}void pop\+And\+Push\+Token (
+\begin{DoxyParamCaption}
+\item[{std\+::stack$<$ {\bf Geo\+Parser\+Token} $\ast$ $>$ \&}]{a\+\_\+stack}
+\end{DoxyParamCaption}
+)}\label{_geo_parser_8h_aa2f2b9af289aeacf3403f15acfde84a4}
+\index{Geo\+Parser.\+h@{Geo\+Parser.\+h}!process\+Alpha@{process\+Alpha}}
+\index{process\+Alpha@{process\+Alpha}!Geo\+Parser.\+h@{Geo\+Parser.\+h}}
+\subsubsection[{process\+Alpha(std\+::string \&a\+\_\+alpha, std\+::string\+::const\+\_\+iterator \&a\+\_\+it, const std\+::string\+::const\+\_\+iterator \&a\+\_\+end)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geo\+Parser\+Error} process\+Alpha (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+alpha, }
+\item[{std\+::string\+::const\+\_\+iterator \&}]{a\+\_\+it, }
+\item[{const std\+::string\+::const\+\_\+iterator \&}]{a\+\_\+end}
+\end{DoxyParamCaption}
+)}\label{_geo_parser_8h_a89cd5e269659235fff8f9504f35a6de3}
+\index{Geo\+Parser.\+h@{Geo\+Parser.\+h}!process\+Digit@{process\+Digit}}
+\index{process\+Digit@{process\+Digit}!Geo\+Parser.\+h@{Geo\+Parser.\+h}}
+\subsubsection[{process\+Digit(std\+::string \&a\+\_\+digit, std\+::string\+::const\+\_\+iterator \&a\+\_\+it, const std\+::string\+::const\+\_\+iterator \&a\+\_\+end)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geo\+Parser\+Error} process\+Digit (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+digit, }
+\item[{std\+::string\+::const\+\_\+iterator \&}]{a\+\_\+it, }
+\item[{const std\+::string\+::const\+\_\+iterator \&}]{a\+\_\+end}
+\end{DoxyParamCaption}
+)}\label{_geo_parser_8h_a8b9e2196a208093ec72f9fbd5d59ec5e}
+\index{Geo\+Parser.\+h@{Geo\+Parser.\+h}!process\+String@{process\+String}}
+\index{process\+String@{process\+String}!Geo\+Parser.\+h@{Geo\+Parser.\+h}}
+\subsubsection[{process\+String(std\+::string \&a\+\_\+string, std\+::string\+::const\+\_\+iterator \&a\+\_\+it, const std\+::string\+::const\+\_\+iterator \&a\+\_\+end)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Geo\+Parser\+Error} process\+String (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+string, }
+\item[{std\+::string\+::const\+\_\+iterator \&}]{a\+\_\+it, }
+\item[{const std\+::string\+::const\+\_\+iterator \&}]{a\+\_\+end}
+\end{DoxyParamCaption}
+)}\label{_geo_parser_8h_a7e401d6691e7b9a4e37b779d2fdc5e09}
+\index{Geo\+Parser.\+h@{Geo\+Parser.\+h}!skip@{skip}}
+\index{skip@{skip}!Geo\+Parser.\+h@{Geo\+Parser.\+h}}
+\subsubsection[{skip(const char \&a\+\_\+char)}]{\setlength{\rightskip}{0pt plus 5cm}bool skip (
+\begin{DoxyParamCaption}
+\item[{const char \&}]{a\+\_\+char}
+\end{DoxyParamCaption}
+)}\label{_geo_parser_8h_ad16658ae0a36ff07cb83cafc9400a8a0}
+\index{Geo\+Parser.\+h@{Geo\+Parser.\+h}!update\+Token@{update\+Token}}
+\index{update\+Token@{update\+Token}!Geo\+Parser.\+h@{Geo\+Parser.\+h}}
+\subsubsection[{update\+Token(\+Geo\+Parser\+Token \&a\+\_\+token, Geo\+Parser\+Type a\+\_\+type, const std\+::string \&a\+\_\+label)}]{\setlength{\rightskip}{0pt plus 5cm}void update\+Token (
+\begin{DoxyParamCaption}
+\item[{{\bf Geo\+Parser\+Token} \&}]{a\+\_\+token, }
+\item[{{\bf Geo\+Parser\+Type}}]{a\+\_\+type, }
+\item[{const std\+::string \&}]{a\+\_\+label}
+\end{DoxyParamCaption}
+)}\label{_geo_parser_8h_a3848587b7f27079c4d852f46796dae44}

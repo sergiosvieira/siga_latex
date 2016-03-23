@@ -1,0 +1,442 @@
+\section{Referência da Classe Res\+Op\+Scenario\+Priority\+Control}
+\label{class_res_op_scenario_priority_control}\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Scenario\+Priority\+Control.\+h$>$}
+
+
+
+Herdeiro de wx\+Object.
+
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf m\+\_\+t\+Element\+Model}
+\begin{DoxyCompactList}\small\item\em Struct \doxyref{m\+\_\+t\+Element\+Model}{pag.}{struct_res_op_scenario_priority_control_1_1m__t_element_model} \+: Save the data from elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Scenario\+Priority\+Control} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+{\bf $\sim$\+Res\+Op\+Scenario\+Priority\+Control} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void {\bf fill\+Grid} (wx\+Grid $\ast$a\+\_\+grid)
+\begin{DoxyCompactList}\small\item\em Fill grid with model data. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ {\bf create\+Model} ()
+\begin{DoxyCompactList}\small\item\em Create the basic model and prepare it based on map of elements from scenario. \end{DoxyCompactList}\item 
+void {\bf set\+Element\+On\+Model} ({\bf Element\+ID} a\+\_\+element\+Id, {\bf Element} $\ast$a\+\_\+element, std\+::string a\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Input the element information on a struct \doxyref{m\+\_\+t\+Element\+Model}{pag.}{struct_res_op_scenario_priority_control_1_1m__t_element_model} and after do a push\+\_\+back on element\textquotesingle{}s model vector. \end{DoxyCompactList}\item 
+void {\bf append\+Sum\+I\+Ds\+Vector} ({\bf Link} $\ast$a\+\_\+node\+Link)
+\begin{DoxyCompactList}\small\item\em Add sum nodes on vector for sum nodes. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::pair$<$ {\bf Element\+ID}, int $>$ $>$ {\bf open\+Rule\+Vector} ()
+\begin{DoxyCompactList}\small\item\em Return a vector\textquotesingle{}s pair that contains the element id and your priority. \end{DoxyCompactList}\item 
+bool {\bf open\+Rule} (std\+::vector$<$ std\+::string $>$ \&a\+\_\+model\+Grid)
+\begin{DoxyCompactList}\small\item\em Get the pirority of elements. \end{DoxyCompactList}\item 
+bool {\bf element\+Priority\+Rule} ({\bf Res\+Op\+Element} $\ast$a\+\_\+element)
+\begin{DoxyCompactList}\small\item\em Get the element\textquotesingle{}s priority rule saved on project. \end{DoxyCompactList}\item 
+bool {\bf save\+Rule} (std\+::vector$<$ std\+::string $>$ a\+\_\+model\+Grid)
+\begin{DoxyCompactList}\small\item\em Save the const prioritys. \end{DoxyCompactList}\item 
+bool {\bf save\+Element\+Priority} ({\bf Res\+Op\+Element} $\ast$a\+\_\+element, std\+::vector$<$ std\+::string $>$ a\+\_\+model\+Grid)
+\begin{DoxyCompactList}\small\item\em Efetive new element\textquotesingle{}s priority rule save. \end{DoxyCompactList}\item 
+bool {\bf set\+Priority\+Value} (int \&a\+\_\+priority, {\bf Element\+ID} id, std\+::vector$<$ std\+::string $>$ a\+\_\+model\+Grid)
+\begin{DoxyCompactList}\small\item\em Set the priority value. \end{DoxyCompactList}\item 
+bool {\bf save\+Const\+Priority} (std\+::string a\+\_\+path\+File, std\+::vector$<$ std\+::string $>$ a\+\_\+string\+Model)
+\begin{DoxyCompactList}\small\item\em Set the prioritys values in the file on system. \end{DoxyCompactList}\item 
+bool {\bf get\+Data\+File} (std\+::string a\+\_\+opened\+File\+Path, std\+::vector$<$ std\+::string $>$ \&a\+\_\+string\+Model)
+\begin{DoxyCompactList}\small\item\em Get the file information. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ {\bf model\+Grid} ()
+\begin{DoxyCompactList}\small\item\em Prepare the model to grid. \end{DoxyCompactList}\item 
+void {\bf refine\+Model} (std\+::vector$<$ std\+::string $>$ \&a\+\_\+model\+List, std\+::vector$<$ uint32\+\_\+t $>$ \&a\+\_\+sum\+Ids)
+\begin{DoxyCompactList}\small\item\em Editting S\+U\+Ms on model data before fill the grid. \end{DoxyCompactList}\item 
+void {\bf remove\+Reservoirs} (std\+::vector$<$ {\bf m\+\_\+t\+Element\+Model} $>$ \&a\+\_\+model, std\+::vector$<$ uint32\+\_\+t $>$ a\+\_\+sum\+Ids)
+\begin{DoxyCompactList}\small\item\em Remove all the Reservoirs or Lakes that not is a S\+UM of a demand. \end{DoxyCompactList}\item 
+std\+::pair$<$ std\+::string, std\+::string $>$ {\bf help} ()
+\begin{DoxyCompactList}\small\item\em Text to Help Dialog. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ {\bf S\+U\+M\+\_\+\+T\+O\+K\+EN} = \char`\"{}\+:$\vert$$\vert$\+:\char`\"{}
+\item 
+char $\ast$ {\bf D\+O\+W\+N\+S\+T\+R\+E\+A\+M\+\_\+\+T\+O\+K\+EN} = \char`\"{}\+:+\+:\char`\"{}
+\item 
+char $\ast$ {\bf type\+\_\+reservoir} = \char`\"{}Reservat�rio\char`\"{}
+\item 
+char $\ast$ {\bf type\+\_\+lake} = \char`\"{}Lago\char`\"{}
+\item 
+char $\ast$ {\bf type\+\_\+demand} = \char`\"{}Demanda\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 24 do arquivo Res\+Op\+Scenario\+Priority\+Control.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{Res\+Op\+Scenario\+Priority\+Control()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Scenario\+Priority\+Control\+::\+Res\+Op\+Scenario\+Priority\+Control (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_control_ae8b563293146c9870441dad9e01ef448}
+
+
+Constructor. 
+
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!````~Res\+Op\+Scenario\+Priority\+Control@{$\sim$\+Res\+Op\+Scenario\+Priority\+Control}}
+\index{````~Res\+Op\+Scenario\+Priority\+Control@{$\sim$\+Res\+Op\+Scenario\+Priority\+Control}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{$\sim$\+Res\+Op\+Scenario\+Priority\+Control()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Scenario\+Priority\+Control\+::$\sim$\+Res\+Op\+Scenario\+Priority\+Control (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_control_a5a6c17a790720ccc5271301c4f9fed33}
+
+
+Destructor. 
+
+
+
+\subsection{Métodos}
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!append\+Sum\+I\+Ds\+Vector@{append\+Sum\+I\+Ds\+Vector}}
+\index{append\+Sum\+I\+Ds\+Vector@{append\+Sum\+I\+Ds\+Vector}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{append\+Sum\+I\+Ds\+Vector(\+Link $\ast$a\+\_\+node\+Link)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+Control\+::append\+Sum\+I\+Ds\+Vector (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{a\+\_\+node\+Link}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_control_aa7bda15cb0667c0a219e8ad021115aa8}
+
+
+Add sum nodes on vector for sum nodes. 
+
+if reservoir or lake has been node origin and if demand has been node destiny save your ids do fill grid based on your sum 
+\begin{DoxyParams}{Parâmetros}
+{\em a} & element node Link$\ast$ \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!create\+Model@{create\+Model}}
+\index{create\+Model@{create\+Model}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{create\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ Res\+Op\+Scenario\+Priority\+Control\+::create\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_control_a92ff142330a01930059c1d1678717397}
+
+
+Create the basic model and prepare it based on map of elements from scenario. 
+
+\begin{DoxySeeAlso}{Veja também}
+\doxyref{model\+Grid()}{pag.}{class_res_op_scenario_priority_control_add39b16b951019482d21f591af5a490a} 
+\end{DoxySeeAlso}
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!element\+Priority\+Rule@{element\+Priority\+Rule}}
+\index{element\+Priority\+Rule@{element\+Priority\+Rule}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{element\+Priority\+Rule(\+Res\+Op\+Element $\ast$a\+\_\+element)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Priority\+Control\+::element\+Priority\+Rule (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{a\+\_\+element}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_control_ab0c6ccf680672852d19241b4fea86210}
+
+
+Get the element\textquotesingle{}s priority rule saved on project. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a} & \doxyref{Res\+Op\+Element}{pag.}{class_res_op_element} \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!fill\+Grid@{fill\+Grid}}
+\index{fill\+Grid@{fill\+Grid}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{fill\+Grid(wx\+Grid $\ast$a\+\_\+grid)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+Control\+::fill\+Grid (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid $\ast$}]{a\+\_\+grid}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_control_ad46736841cf4592bf7673f50ef352932}
+
+
+Fill grid with model data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a} & wx\+Grid pointer \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!get\+Data\+File@{get\+Data\+File}}
+\index{get\+Data\+File@{get\+Data\+File}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{get\+Data\+File(std\+::string a\+\_\+opened\+File\+Path, std\+::vector$<$ std\+::string $>$ \&a\+\_\+string\+Model)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Priority\+Control\+::get\+Data\+File (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{a\+\_\+opened\+File\+Path, }
+\item[{std\+::vector$<$ std\+::string $>$ \&}]{a\+\_\+string\+Model}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_control_af9f176b435b0550bf1822586633fdb7e}
+
+
+Get the file information. 
+
+After load a file, get the data to fill the model from grid 
+\begin{DoxyParams}{Parâmetros}
+{\em a} & path from opened file \\
+\hline
+{\em a} & model from grid data to fill \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+a true if value of transaction will be ok 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!help@{help}}
+\index{help@{help}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{help()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$std\+::string, std\+::string$>$ Res\+Op\+Scenario\+Priority\+Control\+::help (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_control_ab3b3e0dbe06d27c5dbeb6586657033a0}
+
+
+Text to Help Dialog. 
+
+\begin{DoxyReturn}{Retorna}
+a pair with title of dialog and the description 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!model\+Grid@{model\+Grid}}
+\index{model\+Grid@{model\+Grid}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{model\+Grid()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ Res\+Op\+Scenario\+Priority\+Control\+::model\+Grid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_control_add39b16b951019482d21f591af5a490a}
+
+
+Prepare the model to grid. 
+
+Put the tokens sum and downstream on elements to identify better who is a S\+UM and who is a D\+O\+W\+N\+S\+T\+R\+E\+AM \begin{DoxySeeAlso}{Veja também}
+\doxyref{refine\+Model(std\+::vector$<$std\+::string$>$ \& a\+\_\+model\+List, std\+::vector$<$uint32\+\_\+t$>$ \& a\+\_\+sum\+Ids)}{pag.}{class_res_op_scenario_priority_control_af0816b7b699225067e19c10288b95195} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Retorna}
+the model data 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!open\+Rule@{open\+Rule}}
+\index{open\+Rule@{open\+Rule}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{open\+Rule(std\+::vector$<$ std\+::string $>$ \&a\+\_\+model\+Grid)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Priority\+Control\+::open\+Rule (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$ \&}]{a\+\_\+model\+Grid}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_control_a9d53191a9bbd9a4ad64b2b6d8eeeda2e}
+
+
+Get the pirority of elements. 
+
+Get the value of const priority from each demand on network and fill the grid with it \begin{DoxySeeAlso}{Veja também}
+\doxyref{save\+Rule(std\+::vector$<$std\+::string$>$ a\+\_\+model\+Grid)}{pag.}{class_res_op_scenario_priority_control_ab697cc247b3870bd59a9f73ac0d7cac1} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Retorna}
+a true if value of transaction will be ok 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!open\+Rule\+Vector@{open\+Rule\+Vector}}
+\index{open\+Rule\+Vector@{open\+Rule\+Vector}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{open\+Rule\+Vector()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::pair$<${\bf Element\+ID}, int$>$ $>$ Res\+Op\+Scenario\+Priority\+Control\+::open\+Rule\+Vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_control_aed89afcb2cce63e532e88fbb0c6ae40d}
+
+
+Return a vector\textquotesingle{}s pair that contains the element id and your priority. 
+
+\begin{DoxyReturn}{Retorna}
+a vector\textquotesingle{}s pair with \doxyref{Element}{pag.}{class_element} ID and priority from element 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!refine\+Model@{refine\+Model}}
+\index{refine\+Model@{refine\+Model}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{refine\+Model(std\+::vector$<$ std\+::string $>$ \&a\+\_\+model\+List, std\+::vector$<$ uint32\+\_\+t $>$ \&a\+\_\+sum\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+Control\+::refine\+Model (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$ \&}]{a\+\_\+model\+List, }
+\item[{std\+::vector$<$ uint32\+\_\+t $>$ \&}]{a\+\_\+sum\+Ids}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_control_af0816b7b699225067e19c10288b95195}
+
+
+Editting S\+U\+Ms on model data before fill the grid. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a} & reference of model data \\
+\hline
+{\em a} & reference of vector of sum element id \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Veja também}
+\doxyref{remove\+Reservoirs(std\+::vector$<$m\+\_\+t\+Element\+Model$>$ \& a\+\_\+model, std\+::vector$<$uint32\+\_\+t$>$ a\+\_\+sum\+Ids)}{pag.}{class_res_op_scenario_priority_control_a9c869ed943cdab99afdabb519c1945ba} 
+\end{DoxySeeAlso}
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!remove\+Reservoirs@{remove\+Reservoirs}}
+\index{remove\+Reservoirs@{remove\+Reservoirs}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{remove\+Reservoirs(std\+::vector$<$ m\+\_\+t\+Element\+Model $>$ \&a\+\_\+model, std\+::vector$<$ uint32\+\_\+t $>$ a\+\_\+sum\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+Control\+::remove\+Reservoirs (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf m\+\_\+t\+Element\+Model} $>$ \&}]{a\+\_\+model, }
+\item[{std\+::vector$<$ uint32\+\_\+t $>$}]{a\+\_\+sum\+Ids}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_control_a9c869ed943cdab99afdabb519c1945ba}
+
+
+Remove all the Reservoirs or Lakes that not is a S\+UM of a demand. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a} & reference of model data \\
+\hline
+{\em a} & reference of vector of sum element id \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!save\+Const\+Priority@{save\+Const\+Priority}}
+\index{save\+Const\+Priority@{save\+Const\+Priority}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{save\+Const\+Priority(std\+::string a\+\_\+path\+File, std\+::vector$<$ std\+::string $>$ a\+\_\+string\+Model)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Priority\+Control\+::save\+Const\+Priority (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{a\+\_\+path\+File, }
+\item[{std\+::vector$<$ std\+::string $>$}]{a\+\_\+string\+Model}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_control_a74a2005e7037fae86ac02acd7e5eac4e}
+
+
+Set the prioritys values in the file on system. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a} & path of file to output \\
+\hline
+{\em a} & model from grid data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+a true if value of transaction will be ok 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!save\+Element\+Priority@{save\+Element\+Priority}}
+\index{save\+Element\+Priority@{save\+Element\+Priority}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{save\+Element\+Priority(\+Res\+Op\+Element $\ast$a\+\_\+element, std\+::vector$<$ std\+::string $>$ a\+\_\+model\+Grid)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Priority\+Control\+::save\+Element\+Priority (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{a\+\_\+element, }
+\item[{std\+::vector$<$ std\+::string $>$}]{a\+\_\+model\+Grid}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_control_a62147d2366a8b1879efc0b38199471f4}
+
+
+Efetive new element\textquotesingle{}s priority rule save. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{Res\+Op\+Element}{pag.}{class_res_op_element}} & \\
+\hline
+{\em model} & data \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!save\+Rule@{save\+Rule}}
+\index{save\+Rule@{save\+Rule}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{save\+Rule(std\+::vector$<$ std\+::string $>$ a\+\_\+model\+Grid)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Priority\+Control\+::save\+Rule (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$}]{a\+\_\+model\+Grid}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_control_ab697cc247b3870bd59a9f73ac0d7cac1}
+
+
+Save the const prioritys. 
+
+Save the prioritys values after editing \begin{DoxySeeAlso}{Veja também}
+\doxyref{open\+Rule(std\+::vector$<$std\+::string$>$ \& a\+\_\+model\+Grid)}{pag.}{class_res_op_scenario_priority_control_a9d53191a9bbd9a4ad64b2b6d8eeeda2e} 
+
+\doxyref{set\+Priority\+Value(int \& a\+\_\+priority, Element\+I\+D id, std\+::vector$<$std\+::string$>$ a\+\_\+model\+Grid)}{pag.}{class_res_op_scenario_priority_control_a8b5b50e80517a3e1eb9926469c70416b} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Retorna}
+a true if value of transaction will be ok 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!set\+Element\+On\+Model@{set\+Element\+On\+Model}}
+\index{set\+Element\+On\+Model@{set\+Element\+On\+Model}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{set\+Element\+On\+Model(\+Element\+I\+D a\+\_\+element\+Id, Element $\ast$a\+\_\+element, std\+::string a\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+Control\+::set\+Element\+On\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{a\+\_\+element\+Id, }
+\item[{{\bf Element} $\ast$}]{a\+\_\+element, }
+\item[{std\+::string}]{a\+\_\+type}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_control_ae4073fb4b453b886bcf881f2a6c8d30a}
+
+
+Input the element information on a struct \doxyref{m\+\_\+t\+Element\+Model}{pag.}{struct_res_op_scenario_priority_control_1_1m__t_element_model} and after do a push\+\_\+back on element\textquotesingle{}s model vector. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em id} & from element \\
+\hline
+{\em a} & element point \\
+\hline
+{\em the} & type of element \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!set\+Priority\+Value@{set\+Priority\+Value}}
+\index{set\+Priority\+Value@{set\+Priority\+Value}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{set\+Priority\+Value(int \&a\+\_\+priority, Element\+I\+D id, std\+::vector$<$ std\+::string $>$ a\+\_\+model\+Grid)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Priority\+Control\+::set\+Priority\+Value (
+\begin{DoxyParamCaption}
+\item[{int \&}]{a\+\_\+priority, }
+\item[{{\bf Element\+ID}}]{id, }
+\item[{std\+::vector$<$ std\+::string $>$}]{a\+\_\+model\+Grid}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_control_a8b5b50e80517a3e1eb9926469c70416b}
+
+
+Set the priority value. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a} & int reference to priority \\
+\hline
+{\em a} & element id \\
+\hline
+{\em a} & model with data \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Veja também}
+\doxyref{save\+Rule(std\+::vector$<$std\+::string$>$ a\+\_\+model\+Grid)}{pag.}{class_res_op_scenario_priority_control_ab697cc247b3870bd59a9f73ac0d7cac1} 
+\end{DoxySeeAlso}
+\begin{DoxyReturn}{Retorna}
+a true if value of transaction will be ok 
+\end{DoxyReturn}
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!D\+O\+W\+N\+S\+T\+R\+E\+A\+M\+\_\+\+T\+O\+K\+EN@{D\+O\+W\+N\+S\+T\+R\+E\+A\+M\+\_\+\+T\+O\+K\+EN}}
+\index{D\+O\+W\+N\+S\+T\+R\+E\+A\+M\+\_\+\+T\+O\+K\+EN@{D\+O\+W\+N\+S\+T\+R\+E\+A\+M\+\_\+\+T\+O\+K\+EN}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{D\+O\+W\+N\+S\+T\+R\+E\+A\+M\+\_\+\+T\+O\+K\+EN}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Res\+Op\+Scenario\+Priority\+Control\+::\+D\+O\+W\+N\+S\+T\+R\+E\+A\+M\+\_\+\+T\+O\+K\+EN = \char`\"{}\+:+\+:\char`\"{}}\label{class_res_op_scenario_priority_control_aba414c018c3aec365bf6035a484d0a85}
+Token to mark the element how downstream on model 
+
+Definição na linha 28 do arquivo Res\+Op\+Scenario\+Priority\+Control.\+h.
+
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!S\+U\+M\+\_\+\+T\+O\+K\+EN@{S\+U\+M\+\_\+\+T\+O\+K\+EN}}
+\index{S\+U\+M\+\_\+\+T\+O\+K\+EN@{S\+U\+M\+\_\+\+T\+O\+K\+EN}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{S\+U\+M\+\_\+\+T\+O\+K\+EN}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Res\+Op\+Scenario\+Priority\+Control\+::\+S\+U\+M\+\_\+\+T\+O\+K\+EN = \char`\"{}\+:$\vert$$\vert$\+:\char`\"{}}\label{class_res_op_scenario_priority_control_a9ba02448e79a1ddf135e89b626619482}
+Token to mark the element how sum on model 
+
+Definição na linha 27 do arquivo Res\+Op\+Scenario\+Priority\+Control.\+h.
+
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!type\+\_\+demand@{type\+\_\+demand}}
+\index{type\+\_\+demand@{type\+\_\+demand}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{type\+\_\+demand}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Res\+Op\+Scenario\+Priority\+Control\+::type\+\_\+demand = \char`\"{}Demanda\char`\"{}}\label{class_res_op_scenario_priority_control_a96781c0f575de72746d086d11341a07a}
+Identifier type of element like demand 
+
+Definição na linha 31 do arquivo Res\+Op\+Scenario\+Priority\+Control.\+h.
+
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!type\+\_\+lake@{type\+\_\+lake}}
+\index{type\+\_\+lake@{type\+\_\+lake}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{type\+\_\+lake}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Res\+Op\+Scenario\+Priority\+Control\+::type\+\_\+lake = \char`\"{}Lago\char`\"{}}\label{class_res_op_scenario_priority_control_a8e356c8842b0dcd459e605c0b7068592}
+Identifier type of element like lake 
+
+Definição na linha 30 do arquivo Res\+Op\+Scenario\+Priority\+Control.\+h.
+
+\index{Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}!type\+\_\+reservoir@{type\+\_\+reservoir}}
+\index{type\+\_\+reservoir@{type\+\_\+reservoir}!Res\+Op\+Scenario\+Priority\+Control@{Res\+Op\+Scenario\+Priority\+Control}}
+\subsubsection[{type\+\_\+reservoir}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Res\+Op\+Scenario\+Priority\+Control\+::type\+\_\+reservoir = \char`\"{}Reservat�rio\char`\"{}}\label{class_res_op_scenario_priority_control_a1a321651503f9fbc548296d8e815bc19}
+Identifier type of element like reservoir 
+
+Definição na linha 29 do arquivo Res\+Op\+Scenario\+Priority\+Control.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Scenario\+Priority\+Control.\+h}\end{DoxyCompactItemize}

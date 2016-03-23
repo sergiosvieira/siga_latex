@@ -1,0 +1,265 @@
+\section{Refer√™ncia da Classe Aff\+Prev\+Demand\+Model}
+\label{class_aff_prev_demand_model}\index{Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}}
+
+
+{\ttfamily \#include $<$Aff\+Prev\+Demand\+Model.\+h$>$}
+
+
+
+Herdeiro de {\bf Aff\+Prev\+Model}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Aff\+Prev\+Demand\+Model} ({\bf Date} initial\+Date, {\bf Date} final\+Date, {\bf Node} $\ast${\bf node})
+\item 
+{\bf $\sim$\+Aff\+Prev\+Demand\+Model} ()
+\item 
+void {\bf clear} ()
+\item 
+bool {\bf empty} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+int {\bf get\+Id} ()
+\item 
+double {\bf get\+Demand\+Value} ({\bf Date} date, vector$<$ unsigned int $>$ {\bf res\+Up})
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, bool open\+Conf=false)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, bool open\+Conf=false)
+\item 
+void {\bf add\+Scenario} (unsigned int seed, bool copy=false)
+\item 
+{\bf Aff\+Prev\+Scenario} $\ast$ {\bf copy\+Scenario} ({\bf Aff\+Prev\+Scenario} $\ast$)
+\item 
+void {\bf remove\+Scenario} (bool recreate=true)
+\item 
+void {\bf remove\+All\+Scenarios} ()
+\item 
+int {\bf get\+Selected\+Scenario} ()
+\item 
+void {\bf set\+Selected\+Scenario} (unsigned int x)
+\item 
+wx\+String {\bf get\+Scenario\+Name} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+String {\bf demand\+File\+Name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+Cada inst‚ncia de modelo È feita para um nÛ especÌfico 
+
+Defini√ß√£o na linha 17 do arquivo Aff\+Prev\+Demand\+Model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}!Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}}
+\index{Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}!Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}}
+\subsubsection[{Aff\+Prev\+Demand\+Model(\+Date initial\+Date, Date final\+Date, Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}Aff\+Prev\+Demand\+Model\+::\+Aff\+Prev\+Demand\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{initial\+Date, }
+\item[{{\bf Date}}]{final\+Date, }
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_demand_model_a0f6a35917c64f322455c846ecf58e8f7}
+Construtor padr„o da classe \doxyref{Res\+Op\+Model}{pag.}{class_res_op_model} 
+\begin{DoxyParams}{Par√¢metros}
+{\em initial\+Date} & Inicio do intervalo \\
+\hline
+{\em final\+Date} & Final do Intervalo \\
+\hline
+{\em node} & NÛ de interesse \\
+\hline
+\end{DoxyParams}
+\index{Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}!````~Aff\+Prev\+Demand\+Model@{$\sim$\+Aff\+Prev\+Demand\+Model}}
+\index{````~Aff\+Prev\+Demand\+Model@{$\sim$\+Aff\+Prev\+Demand\+Model}!Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}}
+\subsubsection[{$\sim$\+Aff\+Prev\+Demand\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Aff\+Prev\+Demand\+Model\+::$\sim$\+Aff\+Prev\+Demand\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_demand_model_a569a9fb173108c6cf6a46732eec6a7da}
+Destrutor padr„o da classe \doxyref{Res\+Op\+Model}{pag.}{class_res_op_model} 
+
+\subsection{M√©todos}
+\index{Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}!add\+Scenario@{add\+Scenario}}
+\index{add\+Scenario@{add\+Scenario}!Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}}
+\subsubsection[{add\+Scenario(unsigned int seed, bool copy=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Demand\+Model\+::add\+Scenario (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{seed, }
+\item[{bool}]{copy = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_demand_model_a0ee9b08acd662a2050a61b31884fc824}
+\index{Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Aff\+Prev\+Demand\+Model\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_demand_model_adeb3738c5f79dc98ab6f4b4f865fcf45}
+Checa se as informaÁıes est„o completas 
+\begin{DoxyParams}{Par√¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Aff\+Prev\+Model} \doxyref{}{pag.}{class_aff_prev_model_aec2a88cdc3322dd3235434b69fa735cf}.
+
+\index{Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}!clear@{clear}}
+\index{clear@{clear}!Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Demand\+Model\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_demand_model_a7bf7ac3fdb7ed662857b102da2126b58}
+\index{Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}!copy\+Scenario@{copy\+Scenario}}
+\index{copy\+Scenario@{copy\+Scenario}!Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}}
+\subsubsection[{copy\+Scenario(\+Aff\+Prev\+Scenario $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Aff\+Prev\+Scenario}$\ast$ Aff\+Prev\+Demand\+Model\+::copy\+Scenario (
+\begin{DoxyParamCaption}
+\item[{{\bf Aff\+Prev\+Scenario} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_demand_model_ab2e9233b2fa966594b27370d937cee60}
+\index{Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}!empty@{empty}}
+\index{empty@{empty}!Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool Aff\+Prev\+Demand\+Model\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_demand_model_a94a97901ada32662adeed770d8ffa63e}
+retorna se existe algum valor no modelo \index{Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}!get\+Demand\+Value@{get\+Demand\+Value}}
+\index{get\+Demand\+Value@{get\+Demand\+Value}!Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}}
+\subsubsection[{get\+Demand\+Value(\+Date date, vector$<$ unsigned int $>$ res\+Up)}]{\setlength{\rightskip}{0pt plus 5cm}double Aff\+Prev\+Demand\+Model\+::get\+Demand\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{date, }
+\item[{vector$<$ unsigned int $>$}]{res\+Up}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_demand_model_a228cfae11faaa6d75e7d51f628f57db9}
+Retorna o valaor da demanda a ser atendida por um determinado reservatÛrio Id \index{Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}}
+\subsubsection[{get\+Id()}]{\setlength{\rightskip}{0pt plus 5cm}int Aff\+Prev\+Demand\+Model\+::get\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_demand_model_a9a4d375a18541abde53320fc3dc34da7}
+SimulaÁ„o 
+\begin{DoxyParams}{Par√¢metros}
+{\em i} & Dia a ser simulado\\
+\hline
+\end{DoxyParams}
+void \doxyref{run(\+Date i)}{pag.}{class_aff_prev_model_ab4ffcc380a832bb002b4f0bf3af894bb}; AlocaÁ„o de Resultados
+
+void aloc\+Results(); Retorna o identificador do elemento associado \index{Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}!get\+Scenario\+Name@{get\+Scenario\+Name}}
+\index{get\+Scenario\+Name@{get\+Scenario\+Name}!Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}}
+\subsubsection[{get\+Scenario\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Aff\+Prev\+Demand\+Model\+::get\+Scenario\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_demand_model_a05203659af7e7f0a9ba6fa458bd5c512}
+\index{Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}!get\+Selected\+Scenario@{get\+Selected\+Scenario}}
+\index{get\+Selected\+Scenario@{get\+Selected\+Scenario}!Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}}
+\subsubsection[{get\+Selected\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}int Aff\+Prev\+Demand\+Model\+::get\+Selected\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_demand_model_afa457a9d0eec8faa8dbcadcde30fd634}
+\index{Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$proj)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Demand\+Model\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_aff_prev_demand_model_ac15bbf0d7d93bd4eb8367e8396c632d7}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementa√ß√£o de {\bf Aff\+Prev\+Model} \doxyref{}{pag.}{class_aff_prev_model_a9015ec4524ee1beeffecd00b5c462d9b}.
+
+
+
+Defini√ß√£o na linha 92 do arquivo Aff\+Prev\+Demand\+Model.\+h.
+
+\index{Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$proj, bool open\+Conf=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Demand\+Model\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{bool}]{open\+Conf = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_demand_model_ab65e9954968739d3b87f8fb3d6dfc439}
+\index{Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$proj)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Demand\+Model\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_aff_prev_demand_model_ab9e9fdfe7348cdf63a3e8505789edd62}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementa√ß√£o de {\bf Aff\+Prev\+Model} \doxyref{}{pag.}{class_aff_prev_model_af17dbd6ddd9ebea2b45dc91a273b471e}.
+
+
+
+Defini√ß√£o na linha 86 do arquivo Aff\+Prev\+Demand\+Model.\+h.
+
+\index{Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$proj, bool open\+Conf=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Demand\+Model\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{bool}]{open\+Conf = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_demand_model_a4b5bf365384b8de6e11cfa74675d6d5c}
+\index{Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}!remove\+All\+Scenarios@{remove\+All\+Scenarios}}
+\index{remove\+All\+Scenarios@{remove\+All\+Scenarios}!Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}}
+\subsubsection[{remove\+All\+Scenarios()}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Demand\+Model\+::remove\+All\+Scenarios (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_demand_model_a03c2fe5bbb33f08e350f14ed818c0ac9}
+\index{Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}!remove\+Scenario@{remove\+Scenario}}
+\index{remove\+Scenario@{remove\+Scenario}!Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}}
+\subsubsection[{remove\+Scenario(bool recreate=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Demand\+Model\+::remove\+Scenario (
+\begin{DoxyParamCaption}
+\item[{bool}]{recreate = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_demand_model_ad585382de06aca57a16ce6b9729c0616}
+\index{Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}!set\+Selected\+Scenario@{set\+Selected\+Scenario}}
+\index{set\+Selected\+Scenario@{set\+Selected\+Scenario}!Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}}
+\subsubsection[{set\+Selected\+Scenario(unsigned int x)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Demand\+Model\+::set\+Selected\+Scenario (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{x}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_demand_model_a25c119df7aeeba299dc2847b7d00cdfd}
+
+
+\subsection{Atributos}
+\index{Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}!demand\+File\+Name@{demand\+File\+Name}}
+\index{demand\+File\+Name@{demand\+File\+Name}!Aff\+Prev\+Demand\+Model@{Aff\+Prev\+Demand\+Model}}
+\subsubsection[{demand\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Aff\+Prev\+Demand\+Model\+::demand\+File\+Name}\label{class_aff_prev_demand_model_af62c8a400835921f4aefc68700c03be2}
+Nome do arquivo lido de demanda 
+
+Defini√ß√£o na linha 31 do arquivo Aff\+Prev\+Demand\+Model.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Aff\+Prev\+Demand\+Model.\+h}\end{DoxyCompactItemize}

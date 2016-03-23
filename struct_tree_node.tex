@@ -1,0 +1,164 @@
+\section{Referência da Estrutura Tree\+Node}
+\label{struct_tree_node}\index{Tree\+Node@{Tree\+Node}}
+
+
+{\ttfamily \#include $<$import-\/types.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Tree\+Node} (int a\+\_\+label, {\bf Tree\+Node} $\ast$a\+\_\+next=nullptr)
+\item 
+{\bf Tree\+Node} ()
+\item 
+bool {\bf operator==} (const {\bf Tree\+Node} \&a\+\_\+other) const 
+\item 
+bool {\bf operator$<$} (const {\bf Tree\+Node} \&a\+\_\+other) const 
+\item 
+void {\bf value} (long row, long col, float $\ast$a\+\_\+value)
+\item 
+float $\ast$ {\bf value} (long row, long col)
+\item 
+int {\bf size} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf label}
+\item 
+std\+::vector$<$ int $>$ $\ast$ {\bf m\+\_\+stations}
+\item 
+{\bf Sparse\+Matrix}$<$ float $\ast$ $>$ {\bf m\+\_\+matrix}
+\item 
+{\bf Tree\+Node} $\ast$ {\bf next}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 101 do arquivo import-\/types.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Tree\+Node@{Tree\+Node}!Tree\+Node@{Tree\+Node}}
+\index{Tree\+Node@{Tree\+Node}!Tree\+Node@{Tree\+Node}}
+\subsubsection[{Tree\+Node(int a\+\_\+label, Tree\+Node $\ast$a\+\_\+next=nullptr)}]{\setlength{\rightskip}{0pt plus 5cm}Tree\+Node\+::\+Tree\+Node (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+label, }
+\item[{{\bf Tree\+Node} $\ast$}]{a\+\_\+next = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_tree_node_a2796cc20d7c6f212e146f0b981dec26c}
+
+
+Definição na linha 107 do arquivo import-\/types.\+h.
+
+\index{Tree\+Node@{Tree\+Node}!Tree\+Node@{Tree\+Node}}
+\index{Tree\+Node@{Tree\+Node}!Tree\+Node@{Tree\+Node}}
+\subsubsection[{Tree\+Node()}]{\setlength{\rightskip}{0pt plus 5cm}Tree\+Node\+::\+Tree\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_tree_node_a984a98d5ccf7ef1f5a18094c6821f35d}
+
+
+Definição na linha 114 do arquivo import-\/types.\+h.
+
+
+
+\subsection{Métodos}
+\index{Tree\+Node@{Tree\+Node}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Tree\+Node@{Tree\+Node}}
+\subsubsection[{operator$<$(const Tree\+Node \&a\+\_\+other) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Tree\+Node\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tree\+Node} \&}]{a\+\_\+other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_tree_node_a87960868f19a668d762a4e8431255d56}
+
+
+Definição na linha 124 do arquivo import-\/types.\+h.
+
+\index{Tree\+Node@{Tree\+Node}!operator==@{operator==}}
+\index{operator==@{operator==}!Tree\+Node@{Tree\+Node}}
+\subsubsection[{operator==(const Tree\+Node \&a\+\_\+other) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Tree\+Node\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Tree\+Node} \&}]{a\+\_\+other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_tree_node_af9310b7c8b423236138e805208241993}
+
+
+Definição na linha 120 do arquivo import-\/types.\+h.
+
+\index{Tree\+Node@{Tree\+Node}!size@{size}}
+\index{size@{size}!Tree\+Node@{Tree\+Node}}
+\subsubsection[{size()}]{\setlength{\rightskip}{0pt plus 5cm}int Tree\+Node\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_tree_node_a3a8e92410d6d2dba9c0bc8ada7937421}
+
+
+Definição na linha 136 do arquivo import-\/types.\+h.
+
+\index{Tree\+Node@{Tree\+Node}!value@{value}}
+\index{value@{value}!Tree\+Node@{Tree\+Node}}
+\subsubsection[{value(long row, long col, float $\ast$a\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}void Tree\+Node\+::value (
+\begin{DoxyParamCaption}
+\item[{long}]{row, }
+\item[{long}]{col, }
+\item[{float $\ast$}]{a\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_tree_node_adaec834704424378b881ff13db15320c}
+
+
+Definição na linha 128 do arquivo import-\/types.\+h.
+
+\index{Tree\+Node@{Tree\+Node}!value@{value}}
+\index{value@{value}!Tree\+Node@{Tree\+Node}}
+\subsubsection[{value(long row, long col)}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ Tree\+Node\+::value (
+\begin{DoxyParamCaption}
+\item[{long}]{row, }
+\item[{long}]{col}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_tree_node_ab395559b98325b077f975a6283eda7f0}
+
+
+Definição na linha 132 do arquivo import-\/types.\+h.
+
+
+
+\subsection{Atributos}
+\index{Tree\+Node@{Tree\+Node}!label@{label}}
+\index{label@{label}!Tree\+Node@{Tree\+Node}}
+\subsubsection[{label}]{\setlength{\rightskip}{0pt plus 5cm}int Tree\+Node\+::label}\label{struct_tree_node_ac09a2c758173ad1fddc8273b60b484f0}
+
+
+Definição na linha 103 do arquivo import-\/types.\+h.
+
+\index{Tree\+Node@{Tree\+Node}!m\+\_\+matrix@{m\+\_\+matrix}}
+\index{m\+\_\+matrix@{m\+\_\+matrix}!Tree\+Node@{Tree\+Node}}
+\subsubsection[{m\+\_\+matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sparse\+Matrix}$<$float$\ast$$>$ Tree\+Node\+::m\+\_\+matrix}\label{struct_tree_node_a5473e76e77da1f5788b8cb509d9c3d01}
+
+
+Definição na linha 105 do arquivo import-\/types.\+h.
+
+\index{Tree\+Node@{Tree\+Node}!m\+\_\+stations@{m\+\_\+stations}}
+\index{m\+\_\+stations@{m\+\_\+stations}!Tree\+Node@{Tree\+Node}}
+\subsubsection[{m\+\_\+stations}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$$\ast$ Tree\+Node\+::m\+\_\+stations}\label{struct_tree_node_a5bff9d455bd620536cf62bfae55030e8}
+
+
+Definição na linha 104 do arquivo import-\/types.\+h.
+
+\index{Tree\+Node@{Tree\+Node}!next@{next}}
+\index{next@{next}!Tree\+Node@{Tree\+Node}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tree\+Node}$\ast$ Tree\+Node\+::next}\label{struct_tree_node_a450da53055399f97e47b604d9e9e6ed6}
+
+
+Definição na linha 106 do arquivo import-\/types.\+h.
+
+
+
+A documentação para esta estrutura foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf import-\/types.\+h}\end{DoxyCompactItemize}

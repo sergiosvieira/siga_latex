@@ -1,0 +1,31 @@
+\section{Referência do Arquivo Web\+Services.\+h}
+\label{_web_services_8h}\index{Web\+Services.\+h@{Web\+Services.\+h}}
+{\ttfamily \#include $<$wx/protocol/http.\+h$>$}\\*
+{\ttfamily \#include $<$wx/url.\+h$>$}\\*
+{\ttfamily \#include $<$wx/sstream.\+h$>$}\\*
+{\ttfamily \#include $<$json/json.\+h$>$}\\*
+{\ttfamily \#include $<$pugixml/pugixml.\+hpp$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ {\bf Web\+Services}
+\end{DoxyCompactItemize}
+\subsection*{Enumerações}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Web\+Services\+::\+Service\+Exception} \{ {\bf Web\+Services\+::\+Connection\+Exception}, 
+{\bf Web\+Services\+::\+Parsing\+Exception}
+ \}
+\item 
+enum {\bf Web\+Services\+::\+Parsing\+Type} \{ {\bf Web\+Services\+::\+Json\+Parsing}, 
+{\bf Web\+Services\+::\+Xml\+Parsing}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\vector$<$ T $>$ {\bf Web\+Services\+::load\+Objects\+From\+U\+RL} (const wx\+String \&service\+U\+RL, Parsing\+Type parsing\+Type=Json\+Parsing)
+\item 
+{\footnotesize template$<$class T $>$ }\\T {\bf Web\+Services\+::load\+Object\+From\+U\+RL} (const wx\+String \&service\+U\+RL)
+\end{DoxyCompactItemize}

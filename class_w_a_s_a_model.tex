@@ -1,0 +1,955 @@
+\section{Referência da Classe W\+A\+S\+A\+Model}
+\label{class_w_a_s_a_model}\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+
+
+{\ttfamily \#include $<$W\+A\+S\+A\+Model.\+h$>$}
+
+
+
+Herdeiro de {\bf Hidro\+Model}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf W\+A\+S\+A\+Model} ({\bf Node} $\ast${\bf node}, wx\+String {\bf name})
+\item 
+{\bf W\+A\+S\+A\+Model} ({\bf Link} $\ast${\bf link}, wx\+String {\bf name})
+\item 
+void {\bf set\+Basin\+Layer} ({\bf Vector\+LayerM} $\ast$new\+Layer)
+\item 
+void {\bf set\+L\+U\+Layer} ({\bf Vector\+LayerM} $\ast$new\+Layer)
+\item 
+void {\bf set\+Soil\+Layer} ({\bf Vector\+LayerM} $\ast$new\+Layer)
+\item 
+void {\bf set\+Vegetation\+Layer} ({\bf Vector\+LayerM} $\ast$new\+Layer)
+\item 
+void {\bf set\+T\+C\+Layer} ({\bf Vector\+LayerM} $\ast$new\+Layer)
+\item 
+void {\bf set\+Elevation\+Layer} ({\bf Raster\+Layer} $\ast$new\+Layer)
+\item 
+void {\bf set\+Basin\+Col} (int col)
+\item 
+void {\bf set\+L\+U\+Col} (int col)
+\item 
+void {\bf set\+Soil\+Col} (int col)
+\item 
+void {\bf set\+Vegetation\+Col} (int col)
+\item 
+void {\bf set\+T\+C\+Col} (int col)
+\item 
+void {\bf set\+Elevation\+Band} (int band)
+\item 
+void {\bf set\+Shapes\+Indexes} (const vector$<$ int $>$ \&indexes)
+\item 
+void {\bf set\+Ignored\+Col\+Indexes} (const vector$<$ int $>$ \&indexes)
+\item 
+void {\bf set\+Classification\+Raster\+File} (wx\+String {\bf name})
+\item 
+void {\bf set\+Min\+Area\+Rate} (int new\+Rate)
+\item 
+void {\bf set\+Min\+Area\+Rate2} (int new\+Rate)
+\item 
+void {\bf set\+Basin\+Ignored\+Values\+Str} (const vector$<$ wx\+String $>$ \&ignored\+Values)
+\item 
+void {\bf set\+L\+U\+Ignored\+Values\+Str} (const vector$<$ wx\+String $>$ \&ignored\+Values)
+\item 
+void {\bf set\+Soil\+Ignored\+Values\+Str} (const vector$<$ wx\+String $>$ \&ignored\+Values)
+\item 
+void {\bf set\+Vegetation\+Ignored\+Values\+Str} (const vector$<$ wx\+String $>$ \&ignored\+Values)
+\item 
+void {\bf set\+T\+C\+Ignored\+Values\+Str} (const vector$<$ wx\+String $>$ \&ignored\+Values)
+\item 
+void {\bf set\+Min\+Classification\+Limit} (int value)
+\item 
+void {\bf set\+Max\+Classification\+Limit} (int value)
+\item 
+{\bf Vector\+LayerM} $\ast$ {\bf get\+Basin\+Layer} () const 
+\item 
+{\bf Vector\+LayerM} $\ast$ {\bf get\+L\+U\+Layer} () const 
+\item 
+{\bf Vector\+LayerM} $\ast$ {\bf get\+Soil\+Layer} () const 
+\item 
+{\bf Vector\+LayerM} $\ast$ {\bf get\+Vegetation\+Layer} () const 
+\item 
+{\bf Vector\+LayerM} $\ast$ {\bf get\+T\+C\+Layer} () const 
+\item 
+{\bf Raster\+Layer} $\ast$ {\bf get\+Elevation\+Layer} () const 
+\item 
+int {\bf get\+Basin\+Col} () const 
+\item 
+int {\bf get\+L\+U\+Col} () const 
+\item 
+int {\bf get\+Soil\+Col} () const 
+\item 
+int {\bf get\+Vegetation\+Col} () const 
+\item 
+int {\bf get\+T\+C\+Col} () const 
+\item 
+int {\bf get\+Elevation\+Band} () const 
+\item 
+wx\+String {\bf get\+Classification\+Raster\+File} () const 
+\item 
+vector$<$ int $>$ {\bf get\+Shapes\+Indexes} () const 
+\item 
+vector$<$ int $>$ {\bf get\+Ignored\+Col\+Indexes} () const 
+\item 
+int {\bf get\+Min\+Classification\+Limit} () const 
+\item 
+int {\bf get\+Max\+Classification\+Limit} () const 
+\item 
+vector$<$ wx\+String $>$ {\bf get\+Basin\+Ignored\+Values\+Str} () const 
+\item 
+vector$<$ wx\+String $>$ {\bf get\+L\+U\+Ignored\+Values\+Str} () const 
+\item 
+vector$<$ wx\+String $>$ {\bf get\+Soil\+Ignored\+Values\+Str} () const 
+\item 
+vector$<$ wx\+String $>$ {\bf get\+Vegetation\+Ignored\+Values\+Str} () const 
+\item 
+vector$<$ wx\+String $>$ {\bf get\+T\+C\+Ignored\+Values\+Str} () const 
+\item 
+int {\bf get\+Min\+Area\+Rate} () const 
+\item 
+int {\bf get\+Min\+Area\+Rate2} () const 
+\item 
+{\bf Hidro\+Model} $\ast$ {\bf copy} ()
+\item 
+virtual {\bf $\sim$\+W\+A\+S\+A\+Model} ()
+\item 
+bool {\bf run} ()
+\item 
+bool {\bf run} ({\bf Interval} $\ast$exec\+Interval)
+\item 
+bool {\bf run\+Acc} ()
+\item 
+bool {\bf run\+Acc\+Node} ()
+\item 
+bool {\bf run\+Acc\+Link} ()
+\item 
+void {\bf clear} ()
+\item 
+void {\bf clear\+Basin\+Data} ()
+\item 
+void {\bf clear\+L\+U\+Data} ()
+\item 
+void {\bf clear\+Soil\+Data} ()
+\item 
+void {\bf clear\+Vegetation\+Data} ()
+\item 
+void {\bf clear\+Elevation\+Data} ()
+\item 
+void {\bf clear\+T\+C\+Data} ()
+\item 
+void {\bf create\+Results} ({\bf Interval} interval)
+\item 
+virtual bool {\bf empty} ()
+\item 
+virtual bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf classify} (wx\+String clipped\+Raster\+File, G\+D\+A\+L\+Dataset $\ast${\bf classification\+Dataset})
+\item 
+void {\bf slope\+Avg\+By\+Tc} (O\+G\+R\+Feature \&feature, const wx\+String \&clipped\+Raster\+File)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Vector\+LayerM} $\ast$ {\bf basin\+Layer}
+\item 
+{\bf Vector\+LayerM} $\ast$ {\bf lu\+Layer}
+\item 
+{\bf Vector\+LayerM} $\ast$ {\bf soil\+Layer}
+\item 
+{\bf Vector\+LayerM} $\ast$ {\bf vegetation\+Layer}
+\item 
+{\bf Vector\+LayerM} $\ast$ {\bf tc\+Layer}
+\item 
+{\bf Raster\+Layer} $\ast$ {\bf elevation\+Layer}
+\item 
+vector$<$ int $>$ {\bf shapes\+Indexes}
+\item 
+int {\bf basin\+Col}
+\item 
+int {\bf lu\+Col}
+\item 
+int {\bf soil\+Col}
+\item 
+int {\bf vegetation\+Col}
+\item 
+int {\bf tc\+Col}
+\item 
+int {\bf elevation\+Band}
+\item 
+vector$<$ int $>$ {\bf ignored\+Col\+Indexes}
+\item 
+vector$<$ wx\+String $>$ {\bf basin\+Ignored\+Values\+Str}
+\item 
+vector$<$ wx\+String $>$ {\bf lu\+Ignored\+Values\+Str}
+\item 
+vector$<$ wx\+String $>$ {\bf soil\+Ignored\+Values\+Str}
+\item 
+vector$<$ wx\+String $>$ {\bf vegetation\+Ignored\+Values\+Str}
+\item 
+vector$<$ wx\+String $>$ {\bf tc\+Ignored\+Values\+Str}
+\item 
+int {\bf min\+Area\+Rate}
+\item 
+int {\bf min\+Area\+Rate2}
+\item 
+int {\bf min\+Classification\+Limit}
+\item 
+int {\bf max\+Classification\+Limit}
+\item 
+{\bf W\+A\+S\+A\+Param} $\ast$ {\bf param}
+\item 
+wx\+String {\bf classification\+Raster\+File}
+\item 
+G\+D\+A\+L\+Dataset $\ast$ {\bf classification\+Dataset}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 18 do arquivo W\+A\+S\+A\+Model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{W\+A\+S\+A\+Model(\+Node $\ast$node, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}W\+A\+S\+A\+Model\+::\+W\+A\+S\+A\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_a8f94e1a9ae841af1f0cf359873cdf09e}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{W\+A\+S\+A\+Model(\+Link $\ast$link, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}W\+A\+S\+A\+Model\+::\+W\+A\+S\+A\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_aa5d9985d77914e661df9de54cfebf3d2}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!````~W\+A\+S\+A\+Model@{$\sim$\+W\+A\+S\+A\+Model}}
+\index{````~W\+A\+S\+A\+Model@{$\sim$\+W\+A\+S\+A\+Model}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{$\sim$\+W\+A\+S\+A\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}virtual W\+A\+S\+A\+Model\+::$\sim$\+W\+A\+S\+A\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_a10cf43ac0f30b3e5ddd163a845c051c6}
+Destrutor 
+
+\subsection{Métodos}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool W\+A\+S\+A\+Model\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_af96b43ca4b46ef743b7ad368dbe2ab30}
+Avalia se todas as informa��es importantes para o modelo formam informadas 
+\begin{DoxyParams}{Parâmetros}
+{\em dialog} & Caixa de dialogo onde os erros ser�o apresentados \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a9da83995bb3c4c4ab6eb3abe7dfcb431}.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!classify@{classify}}
+\index{classify@{classify}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{classify(wx\+String clipped\+Raster\+File, G\+D\+A\+L\+Dataset $\ast$classification\+Dataset)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::classify (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{clipped\+Raster\+File, }
+\item[{G\+D\+A\+L\+Dataset $\ast$}]{classification\+Dataset}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_a6ef94708535b604413bf4e584cb09f3f}
+Recebe um pol�gono Landscape Unit X Sub-\/bacias e um raster (c�pia do raster original) para ser classificado. Teremos um sub-\/raster para fazer a classifica��o local, percorrendo pixel a pixel analisando a eleva��o e classificando em High-\/\+Land (valor 1), Mid-\/\+Land (2) e Low-\/\+Land (3). A classifica��o � inserida no raster grande. 
+\begin{DoxyParams}{Parâmetros}
+{\em wx\+String} & clipped\+Raster\+File -\/ Nome do subraster clipado \\
+\hline
+{\em G\+D\+A\+L\+Dataset$\ast$} & classification\+Dataset -\/ Raster grande para ser classificado \\
+\hline
+\end{DoxyParams}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!clear@{clear}}
+\index{clear@{clear}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_a8426c6e8121395ca85cb334ac4e11c98}
+Retorna todos as variaveis do modelo para seus valores p�s-\/constru��o 
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a7a59ac6ccde3e96019caa55bb9f3f859}.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!clear\+Basin\+Data@{clear\+Basin\+Data}}
+\index{clear\+Basin\+Data@{clear\+Basin\+Data}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{clear\+Basin\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::clear\+Basin\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_aa2eaf8924cbfbad9e77323c1dc47f0ca}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!clear\+Elevation\+Data@{clear\+Elevation\+Data}}
+\index{clear\+Elevation\+Data@{clear\+Elevation\+Data}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{clear\+Elevation\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::clear\+Elevation\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_a9e79b6fda358b3e95ec0ff69aa37f0dd}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!clear\+L\+U\+Data@{clear\+L\+U\+Data}}
+\index{clear\+L\+U\+Data@{clear\+L\+U\+Data}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{clear\+L\+U\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::clear\+L\+U\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_a36e1801d741de13da92081f1cf884560}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!clear\+Soil\+Data@{clear\+Soil\+Data}}
+\index{clear\+Soil\+Data@{clear\+Soil\+Data}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{clear\+Soil\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::clear\+Soil\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_aafe074071ef3705316ddb0a854b0c63d}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!clear\+T\+C\+Data@{clear\+T\+C\+Data}}
+\index{clear\+T\+C\+Data@{clear\+T\+C\+Data}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{clear\+T\+C\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::clear\+T\+C\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_a3283eefdbabf7d8785d22377e0dfa352}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!clear\+Vegetation\+Data@{clear\+Vegetation\+Data}}
+\index{clear\+Vegetation\+Data@{clear\+Vegetation\+Data}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{clear\+Vegetation\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::clear\+Vegetation\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_a0974e237d26e12ec99a879521f8d74de}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!copy@{copy}}
+\index{copy@{copy}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{copy()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hidro\+Model}$\ast$ W\+A\+S\+A\+Model\+::copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_a2e27be793813139798e407a0000e5acf}
+Implementa��o da funcao abstrata para copia do modelo \begin{DoxyReturn}{Retorna}
+Uma copia de dela mesma (W\+A\+S\+A\+Model$\ast$), alocada dinamicamente. Lembre-\/se de desaloca-\/la!!! 
+\end{DoxyReturn}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_afef4c70600b8f9224c4ad0040363c5dc}.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!create\+Results@{create\+Results}}
+\index{create\+Results@{create\+Results}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{create\+Results(\+Interval interval)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::create\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_a339fba4c45be447d50dfa773a1bf2525}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a8ba135e8d5c7e454fa3278355e2d6a92}.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!empty@{empty}}
+\index{empty@{empty}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool W\+A\+S\+A\+Model\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_a32cca07230c4d0824575f26011a9e3ad}
+retorna se existe algum valor no modelo 
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_aac45c150ea104ed44e2d3349b83fbd40}.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+Basin\+Col@{get\+Basin\+Col}}
+\index{get\+Basin\+Col@{get\+Basin\+Col}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+Basin\+Col() const }]{\setlength{\rightskip}{0pt plus 5cm}int W\+A\+S\+A\+Model\+::get\+Basin\+Col (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_a69f6bbc1c9b9b2a383e55f2ae1d7b01c}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+Basin\+Ignored\+Values\+Str@{get\+Basin\+Ignored\+Values\+Str}}
+\index{get\+Basin\+Ignored\+Values\+Str@{get\+Basin\+Ignored\+Values\+Str}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+Basin\+Ignored\+Values\+Str() const }]{\setlength{\rightskip}{0pt plus 5cm}vector$<$wx\+String$>$ W\+A\+S\+A\+Model\+::get\+Basin\+Ignored\+Values\+Str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_a0414158e295f1bf5badbe8b4d093c353}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+Basin\+Layer@{get\+Basin\+Layer}}
+\index{get\+Basin\+Layer@{get\+Basin\+Layer}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+Basin\+Layer() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector\+LayerM}$\ast$ W\+A\+S\+A\+Model\+::get\+Basin\+Layer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_ade94ada8e676091191246824aaa284a6}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+Classification\+Raster\+File@{get\+Classification\+Raster\+File}}
+\index{get\+Classification\+Raster\+File@{get\+Classification\+Raster\+File}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+Classification\+Raster\+File() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+String W\+A\+S\+A\+Model\+::get\+Classification\+Raster\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_ad6284a289548e50fce186e57294fc187}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+Elevation\+Band@{get\+Elevation\+Band}}
+\index{get\+Elevation\+Band@{get\+Elevation\+Band}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+Elevation\+Band() const }]{\setlength{\rightskip}{0pt plus 5cm}int W\+A\+S\+A\+Model\+::get\+Elevation\+Band (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_a84ab66159b61a2e8fe948f6381e87461}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+Elevation\+Layer@{get\+Elevation\+Layer}}
+\index{get\+Elevation\+Layer@{get\+Elevation\+Layer}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+Elevation\+Layer() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Raster\+Layer}$\ast$ W\+A\+S\+A\+Model\+::get\+Elevation\+Layer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_ab43926aad38ca6e4f03d4f9e283f2ad2}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+Ignored\+Col\+Indexes@{get\+Ignored\+Col\+Indexes}}
+\index{get\+Ignored\+Col\+Indexes@{get\+Ignored\+Col\+Indexes}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+Ignored\+Col\+Indexes() const }]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ W\+A\+S\+A\+Model\+::get\+Ignored\+Col\+Indexes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_af9d0eec5fefdfbf2c25cc65ea8a6913f}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+L\+U\+Col@{get\+L\+U\+Col}}
+\index{get\+L\+U\+Col@{get\+L\+U\+Col}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+L\+U\+Col() const }]{\setlength{\rightskip}{0pt plus 5cm}int W\+A\+S\+A\+Model\+::get\+L\+U\+Col (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_a014ace166be1a6f875ce75d4d0cf270c}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+L\+U\+Ignored\+Values\+Str@{get\+L\+U\+Ignored\+Values\+Str}}
+\index{get\+L\+U\+Ignored\+Values\+Str@{get\+L\+U\+Ignored\+Values\+Str}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+L\+U\+Ignored\+Values\+Str() const }]{\setlength{\rightskip}{0pt plus 5cm}vector$<$wx\+String$>$ W\+A\+S\+A\+Model\+::get\+L\+U\+Ignored\+Values\+Str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_abdd9652dcbee7ab2a1522a1b6cd0cd3e}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+L\+U\+Layer@{get\+L\+U\+Layer}}
+\index{get\+L\+U\+Layer@{get\+L\+U\+Layer}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+L\+U\+Layer() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector\+LayerM}$\ast$ W\+A\+S\+A\+Model\+::get\+L\+U\+Layer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_ad82fcc41fb17358f0477d240ccee5533}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+Max\+Classification\+Limit@{get\+Max\+Classification\+Limit}}
+\index{get\+Max\+Classification\+Limit@{get\+Max\+Classification\+Limit}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+Max\+Classification\+Limit() const }]{\setlength{\rightskip}{0pt plus 5cm}int W\+A\+S\+A\+Model\+::get\+Max\+Classification\+Limit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_ad3d9636ce27d4d9b841ec01f34f8ecc6}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+Min\+Area\+Rate@{get\+Min\+Area\+Rate}}
+\index{get\+Min\+Area\+Rate@{get\+Min\+Area\+Rate}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+Min\+Area\+Rate() const }]{\setlength{\rightskip}{0pt plus 5cm}int W\+A\+S\+A\+Model\+::get\+Min\+Area\+Rate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_acbee4083053483fb06acd6c91c54fc2e}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+Min\+Area\+Rate2@{get\+Min\+Area\+Rate2}}
+\index{get\+Min\+Area\+Rate2@{get\+Min\+Area\+Rate2}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+Min\+Area\+Rate2() const }]{\setlength{\rightskip}{0pt plus 5cm}int W\+A\+S\+A\+Model\+::get\+Min\+Area\+Rate2 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_a254e8f055b9283114738915047d8f164}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+Min\+Classification\+Limit@{get\+Min\+Classification\+Limit}}
+\index{get\+Min\+Classification\+Limit@{get\+Min\+Classification\+Limit}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+Min\+Classification\+Limit() const }]{\setlength{\rightskip}{0pt plus 5cm}int W\+A\+S\+A\+Model\+::get\+Min\+Classification\+Limit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_a8cab0ccaf3f431e62eb767bb33c71e2a}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+Shapes\+Indexes@{get\+Shapes\+Indexes}}
+\index{get\+Shapes\+Indexes@{get\+Shapes\+Indexes}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+Shapes\+Indexes() const }]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ W\+A\+S\+A\+Model\+::get\+Shapes\+Indexes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_a0410cd906a1e0dd99676638cc22cc875}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+Soil\+Col@{get\+Soil\+Col}}
+\index{get\+Soil\+Col@{get\+Soil\+Col}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+Soil\+Col() const }]{\setlength{\rightskip}{0pt plus 5cm}int W\+A\+S\+A\+Model\+::get\+Soil\+Col (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_a4068986b9ad01051eb361dbbea8dec30}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+Soil\+Ignored\+Values\+Str@{get\+Soil\+Ignored\+Values\+Str}}
+\index{get\+Soil\+Ignored\+Values\+Str@{get\+Soil\+Ignored\+Values\+Str}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+Soil\+Ignored\+Values\+Str() const }]{\setlength{\rightskip}{0pt plus 5cm}vector$<$wx\+String$>$ W\+A\+S\+A\+Model\+::get\+Soil\+Ignored\+Values\+Str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_a9c45180ee33d6985c07b3eb6afafd955}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+Soil\+Layer@{get\+Soil\+Layer}}
+\index{get\+Soil\+Layer@{get\+Soil\+Layer}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+Soil\+Layer() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector\+LayerM}$\ast$ W\+A\+S\+A\+Model\+::get\+Soil\+Layer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_a381d42515ec13c4c221bb08d406355f5}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+T\+C\+Col@{get\+T\+C\+Col}}
+\index{get\+T\+C\+Col@{get\+T\+C\+Col}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+T\+C\+Col() const }]{\setlength{\rightskip}{0pt plus 5cm}int W\+A\+S\+A\+Model\+::get\+T\+C\+Col (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_afbcd02789397018b47c5679e4fb02313}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+T\+C\+Ignored\+Values\+Str@{get\+T\+C\+Ignored\+Values\+Str}}
+\index{get\+T\+C\+Ignored\+Values\+Str@{get\+T\+C\+Ignored\+Values\+Str}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+T\+C\+Ignored\+Values\+Str() const }]{\setlength{\rightskip}{0pt plus 5cm}vector$<$wx\+String$>$ W\+A\+S\+A\+Model\+::get\+T\+C\+Ignored\+Values\+Str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_a70e7be474961c20e36c0257806a5ce3f}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+T\+C\+Layer@{get\+T\+C\+Layer}}
+\index{get\+T\+C\+Layer@{get\+T\+C\+Layer}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+T\+C\+Layer() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector\+LayerM}$\ast$ W\+A\+S\+A\+Model\+::get\+T\+C\+Layer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_aa02ba3a84837b71ec5e703bac942704d}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+Vegetation\+Col@{get\+Vegetation\+Col}}
+\index{get\+Vegetation\+Col@{get\+Vegetation\+Col}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+Vegetation\+Col() const }]{\setlength{\rightskip}{0pt plus 5cm}int W\+A\+S\+A\+Model\+::get\+Vegetation\+Col (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_ac0f1d005780b436de0b3a776e963721b}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+Vegetation\+Ignored\+Values\+Str@{get\+Vegetation\+Ignored\+Values\+Str}}
+\index{get\+Vegetation\+Ignored\+Values\+Str@{get\+Vegetation\+Ignored\+Values\+Str}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+Vegetation\+Ignored\+Values\+Str() const }]{\setlength{\rightskip}{0pt plus 5cm}vector$<$wx\+String$>$ W\+A\+S\+A\+Model\+::get\+Vegetation\+Ignored\+Values\+Str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_a85d2d299916af98f393a2cdc35abb344}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!get\+Vegetation\+Layer@{get\+Vegetation\+Layer}}
+\index{get\+Vegetation\+Layer@{get\+Vegetation\+Layer}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{get\+Vegetation\+Layer() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector\+LayerM}$\ast$ W\+A\+S\+A\+Model\+::get\+Vegetation\+Layer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_model_a6125a9610ecd6618ac4d5631218c7c81}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!run@{run}}
+\index{run@{run}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}bool W\+A\+S\+A\+Model\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_ab087ccebdd72602c5c938c9c5bef61f0}
+Executa o modelo W\+A\+SA 
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_ac4b3587518c76af9ad3200646e28a367}.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!run@{run}}
+\index{run@{run}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{run(\+Interval $\ast$exec\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}bool W\+A\+S\+A\+Model\+::run (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval} $\ast$}]{exec\+Interval}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_ac6fdecd88fff2ce6847d4482dd646175}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!run\+Acc@{run\+Acc}}
+\index{run\+Acc@{run\+Acc}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{run\+Acc()}]{\setlength{\rightskip}{0pt plus 5cm}bool W\+A\+S\+A\+Model\+::run\+Acc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_abecd14dd02b55d16a975eaca93b8e98e}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a41ed38d63fb34c6a08badaee94e38dbe}.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!run\+Acc\+Link@{run\+Acc\+Link}}
+\index{run\+Acc\+Link@{run\+Acc\+Link}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{run\+Acc\+Link()}]{\setlength{\rightskip}{0pt plus 5cm}bool W\+A\+S\+A\+Model\+::run\+Acc\+Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_a0b3aa8058bf99de853d9dae81b013fdc}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a6f35f954579dbbe3216d270e2406437a}.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!run\+Acc\+Node@{run\+Acc\+Node}}
+\index{run\+Acc\+Node@{run\+Acc\+Node}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{run\+Acc\+Node()}]{\setlength{\rightskip}{0pt plus 5cm}bool W\+A\+S\+A\+Model\+::run\+Acc\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_a800b05291fa6fe6ebdeeeb56b682216f}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a40997d872a7e0224915f2f8a92212d84}.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+Basin\+Col@{set\+Basin\+Col}}
+\index{set\+Basin\+Col@{set\+Basin\+Col}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+Basin\+Col(int col)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+Basin\+Col (
+\begin{DoxyParamCaption}
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_a3a134d208c46a3166bdd5c7b1f8dbaba}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+Basin\+Ignored\+Values\+Str@{set\+Basin\+Ignored\+Values\+Str}}
+\index{set\+Basin\+Ignored\+Values\+Str@{set\+Basin\+Ignored\+Values\+Str}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+Basin\+Ignored\+Values\+Str(const vector$<$ wx\+String $>$ \&ignored\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+Basin\+Ignored\+Values\+Str (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ wx\+String $>$ \&}]{ignored\+Values}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_afa319d8aa3e2bfdd2abbc94bbeb57c4b}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+Basin\+Layer@{set\+Basin\+Layer}}
+\index{set\+Basin\+Layer@{set\+Basin\+Layer}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+Basin\+Layer(\+Vector\+Layer\+M $\ast$new\+Layer)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+Basin\+Layer (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector\+LayerM} $\ast$}]{new\+Layer}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_ab54de945393798799154f956896c3025}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+Classification\+Raster\+File@{set\+Classification\+Raster\+File}}
+\index{set\+Classification\+Raster\+File@{set\+Classification\+Raster\+File}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+Classification\+Raster\+File(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+Classification\+Raster\+File (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_adc8eace31e141a032c48828d9d3ac02d}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+Elevation\+Band@{set\+Elevation\+Band}}
+\index{set\+Elevation\+Band@{set\+Elevation\+Band}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+Elevation\+Band(int band)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+Elevation\+Band (
+\begin{DoxyParamCaption}
+\item[{int}]{band}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_addd6f5236ed7363d5777f70a59b0e1e8}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+Elevation\+Layer@{set\+Elevation\+Layer}}
+\index{set\+Elevation\+Layer@{set\+Elevation\+Layer}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+Elevation\+Layer(\+Raster\+Layer $\ast$new\+Layer)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+Elevation\+Layer (
+\begin{DoxyParamCaption}
+\item[{{\bf Raster\+Layer} $\ast$}]{new\+Layer}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_a65a1d8b94143b1cef1fb877fe24a867a}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+Ignored\+Col\+Indexes@{set\+Ignored\+Col\+Indexes}}
+\index{set\+Ignored\+Col\+Indexes@{set\+Ignored\+Col\+Indexes}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+Ignored\+Col\+Indexes(const vector$<$ int $>$ \&indexes)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+Ignored\+Col\+Indexes (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ int $>$ \&}]{indexes}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_abc284330b30ea877e1a814ea487c8621}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+L\+U\+Col@{set\+L\+U\+Col}}
+\index{set\+L\+U\+Col@{set\+L\+U\+Col}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+L\+U\+Col(int col)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+L\+U\+Col (
+\begin{DoxyParamCaption}
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_a465135a89f639498f55ed71374d2e51d}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+L\+U\+Ignored\+Values\+Str@{set\+L\+U\+Ignored\+Values\+Str}}
+\index{set\+L\+U\+Ignored\+Values\+Str@{set\+L\+U\+Ignored\+Values\+Str}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+L\+U\+Ignored\+Values\+Str(const vector$<$ wx\+String $>$ \&ignored\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+L\+U\+Ignored\+Values\+Str (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ wx\+String $>$ \&}]{ignored\+Values}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_a59d193a295df499ffb7b1f0ac5b344ad}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+L\+U\+Layer@{set\+L\+U\+Layer}}
+\index{set\+L\+U\+Layer@{set\+L\+U\+Layer}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+L\+U\+Layer(\+Vector\+Layer\+M $\ast$new\+Layer)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+L\+U\+Layer (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector\+LayerM} $\ast$}]{new\+Layer}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_a24ff8977c36039868b7cd23a7d687be7}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+Max\+Classification\+Limit@{set\+Max\+Classification\+Limit}}
+\index{set\+Max\+Classification\+Limit@{set\+Max\+Classification\+Limit}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+Max\+Classification\+Limit(int value)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+Max\+Classification\+Limit (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_a2a939abe28bde703737f03d2d2731d0d}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+Min\+Area\+Rate@{set\+Min\+Area\+Rate}}
+\index{set\+Min\+Area\+Rate@{set\+Min\+Area\+Rate}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+Min\+Area\+Rate(int new\+Rate)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+Min\+Area\+Rate (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Rate}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_a03c993b23a82479b70cb0183907f5299}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+Min\+Area\+Rate2@{set\+Min\+Area\+Rate2}}
+\index{set\+Min\+Area\+Rate2@{set\+Min\+Area\+Rate2}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+Min\+Area\+Rate2(int new\+Rate)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+Min\+Area\+Rate2 (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Rate}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_a81322c7e59c5e76aa7c60f706c7cc09f}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+Min\+Classification\+Limit@{set\+Min\+Classification\+Limit}}
+\index{set\+Min\+Classification\+Limit@{set\+Min\+Classification\+Limit}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+Min\+Classification\+Limit(int value)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+Min\+Classification\+Limit (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_a0627b27f1a92296cbb14fc3351818e41}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+Shapes\+Indexes@{set\+Shapes\+Indexes}}
+\index{set\+Shapes\+Indexes@{set\+Shapes\+Indexes}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+Shapes\+Indexes(const vector$<$ int $>$ \&indexes)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+Shapes\+Indexes (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ int $>$ \&}]{indexes}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_acff47786d12be8c6e037f6395254f528}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+Soil\+Col@{set\+Soil\+Col}}
+\index{set\+Soil\+Col@{set\+Soil\+Col}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+Soil\+Col(int col)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+Soil\+Col (
+\begin{DoxyParamCaption}
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_af6de52e88bdd0db7092e9bbaebdae6db}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+Soil\+Ignored\+Values\+Str@{set\+Soil\+Ignored\+Values\+Str}}
+\index{set\+Soil\+Ignored\+Values\+Str@{set\+Soil\+Ignored\+Values\+Str}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+Soil\+Ignored\+Values\+Str(const vector$<$ wx\+String $>$ \&ignored\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+Soil\+Ignored\+Values\+Str (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ wx\+String $>$ \&}]{ignored\+Values}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_a82870e2b9be45876f5793cc43e4e32aa}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+Soil\+Layer@{set\+Soil\+Layer}}
+\index{set\+Soil\+Layer@{set\+Soil\+Layer}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+Soil\+Layer(\+Vector\+Layer\+M $\ast$new\+Layer)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+Soil\+Layer (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector\+LayerM} $\ast$}]{new\+Layer}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_ab5798e2dfbfaf8ece20f91ed411e83ed}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+T\+C\+Col@{set\+T\+C\+Col}}
+\index{set\+T\+C\+Col@{set\+T\+C\+Col}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+T\+C\+Col(int col)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+T\+C\+Col (
+\begin{DoxyParamCaption}
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_abe72c8a35832508fed4330023a498a7e}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+T\+C\+Ignored\+Values\+Str@{set\+T\+C\+Ignored\+Values\+Str}}
+\index{set\+T\+C\+Ignored\+Values\+Str@{set\+T\+C\+Ignored\+Values\+Str}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+T\+C\+Ignored\+Values\+Str(const vector$<$ wx\+String $>$ \&ignored\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+T\+C\+Ignored\+Values\+Str (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ wx\+String $>$ \&}]{ignored\+Values}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_a0d13bded99295f50057edc25bdd1169a}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+T\+C\+Layer@{set\+T\+C\+Layer}}
+\index{set\+T\+C\+Layer@{set\+T\+C\+Layer}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+T\+C\+Layer(\+Vector\+Layer\+M $\ast$new\+Layer)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+T\+C\+Layer (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector\+LayerM} $\ast$}]{new\+Layer}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_a77657b5ff660ce9f3f23918230757864}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+Vegetation\+Col@{set\+Vegetation\+Col}}
+\index{set\+Vegetation\+Col@{set\+Vegetation\+Col}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+Vegetation\+Col(int col)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+Vegetation\+Col (
+\begin{DoxyParamCaption}
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_a5c0a064f9268f7a4a410e7d11ecece6f}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+Vegetation\+Ignored\+Values\+Str@{set\+Vegetation\+Ignored\+Values\+Str}}
+\index{set\+Vegetation\+Ignored\+Values\+Str@{set\+Vegetation\+Ignored\+Values\+Str}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+Vegetation\+Ignored\+Values\+Str(const vector$<$ wx\+String $>$ \&ignored\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+Vegetation\+Ignored\+Values\+Str (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ wx\+String $>$ \&}]{ignored\+Values}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_acc23113044e8439535f8eca502207b39}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!set\+Vegetation\+Layer@{set\+Vegetation\+Layer}}
+\index{set\+Vegetation\+Layer@{set\+Vegetation\+Layer}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{set\+Vegetation\+Layer(\+Vector\+Layer\+M $\ast$new\+Layer)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::set\+Vegetation\+Layer (
+\begin{DoxyParamCaption}
+\item[{{\bf Vector\+LayerM} $\ast$}]{new\+Layer}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_ab0f192b6888e705d1feefdc110010986}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!slope\+Avg\+By\+Tc@{slope\+Avg\+By\+Tc}}
+\index{slope\+Avg\+By\+Tc@{slope\+Avg\+By\+Tc}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{slope\+Avg\+By\+Tc(\+O\+G\+R\+Feature \&feature, const wx\+String \&clipped\+Raster\+File)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+::slope\+Avg\+By\+Tc (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Feature \&}]{feature, }
+\item[{const wx\+String \&}]{clipped\+Raster\+File}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_a1e4d3a862dd0c9acac7158244e80013d}
+Calcula a declividade m�dia de cada pol�gono de terrain\+Component e depois adiciona essa m�dia num novo campo. 
+\begin{DoxyParams}{Parâmetros}
+{\em O\+G\+R\+Feature\&} & tc\+Feature -\/ feature onde a declividade m�dia ser� inserida \\
+\hline
+{\em wx\+String} & clipped\+Raster\+File -\/ raster de declividade \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!basin\+Col@{basin\+Col}}
+\index{basin\+Col@{basin\+Col}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{basin\+Col}]{\setlength{\rightskip}{0pt plus 5cm}int W\+A\+S\+A\+Model\+::basin\+Col\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_a5bb06d58171c2be22e4c454a14adf029}
+
+
+Definição na linha 29 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!basin\+Ignored\+Values\+Str@{basin\+Ignored\+Values\+Str}}
+\index{basin\+Ignored\+Values\+Str@{basin\+Ignored\+Values\+Str}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{basin\+Ignored\+Values\+Str}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$wx\+String$>$ W\+A\+S\+A\+Model\+::basin\+Ignored\+Values\+Str\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_a84de7bfa3b42d5b3823cf23b2a331e0e}
+
+
+Definição na linha 34 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!basin\+Layer@{basin\+Layer}}
+\index{basin\+Layer@{basin\+Layer}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{basin\+Layer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector\+LayerM}$\ast$ W\+A\+S\+A\+Model\+::basin\+Layer\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_ab5f80ea3bebc10f6e5bd02ef44f184da}
+
+
+Definição na linha 22 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!classification\+Dataset@{classification\+Dataset}}
+\index{classification\+Dataset@{classification\+Dataset}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{classification\+Dataset}]{\setlength{\rightskip}{0pt plus 5cm}G\+D\+A\+L\+Dataset$\ast$ W\+A\+S\+A\+Model\+::classification\+Dataset\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_ae350af91c9236f1a61da589d9daee2af}
+
+
+Definição na linha 51 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!classification\+Raster\+File@{classification\+Raster\+File}}
+\index{classification\+Raster\+File@{classification\+Raster\+File}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{classification\+Raster\+File}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String W\+A\+S\+A\+Model\+::classification\+Raster\+File\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_a84f46e97c37868f92d705c17715404ad}
+
+
+Definição na linha 48 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!elevation\+Band@{elevation\+Band}}
+\index{elevation\+Band@{elevation\+Band}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{elevation\+Band}]{\setlength{\rightskip}{0pt plus 5cm}int W\+A\+S\+A\+Model\+::elevation\+Band\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_a2ba154c7163aa5a49e65e94b387af1ba}
+
+
+Definição na linha 29 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!elevation\+Layer@{elevation\+Layer}}
+\index{elevation\+Layer@{elevation\+Layer}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{elevation\+Layer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Raster\+Layer}$\ast$ W\+A\+S\+A\+Model\+::elevation\+Layer\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_a6ab36f49cab368ee1c5721d302c452ab}
+
+
+Definição na linha 24 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!ignored\+Col\+Indexes@{ignored\+Col\+Indexes}}
+\index{ignored\+Col\+Indexes@{ignored\+Col\+Indexes}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{ignored\+Col\+Indexes}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ W\+A\+S\+A\+Model\+::ignored\+Col\+Indexes\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_a6d4182e63f8da1c1c597c4a724e3ddce}
+
+
+Definição na linha 31 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!lu\+Col@{lu\+Col}}
+\index{lu\+Col@{lu\+Col}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{lu\+Col}]{\setlength{\rightskip}{0pt plus 5cm}int W\+A\+S\+A\+Model\+::lu\+Col\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_a94283192a02515543280a59070e9265d}
+
+
+Definição na linha 29 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!lu\+Ignored\+Values\+Str@{lu\+Ignored\+Values\+Str}}
+\index{lu\+Ignored\+Values\+Str@{lu\+Ignored\+Values\+Str}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{lu\+Ignored\+Values\+Str}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$wx\+String$>$ W\+A\+S\+A\+Model\+::lu\+Ignored\+Values\+Str\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_a65085c40f80f94ac31bd7a30ecbd9618}
+
+
+Definição na linha 34 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!lu\+Layer@{lu\+Layer}}
+\index{lu\+Layer@{lu\+Layer}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{lu\+Layer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector\+LayerM} $\ast$ W\+A\+S\+A\+Model\+::lu\+Layer\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_a38bfcde9bf58183b1b56b14247a3c2a9}
+
+
+Definição na linha 22 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!max\+Classification\+Limit@{max\+Classification\+Limit}}
+\index{max\+Classification\+Limit@{max\+Classification\+Limit}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{max\+Classification\+Limit}]{\setlength{\rightskip}{0pt plus 5cm}int W\+A\+S\+A\+Model\+::max\+Classification\+Limit\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_aef849589164e793b361bf70f5d5bd467}
+
+
+Definição na linha 42 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!min\+Area\+Rate@{min\+Area\+Rate}}
+\index{min\+Area\+Rate@{min\+Area\+Rate}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{min\+Area\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}int W\+A\+S\+A\+Model\+::min\+Area\+Rate\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_aa61a152caa405289474ea083ca8edc15}
+
+
+Definição na linha 38 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!min\+Area\+Rate2@{min\+Area\+Rate2}}
+\index{min\+Area\+Rate2@{min\+Area\+Rate2}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{min\+Area\+Rate2}]{\setlength{\rightskip}{0pt plus 5cm}int W\+A\+S\+A\+Model\+::min\+Area\+Rate2\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_a99e33be2ffb0629ac029a90c4799c9a5}
+
+
+Definição na linha 39 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!min\+Classification\+Limit@{min\+Classification\+Limit}}
+\index{min\+Classification\+Limit@{min\+Classification\+Limit}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{min\+Classification\+Limit}]{\setlength{\rightskip}{0pt plus 5cm}int W\+A\+S\+A\+Model\+::min\+Classification\+Limit\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_a22c9d6b0f032fd290cb76c1d723187fb}
+
+
+Definição na linha 42 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!param@{param}}
+\index{param@{param}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{param}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+A\+S\+A\+Param}$\ast$ W\+A\+S\+A\+Model\+::param\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_a7272e7a5a0cae3edcc1cd16ac98ea3fa}
+
+
+Definição na linha 45 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!shapes\+Indexes@{shapes\+Indexes}}
+\index{shapes\+Indexes@{shapes\+Indexes}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{shapes\+Indexes}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ W\+A\+S\+A\+Model\+::shapes\+Indexes\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_a96fe8fa258f51740e6b0e347f1dd669f}
+
+
+Definição na linha 27 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!soil\+Col@{soil\+Col}}
+\index{soil\+Col@{soil\+Col}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{soil\+Col}]{\setlength{\rightskip}{0pt plus 5cm}int W\+A\+S\+A\+Model\+::soil\+Col\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_aa68423d415d80d2c1cd66a9e552fbbcd}
+
+
+Definição na linha 29 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!soil\+Ignored\+Values\+Str@{soil\+Ignored\+Values\+Str}}
+\index{soil\+Ignored\+Values\+Str@{soil\+Ignored\+Values\+Str}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{soil\+Ignored\+Values\+Str}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$wx\+String$>$ W\+A\+S\+A\+Model\+::soil\+Ignored\+Values\+Str\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_ae07e8e8b9a820c266761d6587d45137b}
+
+
+Definição na linha 34 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!soil\+Layer@{soil\+Layer}}
+\index{soil\+Layer@{soil\+Layer}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{soil\+Layer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector\+LayerM} $\ast$ W\+A\+S\+A\+Model\+::soil\+Layer\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_aa25f72197d13c142bfbf0241e76f2057}
+
+
+Definição na linha 22 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!tc\+Col@{tc\+Col}}
+\index{tc\+Col@{tc\+Col}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{tc\+Col}]{\setlength{\rightskip}{0pt plus 5cm}int W\+A\+S\+A\+Model\+::tc\+Col\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_aff7adee728a6649391a4e821087ae301}
+
+
+Definição na linha 29 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!tc\+Ignored\+Values\+Str@{tc\+Ignored\+Values\+Str}}
+\index{tc\+Ignored\+Values\+Str@{tc\+Ignored\+Values\+Str}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{tc\+Ignored\+Values\+Str}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$wx\+String$>$ W\+A\+S\+A\+Model\+::tc\+Ignored\+Values\+Str\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_a33fb59c9d7774ab5da7dd2ad1282bef5}
+
+
+Definição na linha 34 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!tc\+Layer@{tc\+Layer}}
+\index{tc\+Layer@{tc\+Layer}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{tc\+Layer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector\+LayerM} $\ast$ W\+A\+S\+A\+Model\+::tc\+Layer\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_ab19cce1c088eb3ca004891db849d4871}
+
+
+Definição na linha 22 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!vegetation\+Col@{vegetation\+Col}}
+\index{vegetation\+Col@{vegetation\+Col}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{vegetation\+Col}]{\setlength{\rightskip}{0pt plus 5cm}int W\+A\+S\+A\+Model\+::vegetation\+Col\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_a5778b7156ece4859652c7ffeff8c4b8e}
+
+
+Definição na linha 29 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!vegetation\+Ignored\+Values\+Str@{vegetation\+Ignored\+Values\+Str}}
+\index{vegetation\+Ignored\+Values\+Str@{vegetation\+Ignored\+Values\+Str}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{vegetation\+Ignored\+Values\+Str}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$wx\+String$>$ W\+A\+S\+A\+Model\+::vegetation\+Ignored\+Values\+Str\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_a7ebbd97ad4a29da83b34a98c3f2a169d}
+
+
+Definição na linha 34 do arquivo W\+A\+S\+A\+Model.\+h.
+
+\index{W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}!vegetation\+Layer@{vegetation\+Layer}}
+\index{vegetation\+Layer@{vegetation\+Layer}!W\+A\+S\+A\+Model@{W\+A\+S\+A\+Model}}
+\subsubsection[{vegetation\+Layer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector\+LayerM} $\ast$ W\+A\+S\+A\+Model\+::vegetation\+Layer\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_model_a2f7215f1b30da9d19e3d510086bdd091}
+
+
+Definição na linha 22 do arquivo W\+A\+S\+A\+Model.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf W\+A\+S\+A\+Model.\+h}\end{DoxyCompactItemize}

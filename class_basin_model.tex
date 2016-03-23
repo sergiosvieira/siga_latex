@@ -1,0 +1,187 @@
+\section{Refer√™ncia da Classe Basin\+Model}
+\label{class_basin_model}\index{Basin\+Model@{Basin\+Model}}
+
+
+{\ttfamily \#include $<$Basin\+Model.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Model}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Basin\+Model} ({\bf Date} initial\+Date, {\bf Date} final\+Date, {\bf Node} $\ast${\bf node})
+\item 
+{\bf $\sim$\+Basin\+Model} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf run} ({\bf Date} date)
+\item 
+void {\bf aloc\+Results} ()
+\item 
+int {\bf get\+Id} ()
+\item 
+void {\bf clear} ()
+\item 
+bool {\bf empty} ()
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descri√ß√£o Detalhada}
+Cada inst‚ncia de modelo È feita para um nÛ especÌfico 
+
+Defini√ß√£o na linha 12 do arquivo Basin\+Model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Basin\+Model@{Basin\+Model}!Basin\+Model@{Basin\+Model}}
+\index{Basin\+Model@{Basin\+Model}!Basin\+Model@{Basin\+Model}}
+\subsubsection[{Basin\+Model(\+Date initial\+Date, Date final\+Date, Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}Basin\+Model\+::\+Basin\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{initial\+Date, }
+\item[{{\bf Date}}]{final\+Date, }
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_basin_model_ab2bded0104d5f2284be80a11d842aa5f}
+NÛ de interesse
+
+Node$\ast$ node; Construtor padr„o da classe \doxyref{Basin\+Model}{pag.}{class_basin_model} 
+\begin{DoxyParams}{Par√¢metros}
+{\em initial\+Date} & Inicio do intervalo \\
+\hline
+{\em final\+Date} & Final do Intervalo \\
+\hline
+{\em node} & NÛ de interesse \\
+\hline
+\end{DoxyParams}
+\index{Basin\+Model@{Basin\+Model}!````~Basin\+Model@{$\sim$\+Basin\+Model}}
+\index{````~Basin\+Model@{$\sim$\+Basin\+Model}!Basin\+Model@{Basin\+Model}}
+\subsubsection[{$\sim$\+Basin\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Basin\+Model\+::$\sim$\+Basin\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_basin_model_ae5a163f4767dfe9489c4623ef927424d}
+Destrutor padr„o da classe \doxyref{Basin\+Model}{pag.}{class_basin_model} 
+
+\subsection{M√©todos}
+\index{Basin\+Model@{Basin\+Model}!aloc\+Results@{aloc\+Results}}
+\index{aloc\+Results@{aloc\+Results}!Basin\+Model@{Basin\+Model}}
+\subsubsection[{aloc\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}void Basin\+Model\+::aloc\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_basin_model_a24da1a0bb70b13857383f9223a37aeec}
+AlocaÁ„o de Resultados 
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_af26524ca25da5eb051f825a941c91488}.
+
+\index{Basin\+Model@{Basin\+Model}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Basin\+Model@{Basin\+Model}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Basin\+Model\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_basin_model_a240522dbedd1809b5bdb2c5c3097df57}
+Checa se as informaÁıes est„o completas 
+\begin{DoxyParams}{Par√¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_a5967e944c8fce5e6ca9ba1f8890ad56d}.
+
+\index{Basin\+Model@{Basin\+Model}!clear@{clear}}
+\index{clear@{clear}!Basin\+Model@{Basin\+Model}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Basin\+Model\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_basin_model_ae18565c56a0eb89f0e3621abc3f27ecc}
+Limpa os dados 
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_a6473b3e6e73183d74801546e8816f55a}.
+
+\index{Basin\+Model@{Basin\+Model}!empty@{empty}}
+\index{empty@{empty}!Basin\+Model@{Basin\+Model}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool Basin\+Model\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_basin_model_a3fef0be47805e23f802c6aa38504ef9d}
+retorna se existe algum valor no modelo 
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_adf9cc2f68809802cb9e4d55ed2522078}.
+
+\index{Basin\+Model@{Basin\+Model}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Basin\+Model@{Basin\+Model}}
+\subsubsection[{get\+Id()}]{\setlength{\rightskip}{0pt plus 5cm}int Basin\+Model\+::get\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_basin_model_a4e2fd5756ba546800e0acca2c25f37b3}
+Retorna o identificador do elemento associado 
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_ac9ebfb85cf8c0bf9b2e8c3de070d7292}.
+
+\index{Basin\+Model@{Basin\+Model}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Basin\+Model@{Basin\+Model}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Basin\+Model\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_basin_model_aa3d24c5e6a3ec5975829f17018e5bd39}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementa√ß√£o de {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_a99781b8784bfcdcb228d6f63e72f2088}.
+
+\index{Basin\+Model@{Basin\+Model}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Basin\+Model@{Basin\+Model}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Basin\+Model\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_basin_model_aaef1330da013e593302f20797f33f8a8}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementa√ß√£o de {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_a16eefd6636a24d9feb11388ecc2bb306}.
+
+\index{Basin\+Model@{Basin\+Model}!run@{run}}
+\index{run@{run}!Basin\+Model@{Basin\+Model}}
+\subsubsection[{run(\+Date date)}]{\setlength{\rightskip}{0pt plus 5cm}void Basin\+Model\+::run (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{date}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_basin_model_adbebd8c1d9c48bfc5c98b50f11cc6584}
+SimulaÁ„o 
+\begin{DoxyParams}{Par√¢metros}
+{\em date} & Dia a ser simulado \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_a5cb0cdd25cceb57244a687bf598483ce}.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Basin\+Model.\+h}\end{DoxyCompactItemize}

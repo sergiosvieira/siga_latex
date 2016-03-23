@@ -1,0 +1,335 @@
+\section{Referência da Classe Draw\+Matrix}
+\label{class_draw_matrix}\index{Draw\+Matrix@{Draw\+Matrix}}
+
+
+{\ttfamily \#include $<$Draw\+Matrix.\+h$>$}
+
+
+
+Herdeiro de {\bf S\+I\+G\+A\+Tree\+Item\+Data}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix} \& {\bf matrix} ()
+\item 
+void {\bf matrix} ({\bf Matrix} a\+\_\+matrix)
+\item 
+{\bf Columns\+Infomation\+Map} \& {\bf columns\+Info} ()
+\item 
+{\bf Draw\+Matrix} (wx\+String {\bf token}, {\bf Matrix} {\bf matrix}, wx\+String {\bf name}, map$<$ unsigned int, {\bf Column\+Information} $\ast$ $>$ {\bf columns\+Info}, wx\+String {\bf sections}=\char`\"{}\char`\"{}, unsigned int {\bf type}=0)
+\item 
+virtual {\bf $\sim$\+Draw\+Matrix} ()
+\item 
+void {\bf set\+Column\+Name} (unsigned int column, wx\+String {\bf name})
+\item 
+void {\bf set\+Column\+Unit} (unsigned int column, wx\+String unit)
+\item 
+wx\+String {\bf get\+Column\+Name} (unsigned int column)
+\item 
+wx\+String {\bf get\+Column\+Unit} (unsigned int column)
+\item 
+void {\bf set\+Name} (wx\+String {\bf name})
+\item 
+wx\+String {\bf get\+Name} ()
+\item 
+bool {\bf empty} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+String {\bf token}
+\item 
+unsigned int {\bf type}
+\item 
+wx\+Bitmap {\bf symbol}
+\item 
+int {\bf symbol\+Type}
+\item 
+int {\bf symbol\+Color}
+\item 
+bool {\bf inverse}
+\item 
+wx\+String {\bf sections}
+\item 
+wx\+String {\bf name}
+\item 
+wx\+Colour {\bf color}
+\end{DoxyCompactItemize}
+\subsection*{Tipos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+typedef map$<$ unsigned int, {\bf Column\+Information} $\ast$ $>$ {\bf Columns\+Infomation\+Map}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix} {\bf m\+\_\+matrix}
+\item 
+{\bf Columns\+Infomation\+Map} {\bf m\+\_\+columns}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 12 do arquivo Draw\+Matrix.\+h.
+
+
+
+\subsection{Definições de Tipos}
+\index{Draw\+Matrix@{Draw\+Matrix}!Columns\+Infomation\+Map@{Columns\+Infomation\+Map}}
+\index{Columns\+Infomation\+Map@{Columns\+Infomation\+Map}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{Columns\+Infomation\+Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef map$<$unsigned int, {\bf Column\+Information}$\ast$$>$ {\bf Draw\+Matrix\+::\+Columns\+Infomation\+Map}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_matrix_ab85bb52f1e9d8f8f76ac64ce5ed826c4}
+
+
+Definição na linha 15 do arquivo Draw\+Matrix.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Draw\+Matrix@{Draw\+Matrix}!Draw\+Matrix@{Draw\+Matrix}}
+\index{Draw\+Matrix@{Draw\+Matrix}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{Draw\+Matrix(wx\+String token, Matrix matrix, wx\+String name, map$<$ unsigned int, Column\+Information $\ast$ $>$ columns\+Info, wx\+String sections="""", unsigned int type=0)}]{\setlength{\rightskip}{0pt plus 5cm}Draw\+Matrix\+::\+Draw\+Matrix (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{token, }
+\item[{{\bf Matrix}}]{matrix, }
+\item[{wx\+String}]{name, }
+\item[{map$<$ unsigned int, {\bf Column\+Information} $\ast$ $>$}]{columns\+Info, }
+\item[{wx\+String}]{sections = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{unsigned int}]{type = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_draw_matrix_ab1a4456d9cee5a40d2c9872c9cd30c0e}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em matrix} & Matriz representada \\
+\hline
+{\em name} & Nome da matriz \\
+\hline
+{\em color} & Cor de desenho da matriz \\
+\hline
+{\em columns\+Info} & Coluna(s) a ser(em) desenhada(s) \\
+\hline
+{\em draw\+Dot} & Desenha os pontos do gr�fico \\
+\hline
+{\em draw\+Line} & Desenha as linhas entre os pontos do gr�fico \\
+\hline
+\end{DoxyParams}
+\index{Draw\+Matrix@{Draw\+Matrix}!````~Draw\+Matrix@{$\sim$\+Draw\+Matrix}}
+\index{````~Draw\+Matrix@{$\sim$\+Draw\+Matrix}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{$\sim$\+Draw\+Matrix()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Draw\+Matrix\+::$\sim$\+Draw\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_draw_matrix_a6fbccb482d5a43bba41968c8dc8c4ab5}
+Destrutor 
+
+\subsection{Métodos}
+\index{Draw\+Matrix@{Draw\+Matrix}!columns\+Info@{columns\+Info}}
+\index{columns\+Info@{columns\+Info}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{columns\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Columns\+Infomation\+Map}\& Draw\+Matrix\+::columns\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_matrix_a44bd08ec3246aed74cf5452e907229da}
+\index{Draw\+Matrix@{Draw\+Matrix}!empty@{empty}}
+\index{empty@{empty}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool Draw\+Matrix\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_draw_matrix_a79fca392cd9ffeb09d039a064fe96d9c}
+Diz se h� informa��es armazenadas na matrix 
+
+Reimplementação de {\bf S\+I\+G\+A\+Tree\+Item\+Data} \doxyref{}{pag.}{class_s_i_g_a_tree_item_data_ad2396b72518390c4537d27fd8beb9f73}.
+
+\index{Draw\+Matrix@{Draw\+Matrix}!get\+Column\+Name@{get\+Column\+Name}}
+\index{get\+Column\+Name@{get\+Column\+Name}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{get\+Column\+Name(unsigned int column)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Draw\+Matrix\+::get\+Column\+Name (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{column}
+\end{DoxyParamCaption}
+)}\label{class_draw_matrix_a31c08912fac21979469cc0794c89e1ae}
+Retorna o nome da coluna 
+\begin{DoxyParams}{Parâmetros}
+{\em column} & Coluna \\
+\hline
+\end{DoxyParams}
+\index{Draw\+Matrix@{Draw\+Matrix}!get\+Column\+Unit@{get\+Column\+Unit}}
+\index{get\+Column\+Unit@{get\+Column\+Unit}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{get\+Column\+Unit(unsigned int column)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Draw\+Matrix\+::get\+Column\+Unit (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{column}
+\end{DoxyParamCaption}
+)}\label{class_draw_matrix_aab09cc15d7615467703d0f93faab4d41}
+Retorna a unidade da coluna 
+\begin{DoxyParams}{Parâmetros}
+{\em column} & Coluna \\
+\hline
+\end{DoxyParams}
+\index{Draw\+Matrix@{Draw\+Matrix}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{get\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Draw\+Matrix\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_matrix_a9f80196b2566e6d0e6a62f94a0db0e47}
+Retorna o nome da matriz \index{Draw\+Matrix@{Draw\+Matrix}!matrix@{matrix}}
+\index{matrix@{matrix}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{matrix()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix}\& Draw\+Matrix\+::matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_matrix_a34a39a26ba79dce719d926148d15b5d3}
+\index{Draw\+Matrix@{Draw\+Matrix}!matrix@{matrix}}
+\index{matrix@{matrix}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{matrix(\+Matrix a\+\_\+matrix)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Matrix\+::matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{a\+\_\+matrix}
+\end{DoxyParamCaption}
+)}\label{class_draw_matrix_a5407c8c9c2dd0e5183b9b8d0695ab0d0}
+\index{Draw\+Matrix@{Draw\+Matrix}!set\+Column\+Name@{set\+Column\+Name}}
+\index{set\+Column\+Name@{set\+Column\+Name}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{set\+Column\+Name(unsigned int column, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Matrix\+::set\+Column\+Name (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{column, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_draw_matrix_aa6657c2c2c4856a4f7ba9787a902db5b}
+Desenha a matriz 
+\begin{DoxyParams}{Parâmetros}
+{\em dc} & Ferramenta de pintura \\
+\hline
+{\em columnX} & Valor da abcissa \\
+\hline
+{\em columnY} & Valor da ordenada \\
+\hline
+{\em xmin} & Dia de inicio \\
+\hline
+{\em xmax} & Dia de fim \\
+\hline
+{\em ymin} & Valor minimo \\
+\hline
+{\em ymax} & Valor maximo\\
+\hline
+\end{DoxyParams}
+void draw(wx\+D\+C\& dc,int column\+X, int column\+Y, int xmin, int xmax, int ymin, int ymax); Defini o nome da coluna 
+\begin{DoxyParams}{Parâmetros}
+{\em column} & Coluna a ter nome definido \\
+\hline
+{\em name} & Nome da coluna \\
+\hline
+\end{DoxyParams}
+\index{Draw\+Matrix@{Draw\+Matrix}!set\+Column\+Unit@{set\+Column\+Unit}}
+\index{set\+Column\+Unit@{set\+Column\+Unit}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{set\+Column\+Unit(unsigned int column, wx\+String unit)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Matrix\+::set\+Column\+Unit (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{column, }
+\item[{wx\+String}]{unit}
+\end{DoxyParamCaption}
+)}\label{class_draw_matrix_a9c8fa0b5d98c1da811870d88dfd7f776}
+Defini a unidade da coluna 
+\begin{DoxyParams}{Parâmetros}
+{\em column} & Coluna a ter nome definido \\
+\hline
+{\em unit} & Unidade da coluna \\
+\hline
+\end{DoxyParams}
+\index{Draw\+Matrix@{Draw\+Matrix}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{set\+Name(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Matrix\+::set\+Name (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_draw_matrix_ac6124361925045dc79116cea50d8e726}
+Defini o nome da matrix 
+\begin{DoxyParams}{Parâmetros}
+{\em name} & Nome da matriz \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{Draw\+Matrix@{Draw\+Matrix}!color@{color}}
+\index{color@{color}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{color}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Colour Draw\+Matrix\+::color}\label{class_draw_matrix_ad716272e48312b62202fa953e4f53f9f}
+Cor com a qual a matrix sera desenhada 
+
+Definição na linha 65 do arquivo Draw\+Matrix.\+h.
+
+\index{Draw\+Matrix@{Draw\+Matrix}!inverse@{inverse}}
+\index{inverse@{inverse}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{inverse}]{\setlength{\rightskip}{0pt plus 5cm}bool Draw\+Matrix\+::inverse}\label{class_draw_matrix_a4a6fc260886d3d5287c78b37f8e60d64}
+Plota a \doxyref{Serie}{pag.}{class_serie} de cima para baixo (Geralmente usado para precipita��o) 
+
+Definição na linha 53 do arquivo Draw\+Matrix.\+h.
+
+\index{Draw\+Matrix@{Draw\+Matrix}!m\+\_\+columns@{m\+\_\+columns}}
+\index{m\+\_\+columns@{m\+\_\+columns}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{m\+\_\+columns}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Columns\+Infomation\+Map} Draw\+Matrix\+::m\+\_\+columns\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_matrix_acba8b0ad63c01efcd3af74e48351e6cc}
+Informacoes sobre as colunas 
+
+Definição na linha 23 do arquivo Draw\+Matrix.\+h.
+
+\index{Draw\+Matrix@{Draw\+Matrix}!m\+\_\+matrix@{m\+\_\+matrix}}
+\index{m\+\_\+matrix@{m\+\_\+matrix}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{m\+\_\+matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Draw\+Matrix\+::m\+\_\+matrix\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_matrix_aeff38fc2af49a6612e1d7a34c27f6a2a}
+Matriz representada 
+
+Definição na linha 19 do arquivo Draw\+Matrix.\+h.
+
+\index{Draw\+Matrix@{Draw\+Matrix}!name@{name}}
+\index{name@{name}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Draw\+Matrix\+::name}\label{class_draw_matrix_ae97ea6412e45982d87c2c2527a7faa73}
+Nome da matriz desenhada 
+
+Definição na linha 61 do arquivo Draw\+Matrix.\+h.
+
+\index{Draw\+Matrix@{Draw\+Matrix}!sections@{sections}}
+\index{sections@{sections}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{sections}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Draw\+Matrix\+::sections}\label{class_draw_matrix_a896ba00631fcfa7f2050ce9c9ae5094e}
+Contem as se��es de inser��o 
+
+Definição na linha 57 do arquivo Draw\+Matrix.\+h.
+
+\index{Draw\+Matrix@{Draw\+Matrix}!symbol@{symbol}}
+\index{symbol@{symbol}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{symbol}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Draw\+Matrix\+::symbol}\label{class_draw_matrix_a1f874820d1412ca28675b1911032ec9c}
+Simbolo do gr�fico 
+
+Definição na linha 40 do arquivo Draw\+Matrix.\+h.
+
+\index{Draw\+Matrix@{Draw\+Matrix}!symbol\+Color@{symbol\+Color}}
+\index{symbol\+Color@{symbol\+Color}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{symbol\+Color}]{\setlength{\rightskip}{0pt plus 5cm}int Draw\+Matrix\+::symbol\+Color}\label{class_draw_matrix_af2897c135cbdc0f5278c16e087c30b59}
+Cor do simbolo 
+
+Definição na linha 48 do arquivo Draw\+Matrix.\+h.
+
+\index{Draw\+Matrix@{Draw\+Matrix}!symbol\+Type@{symbol\+Type}}
+\index{symbol\+Type@{symbol\+Type}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{symbol\+Type}]{\setlength{\rightskip}{0pt plus 5cm}int Draw\+Matrix\+::symbol\+Type}\label{class_draw_matrix_a287a42cd36b39f4c6249e4be579d01c5}
+Tipo de simbolo 
+
+Definição na linha 44 do arquivo Draw\+Matrix.\+h.
+
+\index{Draw\+Matrix@{Draw\+Matrix}!token@{token}}
+\index{token@{token}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{token}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Draw\+Matrix\+::token}\label{class_draw_matrix_ac830b4e1fecb92616c3655e05b7de5fc}
+Token para matriz 
+
+Definição na linha 32 do arquivo Draw\+Matrix.\+h.
+
+\index{Draw\+Matrix@{Draw\+Matrix}!type@{type}}
+\index{type@{type}!Draw\+Matrix@{Draw\+Matrix}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Draw\+Matrix\+::type}\label{class_draw_matrix_acf7ca095e7ccd1e6db9f744ad0342828}
+Tipo de gr�fico 
+
+Definição na linha 36 do arquivo Draw\+Matrix.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Draw\+Matrix.\+h}\end{DoxyCompactItemize}

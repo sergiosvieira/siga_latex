@@ -1,0 +1,353 @@
+\section{Refer√™ncia da Classe Column\+Draw\+Info}
+\label{class_column_draw_info}\index{Column\+Draw\+Info@{Column\+Draw\+Info}}
+
+
+{\ttfamily \#include $<$Column\+Draw\+Info.\+h$>$}
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Column\+Draw\+Info} ({\bf S\+Draw\+Matrix} \&parent, int c\+Id, bool showed\+Plan=true, bool showed\+Graph=false)
+\item 
+virtual {\bf $\sim$\+Column\+Draw\+Info} ()
+\item 
+const {\bf S\+Draw\+Matrix} \& {\bf get\+Draw\+Matrix} () const 
+\item 
+void {\bf set\+Color} (int value)
+\item 
+int {\bf get\+Color} () const 
+\item 
+void {\bf set\+Draw\+Lines} (bool value)
+\item 
+bool {\bf has\+Line} () const 
+\item 
+void {\bf set\+Draw\+Symbol} (bool value)
+\item 
+bool {\bf has\+Symbol} () const 
+\item 
+void {\bf set\+Curve\+Id} (int value)
+\item 
+int {\bf get\+Curve\+Id} () const 
+\item 
+void {\bf set\+Show\+Graph} (bool value)
+\item 
+bool {\bf is\+Shown\+Graph} () const 
+\item 
+void {\bf set\+Show\+Plan} (bool value)
+\item 
+bool {\bf is\+Shown\+Plan} () const 
+\item 
+void {\bf set\+Symbol} (wx\+Bitmap \&n\+Symbol)
+\item 
+const wx\+Bitmap \& {\bf get\+Symbol} () const 
+\item 
+void {\bf set\+Symbol\+Type} (int value)
+\item 
+int {\bf get\+Symbol\+Type} () const 
+\item 
+void {\bf set\+Symbol\+Color} (int value)
+\item 
+int {\bf get\+Symbol\+Color} () const 
+\item 
+void {\bf set\+X\+Inverse} (bool value)
+\item 
+bool {\bf get\+X\+Inverse} () const 
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+Draw\+Matrix} $\ast$ {\bf draw\+Matrix}
+\item 
+int {\bf color}
+\item 
+bool {\bf draw\+Lines}
+\item 
+bool {\bf draw\+Symbols}
+\item 
+int {\bf curve\+Id}
+\item 
+bool {\bf show\+Graph}
+\item 
+bool {\bf show\+Plan}
+\item 
+wx\+Bitmap {\bf symbol}
+\item 
+int {\bf symbol\+Type}
+\item 
+int {\bf symbol\+Color}
+\item 
+bool {\bf x\+Inverse}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 13 do arquivo Column\+Draw\+Info.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Column\+Draw\+Info@{Column\+Draw\+Info}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\index{Column\+Draw\+Info@{Column\+Draw\+Info}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{Column\+Draw\+Info(\+S\+Draw\+Matrix \&parent, int c\+Id, bool showed\+Plan=true, bool showed\+Graph=false)}]{\setlength{\rightskip}{0pt plus 5cm}Column\+Draw\+Info\+::\+Column\+Draw\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+Draw\+Matrix} \&}]{parent, }
+\item[{int}]{c\+Id, }
+\item[{bool}]{showed\+Plan = {\ttfamily true}, }
+\item[{bool}]{showed\+Graph = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_column_draw_info_ac17ad5dc102830681c8b8cc55fcaa577}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em parent} & \doxyref{Matrix}{pag.}{class_matrix} relativa a informaÁ„o \\
+\hline
+{\em curve\+Id} & Identificador da curva \\
+\hline
+{\em showed\+Plan} & Deve ser mostrado na planilha \\
+\hline
+{\em showed\+Graph} & Deve ser mostrado no gr·fico \\
+\hline
+\end{DoxyParams}
+\index{Column\+Draw\+Info@{Column\+Draw\+Info}!````~Column\+Draw\+Info@{$\sim$\+Column\+Draw\+Info}}
+\index{````~Column\+Draw\+Info@{$\sim$\+Column\+Draw\+Info}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{$\sim$\+Column\+Draw\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Column\+Draw\+Info\+::$\sim$\+Column\+Draw\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_column_draw_info_ae41a2843740eb851164a8e88c236e889}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Column\+Draw\+Info@{Column\+Draw\+Info}!get\+Color@{get\+Color}}
+\index{get\+Color@{get\+Color}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{get\+Color() const }]{\setlength{\rightskip}{0pt plus 5cm}int Column\+Draw\+Info\+::get\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_column_draw_info_a3e9fb3a5c30fbfac1ec26a23df96c9b6}
+Retorna o valor da cor de desenho \index{Column\+Draw\+Info@{Column\+Draw\+Info}!get\+Curve\+Id@{get\+Curve\+Id}}
+\index{get\+Curve\+Id@{get\+Curve\+Id}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{get\+Curve\+Id() const }]{\setlength{\rightskip}{0pt plus 5cm}int Column\+Draw\+Info\+::get\+Curve\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_column_draw_info_a90c65813ffcd6f7728681762216c6ee0}
+Retorna o identificador da curva \index{Column\+Draw\+Info@{Column\+Draw\+Info}!get\+Draw\+Matrix@{get\+Draw\+Matrix}}
+\index{get\+Draw\+Matrix@{get\+Draw\+Matrix}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{get\+Draw\+Matrix() const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf S\+Draw\+Matrix}\& Column\+Draw\+Info\+::get\+Draw\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_column_draw_info_aa6e518453a7a051be9890d416fdc1941}
+Retorna a matrix relativa a informaÁ„o \index{Column\+Draw\+Info@{Column\+Draw\+Info}!get\+Symbol@{get\+Symbol}}
+\index{get\+Symbol@{get\+Symbol}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{get\+Symbol() const }]{\setlength{\rightskip}{0pt plus 5cm}const wx\+Bitmap\& Column\+Draw\+Info\+::get\+Symbol (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_column_draw_info_a6dc2701f3f469bdaae93ad76f09d778f}
+Retorna o simbolo do gr·fico \index{Column\+Draw\+Info@{Column\+Draw\+Info}!get\+Symbol\+Color@{get\+Symbol\+Color}}
+\index{get\+Symbol\+Color@{get\+Symbol\+Color}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{get\+Symbol\+Color() const }]{\setlength{\rightskip}{0pt plus 5cm}int Column\+Draw\+Info\+::get\+Symbol\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_column_draw_info_a9cfd245060635e49508233f6ce0b6527}
+Retorna a cor do simbolo do gr·fico \index{Column\+Draw\+Info@{Column\+Draw\+Info}!get\+Symbol\+Type@{get\+Symbol\+Type}}
+\index{get\+Symbol\+Type@{get\+Symbol\+Type}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{get\+Symbol\+Type() const }]{\setlength{\rightskip}{0pt plus 5cm}int Column\+Draw\+Info\+::get\+Symbol\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_column_draw_info_a11c06e6dee20348a7acfe62b77f319a8}
+Retorna a referencia para o simbolo do gr·fico \index{Column\+Draw\+Info@{Column\+Draw\+Info}!get\+X\+Inverse@{get\+X\+Inverse}}
+\index{get\+X\+Inverse@{get\+X\+Inverse}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{get\+X\+Inverse() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Column\+Draw\+Info\+::get\+X\+Inverse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_column_draw_info_a620fd311e1a5346aa8fb186081bfcb0b}
+Retorna se tem eixo x invertido \index{Column\+Draw\+Info@{Column\+Draw\+Info}!has\+Line@{has\+Line}}
+\index{has\+Line@{has\+Line}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{has\+Line() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Column\+Draw\+Info\+::has\+Line (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_column_draw_info_a347b71680972b8b9a77a9aa87c5a2999}
+Diz se deve ser desenhada ou n„o linas no grafico \index{Column\+Draw\+Info@{Column\+Draw\+Info}!has\+Symbol@{has\+Symbol}}
+\index{has\+Symbol@{has\+Symbol}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{has\+Symbol() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Column\+Draw\+Info\+::has\+Symbol (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_column_draw_info_ac93515282a9875ab5baa000e4557a14a}
+Diz se deve ser desenhado simbolos no gr·fico \index{Column\+Draw\+Info@{Column\+Draw\+Info}!is\+Shown\+Graph@{is\+Shown\+Graph}}
+\index{is\+Shown\+Graph@{is\+Shown\+Graph}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{is\+Shown\+Graph() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Column\+Draw\+Info\+::is\+Shown\+Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_column_draw_info_ada38b3cabc8d68447670038ea0c6f062}
+Retorna se deve ser desenhado no gr·fico \index{Column\+Draw\+Info@{Column\+Draw\+Info}!is\+Shown\+Plan@{is\+Shown\+Plan}}
+\index{is\+Shown\+Plan@{is\+Shown\+Plan}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{is\+Shown\+Plan() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Column\+Draw\+Info\+::is\+Shown\+Plan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_column_draw_info_ae62db5d01c41ee2fdc771caf0909844c}
+Retorna se deve ser desenhado no palnilha \index{Column\+Draw\+Info@{Column\+Draw\+Info}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{set\+Color(int value)}]{\setlength{\rightskip}{0pt plus 5cm}void Column\+Draw\+Info\+::set\+Color (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\label{class_column_draw_info_abc8281eebcd04d87e10e2d2fc2fc0908}
+Define a cor a ser usada para desenho \index{Column\+Draw\+Info@{Column\+Draw\+Info}!set\+Curve\+Id@{set\+Curve\+Id}}
+\index{set\+Curve\+Id@{set\+Curve\+Id}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{set\+Curve\+Id(int value)}]{\setlength{\rightskip}{0pt plus 5cm}void Column\+Draw\+Info\+::set\+Curve\+Id (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\label{class_column_draw_info_a388ec755c49c0f4c0daafbd0cbf2d3e7}
+Define um identificador para a curva \index{Column\+Draw\+Info@{Column\+Draw\+Info}!set\+Draw\+Lines@{set\+Draw\+Lines}}
+\index{set\+Draw\+Lines@{set\+Draw\+Lines}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{set\+Draw\+Lines(bool value)}]{\setlength{\rightskip}{0pt plus 5cm}void Column\+Draw\+Info\+::set\+Draw\+Lines (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\label{class_column_draw_info_a2f9a4f3b08fd0d24882d362903f7d84f}
+Define se deve ser desenhado linas no gr·fico \index{Column\+Draw\+Info@{Column\+Draw\+Info}!set\+Draw\+Symbol@{set\+Draw\+Symbol}}
+\index{set\+Draw\+Symbol@{set\+Draw\+Symbol}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{set\+Draw\+Symbol(bool value)}]{\setlength{\rightskip}{0pt plus 5cm}void Column\+Draw\+Info\+::set\+Draw\+Symbol (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\label{class_column_draw_info_a0d693ac0cc96dbdbd93ba8c04e3eb49f}
+Define se deve ser desenhado simbolos no grafico \index{Column\+Draw\+Info@{Column\+Draw\+Info}!set\+Show\+Graph@{set\+Show\+Graph}}
+\index{set\+Show\+Graph@{set\+Show\+Graph}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{set\+Show\+Graph(bool value)}]{\setlength{\rightskip}{0pt plus 5cm}void Column\+Draw\+Info\+::set\+Show\+Graph (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\label{class_column_draw_info_ade48c98ee2802140c57eb6952affafde}
+Define se deve ser desenhada no gr·fico \index{Column\+Draw\+Info@{Column\+Draw\+Info}!set\+Show\+Plan@{set\+Show\+Plan}}
+\index{set\+Show\+Plan@{set\+Show\+Plan}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{set\+Show\+Plan(bool value)}]{\setlength{\rightskip}{0pt plus 5cm}void Column\+Draw\+Info\+::set\+Show\+Plan (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\label{class_column_draw_info_a88e6c10242565d64ad71819a041b6151}
+Define se deve ser desenhada na palnilha \index{Column\+Draw\+Info@{Column\+Draw\+Info}!set\+Symbol@{set\+Symbol}}
+\index{set\+Symbol@{set\+Symbol}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{set\+Symbol(wx\+Bitmap \&n\+Symbol)}]{\setlength{\rightskip}{0pt plus 5cm}void Column\+Draw\+Info\+::set\+Symbol (
+\begin{DoxyParamCaption}
+\item[{wx\+Bitmap \&}]{n\+Symbol}
+\end{DoxyParamCaption}
+)}\label{class_column_draw_info_ab843424fda864a979e7f7c20c91f9f93}
+Define o simbolo do gr·fico \index{Column\+Draw\+Info@{Column\+Draw\+Info}!set\+Symbol\+Color@{set\+Symbol\+Color}}
+\index{set\+Symbol\+Color@{set\+Symbol\+Color}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{set\+Symbol\+Color(int value)}]{\setlength{\rightskip}{0pt plus 5cm}void Column\+Draw\+Info\+::set\+Symbol\+Color (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\label{class_column_draw_info_a79f581833a9f868654bdd3d8029dac8b}
+Define a cor do simbolo do gr·fico \index{Column\+Draw\+Info@{Column\+Draw\+Info}!set\+Symbol\+Type@{set\+Symbol\+Type}}
+\index{set\+Symbol\+Type@{set\+Symbol\+Type}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{set\+Symbol\+Type(int value)}]{\setlength{\rightskip}{0pt plus 5cm}void Column\+Draw\+Info\+::set\+Symbol\+Type (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\label{class_column_draw_info_af91939eef085ca38879083088eed79b1}
+Define a referencia para o simbolo do gr·fico \index{Column\+Draw\+Info@{Column\+Draw\+Info}!set\+X\+Inverse@{set\+X\+Inverse}}
+\index{set\+X\+Inverse@{set\+X\+Inverse}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{set\+X\+Inverse(bool value)}]{\setlength{\rightskip}{0pt plus 5cm}void Column\+Draw\+Info\+::set\+X\+Inverse (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\label{class_column_draw_info_afddd0e0c81b45ec74117e1832acee4c6}
+Define se tem eixo x invertido 
+
+\subsection{Atributos}
+\index{Column\+Draw\+Info@{Column\+Draw\+Info}!color@{color}}
+\index{color@{color}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{color}]{\setlength{\rightskip}{0pt plus 5cm}int Column\+Draw\+Info\+::color\hspace{0.3cm}{\ttfamily [protected]}}\label{class_column_draw_info_a4f4e4a6d22ace172dbd2b940eef04986}
+Valor relativo a cor 
+
+Defini√ß√£o na linha 24 do arquivo Column\+Draw\+Info.\+h.
+
+\index{Column\+Draw\+Info@{Column\+Draw\+Info}!curve\+Id@{curve\+Id}}
+\index{curve\+Id@{curve\+Id}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{curve\+Id}]{\setlength{\rightskip}{0pt plus 5cm}int Column\+Draw\+Info\+::curve\+Id\hspace{0.3cm}{\ttfamily [protected]}}\label{class_column_draw_info_ae560018e9824757dfcbf87675f1dce11}
+Referencia unica para ser usada no desenho do gr·fico. Identifica a curva no wx\+Plot\+Ctrl. 
+
+Defini√ß√£o na linha 37 do arquivo Column\+Draw\+Info.\+h.
+
+\index{Column\+Draw\+Info@{Column\+Draw\+Info}!draw\+Lines@{draw\+Lines}}
+\index{draw\+Lines@{draw\+Lines}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{draw\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}bool Column\+Draw\+Info\+::draw\+Lines\hspace{0.3cm}{\ttfamily [protected]}}\label{class_column_draw_info_a82873eac0cdb9c9180fe2ccfb7efcc1f}
+Diz se deve desenhar linhas no gr·fico 
+
+Defini√ß√£o na linha 28 do arquivo Column\+Draw\+Info.\+h.
+
+\index{Column\+Draw\+Info@{Column\+Draw\+Info}!draw\+Matrix@{draw\+Matrix}}
+\index{draw\+Matrix@{draw\+Matrix}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{draw\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+Draw\+Matrix}$\ast$ Column\+Draw\+Info\+::draw\+Matrix\hspace{0.3cm}{\ttfamily [protected]}}\label{class_column_draw_info_a0bf3e5ad11ddd6b387eeda55e9ac1587}
+\doxyref{Matrix}{pag.}{class_matrix} relativa a informaÁ„o 
+
+Defini√ß√£o na linha 20 do arquivo Column\+Draw\+Info.\+h.
+
+\index{Column\+Draw\+Info@{Column\+Draw\+Info}!draw\+Symbols@{draw\+Symbols}}
+\index{draw\+Symbols@{draw\+Symbols}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{draw\+Symbols}]{\setlength{\rightskip}{0pt plus 5cm}bool Column\+Draw\+Info\+::draw\+Symbols\hspace{0.3cm}{\ttfamily [protected]}}\label{class_column_draw_info_a61d861259003c0cebc3b140157a8caad}
+Diz se deve desenhar simbolos no gr·fico 
+
+Defini√ß√£o na linha 32 do arquivo Column\+Draw\+Info.\+h.
+
+\index{Column\+Draw\+Info@{Column\+Draw\+Info}!show\+Graph@{show\+Graph}}
+\index{show\+Graph@{show\+Graph}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{show\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}bool Column\+Draw\+Info\+::show\+Graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_column_draw_info_a5c28da1351fbde98deb241c309aee740}
+Deve ser mostrado ou n„o no gr·fico 
+
+Defini√ß√£o na linha 41 do arquivo Column\+Draw\+Info.\+h.
+
+\index{Column\+Draw\+Info@{Column\+Draw\+Info}!show\+Plan@{show\+Plan}}
+\index{show\+Plan@{show\+Plan}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{show\+Plan}]{\setlength{\rightskip}{0pt plus 5cm}bool Column\+Draw\+Info\+::show\+Plan\hspace{0.3cm}{\ttfamily [protected]}}\label{class_column_draw_info_a6ae649f7131b8f1d7dc9e217a98cba9a}
+Deve ser mostrado ou n„o na planilha 
+
+Defini√ß√£o na linha 45 do arquivo Column\+Draw\+Info.\+h.
+
+\index{Column\+Draw\+Info@{Column\+Draw\+Info}!symbol@{symbol}}
+\index{symbol@{symbol}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{symbol}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Column\+Draw\+Info\+::symbol\hspace{0.3cm}{\ttfamily [protected]}}\label{class_column_draw_info_a7014e31c4b1f4990d9bf783086d607cc}
+Simbolo para desenho 
+
+Defini√ß√£o na linha 49 do arquivo Column\+Draw\+Info.\+h.
+
+\index{Column\+Draw\+Info@{Column\+Draw\+Info}!symbol\+Color@{symbol\+Color}}
+\index{symbol\+Color@{symbol\+Color}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{symbol\+Color}]{\setlength{\rightskip}{0pt plus 5cm}int Column\+Draw\+Info\+::symbol\+Color\hspace{0.3cm}{\ttfamily [protected]}}\label{class_column_draw_info_a2e7199a12a51754e3ce57de050cbdfd6}
+Referencia da cor do simbolo 
+
+Defini√ß√£o na linha 57 do arquivo Column\+Draw\+Info.\+h.
+
+\index{Column\+Draw\+Info@{Column\+Draw\+Info}!symbol\+Type@{symbol\+Type}}
+\index{symbol\+Type@{symbol\+Type}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{symbol\+Type}]{\setlength{\rightskip}{0pt plus 5cm}int Column\+Draw\+Info\+::symbol\+Type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_column_draw_info_a98090dd804ccb9048750d67bc70201d2}
+Referencia do simbolo 
+
+Defini√ß√£o na linha 53 do arquivo Column\+Draw\+Info.\+h.
+
+\index{Column\+Draw\+Info@{Column\+Draw\+Info}!x\+Inverse@{x\+Inverse}}
+\index{x\+Inverse@{x\+Inverse}!Column\+Draw\+Info@{Column\+Draw\+Info}}
+\subsubsection[{x\+Inverse}]{\setlength{\rightskip}{0pt plus 5cm}bool Column\+Draw\+Info\+::x\+Inverse\hspace{0.3cm}{\ttfamily [protected]}}\label{class_column_draw_info_aa2cabfefcc51f5abb6e51925c4e0ccc9}
+Se quando desenhada no eixo X deve ser coloca invertida 
+
+Defini√ß√£o na linha 61 do arquivo Column\+Draw\+Info.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Column\+Draw\+Info.\+h}\end{DoxyCompactItemize}

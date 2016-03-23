@@ -1,0 +1,755 @@
+\section{Refer√™ncia da Classe Res\+Op\+Scenario\+Ctrl}
+\label{class_res_op_scenario_ctrl}\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Scenario\+Ctrl.\+h$>$}
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ {\bf Res\+Op\+Scenario} $\ast$ $>$ \& {\bf get\+Scenarios} ()
+\item 
+bool {\bf can\+Save\+Guarantee} ()
+\item 
+bool {\bf set\+Save\+Guarantee} (bool a\+\_\+save)
+\item 
+void {\bf clear\+Guarantee\+Matrix} ()
+\item 
+{\bf Sparse\+Matrix}$<$ double $>$ {\bf get\+Guarante\+Scenario\+Matrix} ()
+\item 
+std\+::map$<$ int, {\bf Sparse\+Matrix}$<$ double $>$ $>$ {\bf get\+Guarante\+Scenarios\+Map} ()
+\item 
+void {\bf append\+Guarantee\+Map} (int a\+\_\+scenario\+Id, {\bf Sparse\+Matrix}$<$ double $>$ a\+\_\+matrix)
+\item 
+{\bf Res\+Op\+Scenario} $\ast$ {\bf get\+First\+Scenario} ()
+\item 
+void {\bf add\+Subnetwork\+Obj\+Functions} ({\bf Element\+ID} network\+\_\+id)
+\item 
+void {\bf add\+Subnetwork\+Obj\+Functions} ({\bf Element\+ID} network\+\_\+id, {\bf Res\+Op\+Scenario} \&scenario)
+\item 
+void {\bf remove\+Subnetwork\+Obj\+Functions} ({\bf Element\+ID} network\+\_\+id)
+\item 
+{\bf Res\+Op\+Scenario\+Ctrl} ()
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Scenario\+Ctrl} ()
+\item 
+unsigned int {\bf add\+Scenario} (wx\+String name, bool batch=false)
+\item 
+unsigned int {\bf add\+Scenario} ({\bf Res\+Op\+Scenario} $\ast$scen)
+\item 
+bool {\bf remove\+Scenario} (unsigned int scen)
+\item 
+{\bf Res\+Op\+Scenario} $\ast$ {\bf get\+Scenario} (unsigned int scen)
+\item 
+bool {\bf add\+Element\+Data} (unsigned int scen, {\bf Element} \&element, bool ignore\+Old=true)
+\item 
+bool {\bf add\+Element\+Data} (unsigned int scen, {\bf Element} \&element, {\bf Res\+Op\+Element\+Type} element\+Type, bool ignore\+Old=true)
+\item 
+bool {\bf add\+Element\+Data} (unsigned int scen, {\bf Res\+Op\+Element} $\ast$new\+Data, bool ignore\+Old)
+\item 
+bool {\bf set\+Element\+Data} (unsigned int scen, {\bf Res\+Op\+Element} $\ast$new\+Data)
+\item 
+bool {\bf remove\+Element\+Data} ({\bf Element\+ID} element\+Id)
+\item 
+bool {\bf add\+Obj\+Function} (unsigned int scen, {\bf Res\+Op\+Objective\+Function\+Type} type)
+\item 
+bool {\bf remove\+Obj\+Function} (unsigned int scen, {\bf Res\+Op\+Objective\+Function\+Type} type)
+\item 
+bool {\bf set\+Data\+Map} (unsigned int scen, map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&new\+Map, bool ignore\+Old=true)
+\item 
+map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ $\ast$ {\bf get\+Data\+Map} (unsigned int scen)
+\item 
+unsigned int {\bf copy\+Scenario} (unsigned int scen, wx\+String name)
+\item 
+{\bf Res\+Op\+Element} $\ast$ {\bf get\+Element\+Data} (unsigned int scen, {\bf Element\+ID} element\+Id)
+\item 
+void {\bf save\+Default\+Values} (const wx\+String \&file\+Name, {\bf Res\+Op\+Model\+Type} type, {\bf Res\+Op\+Element} $\ast$element)
+\item 
+void {\bf save\+Default\+Values} (const wx\+String \&file\+Name, int scen, {\bf Res\+Op\+Element} $\ast$element)
+\item 
+void {\bf save\+Default\+Values} (const wx\+String \&file\+Name, int scen, {\bf Element\+ID} element\+Id)
+\item 
+void {\bf set\+Default\+Values} (const wx\+String \&file\+Name, {\bf Res\+Op\+Model\+Type} type, {\bf Res\+Op\+Element} $\ast$element)
+\item 
+void {\bf set\+Default\+Values} (const wx\+String \&file\+Name, int scen, {\bf Res\+Op\+Element} $\ast$element)
+\item 
+void {\bf set\+Default\+Values} (const wx\+String \&file\+Name, int scen, {\bf Element\+ID} element\+Id)
+\item 
+int {\bf get\+Scenarios\+Count} ()
+\item 
+bool {\bf run} (unsigned int scen)
+\item 
+bool {\bf run\+Isolated} (unsigned int scenario\+\_\+id, std\+::vector$<$ {\bf Element\+ID} $>$ elements\+\_\+ids, std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Element\+ID} $>$ $>$ dependency\+\_\+map, {\bf Element\+ID} network\+\_\+id)
+\item 
+void {\bf run\+All} (vector$<$ {\bf Res\+Op\+Scenario} $\ast$ $>$ a\+\_\+scenarios, const char $\ast$a\+\_\+output\+Filename)
+\item 
+void {\bf run\+All} (const char $\ast$a\+\_\+output\+Filename)
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog, unsigned int scen)
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog, unsigned int scen, std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ elements\+\_\+map, std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ dependency\+\_\+map)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf create\+Missing\+Elements} (unsigned int scen, bool ignore\+Old=true)
+\item 
+void {\bf create\+Missing\+Element} ({\bf Element\+ID} element\+Id, unsigned int scenario\+Id)
+\item 
+void {\bf set\+Scenario\+Exec\+Type} (int scen, {\bf Res\+Op\+Model\+Type} type)
+\item 
+int {\bf get\+Scenario\+Seed} ()
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj)
+\item 
+bool {\bf calculate\+Num\+Of\+Scenarios\+From\+Element\+Paths} (const std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ $\ast$const a\+\_\+elements\+\_\+map, std\+::vector$<$ int $>$ \&a\+\_\+file\+Indexes, size\+\_\+t \&a\+\_\+number\+\_\+of\+\_\+scenarios, wx\+String \&a\+\_\+error\+\_\+msg)
+\item 
+bool {\bf create\+Batch\+Scenarios} (unsigned int a\+\_\+scenario\+\_\+index, std\+::vector$<$ {\bf Res\+Op\+Scenario} $\ast$ $>$ \&a\+\_\+scenario\+\_\+vec, wx\+String \&a\+\_\+error\+\_\+msg)
+\item 
+bool {\bf load\+Scenario\+Series\+From\+Elements\+Path} (const std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ $\ast$const a\+\_\+elements\+\_\+map, wx\+String a\+\_\+scenario\+\_\+file\+\_\+id, wx\+String \&a\+\_\+error\+\_\+msg, {\bf Interval} scenario\+\_\+interval)
+\item 
+bool {\bf load\+Element\+Serie\+From\+File} ({\bf Res\+Op\+Element} $\ast$a\+\_\+element, {\bf Directory\+ID} a\+\_\+file\+\_\+type, wx\+String a\+\_\+file\+\_\+name)
+\item 
+void {\bf clear\+Scenario\+Elemets\+Path} (std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ $\ast$a\+\_\+elements\+\_\+map)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 19 do arquivo Res\+Op\+Scenario\+Ctrl.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{Res\+Op\+Scenario\+Ctrl()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Scenario\+Ctrl\+::\+Res\+Op\+Scenario\+Ctrl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_ae67bb8866a27ed4e479370d0d31053e5}
+Construtor \index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!````~Res\+Op\+Scenario\+Ctrl@{$\sim$\+Res\+Op\+Scenario\+Ctrl}}
+\index{````~Res\+Op\+Scenario\+Ctrl@{$\sim$\+Res\+Op\+Scenario\+Ctrl}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{$\sim$\+Res\+Op\+Scenario\+Ctrl()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Scenario\+Ctrl\+::$\sim$\+Res\+Op\+Scenario\+Ctrl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_scenario_ctrl_af6b1b09e2643f9537bc95acebbddf737}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!add\+Element\+Data@{add\+Element\+Data}}
+\index{add\+Element\+Data@{add\+Element\+Data}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{add\+Element\+Data(unsigned int scen, Element \&element, bool ignore\+Old=true)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Ctrl\+::add\+Element\+Data (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{scen, }
+\item[{{\bf Element} \&}]{element, }
+\item[{bool}]{ignore\+Old = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_ad5258f035eb8854bf6dee510a61e61c8}
+cria e adiciona dados de um elemento. Se j· houverem dados para o elemento ser· verificado o parametro \char`\"{}replace\char`\"{}. Se \char`\"{}ignore\+Old\char`\"{} for true, caso padr„o, os dados antigos ser„o apagados e os novos colocados no lugar. Caso contrario os dados novos n„o ser„o inseridos havendo dados pre-\/existentes. 
+\begin{DoxyParams}{Par√¢metros}
+{\em scen} & Cenario \\
+\hline
+{\em element} & elemento \\
+\hline
+{\em replace} & Deve trocar os dados caso j· exist„o \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna true se for incerido com sucesso ou false no contrario 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!add\+Element\+Data@{add\+Element\+Data}}
+\index{add\+Element\+Data@{add\+Element\+Data}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{add\+Element\+Data(unsigned int scen, Element \&element, Res\+Op\+Element\+Type element\+Type, bool ignore\+Old=true)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Ctrl\+::add\+Element\+Data (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{scen, }
+\item[{{\bf Element} \&}]{element, }
+\item[{{\bf Res\+Op\+Element\+Type}}]{element\+Type, }
+\item[{bool}]{ignore\+Old = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a2ec01a2236e3d18e875deb0da562294a}
+Adiciona dados de um elemento. Se j· houverem dados para o elemento ser· verificado o parametro \char`\"{}replace\char`\"{}. Se \char`\"{}ignore\+Old\char`\"{} for true, caso padr„o, os dados antigos ser„o apagados e os novos colocados no lugar. Caso contrario os dados novos n„o ser„o inseridos havendo dados pre-\/existentes. 
+\begin{DoxyParams}{Par√¢metros}
+{\em scen} & Cenario \\
+\hline
+{\em new\+Data} & Dado a ser adicionado \\
+\hline
+{\em replace} & Deve trocar os dados caso j· exist„o \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna true se for incerido com sucesso ou false no contrario 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!add\+Element\+Data@{add\+Element\+Data}}
+\index{add\+Element\+Data@{add\+Element\+Data}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{add\+Element\+Data(unsigned int scen, Res\+Op\+Element $\ast$new\+Data, bool ignore\+Old)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Ctrl\+::add\+Element\+Data (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{scen, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{new\+Data, }
+\item[{bool}]{ignore\+Old}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a231eef6fb2347d080991e814db8fb4aa}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!add\+Obj\+Function@{add\+Obj\+Function}}
+\index{add\+Obj\+Function@{add\+Obj\+Function}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{add\+Obj\+Function(unsigned int scen, Res\+Op\+Objective\+Function\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Ctrl\+::add\+Obj\+Function (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{scen, }
+\item[{{\bf Res\+Op\+Objective\+Function\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a4e3a2124aed1c1a0bf0ea15f0119c6f9}
+Adiciona um tipo de funÁ„o objetivo a ser utilizado no cenario 
+\begin{DoxyParams}{Par√¢metros}
+{\em scen} & Cenario \\
+\hline
+{\em type} & Tipo a ser adicionado \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!add\+Scenario@{add\+Scenario}}
+\index{add\+Scenario@{add\+Scenario}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{add\+Scenario(wx\+String name, bool batch=false)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Res\+Op\+Scenario\+Ctrl\+::add\+Scenario (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name, }
+\item[{bool}]{batch = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a5c3efaa4f7586f7c39928857540e7d33}
+Adiciona um cenario. 
+\begin{DoxyParams}{Par√¢metros}
+{\em name} & Nome do cenario criado. Utiliza um nome padr„o caso a string seja vazia. Nome padr„o È \char`\"{}\+Cenario \char`\"{} acrecido de um inteiro baseado na posiÁ„o. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o indice do novo cen·rio (do seu vetor de cen·rios) 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!add\+Scenario@{add\+Scenario}}
+\index{add\+Scenario@{add\+Scenario}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{add\+Scenario(\+Res\+Op\+Scenario $\ast$scen)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Res\+Op\+Scenario\+Ctrl\+::add\+Scenario (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a1219f5d6ae17e21f0b01da901cee2d23}
+Adiciona um cenario. 
+\begin{DoxyParams}{Par√¢metros}
+{\em scen} & Cenario a ser adicionado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o indice do novo cen·rio (do seu vetor de cen·rios) 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!add\+Subnetwork\+Obj\+Functions@{add\+Subnetwork\+Obj\+Functions}}
+\index{add\+Subnetwork\+Obj\+Functions@{add\+Subnetwork\+Obj\+Functions}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{add\+Subnetwork\+Obj\+Functions(\+Element\+I\+D network\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Ctrl\+::add\+Subnetwork\+Obj\+Functions (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{network\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_aec38f0603649be78143e4417a716e8bf}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!add\+Subnetwork\+Obj\+Functions@{add\+Subnetwork\+Obj\+Functions}}
+\index{add\+Subnetwork\+Obj\+Functions@{add\+Subnetwork\+Obj\+Functions}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{add\+Subnetwork\+Obj\+Functions(\+Element\+I\+D network\+\_\+id, Res\+Op\+Scenario \&scenario)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Ctrl\+::add\+Subnetwork\+Obj\+Functions (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{network\+\_\+id, }
+\item[{{\bf Res\+Op\+Scenario} \&}]{scenario}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_aed1b0d8bdfe354e6d5159a307c61d226}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!append\+Guarantee\+Map@{append\+Guarantee\+Map}}
+\index{append\+Guarantee\+Map@{append\+Guarantee\+Map}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{append\+Guarantee\+Map(int a\+\_\+scenario\+Id, Sparse\+Matrix$<$ double $>$ a\+\_\+matrix)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Ctrl\+::append\+Guarantee\+Map (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+scenario\+Id, }
+\item[{{\bf Sparse\+Matrix}$<$ double $>$}]{a\+\_\+matrix}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_ac3d05c69bf2497ca66d754157985390d}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!calculate\+Num\+Of\+Scenarios\+From\+Element\+Paths@{calculate\+Num\+Of\+Scenarios\+From\+Element\+Paths}}
+\index{calculate\+Num\+Of\+Scenarios\+From\+Element\+Paths@{calculate\+Num\+Of\+Scenarios\+From\+Element\+Paths}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{calculate\+Num\+Of\+Scenarios\+From\+Element\+Paths(const std\+::map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ $\ast$const a\+\_\+elements\+\_\+map, std\+::vector$<$ int $>$ \&a\+\_\+file\+Indexes, size\+\_\+t \&a\+\_\+number\+\_\+of\+\_\+scenarios, wx\+String \&a\+\_\+error\+\_\+msg)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Ctrl\+::calculate\+Num\+Of\+Scenarios\+From\+Element\+Paths (
+\begin{DoxyParamCaption}
+\item[{const std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ $\ast$const}]{a\+\_\+elements\+\_\+map, }
+\item[{std\+::vector$<$ int $>$ \&}]{a\+\_\+file\+Indexes, }
+\item[{size\+\_\+t \&}]{a\+\_\+number\+\_\+of\+\_\+scenarios, }
+\item[{wx\+String \&}]{a\+\_\+error\+\_\+msg}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a2ac51067b46cc4f70a94ade8daa75d8a}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!can\+Save\+Guarantee@{can\+Save\+Guarantee}}
+\index{can\+Save\+Guarantee@{can\+Save\+Guarantee}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{can\+Save\+Guarantee()}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Ctrl\+::can\+Save\+Guarantee (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a332413025a01e39f281e4464fc93d263}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog, unsigned int scen)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Ctrl\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog, }
+\item[{unsigned int}]{scen}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a4d7c7c7f6d211b73f457b29cae56b358}
+testa se È possÌvel executar o cen·rio antes de tentar executar os elementos \index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog, unsigned int scen, std\+::map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ elements\+\_\+map, std\+::map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ dependency\+\_\+map)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Ctrl\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog, }
+\item[{unsigned int}]{scen, }
+\item[{std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$}]{elements\+\_\+map, }
+\item[{std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$}]{dependency\+\_\+map}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_acd656a02c8f75bfa11d159821fc4b402}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!clear@{clear}}
+\index{clear@{clear}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Ctrl\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a1fb709dac468d5f1dc2aa445e0d2e95f}
+Apaga todos os dados do cenario 
+\begin{DoxyParams}{Par√¢metros}
+{\em scen} & Cenario a ser apagado \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!clear\+Guarantee\+Matrix@{clear\+Guarantee\+Matrix}}
+\index{clear\+Guarantee\+Matrix@{clear\+Guarantee\+Matrix}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{clear\+Guarantee\+Matrix()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Ctrl\+::clear\+Guarantee\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_aac09ab9ce3be3cdd7d8bc9fee9ab3080}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!clear\+Scenario\+Elemets\+Path@{clear\+Scenario\+Elemets\+Path}}
+\index{clear\+Scenario\+Elemets\+Path@{clear\+Scenario\+Elemets\+Path}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{clear\+Scenario\+Elemets\+Path(std\+::map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ $\ast$a\+\_\+elements\+\_\+map)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Ctrl\+::clear\+Scenario\+Elemets\+Path (
+\begin{DoxyParamCaption}
+\item[{std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ $\ast$}]{a\+\_\+elements\+\_\+map}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_aa3538b3916b2d8efb04b9293bb4765df}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!copy\+Scenario@{copy\+Scenario}}
+\index{copy\+Scenario@{copy\+Scenario}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{copy\+Scenario(unsigned int scen, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Res\+Op\+Scenario\+Ctrl\+::copy\+Scenario (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{scen, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_ab516bb275ba4831f1933de19a57eb62f}
+Adiciona uma copia de um cenario. recomenda-\/se mudar o nome do cenario apÛs a copia 
+\begin{DoxyParams}{Par√¢metros}
+{\em scen} & Cenario fonte da copia; \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna um ponteiro para o cenario criado 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!create\+Batch\+Scenarios@{create\+Batch\+Scenarios}}
+\index{create\+Batch\+Scenarios@{create\+Batch\+Scenarios}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{create\+Batch\+Scenarios(unsigned int a\+\_\+scenario\+\_\+index, std\+::vector$<$ Res\+Op\+Scenario $\ast$ $>$ \&a\+\_\+scenario\+\_\+vec, wx\+String \&a\+\_\+error\+\_\+msg)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Ctrl\+::create\+Batch\+Scenarios (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{a\+\_\+scenario\+\_\+index, }
+\item[{std\+::vector$<$ {\bf Res\+Op\+Scenario} $\ast$ $>$ \&}]{a\+\_\+scenario\+\_\+vec, }
+\item[{wx\+String \&}]{a\+\_\+error\+\_\+msg}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_aed6f6c8444e6499467c1f44ecd6b56cf}
+Create various scenarios accordingly with the elements associated with the base\+\_\+scenario that is passed as argument. Some elements of the scenario, may contain a path associated with them, if so, then each file of the path will be linked with a created scenario \index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!create\+Missing\+Element@{create\+Missing\+Element}}
+\index{create\+Missing\+Element@{create\+Missing\+Element}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{create\+Missing\+Element(\+Element\+I\+D element\+Id, unsigned int scenario\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Ctrl\+::create\+Missing\+Element (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{element\+Id, }
+\item[{unsigned int}]{scenario\+Id}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_accab0a3ac6cb30916db227913aa705ad}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!create\+Missing\+Elements@{create\+Missing\+Elements}}
+\index{create\+Missing\+Elements@{create\+Missing\+Elements}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{create\+Missing\+Elements(unsigned int scen, bool ignore\+Old=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Ctrl\+::create\+Missing\+Elements (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{scen, }
+\item[{bool}]{ignore\+Old = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a9e363a9b5e4acc153921b0d07ee03347}
+Cria os elementos que n„o existirem ou tiverem com tipo diferente 
+\begin{DoxyParams}{Par√¢metros}
+{\em scen} & Cenario \\
+\hline
+{\em ignore\+Old} & Se deve sobrescrever o antigo \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!get\+Data\+Map@{get\+Data\+Map}}
+\index{get\+Data\+Map@{get\+Data\+Map}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{get\+Data\+Map(unsigned int scen)}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf Element\+ID}, {\bf Res\+Op\+Element}$\ast$$>$$\ast$ Res\+Op\+Scenario\+Ctrl\+::get\+Data\+Map (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{scen}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_ac72bf11b75c19f10e499417f6d830ac8}
+Rertorna os elementos do cenario \index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!get\+Element\+Data@{get\+Element\+Data}}
+\index{get\+Element\+Data@{get\+Element\+Data}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{get\+Element\+Data(unsigned int scen, Element\+I\+D element\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Element}$\ast$ Res\+Op\+Scenario\+Ctrl\+::get\+Element\+Data (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{scen, }
+\item[{{\bf Element\+ID}}]{element\+Id}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_aa3d5a7871cb9878e384ad62fda670c2e}
+Retorna um elemento 
+\begin{DoxyParams}{Par√¢metros}
+{\em scen} & Identificador do cenario \\
+\hline
+{\em element\+Id} & identificador do elemento \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!get\+First\+Scenario@{get\+First\+Scenario}}
+\index{get\+First\+Scenario@{get\+First\+Scenario}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{get\+First\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Scenario}$\ast$ Res\+Op\+Scenario\+Ctrl\+::get\+First\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_ab7ec60eef0835f2603cdba55718b14ce}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!get\+Guarante\+Scenario\+Matrix@{get\+Guarante\+Scenario\+Matrix}}
+\index{get\+Guarante\+Scenario\+Matrix@{get\+Guarante\+Scenario\+Matrix}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{get\+Guarante\+Scenario\+Matrix()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sparse\+Matrix}$<$double$>$ Res\+Op\+Scenario\+Ctrl\+::get\+Guarante\+Scenario\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a9c9c4ac9bb21ae91bd4bd37565a19f22}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!get\+Guarante\+Scenarios\+Map@{get\+Guarante\+Scenarios\+Map}}
+\index{get\+Guarante\+Scenarios\+Map@{get\+Guarante\+Scenarios\+Map}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{get\+Guarante\+Scenarios\+Map()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$int, {\bf Sparse\+Matrix}$<$double$>$ $>$ Res\+Op\+Scenario\+Ctrl\+::get\+Guarante\+Scenarios\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a89b279bb156e231f28addf7ae9d61d69}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!get\+Scenario@{get\+Scenario}}
+\index{get\+Scenario@{get\+Scenario}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{get\+Scenario(unsigned int scen)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Scenario}$\ast$ Res\+Op\+Scenario\+Ctrl\+::get\+Scenario (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{scen}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a67fe2d5c12c2759fa7c120f333063fd5}
+
+\begin{DoxyParams}{Par√¢metros}
+{\em scen} & Cenario desejado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna um ponteiro para o cenario 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!get\+Scenarios@{get\+Scenarios}}
+\index{get\+Scenarios@{get\+Scenarios}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{get\+Scenarios()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Res\+Op\+Scenario}$\ast$$>$\& Res\+Op\+Scenario\+Ctrl\+::get\+Scenarios (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a98648fc89c8b9b11bafdcd778cb55187}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!get\+Scenarios\+Count@{get\+Scenarios\+Count}}
+\index{get\+Scenarios\+Count@{get\+Scenarios\+Count}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{get\+Scenarios\+Count()}]{\setlength{\rightskip}{0pt plus 5cm}int Res\+Op\+Scenario\+Ctrl\+::get\+Scenarios\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_ad1afec3181176f99fa2b23b872968408}
+Retorna a quantidade de cenarios \index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!get\+Scenario\+Seed@{get\+Scenario\+Seed}}
+\index{get\+Scenario\+Seed@{get\+Scenario\+Seed}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{get\+Scenario\+Seed()}]{\setlength{\rightskip}{0pt plus 5cm}int Res\+Op\+Scenario\+Ctrl\+::get\+Scenario\+Seed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a52f8d90199424ef5ce8082f3dbe7cc7a}
+Retorna o Seed do cenario \index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!load\+Element\+Serie\+From\+File@{load\+Element\+Serie\+From\+File}}
+\index{load\+Element\+Serie\+From\+File@{load\+Element\+Serie\+From\+File}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{load\+Element\+Serie\+From\+File(\+Res\+Op\+Element $\ast$a\+\_\+element, Directory\+I\+D a\+\_\+file\+\_\+type, wx\+String a\+\_\+file\+\_\+name)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Ctrl\+::load\+Element\+Serie\+From\+File (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{a\+\_\+element, }
+\item[{{\bf Directory\+ID}}]{a\+\_\+file\+\_\+type, }
+\item[{wx\+String}]{a\+\_\+file\+\_\+name}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a5784e9ba3a55618df7dc82d2151f605b}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!load\+Scenario\+Series\+From\+Elements\+Path@{load\+Scenario\+Series\+From\+Elements\+Path}}
+\index{load\+Scenario\+Series\+From\+Elements\+Path@{load\+Scenario\+Series\+From\+Elements\+Path}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{load\+Scenario\+Series\+From\+Elements\+Path(const std\+::map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ $\ast$const a\+\_\+elements\+\_\+map, wx\+String a\+\_\+scenario\+\_\+file\+\_\+id, wx\+String \&a\+\_\+error\+\_\+msg, Interval scenario\+\_\+interval)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Ctrl\+::load\+Scenario\+Series\+From\+Elements\+Path (
+\begin{DoxyParamCaption}
+\item[{const std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ $\ast$const}]{a\+\_\+elements\+\_\+map, }
+\item[{wx\+String}]{a\+\_\+scenario\+\_\+file\+\_\+id, }
+\item[{wx\+String \&}]{a\+\_\+error\+\_\+msg, }
+\item[{{\bf Interval}}]{scenario\+\_\+interval}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a5169963ec9d3856a40868715ec303adc}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$proj)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Ctrl\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_ad214b47faadb67f330ce05e616e81baf}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$proj)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Ctrl\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_af108ec9766da7f11b570b431e00c1ee0}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!remove\+Element\+Data@{remove\+Element\+Data}}
+\index{remove\+Element\+Data@{remove\+Element\+Data}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{remove\+Element\+Data(\+Element\+I\+D element\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Ctrl\+::remove\+Element\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{element\+Id}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_ab6119a198f04463c4c0e209f2c1ef189}
+Remove os dados de um elemento. Os dados ser„o deletados 
+\begin{DoxyParams}{Par√¢metros}
+{\em scen} & Cenario \\
+\hline
+{\em element\+Id} & Identificador do elemento \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna true se conseguir deletar os dados correspondentes ao elemento identificado. 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!remove\+Obj\+Function@{remove\+Obj\+Function}}
+\index{remove\+Obj\+Function@{remove\+Obj\+Function}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{remove\+Obj\+Function(unsigned int scen, Res\+Op\+Objective\+Function\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Ctrl\+::remove\+Obj\+Function (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{scen, }
+\item[{{\bf Res\+Op\+Objective\+Function\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a8c5468dba5e0c84601a01ceb2f3b4cf2}
+Remove um tipo de funÁ„o objetivo da lista de execuÁ„o do cenario 
+\begin{DoxyParams}{Par√¢metros}
+{\em scen} & Cenario \\
+\hline
+{\em type} & Tipo a ser adicionado \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!remove\+Scenario@{remove\+Scenario}}
+\index{remove\+Scenario@{remove\+Scenario}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{remove\+Scenario(unsigned int scen)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Ctrl\+::remove\+Scenario (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{scen}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_ae4d70d36c2d7848d48e6b3e6806bf129}
+Remove um cenario. 
+\begin{DoxyParams}{Par√¢metros}
+{\em scen} & Cenario a ser removido. Primeiro elemento È o zero \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna true se o cenario for removido com sucesso e false caso contrario. 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!remove\+Subnetwork\+Obj\+Functions@{remove\+Subnetwork\+Obj\+Functions}}
+\index{remove\+Subnetwork\+Obj\+Functions@{remove\+Subnetwork\+Obj\+Functions}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{remove\+Subnetwork\+Obj\+Functions(\+Element\+I\+D network\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Ctrl\+::remove\+Subnetwork\+Obj\+Functions (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{network\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a0b107ed78f437ed20472cde23d3a01a4}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!run@{run}}
+\index{run@{run}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{run(unsigned int scen)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Ctrl\+::run (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{scen}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a26bf7727e7962aa2216c0d24f77bd8e6}
+Executa o modelo do cenario selecionado \index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!run\+All@{run\+All}}
+\index{run\+All@{run\+All}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{run\+All(vector$<$ Res\+Op\+Scenario $\ast$ $>$ a\+\_\+scenarios, const char $\ast$a\+\_\+output\+Filename)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Ctrl\+::run\+All (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Res\+Op\+Scenario} $\ast$ $>$}]{a\+\_\+scenarios, }
+\item[{const char $\ast$}]{a\+\_\+output\+Filename}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a345b2c8361984a9fcec0db914c474b3b}
+Executa v·rios cen·rios 
+\begin{DoxyParams}{Par√¢metros}
+{\em vetor} & de cen·rios \\
+\hline
+{\em arquivo} & de saÌda dos resultados \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!run\+All@{run\+All}}
+\index{run\+All@{run\+All}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{run\+All(const char $\ast$a\+\_\+output\+Filename)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Ctrl\+::run\+All (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+output\+Filename}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_af17771722fbd896a8911cb2709261d97}
+Executa todos os cen·rios armazenados no vetor interno 
+\begin{DoxyParams}{Par√¢metros}
+{\em arquivo} & de saÌda dos resultados \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!run\+Isolated@{run\+Isolated}}
+\index{run\+Isolated@{run\+Isolated}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{run\+Isolated(unsigned int scenario\+\_\+id, std\+::vector$<$ Element\+I\+D $>$ elements\+\_\+ids, std\+::map$<$ Element\+I\+D, std\+::vector$<$ Element\+I\+D $>$ $>$ dependency\+\_\+map, Element\+I\+D network\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Ctrl\+::run\+Isolated (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{scenario\+\_\+id, }
+\item[{std\+::vector$<$ {\bf Element\+ID} $>$}]{elements\+\_\+ids, }
+\item[{std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Element\+ID} $>$ $>$}]{dependency\+\_\+map, }
+\item[{{\bf Element\+ID}}]{network\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_aa01fce6e97deec1e755d95813eefe78d}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!save\+Default\+Values@{save\+Default\+Values}}
+\index{save\+Default\+Values@{save\+Default\+Values}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{save\+Default\+Values(const wx\+String \&file\+Name, Res\+Op\+Model\+Type type, Res\+Op\+Element $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Ctrl\+::save\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Name, }
+\item[{{\bf Res\+Op\+Model\+Type}}]{type, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a8dee091d14b5ad167ff4a6336fbf338e}
+Salvar os dados do modelo em arquivo 
+\begin{DoxyParams}{Par√¢metros}
+{\em file\+Name} & Caminho para o arquivo \\
+\hline
+{\em type} & Tipo de modelo de execuÁ„o escolhido \\
+\hline
+{\em element\+Id} & Elemento a ser salvo \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!save\+Default\+Values@{save\+Default\+Values}}
+\index{save\+Default\+Values@{save\+Default\+Values}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{save\+Default\+Values(const wx\+String \&file\+Name, int scen, Res\+Op\+Element $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Ctrl\+::save\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Name, }
+\item[{int}]{scen, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a31ddbd43a46e19393af3017e7ba9a45e}
+Salvar os dados do modelo em arquivo 
+\begin{DoxyParams}{Par√¢metros}
+{\em file\+Name} & Caminho para o arquivo \\
+\hline
+{\em scen} & Cenario \\
+\hline
+{\em element} & Elemento a ser salvo \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!save\+Default\+Values@{save\+Default\+Values}}
+\index{save\+Default\+Values@{save\+Default\+Values}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{save\+Default\+Values(const wx\+String \&file\+Name, int scen, Element\+I\+D element\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Ctrl\+::save\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Name, }
+\item[{int}]{scen, }
+\item[{{\bf Element\+ID}}]{element\+Id}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a75b103aabca67d62271993c3b9d33299}
+Salvar os dados do modelo em arquivo 
+\begin{DoxyParams}{Par√¢metros}
+{\em file\+Name} & Caminho para o arquivo \\
+\hline
+{\em scen} & Cenario \\
+\hline
+{\em element\+Id} & Identificador do elemento a ser salvo \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!set\+Data\+Map@{set\+Data\+Map}}
+\index{set\+Data\+Map@{set\+Data\+Map}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{set\+Data\+Map(unsigned int scen, map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&new\+Map, bool ignore\+Old=true)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Ctrl\+::set\+Data\+Map (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{scen, }
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{new\+Map, }
+\item[{bool}]{ignore\+Old = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a6af096eb6afb32f41920de74ba875824}
+Define um mapa de dados 
+\begin{DoxyParams}{Par√¢metros}
+{\em ignore\+Old} & Se deve sobrescrever o mapa existente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna true se n„o houver problemas. 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!set\+Default\+Values@{set\+Default\+Values}}
+\index{set\+Default\+Values@{set\+Default\+Values}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{set\+Default\+Values(const wx\+String \&file\+Name, Res\+Op\+Model\+Type type, Res\+Op\+Element $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Ctrl\+::set\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Name, }
+\item[{{\bf Res\+Op\+Model\+Type}}]{type, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a703f777139dac0a49bab3dbf2c8b4a4c}
+Define os dados do modelo lido no arquivo 
+\begin{DoxyParams}{Par√¢metros}
+{\em file\+Name} & Caminho para o arquivo \\
+\hline
+{\em type} & Tipo de modelo de execuÁ„o escolhido \\
+\hline
+{\em element\+Id} & Elemento a ser salvo \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!set\+Default\+Values@{set\+Default\+Values}}
+\index{set\+Default\+Values@{set\+Default\+Values}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{set\+Default\+Values(const wx\+String \&file\+Name, int scen, Res\+Op\+Element $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Ctrl\+::set\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Name, }
+\item[{int}]{scen, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a55158bfc5c8c757eba01e96dfba671cf}
+Define os dados do modelo lido no arquivo 
+\begin{DoxyParams}{Par√¢metros}
+{\em file\+Name} & Caminho para o arquivo \\
+\hline
+{\em scen} & Cenario \\
+\hline
+{\em element} & Elemento a ser salvo \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!set\+Default\+Values@{set\+Default\+Values}}
+\index{set\+Default\+Values@{set\+Default\+Values}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{set\+Default\+Values(const wx\+String \&file\+Name, int scen, Element\+I\+D element\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Ctrl\+::set\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Name, }
+\item[{int}]{scen, }
+\item[{{\bf Element\+ID}}]{element\+Id}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a25e172e4823ed0ac253b186efa0d91e3}
+Define os dados do modelo lido no arquivo 
+\begin{DoxyParams}{Par√¢metros}
+{\em file\+Name} & Caminho para o arquivo \\
+\hline
+{\em scen} & Cenario \\
+\hline
+{\em element\+Id} & Identificador do elemento a ser salvo \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!set\+Element\+Data@{set\+Element\+Data}}
+\index{set\+Element\+Data@{set\+Element\+Data}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{set\+Element\+Data(unsigned int scen, Res\+Op\+Element $\ast$new\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Ctrl\+::set\+Element\+Data (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{scen, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{new\+Data}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a31d1088ea430317bc5028aa6e788db49}
+Substitui os dados de um elemento. 
+\begin{DoxyParams}{Par√¢metros}
+{\em scen} & Cenario \\
+\hline
+{\em data} & Dado a ser adicionado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna true se for incerido com sucesso ou false no contrario 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!set\+Save\+Guarantee@{set\+Save\+Guarantee}}
+\index{set\+Save\+Guarantee@{set\+Save\+Guarantee}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{set\+Save\+Guarantee(bool a\+\_\+save)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Ctrl\+::set\+Save\+Guarantee (
+\begin{DoxyParamCaption}
+\item[{bool}]{a\+\_\+save}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_a83ec584f4c21c1dbb2fee37220d55dec}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!set\+Scenario\+Exec\+Type@{set\+Scenario\+Exec\+Type}}
+\index{set\+Scenario\+Exec\+Type@{set\+Scenario\+Exec\+Type}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\subsubsection[{set\+Scenario\+Exec\+Type(int scen, Res\+Op\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Ctrl\+::set\+Scenario\+Exec\+Type (
+\begin{DoxyParamCaption}
+\item[{int}]{scen, }
+\item[{{\bf Res\+Op\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ctrl_af2bcfc42addb56d6a064eb92c50c38ff}
+Define o tipo de modelo do cenario 
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Scenario\+Ctrl.\+h}\end{DoxyCompactItemize}

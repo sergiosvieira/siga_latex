@@ -1,0 +1,281 @@
+\section{Referência da Classe Res\+Op\+Element\+Interface}
+\label{class_res_op_element_interface}\index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Element\+Interface.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+
+
+Superclasse de {\bf Res\+Op\+Basin\+Interface}, {\bf Res\+Op\+Demand\+Interface}, {\bf Res\+Op\+Junction\+Interface}, {\bf Res\+Op\+Link\+Interface} e {\bf Res\+Op\+Reservoir\+Interface}.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bf I\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+D\+E\+M\+A\+ND}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Element\+Interface} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent})
+\item 
+virtual void {\bf show\+Wizard\+Elements} (bool a\+\_\+show\+Elements=false)
+\item 
+bool {\bf initializing\+Batch\+Elements} ()
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Element\+Interface} ()
+\item 
+virtual void {\bf set\+Info} ({\bf Res\+Op\+Element} $\ast$element)
+\item 
+virtual void {\bf show\+Results} ({\bf Res\+Op\+Element} $\ast$)=0
+\item 
+virtual {\bf Serie\+Viewer} $\ast$ {\bf create\+Results} ({\bf Res\+Op\+Element} $\ast$)=0
+\item 
+void {\bf on\+Open\+Nat\+Inflow} (wx\+Command\+Event \&)
+\item 
+void {\bf on\+Dir\+Change} (wx\+File\+Dir\+Picker\+Event \&a\+\_\+event)
+\item 
+wx\+String {\bf get\+Path\+On\+Map} ({\bf Res\+Op\+Element} $\ast$a\+\_\+element, unsigned int a\+\_\+tipo)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf verify\+Valid\+Double} (std\+::string \&str)
+\item 
+bool {\bf fix\+Double\+Value} (std\+::string \&a\+\_\+cell\+Value)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Button $\ast$ {\bf bt\+Nat\+Inflow}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf bitmap\+Nat\+Inflow}
+\item 
+wx\+Bitmap {\bf bitmap\+Ok}
+\item 
+wx\+Bitmap {\bf bitmap\+Empty}
+\item 
+wx\+Static\+Box\+Sizer $\ast$ {\bf s\+Series}
+\item 
+wx\+Flex\+Grid\+Sizer $\ast$ {\bf m\+\_\+grid\+Series}
+\item 
+wx\+Dir\+Picker\+Ctrl $\ast$ {\bf m\+\_\+vazao\+Picker}
+\item 
+wx\+Static\+Text $\ast$ {\bf m\+\_\+text\+Vazao}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 24 do arquivo Res\+Op\+Element\+Interface.\+h.
+
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{class_res_op_element_interface_a5be39bb83f6474dfa8ec06c33c5186fe}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+D\+E\+M\+A\+ND@{I\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+D\+E\+M\+A\+ND}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}\index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!I\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+D\+E\+M\+A\+ND@{I\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+D\+E\+M\+A\+ND}}\item[{\em 
+I\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+D\+E\+M\+A\+ND\label{class_res_op_element_interface_a5be39bb83f6474dfa8ec06c33c5186feaf6bcd2dd8e6272cbf43e38153e0c80b6}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 58 do arquivo Res\+Op\+Element\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+\index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+\subsubsection[{Res\+Op\+Element\+Interface(wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Element\+Interface\+::\+Res\+Op\+Element\+Interface (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_res_op_element_interface_a130cc4f1ec8ac1062c40c8cda578f944}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & Janela principal \\
+\hline
+{\em parent} & Janela que a cont�m \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!````~Res\+Op\+Element\+Interface@{$\sim$\+Res\+Op\+Element\+Interface}}
+\index{````~Res\+Op\+Element\+Interface@{$\sim$\+Res\+Op\+Element\+Interface}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+\subsubsection[{$\sim$\+Res\+Op\+Element\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Element\+Interface\+::$\sim$\+Res\+Op\+Element\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_element_interface_a64181554e59df616cb67453232617ff7}
+Destrutor 
+
+\subsection{Métodos}
+\index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!create\+Results@{create\+Results}}
+\index{create\+Results@{create\+Results}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+\subsubsection[{create\+Results(\+Res\+Op\+Element $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Serie\+Viewer}$\ast$ Res\+Op\+Element\+Interface\+::create\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_element_interface_ad806bc55cd20d4fc875b61e81c9a32cf}
+Cria os resultados 
+
+Implementado por {\bf Res\+Op\+Reservoir\+Interface} \doxyref{}{pag.}{class_res_op_reservoir_interface_acf34d19a789c61e0c1d6a4ce5cea7381}, {\bf Res\+Op\+Demand\+Interface} \doxyref{}{pag.}{class_res_op_demand_interface_ad03bc66d4ceb642269abda9ececc7244}, {\bf Res\+Op\+Reservoir\+Seq\+Interface} \doxyref{}{pag.}{class_res_op_reservoir_seq_interface_add0d423ec0bbfd80542db078b0a83e11}, {\bf Res\+Op\+Reservoir\+Net\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_reservoir_net_flow_interface_a0dfd7fbacca8f2057d45947d02986de9}, {\bf Res\+Op\+Basin\+Interface} \doxyref{}{pag.}{class_res_op_basin_interface_a405175e01e1784f7a5ec69e05019c244}, {\bf Res\+Op\+Link\+Seq\+Interface} \doxyref{}{pag.}{class_res_op_link_seq_interface_a7ffdfe2575777c498b921ae98036dd9c}, {\bf Res\+Op\+Basin\+Net\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_basin_net_flow_interface_a8a1de164574fcae7178d8a06fcd44c8f}, {\bf Res\+Op\+Demand\+Net\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_demand_net_flow_interface_a8d09f5bfc7ba5c69d1a3ee1f9e25b309}, {\bf Res\+Op\+Junction\+Net\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_junction_net_flow_interface_a5cfe46ff6ad29a30c96ab0352a37dfd2}, {\bf Res\+Op\+Link\+Net\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_link_net_flow_interface_a7065bdca633e6af9094db313bd010072}, {\bf Res\+Op\+Basin\+Seq\+Interface} \doxyref{}{pag.}{class_res_op_basin_seq_interface_abc676a58b2a1321e9ced59307908b167}, {\bf Res\+Op\+Demand\+Seq\+Interface} \doxyref{}{pag.}{class_res_op_demand_seq_interface_a8484c3e69d51529ecbf842a77924416f}, {\bf Res\+Op\+Junction\+Interface} \doxyref{}{pag.}{class_res_op_junction_interface_acc85189f95e4f157311ffe22a403b4d3}, {\bf Res\+Op\+Junction\+Seq\+Interface} \doxyref{}{pag.}{class_res_op_junction_seq_interface_aba05f88d1ad29520212c578d0bf79c7c} e {\bf Res\+Op\+Link\+Interface} \doxyref{}{pag.}{class_res_op_link_interface_a1f3e5a94a289057ce69fa6e7e737a76e}.
+
+\index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!fix\+Double\+Value@{fix\+Double\+Value}}
+\index{fix\+Double\+Value@{fix\+Double\+Value}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+\subsubsection[{fix\+Double\+Value(std\+::string \&a\+\_\+cell\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Element\+Interface\+::fix\+Double\+Value (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+cell\+Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_element_interface_a2f696987c006e5e504ad93c6679d08db}
+\index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!get\+Path\+On\+Map@{get\+Path\+On\+Map}}
+\index{get\+Path\+On\+Map@{get\+Path\+On\+Map}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+\subsubsection[{get\+Path\+On\+Map(\+Res\+Op\+Element $\ast$a\+\_\+element, unsigned int a\+\_\+tipo)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Res\+Op\+Element\+Interface\+::get\+Path\+On\+Map (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{a\+\_\+element, }
+\item[{unsigned int}]{a\+\_\+tipo}
+\end{DoxyParamCaption}
+)}\label{class_res_op_element_interface_ad41cc6fc7aaa67ea1bb856789b76e318}
+\index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!initializing\+Batch\+Elements@{initializing\+Batch\+Elements}}
+\index{initializing\+Batch\+Elements@{initializing\+Batch\+Elements}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+\subsubsection[{initializing\+Batch\+Elements()}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Element\+Interface\+::initializing\+Batch\+Elements (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_element_interface_ab9d63bb86fff388ea7ee062bb2eae728}
+Initializing elements to put in the Wizard Dialog (Batch) \index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!on\+Dir\+Change@{on\+Dir\+Change}}
+\index{on\+Dir\+Change@{on\+Dir\+Change}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+\subsubsection[{on\+Dir\+Change(wx\+File\+Dir\+Picker\+Event \&a\+\_\+event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Element\+Interface\+::on\+Dir\+Change (
+\begin{DoxyParamCaption}
+\item[{wx\+File\+Dir\+Picker\+Event \&}]{a\+\_\+event}
+\end{DoxyParamCaption}
+)}\label{class_res_op_element_interface_ae65af4c7bbfe7429e7693a533aa976c2}
+\index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!on\+Open\+Nat\+Inflow@{on\+Open\+Nat\+Inflow}}
+\index{on\+Open\+Nat\+Inflow@{on\+Open\+Nat\+Inflow}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+\subsubsection[{on\+Open\+Nat\+Inflow(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Element\+Interface\+::on\+Open\+Nat\+Inflow (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_element_interface_ad8068a8019f35dcb28147c029044ff96}
+Evento de leitura da s�rie de vaz�o natural incremental \index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+\subsubsection[{set\+Info(\+Res\+Op\+Element $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Element\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_element_interface_a91e5085dcd270c60167d8ee990546083}
+Atualiza dos valores na interface 
+\begin{DoxyParams}{Parâmetros}
+{\em model} & Ponteiro para o modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado por {\bf Res\+Op\+Reservoir\+Interface} \doxyref{}{pag.}{class_res_op_reservoir_interface_ac08d67acbe2597eb8f71e3c342a8c35f}, {\bf Res\+Op\+Demand\+Interface} \doxyref{}{pag.}{class_res_op_demand_interface_a0787a8143b343456bc7c4c92b2542126}, {\bf Res\+Op\+Reservoir\+Seq\+Interface} \doxyref{}{pag.}{class_res_op_reservoir_seq_interface_a557a1336301e97ae461d8635e229a013}, {\bf Res\+Op\+Reservoir\+Net\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_reservoir_net_flow_interface_a708b4bf260024ee7b9f88bb4499a252b}, {\bf Res\+Op\+Link\+Seq\+Interface} \doxyref{}{pag.}{class_res_op_link_seq_interface_a7b0715609b20ea3bfe980c928c1e1e72}, {\bf Res\+Op\+Basin\+Net\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_basin_net_flow_interface_a870a65ec86a664868dcec6a8fac6d364}, {\bf Res\+Op\+Demand\+Net\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_demand_net_flow_interface_a2a0bf79b6bec18f90de2e29f96eae86d}, {\bf Res\+Op\+Junction\+Net\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_junction_net_flow_interface_a9c371479b2b373053ccf4c7b5ac15dc4}, {\bf Res\+Op\+Link\+Net\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_link_net_flow_interface_a6523f07aa580f8bd91f56cac81f8bb9f}, {\bf Res\+Op\+Basin\+Seq\+Interface} \doxyref{}{pag.}{class_res_op_basin_seq_interface_ae5e99d17c742fffc3f51a71fddca37ed}, {\bf Res\+Op\+Demand\+Seq\+Interface} \doxyref{}{pag.}{class_res_op_demand_seq_interface_a192c65a1a994a55d8ae3fca6f7fad6fe}, {\bf Res\+Op\+Junction\+Seq\+Interface} \doxyref{}{pag.}{class_res_op_junction_seq_interface_a6b2854d5fd479745ed163d2d1fc10011}, {\bf Res\+Op\+Basin\+Interface} \doxyref{}{pag.}{class_res_op_basin_interface_a4168ac00299af37eecbc4cfab3c072fa}, {\bf Res\+Op\+Junction\+Interface} \doxyref{}{pag.}{class_res_op_junction_interface_a2e7e3e788428ba538968355b3c914a9b} e {\bf Res\+Op\+Link\+Interface} \doxyref{}{pag.}{class_res_op_link_interface_a6f5d52b5f350241f9b496769552f6cd9}.
+
+\index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+\subsubsection[{show\+Results(\+Res\+Op\+Element $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Element\+Interface\+::show\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_element_interface_aaf3340d6104bde40590320657c6e38ba}
+Mostra os resultados para o modelo 
+\begin{DoxyParams}{Parâmetros}
+{\em change} & Monta a janela de resultados se true, caso contrario, mostra a janela de resultados \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Res\+Op\+Reservoir\+Interface} \doxyref{}{pag.}{class_res_op_reservoir_interface_aef94fd3553661f73cfd6338ab28751c0}, {\bf Res\+Op\+Demand\+Interface} \doxyref{}{pag.}{class_res_op_demand_interface_abad351650ad87744755990b3c23301ec}, {\bf Res\+Op\+Basin\+Interface} \doxyref{}{pag.}{class_res_op_basin_interface_a642ab652a52c41e830406430b9fc1100}, {\bf Res\+Op\+Reservoir\+Seq\+Interface} \doxyref{}{pag.}{class_res_op_reservoir_seq_interface_aef4f22eea3c83042afa21276c101b8fc}, {\bf Res\+Op\+Reservoir\+Net\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_reservoir_net_flow_interface_af04f95a77e36d75868d2a651a9db7614}, {\bf Res\+Op\+Junction\+Interface} \doxyref{}{pag.}{class_res_op_junction_interface_a649f59b2b85c4b381e1c99f6cde7653e}, {\bf Res\+Op\+Link\+Interface} \doxyref{}{pag.}{class_res_op_link_interface_ab9599cf06bb08e75e6299b5c8d235b73}, {\bf Res\+Op\+Link\+Seq\+Interface} \doxyref{}{pag.}{class_res_op_link_seq_interface_aef663c7b709d6f3e0b02430b069442dc}, {\bf Res\+Op\+Basin\+Net\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_basin_net_flow_interface_ad134c24833002eda65c3584c081f9df6}, {\bf Res\+Op\+Demand\+Net\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_demand_net_flow_interface_afec14572d364782b963170cf9c855410}, {\bf Res\+Op\+Junction\+Net\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_junction_net_flow_interface_a12b916baac8a5183f4d50adcf8e7c963}, {\bf Res\+Op\+Link\+Net\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_link_net_flow_interface_a36e208e9a9d8faf7c6154fdd4965af82}, {\bf Res\+Op\+Basin\+Seq\+Interface} \doxyref{}{pag.}{class_res_op_basin_seq_interface_a33c0b14c2ee8549aebc9ea2b15af5c61}, {\bf Res\+Op\+Demand\+Seq\+Interface} \doxyref{}{pag.}{class_res_op_demand_seq_interface_a3542bd75dd97ffd92623ff1bf1127f40} e {\bf Res\+Op\+Junction\+Seq\+Interface} \doxyref{}{pag.}{class_res_op_junction_seq_interface_a5d5f9191b66a710f82f899081d19f0d0}.
+
+\index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!show\+Wizard\+Elements@{show\+Wizard\+Elements}}
+\index{show\+Wizard\+Elements@{show\+Wizard\+Elements}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+\subsubsection[{show\+Wizard\+Elements(bool a\+\_\+show\+Elements=false)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Element\+Interface\+::show\+Wizard\+Elements (
+\begin{DoxyParamCaption}
+\item[{bool}]{a\+\_\+show\+Elements = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_element_interface_adef9bc0bd9775a8dc05feeb1de66ba29}
+
+
+Reimplementado por {\bf Res\+Op\+Reservoir\+Interface} \doxyref{}{pag.}{class_res_op_reservoir_interface_a05da07ec292e293fd6a4bbf4effb9b3d} e {\bf Res\+Op\+Demand\+Interface} \doxyref{}{pag.}{class_res_op_demand_interface_a38157deaa2db5abf33d96d33d578e45b}.
+
+\index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!verify\+Valid\+Double@{verify\+Valid\+Double}}
+\index{verify\+Valid\+Double@{verify\+Valid\+Double}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+\subsubsection[{verify\+Valid\+Double(std\+::string \&str)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Element\+Interface\+::verify\+Valid\+Double (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_element_interface_a0264854bec70eaea4b518ab9d986ac1e}
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!bitmap\+Empty@{bitmap\+Empty}}
+\index{bitmap\+Empty@{bitmap\+Empty}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+\subsubsection[{bitmap\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Res\+Op\+Element\+Interface\+::bitmap\+Empty\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_element_interface_a9c9fd68f0fd8f523347d5d8835411ba6}
+
+
+Definição na linha 42 do arquivo Res\+Op\+Element\+Interface.\+h.
+
+\index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!bitmap\+Nat\+Inflow@{bitmap\+Nat\+Inflow}}
+\index{bitmap\+Nat\+Inflow@{bitmap\+Nat\+Inflow}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+\subsubsection[{bitmap\+Nat\+Inflow}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Res\+Op\+Element\+Interface\+::bitmap\+Nat\+Inflow\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_element_interface_aaec3b1f03dbea26f9d4b0843c98fb60d}
+Bitmap que identifica se as series foram lidas ou n�o 
+
+Definição na linha 37 do arquivo Res\+Op\+Element\+Interface.\+h.
+
+\index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!bitmap\+Ok@{bitmap\+Ok}}
+\index{bitmap\+Ok@{bitmap\+Ok}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+\subsubsection[{bitmap\+Ok}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Res\+Op\+Element\+Interface\+::bitmap\+Ok\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_element_interface_a5ba47b3673d8f8dcf0e8526a997b87b2}
+Imagem de lido e n�o lido para as series de entrada 
+
+Definição na linha 42 do arquivo Res\+Op\+Element\+Interface.\+h.
+
+\index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!bt\+Nat\+Inflow@{bt\+Nat\+Inflow}}
+\index{bt\+Nat\+Inflow@{bt\+Nat\+Inflow}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+\subsubsection[{bt\+Nat\+Inflow}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Res\+Op\+Element\+Interface\+::bt\+Nat\+Inflow\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_element_interface_a7a8222cea81ecfd8d180f92ebfdbb818}
+Bot�es para series de entrada 
+
+Definição na linha 32 do arquivo Res\+Op\+Element\+Interface.\+h.
+
+\index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!m\+\_\+grid\+Series@{m\+\_\+grid\+Series}}
+\index{m\+\_\+grid\+Series@{m\+\_\+grid\+Series}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+\subsubsection[{m\+\_\+grid\+Series}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Flex\+Grid\+Sizer$\ast$ Res\+Op\+Element\+Interface\+::m\+\_\+grid\+Series\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_element_interface_a81344d475b2140f7a3d78d86272d80ce}
+
+
+Definição na linha 50 do arquivo Res\+Op\+Element\+Interface.\+h.
+
+\index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!m\+\_\+text\+Vazao@{m\+\_\+text\+Vazao}}
+\index{m\+\_\+text\+Vazao@{m\+\_\+text\+Vazao}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+\subsubsection[{m\+\_\+text\+Vazao}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Res\+Op\+Element\+Interface\+::m\+\_\+text\+Vazao\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_element_interface_aea22020217c63e30fd47c55786b9fc01}
+
+
+Definição na linha 54 do arquivo Res\+Op\+Element\+Interface.\+h.
+
+\index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!m\+\_\+vazao\+Picker@{m\+\_\+vazao\+Picker}}
+\index{m\+\_\+vazao\+Picker@{m\+\_\+vazao\+Picker}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+\subsubsection[{m\+\_\+vazao\+Picker}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Dir\+Picker\+Ctrl$\ast$ Res\+Op\+Element\+Interface\+::m\+\_\+vazao\+Picker\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_element_interface_adcb004be7700817154e755bb80675fb8}
+
+
+Definição na linha 52 do arquivo Res\+Op\+Element\+Interface.\+h.
+
+\index{Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}!s\+Series@{s\+Series}}
+\index{s\+Series@{s\+Series}!Res\+Op\+Element\+Interface@{Res\+Op\+Element\+Interface}}
+\subsubsection[{s\+Series}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Box\+Sizer$\ast$ Res\+Op\+Element\+Interface\+::s\+Series\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_element_interface_a1780c6f6d0acba21959a8ee4eb94fab5}
+Sizer para series 
+
+Definição na linha 48 do arquivo Res\+Op\+Element\+Interface.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Element\+Interface.\+h}\end{DoxyCompactItemize}

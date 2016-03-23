@@ -1,0 +1,665 @@
+\section{Refer√™ncia da Classe T\+A\+L\+River\+W\+Q\+Model\+Main}
+\label{class_t_a_l_river_w_q_model_main}\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+
+
+{\ttfamily \#include $<$T\+A\+L\+River\+W\+Q\+Model\+Main.\+h$>$}
+
+
+
+Herdeiro de {\bf Quality\+Model\+Main}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf T\+A\+L\+River\+W\+Q\+Model\+Main} ({\bf Quality\+Interface} $\ast${\bf main\+Inter})
+\item 
+{\bf $\sim$\+T\+A\+L\+River\+W\+Q\+Model\+Main} ()
+\item 
+void {\bf set\+Info} ()
+\item 
+void {\bf clear} ()
+\item 
+void {\bf update\+Tree\+Item} ({\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$)
+\item 
+{\bf W\+Q\+Model} $\ast$ {\bf create\+Model} ({\bf Element} $\ast$element)
+\item 
+void {\bf remove\+All\+Scenerios} ()
+\item 
+unsigned int {\bf get\+Scenery\+Count} ()
+\item 
+void {\bf set\+Scenery\+Count} (unsigned int count)
+\item 
+void {\bf show\+Results} (bool change)
+\item 
+virtual void {\bf set\+Default\+Values} (char $\ast$file\+Name)
+\item 
+virtual void {\bf save\+Default\+Values} (char $\ast$file\+Name)
+\item 
+virtual bool {\bf run} ()
+\item 
+void {\bf zero\+Results} ()
+\item 
+virtual void {\bf on\+Changing\+Time\+Interval} ({\bf Date\+::\+Time\+Interval} time\+Interval)
+\item 
+bool {\bf empty} ()
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf shortest\+Path} ({\bf Draw\+Node} $\ast$node\+Root, {\bf Draw\+Node} $\ast$node\+Top, vector$<$ int $>$ temp\+Path, double temp\+Cst, unsigned int scen)
+\item 
+bool {\bf is\+River} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf make\+Incidence\+Matrix} ()
+\item 
+bool {\bf hidro\+Balance} (vector$<$ double $>$ y2, unsigned int count)
+\item 
+bool {\bf inc\+D\+BO} ({\bf Matrix} M\+\_\+\+Massa, vector$<$ double $>$ y2, unsigned int count)
+\item 
+bool {\bf inc\+Col} ({\bf Matrix} M\+\_\+\+Massa, vector$<$ double $>$ y2, unsigned int count)
+\item 
+bool {\bf inc\+Nit} ({\bf Matrix} M\+\_\+\+Massa, vector$<$ double $>$ y2, unsigned int count)
+\item 
+bool {\bf inc\+Ps} ({\bf Matrix} M\+\_\+\+Massa, vector$<$ double $>$ y2, unsigned int count)
+\item 
+bool {\bf inc\+OD} ({\bf Matrix} M\+\_\+\+Massa, vector$<$ double $>$ y2, unsigned int count)
+\item 
+void {\bf enable\+Model\+Interface} ()
+\item 
+{\bf Matrix} {\bf link\+Concentration} (unsigned int link\+Id, double pos, double \&rest\+Link, unsigned int count)
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ {\bf Matrix} $>$ {\bf trib\+Matrixes}
+\item 
+vector$<$ {\bf Matrix} $>$ {\bf con\+Node\+Matrixes}
+\item 
+{\bf Matrix} {\bf dis\+To\+Dreno}
+\item 
+unsigned int {\bf num\+Scenery}
+\item 
+int {\bf selected\+Scenery}
+\item 
+unsigned int {\bf scenery\+Seed}
+\item 
+map$<$ unsigned int, wx\+String $>$ {\bf scenery\+Name}
+\item 
+double {\bf cst}
+\item 
+{\bf Node} $\ast$ {\bf node\+Dreno}
+\item 
+vector$<$ int $>$ {\bf cab\+Node\+Id}
+\item 
+vector$<$ int $>$ {\bf path}
+\item 
+unsigned int {\bf nodesdefault}
+\item 
+unsigned int {\bf nodesdemand}
+\item 
+unsigned int {\bf nodessource}
+\item 
+unsigned int {\bf link\+Def}
+\item 
+unsigned int {\bf link\+Dem}
+\item 
+unsigned int {\bf link\+Efl}
+\item 
+{\bf Matrix} {\bf incidenceM}
+\item 
+vector$<$ double $>$ {\bf v\+Velo}
+\item 
+vector$<$ double $>$ {\bf v\+D\+P\+TH}
+\item 
+vector$<$ double $>$ {\bf v\+T\+R\+V\+TM}
+\item 
+vector$<$ int $>$ {\bf vnodeseq\+Def}
+\item 
+vector$<$ int $>$ {\bf vnodeseq\+Dem}
+\item 
+vector$<$ int $>$ {\bf vnodeseq\+Efl}
+\item 
+vector$<$ int $>$ {\bf vlinkseq\+Def}
+\item 
+vector$<$ int $>$ {\bf vlinkseq\+Efl}
+\item 
+vector$<$ int $>$ {\bf vlinkseq\+Dem}
+\item 
+vector$<$ int $>$ {\bf vnodeseq}
+\item 
+vector$<$ int $>$ {\bf vlinksseq}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 8 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{T\+A\+L\+River\+W\+Q\+Model\+Main(\+Quality\+Interface $\ast$main\+Inter)}]{\setlength{\rightskip}{0pt plus 5cm}T\+A\+L\+River\+W\+Q\+Model\+Main\+::\+T\+A\+L\+River\+W\+Q\+Model\+Main (
+\begin{DoxyParamCaption}
+\item[{{\bf Quality\+Interface} $\ast$}]{main\+Inter}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_w_q_model_main_a35a1ab84bd0ae6f117c6e7b124c195f3}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em main\+Inter} & Ponteiro para interface principal \\
+\hline
+\end{DoxyParams}
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!````~T\+A\+L\+River\+W\+Q\+Model\+Main@{$\sim$\+T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\index{````~T\+A\+L\+River\+W\+Q\+Model\+Main@{$\sim$\+T\+A\+L\+River\+W\+Q\+Model\+Main}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{$\sim$\+T\+A\+L\+River\+W\+Q\+Model\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}T\+A\+L\+River\+W\+Q\+Model\+Main\+::$\sim$\+T\+A\+L\+River\+W\+Q\+Model\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_w_q_model_main_aa5eb922b966856e09d1872a2dadce231}
+Destrutor 
+
+\subsection{M√©todos}
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool T\+A\+L\+River\+W\+Q\+Model\+Main\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_w_q_model_main_a398fa00e801dd86c37e2e89dfabeee2c}
+Verifica se todos os dados foram inseridos de maneira correta 
+\begin{DoxyParams}{Par√¢metros}
+{\em dialog} & Ponteiro para caixa de dialogo onde ser„o mostradas as informaÁıes \\
+\hline
+\end{DoxyParams}
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!clear@{clear}}
+\index{clear@{clear}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+W\+Q\+Model\+Main\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_w_q_model_main_a81b62663e718b25d35e4eb4b7f9f7b45}
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!create\+Model@{create\+Model}}
+\index{create\+Model@{create\+Model}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{create\+Model(\+Element $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+Q\+Model}$\ast$ T\+A\+L\+River\+W\+Q\+Model\+Main\+::create\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_t_a_l_river_w_q_model_main_a33e3185eb257790f6c83fa47fab76fde}
+Cria o modelo para nÛs e trechos do rio
+
+virtual void insert\+Model(\+Draw\+Node$\ast$ ); virtual void insert\+Model(\+Draw\+Link$\ast$ ); void insert\+Model(); 
+
+Implementa {\bf Quality\+Model\+Main} \doxyref{}{pag.}{class_quality_model_main_a15bca1f7d1a3fff3fedaa455c07031ef}.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!empty@{empty}}
+\index{empty@{empty}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool T\+A\+L\+River\+W\+Q\+Model\+Main\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_w_q_model_main_a14ea00482e22690b51ee08221291efd2}
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!enable\+Model\+Interface@{enable\+Model\+Interface}}
+\index{enable\+Model\+Interface@{enable\+Model\+Interface}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{enable\+Model\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+W\+Q\+Model\+Main\+::enable\+Model\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_t_a_l_river_w_q_model_main_a3e194afa682d421012c79c7c40f4e3c8}
+Habilita/\+Desabilita a interface de um modelo do modulo. 
+
+Reimplementa√ß√£o de {\bf Quality\+Model\+Main} \doxyref{}{pag.}{class_quality_model_main_aaf9dbf58cb5ab79ac8eddb9fa521ec11}.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!get\+Scenery\+Count@{get\+Scenery\+Count}}
+\index{get\+Scenery\+Count@{get\+Scenery\+Count}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{get\+Scenery\+Count()}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int T\+A\+L\+River\+W\+Q\+Model\+Main\+::get\+Scenery\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_w_q_model_main_a9f3ca344f5bca08d46017f18e27f5731}
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!hidro\+Balance@{hidro\+Balance}}
+\index{hidro\+Balance@{hidro\+Balance}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{hidro\+Balance(vector$<$ double $>$ y2, unsigned int count)}]{\setlength{\rightskip}{0pt plus 5cm}bool T\+A\+L\+River\+W\+Q\+Model\+Main\+::hidro\+Balance (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{y2, }
+\item[{unsigned int}]{count}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_w_q_model_main_a66bec830539a422a186833cb1bd1b54a}
+Calcula o balanÁo hidrico \index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!inc\+Col@{inc\+Col}}
+\index{inc\+Col@{inc\+Col}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{inc\+Col(\+Matrix M\+\_\+\+Massa, vector$<$ double $>$ y2, unsigned int count)}]{\setlength{\rightskip}{0pt plus 5cm}bool T\+A\+L\+River\+W\+Q\+Model\+Main\+::inc\+Col (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{M\+\_\+\+Massa, }
+\item[{vector$<$ double $>$}]{y2, }
+\item[{unsigned int}]{count}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_w_q_model_main_a45e2380c215e7b5ae5a8e75ea9599f33}
+ConcentraÁ„o de coliformes fecais \index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!inc\+D\+BO@{inc\+D\+BO}}
+\index{inc\+D\+BO@{inc\+D\+BO}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{inc\+D\+B\+O(\+Matrix M\+\_\+\+Massa, vector$<$ double $>$ y2, unsigned int count)}]{\setlength{\rightskip}{0pt plus 5cm}bool T\+A\+L\+River\+W\+Q\+Model\+Main\+::inc\+D\+BO (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{M\+\_\+\+Massa, }
+\item[{vector$<$ double $>$}]{y2, }
+\item[{unsigned int}]{count}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_w_q_model_main_a06987b8d3028bc7389c98c3d9d676c7c}
+Calcula a demanda bioquimica de oxigÍnio \index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!inc\+Nit@{inc\+Nit}}
+\index{inc\+Nit@{inc\+Nit}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{inc\+Nit(\+Matrix M\+\_\+\+Massa, vector$<$ double $>$ y2, unsigned int count)}]{\setlength{\rightskip}{0pt plus 5cm}bool T\+A\+L\+River\+W\+Q\+Model\+Main\+::inc\+Nit (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{M\+\_\+\+Massa, }
+\item[{vector$<$ double $>$}]{y2, }
+\item[{unsigned int}]{count}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_w_q_model_main_a4ebff4fc52c384bc1d8b2ddc5a358a99}
+ConcentraÁ„o de nitrogÍnio \index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!inc\+OD@{inc\+OD}}
+\index{inc\+OD@{inc\+OD}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{inc\+O\+D(\+Matrix M\+\_\+\+Massa, vector$<$ double $>$ y2, unsigned int count)}]{\setlength{\rightskip}{0pt plus 5cm}bool T\+A\+L\+River\+W\+Q\+Model\+Main\+::inc\+OD (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{M\+\_\+\+Massa, }
+\item[{vector$<$ double $>$}]{y2, }
+\item[{unsigned int}]{count}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_w_q_model_main_a8ce526710ac3210d796825a691de3a1e}
+Calcula o oxigÍnio dissolvido \index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!inc\+Ps@{inc\+Ps}}
+\index{inc\+Ps@{inc\+Ps}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{inc\+Ps(\+Matrix M\+\_\+\+Massa, vector$<$ double $>$ y2, unsigned int count)}]{\setlength{\rightskip}{0pt plus 5cm}bool T\+A\+L\+River\+W\+Q\+Model\+Main\+::inc\+Ps (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{M\+\_\+\+Massa, }
+\item[{vector$<$ double $>$}]{y2, }
+\item[{unsigned int}]{count}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_w_q_model_main_ada33fde0c8c7b1b9b70e3172f1b83479}
+ConcentraÁ„o de fÛsforo \index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!is\+River@{is\+River}}
+\index{is\+River@{is\+River}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{is\+River()}]{\setlength{\rightskip}{0pt plus 5cm}bool T\+A\+L\+River\+W\+Q\+Model\+Main\+::is\+River (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_w_q_model_main_a84659d201cfe2f547f629ce7d8e0742a}
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!link\+Concentration@{link\+Concentration}}
+\index{link\+Concentration@{link\+Concentration}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{link\+Concentration(unsigned int link\+Id, double pos, double \&rest\+Link, unsigned int count)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} T\+A\+L\+River\+W\+Q\+Model\+Main\+::link\+Concentration (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{link\+Id, }
+\item[{double}]{pos, }
+\item[{double \&}]{rest\+Link, }
+\item[{unsigned int}]{count}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_w_q_model_main_aab5a1d7548fce86c1eb0761080eb7882}
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!make\+Incidence\+Matrix@{make\+Incidence\+Matrix}}
+\index{make\+Incidence\+Matrix@{make\+Incidence\+Matrix}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{make\+Incidence\+Matrix()}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+W\+Q\+Model\+Main\+::make\+Incidence\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_w_q_model_main_a04dda90f7543b6cb0b5497685274d64d}
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}}
+\index{on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{on\+Changing\+Time\+Interval(\+Date\+::\+Time\+Interval time\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void T\+A\+L\+River\+W\+Q\+Model\+Main\+::on\+Changing\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_t_a_l_river_w_q_model_main_ad0064e84dc6724976d69e01dc13112ec}
+Executa o modelo 
+\begin{DoxyParams}{Par√¢metros}
+{\em node} & NÛ\\
+\hline
+\end{DoxyParams}
+virtual bool run(\+Node$\ast$ ) \{ return false;\}; Executa o modelo 
+\begin{DoxyParams}{Par√¢metros}
+{\em link} & \doxyref{Link}{pag.}{class_link}\\
+\hline
+\end{DoxyParams}
+virtual bool run(\+Link$\ast$) \{ return false;\}; Executa o modelo
+
+virtual bool \doxyref{run()}{pag.}{class_t_a_l_river_w_q_model_main_a1e9357cdb7b3d97a5504cd40a9513ba1} \{return false;\}; 
+
+Implementa {\bf Quality\+Model\+Main} \doxyref{}{pag.}{class_quality_model_main_ae3b9579a006273fb4a627f20bb7600cc}.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+W\+Q\+Model\+Main\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_t_a_l_river_w_q_model_main_a92833dabe67b290467157126ab5d8c7b}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementa√ß√£o de {\bf Quality\+Model\+Main} \doxyref{}{pag.}{class_quality_model_main_afba3483d930bf899d041840f944aec37}.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+W\+Q\+Model\+Main\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_t_a_l_river_w_q_model_main_a8e517689efce1a386b0e1ed0acfc6963}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementa√ß√£o de {\bf Quality\+Model\+Main} \doxyref{}{pag.}{class_quality_model_main_acb46815e597066b3841fdfb5b9c2ec2c}.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!remove\+All\+Scenerios@{remove\+All\+Scenerios}}
+\index{remove\+All\+Scenerios@{remove\+All\+Scenerios}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{remove\+All\+Scenerios()}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+W\+Q\+Model\+Main\+::remove\+All\+Scenerios (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_w_q_model_main_a1d0b2d0ecbffd96bcbfd08f2fd359468}
+Adiciona um cen·rio 
+\begin{DoxyParams}{Par√¢metros}
+{\em copy} & valor boleano que indica se o cen·rio a ser adicionado È uma cÛpia do cen·rio selecionado Remove o cen·rio selecionado de cada modelo Remove todos dos cen·rios existentes \\
+\hline
+\end{DoxyParams}
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!run@{run}}
+\index{run@{run}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool T\+A\+L\+River\+W\+Q\+Model\+Main\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_t_a_l_river_w_q_model_main_a1e9357cdb7b3d97a5504cd40a9513ba1}
+Executa o modelo \index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!save\+Default\+Values@{save\+Default\+Values}}
+\index{save\+Default\+Values@{save\+Default\+Values}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{save\+Default\+Values(char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void T\+A\+L\+River\+W\+Q\+Model\+Main\+::save\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_t_a_l_river_w_q_model_main_a061d813f9c40b10808e3be75a9ba5a67}
+Salva informaÁıes em um arquivo 
+
+Implementa {\bf Quality\+Model\+Main} \doxyref{}{pag.}{class_quality_model_main_a3589117ef1789e3b9cef3896ae647a72}.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!set\+Default\+Values@{set\+Default\+Values}}
+\index{set\+Default\+Values@{set\+Default\+Values}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{set\+Default\+Values(char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void T\+A\+L\+River\+W\+Q\+Model\+Main\+::set\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_t_a_l_river_w_q_model_main_a13c2816eb4f28d85444505e108194c22}
+Recebe informaÁıes de um arquivo 
+
+Implementa {\bf Quality\+Model\+Main} \doxyref{}{pag.}{class_quality_model_main_ad70de3c9dd61112372f6d21a7df86a23}.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+W\+Q\+Model\+Main\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_t_a_l_river_w_q_model_main_afcfea32c279d5d2242d8a9113a4e9b3d}
+Insere informaÁoes na interface 
+
+Implementa {\bf Quality\+Model\+Main} \doxyref{}{pag.}{class_quality_model_main_af1172adf8afc6b492ac5dfd05ebf2856}.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!set\+Scenery\+Count@{set\+Scenery\+Count}}
+\index{set\+Scenery\+Count@{set\+Scenery\+Count}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{set\+Scenery\+Count(unsigned int count)}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+W\+Q\+Model\+Main\+::set\+Scenery\+Count (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{count}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_w_q_model_main_abd5edcb7021099f9cde85f781b737f44}
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!shortest\+Path@{shortest\+Path}}
+\index{shortest\+Path@{shortest\+Path}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{shortest\+Path(\+Draw\+Node $\ast$node\+Root, Draw\+Node $\ast$node\+Top, vector$<$ int $>$ temp\+Path, double temp\+Cst, unsigned int scen)}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+W\+Q\+Model\+Main\+::shortest\+Path (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Node} $\ast$}]{node\+Root, }
+\item[{{\bf Draw\+Node} $\ast$}]{node\+Top, }
+\item[{vector$<$ int $>$}]{temp\+Path, }
+\item[{double}]{temp\+Cst, }
+\item[{unsigned int}]{scen}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_w_q_model_main_af43235a8ca94ba8b34a93640d38727da}
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{show\+Results(bool change)}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+W\+Q\+Model\+Main\+::show\+Results (
+\begin{DoxyParamCaption}
+\item[{bool}]{change}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_t_a_l_river_w_q_model_main_a89d6e87cf10b008d694f0807bcb53c0f}
+Destroi um modelo de um no que nao importa mais (deletado, por exemplo) Apresenta resultados 
+
+Implementa {\bf Quality\+Model\+Main} \doxyref{}{pag.}{class_quality_model_main_a4490ca873d4397cc4420a14290a5d2d0}.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!update\+Tree\+Item@{update\+Tree\+Item}}
+\index{update\+Tree\+Item@{update\+Tree\+Item}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{update\+Tree\+Item(\+S\+I\+G\+A\+Tree\+Ctrl $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+W\+Q\+Model\+Main\+::update\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_t_a_l_river_w_q_model_main_a18496c0d98d8bc850a53684a7071a55f}
+Atualiza os ponteiros das suas series no Tree\+Ctrl de integraÁ„o 
+
+Implementa {\bf Quality\+Model\+Main} \doxyref{}{pag.}{class_quality_model_main_af04d77b05c16827f1efe571a5cb3b04e}.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!zero\+Results@{zero\+Results}}
+\index{zero\+Results@{zero\+Results}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{zero\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}void T\+A\+L\+River\+W\+Q\+Model\+Main\+::zero\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_t_a_l_river_w_q_model_main_a2c7b58a2e74391c59a7386f7a969c89f}
+zera os resultados 
+
+\subsection{Atributos}
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!cab\+Node\+Id@{cab\+Node\+Id}}
+\index{cab\+Node\+Id@{cab\+Node\+Id}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{cab\+Node\+Id}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ T\+A\+L\+River\+W\+Q\+Model\+Main\+::cab\+Node\+Id}\label{class_t_a_l_river_w_q_model_main_afd4fcca8df9ab9592b3ae55cbf8092ed}
+
+
+Defini√ß√£o na linha 49 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!con\+Node\+Matrixes@{con\+Node\+Matrixes}}
+\index{con\+Node\+Matrixes@{con\+Node\+Matrixes}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{con\+Node\+Matrixes}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Matrix} $>$ T\+A\+L\+River\+W\+Q\+Model\+Main\+::con\+Node\+Matrixes}\label{class_t_a_l_river_w_q_model_main_a94687e9514f3affd9e40d0859fa012fe}
+
+
+Defini√ß√£o na linha 17 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!cst@{cst}}
+\index{cst@{cst}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{cst}]{\setlength{\rightskip}{0pt plus 5cm}double T\+A\+L\+River\+W\+Q\+Model\+Main\+::cst}\label{class_t_a_l_river_w_q_model_main_a3fcd281a010c475aed05622fa31bd2fd}
+Utilizado para o calculo do menor caminho 
+
+Defini√ß√£o na linha 41 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!dis\+To\+Dreno@{dis\+To\+Dreno}}
+\index{dis\+To\+Dreno@{dis\+To\+Dreno}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{dis\+To\+Dreno}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} T\+A\+L\+River\+W\+Q\+Model\+Main\+::dis\+To\+Dreno}\label{class_t_a_l_river_w_q_model_main_aa1ced65748e379e1fb1ff024cb2950f7}
+Distancia ao dreno 
+
+Defini√ß√£o na linha 21 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!incidenceM@{incidenceM}}
+\index{incidenceM@{incidenceM}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{incidenceM}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} T\+A\+L\+River\+W\+Q\+Model\+Main\+::incidenceM}\label{class_t_a_l_river_w_q_model_main_a31666a5d33b9df083bd113ca39c3a07f}
+Matriz de incidencia. Representa a rede de acordo com a entrada ou saida de concentraÁ„o 
+
+Defini√ß√£o na linha 66 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!link\+Def@{link\+Def}}
+\index{link\+Def@{link\+Def}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{link\+Def}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int T\+A\+L\+River\+W\+Q\+Model\+Main\+::link\+Def}\label{class_t_a_l_river_w_q_model_main_a61eb8daf334fcff17cb92f97d17768ef}
+Guarda a quantidade de trechos que ligam tipos especificos de nÛs. Techo (liga dois nÛs do tipo Padr„o/\+JunÁ„o), link demanda (um trecho com um nÛ de demanda) e link efluente (um trecho com um nÛ de efluente) respectivamente. 
+
+Defini√ß√£o na linha 62 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!link\+Dem@{link\+Dem}}
+\index{link\+Dem@{link\+Dem}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{link\+Dem}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int T\+A\+L\+River\+W\+Q\+Model\+Main\+::link\+Dem}\label{class_t_a_l_river_w_q_model_main_a97f0bf23c14eae317390e3a18cf815c2}
+
+
+Defini√ß√£o na linha 62 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!link\+Efl@{link\+Efl}}
+\index{link\+Efl@{link\+Efl}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{link\+Efl}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int T\+A\+L\+River\+W\+Q\+Model\+Main\+::link\+Efl}\label{class_t_a_l_river_w_q_model_main_a304d77094e52f27cda3d6db04705671c}
+
+
+Defini√ß√£o na linha 62 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!node\+Dreno@{node\+Dreno}}
+\index{node\+Dreno@{node\+Dreno}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{node\+Dreno}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ T\+A\+L\+River\+W\+Q\+Model\+Main\+::node\+Dreno}\label{class_t_a_l_river_w_q_model_main_a51c0e86eac3fdf0b41bd125fb8304a3f}
+
+
+Defini√ß√£o na linha 45 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!nodesdefault@{nodesdefault}}
+\index{nodesdefault@{nodesdefault}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{nodesdefault}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int T\+A\+L\+River\+W\+Q\+Model\+Main\+::nodesdefault}\label{class_t_a_l_river_w_q_model_main_aa752d51b32b62a7672ee1a5f9f2fefce}
+Guarda a quantidade de um tipo de nÛ. Padr„o/\+JunÁ„o, demanda e efluente respectivamente. 
+
+Defini√ß√£o na linha 57 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!nodesdemand@{nodesdemand}}
+\index{nodesdemand@{nodesdemand}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{nodesdemand}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int T\+A\+L\+River\+W\+Q\+Model\+Main\+::nodesdemand}\label{class_t_a_l_river_w_q_model_main_a6c07e6894e03031518f5218620fb110d}
+
+
+Defini√ß√£o na linha 57 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!nodessource@{nodessource}}
+\index{nodessource@{nodessource}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{nodessource}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int T\+A\+L\+River\+W\+Q\+Model\+Main\+::nodessource}\label{class_t_a_l_river_w_q_model_main_a170dd763caa9729961116ade0aa86951}
+
+
+Defini√ß√£o na linha 57 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!num\+Scenery@{num\+Scenery}}
+\index{num\+Scenery@{num\+Scenery}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{num\+Scenery}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int T\+A\+L\+River\+W\+Q\+Model\+Main\+::num\+Scenery}\label{class_t_a_l_river_w_q_model_main_af51a1f9aa8524dc1aa1a1455f23610c2}
+
+
+Defini√ß√£o na linha 25 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!path@{path}}
+\index{path@{path}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{path}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ T\+A\+L\+River\+W\+Q\+Model\+Main\+::path}\label{class_t_a_l_river_w_q_model_main_afa249faabb7dbc1f2710b66b11e0205d}
+Armazena o menor caminho 
+
+Defini√ß√£o na linha 53 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!scenery\+Name@{scenery\+Name}}
+\index{scenery\+Name@{scenery\+Name}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{scenery\+Name}]{\setlength{\rightskip}{0pt plus 5cm}map$<$ unsigned int, wx\+String $>$ T\+A\+L\+River\+W\+Q\+Model\+Main\+::scenery\+Name}\label{class_t_a_l_river_w_q_model_main_afbf5078ec20712e976d8b7e9608ff434}
+Nome dos cenarios 
+
+Defini√ß√£o na linha 37 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!scenery\+Seed@{scenery\+Seed}}
+\index{scenery\+Seed@{scenery\+Seed}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{scenery\+Seed}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int T\+A\+L\+River\+W\+Q\+Model\+Main\+::scenery\+Seed}\label{class_t_a_l_river_w_q_model_main_ad144f4dd9ac9ca9740eaead375c66b0d}
+Identificador dos cenerarios 
+
+Defini√ß√£o na linha 33 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!selected\+Scenery@{selected\+Scenery}}
+\index{selected\+Scenery@{selected\+Scenery}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{selected\+Scenery}]{\setlength{\rightskip}{0pt plus 5cm}int T\+A\+L\+River\+W\+Q\+Model\+Main\+::selected\+Scenery}\label{class_t_a_l_river_w_q_model_main_a90224a712776be8ff71021ac534aefed}
+
+
+Defini√ß√£o na linha 29 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!trib\+Matrixes@{trib\+Matrixes}}
+\index{trib\+Matrixes@{trib\+Matrixes}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{trib\+Matrixes}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Matrix} $>$ T\+A\+L\+River\+W\+Q\+Model\+Main\+::trib\+Matrixes}\label{class_t_a_l_river_w_q_model_main_a13abb2176994e937cf265bdcf16b872c}
+Matrizes de resultados Elas contem os dados de forma organizada para 
+
+Defini√ß√£o na linha 17 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!v\+D\+P\+TH@{v\+D\+P\+TH}}
+\index{v\+D\+P\+TH@{v\+D\+P\+TH}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{v\+D\+P\+TH}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ T\+A\+L\+River\+W\+Q\+Model\+Main\+::v\+D\+P\+TH}\label{class_t_a_l_river_w_q_model_main_a4a989244025888d468023a98271db4bf}
+Profundidade do canal 
+
+Defini√ß√£o na linha 74 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!vlinkseq\+Def@{vlinkseq\+Def}}
+\index{vlinkseq\+Def@{vlinkseq\+Def}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{vlinkseq\+Def}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ T\+A\+L\+River\+W\+Q\+Model\+Main\+::vlinkseq\+Def}\label{class_t_a_l_river_w_q_model_main_ac294cc764d48f59088de81555abf60da}
+
+
+Defini√ß√£o na linha 85 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!vlinkseq\+Dem@{vlinkseq\+Dem}}
+\index{vlinkseq\+Dem@{vlinkseq\+Dem}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{vlinkseq\+Dem}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ T\+A\+L\+River\+W\+Q\+Model\+Main\+::vlinkseq\+Dem}\label{class_t_a_l_river_w_q_model_main_ab6063be8341edaadc27fd0549e3dae5f}
+
+
+Defini√ß√£o na linha 85 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!vlinkseq\+Efl@{vlinkseq\+Efl}}
+\index{vlinkseq\+Efl@{vlinkseq\+Efl}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{vlinkseq\+Efl}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ T\+A\+L\+River\+W\+Q\+Model\+Main\+::vlinkseq\+Efl}\label{class_t_a_l_river_w_q_model_main_aee70785a471c12c7fb5d72c561c8348e}
+
+
+Defini√ß√£o na linha 85 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!vlinksseq@{vlinksseq}}
+\index{vlinksseq@{vlinksseq}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{vlinksseq}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ T\+A\+L\+River\+W\+Q\+Model\+Main\+::vlinksseq}\label{class_t_a_l_river_w_q_model_main_a832d8cbe3077f2b612e1f2280220c967}
+
+
+Defini√ß√£o na linha 89 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!vnodeseq@{vnodeseq}}
+\index{vnodeseq@{vnodeseq}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{vnodeseq}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ T\+A\+L\+River\+W\+Q\+Model\+Main\+::vnodeseq}\label{class_t_a_l_river_w_q_model_main_a2f9183dea6233178f0f23aa0fd6fda0a}
+Apresenda toda a sequencia dos nÛs e dos links, a partir dos identificadores, de acordo com a ordem anteriormente descrita. 
+
+Defini√ß√£o na linha 89 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!vnodeseq\+Def@{vnodeseq\+Def}}
+\index{vnodeseq\+Def@{vnodeseq\+Def}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{vnodeseq\+Def}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ T\+A\+L\+River\+W\+Q\+Model\+Main\+::vnodeseq\+Def}\label{class_t_a_l_river_w_q_model_main_a38957df101f9708db1cbbc4167a268ef}
+Vetor com sequencia, separado por tipo, utilizado principalmente para montar a matriz de incidencia NÛs representam as linhas da matriz com padr„o/junÁ„o primeiro, depois demanda e por fim efluente Trechos s„o as colunas com trecho, depois link efluente e por fim link demanda 
+
+Defini√ß√£o na linha 85 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!vnodeseq\+Dem@{vnodeseq\+Dem}}
+\index{vnodeseq\+Dem@{vnodeseq\+Dem}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{vnodeseq\+Dem}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ T\+A\+L\+River\+W\+Q\+Model\+Main\+::vnodeseq\+Dem}\label{class_t_a_l_river_w_q_model_main_a0d971dd9bd375b05f100a1fda18bc1f4}
+
+
+Defini√ß√£o na linha 85 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!vnodeseq\+Efl@{vnodeseq\+Efl}}
+\index{vnodeseq\+Efl@{vnodeseq\+Efl}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{vnodeseq\+Efl}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ T\+A\+L\+River\+W\+Q\+Model\+Main\+::vnodeseq\+Efl}\label{class_t_a_l_river_w_q_model_main_a7d24f08b9386cd9f271c73189f60afad}
+
+
+Defini√ß√£o na linha 85 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!v\+T\+R\+V\+TM@{v\+T\+R\+V\+TM}}
+\index{v\+T\+R\+V\+TM@{v\+T\+R\+V\+TM}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{v\+T\+R\+V\+TM}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ T\+A\+L\+River\+W\+Q\+Model\+Main\+::v\+T\+R\+V\+TM}\label{class_t_a_l_river_w_q_model_main_ad368983b26563692ef5989addd7efd0a}
+
+
+Defini√ß√£o na linha 78 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!v\+Velo@{v\+Velo}}
+\index{v\+Velo@{v\+Velo}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\subsubsection[{v\+Velo}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ T\+A\+L\+River\+W\+Q\+Model\+Main\+::v\+Velo}\label{class_t_a_l_river_w_q_model_main_ad9583f1770bf23458472ea884caaf734}
+Velocidade no trecho. 
+
+Defini√ß√£o na linha 70 do arquivo T\+A\+L\+River\+W\+Q\+Model\+Main.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf T\+A\+L\+River\+W\+Q\+Model\+Main.\+h}\end{DoxyCompactItemize}

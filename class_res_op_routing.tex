@@ -1,0 +1,206 @@
+\section{Refer√™ncia da Classe Res\+Op\+Routing}
+\label{class_res_op_routing}\index{Res\+Op\+Routing@{Res\+Op\+Routing}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Routing.\+h$>$}
+
+
+
+Superclasse de {\bf Res\+Op\+L\+A\+G\+Model} e {\bf Res\+Op\+M\+U\+S\+K\+Model}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Routing} ({\bf Link} $\ast${\bf link})
+\item 
+{\bf Res\+Op\+Routing} (const {\bf Res\+Op\+Routing} \&object)
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Routing} ()
+\item 
+{\bf Res\+Op\+Routing\+Type} {\bf get\+Type} ()
+\item 
+{\bf Res\+Op\+Routing} $\ast$ {\bf copy\+Routing} ()
+\item 
+virtual {\bf Res\+Op\+Routing} $\ast$ {\bf do\+Copy} ()
+\item 
+virtual double {\bf calc\+Outflow} ({\bf Date} date, {\bf Res\+Op\+Element} $\ast$element={\bf N\+U\+LL})=0
+\item 
+virtual bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)=0
+\item 
+virtual void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String)=0
+\item 
+virtual void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String)=0
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Routing\+Type} {\bf routing\+Type}
+\item 
+{\bf Link} $\ast$ {\bf link}
+\item 
+bool {\bf enable}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 21 do arquivo Res\+Op\+Routing.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Routing@{Res\+Op\+Routing}!Res\+Op\+Routing@{Res\+Op\+Routing}}
+\index{Res\+Op\+Routing@{Res\+Op\+Routing}!Res\+Op\+Routing@{Res\+Op\+Routing}}
+\subsubsection[{Res\+Op\+Routing(\+Link $\ast$link)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Routing\+::\+Res\+Op\+Routing (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link}
+\end{DoxyParamCaption}
+)}\label{class_res_op_routing_ad86176ca2be0064de23c5f95c56bfeb7}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em link} & \doxyref{Link}{pag.}{class_link} \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Routing@{Res\+Op\+Routing}!Res\+Op\+Routing@{Res\+Op\+Routing}}
+\index{Res\+Op\+Routing@{Res\+Op\+Routing}!Res\+Op\+Routing@{Res\+Op\+Routing}}
+\subsubsection[{Res\+Op\+Routing(const Res\+Op\+Routing \&object)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Routing\+::\+Res\+Op\+Routing (
+\begin{DoxyParamCaption}
+\item[{const {\bf Res\+Op\+Routing} \&}]{object}
+\end{DoxyParamCaption}
+)}\label{class_res_op_routing_a24810d084f6b0687d052b01795e92b1c}
+Construtor de cÛpia.
+
+O\+BS.\+: N„o realiza copia recursiva no link. Atualize o ponteiro de acordo \index{Res\+Op\+Routing@{Res\+Op\+Routing}!````~Res\+Op\+Routing@{$\sim$\+Res\+Op\+Routing}}
+\index{````~Res\+Op\+Routing@{$\sim$\+Res\+Op\+Routing}!Res\+Op\+Routing@{Res\+Op\+Routing}}
+\subsubsection[{$\sim$\+Res\+Op\+Routing()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Routing\+::$\sim$\+Res\+Op\+Routing (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_routing_a778fb832656b379de48b01c2fb4824e7}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Res\+Op\+Routing@{Res\+Op\+Routing}!calc\+Outflow@{calc\+Outflow}}
+\index{calc\+Outflow@{calc\+Outflow}!Res\+Op\+Routing@{Res\+Op\+Routing}}
+\subsubsection[{calc\+Outflow(\+Date date, Res\+Op\+Element $\ast$element=\+N\+U\+L\+L)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual double Res\+Op\+Routing\+::calc\+Outflow (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{date, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_routing_ac7dee2a0ccc65d278e5798c424bbfb3f}
+Retorna valor da liberaÁ„o para a data fornecida 
+\begin{DoxyParams}{Par√¢metros}
+{\em date} & Dia de consulta \\
+\hline
+{\em element} & Elemento \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Res\+Op\+M\+U\+S\+K\+Model} \doxyref{}{pag.}{class_res_op_m_u_s_k_model_ad6fda819231b4b30b7de431a02cca427} e {\bf Res\+Op\+L\+A\+G\+Model} \doxyref{}{pag.}{class_res_op_l_a_g_model_a03a3852201ea7c461911a3ada46d5dac}.
+
+\index{Res\+Op\+Routing@{Res\+Op\+Routing}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Res\+Op\+Routing@{Res\+Op\+Routing}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+Routing\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_routing_aa10d101e3437b3e2ea1ffb69bd0bbece}
+Verifica se todas as informaÁıes necess·rias foram fornecidas 
+\begin{DoxyParams}{Par√¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Res\+Op\+M\+U\+S\+K\+Model} \doxyref{}{pag.}{class_res_op_m_u_s_k_model_a097e2c55e651838167074952b988a876} e {\bf Res\+Op\+L\+A\+G\+Model} \doxyref{}{pag.}{class_res_op_l_a_g_model_a036075fd769936f72cbbfb0af34bbb78}.
+
+\index{Res\+Op\+Routing@{Res\+Op\+Routing}!copy\+Routing@{copy\+Routing}}
+\index{copy\+Routing@{copy\+Routing}!Res\+Op\+Routing@{Res\+Op\+Routing}}
+\subsubsection[{copy\+Routing()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Routing}$\ast$ Res\+Op\+Routing\+::copy\+Routing (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_routing_a82854d607bc804ca1fc6a37caa1a87b9}
+Copia a propagaÁ„o \index{Res\+Op\+Routing@{Res\+Op\+Routing}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!Res\+Op\+Routing@{Res\+Op\+Routing}}
+\subsubsection[{do\+Copy()}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Res\+Op\+Routing}$\ast$ Res\+Op\+Routing\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_routing_a1cfd74f67768bb5515d338c13e9cb0b2}
+Copia a propagaÁ„o 
+
+Reimplementado por {\bf Res\+Op\+M\+U\+S\+K\+Model} \doxyref{}{pag.}{class_res_op_m_u_s_k_model_a6b3e63d2b3ea94408244a81933e1e441} e {\bf Res\+Op\+L\+A\+G\+Model} \doxyref{}{pag.}{class_res_op_l_a_g_model_a173c352ddb7970b9b238e2ae7f705e80}.
+
+\index{Res\+Op\+Routing@{Res\+Op\+Routing}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Res\+Op\+Routing@{Res\+Op\+Routing}}
+\subsubsection[{get\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Routing\+Type} Res\+Op\+Routing\+::get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_routing_a861906d6ee20e1a3e2e7399100daada4}
+Retorna o tipo de propagaÁ„o \index{Res\+Op\+Routing@{Res\+Op\+Routing}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Res\+Op\+Routing@{Res\+Op\+Routing}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Routing\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_routing_a88260f8b0c4449be9ddfd454c52ca176}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Res\+Op\+M\+U\+S\+K\+Model} \doxyref{}{pag.}{class_res_op_m_u_s_k_model_ae45ab8b72e1c3442a02fb275a8a26b02} e {\bf Res\+Op\+L\+A\+G\+Model} \doxyref{}{pag.}{class_res_op_l_a_g_model_a89044f4c2b60cd240d78a01067fe2be4}.
+
+\index{Res\+Op\+Routing@{Res\+Op\+Routing}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Res\+Op\+Routing@{Res\+Op\+Routing}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Routing\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_routing_af00ad0a420d79507cbd5fcfa575d61be}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Res\+Op\+M\+U\+S\+K\+Model} \doxyref{}{pag.}{class_res_op_m_u_s_k_model_a00009338c3611f2627d057dbf2eb643c} e {\bf Res\+Op\+L\+A\+G\+Model} \doxyref{}{pag.}{class_res_op_l_a_g_model_ad9d0340320eceb36d05ac86409441c9f}.
+
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Routing@{Res\+Op\+Routing}!enable@{enable}}
+\index{enable@{enable}!Res\+Op\+Routing@{Res\+Op\+Routing}}
+\subsubsection[{enable}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Routing\+::enable}\label{class_res_op_routing_a4e2c55785ab21c5e24f54a1d4bab9e07}
+Utiliza ou n„o propagaÁ„o 
+
+Defini√ß√£o na linha 38 do arquivo Res\+Op\+Routing.\+h.
+
+\index{Res\+Op\+Routing@{Res\+Op\+Routing}!link@{link}}
+\index{link@{link}!Res\+Op\+Routing@{Res\+Op\+Routing}}
+\subsubsection[{link}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Link}$\ast$ Res\+Op\+Routing\+::link}\label{class_res_op_routing_a02e5920af889a153861fd44829b50993}
+NÛ de interesse 
+
+Defini√ß√£o na linha 33 do arquivo Res\+Op\+Routing.\+h.
+
+\index{Res\+Op\+Routing@{Res\+Op\+Routing}!routing\+Type@{routing\+Type}}
+\index{routing\+Type@{routing\+Type}!Res\+Op\+Routing@{Res\+Op\+Routing}}
+\subsubsection[{routing\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Routing\+Type} Res\+Op\+Routing\+::routing\+Type}\label{class_res_op_routing_a25f0c10cdc3c2e2fedcc09d2495be91f}
+Tipo de propagaÁ„o 
+
+Defini√ß√£o na linha 28 do arquivo Res\+Op\+Routing.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Routing.\+h}\end{DoxyCompactItemize}

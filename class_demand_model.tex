@@ -1,0 +1,292 @@
+\section{Referência da Classe Demand\+Model}
+\label{class_demand_model}\index{Demand\+Model@{Demand\+Model}}
+
+
+{\ttfamily \#include $<$Demand\+Model.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Model}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Demand\+Model} ({\bf Date} initial\+Date, {\bf Date} final\+Date, {\bf Node} $\ast${\bf node})
+\item 
+{\bf $\sim$\+Demand\+Model} ()
+\item 
+void {\bf clear} ()
+\item 
+bool {\bf empty} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf run} ({\bf Date} i)
+\item 
+void {\bf aloc\+Results} ()
+\item 
+int {\bf get\+Id} ()
+\item 
+double {\bf get\+Demand\+Value} ({\bf Date} date, vector$<$ unsigned int $>$ {\bf res\+Up})
+\item 
+double {\bf set\+Returned} ({\bf Date} date, double value)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, bool open\+Conf=false)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, bool open\+Conf=false)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf priority}
+\item 
+map$<$ unsigned int, double $>$ {\bf return\+Demand}
+\item 
+{\bf Serie} $\ast$ {\bf demand}
+\item 
+map$<$ unsigned int, double $>$ {\bf used\+Res\+Up}
+\item 
+unsigned int {\bf res\+Sources}
+\item 
+wx\+String {\bf demand\+File\+Name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Cada inst�ncia de modelo � feita para um n� espec�fico 
+
+Definição na linha 11 do arquivo Demand\+Model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Demand\+Model@{Demand\+Model}!Demand\+Model@{Demand\+Model}}
+\index{Demand\+Model@{Demand\+Model}!Demand\+Model@{Demand\+Model}}
+\subsubsection[{Demand\+Model(\+Date initial\+Date, Date final\+Date, Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}Demand\+Model\+::\+Demand\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{initial\+Date, }
+\item[{{\bf Date}}]{final\+Date, }
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_demand_model_ab0a3bb76d8faaf2fd39aa4f93f56bfc7}
+Construtor padr�o da classe \doxyref{Res\+Op\+Model}{pag.}{class_res_op_model} 
+\begin{DoxyParams}{Parâmetros}
+{\em initial\+Date} & Inicio do intervalo \\
+\hline
+{\em final\+Date} & Final do Intervalo \\
+\hline
+{\em node} & N� de interesse \\
+\hline
+\end{DoxyParams}
+\index{Demand\+Model@{Demand\+Model}!````~Demand\+Model@{$\sim$\+Demand\+Model}}
+\index{````~Demand\+Model@{$\sim$\+Demand\+Model}!Demand\+Model@{Demand\+Model}}
+\subsubsection[{$\sim$\+Demand\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Demand\+Model\+::$\sim$\+Demand\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_demand_model_a176e8a7262379f2cbe3ad91e293ba646}
+Destrutor padr�o da classe \doxyref{Res\+Op\+Model}{pag.}{class_res_op_model} 
+
+\subsection{Métodos}
+\index{Demand\+Model@{Demand\+Model}!aloc\+Results@{aloc\+Results}}
+\index{aloc\+Results@{aloc\+Results}!Demand\+Model@{Demand\+Model}}
+\subsubsection[{aloc\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}void Demand\+Model\+::aloc\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_demand_model_a8f244047859895c32f81ea17498254ca}
+Aloca��o de Resultados 
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_af26524ca25da5eb051f825a941c91488}.
+
+\index{Demand\+Model@{Demand\+Model}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Demand\+Model@{Demand\+Model}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Demand\+Model\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_demand_model_afaecb35032a917f58e960fcb0a7e911a}
+Checa se as informa��es est�o completas 
+\begin{DoxyParams}{Parâmetros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_a5967e944c8fce5e6ca9ba1f8890ad56d}.
+
+\index{Demand\+Model@{Demand\+Model}!clear@{clear}}
+\index{clear@{clear}!Demand\+Model@{Demand\+Model}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Demand\+Model\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_demand_model_a1f73eb9fc8b554a599e08cbfa98e74b8}
+Limpa os dados 
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_a6473b3e6e73183d74801546e8816f55a}.
+
+\index{Demand\+Model@{Demand\+Model}!empty@{empty}}
+\index{empty@{empty}!Demand\+Model@{Demand\+Model}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool Demand\+Model\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_demand_model_a51682862768c5c5b077358e9e7d7d91f}
+retorna se existe algum valor no modelo 
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_adf9cc2f68809802cb9e4d55ed2522078}.
+
+\index{Demand\+Model@{Demand\+Model}!get\+Demand\+Value@{get\+Demand\+Value}}
+\index{get\+Demand\+Value@{get\+Demand\+Value}!Demand\+Model@{Demand\+Model}}
+\subsubsection[{get\+Demand\+Value(\+Date date, vector$<$ unsigned int $>$ res\+Up)}]{\setlength{\rightskip}{0pt plus 5cm}double Demand\+Model\+::get\+Demand\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{date, }
+\item[{vector$<$ unsigned int $>$}]{res\+Up}
+\end{DoxyParamCaption}
+)}\label{class_demand_model_af20f81f9c29c1ca5ed63dde2321fac73}
+Retorna o valaor da demanda a ser atendida por um determinado reservat�rio Id \index{Demand\+Model@{Demand\+Model}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Demand\+Model@{Demand\+Model}}
+\subsubsection[{get\+Id()}]{\setlength{\rightskip}{0pt plus 5cm}int Demand\+Model\+::get\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_demand_model_a69459cf74ac461a78c7d2ddf3b690acc}
+Retorna o identificador do elemento associado 
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_ac9ebfb85cf8c0bf9b2e8c3de070d7292}.
+
+\index{Demand\+Model@{Demand\+Model}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Demand\+Model@{Demand\+Model}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$proj)}]{\setlength{\rightskip}{0pt plus 5cm}void Demand\+Model\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_demand_model_a0a498574499fd0038c1b0620bd98158e}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_a99781b8784bfcdcb228d6f63e72f2088}.
+
+
+
+Definição na linha 93 do arquivo Demand\+Model.\+h.
+
+\index{Demand\+Model@{Demand\+Model}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Demand\+Model@{Demand\+Model}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$, bool open\+Conf=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Demand\+Model\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{bool}]{open\+Conf = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_demand_model_a922ea477d2111bb5220a706f13170f9c}
+\index{Demand\+Model@{Demand\+Model}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Demand\+Model@{Demand\+Model}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$proj)}]{\setlength{\rightskip}{0pt plus 5cm}void Demand\+Model\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_demand_model_afc7bbf86f1421a01d48b54304d865fd4}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_a16eefd6636a24d9feb11388ecc2bb306}.
+
+
+
+Definição na linha 85 do arquivo Demand\+Model.\+h.
+
+\index{Demand\+Model@{Demand\+Model}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Demand\+Model@{Demand\+Model}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$, bool open\+Conf=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Demand\+Model\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{bool}]{open\+Conf = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_demand_model_afc773213cf9e3808e2f8045daf3901ec}
+\index{Demand\+Model@{Demand\+Model}!run@{run}}
+\index{run@{run}!Demand\+Model@{Demand\+Model}}
+\subsubsection[{run(\+Date i)}]{\setlength{\rightskip}{0pt plus 5cm}void Demand\+Model\+::run (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_demand_model_ae7e0a52aa6e2ec5c25e3ab38f05032c9}
+Simula��o 
+\begin{DoxyParams}{Parâmetros}
+{\em i} & Dia a ser simulado \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_a5cb0cdd25cceb57244a687bf598483ce}.
+
+\index{Demand\+Model@{Demand\+Model}!set\+Returned@{set\+Returned}}
+\index{set\+Returned@{set\+Returned}!Demand\+Model@{Demand\+Model}}
+\subsubsection[{set\+Returned(\+Date date, double value)}]{\setlength{\rightskip}{0pt plus 5cm}double Demand\+Model\+::set\+Returned (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{date, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_demand_model_abad4dc5bc22f6b2818eb1625de253f9e}
+Aloca usos n�o-\/consutivos 
+
+\subsection{Atributos}
+\index{Demand\+Model@{Demand\+Model}!demand@{demand}}
+\index{demand@{demand}!Demand\+Model@{Demand\+Model}}
+\subsubsection[{demand}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ Demand\+Model\+::demand}\label{class_demand_model_a89bcf64cdc0494835721e0af4a50fcc7}
+
+
+Definição na linha 17 do arquivo Demand\+Model.\+h.
+
+\index{Demand\+Model@{Demand\+Model}!demand\+File\+Name@{demand\+File\+Name}}
+\index{demand\+File\+Name@{demand\+File\+Name}!Demand\+Model@{Demand\+Model}}
+\subsubsection[{demand\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Demand\+Model\+::demand\+File\+Name}\label{class_demand_model_a07eab2fe9d9159d23e9f00a5f85e72ac}
+Nome do arquivo lido de demanda 
+
+Definição na linha 24 do arquivo Demand\+Model.\+h.
+
+\index{Demand\+Model@{Demand\+Model}!priority@{priority}}
+\index{priority@{priority}!Demand\+Model@{Demand\+Model}}
+\subsubsection[{priority}]{\setlength{\rightskip}{0pt plus 5cm}double Demand\+Model\+::priority}\label{class_demand_model_a1f64c1424be84332e652024492c1668a}
+
+
+Definição na linha 15 do arquivo Demand\+Model.\+h.
+
+\index{Demand\+Model@{Demand\+Model}!res\+Sources@{res\+Sources}}
+\index{res\+Sources@{res\+Sources}!Demand\+Model@{Demand\+Model}}
+\subsubsection[{res\+Sources}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Demand\+Model\+::res\+Sources}\label{class_demand_model_a389fecb0f7b167864f7f7759f04718b8}
+
+
+Definição na linha 19 do arquivo Demand\+Model.\+h.
+
+\index{Demand\+Model@{Demand\+Model}!return\+Demand@{return\+Demand}}
+\index{return\+Demand@{return\+Demand}!Demand\+Model@{Demand\+Model}}
+\subsubsection[{return\+Demand}]{\setlength{\rightskip}{0pt plus 5cm}map$<$unsigned int,double$>$ Demand\+Model\+::return\+Demand}\label{class_demand_model_a9c75615dc43e3bf4d955eec32d76002e}
+
+
+Definição na linha 16 do arquivo Demand\+Model.\+h.
+
+\index{Demand\+Model@{Demand\+Model}!used\+Res\+Up@{used\+Res\+Up}}
+\index{used\+Res\+Up@{used\+Res\+Up}!Demand\+Model@{Demand\+Model}}
+\subsubsection[{used\+Res\+Up}]{\setlength{\rightskip}{0pt plus 5cm}map$<$unsigned int,double$>$ Demand\+Model\+::used\+Res\+Up}\label{class_demand_model_aa24a74432ba6cd36ee3902b2471641d2}
+
+
+Definição na linha 18 do arquivo Demand\+Model.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Demand\+Model.\+h}\end{DoxyCompactItemize}

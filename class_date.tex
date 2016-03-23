@@ -1,0 +1,456 @@
+\section{Referência da Classe Date}
+\label{class_date}\index{Date@{Date}}
+
+
+{\ttfamily \#include $<$Date.\+h$>$}
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Time\+Interval} \{ \\*
+{\bf I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+D\+I\+A\+RY}, 
+{\bf I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+M\+O\+N\+T\+H\+LY}, 
+{\bf I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+A\+N\+N\+U\+AL}, 
+{\bf I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+H\+O\+U\+R\+LY}, 
+\\*
+{\bf I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+N\+O\+NE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Date} (int hour, {\bf Day} day, {\bf Month} month, {\bf Year} year)
+\item 
+{\bf Date} ({\bf Day} day, {\bf Month} month, {\bf Year} year)
+\item 
+{\bf Date} ({\bf Month} month, {\bf Year} year)
+\item 
+{\bf Date} ({\bf Year} year)
+\item 
+{\bf Date} (unsigned int value=(int) wx\+Date\+Time\+::\+Now().Get\+J\+DN(), {\bf Time\+Interval} {\bf time\+Interval}={\bf I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+D\+I\+A\+RY})
+\item 
+{\bf Date} (const wx\+String \&str)
+\item 
+unsigned int {\bf get\+Number} () const 
+\item 
+unsigned int {\bf get\+NumberH} () const 
+\item 
+{\bf Month} {\bf get\+Month} () const 
+\item 
+{\bf Day} {\bf get\+Day} () const 
+\item 
+{\bf Year} {\bf get\+Year} () const 
+\item 
+int {\bf get\+Hour} () const 
+\item 
+void {\bf set\+Hour} (int hour)
+\item 
+wx\+String {\bf get\+Text} ()
+\item 
+bool {\bf is\+Valid} () const 
+\item 
+bool {\bf operator==} (const {\bf Date} \&other) const 
+\item 
+bool {\bf operator!=} (const {\bf Date} \&other) const 
+\item 
+{\bf Date} \& {\bf operator++} ()
+\item 
+{\bf Date} {\bf operator++} (int)
+\item 
+{\bf Date} \& {\bf operator+=} (const int other)
+\item 
+{\bf Date} \& {\bf operator-\/-\/} ()
+\item 
+{\bf Date} {\bf operator-\/-\/} (int)
+\item 
+{\bf Date} {\bf operator+} (const int other) const 
+\item 
+{\bf Date} {\bf operator-\/} (const {\bf Date} \&other) const 
+\item 
+{\bf Date} {\bf operator-\/} (const int other) const 
+\item 
+bool {\bf operator$<$} (const {\bf Date} \&other) const 
+\item 
+bool {\bf operator$<$=} (const {\bf Date} \&other) const 
+\item 
+bool {\bf operator$>$} (const {\bf Date} \&other) const 
+\item 
+bool {\bf operator$>$=} (const {\bf Date} \&other) const 
+\item 
+unsigned int {\bf get\+Days\+In\+Month} () const 
+\item 
+wx\+String {\bf get\+Month\+Text} () const 
+\item 
+bool {\bf is\+Leap\+Year} () const 
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Month} {\bf string\+To\+Month} (wx\+String s\+Mon)
+\item 
+static wx\+String {\bf month\+To\+String} ({\bf Month} mon)
+\item 
+static bool {\bf is\+Leap\+Year} ({\bf Year} year)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Time\+Interval} {\bf time\+Interval}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 34 do arquivo S\+I\+G\+A/\+Date.\+h.
+
+
+
+\subsection{Enumerações}
+\index{Date@{Date}!Time\+Interval@{Time\+Interval}}
+\index{Time\+Interval@{Time\+Interval}!Date@{Date}}
+\subsubsection[{Time\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Date\+::\+Time\+Interval}}\label{class_date_a7175b59b26b0ee3dc70e6829808b61c0}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+D\+I\+A\+RY@{I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+D\+I\+A\+RY}!Date@{Date}}\index{Date@{Date}!I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+D\+I\+A\+RY@{I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+D\+I\+A\+RY}}\item[{\em 
+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+D\+I\+A\+RY\label{class_date_a7175b59b26b0ee3dc70e6829808b61c0abf7b92bbb02a11b049bee5bc7932c8fe}
+}]\index{I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+M\+O\+N\+T\+H\+LY@{I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+M\+O\+N\+T\+H\+LY}!Date@{Date}}\index{Date@{Date}!I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+M\+O\+N\+T\+H\+LY@{I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+M\+O\+N\+T\+H\+LY}}\item[{\em 
+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+M\+O\+N\+T\+H\+LY\label{class_date_a7175b59b26b0ee3dc70e6829808b61c0a310769c0062eaf3f4327265bb2f7b5b7}
+}]\index{I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+A\+N\+N\+U\+AL@{I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+A\+N\+N\+U\+AL}!Date@{Date}}\index{Date@{Date}!I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+A\+N\+N\+U\+AL@{I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+A\+N\+N\+U\+AL}}\item[{\em 
+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+A\+N\+N\+U\+AL\label{class_date_a7175b59b26b0ee3dc70e6829808b61c0a9034522cb38cbf86c6375d51018e24be}
+}]\index{I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+H\+O\+U\+R\+LY@{I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+H\+O\+U\+R\+LY}!Date@{Date}}\index{Date@{Date}!I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+H\+O\+U\+R\+LY@{I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+H\+O\+U\+R\+LY}}\item[{\em 
+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+H\+O\+U\+R\+LY\label{class_date_a7175b59b26b0ee3dc70e6829808b61c0a0c7c8672ad8d4237808f7f17ba1ddbac}
+}]\index{I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+N\+O\+NE@{I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+N\+O\+NE}!Date@{Date}}\index{Date@{Date}!I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+N\+O\+NE@{I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+N\+O\+NE}}\item[{\em 
+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+N\+O\+NE\label{class_date_a7175b59b26b0ee3dc70e6829808b61c0aa81d3c42b3801a487a322259676403d3}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 46 do arquivo S\+I\+G\+A/\+Date.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\subsubsection[{Date(int hour, Day day, Month month, Year year)}]{\setlength{\rightskip}{0pt plus 5cm}Date\+::\+Date (
+\begin{DoxyParamCaption}
+\item[{int}]{hour, }
+\item[{{\bf Day}}]{day, }
+\item[{{\bf Month}}]{month, }
+\item[{{\bf Year}}]{year}
+\end{DoxyParamCaption}
+)}\label{class_date_a9f8682fe49d879e9db1b1c784d5c1ac1}
+Construtor Intervalo diario 
+\begin{DoxyParams}{Parâmetros}
+{\em day} & Dia \\
+\hline
+{\em month} & M�s \\
+\hline
+{\em year} & Ano \\
+\hline
+\end{DoxyParams}
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\subsubsection[{Date(\+Day day, Month month, Year year)}]{\setlength{\rightskip}{0pt plus 5cm}Date\+::\+Date (
+\begin{DoxyParamCaption}
+\item[{{\bf Day}}]{day, }
+\item[{{\bf Month}}]{month, }
+\item[{{\bf Year}}]{year}
+\end{DoxyParamCaption}
+)}\label{class_date_ae3246104ae72e528cb03480fc6d3416b}
+Construtor Intervalo diario 
+\begin{DoxyParams}{Parâmetros}
+{\em day} & Dia \\
+\hline
+{\em month} & M�s \\
+\hline
+{\em year} & Ano \\
+\hline
+\end{DoxyParams}
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\subsubsection[{Date(\+Month month, Year year)}]{\setlength{\rightskip}{0pt plus 5cm}Date\+::\+Date (
+\begin{DoxyParamCaption}
+\item[{{\bf Month}}]{month, }
+\item[{{\bf Year}}]{year}
+\end{DoxyParamCaption}
+)}\label{class_date_a24341a1ddc4b32e5d1a957ebebdeb255}
+Construtor Intervalo mensal 
+\begin{DoxyParams}{Parâmetros}
+{\em month} & M�s \\
+\hline
+{\em year} & Ano \\
+\hline
+\end{DoxyParams}
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\subsubsection[{Date(\+Year year)}]{\setlength{\rightskip}{0pt plus 5cm}Date\+::\+Date (
+\begin{DoxyParamCaption}
+\item[{{\bf Year}}]{year}
+\end{DoxyParamCaption}
+)}\label{class_date_abb74519da316ccd70783b72a2470df71}
+Construtor Intervalo anual 
+\begin{DoxyParams}{Parâmetros}
+{\em year} & Ano \\
+\hline
+\end{DoxyParams}
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\subsubsection[{Date(unsigned int value=(int) wx\+Date\+Time\+::\+Now().\+Get\+J\+D\+N(), Time\+Interval time\+Interval=\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+D\+I\+A\+R\+Y)}]{\setlength{\rightskip}{0pt plus 5cm}Date\+::\+Date (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{value = {\ttfamily (int)~wxDateTime\+:\+:Now().GetJDN()}, }
+\item[{{\bf Time\+Interval}}]{time\+Interval = {\ttfamily {\bf I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+D\+I\+A\+RY}}}
+\end{DoxyParamCaption}
+)}\label{class_date_a2326ea08a8359b98baa8308588c66cab}
+Construtor Julian Day Number 01/01/1980 = 2444240 
+\begin{DoxyParams}{Parâmetros}
+{\em number} & Inteiro que representa uma data \\
+\hline
+\end{DoxyParams}
+\index{Date@{Date}!Date@{Date}}
+\index{Date@{Date}!Date@{Date}}
+\subsubsection[{Date(const wx\+String \&str)}]{\setlength{\rightskip}{0pt plus 5cm}Date\+::\+Date (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{str}
+\end{DoxyParamCaption}
+)}\label{class_date_a3e3d3dde2187fd2f0ddbccd20c7b2399}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em str} & String contendo a data \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Métodos}
+\index{Date@{Date}!get\+Day@{get\+Day}}
+\index{get\+Day@{get\+Day}!Date@{Date}}
+\subsubsection[{get\+Day() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Day} Date\+::get\+Day (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_date_ae25baf53c4c07f911aba0fe0f3593243}
+Retorna o dia \index{Date@{Date}!get\+Days\+In\+Month@{get\+Days\+In\+Month}}
+\index{get\+Days\+In\+Month@{get\+Days\+In\+Month}!Date@{Date}}
+\subsubsection[{get\+Days\+In\+Month() const }]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Date\+::get\+Days\+In\+Month (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_date_a2176cb0383088359aa27205210d8c6d5}
+\index{Date@{Date}!get\+Hour@{get\+Hour}}
+\index{get\+Hour@{get\+Hour}!Date@{Date}}
+\subsubsection[{get\+Hour() const }]{\setlength{\rightskip}{0pt plus 5cm}int Date\+::get\+Hour (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_date_aa83005b132598f7af8fb70e5407e150c}
+Retorna a hora \index{Date@{Date}!get\+Month@{get\+Month}}
+\index{get\+Month@{get\+Month}!Date@{Date}}
+\subsubsection[{get\+Month() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Month} Date\+::get\+Month (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_date_a01a4b5768f302991f28ddf9fe2289ee5}
+Retorna um inteiro que representa o numero juliano
+
+int get\+J\+D\+N() const; Retorna o mes \index{Date@{Date}!get\+Month\+Text@{get\+Month\+Text}}
+\index{get\+Month\+Text@{get\+Month\+Text}!Date@{Date}}
+\subsubsection[{get\+Month\+Text() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Date\+::get\+Month\+Text (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_date_a0671e8fcfc2e60cf2fc42272f5bdc27b}
+\index{Date@{Date}!get\+Number@{get\+Number}}
+\index{get\+Number@{get\+Number}!Date@{Date}}
+\subsubsection[{get\+Number() const }]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Date\+::get\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_date_a8137a5374437ae0a196da08cdc541f53}
+Retorna um inteiro que representa o numero de segundos desde 01/01/1970 \index{Date@{Date}!get\+NumberH@{get\+NumberH}}
+\index{get\+NumberH@{get\+NumberH}!Date@{Date}}
+\subsubsection[{get\+Number\+H() const }]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Date\+::get\+NumberH (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_date_aba362dc59ef3c416c7c6f3e41d12ebc7}
+Retorna o dia juliano (com horas) \index{Date@{Date}!get\+Text@{get\+Text}}
+\index{get\+Text@{get\+Text}!Date@{Date}}
+\subsubsection[{get\+Text()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Date\+::get\+Text (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_date_ade629cdc64b75a8b387b7e988c0450bc}
+\index{Date@{Date}!get\+Year@{get\+Year}}
+\index{get\+Year@{get\+Year}!Date@{Date}}
+\subsubsection[{get\+Year() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Year} Date\+::get\+Year (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_date_a10c4a8eaa8cce7f18a5c4584203d4339}
+Retorna o ano \index{Date@{Date}!is\+Leap\+Year@{is\+Leap\+Year}}
+\index{is\+Leap\+Year@{is\+Leap\+Year}!Date@{Date}}
+\subsubsection[{is\+Leap\+Year() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Date\+::is\+Leap\+Year (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_date_aaab6bfff2001ff4a7cfc882504d9f0c6}
+Informa se o ano da data � Bisexto \index{Date@{Date}!is\+Leap\+Year@{is\+Leap\+Year}}
+\index{is\+Leap\+Year@{is\+Leap\+Year}!Date@{Date}}
+\subsubsection[{is\+Leap\+Year(\+Year year)}]{\setlength{\rightskip}{0pt plus 5cm}static bool Date\+::is\+Leap\+Year (
+\begin{DoxyParamCaption}
+\item[{{\bf Year}}]{year}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_date_a5323217f1419f25df9695371693186ad}
+\index{Date@{Date}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!Date@{Date}}
+\subsubsection[{is\+Valid() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Date\+::is\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_date_ab0322e0be617183deee989ecadb35569}
+\index{Date@{Date}!month\+To\+String@{month\+To\+String}}
+\index{month\+To\+String@{month\+To\+String}!Date@{Date}}
+\subsubsection[{month\+To\+String(\+Month mon)}]{\setlength{\rightskip}{0pt plus 5cm}static wx\+String Date\+::month\+To\+String (
+\begin{DoxyParamCaption}
+\item[{{\bf Month}}]{mon}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_date_aba301c410d5cd2d8b05990a6416b2c9f}
+Retorna um string equivalente ao Month enviado 
+\begin{DoxyParams}{Parâmetros}
+{\em mon} & Mes a ser comparado \\
+\hline
+\end{DoxyParams}
+\index{Date@{Date}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Date@{Date}}
+\subsubsection[{operator"!=(const Date \&other) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Date\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Date} \&}]{other}
+\end{DoxyParamCaption}
+) const}\label{class_date_ada99b46ff858887c6e91b63b68e9ee74}
+\index{Date@{Date}!operator+@{operator+}}
+\index{operator+@{operator+}!Date@{Date}}
+\subsubsection[{operator+(const int other) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Date} Date\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{const int}]{other}
+\end{DoxyParamCaption}
+) const}\label{class_date_aba904a8f979806f9a4cb34bf9709e3b8}
+\index{Date@{Date}!operator++@{operator++}}
+\index{operator++@{operator++}!Date@{Date}}
+\subsubsection[{operator++()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Date}\& Date\+::operator++ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_date_a4a8dd65e13e24ed79972c4ed0596f926}
+\index{Date@{Date}!operator++@{operator++}}
+\index{operator++@{operator++}!Date@{Date}}
+\subsubsection[{operator++(int)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Date} Date\+::operator++ (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\label{class_date_a63f7060a7a7997e289e5e885f84557e5}
+\index{Date@{Date}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Date@{Date}}
+\subsubsection[{operator+=(const int other)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Date}\& Date\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{const int}]{other}
+\end{DoxyParamCaption}
+)}\label{class_date_ab7eb0ac92ac6a8634028e0c4e17782cb}
+\index{Date@{Date}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Date@{Date}}
+\subsubsection[{operator-\/(const Date \&other) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Date} Date\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Date} \&}]{other}
+\end{DoxyParamCaption}
+) const}\label{class_date_af124cfa1a9c5dfa0a510a43b8f8adbfd}
+\index{Date@{Date}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Date@{Date}}
+\subsubsection[{operator-\/(const int other) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Date} Date\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const int}]{other}
+\end{DoxyParamCaption}
+) const}\label{class_date_a1c250617db1f0bb738230423b40ce2d1}
+\index{Date@{Date}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!Date@{Date}}
+\subsubsection[{operator-\/-\/()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Date}\& Date\+::operator-\/-\/ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_date_acaada92d193eb7362121bb764b6ac932}
+\index{Date@{Date}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!Date@{Date}}
+\subsubsection[{operator-\/-\/(int)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Date} Date\+::operator-\/-\/ (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\label{class_date_ac2237a5f9f832bb521fe8f299a47db95}
+\index{Date@{Date}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Date@{Date}}
+\subsubsection[{operator$<$(const Date \&other) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Date\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Date} \&}]{other}
+\end{DoxyParamCaption}
+) const}\label{class_date_aeac2c1d00b262e081ffb1ffd91a9044c}
+\index{Date@{Date}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!Date@{Date}}
+\subsubsection[{operator$<$=(const Date \&other) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Date\+::operator$<$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Date} \&}]{other}
+\end{DoxyParamCaption}
+) const}\label{class_date_ac0ff41dc1905a5bd98c4172838562c83}
+\index{Date@{Date}!operator==@{operator==}}
+\index{operator==@{operator==}!Date@{Date}}
+\subsubsection[{operator==(const Date \&other) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Date\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Date} \&}]{other}
+\end{DoxyParamCaption}
+) const}\label{class_date_acf1ccde422e449d303a942a3014f55d3}
+\index{Date@{Date}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Date@{Date}}
+\subsubsection[{operator$>$(const Date \&other) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Date\+::operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Date} \&}]{other}
+\end{DoxyParamCaption}
+) const}\label{class_date_a129b2f765da352f0dab8a0966bf3209f}
+\index{Date@{Date}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!Date@{Date}}
+\subsubsection[{operator$>$=(const Date \&other) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Date\+::operator$>$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Date} \&}]{other}
+\end{DoxyParamCaption}
+) const}\label{class_date_a5cfd8c7465dabb4520596b4c75e95899}
+\index{Date@{Date}!set\+Hour@{set\+Hour}}
+\index{set\+Hour@{set\+Hour}!Date@{Date}}
+\subsubsection[{set\+Hour(int hour)}]{\setlength{\rightskip}{0pt plus 5cm}void Date\+::set\+Hour (
+\begin{DoxyParamCaption}
+\item[{int}]{hour}
+\end{DoxyParamCaption}
+)}\label{class_date_a39aed5716d41cecafc37be6a11556112}
+Configura a hora da data \index{Date@{Date}!string\+To\+Month@{string\+To\+Month}}
+\index{string\+To\+Month@{string\+To\+Month}!Date@{Date}}
+\subsubsection[{string\+To\+Month(wx\+String s\+Mon)}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Month} Date\+::string\+To\+Month (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{s\+Mon}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_date_acd441440689370d41876148cb74944ba}
+Retorna um Month equivalente ao string enviado 
+\begin{DoxyParams}{Parâmetros}
+{\em s\+Mon} & Mes a ser comparado \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{Date@{Date}!time\+Interval@{time\+Interval}}
+\index{time\+Interval@{time\+Interval}!Date@{Date}}
+\subsubsection[{time\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Interval} Date\+::time\+Interval}\label{class_date_ad663ff7ef418f438f69ef8f9b3b13ef3}
+
+
+Definição na linha 55 do arquivo S\+I\+G\+A/\+Date.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+G\+A/\+Date.\+h}\end{DoxyCompactItemize}

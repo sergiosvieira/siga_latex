@@ -1,0 +1,115 @@
+\section{ReferÃªncia da Classe Res\+Op\+Junction}
+\label{class_res_op_junction}\index{Res\+Op\+Junction@{Res\+Op\+Junction}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Junction.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Element}.
+
+
+
+Superclasse de {\bf Res\+Op\+Network\+Flow\+Junction} e {\bf Res\+Op\+Sequential\+Junction}.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Junction} ({\bf Date} initial\+Date, {\bf Date} final\+Date, {\bf Node} $\ast${\bf node})
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Junction} ()
+\item 
+virtual void {\bf update\+Allocation\+Matrix} ({\bf Node} $\ast${\bf node})=0
+\end{DoxyCompactItemize}
+\subsection*{MÃ©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf Res\+Op\+Element} $\ast$ {\bf do\+Copy} ()=0
+\item 
+void {\bf do\+Create\+Results} ({\bf Interval} interval)
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+Cada instância de modelo é feita para um nó específico 
+
+DefiniÃ§Ã£o na linha 16 do arquivo Res\+Op\+Junction.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Junction@{Res\+Op\+Junction}!Res\+Op\+Junction@{Res\+Op\+Junction}}
+\index{Res\+Op\+Junction@{Res\+Op\+Junction}!Res\+Op\+Junction@{Res\+Op\+Junction}}
+\subsubsection[{Res\+Op\+Junction(\+Date initial\+Date, Date final\+Date, Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Junction\+::\+Res\+Op\+Junction (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{initial\+Date, }
+\item[{{\bf Date}}]{final\+Date, }
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_res_op_junction_afdc9c70b37fef1ed56d4031771812660}
+Construtor padrão da classe \doxyref{Res\+Op\+Element}{pag.}{class_res_op_element} 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em initial\+Date} & Inicio do intervalo \\
+\hline
+{\em final\+Date} & Final do Intervalo \\
+\hline
+{\em node} & Nó de interesse \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Junction@{Res\+Op\+Junction}!````~Res\+Op\+Junction@{$\sim$\+Res\+Op\+Junction}}
+\index{````~Res\+Op\+Junction@{$\sim$\+Res\+Op\+Junction}!Res\+Op\+Junction@{Res\+Op\+Junction}}
+\subsubsection[{$\sim$\+Res\+Op\+Junction()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Junction\+::$\sim$\+Res\+Op\+Junction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_junction_a7ef727a125a29aeddf72cbdb6ecc4c99}
+Destrutor padrão da classe \doxyref{Res\+Op\+Element}{pag.}{class_res_op_element} 
+
+\subsection{MÃ©todos}
+\index{Res\+Op\+Junction@{Res\+Op\+Junction}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!Res\+Op\+Junction@{Res\+Op\+Junction}}
+\subsubsection[{do\+Copy()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Res\+Op\+Element}$\ast$ Res\+Op\+Junction\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{class_res_op_junction_ab3e1d3718a11ba779d3753db9f83589c}
+Copia dos dados especificos 
+
+Implementa {\bf Res\+Op\+Element} \doxyref{}{pag.}{class_res_op_element_a88fe7190d68429d2f9623160df266dc9}.
+
+
+
+Implementado por {\bf Res\+Op\+Network\+Flow\+Junction} \doxyref{}{pag.}{class_res_op_network_flow_junction_a11aade6030335e1ff1069031e6a863b7} e {\bf Res\+Op\+Sequential\+Junction} \doxyref{}{pag.}{class_res_op_sequential_junction_a102d12105d52b6563a4cf07a288862eb}.
+
+\index{Res\+Op\+Junction@{Res\+Op\+Junction}!do\+Create\+Results@{do\+Create\+Results}}
+\index{do\+Create\+Results@{do\+Create\+Results}!Res\+Op\+Junction@{Res\+Op\+Junction}}
+\subsubsection[{do\+Create\+Results(\+Interval interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Junction\+::do\+Create\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_op_junction_a001c990b9db697609e9b38ae8640174e}
+
+
+Implementa {\bf Res\+Op\+Element} \doxyref{}{pag.}{class_res_op_element_a7733b727336bb90ee33299b55d46b335}.
+
+\index{Res\+Op\+Junction@{Res\+Op\+Junction}!update\+Allocation\+Matrix@{update\+Allocation\+Matrix}}
+\index{update\+Allocation\+Matrix@{update\+Allocation\+Matrix}!Res\+Op\+Junction@{Res\+Op\+Junction}}
+\subsubsection[{update\+Allocation\+Matrix(\+Node $\ast$node)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Junction\+::update\+Allocation\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_junction_a9db7c309b563398399d3b7fab0bef33a}
+Define o cabeçalho da alloc; 
+
+Implementa {\bf Res\+Op\+Element} \doxyref{}{pag.}{class_res_op_element_ad75ced5fbb62038bec3e527d4730ebc4}.
+
+
+
+Implementado por {\bf Res\+Op\+Network\+Flow\+Junction} \doxyref{}{pag.}{class_res_op_network_flow_junction_adaf3467e95a1baafb367d5998b278a02} e {\bf Res\+Op\+Sequential\+Junction} \doxyref{}{pag.}{class_res_op_sequential_junction_a3bb1265ab21bc699c7feb973b6bdb03d}.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Junction.\+h}\end{DoxyCompactItemize}

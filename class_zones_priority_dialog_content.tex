@@ -1,0 +1,241 @@
+\section{Referência da Classe Zones\+Priority\+Dialog\+Content}
+\label{class_zones_priority_dialog_content}\index{Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}}
+
+
+{\ttfamily \#include $<$Zones\+Priority\+Dialog\+Content.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Rule\+Dialog\+Content}.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bf I\+D\+\_\+\+Z\+O\+N\+E\+S\+\_\+\+T\+O\+O\+L\+S\+\_\+\+I\+N\+S\+E\+RT} = 2, 
+{\bf I\+D\+\_\+\+Z\+O\+N\+E\+S\+\_\+\+T\+O\+O\+L\+S\+\_\+\+R\+E\+M\+O\+VE} = 3, 
+{\bf I\+D\+\_\+\+Z\+O\+N\+E\+S\+\_\+\+G\+R\+ID} = 4
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Zones\+Priority\+Dialog\+Content} ({\bf Zones\+Priority\+Rule} $\ast${\bf rule}, {\bf S\+I\+G\+A\+Dialog} $\ast$dialog)
+\item 
+{\bf $\sim$\+Zones\+Priority\+Dialog\+Content} ()
+\item 
+void {\bf on\+Change} (wx\+Grid\+Event \&event)
+\item 
+void {\bf on\+Insert} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Remove} (wx\+Command\+Event \&event)
+\item 
+void {\bf set\+Info} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Zones\+Priority\+Text\+Ctrl} $\ast$ {\bf tc\+Zones\+Priority}
+\item 
+wx\+Flex\+Grid\+Sizer $\ast$ {\bf grid}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Vol}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Sim}
+\item 
+wx\+Sizer $\ast$ {\bf b\+Horiz\+One}
+\item 
+wx\+Sizer $\ast$ {\bf bs\+Main\+Box}
+\item 
+wx\+Tool\+Bar $\ast$ {\bf tools\+Zones}
+\item 
+{\bf S\+I\+G\+A\+Grid} $\ast$ {\bf grid\+Zones}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf open\+Conf} ()
+\item 
+virtual void {\bf save\+Conf} ()
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 44 do arquivo Zones\+Priority\+Dialog\+Content.\+h.
+
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{class_zones_priority_dialog_content_a2db1f5d2dc04b3acbb1c941a033a7ef6}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+Z\+O\+N\+E\+S\+\_\+\+T\+O\+O\+L\+S\+\_\+\+I\+N\+S\+E\+RT@{I\+D\+\_\+\+Z\+O\+N\+E\+S\+\_\+\+T\+O\+O\+L\+S\+\_\+\+I\+N\+S\+E\+RT}!Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}}\index{Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}!I\+D\+\_\+\+Z\+O\+N\+E\+S\+\_\+\+T\+O\+O\+L\+S\+\_\+\+I\+N\+S\+E\+RT@{I\+D\+\_\+\+Z\+O\+N\+E\+S\+\_\+\+T\+O\+O\+L\+S\+\_\+\+I\+N\+S\+E\+RT}}\item[{\em 
+I\+D\+\_\+\+Z\+O\+N\+E\+S\+\_\+\+T\+O\+O\+L\+S\+\_\+\+I\+N\+S\+E\+RT\label{class_zones_priority_dialog_content_a2db1f5d2dc04b3acbb1c941a033a7ef6a9d3507fc6da3078b34b2c453c0b3da3b}
+}]\index{I\+D\+\_\+\+Z\+O\+N\+E\+S\+\_\+\+T\+O\+O\+L\+S\+\_\+\+R\+E\+M\+O\+VE@{I\+D\+\_\+\+Z\+O\+N\+E\+S\+\_\+\+T\+O\+O\+L\+S\+\_\+\+R\+E\+M\+O\+VE}!Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}}\index{Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}!I\+D\+\_\+\+Z\+O\+N\+E\+S\+\_\+\+T\+O\+O\+L\+S\+\_\+\+R\+E\+M\+O\+VE@{I\+D\+\_\+\+Z\+O\+N\+E\+S\+\_\+\+T\+O\+O\+L\+S\+\_\+\+R\+E\+M\+O\+VE}}\item[{\em 
+I\+D\+\_\+\+Z\+O\+N\+E\+S\+\_\+\+T\+O\+O\+L\+S\+\_\+\+R\+E\+M\+O\+VE\label{class_zones_priority_dialog_content_a2db1f5d2dc04b3acbb1c941a033a7ef6a2102d124438f4a4e806a329bd3f0e096}
+}]\index{I\+D\+\_\+\+Z\+O\+N\+E\+S\+\_\+\+G\+R\+ID@{I\+D\+\_\+\+Z\+O\+N\+E\+S\+\_\+\+G\+R\+ID}!Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}}\index{Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}!I\+D\+\_\+\+Z\+O\+N\+E\+S\+\_\+\+G\+R\+ID@{I\+D\+\_\+\+Z\+O\+N\+E\+S\+\_\+\+G\+R\+ID}}\item[{\em 
+I\+D\+\_\+\+Z\+O\+N\+E\+S\+\_\+\+G\+R\+ID\label{class_zones_priority_dialog_content_a2db1f5d2dc04b3acbb1c941a033a7ef6aa708904834789e0cd4013044b7f9a841}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 59 do arquivo Zones\+Priority\+Dialog\+Content.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}!Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}}
+\index{Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}!Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}}
+\subsubsection[{Zones\+Priority\+Dialog\+Content(\+Zones\+Priority\+Rule $\ast$rule, S\+I\+G\+A\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}Zones\+Priority\+Dialog\+Content\+::\+Zones\+Priority\+Dialog\+Content (
+\begin{DoxyParamCaption}
+\item[{{\bf Zones\+Priority\+Rule} $\ast$}]{rule, }
+\item[{{\bf S\+I\+G\+A\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_zones_priority_dialog_content_a713bf14b1ff3672d9865e6fe3ad5cb03}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em rule} & Regra de opera��o \\
+\hline
+{\em dialog} & Caixa de dialogo a que pertence \\
+\hline
+\end{DoxyParams}
+\index{Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}!````~Zones\+Priority\+Dialog\+Content@{$\sim$\+Zones\+Priority\+Dialog\+Content}}
+\index{````~Zones\+Priority\+Dialog\+Content@{$\sim$\+Zones\+Priority\+Dialog\+Content}!Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}}
+\subsubsection[{$\sim$\+Zones\+Priority\+Dialog\+Content()}]{\setlength{\rightskip}{0pt plus 5cm}Zones\+Priority\+Dialog\+Content\+::$\sim$\+Zones\+Priority\+Dialog\+Content (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_zones_priority_dialog_content_af58f3ebf21df97ae92c903c2425c4a6b}
+Destrutor 
+
+Definição na linha 111 do arquivo Zones\+Priority\+Dialog\+Content.\+h.
+
+
+
+\subsection{Métodos}
+\index{Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}!on\+Change@{on\+Change}}
+\index{on\+Change@{on\+Change}!Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}}
+\subsubsection[{on\+Change(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Zones\+Priority\+Dialog\+Content\+::on\+Change (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_zones_priority_dialog_content_a599d45b7e1207a28cd58cce875db4e25}
+Evento de mudan�a de grid 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}!on\+Insert@{on\+Insert}}
+\index{on\+Insert@{on\+Insert}!Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}}
+\subsubsection[{on\+Insert(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Zones\+Priority\+Dialog\+Content\+::on\+Insert (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_zones_priority_dialog_content_a58c5a284792c6375e7b5a1eeef988e16}
+Evento de inserir linhas \index{Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}!on\+Remove@{on\+Remove}}
+\index{on\+Remove@{on\+Remove}!Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}}
+\subsubsection[{on\+Remove(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Zones\+Priority\+Dialog\+Content\+::on\+Remove (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_zones_priority_dialog_content_a6b0d94a1d05882dc1fdba1ad045a30ed}
+Evento de remove linhas \index{Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}!open\+Conf@{open\+Conf}}
+\index{open\+Conf@{open\+Conf}!Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}}
+\subsubsection[{open\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Zones\+Priority\+Dialog\+Content\+::open\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_zones_priority_dialog_content_aaaf8c2d1aa0673adf0642f3146fc6740}
+Abrir regra de arquivo 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abf3660e2c31c95afab763b4b520e26e9}.
+
+\index{Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}!save\+Conf@{save\+Conf}}
+\index{save\+Conf@{save\+Conf}!Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}}
+\subsubsection[{save\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Zones\+Priority\+Dialog\+Content\+::save\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_zones_priority_dialog_content_aa504ea1db39d07a9971a42feb454e431}
+Salvar regra em arquivo 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abcef0436251918c1eab033a80b40c626}.
+
+\index{Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void Zones\+Priority\+Dialog\+Content\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_zones_priority_dialog_content_ad5878f3560a9d9fbad60fb1673fcb392}
+Atualiza a interface 
+
+Reimplementação de {\bf Res\+Op\+Rule\+Dialog\+Content} \doxyref{}{pag.}{class_res_op_rule_dialog_content_a836a256a089fd38f217bcf220c037d3a}.
+
+
+
+\subsection{Atributos}
+\index{Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}!b\+Horiz\+One@{b\+Horiz\+One}}
+\index{b\+Horiz\+One@{b\+Horiz\+One}!Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}}
+\subsubsection[{b\+Horiz\+One}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Zones\+Priority\+Dialog\+Content\+::b\+Horiz\+One}\label{class_zones_priority_dialog_content_aa1a24a5be2141d0a08b597c1277bd1a2}
+
+
+Definição na linha 84 do arquivo Zones\+Priority\+Dialog\+Content.\+h.
+
+\index{Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}!bs\+Main\+Box@{bs\+Main\+Box}}
+\index{bs\+Main\+Box@{bs\+Main\+Box}!Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}}
+\subsubsection[{bs\+Main\+Box}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Zones\+Priority\+Dialog\+Content\+::bs\+Main\+Box}\label{class_zones_priority_dialog_content_a4c8831d98790f4781fc24b40489fa71b}
+
+
+Definição na linha 84 do arquivo Zones\+Priority\+Dialog\+Content.\+h.
+
+\index{Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}!grid@{grid}}
+\index{grid@{grid}!Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}}
+\subsubsection[{grid}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Flex\+Grid\+Sizer$\ast$ Zones\+Priority\+Dialog\+Content\+::grid}\label{class_zones_priority_dialog_content_a11b017bc167e3a8b8f863f9789f371ea}
+
+
+Definição na linha 74 do arquivo Zones\+Priority\+Dialog\+Content.\+h.
+
+\index{Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}!grid\+Zones@{grid\+Zones}}
+\index{grid\+Zones@{grid\+Zones}!Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}}
+\subsubsection[{grid\+Zones}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Grid}$\ast$ Zones\+Priority\+Dialog\+Content\+::grid\+Zones}\label{class_zones_priority_dialog_content_a23f6340335b2cd2d6c9ccfe909336a28}
+
+
+Definição na linha 99 do arquivo Zones\+Priority\+Dialog\+Content.\+h.
+
+\index{Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}!s\+Sim@{s\+Sim}}
+\index{s\+Sim@{s\+Sim}!Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}}
+\subsubsection[{s\+Sim}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer$\ast$ Zones\+Priority\+Dialog\+Content\+::s\+Sim}\label{class_zones_priority_dialog_content_acf73f416c8365ffbfcaefb090372fc39}
+
+
+Definição na linha 84 do arquivo Zones\+Priority\+Dialog\+Content.\+h.
+
+\index{Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}!s\+Vol@{s\+Vol}}
+\index{s\+Vol@{s\+Vol}!Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}}
+\subsubsection[{s\+Vol}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer$\ast$ Zones\+Priority\+Dialog\+Content\+::s\+Vol}\label{class_zones_priority_dialog_content_a1eebbcf76aff046da4816906c707432d}
+
+
+Definição na linha 79 do arquivo Zones\+Priority\+Dialog\+Content.\+h.
+
+\index{Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}!tc\+Zones\+Priority@{tc\+Zones\+Priority}}
+\index{tc\+Zones\+Priority@{tc\+Zones\+Priority}!Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}}
+\subsubsection[{tc\+Zones\+Priority}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Zones\+Priority\+Text\+Ctrl}$\ast$ Zones\+Priority\+Dialog\+Content\+::tc\+Zones\+Priority}\label{class_zones_priority_dialog_content_a47300223c9d24514dde84b0bbcb7e1c6}
+Tabela com as libera��es 
+
+Definição na linha 69 do arquivo Zones\+Priority\+Dialog\+Content.\+h.
+
+\index{Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}!tools\+Zones@{tools\+Zones}}
+\index{tools\+Zones@{tools\+Zones}!Zones\+Priority\+Dialog\+Content@{Zones\+Priority\+Dialog\+Content}}
+\subsubsection[{tools\+Zones}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tool\+Bar$\ast$ Zones\+Priority\+Dialog\+Content\+::tools\+Zones}\label{class_zones_priority_dialog_content_af0e0d908288f552094b73043ddca31db}
+To show the image to ilustrate reservoir, zones and demands 
+
+Definição na linha 94 do arquivo Zones\+Priority\+Dialog\+Content.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Zones\+Priority\+Dialog\+Content.\+h}\end{DoxyCompactItemize}

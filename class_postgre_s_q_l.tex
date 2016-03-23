@@ -1,0 +1,218 @@
+\section{ReferÃªncia da Classe Postgre\+S\+QL}
+\label{class_postgre_s_q_l}\index{Postgre\+S\+QL@{Postgre\+S\+QL}}
+
+
+{\ttfamily \#include $<$Postgre\+S\+Q\+L.\+h$>$}
+
+
+
+Herdeiro de {\bf S\+Q\+L\+Base}.
+
+
+
+Superclasse de {\bf P\+S\+Q\+L\+C\+AV} e {\bf P\+S\+Q\+L\+Serie}.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Postgre\+S\+QL} (wx\+String host, wx\+String hostaddr, wx\+String port, wx\+String dbname, wx\+String user, wx\+String password)
+\item 
+{\bf $\sim$\+Postgre\+S\+QL} ()
+\item 
+P\+Gconn $\ast$ {\bf get\+Conn} ()
+\end{DoxyCompactItemize}
+\subsection*{MÃ©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ {\bf exec\+C\+MD} (wx\+String query)
+\item 
+void $\ast$ {\bf select\+DB} (vector$<$ wx\+String $>$ variables, vector$<$ wx\+String $>$ schemas, vector$<$ wx\+String $>$ tables, vector$<$ wx\+String $>$ table\+Alias, wx\+String condition=wx\+Empty\+String, wx\+String order\+By=wx\+Empty\+String)
+\item 
+bool {\bf insert\+DB} (wx\+String schema, wx\+String table, vector$<$ wx\+String $>$ col\+Names, vector$<$ wx\+String $>$ col\+Values)
+\item 
+bool {\bf delete\+DB} (wx\+String schema, wx\+String table, wx\+String condition=wx\+Empty\+String)
+\item 
+bool {\bf update\+DB} (wx\+String schema, wx\+String table, vector$<$ wx\+String $>$ col\+Names, vector$<$ wx\+String $>$ col\+Values, wx\+String condition=wx\+Empty\+String)
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 12 do arquivo Postgre\+S\+Q\+L.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Postgre\+S\+QL@{Postgre\+S\+QL}!Postgre\+S\+QL@{Postgre\+S\+QL}}
+\index{Postgre\+S\+QL@{Postgre\+S\+QL}!Postgre\+S\+QL@{Postgre\+S\+QL}}
+\subsubsection[{Postgre\+S\+Q\+L(wx\+String host, wx\+String hostaddr, wx\+String port, wx\+String dbname, wx\+String user, wx\+String password)}]{\setlength{\rightskip}{0pt plus 5cm}Postgre\+S\+Q\+L\+::\+Postgre\+S\+QL (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{host, }
+\item[{wx\+String}]{hostaddr, }
+\item[{wx\+String}]{port, }
+\item[{wx\+String}]{dbname, }
+\item[{wx\+String}]{user, }
+\item[{wx\+String}]{password}
+\end{DoxyParamCaption}
+)}\label{class_postgre_s_q_l_a8845b57e5910e666843dcbb2290d25bb}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em host} & Host \\
+\hline
+{\em hostaddr} & Endereço para o host \\
+\hline
+{\em port} & Porta \\
+\hline
+{\em dbname} & Nome do banco de dados \\
+\hline
+{\em user} & Usuario de conexão \\
+\hline
+{\em password} & Senha para o usuario de conexão \\
+\hline
+\end{DoxyParams}
+\index{Postgre\+S\+QL@{Postgre\+S\+QL}!````~Postgre\+S\+QL@{$\sim$\+Postgre\+S\+QL}}
+\index{````~Postgre\+S\+QL@{$\sim$\+Postgre\+S\+QL}!Postgre\+S\+QL@{Postgre\+S\+QL}}
+\subsubsection[{$\sim$\+Postgre\+S\+Q\+L()}]{\setlength{\rightskip}{0pt plus 5cm}Postgre\+S\+Q\+L\+::$\sim$\+Postgre\+S\+QL (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_postgre_s_q_l_a207c159342af289deeadc294f2283e1a}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{Postgre\+S\+QL@{Postgre\+S\+QL}!delete\+DB@{delete\+DB}}
+\index{delete\+DB@{delete\+DB}!Postgre\+S\+QL@{Postgre\+S\+QL}}
+\subsubsection[{delete\+D\+B(wx\+String schema, wx\+String table, wx\+String condition=wx\+Empty\+String)}]{\setlength{\rightskip}{0pt plus 5cm}bool Postgre\+S\+Q\+L\+::delete\+DB (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{schema, }
+\item[{wx\+String}]{table, }
+\item[{wx\+String}]{condition = {\ttfamily wxEmptyString}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_postgre_s_q_l_a24635a9d3d53820ad40c89dc3fcfcc7a}
+Monta e executa uma query de deleção de dados no Banco de dados 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em schema} & Esquema da tabela \\
+\hline
+{\em table} & Tabela \\
+\hline
+{\em condition} & Condição \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf S\+Q\+L\+Base} \doxyref{}{pag.}{class_s_q_l_base_af0258e74d1fb27ce7190ba19c92e43b0}.
+
+\index{Postgre\+S\+QL@{Postgre\+S\+QL}!exec\+C\+MD@{exec\+C\+MD}}
+\index{exec\+C\+MD@{exec\+C\+MD}!Postgre\+S\+QL@{Postgre\+S\+QL}}
+\subsubsection[{exec\+C\+M\+D(wx\+String query)}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ Postgre\+S\+Q\+L\+::exec\+C\+MD (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{query}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_postgre_s_q_l_ae0a9a749dc8e804dced019d141700152}
+Executa um comando S\+QL 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em query} & Query \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf S\+Q\+L\+Base} \doxyref{}{pag.}{class_s_q_l_base_abc044dffdea909fba8018ed8da35f075}.
+
+\index{Postgre\+S\+QL@{Postgre\+S\+QL}!get\+Conn@{get\+Conn}}
+\index{get\+Conn@{get\+Conn}!Postgre\+S\+QL@{Postgre\+S\+QL}}
+\subsubsection[{get\+Conn()}]{\setlength{\rightskip}{0pt plus 5cm}P\+Gconn$\ast$ Postgre\+S\+Q\+L\+::get\+Conn (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_postgre_s_q_l_a9c4408c7ba53e97ac2d9f84f90b0c415}
+Retorna a conexão \index{Postgre\+S\+QL@{Postgre\+S\+QL}!insert\+DB@{insert\+DB}}
+\index{insert\+DB@{insert\+DB}!Postgre\+S\+QL@{Postgre\+S\+QL}}
+\subsubsection[{insert\+D\+B(wx\+String schema, wx\+String table, vector$<$ wx\+String $>$ col\+Names, vector$<$ wx\+String $>$ col\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}bool Postgre\+S\+Q\+L\+::insert\+DB (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{schema, }
+\item[{wx\+String}]{table, }
+\item[{vector$<$ wx\+String $>$}]{col\+Names, }
+\item[{vector$<$ wx\+String $>$}]{col\+Values}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_postgre_s_q_l_a943379dc89b06b3cd450b1b8f5d67dfc}
+Monta e executa uma query de inserção de dados no Banco de dados 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em schema} & Esquema da tabela \\
+\hline
+{\em table} & Tabela \\
+\hline
+{\em col\+Names} & Nome das colunas \\
+\hline
+{\em col\+Values} & Valores das colunas \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf S\+Q\+L\+Base} \doxyref{}{pag.}{class_s_q_l_base_a1b66db12b3bc033e5dd3467e4ac63fcc}.
+
+\index{Postgre\+S\+QL@{Postgre\+S\+QL}!select\+DB@{select\+DB}}
+\index{select\+DB@{select\+DB}!Postgre\+S\+QL@{Postgre\+S\+QL}}
+\subsubsection[{select\+D\+B(vector$<$ wx\+String $>$ variables, vector$<$ wx\+String $>$ schemas, vector$<$ wx\+String $>$ tables, vector$<$ wx\+String $>$ table\+Alias, wx\+String condition=wx\+Empty\+String, wx\+String order\+By=wx\+Empty\+String)}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ Postgre\+S\+Q\+L\+::select\+DB (
+\begin{DoxyParamCaption}
+\item[{vector$<$ wx\+String $>$}]{variables, }
+\item[{vector$<$ wx\+String $>$}]{schemas, }
+\item[{vector$<$ wx\+String $>$}]{tables, }
+\item[{vector$<$ wx\+String $>$}]{table\+Alias, }
+\item[{wx\+String}]{condition = {\ttfamily wxEmptyString}, }
+\item[{wx\+String}]{order\+By = {\ttfamily wxEmptyString}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_postgre_s_q_l_a60d4e818903b605a421193c8b6f11814}
+Monta e executa uma query de select 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em variables} & Variaveis desejadas \\
+\hline
+{\em schemas} & Esquemas das tabelas \\
+\hline
+{\em tables} & Tabelas \\
+\hline
+{\em table\+Alias} & Nome para as tabelas \\
+\hline
+{\em condition} & Condições \\
+\hline
+{\em order\+By} & Ordenação dos valores \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf S\+Q\+L\+Base} \doxyref{}{pag.}{class_s_q_l_base_a239d5ba94f069a98cd574b856e4c1804}.
+
+\index{Postgre\+S\+QL@{Postgre\+S\+QL}!update\+DB@{update\+DB}}
+\index{update\+DB@{update\+DB}!Postgre\+S\+QL@{Postgre\+S\+QL}}
+\subsubsection[{update\+D\+B(wx\+String schema, wx\+String table, vector$<$ wx\+String $>$ col\+Names, vector$<$ wx\+String $>$ col\+Values, wx\+String condition=wx\+Empty\+String)}]{\setlength{\rightskip}{0pt plus 5cm}bool Postgre\+S\+Q\+L\+::update\+DB (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{schema, }
+\item[{wx\+String}]{table, }
+\item[{vector$<$ wx\+String $>$}]{col\+Names, }
+\item[{vector$<$ wx\+String $>$}]{col\+Values, }
+\item[{wx\+String}]{condition = {\ttfamily wxEmptyString}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_postgre_s_q_l_ae39c86e23950d8263691a07698f0d8bd}
+Monta e executa uma query de atualização de dados no Banco de dados 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em schema} & Esquema da tabela \\
+\hline
+{\em table} & Tabela \\
+\hline
+{\em col\+Names} & Nome das colunas \\
+\hline
+{\em col\+Values} & Valores das colunas \\
+\hline
+{\em condition} & Condição \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf S\+Q\+L\+Base} \doxyref{}{pag.}{class_s_q_l_base_a98bbfe57d7b1a773439ae28bb527090f}.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Postgre\+S\+Q\+L.\+h}\end{DoxyCompactItemize}

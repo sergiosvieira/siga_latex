@@ -1,0 +1,171 @@
+\section{ReferÃªncia da Classe Serie\+Plan\+Grid}
+\label{class_serie_plan_grid}\index{Serie\+Plan\+Grid@{Serie\+Plan\+Grid}}
+
+
+{\ttfamily \#include $<$Serie\+Plan.\+h$>$}
+
+
+
+Herdeiro de {\bf S\+I\+G\+A\+Grid}.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Serie\+Plan\+Grid} (wx\+Window $\ast$parent, wx\+Window\+ID id, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=0)
+\item 
+void {\bf on\+Select\+Cell} (wx\+Grid\+Event \&event)
+\item 
+void {\bf on\+Left\+Click} (wx\+Grid\+Event \&event)
+\item 
+void {\bf on\+Left\+Double\+Click} (wx\+Grid\+Event \&event)
+\item 
+void {\bf set\+Edit\+Of\+Cell\+In\+Interval} (wx\+Grid\+Event \&event)
+\item 
+{\bf Date} {\bf get\+Date\+Of\+Cell} (int row, int col)
+\item 
+void {\bf on\+Change} (wx\+Grid\+Event \&event)
+\item 
+void {\bf Change\+Cel\+Value} (int row, int col)
+\item 
+bool {\bf grid\+Is\+Modified} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Serie\+Plan} $\ast$ {\bf plan}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 31 do arquivo Serie\+Plan.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Serie\+Plan\+Grid@{Serie\+Plan\+Grid}!Serie\+Plan\+Grid@{Serie\+Plan\+Grid}}
+\index{Serie\+Plan\+Grid@{Serie\+Plan\+Grid}!Serie\+Plan\+Grid@{Serie\+Plan\+Grid}}
+\subsubsection[{Serie\+Plan\+Grid(wx\+Window $\ast$parent, wx\+Window\+I\+D id, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=0)}]{\setlength{\rightskip}{0pt plus 5cm}Serie\+Plan\+Grid\+::\+Serie\+Plan\+Grid (
+\begin{DoxyParamCaption}
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{wx\+Window\+ID}]{id, }
+\item[{const wx\+Point \&}]{pos = {\ttfamily wxDefaultPosition}, }
+\item[{const wx\+Size \&}]{size = {\ttfamily wxDefaultSize}, }
+\item[{long}]{style = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_serie_plan_grid_a03916092aeefd5369c018e062b973a66}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em parent} & Pai do frame \\
+\hline
+{\em id} & Identificador da janela \\
+\hline
+{\em pos} & Posição inicial da janela \\
+\hline
+{\em size} & Tamanho inicial da janela \\
+\hline
+{\em style} & Estilo da janela \\
+\hline
+\end{DoxyParams}
+
+
+DefiniÃ§Ã£o na linha 46 do arquivo Serie\+Plan.\+h.
+
+
+
+\subsection{MÃ©todos}
+\index{Serie\+Plan\+Grid@{Serie\+Plan\+Grid}!Change\+Cel\+Value@{Change\+Cel\+Value}}
+\index{Change\+Cel\+Value@{Change\+Cel\+Value}!Serie\+Plan\+Grid@{Serie\+Plan\+Grid}}
+\subsubsection[{Change\+Cel\+Value(int row, int col)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+Grid\+::\+Change\+Cel\+Value (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_grid_aef7b190a15706b508469a1874593cdd9}
+Pega o valor da linha e coluna passada e muda o valor da serie \index{Serie\+Plan\+Grid@{Serie\+Plan\+Grid}!get\+Date\+Of\+Cell@{get\+Date\+Of\+Cell}}
+\index{get\+Date\+Of\+Cell@{get\+Date\+Of\+Cell}!Serie\+Plan\+Grid@{Serie\+Plan\+Grid}}
+\subsubsection[{get\+Date\+Of\+Cell(int row, int col)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Date} Serie\+Plan\+Grid\+::get\+Date\+Of\+Cell (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_grid_a785afe5efc59a944811c2cdcd430c697}
+Pega a data correspondente da célula clicada na planilha \index{Serie\+Plan\+Grid@{Serie\+Plan\+Grid}!grid\+Is\+Modified@{grid\+Is\+Modified}}
+\index{grid\+Is\+Modified@{grid\+Is\+Modified}!Serie\+Plan\+Grid@{Serie\+Plan\+Grid}}
+\subsubsection[{grid\+Is\+Modified()}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Plan\+Grid\+::grid\+Is\+Modified (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_grid_a6135e89eadd8104fb0d571b30c761ff0}
+\index{Serie\+Plan\+Grid@{Serie\+Plan\+Grid}!on\+Change@{on\+Change}}
+\index{on\+Change@{on\+Change}!Serie\+Plan\+Grid@{Serie\+Plan\+Grid}}
+\subsubsection[{on\+Change(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+Grid\+::on\+Change (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_grid_a184257d763da672087b027a6b62ad94f}
+Evento de mudança de grid 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Plan\+Grid@{Serie\+Plan\+Grid}!on\+Left\+Click@{on\+Left\+Click}}
+\index{on\+Left\+Click@{on\+Left\+Click}!Serie\+Plan\+Grid@{Serie\+Plan\+Grid}}
+\subsubsection[{on\+Left\+Click(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+Grid\+::on\+Left\+Click (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_grid_a4988aeb51ce77ee7d2eaef0253f68222}
+Evento de click do botão esquerdo do mouse em uma célula de grid 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Plan\+Grid@{Serie\+Plan\+Grid}!on\+Left\+Double\+Click@{on\+Left\+Double\+Click}}
+\index{on\+Left\+Double\+Click@{on\+Left\+Double\+Click}!Serie\+Plan\+Grid@{Serie\+Plan\+Grid}}
+\subsubsection[{on\+Left\+Double\+Click(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+Grid\+::on\+Left\+Double\+Click (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_grid_a48f0f8035e5e5f5d25980382ccd6c3ed}
+Evento de duplo click do botão esquerdo do mouse em uma célula de grid 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Plan\+Grid@{Serie\+Plan\+Grid}!on\+Select\+Cell@{on\+Select\+Cell}}
+\index{on\+Select\+Cell@{on\+Select\+Cell}!Serie\+Plan\+Grid@{Serie\+Plan\+Grid}}
+\subsubsection[{on\+Select\+Cell(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+Grid\+::on\+Select\+Cell (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_grid_ac6aa76a4dac4477934dd051ab949d2a6}
+Evento de seleção de uma célula de grid 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Plan\+Grid@{Serie\+Plan\+Grid}!set\+Edit\+Of\+Cell\+In\+Interval@{set\+Edit\+Of\+Cell\+In\+Interval}}
+\index{set\+Edit\+Of\+Cell\+In\+Interval@{set\+Edit\+Of\+Cell\+In\+Interval}!Serie\+Plan\+Grid@{Serie\+Plan\+Grid}}
+\subsubsection[{set\+Edit\+Of\+Cell\+In\+Interval(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+Grid\+::set\+Edit\+Of\+Cell\+In\+Interval (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_grid_a21e4afe3409fca4380a7c84a307ab647}
+Permite a edição ou não da célula da grid de acordo com o intervalo no datepicker 
+
+\subsection{Atributos}
+\index{Serie\+Plan\+Grid@{Serie\+Plan\+Grid}!plan@{plan}}
+\index{plan@{plan}!Serie\+Plan\+Grid@{Serie\+Plan\+Grid}}
+\subsubsection[{plan}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie\+Plan}$\ast$ Serie\+Plan\+Grid\+::plan}\label{class_serie_plan_grid_a3ef5395f11ba9fd26ea154bb11158480}
+Aponta para a planilha 
+
+DefiniÃ§Ã£o na linha 37 do arquivo Serie\+Plan.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Serie\+Plan.\+h}\end{DoxyCompactItemize}

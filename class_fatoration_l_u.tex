@@ -1,0 +1,144 @@
+\section{ReferÃªncia da Classe Fatoration\+LU}
+\label{class_fatoration_l_u}\index{Fatoration\+LU@{Fatoration\+LU}}
+
+
+{\ttfamily \#include $<$Fatoration\+L\+U.\+h$>$}
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Fatoration\+LU} ({\bf Matrix} A={\bf Matrix}(0, 0))
+\item 
+{\bf $\sim$\+Fatoration\+LU} ()
+\item 
+{\bf Matrix} {\bf dcmp\+LU} ({\bf Matrix} A)
+\item 
+vector$<$ double $>$ {\bf solve\+LU} (vector$<$ double $>$ b)
+\item 
+{\bf Matrix} {\bf solve\+LU} ({\bf Matrix} B)
+\item 
+{\bf Matrix} {\bf get\+LU} ()
+\item 
+void {\bf set\+LU} ({\bf Matrix} lu)
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 15 do arquivo Fatoration\+L\+U.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Fatoration\+LU@{Fatoration\+LU}!Fatoration\+LU@{Fatoration\+LU}}
+\index{Fatoration\+LU@{Fatoration\+LU}!Fatoration\+LU@{Fatoration\+LU}}
+\subsubsection[{Fatoration\+L\+U(\+Matrix A=\+Matrix(0, 0))}]{\setlength{\rightskip}{0pt plus 5cm}Fatoration\+L\+U\+::\+Fatoration\+LU (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{A = {\ttfamily {\bf Matrix}(0,~0)}}
+\end{DoxyParamCaption}
+)}\label{class_fatoration_l_u_a2214cee064de9d8aa32042ba47a0d8ec}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em A} & Matriz para decomposição \\
+\hline
+\end{DoxyParams}
+\index{Fatoration\+LU@{Fatoration\+LU}!````~Fatoration\+LU@{$\sim$\+Fatoration\+LU}}
+\index{````~Fatoration\+LU@{$\sim$\+Fatoration\+LU}!Fatoration\+LU@{Fatoration\+LU}}
+\subsubsection[{$\sim$\+Fatoration\+L\+U()}]{\setlength{\rightskip}{0pt plus 5cm}Fatoration\+L\+U\+::$\sim$\+Fatoration\+LU (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_fatoration_l_u_af7ed82baa7ed9c9fad79a3b541bbce9a}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{Fatoration\+LU@{Fatoration\+LU}!dcmp\+LU@{dcmp\+LU}}
+\index{dcmp\+LU@{dcmp\+LU}!Fatoration\+LU@{Fatoration\+LU}}
+\subsubsection[{dcmp\+L\+U(\+Matrix A)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Fatoration\+L\+U\+::dcmp\+LU (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{A}
+\end{DoxyParamCaption}
+)}\label{class_fatoration_l_u_a2a0da33cd63e2b4d75f1f95c8dbc309d}
+Efetua a decomposição de A = L x U Tanto retorna a matriz decomposta quanto armazena na classe a mesma para utilização; 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em A} & Matriz para fatoração \\
+\hline
+\end{DoxyParams}
+\index{Fatoration\+LU@{Fatoration\+LU}!get\+LU@{get\+LU}}
+\index{get\+LU@{get\+LU}!Fatoration\+LU@{Fatoration\+LU}}
+\subsubsection[{get\+L\+U()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Fatoration\+L\+U\+::get\+LU (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_fatoration_l_u_a2ad17ee06309d61aab3bea833c82356a}
+Resolve uma equação linear do tipo A . x = b usando a matrix decomposição LU. B e X são matrizes 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em LU} & \doxyref{Matrix}{pag.}{class_matrix} decomposição de A \\
+\hline
+{\em b} & Matriz do lado direito da equação, B \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a matriz solução X
+\end{DoxyReturn}
+\doxyref{Matrix}{pag.}{class_matrix} solve\+L\+U(\+Matrix lu, Matrix B); Metodos para pegar e definir a matriz decomposta 
+
+DefiniÃ§Ã£o na linha 66 do arquivo Fatoration\+L\+U.\+h.
+
+\index{Fatoration\+LU@{Fatoration\+LU}!set\+LU@{set\+LU}}
+\index{set\+LU@{set\+LU}!Fatoration\+LU@{Fatoration\+LU}}
+\subsubsection[{set\+L\+U(\+Matrix lu)}]{\setlength{\rightskip}{0pt plus 5cm}void Fatoration\+L\+U\+::set\+LU (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{lu}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_fatoration_l_u_a5b06da02ecf73e616e25b47da535945c}
+
+
+DefiniÃ§Ã£o na linha 67 do arquivo Fatoration\+L\+U.\+h.
+
+\index{Fatoration\+LU@{Fatoration\+LU}!solve\+LU@{solve\+LU}}
+\index{solve\+LU@{solve\+LU}!Fatoration\+LU@{Fatoration\+LU}}
+\subsubsection[{solve\+L\+U(vector$<$ double $>$ b)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ Fatoration\+L\+U\+::solve\+LU (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{b}
+\end{DoxyParamCaption}
+)}\label{class_fatoration_l_u_a2be40b300006fc960f9c686f1447f59d}
+Resolve uma equação linear do tipo A . x = b usando a matrix decomposição LU. Utiliza a \doxyref{Matrix}{pag.}{class_matrix} LU da classe para os calculos, fazendo-\/se assim necessario chamar o metodo dcmp\+LU previamente. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em b} & Vetor do lado direito da equação, b \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o vetor solução x 
+\end{DoxyReturn}
+\index{Fatoration\+LU@{Fatoration\+LU}!solve\+LU@{solve\+LU}}
+\index{solve\+LU@{solve\+LU}!Fatoration\+LU@{Fatoration\+LU}}
+\subsubsection[{solve\+L\+U(\+Matrix B)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Fatoration\+L\+U\+::solve\+LU (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{B}
+\end{DoxyParamCaption}
+)}\label{class_fatoration_l_u_a5475b4a6fa09fdb63baa7d826906ae44}
+Resolve uma equação linear do tipo A . x = b usando a matrix decomposição LU. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em LU} & \doxyref{Matrix}{pag.}{class_matrix} decomposição de A \\
+\hline
+{\em b} & Vetor do lado direito da equação, b \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o vetor solução x
+\end{DoxyReturn}
+vector$<$double$>$ solve\+L\+U(\+Matrix lu, vector$<$double$>$ b); Resolve uma equação linear do tipo A . X = B usando a matrix decomposição LU. B e X são matrizes Utiliza a \doxyref{Matrix}{pag.}{class_matrix} LU da classe para os calculos, fazendo-\/se assim necessario chamar o metodo dcmp\+LU previamente. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em b} & Matriz do lado direito da equação, B \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna a matriz solução X 
+\end{DoxyReturn}
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Fatoration\+L\+U.\+h}\end{DoxyCompactItemize}

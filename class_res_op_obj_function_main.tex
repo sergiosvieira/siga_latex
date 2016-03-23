@@ -1,0 +1,221 @@
+\section{ReferÃªncia da Classe Res\+Op\+Obj\+Function\+Main}
+\label{class_res_op_obj_function_main}\index{Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Obj\+Function\+Main.\+h$>$}
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Obj\+Function\+Main} ({\bf Res\+Op\+Interface} $\ast${\bf main\+Inter})
+\item 
+{\bf $\sim$\+Res\+Op\+Obj\+Function\+Main} ()
+\item 
+{\bf Matrix} {\bf run} ({\bf Matrix} \&swarm)
+\item 
+void {\bf run\+Model\+Main} ({\bf Matrix} \&swarm\+Line)
+\item 
+double {\bf run\+Obj\+Function} ({\bf res\+Op\+Obj\+Func\+Type} function)
+\item 
+void {\bf set\+Default\+Values} (char $\ast$file\+Name)
+\item 
+void {\bf save\+Default\+Values} (char $\ast$file\+Name)
+\item 
+void {\bf set\+Info} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+bool {\bf check\+Limits} ()
+\item 
+void {\bf set\+Variables} ({\bf Matrix} \&swarm\+Line)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Atributos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ {\bf res\+Op\+Obj\+Func\+Type}, {\bf Res\+Op\+Obj\+Function} $\ast$ $>$ {\bf functions}
+\item 
+vector$<$ {\bf res\+Op\+Obj\+Func\+Type} $>$ {\bf used\+Functions}
+\item 
+{\bf Res\+Op\+Interface} $\ast$ {\bf main\+Inter}
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 11 do arquivo Res\+Op\+Obj\+Function\+Main.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}!Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}}
+\index{Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}!Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}}
+\subsubsection[{Res\+Op\+Obj\+Function\+Main(\+Res\+Op\+Interface $\ast$main\+Inter)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Obj\+Function\+Main\+::\+Res\+Op\+Obj\+Function\+Main (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Interface} $\ast$}]{main\+Inter}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_main_ab9e3c9fe53142a32233d3ca27a393ba3}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em main\+Inter} & Interface da classe principal \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}!````~Res\+Op\+Obj\+Function\+Main@{$\sim$\+Res\+Op\+Obj\+Function\+Main}}
+\index{````~Res\+Op\+Obj\+Function\+Main@{$\sim$\+Res\+Op\+Obj\+Function\+Main}!Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}}
+\subsubsection[{$\sim$\+Res\+Op\+Obj\+Function\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Obj\+Function\+Main\+::$\sim$\+Res\+Op\+Obj\+Function\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_main_aae716d8fecc56b2211916561bee89973}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Obj\+Function\+Main\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_main_a070f54715dfdb7c5f913e539a5f0c4f5}
+Método que checa se as informações necessárias foram preenchidas. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}!check\+Limits@{check\+Limits}}
+\index{check\+Limits@{check\+Limits}!Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}}
+\subsubsection[{check\+Limits()}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Obj\+Function\+Main\+::check\+Limits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_main_ac25b500c26e5c3300b1ec3cf977afd8f}
+Verifica se swarm\+Line estoura os limites das variáveis \index{Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}!clear@{clear}}
+\index{clear@{clear}!Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Obj\+Function\+Main\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_main_a3552e7c7fd33921cd2cf6ff87b1710f8}
+\index{Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Obj\+Function\+Main\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_main_a8175702a130ab7aa1f7d3361e527760a}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Obj\+Function\+Main\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_main_a3d37417e4b5135f495990faed5d679de}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}!run@{run}}
+\index{run@{run}!Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}}
+\subsubsection[{run(\+Matrix \&swarm)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Res\+Op\+Obj\+Function\+Main\+::run (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{swarm}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_main_a53a96bdfce9a98d0401b4187bc0d3318}
+Método de execução principal do módulo \index{Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}!run\+Model\+Main@{run\+Model\+Main}}
+\index{run\+Model\+Main@{run\+Model\+Main}!Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}}
+\subsubsection[{run\+Model\+Main(\+Matrix \&swarm\+Line)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Obj\+Function\+Main\+::run\+Model\+Main (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{swarm\+Line}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_main_afc32d41c02909217cd7c0269d245c16f}
+Método que executa a simulação da rede \index{Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}!run\+Obj\+Function@{run\+Obj\+Function}}
+\index{run\+Obj\+Function@{run\+Obj\+Function}!Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}}
+\subsubsection[{run\+Obj\+Function(res\+Op\+Obj\+Func\+Type function)}]{\setlength{\rightskip}{0pt plus 5cm}double Res\+Op\+Obj\+Function\+Main\+::run\+Obj\+Function (
+\begin{DoxyParamCaption}
+\item[{{\bf res\+Op\+Obj\+Func\+Type}}]{function}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_main_ae3d4f336e41b1ea4684f6e43784c1310}
+Método que executa o cálculo das funções \index{Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}!save\+Default\+Values@{save\+Default\+Values}}
+\index{save\+Default\+Values@{save\+Default\+Values}!Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}}
+\subsubsection[{save\+Default\+Values(char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Obj\+Function\+Main\+::save\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_main_ac25ac5c37c744d69dc962e361db80597}
+Método que salva os dados para um arquivo. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em file\+Name} & Nome do aquivo para ler as informações. \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}!set\+Default\+Values@{set\+Default\+Values}}
+\index{set\+Default\+Values@{set\+Default\+Values}!Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}}
+\subsubsection[{set\+Default\+Values(char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Obj\+Function\+Main\+::set\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_main_a3821a5227ec6bb0f401929b9d3f9f8fa}
+Método que recebe os dados de arquivo. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em file\+Name} & Nome do aquivo para ler as informações. \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Obj\+Function\+Main\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_main_ad4d7b8e9df021147df55945c0beccf05}
+Insere informaçoes na interface \index{Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}!set\+Variables@{set\+Variables}}
+\index{set\+Variables@{set\+Variables}!Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}}
+\subsubsection[{set\+Variables(\+Matrix \&swarm\+Line)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Obj\+Function\+Main\+::set\+Variables (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{swarm\+Line}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_main_a34310a44d665d5d4d8f4a3078bb24df9}
+Atribui novos valores as variáveis de decisão 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em swarm\+Line} & \doxyref{Matrix}{pag.}{class_matrix} ... \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}!functions@{functions}}
+\index{functions@{functions}!Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}}
+\subsubsection[{functions}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf res\+Op\+Obj\+Func\+Type},{\bf Res\+Op\+Obj\+Function}$\ast$$>$ Res\+Op\+Obj\+Function\+Main\+::functions}\label{class_res_op_obj_function_main_a927665528dedafa0f41cd21aab0fda2c}
+Instâncias das funções para cada tipo  \doxyref{Res\+Op\+Obj\+Function}{pag.}{class_res_op_obj_function} 
+
+DefiniÃ§Ã£o na linha 31 do arquivo Res\+Op\+Obj\+Function\+Main.\+h.
+
+\index{Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}!main\+Inter@{main\+Inter}}
+\index{main\+Inter@{main\+Inter}!Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}}
+\subsubsection[{main\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Interface}$\ast$ Res\+Op\+Obj\+Function\+Main\+::main\+Inter}\label{class_res_op_obj_function_main_adf61e9e8b759a965962368b5feb9c7bb}
+Aponta para a classe da interafce principal 
+
+DefiniÃ§Ã£o na linha 41 do arquivo Res\+Op\+Obj\+Function\+Main.\+h.
+
+\index{Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}!used\+Functions@{used\+Functions}}
+\index{used\+Functions@{used\+Functions}!Res\+Op\+Obj\+Function\+Main@{Res\+Op\+Obj\+Function\+Main}}
+\subsubsection[{used\+Functions}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf res\+Op\+Obj\+Func\+Type}$>$ Res\+Op\+Obj\+Function\+Main\+::used\+Functions}\label{class_res_op_obj_function_main_ade4fb5f8d9f48dfaf28e38a12f578a26}
+Vetor com as funções objetivo à otimização 
+
+DefiniÃ§Ã£o na linha 36 do arquivo Res\+Op\+Obj\+Function\+Main.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Obj\+Function\+Main.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,233 @@
+\section{Referência da Classe C\+Time}
+\label{class_c_time}\index{C\+Time@{C\+Time}}
+
+
+{\ttfamily \#include $<$ctime.\+h$>$}
+
+
+
+Superclasse de {\bf C\+Timestamp}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf C\+Time} (const {\bf C\+Time} \&copy)
+\item 
+{\bf C\+Time} ({\bf Int32} millisec\+Past\+Midnight=0)
+\item 
+{\bf C\+Time} ({\bf Int32} hour, {\bf Int32} minute, {\bf Int32} second, {\bf Int32} millisecond=0)
+\item 
+{\bf $\sim$\+C\+Time} ()
+\item 
+{\bf C\+Time} \& {\bf operator=} (const {\bf C\+Time} \&assign)
+\item 
+bool {\bf operator==} (const {\bf C\+Time} \&compare) const 
+\item 
+bool {\bf operator$<$} (const {\bf C\+Time} \&compare) const 
+\item 
+{\bf C\+Time} {\bf operator+} ({\bf Int32} time\+Offset) const 
+\item 
+{\bf C\+Time} {\bf operator-\/} ({\bf Int32} time\+Offset) const 
+\item 
+{\bf Int32} {\bf operator-\/} (const {\bf C\+Time} \&other\+Time) const 
+\item 
+{\bf C\+Time} \& {\bf operator+=} ({\bf Int32} time\+Offset)
+\item 
+{\bf C\+Time} \& {\bf operator-\/=} ({\bf Int32} time\+Offset)
+\item 
+{\bf Int32} {\bf Get\+Hour} () const 
+\item 
+{\bf Int32} {\bf Get\+Minute} () const 
+\item 
+{\bf Int32} {\bf Get\+Second} () const 
+\item 
+{\bf Int32} {\bf Get\+Milli\+Second} () const 
+\item 
+{\bf Int32} {\bf Get\+Milli\+Seconds\+Past\+Midnight} () const 
+\item 
+void {\bf Internal\+To\+M\+S\+PM} () const 
+\item 
+void {\bf Internal\+To\+Time} () const 
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf C\+Time} {\bf Get\+System\+Time} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 58 do arquivo ctime.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{C\+Time@{C\+Time}!C\+Time@{C\+Time}}
+\index{C\+Time@{C\+Time}!C\+Time@{C\+Time}}
+\subsubsection[{C\+Time(const C\+Time \&copy)}]{\setlength{\rightskip}{0pt plus 5cm}C\+Time\+::\+C\+Time (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Time} \&}]{copy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c_time_ae28e7c2ff7debf80635bff9eb239e2f2}
+
+
+Definição na linha 71 do arquivo ctime.\+h.
+
+\index{C\+Time@{C\+Time}!C\+Time@{C\+Time}}
+\index{C\+Time@{C\+Time}!C\+Time@{C\+Time}}
+\subsubsection[{C\+Time(\+Int32 millisec\+Past\+Midnight=0)}]{\setlength{\rightskip}{0pt plus 5cm}C\+Time\+::\+C\+Time (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{millisec\+Past\+Midnight = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c_time_a94a28cbd87f269816eebb4a0298cd445}
+
+
+Definição na linha 73 do arquivo ctime.\+h.
+
+\index{C\+Time@{C\+Time}!C\+Time@{C\+Time}}
+\index{C\+Time@{C\+Time}!C\+Time@{C\+Time}}
+\subsubsection[{C\+Time(\+Int32 hour, Int32 minute, Int32 second, Int32 millisecond=0)}]{\setlength{\rightskip}{0pt plus 5cm}C\+Time\+::\+C\+Time (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{hour, }
+\item[{{\bf Int32}}]{minute, }
+\item[{{\bf Int32}}]{second, }
+\item[{{\bf Int32}}]{millisecond = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_c_time_ac0a6c1d94d932eef190821db4d8e88d9}
+\index{C\+Time@{C\+Time}!````~C\+Time@{$\sim$\+C\+Time}}
+\index{````~C\+Time@{$\sim$\+C\+Time}!C\+Time@{C\+Time}}
+\subsubsection[{$\sim$\+C\+Time()}]{\setlength{\rightskip}{0pt plus 5cm}C\+Time\+::$\sim$\+C\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c_time_a330cc74fe72e66eb37a6f1932a8bbe05}
+
+
+Definição na linha 81 do arquivo ctime.\+h.
+
+
+
+\subsection{Métodos}
+\index{C\+Time@{C\+Time}!Get\+Hour@{Get\+Hour}}
+\index{Get\+Hour@{Get\+Hour}!C\+Time@{C\+Time}}
+\subsubsection[{Get\+Hour() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int32} C\+Time\+::\+Get\+Hour (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_c_time_ab92927dcfd4321107c338418ac52dc01}
+\index{C\+Time@{C\+Time}!Get\+Milli\+Second@{Get\+Milli\+Second}}
+\index{Get\+Milli\+Second@{Get\+Milli\+Second}!C\+Time@{C\+Time}}
+\subsubsection[{Get\+Milli\+Second() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int32} C\+Time\+::\+Get\+Milli\+Second (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_c_time_a442aa3f7157c7969bf4da07ad73338b4}
+\index{C\+Time@{C\+Time}!Get\+Milli\+Seconds\+Past\+Midnight@{Get\+Milli\+Seconds\+Past\+Midnight}}
+\index{Get\+Milli\+Seconds\+Past\+Midnight@{Get\+Milli\+Seconds\+Past\+Midnight}!C\+Time@{C\+Time}}
+\subsubsection[{Get\+Milli\+Seconds\+Past\+Midnight() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int32} C\+Time\+::\+Get\+Milli\+Seconds\+Past\+Midnight (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_c_time_ab6afadab8eeab33a462cf7495b7a43dd}
+\index{C\+Time@{C\+Time}!Get\+Minute@{Get\+Minute}}
+\index{Get\+Minute@{Get\+Minute}!C\+Time@{C\+Time}}
+\subsubsection[{Get\+Minute() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int32} C\+Time\+::\+Get\+Minute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_c_time_a304985d968ed7f8e7069baddef20a985}
+\index{C\+Time@{C\+Time}!Get\+Second@{Get\+Second}}
+\index{Get\+Second@{Get\+Second}!C\+Time@{C\+Time}}
+\subsubsection[{Get\+Second() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int32} C\+Time\+::\+Get\+Second (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_c_time_ad36e24d4bde9456be3a9f9a97f3fa270}
+\index{C\+Time@{C\+Time}!Get\+System\+Time@{Get\+System\+Time}}
+\index{Get\+System\+Time@{Get\+System\+Time}!C\+Time@{C\+Time}}
+\subsubsection[{Get\+System\+Time()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf C\+Time} C\+Time\+::\+Get\+System\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_c_time_a8da41d561e0f366917ebb02dbaf3f8ed}
+\index{C\+Time@{C\+Time}!Internal\+To\+M\+S\+PM@{Internal\+To\+M\+S\+PM}}
+\index{Internal\+To\+M\+S\+PM@{Internal\+To\+M\+S\+PM}!C\+Time@{C\+Time}}
+\subsubsection[{Internal\+To\+M\+S\+P\+M() const }]{\setlength{\rightskip}{0pt plus 5cm}void C\+Time\+::\+Internal\+To\+M\+S\+PM (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_c_time_ab2ee896545a0b7fac85550952e697b0b}
+\index{C\+Time@{C\+Time}!Internal\+To\+Time@{Internal\+To\+Time}}
+\index{Internal\+To\+Time@{Internal\+To\+Time}!C\+Time@{C\+Time}}
+\subsubsection[{Internal\+To\+Time() const }]{\setlength{\rightskip}{0pt plus 5cm}void C\+Time\+::\+Internal\+To\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_c_time_a984047c81113eada793b12b4ab58283f}
+\index{C\+Time@{C\+Time}!operator+@{operator+}}
+\index{operator+@{operator+}!C\+Time@{C\+Time}}
+\subsubsection[{operator+(\+Int32 time\+Offset) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Time} C\+Time\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{time\+Offset}
+\end{DoxyParamCaption}
+) const}\label{class_c_time_a4689a2fd72a25131b5e6205325d4b724}
+\index{C\+Time@{C\+Time}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!C\+Time@{C\+Time}}
+\subsubsection[{operator+=(\+Int32 time\+Offset)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Time}\& C\+Time\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{time\+Offset}
+\end{DoxyParamCaption}
+)}\label{class_c_time_a5fce4444a9c2d3f251fdbdd06e1db4e3}
+\index{C\+Time@{C\+Time}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!C\+Time@{C\+Time}}
+\subsubsection[{operator-\/(\+Int32 time\+Offset) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Time} C\+Time\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{time\+Offset}
+\end{DoxyParamCaption}
+) const}\label{class_c_time_af37c55a533221bff479bdda62675ce2a}
+\index{C\+Time@{C\+Time}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!C\+Time@{C\+Time}}
+\subsubsection[{operator-\/(const C\+Time \&other\+Time) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int32} C\+Time\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Time} \&}]{other\+Time}
+\end{DoxyParamCaption}
+) const}\label{class_c_time_ad42c01b47fc27abe6cf89945d1dbaf13}
+\index{C\+Time@{C\+Time}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!C\+Time@{C\+Time}}
+\subsubsection[{operator-\/=(\+Int32 time\+Offset)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Time}\& C\+Time\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{time\+Offset}
+\end{DoxyParamCaption}
+)}\label{class_c_time_a9987daf395caf2844ea381c9e9bad862}
+\index{C\+Time@{C\+Time}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!C\+Time@{C\+Time}}
+\subsubsection[{operator$<$(const C\+Time \&compare) const }]{\setlength{\rightskip}{0pt plus 5cm}bool C\+Time\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Time} \&}]{compare}
+\end{DoxyParamCaption}
+) const}\label{class_c_time_addb06d00c8432b8fc646df83e403fd09}
+\index{C\+Time@{C\+Time}!operator=@{operator=}}
+\index{operator=@{operator=}!C\+Time@{C\+Time}}
+\subsubsection[{operator=(const C\+Time \&assign)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Time}\& C\+Time\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Time} \&}]{assign}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c_time_a9b9f3210ba5154015fba494b009db7be}
+
+
+Definição na linha 86 do arquivo ctime.\+h.
+
+\index{C\+Time@{C\+Time}!operator==@{operator==}}
+\index{operator==@{operator==}!C\+Time@{C\+Time}}
+\subsubsection[{operator==(const C\+Time \&compare) const }]{\setlength{\rightskip}{0pt plus 5cm}bool C\+Time\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Time} \&}]{compare}
+\end{DoxyParamCaption}
+) const}\label{class_c_time_a7f5fc08671126b87634cc20e9c5840ee}
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf ctime.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,143 @@
+\section{ReferÃªncia da Classe Numerical\+Utils}
+\label{class_numerical_utils}\index{Numerical\+Utils@{Numerical\+Utils}}
+
+
+{\ttfamily \#include $<$Numerical\+Utils.\+h$>$}
+
+\subsection*{MÃ©todos PÃºblicos EstÃ¡ticos}
+\begin{DoxyCompactItemize}
+\item 
+static bool {\bf compare\+Doubles} (double x, double y, double {\bf epsilon}=0.\+0001)
+\item 
+static unsigned int {\bf random\+Int\+Number} (unsigned int min, unsigned int max)
+\item 
+static double {\bf random\+Number} (double min, double max)
+\item 
+static void {\bf thiessen\+Matrix\+To\+Matrix} ({\bf Matrix} \&matrix, std\+::vector$<$ std\+::vector$<$ string $>$ $>$ \&t\+Matrix)
+\item 
+static void {\bf matrix\+To\+Thiessen\+Matrix} ({\bf Matrix} \&matrix, std\+::vector$<$ std\+::vector$<$ string $>$ $>$ \&t\+Matrix)
+\item 
+static wx\+String {\bf insert\+Slash\+Into\+Date} (const wx\+String \&str\+Date)
+\item 
+static wx\+String {\bf strip\+Slashes\+From\+Date} (const wx\+String \&str\+Date)
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 14 do arquivo Numerical\+Utils.\+h.
+
+
+
+\subsection{MÃ©todos}
+\index{Numerical\+Utils@{Numerical\+Utils}!compare\+Doubles@{compare\+Doubles}}
+\index{compare\+Doubles@{compare\+Doubles}!Numerical\+Utils@{Numerical\+Utils}}
+\subsubsection[{compare\+Doubles(double x, double y, double epsilon=0.\+0001)}]{\setlength{\rightskip}{0pt plus 5cm}static bool Numerical\+Utils\+::compare\+Doubles (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y, }
+\item[{double}]{epsilon = {\ttfamily 0.0001}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_numerical_utils_a727e846e538069e094d1a68f2b609f0a}
+Compara 2 doubles e retorna true caso eles sejam numericamente iguais, considerando um certo epsilon 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em x} & Primeiro número a ser comparado \\
+\hline
+{\em y} & Segundo número a ser comparado \\
+\hline
+{\em epsilon} & Precisão a ser condiserada na comparação. Quanto menor for o valor de epsilon, mais próximos os números deverão ser para serem considerados iguais. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true, caso os números sejam iguais. false, cc. 
+\end{DoxyReturn}
+\index{Numerical\+Utils@{Numerical\+Utils}!insert\+Slash\+Into\+Date@{insert\+Slash\+Into\+Date}}
+\index{insert\+Slash\+Into\+Date@{insert\+Slash\+Into\+Date}!Numerical\+Utils@{Numerical\+Utils}}
+\subsubsection[{insert\+Slash\+Into\+Date(const wx\+String \&str\+Date)}]{\setlength{\rightskip}{0pt plus 5cm}static wx\+String Numerical\+Utils\+::insert\+Slash\+Into\+Date (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{str\+Date}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_numerical_utils_a31b3a30ee92a82ebc410ff3d5697b6bc}
+Mover esta função para uma classe nova \doxyref{String\+Utils}{pag.}{class_string_utils} Insere barras \textquotesingle{}/\textquotesingle{} como separador na data sem formatação de entrada
+
+
+\begin{DoxyParams}{ParÃ¢metros}
+{\em str\+Date} & Data sem separação por barras (ex.\+: ddmmaaaa) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+data formatada com barras (ex.\+: dd/mm/aaaa) 
+\end{DoxyReturn}
+\index{Numerical\+Utils@{Numerical\+Utils}!matrix\+To\+Thiessen\+Matrix@{matrix\+To\+Thiessen\+Matrix}}
+\index{matrix\+To\+Thiessen\+Matrix@{matrix\+To\+Thiessen\+Matrix}!Numerical\+Utils@{Numerical\+Utils}}
+\subsubsection[{matrix\+To\+Thiessen\+Matrix(\+Matrix \&matrix, std\+::vector$<$ std\+::vector$<$ string $>$ $>$ \&t\+Matrix)}]{\setlength{\rightskip}{0pt plus 5cm}static void Numerical\+Utils\+::matrix\+To\+Thiessen\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{matrix, }
+\item[{std\+::vector$<$ std\+::vector$<$ string $>$ $>$ \&}]{t\+Matrix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_numerical_utils_a8215d18d3efdb2ec64d2343b80a2b839}
+Transforma uma Thiessen\+Matrix(vector$<$vector$<$wx\+String$>$ $>$) em uma \doxyref{Matrix}{pag.}{class_matrix} \index{Numerical\+Utils@{Numerical\+Utils}!random\+Int\+Number@{random\+Int\+Number}}
+\index{random\+Int\+Number@{random\+Int\+Number}!Numerical\+Utils@{Numerical\+Utils}}
+\subsubsection[{random\+Int\+Number(unsigned int min, unsigned int max)}]{\setlength{\rightskip}{0pt plus 5cm}static unsigned int Numerical\+Utils\+::random\+Int\+Number (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{min, }
+\item[{unsigned int}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_numerical_utils_afdc02eba5671c719342d3afbc6a726c9}
+Gera um número inteiro aleatório dentro da faixa [min, max]
+
+
+\begin{DoxyParams}{ParÃ¢metros}
+{\em min} & Menor valor para o número aleatório (inclusivo) \\
+\hline
+{\em max} & Maior valor para o número aleatório (inclusivo) \\
+\hline
+\end{DoxyParams}
+\index{Numerical\+Utils@{Numerical\+Utils}!random\+Number@{random\+Number}}
+\index{random\+Number@{random\+Number}!Numerical\+Utils@{Numerical\+Utils}}
+\subsubsection[{random\+Number(double min, double max)}]{\setlength{\rightskip}{0pt plus 5cm}static double Numerical\+Utils\+::random\+Number (
+\begin{DoxyParamCaption}
+\item[{double}]{min, }
+\item[{double}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_numerical_utils_a4c1bc7ca688c1c59b7eaf248614d8327}
+Gera um número real (double) aleatório dentro da faixa [min, max)
+
+
+\begin{DoxyParams}{ParÃ¢metros}
+{\em min} & Menor valor para o número aleatório (inclusivo) \\
+\hline
+{\em max} & Maior valor para o número aleatório (exclusivo) \\
+\hline
+\end{DoxyParams}
+\index{Numerical\+Utils@{Numerical\+Utils}!strip\+Slashes\+From\+Date@{strip\+Slashes\+From\+Date}}
+\index{strip\+Slashes\+From\+Date@{strip\+Slashes\+From\+Date}!Numerical\+Utils@{Numerical\+Utils}}
+\subsubsection[{strip\+Slashes\+From\+Date(const wx\+String \&str\+Date)}]{\setlength{\rightskip}{0pt plus 5cm}static wx\+String Numerical\+Utils\+::strip\+Slashes\+From\+Date (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{str\+Date}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_numerical_utils_a233d52a6da815cd182ac1a1af5fc9a61}
+Mover esta função para uma classe nova \doxyref{String\+Utils}{pag.}{class_string_utils} Remove as barras \textquotesingle{}/\textquotesingle{} da data formatada de entrada
+
+
+\begin{DoxyParams}{ParÃ¢metros}
+{\em str\+Date} & Data com formatação por barras (ex.\+: dd/mm/aaaa) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+data sem formatação de barras (ex.\+: ddmmaaaa) 
+\end{DoxyReturn}
+\index{Numerical\+Utils@{Numerical\+Utils}!thiessen\+Matrix\+To\+Matrix@{thiessen\+Matrix\+To\+Matrix}}
+\index{thiessen\+Matrix\+To\+Matrix@{thiessen\+Matrix\+To\+Matrix}!Numerical\+Utils@{Numerical\+Utils}}
+\subsubsection[{thiessen\+Matrix\+To\+Matrix(\+Matrix \&matrix, std\+::vector$<$ std\+::vector$<$ string $>$ $>$ \&t\+Matrix)}]{\setlength{\rightskip}{0pt plus 5cm}static void Numerical\+Utils\+::thiessen\+Matrix\+To\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{matrix, }
+\item[{std\+::vector$<$ std\+::vector$<$ string $>$ $>$ \&}]{t\+Matrix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_numerical_utils_a636a0b07a89cbf82d5cffe4a81044aa1}
+Transforma uma \doxyref{Matrix}{pag.}{class_matrix} em uma Thiessen\+Matrix(vector$<$vector$<$wx\+String$>$ $>$) 
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Numerical\+Utils.\+h}\end{DoxyCompactItemize}

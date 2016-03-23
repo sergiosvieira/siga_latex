@@ -1,0 +1,318 @@
+\section{Referência da Classe Generic\+Interface}
+\label{class_generic_interface}\index{Generic\+Interface@{Generic\+Interface}}
+
+
+{\ttfamily \#include $<$Generic\+Interface.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf update\+Elements} ()
+\item 
+{\bf Generic\+Interface} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent})
+\item 
+{\bf $\sim$\+Generic\+Interface} ()
+\item 
+void {\bf on\+Open\+Q\+Inflow} (wx\+Command\+Event \&event)
+\item 
+void {\bf set\+Info} ()
+\item 
+void {\bf radio\+Box} ()
+\item 
+void {\bf set\+Interval} (const {\bf Interval} \&interval)
+\item 
+void {\bf show\+Results} ()
+\item 
+void {\bf create\+Results} (int id)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf on\+Chanced\+Radio\+Box} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Choice\+Element} (wx\+Command\+Event \&event)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ unsigned int $>$ {\bf elements\+Ids}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Corr\+Fact}
+\item 
+wx\+Button $\ast$ {\bf bt\+Q\+Obs}
+\item 
+wx\+Bitmap {\bf bitmap\+Ok}
+\item 
+wx\+Bitmap {\bf bitmap\+Empty}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf bitmap\+Q\+Obs}
+\item 
+wx\+Flex\+Grid\+Sizer $\ast$ {\bf grid\+Weather}
+\item 
+wx\+Flex\+Grid\+Sizer $\ast$ {\bf grid\+Corr\+Fact}
+\item 
+wx\+Radio\+Box $\ast$ {\bf rb\+Obs}
+\item 
+wx\+Choice $\ast$ {\bf c\+Elements}
+\item 
+wx\+Sizer $\ast$ {\bf bs\+Elements}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Generic\+Model\+Main}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 61 do arquivo Generic\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Generic\+Interface@{Generic\+Interface}!Generic\+Interface@{Generic\+Interface}}
+\index{Generic\+Interface@{Generic\+Interface}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{Generic\+Interface(wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Generic\+Interface\+::\+Generic\+Interface (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_generic_interface_a98099139f201133aa5d364c30addb37d}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & \\
+\hline
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+\index{Generic\+Interface@{Generic\+Interface}!````~Generic\+Interface@{$\sim$\+Generic\+Interface}}
+\index{````~Generic\+Interface@{$\sim$\+Generic\+Interface}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{$\sim$\+Generic\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}Generic\+Interface\+::$\sim$\+Generic\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_generic_interface_a8543b504083542c36dc7f11e00895390}
+Destrutor 
+
+\subsection{Métodos}
+\index{Generic\+Interface@{Generic\+Interface}!create\+Results@{create\+Results}}
+\index{create\+Results@{create\+Results}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{create\+Results(int id)}]{\setlength{\rightskip}{0pt plus 5cm}void Generic\+Interface\+::create\+Results (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}\label{class_generic_interface_ad65c5ab3aa482b28fb4386e4bd55485e}
+\index{Generic\+Interface@{Generic\+Interface}!on\+Chanced\+Radio\+Box@{on\+Chanced\+Radio\+Box}}
+\index{on\+Chanced\+Radio\+Box@{on\+Chanced\+Radio\+Box}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{on\+Chanced\+Radio\+Box(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Generic\+Interface\+::on\+Chanced\+Radio\+Box (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_generic_interface_afdd56bf2d40177ccb35afd433e02bcd9}
+Evento de mudan�a do radio box \index{Generic\+Interface@{Generic\+Interface}!on\+Choice\+Element@{on\+Choice\+Element}}
+\index{on\+Choice\+Element@{on\+Choice\+Element}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{on\+Choice\+Element(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Generic\+Interface\+::on\+Choice\+Element (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_generic_interface_ab72688b56347998876a4eb482919d6c9}
+Evento de sele��o de elemento \index{Generic\+Interface@{Generic\+Interface}!on\+Open\+Q\+Inflow@{on\+Open\+Q\+Inflow}}
+\index{on\+Open\+Q\+Inflow@{on\+Open\+Q\+Inflow}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{on\+Open\+Q\+Inflow(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Generic\+Interface\+::on\+Open\+Q\+Inflow (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_generic_interface_ab2b8f1ff1f2afc51a48a928dc1d2c882}
+Abre arquivo com dados de temperatura para o modelo G\+W\+LF. 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Generic\+Interface@{Generic\+Interface}!radio\+Box@{radio\+Box}}
+\index{radio\+Box@{radio\+Box}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{radio\+Box()}]{\setlength{\rightskip}{0pt plus 5cm}void Generic\+Interface\+::radio\+Box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_generic_interface_a09af15b1c646beded767f845290ef9af}
+
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_a202fd862c10d339ae7d7e83d80b248bd}.
+
+\index{Generic\+Interface@{Generic\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void Generic\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_generic_interface_a67b62dcf4a46c692e0f5fbe72bc40995}
+Seta os par�metros para calculo do modelo hidrologico G\+W\+LF 
+\begin{DoxyParams}{Parâmetros}
+{\em model} & Inst�ncia do modelo G\+W\+LF \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_aced556e5caf584b7335135d337895154}.
+
+\index{Generic\+Interface@{Generic\+Interface}!set\+Interval@{set\+Interval}}
+\index{set\+Interval@{set\+Interval}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{set\+Interval(const Interval \&interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Generic\+Interface\+::set\+Interval (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interval} \&}]{interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_generic_interface_af2d4f3d694a16b4d07fba23c86327763}
+
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_ad1498cd36a41f88924a92d1a66f74947}.
+
+\index{Generic\+Interface@{Generic\+Interface}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{show\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}void Generic\+Interface\+::show\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_generic_interface_aa3d347954248ccb9979b66ed2751a977}
+Resultados para o modelo G\+W\+LF 
+\begin{DoxyParams}{Parâmetros}
+{\em results} & Aponta para os resultados \\
+\hline
+{\em change} & Diferencia se a chamada foi feita atraves do bot�o de visualiza��o ou de rodar o modelo \\
+\hline
+\end{DoxyParams}
+\index{Generic\+Interface@{Generic\+Interface}!update\+Elements@{update\+Elements}}
+\index{update\+Elements@{update\+Elements}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{update\+Elements()}]{\setlength{\rightskip}{0pt plus 5cm}void Generic\+Interface\+::update\+Elements (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_generic_interface_a67f85a911c7b4bc56c7c1cd82faadee0}
+Retorna um array de strings com os nomes de todos os elementos que podem ser selecionandos para um elemento 
+
+\subsection{Amigas e Funções Relacionadas}
+\index{Generic\+Interface@{Generic\+Interface}!Generic\+Model\+Main@{Generic\+Model\+Main}}
+\index{Generic\+Model\+Main@{Generic\+Model\+Main}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{Generic\+Model\+Main}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Generic\+Model\+Main}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_generic_interface_ac871d8bd6e281b3229dae181057ad865}
+
+
+Definição na linha 64 do arquivo Generic\+Interface.\+h.
+
+
+
+\subsection{Atributos}
+\index{Generic\+Interface@{Generic\+Interface}!bitmap\+Empty@{bitmap\+Empty}}
+\index{bitmap\+Empty@{bitmap\+Empty}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{bitmap\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Generic\+Interface\+::bitmap\+Empty\hspace{0.3cm}{\ttfamily [protected]}}\label{class_generic_interface_a4c52543246861be7a6b410ca2ce11590}
+
+
+Definição na linha 92 do arquivo Generic\+Interface.\+h.
+
+\index{Generic\+Interface@{Generic\+Interface}!bitmap\+Ok@{bitmap\+Ok}}
+\index{bitmap\+Ok@{bitmap\+Ok}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{bitmap\+Ok}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Generic\+Interface\+::bitmap\+Ok\hspace{0.3cm}{\ttfamily [protected]}}\label{class_generic_interface_a3e321f653bfe02b5f728b1f8664a2ebe}
+
+\begin{DoxyItemize}
+\item Bitmap para os bot�es $\ast$ 
+\begin{DoxyParams}{Parâmetros}
+{\em bitmap\+Ok} & Dados preenchidos $\ast$ \\
+\hline
+{\em bitmap\+Empty} & Dados n�o preenchidos \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Definição na linha 92 do arquivo Generic\+Interface.\+h.
+
+\index{Generic\+Interface@{Generic\+Interface}!bitmap\+Q\+Obs@{bitmap\+Q\+Obs}}
+\index{bitmap\+Q\+Obs@{bitmap\+Q\+Obs}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{bitmap\+Q\+Obs}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Generic\+Interface\+::bitmap\+Q\+Obs\hspace{0.3cm}{\ttfamily [protected]}}\label{class_generic_interface_a883f94fe27724aa51111d8571414112e}
+Imagem do bot�o de vaz�o incremental 
+\begin{DoxyParams}{Parâmetros}
+{\em bitmap\+Q\+Inflow} & Bot�o da serie de vaz�o incremental \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 99 do arquivo Generic\+Interface.\+h.
+
+\index{Generic\+Interface@{Generic\+Interface}!bs\+Elements@{bs\+Elements}}
+\index{bs\+Elements@{bs\+Elements}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{bs\+Elements}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer$\ast$ Generic\+Interface\+::bs\+Elements\hspace{0.3cm}{\ttfamily [protected]}}\label{class_generic_interface_abe44c932f44996347ed07341e55ee061}
+Sizer para o seletor de elemento 
+
+Definição na linha 119 do arquivo Generic\+Interface.\+h.
+
+\index{Generic\+Interface@{Generic\+Interface}!bt\+Q\+Obs@{bt\+Q\+Obs}}
+\index{bt\+Q\+Obs@{bt\+Q\+Obs}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{bt\+Q\+Obs}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Generic\+Interface\+::bt\+Q\+Obs\hspace{0.3cm}{\ttfamily [protected]}}\label{class_generic_interface_ac9d4d224759d169e44a0d144e86af325}
+Controlado de data inicial e final 
+\begin{DoxyParams}{Parâmetros}
+{\em dp\+Start\+Interval} & Data inicial \\
+\hline
+{\em dp\+End\+Interval} & Data final\\
+\hline
+\end{DoxyParams}
+wx\+Date\+Picker\+Ctrl $\ast$dp\+Start\+Interval, $\ast$dp\+End\+Interval; Bot�o para serie de entrada de vaz�o incremental 
+\begin{DoxyParams}{Parâmetros}
+{\em bt\+Qinflow} & Bot�o para vaz�o incremental \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 87 do arquivo Generic\+Interface.\+h.
+
+\index{Generic\+Interface@{Generic\+Interface}!c\+Elements@{c\+Elements}}
+\index{c\+Elements@{c\+Elements}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{c\+Elements}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Generic\+Interface\+::c\+Elements\hspace{0.3cm}{\ttfamily [protected]}}\label{class_generic_interface_a3a402f2a6ae892b181c690d10e036224}
+Choice com os elementos que podem ser selecionados 
+
+Definição na linha 114 do arquivo Generic\+Interface.\+h.
+
+\index{Generic\+Interface@{Generic\+Interface}!elements\+Ids@{elements\+Ids}}
+\index{elements\+Ids@{elements\+Ids}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{elements\+Ids}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$unsigned int$>$ Generic\+Interface\+::elements\+Ids\hspace{0.3cm}{\ttfamily [protected]}}\label{class_generic_interface_a3b3ea0fa592a76a1579b9b95e1ae9d10}
+Vetor para identificar o elemento pelo seletor 
+
+Definição na linha 70 do arquivo Generic\+Interface.\+h.
+
+\index{Generic\+Interface@{Generic\+Interface}!grid\+Corr\+Fact@{grid\+Corr\+Fact}}
+\index{grid\+Corr\+Fact@{grid\+Corr\+Fact}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{grid\+Corr\+Fact}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Flex\+Grid\+Sizer $\ast$ Generic\+Interface\+::grid\+Corr\+Fact\hspace{0.3cm}{\ttfamily [protected]}}\label{class_generic_interface_a0c10bf642414515c06a659aca573b045}
+
+
+Definição na linha 104 do arquivo Generic\+Interface.\+h.
+
+\index{Generic\+Interface@{Generic\+Interface}!grid\+Weather@{grid\+Weather}}
+\index{grid\+Weather@{grid\+Weather}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{grid\+Weather}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Flex\+Grid\+Sizer$\ast$ Generic\+Interface\+::grid\+Weather\hspace{0.3cm}{\ttfamily [protected]}}\label{class_generic_interface_a161e5830471a7fe3736ce78e2fea0b61}
+Sizer que cont�m o bot�o de entrada da \doxyref{Serie}{pag.}{class_serie} 
+
+Definição na linha 104 do arquivo Generic\+Interface.\+h.
+
+\index{Generic\+Interface@{Generic\+Interface}!rb\+Obs@{rb\+Obs}}
+\index{rb\+Obs@{rb\+Obs}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{rb\+Obs}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box$\ast$ Generic\+Interface\+::rb\+Obs\hspace{0.3cm}{\ttfamily [protected]}}\label{class_generic_interface_ac009beeb6810f5a9a996a6b56317964a}
+Radio que seleciona se deve pegar a serie observada de um arquivo ou um elemento que possua. 
+
+Definição na linha 109 do arquivo Generic\+Interface.\+h.
+
+\index{Generic\+Interface@{Generic\+Interface}!tc\+Corr\+Fact@{tc\+Corr\+Fact}}
+\index{tc\+Corr\+Fact@{tc\+Corr\+Fact}!Generic\+Interface@{Generic\+Interface}}
+\subsubsection[{tc\+Corr\+Fact}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl$\ast$ Generic\+Interface\+::tc\+Corr\+Fact\hspace{0.3cm}{\ttfamily [protected]}}\label{class_generic_interface_abd75dbc7cb77ad87c844eb041a2bdff3}
+Entrada do fator de corre��o da vaz�o observada 
+
+Definição na linha 75 do arquivo Generic\+Interface.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Generic\+Interface.\+h}\end{DoxyCompactItemize}

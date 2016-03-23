@@ -1,0 +1,174 @@
+\section{Refer√™ncia da Classe Thiessen\+File}
+\label{class_thiessen_file}\index{Thiessen\+File@{Thiessen\+File}}
+
+
+{\ttfamily \#include $<$Thiessen\+File.\+h$>$}
+
+\subsection*{Tipos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Error} \{ {\bf E\+R\+R\+O\+R\+\_\+\+N\+O\+NE}, 
+{\bf E\+R\+R\+O\+R\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE}, 
+{\bf E\+R\+R\+O\+R\+\_\+\+C\+A\+N\+C\+E\+L\+E\+D\+\_\+\+B\+Y\+\_\+\+U\+S\+ER}
+ \}\begin{DoxyCompactList}\small\item\em Error codes. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Thiessen\+File} ()
+\item 
+virtual {\bf $\sim$\+Thiessen\+File} ()
+\item 
+void {\bf make\+Save} (wx\+Text\+Output\+Stream $\ast$file, {\bf Draw\+Matrix} $\ast$m)
+\item 
+vector$<$ vector$<$ string $>$ $>$ $\ast$ {\bf make\+Load} (wx\+String name)
+\item 
+void {\bf export\+Matrix\+To\+S\+RS} (const wx\+String \&path, {\bf Draw\+Matrix} $\ast$draw\+Matrix)
+\end{DoxyCompactItemize}
+\subsection*{M√©todos P√∫blicos Est√°ticos}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bf make\+Save} (const std\+::string \&a\+\_\+filename, {\bf Draw\+Matrix} $\ast$a\+\_\+draw\+Matrix, {\bf Error} $\ast$a\+\_\+error=nullptr, {\bf Progress\+Callback} a\+\_\+callback=nullptr)
+\begin{DoxyCompactList}\small\item\em Creates a output file containing the station\textquotesingle{}s ID and rainfall values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Est√°ticos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ {\bf k\+Delimiter}
+\begin{DoxyCompactList}\small\item\em Default output text separator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 17 do arquivo Thiessen\+File.\+h.
+
+
+
+\subsection{Enumera√ß√µes}
+\index{Thiessen\+File@{Thiessen\+File}!Error@{Error}}
+\index{Error@{Error}!Thiessen\+File@{Thiessen\+File}}
+\subsubsection[{Error}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Thiessen\+File\+::\+Error}}\label{class_thiessen_file_abc5c5bbd84cef0b2c46649638f805773}
+
+
+Error codes. 
+
+\begin{Desc}
+\item[Valores de enumera√ß√µes]\par
+\begin{description}
+\index{E\+R\+R\+O\+R\+\_\+\+N\+O\+NE@{E\+R\+R\+O\+R\+\_\+\+N\+O\+NE}!Thiessen\+File@{Thiessen\+File}}\index{Thiessen\+File@{Thiessen\+File}!E\+R\+R\+O\+R\+\_\+\+N\+O\+NE@{E\+R\+R\+O\+R\+\_\+\+N\+O\+NE}}\item[{\em 
+E\+R\+R\+O\+R\+\_\+\+N\+O\+NE\label{class_thiessen_file_abc5c5bbd84cef0b2c46649638f805773a767d91a0337a3ff99f144589f7ec7ba3}
+}]\index{E\+R\+R\+O\+R\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE@{E\+R\+R\+O\+R\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE}!Thiessen\+File@{Thiessen\+File}}\index{Thiessen\+File@{Thiessen\+File}!E\+R\+R\+O\+R\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE@{E\+R\+R\+O\+R\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE}}\item[{\em 
+E\+R\+R\+O\+R\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE\label{class_thiessen_file_abc5c5bbd84cef0b2c46649638f805773a6a828ef1c460ed53a03f8926bda8861a}
+}]\index{E\+R\+R\+O\+R\+\_\+\+C\+A\+N\+C\+E\+L\+E\+D\+\_\+\+B\+Y\+\_\+\+U\+S\+ER@{E\+R\+R\+O\+R\+\_\+\+C\+A\+N\+C\+E\+L\+E\+D\+\_\+\+B\+Y\+\_\+\+U\+S\+ER}!Thiessen\+File@{Thiessen\+File}}\index{Thiessen\+File@{Thiessen\+File}!E\+R\+R\+O\+R\+\_\+\+C\+A\+N\+C\+E\+L\+E\+D\+\_\+\+B\+Y\+\_\+\+U\+S\+ER@{E\+R\+R\+O\+R\+\_\+\+C\+A\+N\+C\+E\+L\+E\+D\+\_\+\+B\+Y\+\_\+\+U\+S\+ER}}\item[{\em 
+E\+R\+R\+O\+R\+\_\+\+C\+A\+N\+C\+E\+L\+E\+D\+\_\+\+B\+Y\+\_\+\+U\+S\+ER\label{class_thiessen_file_abc5c5bbd84cef0b2c46649638f805773a58ba602530f3c00f573147a493b1435f}
+}]\end{description}
+\end{Desc}
+
+
+Defini√ß√£o na linha 31 do arquivo Thiessen\+File.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Thiessen\+File@{Thiessen\+File}!Thiessen\+File@{Thiessen\+File}}
+\index{Thiessen\+File@{Thiessen\+File}!Thiessen\+File@{Thiessen\+File}}
+\subsubsection[{Thiessen\+File()}]{\setlength{\rightskip}{0pt plus 5cm}Thiessen\+File\+::\+Thiessen\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_file_a147bdd85e6aa20b9d3adc49e019a916f}
+Construtor \index{Thiessen\+File@{Thiessen\+File}!````~Thiessen\+File@{$\sim$\+Thiessen\+File}}
+\index{````~Thiessen\+File@{$\sim$\+Thiessen\+File}!Thiessen\+File@{Thiessen\+File}}
+\subsubsection[{$\sim$\+Thiessen\+File()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Thiessen\+File\+::$\sim$\+Thiessen\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_thiessen_file_abebc098a40830ff446a8b85a634cfe5c}
+
+
+\subsection{M√©todos}
+\index{Thiessen\+File@{Thiessen\+File}!export\+Matrix\+To\+S\+RS@{export\+Matrix\+To\+S\+RS}}
+\index{export\+Matrix\+To\+S\+RS@{export\+Matrix\+To\+S\+RS}!Thiessen\+File@{Thiessen\+File}}
+\subsubsection[{export\+Matrix\+To\+S\+R\+S(const wx\+String \&path, Draw\+Matrix $\ast$draw\+Matrix)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+File\+::export\+Matrix\+To\+S\+RS (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{path, }
+\item[{{\bf Draw\+Matrix} $\ast$}]{draw\+Matrix}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_file_a254b9441d0337e965afba1a974fb5850}
+Exporta a matrix de resultado de thiessen para v·rios arquivos S\+RS (um pra cada Ponto/coluna/\+P\+CD), que ser„o salvos em \textquotesingle{}path\textquotesingle{}.
+
+
+\begin{DoxyParams}{Par√¢metros}
+{\em path} & DiretÛrio onde ser„o salvos os arquivos de serie S\+RS \\
+\hline
+{\em matrix} & \doxyref{Matrix}{pag.}{class_matrix} a ser exportada \\
+\hline
+\end{DoxyParams}
+\index{Thiessen\+File@{Thiessen\+File}!make\+Load@{make\+Load}}
+\index{make\+Load@{make\+Load}!Thiessen\+File@{Thiessen\+File}}
+\subsubsection[{make\+Load(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$vector$<$string$>$ $>$$\ast$ Thiessen\+File\+::make\+Load (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_file_a7c80179d676569b10f84613f3fb52b32}
+FunÁ„o para ler um arquivo com a matriz dos valores de \doxyref{Thiessen}{pag.}{class_thiessen} A gerencia de memÛria da matriz dever· ser tratada pelo caller, que ficar· respons·vel por desaloc·-\/la \index{Thiessen\+File@{Thiessen\+File}!make\+Save@{make\+Save}}
+\index{make\+Save@{make\+Save}!Thiessen\+File@{Thiessen\+File}}
+\subsubsection[{make\+Save(const std\+::string \&a\+\_\+filename, Draw\+Matrix $\ast$a\+\_\+draw\+Matrix, Error $\ast$a\+\_\+error=nullptr, Progress\+Callback a\+\_\+callback=nullptr)}]{\setlength{\rightskip}{0pt plus 5cm}static void Thiessen\+File\+::make\+Save (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+\_\+filename, }
+\item[{{\bf Draw\+Matrix} $\ast$}]{a\+\_\+draw\+Matrix, }
+\item[{{\bf Error} $\ast$}]{a\+\_\+error = {\ttfamily nullptr}, }
+\item[{{\bf Progress\+Callback}}]{a\+\_\+callback = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_thiessen_file_a84c1e9427261885b193d287e8c31dbf3}
+
+
+Creates a output file containing the station\textquotesingle{}s ID and rainfall values. 
+
+
+\begin{DoxyParams}{Par√¢metros}
+{\em const} & std\+::string\& -\/ output file name \\
+\hline
+{\em Draw\+Matrix$\ast$} & \\
+\hline
+{\em Error$\ast$} & \\
+\hline
+{\em Progress\+Bar} & -\/ Progress bar callback \\
+\hline
+\end{DoxyParams}
+\index{Thiessen\+File@{Thiessen\+File}!make\+Save@{make\+Save}}
+\index{make\+Save@{make\+Save}!Thiessen\+File@{Thiessen\+File}}
+\subsubsection[{make\+Save(wx\+Text\+Output\+Stream $\ast$file, Draw\+Matrix $\ast$m)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+File\+::make\+Save (
+\begin{DoxyParamCaption}
+\item[{wx\+Text\+Output\+Stream $\ast$}]{file, }
+\item[{{\bf Draw\+Matrix} $\ast$}]{m}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_file_ad4faf40600cfee9767bb15c057612e76}
+Responsavel por salvar do arquivo que contÈm uma matrix
+
+
+\begin{DoxyParams}{Par√¢metros}
+{\em file} & \\
+\hline
+{\em matrix} & Draw\+Matriz que contÈm os dados para geraÁ„o da Matriz de \doxyref{Thiessen}{pag.}{class_thiessen}. Os dados dever„o estar organizados da seguinte forma\+: Matriz de Dados -\/$>$ Draw\+Matrix\+::matrix\+::values Lista de Datas -\/$>$ Draw\+Matrix\+::matrix\+::name\+Row[i] (assert(name\+Row.\+size() == values.\+n\+Row()) Lista de ID\textquotesingle{}s -\/$>$ Draw\+Matrix\+::cols\+Info[i]\+::name (assert(cols\+Info.\+size() == value.\+n\+Col()) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{Thiessen\+File@{Thiessen\+File}!k\+Delimiter@{k\+Delimiter}}
+\index{k\+Delimiter@{k\+Delimiter}!Thiessen\+File@{Thiessen\+File}}
+\subsubsection[{k\+Delimiter}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Thiessen\+File\+::k\+Delimiter\hspace{0.3cm}{\ttfamily [static]}}\label{class_thiessen_file_afc6887a34ca18716af7fd68cdb64a7c2}
+
+
+Default output text separator. 
+
+
+
+Defini√ß√£o na linha 40 do arquivo Thiessen\+File.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Thiessen\+File.\+h}\end{DoxyCompactItemize}

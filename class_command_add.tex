@@ -1,0 +1,145 @@
+\section{Referência da Classe Command\+Add}
+\label{class_command_add}\index{Command\+Add@{Command\+Add}}
+
+
+{\ttfamily \#include $<$Command\+Add.\+h$>$}
+
+
+
+Herdeiro de {\bf Command}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Command\+Add} ({\bf Net\+Canvas\+Element\+Manager} \&manager, {\bf Draw\+Node} \&draw\+\_\+node, {\bf Node} \&node)
+\item 
+{\bf Command\+Add} ({\bf Net\+Canvas\+Element\+Manager} \&manager, {\bf Draw\+Link} \&draw\+\_\+link, {\bf Link} \&link)
+\item 
+{\bf Command\+Add} ({\bf Net\+Canvas\+Element\+Manager} \&manager, std\+::vector$<$ std\+::pair$<$ {\bf Draw\+Node} $\ast$, {\bf Node} $\ast$ $>$ $>$ \&nodes\+\_\+vec, std\+::vector$<$ std\+::pair$<$ {\bf Draw\+Link} $\ast$, {\bf Link} $\ast$ $>$ $>$ \&links\+\_\+vec)
+\item 
+{\bf $\sim$\+Command\+Add} ()
+\item 
+void {\bf do\+Command} ()
+\item 
+void {\bf redo\+Command} ()
+\item 
+void {\bf undo\+Command} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Net\+Canvas\+Element\+Manager} $\ast$ {\bf m\+\_\+canvas\+\_\+element\+\_\+manager}
+\item 
+std\+::vector$<$ std\+::pair$<$ {\bf Draw\+Node} $\ast$, {\bf Node} $\ast$ $>$ $>$ {\bf m\+\_\+nodes\+\_\+vec}
+\item 
+std\+::vector$<$ std\+::pair$<$ {\bf Draw\+Link} $\ast$, {\bf Link} $\ast$ $>$ $>$ {\bf m\+\_\+links\+\_\+vec}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 15 do arquivo Command\+Add.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Command\+Add@{Command\+Add}!Command\+Add@{Command\+Add}}
+\index{Command\+Add@{Command\+Add}!Command\+Add@{Command\+Add}}
+\subsubsection[{Command\+Add(\+Net\+Canvas\+Element\+Manager \&manager, Draw\+Node \&draw\+\_\+node, Node \&node)}]{\setlength{\rightskip}{0pt plus 5cm}Command\+Add\+::\+Command\+Add (
+\begin{DoxyParamCaption}
+\item[{{\bf Net\+Canvas\+Element\+Manager} \&}]{manager, }
+\item[{{\bf Draw\+Node} \&}]{draw\+\_\+node, }
+\item[{{\bf Node} \&}]{node}
+\end{DoxyParamCaption}
+)}\label{class_command_add_a7a921e7860c94908fe271a4f687f8b15}
+\index{Command\+Add@{Command\+Add}!Command\+Add@{Command\+Add}}
+\index{Command\+Add@{Command\+Add}!Command\+Add@{Command\+Add}}
+\subsubsection[{Command\+Add(\+Net\+Canvas\+Element\+Manager \&manager, Draw\+Link \&draw\+\_\+link, Link \&link)}]{\setlength{\rightskip}{0pt plus 5cm}Command\+Add\+::\+Command\+Add (
+\begin{DoxyParamCaption}
+\item[{{\bf Net\+Canvas\+Element\+Manager} \&}]{manager, }
+\item[{{\bf Draw\+Link} \&}]{draw\+\_\+link, }
+\item[{{\bf Link} \&}]{link}
+\end{DoxyParamCaption}
+)}\label{class_command_add_aa3dc230e9a8fc3d1e2696b78d77b2c7a}
+\index{Command\+Add@{Command\+Add}!Command\+Add@{Command\+Add}}
+\index{Command\+Add@{Command\+Add}!Command\+Add@{Command\+Add}}
+\subsubsection[{Command\+Add(\+Net\+Canvas\+Element\+Manager \&manager, std\+::vector$<$ std\+::pair$<$ Draw\+Node $\ast$, Node $\ast$ $>$ $>$ \&nodes\+\_\+vec, std\+::vector$<$ std\+::pair$<$ Draw\+Link $\ast$, Link $\ast$ $>$ $>$ \&links\+\_\+vec)}]{\setlength{\rightskip}{0pt plus 5cm}Command\+Add\+::\+Command\+Add (
+\begin{DoxyParamCaption}
+\item[{{\bf Net\+Canvas\+Element\+Manager} \&}]{manager, }
+\item[{std\+::vector$<$ std\+::pair$<$ {\bf Draw\+Node} $\ast$, {\bf Node} $\ast$ $>$ $>$ \&}]{nodes\+\_\+vec, }
+\item[{std\+::vector$<$ std\+::pair$<$ {\bf Draw\+Link} $\ast$, {\bf Link} $\ast$ $>$ $>$ \&}]{links\+\_\+vec}
+\end{DoxyParamCaption}
+)}\label{class_command_add_adc90cdd0842e55247cb4ee277f5ac84c}
+\index{Command\+Add@{Command\+Add}!````~Command\+Add@{$\sim$\+Command\+Add}}
+\index{````~Command\+Add@{$\sim$\+Command\+Add}!Command\+Add@{Command\+Add}}
+\subsubsection[{$\sim$\+Command\+Add()}]{\setlength{\rightskip}{0pt plus 5cm}Command\+Add\+::$\sim$\+Command\+Add (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_command_add_aabfa7f4340e2169bee5350cef9750389}
+
+
+\subsection{Métodos}
+\index{Command\+Add@{Command\+Add}!do\+Command@{do\+Command}}
+\index{do\+Command@{do\+Command}!Command\+Add@{Command\+Add}}
+\subsubsection[{do\+Command()}]{\setlength{\rightskip}{0pt plus 5cm}void Command\+Add\+::do\+Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_command_add_a59bbf7cd71136645be94888604e148b3}
+
+
+Implementa {\bf Command} \doxyref{}{pag.}{class_command_a3555b798fe9ff85c76f471c10e498dbe}.
+
+\index{Command\+Add@{Command\+Add}!redo\+Command@{redo\+Command}}
+\index{redo\+Command@{redo\+Command}!Command\+Add@{Command\+Add}}
+\subsubsection[{redo\+Command()}]{\setlength{\rightskip}{0pt plus 5cm}void Command\+Add\+::redo\+Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_command_add_abf96d63757f1312603bcef58cba2028b}
+
+
+Implementa {\bf Command} \doxyref{}{pag.}{class_command_ac9794df74782dd2d2b83d41c2d925d3b}.
+
+\index{Command\+Add@{Command\+Add}!undo\+Command@{undo\+Command}}
+\index{undo\+Command@{undo\+Command}!Command\+Add@{Command\+Add}}
+\subsubsection[{undo\+Command()}]{\setlength{\rightskip}{0pt plus 5cm}void Command\+Add\+::undo\+Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_command_add_afd557dcf86d084627a45b88a2bd498e5}
+
+
+Implementa {\bf Command} \doxyref{}{pag.}{class_command_a67f78fa759133e2f9c544a11b813cbe2}.
+
+
+
+\subsection{Atributos}
+\index{Command\+Add@{Command\+Add}!m\+\_\+canvas\+\_\+element\+\_\+manager@{m\+\_\+canvas\+\_\+element\+\_\+manager}}
+\index{m\+\_\+canvas\+\_\+element\+\_\+manager@{m\+\_\+canvas\+\_\+element\+\_\+manager}!Command\+Add@{Command\+Add}}
+\subsubsection[{m\+\_\+canvas\+\_\+element\+\_\+manager}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Net\+Canvas\+Element\+Manager}$\ast$ Command\+Add\+::m\+\_\+canvas\+\_\+element\+\_\+manager\hspace{0.3cm}{\ttfamily [protected]}}\label{class_command_add_a4e89c334d407291f1c1118c2dc2d0642}
+
+
+Definição na linha 27 do arquivo Command\+Add.\+h.
+
+\index{Command\+Add@{Command\+Add}!m\+\_\+links\+\_\+vec@{m\+\_\+links\+\_\+vec}}
+\index{m\+\_\+links\+\_\+vec@{m\+\_\+links\+\_\+vec}!Command\+Add@{Command\+Add}}
+\subsubsection[{m\+\_\+links\+\_\+vec}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::pair$<$ {\bf Draw\+Link}$\ast$, {\bf Link}$\ast$ $>$ $>$ Command\+Add\+::m\+\_\+links\+\_\+vec\hspace{0.3cm}{\ttfamily [protected]}}\label{class_command_add_ab0fa50bfb68ed96c128e34aa8f1c5e76}
+
+
+Definição na linha 30 do arquivo Command\+Add.\+h.
+
+\index{Command\+Add@{Command\+Add}!m\+\_\+nodes\+\_\+vec@{m\+\_\+nodes\+\_\+vec}}
+\index{m\+\_\+nodes\+\_\+vec@{m\+\_\+nodes\+\_\+vec}!Command\+Add@{Command\+Add}}
+\subsubsection[{m\+\_\+nodes\+\_\+vec}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ std\+::pair$<$ {\bf Draw\+Node}$\ast$, {\bf Node}$\ast$ $>$ $>$ Command\+Add\+::m\+\_\+nodes\+\_\+vec\hspace{0.3cm}{\ttfamily [protected]}}\label{class_command_add_af4b24dabd6a1d7d7a085731b92d7a8c8}
+
+
+Definição na linha 29 do arquivo Command\+Add.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Command\+Add.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,427 @@
+\section{Refer√™ncia da Classe Hidro\+Interface}
+\label{class_hidro_interface}\index{Hidro\+Interface@{Hidro\+Interface}}
+
+
+{\ttfamily \#include $<$Hidro\+Interface.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Hidro\+Interface} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent})
+\item 
+virtual {\bf $\sim$\+Hidro\+Interface} ()
+\item 
+void {\bf add\+Scenario\+Page} (const wx\+String \&name, int event\+Id={\bf Hidro\+Interface\+I\+Ds\+::\+I\+D\+\_\+\+N\+E\+W\+\_\+\+S\+C\+EN})
+\item 
+void {\bf remove\+Selected\+Scenario} (size\+\_\+t page, bool remove\+Scen)
+\item 
+void {\bf on\+Change\+Selected\+Scenario} (wx\+Choicebook\+Event \&event)
+\item 
+void {\bf change\+Selected\+Scenario} (int selection, int old\+Page\+Id=-\/1)
+\item 
+void {\bf create\+Results} (int id, {\bf hidro\+Model\+Type} type)
+\item 
+void {\bf adjust\+Interval\+Range} (const {\bf Interval} \&interval)
+\item 
+void {\bf set\+Date\+Values} (size\+\_\+t id, const {\bf Interval} \&interval)
+\item 
+{\bf Interval} {\bf get\+Date\+Values} (size\+\_\+t id) const 
+\item 
+{\bf Hidro\+Scenario\+Page} $\ast$ {\bf get\+Scenario\+Page\+By\+Id} (size\+\_\+t id) const 
+\item 
+{\bf Component\+Interface} $\ast$ {\bf get\+Rain\+Interface} (enum {\bf hidro\+Model\+Type} type)
+\item 
+{\bf Component\+Interface} $\ast$ {\bf get\+Prop\+Interface} (enum {\bf hidro\+Model\+Type} type)
+\item 
+void {\bf hide\+Prop\+Interface} ()
+\item 
+void {\bf show\+Prop\+Interface} (bool show=true)
+\item 
+void {\bf hide\+Rain\+Interface} ()
+\item 
+void {\bf show\+Rain\+Interface} (bool show=true)
+\item 
+void {\bf set\+Rain\+Radio\+Box\+Selection} ({\bf hidro\+Model\+Type} type, bool update\+Results=false)
+\item 
+void {\bf set\+Prop\+Radio\+Box\+Selection} ({\bf hidro\+Model\+Type} type, bool update\+Results=false)
+\item 
+void {\bf update\+Interface} ({\bf hidro\+Model\+Type} type)
+\item 
+void {\bf enable\+Toolbar\+Button} ({\bf Hidro\+Interface\+I\+Ds\+::\+I\+Ds} button\+ID={\bf Hidro\+Interface\+I\+Ds\+::\+I\+D\+\_\+\+A\+L\+L\+\_\+\+B\+U\+T\+T\+O\+N\+S\+\_\+\+S\+C\+EN}, bool enable=true)
+\item 
+void {\bf remove\+All\+Scenario\+Pages} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Panel $\ast$ {\bf panel}
+\item 
+wx\+Choicebook $\ast$ {\bf nb\+Scen}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf on\+Add\+Scenario} (wx\+Command\+Event \&)
+\item 
+void {\bf on\+Remove\+Selected\+Scenario} (wx\+Command\+Event \&)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Tool\+Bar $\ast$ {\bf tbar}
+\item 
+{\bf Generic\+Interface} $\ast$ {\bf generic\+Interface}
+\item 
+{\bf G\+W\+L\+F\+Interface} $\ast$ {\bf gwlf\+Interface}
+\item 
+{\bf S\+M\+A\+P\+Interface} $\ast$ {\bf smap\+Interface}
+\item 
+{\bf H\+Y\+M\+O\+D\+Interface} $\ast$ {\bf hymod\+Interface}
+\item 
+{\bf S\+A\+C\+R\+Interface} $\ast$ {\bf sacr\+Interface}
+\item 
+{\bf W\+A\+S\+A\+Interface} $\ast$ {\bf wasa\+Interface}
+\item 
+{\bf M\+U\+S\+K\+Interface} $\ast$ {\bf musk\+Interface}
+\item 
+{\bf S\+M\+A\+P\+M\+Interface} $\ast$ {\bf smapm\+Interface}
+\item 
+{\bf C\+N3\+S\+Interface} $\ast$ {\bf cn3s\+Interface}
+\item 
+{\bf S\+M\+A\+P\+H\+Interface} $\ast$ {\bf smaph\+Interface}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Hidro\+Main}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 47 do arquivo Hidro\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Hidro\+Interface@{Hidro\+Interface}!Hidro\+Interface@{Hidro\+Interface}}
+\index{Hidro\+Interface@{Hidro\+Interface}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{Hidro\+Interface(wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Hidro\+Interface\+::\+Hidro\+Interface (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_hidro_interface_abeb3d016d1f5458955c96c75fc851d84}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em frame} & Janela onde a interface ser· inserida \\
+\hline
+{\em parent} & Componente onde a interface sera inserida \\
+\hline
+\end{DoxyParams}
+\index{Hidro\+Interface@{Hidro\+Interface}!````~Hidro\+Interface@{$\sim$\+Hidro\+Interface}}
+\index{````~Hidro\+Interface@{$\sim$\+Hidro\+Interface}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{$\sim$\+Hidro\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Hidro\+Interface\+::$\sim$\+Hidro\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_hidro_interface_a0757f131e4de2e4d06ddc89acdee10e7}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Hidro\+Interface@{Hidro\+Interface}!add\+Scenario\+Page@{add\+Scenario\+Page}}
+\index{add\+Scenario\+Page@{add\+Scenario\+Page}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{add\+Scenario\+Page(const wx\+String \&name, int event\+Id=\+Hidro\+Interface\+I\+Ds\+::\+I\+D\+\_\+\+N\+E\+W\+\_\+\+S\+C\+E\+N)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Interface\+::add\+Scenario\+Page (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{name, }
+\item[{int}]{event\+Id = {\ttfamily {\bf Hidro\+Interface\+I\+Ds\+::\+I\+D\+\_\+\+N\+E\+W\+\_\+\+S\+C\+EN}}}
+\end{DoxyParamCaption}
+)}\label{class_hidro_interface_af12046a3fc1aaf9c37a2f9dbffd07aef}
+AdiÁ„o de pagina do cenario \index{Hidro\+Interface@{Hidro\+Interface}!adjust\+Interval\+Range@{adjust\+Interval\+Range}}
+\index{adjust\+Interval\+Range@{adjust\+Interval\+Range}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{adjust\+Interval\+Range(const Interval \&interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Interface\+::adjust\+Interval\+Range (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interval} \&}]{interval}
+\end{DoxyParamCaption}
+)}\label{class_hidro_interface_a75251924f76b62717fcf3fbe9fe1c3ff}
+\index{Hidro\+Interface@{Hidro\+Interface}!change\+Selected\+Scenario@{change\+Selected\+Scenario}}
+\index{change\+Selected\+Scenario@{change\+Selected\+Scenario}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{change\+Selected\+Scenario(int selection, int old\+Page\+Id=-\/1)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Interface\+::change\+Selected\+Scenario (
+\begin{DoxyParamCaption}
+\item[{int}]{selection, }
+\item[{int}]{old\+Page\+Id = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}\label{class_hidro_interface_aefbf7eb0a07a7641bbf16557229b2437}
+Atualializa a interface para modificaÁ„o de cen·rio selecionado 
+\begin{DoxyParams}{Par√¢metros}
+{\em selection} & PosiÁ„o, no Note\+Book, do cen·rio selecionado \\
+\hline
+{\em old\+Selection} & PosiÁ„o, no Note\+Book, do antigo cen·rio selecionado \\
+\hline
+\end{DoxyParams}
+\index{Hidro\+Interface@{Hidro\+Interface}!create\+Results@{create\+Results}}
+\index{create\+Results@{create\+Results}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{create\+Results(int id, hidro\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Interface\+::create\+Results (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{{\bf hidro\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_hidro_interface_ade82d69188c2a03d253f56b87aa41a4b}
+Apresenta resultados do modelo hidrologia para o nÛ selecionado. 
+\begin{DoxyParams}{Par√¢metros}
+{\em change} & Diferencia se a chamada foi feita atraves do bot„o de visualizaÁ„o ou de rodar o modelo\\
+\hline
+\end{DoxyParams}
+void show\+Res(bool change = false); \index{Hidro\+Interface@{Hidro\+Interface}!enable\+Toolbar\+Button@{enable\+Toolbar\+Button}}
+\index{enable\+Toolbar\+Button@{enable\+Toolbar\+Button}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{enable\+Toolbar\+Button(\+Hidro\+Interface\+I\+Ds\+::\+I\+Ds button\+I\+D=\+Hidro\+Interface\+I\+Ds\+::\+I\+D\+\_\+\+A\+L\+L\+\_\+\+B\+U\+T\+T\+O\+N\+S\+\_\+\+S\+C\+E\+N, bool enable=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Interface\+::enable\+Toolbar\+Button (
+\begin{DoxyParamCaption}
+\item[{{\bf Hidro\+Interface\+I\+Ds\+::\+I\+Ds}}]{button\+ID = {\ttfamily {\bf Hidro\+Interface\+I\+Ds\+::\+I\+D\+\_\+\+A\+L\+L\+\_\+\+B\+U\+T\+T\+O\+N\+S\+\_\+\+S\+C\+EN}}, }
+\item[{bool}]{enable = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_hidro_interface_ad5eb03c325ae12623a5f00597ed31794}
+Habilita/\+Desabilita um botao da toolbar dos cenarios \index{Hidro\+Interface@{Hidro\+Interface}!get\+Date\+Values@{get\+Date\+Values}}
+\index{get\+Date\+Values@{get\+Date\+Values}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{get\+Date\+Values(size\+\_\+t id) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Hidro\+Interface\+::get\+Date\+Values (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{id}
+\end{DoxyParamCaption}
+) const}\label{class_hidro_interface_a79b2d1aa2b750a9fe420887c1149352b}
+Retorna o intervalo de datas correspondete aos datepickers \index{Hidro\+Interface@{Hidro\+Interface}!get\+Prop\+Interface@{get\+Prop\+Interface}}
+\index{get\+Prop\+Interface@{get\+Prop\+Interface}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{get\+Prop\+Interface(enum hidro\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component\+Interface}$\ast$ Hidro\+Interface\+::get\+Prop\+Interface (
+\begin{DoxyParamCaption}
+\item[{enum {\bf hidro\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_hidro_interface_a4511df42e0d6c7c9715e2165a7e4905f}
+Retorna a Interface correspondente ao tipo de modelo de propagacao especificado \index{Hidro\+Interface@{Hidro\+Interface}!get\+Rain\+Interface@{get\+Rain\+Interface}}
+\index{get\+Rain\+Interface@{get\+Rain\+Interface}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{get\+Rain\+Interface(enum hidro\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component\+Interface}$\ast$ Hidro\+Interface\+::get\+Rain\+Interface (
+\begin{DoxyParamCaption}
+\item[{enum {\bf hidro\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_hidro_interface_af46865781824249cebca5807182163f8}
+Retorna a Interface correspondente ao tipo de modelo de chuva-\/vazao especificado \index{Hidro\+Interface@{Hidro\+Interface}!get\+Scenario\+Page\+By\+Id@{get\+Scenario\+Page\+By\+Id}}
+\index{get\+Scenario\+Page\+By\+Id@{get\+Scenario\+Page\+By\+Id}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{get\+Scenario\+Page\+By\+Id(size\+\_\+t id) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hidro\+Scenario\+Page}$\ast$ Hidro\+Interface\+::get\+Scenario\+Page\+By\+Id (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{id}
+\end{DoxyParamCaption}
+) const}\label{class_hidro_interface_ae1f8d0eb6965d36ae43e8b9c8ef9d7f9}
+\index{Hidro\+Interface@{Hidro\+Interface}!hide\+Prop\+Interface@{hide\+Prop\+Interface}}
+\index{hide\+Prop\+Interface@{hide\+Prop\+Interface}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{hide\+Prop\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Interface\+::hide\+Prop\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_hidro_interface_a905de91cfcfcb567fcdf073605dbb974}
+Habilita a interface de propagacao na pagina atual do notebook \index{Hidro\+Interface@{Hidro\+Interface}!hide\+Rain\+Interface@{hide\+Rain\+Interface}}
+\index{hide\+Rain\+Interface@{hide\+Rain\+Interface}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{hide\+Rain\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Interface\+::hide\+Rain\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_hidro_interface_aa6eccd38f2c206735b3632ac1122f645}
+\index{Hidro\+Interface@{Hidro\+Interface}!on\+Add\+Scenario@{on\+Add\+Scenario}}
+\index{on\+Add\+Scenario@{on\+Add\+Scenario}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{on\+Add\+Scenario(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Interface\+::on\+Add\+Scenario (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_hidro_interface_a3796d63639e099e7dfda3c50f497ab67}
+Evento de adiÁ„o de cenario \index{Hidro\+Interface@{Hidro\+Interface}!on\+Change\+Selected\+Scenario@{on\+Change\+Selected\+Scenario}}
+\index{on\+Change\+Selected\+Scenario@{on\+Change\+Selected\+Scenario}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{on\+Change\+Selected\+Scenario(wx\+Choicebook\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Interface\+::on\+Change\+Selected\+Scenario (
+\begin{DoxyParamCaption}
+\item[{wx\+Choicebook\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_hidro_interface_a9182c534fdf604a39d7291e9a0121299}
+Evento de mudanÁa de cen·rio selecionado \index{Hidro\+Interface@{Hidro\+Interface}!on\+Remove\+Selected\+Scenario@{on\+Remove\+Selected\+Scenario}}
+\index{on\+Remove\+Selected\+Scenario@{on\+Remove\+Selected\+Scenario}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{on\+Remove\+Selected\+Scenario(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Interface\+::on\+Remove\+Selected\+Scenario (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_hidro_interface_ae39cead417a04f2af7b7f1832194bc69}
+Evento de remoÁ„o de cenario \index{Hidro\+Interface@{Hidro\+Interface}!remove\+All\+Scenario\+Pages@{remove\+All\+Scenario\+Pages}}
+\index{remove\+All\+Scenario\+Pages@{remove\+All\+Scenario\+Pages}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{remove\+All\+Scenario\+Pages()}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Interface\+::remove\+All\+Scenario\+Pages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_hidro_interface_a1497eccfaca71c539fc803b1c424bef5}
+\index{Hidro\+Interface@{Hidro\+Interface}!remove\+Selected\+Scenario@{remove\+Selected\+Scenario}}
+\index{remove\+Selected\+Scenario@{remove\+Selected\+Scenario}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{remove\+Selected\+Scenario(size\+\_\+t page, bool remove\+Scen)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Interface\+::remove\+Selected\+Scenario (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{page, }
+\item[{bool}]{remove\+Scen}
+\end{DoxyParamCaption}
+)}\label{class_hidro_interface_a7ebbc828c991fc8520b0e17744b39236}
+\index{Hidro\+Interface@{Hidro\+Interface}!set\+Date\+Values@{set\+Date\+Values}}
+\index{set\+Date\+Values@{set\+Date\+Values}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{set\+Date\+Values(size\+\_\+t id, const Interval \&interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Interface\+::set\+Date\+Values (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{id, }
+\item[{const {\bf Interval} \&}]{interval}
+\end{DoxyParamCaption}
+)}\label{class_hidro_interface_a3b9ce1af689d1ed3580ac5e1685e1874}
+Altera o valor das datas do datepicker da pagina 
+\begin{DoxyParams}{Par√¢metros}
+{\em id} & ID do cenario/pagina a ser alterado o datepicker \\
+\hline
+{\em interval} & novo intervalo do datepicker \\
+\hline
+\end{DoxyParams}
+\index{Hidro\+Interface@{Hidro\+Interface}!set\+Prop\+Radio\+Box\+Selection@{set\+Prop\+Radio\+Box\+Selection}}
+\index{set\+Prop\+Radio\+Box\+Selection@{set\+Prop\+Radio\+Box\+Selection}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{set\+Prop\+Radio\+Box\+Selection(hidro\+Model\+Type type, bool update\+Results=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Interface\+::set\+Prop\+Radio\+Box\+Selection (
+\begin{DoxyParamCaption}
+\item[{{\bf hidro\+Model\+Type}}]{type, }
+\item[{bool}]{update\+Results = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_hidro_interface_a6cf3ca32a2655e9a2e0febdb2f0bf491}
+\index{Hidro\+Interface@{Hidro\+Interface}!set\+Rain\+Radio\+Box\+Selection@{set\+Rain\+Radio\+Box\+Selection}}
+\index{set\+Rain\+Radio\+Box\+Selection@{set\+Rain\+Radio\+Box\+Selection}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{set\+Rain\+Radio\+Box\+Selection(hidro\+Model\+Type type, bool update\+Results=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Interface\+::set\+Rain\+Radio\+Box\+Selection (
+\begin{DoxyParamCaption}
+\item[{{\bf hidro\+Model\+Type}}]{type, }
+\item[{bool}]{update\+Results = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_hidro_interface_abe91eb067c8c566f0c985ac9928d4c06}
+Ajusta o radiobox para a selecao correta \index{Hidro\+Interface@{Hidro\+Interface}!show\+Prop\+Interface@{show\+Prop\+Interface}}
+\index{show\+Prop\+Interface@{show\+Prop\+Interface}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{show\+Prop\+Interface(bool show=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Interface\+::show\+Prop\+Interface (
+\begin{DoxyParamCaption}
+\item[{bool}]{show = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_hidro_interface_aa73ee30b92a8f41b8c32c4877820ab70}
+\index{Hidro\+Interface@{Hidro\+Interface}!show\+Rain\+Interface@{show\+Rain\+Interface}}
+\index{show\+Rain\+Interface@{show\+Rain\+Interface}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{show\+Rain\+Interface(bool show=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Interface\+::show\+Rain\+Interface (
+\begin{DoxyParamCaption}
+\item[{bool}]{show = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_hidro_interface_a0613d3161401e16e7782f2b83f733da7}
+\index{Hidro\+Interface@{Hidro\+Interface}!update\+Interface@{update\+Interface}}
+\index{update\+Interface@{update\+Interface}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{update\+Interface(hidro\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Interface\+::update\+Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf hidro\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_hidro_interface_a633fc278a0820fd50268112b806a865f}
+Chama o set\+Info da interface 
+
+\subsection{Amigas e Fun√ß√µes Relacionadas}
+\index{Hidro\+Interface@{Hidro\+Interface}!Hidro\+Main@{Hidro\+Main}}
+\index{Hidro\+Main@{Hidro\+Main}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{Hidro\+Main}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Hidro\+Main}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_hidro_interface_a53fe72855122b1d7cfa9c9b8ee0e9768}
+
+
+Defini√ß√£o na linha 48 do arquivo Hidro\+Interface.\+h.
+
+
+
+\subsection{Atributos}
+\index{Hidro\+Interface@{Hidro\+Interface}!cn3s\+Interface@{cn3s\+Interface}}
+\index{cn3s\+Interface@{cn3s\+Interface}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{cn3s\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+N3\+S\+Interface}$\ast$ Hidro\+Interface\+::cn3s\+Interface\hspace{0.3cm}{\ttfamily [protected]}}\label{class_hidro_interface_aa01e14e87134856a06176deb05203611}
+
+
+Defini√ß√£o na linha 92 do arquivo Hidro\+Interface.\+h.
+
+\index{Hidro\+Interface@{Hidro\+Interface}!generic\+Interface@{generic\+Interface}}
+\index{generic\+Interface@{generic\+Interface}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{generic\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Generic\+Interface}$\ast$ Hidro\+Interface\+::generic\+Interface\hspace{0.3cm}{\ttfamily [protected]}}\label{class_hidro_interface_a8b0f9b97da250ee14e5577fd6c3287b4}
+
+
+Defini√ß√£o na linha 80 do arquivo Hidro\+Interface.\+h.
+
+\index{Hidro\+Interface@{Hidro\+Interface}!gwlf\+Interface@{gwlf\+Interface}}
+\index{gwlf\+Interface@{gwlf\+Interface}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{gwlf\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+W\+L\+F\+Interface}$\ast$ Hidro\+Interface\+::gwlf\+Interface\hspace{0.3cm}{\ttfamily [protected]}}\label{class_hidro_interface_ab8f244c2da52e66b7d495b58a37a292b}
+
+
+Defini√ß√£o na linha 81 do arquivo Hidro\+Interface.\+h.
+
+\index{Hidro\+Interface@{Hidro\+Interface}!hymod\+Interface@{hymod\+Interface}}
+\index{hymod\+Interface@{hymod\+Interface}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{hymod\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf H\+Y\+M\+O\+D\+Interface}$\ast$ Hidro\+Interface\+::hymod\+Interface\hspace{0.3cm}{\ttfamily [protected]}}\label{class_hidro_interface_a2fca8f4fbae67d3b1d27f3d86d5c4ed3}
+
+
+Defini√ß√£o na linha 83 do arquivo Hidro\+Interface.\+h.
+
+\index{Hidro\+Interface@{Hidro\+Interface}!musk\+Interface@{musk\+Interface}}
+\index{musk\+Interface@{musk\+Interface}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{musk\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+U\+S\+K\+Interface}$\ast$ Hidro\+Interface\+::musk\+Interface\hspace{0.3cm}{\ttfamily [protected]}}\label{class_hidro_interface_a37e272126f5ab98550bdfd42bd73324d}
+
+
+Defini√ß√£o na linha 88 do arquivo Hidro\+Interface.\+h.
+
+\index{Hidro\+Interface@{Hidro\+Interface}!nb\+Scen@{nb\+Scen}}
+\index{nb\+Scen@{nb\+Scen}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{nb\+Scen}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choicebook$\ast$ Hidro\+Interface\+::nb\+Scen}\label{class_hidro_interface_a9221d97c69da2a1cb51f43e4752b63c0}
+Notebook que contÈm os cenarios 
+
+Defini√ß√£o na linha 116 do arquivo Hidro\+Interface.\+h.
+
+\index{Hidro\+Interface@{Hidro\+Interface}!panel@{panel}}
+\index{panel@{panel}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{panel}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel$\ast$ Hidro\+Interface\+::panel}\label{class_hidro_interface_a96ad672ee5621aedcac7d7f70dd61ddf}
+Painal onde a interface dos cenarios ser· inserida 
+
+Defini√ß√£o na linha 112 do arquivo Hidro\+Interface.\+h.
+
+\index{Hidro\+Interface@{Hidro\+Interface}!sacr\+Interface@{sacr\+Interface}}
+\index{sacr\+Interface@{sacr\+Interface}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{sacr\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+A\+C\+R\+Interface}$\ast$ Hidro\+Interface\+::sacr\+Interface\hspace{0.3cm}{\ttfamily [protected]}}\label{class_hidro_interface_ac536ed9e739e69e41587c7b0f155d23c}
+
+
+Defini√ß√£o na linha 84 do arquivo Hidro\+Interface.\+h.
+
+\index{Hidro\+Interface@{Hidro\+Interface}!smaph\+Interface@{smaph\+Interface}}
+\index{smaph\+Interface@{smaph\+Interface}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{smaph\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+M\+A\+P\+H\+Interface}$\ast$ Hidro\+Interface\+::smaph\+Interface\hspace{0.3cm}{\ttfamily [protected]}}\label{class_hidro_interface_a292ea67805b790c914fe7a9fde5032ac}
+
+
+Defini√ß√£o na linha 95 do arquivo Hidro\+Interface.\+h.
+
+\index{Hidro\+Interface@{Hidro\+Interface}!smap\+Interface@{smap\+Interface}}
+\index{smap\+Interface@{smap\+Interface}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{smap\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+M\+A\+P\+Interface}$\ast$ Hidro\+Interface\+::smap\+Interface\hspace{0.3cm}{\ttfamily [protected]}}\label{class_hidro_interface_aac512bc96fb6c239f0fff8f6798ad885}
+
+
+Defini√ß√£o na linha 82 do arquivo Hidro\+Interface.\+h.
+
+\index{Hidro\+Interface@{Hidro\+Interface}!smapm\+Interface@{smapm\+Interface}}
+\index{smapm\+Interface@{smapm\+Interface}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{smapm\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+M\+A\+P\+M\+Interface}$\ast$ Hidro\+Interface\+::smapm\+Interface\hspace{0.3cm}{\ttfamily [protected]}}\label{class_hidro_interface_a0de8b9d2aae890b12a398952f733583b}
+
+
+Defini√ß√£o na linha 91 do arquivo Hidro\+Interface.\+h.
+
+\index{Hidro\+Interface@{Hidro\+Interface}!tbar@{tbar}}
+\index{tbar@{tbar}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{tbar}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tool\+Bar$\ast$ Hidro\+Interface\+::tbar\hspace{0.3cm}{\ttfamily [protected]}}\label{class_hidro_interface_a082e340a51f7d44f3e2b683b24f79c57}
+
+
+Defini√ß√£o na linha 77 do arquivo Hidro\+Interface.\+h.
+
+\index{Hidro\+Interface@{Hidro\+Interface}!wasa\+Interface@{wasa\+Interface}}
+\index{wasa\+Interface@{wasa\+Interface}!Hidro\+Interface@{Hidro\+Interface}}
+\subsubsection[{wasa\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+A\+S\+A\+Interface}$\ast$ Hidro\+Interface\+::wasa\+Interface\hspace{0.3cm}{\ttfamily [protected]}}\label{class_hidro_interface_aacbaffb21f1c35da637b03aa92c54b4b}
+
+
+Defini√ß√£o na linha 85 do arquivo Hidro\+Interface.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Hidro\+Interface.\+h}\end{DoxyCompactItemize}

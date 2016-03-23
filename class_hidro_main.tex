@@ -1,0 +1,762 @@
+\section{Refer√™ncia da Classe Hidro\+Main}
+\label{class_hidro_main}\index{Hidro\+Main@{Hidro\+Main}}
+
+
+{\ttfamily \#include $<$Hidro\+Main.\+h$>$}
+
+
+
+Herdeiro de {\bf Component}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf on\+Init} ({\bf S\+I\+GA} $\ast${\bf main}, wx\+Frame $\ast${\bf frame}, wx\+Window $\ast$parent)
+\item 
+void {\bf update\+Tree\+Item} ({\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$)
+\item 
+void {\bf on\+Select\+Element} ()
+\item 
+void {\bf on\+Select\+Link} ()
+\item 
+void {\bf on\+Changed\+Component} ()
+\item 
+void {\bf create\+Missing\+Models} ()
+\item 
+virtual void {\bf on\+Changing\+Component} ()
+\item 
+virtual void {\bf on\+Delete\+Elements} (vector$<$ {\bf Element\+ID} $>$ \&elements\+\_\+id\+\_\+vector)
+\item 
+bool {\bf run} ()
+\item 
+void {\bf create\+Model} ({\bf Element} \&element)
+\item 
+void {\bf create\+Model} ({\bf Node} \&node)
+\item 
+void {\bf create\+Model} ({\bf Link} \&link)
+\item 
+void {\bf create\+Model\+Main} ({\bf hidro\+Model\+Type} type)
+\item 
+int {\bf change\+Model\+Type} ({\bf Element\+ID} elem\+Id, enum {\bf hidro\+Model\+Type} type)
+\item 
+int {\bf change\+Model\+Type} (enum {\bf hidro\+Model\+Type} type)
+\item 
+{\bf Hidro\+Model\+Main} $\ast$ {\bf get\+Model\+Main} ({\bf hidro\+Model\+Type} type)
+\item 
+{\bf Hidro\+Model\+Main} $\ast$ {\bf get\+Model\+Main} ({\bf hidro\+Tag} tag)
+\item 
+std\+::vector$<$ {\bf Hidro\+Scenario} $\ast$ $>$ $\ast$ {\bf get\+Scenarios\+Vector} ()
+\item 
+{\bf Hidro\+Model} $\ast$ {\bf get\+Model} ({\bf Element\+ID} id)
+\item 
+{\bf Hidro\+Model} $\ast$ {\bf get\+Model} ({\bf Element\+ID} id, {\bf hidro\+Tag} tag)
+\item 
+{\bf Hidro\+Model} $\ast$ {\bf get\+Model} (int scen, {\bf hidro\+Model\+Type} type, {\bf Element\+ID} id\+Node)
+\item 
+{\bf Hidro\+Model} $\ast$ {\bf get\+Model} ({\bf hidro\+Model\+Type} type, {\bf Element\+ID} id\+Node)
+\item 
+{\bf Hidro\+Model} $\ast$ {\bf get\+Model} ({\bf hidro\+Model\+Type} type)
+\item 
+{\bf Hidro\+Model} $\ast$ {\bf get\+Model} ({\bf hidro\+Tag} tag)
+\item 
+void {\bf on\+Changing\+Time\+Interval} ({\bf Date\+::\+Time\+Interval} time\+Interval)
+\item 
+void {\bf on\+Changing\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ element\+Ids)
+\item 
+void {\bf on\+Changed\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ elemet\+Ids)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf recreate\+Interface\+Model} (wx\+String {\bf name})
+\item 
+void {\bf set\+Visible\+Model} (wx\+String {\bf name}, bool show)
+\item 
+int {\bf get\+Model\+Type\+Id} (wx\+String {\bf name})
+\item 
+int {\bf get\+Model\+Idby\+Choice} (wx\+String {\bf name})
+\item 
+void {\bf add\+Scenario} (const wx\+String \&{\bf name}, bool copy=false)
+\item 
+void {\bf remove\+Scenario} (bool recalculate\+Id=true)
+\item 
+void {\bf remove\+All\+Scenarios} ()
+\item 
+void {\bf set\+Selected\+Scenario} (unsigned int scen)
+\item 
+void {\bf set\+Selected\+Model\+Type} ({\bf hidro\+Model\+Type} type)
+\item 
+{\bf hidro\+Model\+Type} {\bf get\+Selected\+Model\+Type} ({\bf hidro\+Tag} tag)
+\item 
+void {\bf set\+Selected\+Element} ({\bf Element} \&element)
+\item 
+int {\bf get\+Selected\+Scenario} ()
+\item 
+{\bf Hidro\+Scenario} $\ast$ {\bf get\+Scenario} (int id)
+\item 
+{\bf Hidro\+Scenario} $\ast$ {\bf get\+Scenario} ()
+\item 
+wx\+String {\bf get\+Scenario\+Name} ()
+\item 
+int {\bf get\+Scenario\+Seed} ()
+\item 
+void {\bf interval\+Updated} (bool value)
+\item 
+bool {\bf interval\+Has\+Changed} ()
+\end{DoxyCompactItemize}
+\subsection*{M√©todos P√∫blicos Est√°ticos}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Hidro\+Main} \& {\bf Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf hidro\+Model\+Type} {\bf selected\+Rain\+Type}
+\item 
+{\bf hidro\+Model\+Type} {\bf selected\+Prop\+Type}
+\item 
+wx\+Frame $\ast$ {\bf frame}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf selected\+Scenario}
+\item 
+unsigned int {\bf scenario\+Seed}
+\item 
+vector$<$ {\bf Hidro\+Scenario} $\ast$ $>$ {\bf scenarios}
+\item 
+bool {\bf flag\+Interval\+Has\+Changed}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 52 do arquivo Hidro\+Main.\+h.
+
+
+
+\subsection{M√©todos}
+\index{Hidro\+Main@{Hidro\+Main}!add\+Scenario@{add\+Scenario}}
+\index{add\+Scenario@{add\+Scenario}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{add\+Scenario(const wx\+String \&name, bool copy=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::add\+Scenario (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{name, }
+\item[{bool}]{copy = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_a319330b7ad19429988ce6c1904f95276}
+Adiciona um cen·rio 
+\begin{DoxyParams}{Par√¢metros}
+{\em copy} & valor boleano que indica se o cen·rio a ser adicionado È uma cÛpia do cen·rio selecionado \\
+\hline
+\end{DoxyParams}
+\index{Hidro\+Main@{Hidro\+Main}!change\+Model\+Type@{change\+Model\+Type}}
+\index{change\+Model\+Type@{change\+Model\+Type}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{change\+Model\+Type(\+Element\+I\+D elem\+Id, enum hidro\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}int Hidro\+Main\+::change\+Model\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{elem\+Id, }
+\item[{enum {\bf hidro\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_ab650a04d81d6fb950cba08f5b8b06c09}
+Modifica o tipo do modelo do elemento \index{Hidro\+Main@{Hidro\+Main}!change\+Model\+Type@{change\+Model\+Type}}
+\index{change\+Model\+Type@{change\+Model\+Type}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{change\+Model\+Type(enum hidro\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}int Hidro\+Main\+::change\+Model\+Type (
+\begin{DoxyParamCaption}
+\item[{enum {\bf hidro\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_aa4cb8da2c081ffddfbb358f35bfe29aa}
+\index{Hidro\+Main@{Hidro\+Main}!clear@{clear}}
+\index{clear@{clear}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_hidro_main_aa98c230833231c591758a374ed736ba0}
+Chama o metodo clear de cada \doxyref{Hidro\+Model\+Main}{pag.}{class_hidro_model_main} 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a3155a0112bacea4b0af7b131c0e3f011}.
+
+\index{Hidro\+Main@{Hidro\+Main}!create\+Missing\+Models@{create\+Missing\+Models}}
+\index{create\+Missing\+Models@{create\+Missing\+Models}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{create\+Missing\+Models()}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::create\+Missing\+Models (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_a71b4d27b627786890b223b5118d7d1b3}
+Evento de saida do modelo \index{Hidro\+Main@{Hidro\+Main}!create\+Model@{create\+Model}}
+\index{create\+Model@{create\+Model}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{create\+Model(\+Element \&element)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::create\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Element} \&}]{element}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_a9483c5e966d564afc751234bcb245360}
+\index{Hidro\+Main@{Hidro\+Main}!create\+Model@{create\+Model}}
+\index{create\+Model@{create\+Model}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{create\+Model(\+Node \&node)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::create\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} \&}]{node}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_a8f55f7cc2ab20ba2cc619f935f8b4e42}
+Cria o modelo caso ele ainda n„o exista para o nÛ selecionado. 
+\begin{DoxyParams}{Par√¢metros}
+{\em node} & NÛ para criar o modelo \\
+\hline
+\end{DoxyParams}
+\index{Hidro\+Main@{Hidro\+Main}!create\+Model@{create\+Model}}
+\index{create\+Model@{create\+Model}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{create\+Model(\+Link \&link)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::create\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} \&}]{link}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_a446071f67116b7266ec221f8e83edcee}
+Cria o modelo caso ele ainda n„o exista para o trecho selecionado. 
+\begin{DoxyParams}{Par√¢metros}
+{\em link} & Trecho para criar o modelo \\
+\hline
+\end{DoxyParams}
+\index{Hidro\+Main@{Hidro\+Main}!create\+Model\+Main@{create\+Model\+Main}}
+\index{create\+Model\+Main@{create\+Model\+Main}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{create\+Model\+Main(hidro\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::create\+Model\+Main (
+\begin{DoxyParamCaption}
+\item[{{\bf hidro\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_aa132f14cecdcda359ac4dfdc2530593a}
+Cria o objeto principal de cada tipo de modelo. O\+BS\+: Garanta que este metodo ser· chamado na ordem do enum hidro\+Model\+Type 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo do mÛdelo Hidrologico \\
+\hline
+\end{DoxyParams}
+\index{Hidro\+Main@{Hidro\+Main}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{get\+Model(\+Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hidro\+Model}$\ast$ Hidro\+Main\+::get\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_a8bacc800083ae67a795d764e75bb977c}
+Retorna a inst‚ncia do \doxyref{Hidro\+Model}{pag.}{class_hidro_model} correspondente ao tipo do modelo fornecido e do id do nÛ fornecido. 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo do mÛdelo Hidrologico \\
+\hline
+{\em id\+Node} & Id do nÛ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Hidro\+Model}{pag.}{class_hidro_model} 
+\end{DoxyReturn}
+\index{Hidro\+Main@{Hidro\+Main}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{get\+Model(\+Element\+I\+D id, hidro\+Tag tag)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hidro\+Model}$\ast$ Hidro\+Main\+::get\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{{\bf hidro\+Tag}}]{tag}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_ad523e97697c0bf408d93702f30412d4c}
+Retorna a inst‚ncia do \doxyref{Hidro\+Model}{pag.}{class_hidro_model} correspondente ao tipo do modelo fornecido e do id do nÛ fornecido. 
+\begin{DoxyParams}{Par√¢metros}
+{\em id} & Id do elemento \\
+\hline
+{\em tag} & Tipo elemento \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Hidro\+Model}{pag.}{class_hidro_model} 
+\end{DoxyReturn}
+\index{Hidro\+Main@{Hidro\+Main}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{get\+Model(int scen, hidro\+Model\+Type type, Element\+I\+D id\+Node)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hidro\+Model}$\ast$ Hidro\+Main\+::get\+Model (
+\begin{DoxyParamCaption}
+\item[{int}]{scen, }
+\item[{{\bf hidro\+Model\+Type}}]{type, }
+\item[{{\bf Element\+ID}}]{id\+Node}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_afa0d4e7570420efdaaf619cecc93a80c}
+Retorna a inst‚ncia do \doxyref{Hidro\+Model}{pag.}{class_hidro_model} correspondente ao tipo do modelo fornecido e do id do nÛ fornecido. 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo do mÛdelo Hidrologico \\
+\hline
+{\em id\+Node} & Id do nÛ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Hidro\+Model}{pag.}{class_hidro_model} 
+\end{DoxyReturn}
+\index{Hidro\+Main@{Hidro\+Main}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{get\+Model(hidro\+Model\+Type type, Element\+I\+D id\+Node)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hidro\+Model}$\ast$ Hidro\+Main\+::get\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf hidro\+Model\+Type}}]{type, }
+\item[{{\bf Element\+ID}}]{id\+Node}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_a490c8514e5e6c621967cb96b8f9e18e6}
+Retorna a inst‚ncia do \doxyref{Hidro\+Model}{pag.}{class_hidro_model} correspondente ao tipo do modelo fornecido e do id do nÛ fornecido. 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo do mÛdelo Hidrologico \\
+\hline
+{\em id\+Node} & Id do nÛ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Hidro\+Model}{pag.}{class_hidro_model} 
+\end{DoxyReturn}
+\index{Hidro\+Main@{Hidro\+Main}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{get\+Model(hidro\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hidro\+Model}$\ast$ Hidro\+Main\+::get\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf hidro\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_a5e46bc1d656d7c46068f2f921321f7f2}
+Retorna a inst‚ncia do \doxyref{Hidro\+Model}{pag.}{class_hidro_model} correspondente ao id do nÛ fornecido do modelo utilizado no momento. 
+\begin{DoxyParams}{Par√¢metros}
+{\em id\+Node} & Id do nÛ selecionado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Hidro\+Model}{pag.}{class_hidro_model}
+\end{DoxyReturn}
+Hidro\+Model$\ast$ get\+Model(unsigned int id\+Node); Retorna a inst‚ncia do \doxyref{Hidro\+Model}{pag.}{class_hidro_model} correspondente ao tipo de modelo fornecido para o nÛ selecionado. 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo do mÛdelo Hidrologico \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Hidro\+Model}{pag.}{class_hidro_model} 
+\end{DoxyReturn}
+\index{Hidro\+Main@{Hidro\+Main}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{get\+Model(hidro\+Tag tag)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hidro\+Model}$\ast$ Hidro\+Main\+::get\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf hidro\+Tag}}]{tag}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_a886f1d1843a8fce23b9c272d742dfac1}
+\index{Hidro\+Main@{Hidro\+Main}!get\+Model\+Idby\+Choice@{get\+Model\+Idby\+Choice}}
+\index{get\+Model\+Idby\+Choice@{get\+Model\+Idby\+Choice}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{get\+Model\+Idby\+Choice(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}int Hidro\+Main\+::get\+Model\+Idby\+Choice (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_a1b309ec469fde362e75039a2c3f2ce2e}
+Retorna a posiÁ„o no choice\+Model correspondente ao nome fornecido \index{Hidro\+Main@{Hidro\+Main}!get\+Model\+Main@{get\+Model\+Main}}
+\index{get\+Model\+Main@{get\+Model\+Main}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{get\+Model\+Main(hidro\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hidro\+Model\+Main}$\ast$ Hidro\+Main\+::get\+Model\+Main (
+\begin{DoxyParamCaption}
+\item[{{\bf hidro\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_hidro_main_a6f68ff32b9c5395218179e12c2921cf0}
+Retorna a inst‚ncia do \doxyref{Hidro\+Model\+Main}{pag.}{class_hidro_model_main} correspondente ao tipo de modelo fornecido. 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo do mÛdelo Hidrologico \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia \doxyref{Hidro\+Model\+Main}{pag.}{class_hidro_model_main} 
+\end{DoxyReturn}
+
+
+Defini√ß√£o na linha 195 do arquivo Hidro\+Main.\+h.
+
+\index{Hidro\+Main@{Hidro\+Main}!get\+Model\+Main@{get\+Model\+Main}}
+\index{get\+Model\+Main@{get\+Model\+Main}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{get\+Model\+Main(hidro\+Tag tag)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hidro\+Model\+Main}$\ast$ Hidro\+Main\+::get\+Model\+Main (
+\begin{DoxyParamCaption}
+\item[{{\bf hidro\+Tag}}]{tag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_hidro_main_ac3d1e37f8ec581cc02146b2f1ccb4a63}
+Retorna a inst‚ncia do \doxyref{Hidro\+Model\+Main}{pag.}{class_hidro_model_main} correspondente ao tipo de modelo que esta sendo utilizado no momento. \begin{DoxyReturn}{Retorna}
+Inst‚ncia \doxyref{Hidro\+Model\+Main}{pag.}{class_hidro_model_main} 
+\end{DoxyReturn}
+
+
+Defini√ß√£o na linha 201 do arquivo Hidro\+Main.\+h.
+
+\index{Hidro\+Main@{Hidro\+Main}!get\+Model\+Type\+Id@{get\+Model\+Type\+Id}}
+\index{get\+Model\+Type\+Id@{get\+Model\+Type\+Id}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{get\+Model\+Type\+Id(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}int Hidro\+Main\+::get\+Model\+Type\+Id (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_aaed3b09402d2fec507b50154a9fe3abe}
+Retorna a posiÁ„o no mapa models\+Main correspondente ao nome fornecido \index{Hidro\+Main@{Hidro\+Main}!get\+Scenario@{get\+Scenario}}
+\index{get\+Scenario@{get\+Scenario}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{get\+Scenario(int id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hidro\+Scenario}$\ast$ Hidro\+Main\+::get\+Scenario (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_hidro_main_a1cce542875ce7ec3f0d8e7bf0df64cd6}
+
+
+Defini√ß√£o na linha 350 do arquivo Hidro\+Main.\+h.
+
+\index{Hidro\+Main@{Hidro\+Main}!get\+Scenario@{get\+Scenario}}
+\index{get\+Scenario@{get\+Scenario}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{get\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hidro\+Scenario}$\ast$ Hidro\+Main\+::get\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_hidro_main_a6280be9076edb54fb3f955961adc5365}
+
+
+Defini√ß√£o na linha 357 do arquivo Hidro\+Main.\+h.
+
+\index{Hidro\+Main@{Hidro\+Main}!get\+Scenario\+Name@{get\+Scenario\+Name}}
+\index{get\+Scenario\+Name@{get\+Scenario\+Name}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{get\+Scenario\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Hidro\+Main\+::get\+Scenario\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_adc07140d3d8e73df636e5c9d4cb482f8}
+\index{Hidro\+Main@{Hidro\+Main}!get\+Scenario\+Seed@{get\+Scenario\+Seed}}
+\index{get\+Scenario\+Seed@{get\+Scenario\+Seed}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{get\+Scenario\+Seed()}]{\setlength{\rightskip}{0pt plus 5cm}int Hidro\+Main\+::get\+Scenario\+Seed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_hidro_main_a1ed412213f660707f41d412eb24cca75}
+
+
+Defini√ß√£o na linha 364 do arquivo Hidro\+Main.\+h.
+
+\index{Hidro\+Main@{Hidro\+Main}!get\+Scenarios\+Vector@{get\+Scenarios\+Vector}}
+\index{get\+Scenarios\+Vector@{get\+Scenarios\+Vector}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{get\+Scenarios\+Vector()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Hidro\+Scenario}$\ast$ $>$$\ast$ Hidro\+Main\+::get\+Scenarios\+Vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_hidro_main_ac68571ab4b87af2bd77799ee3f3d721a}
+
+
+Defini√ß√£o na linha 210 do arquivo Hidro\+Main.\+h.
+
+\index{Hidro\+Main@{Hidro\+Main}!get\+Selected\+Model\+Type@{get\+Selected\+Model\+Type}}
+\index{get\+Selected\+Model\+Type@{get\+Selected\+Model\+Type}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{get\+Selected\+Model\+Type(hidro\+Tag tag)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf hidro\+Model\+Type} Hidro\+Main\+::get\+Selected\+Model\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf hidro\+Tag}}]{tag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_hidro_main_acff63dc709e464946c0296a4e15227e1}
+
+
+Defini√ß√£o na linha 334 do arquivo Hidro\+Main.\+h.
+
+\index{Hidro\+Main@{Hidro\+Main}!get\+Selected\+Scenario@{get\+Selected\+Scenario}}
+\index{get\+Selected\+Scenario@{get\+Selected\+Scenario}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{get\+Selected\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}int Hidro\+Main\+::get\+Selected\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_hidro_main_a0e610c5993b3cf0184fcb7a2d29f3138}
+
+
+Defini√ß√£o na linha 345 do arquivo Hidro\+Main.\+h.
+
+\index{Hidro\+Main@{Hidro\+Main}!Instance@{Instance}}
+\index{Instance@{Instance}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{Instance()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Hidro\+Main}\& Hidro\+Main\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_hidro_main_a201f466ca874fe95f57419b03a759da9}
+Recupera a inst‚ncia da classe \index{Hidro\+Main@{Hidro\+Main}!interval\+Has\+Changed@{interval\+Has\+Changed}}
+\index{interval\+Has\+Changed@{interval\+Has\+Changed}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{interval\+Has\+Changed()}]{\setlength{\rightskip}{0pt plus 5cm}bool Hidro\+Main\+::interval\+Has\+Changed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_a434b097769c1a8e98018d6bf8ca1d22e}
+\index{Hidro\+Main@{Hidro\+Main}!interval\+Updated@{interval\+Updated}}
+\index{interval\+Updated@{interval\+Updated}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{interval\+Updated(bool value)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::interval\+Updated (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_a52688a408dd5612cfe3cd3d515cb3e05}
+\index{Hidro\+Main@{Hidro\+Main}!on\+Changed\+Component@{on\+Changed\+Component}}
+\index{on\+Changed\+Component@{on\+Changed\+Component}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{on\+Changed\+Component()}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::on\+Changed\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_hidro_main_a8c8e5bcd260aaa93f59cfa879adb428f}
+Evento de mudanÁa para o modelo 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a528080e8ef4be5f15e8a268ef8a06bd6}.
+
+\index{Hidro\+Main@{Hidro\+Main}!on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}}
+\index{on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{on\+Changed\+Element\+Type(vector$<$ Element\+I\+D $>$ elemet\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::on\+Changed\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{elemet\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_hidro_main_a62bea2cd76bbafb4908a3df18a2ee49d}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a49dc89aa957ef7a7fdb37c6b55041261}.
+
+\index{Hidro\+Main@{Hidro\+Main}!on\+Changing\+Component@{on\+Changing\+Component}}
+\index{on\+Changing\+Component@{on\+Changing\+Component}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{on\+Changing\+Component()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Hidro\+Main\+::on\+Changing\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_hidro_main_a97fe3c7f3a2ae8dbf56fe04df276ea60}
+Evento de saida do modulo Deve ser reimplementado no mÛdulo se deseja realizar algo 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a86d6778195457395b75c8995e98075f1}.
+
+\index{Hidro\+Main@{Hidro\+Main}!on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}}
+\index{on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{on\+Changing\+Element\+Type(vector$<$ Element\+I\+D $>$ element\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::on\+Changing\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{element\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_hidro_main_a9e3040a44e4dd190d8dba9981d83106e}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a959af092622ea87958a2858d0e2d0ce1}.
+
+\index{Hidro\+Main@{Hidro\+Main}!on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}}
+\index{on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{on\+Changing\+Time\+Interval(\+Date\+::\+Time\+Interval time\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::on\+Changing\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_hidro_main_af9828a51aeda748c069eae87b2133daf}
+Retorna a inst‚ncia do modelo correspondente ao tipo de modelo utilizado para o nÛ selecionado. \begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Hidro\+Model}{pag.}{class_hidro_model}
+\end{DoxyReturn}
+Hidro\+Model$\ast$ \doxyref{get\+Model()}{pag.}{class_hidro_main_a8bacc800083ae67a795d764e75bb977c}; Evento chamado quando o sistema muda de intervalo de tempo O modulo adapta os modelos de acordo com o intervalo de tempo definido 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a3e49742b76123d86cd3fec640ba57dd8}.
+
+\index{Hidro\+Main@{Hidro\+Main}!on\+Delete\+Elements@{on\+Delete\+Elements}}
+\index{on\+Delete\+Elements@{on\+Delete\+Elements}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{on\+Delete\+Elements(vector$<$ Element\+I\+D $>$ \&elements\+\_\+id\+\_\+vector)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Hidro\+Main\+::on\+Delete\+Elements (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$ \&}]{elements\+\_\+id\+\_\+vector}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_hidro_main_a9d8537691fd73491860eb56cbe006c78}
+Chamado quando algum nÛ È deletado 
+\begin{DoxyParams}{Par√¢metros}
+{\em node\+Ids} & Vetor com os nÛs selecionados. \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_ad77e22c15657b1a02cf967a59ddbc2cd}.
+
+\index{Hidro\+Main@{Hidro\+Main}!on\+Init@{on\+Init}}
+\index{on\+Init@{on\+Init}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{on\+Init(\+S\+I\+G\+A $\ast$main, wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::on\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+GA} $\ast$}]{main, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_hidro_main_aed44c4e8868aa61b491f8a3b6d35d267}
+Vetor que guarda a sequencia de execucao dos modelos
+
+vector$<$ int$>$ sequence; Inicializa a instancia do \doxyref{Hidro\+Main}{pag.}{class_hidro_main} 
+\begin{DoxyParams}{Par√¢metros}
+{\em main} & Classe base \\
+\hline
+{\em frame} & Janela onde a interface ser· inserida \\
+\hline
+{\em parent} & Componente onde a interface sera inserida \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_aa781bddb43637778a628acbe21a78a01}.
+
+\index{Hidro\+Main@{Hidro\+Main}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$proj)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_hidro_main_ac75d4e28f94973e7903980311678e6d0}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a755c932409c320f6a057abf6c4ebc5e4}.
+
+\index{Hidro\+Main@{Hidro\+Main}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$proj)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_hidro_main_a7695ef501a44b4734be62e015f831032}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_ad6ccdceebf942b62e75f0255319c9fab}.
+
+\index{Hidro\+Main@{Hidro\+Main}!on\+Select\+Element@{on\+Select\+Element}}
+\index{on\+Select\+Element@{on\+Select\+Element}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{on\+Select\+Element()}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::on\+Select\+Element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_hidro_main_a87b8abf9817b59e572b9f8012fc0d1c2}
+Chamado quando algum elemento È selecionado 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a886fc9240f1faf7948ad00aec78c50c3}.
+
+\index{Hidro\+Main@{Hidro\+Main}!on\+Select\+Link@{on\+Select\+Link}}
+\index{on\+Select\+Link@{on\+Select\+Link}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{on\+Select\+Link()}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::on\+Select\+Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_a0a69d42f9192d8f04470be931c9f233e}
+Chamado quando algum trecho È selecionado \index{Hidro\+Main@{Hidro\+Main}!recreate\+Interface\+Model@{recreate\+Interface\+Model}}
+\index{recreate\+Interface\+Model@{recreate\+Interface\+Model}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{recreate\+Interface\+Model(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::recreate\+Interface\+Model (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_a49594fe587f3f2e47fa27ef26a11f190}
+Deleta a interface e cria a interface 
+\begin{DoxyParams}{Par√¢metros}
+{\em name} & Nome do modelo \\
+\hline
+\end{DoxyParams}
+\index{Hidro\+Main@{Hidro\+Main}!remove\+All\+Scenarios@{remove\+All\+Scenarios}}
+\index{remove\+All\+Scenarios@{remove\+All\+Scenarios}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{remove\+All\+Scenarios()}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::remove\+All\+Scenarios (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_a2648309b61ed176944cc3031d3b31954}
+Remove todos dos cen·rios existentes \index{Hidro\+Main@{Hidro\+Main}!remove\+Scenario@{remove\+Scenario}}
+\index{remove\+Scenario@{remove\+Scenario}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{remove\+Scenario(bool recalculate\+Id=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::remove\+Scenario (
+\begin{DoxyParamCaption}
+\item[{bool}]{recalculate\+Id = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_a485a713e3bfb537b1050a8e3af9f0644}
+Remove o cen·rio selecionado de cada modelo \index{Hidro\+Main@{Hidro\+Main}!run@{run}}
+\index{run@{run}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}bool Hidro\+Main\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_a20d4fe6810b104da86bd6dd9392b60d2}
+calcula qual sequencia os elementos devem ser executados
+
+void sequence\+Run(unsigned int selected\+Id = 0); chama os \doxyref{run()}{pag.}{class_hidro_main_a20d4fe6810b104da86bd6dd9392b60d2} dos modelmain que devem ser executados conforme o vector \index{Hidro\+Main@{Hidro\+Main}!set\+Selected\+Element@{set\+Selected\+Element}}
+\index{set\+Selected\+Element@{set\+Selected\+Element}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{set\+Selected\+Element(\+Element \&element)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::set\+Selected\+Element (
+\begin{DoxyParamCaption}
+\item[{{\bf Element} \&}]{element}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_aeec1b640537be93dba69a84a486a5b48}
+\index{Hidro\+Main@{Hidro\+Main}!set\+Selected\+Model\+Type@{set\+Selected\+Model\+Type}}
+\index{set\+Selected\+Model\+Type@{set\+Selected\+Model\+Type}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{set\+Selected\+Model\+Type(hidro\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::set\+Selected\+Model\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf hidro\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_a1fce4e838f0ea759a4ff1a3123f56c1c}
+\index{Hidro\+Main@{Hidro\+Main}!set\+Selected\+Scenario@{set\+Selected\+Scenario}}
+\index{set\+Selected\+Scenario@{set\+Selected\+Scenario}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{set\+Selected\+Scenario(unsigned int scen)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::set\+Selected\+Scenario (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{scen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_hidro_main_a74497cb4e5c68acfd1d71933a35b57d3}
+
+
+Defini√ß√£o na linha 326 do arquivo Hidro\+Main.\+h.
+
+\index{Hidro\+Main@{Hidro\+Main}!set\+Visible\+Model@{set\+Visible\+Model}}
+\index{set\+Visible\+Model@{set\+Visible\+Model}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{set\+Visible\+Model(wx\+String name, bool show)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::set\+Visible\+Model (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name, }
+\item[{bool}]{show}
+\end{DoxyParamCaption}
+)}\label{class_hidro_main_aa05d1d0bcb29d8353f2b869f1c9dac7b}
+\index{Hidro\+Main@{Hidro\+Main}!update\+Tree\+Item@{update\+Tree\+Item}}
+\index{update\+Tree\+Item@{update\+Tree\+Item}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{update\+Tree\+Item(\+S\+I\+G\+A\+Tree\+Ctrl $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Hidro\+Main\+::update\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_hidro_main_a44981c30113ac36cd2b301f1f9d00570}
+Atualiza os ponteiros das suas series no Tree\+Ctrl de integraÁ„o 
+
+Reimplementa√ß√£o de {\bf Component} \doxyref{}{pag.}{class_component_a29b14a3db0650e8c62711bb9edea68a1}.
+
+
+
+\subsection{Atributos}
+\index{Hidro\+Main@{Hidro\+Main}!flag\+Interval\+Has\+Changed@{flag\+Interval\+Has\+Changed}}
+\index{flag\+Interval\+Has\+Changed@{flag\+Interval\+Has\+Changed}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{flag\+Interval\+Has\+Changed}]{\setlength{\rightskip}{0pt plus 5cm}bool Hidro\+Main\+::flag\+Interval\+Has\+Changed\hspace{0.3cm}{\ttfamily [protected]}}\label{class_hidro_main_ab49fb433387cc809deb00fd767b2f843}
+
+
+Defini√ß√£o na linha 75 do arquivo Hidro\+Main.\+h.
+
+\index{Hidro\+Main@{Hidro\+Main}!frame@{frame}}
+\index{frame@{frame}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{frame}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Frame$\ast$ Hidro\+Main\+::frame}\label{class_hidro_main_a0b67b29e7b23b1a778a817b8dc2603f0}
+Frame que contÈm a interface 
+
+Defini√ß√£o na linha 108 do arquivo Hidro\+Main.\+h.
+
+\index{Hidro\+Main@{Hidro\+Main}!scenarios@{scenarios}}
+\index{scenarios@{scenarios}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{scenarios}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Hidro\+Scenario}$\ast$ $>$ Hidro\+Main\+::scenarios\hspace{0.3cm}{\ttfamily [protected]}}\label{class_hidro_main_a2e4cf86403485b06fbb8609623f3895c}
+Mapa para os cen·rios do modelo 
+
+Defini√ß√£o na linha 65 do arquivo Hidro\+Main.\+h.
+
+\index{Hidro\+Main@{Hidro\+Main}!scenario\+Seed@{scenario\+Seed}}
+\index{scenario\+Seed@{scenario\+Seed}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{scenario\+Seed}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Hidro\+Main\+::scenario\+Seed\hspace{0.3cm}{\ttfamily [protected]}}\label{class_hidro_main_aa65f94595ce4ed5ba28b64c78361ef1c}
+Identificador dos cenarios 
+
+Defini√ß√£o na linha 61 do arquivo Hidro\+Main.\+h.
+
+\index{Hidro\+Main@{Hidro\+Main}!selected\+Prop\+Type@{selected\+Prop\+Type}}
+\index{selected\+Prop\+Type@{selected\+Prop\+Type}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{selected\+Prop\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf hidro\+Model\+Type} Hidro\+Main\+::selected\+Prop\+Type}\label{class_hidro_main_a05a9db21397a8a4b4d2555826ead2808}
+Guarda o tipo de modelo de propagaÁ„o que esta sendo utilizado no momento 
+
+Defini√ß√£o na linha 104 do arquivo Hidro\+Main.\+h.
+
+\index{Hidro\+Main@{Hidro\+Main}!selected\+Rain\+Type@{selected\+Rain\+Type}}
+\index{selected\+Rain\+Type@{selected\+Rain\+Type}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{selected\+Rain\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf hidro\+Model\+Type} Hidro\+Main\+::selected\+Rain\+Type}\label{class_hidro_main_a92e547e9bb0e23ec5f2a53672e559a0d}
+Roda a rede apartir de um elemento
+
+bool run(int id, int \&progress); Guarda o tipo de modelo de chuva-\/vaz„o que esta sendo utilizado no momento 
+
+Defini√ß√£o na linha 100 do arquivo Hidro\+Main.\+h.
+
+\index{Hidro\+Main@{Hidro\+Main}!selected\+Scenario@{selected\+Scenario}}
+\index{selected\+Scenario@{selected\+Scenario}!Hidro\+Main@{Hidro\+Main}}
+\subsubsection[{selected\+Scenario}]{\setlength{\rightskip}{0pt plus 5cm}int Hidro\+Main\+::selected\+Scenario\hspace{0.3cm}{\ttfamily [protected]}}\label{class_hidro_main_aa1e1b12d71004a105702ad9ad6c10873}
+Cen·rio selacionado 
+
+Defini√ß√£o na linha 57 do arquivo Hidro\+Main.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Hidro\+Main.\+h}\end{DoxyCompactItemize}

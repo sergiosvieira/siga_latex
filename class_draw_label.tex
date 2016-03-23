@@ -1,0 +1,202 @@
+\section{Referência da Classe Draw\+Label}
+\label{class_draw_label}\index{Draw\+Label@{Draw\+Label}}
+
+
+{\ttfamily \#include $<$Draw\+Label.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Draw\+Label} (wx\+String {\bf name}, int desx, int desy)
+\item 
+{\bf Draw\+Label} ()
+\item 
+bool {\bf hit\+Test} (wx\+DC \&dc, int posx, int posy)
+\item 
+void {\bf draw} (wx\+DC \&dc)
+\item 
+wx\+Rect {\bf get\+Rect} (wx\+DC \&dc)
+\item 
+{\bf Vector2D} \& {\bf deslocation\+Vector} ()
+\item 
+void {\bf set\+Deslocation} (int deslocation\+\_\+x, int deslocation\+\_\+y)
+\item 
+void {\bf set\+Name} (std\+::string {\bf name})
+\item 
+wx\+String {\bf name} ()
+\item 
+void {\bf set\+Reference\+Position} (int x, int y)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf m\+\_\+reference\+\_\+x}
+\item 
+int {\bf m\+\_\+reference\+\_\+y}
+\item 
+wx\+String {\bf m\+\_\+name}
+\item 
+{\bf Vector2D} {\bf m\+\_\+deslocation\+\_\+vector}
+\begin{DoxyCompactList}\small\item\em Vetor que aponta aonde o rotulo ser� desenhada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 11 do arquivo Draw\+Label.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Draw\+Label@{Draw\+Label}!Draw\+Label@{Draw\+Label}}
+\index{Draw\+Label@{Draw\+Label}!Draw\+Label@{Draw\+Label}}
+\subsubsection[{Draw\+Label(wx\+String name, int desx, int desy)}]{\setlength{\rightskip}{0pt plus 5cm}Draw\+Label\+::\+Draw\+Label (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name, }
+\item[{int}]{desx, }
+\item[{int}]{desy}
+\end{DoxyParamCaption}
+)}\label{class_draw_label_a61b923301d4e082c579001d0c4e869da}
+Construtor para trecho 
+\begin{DoxyParams}{Parâmetros}
+{\em name} & Texto \\
+\hline
+{\em desx} & Deslocamento no eixo X \\
+\hline
+{\em desy} & Deslocamento no eixo Y \\
+\hline
+{\em node} & Trecho \\
+\hline
+\end{DoxyParams}
+\index{Draw\+Label@{Draw\+Label}!Draw\+Label@{Draw\+Label}}
+\index{Draw\+Label@{Draw\+Label}!Draw\+Label@{Draw\+Label}}
+\subsubsection[{Draw\+Label()}]{\setlength{\rightskip}{0pt plus 5cm}Draw\+Label\+::\+Draw\+Label (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_label_aeaea8dd18bfa7b88e2201e0ad78524fe}
+
+
+\subsection{Métodos}
+\index{Draw\+Label@{Draw\+Label}!deslocation\+Vector@{deslocation\+Vector}}
+\index{deslocation\+Vector@{deslocation\+Vector}!Draw\+Label@{Draw\+Label}}
+\subsubsection[{deslocation\+Vector()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2D}\& Draw\+Label\+::deslocation\+Vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_label_a2108199a63a77c04e3265a41e0195106}
+\index{Draw\+Label@{Draw\+Label}!draw@{draw}}
+\index{draw@{draw}!Draw\+Label@{Draw\+Label}}
+\subsubsection[{draw(wx\+D\+C \&dc)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Label\+::draw (
+\begin{DoxyParamCaption}
+\item[{wx\+DC \&}]{dc}
+\end{DoxyParamCaption}
+)}\label{class_draw_label_a4604ecf42bace60bf14fb5d3de93978f}
+Desenha o rotulo 
+\begin{DoxyParams}{Parâmetros}
+{\em dc} & DC \\
+\hline
+\end{DoxyParams}
+\index{Draw\+Label@{Draw\+Label}!get\+Rect@{get\+Rect}}
+\index{get\+Rect@{get\+Rect}!Draw\+Label@{Draw\+Label}}
+\subsubsection[{get\+Rect(wx\+D\+C \&dc)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Rect Draw\+Label\+::get\+Rect (
+\begin{DoxyParamCaption}
+\item[{wx\+DC \&}]{dc}
+\end{DoxyParamCaption}
+)}\label{class_draw_label_af470bd7a7f7c3b459eaecf06ddb1b730}
+Retorna o retangulo onde foi desenhado o rotulo 
+\begin{DoxyParams}{Parâmetros}
+{\em dc} & DC \\
+\hline
+\end{DoxyParams}
+\index{Draw\+Label@{Draw\+Label}!hit\+Test@{hit\+Test}}
+\index{hit\+Test@{hit\+Test}!Draw\+Label@{Draw\+Label}}
+\subsubsection[{hit\+Test(wx\+D\+C \&dc, int posx, int posy)}]{\setlength{\rightskip}{0pt plus 5cm}bool Draw\+Label\+::hit\+Test (
+\begin{DoxyParamCaption}
+\item[{wx\+DC \&}]{dc, }
+\item[{int}]{posx, }
+\item[{int}]{posy}
+\end{DoxyParamCaption}
+)}\label{class_draw_label_a573f0a92630262b6fb00ee77d2be8f18}
+Testa se o ponto esta dentro da legenda \begin{DoxyReturn}{Retorna}
+Retorna true se o ponto pertencer ao rotulo 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parâmetros}
+{\em dc} & DC \\
+\hline
+{\em posx} & Posi��o X \\
+\hline
+{\em posy} & Posi��o Y \\
+\hline
+\end{DoxyParams}
+\index{Draw\+Label@{Draw\+Label}!name@{name}}
+\index{name@{name}!Draw\+Label@{Draw\+Label}}
+\subsubsection[{name()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Draw\+Label\+::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_label_ad2fd9bb4e0e67e0c8fe6c49192215bc3}
+\index{Draw\+Label@{Draw\+Label}!set\+Deslocation@{set\+Deslocation}}
+\index{set\+Deslocation@{set\+Deslocation}!Draw\+Label@{Draw\+Label}}
+\subsubsection[{set\+Deslocation(int deslocation\+\_\+x, int deslocation\+\_\+y)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Label\+::set\+Deslocation (
+\begin{DoxyParamCaption}
+\item[{int}]{deslocation\+\_\+x, }
+\item[{int}]{deslocation\+\_\+y}
+\end{DoxyParamCaption}
+)}\label{class_draw_label_a4b21061dade941b1c2fb603d103e9bba}
+\index{Draw\+Label@{Draw\+Label}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!Draw\+Label@{Draw\+Label}}
+\subsubsection[{set\+Name(std\+::string name)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Label\+::set\+Name (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+)}\label{class_draw_label_a8491e0c65161306861f5145b5e0576e9}
+\index{Draw\+Label@{Draw\+Label}!set\+Reference\+Position@{set\+Reference\+Position}}
+\index{set\+Reference\+Position@{set\+Reference\+Position}!Draw\+Label@{Draw\+Label}}
+\subsubsection[{set\+Reference\+Position(int x, int y)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Label\+::set\+Reference\+Position (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{class_draw_label_a3bd4fd6245f445af065cb77b522f9c54}
+
+
+\subsection{Atributos}
+\index{Draw\+Label@{Draw\+Label}!m\+\_\+deslocation\+\_\+vector@{m\+\_\+deslocation\+\_\+vector}}
+\index{m\+\_\+deslocation\+\_\+vector@{m\+\_\+deslocation\+\_\+vector}!Draw\+Label@{Draw\+Label}}
+\subsubsection[{m\+\_\+deslocation\+\_\+vector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vector2D} Draw\+Label\+::m\+\_\+deslocation\+\_\+vector\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_label_ac1af6f391485843e3ab8f393fc7a8528}
+
+
+Vetor que aponta aonde o rotulo ser� desenhada. 
+
+
+
+Definição na linha 58 do arquivo Draw\+Label.\+h.
+
+\index{Draw\+Label@{Draw\+Label}!m\+\_\+name@{m\+\_\+name}}
+\index{m\+\_\+name@{m\+\_\+name}!Draw\+Label@{Draw\+Label}}
+\subsubsection[{m\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Draw\+Label\+::m\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_label_a7dce833525d6d7f65c6a657ed3ff00c0}
+
+
+Definição na linha 57 do arquivo Draw\+Label.\+h.
+
+\index{Draw\+Label@{Draw\+Label}!m\+\_\+reference\+\_\+x@{m\+\_\+reference\+\_\+x}}
+\index{m\+\_\+reference\+\_\+x@{m\+\_\+reference\+\_\+x}!Draw\+Label@{Draw\+Label}}
+\subsubsection[{m\+\_\+reference\+\_\+x}]{\setlength{\rightskip}{0pt plus 5cm}int Draw\+Label\+::m\+\_\+reference\+\_\+x\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_label_abcee227fbfc8bee4a9221d6d3a3876df}
+
+
+Definição na linha 54 do arquivo Draw\+Label.\+h.
+
+\index{Draw\+Label@{Draw\+Label}!m\+\_\+reference\+\_\+y@{m\+\_\+reference\+\_\+y}}
+\index{m\+\_\+reference\+\_\+y@{m\+\_\+reference\+\_\+y}!Draw\+Label@{Draw\+Label}}
+\subsubsection[{m\+\_\+reference\+\_\+y}]{\setlength{\rightskip}{0pt plus 5cm}int Draw\+Label\+::m\+\_\+reference\+\_\+y\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_label_ada2f40545c3ab85e2cfc085e07d5298e}
+
+
+Definição na linha 55 do arquivo Draw\+Label.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Draw\+Label.\+h}\end{DoxyCompactItemize}

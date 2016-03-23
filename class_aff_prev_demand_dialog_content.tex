@@ -1,0 +1,266 @@
+\section{Referência da Classe Aff\+Prev\+Demand\+Dialog\+Content}
+\label{class_aff_prev_demand_dialog_content}\index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}
+
+
+{\ttfamily \#include $<$Aff\+Prev\+Demand\+Dialog\+Content.\+h$>$}
+
+
+
+Herdeiro de {\bf S\+I\+G\+A\+Dialog\+Content}.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf id\+Demand} \{ {\bf I\+D\+\_\+\+N\+O\+T\+E\+\_\+\+D\+E\+M\+A\+N\+DS}, 
+{\bf I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+D\+E\+M\+A\+N\+DS}, 
+{\bf I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+V\+A\+L\+U\+ES}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Aff\+Prev\+Demand\+Dialog\+Content} ({\bf Aff\+Prev\+Demand\+Model} $\ast${\bf model}, {\bf S\+I\+G\+A\+Dialog} $\ast$dialog)
+\item 
+{\bf $\sim$\+Aff\+Prev\+Demand\+Dialog\+Content} ()
+\item 
+void {\bf on\+Change\+Notebook} (wx\+Notebook\+Event \&event)
+\item 
+void {\bf on\+Tool\+Options} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Change\+Grid} (wx\+Grid\+Event \&event)
+\item 
+virtual void {\bf set\+Info} ()
+\item 
+{\bf D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+String {\bf types} [2]
+\item 
+{\bf S\+I\+G\+A\+Grid} $\ast$ {\bf grid\+Demands}
+\item 
+wx\+Notebook $\ast$ {\bf note}
+\item 
+{\bf S\+I\+G\+A\+Grid} $\ast$ {\bf grid\+Values}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf open\+Conf} ()
+\item 
+void {\bf save\+Conf} ()
+\item 
+void {\bf add} ()
+\item 
+void {\bf remove} ()
+\item 
+void {\bf clear\+Grid} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Aff\+Prev\+Scenario} $\ast$ {\bf selected\+Scenario}
+\item 
+{\bf Aff\+Prev\+Demand\+Model} $\ast$ {\bf model}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 11 do arquivo Demand/\+Aff\+Prev\+Demand\+Dialog\+Content.\+h.
+
+
+
+\subsection{Enumerações}
+\index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!id\+Demand@{id\+Demand}}
+\index{id\+Demand@{id\+Demand}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}
+\subsubsection[{id\+Demand}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Aff\+Prev\+Demand\+Dialog\+Content\+::id\+Demand}}\label{class_aff_prev_demand_dialog_content_a5fa96f19228c825db1d391f8c143162c}
+Identificadores de para elementos da interface do cont�udo da caixa de dialogo \begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+N\+O\+T\+E\+\_\+\+D\+E\+M\+A\+N\+DS@{I\+D\+\_\+\+N\+O\+T\+E\+\_\+\+D\+E\+M\+A\+N\+DS}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}\index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!I\+D\+\_\+\+N\+O\+T\+E\+\_\+\+D\+E\+M\+A\+N\+DS@{I\+D\+\_\+\+N\+O\+T\+E\+\_\+\+D\+E\+M\+A\+N\+DS}}\item[{\em 
+I\+D\+\_\+\+N\+O\+T\+E\+\_\+\+D\+E\+M\+A\+N\+DS\label{class_aff_prev_demand_dialog_content_a5fa96f19228c825db1d391f8c143162ca10a245ab6afedc8f1c36be711380161a}
+}]\index{I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+D\+E\+M\+A\+N\+DS@{I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+D\+E\+M\+A\+N\+DS}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}\index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+D\+E\+M\+A\+N\+DS@{I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+D\+E\+M\+A\+N\+DS}}\item[{\em 
+I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+D\+E\+M\+A\+N\+DS\label{class_aff_prev_demand_dialog_content_a5fa96f19228c825db1d391f8c143162caf0e555516b66cf8d3a15e89a05d06d2e}
+}]\index{I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+V\+A\+L\+U\+ES@{I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+V\+A\+L\+U\+ES}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}\index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+V\+A\+L\+U\+ES@{I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+V\+A\+L\+U\+ES}}\item[{\em 
+I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+V\+A\+L\+U\+ES\label{class_aff_prev_demand_dialog_content_a5fa96f19228c825db1d391f8c143162ca00c5b217580c9a80f3d9cfed3ccfba40}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 54 do arquivo Demand/\+Aff\+Prev\+Demand\+Dialog\+Content.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}
+\index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}
+\subsubsection[{Aff\+Prev\+Demand\+Dialog\+Content(\+Aff\+Prev\+Demand\+Model $\ast$model, S\+I\+G\+A\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}Aff\+Prev\+Demand\+Dialog\+Content\+::\+Aff\+Prev\+Demand\+Dialog\+Content (
+\begin{DoxyParamCaption}
+\item[{{\bf Aff\+Prev\+Demand\+Model} $\ast$}]{model, }
+\item[{{\bf S\+I\+G\+A\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_demand_dialog_content_aa8366f74c0c805b203e680c3dea6c506}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em function} & Ponteiro para o modelo de demanda \\
+\hline
+{\em dialog} & Caixa de dialogo a que pertence \\
+\hline
+\end{DoxyParams}
+\index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!````~Aff\+Prev\+Demand\+Dialog\+Content@{$\sim$\+Aff\+Prev\+Demand\+Dialog\+Content}}
+\index{````~Aff\+Prev\+Demand\+Dialog\+Content@{$\sim$\+Aff\+Prev\+Demand\+Dialog\+Content}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}
+\subsubsection[{$\sim$\+Aff\+Prev\+Demand\+Dialog\+Content()}]{\setlength{\rightskip}{0pt plus 5cm}Aff\+Prev\+Demand\+Dialog\+Content\+::$\sim$\+Aff\+Prev\+Demand\+Dialog\+Content (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_aff_prev_demand_dialog_content_a5e6ee3312e5554562624423a92f8e9ab}
+Destrutor 
+
+Definição na linha 91 do arquivo Demand/\+Aff\+Prev\+Demand\+Dialog\+Content.\+h.
+
+
+
+\subsection{Métodos}
+\index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!add@{add}}
+\index{add@{add}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}
+\subsubsection[{add()}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Demand\+Dialog\+Content\+::add (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_aff_prev_demand_dialog_content_a453ebf53e5c3cc12fca6b9e5a73665c4}
+Adiciona nova linha e nova aba 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_afcaf28aadef0b3ce51afffe258b88947}.
+
+\index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!clear\+Grid@{clear\+Grid}}
+\index{clear\+Grid@{clear\+Grid}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}
+\subsubsection[{clear\+Grid()}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Demand\+Dialog\+Content\+::clear\+Grid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_aff_prev_demand_dialog_content_a2f280fb55dd14852d4590c83b7313cd9}
+remove todos os dados da aba \index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}
+\subsubsection[{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+L\+E()}]{\setlength{\rightskip}{0pt plus 5cm}Aff\+Prev\+Demand\+Dialog\+Content\+::\+D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_demand_dialog_content_a3ef60b0fcc93bd0b3445462bed924e3b}
+Declara��o da tabela de eventos \index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!on\+Change\+Grid@{on\+Change\+Grid}}
+\index{on\+Change\+Grid@{on\+Change\+Grid}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}
+\subsubsection[{on\+Change\+Grid(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Demand\+Dialog\+Content\+::on\+Change\+Grid (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_demand_dialog_content_a5f1b7a956e0bbd9ed04410ec40372569}
+Evento chamado quando ocorre modifi��o nos dados das tabelas \index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!on\+Change\+Notebook@{on\+Change\+Notebook}}
+\index{on\+Change\+Notebook@{on\+Change\+Notebook}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}
+\subsubsection[{on\+Change\+Notebook(wx\+Notebook\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Demand\+Dialog\+Content\+::on\+Change\+Notebook (
+\begin{DoxyParamCaption}
+\item[{wx\+Notebook\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_demand_dialog_content_a044f73cd7084be055ce71519e13c858f}
+Evento de troca de paginas do notebook \index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!on\+Tool\+Options@{on\+Tool\+Options}}
+\index{on\+Tool\+Options@{on\+Tool\+Options}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}
+\subsubsection[{on\+Tool\+Options(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Demand\+Dialog\+Content\+::on\+Tool\+Options (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_demand_dialog_content_adb8d6c241c32d087c52feb78f3e59ec7}
+Captura eventos da barra de ferramentas \index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!open\+Conf@{open\+Conf}}
+\index{open\+Conf@{open\+Conf}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}
+\subsubsection[{open\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Demand\+Dialog\+Content\+::open\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_aff_prev_demand_dialog_content_a4404dccda21061f926f8f33c18581ad8}
+Abrir regra de arquivo 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abf3660e2c31c95afab763b4b520e26e9}.
+
+\index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!remove@{remove}}
+\index{remove@{remove}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}
+\subsubsection[{remove()}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Demand\+Dialog\+Content\+::remove (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_aff_prev_demand_dialog_content_a291769127f629dc5da40fde54a80928b}
+Remove linha e aba 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_a4ea7f5ae0d3c599a63617a491e551927}.
+
+\index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!save\+Conf@{save\+Conf}}
+\index{save\+Conf@{save\+Conf}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}
+\subsubsection[{save\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Demand\+Dialog\+Content\+::save\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_aff_prev_demand_dialog_content_a04259829bef9be12a2c68fe2f7de49ed}
+Salvar regra em arquivo 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abcef0436251918c1eab033a80b40c626}.
+
+\index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Aff\+Prev\+Demand\+Dialog\+Content\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_demand_dialog_content_afb654e5cc427f4966bf6cb4c555f8b80}
+Atualiza a interface 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_aced556e5caf584b7335135d337895154}.
+
+
+
+\subsection{Atributos}
+\index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!grid\+Demands@{grid\+Demands}}
+\index{grid\+Demands@{grid\+Demands}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}
+\subsubsection[{grid\+Demands}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Grid}$\ast$ Aff\+Prev\+Demand\+Dialog\+Content\+::grid\+Demands}\label{class_aff_prev_demand_dialog_content_abe4dfb8904a3523f48774ff68dd0a486}
+Tabela de descri��o das demandas 
+
+Definição na linha 69 do arquivo Demand/\+Aff\+Prev\+Demand\+Dialog\+Content.\+h.
+
+\index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!grid\+Values@{grid\+Values}}
+\index{grid\+Values@{grid\+Values}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}
+\subsubsection[{grid\+Values}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Grid}$\ast$ Aff\+Prev\+Demand\+Dialog\+Content\+::grid\+Values}\label{class_aff_prev_demand_dialog_content_ae9b10c52f0b437fac7f20ae45c620e71}
+Tabela com valores das demandas 
+
+Definição na linha 79 do arquivo Demand/\+Aff\+Prev\+Demand\+Dialog\+Content.\+h.
+
+\index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!model@{model}}
+\index{model@{model}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}
+\subsubsection[{model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Aff\+Prev\+Demand\+Model}$\ast$ Aff\+Prev\+Demand\+Dialog\+Content\+::model\hspace{0.3cm}{\ttfamily [protected]}}\label{class_aff_prev_demand_dialog_content_a59d669d083402137bbdb255a40bf85d5}
+Ponteiro para o modelo 
+
+Definição na linha 23 do arquivo Demand/\+Aff\+Prev\+Demand\+Dialog\+Content.\+h.
+
+\index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!note@{note}}
+\index{note@{note}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}
+\subsubsection[{note}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Notebook$\ast$ Aff\+Prev\+Demand\+Dialog\+Content\+::note}\label{class_aff_prev_demand_dialog_content_a0aa0f79d4f4fa37e858ef882c139dfaa}
+Caderno com abas para informa��es dos valores das demandas 
+
+Definição na linha 74 do arquivo Demand/\+Aff\+Prev\+Demand\+Dialog\+Content.\+h.
+
+\index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!selected\+Scenario@{selected\+Scenario}}
+\index{selected\+Scenario@{selected\+Scenario}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}
+\subsubsection[{selected\+Scenario}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Aff\+Prev\+Scenario}$\ast$ Aff\+Prev\+Demand\+Dialog\+Content\+::selected\+Scenario\hspace{0.3cm}{\ttfamily [protected]}}\label{class_aff_prev_demand_dialog_content_a32e34c2c96c1d37e0c89f46af1fbdf35}
+Senario selecionado 
+
+Definição na linha 18 do arquivo Demand/\+Aff\+Prev\+Demand\+Dialog\+Content.\+h.
+
+\index{Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}!types@{types}}
+\index{types@{types}!Aff\+Prev\+Demand\+Dialog\+Content@{Aff\+Prev\+Demand\+Dialog\+Content}}
+\subsubsection[{types}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Aff\+Prev\+Demand\+Dialog\+Content\+::types[2]}\label{class_aff_prev_demand_dialog_content_ac08d8731cdfae7a19a937ef74b173b22}
+Tipo de demanda 
+
+Definição na linha 64 do arquivo Demand/\+Aff\+Prev\+Demand\+Dialog\+Content.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Demand/\+Aff\+Prev\+Demand\+Dialog\+Content.\+h}\end{DoxyCompactItemize}

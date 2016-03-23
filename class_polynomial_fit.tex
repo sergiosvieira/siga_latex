@@ -1,0 +1,368 @@
+\section{Referência da Classe Polynomial\+Fit}
+\label{class_polynomial_fit}\index{Polynomial\+Fit@{Polynomial\+Fit}}
+
+
+{\ttfamily \#include $<$Polynomial\+Fit.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Polynomial\+Fit} (vector$<$ double $>$ {\bf x}, vector$<$ double $>$ {\bf y}, int {\bf degree}=2, wx\+Real\+Point {\bf range}=wx\+Real\+Point({\bf E\+M\+P\+TY}, {\bf E\+M\+P\+TY}), double {\bf dx}=1)
+\item 
+{\bf Polynomial\+Fit} ({\bf Matrix} matrix, int colX, int colY, int {\bf degree}=2, wx\+Real\+Point {\bf range}=wx\+Real\+Point({\bf E\+M\+P\+TY}, {\bf E\+M\+P\+TY}), double {\bf dx}=1)
+\item 
+{\bf Polynomial\+Fit} (vector$<$ double $>$ {\bf coef})
+\item 
+{\bf $\sim$\+Polynomial\+Fit} ()
+\item 
+void {\bf set\+Poly\+Coef} (vector$<$ double $>$ poly\+Coef)
+\item 
+vector$<$ double $>$ {\bf get\+Poly\+Coef} ()
+\item 
+void {\bf fit\+Curve} ()
+\item 
+void {\bf calc\+Curve} ()
+\item 
+double {\bf calc\+Value} (double valueX)
+\item 
+vector$<$ double $>$ {\bf get\+X\+Values} ()
+\item 
+vector$<$ double $>$ {\bf get\+Y\+Values} ()
+\item 
+void {\bf set\+Degree} (int value)
+\item 
+void {\bf set\+Dx} (double value)
+\item 
+void {\bf set\+Range} (wx\+Real\+Point poly\+Range)
+\item 
+int {\bf get\+Degree} ()
+\item 
+void {\bf set\+X\+Values} (vector$<$ double $>$ x1)
+\item 
+void {\bf set\+Y\+Values} (vector$<$ double $>$ y1)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bf calc\+Curve} (vector$<$ double $>$ \&x1, vector$<$ double $>$ \&y1, vector$<$ double $>$ coef1, wx\+Real\+Point range1, double dx1=1)
+\item 
+static double {\bf calc\+Value} (vector$<$ double $>$ coef1, double valueX)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ double $>$ {\bf coef}
+\item 
+vector$<$ double $>$ {\bf x}
+\item 
+vector$<$ double $>$ {\bf y}
+\item 
+int {\bf n}
+\item 
+int {\bf degree}
+\item 
+double {\bf dx}
+\item 
+wx\+Real\+Point {\bf range}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 17 do arquivo Polynomial\+Fit.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Polynomial\+Fit@{Polynomial\+Fit}!Polynomial\+Fit@{Polynomial\+Fit}}
+\index{Polynomial\+Fit@{Polynomial\+Fit}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{Polynomial\+Fit(vector$<$ double $>$ x, vector$<$ double $>$ y, int degree=2, wx\+Real\+Point range=wx\+Real\+Point(\+E\+M\+P\+T\+Y, E\+M\+P\+T\+Y), double dx=1)}]{\setlength{\rightskip}{0pt plus 5cm}Polynomial\+Fit\+::\+Polynomial\+Fit (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{x, }
+\item[{vector$<$ double $>$}]{y, }
+\item[{int}]{degree = {\ttfamily 2}, }
+\item[{wx\+Real\+Point}]{range = {\ttfamily wxRealPoint({\bf E\+M\+P\+TY},~{\bf E\+M\+P\+TY})}, }
+\item[{double}]{dx = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\label{class_polynomial_fit_ab916471a487a224a14475d06e33ce1f9}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em x} & Vetor contendo os valores de x \\
+\hline
+{\em y} & Vetor contendo os valores de y \\
+\hline
+{\em range} & Valores maximo e minimo da curva de ajuste \\
+\hline
+{\em dx} & Incremento de valor em x. Usado pra calcular a curva de ajuste \\
+\hline
+\end{DoxyParams}
+\index{Polynomial\+Fit@{Polynomial\+Fit}!Polynomial\+Fit@{Polynomial\+Fit}}
+\index{Polynomial\+Fit@{Polynomial\+Fit}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{Polynomial\+Fit(\+Matrix matrix, int col\+X, int col\+Y, int degree=2, wx\+Real\+Point range=wx\+Real\+Point(\+E\+M\+P\+T\+Y, E\+M\+P\+T\+Y), double dx=1)}]{\setlength{\rightskip}{0pt plus 5cm}Polynomial\+Fit\+::\+Polynomial\+Fit (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{matrix, }
+\item[{int}]{colX, }
+\item[{int}]{colY, }
+\item[{int}]{degree = {\ttfamily 2}, }
+\item[{wx\+Real\+Point}]{range = {\ttfamily wxRealPoint({\bf E\+M\+P\+TY},~{\bf E\+M\+P\+TY})}, }
+\item[{double}]{dx = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\label{class_polynomial_fit_a3bfa63ca0fc9a9c7a745a1ab159acc65}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em matrix} & Matriz contendo a curva ser ajustada \\
+\hline
+{\em colX} & Posi��o da coluna para valores de x \\
+\hline
+{\em colY} & Posi��o da coluna para valores de y \\
+\hline
+{\em range} & Valores maximo e minimo da curva de ajuste \\
+\hline
+{\em dx} & Incremento de valor em x. Usado pra calcular a curva de ajuste \\
+\hline
+\end{DoxyParams}
+\index{Polynomial\+Fit@{Polynomial\+Fit}!Polynomial\+Fit@{Polynomial\+Fit}}
+\index{Polynomial\+Fit@{Polynomial\+Fit}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{Polynomial\+Fit(vector$<$ double $>$ coef)}]{\setlength{\rightskip}{0pt plus 5cm}Polynomial\+Fit\+::\+Polynomial\+Fit (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{coef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_polynomial_fit_a9c9edbe476ea1d050ce08eb7aa291f17}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em serie} & \doxyref{Serie}{pag.}{class_serie} contendo a curva a ser ajustada \\
+\hline
+{\em range} & Valores maximo e minimo da curva de ajuste \\
+\hline
+{\em dx} & Incremento de valor em x. Usado pra calcular a curva de ajuste\\
+\hline
+\end{DoxyParams}
+\doxyref{Polynomial\+Fit}{pag.}{class_polynomial_fit}(\doxyref{Serie}{pag.}{class_serie} $\ast$serie, int type, int degree = 2, wx\+Real\+Point range = wx\+Real\+Point(\+E\+M\+P\+T\+Y, E\+M\+P\+T\+Y), double dx = 1); Construtor Esse construtor deve ser usado apenas para calcular valor a valor utilizando o alfa e beta enviado 
+\begin{DoxyParams}{Parâmetros}
+{\em alfa} & Valor de alfa \\
+\hline
+{\em beta} & Valor de beta \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 75 do arquivo Polynomial\+Fit.\+h.
+
+\index{Polynomial\+Fit@{Polynomial\+Fit}!````~Polynomial\+Fit@{$\sim$\+Polynomial\+Fit}}
+\index{````~Polynomial\+Fit@{$\sim$\+Polynomial\+Fit}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{$\sim$\+Polynomial\+Fit()}]{\setlength{\rightskip}{0pt plus 5cm}Polynomial\+Fit\+::$\sim$\+Polynomial\+Fit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_polynomial_fit_a82034b6c3eecfd18ed9b4fc944a386e6}
+Destrutor 
+
+\subsection{Métodos}
+\index{Polynomial\+Fit@{Polynomial\+Fit}!calc\+Curve@{calc\+Curve}}
+\index{calc\+Curve@{calc\+Curve}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{calc\+Curve()}]{\setlength{\rightskip}{0pt plus 5cm}void Polynomial\+Fit\+::calc\+Curve (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_polynomial_fit_acc81b56ad536e4f38fa94238bd7b4a08}
+Calcula a curva de ajuste \index{Polynomial\+Fit@{Polynomial\+Fit}!calc\+Curve@{calc\+Curve}}
+\index{calc\+Curve@{calc\+Curve}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{calc\+Curve(vector$<$ double $>$ \&x1, vector$<$ double $>$ \&y1, vector$<$ double $>$ coef1, wx\+Real\+Point range1, double dx1=1)}]{\setlength{\rightskip}{0pt plus 5cm}static void Polynomial\+Fit\+::calc\+Curve (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$ \&}]{x1, }
+\item[{vector$<$ double $>$ \&}]{y1, }
+\item[{vector$<$ double $>$}]{coef1, }
+\item[{wx\+Real\+Point}]{range1, }
+\item[{double}]{dx1 = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_polynomial_fit_aee05b34c4fb10d5a04a9d2d99a167788}
+Calcula a curva de ajuste \index{Polynomial\+Fit@{Polynomial\+Fit}!calc\+Value@{calc\+Value}}
+\index{calc\+Value@{calc\+Value}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{calc\+Value(double value\+X)}]{\setlength{\rightskip}{0pt plus 5cm}double Polynomial\+Fit\+::calc\+Value (
+\begin{DoxyParamCaption}
+\item[{double}]{valueX}
+\end{DoxyParamCaption}
+)}\label{class_polynomial_fit_acf2c5ffb362a0202842cee9415cad063}
+Calcula e retorna o valor de y com base no alfa e beta da classe \index{Polynomial\+Fit@{Polynomial\+Fit}!calc\+Value@{calc\+Value}}
+\index{calc\+Value@{calc\+Value}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{calc\+Value(vector$<$ double $>$ coef1, double value\+X)}]{\setlength{\rightskip}{0pt plus 5cm}static double Polynomial\+Fit\+::calc\+Value (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{coef1, }
+\item[{double}]{valueX}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_polynomial_fit_a1985643a6dda0344aea1206af08da779}
+Calcula e retorna o valor de y com o alfa e beta enviado \index{Polynomial\+Fit@{Polynomial\+Fit}!fit\+Curve@{fit\+Curve}}
+\index{fit\+Curve@{fit\+Curve}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{fit\+Curve()}]{\setlength{\rightskip}{0pt plus 5cm}void Polynomial\+Fit\+::fit\+Curve (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_polynomial_fit_ae9dd84eaac76c7f49cb20d55248776ab}
+Calcula os coeficientes do polinomio \index{Polynomial\+Fit@{Polynomial\+Fit}!get\+Degree@{get\+Degree}}
+\index{get\+Degree@{get\+Degree}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{get\+Degree()}]{\setlength{\rightskip}{0pt plus 5cm}int Polynomial\+Fit\+::get\+Degree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_polynomial_fit_a7b81b6880ca565f446b7b5dc51dd2ee8}
+Retorna a ordem do polinomio usado 
+
+Definição na linha 132 do arquivo Polynomial\+Fit.\+h.
+
+\index{Polynomial\+Fit@{Polynomial\+Fit}!get\+Poly\+Coef@{get\+Poly\+Coef}}
+\index{get\+Poly\+Coef@{get\+Poly\+Coef}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{get\+Poly\+Coef()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Polynomial\+Fit\+::get\+Poly\+Coef (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_polynomial_fit_a5382b9d27f75f595db1051102d4398f6}
+Retorna o valor dos coeficientes 
+
+Definição na linha 87 do arquivo Polynomial\+Fit.\+h.
+
+\index{Polynomial\+Fit@{Polynomial\+Fit}!get\+X\+Values@{get\+X\+Values}}
+\index{get\+X\+Values@{get\+X\+Values}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{get\+X\+Values()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Polynomial\+Fit\+::get\+X\+Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_polynomial_fit_a3e324ef04bc82d4d3635c7878393fb94}
+Retorna os valores de x 
+
+Definição na linha 111 do arquivo Polynomial\+Fit.\+h.
+
+\index{Polynomial\+Fit@{Polynomial\+Fit}!get\+Y\+Values@{get\+Y\+Values}}
+\index{get\+Y\+Values@{get\+Y\+Values}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{get\+Y\+Values()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Polynomial\+Fit\+::get\+Y\+Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_polynomial_fit_a3aa64566edad8e63e796ffc281713194}
+Retorna os valores de y 
+
+Definição na linha 115 do arquivo Polynomial\+Fit.\+h.
+
+\index{Polynomial\+Fit@{Polynomial\+Fit}!set\+Degree@{set\+Degree}}
+\index{set\+Degree@{set\+Degree}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{set\+Degree(int value)}]{\setlength{\rightskip}{0pt plus 5cm}void Polynomial\+Fit\+::set\+Degree (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_polynomial_fit_adb190f09628630955f6b357d75c6242e}
+Define o grau do ajuste 
+
+Definição na linha 119 do arquivo Polynomial\+Fit.\+h.
+
+\index{Polynomial\+Fit@{Polynomial\+Fit}!set\+Dx@{set\+Dx}}
+\index{set\+Dx@{set\+Dx}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{set\+Dx(double value)}]{\setlength{\rightskip}{0pt plus 5cm}void Polynomial\+Fit\+::set\+Dx (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_polynomial_fit_ae09821e12914bee4b5a664d4aa5c23aa}
+Define dx 
+
+Definição na linha 127 do arquivo Polynomial\+Fit.\+h.
+
+\index{Polynomial\+Fit@{Polynomial\+Fit}!set\+Poly\+Coef@{set\+Poly\+Coef}}
+\index{set\+Poly\+Coef@{set\+Poly\+Coef}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{set\+Poly\+Coef(vector$<$ double $>$ poly\+Coef)}]{\setlength{\rightskip}{0pt plus 5cm}void Polynomial\+Fit\+::set\+Poly\+Coef (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{poly\+Coef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_polynomial_fit_a6f8184bfad573c3eec605958ef207c62}
+Define o valor dos coeficientes 
+
+Definição na linha 83 do arquivo Polynomial\+Fit.\+h.
+
+\index{Polynomial\+Fit@{Polynomial\+Fit}!set\+Range@{set\+Range}}
+\index{set\+Range@{set\+Range}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{set\+Range(wx\+Real\+Point poly\+Range)}]{\setlength{\rightskip}{0pt plus 5cm}void Polynomial\+Fit\+::set\+Range (
+\begin{DoxyParamCaption}
+\item[{wx\+Real\+Point}]{poly\+Range}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_polynomial_fit_ae0435ac516d418d22edda1e89782e833}
+
+
+Definição na linha 128 do arquivo Polynomial\+Fit.\+h.
+
+\index{Polynomial\+Fit@{Polynomial\+Fit}!set\+X\+Values@{set\+X\+Values}}
+\index{set\+X\+Values@{set\+X\+Values}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{set\+X\+Values(vector$<$ double $>$ x1)}]{\setlength{\rightskip}{0pt plus 5cm}void Polynomial\+Fit\+::set\+X\+Values (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{x1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_polynomial_fit_a206854ccff64ef8eff962e7d0d84a24b}
+
+
+Definição na linha 136 do arquivo Polynomial\+Fit.\+h.
+
+\index{Polynomial\+Fit@{Polynomial\+Fit}!set\+Y\+Values@{set\+Y\+Values}}
+\index{set\+Y\+Values@{set\+Y\+Values}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{set\+Y\+Values(vector$<$ double $>$ y1)}]{\setlength{\rightskip}{0pt plus 5cm}void Polynomial\+Fit\+::set\+Y\+Values (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{y1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_polynomial_fit_a56a71b5d7a379bf5406ec9eb3ad005ea}
+
+
+Definição na linha 140 do arquivo Polynomial\+Fit.\+h.
+
+
+
+\subsection{Atributos}
+\index{Polynomial\+Fit@{Polynomial\+Fit}!coef@{coef}}
+\index{coef@{coef}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{coef}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Polynomial\+Fit\+::coef\hspace{0.3cm}{\ttfamily [protected]}}\label{class_polynomial_fit_a733643fb44d188fd3e1aa0a3b8dc0440}
+Vetor contendo os coeficientes 
+
+Definição na linha 23 do arquivo Polynomial\+Fit.\+h.
+
+\index{Polynomial\+Fit@{Polynomial\+Fit}!degree@{degree}}
+\index{degree@{degree}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{degree}]{\setlength{\rightskip}{0pt plus 5cm}int Polynomial\+Fit\+::degree\hspace{0.3cm}{\ttfamily [protected]}}\label{class_polynomial_fit_a3698ba31f858dd2aa06424be90125ea7}
+Ordem do polinomio 
+
+Definição na linha 35 do arquivo Polynomial\+Fit.\+h.
+
+\index{Polynomial\+Fit@{Polynomial\+Fit}!dx@{dx}}
+\index{dx@{dx}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{dx}]{\setlength{\rightskip}{0pt plus 5cm}double Polynomial\+Fit\+::dx\hspace{0.3cm}{\ttfamily [protected]}}\label{class_polynomial_fit_aaebf81ddac4c564b5d106695fdffdec9}
+Varia��o de x 
+
+Definição na linha 39 do arquivo Polynomial\+Fit.\+h.
+
+\index{Polynomial\+Fit@{Polynomial\+Fit}!n@{n}}
+\index{n@{n}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{n}]{\setlength{\rightskip}{0pt plus 5cm}int Polynomial\+Fit\+::n\hspace{0.3cm}{\ttfamily [protected]}}\label{class_polynomial_fit_ae974abfb1c45e30c477cf6037ce0991b}
+Numero de amostras 
+
+Definição na linha 31 do arquivo Polynomial\+Fit.\+h.
+
+\index{Polynomial\+Fit@{Polynomial\+Fit}!range@{range}}
+\index{range@{range}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{range}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Real\+Point Polynomial\+Fit\+::range\hspace{0.3cm}{\ttfamily [protected]}}\label{class_polynomial_fit_a2784839700f1f8d3e74700ab5ac1d6a0}
+Valor minimo e maximo de x 
+
+Definição na linha 43 do arquivo Polynomial\+Fit.\+h.
+
+\index{Polynomial\+Fit@{Polynomial\+Fit}!x@{x}}
+\index{x@{x}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Polynomial\+Fit\+::x\hspace{0.3cm}{\ttfamily [protected]}}\label{class_polynomial_fit_ab99195ef5efa6df486ddc2504ad6c7f8}
+Vetores contendo os pontos 
+
+Definição na linha 27 do arquivo Polynomial\+Fit.\+h.
+
+\index{Polynomial\+Fit@{Polynomial\+Fit}!y@{y}}
+\index{y@{y}!Polynomial\+Fit@{Polynomial\+Fit}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Polynomial\+Fit\+::y\hspace{0.3cm}{\ttfamily [protected]}}\label{class_polynomial_fit_aca9d19f8bc31a77d9c3fedaba9d8ab5a}
+
+
+Definição na linha 27 do arquivo Polynomial\+Fit.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Polynomial\+Fit.\+h}\end{DoxyCompactItemize}

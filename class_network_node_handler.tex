@@ -1,0 +1,181 @@
+\section{Referência da Classe Network\+Node\+Handler}
+\label{class_network_node_handler}\index{Network\+Node\+Handler@{Network\+Node\+Handler}}
+
+
+{\ttfamily \#include $<$Network\+Node\+Handler.\+h$>$}
+
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Network\+Node\+Handler} (std\+::map$<$ {\bf Element\+ID}, {\bf Element} $\ast$ $>$ \&element\+\_\+map, std\+::map$<$ {\bf Element\+ID}, {\bf Node} $\ast$ $>$ \&node\+\_\+map, std\+::map$<$ {\bf Element\+ID}, {\bf Link} $\ast$ $>$ \&link\+\_\+map, std\+::set$<$ {\bf Element\+ID} $>$ \&subnetwork\+\_\+id\+\_\+set)
+\item 
+{\bf $\sim$\+Network\+Node\+Handler} ()
+\item 
+{\bf Node} \& {\bf add\+Node} ({\bf Element\+ID} id, {\bf Node\+Type} type, double latitude, double longitude)
+\begin{DoxyCompactList}\small\item\em Creates a new node. \end{DoxyCompactList}\item 
+bool {\bf get\+Node} ({\bf Element\+ID} id, {\bf Node} $\ast$\&result)
+\begin{DoxyCompactList}\small\item\em returns true and fills the pointer result with the node\textquotesingle{}s pointer if it exists \end{DoxyCompactList}\item 
+bool {\bf set\+Node\+Type} ({\bf Node} \&node, {\bf Node\+Type} new\+\_\+type)
+\item 
+bool {\bf set\+Node\+Type} ({\bf Element\+ID} node\+\_\+id, {\bf Node\+Type} new\+\_\+type)
+\item 
+bool {\bf attach\+Node} ({\bf Node} \&node)
+\begin{DoxyCompactList}\small\item\em this method adds the node passed if it id does not match with the id of any element added \end{DoxyCompactList}\item 
+{\bf Node} $\ast$ {\bf detach\+Node} ({\bf Element\+ID} id)
+\begin{DoxyCompactList}\small\item\em this method removes the node from the list, but it does N\+OT delete the node itself \end{DoxyCompactList}\item 
+bool {\bf get\+Subnetwork} ({\bf Element\+ID} root\+\_\+id, std\+::vector$<$ {\bf Element\+ID} $>$ \&subnetwork\+\_\+ids\+\_\+vec, std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Element\+ID} $>$ $>$ \&dependency\+\_\+map)
+\item 
+std\+::vector$<$ {\bf Node} $\ast$ $>$ {\bf subnetworks\+Roots} ()
+\begin{DoxyCompactList}\small\item\em All nodes that are root of a subnetwork. \end{DoxyCompactList}\item 
+bool {\bf mark\+Node\+As\+Subnetwork} ({\bf Element\+ID} node\+\_\+id)
+\item 
+bool {\bf unmark\+Node\+As\+Subnetwork} ({\bf Element\+ID} node\+\_\+id)
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Network}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 12 do arquivo Network\+Node\+Handler.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Network\+Node\+Handler@{Network\+Node\+Handler}!Network\+Node\+Handler@{Network\+Node\+Handler}}
+\index{Network\+Node\+Handler@{Network\+Node\+Handler}!Network\+Node\+Handler@{Network\+Node\+Handler}}
+\subsubsection[{Network\+Node\+Handler(std\+::map$<$ Element\+I\+D, Element $\ast$ $>$ \&element\+\_\+map, std\+::map$<$ Element\+I\+D, Node $\ast$ $>$ \&node\+\_\+map, std\+::map$<$ Element\+I\+D, Link $\ast$ $>$ \&link\+\_\+map, std\+::set$<$ Element\+I\+D $>$ \&subnetwork\+\_\+id\+\_\+set)}]{\setlength{\rightskip}{0pt plus 5cm}Network\+Node\+Handler\+::\+Network\+Node\+Handler (
+\begin{DoxyParamCaption}
+\item[{std\+::map$<$ {\bf Element\+ID}, {\bf Element} $\ast$ $>$ \&}]{element\+\_\+map, }
+\item[{std\+::map$<$ {\bf Element\+ID}, {\bf Node} $\ast$ $>$ \&}]{node\+\_\+map, }
+\item[{std\+::map$<$ {\bf Element\+ID}, {\bf Link} $\ast$ $>$ \&}]{link\+\_\+map, }
+\item[{std\+::set$<$ {\bf Element\+ID} $>$ \&}]{subnetwork\+\_\+id\+\_\+set}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_node_handler_a8c15e06d6dadd13e48bc2627d7a4b321}
+\index{Network\+Node\+Handler@{Network\+Node\+Handler}!````~Network\+Node\+Handler@{$\sim$\+Network\+Node\+Handler}}
+\index{````~Network\+Node\+Handler@{$\sim$\+Network\+Node\+Handler}!Network\+Node\+Handler@{Network\+Node\+Handler}}
+\subsubsection[{$\sim$\+Network\+Node\+Handler()}]{\setlength{\rightskip}{0pt plus 5cm}Network\+Node\+Handler\+::$\sim$\+Network\+Node\+Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_node_handler_ac6290a5e6fc6b906126425ab1e9366b2}
+
+
+\subsection{Métodos}
+\index{Network\+Node\+Handler@{Network\+Node\+Handler}!add\+Node@{add\+Node}}
+\index{add\+Node@{add\+Node}!Network\+Node\+Handler@{Network\+Node\+Handler}}
+\subsubsection[{add\+Node(\+Element\+I\+D id, Node\+Type type, double latitude, double longitude)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}\& Network\+Node\+Handler\+::add\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{{\bf Node\+Type}}]{type, }
+\item[{double}]{latitude, }
+\item[{double}]{longitude}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_node_handler_a463704073253f4be4674a7999d57d8ab}
+
+
+Creates a new node. 
+
+\index{Network\+Node\+Handler@{Network\+Node\+Handler}!attach\+Node@{attach\+Node}}
+\index{attach\+Node@{attach\+Node}!Network\+Node\+Handler@{Network\+Node\+Handler}}
+\subsubsection[{attach\+Node(\+Node \&node)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+Node\+Handler\+::attach\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} \&}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_node_handler_a226e6ed6f41e4f83bb9fe313c8a0319f}
+
+
+this method adds the node passed if it id does not match with the id of any element added 
+
+\index{Network\+Node\+Handler@{Network\+Node\+Handler}!detach\+Node@{detach\+Node}}
+\index{detach\+Node@{detach\+Node}!Network\+Node\+Handler@{Network\+Node\+Handler}}
+\subsubsection[{detach\+Node(\+Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ Network\+Node\+Handler\+::detach\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_node_handler_a4452ed145c9088357feceb08d330023a}
+
+
+this method removes the node from the list, but it does N\+OT delete the node itself 
+
+Return all elements that are part of the subnetwork of the root element \index{Network\+Node\+Handler@{Network\+Node\+Handler}!get\+Node@{get\+Node}}
+\index{get\+Node@{get\+Node}!Network\+Node\+Handler@{Network\+Node\+Handler}}
+\subsubsection[{get\+Node(\+Element\+I\+D id, Node $\ast$\&result)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+Node\+Handler\+::get\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{{\bf Node} $\ast$\&}]{result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_node_handler_acf9f87ab0bc485734be3207e4f1b362a}
+
+
+returns true and fills the pointer result with the node\textquotesingle{}s pointer if it exists 
+
+\index{Network\+Node\+Handler@{Network\+Node\+Handler}!get\+Subnetwork@{get\+Subnetwork}}
+\index{get\+Subnetwork@{get\+Subnetwork}!Network\+Node\+Handler@{Network\+Node\+Handler}}
+\subsubsection[{get\+Subnetwork(\+Element\+I\+D root\+\_\+id, std\+::vector$<$ Element\+I\+D $>$ \&subnetwork\+\_\+ids\+\_\+vec, std\+::map$<$ Element\+I\+D, std\+::vector$<$ Element\+I\+D $>$ $>$ \&dependency\+\_\+map)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+Node\+Handler\+::get\+Subnetwork (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{root\+\_\+id, }
+\item[{std\+::vector$<$ {\bf Element\+ID} $>$ \&}]{subnetwork\+\_\+ids\+\_\+vec, }
+\item[{std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Element\+ID} $>$ $>$ \&}]{dependency\+\_\+map}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_node_handler_aa97e84e8f26303e939d668a1121821ad}
+\index{Network\+Node\+Handler@{Network\+Node\+Handler}!mark\+Node\+As\+Subnetwork@{mark\+Node\+As\+Subnetwork}}
+\index{mark\+Node\+As\+Subnetwork@{mark\+Node\+As\+Subnetwork}!Network\+Node\+Handler@{Network\+Node\+Handler}}
+\subsubsection[{mark\+Node\+As\+Subnetwork(\+Element\+I\+D node\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+Node\+Handler\+::mark\+Node\+As\+Subnetwork (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{node\+\_\+id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_node_handler_a8bc00602dd436655acf60d0d92a4cb20}
+\index{Network\+Node\+Handler@{Network\+Node\+Handler}!set\+Node\+Type@{set\+Node\+Type}}
+\index{set\+Node\+Type@{set\+Node\+Type}!Network\+Node\+Handler@{Network\+Node\+Handler}}
+\subsubsection[{set\+Node\+Type(\+Node \&node, Node\+Type new\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+Node\+Handler\+::set\+Node\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} \&}]{node, }
+\item[{{\bf Node\+Type}}]{new\+\_\+type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_node_handler_a1ac8557e420480dae5048d3054d1dab9}
+\index{Network\+Node\+Handler@{Network\+Node\+Handler}!set\+Node\+Type@{set\+Node\+Type}}
+\index{set\+Node\+Type@{set\+Node\+Type}!Network\+Node\+Handler@{Network\+Node\+Handler}}
+\subsubsection[{set\+Node\+Type(\+Element\+I\+D node\+\_\+id, Node\+Type new\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+Node\+Handler\+::set\+Node\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{node\+\_\+id, }
+\item[{{\bf Node\+Type}}]{new\+\_\+type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_node_handler_ad87e4ad1679bc1e2c37b0b8cbac6bd38}
+\index{Network\+Node\+Handler@{Network\+Node\+Handler}!subnetworks\+Roots@{subnetworks\+Roots}}
+\index{subnetworks\+Roots@{subnetworks\+Roots}!Network\+Node\+Handler@{Network\+Node\+Handler}}
+\subsubsection[{subnetworks\+Roots()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Node}$\ast$ $>$ Network\+Node\+Handler\+::subnetworks\+Roots (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_node_handler_a22e7c8fdc790e5e188b4be0f98786f5c}
+
+
+All nodes that are root of a subnetwork. 
+
+\index{Network\+Node\+Handler@{Network\+Node\+Handler}!unmark\+Node\+As\+Subnetwork@{unmark\+Node\+As\+Subnetwork}}
+\index{unmark\+Node\+As\+Subnetwork@{unmark\+Node\+As\+Subnetwork}!Network\+Node\+Handler@{Network\+Node\+Handler}}
+\subsubsection[{unmark\+Node\+As\+Subnetwork(\+Element\+I\+D node\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+Node\+Handler\+::unmark\+Node\+As\+Subnetwork (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{node\+\_\+id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_node_handler_a028e1507d47f0d2adae2b9754961dc69}
+
+
+\subsection{Amigas e Funções Relacionadas}
+\index{Network\+Node\+Handler@{Network\+Node\+Handler}!Network@{Network}}
+\index{Network@{Network}!Network\+Node\+Handler@{Network\+Node\+Handler}}
+\subsubsection[{Network}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Network}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_network_node_handler_a88b59289ffd793fecd040d32e397b1e9}
+
+
+Definição na linha 13 do arquivo Network\+Node\+Handler.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Network\+Node\+Handler.\+h}\end{DoxyCompactItemize}

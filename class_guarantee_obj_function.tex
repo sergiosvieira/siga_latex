@@ -1,0 +1,279 @@
+\section{Refer√™ncia da Classe Guarantee\+Obj\+Function}
+\label{class_guarantee_obj_function}\index{Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}}
+
+
+{\ttfamily \#include $<$Guarantee\+Obj\+Function.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Obj\+Function} e {\bf Res\+Op\+Obj\+Function}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Guarantee\+Obj\+Function} ()
+\item 
+{\bf $\sim$\+Guarantee\+Obj\+Function} ()
+\item 
+double {\bf run} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+{\bf Guarantee\+Obj\+Function} (bool {\bf minimize}=true)
+\item 
+{\bf $\sim$\+Guarantee\+Obj\+Function} ()
+\item 
+double {\bf run} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements)
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String section)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String section)
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ unsigned int $>$ {\bf id\+Sel\+Demands}
+\item 
+vector$<$ double $>$ {\bf g\+Sel\+Demands}
+\item 
+vector$<$ {\bf Element\+ID} $>$ {\bf id\+Sel\+Demands}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Obj\+Function} $\ast$ {\bf do\+Copy} ()
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descri√ß√£o Detalhada}
+Classe para funÁ„o objetivo Garantia de Atendimento 
+
+Defini√ß√£o na linha 9 do arquivo Obj\+Function/\+Guarantee/\+Guarantee\+Obj\+Function.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}!Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}}
+\index{Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}!Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}}
+\subsubsection[{Guarantee\+Obj\+Function()}]{\setlength{\rightskip}{0pt plus 5cm}Guarantee\+Obj\+Function\+::\+Guarantee\+Obj\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_guarantee_obj_function_ab6a5c807fbb0eca0ed571207165ca6a3}
+Construtor \index{Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}!````~Guarantee\+Obj\+Function@{$\sim$\+Guarantee\+Obj\+Function}}
+\index{````~Guarantee\+Obj\+Function@{$\sim$\+Guarantee\+Obj\+Function}!Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}}
+\subsubsection[{$\sim$\+Guarantee\+Obj\+Function()}]{\setlength{\rightskip}{0pt plus 5cm}Guarantee\+Obj\+Function\+::$\sim$\+Guarantee\+Obj\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_guarantee_obj_function_a8da5accdf02477586b82bd2715e1d0a4}
+Destrutor \index{Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}!Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}}
+\index{Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}!Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}}
+\subsubsection[{Guarantee\+Obj\+Function(bool minimize=true)}]{\setlength{\rightskip}{0pt plus 5cm}Guarantee\+Obj\+Function\+::\+Guarantee\+Obj\+Function (
+\begin{DoxyParamCaption}
+\item[{bool}]{minimize = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_guarantee_obj_function_a4ff2d58335c0165c767074ea3f284171}
+Construtor \index{Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}!````~Guarantee\+Obj\+Function@{$\sim$\+Guarantee\+Obj\+Function}}
+\index{````~Guarantee\+Obj\+Function@{$\sim$\+Guarantee\+Obj\+Function}!Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}}
+\subsubsection[{$\sim$\+Guarantee\+Obj\+Function()}]{\setlength{\rightskip}{0pt plus 5cm}Guarantee\+Obj\+Function\+::$\sim$\+Guarantee\+Obj\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_guarantee_obj_function_a8da5accdf02477586b82bd2715e1d0a4}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Guarantee\+Obj\+Function\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_guarantee_obj_function_af43f05d2f0fc16f111b72cebc00c5f2d}
+Checa se as informaÁıes est„o completas 
+\begin{DoxyParams}{Par√¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a10a132bc689a51c9aecaa60de7983331}.
+
+\index{Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Guarantee\+Obj\+Function\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_guarantee_obj_function_af43f05d2f0fc16f111b72cebc00c5f2d}
+Checa se as informaÁıes est„o completas 
+\begin{DoxyParams}{Par√¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a10a132bc689a51c9aecaa60de7983331}.
+
+\index{Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}!clear@{clear}}
+\index{clear@{clear}!Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Guarantee\+Obj\+Function\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_guarantee_obj_function_a2ae3e00dc70bc87ebe47e16293996b34}
+Limpa Dados 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a0a924a09921115d1aaf93d716eef0f02}.
+
+\index{Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}!clear@{clear}}
+\index{clear@{clear}!Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Guarantee\+Obj\+Function\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_guarantee_obj_function_a2ae3e00dc70bc87ebe47e16293996b34}
+Limpa Dados 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a0a924a09921115d1aaf93d716eef0f02}.
+
+\index{Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}}
+\subsubsection[{do\+Copy()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Obj\+Function}$\ast$ Guarantee\+Obj\+Function\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_guarantee_obj_function_a88a02f77ab678e2b36ba7a59fa3de55d}
+Copia a funÁ„o Objetivo corretamente 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a11780e26a00ee5abf1304dfa872026f6}.
+
+\index{Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Guarantee\+Obj\+Function\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_guarantee_obj_function_a2e985b6b3f95bb386c763f05873e2118}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_aa5cf9b1f0a157e6571ab2d6a29aa4885}.
+
+\index{Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Guarantee\+Obj\+Function\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_guarantee_obj_function_ac4f69204c11579b401b546055c9a0cff}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_abf817a6bd51617b6381e627336a8b15d}.
+
+\index{Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Guarantee\+Obj\+Function\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_guarantee_obj_function_ae8bdaca4094173cce8dc14eb58063600}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a0adda529d70cc0557f7f700c944c52b9}.
+
+\index{Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Guarantee\+Obj\+Function\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_guarantee_obj_function_ab41849c2f75d6929d5df72b019cdbfb9}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a98425e92f67bc4f282c62c4b1c38a472}.
+
+\index{Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}!run@{run}}
+\index{run@{run}!Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}double Guarantee\+Obj\+Function\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_guarantee_obj_function_a40dfd4693edb8984ca29f3301a816d5a}
+Executa a funÁ„o objetivo 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a4454977f68f8b6f3565e1f6e1c016f56}.
+
+\index{Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}!run@{run}}
+\index{run@{run}!Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}}
+\subsubsection[{run(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements)}]{\setlength{\rightskip}{0pt plus 5cm}double Guarantee\+Obj\+Function\+::run (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_guarantee_obj_function_a64abd8e369c2c1ac0daa2aa4ff30b1b8}
+Executa a funÁ„o objetivo 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_ae8e96c0de73af8d11c6095f752de7fd4}.
+
+
+
+\subsection{Atributos}
+\index{Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}!g\+Sel\+Demands@{g\+Sel\+Demands}}
+\index{g\+Sel\+Demands@{g\+Sel\+Demands}!Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}}
+\subsubsection[{g\+Sel\+Demands}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Guarantee\+Obj\+Function\+::g\+Sel\+Demands}\label{class_guarantee_obj_function_a6c29a4b20355fff3f5823ee840222efd}
+Valor meta para a garantia de cada uma das demandas selecionadas 
+
+Defini√ß√£o na linha 21 do arquivo Obj\+Function/\+Guarantee/\+Guarantee\+Obj\+Function.\+h.
+
+\index{Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}!id\+Sel\+Demands@{id\+Sel\+Demands}}
+\index{id\+Sel\+Demands@{id\+Sel\+Demands}!Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}}
+\subsubsection[{id\+Sel\+Demands}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$unsigned int$>$ Guarantee\+Obj\+Function\+::id\+Sel\+Demands}\label{class_guarantee_obj_function_a960ead0eddaebec1f97de651e15a583e}
+ReservatÛrios do sistema utilizados para c·lculo da garantia de atendimento 
+
+Defini√ß√£o na linha 16 do arquivo Obj\+Function/\+Guarantee/\+Guarantee\+Obj\+Function.\+h.
+
+\index{Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}!id\+Sel\+Demands@{id\+Sel\+Demands}}
+\index{id\+Sel\+Demands@{id\+Sel\+Demands}!Guarantee\+Obj\+Function@{Guarantee\+Obj\+Function}}
+\subsubsection[{id\+Sel\+Demands}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Element\+ID}$>$ Guarantee\+Obj\+Function\+::id\+Sel\+Demands}\label{class_guarantee_obj_function_ad781738ff0347fbadf99d1f7aeef4ab0}
+ReservatÛrios do sistema utilizados para c·lculo da garantia de atendimento 
+
+Defini√ß√£o na linha 28 do arquivo /\+Obj\+Function/\+Guarantee/\+Guarantee\+Obj\+Function.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Obj\+Function/\+Guarantee/\+Guarantee\+Obj\+Function.\+h}\end{DoxyCompactItemize}

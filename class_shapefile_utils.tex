@@ -1,0 +1,365 @@
+\section{Referência da Classe Shapefile\+Utils}
+\label{class_shapefile_utils}\index{Shapefile\+Utils@{Shapefile\+Utils}}
+
+
+The Shape\+File\+Utils class  Save shapefile.  
+
+
+
+
+{\ttfamily \#include $<$shapefile-\/utils.\+h$>$}
+
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ int $>$ {\bf integer\+Features} (O\+G\+R\+Data\+Source $\ast$a\+\_\+data\+Source, const char $\ast$a\+\_\+feature\+Field\+Label)
+\begin{DoxyCompactList}\small\item\em generates a vector of integer of specified feature \end{DoxyCompactList}\item 
+static std\+::vector$<$ std\+::string $>$ {\bf string\+Features} (O\+G\+R\+Data\+Source $\ast$a\+\_\+data\+Source, const char $\ast$a\+\_\+feature\+Field\+Label)
+\begin{DoxyCompactList}\small\item\em generates a vector of string of specified feature \end{DoxyCompactList}\item 
+static O\+G\+R\+Data\+Source $\ast$ {\bf create\+Data\+Source\+Buffer} (O\+G\+R\+Layer $\ast$a\+\_\+input\+Layer, const char $\ast$a\+\_\+output\+Filename, double a\+\_\+distance, {\bf Progress\+Callback} a\+\_\+callback)
+\begin{DoxyCompactList}\small\item\em this method creates a new shape file from a input layer with desired buffer \end{DoxyCompactList}\item 
+static O\+G\+R\+Data\+Source $\ast$ {\bf create\+Data\+Source\+Intersection} (O\+G\+R\+Layer $\ast$a\+\_\+first\+Layer, O\+G\+R\+Layer $\ast$a\+\_\+second\+Layer, O\+G\+Rwkb\+Geometry\+Type a\+\_\+type, const char $\ast$a\+\_\+output\+Filename, {\bf Progress\+Callback} a\+\_\+callback)
+\begin{DoxyCompactList}\small\item\em this method creates a new shape file from union of two layers \end{DoxyCompactList}\item 
+static std\+::vector$<$ O\+G\+R\+Point $\ast$ $>$ {\bf get\+Points} (O\+G\+R\+Layer $\ast$a\+\_\+layer, const char $\ast$a\+\_\+point\+ID)
+\begin{DoxyCompactList}\small\item\em gets a vector of points of a layer \end{DoxyCompactList}\item 
+static O\+G\+R\+Geometry\+Collection $\ast$ {\bf get\+Collection} (O\+G\+R\+Layer $\ast$a\+\_\+layer, {\bf Progress\+Callback} a\+\_\+callback)
+\begin{DoxyCompactList}\small\item\em gets a collection of geometries from a specified layer \end{DoxyCompactList}\item 
+static O\+G\+R\+Multi\+Line\+String $\ast$ {\bf creates\+Bouding\+Box} (O\+G\+R\+Envelope $\ast$a\+\_\+envelope)
+\begin{DoxyCompactList}\small\item\em creates\+Bouding\+Box \end{DoxyCompactList}\item 
+static std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ {\bf get\+Features} (O\+G\+R\+Layer $\ast$a\+\_\+layer)
+\begin{DoxyCompactList}\small\item\em get\+Features \end{DoxyCompactList}\item 
+static std\+::string {\bf features} (O\+G\+R\+Layer $\ast$a\+\_\+layer)
+\begin{DoxyCompactList}\small\item\em features \end{DoxyCompactList}\item 
+static std\+::string {\bf export\+To\+K\+ML} (O\+G\+R\+Geometry $\ast$a\+\_\+geometry)
+\begin{DoxyCompactList}\small\item\em export\+To\+K\+ML \end{DoxyCompactList}\item 
+static O\+G\+R\+Data\+Source $\ast$ {\bf create\+Data\+Source\+Area} (O\+G\+R\+Layer $\ast$a\+\_\+layer, const char $\ast$a\+\_\+area\+Label, const char $\ast$a\+\_\+output\+Filename)
+\begin{DoxyCompactList}\small\item\em create\+Data\+Source\+Area \end{DoxyCompactList}\item 
+static O\+G\+R\+Data\+Source $\ast$ {\bf creates\+Data\+Source\+Convex\+Buffer} (O\+G\+R\+Layer $\ast$a\+\_\+layer, const char $\ast$a\+\_\+output\+Filename, double a\+\_\+distance, {\bf Progress\+Callback} a\+\_\+callback)
+\begin{DoxyCompactList}\small\item\em creates\+Data\+Source\+Convex\+Buffer \end{DoxyCompactList}\item 
+static O\+G\+R\+Data\+Source $\ast$ {\bf creates\+Data\+Source\+Geometry\+Collection} (O\+G\+R\+Geometry\+Collection $\ast$a\+\_\+collection, const char $\ast$a\+\_\+output\+Filename, {\bf Progress\+Callback} a\+\_\+callback)
+\begin{DoxyCompactList}\small\item\em creates\+Data\+Source\+Geometry\+Collection \end{DoxyCompactList}\item 
+static bool {\bf create\+Points} ({\bf Create\+Layer\+Model} \&a\+\_\+model, const char $\ast$a\+\_\+output\+Filename, {\bf Progress\+Callback} a\+\_\+callback)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Estáticos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ {\bf k\+Driver\+Name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+The Shape\+File\+Utils class  Save shapefile. 
+
+Definição na linha 32 do arquivo shapefile-\/utils.\+h.
+
+
+
+\subsection{Métodos}
+\index{Shapefile\+Utils@{Shapefile\+Utils}!create\+Data\+Source\+Area@{create\+Data\+Source\+Area}}
+\index{create\+Data\+Source\+Area@{create\+Data\+Source\+Area}!Shapefile\+Utils@{Shapefile\+Utils}}
+\subsubsection[{create\+Data\+Source\+Area(\+O\+G\+R\+Layer $\ast$a\+\_\+layer, const char $\ast$a\+\_\+area\+Label, const char $\ast$a\+\_\+output\+Filename)}]{\setlength{\rightskip}{0pt plus 5cm}static O\+G\+R\+Data\+Source$\ast$ Shapefile\+Utils\+::create\+Data\+Source\+Area (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{a\+\_\+layer, }
+\item[{const char $\ast$}]{a\+\_\+area\+Label, }
+\item[{const char $\ast$}]{a\+\_\+output\+Filename}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_shapefile_utils_a5ae277a8f721a0e094bf1576940a4ff5}
+
+
+create\+Data\+Source\+Area 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+layer} & \\
+\hline
+{\em a\+\_\+area\+Label} & \\
+\hline
+{\em a\+\_\+output\+Filename} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+
+\end{DoxyReturn}
+\index{Shapefile\+Utils@{Shapefile\+Utils}!create\+Data\+Source\+Buffer@{create\+Data\+Source\+Buffer}}
+\index{create\+Data\+Source\+Buffer@{create\+Data\+Source\+Buffer}!Shapefile\+Utils@{Shapefile\+Utils}}
+\subsubsection[{create\+Data\+Source\+Buffer(\+O\+G\+R\+Layer $\ast$a\+\_\+input\+Layer, const char $\ast$a\+\_\+output\+Filename, double a\+\_\+distance, Progress\+Callback a\+\_\+callback)}]{\setlength{\rightskip}{0pt plus 5cm}static O\+G\+R\+Data\+Source$\ast$ Shapefile\+Utils\+::create\+Data\+Source\+Buffer (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{a\+\_\+input\+Layer, }
+\item[{const char $\ast$}]{a\+\_\+output\+Filename, }
+\item[{double}]{a\+\_\+distance, }
+\item[{{\bf Progress\+Callback}}]{a\+\_\+callback}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_shapefile_utils_aa16009be67ebdd7b87de714de811707e}
+
+
+this method creates a new shape file from a input layer with desired buffer 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+input\+Layer} & \\
+\hline
+{\em a\+\_\+output\+Filename} & \\
+\hline
+{\em a\+\_\+distance} & \\
+\hline
+{\em a\+\_\+callback} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O\+G\+R\+Data\+Source$\ast$ 
+\end{DoxyReturn}
+\index{Shapefile\+Utils@{Shapefile\+Utils}!create\+Data\+Source\+Intersection@{create\+Data\+Source\+Intersection}}
+\index{create\+Data\+Source\+Intersection@{create\+Data\+Source\+Intersection}!Shapefile\+Utils@{Shapefile\+Utils}}
+\subsubsection[{create\+Data\+Source\+Intersection(\+O\+G\+R\+Layer $\ast$a\+\_\+first\+Layer, O\+G\+R\+Layer $\ast$a\+\_\+second\+Layer, O\+G\+Rwkb\+Geometry\+Type a\+\_\+type, const char $\ast$a\+\_\+output\+Filename, Progress\+Callback a\+\_\+callback)}]{\setlength{\rightskip}{0pt plus 5cm}static O\+G\+R\+Data\+Source$\ast$ Shapefile\+Utils\+::create\+Data\+Source\+Intersection (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{a\+\_\+first\+Layer, }
+\item[{O\+G\+R\+Layer $\ast$}]{a\+\_\+second\+Layer, }
+\item[{O\+G\+Rwkb\+Geometry\+Type}]{a\+\_\+type, }
+\item[{const char $\ast$}]{a\+\_\+output\+Filename, }
+\item[{{\bf Progress\+Callback}}]{a\+\_\+callback}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_shapefile_utils_ad0847250a05aee3a2a9bee26aa1fa732}
+
+
+this method creates a new shape file from union of two layers 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+first\+Layer} & \\
+\hline
+{\em a\+\_\+second\+Layer} & \\
+\hline
+{\em a\+\_\+type} & \\
+\hline
+{\em a\+\_\+output\+Filename} & \\
+\hline
+{\em a\+\_\+callback} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O\+G\+R\+Data\+Source$\ast$ 
+\end{DoxyReturn}
+\index{Shapefile\+Utils@{Shapefile\+Utils}!create\+Points@{create\+Points}}
+\index{create\+Points@{create\+Points}!Shapefile\+Utils@{Shapefile\+Utils}}
+\subsubsection[{create\+Points(\+Create\+Layer\+Model \&a\+\_\+model, const char $\ast$a\+\_\+output\+Filename, Progress\+Callback a\+\_\+callback)}]{\setlength{\rightskip}{0pt plus 5cm}static bool Shapefile\+Utils\+::create\+Points (
+\begin{DoxyParamCaption}
+\item[{{\bf Create\+Layer\+Model} \&}]{a\+\_\+model, }
+\item[{const char $\ast$}]{a\+\_\+output\+Filename, }
+\item[{{\bf Progress\+Callback}}]{a\+\_\+callback}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_shapefile_utils_a63b60cb9fcedda60c51b63d2cdfe0518}
+\index{Shapefile\+Utils@{Shapefile\+Utils}!creates\+Bouding\+Box@{creates\+Bouding\+Box}}
+\index{creates\+Bouding\+Box@{creates\+Bouding\+Box}!Shapefile\+Utils@{Shapefile\+Utils}}
+\subsubsection[{creates\+Bouding\+Box(\+O\+G\+R\+Envelope $\ast$a\+\_\+envelope)}]{\setlength{\rightskip}{0pt plus 5cm}static O\+G\+R\+Multi\+Line\+String$\ast$ Shapefile\+Utils\+::creates\+Bouding\+Box (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Envelope $\ast$}]{a\+\_\+envelope}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_shapefile_utils_a78fa34fcd783e02f085c7a928b6d37eb}
+
+
+creates\+Bouding\+Box 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+envelope} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O\+G\+R\+Multi\+Line\+String $\ast$ 
+\end{DoxyReturn}
+\index{Shapefile\+Utils@{Shapefile\+Utils}!creates\+Data\+Source\+Convex\+Buffer@{creates\+Data\+Source\+Convex\+Buffer}}
+\index{creates\+Data\+Source\+Convex\+Buffer@{creates\+Data\+Source\+Convex\+Buffer}!Shapefile\+Utils@{Shapefile\+Utils}}
+\subsubsection[{creates\+Data\+Source\+Convex\+Buffer(\+O\+G\+R\+Layer $\ast$a\+\_\+layer, const char $\ast$a\+\_\+output\+Filename, double a\+\_\+distance, Progress\+Callback a\+\_\+callback)}]{\setlength{\rightskip}{0pt plus 5cm}static O\+G\+R\+Data\+Source$\ast$ Shapefile\+Utils\+::creates\+Data\+Source\+Convex\+Buffer (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{a\+\_\+layer, }
+\item[{const char $\ast$}]{a\+\_\+output\+Filename, }
+\item[{double}]{a\+\_\+distance, }
+\item[{{\bf Progress\+Callback}}]{a\+\_\+callback}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_shapefile_utils_a764d3ab9a2fecf68957a483fbedd293e}
+
+
+creates\+Data\+Source\+Convex\+Buffer 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+layer} & \\
+\hline
+{\em a\+\_\+output\+Filename} & \\
+\hline
+{\em a\+\_\+distance} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+
+\end{DoxyReturn}
+\index{Shapefile\+Utils@{Shapefile\+Utils}!creates\+Data\+Source\+Geometry\+Collection@{creates\+Data\+Source\+Geometry\+Collection}}
+\index{creates\+Data\+Source\+Geometry\+Collection@{creates\+Data\+Source\+Geometry\+Collection}!Shapefile\+Utils@{Shapefile\+Utils}}
+\subsubsection[{creates\+Data\+Source\+Geometry\+Collection(\+O\+G\+R\+Geometry\+Collection $\ast$a\+\_\+collection, const char $\ast$a\+\_\+output\+Filename, Progress\+Callback a\+\_\+callback)}]{\setlength{\rightskip}{0pt plus 5cm}static O\+G\+R\+Data\+Source$\ast$ Shapefile\+Utils\+::creates\+Data\+Source\+Geometry\+Collection (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Geometry\+Collection $\ast$}]{a\+\_\+collection, }
+\item[{const char $\ast$}]{a\+\_\+output\+Filename, }
+\item[{{\bf Progress\+Callback}}]{a\+\_\+callback}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_shapefile_utils_a40361d819de7e57fa25ea6b2990f8863}
+
+
+creates\+Data\+Source\+Geometry\+Collection 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+collection} & \\
+\hline
+{\em a\+\_\+output\+Filename} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+
+\end{DoxyReturn}
+\index{Shapefile\+Utils@{Shapefile\+Utils}!export\+To\+K\+ML@{export\+To\+K\+ML}}
+\index{export\+To\+K\+ML@{export\+To\+K\+ML}!Shapefile\+Utils@{Shapefile\+Utils}}
+\subsubsection[{export\+To\+K\+M\+L(\+O\+G\+R\+Geometry $\ast$a\+\_\+geometry)}]{\setlength{\rightskip}{0pt plus 5cm}static std\+::string Shapefile\+Utils\+::export\+To\+K\+ML (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Geometry $\ast$}]{a\+\_\+geometry}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_shapefile_utils_acf0321ad5c13ff5cc164994506dc5e05}
+
+
+export\+To\+K\+ML 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+geometry} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
+\index{Shapefile\+Utils@{Shapefile\+Utils}!features@{features}}
+\index{features@{features}!Shapefile\+Utils@{Shapefile\+Utils}}
+\subsubsection[{features(\+O\+G\+R\+Layer $\ast$a\+\_\+layer)}]{\setlength{\rightskip}{0pt plus 5cm}static std\+::string Shapefile\+Utils\+::features (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{a\+\_\+layer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_shapefile_utils_a07a16a0e6283a66b9db9e596427fe341}
+
+
+features 
+
+\begin{DoxyReturn}{Retorna}
+std\+::string 
+\end{DoxyReturn}
+\index{Shapefile\+Utils@{Shapefile\+Utils}!get\+Collection@{get\+Collection}}
+\index{get\+Collection@{get\+Collection}!Shapefile\+Utils@{Shapefile\+Utils}}
+\subsubsection[{get\+Collection(\+O\+G\+R\+Layer $\ast$a\+\_\+layer, Progress\+Callback a\+\_\+callback)}]{\setlength{\rightskip}{0pt plus 5cm}static O\+G\+R\+Geometry\+Collection$\ast$ Shapefile\+Utils\+::get\+Collection (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{a\+\_\+layer, }
+\item[{{\bf Progress\+Callback}}]{a\+\_\+callback}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_shapefile_utils_a1b586ce14c6864d02bc8b9d1f8ff6c7f}
+
+
+gets a collection of geometries from a specified layer 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+layer} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O\+G\+R\+Geometry\+Collection $\ast$ 
+\end{DoxyReturn}
+\index{Shapefile\+Utils@{Shapefile\+Utils}!get\+Features@{get\+Features}}
+\index{get\+Features@{get\+Features}!Shapefile\+Utils@{Shapefile\+Utils}}
+\subsubsection[{get\+Features(\+O\+G\+R\+Layer $\ast$a\+\_\+layer)}]{\setlength{\rightskip}{0pt plus 5cm}static std\+::vector$<$O\+G\+R\+Feature$\ast$$>$ Shapefile\+Utils\+::get\+Features (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{a\+\_\+layer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_shapefile_utils_a36876e064f5e8c2d0502c6e80ba40dc0}
+
+
+get\+Features 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+layer} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::vector$<$\+O\+G\+R\+Feature$\ast$$>$ 
+\end{DoxyReturn}
+\index{Shapefile\+Utils@{Shapefile\+Utils}!get\+Points@{get\+Points}}
+\index{get\+Points@{get\+Points}!Shapefile\+Utils@{Shapefile\+Utils}}
+\subsubsection[{get\+Points(\+O\+G\+R\+Layer $\ast$a\+\_\+layer, const char $\ast$a\+\_\+point\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}static std\+::vector$<$O\+G\+R\+Point $\ast$$>$ Shapefile\+Utils\+::get\+Points (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{a\+\_\+layer, }
+\item[{const char $\ast$}]{a\+\_\+point\+ID}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_shapefile_utils_a722579e69cfde61fc36748a6dd150d04}
+
+
+gets a vector of points of a layer 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+layer} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::vector$<$\+O\+G\+R\+Point $\ast$$>$ 
+\end{DoxyReturn}
+\index{Shapefile\+Utils@{Shapefile\+Utils}!integer\+Features@{integer\+Features}}
+\index{integer\+Features@{integer\+Features}!Shapefile\+Utils@{Shapefile\+Utils}}
+\subsubsection[{integer\+Features(\+O\+G\+R\+Data\+Source $\ast$a\+\_\+data\+Source, const char $\ast$a\+\_\+feature\+Field\+Label)}]{\setlength{\rightskip}{0pt plus 5cm}static std\+::vector$<$int$>$ Shapefile\+Utils\+::integer\+Features (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Data\+Source $\ast$}]{a\+\_\+data\+Source, }
+\item[{const char $\ast$}]{a\+\_\+feature\+Field\+Label}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_shapefile_utils_a538b8eecd8d7e61a6228e70a321117c8}
+
+
+generates a vector of integer of specified feature 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+feature\+Field\+Label} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::vector$<$int$>$ 
+\end{DoxyReturn}
+\index{Shapefile\+Utils@{Shapefile\+Utils}!string\+Features@{string\+Features}}
+\index{string\+Features@{string\+Features}!Shapefile\+Utils@{Shapefile\+Utils}}
+\subsubsection[{string\+Features(\+O\+G\+R\+Data\+Source $\ast$a\+\_\+data\+Source, const char $\ast$a\+\_\+feature\+Field\+Label)}]{\setlength{\rightskip}{0pt plus 5cm}static std\+::vector$<$std\+::string$>$ Shapefile\+Utils\+::string\+Features (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Data\+Source $\ast$}]{a\+\_\+data\+Source, }
+\item[{const char $\ast$}]{a\+\_\+feature\+Field\+Label}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_shapefile_utils_a01776511200beda11e4790a5666c77b7}
+
+
+generates a vector of string of specified feature 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+feature\+Field\+Label} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+std\+::vector$<$string$>$ 
+\end{DoxyReturn}
+
+
+\subsection{Atributos}
+\index{Shapefile\+Utils@{Shapefile\+Utils}!k\+Driver\+Name@{k\+Driver\+Name}}
+\index{k\+Driver\+Name@{k\+Driver\+Name}!Shapefile\+Utils@{Shapefile\+Utils}}
+\subsubsection[{k\+Driver\+Name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Shapefile\+Utils\+::k\+Driver\+Name\hspace{0.3cm}{\ttfamily [static]}}\label{class_shapefile_utils_a76837a876fc412da1c8faaf5408d6693}
+
+
+Definição na linha 35 do arquivo shapefile-\/utils.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf shapefile-\/utils.\+h}\end{DoxyCompactItemize}

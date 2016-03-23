@@ -1,0 +1,504 @@
+\section{Refer√™ncia da Classe Component\+Interface}
+\label{class_component_interface}\index{Component\+Interface@{Component\+Interface}}
+
+
+{\ttfamily \#include $<$Component\+Interface.\+h$>$}
+
+
+
+Herdeiro de wx\+Scrolled\+Window.
+
+
+
+Superclasse de {\bf Aff\+Prev\+Demand\+Dialog\+Result}, {\bf Aff\+Prev\+Demand\+Model\+Interface}, {\bf Aff\+Prev\+Interface}, {\bf Aff\+Prev\+Res\+Interface}, {\bf Basin\+Model\+Interface}, {\bf C\+N3\+S\+Interface}, {\bf Demand\+Interface}, {\bf Demand\+Model\+Interface}, {\bf Flow\+Forecast\+Interface}, {\bf Generic\+Interface}, {\bf G\+W\+L\+F\+Basin\+W\+Q\+Interface}, {\bf G\+W\+L\+F\+Interface}, {\bf G\+W\+L\+F\+Nit\+Interface}, {\bf G\+W\+L\+F\+Pho\+Interface}, {\bf G\+W\+L\+F\+Sediment\+Interface}, {\bf H\+B\+M\+M\+O\+Interface}, {\bf Hidro\+Interface}, {\bf H\+Y\+M\+O\+D\+Interface}, {\bf Junction\+Model\+Interface}, {\bf Link\+Model\+Interface}, {\bf Matrix\+Graph}, {\bf Matrix\+Plan}, {\bf Matrix\+Viewer}, {\bf M\+E\+C\+A\+Ps\+Interface}, {\bf M\+E\+C\+A\+Res\+W\+Q\+Interface}, {\bf M\+E\+N\+U\+Res\+W\+Q\+Interface}, {\bf M\+O\+P\+S\+O\+Interface}, {\bf M\+U\+S\+K\+Interface}, {\bf Net\+Interface}, {\bf Obj\+Function\+Interface}, {\bf Opt\+C\+N3\+S\+Interface}, {\bf Opt\+Hydrology\+Interface}, {\bf Opt\+H\+Y\+M\+O\+D\+Interface}, {\bf Opt\+Interface}, {\bf Opt\+S\+M\+A\+P\+Interface}, {\bf Opt\+S\+M\+A\+P\+M\+Interface}, {\bf Out\+Interface}, {\bf Output}, {\bf Out\+Zones}, {\bf Quality\+Interface}, {\bf Reservoir\+Model\+Interface}, {\bf Res\+Op\+Component\+Interface}, {\bf Res\+Op\+Element\+Interface}, {\bf Res\+Op\+Interface}, {\bf Res\+Op\+Interface}, {\bf Res\+Op\+L\+A\+G\+Interface}, {\bf Res\+Op\+M\+O\+P\+S\+O\+Interface}, {\bf Res\+Op\+M\+O\+P\+S\+O\+Interface}, {\bf Res\+Op\+M\+U\+S\+K\+Interface}, {\bf Res\+Op\+Obj\+Function\+Interface}, {\bf Res\+Op\+Obj\+Function\+Interface}, {\bf Res\+Op\+Routing\+Interface}, {\bf Res\+Op\+Rule\+Interface}, {\bf Res\+Op\+Rule\+Interface}, {\bf S\+A\+C\+N3\+S\+Interface}, {\bf S\+A\+C\+R\+Interface}, {\bf S\+A\+Dialog\+Parent}, {\bf S\+A\+H\+Y\+M\+O\+D\+Interface}, {\bf S\+A\+S\+M\+A\+P\+Interface}, {\bf S\+A\+S\+M\+A\+P\+M\+Interface}, {\bf Serie\+Graph}, {\bf Serie\+Plan}, {\bf Serie\+Statistics}, {\bf Serie\+Viewer}, {\bf S\+I\+G\+A\+Dialog\+Content}, {\bf S\+I\+G\+A\+Project\+Property\+Interface}, {\bf S\+I\+G\+A\+Viewer}, {\bf S\+M\+A\+P\+H\+Interface}, {\bf S\+M\+A\+P\+Interface}, {\bf S\+M\+A\+P\+M\+Interface}, {\bf T\+A\+L\+River\+Interface}, {\bf Thiessen\+Graph} e {\bf W\+A\+S\+A\+Interface}.
+
+\subsection*{Tipos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+{\bf I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+O\+P\+E\+N\+\_\+\+C\+O\+NF}, 
+{\bf I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+S\+A\+V\+E\+\_\+\+C\+O\+NF}, 
+{\bf I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+R\+UN}, 
+{\bf I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+O\+P\+E\+N\+\_\+\+R\+ES}, 
+\\*
+{\bf I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+I\+M\+P\+O\+RT}, 
+{\bf I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+A\+DD}, 
+{\bf I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+R\+E\+M\+O\+VE}
+ \}
+\item 
+enum {\bf component\+Options} \{ \\*
+{\bf B\+U\+T\+T\+O\+N\+\_\+\+N\+U\+LL} = 0x00000000, 
+{\bf B\+U\+T\+T\+O\+N\+\_\+\+O\+P\+E\+N\+\_\+\+C\+O\+NF} = 0x00000001, 
+{\bf B\+U\+T\+T\+O\+N\+\_\+\+S\+A\+V\+E\+\_\+\+C\+O\+NF} = 0x00000002, 
+{\bf B\+U\+T\+T\+O\+N\+\_\+\+R\+UN} = 0x00000004, 
+\\*
+{\bf B\+U\+T\+T\+O\+N\+\_\+\+O\+P\+E\+N\+\_\+\+R\+ES} = 0x00000008, 
+{\bf B\+U\+T\+T\+O\+N\+\_\+\+O\+P\+EN} = 0x00000010, 
+{\bf B\+U\+T\+T\+O\+N\+\_\+\+S\+A\+VE} = 0x00000020, 
+{\bf B\+U\+T\+T\+O\+N\+S\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT} = 0x00000040, 
+\\*
+{\bf B\+U\+T\+T\+O\+N\+S\+\_\+\+D\+I\+A\+L\+OG} = 0x00000080, 
+{\bf B\+U\+T\+T\+O\+N\+\_\+\+I\+M\+P\+O\+RT} = 0x00000100, 
+{\bf B\+U\+T\+T\+O\+N\+\_\+\+A\+DD} = 0x00000200, 
+{\bf B\+U\+T\+T\+O\+N\+\_\+\+R\+E\+M\+O\+VE} = 0x00000400
+ \}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf on\+Set\+Info} ()
+\item 
+void {\bf on\+Radio\+Box} ()
+\item 
+void {\bf on\+Set\+Interval} (const {\bf Interval} \&interval)
+\item 
+{\bf Component\+Interface} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent}, int options={\bf B\+U\+T\+T\+O\+N\+S\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT})
+\item 
+virtual {\bf $\sim$\+Component\+Interface} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Window $\ast$ {\bf parent}
+\item 
+wx\+Frame $\ast$ {\bf frame}
+\item 
+wx\+Box\+Sizer $\ast$ {\bf box\+Sizer}
+\item 
+wx\+Tool\+Bar $\ast$ {\bf tools}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf open\+Conf} ()
+\item 
+virtual void {\bf save\+Conf} ()
+\item 
+virtual void {\bf run} ()
+\item 
+virtual void {\bf open\+Result} ()
+\item 
+virtual void {\bf open\+All\+Results} ()
+\item 
+virtual void {\bf import} ()
+\item 
+virtual void {\bf add} ()
+\item 
+virtual void {\bf remove} ()
+\item 
+void {\bf on\+Open\+Conf} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Save\+Conf} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Run} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Open\+Result} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Open\+All\+Results} (wx\+Command\+Event \&a\+\_\+event)
+\item 
+void {\bf on\+Import} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Add} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Remove} (wx\+Command\+Event \&event)
+\item 
+virtual void {\bf set\+Info} ()
+\item 
+virtual void {\bf radio\+Box} ()
+\item 
+virtual void {\bf set\+Interval} (const {\bf Interval} \&)
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf S\+I\+G\+A\+Frame}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 17 do arquivo Component\+Interface.\+h.
+
+
+
+\subsection{Enumera√ß√µes}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{class_component_interface_a10354a587e59ec253cbe94526588459f}
+Enumerador dos Botıes \begin{Desc}
+\item[Valores de enumera√ß√µes]\par
+\begin{description}
+\index{I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+O\+P\+E\+N\+\_\+\+C\+O\+NF@{I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+O\+P\+E\+N\+\_\+\+C\+O\+NF}!Component\+Interface@{Component\+Interface}}\index{Component\+Interface@{Component\+Interface}!I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+O\+P\+E\+N\+\_\+\+C\+O\+NF@{I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+O\+P\+E\+N\+\_\+\+C\+O\+NF}}\item[{\em 
+I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+O\+P\+E\+N\+\_\+\+C\+O\+NF\label{class_component_interface_a10354a587e59ec253cbe94526588459faa3552073045b6b5c78928687e7fa8999}
+}]\index{I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+S\+A\+V\+E\+\_\+\+C\+O\+NF@{I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+S\+A\+V\+E\+\_\+\+C\+O\+NF}!Component\+Interface@{Component\+Interface}}\index{Component\+Interface@{Component\+Interface}!I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+S\+A\+V\+E\+\_\+\+C\+O\+NF@{I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+S\+A\+V\+E\+\_\+\+C\+O\+NF}}\item[{\em 
+I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+S\+A\+V\+E\+\_\+\+C\+O\+NF\label{class_component_interface_a10354a587e59ec253cbe94526588459fa78f96f765086e258fbcb39de5f18d788}
+}]\index{I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+R\+UN@{I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+R\+UN}!Component\+Interface@{Component\+Interface}}\index{Component\+Interface@{Component\+Interface}!I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+R\+UN@{I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+R\+UN}}\item[{\em 
+I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+R\+UN\label{class_component_interface_a10354a587e59ec253cbe94526588459fa289a1be5a5d25d1d072529e0ef92a780}
+}]\index{I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+O\+P\+E\+N\+\_\+\+R\+ES@{I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+O\+P\+E\+N\+\_\+\+R\+ES}!Component\+Interface@{Component\+Interface}}\index{Component\+Interface@{Component\+Interface}!I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+O\+P\+E\+N\+\_\+\+R\+ES@{I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+O\+P\+E\+N\+\_\+\+R\+ES}}\item[{\em 
+I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+O\+P\+E\+N\+\_\+\+R\+ES\label{class_component_interface_a10354a587e59ec253cbe94526588459fa8098d96d9b42b9e6d20651d7ff2024d2}
+}]\index{I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+I\+M\+P\+O\+RT@{I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+I\+M\+P\+O\+RT}!Component\+Interface@{Component\+Interface}}\index{Component\+Interface@{Component\+Interface}!I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+I\+M\+P\+O\+RT@{I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+I\+M\+P\+O\+RT}}\item[{\em 
+I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+I\+M\+P\+O\+RT\label{class_component_interface_a10354a587e59ec253cbe94526588459fae2a4d8476827c5f4db1784027c7a569b}
+}]\index{I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+A\+DD@{I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+A\+DD}!Component\+Interface@{Component\+Interface}}\index{Component\+Interface@{Component\+Interface}!I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+A\+DD@{I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+A\+DD}}\item[{\em 
+I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+A\+DD\label{class_component_interface_a10354a587e59ec253cbe94526588459fa3607f9ad3bc7f8113eeb3bb59cc35a61}
+}]\index{I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+R\+E\+M\+O\+VE@{I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+R\+E\+M\+O\+VE}!Component\+Interface@{Component\+Interface}}\index{Component\+Interface@{Component\+Interface}!I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+R\+E\+M\+O\+VE@{I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+R\+E\+M\+O\+VE}}\item[{\em 
+I\+D\+\_\+\+S\+I\+G\+A\+\_\+\+R\+E\+M\+O\+VE\label{class_component_interface_a10354a587e59ec253cbe94526588459fa53083403dce0efd30757c39748f15664}
+}]\end{description}
+\end{Desc}
+
+
+Defini√ß√£o na linha 104 do arquivo Component\+Interface.\+h.
+
+\index{Component\+Interface@{Component\+Interface}!component\+Options@{component\+Options}}
+\index{component\+Options@{component\+Options}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{component\+Options}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Component\+Interface\+::component\+Options}}\label{class_component_interface_ac7b1e7e91ff64e404ed4b504b92e1335}
+Enumerador de seleÁ„o de botıes a serem desenhados \begin{Desc}
+\item[Valores de enumera√ß√µes]\par
+\begin{description}
+\index{B\+U\+T\+T\+O\+N\+\_\+\+N\+U\+LL@{B\+U\+T\+T\+O\+N\+\_\+\+N\+U\+LL}!Component\+Interface@{Component\+Interface}}\index{Component\+Interface@{Component\+Interface}!B\+U\+T\+T\+O\+N\+\_\+\+N\+U\+LL@{B\+U\+T\+T\+O\+N\+\_\+\+N\+U\+LL}}\item[{\em 
+B\+U\+T\+T\+O\+N\+\_\+\+N\+U\+LL\label{class_component_interface_ac7b1e7e91ff64e404ed4b504b92e1335acb361e55f12fe941a3f6800b2909a7ef}
+}]\index{B\+U\+T\+T\+O\+N\+\_\+\+O\+P\+E\+N\+\_\+\+C\+O\+NF@{B\+U\+T\+T\+O\+N\+\_\+\+O\+P\+E\+N\+\_\+\+C\+O\+NF}!Component\+Interface@{Component\+Interface}}\index{Component\+Interface@{Component\+Interface}!B\+U\+T\+T\+O\+N\+\_\+\+O\+P\+E\+N\+\_\+\+C\+O\+NF@{B\+U\+T\+T\+O\+N\+\_\+\+O\+P\+E\+N\+\_\+\+C\+O\+NF}}\item[{\em 
+B\+U\+T\+T\+O\+N\+\_\+\+O\+P\+E\+N\+\_\+\+C\+O\+NF\label{class_component_interface_ac7b1e7e91ff64e404ed4b504b92e1335a8dd781297fb4b0ccb1462f0f9278867a}
+}]\index{B\+U\+T\+T\+O\+N\+\_\+\+S\+A\+V\+E\+\_\+\+C\+O\+NF@{B\+U\+T\+T\+O\+N\+\_\+\+S\+A\+V\+E\+\_\+\+C\+O\+NF}!Component\+Interface@{Component\+Interface}}\index{Component\+Interface@{Component\+Interface}!B\+U\+T\+T\+O\+N\+\_\+\+S\+A\+V\+E\+\_\+\+C\+O\+NF@{B\+U\+T\+T\+O\+N\+\_\+\+S\+A\+V\+E\+\_\+\+C\+O\+NF}}\item[{\em 
+B\+U\+T\+T\+O\+N\+\_\+\+S\+A\+V\+E\+\_\+\+C\+O\+NF\label{class_component_interface_ac7b1e7e91ff64e404ed4b504b92e1335aba7f7253abd4cddae351fc615f247c7c}
+}]\index{B\+U\+T\+T\+O\+N\+\_\+\+R\+UN@{B\+U\+T\+T\+O\+N\+\_\+\+R\+UN}!Component\+Interface@{Component\+Interface}}\index{Component\+Interface@{Component\+Interface}!B\+U\+T\+T\+O\+N\+\_\+\+R\+UN@{B\+U\+T\+T\+O\+N\+\_\+\+R\+UN}}\item[{\em 
+B\+U\+T\+T\+O\+N\+\_\+\+R\+UN\label{class_component_interface_ac7b1e7e91ff64e404ed4b504b92e1335adc221a9783eabd2abe7db675d86008dc}
+}]\index{B\+U\+T\+T\+O\+N\+\_\+\+O\+P\+E\+N\+\_\+\+R\+ES@{B\+U\+T\+T\+O\+N\+\_\+\+O\+P\+E\+N\+\_\+\+R\+ES}!Component\+Interface@{Component\+Interface}}\index{Component\+Interface@{Component\+Interface}!B\+U\+T\+T\+O\+N\+\_\+\+O\+P\+E\+N\+\_\+\+R\+ES@{B\+U\+T\+T\+O\+N\+\_\+\+O\+P\+E\+N\+\_\+\+R\+ES}}\item[{\em 
+B\+U\+T\+T\+O\+N\+\_\+\+O\+P\+E\+N\+\_\+\+R\+ES\label{class_component_interface_ac7b1e7e91ff64e404ed4b504b92e1335ae7a77ecf04498dda6280b99899ba657d}
+}]\index{B\+U\+T\+T\+O\+N\+\_\+\+O\+P\+EN@{B\+U\+T\+T\+O\+N\+\_\+\+O\+P\+EN}!Component\+Interface@{Component\+Interface}}\index{Component\+Interface@{Component\+Interface}!B\+U\+T\+T\+O\+N\+\_\+\+O\+P\+EN@{B\+U\+T\+T\+O\+N\+\_\+\+O\+P\+EN}}\item[{\em 
+B\+U\+T\+T\+O\+N\+\_\+\+O\+P\+EN\label{class_component_interface_ac7b1e7e91ff64e404ed4b504b92e1335a99a14da8694c78192b05843b0c21ebc8}
+}]\index{B\+U\+T\+T\+O\+N\+\_\+\+S\+A\+VE@{B\+U\+T\+T\+O\+N\+\_\+\+S\+A\+VE}!Component\+Interface@{Component\+Interface}}\index{Component\+Interface@{Component\+Interface}!B\+U\+T\+T\+O\+N\+\_\+\+S\+A\+VE@{B\+U\+T\+T\+O\+N\+\_\+\+S\+A\+VE}}\item[{\em 
+B\+U\+T\+T\+O\+N\+\_\+\+S\+A\+VE\label{class_component_interface_ac7b1e7e91ff64e404ed4b504b92e1335affd9cad38a81a4060423216ca1adf457}
+}]\index{B\+U\+T\+T\+O\+N\+S\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT@{B\+U\+T\+T\+O\+N\+S\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT}!Component\+Interface@{Component\+Interface}}\index{Component\+Interface@{Component\+Interface}!B\+U\+T\+T\+O\+N\+S\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT@{B\+U\+T\+T\+O\+N\+S\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT}}\item[{\em 
+B\+U\+T\+T\+O\+N\+S\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT\label{class_component_interface_ac7b1e7e91ff64e404ed4b504b92e1335aa7065649c7784b54806d075d717987d6}
+}]\index{B\+U\+T\+T\+O\+N\+S\+\_\+\+D\+I\+A\+L\+OG@{B\+U\+T\+T\+O\+N\+S\+\_\+\+D\+I\+A\+L\+OG}!Component\+Interface@{Component\+Interface}}\index{Component\+Interface@{Component\+Interface}!B\+U\+T\+T\+O\+N\+S\+\_\+\+D\+I\+A\+L\+OG@{B\+U\+T\+T\+O\+N\+S\+\_\+\+D\+I\+A\+L\+OG}}\item[{\em 
+B\+U\+T\+T\+O\+N\+S\+\_\+\+D\+I\+A\+L\+OG\label{class_component_interface_ac7b1e7e91ff64e404ed4b504b92e1335a02f4f36758a8d71f354a96e98d55bf62}
+}]\index{B\+U\+T\+T\+O\+N\+\_\+\+I\+M\+P\+O\+RT@{B\+U\+T\+T\+O\+N\+\_\+\+I\+M\+P\+O\+RT}!Component\+Interface@{Component\+Interface}}\index{Component\+Interface@{Component\+Interface}!B\+U\+T\+T\+O\+N\+\_\+\+I\+M\+P\+O\+RT@{B\+U\+T\+T\+O\+N\+\_\+\+I\+M\+P\+O\+RT}}\item[{\em 
+B\+U\+T\+T\+O\+N\+\_\+\+I\+M\+P\+O\+RT\label{class_component_interface_ac7b1e7e91ff64e404ed4b504b92e1335a604c3c18d3bacafdb29a5526ddea245b}
+}]\index{B\+U\+T\+T\+O\+N\+\_\+\+A\+DD@{B\+U\+T\+T\+O\+N\+\_\+\+A\+DD}!Component\+Interface@{Component\+Interface}}\index{Component\+Interface@{Component\+Interface}!B\+U\+T\+T\+O\+N\+\_\+\+A\+DD@{B\+U\+T\+T\+O\+N\+\_\+\+A\+DD}}\item[{\em 
+B\+U\+T\+T\+O\+N\+\_\+\+A\+DD\label{class_component_interface_ac7b1e7e91ff64e404ed4b504b92e1335a67ddc4c638e1ca509114fc349d89ef8b}
+}]\index{B\+U\+T\+T\+O\+N\+\_\+\+R\+E\+M\+O\+VE@{B\+U\+T\+T\+O\+N\+\_\+\+R\+E\+M\+O\+VE}!Component\+Interface@{Component\+Interface}}\index{Component\+Interface@{Component\+Interface}!B\+U\+T\+T\+O\+N\+\_\+\+R\+E\+M\+O\+VE@{B\+U\+T\+T\+O\+N\+\_\+\+R\+E\+M\+O\+VE}}\item[{\em 
+B\+U\+T\+T\+O\+N\+\_\+\+R\+E\+M\+O\+VE\label{class_component_interface_ac7b1e7e91ff64e404ed4b504b92e1335a7ec112cf2f956d55d1e91e44534e827a}
+}]\end{description}
+\end{Desc}
+
+
+Defini√ß√£o na linha 117 do arquivo Component\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Component\+Interface@{Component\+Interface}!Component\+Interface@{Component\+Interface}}
+\index{Component\+Interface@{Component\+Interface}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{Component\+Interface(wx\+Frame $\ast$frame, wx\+Window $\ast$parent, int options=\+B\+U\+T\+T\+O\+N\+S\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T)}]{\setlength{\rightskip}{0pt plus 5cm}Component\+Interface\+::\+Component\+Interface (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{int}]{options = {\ttfamily {\bf B\+U\+T\+T\+O\+N\+S\+\_\+\+C\+O\+M\+P\+O\+N\+E\+NT}}}
+\end{DoxyParamCaption}
+)}\label{class_component_interface_a160592e39f34ec555fb5b4672e8b9435}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em Janela} & onde a interface ser· inserida \\
+\hline
+{\em parent} & Componente a que pertence \\
+\hline
+{\em options} & Bot„o(ıes) a ser(em) desenhado(s) \\
+\hline
+\end{DoxyParams}
+\index{Component\+Interface@{Component\+Interface}!````~Component\+Interface@{$\sim$\+Component\+Interface}}
+\index{````~Component\+Interface@{$\sim$\+Component\+Interface}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{$\sim$\+Component\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Component\+Interface\+::$\sim$\+Component\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_component_interface_a3886256e350e41fe89687a5497308333}
+Destrutor 
+
+Defini√ß√£o na linha 152 do arquivo Component\+Interface.\+h.
+
+
+
+\subsection{M√©todos}
+\index{Component\+Interface@{Component\+Interface}!add@{add}}
+\index{add@{add}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{add()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+Interface\+::add (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_component_interface_afcaf28aadef0b3ce51afffe258b88947}
+MÈtodo chamado clicar no botao de \char`\"{}\+Adicionar\char`\"{} da Tool\+Bar Deve ser reimplementado no mÛdulo se deseja realizar algo 
+
+Reimplementado por {\bf Aff\+Prev\+Demand\+Dialog\+Content} \doxyref{}{pag.}{class_aff_prev_demand_dialog_content_a453ebf53e5c3cc12fca6b9e5a73665c4} e {\bf Demand\+Dialog\+Content} \doxyref{}{pag.}{class_demand_dialog_content_afe88f2abf7be1e52d0311a469a97d81d}.
+
+
+
+Defini√ß√£o na linha 54 do arquivo Component\+Interface.\+h.
+
+\index{Component\+Interface@{Component\+Interface}!import@{import}}
+\index{import@{import}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{import()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+Interface\+::import (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_component_interface_aec4cb2ab2c83295cdd930b10ef188016}
+MÈtodo chamado clicar no botao de \char`\"{}\+Importar Serie\char`\"{} da Tool\+Bar Deve ser reimplementado no mÛdulo se deseja realizar algo 
+
+Reimplementado por {\bf Serie\+Dialog\+Content} \doxyref{}{pag.}{class_serie_dialog_content_a7945f42c6284d607175c9e9246437a41}, {\bf Res\+Op\+Tecnique\+Dialog\+Result} \doxyref{}{pag.}{class_res_op_tecnique_dialog_result_a9e377789d6f2b1a6a251ea41f8117ab9}, {\bf Res\+Op\+Tecnique\+Dialog\+Result} \doxyref{}{pag.}{class_res_op_tecnique_dialog_result_a9e377789d6f2b1a6a251ea41f8117ab9} e {\bf Opt\+Node\+Result} \doxyref{}{pag.}{class_opt_node_result_aa3b34ba65c6673061b1b4fb91cd17df4}.
+
+
+
+Defini√ß√£o na linha 49 do arquivo Component\+Interface.\+h.
+
+\index{Component\+Interface@{Component\+Interface}!on\+Add@{on\+Add}}
+\index{on\+Add@{on\+Add}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{on\+Add(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Component\+Interface\+::on\+Add (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_component_interface_a54bc839ead578d7762db941467d384be}
+Evento de adicionar \index{Component\+Interface@{Component\+Interface}!on\+Import@{on\+Import}}
+\index{on\+Import@{on\+Import}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{on\+Import(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Component\+Interface\+::on\+Import (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_component_interface_a54917ad5b91b0a21b85edb56129b9803}
+Abre a janela de importaÁ„o de series \index{Component\+Interface@{Component\+Interface}!on\+Open\+All\+Results@{on\+Open\+All\+Results}}
+\index{on\+Open\+All\+Results@{on\+Open\+All\+Results}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{on\+Open\+All\+Results(wx\+Command\+Event \&a\+\_\+event)}]{\setlength{\rightskip}{0pt plus 5cm}void Component\+Interface\+::on\+Open\+All\+Results (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{a\+\_\+event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_component_interface_aa59a6c4f611859b47fd047c04d1c22c4}
+Abre todos os resultados do modelo previamente executado \index{Component\+Interface@{Component\+Interface}!on\+Open\+Conf@{on\+Open\+Conf}}
+\index{on\+Open\+Conf@{on\+Open\+Conf}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{on\+Open\+Conf(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Component\+Interface\+::on\+Open\+Conf (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_component_interface_a21faa50944f4e4b6162aa5d857fc0b7f}
+Abre o arquivo de configuraÁ„o \index{Component\+Interface@{Component\+Interface}!on\+Open\+Result@{on\+Open\+Result}}
+\index{on\+Open\+Result@{on\+Open\+Result}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{on\+Open\+Result(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Component\+Interface\+::on\+Open\+Result (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_component_interface_aa30c1fa2020a215d5623e452c6f3da2a}
+Abre os resultados do modelo previamente executado \index{Component\+Interface@{Component\+Interface}!on\+Radio\+Box@{on\+Radio\+Box}}
+\index{on\+Radio\+Box@{on\+Radio\+Box}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{on\+Radio\+Box()}]{\setlength{\rightskip}{0pt plus 5cm}void Component\+Interface\+::on\+Radio\+Box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_component_interface_a965aea3ec46eb1ea5571595afe4c3680}
+\index{Component\+Interface@{Component\+Interface}!on\+Remove@{on\+Remove}}
+\index{on\+Remove@{on\+Remove}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{on\+Remove(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Component\+Interface\+::on\+Remove (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_component_interface_a6c3938b8e422fd97a00df58113e37181}
+Evento de remover \index{Component\+Interface@{Component\+Interface}!on\+Run@{on\+Run}}
+\index{on\+Run@{on\+Run}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{on\+Run(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Component\+Interface\+::on\+Run (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_component_interface_a6a909a78868d7af13ced024ff5df01e5}
+Executa o modelo \index{Component\+Interface@{Component\+Interface}!on\+Save\+Conf@{on\+Save\+Conf}}
+\index{on\+Save\+Conf@{on\+Save\+Conf}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{on\+Save\+Conf(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Component\+Interface\+::on\+Save\+Conf (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_component_interface_a9de8ec27f60db5af827ebcc9865bbb3c}
+Salva as configuraÁıes \index{Component\+Interface@{Component\+Interface}!on\+Set\+Info@{on\+Set\+Info}}
+\index{on\+Set\+Info@{on\+Set\+Info}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{on\+Set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void Component\+Interface\+::on\+Set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_component_interface_aa2fa00c178780f1a6872061c72f9a4dd}
+Seta os par‚metros para calculo do modelo \index{Component\+Interface@{Component\+Interface}!on\+Set\+Interval@{on\+Set\+Interval}}
+\index{on\+Set\+Interval@{on\+Set\+Interval}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{on\+Set\+Interval(const Interval \&interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Component\+Interface\+::on\+Set\+Interval (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interval} \&}]{interval}
+\end{DoxyParamCaption}
+)}\label{class_component_interface_abe148fe6a9b107adb7c1863014c380f3}
+\index{Component\+Interface@{Component\+Interface}!open\+All\+Results@{open\+All\+Results}}
+\index{open\+All\+Results@{open\+All\+Results}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{open\+All\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+Interface\+::open\+All\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_component_interface_a637f65468bad2321d072550ed8b0d805}
+MÈtodo chamado clicar no botao de \char`\"{}\+Todos os Resultados\char`\"{} da Tool\+Bar Deve ser reimplementado no mÛdulo se deseja realizar algo 
+
+Defini√ß√£o na linha 44 do arquivo Component\+Interface.\+h.
+
+\index{Component\+Interface@{Component\+Interface}!open\+Conf@{open\+Conf}}
+\index{open\+Conf@{open\+Conf}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{open\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+Interface\+::open\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_component_interface_abf3660e2c31c95afab763b4b520e26e9}
+MÈtodo chamado clicar no botao \char`\"{}\+Abrir ConfiguraÁ„o\char`\"{} da Tool\+Bar Deve ser reimplementado no mÛdulo se deseja realizar algo 
+
+Reimplementado por {\bf Matrix\+Viewer} \doxyref{}{pag.}{class_matrix_viewer_aaef1beffd429b3f7b72785455629d7f8}, {\bf Out\+Zones} \doxyref{}{pag.}{class_out_zones_ad31f08b0a5da8d92e388799c1df245a3}, {\bf Serie\+Dialog\+Content} \doxyref{}{pag.}{class_serie_dialog_content_abda1c36fdd6e9bcef1e31a8031dc3456}, {\bf Matrix\+Dialog\+Content} \doxyref{}{pag.}{class_matrix_dialog_content_ae88b5c989c17029602e1b932600f053f}, {\bf S\+A\+Sediment\+Content} \doxyref{}{pag.}{class_s_a_sediment_content_a165544ff221e968c3bcbe3f528785fd4}, {\bf Septic\+System\+Content} \doxyref{}{pag.}{class_septic_system_content_a2e8737debcf2ba092d0206ccde705296}, {\bf Res\+C\+A\+V\+Dialog\+Content} \doxyref{}{pag.}{class_res_c_a_v_dialog_content_aae08390cf11c01429fe14719cfb73d06}, {\bf Res\+C\+A\+V\+Dialog\+Content} \doxyref{}{pag.}{class_res_c_a_v_dialog_content_aae08390cf11c01429fe14719cfb73d06}, {\bf Pumping\+Costs\+Dialog\+Content} \doxyref{}{pag.}{class_pumping_costs_dialog_content_ab08d0ecd6aac5911802d118f308ed3f5}, {\bf Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_vol_dep_release_dialog_content_a183e1fbd5efc2bfc24e24e0daa649a61}, {\bf Const\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_const_release_dialog_content_a2bcea0e2f73050accbf65b99ba043557}, {\bf Res\+Op\+Interface} \doxyref{}{pag.}{class_res_op_interface_a5421f048ab54a4ef85be828fe6547e2a}, {\bf Pumping\+Costs\+Dialog\+Content} \doxyref{}{pag.}{class_pumping_costs_dialog_content_ab08d0ecd6aac5911802d118f308ed3f5}, {\bf Opt\+Const\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_const_release_dialog_content_a0339bb8fba6a4d74d9032a4b93f47252}, {\bf Zones\+Priority\+Dialog\+Content} \doxyref{}{pag.}{class_zones_priority_dialog_content_aaaf8c2d1aa0673adf0642f3146fc6740}, {\bf Const\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_const_release_dialog_content_a1aeff53e3f3ab82f2156a075665ffb44}, {\bf One\+Priority\+Dialog\+Content} \doxyref{}{pag.}{class_one_priority_dialog_content_a576127587d008a2675273cbb382341e0}, {\bf Thiessen\+Dialog\+Content} \doxyref{}{pag.}{class_thiessen_dialog_content_a7e0ae7cd2b8c798fcfe03558da47359e}, {\bf S\+A\+Dialog\+Content} \doxyref{}{pag.}{class_s_a_dialog_content_ab813804a4397eefb6a44420676f4ee25}, {\bf Failure\+Number\+Dialog\+Content} \doxyref{}{pag.}{class_failure_number_dialog_content_ac4b803dba0188aefc725798a30636467}, {\bf Guarantee\+Dialog\+Content} \doxyref{}{pag.}{class_guarantee_dialog_content_ad7155e3e7b8c83afaba74eb2fa1b835c}, {\bf Failure\+Number\+Dialog\+Content} \doxyref{}{pag.}{class_failure_number_dialog_content_ac4b803dba0188aefc725798a30636467}, {\bf Guarantee\+Dialog\+Content} \doxyref{}{pag.}{class_guarantee_dialog_content_ad7155e3e7b8c83afaba74eb2fa1b835c}, {\bf Evaporation\+Losses\+Dialog\+Content} \doxyref{}{pag.}{class_evaporation_losses_dialog_content_a41244e536fc84c617a22129f8fa5aa02}, {\bf Shortage\+Volume\+Dialog\+Content} \doxyref{}{pag.}{class_shortage_volume_dialog_content_a7742c5f1a8119247170cd893b9691854}, {\bf Aff\+Prev\+Demand\+Dialog\+Content} \doxyref{}{pag.}{class_aff_prev_demand_dialog_content_a4404dccda21061f926f8f33c18581ad8}, {\bf Res\+Op\+Interface} \doxyref{}{pag.}{class_res_op_interface_a5421f048ab54a4ef85be828fe6547e2a}, {\bf Evaporation\+Losses\+Dialog\+Content} \doxyref{}{pag.}{class_evaporation_losses_dialog_content_a41244e536fc84c617a22129f8fa5aa02}, {\bf Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_vol_dep_release_dialog_content_addf5e8f5218453c89c341de489183ef7}, {\bf Shortage\+Volume\+Dialog\+Content} \doxyref{}{pag.}{class_shortage_volume_dialog_content_a7742c5f1a8119247170cd893b9691854}, {\bf Opt\+Periodic\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_periodic_release_dialog_content_a75b18b88ebbad6f361bf60e3d51c94cc}, {\bf Opt\+Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_vol_dep_release_dialog_content_aaaab485415ea819936d920b5cca6f53d}, {\bf Demand\+Dialog\+Content} \doxyref{}{pag.}{class_demand_dialog_content_a4854a5ee1c5c43be9effd82ab14a121e}, {\bf Periodic\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_periodic_release_dialog_content_a3539fd461ce449ee89e66e69e807a46a} e {\bf Periodic\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_periodic_release_dialog_content_a3539fd461ce449ee89e66e69e807a46a}.
+
+
+
+Defini√ß√£o na linha 24 do arquivo Component\+Interface.\+h.
+
+\index{Component\+Interface@{Component\+Interface}!open\+Result@{open\+Result}}
+\index{open\+Result@{open\+Result}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{open\+Result()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+Interface\+::open\+Result (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_component_interface_a8d55317d894c2e893b6d0acca9b1ae8f}
+MÈtodo chamado clicar no botao de \char`\"{}\+Abrir Resultados\char`\"{} da Tool\+Bar Deve ser reimplementado no mÛdulo se deseja realizar algo 
+
+Reimplementado por {\bf Res\+Op\+Interface} \doxyref{}{pag.}{class_res_op_interface_aa532fc4b11284f0800975e5ee19cd763} e {\bf Res\+Op\+Interface} \doxyref{}{pag.}{class_res_op_interface_aa532fc4b11284f0800975e5ee19cd763}.
+
+
+
+Defini√ß√£o na linha 39 do arquivo Component\+Interface.\+h.
+
+\index{Component\+Interface@{Component\+Interface}!radio\+Box@{radio\+Box}}
+\index{radio\+Box@{radio\+Box}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{radio\+Box()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+Interface\+::radio\+Box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_component_interface_a202fd862c10d339ae7d7e83d80b248bd}
+
+
+Reimplementado por {\bf G\+W\+L\+F\+Interface} \doxyref{}{pag.}{class_g_w_l_f_interface_a07bacc8c7d2798abc3e9abcaf0a69c3a}, {\bf S\+A\+C\+R\+Interface} \doxyref{}{pag.}{class_s_a_c_r_interface_a415147ba57497ef40036bd38e8de960a}, {\bf M\+U\+S\+K\+Interface} \doxyref{}{pag.}{class_m_u_s_k_interface_a7e2dbb26c2d5b8299d6d5ffb6bd57bb6}, {\bf H\+Y\+M\+O\+D\+Interface} \doxyref{}{pag.}{class_h_y_m_o_d_interface_adb6ef714d8a4136ea32204385c05e1bc}, {\bf S\+M\+A\+P\+Interface} \doxyref{}{pag.}{class_s_m_a_p_interface_ab36eca16b64daf7b2c3e5fc0009a6ae1}, {\bf M\+E\+C\+A\+Res\+W\+Q\+Interface} \doxyref{}{pag.}{class_m_e_c_a_res_w_q_interface_a74e3c761bbad7f7bde592b7ca4a362fd}, {\bf T\+A\+L\+River\+Interface} \doxyref{}{pag.}{class_t_a_l_river_interface_ab545a6eb7fff3360019852ce0238708f}, {\bf S\+M\+A\+P\+M\+Interface} \doxyref{}{pag.}{class_s_m_a_p_m_interface_ab44c3d401c5f6c494a77c0b0da82054a}, {\bf M\+E\+N\+U\+Res\+W\+Q\+Interface} \doxyref{}{pag.}{class_m_e_n_u_res_w_q_interface_aee7622aa23cb9116423bddccd9941ca5}, {\bf S\+M\+A\+P\+H\+Interface} \doxyref{}{pag.}{class_s_m_a_p_h_interface_a21b427a123db52ba9d4d8238cada1ed2}, {\bf C\+N3\+S\+Interface} \doxyref{}{pag.}{class_c_n3_s_interface_a32e3e6f3a13b11527d53da019dc51fc7}, {\bf Generic\+Interface} \doxyref{}{pag.}{class_generic_interface_a09af15b1c646beded767f845290ef9af}, {\bf G\+W\+L\+F\+Basin\+W\+Q\+Interface} \doxyref{}{pag.}{class_g_w_l_f_basin_w_q_interface_ac698cf712362cf1802797c3426a9b743}, {\bf W\+A\+S\+A\+Interface} \doxyref{}{pag.}{class_w_a_s_a_interface_a8a753309a51a66a3c11917624c6edf8c}, {\bf Res\+Op\+Sequential\+Interface} \doxyref{}{pag.}{class_res_op_sequential_interface_a6bc7ae5a05e7277479efa7cbc567c983} e {\bf Res\+Op\+Network\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_network_flow_interface_a059f7ea61d51047e66ab01a6e4e533e8}.
+
+
+
+Defini√ß√£o na linha 97 do arquivo Component\+Interface.\+h.
+
+\index{Component\+Interface@{Component\+Interface}!remove@{remove}}
+\index{remove@{remove}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{remove()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+Interface\+::remove (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_component_interface_a4ea7f5ae0d3c599a63617a491e551927}
+MÈtodo chamado clicar no botao de \char`\"{}\+Remover\char`\"{} da Tool\+Bar Deve ser reimplementado no mÛdulo se deseja realizar algo 
+
+Reimplementado por {\bf Aff\+Prev\+Demand\+Dialog\+Content} \doxyref{}{pag.}{class_aff_prev_demand_dialog_content_a291769127f629dc5da40fde54a80928b} e {\bf Demand\+Dialog\+Content} \doxyref{}{pag.}{class_demand_dialog_content_af61c08c8944a34299ef8788aea56077f}.
+
+
+
+Defini√ß√£o na linha 59 do arquivo Component\+Interface.\+h.
+
+\index{Component\+Interface@{Component\+Interface}!run@{run}}
+\index{run@{run}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+Interface\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_component_interface_a747fb799cb1c6c59194fdf5de8cd39c1}
+MÈtodo chamado clicar no botao \char`\"{}\+Executar MÛdulo\char`\"{} da Tool\+Bar Deve ser reimplementado no mÛdulo se deseja realizar algo 
+
+Reimplementado por {\bf S\+A\+Dialog\+Parent} \doxyref{}{pag.}{class_s_a_dialog_parent_ad8733b34e6cbc39c21c9b4c54e36f44e}, {\bf Res\+Op\+Interface} \doxyref{}{pag.}{class_res_op_interface_a01ad206fac2f8c41052781ac7965fe79}, {\bf S\+A\+H\+Y\+M\+OD} \doxyref{}{pag.}{class_s_a_h_y_m_o_d_ac13fb5a19556d86b4e56c16779287b1e}, {\bf S\+A\+C\+N3S} \doxyref{}{pag.}{class_s_a_c_n3_s_a35e82df48c27aa44faed666041111fb4}, {\bf S\+A\+S\+M\+AP} \doxyref{}{pag.}{class_s_a_s_m_a_p_a4254860d90d39d81c41176c21228cf38}, {\bf S\+A\+S\+M\+A\+PM} \doxyref{}{pag.}{class_s_a_s_m_a_p_m_ac01feff56d2a8b605c18dbdc85a1f64a} e {\bf Res\+Op\+Interface} \doxyref{}{pag.}{class_res_op_interface_a01ad206fac2f8c41052781ac7965fe79}.
+
+
+
+Defini√ß√£o na linha 34 do arquivo Component\+Interface.\+h.
+
+\index{Component\+Interface@{Component\+Interface}!save\+Conf@{save\+Conf}}
+\index{save\+Conf@{save\+Conf}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{save\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+Interface\+::save\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_component_interface_abcef0436251918c1eab033a80b40c626}
+MÈtodo chamado clicar no botao \char`\"{}\+Salvar ConfiguraÁ„o\char`\"{} da Tool\+Bar Deve ser reimplementado no mÛdulo se deseja realizar algo 
+
+Reimplementado por {\bf Serie\+Viewer} \doxyref{}{pag.}{class_serie_viewer_a819f894fddb9c7c7e7eabe0ab08e8e0c}, {\bf Matrix\+Viewer} \doxyref{}{pag.}{class_matrix_viewer_accd506b46e8acc194b7ace7b2f8838b0}, {\bf Out\+Zones} \doxyref{}{pag.}{class_out_zones_adbead5aaa0d5c861d7b6512272b28e8d}, {\bf Serie\+Dialog\+Content} \doxyref{}{pag.}{class_serie_dialog_content_af60cb6f059b4395ae7483e86ce22d1d0}, {\bf Matrix\+Dialog\+Content} \doxyref{}{pag.}{class_matrix_dialog_content_ae34742cf649479d64e90dd1c40ea8142}, {\bf Septic\+System\+Content} \doxyref{}{pag.}{class_septic_system_content_ad85b35b83a5ecbed87886b1bb604af27}, {\bf S\+I\+G\+A\+Viewer} \doxyref{}{pag.}{class_s_i_g_a_viewer_a33d9268e1ef97997afe72d1c34ce7d94}, {\bf S\+A\+Sediment\+Content} \doxyref{}{pag.}{class_s_a_sediment_content_a3e74ad91a60e25e3d7a1b51e46b90db3}, {\bf Thiessen\+Viewer} \doxyref{}{pag.}{class_thiessen_viewer_ac81939dde6def74708664ace000cdeb2}, {\bf Res\+C\+A\+V\+Dialog\+Content} \doxyref{}{pag.}{class_res_c_a_v_dialog_content_a74afd562a4b51272bae9914a03d89e8e}, {\bf Res\+C\+A\+V\+Dialog\+Content} \doxyref{}{pag.}{class_res_c_a_v_dialog_content_a74afd562a4b51272bae9914a03d89e8e}, {\bf Pumping\+Costs\+Dialog\+Content} \doxyref{}{pag.}{class_pumping_costs_dialog_content_a842d09d5a6d4c916e3cea73fce5aacf8}, {\bf Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_vol_dep_release_dialog_content_a8fef56741f70c88b165419b5b5eff10a}, {\bf Const\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_const_release_dialog_content_a9d5481ba8829b3b158fedc4e3a3497ec}, {\bf Res\+Op\+Interface} \doxyref{}{pag.}{class_res_op_interface_af50649408de080ca6d71c8f2fffce066}, {\bf Pumping\+Costs\+Dialog\+Content} \doxyref{}{pag.}{class_pumping_costs_dialog_content_a842d09d5a6d4c916e3cea73fce5aacf8}, {\bf Opt\+Const\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_const_release_dialog_content_aefa4b23843d251dee62ca152c6f1b780}, {\bf Zones\+Priority\+Dialog\+Content} \doxyref{}{pag.}{class_zones_priority_dialog_content_aa504ea1db39d07a9971a42feb454e431}, {\bf Const\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_const_release_dialog_content_a30bcea20222116fcf535b76d47613d0c}, {\bf One\+Priority\+Dialog\+Content} \doxyref{}{pag.}{class_one_priority_dialog_content_ac61531e866ab07b03d7c97ba3fc7f15d}, {\bf Thiessen\+Dialog\+Content} \doxyref{}{pag.}{class_thiessen_dialog_content_a2a228f35693e58d42ff3075c76efe7d6}, {\bf S\+A\+Dialog\+Content} \doxyref{}{pag.}{class_s_a_dialog_content_a1d84aa9cedea8c89212e90a5d4a4be34}, {\bf Failure\+Number\+Dialog\+Content} \doxyref{}{pag.}{class_failure_number_dialog_content_a21828ca8b5f001c13a24aeb5ecd3d15b}, {\bf Guarantee\+Dialog\+Content} \doxyref{}{pag.}{class_guarantee_dialog_content_af873bef90f6b3536f8dbd9e9ea2517bd}, {\bf Failure\+Number\+Dialog\+Content} \doxyref{}{pag.}{class_failure_number_dialog_content_a21828ca8b5f001c13a24aeb5ecd3d15b}, {\bf Guarantee\+Dialog\+Content} \doxyref{}{pag.}{class_guarantee_dialog_content_af873bef90f6b3536f8dbd9e9ea2517bd}, {\bf Evaporation\+Losses\+Dialog\+Content} \doxyref{}{pag.}{class_evaporation_losses_dialog_content_ade32b5898d39aaec33e886eb073542ba}, {\bf Shortage\+Volume\+Dialog\+Content} \doxyref{}{pag.}{class_shortage_volume_dialog_content_a0814587f5219208df83d5f757fe87a5c}, {\bf Aff\+Prev\+Demand\+Dialog\+Content} \doxyref{}{pag.}{class_aff_prev_demand_dialog_content_a04259829bef9be12a2c68fe2f7de49ed}, {\bf Res\+Op\+Interface} \doxyref{}{pag.}{class_res_op_interface_af50649408de080ca6d71c8f2fffce066}, {\bf Evaporation\+Losses\+Dialog\+Content} \doxyref{}{pag.}{class_evaporation_losses_dialog_content_ade32b5898d39aaec33e886eb073542ba}, {\bf Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_vol_dep_release_dialog_content_a4d84251cca235f798d6e92fdc248c2e5}, {\bf Shortage\+Volume\+Dialog\+Content} \doxyref{}{pag.}{class_shortage_volume_dialog_content_a0814587f5219208df83d5f757fe87a5c}, {\bf Opt\+Periodic\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_periodic_release_dialog_content_a6b99511d0dd245e08f48719f705be5b6}, {\bf Opt\+Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_vol_dep_release_dialog_content_a140af9eb63dceb9da89145c2a4c5d7cf}, {\bf Demand\+Dialog\+Content} \doxyref{}{pag.}{class_demand_dialog_content_acbace8d8635ba8f0c948622de723a065}, {\bf Periodic\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_periodic_release_dialog_content_a6f20e96d17a3f7cdf080a17091786098} e {\bf Periodic\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_periodic_release_dialog_content_a6f20e96d17a3f7cdf080a17091786098}.
+
+
+
+Defini√ß√£o na linha 29 do arquivo Component\+Interface.\+h.
+
+\index{Component\+Interface@{Component\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_component_interface_aced556e5caf584b7335135d337895154}
+Seta os par‚metros para calculo do modelo 
+
+Reimplementado por {\bf G\+W\+L\+F\+Interface} \doxyref{}{pag.}{class_g_w_l_f_interface_a556d2a3112e9cf8d634b375bb669cc1a}, {\bf Matrix\+Graph} \doxyref{}{pag.}{class_matrix_graph_a95374ceb5f01b862390fc13f690d905b}, {\bf S\+A\+C\+R\+Interface} \doxyref{}{pag.}{class_s_a_c_r_interface_a8e14aa0714ad63241c8a85952a5ef82b}, {\bf M\+U\+S\+K\+Interface} \doxyref{}{pag.}{class_m_u_s_k_interface_a19d355e326216f8979eb29d4d901c507}, {\bf H\+Y\+M\+O\+D\+Interface} \doxyref{}{pag.}{class_h_y_m_o_d_interface_ac7424958da3a1b110490c70e4750737f}, {\bf S\+M\+A\+P\+Interface} \doxyref{}{pag.}{class_s_m_a_p_interface_a8a2e7590262648d54080d36462518a39}, {\bf M\+E\+C\+A\+Res\+W\+Q\+Interface} \doxyref{}{pag.}{class_m_e_c_a_res_w_q_interface_a311a3f44131b555eadd1a57150077244}, {\bf T\+A\+L\+River\+Interface} \doxyref{}{pag.}{class_t_a_l_river_interface_a80356d0e8e3ed3120e8b3be5c2de5227}, {\bf S\+M\+A\+P\+M\+Interface} \doxyref{}{pag.}{class_s_m_a_p_m_interface_ad9fce0b05a4fdf69017bf2217d72425c}, {\bf M\+E\+N\+U\+Res\+W\+Q\+Interface} \doxyref{}{pag.}{class_m_e_n_u_res_w_q_interface_aa41c3e37d66701c13d661b241f5f1d64}, {\bf S\+M\+A\+P\+H\+Interface} \doxyref{}{pag.}{class_s_m_a_p_h_interface_a7a879aec59e1b045bf84c7a658e5c3ea}, {\bf C\+N3\+S\+Interface} \doxyref{}{pag.}{class_c_n3_s_interface_a5833017cfc2b7876105b28c670a24971}, {\bf G\+W\+L\+F\+Sediment\+Interface} \doxyref{}{pag.}{class_g_w_l_f_sediment_interface_a640d5300ee5a439f5fc3f60e71bc05d3}, {\bf Res\+C\+A\+V\+Dialog\+Content} \doxyref{}{pag.}{class_res_c_a_v_dialog_content_ab944a22e99469cae9576d48aa078e7ae}, {\bf Opt\+Interface} \doxyref{}{pag.}{class_opt_interface_aa9d7a3fc06032ff314864b63028e6028}, {\bf G\+W\+L\+F\+Pho\+Interface} \doxyref{}{pag.}{class_g_w_l_f_pho_interface_a2105081edb30d2ec346a4ea0a5d99a8c}, {\bf Generic\+Interface} \doxyref{}{pag.}{class_generic_interface_a67b62dcf4a46c692e0f5fbe72bc40995}, {\bf Res\+C\+A\+V\+Dialog\+Content} \doxyref{}{pag.}{class_res_c_a_v_dialog_content_ab944a22e99469cae9576d48aa078e7ae}, {\bf G\+W\+L\+F\+Basin\+W\+Q\+Interface} \doxyref{}{pag.}{class_g_w_l_f_basin_w_q_interface_a481e352703611d12a9e549c8b621f80b}, {\bf Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_vol_dep_release_dialog_content_a0d523ea0cb85f62206d05f0e1924f408}, {\bf Pumping\+Costs\+Dialog\+Content} \doxyref{}{pag.}{class_pumping_costs_dialog_content_a5fc77aeb223237acefdabe8b0ce558b3}, {\bf Pumping\+Costs\+Dialog\+Content} \doxyref{}{pag.}{class_pumping_costs_dialog_content_a5fc77aeb223237acefdabe8b0ce558b3}, {\bf Zones\+Priority\+Dialog\+Content} \doxyref{}{pag.}{class_zones_priority_dialog_content_ad5878f3560a9d9fbad60fb1673fcb392}, {\bf G\+W\+L\+F\+Nit\+Interface} \doxyref{}{pag.}{class_g_w_l_f_nit_interface_ab3baf4a90e7d32cb25ff92fdd27e8776}, {\bf Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_vol_dep_release_dialog_content_af6e69e8269dd08979c968d2b4fea4056}, {\bf W\+A\+S\+A\+Interface} \doxyref{}{pag.}{class_w_a_s_a_interface_ae45d093159c803663ee6c09bef83210e}, {\bf Res\+Op\+Interface} \doxyref{}{pag.}{class_res_op_interface_a168a28715e29bc8ce37b50db9b2b3801}, {\bf Res\+Op\+Sequential\+Interface} \doxyref{}{pag.}{class_res_op_sequential_interface_a26bdf00f02ad82bba87ebdf4bf801f0a}, {\bf Aff\+Prev\+Demand\+Dialog\+Content} \doxyref{}{pag.}{class_aff_prev_demand_dialog_content_afb654e5cc427f4966bf6cb4c555f8b80}, {\bf Demand\+Dialog\+Content} \doxyref{}{pag.}{class_demand_dialog_content_a53c13598515f56e206abd6918ea9ed80}, {\bf Res\+Op\+Tecnique\+Dialog\+Result} \doxyref{}{pag.}{class_res_op_tecnique_dialog_result_a8408867690013588824af38409d2b3d4}, {\bf Opt\+Const\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_const_release_dialog_content_a17f45317d10e672463f7e737352dd333}, {\bf Const\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_const_release_dialog_content_a18c98a3dee6d681cbf732c7695329102}, {\bf Res\+Op\+Tecnique\+Dialog\+Result} \doxyref{}{pag.}{class_res_op_tecnique_dialog_result_a8408867690013588824af38409d2b3d4}, {\bf Const\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_const_release_dialog_content_a18c98a3dee6d681cbf732c7695329102}, {\bf Demand\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_demand_release_dialog_content_a1362ff17bf705ee9aa3063c31dcf5779}, {\bf One\+Priority\+Dialog\+Content} \doxyref{}{pag.}{class_one_priority_dialog_content_a43f9c6844b0d27d5f0a462a048997a6a}, {\bf Res\+Op\+M\+U\+S\+K\+Interface} \doxyref{}{pag.}{class_res_op_m_u_s_k_interface_a8bb9ce1ad58f8466c4a2c2aea212e396}, {\bf Failure\+Number\+Dialog\+Content} \doxyref{}{pag.}{class_failure_number_dialog_content_a8604d765b0ec5dfb8aa16ea021b250b9}, {\bf Res\+Op\+Sequential\+Opt\+Interface} \doxyref{}{pag.}{class_res_op_sequential_opt_interface_a2c36323caa11ef94e3a109029978b1d2}, {\bf Res\+Op\+L\+A\+G\+Interface} \doxyref{}{pag.}{class_res_op_l_a_g_interface_afae7a1422e1e1d56c73833d4167ac7fe}, {\bf Res\+Op\+Network\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_network_flow_interface_acafcae50f8c80f8e4ac3d1752fa1f748}, {\bf Evaporation\+Losses\+Dialog\+Content} \doxyref{}{pag.}{class_evaporation_losses_dialog_content_a66b7ac10ab41a1d8546d997ce507990f}, {\bf Guarantee\+Dialog\+Content} \doxyref{}{pag.}{class_guarantee_dialog_content_a4d518d1799cd8bc9f8be8fd76b23d856}, {\bf Shortage\+Volume\+Dialog\+Content} \doxyref{}{pag.}{class_shortage_volume_dialog_content_a2c8c204262a78e248add332d3327708c}, {\bf Failure\+Number\+Dialog\+Content} \doxyref{}{pag.}{class_failure_number_dialog_content_a8604d765b0ec5dfb8aa16ea021b250b9}, {\bf Res\+Op\+Rule\+Dialog\+Content} \doxyref{}{pag.}{class_res_op_rule_dialog_content_a836a256a089fd38f217bcf220c037d3a}, {\bf Evaporation\+Losses\+Dialog\+Content} \doxyref{}{pag.}{class_evaporation_losses_dialog_content_a66b7ac10ab41a1d8546d997ce507990f}, {\bf Guarantee\+Dialog\+Content} \doxyref{}{pag.}{class_guarantee_dialog_content_a4d518d1799cd8bc9f8be8fd76b23d856}, {\bf Shortage\+Volume\+Dialog\+Content} \doxyref{}{pag.}{class_shortage_volume_dialog_content_a2c8c204262a78e248add332d3327708c}, {\bf Res\+Op\+Network\+Flow\+Wnd\+Interface} \doxyref{}{pag.}{class_res_op_network_flow_wnd_interface_a38edb908b4f70ea4e8b7c92441ea29e4}, {\bf Obj\+Function\+Interface} \doxyref{}{pag.}{class_obj_function_interface_a9146fe8b50e7fec616ba8805ba2a4653}, {\bf Opt\+Periodic\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_periodic_release_dialog_content_a46769c6a4c8007902180c2c5246a4c86}, {\bf Res\+Op\+Rule\+Dialog\+Content} \doxyref{}{pag.}{class_res_op_rule_dialog_content_ae91ac03d1b5448e8c3c09d59029d8e0c}, {\bf Opt\+Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_vol_dep_release_dialog_content_abc00841fc1aa1350a438d72138800f7b}, {\bf Res\+Op\+Obj\+Function\+Interface} \doxyref{}{pag.}{class_res_op_obj_function_interface_a52068b2235078e591757059715c1b3a8}, {\bf Res\+Op\+Sequential\+Wnd\+Interface} \doxyref{}{pag.}{class_res_op_sequential_wnd_interface_a91eda865c083fcb1bda3b9db970d8e9f}, {\bf Periodic\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_periodic_release_dialog_content_a0a22e0f0cdd0cf7353b186221f111668}, {\bf Periodic\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_periodic_release_dialog_content_a0a22e0f0cdd0cf7353b186221f111668} e {\bf Res\+Op\+Obj\+Function\+Interface} \doxyref{}{pag.}{class_res_op_obj_function_interface_a52068b2235078e591757059715c1b3a8}.
+
+
+
+Defini√ß√£o na linha 96 do arquivo Component\+Interface.\+h.
+
+\index{Component\+Interface@{Component\+Interface}!set\+Interval@{set\+Interval}}
+\index{set\+Interval@{set\+Interval}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{set\+Interval(const Interval \&)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+Interface\+::set\+Interval (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interval} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_component_interface_ad1498cd36a41f88924a92d1a66f74947}
+
+
+Reimplementado por {\bf G\+W\+L\+F\+Interface} \doxyref{}{pag.}{class_g_w_l_f_interface_a34a25e4847a7990a8e87716d9fd23ce3}, {\bf S\+A\+C\+R\+Interface} \doxyref{}{pag.}{class_s_a_c_r_interface_a9652560b529b44c1ea930d8242d62832}, {\bf H\+Y\+M\+O\+D\+Interface} \doxyref{}{pag.}{class_h_y_m_o_d_interface_a042b58281c16a400fbc22cb54c855f11}, {\bf S\+M\+A\+P\+Interface} \doxyref{}{pag.}{class_s_m_a_p_interface_a004e5fe5fc1f2857d52812bd723cef4a}, {\bf S\+M\+A\+P\+M\+Interface} \doxyref{}{pag.}{class_s_m_a_p_m_interface_a6c370124b8f423a44b8f6f17209426f5}, {\bf M\+U\+S\+K\+Interface} \doxyref{}{pag.}{class_m_u_s_k_interface_a51621d8b563eb142b0645336c8397b9a}, {\bf M\+E\+C\+A\+Res\+W\+Q\+Interface} \doxyref{}{pag.}{class_m_e_c_a_res_w_q_interface_aeb1c2a80d7f8924cd6db27c00c1c6ee8}, {\bf T\+A\+L\+River\+Interface} \doxyref{}{pag.}{class_t_a_l_river_interface_a98950413cf63c283c662719053629fbd}, {\bf M\+E\+N\+U\+Res\+W\+Q\+Interface} \doxyref{}{pag.}{class_m_e_n_u_res_w_q_interface_a7aaec07ee532fdef16f9c91341f2d229}, {\bf S\+M\+A\+P\+H\+Interface} \doxyref{}{pag.}{class_s_m_a_p_h_interface_a160b96fd5ef343e5120798050ea4b938}, {\bf C\+N3\+S\+Interface} \doxyref{}{pag.}{class_c_n3_s_interface_a0a130e4587d0680c841a51fa4574c390}, {\bf Generic\+Interface} \doxyref{}{pag.}{class_generic_interface_af2d4f3d694a16b4d07fba23c86327763} e {\bf G\+W\+L\+F\+Basin\+W\+Q\+Interface} \doxyref{}{pag.}{class_g_w_l_f_basin_w_q_interface_ae6d1c6dc2f0ae9caf6669697067b2df8}.
+
+
+
+Defini√ß√£o na linha 98 do arquivo Component\+Interface.\+h.
+
+
+
+\subsection{Amigas e Fun√ß√µes Relacionadas}
+\index{Component\+Interface@{Component\+Interface}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{S\+I\+G\+A\+Frame}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf S\+I\+G\+A\+Frame}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_component_interface_a9d47c290d5cd19d44bd1f4e8a4817caa}
+
+
+Defini√ß√£o na linha 18 do arquivo Component\+Interface.\+h.
+
+
+
+\subsection{Atributos}
+\index{Component\+Interface@{Component\+Interface}!box\+Sizer@{box\+Sizer}}
+\index{box\+Sizer@{box\+Sizer}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{box\+Sizer}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Box\+Sizer$\ast$ Component\+Interface\+::box\+Sizer}\label{class_component_interface_aed81eedba64f82df988f0ab2174a9c41}
+Sizer principal da janela, todos os componentes devem ser inseridos nele 
+
+Defini√ß√£o na linha 166 do arquivo Component\+Interface.\+h.
+
+\index{Component\+Interface@{Component\+Interface}!frame@{frame}}
+\index{frame@{frame}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{frame}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Frame$\ast$ Component\+Interface\+::frame}\label{class_component_interface_a93b3b34e957deb1325188f9b78f6ab57}
+Frame (janela) que possui a interface Pode ser utilizado para acessar barra de estado, menu etc. 
+
+Defini√ß√£o na linha 161 do arquivo Component\+Interface.\+h.
+
+\index{Component\+Interface@{Component\+Interface}!parent@{parent}}
+\index{parent@{parent}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Window$\ast$ Component\+Interface\+::parent}\label{class_component_interface_af9b26a276a50b903ff2153175d2b9a87}
+Janela a qual este componente ira pertencer na interface 
+
+Defini√ß√£o na linha 152 do arquivo Component\+Interface.\+h.
+
+\index{Component\+Interface@{Component\+Interface}!tools@{tools}}
+\index{tools@{tools}!Component\+Interface@{Component\+Interface}}
+\subsubsection[{tools}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tool\+Bar$\ast$ Component\+Interface\+::tools}\label{class_component_interface_a989b776cb8932d2e2c112cc0c0e0e3b1}
+Ferramentas comuns do Componet Pode ser utilizado para inserir novos ou alterar os existentes 
+
+Defini√ß√£o na linha 171 do arquivo Component\+Interface.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Component\+Interface.\+h}\end{DoxyCompactItemize}

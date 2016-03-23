@@ -1,0 +1,195 @@
+\section{Referência do Arquivo S\+I\+G\+A.\+cpp}
+\label{_s_i_g_a_8cpp}\index{S\+I\+G\+A.\+cpp@{S\+I\+G\+A.\+cpp}}
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+S\+I\+G\+A.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Ui\+Utils.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Serie.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Component.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+S\+I\+G\+A\+Project\+Property.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+S\+I\+G\+A\+Conf\+File.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Date.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Serie\+Dialog.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+C\+A\+V\+Import\+Dialog.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Serie\+Import\+Dialog.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Si\+G\+A/\+Helpers/\+Results\+Helper.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Numericals/\+Interpolation.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Numericals/\+Thiessen/\+Thiessen.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Numericals/\+Thiessen/\+Thiessen\+Wizard.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Numericals/\+Thiessen/\+Thiessen\+Dialog/\+Thiessen\+Converter\+Wizard.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Serie\+Viewer.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Network/\+Net\+Interface.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Network/\+Net\+Main.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Hydrology/\+Hidro\+Interface.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Hydrology/\+Hidro\+Main.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Results/\+Out\+Interface.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Results/\+Out\+Main.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Optimization/\+Opt\+Interface.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Optimization/\+Opt\+Main.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Quality/\+Quality\+Interface.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Quality/\+Quality\+Main.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Res\+Operation2/\+Res\+Op\+Interface.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Res\+Operation2/\+Res\+Op\+Ctrl.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Res\+Operation2/\+Guarantee/\+Guarantee\+Curve.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}D\+B/\+Web\+Services/\+Web\+Services.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}D\+B/\+Web\+Services/\+Funceme/\+S\+I\+G\+A\+Meta\+Data.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$acquanet\+\_\+converter\+\_\+dll.\+h$>$}\\*
+{\ttfamily \#include $<$wx/dir.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/string-\/utils.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Network/\+Layer\+Manager.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Network/\+Coordinates\+Mapping.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Reference\+Window/\+Coordinate\+Reference\+System\+Model.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Reference\+Window/\+Coordinate\+Reference\+System\+Controller.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/siga16.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/comment.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/siga32.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/configure\+\_\+shortcuts.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/exit.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/help.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/fileclose.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/filenew.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/fileopen.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/filesave.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/filesaveas.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/import.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/pan.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/\+Zoom\+In.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/\+Zoom\+Out.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/arrow\+\_\+in.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/arrow\+\_\+in2.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/hand\+\_\+pan.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/zoom\+\_\+in\+\_\+canvas.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/zoom\+\_\+out\+\_\+canvas.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/cursor.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/oscilloscope.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/run.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/conf.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/saveconf.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/res.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/open.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/save.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/sa.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/delete.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/delete16.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/loadmap.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/scaleup.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/scaledown.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/fontsizeup.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/fontsizedown.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/aplus.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/aminus.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/linkcomments.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/nodecomments.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/commentsall.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/demanda.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/lago\+\_\+natural.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/juncao.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/reservatorio.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/bola.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/redo.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/undo.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}images/unirprojeto.\+xpm\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}wx/wx.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$wx/wxhtml.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}wx/html/htmlwin.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}wx/html/htmprint.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$wx/choicebk.\+h$>$}\\*
+{\ttfamily \#include $<$wx/wfstream.\+h$>$}\\*
+{\ttfamily \#include $<$wx/fs\+\_\+zip.\+h$>$}\\*
+{\ttfamily \#include $<$wx/splash.\+h$>$}\\*
+{\ttfamily \#include $<$wx/string.\+h$>$}\\*
+{\ttfamily \#include $<$wx/stdpaths.\+h$>$}\\*
+{\ttfamily \#include $<$wx/filepicker.\+h$>$}\\*
+{\ttfamily \#include $<$wx/webview.\+h$>$}\\*
+{\ttfamily \#include $<$S\+I\+G\+A/filesystem.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/lib-\/archive.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$wx/timer.\+h$>$}\\*
+{\ttfamily \#include $<$wx/aboutdlg.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}json/json.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$Dbg\+Help.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Crash\+Rpt.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}wx/xrc/xmlres.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/import-\/window-\/model.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/import-\/window-\/controller.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf M\+A\+J\+OR}~1
+\item 
+\#define {\bf M\+I\+N\+OR}~4
+\item 
+\#define {\bf R\+E\+V\+I\+S\+I\+ON}~0
+\item 
+\#define {\bf P\+A\+T\+CH}~8
+\item 
+\#define {\bf R\+E\+L\+E\+A\+S\+E\+\_\+\+D\+A\+TE}~S\+I\+G\+A\+::release\+Date()
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+crash\+\_\+rpt\+::\+Crash\+Rpt {\bf g\+\_\+crash\+Rpt} (\char`\"{}190c37b4-\/ef52-\/4a9e-\/932a-\/17d5f6e764a2\char`\"{}, L\char`\"{}\+S\+I\+G\+A\char`\"{}, L\char`\"{}\+F\+U\+N\+C\+E\+M\+E\char`\"{})
+\item 
+int {\bf update\+Progress\+Bar} (const char $\ast$a\+\_\+current\+\_\+file, long a\+\_\+current, long a\+\_\+total)
+\end{DoxyCompactItemize}
+
+
+\subsection{Definições e macros}
+\index{S\+I\+G\+A.\+cpp@{S\+I\+G\+A.\+cpp}!M\+A\+J\+OR@{M\+A\+J\+OR}}
+\index{M\+A\+J\+OR@{M\+A\+J\+OR}!S\+I\+G\+A.\+cpp@{S\+I\+G\+A.\+cpp}}
+\subsubsection[{M\+A\+J\+OR}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+J\+OR~1}\label{_s_i_g_a_8cpp_a877cce34f3e58fd7f9194fab90724cb8}
+
+
+Definição na linha 161 do arquivo S\+I\+G\+A.\+cpp.
+
+\index{S\+I\+G\+A.\+cpp@{S\+I\+G\+A.\+cpp}!M\+I\+N\+OR@{M\+I\+N\+OR}}
+\index{M\+I\+N\+OR@{M\+I\+N\+OR}!S\+I\+G\+A.\+cpp@{S\+I\+G\+A.\+cpp}}
+\subsubsection[{M\+I\+N\+OR}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+I\+N\+OR~4}\label{_s_i_g_a_8cpp_a4e10915d93013542d442d78de0e02e9a}
+
+
+Definição na linha 162 do arquivo S\+I\+G\+A.\+cpp.
+
+\index{S\+I\+G\+A.\+cpp@{S\+I\+G\+A.\+cpp}!P\+A\+T\+CH@{P\+A\+T\+CH}}
+\index{P\+A\+T\+CH@{P\+A\+T\+CH}!S\+I\+G\+A.\+cpp@{S\+I\+G\+A.\+cpp}}
+\subsubsection[{P\+A\+T\+CH}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+A\+T\+CH~8}\label{_s_i_g_a_8cpp_af59c44c1f3ff875c35393428624473aa}
+
+
+Definição na linha 164 do arquivo S\+I\+G\+A.\+cpp.
+
+\index{S\+I\+G\+A.\+cpp@{S\+I\+G\+A.\+cpp}!R\+E\+L\+E\+A\+S\+E\+\_\+\+D\+A\+TE@{R\+E\+L\+E\+A\+S\+E\+\_\+\+D\+A\+TE}}
+\index{R\+E\+L\+E\+A\+S\+E\+\_\+\+D\+A\+TE@{R\+E\+L\+E\+A\+S\+E\+\_\+\+D\+A\+TE}!S\+I\+G\+A.\+cpp@{S\+I\+G\+A.\+cpp}}
+\subsubsection[{R\+E\+L\+E\+A\+S\+E\+\_\+\+D\+A\+TE}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+L\+E\+A\+S\+E\+\_\+\+D\+A\+TE~S\+I\+G\+A\+::release\+Date()}\label{_s_i_g_a_8cpp_a31ff09ed82c4144659f8d0a2d3f24f5a}
+
+
+Definição na linha 165 do arquivo S\+I\+G\+A.\+cpp.
+
+\index{S\+I\+G\+A.\+cpp@{S\+I\+G\+A.\+cpp}!R\+E\+V\+I\+S\+I\+ON@{R\+E\+V\+I\+S\+I\+ON}}
+\index{R\+E\+V\+I\+S\+I\+ON@{R\+E\+V\+I\+S\+I\+ON}!S\+I\+G\+A.\+cpp@{S\+I\+G\+A.\+cpp}}
+\subsubsection[{R\+E\+V\+I\+S\+I\+ON}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+V\+I\+S\+I\+ON~0}\label{_s_i_g_a_8cpp_ad526597ab378f3faff87123d7742c79a}
+
+
+Definição na linha 163 do arquivo S\+I\+G\+A.\+cpp.
+
+
+
+\subsection{Funções}
+\index{S\+I\+G\+A.\+cpp@{S\+I\+G\+A.\+cpp}!g\+\_\+crash\+Rpt@{g\+\_\+crash\+Rpt}}
+\index{g\+\_\+crash\+Rpt@{g\+\_\+crash\+Rpt}!S\+I\+G\+A.\+cpp@{S\+I\+G\+A.\+cpp}}
+\subsubsection[{g\+\_\+crash\+Rpt(""190c37b4-\/ef52-\/4a9e-\/932a-\/17d5f6e764a2"", L""S\+I\+GA"", L""F\+U\+N\+C\+E\+ME"")}]{\setlength{\rightskip}{0pt plus 5cm}crash\+\_\+rpt\+::\+Crash\+Rpt g\+\_\+crash\+Rpt (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}190c37b4-\/ef52-\/4a9e-\/932a-\/17d5f6e764a2\char`\"{}}]{, }
+\item[{L\char`\"{}S\+I\+GA\char`\"{}}]{, }
+\item[{L\char`\"{}F\+U\+N\+C\+E\+ME\char`\"{}}]{}
+\end{DoxyParamCaption}
+)}\label{_s_i_g_a_8cpp_a21b1d39a154f29248011554ff18607a8}
+\index{S\+I\+G\+A.\+cpp@{S\+I\+G\+A.\+cpp}!update\+Progress\+Bar@{update\+Progress\+Bar}}
+\index{update\+Progress\+Bar@{update\+Progress\+Bar}!S\+I\+G\+A.\+cpp@{S\+I\+G\+A.\+cpp}}
+\subsubsection[{update\+Progress\+Bar(const char $\ast$a\+\_\+current\+\_\+file, long a\+\_\+current, long a\+\_\+total)}]{\setlength{\rightskip}{0pt plus 5cm}int update\+Progress\+Bar (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+current\+\_\+file, }
+\item[{long}]{a\+\_\+current, }
+\item[{long}]{a\+\_\+total}
+\end{DoxyParamCaption}
+)}\label{_s_i_g_a_8cpp_a39f4b460a3ffc2dc16b7e218d4b2bfc7}
+
+
+Definição na linha 556 do arquivo S\+I\+G\+A.\+cpp.
+

@@ -1,0 +1,148 @@
+\section{Referência da Classe Network\+Link\+Handler}
+\label{class_network_link_handler}\index{Network\+Link\+Handler@{Network\+Link\+Handler}}
+
+
+{\ttfamily \#include $<$Network\+Link\+Handler.\+h$>$}
+
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Network\+Link\+Handler} (std\+::map$<$ {\bf Element\+ID}, {\bf Element} $\ast$ $>$ \&element\+\_\+map, std\+::map$<$ {\bf Element\+ID}, {\bf Link} $\ast$ $>$ \&link\+\_\+map)
+\item 
+{\bf $\sim$\+Network\+Link\+Handler} ()
+\item 
+bool {\bf add\+Link} ({\bf Element\+ID} link\+\_\+id, {\bf Node} \&node\+\_\+origin, {\bf Node} \&node\+\_\+destiny, {\bf Link} $\ast$\&result, {\bf Link\+Type} type, bool bidirectional, bool lat\+Inflow, bool artificial)
+\item 
+bool {\bf get\+Link} ({\bf Element\+ID} id, {\bf Link} $\ast$\&result)
+\begin{DoxyCompactList}\small\item\em returns true and fills the pointer result with the link\textquotesingle{}s pointer if it exists \end{DoxyCompactList}\item 
+bool {\bf set\+Link\+Type} ({\bf Link} \&link, {\bf Link\+Type} new\+\_\+type)
+\item 
+bool {\bf set\+Link\+Type} ({\bf Element\+ID} link\+\_\+id, {\bf Link\+Type} new\+\_\+type)
+\item 
+bool {\bf set\+Link\+Nodes} ({\bf Element\+ID} link\+\_\+id, {\bf Node} \&node\+\_\+origin, {\bf Node} \&node\+\_\+destiny)
+\item 
+bool {\bf attach\+Link} ({\bf Link} \&link)
+\begin{DoxyCompactList}\small\item\em this method adds the link passed if it id does not match with the id of any element added \end{DoxyCompactList}\item 
+{\bf Link} $\ast$ {\bf detach\+Link} ({\bf Element\+ID} id)
+\begin{DoxyCompactList}\small\item\em this method detaches the link from the map but does not delete it \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Network}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 10 do arquivo Network\+Link\+Handler.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Network\+Link\+Handler@{Network\+Link\+Handler}!Network\+Link\+Handler@{Network\+Link\+Handler}}
+\index{Network\+Link\+Handler@{Network\+Link\+Handler}!Network\+Link\+Handler@{Network\+Link\+Handler}}
+\subsubsection[{Network\+Link\+Handler(std\+::map$<$ Element\+I\+D, Element $\ast$ $>$ \&element\+\_\+map, std\+::map$<$ Element\+I\+D, Link $\ast$ $>$ \&link\+\_\+map)}]{\setlength{\rightskip}{0pt plus 5cm}Network\+Link\+Handler\+::\+Network\+Link\+Handler (
+\begin{DoxyParamCaption}
+\item[{std\+::map$<$ {\bf Element\+ID}, {\bf Element} $\ast$ $>$ \&}]{element\+\_\+map, }
+\item[{std\+::map$<$ {\bf Element\+ID}, {\bf Link} $\ast$ $>$ \&}]{link\+\_\+map}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_link_handler_a6ce1ce6d65b33f06724b59cfa3bedd25}
+\index{Network\+Link\+Handler@{Network\+Link\+Handler}!````~Network\+Link\+Handler@{$\sim$\+Network\+Link\+Handler}}
+\index{````~Network\+Link\+Handler@{$\sim$\+Network\+Link\+Handler}!Network\+Link\+Handler@{Network\+Link\+Handler}}
+\subsubsection[{$\sim$\+Network\+Link\+Handler()}]{\setlength{\rightskip}{0pt plus 5cm}Network\+Link\+Handler\+::$\sim$\+Network\+Link\+Handler (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_link_handler_af28847ce079660fdad1769fa2e79a1e1}
+
+
+\subsection{Métodos}
+\index{Network\+Link\+Handler@{Network\+Link\+Handler}!add\+Link@{add\+Link}}
+\index{add\+Link@{add\+Link}!Network\+Link\+Handler@{Network\+Link\+Handler}}
+\subsubsection[{add\+Link(\+Element\+I\+D link\+\_\+id, Node \&node\+\_\+origin, Node \&node\+\_\+destiny, Link $\ast$\&result, Link\+Type type, bool bidirectional, bool lat\+Inflow, bool artificial)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+Link\+Handler\+::add\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{link\+\_\+id, }
+\item[{{\bf Node} \&}]{node\+\_\+origin, }
+\item[{{\bf Node} \&}]{node\+\_\+destiny, }
+\item[{{\bf Link} $\ast$\&}]{result, }
+\item[{{\bf Link\+Type}}]{type, }
+\item[{bool}]{bidirectional, }
+\item[{bool}]{lat\+Inflow, }
+\item[{bool}]{artificial}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_link_handler_a123f92a6b89cd4a1f9334095562186ab}
+\index{Network\+Link\+Handler@{Network\+Link\+Handler}!attach\+Link@{attach\+Link}}
+\index{attach\+Link@{attach\+Link}!Network\+Link\+Handler@{Network\+Link\+Handler}}
+\subsubsection[{attach\+Link(\+Link \&link)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+Link\+Handler\+::attach\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} \&}]{link}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_link_handler_ad3106f8d6da0a2cc1e25b530bfb6e713}
+
+
+this method adds the link passed if it id does not match with the id of any element added 
+
+\index{Network\+Link\+Handler@{Network\+Link\+Handler}!detach\+Link@{detach\+Link}}
+\index{detach\+Link@{detach\+Link}!Network\+Link\+Handler@{Network\+Link\+Handler}}
+\subsubsection[{detach\+Link(\+Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Link}$\ast$ Network\+Link\+Handler\+::detach\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_link_handler_a03a1457164a0c75fdd2f066fae9b9cad}
+
+
+this method detaches the link from the map but does not delete it 
+
+\index{Network\+Link\+Handler@{Network\+Link\+Handler}!get\+Link@{get\+Link}}
+\index{get\+Link@{get\+Link}!Network\+Link\+Handler@{Network\+Link\+Handler}}
+\subsubsection[{get\+Link(\+Element\+I\+D id, Link $\ast$\&result)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+Link\+Handler\+::get\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{{\bf Link} $\ast$\&}]{result}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_link_handler_a49030cc2452a8555b65792b2533b96c7}
+
+
+returns true and fills the pointer result with the link\textquotesingle{}s pointer if it exists 
+
+\index{Network\+Link\+Handler@{Network\+Link\+Handler}!set\+Link\+Nodes@{set\+Link\+Nodes}}
+\index{set\+Link\+Nodes@{set\+Link\+Nodes}!Network\+Link\+Handler@{Network\+Link\+Handler}}
+\subsubsection[{set\+Link\+Nodes(\+Element\+I\+D link\+\_\+id, Node \&node\+\_\+origin, Node \&node\+\_\+destiny)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+Link\+Handler\+::set\+Link\+Nodes (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{link\+\_\+id, }
+\item[{{\bf Node} \&}]{node\+\_\+origin, }
+\item[{{\bf Node} \&}]{node\+\_\+destiny}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_link_handler_ac91f04ba4307280ee6db5c29448bd103}
+\index{Network\+Link\+Handler@{Network\+Link\+Handler}!set\+Link\+Type@{set\+Link\+Type}}
+\index{set\+Link\+Type@{set\+Link\+Type}!Network\+Link\+Handler@{Network\+Link\+Handler}}
+\subsubsection[{set\+Link\+Type(\+Link \&link, Link\+Type new\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+Link\+Handler\+::set\+Link\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} \&}]{link, }
+\item[{{\bf Link\+Type}}]{new\+\_\+type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_link_handler_abe38b1c1e040699b03ada32d0015e09e}
+\index{Network\+Link\+Handler@{Network\+Link\+Handler}!set\+Link\+Type@{set\+Link\+Type}}
+\index{set\+Link\+Type@{set\+Link\+Type}!Network\+Link\+Handler@{Network\+Link\+Handler}}
+\subsubsection[{set\+Link\+Type(\+Element\+I\+D link\+\_\+id, Link\+Type new\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+Link\+Handler\+::set\+Link\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{link\+\_\+id, }
+\item[{{\bf Link\+Type}}]{new\+\_\+type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_link_handler_a9f6908e474455cb68e11aaec57e5b1d3}
+
+
+\subsection{Amigas e Funções Relacionadas}
+\index{Network\+Link\+Handler@{Network\+Link\+Handler}!Network@{Network}}
+\index{Network@{Network}!Network\+Link\+Handler@{Network\+Link\+Handler}}
+\subsubsection[{Network}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Network}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_network_link_handler_a88b59289ffd793fecd040d32e397b1e9}
+
+
+Definição na linha 11 do arquivo Network\+Link\+Handler.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Network\+Link\+Handler.\+h}\end{DoxyCompactItemize}

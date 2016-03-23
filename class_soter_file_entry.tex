@@ -1,0 +1,464 @@
+\section{Referência da Classe Soter\+File\+Entry}
+\label{class_soter_file_entry}\index{Soter\+File\+Entry@{Soter\+File\+Entry}}
+
+
+{\ttfamily \#include $<$Soter\+File\+Entry.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Soter\+File\+Entry} ()
+\item 
+{\bf Soter\+File\+Entry} (int {\bf lu\+ID}, const wx\+String \&{\bf lu\+Class}, const std\+::vector$<$ int $>$ \&{\bf tc\+I\+Ds})
+\item 
+int {\bf get\+L\+U\+ID} () const 
+\item 
+wx\+String {\bf get\+L\+U\+Class} () const 
+\item 
+std\+::vector$<$ int $>$ {\bf get\+T\+C\+I\+Ds} () const 
+\item 
+double {\bf get\+Length} () const 
+\item 
+double {\bf get\+K\+F\+SU} () const 
+\item 
+double {\bf get\+Mean\+Dep} () const 
+\item 
+double {\bf get\+Max\+Dep} () const 
+\item 
+double {\bf get\+River\+Bed} () const 
+\item 
+int {\bf get\+G\+W\+Flag} () const 
+\item 
+double {\bf get\+G\+W\+Dist} () const 
+\item 
+double {\bf get\+F\+R\+G\+W\+Delay} () const 
+\item 
+void {\bf set\+L\+U\+ID} (int new\+Value)
+\item 
+void {\bf set\+L\+U\+Class} (const wx\+String \&{\bf lu\+Class})
+\item 
+void {\bf set\+T\+C\+I\+Ds} (const std\+::vector$<$ int $>$ \&new\+Values)
+\item 
+void {\bf set\+Length} (double new\+Value)
+\item 
+void {\bf set\+K\+F\+SU} (double new\+Value)
+\item 
+void {\bf set\+Mean\+Dep} (double new\+Value)
+\item 
+void {\bf set\+Max\+Dep} (double new\+Value)
+\item 
+void {\bf set\+River\+Bed} (double new\+Value)
+\item 
+void {\bf set\+G\+W\+Flag} (int new\+Value)
+\item 
+void {\bf set\+G\+W\+Dist} (double new\+Value)
+\item 
+void {\bf set\+F\+R\+G\+W\+Delay} (double new\+Value)
+\item 
+int {\bf get\+T\+C\+Count} () const 
+\item 
+wx\+String {\bf get\+String} () const 
+\item 
+void {\bf add\+T\+C\+ID} (int tc\+ID)
+\item 
+virtual {\bf $\sim$\+Soter\+File\+Entry} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static wx\+String {\bf get\+Header} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Estáticos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+static const double {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+K\+F\+SU}
+\item 
+static const double {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+E\+A\+N\+\_\+\+D\+EP}
+\item 
+static const double {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+D\+EP}
+\item 
+static const double {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+V\+E\+R\+\_\+\+B\+ED}
+\item 
+static const int {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+W\+\_\+\+F\+L\+AG}
+\item 
+static const double {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+W\+\_\+\+D\+I\+ST}
+\item 
+static const double {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+R\+G\+W\+\_\+\+D\+E\+L\+AY}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf lu\+ID}
+\item 
+wx\+String {\bf lu\+Class}
+\item 
+std\+::vector$<$ int $>$ {\bf tc\+I\+Ds}
+\item 
+double {\bf length}
+\item 
+double {\bf kfsu}
+\item 
+double {\bf mean\+Dep}
+\item 
+double {\bf max\+Dep}
+\item 
+double {\bf river\+Bed}
+\item 
+double {\bf gw\+Dist}
+\item 
+double {\bf frgw\+Delay}
+\item 
+int {\bf gw\+Flag}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Essa classe apenas representa uma lina do arquivo de entrada \textquotesingle{}hymo.\+dat\textquotesingle{} 
+
+Definição na linha 15 do arquivo Soter\+File\+Entry.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{Soter\+File\+Entry()}]{\setlength{\rightskip}{0pt plus 5cm}Soter\+File\+Entry\+::\+Soter\+File\+Entry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_soter_file_entry_ab480a4c6497e320bf21b1405747f3d1a}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{Soter\+File\+Entry(int lu\+I\+D, const wx\+String \&lu\+Class, const std\+::vector$<$ int $>$ \&tc\+I\+Ds)}]{\setlength{\rightskip}{0pt plus 5cm}Soter\+File\+Entry\+::\+Soter\+File\+Entry (
+\begin{DoxyParamCaption}
+\item[{int}]{lu\+ID, }
+\item[{const wx\+String \&}]{lu\+Class, }
+\item[{const std\+::vector$<$ int $>$ \&}]{tc\+I\+Ds}
+\end{DoxyParamCaption}
+)}\label{class_soter_file_entry_adb60c7ff49efb8a9c35a463b309293d7}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!````~Soter\+File\+Entry@{$\sim$\+Soter\+File\+Entry}}
+\index{````~Soter\+File\+Entry@{$\sim$\+Soter\+File\+Entry}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{$\sim$\+Soter\+File\+Entry()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Soter\+File\+Entry\+::$\sim$\+Soter\+File\+Entry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_soter_file_entry_a3377aed6807892072b132f5efad2635b}
+
+
+\subsection{Métodos}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!add\+T\+C\+ID@{add\+T\+C\+ID}}
+\index{add\+T\+C\+ID@{add\+T\+C\+ID}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{add\+T\+C\+I\+D(int tc\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}void Soter\+File\+Entry\+::add\+T\+C\+ID (
+\begin{DoxyParamCaption}
+\item[{int}]{tc\+ID}
+\end{DoxyParamCaption}
+)}\label{class_soter_file_entry_a03b80e5222d4e9718ea9e0066dadc3d1}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!get\+F\+R\+G\+W\+Delay@{get\+F\+R\+G\+W\+Delay}}
+\index{get\+F\+R\+G\+W\+Delay@{get\+F\+R\+G\+W\+Delay}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{get\+F\+R\+G\+W\+Delay() const }]{\setlength{\rightskip}{0pt plus 5cm}double Soter\+File\+Entry\+::get\+F\+R\+G\+W\+Delay (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soter_file_entry_a286c25bdcfe7e738cdc97c23ed7fcf8b}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!get\+G\+W\+Dist@{get\+G\+W\+Dist}}
+\index{get\+G\+W\+Dist@{get\+G\+W\+Dist}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{get\+G\+W\+Dist() const }]{\setlength{\rightskip}{0pt plus 5cm}double Soter\+File\+Entry\+::get\+G\+W\+Dist (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soter_file_entry_a4e8dca3f52d60140bc000f20dafaa9d8}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!get\+G\+W\+Flag@{get\+G\+W\+Flag}}
+\index{get\+G\+W\+Flag@{get\+G\+W\+Flag}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{get\+G\+W\+Flag() const }]{\setlength{\rightskip}{0pt plus 5cm}int Soter\+File\+Entry\+::get\+G\+W\+Flag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soter_file_entry_a5cece99c6da6cf3d0d07def903431ac7}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!get\+Header@{get\+Header}}
+\index{get\+Header@{get\+Header}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{get\+Header()}]{\setlength{\rightskip}{0pt plus 5cm}static wx\+String Soter\+File\+Entry\+::get\+Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_soter_file_entry_ad214e158b80db0bba4295a6aca90cc4f}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!get\+K\+F\+SU@{get\+K\+F\+SU}}
+\index{get\+K\+F\+SU@{get\+K\+F\+SU}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{get\+K\+F\+S\+U() const }]{\setlength{\rightskip}{0pt plus 5cm}double Soter\+File\+Entry\+::get\+K\+F\+SU (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soter_file_entry_a69223c0bc9668c7eb0e50cfdc67e71ed}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!get\+Length@{get\+Length}}
+\index{get\+Length@{get\+Length}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{get\+Length() const }]{\setlength{\rightskip}{0pt plus 5cm}double Soter\+File\+Entry\+::get\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soter_file_entry_a6d9b4df054008c9e64aa03b862f71130}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!get\+L\+U\+Class@{get\+L\+U\+Class}}
+\index{get\+L\+U\+Class@{get\+L\+U\+Class}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{get\+L\+U\+Class() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Soter\+File\+Entry\+::get\+L\+U\+Class (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soter_file_entry_af9d8f47cbdaad79642ff4372ad82d247}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!get\+L\+U\+ID@{get\+L\+U\+ID}}
+\index{get\+L\+U\+ID@{get\+L\+U\+ID}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{get\+L\+U\+I\+D() const }]{\setlength{\rightskip}{0pt plus 5cm}int Soter\+File\+Entry\+::get\+L\+U\+ID (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soter_file_entry_ad3b3d398251e4e08eca836ae0b3ed8ad}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!get\+Max\+Dep@{get\+Max\+Dep}}
+\index{get\+Max\+Dep@{get\+Max\+Dep}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{get\+Max\+Dep() const }]{\setlength{\rightskip}{0pt plus 5cm}double Soter\+File\+Entry\+::get\+Max\+Dep (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soter_file_entry_a51cbdd6826708e59b848b2ca88ef26ae}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!get\+Mean\+Dep@{get\+Mean\+Dep}}
+\index{get\+Mean\+Dep@{get\+Mean\+Dep}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{get\+Mean\+Dep() const }]{\setlength{\rightskip}{0pt plus 5cm}double Soter\+File\+Entry\+::get\+Mean\+Dep (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soter_file_entry_a1291d7e3835b1f3141cf9103a306a2c6}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!get\+River\+Bed@{get\+River\+Bed}}
+\index{get\+River\+Bed@{get\+River\+Bed}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{get\+River\+Bed() const }]{\setlength{\rightskip}{0pt plus 5cm}double Soter\+File\+Entry\+::get\+River\+Bed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soter_file_entry_ab8cbb825d846ea271c0878a92ef1acb9}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{get\+String() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Soter\+File\+Entry\+::get\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soter_file_entry_aa1a58fdfac880af6b3f743502605c5b7}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!get\+T\+C\+Count@{get\+T\+C\+Count}}
+\index{get\+T\+C\+Count@{get\+T\+C\+Count}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{get\+T\+C\+Count() const }]{\setlength{\rightskip}{0pt plus 5cm}int Soter\+File\+Entry\+::get\+T\+C\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soter_file_entry_a5663f44650af4e63d59a073f8a11c27a}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!get\+T\+C\+I\+Ds@{get\+T\+C\+I\+Ds}}
+\index{get\+T\+C\+I\+Ds@{get\+T\+C\+I\+Ds}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{get\+T\+C\+I\+Ds() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ Soter\+File\+Entry\+::get\+T\+C\+I\+Ds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soter_file_entry_afba9d3c54b5dc86f07bf311ca08fdc04}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!set\+F\+R\+G\+W\+Delay@{set\+F\+R\+G\+W\+Delay}}
+\index{set\+F\+R\+G\+W\+Delay@{set\+F\+R\+G\+W\+Delay}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{set\+F\+R\+G\+W\+Delay(double new\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Soter\+File\+Entry\+::set\+F\+R\+G\+W\+Delay (
+\begin{DoxyParamCaption}
+\item[{double}]{new\+Value}
+\end{DoxyParamCaption}
+)}\label{class_soter_file_entry_a13c848343b4e494fc8238b34dc920561}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!set\+G\+W\+Dist@{set\+G\+W\+Dist}}
+\index{set\+G\+W\+Dist@{set\+G\+W\+Dist}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{set\+G\+W\+Dist(double new\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Soter\+File\+Entry\+::set\+G\+W\+Dist (
+\begin{DoxyParamCaption}
+\item[{double}]{new\+Value}
+\end{DoxyParamCaption}
+)}\label{class_soter_file_entry_a514e5e3cc995ad1f8fae830db961e37b}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!set\+G\+W\+Flag@{set\+G\+W\+Flag}}
+\index{set\+G\+W\+Flag@{set\+G\+W\+Flag}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{set\+G\+W\+Flag(int new\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Soter\+File\+Entry\+::set\+G\+W\+Flag (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Value}
+\end{DoxyParamCaption}
+)}\label{class_soter_file_entry_a041b2afc63d644ed84fbcc5848a54541}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!set\+K\+F\+SU@{set\+K\+F\+SU}}
+\index{set\+K\+F\+SU@{set\+K\+F\+SU}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{set\+K\+F\+S\+U(double new\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Soter\+File\+Entry\+::set\+K\+F\+SU (
+\begin{DoxyParamCaption}
+\item[{double}]{new\+Value}
+\end{DoxyParamCaption}
+)}\label{class_soter_file_entry_a3fd5f06a15c4b3ee91c02784372ad73e}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!set\+Length@{set\+Length}}
+\index{set\+Length@{set\+Length}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{set\+Length(double new\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Soter\+File\+Entry\+::set\+Length (
+\begin{DoxyParamCaption}
+\item[{double}]{new\+Value}
+\end{DoxyParamCaption}
+)}\label{class_soter_file_entry_a4fe7eeeff2f14e5492cbc7a62418b327}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!set\+L\+U\+Class@{set\+L\+U\+Class}}
+\index{set\+L\+U\+Class@{set\+L\+U\+Class}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{set\+L\+U\+Class(const wx\+String \&lu\+Class)}]{\setlength{\rightskip}{0pt plus 5cm}void Soter\+File\+Entry\+::set\+L\+U\+Class (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{lu\+Class}
+\end{DoxyParamCaption}
+)}\label{class_soter_file_entry_af326806fd2aa7a18839c445830bc9746}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!set\+L\+U\+ID@{set\+L\+U\+ID}}
+\index{set\+L\+U\+ID@{set\+L\+U\+ID}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{set\+L\+U\+I\+D(int new\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Soter\+File\+Entry\+::set\+L\+U\+ID (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Value}
+\end{DoxyParamCaption}
+)}\label{class_soter_file_entry_af2703480f3476668ba9466e103f08d8c}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!set\+Max\+Dep@{set\+Max\+Dep}}
+\index{set\+Max\+Dep@{set\+Max\+Dep}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{set\+Max\+Dep(double new\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Soter\+File\+Entry\+::set\+Max\+Dep (
+\begin{DoxyParamCaption}
+\item[{double}]{new\+Value}
+\end{DoxyParamCaption}
+)}\label{class_soter_file_entry_acf24ec08b26425ab3d8a24a590532bde}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!set\+Mean\+Dep@{set\+Mean\+Dep}}
+\index{set\+Mean\+Dep@{set\+Mean\+Dep}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{set\+Mean\+Dep(double new\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Soter\+File\+Entry\+::set\+Mean\+Dep (
+\begin{DoxyParamCaption}
+\item[{double}]{new\+Value}
+\end{DoxyParamCaption}
+)}\label{class_soter_file_entry_aff8b4ad2c2bc8b734b79a93a15022637}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!set\+River\+Bed@{set\+River\+Bed}}
+\index{set\+River\+Bed@{set\+River\+Bed}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{set\+River\+Bed(double new\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Soter\+File\+Entry\+::set\+River\+Bed (
+\begin{DoxyParamCaption}
+\item[{double}]{new\+Value}
+\end{DoxyParamCaption}
+)}\label{class_soter_file_entry_a34b2b401cc4af56d00b3bebfebc6bdfa}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!set\+T\+C\+I\+Ds@{set\+T\+C\+I\+Ds}}
+\index{set\+T\+C\+I\+Ds@{set\+T\+C\+I\+Ds}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{set\+T\+C\+I\+Ds(const std\+::vector$<$ int $>$ \&new\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void Soter\+File\+Entry\+::set\+T\+C\+I\+Ds (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ int $>$ \&}]{new\+Values}
+\end{DoxyParamCaption}
+)}\label{class_soter_file_entry_af98656ba015affe4dfd5e2363b32dab9}
+
+
+\subsection{Atributos}
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+R\+G\+W\+\_\+\+D\+E\+L\+AY@{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+R\+G\+W\+\_\+\+D\+E\+L\+AY}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+R\+G\+W\+\_\+\+D\+E\+L\+AY@{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+R\+G\+W\+\_\+\+D\+E\+L\+AY}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+R\+G\+W\+\_\+\+D\+E\+L\+AY}]{\setlength{\rightskip}{0pt plus 5cm}const double Soter\+File\+Entry\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+R\+G\+W\+\_\+\+D\+E\+L\+AY\hspace{0.3cm}{\ttfamily [static]}}\label{class_soter_file_entry_a56b6cb4dac60dbae41a5fb1d0d1c3689}
+
+
+Definição na linha 31 do arquivo Soter\+File\+Entry.\+h.
+
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+W\+\_\+\+D\+I\+ST@{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+W\+\_\+\+D\+I\+ST}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+W\+\_\+\+D\+I\+ST@{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+W\+\_\+\+D\+I\+ST}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+W\+\_\+\+D\+I\+ST}]{\setlength{\rightskip}{0pt plus 5cm}const double Soter\+File\+Entry\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+W\+\_\+\+D\+I\+ST\hspace{0.3cm}{\ttfamily [static]}}\label{class_soter_file_entry_a38b4111162ff1b9847e5bfa23872fc7e}
+
+
+Definição na linha 30 do arquivo Soter\+File\+Entry.\+h.
+
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+W\+\_\+\+F\+L\+AG@{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+W\+\_\+\+F\+L\+AG}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+W\+\_\+\+F\+L\+AG@{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+W\+\_\+\+F\+L\+AG}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+W\+\_\+\+F\+L\+AG}]{\setlength{\rightskip}{0pt plus 5cm}const int Soter\+File\+Entry\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+W\+\_\+\+F\+L\+AG\hspace{0.3cm}{\ttfamily [static]}}\label{class_soter_file_entry_a6411a7f043c15c5fd7f55885b55ccb5e}
+
+
+Definição na linha 29 do arquivo Soter\+File\+Entry.\+h.
+
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!D\+E\+F\+A\+U\+L\+T\+\_\+\+K\+F\+SU@{D\+E\+F\+A\+U\+L\+T\+\_\+\+K\+F\+SU}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+K\+F\+SU@{D\+E\+F\+A\+U\+L\+T\+\_\+\+K\+F\+SU}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+K\+F\+SU}]{\setlength{\rightskip}{0pt plus 5cm}const double Soter\+File\+Entry\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+K\+F\+SU\hspace{0.3cm}{\ttfamily [static]}}\label{class_soter_file_entry_a08a65a52cfe9c7f632f7585676b87c73}
+
+
+Definição na linha 25 do arquivo Soter\+File\+Entry.\+h.
+
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+D\+EP@{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+D\+EP}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+D\+EP@{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+D\+EP}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+D\+EP}]{\setlength{\rightskip}{0pt plus 5cm}const double Soter\+File\+Entry\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+A\+X\+\_\+\+D\+EP\hspace{0.3cm}{\ttfamily [static]}}\label{class_soter_file_entry_a046ab8c78972c7dcfc440aec04845896}
+
+
+Definição na linha 27 do arquivo Soter\+File\+Entry.\+h.
+
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+E\+A\+N\+\_\+\+D\+EP@{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+E\+A\+N\+\_\+\+D\+EP}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+E\+A\+N\+\_\+\+D\+EP@{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+E\+A\+N\+\_\+\+D\+EP}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+E\+A\+N\+\_\+\+D\+EP}]{\setlength{\rightskip}{0pt plus 5cm}const double Soter\+File\+Entry\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+M\+E\+A\+N\+\_\+\+D\+EP\hspace{0.3cm}{\ttfamily [static]}}\label{class_soter_file_entry_a4351422af98b24028fff64b13387758c}
+
+
+Definição na linha 26 do arquivo Soter\+File\+Entry.\+h.
+
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+V\+E\+R\+\_\+\+B\+ED@{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+V\+E\+R\+\_\+\+B\+ED}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+V\+E\+R\+\_\+\+B\+ED@{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+V\+E\+R\+\_\+\+B\+ED}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+V\+E\+R\+\_\+\+B\+ED}]{\setlength{\rightskip}{0pt plus 5cm}const double Soter\+File\+Entry\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+I\+V\+E\+R\+\_\+\+B\+ED\hspace{0.3cm}{\ttfamily [static]}}\label{class_soter_file_entry_ad4c2d85f32814306ffccf7b6cf6c7521}
+
+
+Definição na linha 28 do arquivo Soter\+File\+Entry.\+h.
+
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!frgw\+Delay@{frgw\+Delay}}
+\index{frgw\+Delay@{frgw\+Delay}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{frgw\+Delay}]{\setlength{\rightskip}{0pt plus 5cm}double Soter\+File\+Entry\+::frgw\+Delay\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soter_file_entry_acdcb6c597c6d8934f635cb7e0e0d6739}
+
+
+Definição na linha 21 do arquivo Soter\+File\+Entry.\+h.
+
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!gw\+Dist@{gw\+Dist}}
+\index{gw\+Dist@{gw\+Dist}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{gw\+Dist}]{\setlength{\rightskip}{0pt plus 5cm}double Soter\+File\+Entry\+::gw\+Dist\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soter_file_entry_a5eed4e7f2add6427f71accfd67e74acc}
+
+
+Definição na linha 21 do arquivo Soter\+File\+Entry.\+h.
+
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!gw\+Flag@{gw\+Flag}}
+\index{gw\+Flag@{gw\+Flag}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{gw\+Flag}]{\setlength{\rightskip}{0pt plus 5cm}int Soter\+File\+Entry\+::gw\+Flag\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soter_file_entry_a28a78827515594116b68019858a7ae10}
+
+
+Definição na linha 22 do arquivo Soter\+File\+Entry.\+h.
+
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!kfsu@{kfsu}}
+\index{kfsu@{kfsu}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{kfsu}]{\setlength{\rightskip}{0pt plus 5cm}double Soter\+File\+Entry\+::kfsu\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soter_file_entry_a36a63f909294aa2256137e4d87c5027c}
+
+
+Definição na linha 21 do arquivo Soter\+File\+Entry.\+h.
+
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!length@{length}}
+\index{length@{length}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}double Soter\+File\+Entry\+::length\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soter_file_entry_af6584866bd9c850a6524ccffbc65098d}
+
+
+Definição na linha 21 do arquivo Soter\+File\+Entry.\+h.
+
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!lu\+Class@{lu\+Class}}
+\index{lu\+Class@{lu\+Class}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{lu\+Class}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Soter\+File\+Entry\+::lu\+Class\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soter_file_entry_a52fd72c2944ee15b9021fb24c90e2eb0}
+
+
+Definição na linha 19 do arquivo Soter\+File\+Entry.\+h.
+
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!lu\+ID@{lu\+ID}}
+\index{lu\+ID@{lu\+ID}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{lu\+ID}]{\setlength{\rightskip}{0pt plus 5cm}int Soter\+File\+Entry\+::lu\+ID\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soter_file_entry_a152bca4d1e0f7c71438a3acda02494d3}
+
+
+Definição na linha 18 do arquivo Soter\+File\+Entry.\+h.
+
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!max\+Dep@{max\+Dep}}
+\index{max\+Dep@{max\+Dep}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{max\+Dep}]{\setlength{\rightskip}{0pt plus 5cm}double Soter\+File\+Entry\+::max\+Dep\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soter_file_entry_a3aaba410c2064e688d1af6b1b5984acf}
+
+
+Definição na linha 21 do arquivo Soter\+File\+Entry.\+h.
+
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!mean\+Dep@{mean\+Dep}}
+\index{mean\+Dep@{mean\+Dep}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{mean\+Dep}]{\setlength{\rightskip}{0pt plus 5cm}double Soter\+File\+Entry\+::mean\+Dep\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soter_file_entry_a34ab4fd40859fc8678d3c7b4e6b4428d}
+
+
+Definição na linha 21 do arquivo Soter\+File\+Entry.\+h.
+
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!river\+Bed@{river\+Bed}}
+\index{river\+Bed@{river\+Bed}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{river\+Bed}]{\setlength{\rightskip}{0pt plus 5cm}double Soter\+File\+Entry\+::river\+Bed\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soter_file_entry_a4dd5bd219e3753f2f7948b35992e52df}
+
+
+Definição na linha 21 do arquivo Soter\+File\+Entry.\+h.
+
+\index{Soter\+File\+Entry@{Soter\+File\+Entry}!tc\+I\+Ds@{tc\+I\+Ds}}
+\index{tc\+I\+Ds@{tc\+I\+Ds}!Soter\+File\+Entry@{Soter\+File\+Entry}}
+\subsubsection[{tc\+I\+Ds}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ Soter\+File\+Entry\+::tc\+I\+Ds\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soter_file_entry_a5fc9e8d3753a30d1a28637c778c26703}
+
+
+Definição na linha 20 do arquivo Soter\+File\+Entry.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Soter\+File\+Entry.\+h}\end{DoxyCompactItemize}

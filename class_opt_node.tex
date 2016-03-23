@@ -1,0 +1,309 @@
+\section{Refer√™ncia da Classe Opt\+Node}
+\label{class_opt_node}\index{Opt\+Node@{Opt\+Node}}
+
+
+{\ttfamily \#include $<$Opt\+Node.\+h$>$}
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Node} ({\bf Node} $\ast${\bf node}, {\bf Opt\+Interface} $\ast${\bf main\+Inter})
+\item 
+virtual {\bf $\sim$\+Opt\+Node} ()
+\item 
+void {\bf create\+Module} ({\bf opt\+Module\+Type} type)
+\item 
+void {\bf create\+Algo} ({\bf opt\+Algo\+Type} type)
+\item 
+{\bf Opt\+Module} $\ast$ {\bf get\+Module} ({\bf opt\+Module\+Type} type)
+\item 
+{\bf Opt\+Module} $\ast$ {\bf get\+Module} ()
+\item 
+{\bf Opt\+Algo} $\ast$ {\bf get\+Algo} ({\bf opt\+Algo\+Type} type)
+\item 
+{\bf Opt\+Algo} $\ast$ {\bf get\+Algo} ()
+\item 
+void {\bf set\+Info} ()
+\item 
+void {\bf set\+Selected\+Model\+Type} ({\bf opt\+Model\+Type} new\+Model\+Type)
+\item 
+{\bf opt\+Model\+Type} {\bf get\+Selected\+Model\+Type} () const 
+\item 
+virtual void {\bf update\+Tree\+Item} ({\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$)
+\item 
+void {\bf update\+Results} ()
+\item 
+void {\bf show\+Results} (bool change=false)
+\item 
+void {\bf set\+Algo\+Default\+Values} (const wx\+String \&file\+Name)
+\item 
+void {\bf save\+Algo\+Default\+Values} (const wx\+String \&file\+Name)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ {\bf opt\+Algo\+Type}, {\bf map\+Opt\+Result} $>$ {\bf results}
+\item 
+map$<$ {\bf opt\+Module\+Type}, {\bf Opt\+Module} $\ast$ $>$ {\bf modules}
+\item 
+map$<$ {\bf opt\+Algo\+Type}, {\bf Opt\+Algo} $\ast$ $>$ {\bf algos}
+\item 
+{\bf Opt\+Interface} $\ast$ {\bf main\+Inter}
+\item 
+{\bf Node} $\ast$ {\bf node}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf opt\+Model\+Type} {\bf selected\+Model\+Type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 19 do arquivo Opt\+Node.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Opt\+Node@{Opt\+Node}!Opt\+Node@{Opt\+Node}}
+\index{Opt\+Node@{Opt\+Node}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{Opt\+Node(\+Node $\ast$node, Opt\+Interface $\ast$main\+Inter)}]{\setlength{\rightskip}{0pt plus 5cm}Opt\+Node\+::\+Opt\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node, }
+\item[{{\bf Opt\+Interface} $\ast$}]{main\+Inter}
+\end{DoxyParamCaption}
+)}\label{class_opt_node_ad18f9be797f54506d12dc67caa364b97}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em node} & NÛ \\
+\hline
+{\em main\+Inter} & Interface \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Node@{Opt\+Node}!````~Opt\+Node@{$\sim$\+Opt\+Node}}
+\index{````~Opt\+Node@{$\sim$\+Opt\+Node}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{$\sim$\+Opt\+Node()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Opt\+Node\+::$\sim$\+Opt\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_node_a19323452635c3c53e9c49fc7228f6261}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Opt\+Node@{Opt\+Node}!clear@{clear}}
+\index{clear@{clear}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Node\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_opt_node_ab9d4066b03955991d916dbb78273e16e}
+Limpa os valores e retorna ao estado pÛs-\/construÁ„o \index{Opt\+Node@{Opt\+Node}!create\+Algo@{create\+Algo}}
+\index{create\+Algo@{create\+Algo}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{create\+Algo(opt\+Algo\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Node\+::create\+Algo (
+\begin{DoxyParamCaption}
+\item[{{\bf opt\+Algo\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_opt_node_a417a27c96f8fb23eca5355cd6e844218}
+Cria o algoritmo caso ele ainda nao exista \index{Opt\+Node@{Opt\+Node}!create\+Module@{create\+Module}}
+\index{create\+Module@{create\+Module}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{create\+Module(opt\+Module\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Node\+::create\+Module (
+\begin{DoxyParamCaption}
+\item[{{\bf opt\+Module\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_opt_node_a20dd22ad78b2debb4b01ceaca1f58310}
+Cria o mÛdulo O\+BS\+: Garanta que este metodo ser· chamado na ordem do enum opt\+Module 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo a ser criado \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Node@{Opt\+Node}!get\+Algo@{get\+Algo}}
+\index{get\+Algo@{get\+Algo}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{get\+Algo(opt\+Algo\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Opt\+Algo}$\ast$ Opt\+Node\+::get\+Algo (
+\begin{DoxyParamCaption}
+\item[{{\bf opt\+Algo\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_opt_node_ac1affe54ff0372a8051c3716f005320e}
+Retorna um \doxyref{Opt\+Algo}{pag.}{class_opt_algo} 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & tipo \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Node@{Opt\+Node}!get\+Algo@{get\+Algo}}
+\index{get\+Algo@{get\+Algo}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{get\+Algo()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Opt\+Algo}$\ast$ Opt\+Node\+::get\+Algo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_opt_node_aef7a0c9669ede52e1a5a0affa4ead84a}
+retorna o \doxyref{Opt\+Algo}{pag.}{class_opt_algo} selecionado \index{Opt\+Node@{Opt\+Node}!get\+Module@{get\+Module}}
+\index{get\+Module@{get\+Module}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{get\+Module(opt\+Module\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Opt\+Module}$\ast$ Opt\+Node\+::get\+Module (
+\begin{DoxyParamCaption}
+\item[{{\bf opt\+Module\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_opt_node_a1d248337c7dea7c8c296dc4fd156b328}
+Retorna um \doxyref{Opt\+Module}{pag.}{class_opt_module} 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & tipo \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Node@{Opt\+Node}!get\+Module@{get\+Module}}
+\index{get\+Module@{get\+Module}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{get\+Module()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Opt\+Module}$\ast$ Opt\+Node\+::get\+Module (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_opt_node_ac320f2dd28a6af8166398ebe266820b6}
+Retorna o Opt\+Moduleselecionado \index{Opt\+Node@{Opt\+Node}!get\+Selected\+Model\+Type@{get\+Selected\+Model\+Type}}
+\index{get\+Selected\+Model\+Type@{get\+Selected\+Model\+Type}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{get\+Selected\+Model\+Type() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf opt\+Model\+Type} Opt\+Node\+::get\+Selected\+Model\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_opt_node_a70c9737fa67580f32a74b30136e750f6}
+Getter para o tipo de modelo selecionado do noh \index{Opt\+Node@{Opt\+Node}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Node\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_opt_node_ab214304a5b972c62db8b62ab7525723e}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Node@{Opt\+Node}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Node\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_opt_node_a082c51c147f059f13cba8f2335d921b6}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Node@{Opt\+Node}!save\+Algo\+Default\+Values@{save\+Algo\+Default\+Values}}
+\index{save\+Algo\+Default\+Values@{save\+Algo\+Default\+Values}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{save\+Algo\+Default\+Values(const wx\+String \&file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Node\+::save\+Algo\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{class_opt_node_afec219511b70eb80031aa6e79e08df6c}
+Salvar Arquivo Padr„o 
+\begin{DoxyParams}{Par√¢metros}
+{\em file\+Name} & Nome do arquivo \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Node@{Opt\+Node}!set\+Algo\+Default\+Values@{set\+Algo\+Default\+Values}}
+\index{set\+Algo\+Default\+Values@{set\+Algo\+Default\+Values}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{set\+Algo\+Default\+Values(const wx\+String \&file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Node\+::set\+Algo\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{class_opt_node_a889dc6a8535d127f10f92fdf15e05e73}
+Entrada por arquivo padr„o 
+\begin{DoxyParams}{Par√¢metros}
+{\em file\+Name} & Nome do arquivo \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Node@{Opt\+Node}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Node\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_opt_node_a8a103f8aa726d5e79e3f86c8b82e2194}
+Atualiza informaÁıes do nÛ \index{Opt\+Node@{Opt\+Node}!set\+Selected\+Model\+Type@{set\+Selected\+Model\+Type}}
+\index{set\+Selected\+Model\+Type@{set\+Selected\+Model\+Type}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{set\+Selected\+Model\+Type(opt\+Model\+Type new\+Model\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Node\+::set\+Selected\+Model\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf opt\+Model\+Type}}]{new\+Model\+Type}
+\end{DoxyParamCaption}
+)}\label{class_opt_node_a8d9ecf1a05aa285e56f436c17366337b}
+Setter para o tipo de modelo selecionado do noh \index{Opt\+Node@{Opt\+Node}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{show\+Results(bool change=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Node\+::show\+Results (
+\begin{DoxyParamCaption}
+\item[{bool}]{change = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_opt_node_a247ed6f9a8ae255445e0e64a8ecf67ea}
+ApresentaÁ„o de resultados 
+\begin{DoxyParams}{Par√¢metros}
+{\em change} & Indica se deve criar ou apenas mostrar a janela de resultados \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Node@{Opt\+Node}!update\+Results@{update\+Results}}
+\index{update\+Results@{update\+Results}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{update\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Node\+::update\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_opt_node_ab1190c2bfc9027bc83e9a86550565955}
+AtualizaÁ„o dos resultados \index{Opt\+Node@{Opt\+Node}!update\+Tree\+Item@{update\+Tree\+Item}}
+\index{update\+Tree\+Item@{update\+Tree\+Item}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{update\+Tree\+Item(\+S\+I\+G\+A\+Tree\+Ctrl $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Node\+::update\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_node_afae2ee48410dfb25a4762dafd6405edc}
+Atualiza os ponteiros das suas series no Tree\+Ctrl de integraÁ„o 
+
+\subsection{Atributos}
+\index{Opt\+Node@{Opt\+Node}!algos@{algos}}
+\index{algos@{algos}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{algos}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf opt\+Algo\+Type},{\bf Opt\+Algo}$\ast$$>$ Opt\+Node\+::algos}\label{class_opt_node_af4251f120e3286bd636b4e0fb8e2906a}
+Guarda os algoritmos 
+
+Defini√ß√£o na linha 39 do arquivo Opt\+Node.\+h.
+
+\index{Opt\+Node@{Opt\+Node}!main\+Inter@{main\+Inter}}
+\index{main\+Inter@{main\+Inter}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{main\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Opt\+Interface}$\ast$ Opt\+Node\+::main\+Inter}\label{class_opt_node_aa99fb14f79d51c5197801d769f693f7e}
+Aponta para a classe da interface principal do modulo 
+
+Defini√ß√£o na linha 43 do arquivo Opt\+Node.\+h.
+
+\index{Opt\+Node@{Opt\+Node}!modules@{modules}}
+\index{modules@{modules}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{modules}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf opt\+Module\+Type},{\bf Opt\+Module}$\ast$$>$ Opt\+Node\+::modules}\label{class_opt_node_ad86ee151e157468e7e57125a8d8ef09f}
+Guarda os mÛdulos 
+
+Defini√ß√£o na linha 35 do arquivo Opt\+Node.\+h.
+
+\index{Opt\+Node@{Opt\+Node}!node@{node}}
+\index{node@{node}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ Opt\+Node\+::node}\label{class_opt_node_a17e55b9b091af59a31461f13a2e227d9}
+NÛ presente 
+
+Defini√ß√£o na linha 48 do arquivo Opt\+Node.\+h.
+
+\index{Opt\+Node@{Opt\+Node}!results@{results}}
+\index{results@{results}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{results}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf opt\+Algo\+Type},{\bf map\+Opt\+Result}$>$ Opt\+Node\+::results}\label{class_opt_node_a2b73be7937364b9f20580bec74e68e15}
+Guarda os resultados 
+
+Defini√ß√£o na linha 31 do arquivo Opt\+Node.\+h.
+
+\index{Opt\+Node@{Opt\+Node}!selected\+Model\+Type@{selected\+Model\+Type}}
+\index{selected\+Model\+Type@{selected\+Model\+Type}!Opt\+Node@{Opt\+Node}}
+\subsubsection[{selected\+Model\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf opt\+Model\+Type} Opt\+Node\+::selected\+Model\+Type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_opt_node_a3315fa42d3ff2d0838dcb7d17a28ebbc}
+Indica qual o tipo do modelo selecionado 
+
+Defini√ß√£o na linha 25 do arquivo Opt\+Node.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Node.\+h}\end{DoxyCompactItemize}

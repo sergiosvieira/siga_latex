@@ -1,0 +1,33 @@
+\section{Referência do Arquivo tree.\+h}
+\label{tree_8h}\index{tree.\+h@{tree.\+h}}
+{\ttfamily \#include $<$cassert$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$stdexcept$>$}\\*
+{\ttfamily \#include $<$iterator$>$}\\*
+{\ttfamily \#include $<$set$>$}\\*
+{\ttfamily \#include $<$queue$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$cstddef$>$}\\*
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf tree\+\_\+node\+\_\+$<$ T $>$}
+\begin{DoxyCompactList}\small\item\em A node in the tree, combining links to other nodes as well as the actual data. \end{DoxyCompactList}\item 
+class {\bf tree$<$ T, tree\+\_\+node\+\_\+allocator $>$}
+\item 
+class {\bf tree$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::iterator\+\_\+base}
+\begin{DoxyCompactList}\small\item\em Base class for iterators, only pointers stored, no traversal logic. \end{DoxyCompactList}\item 
+class {\bf tree$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::pre\+\_\+order\+\_\+iterator}
+\begin{DoxyCompactList}\small\item\em Depth-\/first iterator, first accessing the node, then its children. \end{DoxyCompactList}\item 
+class {\bf tree$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::post\+\_\+order\+\_\+iterator}
+\begin{DoxyCompactList}\small\item\em Depth-\/first iterator, first accessing the children, then the node itself. \end{DoxyCompactList}\item 
+class {\bf tree$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::breadth\+\_\+first\+\_\+queued\+\_\+iterator}
+\begin{DoxyCompactList}\small\item\em Breadth-\/first iterator, using a queue. \end{DoxyCompactList}\item 
+class {\bf tree$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::fixed\+\_\+depth\+\_\+iterator}
+\begin{DoxyCompactList}\small\item\em Iterator which traverses only the nodes at a given depth from the root. \end{DoxyCompactList}\item 
+class {\bf tree$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::sibling\+\_\+iterator}
+\begin{DoxyCompactList}\small\item\em Iterator which traverses only the nodes which are siblings of each other. \end{DoxyCompactList}\item 
+class {\bf tree$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::leaf\+\_\+iterator}
+\begin{DoxyCompactList}\small\item\em Iterator which traverses only the leaves. \end{DoxyCompactList}\item 
+class {\bf tree$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::iterator\+\_\+base\+\_\+less}
+\begin{DoxyCompactList}\small\item\em Comparator class for iterators (compares pointer values; why doesn\textquotesingle{}t this work automatically?) \end{DoxyCompactList}\end{DoxyCompactItemize}

@@ -1,0 +1,983 @@
+\section{Referência da Classe S\+I\+G\+A\+Project\+Property}
+\label{class_s_i_g_a_project_property}\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+
+
+{\ttfamily \#include $<$S\+I\+G\+A\+Project\+Property.\+h$>$}
+
+
+
+Herdeiro de wx\+Dialog.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+G\+A\+Project\+Property} (wx\+Window $\ast$parent, wx\+Window\+ID id, const wx\+String \&{\bf title}, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size)
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} {\bf get\+Transformation\+Type\+Up} (wx\+String name, wx\+String unit)
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} {\bf get\+Transformation\+Type\+Down} (wx\+String name, wx\+String unit)
+\item 
+int {\bf get\+Sel\+DeltaT} ()
+\item 
+void {\bf on\+Choice} (wx\+Command\+Event \&event)
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} {\bf convert\+Up} (int id)
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} {\bf convert\+Down} (int id)
+\item 
+void {\bf set\+Info} ()
+\item 
+void {\bf clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Title}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Author}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Path}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Version}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Comment}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Local}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+File\+Size}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Celsius\+Unit\+Up}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Cm\+Q\+Unit\+Up}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Cm\+Unit\+Up}
+\item 
+wx\+Choice $\ast$ {\bf cb\+M3\+Seg\+Unit\+Up}
+\item 
+wx\+Choice $\ast$ {\bf cb\+M\+Seg\+Unit\+Up}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Mm\+Unit\+Up}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Mm\+Q\+Unit\+Up}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Km2\+Unit\+Up}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Mg\+Unit\+Up}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Kg\+Unit\+Up}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Hm3\+Unit\+Up}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Microg\+L\+Unit\+Up}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Mg\+L\+Unit\+Up}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Wm2\+Unit\+Up}
+\item 
+wx\+Choice $\ast$ {\bf cb\+M\+Unit\+Up}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Hr\+Unit\+Up}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Perc\+Unit\+Up}
+\item 
+wx\+Choice $\ast$ {\bf cb\+N100m\+L\+Unit\+Up}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Celsius\+Unit\+Down}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Cm\+Q\+Unit\+Down}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Cm\+Unit\+Down}
+\item 
+wx\+Choice $\ast$ {\bf cb\+M3\+Seg\+Unit\+Down}
+\item 
+wx\+Choice $\ast$ {\bf cb\+M\+Seg\+Unit\+Down}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Mm\+Unit\+Down}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Mm\+Q\+Unit\+Down}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Km2\+Unit\+Down}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Mg\+Unit\+Down}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Kg\+Unit\+Down}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Hm3\+Unit\+Down}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Microg\+L\+Unit\+Down}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Mg\+L\+Unit\+Down}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Wm2\+Unit\+Down}
+\item 
+wx\+Choice $\ast$ {\bf cb\+M\+Unit\+Down}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Hr\+Unit\+Down}
+\item 
+wx\+Choice $\ast$ {\bf cb\+N100m\+L\+Unit\+Down}
+\item 
+wx\+Choice $\ast$ {\bf cb\+DeltaT}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Coord\+System}
+\item 
+bool {\bf splash}
+\item 
+bool {\bf subtitle}
+\item 
+bool {\bf layers}
+\item 
+bool {\bf same\+Choice}
+\item 
+wx\+String {\bf project\+File\+Name}
+\item 
+wx\+String {\bf project\+Coordinate\+System}
+\item 
+wx\+String {\bf project\+Path\+File}
+\item 
+wx\+String {\bf title}
+\item 
+wx\+String {\bf author}
+\item 
+wx\+String {\bf comment}
+\item 
+wx\+String {\bf st\+Path}
+\item 
+wx\+String {\bf date\+Created}
+\item 
+wx\+String {\bf date\+Modification}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} {\bf celsius\+Unit\+Up}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} {\bf cm\+Unit\+Up}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} {\bf cm\+Q\+Unit\+Up}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} {\bf m3\+Seg\+Unit\+Up}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} {\bf mm\+Unit\+Up}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} {\bf mm\+Q\+Unit\+Up}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} {\bf m\+Unit\+Up}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} {\bf km2\+Unit\+Up}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} {\bf mg\+Unit\+Up}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} {\bf kg\+Unit\+Up}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} {\bf hm3\+Unit\+Up}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} {\bf microg\+L\+Unit\+Up}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} {\bf mg\+L\+Unit\+Up}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} {\bf wm2\+Unit\+Up}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} {\bf hr\+Unit\+Up}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} {\bf celsius\+Unit\+Down}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} {\bf cm\+Unit\+Down}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} {\bf cm\+Q\+Unit\+Down}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} {\bf m3\+Seg\+Unit\+Down}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} {\bf mm\+Unit\+Down}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} {\bf mm\+Q\+Unit\+Down}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} {\bf m\+Unit\+Down}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} {\bf km2\+Unit\+Down}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} {\bf mg\+Unit\+Down}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} {\bf kg\+Unit\+Down}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} {\bf hm3\+Unit\+Down}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} {\bf microg\+L\+Unit\+Down}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} {\bf mg\+L\+Unit\+Down}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} {\bf wm2\+Unit\+Down}
+\item 
+{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} {\bf hr\+Unit\+Down}
+\item 
+long {\bf sel\+DeltaT}
+\item 
+wx\+Static\+Text $\ast$ {\bf st\+Date\+Create2}
+\item 
+wx\+Static\+Text $\ast$ {\bf st\+Path2}
+\item 
+wx\+Static\+Text $\ast$ {\bf st\+Date\+Mod2}
+\item 
+wx\+Static\+Text $\ast$ {\bf st\+File\+Size2}
+\item 
+wx\+Static\+Text $\ast$ {\bf st\+Local2}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 138 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{S\+I\+G\+A\+Project\+Property(wx\+Window $\ast$parent, wx\+Window\+I\+D id, const wx\+String \&title, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size)}]{\setlength{\rightskip}{0pt plus 5cm}S\+I\+G\+A\+Project\+Property\+::\+S\+I\+G\+A\+Project\+Property (
+\begin{DoxyParamCaption}
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{wx\+Window\+ID}]{id, }
+\item[{const wx\+String \&}]{title, }
+\item[{const wx\+Point \&}]{pos = {\ttfamily wxDefaultPosition}, }
+\item[{const wx\+Size \&}]{size = {\ttfamily wxDefaultSize}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_property_ab774e034c18361597b5503b9c9eee7f4}
+Vers�o do \doxyref{S\+I\+GA}{pag.}{class_s_i_g_a} quando o arquivo foi salvo Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em parent} & Pai da janela \\
+\hline
+{\em id} & Identificador \\
+\hline
+{\em title} & Titulo da janela \\
+\hline
+{\em pos} & Posi��o inicial da janela \\
+\hline
+{\em size} & Tamanho inicial da janela \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Métodos}
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!clear@{clear}}
+\index{clear@{clear}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Project\+Property\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_property_a12b381f116ca62ab32f39bff51e8232a}
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!convert\+Down@{convert\+Down}}
+\index{convert\+Down@{convert\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{convert\+Down(int id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} S\+I\+G\+A\+Project\+Property\+::convert\+Down (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_property_aeb7778629bb9f4330f30010ecd109c40}
+Converte inteiro para \doxyref{S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down}{pag.}{class_s_i_g_a_tranformation_a50954eb1d7c9d660e65507b52be4af5c} \index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!convert\+Up@{convert\+Up}}
+\index{convert\+Up@{convert\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{convert\+Up(int id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} S\+I\+G\+A\+Project\+Property\+::convert\+Up (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_property_ad2030c95cbdf95b0b89635ae50c41a1b}
+Converte inteiro para \doxyref{S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up}{pag.}{class_s_i_g_a_tranformation_af7499731d4a9b1a368dbd62ec873247a} \index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!get\+Sel\+DeltaT@{get\+Sel\+DeltaT}}
+\index{get\+Sel\+DeltaT@{get\+Sel\+DeltaT}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{get\+Sel\+Delta\+T()}]{\setlength{\rightskip}{0pt plus 5cm}int S\+I\+G\+A\+Project\+Property\+::get\+Sel\+DeltaT (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_i_g_a_project_property_a98f977227a9bbbf18ef3ad3552322a57}
+Retorna o intervalo de tempo padr�o selecionado pelo usuario 
+
+Definição na linha 234 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!get\+Transformation\+Type\+Down@{get\+Transformation\+Type\+Down}}
+\index{get\+Transformation\+Type\+Down@{get\+Transformation\+Type\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{get\+Transformation\+Type\+Down(wx\+String name, wx\+String unit)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} S\+I\+G\+A\+Project\+Property\+::get\+Transformation\+Type\+Down (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name, }
+\item[{wx\+String}]{unit}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_property_aa84ee14939e86a919e9e30ace136f183}
+Retorna o estado da transforma��o reversa \index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!get\+Transformation\+Type\+Up@{get\+Transformation\+Type\+Up}}
+\index{get\+Transformation\+Type\+Up@{get\+Transformation\+Type\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{get\+Transformation\+Type\+Up(wx\+String name, wx\+String unit)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} S\+I\+G\+A\+Project\+Property\+::get\+Transformation\+Type\+Up (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name, }
+\item[{wx\+String}]{unit}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_property_a9dd47dee0fdfc0b6a6b08bd10e80cc23}
+Retorna o estado da transforma��o direta \index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!on\+Choice@{on\+Choice}}
+\index{on\+Choice@{on\+Choice}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{on\+Choice(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Project\+Property\+::on\+Choice (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_property_aef44d22429b788de105ec0469dfe21d5}
+Evento de atualiza��o das transforma��es \index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Project\+Property\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_property_a5a536e47ce60b4df67db4101c283f220}
+Insere valores no n� 
+\begin{DoxyParams}{Parâmetros}
+{\em sub} & N� onde seram inserios os valores \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!author@{author}}
+\index{author@{author}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{author}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Project\+Property\+::author}\label{class_s_i_g_a_project_property_a40c1a1abca4110e49e070621f7387d5a}
+
+
+Definição na linha 191 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Celsius\+Unit\+Down@{cb\+Celsius\+Unit\+Down}}
+\index{cb\+Celsius\+Unit\+Down@{cb\+Celsius\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Celsius\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Celsius\+Unit\+Down}\label{class_s_i_g_a_project_property_a5b65fd3e6e9e52c0a4381e55f55029ae}
+Seletor de transforma��o escalar reversocb\+No\+Unit\+Down, 
+
+Definição na linha 154 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Celsius\+Unit\+Up@{cb\+Celsius\+Unit\+Up}}
+\index{cb\+Celsius\+Unit\+Up@{cb\+Celsius\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Celsius\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Celsius\+Unit\+Up}\label{class_s_i_g_a_project_property_aed7f7a193f8737edc6d9d84e977fe63f}
+Seletor de transforma��o escalar diretocb\+No\+Unit\+Up, 
+
+Definição na linha 148 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Cm\+Q\+Unit\+Down@{cb\+Cm\+Q\+Unit\+Down}}
+\index{cb\+Cm\+Q\+Unit\+Down@{cb\+Cm\+Q\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Cm\+Q\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Cm\+Q\+Unit\+Down}\label{class_s_i_g_a_project_property_a365500b2b685997021b2e5b6da5ffb09}
+
+
+Definição na linha 154 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Cm\+Q\+Unit\+Up@{cb\+Cm\+Q\+Unit\+Up}}
+\index{cb\+Cm\+Q\+Unit\+Up@{cb\+Cm\+Q\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Cm\+Q\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Cm\+Q\+Unit\+Up}\label{class_s_i_g_a_project_property_a62484de332eba69f14e477463e330e71}
+
+
+Definição na linha 148 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Cm\+Unit\+Down@{cb\+Cm\+Unit\+Down}}
+\index{cb\+Cm\+Unit\+Down@{cb\+Cm\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Cm\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Cm\+Unit\+Down}\label{class_s_i_g_a_project_property_a69afe823e12adc931eb1426ea9255143}
+
+
+Definição na linha 154 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Cm\+Unit\+Up@{cb\+Cm\+Unit\+Up}}
+\index{cb\+Cm\+Unit\+Up@{cb\+Cm\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Cm\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Cm\+Unit\+Up}\label{class_s_i_g_a_project_property_af53f6ccdf0f7b84e1cfe975d600a648b}
+
+
+Definição na linha 148 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Coord\+System@{cb\+Coord\+System}}
+\index{cb\+Coord\+System@{cb\+Coord\+System}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Coord\+System}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Coord\+System}\label{class_s_i_g_a_project_property_a34a4626e39c53a140f3b2ee76fba0220}
+
+
+Definição na linha 159 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+DeltaT@{cb\+DeltaT}}
+\index{cb\+DeltaT@{cb\+DeltaT}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+DeltaT}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+DeltaT}\label{class_s_i_g_a_project_property_a16fac280bcc2fd65ab98533a1b187e04}
+
+
+Definição na linha 158 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Hm3\+Unit\+Down@{cb\+Hm3\+Unit\+Down}}
+\index{cb\+Hm3\+Unit\+Down@{cb\+Hm3\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Hm3\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Hm3\+Unit\+Down}\label{class_s_i_g_a_project_property_a98938f503b14068c8faf683e3dda8d8a}
+cb\+M3\+Unit\+Down, 
+
+Definição na linha 154 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Hm3\+Unit\+Up@{cb\+Hm3\+Unit\+Up}}
+\index{cb\+Hm3\+Unit\+Up@{cb\+Hm3\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Hm3\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Hm3\+Unit\+Up}\label{class_s_i_g_a_project_property_ac70acf8492d7893a2ba559051509e286}
+cb\+M3\+Unit\+Up, 
+
+Definição na linha 148 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Hr\+Unit\+Down@{cb\+Hr\+Unit\+Down}}
+\index{cb\+Hr\+Unit\+Down@{cb\+Hr\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Hr\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Hr\+Unit\+Down}\label{class_s_i_g_a_project_property_a496301b2ed71a9a4943a9407e853125d}
+
+
+Definição na linha 154 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Hr\+Unit\+Up@{cb\+Hr\+Unit\+Up}}
+\index{cb\+Hr\+Unit\+Up@{cb\+Hr\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Hr\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Hr\+Unit\+Up}\label{class_s_i_g_a_project_property_a0379576dd7be1b3ec2c136ca8e3b5c3c}
+
+
+Definição na linha 148 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Kg\+Unit\+Down@{cb\+Kg\+Unit\+Down}}
+\index{cb\+Kg\+Unit\+Down@{cb\+Kg\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Kg\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Kg\+Unit\+Down}\label{class_s_i_g_a_project_property_a18dc37a15f560bbce5af8dd1a4124b77}
+
+
+Definição na linha 154 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Kg\+Unit\+Up@{cb\+Kg\+Unit\+Up}}
+\index{cb\+Kg\+Unit\+Up@{cb\+Kg\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Kg\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Kg\+Unit\+Up}\label{class_s_i_g_a_project_property_a60ed26de0b7e48d5ad9811fd631e5687}
+
+
+Definição na linha 148 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Km2\+Unit\+Down@{cb\+Km2\+Unit\+Down}}
+\index{cb\+Km2\+Unit\+Down@{cb\+Km2\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Km2\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Km2\+Unit\+Down}\label{class_s_i_g_a_project_property_a32b4743aaacca0684caea670a041d9fc}
+cb\+M2\+Unit\+Down, 
+
+Definição na linha 154 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Km2\+Unit\+Up@{cb\+Km2\+Unit\+Up}}
+\index{cb\+Km2\+Unit\+Up@{cb\+Km2\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Km2\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Km2\+Unit\+Up}\label{class_s_i_g_a_project_property_a88446d22ab616cb055cb5fe1724cb068}
+
+
+Definição na linha 148 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+M3\+Seg\+Unit\+Down@{cb\+M3\+Seg\+Unit\+Down}}
+\index{cb\+M3\+Seg\+Unit\+Down@{cb\+M3\+Seg\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+M3\+Seg\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+M3\+Seg\+Unit\+Down}\label{class_s_i_g_a_project_property_aeb8bbeb7823bc270dcc524420da68832}
+cb\+Cm\+Celsius\+Unit\+Down, 
+
+Definição na linha 154 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+M3\+Seg\+Unit\+Up@{cb\+M3\+Seg\+Unit\+Up}}
+\index{cb\+M3\+Seg\+Unit\+Up@{cb\+M3\+Seg\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+M3\+Seg\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+M3\+Seg\+Unit\+Up}\label{class_s_i_g_a_project_property_a657013b300b1e8420ce93450f6520cb6}
+
+
+Definição na linha 148 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Mg\+L\+Unit\+Down@{cb\+Mg\+L\+Unit\+Down}}
+\index{cb\+Mg\+L\+Unit\+Down@{cb\+Mg\+L\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Mg\+L\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Mg\+L\+Unit\+Down}\label{class_s_i_g_a_project_property_adffef371c36e0ff81561669bb45e64ff}
+
+
+Definição na linha 154 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Mg\+L\+Unit\+Up@{cb\+Mg\+L\+Unit\+Up}}
+\index{cb\+Mg\+L\+Unit\+Up@{cb\+Mg\+L\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Mg\+L\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Mg\+L\+Unit\+Up}\label{class_s_i_g_a_project_property_a3e123564f1215aef67a7892bb50ba0f1}
+
+
+Definição na linha 148 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Mg\+Unit\+Down@{cb\+Mg\+Unit\+Down}}
+\index{cb\+Mg\+Unit\+Down@{cb\+Mg\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Mg\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Mg\+Unit\+Down}\label{class_s_i_g_a_project_property_a51d137dfb2f50a54529a000d647e848d}
+
+
+Definição na linha 154 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Mg\+Unit\+Up@{cb\+Mg\+Unit\+Up}}
+\index{cb\+Mg\+Unit\+Up@{cb\+Mg\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Mg\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Mg\+Unit\+Up}\label{class_s_i_g_a_project_property_aa3a4dd27876ade7711a78c657074ccf4}
+
+
+Definição na linha 148 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Microg\+L\+Unit\+Down@{cb\+Microg\+L\+Unit\+Down}}
+\index{cb\+Microg\+L\+Unit\+Down@{cb\+Microg\+L\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Microg\+L\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Microg\+L\+Unit\+Down}\label{class_s_i_g_a_project_property_a26aea9c1821acf3456a7e20bdb8b9ddf}
+
+
+Definição na linha 154 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Microg\+L\+Unit\+Up@{cb\+Microg\+L\+Unit\+Up}}
+\index{cb\+Microg\+L\+Unit\+Up@{cb\+Microg\+L\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Microg\+L\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Microg\+L\+Unit\+Up}\label{class_s_i_g_a_project_property_af42687940319b8b227f947a2cf1d4259}
+
+
+Definição na linha 148 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Mm\+Q\+Unit\+Down@{cb\+Mm\+Q\+Unit\+Down}}
+\index{cb\+Mm\+Q\+Unit\+Down@{cb\+Mm\+Q\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Mm\+Q\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Mm\+Q\+Unit\+Down}\label{class_s_i_g_a_project_property_aca25834cea59fea9977d3538928aac3e}
+
+
+Definição na linha 154 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Mm\+Q\+Unit\+Up@{cb\+Mm\+Q\+Unit\+Up}}
+\index{cb\+Mm\+Q\+Unit\+Up@{cb\+Mm\+Q\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Mm\+Q\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Mm\+Q\+Unit\+Up}\label{class_s_i_g_a_project_property_a4fcc327a603fede30917adca13deaa38}
+cb\+M2\+Unit\+Up, 
+
+Definição na linha 148 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Mm\+Unit\+Down@{cb\+Mm\+Unit\+Down}}
+\index{cb\+Mm\+Unit\+Down@{cb\+Mm\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Mm\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Mm\+Unit\+Down}\label{class_s_i_g_a_project_property_a87a41037b00a3bad6fdfb6030e728d1e}
+
+
+Definição na linha 154 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Mm\+Unit\+Up@{cb\+Mm\+Unit\+Up}}
+\index{cb\+Mm\+Unit\+Up@{cb\+Mm\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Mm\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Mm\+Unit\+Up}\label{class_s_i_g_a_project_property_a7bf6c6ecd6b36b6ea3a7406e4985e7ae}
+
+
+Definição na linha 148 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+M\+Seg\+Unit\+Down@{cb\+M\+Seg\+Unit\+Down}}
+\index{cb\+M\+Seg\+Unit\+Down@{cb\+M\+Seg\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+M\+Seg\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+M\+Seg\+Unit\+Down}\label{class_s_i_g_a_project_property_ad9eb8f77a6032746650cc8d7150ad935}
+
+
+Definição na linha 154 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+M\+Seg\+Unit\+Up@{cb\+M\+Seg\+Unit\+Up}}
+\index{cb\+M\+Seg\+Unit\+Up@{cb\+M\+Seg\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+M\+Seg\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+M\+Seg\+Unit\+Up}\label{class_s_i_g_a_project_property_aa26a4e472c53a827d05673ece536ca0d}
+
+
+Definição na linha 148 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+M\+Unit\+Down@{cb\+M\+Unit\+Down}}
+\index{cb\+M\+Unit\+Down@{cb\+M\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+M\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+M\+Unit\+Down}\label{class_s_i_g_a_project_property_a5360a96c0813c5feb167f3a098c8e223}
+
+
+Definição na linha 154 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+M\+Unit\+Up@{cb\+M\+Unit\+Up}}
+\index{cb\+M\+Unit\+Up@{cb\+M\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+M\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+M\+Unit\+Up}\label{class_s_i_g_a_project_property_a4d66850c8015b98ce94f9ab2f553376c}
+
+
+Definição na linha 148 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+N100m\+L\+Unit\+Down@{cb\+N100m\+L\+Unit\+Down}}
+\index{cb\+N100m\+L\+Unit\+Down@{cb\+N100m\+L\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+N100m\+L\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+N100m\+L\+Unit\+Down}\label{class_s_i_g_a_project_property_ae3174e6e25b391fb88143d06c3758014}
+cb\+Perc\+Unit\+Down, 
+
+Definição na linha 154 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+N100m\+L\+Unit\+Up@{cb\+N100m\+L\+Unit\+Up}}
+\index{cb\+N100m\+L\+Unit\+Up@{cb\+N100m\+L\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+N100m\+L\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+N100m\+L\+Unit\+Up}\label{class_s_i_g_a_project_property_a24eebe6f5ee12586785a2fb23d204539}
+
+
+Definição na linha 148 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Perc\+Unit\+Up@{cb\+Perc\+Unit\+Up}}
+\index{cb\+Perc\+Unit\+Up@{cb\+Perc\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Perc\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Perc\+Unit\+Up}\label{class_s_i_g_a_project_property_a266e724b679fd50d9d0c737379758265}
+
+
+Definição na linha 148 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Wm2\+Unit\+Down@{cb\+Wm2\+Unit\+Down}}
+\index{cb\+Wm2\+Unit\+Down@{cb\+Wm2\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Wm2\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Wm2\+Unit\+Down}\label{class_s_i_g_a_project_property_a6036f0aac55759564656eed36e2e8539}
+
+
+Definição na linha 154 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cb\+Wm2\+Unit\+Up@{cb\+Wm2\+Unit\+Up}}
+\index{cb\+Wm2\+Unit\+Up@{cb\+Wm2\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cb\+Wm2\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ S\+I\+G\+A\+Project\+Property\+::cb\+Wm2\+Unit\+Up}\label{class_s_i_g_a_project_property_a1b41c2bed71156de97e08bfd1e7621d8}
+
+
+Definição na linha 148 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!celsius\+Unit\+Down@{celsius\+Unit\+Down}}
+\index{celsius\+Unit\+Down@{celsius\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{celsius\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} S\+I\+G\+A\+Project\+Property\+::celsius\+Unit\+Down}\label{class_s_i_g_a_project_property_ad97068c9ca54e6968c7fb12d934d1f35}
+Estado de transforma��o escalar reverso 
+
+Definição na linha 200 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!celsius\+Unit\+Up@{celsius\+Unit\+Up}}
+\index{celsius\+Unit\+Up@{celsius\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{celsius\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} S\+I\+G\+A\+Project\+Property\+::celsius\+Unit\+Up}\label{class_s_i_g_a_project_property_a1b57fcc709bbb9c4a2f3a68d24ad204d}
+Estado de transforma��o escalar direto 
+
+Definição na linha 195 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cm\+Q\+Unit\+Down@{cm\+Q\+Unit\+Down}}
+\index{cm\+Q\+Unit\+Down@{cm\+Q\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cm\+Q\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} S\+I\+G\+A\+Project\+Property\+::cm\+Q\+Unit\+Down}\label{class_s_i_g_a_project_property_a75f2533c20d87c59a414bffe5e481c11}
+
+
+Definição na linha 200 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cm\+Q\+Unit\+Up@{cm\+Q\+Unit\+Up}}
+\index{cm\+Q\+Unit\+Up@{cm\+Q\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cm\+Q\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} S\+I\+G\+A\+Project\+Property\+::cm\+Q\+Unit\+Up}\label{class_s_i_g_a_project_property_a6bca17e81a198e2492d84c49a1a64450}
+
+
+Definição na linha 195 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cm\+Unit\+Down@{cm\+Unit\+Down}}
+\index{cm\+Unit\+Down@{cm\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cm\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} S\+I\+G\+A\+Project\+Property\+::cm\+Unit\+Down}\label{class_s_i_g_a_project_property_ae13c5e67dd476bbbf75027be4b5d81c4}
+
+
+Definição na linha 200 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!cm\+Unit\+Up@{cm\+Unit\+Up}}
+\index{cm\+Unit\+Up@{cm\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{cm\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} S\+I\+G\+A\+Project\+Property\+::cm\+Unit\+Up}\label{class_s_i_g_a_project_property_a4c640865d3e0df87c1cc8f27a1d3058b}
+
+
+Definição na linha 195 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!comment@{comment}}
+\index{comment@{comment}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{comment}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Project\+Property\+::comment}\label{class_s_i_g_a_project_property_a0a721465570e9412e052c883bc2589c8}
+
+
+Definição na linha 191 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!date\+Created@{date\+Created}}
+\index{date\+Created@{date\+Created}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{date\+Created}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Project\+Property\+::date\+Created}\label{class_s_i_g_a_project_property_ad12613ccc1275c4e244177e8a459f1ab}
+
+
+Definição na linha 191 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!date\+Modification@{date\+Modification}}
+\index{date\+Modification@{date\+Modification}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{date\+Modification}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Project\+Property\+::date\+Modification}\label{class_s_i_g_a_project_property_aa7831613ef34e2ff9d1482ef2c111bbd}
+
+
+Definição na linha 191 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!hm3\+Unit\+Down@{hm3\+Unit\+Down}}
+\index{hm3\+Unit\+Down@{hm3\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{hm3\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} S\+I\+G\+A\+Project\+Property\+::hm3\+Unit\+Down}\label{class_s_i_g_a_project_property_a5ca74c9261de36d3d326da43b93b297a}
+
+
+Definição na linha 200 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!hm3\+Unit\+Up@{hm3\+Unit\+Up}}
+\index{hm3\+Unit\+Up@{hm3\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{hm3\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} S\+I\+G\+A\+Project\+Property\+::hm3\+Unit\+Up}\label{class_s_i_g_a_project_property_a15585556f4d7f5f7f8c89e4cf7997d39}
+
+
+Definição na linha 195 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!hr\+Unit\+Down@{hr\+Unit\+Down}}
+\index{hr\+Unit\+Down@{hr\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{hr\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} S\+I\+G\+A\+Project\+Property\+::hr\+Unit\+Down}\label{class_s_i_g_a_project_property_a0804aa07d4f091a931c2abc5d7de6af9}
+
+
+Definição na linha 200 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!hr\+Unit\+Up@{hr\+Unit\+Up}}
+\index{hr\+Unit\+Up@{hr\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{hr\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} S\+I\+G\+A\+Project\+Property\+::hr\+Unit\+Up}\label{class_s_i_g_a_project_property_aac120d7fc9494f495324e1f260bb819f}
+
+
+Definição na linha 195 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!kg\+Unit\+Down@{kg\+Unit\+Down}}
+\index{kg\+Unit\+Down@{kg\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{kg\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} S\+I\+G\+A\+Project\+Property\+::kg\+Unit\+Down}\label{class_s_i_g_a_project_property_ae618ce3b011e72d21eca15136fdeb1cc}
+
+
+Definição na linha 200 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!kg\+Unit\+Up@{kg\+Unit\+Up}}
+\index{kg\+Unit\+Up@{kg\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{kg\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} S\+I\+G\+A\+Project\+Property\+::kg\+Unit\+Up}\label{class_s_i_g_a_project_property_a508697d8270c9227b3e049d209bfd282}
+
+
+Definição na linha 195 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!km2\+Unit\+Down@{km2\+Unit\+Down}}
+\index{km2\+Unit\+Down@{km2\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{km2\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} S\+I\+G\+A\+Project\+Property\+::km2\+Unit\+Down}\label{class_s_i_g_a_project_property_a05f29d2e86ede509b13b7b62ff2aa4a4}
+
+
+Definição na linha 200 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!km2\+Unit\+Up@{km2\+Unit\+Up}}
+\index{km2\+Unit\+Up@{km2\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{km2\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} S\+I\+G\+A\+Project\+Property\+::km2\+Unit\+Up}\label{class_s_i_g_a_project_property_a552b702af2cc7592f9464c8462f4f34c}
+
+
+Definição na linha 195 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!layers@{layers}}
+\index{layers@{layers}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{layers}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Project\+Property\+::layers}\label{class_s_i_g_a_project_property_adbc127173d9ac17d670a0a268046ce26}
+Mostrar ou n�o os layers ao abrir o \doxyref{S\+I\+GA}{pag.}{class_s_i_g_a} 
+
+Definição na linha 171 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!m3\+Seg\+Unit\+Down@{m3\+Seg\+Unit\+Down}}
+\index{m3\+Seg\+Unit\+Down@{m3\+Seg\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{m3\+Seg\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} S\+I\+G\+A\+Project\+Property\+::m3\+Seg\+Unit\+Down}\label{class_s_i_g_a_project_property_a46eeba71411982a10c3c47bec2377b60}
+
+
+Definição na linha 200 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!m3\+Seg\+Unit\+Up@{m3\+Seg\+Unit\+Up}}
+\index{m3\+Seg\+Unit\+Up@{m3\+Seg\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{m3\+Seg\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} S\+I\+G\+A\+Project\+Property\+::m3\+Seg\+Unit\+Up}\label{class_s_i_g_a_project_property_a50cb910d5bfdf796b3a3a4d0b5ef8533}
+
+
+Definição na linha 195 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!mg\+L\+Unit\+Down@{mg\+L\+Unit\+Down}}
+\index{mg\+L\+Unit\+Down@{mg\+L\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{mg\+L\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} S\+I\+G\+A\+Project\+Property\+::mg\+L\+Unit\+Down}\label{class_s_i_g_a_project_property_a90f63d9fd9b3839362a4a6065b338d86}
+
+
+Definição na linha 200 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!mg\+L\+Unit\+Up@{mg\+L\+Unit\+Up}}
+\index{mg\+L\+Unit\+Up@{mg\+L\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{mg\+L\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} S\+I\+G\+A\+Project\+Property\+::mg\+L\+Unit\+Up}\label{class_s_i_g_a_project_property_ab9360fdb5287cf4ca4fc559a2d45c53b}
+
+
+Definição na linha 195 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!mg\+Unit\+Down@{mg\+Unit\+Down}}
+\index{mg\+Unit\+Down@{mg\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{mg\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} S\+I\+G\+A\+Project\+Property\+::mg\+Unit\+Down}\label{class_s_i_g_a_project_property_ad726cd9213dc9fe00c9ac5b708088cb8}
+
+
+Definição na linha 200 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!mg\+Unit\+Up@{mg\+Unit\+Up}}
+\index{mg\+Unit\+Up@{mg\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{mg\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} S\+I\+G\+A\+Project\+Property\+::mg\+Unit\+Up}\label{class_s_i_g_a_project_property_ad2a78fc7e343dc42205341454b8e92ab}
+
+
+Definição na linha 195 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!microg\+L\+Unit\+Down@{microg\+L\+Unit\+Down}}
+\index{microg\+L\+Unit\+Down@{microg\+L\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{microg\+L\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} S\+I\+G\+A\+Project\+Property\+::microg\+L\+Unit\+Down}\label{class_s_i_g_a_project_property_a273869f163e3bb59bdc2564920293f9f}
+
+
+Definição na linha 200 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!microg\+L\+Unit\+Up@{microg\+L\+Unit\+Up}}
+\index{microg\+L\+Unit\+Up@{microg\+L\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{microg\+L\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} S\+I\+G\+A\+Project\+Property\+::microg\+L\+Unit\+Up}\label{class_s_i_g_a_project_property_a5963904ab053e1fbe3f433b2d11b381a}
+
+
+Definição na linha 195 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!mm\+Q\+Unit\+Down@{mm\+Q\+Unit\+Down}}
+\index{mm\+Q\+Unit\+Down@{mm\+Q\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{mm\+Q\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} S\+I\+G\+A\+Project\+Property\+::mm\+Q\+Unit\+Down}\label{class_s_i_g_a_project_property_a3a352f3dd12fcdd06411e3e0b5348fd2}
+
+
+Definição na linha 200 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!mm\+Q\+Unit\+Up@{mm\+Q\+Unit\+Up}}
+\index{mm\+Q\+Unit\+Up@{mm\+Q\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{mm\+Q\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} S\+I\+G\+A\+Project\+Property\+::mm\+Q\+Unit\+Up}\label{class_s_i_g_a_project_property_a58fc3472e1966c89cd16c86efabaf099}
+
+
+Definição na linha 195 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!mm\+Unit\+Down@{mm\+Unit\+Down}}
+\index{mm\+Unit\+Down@{mm\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{mm\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} S\+I\+G\+A\+Project\+Property\+::mm\+Unit\+Down}\label{class_s_i_g_a_project_property_a97c95bcd372618e13a0892216a7f2bd4}
+
+
+Definição na linha 200 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!mm\+Unit\+Up@{mm\+Unit\+Up}}
+\index{mm\+Unit\+Up@{mm\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{mm\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} S\+I\+G\+A\+Project\+Property\+::mm\+Unit\+Up}\label{class_s_i_g_a_project_property_a79371ba78634eae994ef49cd05eb06e2}
+
+
+Definição na linha 195 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!m\+Unit\+Down@{m\+Unit\+Down}}
+\index{m\+Unit\+Down@{m\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{m\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} S\+I\+G\+A\+Project\+Property\+::m\+Unit\+Down}\label{class_s_i_g_a_project_property_a394f5d63d33f7d32e27c427c33d76d86}
+
+
+Definição na linha 200 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!m\+Unit\+Up@{m\+Unit\+Up}}
+\index{m\+Unit\+Up@{m\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{m\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} S\+I\+G\+A\+Project\+Property\+::m\+Unit\+Up}\label{class_s_i_g_a_project_property_afad08f794d917cb7bfb507263aa02883}
+
+
+Definição na linha 195 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!project\+Coordinate\+System@{project\+Coordinate\+System}}
+\index{project\+Coordinate\+System@{project\+Coordinate\+System}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{project\+Coordinate\+System}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Project\+Property\+::project\+Coordinate\+System}\label{class_s_i_g_a_project_property_a29d83d3ce26e147435e0771e7f615159}
+
+
+Definição na linha 183 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!project\+File\+Name@{project\+File\+Name}}
+\index{project\+File\+Name@{project\+File\+Name}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{project\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Project\+Property\+::project\+File\+Name}\label{class_s_i_g_a_project_property_a1a009c521098fc361c6b3551a888eb04}
+
+
+Definição na linha 179 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!project\+Path\+File@{project\+Path\+File}}
+\index{project\+Path\+File@{project\+Path\+File}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{project\+Path\+File}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Project\+Property\+::project\+Path\+File}\label{class_s_i_g_a_project_property_a79b9f8efc2499974812171470cbe4f9b}
+
+
+Definição na linha 187 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!same\+Choice@{same\+Choice}}
+\index{same\+Choice@{same\+Choice}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{same\+Choice}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Project\+Property\+::same\+Choice}\label{class_s_i_g_a_project_property_a517be30866da8a2c3fecbc3146da6cb6}
+
+
+Definição na linha 175 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!sel\+DeltaT@{sel\+DeltaT}}
+\index{sel\+DeltaT@{sel\+DeltaT}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{sel\+DeltaT}]{\setlength{\rightskip}{0pt plus 5cm}long S\+I\+G\+A\+Project\+Property\+::sel\+DeltaT}\label{class_s_i_g_a_project_property_ad28c1b168ee6f09099a59ce89c86ba78}
+
+
+Definição na linha 203 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!splash@{splash}}
+\index{splash@{splash}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{splash}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Project\+Property\+::splash}\label{class_s_i_g_a_project_property_a6d04e72b59abaf6b71694d60f6ce3d30}
+Mostrar Tela de Boas Vindas 
+
+Definição na linha 163 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!st\+Date\+Create2@{st\+Date\+Create2}}
+\index{st\+Date\+Create2@{st\+Date\+Create2}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{st\+Date\+Create2}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ S\+I\+G\+A\+Project\+Property\+::st\+Date\+Create2}\label{class_s_i_g_a_project_property_ac049a3e90265f1cb547a684e12d331b8}
+Data de Cria��o 
+
+Definição na linha 207 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!st\+Date\+Mod2@{st\+Date\+Mod2}}
+\index{st\+Date\+Mod2@{st\+Date\+Mod2}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{st\+Date\+Mod2}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text $\ast$ S\+I\+G\+A\+Project\+Property\+::st\+Date\+Mod2}\label{class_s_i_g_a_project_property_ada45cf816c71f1525f3ccf8609a33bda}
+
+
+Definição na linha 207 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!st\+File\+Size2@{st\+File\+Size2}}
+\index{st\+File\+Size2@{st\+File\+Size2}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{st\+File\+Size2}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text $\ast$ S\+I\+G\+A\+Project\+Property\+::st\+File\+Size2}\label{class_s_i_g_a_project_property_aabc57171d12d17326b4d15762799a79d}
+
+
+Definição na linha 207 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!st\+Local2@{st\+Local2}}
+\index{st\+Local2@{st\+Local2}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{st\+Local2}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text $\ast$ S\+I\+G\+A\+Project\+Property\+::st\+Local2}\label{class_s_i_g_a_project_property_ac0534d3eaad1807a7ab16a84e1a8afd4}
+
+
+Definição na linha 207 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!st\+Path@{st\+Path}}
+\index{st\+Path@{st\+Path}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{st\+Path}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Project\+Property\+::st\+Path}\label{class_s_i_g_a_project_property_a9e4a6e476d1edf661bf182a21dae4bfb}
+
+
+Definição na linha 191 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!st\+Path2@{st\+Path2}}
+\index{st\+Path2@{st\+Path2}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{st\+Path2}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text $\ast$ S\+I\+G\+A\+Project\+Property\+::st\+Path2}\label{class_s_i_g_a_project_property_ae68156f62336cd5048e37162dfbd1536}
+
+
+Definição na linha 207 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!subtitle@{subtitle}}
+\index{subtitle@{subtitle}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{subtitle}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Project\+Property\+::subtitle}\label{class_s_i_g_a_project_property_a52c8350ad3f2499ef8c4f0f4e7af9d28}
+Mostrar ou n�o a legenda ao abrir o \doxyref{S\+I\+GA}{pag.}{class_s_i_g_a} 
+
+Definição na linha 167 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!tc\+Author@{tc\+Author}}
+\index{tc\+Author@{tc\+Author}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{tc\+Author}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ S\+I\+G\+A\+Project\+Property\+::tc\+Author}\label{class_s_i_g_a_project_property_aba9990267439ac323e6ebe2d91b0fe75}
+
+
+Definição na linha 144 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!tc\+Comment@{tc\+Comment}}
+\index{tc\+Comment@{tc\+Comment}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{tc\+Comment}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ S\+I\+G\+A\+Project\+Property\+::tc\+Comment}\label{class_s_i_g_a_project_property_acd6bfd2bc57a6c10088e762cd28885df}
+
+
+Definição na linha 144 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!tc\+File\+Size@{tc\+File\+Size}}
+\index{tc\+File\+Size@{tc\+File\+Size}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{tc\+File\+Size}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ S\+I\+G\+A\+Project\+Property\+::tc\+File\+Size}\label{class_s_i_g_a_project_property_ae6aad9292c8103a64d2b9b701ebe7b7e}
+
+
+Definição na linha 144 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!tc\+Local@{tc\+Local}}
+\index{tc\+Local@{tc\+Local}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{tc\+Local}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ S\+I\+G\+A\+Project\+Property\+::tc\+Local}\label{class_s_i_g_a_project_property_a54a039d5579d5abf24fa050c35461a5a}
+
+
+Definição na linha 144 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!tc\+Path@{tc\+Path}}
+\index{tc\+Path@{tc\+Path}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{tc\+Path}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ S\+I\+G\+A\+Project\+Property\+::tc\+Path}\label{class_s_i_g_a_project_property_a42ef9be90684d9fdbbc123ab04d732e6}
+
+
+Definição na linha 144 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!tc\+Title@{tc\+Title}}
+\index{tc\+Title@{tc\+Title}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{tc\+Title}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl$\ast$ S\+I\+G\+A\+Project\+Property\+::tc\+Title}\label{class_s_i_g_a_project_property_ac56cb4531e33216d518bff6ad811bc8a}
+Caixas de texto 
+
+Definição na linha 144 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!tc\+Version@{tc\+Version}}
+\index{tc\+Version@{tc\+Version}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{tc\+Version}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ S\+I\+G\+A\+Project\+Property\+::tc\+Version}\label{class_s_i_g_a_project_property_a1e801a46215c4e5d04f3316867975778}
+
+
+Definição na linha 144 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!title@{title}}
+\index{title@{title}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{title}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Project\+Property\+::title}\label{class_s_i_g_a_project_property_a1188b9a363a5e1f1f746943b3e9c532d}
+Texto Contendo Titulo, Autor, Comentario e Data de Cria��o 
+
+Definição na linha 191 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!wm2\+Unit\+Down@{wm2\+Unit\+Down}}
+\index{wm2\+Unit\+Down@{wm2\+Unit\+Down}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{wm2\+Unit\+Down}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down} S\+I\+G\+A\+Project\+Property\+::wm2\+Unit\+Down}\label{class_s_i_g_a_project_property_a35123cecdabb20efd7da11a79a6c840e}
+
+
+Definição na linha 200 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+\index{S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}!wm2\+Unit\+Up@{wm2\+Unit\+Up}}
+\index{wm2\+Unit\+Up@{wm2\+Unit\+Up}!S\+I\+G\+A\+Project\+Property@{S\+I\+G\+A\+Project\+Property}}
+\subsubsection[{wm2\+Unit\+Up}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up} S\+I\+G\+A\+Project\+Property\+::wm2\+Unit\+Up}\label{class_s_i_g_a_project_property_ac0beeb81edd0d1952a9e66d5ccd993ac}
+
+
+Definição na linha 195 do arquivo S\+I\+G\+A\+Project\+Property.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+G\+A\+Project\+Property.\+h}\end{DoxyCompactItemize}

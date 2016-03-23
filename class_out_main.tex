@@ -1,0 +1,369 @@
+\section{Refer√™ncia da Classe Out\+Main}
+\label{class_out_main}\index{Out\+Main@{Out\+Main}}
+
+
+{\ttfamily \#include $<$Out\+Main.\+h$>$}
+
+
+
+Herdeiro de {\bf Component}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf on\+Init} ({\bf S\+I\+GA} $\ast${\bf main}, wx\+Frame $\ast$frame, wx\+Window $\ast$parent)
+\item 
+void {\bf on\+Select\+Element} ()
+\item 
+void {\bf on\+Changed\+Component} ()
+\item 
+void {\bf on\+Changing\+Component} ()
+\item 
+void {\bf on\+Delete\+Elements} (vector$<$ {\bf Element\+ID} $>$ \&element\+\_\+ids)
+\item 
+void {\bf on\+Delete\+Links} (vector$<$ {\bf Element\+ID} $>$ link\+Ids)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf insert\+Serie} ({\bf Res\+Serie} $\ast$r\+Serie, bool inverse=false, bool show\+Plan=true, bool show\+Graph=false, wx\+String path=\char`\"{}\char`\"{}, bool draw\+Symbols=true, bool draw\+Lines=true)
+\item 
+void {\bf insert\+Matrix} ({\bf Res\+Matrix} $\ast$r\+Matrix, wx\+String {\bf name}, map$<$ unsigned int, {\bf Column\+Information} $\ast$ $>$ infos, wx\+String section, unsigned int type)
+\item 
+void {\bf remove\+Serie} ({\bf Res\+Serie} $\ast$r\+Serie, wx\+String path=\char`\"{}\char`\"{})
+\item 
+void {\bf remove\+Matrix} ({\bf Res\+Matrix} $\ast$r\+Matrix, wx\+String path=\char`\"{}\char`\"{})
+\item 
+int {\bf get\+Component\+Id} (wx\+String {\bf name})
+\item 
+int {\bf get\+Component\+Id\+Notecomponets} (wx\+String {\bf name})
+\item 
+void {\bf Enable} (bool value)
+\item 
+void {\bf on\+Changing\+Time\+Interval} ({\bf Date\+::\+Time\+Interval} time\+Interval)
+\item 
+void {\bf on\+Changing\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ element\+Ids)
+\item 
+void {\bf on\+Changed\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ elemet\+Ids)
+\item 
+void {\bf update\+Result\+Serie} (const wx\+String \&section, {\bf Serie} $\ast${\bf serie})
+\item 
+void {\bf remove\+Result\+Serie} (const wx\+String \&section, const wx\+String \&unit=wx\+Empty\+String, const wx\+String \&{\bf name}=wx\+Empty\+String)
+\item 
+void {\bf update\+Viewer} ()
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{M√©todos P√∫blicos Est√°ticos}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Out\+Main} \& {\bf Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+String {\bf serie}
+\item 
+wx\+String {\bf matrix} [3]
+\item 
+map$<$ int, {\bf Output} $\ast$ $>$ {\bf outs}
+\item 
+map$<$ {\bf Element\+ID}, vector$<$ {\bf Res\+Output} $\ast$ $>$ $>$ {\bf node\+Series\+Opened}
+\item 
+{\bf S\+I\+G\+A\+Viewer} $\ast$ {\bf viewer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 28 do arquivo Out\+Main.\+h.
+
+
+
+\subsection{M√©todos}
+\index{Out\+Main@{Out\+Main}!clear@{clear}}
+\index{clear@{clear}!Out\+Main@{Out\+Main}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Main\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_out_main_ab50d4d71b3772f816c2eee24f7819b2c}
+Limpa os valores e os deixa no estade de pÛs-\/construÁ„o 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a3155a0112bacea4b0af7b131c0e3f011}.
+
+\index{Out\+Main@{Out\+Main}!Enable@{Enable}}
+\index{Enable@{Enable}!Out\+Main@{Out\+Main}}
+\subsubsection[{Enable(bool value)}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Main\+::\+Enable (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\label{class_out_main_a5049ef17396842cef74d205ef3750583}
+Habilita ou desabilita interface \index{Out\+Main@{Out\+Main}!get\+Component\+Id@{get\+Component\+Id}}
+\index{get\+Component\+Id@{get\+Component\+Id}!Out\+Main@{Out\+Main}}
+\subsubsection[{get\+Component\+Id(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}int Out\+Main\+::get\+Component\+Id (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_out_main_ac6056cc65ddd8f629433a1414ea574d9}
+Retorna o identificador do modulo pelo nome fornecido \index{Out\+Main@{Out\+Main}!get\+Component\+Id\+Notecomponets@{get\+Component\+Id\+Notecomponets}}
+\index{get\+Component\+Id\+Notecomponets@{get\+Component\+Id\+Notecomponets}!Out\+Main@{Out\+Main}}
+\subsubsection[{get\+Component\+Id\+Notecomponets(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}int Out\+Main\+::get\+Component\+Id\+Notecomponets (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_out_main_a9b5c96e0a00cfafc879157fe4ded93a0}
+Retorna a posiÁ„o do modulo pelo nome fornecido no notecomponets \index{Out\+Main@{Out\+Main}!insert\+Matrix@{insert\+Matrix}}
+\index{insert\+Matrix@{insert\+Matrix}!Out\+Main@{Out\+Main}}
+\subsubsection[{insert\+Matrix(\+Res\+Matrix $\ast$r\+Matrix, wx\+String name, map$<$ unsigned int, Column\+Information $\ast$ $>$ infos, wx\+String section, unsigned int type)}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Main\+::insert\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Matrix} $\ast$}]{r\+Matrix, }
+\item[{wx\+String}]{name, }
+\item[{map$<$ unsigned int, {\bf Column\+Information} $\ast$ $>$}]{infos, }
+\item[{wx\+String}]{section, }
+\item[{unsigned int}]{type}
+\end{DoxyParamCaption}
+)}\label{class_out_main_ae67b1fbddec7c558f0859b8806dca783}
+\index{Out\+Main@{Out\+Main}!insert\+Serie@{insert\+Serie}}
+\index{insert\+Serie@{insert\+Serie}!Out\+Main@{Out\+Main}}
+\subsubsection[{insert\+Serie(\+Res\+Serie $\ast$r\+Serie, bool inverse=false, bool show\+Plan=true, bool show\+Graph=false, wx\+String path="""", bool draw\+Symbols=true, bool draw\+Lines=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Main\+::insert\+Serie (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Serie} $\ast$}]{r\+Serie, }
+\item[{bool}]{inverse = {\ttfamily false}, }
+\item[{bool}]{show\+Plan = {\ttfamily true}, }
+\item[{bool}]{show\+Graph = {\ttfamily false}, }
+\item[{wx\+String}]{path = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{bool}]{draw\+Symbols = {\ttfamily true}, }
+\item[{bool}]{draw\+Lines = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_out_main_a8d92a720b9a18f5232ab256288ec581b}
+Insere uma serie no pane de resultados \index{Out\+Main@{Out\+Main}!Instance@{Instance}}
+\index{Instance@{Instance}!Out\+Main@{Out\+Main}}
+\subsubsection[{Instance()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Out\+Main}\& Out\+Main\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_out_main_a6c3ba1b5986b6a349d588f6990376d56}
+Recupera a instancia da classe \index{Out\+Main@{Out\+Main}!on\+Changed\+Component@{on\+Changed\+Component}}
+\index{on\+Changed\+Component@{on\+Changed\+Component}!Out\+Main@{Out\+Main}}
+\subsubsection[{on\+Changed\+Component()}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Main\+::on\+Changed\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_out_main_a9b7aa2568fa7fa3196f00686ec24b6cb}
+Evento de mudanÁa para o modelo 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a528080e8ef4be5f15e8a268ef8a06bd6}.
+
+\index{Out\+Main@{Out\+Main}!on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}}
+\index{on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}!Out\+Main@{Out\+Main}}
+\subsubsection[{on\+Changed\+Element\+Type(vector$<$ Element\+I\+D $>$ elemet\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Main\+::on\+Changed\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{elemet\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_out_main_a4a1c598474166ff74b2bfb7c0a64cea9}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a49dc89aa957ef7a7fdb37c6b55041261}.
+
+\index{Out\+Main@{Out\+Main}!on\+Changing\+Component@{on\+Changing\+Component}}
+\index{on\+Changing\+Component@{on\+Changing\+Component}!Out\+Main@{Out\+Main}}
+\subsubsection[{on\+Changing\+Component()}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Main\+::on\+Changing\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_out_main_a37d6c70f8a87dfbed333a42028dbc8d8}
+Evento de saida do modelo 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a86d6778195457395b75c8995e98075f1}.
+
+\index{Out\+Main@{Out\+Main}!on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}}
+\index{on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}!Out\+Main@{Out\+Main}}
+\subsubsection[{on\+Changing\+Element\+Type(vector$<$ Element\+I\+D $>$ element\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Main\+::on\+Changing\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{element\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_out_main_a23f465f26d76230870210bb434bd3387}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a959af092622ea87958a2858d0e2d0ce1}.
+
+\index{Out\+Main@{Out\+Main}!on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}}
+\index{on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}!Out\+Main@{Out\+Main}}
+\subsubsection[{on\+Changing\+Time\+Interval(\+Date\+::\+Time\+Interval time\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Main\+::on\+Changing\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_out_main_aadcba5e89cb93ea9c7762eb9c8dfb8fb}
+Evento chamado quando o sistema muda de intervalo de tempo O modulo adapta os modelos de acordo com o intervalo de tempo definido 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a3e49742b76123d86cd3fec640ba57dd8}.
+
+\index{Out\+Main@{Out\+Main}!on\+Delete\+Elements@{on\+Delete\+Elements}}
+\index{on\+Delete\+Elements@{on\+Delete\+Elements}!Out\+Main@{Out\+Main}}
+\subsubsection[{on\+Delete\+Elements(vector$<$ Element\+I\+D $>$ \&element\+\_\+ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Main\+::on\+Delete\+Elements (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$ \&}]{element\+\_\+ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_out_main_a72ce0516fc28965ad3a6aa2b5c1ea8db}
+Evento de deleÁ„o de nÛ(s) 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_ad77e22c15657b1a02cf967a59ddbc2cd}.
+
+\index{Out\+Main@{Out\+Main}!on\+Delete\+Links@{on\+Delete\+Links}}
+\index{on\+Delete\+Links@{on\+Delete\+Links}!Out\+Main@{Out\+Main}}
+\subsubsection[{on\+Delete\+Links(vector$<$ Element\+I\+D $>$ link\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Main\+::on\+Delete\+Links (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{link\+Ids}
+\end{DoxyParamCaption}
+)}\label{class_out_main_a93834838a11abda4ac7e365450413c11}
+\index{Out\+Main@{Out\+Main}!on\+Init@{on\+Init}}
+\index{on\+Init@{on\+Init}!Out\+Main@{Out\+Main}}
+\subsubsection[{on\+Init(\+S\+I\+G\+A $\ast$main, wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Main\+::on\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+GA} $\ast$}]{main, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_out_main_ac6cff1c588ff0fdd94f3cce1ba6c996c}
+Inicializa a instancia do \doxyref{Out\+Main}{pag.}{class_out_main} 
+\begin{DoxyParams}{Par√¢metros}
+{\em frame} & Janela onde a interface ser· inserida \\
+\hline
+{\em parent} & Componente onde a interface sera inserida \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_aa781bddb43637778a628acbe21a78a01}.
+
+\index{Out\+Main@{Out\+Main}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Out\+Main@{Out\+Main}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Main\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_out_main_a480c382cb183ae06bea403961fdc1140}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a755c932409c320f6a057abf6c4ebc5e4}.
+
+\index{Out\+Main@{Out\+Main}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Out\+Main@{Out\+Main}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Main\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_out_main_a0552f30b4e35f8bbe87d941fc06bb718}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_ad6ccdceebf942b62e75f0255319c9fab}.
+
+\index{Out\+Main@{Out\+Main}!on\+Select\+Element@{on\+Select\+Element}}
+\index{on\+Select\+Element@{on\+Select\+Element}!Out\+Main@{Out\+Main}}
+\subsubsection[{on\+Select\+Element()}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Main\+::on\+Select\+Element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_out_main_aaa60736fe087401861f93222372327cf}
+Evento de seleÁ„o de elemento 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a886fc9240f1faf7948ad00aec78c50c3}.
+
+\index{Out\+Main@{Out\+Main}!remove\+Matrix@{remove\+Matrix}}
+\index{remove\+Matrix@{remove\+Matrix}!Out\+Main@{Out\+Main}}
+\subsubsection[{remove\+Matrix(\+Res\+Matrix $\ast$r\+Matrix, wx\+String path="""")}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Main\+::remove\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Matrix} $\ast$}]{r\+Matrix, }
+\item[{wx\+String}]{path = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_out_main_accd529c1cf9d5d5398f9fe0c0d188b4a}
+\index{Out\+Main@{Out\+Main}!remove\+Result\+Serie@{remove\+Result\+Serie}}
+\index{remove\+Result\+Serie@{remove\+Result\+Serie}!Out\+Main@{Out\+Main}}
+\subsubsection[{remove\+Result\+Serie(const wx\+String \&section, const wx\+String \&unit=wx\+Empty\+String, const wx\+String \&name=wx\+Empty\+String)}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Main\+::remove\+Result\+Serie (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{section, }
+\item[{const wx\+String \&}]{unit = {\ttfamily wxEmptyString}, }
+\item[{const wx\+String \&}]{name = {\ttfamily wxEmptyString}}
+\end{DoxyParamCaption}
+)}\label{class_out_main_a15ad63197d4e631965d77c759270a648}
+Remove uma serie ou seÁ„o do modulo de resultados
+
+O\+BS\+: ainda precisa do unit e do name? \index{Out\+Main@{Out\+Main}!remove\+Serie@{remove\+Serie}}
+\index{remove\+Serie@{remove\+Serie}!Out\+Main@{Out\+Main}}
+\subsubsection[{remove\+Serie(\+Res\+Serie $\ast$r\+Serie, wx\+String path="""")}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Main\+::remove\+Serie (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Serie} $\ast$}]{r\+Serie, }
+\item[{wx\+String}]{path = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_out_main_a0c3fb9eb0200844fd6dfb8e5bb2bfcef}
+Remove uma serie no pane de resultados \index{Out\+Main@{Out\+Main}!update\+Result\+Serie@{update\+Result\+Serie}}
+\index{update\+Result\+Serie@{update\+Result\+Serie}!Out\+Main@{Out\+Main}}
+\subsubsection[{update\+Result\+Serie(const wx\+String \&section, Serie $\ast$serie)}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Main\+::update\+Result\+Serie (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{section, }
+\item[{{\bf Serie} $\ast$}]{serie}
+\end{DoxyParamCaption}
+)}\label{class_out_main_af2e69c7f0def7be806518debd15b1df5}
+Modificar uma serie no modulo de resultados \index{Out\+Main@{Out\+Main}!update\+Viewer@{update\+Viewer}}
+\index{update\+Viewer@{update\+Viewer}!Out\+Main@{Out\+Main}}
+\subsubsection[{update\+Viewer()}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Main\+::update\+Viewer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_out_main_a91eac5c0353a4f4d0e1026a867899a15}
+Atualiza os desenhos na planilha 
+
+\subsection{Atributos}
+\index{Out\+Main@{Out\+Main}!matrix@{matrix}}
+\index{matrix@{matrix}!Out\+Main@{Out\+Main}}
+\subsubsection[{matrix}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Out\+Main\+::matrix[3]}\label{class_out_main_a00c2cea9b7d089ff727891f87cd7b53d}
+
+
+Defini√ß√£o na linha 51 do arquivo Out\+Main.\+h.
+
+\index{Out\+Main@{Out\+Main}!node\+Series\+Opened@{node\+Series\+Opened}}
+\index{node\+Series\+Opened@{node\+Series\+Opened}!Out\+Main@{Out\+Main}}
+\subsubsection[{node\+Series\+Opened}]{\setlength{\rightskip}{0pt plus 5cm}map$<$ {\bf Element\+ID}, vector$<${\bf Res\+Output}$\ast$$>$ $>$ Out\+Main\+::node\+Series\+Opened}\label{class_out_main_a07249342adb17562a334d3d464f4e1f2}
+
+
+Defini√ß√£o na linha 59 do arquivo Out\+Main.\+h.
+
+\index{Out\+Main@{Out\+Main}!outs@{outs}}
+\index{outs@{outs}!Out\+Main@{Out\+Main}}
+\subsubsection[{outs}]{\setlength{\rightskip}{0pt plus 5cm}map$<$int,{\bf Output}$\ast$$>$ Out\+Main\+::outs}\label{class_out_main_aa147e85d9a3bcfac6ad5b489a114e309}
+Mapa de \doxyref{Output}{pag.}{class_output} 
+
+Defini√ß√£o na linha 55 do arquivo Out\+Main.\+h.
+
+\index{Out\+Main@{Out\+Main}!serie@{serie}}
+\index{serie@{serie}!Out\+Main@{Out\+Main}}
+\subsubsection[{serie}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Out\+Main\+::serie}\label{class_out_main_a1175520137004f4f6afa6bd6642677b7}
+Identificadores do \doxyref{S\+I\+G\+A\+Viewer}{pag.}{class_s_i_g_a_viewer} 
+
+Defini√ß√£o na linha 51 do arquivo Out\+Main.\+h.
+
+\index{Out\+Main@{Out\+Main}!viewer@{viewer}}
+\index{viewer@{viewer}!Out\+Main@{Out\+Main}}
+\subsubsection[{viewer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Viewer}$\ast$ Out\+Main\+::viewer}\label{class_out_main_a0b6cc3b6793571018364c7d40725ae73}
+Pane de resultados 
+
+Defini√ß√£o na linha 63 do arquivo Out\+Main.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Out\+Main.\+h}\end{DoxyCompactItemize}

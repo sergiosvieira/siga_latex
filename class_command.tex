@@ -1,0 +1,112 @@
+\section{Referência da Classe Command}
+\label{class_command}\index{Command@{Command}}
+
+
+{\ttfamily \#include $<$Command.\+h$>$}
+
+
+
+Superclasse de {\bf Command\+Add}, {\bf Command\+Add\+Div\+Point}, {\bf Command\+Change\+Demand\+Type}, {\bf Command\+Change\+Type}, {\bf Command\+Move}, {\bf Command\+Remove} e {\bf Command\+Remove\+Div\+Point}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf $\sim$\+Command} ()
+\item 
+virtual void {\bf do\+Command} ()=0
+\item 
+virtual void {\bf redo\+Command} ()=0
+\item 
+virtual void {\bf undo\+Command} ()=0
+\item 
+bool {\bf do\+Command\+Error} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf m\+\_\+can\+\_\+redo} \{ false \}
+\item 
+bool {\bf m\+\_\+do\+\_\+command\+\_\+error} \{ false \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 6 do arquivo Command.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Command@{Command}!````~Command@{$\sim$\+Command}}
+\index{````~Command@{$\sim$\+Command}!Command@{Command}}
+\subsubsection[{$\sim$\+Command()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Command\+::$\sim$\+Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_command_a641c23ef533dd6f77d0a4ef0311598b2}
+
+
+\subsection{Métodos}
+\index{Command@{Command}!do\+Command@{do\+Command}}
+\index{do\+Command@{do\+Command}!Command@{Command}}
+\subsubsection[{do\+Command()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Command\+::do\+Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_command_a3555b798fe9ff85c76f471c10e498dbe}
+
+
+Implementado por {\bf Command\+Change\+Type} \doxyref{}{pag.}{class_command_change_type_ad1f5f796b3ba101d4966150e9077d457}, {\bf Command\+Remove} \doxyref{}{pag.}{class_command_remove_acdde79750561d38d25304495722c45a0}, {\bf Command\+Move} \doxyref{}{pag.}{class_command_move_ac74b2fd833676f7c484f0b7b6f650759}, {\bf Command\+Add} \doxyref{}{pag.}{class_command_add_a59bbf7cd71136645be94888604e148b3}, {\bf Command\+Change\+Demand\+Type} \doxyref{}{pag.}{class_command_change_demand_type_a49434f44e568d72dbbbefffd18b30e10}, {\bf Command\+Add\+Div\+Point} \doxyref{}{pag.}{class_command_add_div_point_a1e6f5c7ba304a80f10219d909f9d79ad} e {\bf Command\+Remove\+Div\+Point} \doxyref{}{pag.}{class_command_remove_div_point_a0c3391725041e61a9775452df35acf54}.
+
+\index{Command@{Command}!do\+Command\+Error@{do\+Command\+Error}}
+\index{do\+Command\+Error@{do\+Command\+Error}!Command@{Command}}
+\subsubsection[{do\+Command\+Error()}]{\setlength{\rightskip}{0pt plus 5cm}bool Command\+::do\+Command\+Error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_command_a905696b53f805a03d55e33e4f2e4ea31}
+\index{Command@{Command}!redo\+Command@{redo\+Command}}
+\index{redo\+Command@{redo\+Command}!Command@{Command}}
+\subsubsection[{redo\+Command()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Command\+::redo\+Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_command_ac9794df74782dd2d2b83d41c2d925d3b}
+
+
+Implementado por {\bf Command\+Change\+Type} \doxyref{}{pag.}{class_command_change_type_ab10d36a428d33c34305cca4b6b3e5b2a}, {\bf Command\+Remove} \doxyref{}{pag.}{class_command_remove_a5907a256e9fd307ed5d77278eae3479c}, {\bf Command\+Move} \doxyref{}{pag.}{class_command_move_a190ab9a3f92e9ea2eff94302686d5715}, {\bf Command\+Add} \doxyref{}{pag.}{class_command_add_abf96d63757f1312603bcef58cba2028b}, {\bf Command\+Change\+Demand\+Type} \doxyref{}{pag.}{class_command_change_demand_type_a18af6cdeaaa8b9e875da34f4abe39a70}, {\bf Command\+Add\+Div\+Point} \doxyref{}{pag.}{class_command_add_div_point_aed9158eead31f5ec4c83a46a6e85707f} e {\bf Command\+Remove\+Div\+Point} \doxyref{}{pag.}{class_command_remove_div_point_ad42e104ef82633d4b52bcc407ab15eeb}.
+
+\index{Command@{Command}!undo\+Command@{undo\+Command}}
+\index{undo\+Command@{undo\+Command}!Command@{Command}}
+\subsubsection[{undo\+Command()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Command\+::undo\+Command (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_command_a67f78fa759133e2f9c544a11b813cbe2}
+
+
+Implementado por {\bf Command\+Change\+Type} \doxyref{}{pag.}{class_command_change_type_a9b11b5b4d58d6394879b8d548661d1f2}, {\bf Command\+Remove} \doxyref{}{pag.}{class_command_remove_a0220ab159ac56cf79fd669a15573a30c}, {\bf Command\+Move} \doxyref{}{pag.}{class_command_move_a109bb248596e2b05bedff1c5b917353e}, {\bf Command\+Add} \doxyref{}{pag.}{class_command_add_afd557dcf86d084627a45b88a2bd498e5}, {\bf Command\+Change\+Demand\+Type} \doxyref{}{pag.}{class_command_change_demand_type_aff039a874ec4b50ded5a3032497b8442}, {\bf Command\+Add\+Div\+Point} \doxyref{}{pag.}{class_command_add_div_point_a876014885b0ea43484f6cd1a72d05152} e {\bf Command\+Remove\+Div\+Point} \doxyref{}{pag.}{class_command_remove_div_point_a241fcfbe1f412d4b182ba3aae08f82b1}.
+
+
+
+\subsection{Atributos}
+\index{Command@{Command}!m\+\_\+can\+\_\+redo@{m\+\_\+can\+\_\+redo}}
+\index{m\+\_\+can\+\_\+redo@{m\+\_\+can\+\_\+redo}!Command@{Command}}
+\subsubsection[{m\+\_\+can\+\_\+redo}]{\setlength{\rightskip}{0pt plus 5cm}bool Command\+::m\+\_\+can\+\_\+redo \{ false \}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_command_ac0afac8bcc9c7b1bc3e3a7d656a399b4}
+
+
+Definição na linha 16 do arquivo Command.\+h.
+
+\index{Command@{Command}!m\+\_\+do\+\_\+command\+\_\+error@{m\+\_\+do\+\_\+command\+\_\+error}}
+\index{m\+\_\+do\+\_\+command\+\_\+error@{m\+\_\+do\+\_\+command\+\_\+error}!Command@{Command}}
+\subsubsection[{m\+\_\+do\+\_\+command\+\_\+error}]{\setlength{\rightskip}{0pt plus 5cm}bool Command\+::m\+\_\+do\+\_\+command\+\_\+error \{ false \}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_command_aeb409e16ff60245beadd7bd70d4c5722}
+
+
+Definição na linha 17 do arquivo Command.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Command.\+h}\end{DoxyCompactItemize}

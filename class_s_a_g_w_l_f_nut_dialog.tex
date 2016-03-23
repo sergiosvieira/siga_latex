@@ -1,0 +1,160 @@
+\section{ReferÃªncia da Classe S\+A\+G\+W\+L\+F\+Nut\+Dialog}
+\label{class_s_a_g_w_l_f_nut_dialog}\index{S\+A\+G\+W\+L\+F\+Nut\+Dialog@{S\+A\+G\+W\+L\+F\+Nut\+Dialog}}
+
+
+{\ttfamily \#include $<$G\+W\+L\+F\+Pho\+Interface.\+h$>$}
+
+
+
+Herdeiro de wx\+Dialog.
+
+
+
+Superclasse de {\bf S\+A\+G\+W\+L\+F\+Nit\+Dialog}.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+A\+G\+W\+L\+F\+Nut\+Dialog} (wx\+Window $\ast$parent, wx\+Window\+ID id, const wx\+String \&title, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size)
+\item 
+void {\bf set\+Info} ({\bf Subbasin} $\ast$sub, {\bf G\+W\+L\+F\+Dissolved\+Nutrient} $\ast$dis\+Nut, {\bf G\+W\+L\+F\+Solid\+Nutrient} $\ast$sol\+Nut)
+\item 
+void {\bf save\+Info} ({\bf Subbasin} $\ast$sub, {\bf G\+W\+L\+F\+Dissolved\+Nutrient} $\ast$dis\+Nut, {\bf G\+W\+L\+F\+Solid\+Nutrient} $\ast$sol\+Nut)
+\item 
+void {\bf on\+Save\+SA} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Load\+SA} (wx\+Command\+Event \&event)
+\item 
+virtual void {\bf save\+Info\+To\+File} ()
+\item 
+virtual void {\bf load\+Info\+In\+File} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+G\+A\+Grid} $\ast$ {\bf grid\+SA}
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 59 do arquivo G\+W\+L\+F\+Pho\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{S\+A\+G\+W\+L\+F\+Nut\+Dialog@{S\+A\+G\+W\+L\+F\+Nut\+Dialog}!S\+A\+G\+W\+L\+F\+Nut\+Dialog@{S\+A\+G\+W\+L\+F\+Nut\+Dialog}}
+\index{S\+A\+G\+W\+L\+F\+Nut\+Dialog@{S\+A\+G\+W\+L\+F\+Nut\+Dialog}!S\+A\+G\+W\+L\+F\+Nut\+Dialog@{S\+A\+G\+W\+L\+F\+Nut\+Dialog}}
+\subsubsection[{S\+A\+G\+W\+L\+F\+Nut\+Dialog(wx\+Window $\ast$parent, wx\+Window\+I\+D id, const wx\+String \&title, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size)}]{\setlength{\rightskip}{0pt plus 5cm}S\+A\+G\+W\+L\+F\+Nut\+Dialog\+::\+S\+A\+G\+W\+L\+F\+Nut\+Dialog (
+\begin{DoxyParamCaption}
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{wx\+Window\+ID}]{id, }
+\item[{const wx\+String \&}]{title, }
+\item[{const wx\+Point \&}]{pos = {\ttfamily wxDefaultPosition}, }
+\item[{const wx\+Size \&}]{size = {\ttfamily wxDefaultSize}}
+\end{DoxyParamCaption}
+)}\label{class_s_a_g_w_l_f_nut_dialog_a7e4ce66089f37303a09a0624e92d4b90}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em parent} & Pai da janela \\
+\hline
+{\em id} & Identificador \\
+\hline
+{\em title} & Nome da caixa de dialogo \\
+\hline
+{\em pos} & Posição \\
+\hline
+{\em size} & Tamanho \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{MÃ©todos}
+\index{S\+A\+G\+W\+L\+F\+Nut\+Dialog@{S\+A\+G\+W\+L\+F\+Nut\+Dialog}!load\+Info\+In\+File@{load\+Info\+In\+File}}
+\index{load\+Info\+In\+File@{load\+Info\+In\+File}!S\+A\+G\+W\+L\+F\+Nut\+Dialog@{S\+A\+G\+W\+L\+F\+Nut\+Dialog}}
+\subsubsection[{load\+Info\+In\+File()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+A\+G\+W\+L\+F\+Nut\+Dialog\+::load\+Info\+In\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_a_g_w_l_f_nut_dialog_a2eb4355cfadff05cd02e1673617e6817}
+Abre informações do nutriente de arquivo 
+
+Reimplementado por {\bf S\+A\+G\+W\+L\+F\+Nit\+Dialog} \doxyref{}{pag.}{class_s_a_g_w_l_f_nit_dialog_aa65f5883698a45366998bae1b662177e}.
+
+\index{S\+A\+G\+W\+L\+F\+Nut\+Dialog@{S\+A\+G\+W\+L\+F\+Nut\+Dialog}!on\+Load\+SA@{on\+Load\+SA}}
+\index{on\+Load\+SA@{on\+Load\+SA}!S\+A\+G\+W\+L\+F\+Nut\+Dialog@{S\+A\+G\+W\+L\+F\+Nut\+Dialog}}
+\subsubsection[{on\+Load\+S\+A(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+G\+W\+L\+F\+Nut\+Dialog\+::on\+Load\+SA (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_a_g_w_l_f_nut_dialog_a2e4f850b97093db0dacdbd7ca7004006}
+Evento de abrir informações de areas fontes de arquivo \index{S\+A\+G\+W\+L\+F\+Nut\+Dialog@{S\+A\+G\+W\+L\+F\+Nut\+Dialog}!on\+Save\+SA@{on\+Save\+SA}}
+\index{on\+Save\+SA@{on\+Save\+SA}!S\+A\+G\+W\+L\+F\+Nut\+Dialog@{S\+A\+G\+W\+L\+F\+Nut\+Dialog}}
+\subsubsection[{on\+Save\+S\+A(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+G\+W\+L\+F\+Nut\+Dialog\+::on\+Save\+SA (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_a_g_w_l_f_nut_dialog_a071b29f3d016624686c47001aace058f}
+Evento de salvar as informações das areas fontes em arquivo \index{S\+A\+G\+W\+L\+F\+Nut\+Dialog@{S\+A\+G\+W\+L\+F\+Nut\+Dialog}!save\+Info@{save\+Info}}
+\index{save\+Info@{save\+Info}!S\+A\+G\+W\+L\+F\+Nut\+Dialog@{S\+A\+G\+W\+L\+F\+Nut\+Dialog}}
+\subsubsection[{save\+Info(\+Subbasin $\ast$sub, G\+W\+L\+F\+Dissolved\+Nutrient $\ast$dis\+Nut, G\+W\+L\+F\+Solid\+Nutrient $\ast$sol\+Nut)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+G\+W\+L\+F\+Nut\+Dialog\+::save\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Subbasin} $\ast$}]{sub, }
+\item[{{\bf G\+W\+L\+F\+Dissolved\+Nutrient} $\ast$}]{dis\+Nut, }
+\item[{{\bf G\+W\+L\+F\+Solid\+Nutrient} $\ast$}]{sol\+Nut}
+\end{DoxyParamCaption}
+)}\label{class_s_a_g_w_l_f_nut_dialog_a982f788bfba68d965de52fa17a4fb87c}
+Salva as informações na interface 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em sub} & Subbacia \\
+\hline
+{\em dis\+Nut} & Nutriente dissolvido \\
+\hline
+{\em sol\+Nut} & Nutriente solido \\
+\hline
+\end{DoxyParams}
+\index{S\+A\+G\+W\+L\+F\+Nut\+Dialog@{S\+A\+G\+W\+L\+F\+Nut\+Dialog}!save\+Info\+To\+File@{save\+Info\+To\+File}}
+\index{save\+Info\+To\+File@{save\+Info\+To\+File}!S\+A\+G\+W\+L\+F\+Nut\+Dialog@{S\+A\+G\+W\+L\+F\+Nut\+Dialog}}
+\subsubsection[{save\+Info\+To\+File()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+A\+G\+W\+L\+F\+Nut\+Dialog\+::save\+Info\+To\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_a_g_w_l_f_nut_dialog_ac661736bebdd0519b36405cf23422bb4}
+Salva informações do nutriente em arquivo 
+
+Reimplementado por {\bf S\+A\+G\+W\+L\+F\+Nit\+Dialog} \doxyref{}{pag.}{class_s_a_g_w_l_f_nit_dialog_aeac3839a91c3adbc6ef1519c5d2b6ca1}.
+
+\index{S\+A\+G\+W\+L\+F\+Nut\+Dialog@{S\+A\+G\+W\+L\+F\+Nut\+Dialog}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!S\+A\+G\+W\+L\+F\+Nut\+Dialog@{S\+A\+G\+W\+L\+F\+Nut\+Dialog}}
+\subsubsection[{set\+Info(\+Subbasin $\ast$sub, G\+W\+L\+F\+Dissolved\+Nutrient $\ast$dis\+Nut, G\+W\+L\+F\+Solid\+Nutrient $\ast$sol\+Nut)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+G\+W\+L\+F\+Nut\+Dialog\+::set\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Subbasin} $\ast$}]{sub, }
+\item[{{\bf G\+W\+L\+F\+Dissolved\+Nutrient} $\ast$}]{dis\+Nut, }
+\item[{{\bf G\+W\+L\+F\+Solid\+Nutrient} $\ast$}]{sol\+Nut}
+\end{DoxyParamCaption}
+)}\label{class_s_a_g_w_l_f_nut_dialog_a5a98c5ed04403f76a36588c46e715a4c}
+Insere as informações na interface 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em sub} & Subbacia \\
+\hline
+{\em dis\+Nut} & Nutriente dissolvido \\
+\hline
+{\em sol\+Nut} & Nutriente solido \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{S\+A\+G\+W\+L\+F\+Nut\+Dialog@{S\+A\+G\+W\+L\+F\+Nut\+Dialog}!grid\+SA@{grid\+SA}}
+\index{grid\+SA@{grid\+SA}!S\+A\+G\+W\+L\+F\+Nut\+Dialog@{S\+A\+G\+W\+L\+F\+Nut\+Dialog}}
+\subsubsection[{grid\+SA}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Grid}$\ast$ S\+A\+G\+W\+L\+F\+Nut\+Dialog\+::grid\+SA}\label{class_s_a_g_w_l_f_nut_dialog_a4f44c74bc21e826bb8eb2aef7d17c067}
+Grade onde os valores serão inseridos 
+
+DefiniÃ§Ã£o na linha 65 do arquivo G\+W\+L\+F\+Pho\+Interface.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf G\+W\+L\+F\+Pho\+Interface.\+h}\end{DoxyCompactItemize}

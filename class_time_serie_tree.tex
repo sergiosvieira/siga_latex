@@ -1,0 +1,283 @@
+\section{Referência da Classe Time\+Serie\+Tree}
+\label{class_time_serie_tree}\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+
+
+{\ttfamily \#include $<$Time\+Serie\+Tree.\+h$>$}
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+typedef {\bf tree}$<$ {\bf Tree\+Node} $>$\+::iterator {\bf Tree\+Node\+Iterator}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Time\+Serie\+Tree} ()
+\item 
+{\bf Time\+Serie\+Tree} (int a\+\_\+year, {\bf Period\+Type} a\+\_\+type)
+\item 
+{\bf $\sim$\+Time\+Serie\+Tree} ()
+\item 
+void {\bf create\+Nodes} (int a\+\_\+year, {\bf Period\+Type} a\+\_\+type)
+\item 
+bool {\bf insert\+Value\+On\+Station} (const {\bf C\+Date} \&a\+\_\+date, const int \&a\+\_\+station\+ID, const float \&a\+\_\+value)
+\item 
+void {\bf insert\+Station\+ID} (const int \&a\+\_\+station\+ID)
+\item 
+void {\bf clear\+Stations} ()
+\item 
+std\+::tuple$<$ float, float, float $>$ {\bf value\+On\+Station} (const {\bf C\+Date} \&a\+\_\+date, const int \&a\+\_\+station\+ID)
+\item 
+void {\bf sort\+Values} ()
+\item 
+int {\bf depth} ({\bf Tree\+Node\+Iterator} \&a\+\_\+node\+Iterator) const 
+\item 
+int {\bf stations\+Length} () const 
+\item 
+int {\bf rows\+Length} () const 
+\item 
+std\+::vector$<$ std\+::string $>$ {\bf station\+Labels} () const 
+\item 
+int {\bf station\+ID} (int a\+\_\+index) const 
+\item 
+{\bf Tree\+Node\+Iterator} {\bf begin} () const 
+\item 
+{\bf Tree\+Node\+Iterator} {\bf end} () const 
+\item 
+int {\bf years\+Lenght} () const 
+\item 
+{\bf Period\+Type} {\bf period\+Type} () const 
+\item 
+int {\bf size} () const 
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ int $>$ {\bf m\+\_\+stations}
+\item 
+{\bf tree}$<$ {\bf Tree\+Node} $>$ {\bf m\+\_\+tree}
+\item 
+int {\bf m\+\_\+rows} = 0
+\item 
+int {\bf m\+\_\+years\+Counter} = 0
+\item 
+{\bf Period\+Type} {\bf m\+\_\+type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+\doxyref{S\+I\+GA}{pag.}{class_s_i_g_a} C++ 
+
+Definição na linha 13 do arquivo Time\+Serie\+Tree.\+h.
+
+
+
+\subsection{Definições de Tipos}
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!Tree\+Node\+Iterator@{Tree\+Node\+Iterator}}
+\index{Tree\+Node\+Iterator@{Tree\+Node\+Iterator}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{Tree\+Node\+Iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf tree}$<${\bf Tree\+Node}$>$\+::iterator {\bf Time\+Serie\+Tree\+::\+Tree\+Node\+Iterator}}\label{class_time_serie_tree_ab67b4a55541ad333d889a9b9c4a6b6e7}
+
+
+Definição na linha 16 do arquivo Time\+Serie\+Tree.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{Time\+Serie\+Tree()}]{\setlength{\rightskip}{0pt plus 5cm}Time\+Serie\+Tree\+::\+Time\+Serie\+Tree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_time_serie_tree_ade43643c29e334160e7a83f23c07dbcb}
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{Time\+Serie\+Tree(int a\+\_\+year, Period\+Type a\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}Time\+Serie\+Tree\+::\+Time\+Serie\+Tree (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+year, }
+\item[{{\bf Period\+Type}}]{a\+\_\+type}
+\end{DoxyParamCaption}
+)}\label{class_time_serie_tree_a7fa5a2975397aeb146d4386f14a41a10}
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!````~Time\+Serie\+Tree@{$\sim$\+Time\+Serie\+Tree}}
+\index{````~Time\+Serie\+Tree@{$\sim$\+Time\+Serie\+Tree}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{$\sim$\+Time\+Serie\+Tree()}]{\setlength{\rightskip}{0pt plus 5cm}Time\+Serie\+Tree\+::$\sim$\+Time\+Serie\+Tree (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_time_serie_tree_ac398b0c1db841aaefc2da3cf7948a09f}
+
+
+\subsection{Métodos}
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!begin@{begin}}
+\index{begin@{begin}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{begin() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tree\+Node\+Iterator} Time\+Serie\+Tree\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_time_serie_tree_aa623022c97f3ca15aec860af0bfcb3bc}
+
+
+Definição na linha 40 do arquivo Time\+Serie\+Tree.\+h.
+
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!clear\+Stations@{clear\+Stations}}
+\index{clear\+Stations@{clear\+Stations}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{clear\+Stations()}]{\setlength{\rightskip}{0pt plus 5cm}void Time\+Serie\+Tree\+::clear\+Stations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_time_serie_tree_a380cb4feffc4a7a7ee0152e0c3164309}
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!create\+Nodes@{create\+Nodes}}
+\index{create\+Nodes@{create\+Nodes}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{create\+Nodes(int a\+\_\+year, Period\+Type a\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}void Time\+Serie\+Tree\+::create\+Nodes (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+year, }
+\item[{{\bf Period\+Type}}]{a\+\_\+type}
+\end{DoxyParamCaption}
+)}\label{class_time_serie_tree_a0f7892fce38883869086fbca7f86d5d1}
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!depth@{depth}}
+\index{depth@{depth}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{depth(\+Tree\+Node\+Iterator \&a\+\_\+node\+Iterator) const }]{\setlength{\rightskip}{0pt plus 5cm}int Time\+Serie\+Tree\+::depth (
+\begin{DoxyParamCaption}
+\item[{{\bf Tree\+Node\+Iterator} \&}]{a\+\_\+node\+Iterator}
+\end{DoxyParamCaption}
+) const}\label{class_time_serie_tree_a424e92d8ff9c100c15b87d2810f4ba3f}
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!end@{end}}
+\index{end@{end}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{end() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Tree\+Node\+Iterator} Time\+Serie\+Tree\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_time_serie_tree_ae959b62aadd5ef22efc6423dfc6a09d7}
+
+
+Definição na linha 44 do arquivo Time\+Serie\+Tree.\+h.
+
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!insert\+Station\+ID@{insert\+Station\+ID}}
+\index{insert\+Station\+ID@{insert\+Station\+ID}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{insert\+Station\+I\+D(const int \&a\+\_\+station\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}void Time\+Serie\+Tree\+::insert\+Station\+ID (
+\begin{DoxyParamCaption}
+\item[{const int \&}]{a\+\_\+station\+ID}
+\end{DoxyParamCaption}
+)}\label{class_time_serie_tree_aa29a12a2c82f0900667b51250c2f2286}
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!insert\+Value\+On\+Station@{insert\+Value\+On\+Station}}
+\index{insert\+Value\+On\+Station@{insert\+Value\+On\+Station}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{insert\+Value\+On\+Station(const C\+Date \&a\+\_\+date, const int \&a\+\_\+station\+I\+D, const float \&a\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}bool Time\+Serie\+Tree\+::insert\+Value\+On\+Station (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Date} \&}]{a\+\_\+date, }
+\item[{const int \&}]{a\+\_\+station\+ID, }
+\item[{const float \&}]{a\+\_\+value}
+\end{DoxyParamCaption}
+)}\label{class_time_serie_tree_a85397a28927a8d7b2228769f6a9e65c8}
+\begin{DoxyReturn}{Retorna}
+value inserted with success -\/ true or false 
+\end{DoxyReturn}
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!period\+Type@{period\+Type}}
+\index{period\+Type@{period\+Type}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{period\+Type() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Period\+Type} Time\+Serie\+Tree\+::period\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_time_serie_tree_a3f3b712e0d2ca0a9e3c3510b99a6aee4}
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!rows\+Length@{rows\+Length}}
+\index{rows\+Length@{rows\+Length}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{rows\+Length() const }]{\setlength{\rightskip}{0pt plus 5cm}int Time\+Serie\+Tree\+::rows\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_time_serie_tree_a0ba24f0342c540bb5a936550ad9a7d4b}
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!size@{size}}
+\index{size@{size}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{size() const }]{\setlength{\rightskip}{0pt plus 5cm}int Time\+Serie\+Tree\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_time_serie_tree_a083555a7b819a57cf070fabdaa65f230}
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!sort\+Values@{sort\+Values}}
+\index{sort\+Values@{sort\+Values}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{sort\+Values()}]{\setlength{\rightskip}{0pt plus 5cm}void Time\+Serie\+Tree\+::sort\+Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_time_serie_tree_aac9a3c1426062046d69e54ea7b22151f}
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!station\+ID@{station\+ID}}
+\index{station\+ID@{station\+ID}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{station\+I\+D(int a\+\_\+index) const }]{\setlength{\rightskip}{0pt plus 5cm}int Time\+Serie\+Tree\+::station\+ID (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+index}
+\end{DoxyParamCaption}
+) const}\label{class_time_serie_tree_a3c389c66c5baf2630cccea9e5023805c}
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!station\+Labels@{station\+Labels}}
+\index{station\+Labels@{station\+Labels}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{station\+Labels() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ Time\+Serie\+Tree\+::station\+Labels (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_time_serie_tree_a7c41787a9c379909838c507a0464f87b}
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!stations\+Length@{stations\+Length}}
+\index{stations\+Length@{stations\+Length}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{stations\+Length() const }]{\setlength{\rightskip}{0pt plus 5cm}int Time\+Serie\+Tree\+::stations\+Length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_time_serie_tree_ac87821c000f91da136bdd12a708a2473}
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!value\+On\+Station@{value\+On\+Station}}
+\index{value\+On\+Station@{value\+On\+Station}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{value\+On\+Station(const C\+Date \&a\+\_\+date, const int \&a\+\_\+station\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::tuple$<$float, float, float$>$ Time\+Serie\+Tree\+::value\+On\+Station (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Date} \&}]{a\+\_\+date, }
+\item[{const int \&}]{a\+\_\+station\+ID}
+\end{DoxyParamCaption}
+)}\label{class_time_serie_tree_afeba98770f67299736f987ee3874a022}
+\begin{DoxyReturn}{Retorna}
+day value, month (sum of days), year (sum of months) 
+\end{DoxyReturn}
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!years\+Lenght@{years\+Lenght}}
+\index{years\+Lenght@{years\+Lenght}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{years\+Lenght() const }]{\setlength{\rightskip}{0pt plus 5cm}int Time\+Serie\+Tree\+::years\+Lenght (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_time_serie_tree_af9949aa0f19747f3e908c9310300cfbe}
+
+
+\subsection{Atributos}
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!m\+\_\+rows@{m\+\_\+rows}}
+\index{m\+\_\+rows@{m\+\_\+rows}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{m\+\_\+rows}]{\setlength{\rightskip}{0pt plus 5cm}int Time\+Serie\+Tree\+::m\+\_\+rows = 0\hspace{0.3cm}{\ttfamily [protected]}}\label{class_time_serie_tree_aad6960caa6c3d509cbf44603fe3a5191}
+
+
+Definição na linha 54 do arquivo Time\+Serie\+Tree.\+h.
+
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!m\+\_\+stations@{m\+\_\+stations}}
+\index{m\+\_\+stations@{m\+\_\+stations}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{m\+\_\+stations}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ Time\+Serie\+Tree\+::m\+\_\+stations\hspace{0.3cm}{\ttfamily [protected]}}\label{class_time_serie_tree_a503d5cc9c73e58543ca82e6f1c129c7c}
+
+
+Definição na linha 52 do arquivo Time\+Serie\+Tree.\+h.
+
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!m\+\_\+tree@{m\+\_\+tree}}
+\index{m\+\_\+tree@{m\+\_\+tree}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{m\+\_\+tree}]{\setlength{\rightskip}{0pt plus 5cm}{\bf tree}$<${\bf Tree\+Node}$>$ Time\+Serie\+Tree\+::m\+\_\+tree\hspace{0.3cm}{\ttfamily [protected]}}\label{class_time_serie_tree_ae3a1c7830ab66ce199de571a4b765aed}
+
+
+Definição na linha 53 do arquivo Time\+Serie\+Tree.\+h.
+
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!m\+\_\+type@{m\+\_\+type}}
+\index{m\+\_\+type@{m\+\_\+type}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{m\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Period\+Type} Time\+Serie\+Tree\+::m\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_time_serie_tree_ab775f0f013216a1ac413773813678847}
+
+
+Definição na linha 56 do arquivo Time\+Serie\+Tree.\+h.
+
+\index{Time\+Serie\+Tree@{Time\+Serie\+Tree}!m\+\_\+years\+Counter@{m\+\_\+years\+Counter}}
+\index{m\+\_\+years\+Counter@{m\+\_\+years\+Counter}!Time\+Serie\+Tree@{Time\+Serie\+Tree}}
+\subsubsection[{m\+\_\+years\+Counter}]{\setlength{\rightskip}{0pt plus 5cm}int Time\+Serie\+Tree\+::m\+\_\+years\+Counter = 0\hspace{0.3cm}{\ttfamily [protected]}}\label{class_time_serie_tree_a743823703a918882adb2e3b3be12338f}
+
+
+Definição na linha 55 do arquivo Time\+Serie\+Tree.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Time\+Serie\+Tree.\+h}\end{DoxyCompactItemize}

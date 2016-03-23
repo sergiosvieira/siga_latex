@@ -1,0 +1,152 @@
+\section{Refer√™ncia da Classe H\+Y\+M\+O\+D\+Scenario}
+\label{class_h_y_m_o_d_scenario}\index{H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}}
+
+
+{\ttfamily \#include $<$H\+Y\+M\+O\+D\+Scenario.\+h$>$}
+
+
+
+Herdeiro de {\bf Hidro\+Scenario}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf H\+Y\+M\+O\+D\+Scenario} ({\bf H\+Y\+M\+O\+D\+Model} $\ast$parent, {\bf Date} interval\+Begin, {\bf Date} interval\+End)
+\item 
+{\bf $\sim$\+H\+Y\+M\+O\+D\+Scenario} ()
+\item 
+bool {\bf empty} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf H\+Y\+M\+O\+D\+Param} $\ast$ {\bf param}
+\item 
+{\bf Serie} $\ast$ {\bf prec}
+\item 
+{\bf Serie} $\ast$ {\bf etp}
+\item 
+wx\+String {\bf etp\+File\+Name}
+\item 
+wx\+String {\bf prec\+File\+Name}
+\item 
+double {\bf water\+Storage}
+\item 
+double {\bf slow\+Tank\+State}
+\item 
+vector$<$ double $>$ {\bf quick\+Tank\+State}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 16 do arquivo H\+Y\+M\+O\+D\+Scenario.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}!H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}}
+\index{H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}!H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}}
+\subsubsection[{H\+Y\+M\+O\+D\+Scenario(\+H\+Y\+M\+O\+D\+Model $\ast$parent, Date interval\+Begin, Date interval\+End)}]{\setlength{\rightskip}{0pt plus 5cm}H\+Y\+M\+O\+D\+Scenario\+::\+H\+Y\+M\+O\+D\+Scenario (
+\begin{DoxyParamCaption}
+\item[{{\bf H\+Y\+M\+O\+D\+Model} $\ast$}]{parent, }
+\item[{{\bf Date}}]{interval\+Begin, }
+\item[{{\bf Date}}]{interval\+End}
+\end{DoxyParamCaption}
+)}\label{class_h_y_m_o_d_scenario_a6ca9cd3e6cf66fc1b29ca352d0ba2fef}
+Construtor \index{H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}!````~H\+Y\+M\+O\+D\+Scenario@{$\sim$\+H\+Y\+M\+O\+D\+Scenario}}
+\index{````~H\+Y\+M\+O\+D\+Scenario@{$\sim$\+H\+Y\+M\+O\+D\+Scenario}!H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}}
+\subsubsection[{$\sim$\+H\+Y\+M\+O\+D\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}H\+Y\+M\+O\+D\+Scenario\+::$\sim$\+H\+Y\+M\+O\+D\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_h_y_m_o_d_scenario_a1730c23d83b3c392c22d38ba616e404b}
+Destrutor 
+
+\subsection{M√©todos}
+\index{H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool H\+Y\+M\+O\+D\+Scenario\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_h_y_m_o_d_scenario_a26d333df370a81c16c9e5ae1b26e7d10}
+Avalia se todas as informaÁıes importantes para o modelo formam informadas 
+\begin{DoxyParams}{Par√¢metros}
+{\em dialog} & Caixa de dialogo onde os erros ser„o apresentados \\
+\hline
+\end{DoxyParams}
+\index{H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}!empty@{empty}}
+\index{empty@{empty}!H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool H\+Y\+M\+O\+D\+Scenario\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_h_y_m_o_d_scenario_aef87c7e0b9aa8bd96e4a2832f87996d2}
+retorna se existe algum valor no modelo 
+
+\subsection{Atributos}
+\index{H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}!etp@{etp}}
+\index{etp@{etp}!H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}}
+\subsubsection[{etp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ H\+Y\+M\+O\+D\+Scenario\+::etp}\label{class_h_y_m_o_d_scenario_ac2c98722b9e91c72a1bb0a5d80f404a5}
+EvaporaÁ„o potencial 
+
+Defini√ß√£o na linha 33 do arquivo H\+Y\+M\+O\+D\+Scenario.\+h.
+
+\index{H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}!etp\+File\+Name@{etp\+File\+Name}}
+\index{etp\+File\+Name@{etp\+File\+Name}!H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}}
+\subsubsection[{etp\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String H\+Y\+M\+O\+D\+Scenario\+::etp\+File\+Name}\label{class_h_y_m_o_d_scenario_a137378e08dd2e0c25e9dbd9ebb574b8b}
+Nomes dos arquivos de precipitaÁ„o e evaporaÁ„o 
+
+Defini√ß√£o na linha 37 do arquivo H\+Y\+M\+O\+D\+Scenario.\+h.
+
+\index{H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}!param@{param}}
+\index{param@{param}!H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}}
+\subsubsection[{param}]{\setlength{\rightskip}{0pt plus 5cm}{\bf H\+Y\+M\+O\+D\+Param}$\ast$ H\+Y\+M\+O\+D\+Scenario\+::param}\label{class_h_y_m_o_d_scenario_aeaaeceae6e5b9dc2124419d9c6666e52}
+Par‚metros do modelo H\+Y\+M\+OD 
+
+Defini√ß√£o na linha 23 do arquivo H\+Y\+M\+O\+D\+Scenario.\+h.
+
+\index{H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}!prec@{prec}}
+\index{prec@{prec}!H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}}
+\subsubsection[{prec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ H\+Y\+M\+O\+D\+Scenario\+::prec}\label{class_h_y_m_o_d_scenario_acf745443bdc1cc230bf38583f6b0f433}
+PrecipitaÁ„o sobre a bacia 
+
+Defini√ß√£o na linha 28 do arquivo H\+Y\+M\+O\+D\+Scenario.\+h.
+
+\index{H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}!prec\+File\+Name@{prec\+File\+Name}}
+\index{prec\+File\+Name@{prec\+File\+Name}!H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}}
+\subsubsection[{prec\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String H\+Y\+M\+O\+D\+Scenario\+::prec\+File\+Name}\label{class_h_y_m_o_d_scenario_a1ab6da1adb775f01fe253049f8eb8543}
+
+
+Defini√ß√£o na linha 37 do arquivo H\+Y\+M\+O\+D\+Scenario.\+h.
+
+\index{H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}!quick\+Tank\+State@{quick\+Tank\+State}}
+\index{quick\+Tank\+State@{quick\+Tank\+State}!H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}}
+\subsubsection[{quick\+Tank\+State}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ H\+Y\+M\+O\+D\+Scenario\+::quick\+Tank\+State}\label{class_h_y_m_o_d_scenario_a5d5743fa01db1178a7043815fd426304}
+CondiÁ„o inicial dos tanque de fluxo r·pido 
+
+Defini√ß√£o na linha 52 do arquivo H\+Y\+M\+O\+D\+Scenario.\+h.
+
+\index{H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}!slow\+Tank\+State@{slow\+Tank\+State}}
+\index{slow\+Tank\+State@{slow\+Tank\+State}!H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}}
+\subsubsection[{slow\+Tank\+State}]{\setlength{\rightskip}{0pt plus 5cm}double H\+Y\+M\+O\+D\+Scenario\+::slow\+Tank\+State}\label{class_h_y_m_o_d_scenario_a27b0cf23db97fc953f8da7df043f6cfb}
+CondiÁ„o inicial do tanque de fluxo lento 
+
+Defini√ß√£o na linha 47 do arquivo H\+Y\+M\+O\+D\+Scenario.\+h.
+
+\index{H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}!water\+Storage@{water\+Storage}}
+\index{water\+Storage@{water\+Storage}!H\+Y\+M\+O\+D\+Scenario@{H\+Y\+M\+O\+D\+Scenario}}
+\subsubsection[{water\+Storage}]{\setlength{\rightskip}{0pt plus 5cm}double H\+Y\+M\+O\+D\+Scenario\+::water\+Storage}\label{class_h_y_m_o_d_scenario_a9ffdcebec31626e6de442494e04c199e}
+¡gua armazenada na bacia, condiÁ„o inicial 
+
+Defini√ß√£o na linha 42 do arquivo H\+Y\+M\+O\+D\+Scenario.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf H\+Y\+M\+O\+D\+Scenario.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,205 @@
+\section{Referência da Classe T\+A\+L\+River\+W\+Q\+Result}
+\label{class_t_a_l_river_w_q_result}\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}
+
+
+{\ttfamily \#include $<$T\+A\+L\+River\+W\+Q\+Result.\+h$>$}
+
+
+
+Herdeiro de {\bf W\+Q\+Result}.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf T\+A\+L\+Polutant\+Type} \{ \\*
+{\bf T\+A\+L\+\_\+\+OD}, 
+{\bf T\+A\+L\+\_\+\+D\+BO}, 
+{\bf T\+A\+L\+\_\+\+PS}, 
+{\bf T\+A\+L\+\_\+N}, 
+\\*
+{\bf T\+A\+L\+\_\+\+C\+OL}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf T\+A\+L\+River\+W\+Q\+Result} ()
+\item 
+{\bf $\sim$\+T\+A\+L\+River\+W\+Q\+Result} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf drain\+Dis}
+\item 
+map$<$ {\bf T\+A\+L\+Polutant\+Type}, double $>$ {\bf point\+Con}
+\item 
+double {\bf Def\+OD}
+\item 
+double {\bf Csat}
+\item 
+double {\bf q\+Link}
+\item 
+double {\bf velo\+Link}
+\item 
+double {\bf dpth\+Link}
+\item 
+map$<$ {\bf T\+A\+L\+Polutant\+Type}, double $>$ {\bf framing}
+\item 
+map$<$ {\bf T\+A\+L\+Polutant\+Type}, double $>$ {\bf begin\+Con}
+\item 
+map$<$ {\bf T\+A\+L\+Polutant\+Type}, double $>$ {\bf mid\+Con}
+\item 
+map$<$ {\bf T\+A\+L\+Polutant\+Type}, double $>$ {\bf end\+Con}
+\item 
+{\bf Matrix} {\bf con\+X\+Dis}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 8 do arquivo T\+A\+L\+River\+W\+Q\+Result.\+h.
+
+
+
+\subsection{Enumerações}
+\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}!T\+A\+L\+Polutant\+Type@{T\+A\+L\+Polutant\+Type}}
+\index{T\+A\+L\+Polutant\+Type@{T\+A\+L\+Polutant\+Type}!T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}
+\subsubsection[{T\+A\+L\+Polutant\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf T\+A\+L\+River\+W\+Q\+Result\+::\+T\+A\+L\+Polutant\+Type}}\label{class_t_a_l_river_w_q_result_a73d4923c7fbfadbac2222d675c7a4069}
+Enumerador para diferenciar o tipo de poluente \begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{T\+A\+L\+\_\+\+OD@{T\+A\+L\+\_\+\+OD}!T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}!T\+A\+L\+\_\+\+OD@{T\+A\+L\+\_\+\+OD}}\item[{\em 
+T\+A\+L\+\_\+\+OD\label{class_t_a_l_river_w_q_result_a73d4923c7fbfadbac2222d675c7a4069acd6edb2ae783c8bf089339667deb24a7}
+}]\index{T\+A\+L\+\_\+\+D\+BO@{T\+A\+L\+\_\+\+D\+BO}!T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}!T\+A\+L\+\_\+\+D\+BO@{T\+A\+L\+\_\+\+D\+BO}}\item[{\em 
+T\+A\+L\+\_\+\+D\+BO\label{class_t_a_l_river_w_q_result_a73d4923c7fbfadbac2222d675c7a4069a80a5c3cc34d9822da3310ec573d3ec5d}
+}]\index{T\+A\+L\+\_\+\+PS@{T\+A\+L\+\_\+\+PS}!T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}!T\+A\+L\+\_\+\+PS@{T\+A\+L\+\_\+\+PS}}\item[{\em 
+T\+A\+L\+\_\+\+PS\label{class_t_a_l_river_w_q_result_a73d4923c7fbfadbac2222d675c7a4069ae82c4b4e42958409c3f967aa09649e85}
+}]\index{T\+A\+L\+\_\+N@{T\+A\+L\+\_\+N}!T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}!T\+A\+L\+\_\+N@{T\+A\+L\+\_\+N}}\item[{\em 
+T\+A\+L\+\_\+N\label{class_t_a_l_river_w_q_result_a73d4923c7fbfadbac2222d675c7a4069a7691b569a49126380c9b9ba95abfea65}
+}]\index{T\+A\+L\+\_\+\+C\+OL@{T\+A\+L\+\_\+\+C\+OL}!T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}!T\+A\+L\+\_\+\+C\+OL@{T\+A\+L\+\_\+\+C\+OL}}\item[{\em 
+T\+A\+L\+\_\+\+C\+OL\label{class_t_a_l_river_w_q_result_a73d4923c7fbfadbac2222d675c7a4069a1810dc09992a8c2e2fb55c476800f019}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 15 do arquivo T\+A\+L\+River\+W\+Q\+Result.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}!T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}
+\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}!T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}
+\subsubsection[{T\+A\+L\+River\+W\+Q\+Result()}]{\setlength{\rightskip}{0pt plus 5cm}T\+A\+L\+River\+W\+Q\+Result\+::\+T\+A\+L\+River\+W\+Q\+Result (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_t_a_l_river_w_q_result_a47df2539faf4874d7bc73a7a202d2363}
+Construtor 
+
+Definição na linha 26 do arquivo T\+A\+L\+River\+W\+Q\+Result.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}!````~T\+A\+L\+River\+W\+Q\+Result@{$\sim$\+T\+A\+L\+River\+W\+Q\+Result}}
+\index{````~T\+A\+L\+River\+W\+Q\+Result@{$\sim$\+T\+A\+L\+River\+W\+Q\+Result}!T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}
+\subsubsection[{$\sim$\+T\+A\+L\+River\+W\+Q\+Result()}]{\setlength{\rightskip}{0pt plus 5cm}T\+A\+L\+River\+W\+Q\+Result\+::$\sim$\+T\+A\+L\+River\+W\+Q\+Result (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_t_a_l_river_w_q_result_a4ac8d736848ba959618e1a822eb5ff4e}
+Destrutor 
+
+Definição na linha 30 do arquivo T\+A\+L\+River\+W\+Q\+Result.\+h.
+
+
+
+\subsection{Atributos}
+\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}!begin\+Con@{begin\+Con}}
+\index{begin\+Con@{begin\+Con}!T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}
+\subsubsection[{begin\+Con}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf T\+A\+L\+Polutant\+Type}, double $>$ T\+A\+L\+River\+W\+Q\+Result\+::begin\+Con}\label{class_t_a_l_river_w_q_result_a247979339dc885b56e8d6c33dd7b5b66}
+Concentra��o inicial, intermediaria e final respectivamente 
+
+Definição na linha 69 do arquivo T\+A\+L\+River\+W\+Q\+Result.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}!con\+X\+Dis@{con\+X\+Dis}}
+\index{con\+X\+Dis@{con\+X\+Dis}!T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}
+\subsubsection[{con\+X\+Dis}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} T\+A\+L\+River\+W\+Q\+Result\+::con\+X\+Dis}\label{class_t_a_l_river_w_q_result_a93e5c92770e8e54e8debc3f7f6d7bcbb}
+Concentra��o X Dist�ncia 
+
+Definição na linha 73 do arquivo T\+A\+L\+River\+W\+Q\+Result.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}!Csat@{Csat}}
+\index{Csat@{Csat}!T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}
+\subsubsection[{Csat}]{\setlength{\rightskip}{0pt plus 5cm}double T\+A\+L\+River\+W\+Q\+Result\+::\+Csat}\label{class_t_a_l_river_w_q_result_a4a3b69c6ba69297146fd2871df45e198}
+Coeficiente de Satura��o 
+
+Definição na linha 47 do arquivo T\+A\+L\+River\+W\+Q\+Result.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}!Def\+OD@{Def\+OD}}
+\index{Def\+OD@{Def\+OD}!T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}
+\subsubsection[{Def\+OD}]{\setlength{\rightskip}{0pt plus 5cm}double T\+A\+L\+River\+W\+Q\+Result\+::\+Def\+OD}\label{class_t_a_l_river_w_q_result_acb899f3f73f467f3a8d0b06417d7bd9b}
+Defici de Oxig�nio 
+
+Definição na linha 43 do arquivo T\+A\+L\+River\+W\+Q\+Result.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}!dpth\+Link@{dpth\+Link}}
+\index{dpth\+Link@{dpth\+Link}!T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}
+\subsubsection[{dpth\+Link}]{\setlength{\rightskip}{0pt plus 5cm}double T\+A\+L\+River\+W\+Q\+Result\+::dpth\+Link}\label{class_t_a_l_river_w_q_result_af89feffcca84278486a4529c268be320}
+Profundidade no trecho 
+
+Definição na linha 60 do arquivo T\+A\+L\+River\+W\+Q\+Result.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}!drain\+Dis@{drain\+Dis}}
+\index{drain\+Dis@{drain\+Dis}!T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}
+\subsubsection[{drain\+Dis}]{\setlength{\rightskip}{0pt plus 5cm}double T\+A\+L\+River\+W\+Q\+Result\+::drain\+Dis}\label{class_t_a_l_river_w_q_result_af98642c35171a271f18f54fde3fa7087}
+Distancia ate o dreno 
+
+Definição na linha 30 do arquivo T\+A\+L\+River\+W\+Q\+Result.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}!end\+Con@{end\+Con}}
+\index{end\+Con@{end\+Con}!T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}
+\subsubsection[{end\+Con}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf T\+A\+L\+Polutant\+Type}, double $>$ T\+A\+L\+River\+W\+Q\+Result\+::end\+Con}\label{class_t_a_l_river_w_q_result_a58b0a2d1bb74efd98d4f5792fb19975d}
+
+
+Definição na linha 69 do arquivo T\+A\+L\+River\+W\+Q\+Result.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}!framing@{framing}}
+\index{framing@{framing}!T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}
+\subsubsection[{framing}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf T\+A\+L\+Polutant\+Type}, double $>$ T\+A\+L\+River\+W\+Q\+Result\+::framing}\label{class_t_a_l_river_w_q_result_a26c698a9d890d8854c8e82ec8757e8a4}
+Enquadramento. Repetido ao longo do trecho para visualiza��o no gr�fico 
+
+Definição na linha 65 do arquivo T\+A\+L\+River\+W\+Q\+Result.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}!mid\+Con@{mid\+Con}}
+\index{mid\+Con@{mid\+Con}!T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}
+\subsubsection[{mid\+Con}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf T\+A\+L\+Polutant\+Type}, double $>$ T\+A\+L\+River\+W\+Q\+Result\+::mid\+Con}\label{class_t_a_l_river_w_q_result_a863929ca7cd5d688d5db6b92a004e0d1}
+
+
+Definição na linha 69 do arquivo T\+A\+L\+River\+W\+Q\+Result.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}!point\+Con@{point\+Con}}
+\index{point\+Con@{point\+Con}!T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}
+\subsubsection[{point\+Con}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf T\+A\+L\+Polutant\+Type}, double $>$ T\+A\+L\+River\+W\+Q\+Result\+::point\+Con}\label{class_t_a_l_river_w_q_result_a1225514dd474ce3995746829c2e73013}
+Concentra��o do n� 
+
+Definição na linha 39 do arquivo T\+A\+L\+River\+W\+Q\+Result.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}!q\+Link@{q\+Link}}
+\index{q\+Link@{q\+Link}!T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}
+\subsubsection[{q\+Link}]{\setlength{\rightskip}{0pt plus 5cm}double T\+A\+L\+River\+W\+Q\+Result\+::q\+Link}\label{class_t_a_l_river_w_q_result_a54f13d30dad4c7153e02aa2e0a6bcda8}
+Vaz�o no trecho 
+
+Definição na linha 52 do arquivo T\+A\+L\+River\+W\+Q\+Result.\+h.
+
+\index{T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}!velo\+Link@{velo\+Link}}
+\index{velo\+Link@{velo\+Link}!T\+A\+L\+River\+W\+Q\+Result@{T\+A\+L\+River\+W\+Q\+Result}}
+\subsubsection[{velo\+Link}]{\setlength{\rightskip}{0pt plus 5cm}double T\+A\+L\+River\+W\+Q\+Result\+::velo\+Link}\label{class_t_a_l_river_w_q_result_a30415387113582592c4e0083ed302dc5}
+Velocidade no trecho 
+
+Definição na linha 56 do arquivo T\+A\+L\+River\+W\+Q\+Result.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf T\+A\+L\+River\+W\+Q\+Result.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,213 @@
+\section{Refer√™ncia da Classe Junction\+Model}
+\label{class_junction_model}\index{Junction\+Model@{Junction\+Model}}
+
+
+{\ttfamily \#include $<$Junction\+Model.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Model}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Junction\+Model} ({\bf Date} initial\+Date, {\bf Date} final\+Date, {\bf Node} $\ast${\bf node})
+\item 
+{\bf $\sim$\+Junction\+Model} ()
+\item 
+void {\bf clear} ()
+\item 
+bool {\bf empty} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf run} ({\bf Date} i)
+\item 
+void {\bf aloc\+Results} ()
+\item 
+int {\bf get\+Id} ()
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, bool open\+Conf=false)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, bool open\+Conf=false)
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descri√ß√£o Detalhada}
+Cada inst‚ncia de modelo È feita para um nÛ especÌfico 
+
+Defini√ß√£o na linha 10 do arquivo Junction\+Model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Junction\+Model@{Junction\+Model}!Junction\+Model@{Junction\+Model}}
+\index{Junction\+Model@{Junction\+Model}!Junction\+Model@{Junction\+Model}}
+\subsubsection[{Junction\+Model(\+Date initial\+Date, Date final\+Date, Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}Junction\+Model\+::\+Junction\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{initial\+Date, }
+\item[{{\bf Date}}]{final\+Date, }
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_junction_model_af36fa2d352d31c841c491ba1433b61ae}
+Construtor padr„o da classe \doxyref{Res\+Op\+Model}{pag.}{class_res_op_model} 
+\begin{DoxyParams}{Par√¢metros}
+{\em initial\+Date} & Inicio do intervalo \\
+\hline
+{\em final\+Date} & Final do Intervalo \\
+\hline
+{\em node} & NÛ de interesse \\
+\hline
+\end{DoxyParams}
+\index{Junction\+Model@{Junction\+Model}!````~Junction\+Model@{$\sim$\+Junction\+Model}}
+\index{````~Junction\+Model@{$\sim$\+Junction\+Model}!Junction\+Model@{Junction\+Model}}
+\subsubsection[{$\sim$\+Junction\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Junction\+Model\+::$\sim$\+Junction\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_junction_model_a0b370a870018c9fde700be87e8f8696d}
+Destrutor padr„o da classe \doxyref{Res\+Op\+Model}{pag.}{class_res_op_model} 
+
+\subsection{M√©todos}
+\index{Junction\+Model@{Junction\+Model}!aloc\+Results@{aloc\+Results}}
+\index{aloc\+Results@{aloc\+Results}!Junction\+Model@{Junction\+Model}}
+\subsubsection[{aloc\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}void Junction\+Model\+::aloc\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_junction_model_aa6dd014d865ceb40700d294ea30a05ba}
+AlocaÁ„o de Resultados 
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_af26524ca25da5eb051f825a941c91488}.
+
+\index{Junction\+Model@{Junction\+Model}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Junction\+Model@{Junction\+Model}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Junction\+Model\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_junction_model_a8eda433363f58e1c5901adc8e5576c6f}
+Checa se as informaÁıes est„o completas 
+\begin{DoxyParams}{Par√¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_a5967e944c8fce5e6ca9ba1f8890ad56d}.
+
+\index{Junction\+Model@{Junction\+Model}!clear@{clear}}
+\index{clear@{clear}!Junction\+Model@{Junction\+Model}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Junction\+Model\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_junction_model_a700801b4591a705cf4ad2650bca8692b}
+Limpa os dados 
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_a6473b3e6e73183d74801546e8816f55a}.
+
+\index{Junction\+Model@{Junction\+Model}!empty@{empty}}
+\index{empty@{empty}!Junction\+Model@{Junction\+Model}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool Junction\+Model\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_junction_model_a5365ad59500f4f5eb03da1d75b087b1f}
+retorna se existe algum valor no modelo 
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_adf9cc2f68809802cb9e4d55ed2522078}.
+
+\index{Junction\+Model@{Junction\+Model}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Junction\+Model@{Junction\+Model}}
+\subsubsection[{get\+Id()}]{\setlength{\rightskip}{0pt plus 5cm}int Junction\+Model\+::get\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_junction_model_a16fc10ad540dc3988a487a7fb478f4df}
+Retorna o identificador do elemento associado 
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_ac9ebfb85cf8c0bf9b2e8c3de070d7292}.
+
+\index{Junction\+Model@{Junction\+Model}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Junction\+Model@{Junction\+Model}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$proj)}]{\setlength{\rightskip}{0pt plus 5cm}void Junction\+Model\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_junction_model_ae9e48a75e4f971871acff92ea47641e7}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementa√ß√£o de {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_a99781b8784bfcdcb228d6f63e72f2088}.
+
+
+
+Defini√ß√£o na linha 70 do arquivo Junction\+Model.\+h.
+
+\index{Junction\+Model@{Junction\+Model}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Junction\+Model@{Junction\+Model}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$, bool open\+Conf=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Junction\+Model\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{bool}]{open\+Conf = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_junction_model_a7b79aa1dd085bb2a89efb9bce5b0d375}
+\index{Junction\+Model@{Junction\+Model}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Junction\+Model@{Junction\+Model}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$proj)}]{\setlength{\rightskip}{0pt plus 5cm}void Junction\+Model\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_junction_model_a3b300cefc889e02ddf34b5bcdea2ccec}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementa√ß√£o de {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_a16eefd6636a24d9feb11388ecc2bb306}.
+
+
+
+Defini√ß√£o na linha 62 do arquivo Junction\+Model.\+h.
+
+\index{Junction\+Model@{Junction\+Model}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Junction\+Model@{Junction\+Model}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$, bool open\+Conf=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Junction\+Model\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{bool}]{open\+Conf = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_junction_model_a47cc2b215838d80662f2f4e25197f06c}
+\index{Junction\+Model@{Junction\+Model}!run@{run}}
+\index{run@{run}!Junction\+Model@{Junction\+Model}}
+\subsubsection[{run(\+Date i)}]{\setlength{\rightskip}{0pt plus 5cm}void Junction\+Model\+::run (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_junction_model_a42a7eb3038173d2c959cbc7e54a7b78d}
+SimulaÁ„o 
+\begin{DoxyParams}{Par√¢metros}
+{\em i} & Dia a ser simulado \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_a5cb0cdd25cceb57244a687bf598483ce}.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Junction\+Model.\+h}\end{DoxyCompactItemize}

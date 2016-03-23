@@ -1,0 +1,1511 @@
+\section{Referência da Classe Net\+Canvas}
+\label{class_net_canvas}\index{Net\+Canvas@{Net\+Canvas}}
+
+
+{\ttfamily \#include $<$Net\+Canvas.\+h$>$}
+
+
+
+Herdeiro de wx\+Window.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Visible\+Elements} \{ \\*
+{\bf N\+O\+NE} = 1 $<$$<$ 0, 
+{\bf B\+A\+S\+IN} = 1 $<$$<$ 1, 
+{\bf B\+A\+S\+I\+N\+\_\+\+L\+A\+B\+EL} = 1 $<$$<$ 2, 
+{\bf J\+U\+N\+C\+T\+I\+ON} = 1 $<$$<$ 3, 
+\\*
+{\bf J\+U\+N\+C\+T\+I\+O\+N\+\_\+\+L\+A\+B\+EL} = 1 $<$$<$ 4, 
+{\bf R\+E\+S\+E\+R\+V\+O\+IR} = 1 $<$$<$ 5, 
+{\bf R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+L\+A\+B\+EL} = 1 $<$$<$ 6, 
+{\bf L\+A\+KE} = 1 $<$$<$ 7, 
+\\*
+{\bf L\+A\+K\+E\+\_\+\+L\+A\+B\+EL} = 1 $<$$<$ 8, 
+{\bf D\+E\+M\+A\+ND} = 1 $<$$<$ 9, 
+{\bf D\+E\+M\+A\+N\+D\+\_\+\+L\+A\+B\+EL} = 1 $<$$<$ 10, 
+{\bf L\+I\+NK} = 1 $<$$<$ 11, 
+\\*
+{\bf L\+I\+N\+K\+\_\+\+L\+A\+B\+EL} = 1 $<$$<$ 12, 
+{\bf L\+I\+N\+K\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+AL} = 1 $<$$<$ 13, 
+{\bf L\+I\+N\+K\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+A\+L\+\_\+\+L\+A\+B\+EL} = 1 $<$$<$ 14
+ \}
+\item 
+enum {\bf Pop\+Up\+Menu\+Items} \{ \\*
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+F\+A\+U\+LT} = wx\+I\+D\+\_\+\+H\+I\+G\+H\+E\+ST + 100, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+J\+U\+N\+C\+T\+I\+ON}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+IR}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+I\+S\+O\+L\+A\+T\+I\+ON}, 
+\\*
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+I\+S\+O\+L\+A\+T\+I\+O\+N\+\_\+\+E\+Q\+U\+I\+V\+A\+L\+E\+NT}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+L\+A\+KE}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+M\+A\+ND}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+O\+L\+L\+U\+T\+I\+ON}, 
+\\*
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+D\+E\+F\+A\+U\+LT}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+R\+O\+U\+T\+I\+NG}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+P\+U\+M\+P\+I\+NG}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+AL}, 
+\\*
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+L\+A\+T\+E\+R\+A\+L\+\_\+\+I\+N\+F\+L\+OW}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+C\+A\+L\+E\+\_\+\+UP}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+C\+A\+L\+E\+\_\+\+D\+O\+WN}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+F\+O\+N\+T\+\_\+\+UP}, 
+\\*
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+F\+O\+N\+T\+\_\+\+D\+O\+WN}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+I\+V\+\_\+\+P\+O\+I\+NT}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+B\+A\+S\+IN}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+IR}, 
+\\*
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+D\+E\+M\+A\+ND}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+J\+U\+N\+C\+T\+I\+ON}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+A\+KE}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+I\+N\+KS}, 
+\\*
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+A\+N\+I\+M\+A\+L\+\_\+\+C\+O\+N\+S\+U\+ME}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+H\+U\+M\+A\+N\+\_\+\+C\+O\+N\+S\+U\+ME}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+I\+N\+D\+U\+S\+T\+R\+I\+AL}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+I\+R\+R\+I\+G\+A\+T\+I\+ON}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Net\+Canvas\+Element\+Manager} \& {\bf element\+Manager} ()
+\item 
+void {\bf update\+Elements\+Positions} ()
+\item 
+const std\+::vector$<$ {\bf Draw\+Element} $\ast$ $>$ {\bf vector\+Of\+Selected\+Elements} ()
+\item 
+void {\bf add\+Visible\+Elements} ({\bf Visible\+Elements} a\+\_\+visibility)
+\item 
+void {\bf remove\+Visible\+Elements} ({\bf Visible\+Elements} a\+\_\+visibility)
+\item 
+bool {\bf is\+Multi\+Selection} ()
+\item 
+void {\bf update\+Interface} ()
+\item 
+void {\bf select\+Element\+By\+ID} ({\bf Element\+ID} a\+\_\+id)
+\item 
+void {\bf select\+Elements\+By\+ID} (std\+::vector$<$ {\bf Element\+ID} $>$ \&a\+\_\+id)
+\item 
+void {\bf select\+All\+Elements} ()
+\item 
+void {\bf unselect\+All\+Elements} ()
+\item 
+void {\bf on\+Mouse\+Wheel\+Up} (wx\+Mouse\+Event \&event)
+\item 
+void {\bf on\+Mouse\+Wheel\+Down} (wx\+Mouse\+Event \&event)
+\item 
+{\bf Command\+Manager} \& {\bf get\+Command\+Manager} ()
+\item 
+void {\bf highlight\+Sub\+Network} ({\bf Element\+ID} reservoir\+\_\+id)
+\item 
+{\bf Net\+Canvas} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast$parent, wx\+Window\+ID id=-\/1, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=0, const wx\+String \&name=\char`\"{}C\+A\+N\+V\+AS\char`\"{})
+\item 
+virtual {\bf $\sim$\+Net\+Canvas} ()
+\item 
+wx\+Real\+Point {\bf get\+Center} ()
+\item 
+void {\bf on\+Mouse\+Event} (wx\+Mouse\+Event \&event)
+\item 
+void {\bf show\+Labels} (bool status, int id)
+\item 
+void {\bf show\+Labels\+Link} (bool status)
+\item 
+void {\bf show\+Labels\+All} (bool status)
+\item 
+void {\bf on\+Key\+Down} (wx\+Key\+Event \&event)
+\item 
+void {\bf on\+Key\+Up} (wx\+Key\+Event \&event)
+\item 
+void {\bf on\+Font\+Up} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Font\+Down} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Div\+Point} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Scale\+Up} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Scale\+Down} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Popup\+Menu\+Click} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Popup\+Menu\+Viewer\+Click} (wx\+Command\+Event \&event)
+\item 
+bool {\bf set\+Font\+Up} ()
+\item 
+bool {\bf set\+Font\+Down} ()
+\item 
+bool {\bf set\+Scale\+Up} ()
+\item 
+bool {\bf set\+Scale\+Down} ()
+\item 
+bool {\bf is\+Up\+Edged} ()
+\item 
+bool {\bf is\+Down\+Edged} ()
+\item 
+bool {\bf load\+Map} (char $\ast$name)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf select\+Element} ({\bf Draw\+Element} \&element)
+\item 
+void {\bf create\+Popup\+Menu\+Viewer} ()
+\item 
+void {\bf create\+Popup\+Menu} ({\bf Draw\+Element} \&element)
+\item 
+void {\bf create\+Popup\+Menu} ()
+\item 
+void {\bf create\+Popup\+Menu} ({\bf Draw\+Node} \&node)
+\item 
+void {\bf create\+Popup\+Menu} ({\bf Draw\+Link} \&link)
+\item 
+void {\bf draw\+Vector\+Bounding\+Box} (wx\+Memory\+DC \&m\+DC)
+\item 
+void {\bf load\+Bitmap\+Portion} ()
+\item 
+void {\bf update\+Window} ()
+\item 
+double {\bf measure} (const wx\+Point \&p1, const wx\+Point \&p2)
+\item 
+void {\bf On\+Mouse\+Zoom\+In\+Event} (wx\+Mouse\+Event \&event)
+\item 
+void {\bf On\+Mouse\+Zoom\+Out\+Event} (wx\+Mouse\+Event \&event)
+\item 
+void {\bf centralize\+Shapes} ()
+\item 
+std\+::vector$<$ wx\+Real\+Point $>$ {\bf create\+Vector\+Of\+Elements\+Coordinates} ()
+\item 
+void {\bf resize\+World\+Window\+To\+Fit\+Elements} ()
+\item 
+void {\bf last\+Zoom\+Position} ()
+\item 
+void {\bf next\+Zoom\+Position} ()
+\item 
+void {\bf clear\+Vector\+Zoom} ()
+\item 
+void {\bf add\+First\+Windows\+Vector\+Zoom} ()
+\item 
+bool {\bf export\+To\+J\+P\+EG} (const std\+::string \&a\+\_\+filename)
+\item 
+{\bf D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Bitmap {\bf canvas\+Bitmap}
+\item 
+int {\bf font\+Max\+Size}
+\item 
+int {\bf font\+Min\+Size}
+\item 
+wx\+Coord {\bf mousex}
+\item 
+wx\+Coord {\bf mousey}
+\item 
+bool {\bf is\+Dragging}
+\item 
+wx\+Menu $\ast$ {\bf popup\+Menu}
+\item 
+wx\+Menu $\ast$ {\bf popup\+Font}
+\item 
+wx\+Menu $\ast$ {\bf popup\+Elements}
+\item 
+bool {\bf single\+Click\+On\+Right\+Button}
+\item 
+wx\+String {\bf net\+Name}
+\item 
+wx\+Bitmap {\bf back\+Map}
+\item 
+wx\+Bitmap {\bf back\+Shape\+Map}
+\item 
+wx\+String {\bf back\+Map\+Name}
+\item 
+unsigned int {\bf nodes\+Size}
+\item 
+unsigned int {\bf seed}
+\item 
+unsigned int {\bf links\+Size}
+\item 
+{\bf Link\+Type} {\bf selected\+Link\+Type}
+\item 
+{\bf Draw\+Link} $\ast$ {\bf drawing\+Link}
+\item 
+{\bf Draw\+Link} $\ast$ {\bf dragging\+Link}
+\item 
+{\bf Draw\+Node} $\ast$ {\bf dragging\+Node}
+\item 
+{\bf Draw\+Label} $\ast$ {\bf dragging\+Label}
+\item 
+{\bf Point2D} {\bf dragging\+Label\+Point}
+\item 
+wx\+Point {\bf selection\+Start\+Point}
+\item 
+wx\+Point {\bf selection\+End\+Point}
+\item 
+int {\bf scroll\+InitX}
+\item 
+int {\bf scroll\+InitY}
+\item 
+bool {\bf scrolling}
+\item 
+bool {\bf is\+Panning}
+\item 
+bool {\bf has\+Network\+Moved}
+\item 
+bool {\bf network\+Can\+Be\+Moved}
+\item 
+bool {\bf is\+Selection\+Mode}
+\item 
+bool {\bf is\+Network\+In\+Edit\+Mode}
+\item 
+{\bf Leg\+Panel} $\ast$ {\bf legP}
+\item 
+{\bf Layer\+Panel} $\ast$ {\bf layP}
+\item 
+{\bf Layer\+Panel} $\ast$ {\bf autP}
+\item 
+{\bf Sub\+Network\+Panel} $\ast$ {\bf sub\+\_\+network\+\_\+panel\+\_\+}
+\item 
+wx\+Size {\bf display\+M\+M\+Size}
+\item 
+int {\bf scale}
+\item 
+int {\bf pixels\+Per\+CM}
+\item 
+bool {\bf node\+Condicion} = true
+\item 
+bool {\bf link\+Condicion} = true
+\item 
+wx\+Point {\bf initial\+Bitmap\+Draw\+Point}
+\item 
+double {\bf world\+West}
+\item 
+double {\bf world\+East}
+\item 
+double {\bf world\+North}
+\item 
+double {\bf world\+South}
+\item 
+wx\+Real\+Point {\bf center}
+\item 
+bool {\bf bool\+Link\+Label}
+\item 
+bool {\bf bool\+Node\+Label}
+\item 
+wx\+Point {\bf p\+In}
+\item 
+wx\+Point {\bf p\+Fin}
+\end{DoxyCompactItemize}
+\subsection*{Tipos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf State} \{ \\*
+{\bf I\+D\+LE}, 
+{\bf S\+E\+L\+E\+C\+T\+I\+NG}, 
+{\bf M\+U\+L\+T\+I\+S\+E\+L\+E\+C\+T\+I\+NG}, 
+{\bf C\+R\+E\+A\+T\+I\+NG}, 
+\\*
+{\bf D\+R\+A\+G\+G\+I\+NG}, 
+{\bf D\+R\+A\+W\+I\+N\+G\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}, 
+{\bf D\+R\+A\+W\+I\+N\+G\+\_\+\+Z\+O\+O\+M\+\_\+\+B\+OX}, 
+{\bf P\+A\+N\+N\+I\+NG}, 
+\\*
+{\bf Z\+O\+O\+M\+I\+N\+G\+\_\+\+IN}, 
+{\bf Z\+O\+O\+M\+I\+N\+G\+\_\+\+O\+UT}, 
+{\bf P\+O\+P\+U\+P\+\_\+\+M\+E\+NU}, 
+{\bf P\+O\+P\+U\+P\+\_\+\+M\+E\+N\+U\+\_\+\+V\+I\+E\+W\+ER}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf do\+Paint} (wx\+DC \&dc)
+\item 
+void {\bf on\+Paint} (wx\+Paint\+Event \&W\+X\+U\+N\+U\+S\+ED(event))
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Point {\bf m\+\_\+last\+Click\+Point}
+\item 
+{\bf State} {\bf m\+\_\+last\+State}
+\item 
+{\bf State} {\bf m\+\_\+current\+State}
+\item 
+{\bf Visible\+Elements} {\bf m\+\_\+visible\+Elements}
+\item 
+{\bf Draw\+Element} $\ast$ {\bf m\+\_\+selected\+Element}
+\item 
+int {\bf m\+\_\+zoom\+Position}
+\item 
+bool {\bf m\+\_\+handle\+Vector\+Zoom}
+\item 
+wx\+Font {\bf font}
+\item 
+wx\+Point {\bf m\+Final}
+\item 
+wx\+Point {\bf m\+Initial}
+\item 
+wx\+Cursor $\ast$ {\bf cur\+Hand}
+\item 
+wx\+Cursor $\ast$ {\bf cur\+Hand2}
+\item 
+{\bf Point2D} {\bf start\+Point\+Web}
+\item 
+{\bf Point2D} {\bf min\+Position}
+\item 
+{\bf Point2D} {\bf max\+Position}
+\item 
+{\bf S\+I\+G\+A\+Frame} $\ast$ {\bf frame}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf S\+I\+G\+A\+Frame}
+\item 
+class {\bf Net\+Interface}
+\item 
+class {\bf Net\+Main}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 35 do arquivo Net\+Canvas.\+h.
+
+
+
+\subsection{Enumerações}
+\index{Net\+Canvas@{Net\+Canvas}!Pop\+Up\+Menu\+Items@{Pop\+Up\+Menu\+Items}}
+\index{Pop\+Up\+Menu\+Items@{Pop\+Up\+Menu\+Items}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{Pop\+Up\+Menu\+Items}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Net\+Canvas\+::\+Pop\+Up\+Menu\+Items}}\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+F\+A\+U\+LT@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+F\+A\+U\+LT}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+F\+A\+U\+LT@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+F\+A\+U\+LT}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+F\+A\+U\+LT\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214a80f5008feb2bc909fc3e1fcae1661eb8}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+J\+U\+N\+C\+T\+I\+ON@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+J\+U\+N\+C\+T\+I\+ON}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+J\+U\+N\+C\+T\+I\+ON@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+J\+U\+N\+C\+T\+I\+ON}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+J\+U\+N\+C\+T\+I\+ON\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214a691016681b61a153fe01139e8f96622c}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+IR@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+IR}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+IR@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+IR}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+IR\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214a0b868e754df98b03428013eaaf96e0c4}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+I\+S\+O\+L\+A\+T\+I\+ON@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+I\+S\+O\+L\+A\+T\+I\+ON}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+I\+S\+O\+L\+A\+T\+I\+ON@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+I\+S\+O\+L\+A\+T\+I\+ON}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+I\+S\+O\+L\+A\+T\+I\+ON\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214a8cecc06cacaf6d4e9cc1ccfe28288fba}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+I\+S\+O\+L\+A\+T\+I\+O\+N\+\_\+\+E\+Q\+U\+I\+V\+A\+L\+E\+NT@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+I\+S\+O\+L\+A\+T\+I\+O\+N\+\_\+\+E\+Q\+U\+I\+V\+A\+L\+E\+NT}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+I\+S\+O\+L\+A\+T\+I\+O\+N\+\_\+\+E\+Q\+U\+I\+V\+A\+L\+E\+NT@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+I\+S\+O\+L\+A\+T\+I\+O\+N\+\_\+\+E\+Q\+U\+I\+V\+A\+L\+E\+NT}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+I\+S\+O\+L\+A\+T\+I\+O\+N\+\_\+\+E\+Q\+U\+I\+V\+A\+L\+E\+NT\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214ae63515ca29c984b4369adfa92bed424f}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+L\+A\+KE@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+L\+A\+KE}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+L\+A\+KE@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+L\+A\+KE}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+L\+A\+KE\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214a2c0ec439268dad0b805f252858b70985}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+M\+A\+ND@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+M\+A\+ND}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+M\+A\+ND@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+M\+A\+ND}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+M\+A\+ND\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214af2cbbaf5d2d6dab2ffb06d3124b75330}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+O\+L\+L\+U\+T\+I\+ON@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+O\+L\+L\+U\+T\+I\+ON}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+O\+L\+L\+U\+T\+I\+ON@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+O\+L\+L\+U\+T\+I\+ON}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+N\+O\+D\+E\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+P\+O\+L\+L\+U\+T\+I\+ON\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214a75083d74e323e4ef77a07c5ad8666b6a}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+D\+E\+F\+A\+U\+LT@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+D\+E\+F\+A\+U\+LT}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+D\+E\+F\+A\+U\+LT@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+D\+E\+F\+A\+U\+LT}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+D\+E\+F\+A\+U\+LT\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214a7bc1361bdd08199b901004c5f7c5f850}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+R\+O\+U\+T\+I\+NG@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+R\+O\+U\+T\+I\+NG}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+R\+O\+U\+T\+I\+NG@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+R\+O\+U\+T\+I\+NG}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+R\+O\+U\+T\+I\+NG\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214abc0dfdbb5c1e6156ad358f5843ebe599}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+P\+U\+M\+P\+I\+NG@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+P\+U\+M\+P\+I\+NG}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+P\+U\+M\+P\+I\+NG@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+P\+U\+M\+P\+I\+NG}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+P\+U\+M\+P\+I\+NG\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214abe700d4b7a4c7da84ee53e68c7604339}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+AL@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+AL}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+AL@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+AL}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+AL\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214a18e92fc90ba9888b4d394ad4533cf4dc}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+L\+A\+T\+E\+R\+A\+L\+\_\+\+I\+N\+F\+L\+OW@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+L\+A\+T\+E\+R\+A\+L\+\_\+\+I\+N\+F\+L\+OW}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+L\+A\+T\+E\+R\+A\+L\+\_\+\+I\+N\+F\+L\+OW@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+L\+A\+T\+E\+R\+A\+L\+\_\+\+I\+N\+F\+L\+OW}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+L\+I\+N\+K\+\_\+\+L\+A\+T\+E\+R\+A\+L\+\_\+\+I\+N\+F\+L\+OW\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214add83e2689451783ea65ba66eda3142e8}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+C\+A\+L\+E\+\_\+\+UP@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+C\+A\+L\+E\+\_\+\+UP}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+C\+A\+L\+E\+\_\+\+UP@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+C\+A\+L\+E\+\_\+\+UP}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+C\+A\+L\+E\+\_\+\+UP\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214a48567adfae8ab915483be66730ae8615}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+C\+A\+L\+E\+\_\+\+D\+O\+WN@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+C\+A\+L\+E\+\_\+\+D\+O\+WN}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+C\+A\+L\+E\+\_\+\+D\+O\+WN@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+C\+A\+L\+E\+\_\+\+D\+O\+WN}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+C\+A\+L\+E\+\_\+\+D\+O\+WN\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214a7a4638abfc87d4e3f8ab01bdf410757e}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+F\+O\+N\+T\+\_\+\+UP@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+F\+O\+N\+T\+\_\+\+UP}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+F\+O\+N\+T\+\_\+\+UP@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+F\+O\+N\+T\+\_\+\+UP}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+F\+O\+N\+T\+\_\+\+UP\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214af51008b27ab3eaece633955ffa98b819}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+F\+O\+N\+T\+\_\+\+D\+O\+WN@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+F\+O\+N\+T\+\_\+\+D\+O\+WN}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+F\+O\+N\+T\+\_\+\+D\+O\+WN@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+F\+O\+N\+T\+\_\+\+D\+O\+WN}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+F\+O\+N\+T\+\_\+\+D\+O\+WN\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214a47dd2eaead54d993ccad7f82919986ec}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+I\+V\+\_\+\+P\+O\+I\+NT@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+I\+V\+\_\+\+P\+O\+I\+NT}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+I\+V\+\_\+\+P\+O\+I\+NT@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+I\+V\+\_\+\+P\+O\+I\+NT}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+I\+V\+\_\+\+P\+O\+I\+NT\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214ad245f605cdcbd446c250cb52839a3a92}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+B\+A\+S\+IN@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+B\+A\+S\+IN}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+B\+A\+S\+IN@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+B\+A\+S\+IN}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+B\+A\+S\+IN\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214aa29a77b7762c89b6f0aa81771a08d45a}
+}]S\+H\+OW H\+I\+DE P\+O\+P\+UP O\+P\+T\+I\+O\+NS \index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+IR@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+IR}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+IR@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+IR}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+IR\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214ac1cf75c058d2872b5acedb6e25758711}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+D\+E\+M\+A\+ND@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+D\+E\+M\+A\+ND}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+D\+E\+M\+A\+ND@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+D\+E\+M\+A\+ND}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+D\+E\+M\+A\+ND\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214a7fcb2a1c74d7176eabbbd6f98d9df0f6}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+J\+U\+N\+C\+T\+I\+ON@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+J\+U\+N\+C\+T\+I\+ON}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+J\+U\+N\+C\+T\+I\+ON@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+J\+U\+N\+C\+T\+I\+ON}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+J\+U\+N\+C\+T\+I\+ON\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214a5692c4fd68d0741dfebfd5839e9541c2}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+A\+KE@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+A\+KE}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+A\+KE@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+A\+KE}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+A\+KE\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214af9d7f75a9b26a9f92cb55bde5bdc3b6e}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+I\+N\+KS@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+I\+N\+KS}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+I\+N\+KS@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+I\+N\+KS}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+I\+N\+KS\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214aa05a1ee2433cc85b6aeb26e97854c2e5}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+A\+N\+I\+M\+A\+L\+\_\+\+C\+O\+N\+S\+U\+ME@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+A\+N\+I\+M\+A\+L\+\_\+\+C\+O\+N\+S\+U\+ME}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+A\+N\+I\+M\+A\+L\+\_\+\+C\+O\+N\+S\+U\+ME@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+A\+N\+I\+M\+A\+L\+\_\+\+C\+O\+N\+S\+U\+ME}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+A\+N\+I\+M\+A\+L\+\_\+\+C\+O\+N\+S\+U\+ME\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214a3f57319a76e3fd109bb5789b3a915a69}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+H\+U\+M\+A\+N\+\_\+\+C\+O\+N\+S\+U\+ME@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+H\+U\+M\+A\+N\+\_\+\+C\+O\+N\+S\+U\+ME}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+H\+U\+M\+A\+N\+\_\+\+C\+O\+N\+S\+U\+ME@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+H\+U\+M\+A\+N\+\_\+\+C\+O\+N\+S\+U\+ME}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+H\+U\+M\+A\+N\+\_\+\+C\+O\+N\+S\+U\+ME\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214a28afabb021855224a47b1da12d378247}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+I\+N\+D\+U\+S\+T\+R\+I\+AL@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+I\+N\+D\+U\+S\+T\+R\+I\+AL}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+I\+N\+D\+U\+S\+T\+R\+I\+AL@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+I\+N\+D\+U\+S\+T\+R\+I\+AL}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+I\+N\+D\+U\+S\+T\+R\+I\+AL\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214ade11fec8fc5bba6d6dd1cbd054ed3e6b}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+I\+R\+R\+I\+G\+A\+T\+I\+ON@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+I\+R\+R\+I\+G\+A\+T\+I\+ON}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+I\+R\+R\+I\+G\+A\+T\+I\+ON@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+I\+R\+R\+I\+G\+A\+T\+I\+ON}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+I\+R\+R\+I\+G\+A\+T\+I\+ON\label{class_net_canvas_a66c9314ff9530c1c84652488bf788214a863e42df119fa89549d2346e510e2b9c}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 61 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!State@{State}}
+\index{State@{State}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Net\+Canvas\+::\+State}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_canvas_a5187384d52988808c7dfc0e77b6510e7}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+LE@{I\+D\+LE}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!I\+D\+LE@{I\+D\+LE}}\item[{\em 
+I\+D\+LE\label{class_net_canvas_a5187384d52988808c7dfc0e77b6510e7a4590f215ea1d13031ed1fc50c729e84a}
+}]\index{S\+E\+L\+E\+C\+T\+I\+NG@{S\+E\+L\+E\+C\+T\+I\+NG}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!S\+E\+L\+E\+C\+T\+I\+NG@{S\+E\+L\+E\+C\+T\+I\+NG}}\item[{\em 
+S\+E\+L\+E\+C\+T\+I\+NG\label{class_net_canvas_a5187384d52988808c7dfc0e77b6510e7af944d28e08feacb347e61b108cf20b57}
+}]\index{M\+U\+L\+T\+I\+S\+E\+L\+E\+C\+T\+I\+NG@{M\+U\+L\+T\+I\+S\+E\+L\+E\+C\+T\+I\+NG}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!M\+U\+L\+T\+I\+S\+E\+L\+E\+C\+T\+I\+NG@{M\+U\+L\+T\+I\+S\+E\+L\+E\+C\+T\+I\+NG}}\item[{\em 
+M\+U\+L\+T\+I\+S\+E\+L\+E\+C\+T\+I\+NG\label{class_net_canvas_a5187384d52988808c7dfc0e77b6510e7ab2b7477eee155a5e917dbde3e830dc43}
+}]\index{C\+R\+E\+A\+T\+I\+NG@{C\+R\+E\+A\+T\+I\+NG}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!C\+R\+E\+A\+T\+I\+NG@{C\+R\+E\+A\+T\+I\+NG}}\item[{\em 
+C\+R\+E\+A\+T\+I\+NG\label{class_net_canvas_a5187384d52988808c7dfc0e77b6510e7a423b69f781dbf0481d253e9d19000941}
+}]\index{D\+R\+A\+G\+G\+I\+NG@{D\+R\+A\+G\+G\+I\+NG}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!D\+R\+A\+G\+G\+I\+NG@{D\+R\+A\+G\+G\+I\+NG}}\item[{\em 
+D\+R\+A\+G\+G\+I\+NG\label{class_net_canvas_a5187384d52988808c7dfc0e77b6510e7ad269c12f3fd08ad74ae6c5d70139320f}
+}]\index{D\+R\+A\+W\+I\+N\+G\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON@{D\+R\+A\+W\+I\+N\+G\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!D\+R\+A\+W\+I\+N\+G\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON@{D\+R\+A\+W\+I\+N\+G\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}}\item[{\em 
+D\+R\+A\+W\+I\+N\+G\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON\label{class_net_canvas_a5187384d52988808c7dfc0e77b6510e7aed42f5d6a9365f2d4d22e153c78c3873}
+}]\index{D\+R\+A\+W\+I\+N\+G\+\_\+\+Z\+O\+O\+M\+\_\+\+B\+OX@{D\+R\+A\+W\+I\+N\+G\+\_\+\+Z\+O\+O\+M\+\_\+\+B\+OX}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!D\+R\+A\+W\+I\+N\+G\+\_\+\+Z\+O\+O\+M\+\_\+\+B\+OX@{D\+R\+A\+W\+I\+N\+G\+\_\+\+Z\+O\+O\+M\+\_\+\+B\+OX}}\item[{\em 
+D\+R\+A\+W\+I\+N\+G\+\_\+\+Z\+O\+O\+M\+\_\+\+B\+OX\label{class_net_canvas_a5187384d52988808c7dfc0e77b6510e7a1f073a6726a058c5f7dd235127a1a16d}
+}]\index{P\+A\+N\+N\+I\+NG@{P\+A\+N\+N\+I\+NG}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+A\+N\+N\+I\+NG@{P\+A\+N\+N\+I\+NG}}\item[{\em 
+P\+A\+N\+N\+I\+NG\label{class_net_canvas_a5187384d52988808c7dfc0e77b6510e7a89bc53e923ad67c29001de741f3b6638}
+}]\index{Z\+O\+O\+M\+I\+N\+G\+\_\+\+IN@{Z\+O\+O\+M\+I\+N\+G\+\_\+\+IN}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!Z\+O\+O\+M\+I\+N\+G\+\_\+\+IN@{Z\+O\+O\+M\+I\+N\+G\+\_\+\+IN}}\item[{\em 
+Z\+O\+O\+M\+I\+N\+G\+\_\+\+IN\label{class_net_canvas_a5187384d52988808c7dfc0e77b6510e7a80b0d63e5589115db5299267dd05e93f}
+}]\index{Z\+O\+O\+M\+I\+N\+G\+\_\+\+O\+UT@{Z\+O\+O\+M\+I\+N\+G\+\_\+\+O\+UT}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!Z\+O\+O\+M\+I\+N\+G\+\_\+\+O\+UT@{Z\+O\+O\+M\+I\+N\+G\+\_\+\+O\+UT}}\item[{\em 
+Z\+O\+O\+M\+I\+N\+G\+\_\+\+O\+UT\label{class_net_canvas_a5187384d52988808c7dfc0e77b6510e7a88284b03654535994459783bde0809d5}
+}]\index{P\+O\+P\+U\+P\+\_\+\+M\+E\+NU@{P\+O\+P\+U\+P\+\_\+\+M\+E\+NU}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+\_\+\+M\+E\+NU@{P\+O\+P\+U\+P\+\_\+\+M\+E\+NU}}\item[{\em 
+P\+O\+P\+U\+P\+\_\+\+M\+E\+NU\label{class_net_canvas_a5187384d52988808c7dfc0e77b6510e7ab5d21f942042533d69677d7d4b10291c}
+}]\index{P\+O\+P\+U\+P\+\_\+\+M\+E\+N\+U\+\_\+\+V\+I\+E\+W\+ER@{P\+O\+P\+U\+P\+\_\+\+M\+E\+N\+U\+\_\+\+V\+I\+E\+W\+ER}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!P\+O\+P\+U\+P\+\_\+\+M\+E\+N\+U\+\_\+\+V\+I\+E\+W\+ER@{P\+O\+P\+U\+P\+\_\+\+M\+E\+N\+U\+\_\+\+V\+I\+E\+W\+ER}}\item[{\em 
+P\+O\+P\+U\+P\+\_\+\+M\+E\+N\+U\+\_\+\+V\+I\+E\+W\+ER\label{class_net_canvas_a5187384d52988808c7dfc0e77b6510e7a89ef43db616c617b7442315b708a56dc}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 300 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!Visible\+Elements@{Visible\+Elements}}
+\index{Visible\+Elements@{Visible\+Elements}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{Visible\+Elements}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Net\+Canvas\+::\+Visible\+Elements}}\label{class_net_canvas_a8637f1961582766e426fb17d0fcbf2cd}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{N\+O\+NE@{N\+O\+NE}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!N\+O\+NE@{N\+O\+NE}}\item[{\em 
+N\+O\+NE\label{class_net_canvas_a8637f1961582766e426fb17d0fcbf2cda7db44effe4527305cfd632b935713cef}
+}]\index{B\+A\+S\+IN@{B\+A\+S\+IN}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!B\+A\+S\+IN@{B\+A\+S\+IN}}\item[{\em 
+B\+A\+S\+IN\label{class_net_canvas_a8637f1961582766e426fb17d0fcbf2cdaad4011135433afea4be0281fba936790}
+}]\index{B\+A\+S\+I\+N\+\_\+\+L\+A\+B\+EL@{B\+A\+S\+I\+N\+\_\+\+L\+A\+B\+EL}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!B\+A\+S\+I\+N\+\_\+\+L\+A\+B\+EL@{B\+A\+S\+I\+N\+\_\+\+L\+A\+B\+EL}}\item[{\em 
+B\+A\+S\+I\+N\+\_\+\+L\+A\+B\+EL\label{class_net_canvas_a8637f1961582766e426fb17d0fcbf2cdae2cff92b47d1e2869caa89234121d176}
+}]\index{J\+U\+N\+C\+T\+I\+ON@{J\+U\+N\+C\+T\+I\+ON}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!J\+U\+N\+C\+T\+I\+ON@{J\+U\+N\+C\+T\+I\+ON}}\item[{\em 
+J\+U\+N\+C\+T\+I\+ON\label{class_net_canvas_a8637f1961582766e426fb17d0fcbf2cdaff8421e9e70437ee2e544e5ba206113b}
+}]\index{J\+U\+N\+C\+T\+I\+O\+N\+\_\+\+L\+A\+B\+EL@{J\+U\+N\+C\+T\+I\+O\+N\+\_\+\+L\+A\+B\+EL}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!J\+U\+N\+C\+T\+I\+O\+N\+\_\+\+L\+A\+B\+EL@{J\+U\+N\+C\+T\+I\+O\+N\+\_\+\+L\+A\+B\+EL}}\item[{\em 
+J\+U\+N\+C\+T\+I\+O\+N\+\_\+\+L\+A\+B\+EL\label{class_net_canvas_a8637f1961582766e426fb17d0fcbf2cda2dad93111bbc611601d22298f750ab66}
+}]\index{R\+E\+S\+E\+R\+V\+O\+IR@{R\+E\+S\+E\+R\+V\+O\+IR}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!R\+E\+S\+E\+R\+V\+O\+IR@{R\+E\+S\+E\+R\+V\+O\+IR}}\item[{\em 
+R\+E\+S\+E\+R\+V\+O\+IR\label{class_net_canvas_a8637f1961582766e426fb17d0fcbf2cda54b85b2acfbda22e594299c0974c1cc6}
+}]\index{R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+L\+A\+B\+EL@{R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+L\+A\+B\+EL}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+L\+A\+B\+EL@{R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+L\+A\+B\+EL}}\item[{\em 
+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+L\+A\+B\+EL\label{class_net_canvas_a8637f1961582766e426fb17d0fcbf2cda4fc27578993b3996d76f129ef7f584a2}
+}]\index{L\+A\+KE@{L\+A\+KE}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!L\+A\+KE@{L\+A\+KE}}\item[{\em 
+L\+A\+KE\label{class_net_canvas_a8637f1961582766e426fb17d0fcbf2cdaea8593ff593036e98f61ce1b4e8c56b4}
+}]\index{L\+A\+K\+E\+\_\+\+L\+A\+B\+EL@{L\+A\+K\+E\+\_\+\+L\+A\+B\+EL}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!L\+A\+K\+E\+\_\+\+L\+A\+B\+EL@{L\+A\+K\+E\+\_\+\+L\+A\+B\+EL}}\item[{\em 
+L\+A\+K\+E\+\_\+\+L\+A\+B\+EL\label{class_net_canvas_a8637f1961582766e426fb17d0fcbf2cdaac15404dc38f2102f46ad5d9b47a06fe}
+}]\index{D\+E\+M\+A\+ND@{D\+E\+M\+A\+ND}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!D\+E\+M\+A\+ND@{D\+E\+M\+A\+ND}}\item[{\em 
+D\+E\+M\+A\+ND\label{class_net_canvas_a8637f1961582766e426fb17d0fcbf2cdad559384c272fa67dc7dbb75954a30000}
+}]\index{D\+E\+M\+A\+N\+D\+\_\+\+L\+A\+B\+EL@{D\+E\+M\+A\+N\+D\+\_\+\+L\+A\+B\+EL}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!D\+E\+M\+A\+N\+D\+\_\+\+L\+A\+B\+EL@{D\+E\+M\+A\+N\+D\+\_\+\+L\+A\+B\+EL}}\item[{\em 
+D\+E\+M\+A\+N\+D\+\_\+\+L\+A\+B\+EL\label{class_net_canvas_a8637f1961582766e426fb17d0fcbf2cda0de89d66e20e319664bfaf759fedda76}
+}]\index{L\+I\+NK@{L\+I\+NK}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!L\+I\+NK@{L\+I\+NK}}\item[{\em 
+L\+I\+NK\label{class_net_canvas_a8637f1961582766e426fb17d0fcbf2cda42f7cf383ddf053f7ac294ac1a9b3155}
+}]\index{L\+I\+N\+K\+\_\+\+L\+A\+B\+EL@{L\+I\+N\+K\+\_\+\+L\+A\+B\+EL}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!L\+I\+N\+K\+\_\+\+L\+A\+B\+EL@{L\+I\+N\+K\+\_\+\+L\+A\+B\+EL}}\item[{\em 
+L\+I\+N\+K\+\_\+\+L\+A\+B\+EL\label{class_net_canvas_a8637f1961582766e426fb17d0fcbf2cda9c395c9e4d2c5b127901b753dd1d7f88}
+}]\index{L\+I\+N\+K\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+AL@{L\+I\+N\+K\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+AL}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!L\+I\+N\+K\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+AL@{L\+I\+N\+K\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+AL}}\item[{\em 
+L\+I\+N\+K\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+AL\label{class_net_canvas_a8637f1961582766e426fb17d0fcbf2cda39ee9ffae198a646c53c146d9417fdda}
+}]\index{L\+I\+N\+K\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+A\+L\+\_\+\+L\+A\+B\+EL@{L\+I\+N\+K\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+A\+L\+\_\+\+L\+A\+B\+EL}!Net\+Canvas@{Net\+Canvas}}\index{Net\+Canvas@{Net\+Canvas}!L\+I\+N\+K\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+A\+L\+\_\+\+L\+A\+B\+EL@{L\+I\+N\+K\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+A\+L\+\_\+\+L\+A\+B\+EL}}\item[{\em 
+L\+I\+N\+K\+\_\+\+A\+R\+T\+I\+F\+I\+C\+I\+A\+L\+\_\+\+L\+A\+B\+EL\label{class_net_canvas_a8637f1961582766e426fb17d0fcbf2cda6b0bb66a6d8e8505f90dcf9c3b66c0f6}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 43 do arquivo Net\+Canvas.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Net\+Canvas@{Net\+Canvas}!Net\+Canvas@{Net\+Canvas}}
+\index{Net\+Canvas@{Net\+Canvas}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{Net\+Canvas(wx\+Frame $\ast$frame, wx\+Window $\ast$parent, wx\+Window\+I\+D id=-\/1, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=0, const wx\+String \&name=""C\+A\+N\+V\+AS"")}]{\setlength{\rightskip}{0pt plus 5cm}Net\+Canvas\+::\+Net\+Canvas (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{wx\+Window\+ID}]{id = {\ttfamily -\/1}, }
+\item[{const wx\+Point \&}]{pos = {\ttfamily wxDefaultPosition}, }
+\item[{const wx\+Size \&}]{size = {\ttfamily wxDefaultSize}, }
+\item[{long}]{style = {\ttfamily 0}, }
+\item[{const wx\+String \&}]{name = {\ttfamily \char`\"{}CANVAS\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a0086d355c77100145612a3e19ab8fe31}
+Construtor \index{Net\+Canvas@{Net\+Canvas}!````~Net\+Canvas@{$\sim$\+Net\+Canvas}}
+\index{````~Net\+Canvas@{$\sim$\+Net\+Canvas}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{$\sim$\+Net\+Canvas()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Net\+Canvas\+::$\sim$\+Net\+Canvas (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_net_canvas_aee3684d5a706305107fe3f5b231c5411}
+Destrutor 
+
+\subsection{Métodos}
+\index{Net\+Canvas@{Net\+Canvas}!add\+First\+Windows\+Vector\+Zoom@{add\+First\+Windows\+Vector\+Zoom}}
+\index{add\+First\+Windows\+Vector\+Zoom@{add\+First\+Windows\+Vector\+Zoom}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{add\+First\+Windows\+Vector\+Zoom()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::add\+First\+Windows\+Vector\+Zoom (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a5dff8aad444857f7d484c30fc112b077}
+\index{Net\+Canvas@{Net\+Canvas}!add\+Visible\+Elements@{add\+Visible\+Elements}}
+\index{add\+Visible\+Elements@{add\+Visible\+Elements}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{add\+Visible\+Elements(\+Visible\+Elements a\+\_\+visibility)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::add\+Visible\+Elements (
+\begin{DoxyParamCaption}
+\item[{{\bf Visible\+Elements}}]{a\+\_\+visibility}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a8aaa8f1e79c3f4766ab9aed5720d7a23}
+\index{Net\+Canvas@{Net\+Canvas}!centralize\+Shapes@{centralize\+Shapes}}
+\index{centralize\+Shapes@{centralize\+Shapes}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{centralize\+Shapes()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::centralize\+Shapes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_aa1aed25eb0b860dfc682a06048125008}
+\index{Net\+Canvas@{Net\+Canvas}!clear@{clear}}
+\index{clear@{clear}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a63292e8e381917b83f3683c1d7392eea}
+\index{Net\+Canvas@{Net\+Canvas}!clear\+Vector\+Zoom@{clear\+Vector\+Zoom}}
+\index{clear\+Vector\+Zoom@{clear\+Vector\+Zoom}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{clear\+Vector\+Zoom()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::clear\+Vector\+Zoom (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a83b84cb13476d0419ffcaca7d801be88}
+\index{Net\+Canvas@{Net\+Canvas}!create\+Popup\+Menu@{create\+Popup\+Menu}}
+\index{create\+Popup\+Menu@{create\+Popup\+Menu}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{create\+Popup\+Menu(\+Draw\+Element \&element)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::create\+Popup\+Menu (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Element} \&}]{element}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_aacf559d416db1e8345b6bdea69eb0f66}
+\index{Net\+Canvas@{Net\+Canvas}!create\+Popup\+Menu@{create\+Popup\+Menu}}
+\index{create\+Popup\+Menu@{create\+Popup\+Menu}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{create\+Popup\+Menu()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::create\+Popup\+Menu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_aae0a2522f0cb88fa13554f384a303215}
+\index{Net\+Canvas@{Net\+Canvas}!create\+Popup\+Menu@{create\+Popup\+Menu}}
+\index{create\+Popup\+Menu@{create\+Popup\+Menu}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{create\+Popup\+Menu(\+Draw\+Node \&node)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::create\+Popup\+Menu (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Node} \&}]{node}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_aea78e50af092a187c8cbac3a2404d460}
+\index{Net\+Canvas@{Net\+Canvas}!create\+Popup\+Menu@{create\+Popup\+Menu}}
+\index{create\+Popup\+Menu@{create\+Popup\+Menu}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{create\+Popup\+Menu(\+Draw\+Link \&link)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::create\+Popup\+Menu (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Link} \&}]{link}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a8ee50a7056e4456044cce0010ed6b66a}
+\index{Net\+Canvas@{Net\+Canvas}!create\+Popup\+Menu\+Viewer@{create\+Popup\+Menu\+Viewer}}
+\index{create\+Popup\+Menu\+Viewer@{create\+Popup\+Menu\+Viewer}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{create\+Popup\+Menu\+Viewer()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::create\+Popup\+Menu\+Viewer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a5f5c8b04492b66df1b3be7d60379f137}
+\index{Net\+Canvas@{Net\+Canvas}!create\+Vector\+Of\+Elements\+Coordinates@{create\+Vector\+Of\+Elements\+Coordinates}}
+\index{create\+Vector\+Of\+Elements\+Coordinates@{create\+Vector\+Of\+Elements\+Coordinates}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{create\+Vector\+Of\+Elements\+Coordinates()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$wx\+Real\+Point$>$ Net\+Canvas\+::create\+Vector\+Of\+Elements\+Coordinates (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_aa8c573b8711a4974482e51cd62f4e128}
+\index{Net\+Canvas@{Net\+Canvas}!D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+L\+E()}]{\setlength{\rightskip}{0pt plus 5cm}Net\+Canvas\+::\+D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_aab31e75c025bc9ef2920f61d15611f74}
+\index{Net\+Canvas@{Net\+Canvas}!do\+Paint@{do\+Paint}}
+\index{do\+Paint@{do\+Paint}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{do\+Paint(wx\+D\+C \&dc)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::do\+Paint (
+\begin{DoxyParamCaption}
+\item[{wx\+DC \&}]{dc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_canvas_aef9b9cfdb86d70c3fd443cdec3660ced}
+Insere um trecho
+
+void insert\+Selected\+Link(\+Draw\+Link$\ast$ link); Metodo de pintura 
+\begin{DoxyParams}{Parâmetros}
+{\em dc} & Recebe o wx\+DC para pintura \\
+\hline
+\end{DoxyParams}
+\index{Net\+Canvas@{Net\+Canvas}!draw\+Vector\+Bounding\+Box@{draw\+Vector\+Bounding\+Box}}
+\index{draw\+Vector\+Bounding\+Box@{draw\+Vector\+Bounding\+Box}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{draw\+Vector\+Bounding\+Box(wx\+Memory\+D\+C \&m\+D\+C)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::draw\+Vector\+Bounding\+Box (
+\begin{DoxyParamCaption}
+\item[{wx\+Memory\+DC \&}]{m\+DC}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a61434b59fb28316a8b83f84f0c650889}
+\index{Net\+Canvas@{Net\+Canvas}!element\+Manager@{element\+Manager}}
+\index{element\+Manager@{element\+Manager}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{element\+Manager()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Net\+Canvas\+Element\+Manager}\& Net\+Canvas\+::element\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a3fd5d11833de165076beea219e6b2455}
+\index{Net\+Canvas@{Net\+Canvas}!export\+To\+J\+P\+EG@{export\+To\+J\+P\+EG}}
+\index{export\+To\+J\+P\+EG@{export\+To\+J\+P\+EG}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{export\+To\+J\+P\+E\+G(const std\+::string \&a\+\_\+filename)}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::export\+To\+J\+P\+EG (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+\_\+filename}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a6e5e35a463f30a2fb0578dcf45b525c4}
+\index{Net\+Canvas@{Net\+Canvas}!get\+Center@{get\+Center}}
+\index{get\+Center@{get\+Center}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{get\+Center()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Real\+Point Net\+Canvas\+::get\+Center (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_acb5d1414d21a4979e767e85724c3d188}
+Retorna o ponto central entre os extremos entre shapes e elementos \index{Net\+Canvas@{Net\+Canvas}!get\+Command\+Manager@{get\+Command\+Manager}}
+\index{get\+Command\+Manager@{get\+Command\+Manager}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{get\+Command\+Manager()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Command\+Manager}\& Net\+Canvas\+::get\+Command\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_afcd257b2cc86d40055009447d5eeb9ee}
+\index{Net\+Canvas@{Net\+Canvas}!highlight\+Sub\+Network@{highlight\+Sub\+Network}}
+\index{highlight\+Sub\+Network@{highlight\+Sub\+Network}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{highlight\+Sub\+Network(\+Element\+I\+D reservoir\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::highlight\+Sub\+Network (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{reservoir\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a31d2f1926f2fb3a362d7cd205c20b89f}
+\index{Net\+Canvas@{Net\+Canvas}!is\+Down\+Edged@{is\+Down\+Edged}}
+\index{is\+Down\+Edged@{is\+Down\+Edged}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{is\+Down\+Edged()}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::is\+Down\+Edged (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a509a8248054ed1912628d5e4842d41b4}
+\index{Net\+Canvas@{Net\+Canvas}!is\+Multi\+Selection@{is\+Multi\+Selection}}
+\index{is\+Multi\+Selection@{is\+Multi\+Selection}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{is\+Multi\+Selection()}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::is\+Multi\+Selection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a9d4f3ebe68448a7ff1c2f61dc47b8015}
+\index{Net\+Canvas@{Net\+Canvas}!is\+Up\+Edged@{is\+Up\+Edged}}
+\index{is\+Up\+Edged@{is\+Up\+Edged}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{is\+Up\+Edged()}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::is\+Up\+Edged (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a06f9a10ef0e871edf86bbbfa5c23531d}
+\index{Net\+Canvas@{Net\+Canvas}!last\+Zoom\+Position@{last\+Zoom\+Position}}
+\index{last\+Zoom\+Position@{last\+Zoom\+Position}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{last\+Zoom\+Position()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::last\+Zoom\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a22701840fddee1837716987812b1d900}
+\index{Net\+Canvas@{Net\+Canvas}!load\+Bitmap\+Portion@{load\+Bitmap\+Portion}}
+\index{load\+Bitmap\+Portion@{load\+Bitmap\+Portion}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{load\+Bitmap\+Portion()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::load\+Bitmap\+Portion (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a8767cf056c3e305d127091e568caf9df}
+\index{Net\+Canvas@{Net\+Canvas}!load\+Map@{load\+Map}}
+\index{load\+Map@{load\+Map}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{load\+Map(char $\ast$name)}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::load\+Map (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_ae8881a57e72ae9d02e37d4a1853047b3}
+\index{Net\+Canvas@{Net\+Canvas}!measure@{measure}}
+\index{measure@{measure}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{measure(const wx\+Point \&p1, const wx\+Point \&p2)}]{\setlength{\rightskip}{0pt plus 5cm}double Net\+Canvas\+::measure (
+\begin{DoxyParamCaption}
+\item[{const wx\+Point \&}]{p1, }
+\item[{const wx\+Point \&}]{p2}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a29468db0cc0556b9211ebbc6fe8d3493}
+\index{Net\+Canvas@{Net\+Canvas}!next\+Zoom\+Position@{next\+Zoom\+Position}}
+\index{next\+Zoom\+Position@{next\+Zoom\+Position}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{next\+Zoom\+Position()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::next\+Zoom\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_af8d6673bce7d3607a5d76d732a2456bd}
+\index{Net\+Canvas@{Net\+Canvas}!on\+Div\+Point@{on\+Div\+Point}}
+\index{on\+Div\+Point@{on\+Div\+Point}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{on\+Div\+Point(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::on\+Div\+Point (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a1f17867454dcaef76d53803614bf0f1b}
+\index{Net\+Canvas@{Net\+Canvas}!on\+Font\+Down@{on\+Font\+Down}}
+\index{on\+Font\+Down@{on\+Font\+Down}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{on\+Font\+Down(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::on\+Font\+Down (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_af22ba61ce8b4a79bf52f591d9f969373}
+\index{Net\+Canvas@{Net\+Canvas}!on\+Font\+Up@{on\+Font\+Up}}
+\index{on\+Font\+Up@{on\+Font\+Up}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{on\+Font\+Up(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::on\+Font\+Up (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a0a9bc7ad7942f531960727cd22f46a81}
+\index{Net\+Canvas@{Net\+Canvas}!on\+Key\+Down@{on\+Key\+Down}}
+\index{on\+Key\+Down@{on\+Key\+Down}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{on\+Key\+Down(wx\+Key\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::on\+Key\+Down (
+\begin{DoxyParamCaption}
+\item[{wx\+Key\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_af10dca566e3b07f3c445bfd6c991ea4c}
+Evento de precionar tecla 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento recebido \\
+\hline
+\end{DoxyParams}
+\index{Net\+Canvas@{Net\+Canvas}!on\+Key\+Up@{on\+Key\+Up}}
+\index{on\+Key\+Up@{on\+Key\+Up}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{on\+Key\+Up(wx\+Key\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::on\+Key\+Up (
+\begin{DoxyParamCaption}
+\item[{wx\+Key\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a8dbcb700acc1f17037010f345e668fcc}
+Metodo de soltar tecla 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento recebido \\
+\hline
+\end{DoxyParams}
+\index{Net\+Canvas@{Net\+Canvas}!on\+Mouse\+Event@{on\+Mouse\+Event}}
+\index{on\+Mouse\+Event@{on\+Mouse\+Event}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{on\+Mouse\+Event(wx\+Mouse\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::on\+Mouse\+Event (
+\begin{DoxyParamCaption}
+\item[{wx\+Mouse\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a6e258ae81fe161298a70a504abec2d9f}
+Eventos do Mouse 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento recebido \\
+\hline
+\end{DoxyParams}
+\index{Net\+Canvas@{Net\+Canvas}!on\+Mouse\+Wheel\+Down@{on\+Mouse\+Wheel\+Down}}
+\index{on\+Mouse\+Wheel\+Down@{on\+Mouse\+Wheel\+Down}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{on\+Mouse\+Wheel\+Down(wx\+Mouse\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::on\+Mouse\+Wheel\+Down (
+\begin{DoxyParamCaption}
+\item[{wx\+Mouse\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_accdc7bf08ea45eecb3f6d2a49c74ce46}
+\index{Net\+Canvas@{Net\+Canvas}!on\+Mouse\+Wheel\+Up@{on\+Mouse\+Wheel\+Up}}
+\index{on\+Mouse\+Wheel\+Up@{on\+Mouse\+Wheel\+Up}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{on\+Mouse\+Wheel\+Up(wx\+Mouse\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::on\+Mouse\+Wheel\+Up (
+\begin{DoxyParamCaption}
+\item[{wx\+Mouse\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_ad7c0e708f59cf7e737d3a2fd821d55ec}
+\index{Net\+Canvas@{Net\+Canvas}!On\+Mouse\+Zoom\+In\+Event@{On\+Mouse\+Zoom\+In\+Event}}
+\index{On\+Mouse\+Zoom\+In\+Event@{On\+Mouse\+Zoom\+In\+Event}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{On\+Mouse\+Zoom\+In\+Event(wx\+Mouse\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::\+On\+Mouse\+Zoom\+In\+Event (
+\begin{DoxyParamCaption}
+\item[{wx\+Mouse\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a32da2bb7280d4826cb0ed40aaa662e15}
+\index{Net\+Canvas@{Net\+Canvas}!On\+Mouse\+Zoom\+Out\+Event@{On\+Mouse\+Zoom\+Out\+Event}}
+\index{On\+Mouse\+Zoom\+Out\+Event@{On\+Mouse\+Zoom\+Out\+Event}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{On\+Mouse\+Zoom\+Out\+Event(wx\+Mouse\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::\+On\+Mouse\+Zoom\+Out\+Event (
+\begin{DoxyParamCaption}
+\item[{wx\+Mouse\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a703df5c1551bb206082490ba4490d58f}
+\index{Net\+Canvas@{Net\+Canvas}!on\+Paint@{on\+Paint}}
+\index{on\+Paint@{on\+Paint}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{on\+Paint(wx\+Paint\+Event \&\+W\+X\+U\+N\+U\+S\+E\+D(event))}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::on\+Paint (
+\begin{DoxyParamCaption}
+\item[{wx\+Paint\+Event \&}]{W\+X\+U\+N\+U\+S\+EDevent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_canvas_a662d09cde50fda7da666bc8e89c1a456}
+Evento que chama o metodo de pintura 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento recebido \\
+\hline
+\end{DoxyParams}
+\index{Net\+Canvas@{Net\+Canvas}!on\+Popup\+Menu\+Click@{on\+Popup\+Menu\+Click}}
+\index{on\+Popup\+Menu\+Click@{on\+Popup\+Menu\+Click}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{on\+Popup\+Menu\+Click(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::on\+Popup\+Menu\+Click (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_aa063400f1a46e6d3be757051f3b85df4}
+\index{Net\+Canvas@{Net\+Canvas}!on\+Popup\+Menu\+Viewer\+Click@{on\+Popup\+Menu\+Viewer\+Click}}
+\index{on\+Popup\+Menu\+Viewer\+Click@{on\+Popup\+Menu\+Viewer\+Click}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{on\+Popup\+Menu\+Viewer\+Click(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::on\+Popup\+Menu\+Viewer\+Click (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a2459307b4c0d2acc719119a53e89a4db}
+\index{Net\+Canvas@{Net\+Canvas}!on\+Scale\+Down@{on\+Scale\+Down}}
+\index{on\+Scale\+Down@{on\+Scale\+Down}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{on\+Scale\+Down(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::on\+Scale\+Down (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_ab384ea196d547e803f9243bedc620538}
+\index{Net\+Canvas@{Net\+Canvas}!on\+Scale\+Up@{on\+Scale\+Up}}
+\index{on\+Scale\+Up@{on\+Scale\+Up}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{on\+Scale\+Up(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::on\+Scale\+Up (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_aa6e46a82ccdeb7dfc6f90b10176a2ea7}
+\index{Net\+Canvas@{Net\+Canvas}!remove\+Visible\+Elements@{remove\+Visible\+Elements}}
+\index{remove\+Visible\+Elements@{remove\+Visible\+Elements}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{remove\+Visible\+Elements(\+Visible\+Elements a\+\_\+visibility)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::remove\+Visible\+Elements (
+\begin{DoxyParamCaption}
+\item[{{\bf Visible\+Elements}}]{a\+\_\+visibility}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a2b3dd799a0fa1c4815780d801322c601}
+\index{Net\+Canvas@{Net\+Canvas}!resize\+World\+Window\+To\+Fit\+Elements@{resize\+World\+Window\+To\+Fit\+Elements}}
+\index{resize\+World\+Window\+To\+Fit\+Elements@{resize\+World\+Window\+To\+Fit\+Elements}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{resize\+World\+Window\+To\+Fit\+Elements()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::resize\+World\+Window\+To\+Fit\+Elements (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a46c35a775592f69af5437b6647cfa363}
+\index{Net\+Canvas@{Net\+Canvas}!select\+All\+Elements@{select\+All\+Elements}}
+\index{select\+All\+Elements@{select\+All\+Elements}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{select\+All\+Elements()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::select\+All\+Elements (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_af62688f360dc3ce568929035870a78a5}
+\index{Net\+Canvas@{Net\+Canvas}!select\+Element@{select\+Element}}
+\index{select\+Element@{select\+Element}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{select\+Element(\+Draw\+Element \&element)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::select\+Element (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Element} \&}]{element}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a90416c74c8bfe77570a23b9ea8f18dc2}
+\index{Net\+Canvas@{Net\+Canvas}!select\+Element\+By\+ID@{select\+Element\+By\+ID}}
+\index{select\+Element\+By\+ID@{select\+Element\+By\+ID}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{select\+Element\+By\+I\+D(\+Element\+I\+D a\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::select\+Element\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{a\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_aae3e139c646e691931c51f7b5f970cb7}
+\index{Net\+Canvas@{Net\+Canvas}!select\+Elements\+By\+ID@{select\+Elements\+By\+ID}}
+\index{select\+Elements\+By\+ID@{select\+Elements\+By\+ID}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{select\+Elements\+By\+I\+D(std\+::vector$<$ Element\+I\+D $>$ \&a\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::select\+Elements\+By\+ID (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Element\+ID} $>$ \&}]{a\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a5f7581e39992af00b3e65d9f29fce5f8}
+\index{Net\+Canvas@{Net\+Canvas}!set\+Font\+Down@{set\+Font\+Down}}
+\index{set\+Font\+Down@{set\+Font\+Down}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{set\+Font\+Down()}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::set\+Font\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a2c0983b3c77b2784444db81b0eb1e104}
+\index{Net\+Canvas@{Net\+Canvas}!set\+Font\+Up@{set\+Font\+Up}}
+\index{set\+Font\+Up@{set\+Font\+Up}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{set\+Font\+Up()}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::set\+Font\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a9c3e424cb4800b3593284e0e7689c9e9}
+\index{Net\+Canvas@{Net\+Canvas}!set\+Scale\+Down@{set\+Scale\+Down}}
+\index{set\+Scale\+Down@{set\+Scale\+Down}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{set\+Scale\+Down()}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::set\+Scale\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a401d48a88cfd94ec3ce0f9d50b5f06ae}
+\index{Net\+Canvas@{Net\+Canvas}!set\+Scale\+Up@{set\+Scale\+Up}}
+\index{set\+Scale\+Up@{set\+Scale\+Up}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{set\+Scale\+Up()}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::set\+Scale\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_ac201f43c1a69131dad2ff58d9e68e3f1}
+\index{Net\+Canvas@{Net\+Canvas}!show\+Labels@{show\+Labels}}
+\index{show\+Labels@{show\+Labels}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{show\+Labels(bool status, int id)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::show\+Labels (
+\begin{DoxyParamCaption}
+\item[{bool}]{status, }
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_aa7f7550b76e426fc5f38f332c4c46145}
+\index{Net\+Canvas@{Net\+Canvas}!show\+Labels\+All@{show\+Labels\+All}}
+\index{show\+Labels\+All@{show\+Labels\+All}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{show\+Labels\+All(bool status)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::show\+Labels\+All (
+\begin{DoxyParamCaption}
+\item[{bool}]{status}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a0b8b217bcf469b65a6f4fb352d72fd5a}
+\index{Net\+Canvas@{Net\+Canvas}!show\+Labels\+Link@{show\+Labels\+Link}}
+\index{show\+Labels\+Link@{show\+Labels\+Link}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{show\+Labels\+Link(bool status)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::show\+Labels\+Link (
+\begin{DoxyParamCaption}
+\item[{bool}]{status}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a3e0a2b2dac52cbbbdf32d65755d3d0c2}
+\index{Net\+Canvas@{Net\+Canvas}!unselect\+All\+Elements@{unselect\+All\+Elements}}
+\index{unselect\+All\+Elements@{unselect\+All\+Elements}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{unselect\+All\+Elements()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::unselect\+All\+Elements (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a7da422f593006af98cd1869db72f6ecb}
+\index{Net\+Canvas@{Net\+Canvas}!update\+Elements\+Positions@{update\+Elements\+Positions}}
+\index{update\+Elements\+Positions@{update\+Elements\+Positions}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{update\+Elements\+Positions()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::update\+Elements\+Positions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a4dc263bcb01b2ec0f614fd68e28bb18c}
+\index{Net\+Canvas@{Net\+Canvas}!update\+Interface@{update\+Interface}}
+\index{update\+Interface@{update\+Interface}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{update\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::update\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_afa84138c9eef820b795777fc8d204b7d}
+\index{Net\+Canvas@{Net\+Canvas}!update\+Window@{update\+Window}}
+\index{update\+Window@{update\+Window}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{update\+Window()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+::update\+Window (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a37e6c4c8e8d6b358d8e18cf7824567f1}
+\index{Net\+Canvas@{Net\+Canvas}!vector\+Of\+Selected\+Elements@{vector\+Of\+Selected\+Elements}}
+\index{vector\+Of\+Selected\+Elements@{vector\+Of\+Selected\+Elements}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{vector\+Of\+Selected\+Elements()}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::vector$<${\bf Draw\+Element}$\ast$$>$ Net\+Canvas\+::vector\+Of\+Selected\+Elements (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_a987111a19c4502e41340683d1f2740d6}
+W\+A\+R\+N\+I\+NG\+: for improve performance this method restuls could contains null pointers 
+
+\subsection{Amigas e Funções Relacionadas}
+\index{Net\+Canvas@{Net\+Canvas}!Net\+Interface@{Net\+Interface}}
+\index{Net\+Interface@{Net\+Interface}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{Net\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Net\+Interface}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_net_canvas_abfd3bdd9b110dc26c9ad141dffd2e29a}
+
+
+Definição na linha 40 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!Net\+Main@{Net\+Main}}
+\index{Net\+Main@{Net\+Main}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{Net\+Main}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Net\+Main}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_net_canvas_a3369da6ff2a507b113cce97adec8bc0f}
+
+
+Definição na linha 41 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{S\+I\+G\+A\+Frame}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf S\+I\+G\+A\+Frame}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_net_canvas_a9d47c290d5cd19d44bd1f4e8a4817caa}
+Classe amiga 
+
+Definição na linha 39 do arquivo Net\+Canvas.\+h.
+
+
+
+\subsection{Atributos}
+\index{Net\+Canvas@{Net\+Canvas}!autP@{autP}}
+\index{autP@{autP}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{autP}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Layer\+Panel}$\ast$ Net\+Canvas\+::autP}\label{class_net_canvas_ac634cf3a29edad7b3f0d8b606032967a}
+
+
+Definição na linha 207 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!back\+Map@{back\+Map}}
+\index{back\+Map@{back\+Map}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{back\+Map}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Net\+Canvas\+::back\+Map}\label{class_net_canvas_ac15d79f7c8415abad262375501c6dc8b}
+Bitmap de fundo e de shape 
+
+Definição na linha 159 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!back\+Map\+Name@{back\+Map\+Name}}
+\index{back\+Map\+Name@{back\+Map\+Name}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{back\+Map\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Net\+Canvas\+::back\+Map\+Name}\label{class_net_canvas_a50d596d6ecd46f1ecbedcadb29e70532}
+Nome do bitmap de fundo 
+
+Definição na linha 163 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!back\+Shape\+Map@{back\+Shape\+Map}}
+\index{back\+Shape\+Map@{back\+Shape\+Map}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{back\+Shape\+Map}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Net\+Canvas\+::back\+Shape\+Map}\label{class_net_canvas_a6aa87e9712b3d6e510946eff6f1de098}
+
+
+Definição na linha 159 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!bool\+Link\+Label@{bool\+Link\+Label}}
+\index{bool\+Link\+Label@{bool\+Link\+Label}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{bool\+Link\+Label}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::bool\+Link\+Label}\label{class_net_canvas_ac1f9cd6274ec6f23e0e423f1b8577102}
+
+
+Definição na linha 243 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!bool\+Node\+Label@{bool\+Node\+Label}}
+\index{bool\+Node\+Label@{bool\+Node\+Label}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{bool\+Node\+Label}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::bool\+Node\+Label}\label{class_net_canvas_af714e758654edc37d3b4c394516e61c2}
+
+
+Definição na linha 244 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!canvas\+Bitmap@{canvas\+Bitmap}}
+\index{canvas\+Bitmap@{canvas\+Bitmap}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{canvas\+Bitmap}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Net\+Canvas\+::canvas\+Bitmap}\label{class_net_canvas_a0c0395615afcf673d959ef4b54e8333f}
+
+
+Definição na linha 115 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!center@{center}}
+\index{center@{center}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{center}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Real\+Point Net\+Canvas\+::center}\label{class_net_canvas_a0c5498e09efec26f6b7d94a6c0b49338}
+
+
+Definição na linha 219 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!cur\+Hand@{cur\+Hand}}
+\index{cur\+Hand@{cur\+Hand}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{cur\+Hand}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Cursor$\ast$ Net\+Canvas\+::cur\+Hand\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_canvas_a972abd5f80cb7052affab324a237dfa5}
+Cursor 
+
+Definição na linha 335 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!cur\+Hand2@{cur\+Hand2}}
+\index{cur\+Hand2@{cur\+Hand2}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{cur\+Hand2}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Cursor $\ast$ Net\+Canvas\+::cur\+Hand2\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_canvas_a005a5d12dcad90098a9534927f7b4820}
+
+
+Definição na linha 335 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!display\+M\+M\+Size@{display\+M\+M\+Size}}
+\index{display\+M\+M\+Size@{display\+M\+M\+Size}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{display\+M\+M\+Size}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Size Net\+Canvas\+::display\+M\+M\+Size}\label{class_net_canvas_a5754ab87d684209ee93a1ba985207ba6}
+
+
+Definição na linha 210 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!dragging\+Label@{dragging\+Label}}
+\index{dragging\+Label@{dragging\+Label}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{dragging\+Label}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Label}$\ast$ Net\+Canvas\+::dragging\+Label}\label{class_net_canvas_ae293bf9526b9caf7c288bda78753aa49}
+
+
+Definição na linha 191 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!dragging\+Label\+Point@{dragging\+Label\+Point}}
+\index{dragging\+Label\+Point@{dragging\+Label\+Point}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{dragging\+Label\+Point}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point2D} Net\+Canvas\+::dragging\+Label\+Point}\label{class_net_canvas_a99a435cd2d7d27e1719ac0906e131603}
+
+
+Definição na linha 192 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!dragging\+Link@{dragging\+Link}}
+\index{dragging\+Link@{dragging\+Link}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{dragging\+Link}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Link}$\ast$ Net\+Canvas\+::dragging\+Link}\label{class_net_canvas_a01148cde917de11bc1ac248cd142d933}
+
+
+Definição na linha 189 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!dragging\+Node@{dragging\+Node}}
+\index{dragging\+Node@{dragging\+Node}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{dragging\+Node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Node}$\ast$ Net\+Canvas\+::dragging\+Node}\label{class_net_canvas_a70c7794191990030510c4a831b73136d}
+
+
+Definição na linha 190 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!drawing\+Link@{drawing\+Link}}
+\index{drawing\+Link@{drawing\+Link}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{drawing\+Link}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Link}$\ast$ Net\+Canvas\+::drawing\+Link}\label{class_net_canvas_ae817e35e83d38897e65d8d6746c623dd}
+
+
+Definição na linha 188 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!font@{font}}
+\index{font@{font}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{font}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Font Net\+Canvas\+::font\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_canvas_a00c7244881b5b91da19c5c1c0b8c1112}
+Fonte usada para todos os elementos desenhados na rede 
+
+Definição na linha 327 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!font\+Max\+Size@{font\+Max\+Size}}
+\index{font\+Max\+Size@{font\+Max\+Size}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{font\+Max\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int Net\+Canvas\+::font\+Max\+Size}\label{class_net_canvas_a3ea379432fdd0279365e1f608a9c491a}
+Tamanho máximo da fonte 
+
+Definição na linha 119 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!font\+Min\+Size@{font\+Min\+Size}}
+\index{font\+Min\+Size@{font\+Min\+Size}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{font\+Min\+Size}]{\setlength{\rightskip}{0pt plus 5cm}int Net\+Canvas\+::font\+Min\+Size}\label{class_net_canvas_aa7dc6e689e1e1123b04670954765d225}
+Tamanho mínimo da fonte 
+
+Definição na linha 123 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!frame@{frame}}
+\index{frame@{frame}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{frame}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Frame}$\ast$ Net\+Canvas\+::frame\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_canvas_ad6205dc014494f621b44b33d3a0b3409}
+Ponteiro para janela principal 
+
+Definição na linha 361 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!has\+Network\+Moved@{has\+Network\+Moved}}
+\index{has\+Network\+Moved@{has\+Network\+Moved}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{has\+Network\+Moved}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::has\+Network\+Moved}\label{class_net_canvas_aec7180ca19b119642c8c7879ded84e99}
+
+
+Definição na linha 200 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!initial\+Bitmap\+Draw\+Point@{initial\+Bitmap\+Draw\+Point}}
+\index{initial\+Bitmap\+Draw\+Point@{initial\+Bitmap\+Draw\+Point}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{initial\+Bitmap\+Draw\+Point}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point Net\+Canvas\+::initial\+Bitmap\+Draw\+Point}\label{class_net_canvas_aab94d6cc55c7bfcff6cf5cc69d971fa0}
+
+
+Definição na linha 217 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!is\+Dragging@{is\+Dragging}}
+\index{is\+Dragging@{is\+Dragging}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{is\+Dragging}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::is\+Dragging}\label{class_net_canvas_acd4e1a6871a35fd5f7bc3cc7d16071e4}
+boleano para arastar 
+
+Definição na linha 131 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!is\+Network\+In\+Edit\+Mode@{is\+Network\+In\+Edit\+Mode}}
+\index{is\+Network\+In\+Edit\+Mode@{is\+Network\+In\+Edit\+Mode}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{is\+Network\+In\+Edit\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::is\+Network\+In\+Edit\+Mode}\label{class_net_canvas_a33197bcaaa14a77fdf6b0244514479e5}
+
+
+Definição na linha 203 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!is\+Panning@{is\+Panning}}
+\index{is\+Panning@{is\+Panning}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{is\+Panning}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::is\+Panning}\label{class_net_canvas_a15555c4f1765cf31e0380217eb32a18d}
+
+
+Definição na linha 199 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!is\+Selection\+Mode@{is\+Selection\+Mode}}
+\index{is\+Selection\+Mode@{is\+Selection\+Mode}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{is\+Selection\+Mode}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::is\+Selection\+Mode}\label{class_net_canvas_a7b6f23aaf47cab40855f8a082fe4fde9}
+
+
+Definição na linha 202 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!layP@{layP}}
+\index{layP@{layP}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{layP}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Layer\+Panel}$\ast$ Net\+Canvas\+::layP}\label{class_net_canvas_ad53e17da8852e40c395eba6e36a68fcb}
+
+
+Definição na linha 206 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!legP@{legP}}
+\index{legP@{legP}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{legP}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Leg\+Panel}$\ast$ Net\+Canvas\+::legP}\label{class_net_canvas_a2253fb989bac6cd201fe731c49c19c62}
+
+
+Definição na linha 205 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!link\+Condicion@{link\+Condicion}}
+\index{link\+Condicion@{link\+Condicion}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{link\+Condicion}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::link\+Condicion = true}\label{class_net_canvas_a7c1bfba43faf77d6ca52e3c0b3516956}
+
+
+Definição na linha 215 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!links\+Size@{links\+Size}}
+\index{links\+Size@{links\+Size}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{links\+Size}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Net\+Canvas\+::links\+Size}\label{class_net_canvas_a4e7bebab6e55baa8a7a1ce5184541f35}
+Mapa utilizado para criar a rede Quantidade de trechos na rede 
+
+Definição na linha 183 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!m\+\_\+current\+State@{m\+\_\+current\+State}}
+\index{m\+\_\+current\+State@{m\+\_\+current\+State}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{m\+\_\+current\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf State} Net\+Canvas\+::m\+\_\+current\+State\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_canvas_aa505159284be2266fd4dd0ae8c228544}
+
+
+Definição na linha 317 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!m\+\_\+handle\+Vector\+Zoom@{m\+\_\+handle\+Vector\+Zoom}}
+\index{m\+\_\+handle\+Vector\+Zoom@{m\+\_\+handle\+Vector\+Zoom}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{m\+\_\+handle\+Vector\+Zoom}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::m\+\_\+handle\+Vector\+Zoom\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_canvas_ad42c2a2ca237702b94477359628b79b3}
+
+
+Definição na linha 321 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!m\+\_\+last\+Click\+Point@{m\+\_\+last\+Click\+Point}}
+\index{m\+\_\+last\+Click\+Point@{m\+\_\+last\+Click\+Point}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{m\+\_\+last\+Click\+Point}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point Net\+Canvas\+::m\+\_\+last\+Click\+Point\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_canvas_a0cd448a510d14da31f6617b0a916e5b6}
+
+
+Definição na linha 315 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!m\+\_\+last\+State@{m\+\_\+last\+State}}
+\index{m\+\_\+last\+State@{m\+\_\+last\+State}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{m\+\_\+last\+State}]{\setlength{\rightskip}{0pt plus 5cm}{\bf State} Net\+Canvas\+::m\+\_\+last\+State\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_canvas_af5370bcddca621db7645f0491da5e1d2}
+
+
+Definição na linha 316 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!m\+\_\+selected\+Element@{m\+\_\+selected\+Element}}
+\index{m\+\_\+selected\+Element@{m\+\_\+selected\+Element}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{m\+\_\+selected\+Element}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Element}$\ast$ Net\+Canvas\+::m\+\_\+selected\+Element\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_canvas_a3acd580ea951e019cb1e981667fdd308}
+
+
+Definição na linha 319 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!m\+\_\+visible\+Elements@{m\+\_\+visible\+Elements}}
+\index{m\+\_\+visible\+Elements@{m\+\_\+visible\+Elements}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{m\+\_\+visible\+Elements}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Visible\+Elements} Net\+Canvas\+::m\+\_\+visible\+Elements\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_canvas_a55c380a6e955763f1d92dbba2b0b41b3}
+
+
+Definição na linha 318 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!m\+\_\+zoom\+Position@{m\+\_\+zoom\+Position}}
+\index{m\+\_\+zoom\+Position@{m\+\_\+zoom\+Position}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{m\+\_\+zoom\+Position}]{\setlength{\rightskip}{0pt plus 5cm}int Net\+Canvas\+::m\+\_\+zoom\+Position\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_canvas_a2a710dfd77e97b6acc40521365385f2e}
+
+
+Definição na linha 320 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!max\+Position@{max\+Position}}
+\index{max\+Position@{max\+Position}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{max\+Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point2D} Net\+Canvas\+::max\+Position\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_canvas_a0db2937ce45dea052c9c7023673477dd}
+
+
+Definição na linha 343 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!m\+Final@{m\+Final}}
+\index{m\+Final@{m\+Final}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{m\+Final}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point Net\+Canvas\+::m\+Final\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_canvas_a5e835b1fae14ce73410ac0dc151fe62f}
+Ponto de inicio/fim para mover a tela com o botão do meio do mouse 
+
+Definição na linha 331 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!m\+Initial@{m\+Initial}}
+\index{m\+Initial@{m\+Initial}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{m\+Initial}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point Net\+Canvas\+::m\+Initial\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_canvas_a144cd19a580f670a08ab838490fa34ec}
+
+
+Definição na linha 331 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!min\+Position@{min\+Position}}
+\index{min\+Position@{min\+Position}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{min\+Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point2D} Net\+Canvas\+::min\+Position\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_canvas_a726f5a596200fff9265eec21a868cded}
+Possições limites 
+
+Definição na linha 343 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!mousex@{mousex}}
+\index{mousex@{mousex}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{mousex}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Coord Net\+Canvas\+::mousex}\label{class_net_canvas_a9c8b505e2b1a84f08607e4ef55334abf}
+Coordenadas do mouse 
+
+Definição na linha 127 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!mousey@{mousey}}
+\index{mousey@{mousey}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{mousey}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Coord Net\+Canvas\+::mousey}\label{class_net_canvas_af604ee694514e05dd1c2222bea1d8449}
+
+
+Definição na linha 127 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!net\+Name@{net\+Name}}
+\index{net\+Name@{net\+Name}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{net\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Net\+Canvas\+::net\+Name}\label{class_net_canvas_a2940b8731cc07dc1acfdd4b4d626d852}
+Nome da rede 
+
+Definição na linha 155 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!network\+Can\+Be\+Moved@{network\+Can\+Be\+Moved}}
+\index{network\+Can\+Be\+Moved@{network\+Can\+Be\+Moved}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{network\+Can\+Be\+Moved}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::network\+Can\+Be\+Moved}\label{class_net_canvas_a2ae5249f2fb8e7ff7b15dd77d9667836}
+
+
+Definição na linha 201 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!node\+Condicion@{node\+Condicion}}
+\index{node\+Condicion@{node\+Condicion}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{node\+Condicion}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::node\+Condicion = true}\label{class_net_canvas_a64b96954a1084e6c0ad6c8427fe69825}
+
+
+Definição na linha 214 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!nodes\+Size@{nodes\+Size}}
+\index{nodes\+Size@{nodes\+Size}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{nodes\+Size}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Net\+Canvas\+::nodes\+Size}\label{class_net_canvas_a25be12e0c2f7d9e6114f33386dece61c}
+Mapa utilizado para criar a rede Quantidade de nós na rede 
+
+Definição na linha 171 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!p\+Fin@{p\+Fin}}
+\index{p\+Fin@{p\+Fin}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{p\+Fin}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point Net\+Canvas\+::p\+Fin}\label{class_net_canvas_a31ab4cbfa92786723007882dad765b10}
+
+
+Definição na linha 288 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!p\+In@{p\+In}}
+\index{p\+In@{p\+In}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{p\+In}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point Net\+Canvas\+::p\+In}\label{class_net_canvas_a058b5bd44a732db185dab5aec321987c}
+
+
+Definição na linha 287 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!pixels\+Per\+CM@{pixels\+Per\+CM}}
+\index{pixels\+Per\+CM@{pixels\+Per\+CM}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{pixels\+Per\+CM}]{\setlength{\rightskip}{0pt plus 5cm}int Net\+Canvas\+::pixels\+Per\+CM}\label{class_net_canvas_a0fb859d245b23043c44b36dff0198031}
+
+
+Definição na linha 213 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!popup\+Elements@{popup\+Elements}}
+\index{popup\+Elements@{popup\+Elements}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{popup\+Elements}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Menu$\ast$ Net\+Canvas\+::popup\+Elements}\label{class_net_canvas_a507584a5848b4ab6d22e155d3ce3598d}
+Menu de popup de exibir/esconder elementos da rede 
+
+Definição na linha 143 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!popup\+Font@{popup\+Font}}
+\index{popup\+Font@{popup\+Font}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{popup\+Font}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Menu$\ast$ Net\+Canvas\+::popup\+Font}\label{class_net_canvas_a77492003c923030bb66ef25ed130f080}
+Menu de popup 
+
+Definição na linha 139 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!popup\+Menu@{popup\+Menu}}
+\index{popup\+Menu@{popup\+Menu}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{popup\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Menu$\ast$ Net\+Canvas\+::popup\+Menu}\label{class_net_canvas_a1505f9cbb7b63745f498aacafe2769c6}
+Menu de popup 
+
+Definição na linha 135 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!scale@{scale}}
+\index{scale@{scale}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{scale}]{\setlength{\rightskip}{0pt plus 5cm}int Net\+Canvas\+::scale}\label{class_net_canvas_af349804830b7daa9511bd50621604bcd}
+
+
+Definição na linha 212 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!scrolling@{scrolling}}
+\index{scrolling@{scrolling}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{scrolling}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::scrolling}\label{class_net_canvas_a9822a6c09031ec2b8fc96586efcc2dd3}
+
+
+Definição na linha 198 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!scroll\+InitX@{scroll\+InitX}}
+\index{scroll\+InitX@{scroll\+InitX}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{scroll\+InitX}]{\setlength{\rightskip}{0pt plus 5cm}int Net\+Canvas\+::scroll\+InitX}\label{class_net_canvas_a5609ffb2345f53b5895bc2201461e2ae}
+
+
+Definição na linha 196 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!scroll\+InitY@{scroll\+InitY}}
+\index{scroll\+InitY@{scroll\+InitY}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{scroll\+InitY}]{\setlength{\rightskip}{0pt plus 5cm}int Net\+Canvas\+::scroll\+InitY}\label{class_net_canvas_aeccd27e516d96c819f61e91c5aa38618}
+
+
+Definição na linha 196 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!seed@{seed}}
+\index{seed@{seed}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{seed}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Net\+Canvas\+::seed}\label{class_net_canvas_a7805b26106b8978326f61a62caeface5}
+Valor para identificador dos nós 
+
+Definição na linha 175 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!selected\+Link\+Type@{selected\+Link\+Type}}
+\index{selected\+Link\+Type@{selected\+Link\+Type}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{selected\+Link\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Link\+Type} Net\+Canvas\+::selected\+Link\+Type}\label{class_net_canvas_ad557c8dc0f491ee2e3bc8ae021cc3e73}
+
+
+Definição na linha 187 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!selection\+End\+Point@{selection\+End\+Point}}
+\index{selection\+End\+Point@{selection\+End\+Point}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{selection\+End\+Point}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point Net\+Canvas\+::selection\+End\+Point}\label{class_net_canvas_af769e66c6249d762d367bd68e675a0ce}
+
+
+Definição na linha 194 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!selection\+Start\+Point@{selection\+Start\+Point}}
+\index{selection\+Start\+Point@{selection\+Start\+Point}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{selection\+Start\+Point}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point Net\+Canvas\+::selection\+Start\+Point}\label{class_net_canvas_a062ebd205f99b70c27286ee583cc6bda}
+
+
+Definição na linha 193 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!single\+Click\+On\+Right\+Button@{single\+Click\+On\+Right\+Button}}
+\index{single\+Click\+On\+Right\+Button@{single\+Click\+On\+Right\+Button}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{single\+Click\+On\+Right\+Button}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+::single\+Click\+On\+Right\+Button}\label{class_net_canvas_ae836673ae1437e30e1ca9caa3c134c0d}
+boleano para clique unico do botao direito 
+
+Definição na linha 147 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!start\+Point\+Web@{start\+Point\+Web}}
+\index{start\+Point\+Web@{start\+Point\+Web}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{start\+Point\+Web}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point2D} Net\+Canvas\+::start\+Point\+Web\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_canvas_a4a3ca13cdc12ae5b51e5d72cc8e785ae}
+Ponto que serve de referencia para mover uma rede selecionada 
+
+Definição na linha 339 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!sub\+\_\+network\+\_\+panel\+\_\+@{sub\+\_\+network\+\_\+panel\+\_\+}}
+\index{sub\+\_\+network\+\_\+panel\+\_\+@{sub\+\_\+network\+\_\+panel\+\_\+}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{sub\+\_\+network\+\_\+panel\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sub\+Network\+Panel}$\ast$ Net\+Canvas\+::sub\+\_\+network\+\_\+panel\+\_\+}\label{class_net_canvas_a5b43a58995179ee0ef68aa69e4b129f8}
+
+
+Definição na linha 208 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!world\+East@{world\+East}}
+\index{world\+East@{world\+East}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{world\+East}]{\setlength{\rightskip}{0pt plus 5cm}double Net\+Canvas\+::world\+East}\label{class_net_canvas_aa61f8a0efbb783a8a2c5e9f6ca1027c9}
+
+
+Definição na linha 218 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!world\+North@{world\+North}}
+\index{world\+North@{world\+North}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{world\+North}]{\setlength{\rightskip}{0pt plus 5cm}double Net\+Canvas\+::world\+North}\label{class_net_canvas_a6a3c4af3d80fa9356e1d7e28254be154}
+
+
+Definição na linha 218 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!world\+South@{world\+South}}
+\index{world\+South@{world\+South}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{world\+South}]{\setlength{\rightskip}{0pt plus 5cm}double Net\+Canvas\+::world\+South}\label{class_net_canvas_ad61bf02f9c25a56d2b25214c36db2211}
+
+
+Definição na linha 218 do arquivo Net\+Canvas.\+h.
+
+\index{Net\+Canvas@{Net\+Canvas}!world\+West@{world\+West}}
+\index{world\+West@{world\+West}!Net\+Canvas@{Net\+Canvas}}
+\subsubsection[{world\+West}]{\setlength{\rightskip}{0pt plus 5cm}double Net\+Canvas\+::world\+West}\label{class_net_canvas_aa8ed1465aea3a171caee40cdba97e3fa}
+
+
+Definição na linha 218 do arquivo Net\+Canvas.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Net\+Canvas.\+h}\end{DoxyCompactItemize}

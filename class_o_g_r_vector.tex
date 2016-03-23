@@ -1,0 +1,366 @@
+\section{ReferÃªncia da Classe O\+G\+R\+Vector}
+\label{class_o_g_r_vector}\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+
+
+{\ttfamily \#include $<$ogrvector.\+h$>$}
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf O\+G\+R\+Vector} ()
+\item 
+{\bf O\+G\+R\+Vector} (wx\+String vector\+File\+Name)
+\item 
+{\bf O\+G\+R\+Vector} (O\+G\+R\+Data\+Source $\ast$datasource)
+\item 
+virtual {\bf $\sim$\+O\+G\+R\+Vector} ()
+\item 
+void {\bf init} ()
+\item 
+bool {\bf select\+Layer} (unsigned int layer\+Index)
+\item 
+unsigned int {\bf get\+Selected\+Layer\+Index} ()
+\item 
+int {\bf get\+Field\+Count} ()
+\item 
+O\+G\+R\+Layer $\ast$ {\bf get\+Layer} (unsigned int i)
+\item 
+O\+G\+R\+Layer $\ast$ {\bf get\+Selected\+Layer} ()
+\item 
+bool {\bf is\+Ok} ()
+\item 
+void {\bf show\+Type} ()
+\item 
+wx\+String {\bf get\+Vector\+File} ()
+\item 
+{\bf Real\+Rect} {\bf get\+Item\+Bounding\+Box} (long feature\+\_\+id)
+\item 
+int {\bf get\+Layer\+Count} ()
+\item 
+O\+G\+R\+Feature $\ast$ {\bf get\+Feature\+From\+Point} (wx\+Real\+Point \&point)
+\item 
+vector$<$ {\bf Attr\+Table\+Column} $>$ {\bf get\+Feature\+From\+Layer} ()
+\item 
+O\+G\+R\+Data\+Source $\ast$ {\bf get\+Data\+Source} () const 
+\item 
+std\+::string {\bf get\+Projection\+Ref} ()
+\end{DoxyCompactItemize}
+\subsection*{MÃ©todos PÃºblicos EstÃ¡ticos}
+\begin{DoxyCompactItemize}
+\item 
+static wx\+String {\bf get\+Field\+From\+Feature} (O\+G\+R\+Feature \&feature, int col\+Index)
+\item 
+static void {\bf collect\+All\+Polygons} (O\+G\+R\+Layer $\ast$layer, vector$<$ O\+G\+R\+Polygon $\ast$ $>$ \&geometries, vector$<$ O\+G\+R\+Feature $\ast$ $>$ $\ast$features, const vector$<$ wx\+String $>$ \&ignored\+Values=vector$<$ wx\+String $>$(), int ignored\+Col\+Index=0)
+\item 
+static O\+G\+R\+Data\+Source $\ast$ {\bf intersection} (const wx\+String \&Shape\+File\+Name, wx\+Progress\+Dialog $\ast$progress\+Dialog, int $\ast$current\+Progress, O\+G\+R\+Layer $\ast$layer1, O\+G\+R\+Layer $\ast$layer2, int layer1\+Col, int layer2\+Col, int ignored\+Layer1\+Col\+Index, int ignored\+Layer2\+Col\+Index, const vector$<$ wx\+String $>$ \&layer1\+Ignored\+Values\+Str, const vector$<$ wx\+String $>$ \&layer2\+Ignored\+Values\+Str, double min\+Area\+Rate)
+\item 
+static void {\bf cmp\+Replace\+Field\+Dfn} (O\+G\+R\+Layer $\ast$new\+Layer, O\+G\+R\+Layer $\ast$layer\+To\+Cpy, int field\+To\+Cpy)
+\item 
+static void {\bf destroy\+Feature\+Vector} (std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ $\ast$vector)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+String {\bf vector\+File}
+\item 
+unsigned int {\bf selected\+Layer\+Index}
+\item 
+O\+G\+R\+Data\+Source $\ast$ {\bf data\+Source}
+\item 
+O\+G\+R\+Layer $\ast$ {\bf selected\+Layer}
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 38 do arquivo ogrvector.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{O\+G\+R\+Vector()}]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Vector\+::\+O\+G\+R\+Vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_o_g_r_vector_a7ef71f4fe40899b388c3025ed7719ed6}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{O\+G\+R\+Vector(wx\+String vector\+File\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Vector\+::\+O\+G\+R\+Vector (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{vector\+File\+Name}
+\end{DoxyParamCaption}
+)}\label{class_o_g_r_vector_a577b3c02a61033462ecbd3bea70eaae0}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{O\+G\+R\+Vector(\+O\+G\+R\+Data\+Source $\ast$datasource)}]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Vector\+::\+O\+G\+R\+Vector (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Data\+Source $\ast$}]{datasource}
+\end{DoxyParamCaption}
+)}\label{class_o_g_r_vector_a164bfa2e5cde017d6516aff1db166218}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!````~O\+G\+R\+Vector@{$\sim$\+O\+G\+R\+Vector}}
+\index{````~O\+G\+R\+Vector@{$\sim$\+O\+G\+R\+Vector}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{$\sim$\+O\+G\+R\+Vector()}]{\setlength{\rightskip}{0pt plus 5cm}virtual O\+G\+R\+Vector\+::$\sim$\+O\+G\+R\+Vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_o_g_r_vector_a813055ad95eac9ecf665555788be6e5a}
+
+
+\subsection{MÃ©todos}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!cmp\+Replace\+Field\+Dfn@{cmp\+Replace\+Field\+Dfn}}
+\index{cmp\+Replace\+Field\+Dfn@{cmp\+Replace\+Field\+Dfn}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{cmp\+Replace\+Field\+Dfn(\+O\+G\+R\+Layer $\ast$new\+Layer, O\+G\+R\+Layer $\ast$layer\+To\+Cpy, int field\+To\+Cpy)}]{\setlength{\rightskip}{0pt plus 5cm}static void O\+G\+R\+Vector\+::cmp\+Replace\+Field\+Dfn (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{new\+Layer, }
+\item[{O\+G\+R\+Layer $\ast$}]{layer\+To\+Cpy, }
+\item[{int}]{field\+To\+Cpy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_o_g_r_vector_a072fea2107cff97872b17d9274894c30}
+Esse método é usado ao copiar um campo de uma layer existente para uma nova layer. Se a nova layer já possuir um campo com o mesmo nome do campo que está sendo copiado, cria um novo nome de campo na nova layer. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em O\+G\+R\+Layer$\ast$} & new\+Layer -\/ Nova layer que está sendo construída \\
+\hline
+{\em O\+G\+R\+Layer$\ast$} & layer\+To\+Cpy -\/ Layer que contém um campo que está sendo copiado para a nova layer \\
+\hline
+{\em int} & field\+To\+Cpy -\/ Índice do campo a ser copiado para a nova layer \\
+\hline
+\end{DoxyParams}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!collect\+All\+Polygons@{collect\+All\+Polygons}}
+\index{collect\+All\+Polygons@{collect\+All\+Polygons}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{collect\+All\+Polygons(\+O\+G\+R\+Layer $\ast$layer, vector$<$ O\+G\+R\+Polygon $\ast$ $>$ \&geometries, vector$<$ O\+G\+R\+Feature $\ast$ $>$ $\ast$features, const vector$<$ wx\+String $>$ \&ignored\+Values=vector$<$ wx\+String $>$(), int ignored\+Col\+Index=0)}]{\setlength{\rightskip}{0pt plus 5cm}static void O\+G\+R\+Vector\+::collect\+All\+Polygons (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{layer, }
+\item[{vector$<$ O\+G\+R\+Polygon $\ast$ $>$ \&}]{geometries, }
+\item[{vector$<$ O\+G\+R\+Feature $\ast$ $>$ $\ast$}]{features, }
+\item[{const vector$<$ wx\+String $>$ \&}]{ignored\+Values = {\ttfamily vector$<$~wxString~$>$()}, }
+\item[{int}]{ignored\+Col\+Index = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_o_g_r_vector_a2036935ee3da47c449a059b3575121d5}
+Extrai todas os polígonos de um layer, retornando pelo vetor \textquotesingle{}geometries\textquotesingle{} e suas features pelo vetor \textquotesingle{}features\textquotesingle{}. Antes de incluir o polígono no resultado, esta função verifica se ele não deve ser ignorado, de acordo com o vetor \textquotesingle{}ignored\+Values\textquotesingle{}, usando como referencia a coluna da tabela de atributos de indice \textquotesingle{}ignored\+Col\+Index\textquotesingle{}.
+
+
+\begin{DoxyParams}{ParÃ¢metros}
+{\em layer} & IN layer de entrada que contem os polígonos a serem extraídos \\
+\hline
+{\em geometries} & O\+UT vetor de saída que conterá todos os polígonos da layer (exceto os que devem ser ignorados) \\
+\hline
+{\em features} & O\+UT (opcional) vetor de saída que conterá todas as features relativas as poligonos. (geometries.\+size() == features.\+size()). \\
+\hline
+{\em ignored\+Values} & IN vetor de entrada que contem uma lista de nomes a serem ignorados, de acordo com uma das colunas da tabela de atributos \\
+\hline
+{\em ignored\+Col\+Index} & IN inteiro que representa o indice da coluna na tabela de atributos onde se encontram os valores de \textquotesingle{}ignored\+Values\textquotesingle{} \\
+\hline
+\end{DoxyParams}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!destroy\+Feature\+Vector@{destroy\+Feature\+Vector}}
+\index{destroy\+Feature\+Vector@{destroy\+Feature\+Vector}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{destroy\+Feature\+Vector(std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ $\ast$vector)}]{\setlength{\rightskip}{0pt plus 5cm}static void O\+G\+R\+Vector\+::destroy\+Feature\+Vector (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ $\ast$}]{vector}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_o_g_r_vector_aa9c6c3395fdf28f4ae5b8a03b19b7565}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!get\+Data\+Source@{get\+Data\+Source}}
+\index{get\+Data\+Source@{get\+Data\+Source}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{get\+Data\+Source() const }]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Data\+Source$\ast$ O\+G\+R\+Vector\+::get\+Data\+Source (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_o_g_r_vector_aaddfe002332dde472e4530429c4dc0ea}
+Retorna o O\+G\+R\+Data\+Source associado a este vectorlayer \index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!get\+Feature\+From\+Layer@{get\+Feature\+From\+Layer}}
+\index{get\+Feature\+From\+Layer@{get\+Feature\+From\+Layer}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{get\+Feature\+From\+Layer()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Attr\+Table\+Column}$>$ O\+G\+R\+Vector\+::get\+Feature\+From\+Layer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_o_g_r_vector_a71d94fb64f87c339e3e78a523b040b5c}
+Retorna as features da camada atual \index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!get\+Feature\+From\+Point@{get\+Feature\+From\+Point}}
+\index{get\+Feature\+From\+Point@{get\+Feature\+From\+Point}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{get\+Feature\+From\+Point(wx\+Real\+Point \&point)}]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Feature$\ast$ O\+G\+R\+Vector\+::get\+Feature\+From\+Point (
+\begin{DoxyParamCaption}
+\item[{wx\+Real\+Point \&}]{point}
+\end{DoxyParamCaption}
+)}\label{class_o_g_r_vector_a787e8a71b0d40d55506231378082902b}
+Retorna a feature que contém o ponto informado, na camada atual \index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!get\+Field\+Count@{get\+Field\+Count}}
+\index{get\+Field\+Count@{get\+Field\+Count}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{get\+Field\+Count()}]{\setlength{\rightskip}{0pt plus 5cm}int O\+G\+R\+Vector\+::get\+Field\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_o_g_r_vector_a6aca1e9996497639a1a1223dd7067605}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!get\+Field\+From\+Feature@{get\+Field\+From\+Feature}}
+\index{get\+Field\+From\+Feature@{get\+Field\+From\+Feature}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{get\+Field\+From\+Feature(\+O\+G\+R\+Feature \&feature, int col\+Index)}]{\setlength{\rightskip}{0pt plus 5cm}static wx\+String O\+G\+R\+Vector\+::get\+Field\+From\+Feature (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Feature \&}]{feature, }
+\item[{int}]{col\+Index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_o_g_r_vector_a594ed197bdafbfa08e39cdc44c84a226}
+Retorna um capo específico da feature da layer \index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!get\+Item\+Bounding\+Box@{get\+Item\+Bounding\+Box}}
+\index{get\+Item\+Bounding\+Box@{get\+Item\+Bounding\+Box}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{get\+Item\+Bounding\+Box(long feature\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Real\+Rect} O\+G\+R\+Vector\+::get\+Item\+Bounding\+Box (
+\begin{DoxyParamCaption}
+\item[{long}]{feature\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_o_g_r_vector_aa0644ebada277efc706a2b728cf74ace}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!get\+Layer@{get\+Layer}}
+\index{get\+Layer@{get\+Layer}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{get\+Layer(unsigned int i)}]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Layer$\ast$ O\+G\+R\+Vector\+::get\+Layer (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{i}
+\end{DoxyParamCaption}
+)}\label{class_o_g_r_vector_a55be25021dee57e1ac70b369d2765781}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!get\+Layer\+Count@{get\+Layer\+Count}}
+\index{get\+Layer\+Count@{get\+Layer\+Count}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{get\+Layer\+Count()}]{\setlength{\rightskip}{0pt plus 5cm}int O\+G\+R\+Vector\+::get\+Layer\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_o_g_r_vector_aebe0322adc59bd19eccd4974d36ba6b7}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!get\+Projection\+Ref@{get\+Projection\+Ref}}
+\index{get\+Projection\+Ref@{get\+Projection\+Ref}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{get\+Projection\+Ref()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string O\+G\+R\+Vector\+::get\+Projection\+Ref (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_o_g_r_vector_a86bdb528cea4d85ddeebe08d9f5fba14}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!get\+Selected\+Layer@{get\+Selected\+Layer}}
+\index{get\+Selected\+Layer@{get\+Selected\+Layer}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{get\+Selected\+Layer()}]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Layer$\ast$ O\+G\+R\+Vector\+::get\+Selected\+Layer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_o_g_r_vector_a071f6cd923e94e20bb0cbf6a0a4582d2}
+
+
+DefiniÃ§Ã£o na linha 54 do arquivo ogrvector.\+h.
+
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!get\+Selected\+Layer\+Index@{get\+Selected\+Layer\+Index}}
+\index{get\+Selected\+Layer\+Index@{get\+Selected\+Layer\+Index}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{get\+Selected\+Layer\+Index()}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int O\+G\+R\+Vector\+::get\+Selected\+Layer\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_o_g_r_vector_a396f4c44be5e9410ea113ab3f5050c8e}
+
+
+DefiniÃ§Ã£o na linha 49 do arquivo ogrvector.\+h.
+
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!get\+Vector\+File@{get\+Vector\+File}}
+\index{get\+Vector\+File@{get\+Vector\+File}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{get\+Vector\+File()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String O\+G\+R\+Vector\+::get\+Vector\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_o_g_r_vector_a09a187c9e3d31c5cc20348b7d6332393}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!init@{init}}
+\index{init@{init}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{init()}]{\setlength{\rightskip}{0pt plus 5cm}void O\+G\+R\+Vector\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_o_g_r_vector_ad76d3c80dfd500f9501c2ea7337ff136}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!intersection@{intersection}}
+\index{intersection@{intersection}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{intersection(const wx\+String \&\+Shape\+File\+Name, wx\+Progress\+Dialog $\ast$progress\+Dialog, int $\ast$current\+Progress, O\+G\+R\+Layer $\ast$layer1, O\+G\+R\+Layer $\ast$layer2, int layer1\+Col, int layer2\+Col, int ignored\+Layer1\+Col\+Index, int ignored\+Layer2\+Col\+Index, const vector$<$ wx\+String $>$ \&layer1\+Ignored\+Values\+Str, const vector$<$ wx\+String $>$ \&layer2\+Ignored\+Values\+Str, double min\+Area\+Rate)}]{\setlength{\rightskip}{0pt plus 5cm}static O\+G\+R\+Data\+Source$\ast$ O\+G\+R\+Vector\+::intersection (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{Shape\+File\+Name, }
+\item[{wx\+Progress\+Dialog $\ast$}]{progress\+Dialog, }
+\item[{int $\ast$}]{current\+Progress, }
+\item[{O\+G\+R\+Layer $\ast$}]{layer1, }
+\item[{O\+G\+R\+Layer $\ast$}]{layer2, }
+\item[{int}]{layer1\+Col, }
+\item[{int}]{layer2\+Col, }
+\item[{int}]{ignored\+Layer1\+Col\+Index, }
+\item[{int}]{ignored\+Layer2\+Col\+Index, }
+\item[{const vector$<$ wx\+String $>$ \&}]{layer1\+Ignored\+Values\+Str, }
+\item[{const vector$<$ wx\+String $>$ \&}]{layer2\+Ignored\+Values\+Str, }
+\item[{double}]{min\+Area\+Rate}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_o_g_r_vector_a90f1fe77807bdff0c6586671693f7ec0}
+Faz a interseção entre os polígonos de dois shapes. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em wx\+String} & Shape\+File\+Name -\/ Nome do shapefile resultante da interseção \\
+\hline
+{\em wx\+Progress\+Dialog$\ast$} & progress\+Dialog -\/ Barra de progresso \\
+\hline
+{\em int$\ast$} & current\+Progress -\/ Contador do progresso da progress\+Dialog \\
+\hline
+{\em O\+G\+R\+Layer$\ast$} & layer1 -\/ Primeiro shapefile \\
+\hline
+{\em O\+G\+R\+Vector$\ast$} & layer2 -\/ Segundo shapefile \\
+\hline
+{\em int} & layer1\+Col -\/ Índice da coluna relevante do primeiro shapefile (-\/1, copia todas as colunas do layer original) \\
+\hline
+{\em int} & layer2\+Col -\/ Índice da coluna relevante do primeiro shapefile (-\/1, copia todas as colunas do layer original) \\
+\hline
+{\em int} & ignored\+Layer1\+Col\+Index -\/ Índice da coluna que contém valores a serem ignorados do primeiro shapefile \\
+\hline
+{\em int} & ignored\+Layer2\+Col\+Index -\/ Índice da coluna que contém valores a serem ignorados do segundo shapefile \\
+\hline
+{\em const} & vector$<$wx\+String$>$\& layer1\+Ignored\+Values\+Str -\/ Valores ignorados da coluna ignored\+Col1 \\
+\hline
+{\em const} & vector$<$wx\+String$>$\& layer2\+Ignored\+Values\+Str -\/ Valores ignorados da coluna ignored\+Col2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O\+G\+R\+Vector$\ast$ -\/ \doxyref{Shapefile}{pag.}{class_shapefile} dos polígonos resultantes da interseção 
+\end{DoxyReturn}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!is\+Ok@{is\+Ok}}
+\index{is\+Ok@{is\+Ok}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{is\+Ok()}]{\setlength{\rightskip}{0pt plus 5cm}bool O\+G\+R\+Vector\+::is\+Ok (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_o_g_r_vector_a1fba3645cc3e1eabdfee1778b496a6b3}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!select\+Layer@{select\+Layer}}
+\index{select\+Layer@{select\+Layer}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{select\+Layer(unsigned int layer\+Index)}]{\setlength{\rightskip}{0pt plus 5cm}bool O\+G\+R\+Vector\+::select\+Layer (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{layer\+Index}
+\end{DoxyParamCaption}
+)}\label{class_o_g_r_vector_aee5fa3c44150d1ebc3aa43654a68ba50}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!show\+Type@{show\+Type}}
+\index{show\+Type@{show\+Type}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{show\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}void O\+G\+R\+Vector\+::show\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_o_g_r_vector_a227a8223f2eaafd02075e9c7d058c3e8}
+
+
+\subsection{Atributos}
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!data\+Source@{data\+Source}}
+\index{data\+Source@{data\+Source}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{data\+Source}]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Data\+Source$\ast$ O\+G\+R\+Vector\+::data\+Source\hspace{0.3cm}{\ttfamily [protected]}}\label{class_o_g_r_vector_aee17ab4e7cb1c7f2a5b1927798df4d03}
+
+
+DefiniÃ§Ã£o na linha 128 do arquivo ogrvector.\+h.
+
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!selected\+Layer@{selected\+Layer}}
+\index{selected\+Layer@{selected\+Layer}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{selected\+Layer}]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Layer$\ast$ O\+G\+R\+Vector\+::selected\+Layer\hspace{0.3cm}{\ttfamily [protected]}}\label{class_o_g_r_vector_a2f28c4f8c8092e48f57464cd64c9e5e8}
+
+
+DefiniÃ§Ã£o na linha 129 do arquivo ogrvector.\+h.
+
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!selected\+Layer\+Index@{selected\+Layer\+Index}}
+\index{selected\+Layer\+Index@{selected\+Layer\+Index}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{selected\+Layer\+Index}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int O\+G\+R\+Vector\+::selected\+Layer\+Index\hspace{0.3cm}{\ttfamily [protected]}}\label{class_o_g_r_vector_ae6051432bb981c5a9481a75684cd0122}
+
+
+DefiniÃ§Ã£o na linha 127 do arquivo ogrvector.\+h.
+
+\index{O\+G\+R\+Vector@{O\+G\+R\+Vector}!vector\+File@{vector\+File}}
+\index{vector\+File@{vector\+File}!O\+G\+R\+Vector@{O\+G\+R\+Vector}}
+\subsubsection[{vector\+File}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String O\+G\+R\+Vector\+::vector\+File\hspace{0.3cm}{\ttfamily [protected]}}\label{class_o_g_r_vector_a2d1947c2082854d09aa651beb56427b3}
+
+
+DefiniÃ§Ã£o na linha 126 do arquivo ogrvector.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf ogrvector.\+h}\end{DoxyCompactItemize}

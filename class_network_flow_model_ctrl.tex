@@ -1,0 +1,539 @@
+\section{ReferÃªncia da Classe Network\+Flow\+Model\+Ctrl}
+\label{class_network_flow_model_ctrl}\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+
+
+{\ttfamily \#include $<$Network\+Flow\+Model\+Ctrl.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Model\+Ctrl}.
+
+
+
+Superclasse de {\bf Wnd\+Network\+Flow\+Model\+Ctrl}.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Network\+Flow\+Model\+Ctrl} ({\bf Res\+Op\+Interface} $\ast${\bf main\+Inter})
+\item 
+virtual {\bf $\sim$\+Network\+Flow\+Model\+Ctrl} ()
+\item 
+virtual bool {\bf run} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, {\bf Res\+Op\+Scenario} $\ast$scen)
+\item 
+virtual bool {\bf run\+Isolated} (std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&dependency\+\_\+map, {\bf Res\+Op\+Scenario} $\ast$scen, {\bf Element\+ID} network\+\_\+id)
+\item 
+virtual bool {\bf check\+Completeness} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, {\bf Res\+Op\+Scenario} $\ast$scen)
+\item 
+bool {\bf empty} ({\bf Res\+Op\+Element} $\ast$data)
+\item 
+void {\bf set\+Default\+Values} (const wx\+String \&file\+Name, {\bf Res\+Op\+Element} $\ast$element)
+\item 
+void {\bf save\+Default\+Values} (const wx\+String \&file\+Name, {\bf Res\+Op\+Element} $\ast$element)
+\item 
+void {\bf aloc\+Results} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, {\bf Interval} interval)
+\item 
+void {\bf aloc\+Results} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&dependency\+\_\+map, {\bf Interval} interval)
+\item 
+double {\bf count\+Decisions\+Variables} ({\bf Res\+Op\+Scenario} $\ast$scenario)
+\item 
+void {\bf set\+Decisions\+Variables} ({\bf Res\+Op\+Scenario} $\ast$scenario, {\bf Matrix} \&variables)
+\item 
+bool {\bf check\+Limits} ({\bf Matrix} \&variables)
+\item 
+virtual void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Element} $\ast$element, wx\+String section)
+\item 
+virtual void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Element} $\ast$element, wx\+String section)
+\item 
+void {\bf update\+Results\+Series} ({\bf Res\+Op\+Element} $\ast$element, const wx\+String \&scenario\+Name)
+\item 
+virtual void {\bf update\+Results\+Series\+In} ({\bf Res\+Op\+Element} $\ast$element, const wx\+String \&scenario\+Name)
+\item 
+virtual void {\bf update\+Results\+Series\+Out} ({\bf Res\+Op\+Element} $\ast$element, const wx\+String \&scenario\+Name)
+\item 
+virtual void {\bf remove\+Results\+Series\+Out} ({\bf Res\+Op\+Element} $\ast$element, const wx\+String \&scenario\+Name)
+\end{DoxyCompactItemize}
+\subsection*{MÃ©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf save\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Network\+Flow\+Basin} $\ast$element, wx\+String section)
+\item 
+virtual void {\bf save\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Network\+Flow\+Demand} $\ast$element, wx\+String section)
+\item 
+virtual void {\bf save\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Network\+Flow\+Junction} $\ast$element, wx\+String section)
+\item 
+virtual void {\bf save\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Network\+Flow\+Link} $\ast$element, wx\+String section)
+\item 
+virtual void {\bf save\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Network\+Flow\+Reservoir} $\ast$element, wx\+String section)
+\item 
+virtual void {\bf load\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Network\+Flow\+Basin} $\ast$element, wx\+String section)
+\item 
+virtual void {\bf load\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Network\+Flow\+Demand} $\ast$element, wx\+String section)
+\item 
+virtual void {\bf load\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Network\+Flow\+Junction} $\ast$element, wx\+String section)
+\item 
+virtual void {\bf load\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Network\+Flow\+Link} $\ast$element, wx\+String section)
+\item 
+virtual void {\bf load\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Network\+Flow\+Reservoir} $\ast$element, wx\+String section)
+\item 
+void {\bf update\+Results\+Series\+In} ({\bf Res\+Op\+Network\+Flow\+Basin} $\ast$element, const wx\+String \&section)
+\item 
+void {\bf update\+Results\+Series\+Out} ({\bf Res\+Op\+Network\+Flow\+Basin} $\ast$element, const wx\+String \&section)
+\item 
+void {\bf update\+Results\+Series\+In} ({\bf Res\+Op\+Network\+Flow\+Demand} $\ast$element, const wx\+String \&section)
+\item 
+void {\bf update\+Results\+Series\+Out} ({\bf Res\+Op\+Network\+Flow\+Demand} $\ast$element, const wx\+String \&section)
+\item 
+void {\bf update\+Results\+Series\+In} ({\bf Res\+Op\+Network\+Flow\+Junction} $\ast$element, const wx\+String \&section)
+\item 
+void {\bf update\+Results\+Series\+Out} ({\bf Res\+Op\+Network\+Flow\+Junction} $\ast$element, const wx\+String \&section)
+\item 
+void {\bf update\+Results\+Series\+In} ({\bf Res\+Op\+Network\+Flow\+Link} $\ast$element, const wx\+String \&section)
+\item 
+void {\bf update\+Results\+Series\+Out} ({\bf Res\+Op\+Network\+Flow\+Link} $\ast$element, const wx\+String \&section)
+\item 
+void {\bf update\+Results\+Series\+In} ({\bf Res\+Op\+Network\+Flow\+Reservoir} $\ast$element, const wx\+String \&section)
+\item 
+void {\bf update\+Results\+Series\+Out} ({\bf Res\+Op\+Network\+Flow\+Reservoir} $\ast$element, const wx\+String \&section)
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 20 do arquivo Network\+Flow\+Model\+Ctrl.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{Network\+Flow\+Model\+Ctrl(\+Res\+Op\+Interface $\ast$main\+Inter)}]{\setlength{\rightskip}{0pt plus 5cm}Network\+Flow\+Model\+Ctrl\+::\+Network\+Flow\+Model\+Ctrl (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Interface} $\ast$}]{main\+Inter}
+\end{DoxyParamCaption}
+)}\label{class_network_flow_model_ctrl_aa3cc76545e91240bae0a79ebd015cccf}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em main\+Inter} & Interface da classe principal \\
+\hline
+\end{DoxyParams}
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!````~Network\+Flow\+Model\+Ctrl@{$\sim$\+Network\+Flow\+Model\+Ctrl}}
+\index{````~Network\+Flow\+Model\+Ctrl@{$\sim$\+Network\+Flow\+Model\+Ctrl}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{$\sim$\+Network\+Flow\+Model\+Ctrl()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Network\+Flow\+Model\+Ctrl\+::$\sim$\+Network\+Flow\+Model\+Ctrl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_a6194dbbbfd38485ea753e288348cd946}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!aloc\+Results@{aloc\+Results}}
+\index{aloc\+Results@{aloc\+Results}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{aloc\+Results(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, Interval interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Network\+Flow\+Model\+Ctrl\+::aloc\+Results (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)}\label{class_network_flow_model_ctrl_a110809612a80e5bc535b00c724f4aa60}
+Método que reinicia os resultados do sistema \index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!aloc\+Results@{aloc\+Results}}
+\index{aloc\+Results@{aloc\+Results}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{aloc\+Results(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, std\+::map$<$ Element\+I\+D, std\+::vector$<$ Res\+Op\+Element $\ast$ $>$ $>$ \&dependency\+\_\+map, Interval interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Network\+Flow\+Model\+Ctrl\+::aloc\+Results (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&}]{dependency\+\_\+map, }
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)}\label{class_network_flow_model_ctrl_a3497525564ff726123a12fde94347d9d}
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{check\+Completeness(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, Res\+Op\+Scenario $\ast$scen)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Network\+Flow\+Model\+Ctrl\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_a69a37247e2dfdea0eaf31aa3ef5db3f1}
+Método que checa se as informações necessárias foram preenchidas. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_ad7995a59b64d8b31ea54d206059ebd50}.
+
+
+
+Reimplementado por {\bf Wnd\+Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_network_flow_model_ctrl_ae93f1a99a8a30bc9093f3677f8777d9f}.
+
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!check\+Limits@{check\+Limits}}
+\index{check\+Limits@{check\+Limits}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{check\+Limits(\+Matrix \&variables)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+Flow\+Model\+Ctrl\+::check\+Limits (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{variables}
+\end{DoxyParamCaption}
+)}\label{class_network_flow_model_ctrl_a1f1a02b10cbac663167bdacd4cdb49f2}
+Verifica se os limites das variáveis estão corretos \index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!count\+Decisions\+Variables@{count\+Decisions\+Variables}}
+\index{count\+Decisions\+Variables@{count\+Decisions\+Variables}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{count\+Decisions\+Variables(\+Res\+Op\+Scenario $\ast$scenario)}]{\setlength{\rightskip}{0pt plus 5cm}double Network\+Flow\+Model\+Ctrl\+::count\+Decisions\+Variables (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scenario}
+\end{DoxyParamCaption}
+)}\label{class_network_flow_model_ctrl_a1946070f575320d531921c678cdf5a07}
+Método para contar as variáveis de decisão \index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!empty@{empty}}
+\index{empty@{empty}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{empty(\+Res\+Op\+Element $\ast$data)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+Flow\+Model\+Ctrl\+::empty (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_a543f964b77c32e5bc571f2b7e60b5d61}
+retorna se existe algum valor no elemento 
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_a26d579005471dadbb2cb789aa79a58c1}.
+
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!load\+Element\+Project@{load\+Element\+Project}}
+\index{load\+Element\+Project@{load\+Element\+Project}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{load\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Network\+Flow\+Basin $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Network\+Flow\+Model\+Ctrl\+::load\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Network\+Flow\+Basin} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_a16be170bcf273f565bc3277f84a2a44d}
+Read the project the datas from Basin \doxyref{Element}{pag.}{class_element} \index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!load\+Element\+Project@{load\+Element\+Project}}
+\index{load\+Element\+Project@{load\+Element\+Project}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{load\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Network\+Flow\+Demand $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Network\+Flow\+Model\+Ctrl\+::load\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Network\+Flow\+Demand} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_a5cd7072b84ec121e1ad2141a2365f35d}
+Read the project the datas from Demand \doxyref{Element}{pag.}{class_element} \index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!load\+Element\+Project@{load\+Element\+Project}}
+\index{load\+Element\+Project@{load\+Element\+Project}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{load\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Network\+Flow\+Junction $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Network\+Flow\+Model\+Ctrl\+::load\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Network\+Flow\+Junction} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_a325569b03a2351331aeb6a99f2297335}
+Read the project the datas from Juntion \doxyref{Element}{pag.}{class_element} \index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!load\+Element\+Project@{load\+Element\+Project}}
+\index{load\+Element\+Project@{load\+Element\+Project}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{load\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Network\+Flow\+Link $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Network\+Flow\+Model\+Ctrl\+::load\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Network\+Flow\+Link} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_ae00d2171f6163371b18b1a8d63d9fdfd}
+Read the project the datas from \doxyref{Link}{pag.}{class_link} \doxyref{Element}{pag.}{class_element} \index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!load\+Element\+Project@{load\+Element\+Project}}
+\index{load\+Element\+Project@{load\+Element\+Project}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{load\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Network\+Flow\+Reservoir $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Network\+Flow\+Model\+Ctrl\+::load\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Network\+Flow\+Reservoir} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_a6dce68e307de29d167ab8451e16a0b37}
+Read the project the datas from Reservoir \doxyref{Element}{pag.}{class_element} \index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Element $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Network\+Flow\+Model\+Ctrl\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_abbd5b9f90de5526b1ae204dbdb591a6d}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_af3faee21b4277854398b93b7fa53d0e2}.
+
+
+
+Reimplementado por {\bf Wnd\+Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_network_flow_model_ctrl_abe5da58a5753d9e526e9ddf942b6873c}.
+
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Element $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Network\+Flow\+Model\+Ctrl\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_a1b6b5c0bb247ca33ec47e60ed2bf9127}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_a11e561f391bee1bb76fc130a459736fb}.
+
+
+
+Reimplementado por {\bf Wnd\+Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_network_flow_model_ctrl_a52927e4927da8747b1fef5e6db029905}.
+
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!remove\+Results\+Series\+Out@{remove\+Results\+Series\+Out}}
+\index{remove\+Results\+Series\+Out@{remove\+Results\+Series\+Out}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{remove\+Results\+Series\+Out(\+Res\+Op\+Element $\ast$element, const wx\+String \&scenario\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Network\+Flow\+Model\+Ctrl\+::remove\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_a808263e193fc5af13b7271fbc245ae85}
+
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_a4de02f0f247b0c826dfe26ed09b812e7}.
+
+
+
+Reimplementado por {\bf Wnd\+Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_network_flow_model_ctrl_a12b2f8c6b5b40292d20b2d3e48d911e5}.
+
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!run@{run}}
+\index{run@{run}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{run(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, Res\+Op\+Scenario $\ast$scen)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Network\+Flow\+Model\+Ctrl\+::run (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_ad8d0cff475350a66f2276ce1a1f8c942}
+Método abstrato que executa a tecnica 
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_aeaad0950868750f122df1dc2e37d06e7}.
+
+
+
+Reimplementado por {\bf Wnd\+Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_network_flow_model_ctrl_aeb4fd0c93e63c1ea42c3eac3b8a8a1b9}.
+
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!run\+Isolated@{run\+Isolated}}
+\index{run\+Isolated@{run\+Isolated}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{run\+Isolated(std\+::map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, std\+::map$<$ Element\+I\+D, std\+::vector$<$ Res\+Op\+Element $\ast$ $>$ $>$ \&dependency\+\_\+map, Res\+Op\+Scenario $\ast$scen, Element\+I\+D network\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Network\+Flow\+Model\+Ctrl\+::run\+Isolated (
+\begin{DoxyParamCaption}
+\item[{std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&}]{dependency\+\_\+map, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen, }
+\item[{{\bf Element\+ID}}]{network\+\_\+id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_a1674c7c7a767bceed235bfdc43bf8424}
+
+
+ReimplementaÃ§Ã£o de {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_ac62b6754d919c917c9314afd6cf4f52c}.
+
+
+
+Reimplementado por {\bf Wnd\+Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_network_flow_model_ctrl_a126eb2fb2fe9ccc4e83a3ef915322c79}.
+
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!save\+Default\+Values@{save\+Default\+Values}}
+\index{save\+Default\+Values@{save\+Default\+Values}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{save\+Default\+Values(const wx\+String \&file\+Name, Res\+Op\+Element $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}void Network\+Flow\+Model\+Ctrl\+::save\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Name, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_a5b8183445e43ca125580e1a4f9f793f7}
+
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_a25ac7b64ee885352ea5508abc1afe9e2}.
+
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!save\+Element\+Project@{save\+Element\+Project}}
+\index{save\+Element\+Project@{save\+Element\+Project}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{save\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Network\+Flow\+Basin $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Network\+Flow\+Model\+Ctrl\+::save\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Network\+Flow\+Basin} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_a671772d4f8617c2ad87d5e0fe1b75cdd}
+Salva no projeto os dados do elemento Bacia \index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!save\+Element\+Project@{save\+Element\+Project}}
+\index{save\+Element\+Project@{save\+Element\+Project}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{save\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Network\+Flow\+Demand $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Network\+Flow\+Model\+Ctrl\+::save\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Network\+Flow\+Demand} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_a1f4219e37bea358fcf53427851b9b829}
+Salva no projeto os dados do elemento Demanda \index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!save\+Element\+Project@{save\+Element\+Project}}
+\index{save\+Element\+Project@{save\+Element\+Project}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{save\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Network\+Flow\+Junction $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Network\+Flow\+Model\+Ctrl\+::save\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Network\+Flow\+Junction} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_a34423575b15cfa130a0c0948beec83f1}
+Salva no projeto os dados do elemento Junção \index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!save\+Element\+Project@{save\+Element\+Project}}
+\index{save\+Element\+Project@{save\+Element\+Project}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{save\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Network\+Flow\+Link $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Network\+Flow\+Model\+Ctrl\+::save\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Network\+Flow\+Link} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_a71f6bd83cf20c04a041db5b52f19ec45}
+Salva no projeto os dados do elemento \doxyref{Link}{pag.}{class_link} \index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!save\+Element\+Project@{save\+Element\+Project}}
+\index{save\+Element\+Project@{save\+Element\+Project}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{save\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Network\+Flow\+Reservoir $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Network\+Flow\+Model\+Ctrl\+::save\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Network\+Flow\+Reservoir} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_a0facfba0d74ac0b89639b994ed7f14fc}
+Salva no projeto os dados do elemento Reservatorio \index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!set\+Decisions\+Variables@{set\+Decisions\+Variables}}
+\index{set\+Decisions\+Variables@{set\+Decisions\+Variables}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{set\+Decisions\+Variables(\+Res\+Op\+Scenario $\ast$scenario, Matrix \&variables)}]{\setlength{\rightskip}{0pt plus 5cm}void Network\+Flow\+Model\+Ctrl\+::set\+Decisions\+Variables (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scenario, }
+\item[{{\bf Matrix} \&}]{variables}
+\end{DoxyParamCaption}
+)}\label{class_network_flow_model_ctrl_aa7e082a01df937be305c300a8cf2ef26}
+Método para atribuir soluções as respectivas variáveis \index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!set\+Default\+Values@{set\+Default\+Values}}
+\index{set\+Default\+Values@{set\+Default\+Values}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{set\+Default\+Values(const wx\+String \&file\+Name, Res\+Op\+Element $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}void Network\+Flow\+Model\+Ctrl\+::set\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Name, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_a1a707b1180965caaa8a3391c5198a7ae}
+
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_a5bc33ce032ab0c182c73381bc168e30f}.
+
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!update\+Results\+Series@{update\+Results\+Series}}
+\index{update\+Results\+Series@{update\+Results\+Series}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series(\+Res\+Op\+Element $\ast$element, const wx\+String \&scenario\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Network\+Flow\+Model\+Ctrl\+::update\+Results\+Series (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_aabcc538c9193565b001bf33c742af89c}
+Adciona as series que existirem daquele modelo no modulo de Resultados Lembrete\+: Caso haja uma alteração no nome ou na unidade da serie será necessario mudar neste metodo também 
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_a169d6145edeff7dc8e88b7421b99e031}.
+
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!update\+Results\+Series\+In@{update\+Results\+Series\+In}}
+\index{update\+Results\+Series\+In@{update\+Results\+Series\+In}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+In(\+Res\+Op\+Element $\ast$element, const wx\+String \&scenario\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Network\+Flow\+Model\+Ctrl\+::update\+Results\+Series\+In (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_acbdbf8756473e3ea43428b7f95e91536}
+
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_a5ab379d0dbc21cf439d0568359b23afd}.
+
+
+
+Reimplementado por {\bf Wnd\+Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_network_flow_model_ctrl_abee78fa3ee44cc89a0fcfbf71bf60972}.
+
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!update\+Results\+Series\+In@{update\+Results\+Series\+In}}
+\index{update\+Results\+Series\+In@{update\+Results\+Series\+In}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+In(\+Res\+Op\+Network\+Flow\+Basin $\ast$element, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void Network\+Flow\+Model\+Ctrl\+::update\+Results\+Series\+In (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Network\+Flow\+Basin} $\ast$}]{element, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_flow_model_ctrl_a66eef8323fa357d938290d9ccb187cb6}
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!update\+Results\+Series\+In@{update\+Results\+Series\+In}}
+\index{update\+Results\+Series\+In@{update\+Results\+Series\+In}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+In(\+Res\+Op\+Network\+Flow\+Demand $\ast$element, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void Network\+Flow\+Model\+Ctrl\+::update\+Results\+Series\+In (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Network\+Flow\+Demand} $\ast$}]{element, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_flow_model_ctrl_ac429eccfcc7741fea51c162784f736fe}
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!update\+Results\+Series\+In@{update\+Results\+Series\+In}}
+\index{update\+Results\+Series\+In@{update\+Results\+Series\+In}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+In(\+Res\+Op\+Network\+Flow\+Junction $\ast$element, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void Network\+Flow\+Model\+Ctrl\+::update\+Results\+Series\+In (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Network\+Flow\+Junction} $\ast$}]{element, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_flow_model_ctrl_ae5168c522a8c5076044e400d76987e47}
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!update\+Results\+Series\+In@{update\+Results\+Series\+In}}
+\index{update\+Results\+Series\+In@{update\+Results\+Series\+In}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+In(\+Res\+Op\+Network\+Flow\+Link $\ast$element, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void Network\+Flow\+Model\+Ctrl\+::update\+Results\+Series\+In (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Network\+Flow\+Link} $\ast$}]{element, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_flow_model_ctrl_adbdf3f4580908d60cc1e4c8609fabed7}
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!update\+Results\+Series\+In@{update\+Results\+Series\+In}}
+\index{update\+Results\+Series\+In@{update\+Results\+Series\+In}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+In(\+Res\+Op\+Network\+Flow\+Reservoir $\ast$element, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void Network\+Flow\+Model\+Ctrl\+::update\+Results\+Series\+In (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Network\+Flow\+Reservoir} $\ast$}]{element, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_flow_model_ctrl_a11f11b2a5ad5fd45c78f34f7aad044e0}
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!update\+Results\+Series\+Out@{update\+Results\+Series\+Out}}
+\index{update\+Results\+Series\+Out@{update\+Results\+Series\+Out}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+Out(\+Res\+Op\+Element $\ast$element, const wx\+String \&scenario\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Network\+Flow\+Model\+Ctrl\+::update\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_network_flow_model_ctrl_a7f7bded7c5db877619f7ae5fd7486ce4}
+
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_a52d3e5c6017434cea994eb1d85f93769}.
+
+
+
+Reimplementado por {\bf Wnd\+Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_network_flow_model_ctrl_abb53922d4718191051f35ab73c0e035e}.
+
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!update\+Results\+Series\+Out@{update\+Results\+Series\+Out}}
+\index{update\+Results\+Series\+Out@{update\+Results\+Series\+Out}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+Out(\+Res\+Op\+Network\+Flow\+Basin $\ast$element, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void Network\+Flow\+Model\+Ctrl\+::update\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Network\+Flow\+Basin} $\ast$}]{element, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_flow_model_ctrl_ae2671e8c92ebe5339b1446257017fa62}
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!update\+Results\+Series\+Out@{update\+Results\+Series\+Out}}
+\index{update\+Results\+Series\+Out@{update\+Results\+Series\+Out}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+Out(\+Res\+Op\+Network\+Flow\+Demand $\ast$element, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void Network\+Flow\+Model\+Ctrl\+::update\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Network\+Flow\+Demand} $\ast$}]{element, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_flow_model_ctrl_a69810ab395fb37fa46e357192841b5c7}
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!update\+Results\+Series\+Out@{update\+Results\+Series\+Out}}
+\index{update\+Results\+Series\+Out@{update\+Results\+Series\+Out}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+Out(\+Res\+Op\+Network\+Flow\+Junction $\ast$element, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void Network\+Flow\+Model\+Ctrl\+::update\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Network\+Flow\+Junction} $\ast$}]{element, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_flow_model_ctrl_a3ff6b61f682318217114e90f656a3cbe}
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!update\+Results\+Series\+Out@{update\+Results\+Series\+Out}}
+\index{update\+Results\+Series\+Out@{update\+Results\+Series\+Out}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+Out(\+Res\+Op\+Network\+Flow\+Link $\ast$element, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void Network\+Flow\+Model\+Ctrl\+::update\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Network\+Flow\+Link} $\ast$}]{element, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_flow_model_ctrl_a9240eace2c3b34a5ed07b0040787a4f4}
+\index{Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}!update\+Results\+Series\+Out@{update\+Results\+Series\+Out}}
+\index{update\+Results\+Series\+Out@{update\+Results\+Series\+Out}!Network\+Flow\+Model\+Ctrl@{Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+Out(\+Res\+Op\+Network\+Flow\+Reservoir $\ast$element, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void Network\+Flow\+Model\+Ctrl\+::update\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Network\+Flow\+Reservoir} $\ast$}]{element, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_flow_model_ctrl_a4a3dcd6a698494ac80a60e279f6b25c3}
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Network\+Flow\+Model\+Ctrl.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,1183 @@
+\section{Referência da Classe Do\+Entry}
+\label{class_do_entry}\index{Do\+Entry@{Do\+Entry}}
+
+
+{\ttfamily \#include $<$Do\+Entry.\+h$>$}
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Scenario} \{ {\bf L\+E\+S\+S\+\_\+\+R\+A\+IN}, 
+{\bf N\+O\+\_\+\+T\+R\+E\+ND}, 
+{\bf M\+O\+R\+E\+\_\+\+R\+A\+IN}
+ \}
+\item 
+enum {\bf Precipitation\+Interpolation\+Type} \{ \\*
+{\bf OK}, 
+{\bf E\+DK}, 
+{\bf E\+D\+K\+\_\+\+X\+YZ}, 
+{\bf C\+S\+I\+M\+A\+B\+S\+E\+D3}, 
+\\*
+{\bf C\+S\+I\+M\+R\+E\+L\+E\+D3}, 
+{\bf C\+S\+I\+M\+R\+E\+L\+E\+D1}, 
+{\bf C\+S\+I\+M\+A\+B\+S\+E\+D1}, 
+{\bf S\+T\+A\+T\+D\+A\+TA}, 
+\\*
+{\bf S\+T\+A\+T\+D\+A\+T\+A\+C\+ON}, 
+{\bf G\+E\+R\+S\+T\+D\+A\+T\+A\+C\+ON}, 
+{\bf G\+E\+R\+S\+T\+D\+A\+TA}, 
+{\bf O\+K\+\_\+\+M\+E\+A\+N1\+C\+E\+LL}
+ \}
+\item 
+enum {\bf Interception\+Routine\+Type} \{ {\bf S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+C\+K\+ET}, 
+{\bf M\+O\+D\+I\+F\+I\+E\+D\+\_\+\+B\+U\+C\+K\+ET}
+ \}
+\item 
+enum {\bf River\+Sediment\+Model\+Type} \{ {\bf O\+L\+D\+\_\+\+R\+O\+U\+T\+I\+NG} = 1, 
+{\bf M\+U\+S\+K\+I\+N\+G\+U\+M\+\_\+\+S\+S\+T\+R\+A\+N\+S\+P\+O\+RT}, 
+{\bf M\+U\+S\+K\+I\+N\+G\+U\+M\+\_\+\+B\+E\+D\+L\+O\+AD}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Do\+Entry} ()
+\item 
+virtual {\bf $\sim$\+Do\+Entry} ()
+\item 
+void {\bf set\+Input\+Path} (const wx\+String \&{\bf input\+Path})
+\item 
+wx\+String {\bf get\+Input\+Path} () const 
+\item 
+void {\bf set\+Output\+Path} (const wx\+String \&{\bf output\+Path})
+\item 
+wx\+String {\bf get\+Output\+Path} () const 
+\item 
+void {\bf set\+Simulation\+Start} (const wx\+Date\+Time \&{\bf simulation\+Start})
+\item 
+wx\+Date\+Time {\bf get\+Simulation\+Start} () const 
+\item 
+void {\bf set\+Simulation\+End} (const wx\+Date\+Time \&{\bf simulation\+End})
+\item 
+wx\+Date\+Time {\bf get\+Simulation\+End} () const 
+\item 
+void {\bf set\+Number\+Of\+Subbasin} (int {\bf number\+Of\+Subbasin})
+\item 
+int {\bf get\+Number\+Of\+Subbasin} () const 
+\item 
+void {\bf set\+Number\+Of\+Combinations} (int {\bf number\+Of\+Combinations})
+\item 
+int {\bf get\+Number\+Of\+Combinations} () const 
+\item 
+void {\bf set\+Total\+Soter} (int {\bf total\+Soter})
+\item 
+int {\bf get\+Total\+Soter} () const 
+\item 
+void {\bf set\+Total\+TC} (int {\bf total\+TC})
+\item 
+int {\bf get\+Total\+TC} () const 
+\item 
+void {\bf set\+Total\+Soil} (int {\bf total\+Soil})
+\item 
+int {\bf get\+Total\+Soil} () const 
+\item 
+void {\bf set\+Total\+Vegetation} (int {\bf total\+Vegetation})
+\item 
+int {\bf get\+Total\+Vegetation} () const 
+\item 
+void {\bf set\+Do\+Reservoir\+Calculations} (bool {\bf do\+Reservoir\+Calculations})
+\item 
+bool {\bf get\+Do\+Reservoir\+Calculations} () const 
+\item 
+void {\bf set\+Include\+Dam\+Calculations} (bool {\bf include\+Dam\+Calculations})
+\item 
+bool {\bf get\+Include\+Dam\+Calculations} () const 
+\item 
+void {\bf set\+Do\+Latflow\+Between\+TC} (bool {\bf do\+Latflow\+Between\+TC})
+\item 
+bool {\bf get\+Do\+Latflow\+Between\+TC} () const 
+\item 
+void {\bf set\+Rout\+Latflow} (bool {\bf rout\+Latflow})
+\item 
+bool {\bf get\+Rout\+Latflow} () const 
+\item 
+void {\bf set\+Surface\+Runoff} (bool {\bf surface\+Runoff})
+\item 
+bool {\bf get\+Surface\+Runoff} () const 
+\item 
+void {\bf set\+Subsurface\+Runoff} (bool {\bf subsurface\+Runoff})
+\item 
+bool {\bf get\+Subsurface\+Runoff} () const 
+\item 
+void {\bf set\+Do\+Water\+Transpositions} (bool {\bf do\+Water\+Transpositions})
+\item 
+bool {\bf get\+Do\+Water\+Transpositions} () const 
+\item 
+void {\bf set\+Do\+Hourly\+Version} (bool {\bf do\+Hourly\+Version})
+\item 
+bool {\bf get\+Do\+Hourly\+Version} () const 
+\item 
+void {\bf set\+Do\+Scaling} (bool {\bf do\+Scaling})
+\item 
+bool {\bf get\+Do\+Scaling} () const 
+\item 
+void {\bf set\+Use\+Rainfall\+Input} (bool {\bf use\+Rainfall\+Input})
+\item 
+bool {\bf get\+Use\+Rainfall\+Input} () const 
+\item 
+void {\bf set\+Do\+Sediment} (bool {\bf do\+Sediment})
+\item 
+bool {\bf get\+Do\+Sediment} () const 
+\item 
+void {\bf set\+Load\+State\+Of\+Storages} (bool {\bf load\+State\+Of\+Storages})
+\item 
+bool {\bf get\+Load\+State\+Of\+Storages} () const 
+\item 
+void {\bf set\+Save\+State\+Of\+Storages} (bool {\bf save\+State\+Of\+Storages})
+\item 
+bool {\bf get\+Save\+State\+Of\+Storages} () const 
+\item 
+void {\bf set\+Scenario} ({\bf Scenario} {\bf scenario})
+\item 
+{\bf Scenario} {\bf get\+Scenario} () const 
+\item 
+void {\bf set\+Precipitation\+Interpolation\+Type} ({\bf Precipitation\+Interpolation\+Type} {\bf precipitation\+Interpolation\+Type})
+\item 
+{\bf Precipitation\+Interpolation\+Type} {\bf get\+Precipitation\+Interpolation\+Type} () const 
+\item 
+void {\bf set\+Interception\+Routine\+Type} ({\bf Interception\+Routine\+Type} {\bf interception\+Routine\+Type})
+\item 
+{\bf Interception\+Routine\+Type} {\bf get\+Interception\+Routine\+Type} () const 
+\item 
+void {\bf set\+River\+Sediment\+Model\+Type} ({\bf River\+Sediment\+Model\+Type} {\bf river\+Sediment\+Model\+Type})
+\item 
+{\bf River\+Sediment\+Model\+Type} {\bf get\+River\+Sediment\+Model\+Type} () const 
+\item 
+void {\bf set\+Hydraulic\+Conduct\+Factor} (double {\bf hydraulic\+Conduct\+Factor})
+\item 
+double {\bf get\+Hydraulic\+Conduct\+Factor} () const 
+\item 
+void {\bf set\+Interception\+Capacity} (double {\bf interception\+Capacity})
+\item 
+double {\bf get\+Interception\+Capacity} () const 
+\item 
+void {\bf set\+Sensitivity\+Factor} (double {\bf sensitivity\+Factor})
+\item 
+double {\bf get\+Sensitivity\+Factor} () const 
+\item 
+void {\bf set\+Time\+Step} (int {\bf time\+Step})
+\item 
+int {\bf get\+Time\+Step} () const 
+\item 
+void {\bf set\+Grain\+Class\+Number} (int {\bf grain\+Class\+Number})
+\item 
+int {\bf get\+Grain\+Class\+Number} () const 
+\item 
+void {\bf set\+Sediment\+Transport\+Model\+Type} (int {\bf sediment\+Transport\+Model\+Type})
+\item 
+int {\bf get\+Sediment\+Transport\+Model\+Type} () const 
+\item 
+void {\bf set\+Reservoir\+Sediment\+Model\+Type} (int {\bf reservoir\+Sediment\+Model\+Type})
+\item 
+int {\bf get\+Reservoir\+Sediment\+Model\+Type} () const 
+\item 
+wx\+String {\bf get\+String} () const 
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static wx\+String {\bf get\+Header} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Estáticos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+static const double {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+Y\+D\+R\+A\+U\+L\+I\+C\+\_\+\+C\+O\+N\+D\+U\+C\+T\+\_\+\+F\+A\+C\+T\+OR}
+\item 
+static const double {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+T\+E\+R\+C\+E\+P\+T\+I\+O\+N\+\_\+\+C\+A\+P\+A\+C\+I\+TY}
+\item 
+static const double {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+\_\+\+F\+A\+C\+T\+OR}
+\item 
+static const int {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+EP}
+\item 
+static const int {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+R\+A\+I\+N\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+U\+M\+B\+ER}
+\item 
+static const int {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE}
+\item 
+static const int {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+String {\bf input\+Path}
+\item 
+wx\+String {\bf output\+Path}
+\item 
+wx\+Date\+Time {\bf simulation\+Start}
+\item 
+wx\+Date\+Time {\bf simulation\+End}
+\item 
+int {\bf number\+Of\+Subbasin}
+\item 
+int {\bf number\+Of\+Combinations}
+\item 
+int {\bf total\+Soter}
+\item 
+int {\bf total\+TC}
+\item 
+int {\bf total\+Soil}
+\item 
+int {\bf total\+Vegetation}
+\item 
+bool {\bf do\+Reservoir\+Calculations}
+\item 
+bool {\bf include\+Dam\+Calculations}
+\item 
+bool {\bf do\+Latflow\+Between\+TC}
+\item 
+bool {\bf rout\+Latflow}
+\item 
+bool {\bf surface\+Runoff}
+\item 
+bool {\bf subsurface\+Runoff}
+\item 
+bool {\bf do\+Water\+Transpositions}
+\item 
+bool {\bf do\+Hourly\+Version}
+\item 
+bool {\bf do\+Scaling}
+\item 
+bool {\bf use\+Rainfall\+Input}
+\item 
+bool {\bf do\+Sediment}
+\item 
+bool {\bf load\+State\+Of\+Storages}
+\item 
+bool {\bf save\+State\+Of\+Storages}
+\item 
+{\bf Scenario} {\bf scenario}
+\item 
+{\bf Precipitation\+Interpolation\+Type} {\bf precipitation\+Interpolation\+Type}
+\item 
+{\bf Interception\+Routine\+Type} {\bf interception\+Routine\+Type}
+\item 
+{\bf River\+Sediment\+Model\+Type} {\bf river\+Sediment\+Model\+Type}
+\item 
+double {\bf hydraulic\+Conduct\+Factor}
+\item 
+double {\bf interception\+Capacity}
+\item 
+double {\bf sensitivity\+Factor}
+\item 
+int {\bf time\+Step}
+\item 
+int {\bf grain\+Class\+Number}
+\item 
+int {\bf sediment\+Transport\+Model\+Type}
+\item 
+int {\bf reservoir\+Sediment\+Model\+Type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+\doxyref{Do\+Entry}{pag.}{class_do_entry}
+
+Class que mapeia/modela uma entrada do arquivo do.\+dat Neste caso, o arquivo possui apenas uma entry, que descrevem todas as suas linhas 
+
+Definição na linha 18 do arquivo Do\+Entry.\+h.
+
+
+
+\subsection{Enumerações}
+\index{Do\+Entry@{Do\+Entry}!Interception\+Routine\+Type@{Interception\+Routine\+Type}}
+\index{Interception\+Routine\+Type@{Interception\+Routine\+Type}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{Interception\+Routine\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Do\+Entry\+::\+Interception\+Routine\+Type}}\label{class_do_entry_a10491beee29a6ad78c45a8d172e8cdbd}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+C\+K\+ET@{S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+C\+K\+ET}!Do\+Entry@{Do\+Entry}}\index{Do\+Entry@{Do\+Entry}!S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+C\+K\+ET@{S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+C\+K\+ET}}\item[{\em 
+S\+I\+M\+P\+L\+E\+\_\+\+B\+U\+C\+K\+ET\label{class_do_entry_a10491beee29a6ad78c45a8d172e8cdbdaff09f247756e79c9938fb962a92d1354}
+}]\index{M\+O\+D\+I\+F\+I\+E\+D\+\_\+\+B\+U\+C\+K\+ET@{M\+O\+D\+I\+F\+I\+E\+D\+\_\+\+B\+U\+C\+K\+ET}!Do\+Entry@{Do\+Entry}}\index{Do\+Entry@{Do\+Entry}!M\+O\+D\+I\+F\+I\+E\+D\+\_\+\+B\+U\+C\+K\+ET@{M\+O\+D\+I\+F\+I\+E\+D\+\_\+\+B\+U\+C\+K\+ET}}\item[{\em 
+M\+O\+D\+I\+F\+I\+E\+D\+\_\+\+B\+U\+C\+K\+ET\label{class_do_entry_a10491beee29a6ad78c45a8d172e8cdbda691c9e810c146075b4053819bb22c86a}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 33 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!Precipitation\+Interpolation\+Type@{Precipitation\+Interpolation\+Type}}
+\index{Precipitation\+Interpolation\+Type@{Precipitation\+Interpolation\+Type}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{Precipitation\+Interpolation\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Do\+Entry\+::\+Precipitation\+Interpolation\+Type}}\label{class_do_entry_ae28a7c17bc566a69a56738fba4c4b3e3}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{OK@{OK}!Do\+Entry@{Do\+Entry}}\index{Do\+Entry@{Do\+Entry}!OK@{OK}}\item[{\em 
+OK\label{class_do_entry_ae28a7c17bc566a69a56738fba4c4b3e3af7da43dffc7906158b9d5d8cc5c504d5}
+}]\index{E\+DK@{E\+DK}!Do\+Entry@{Do\+Entry}}\index{Do\+Entry@{Do\+Entry}!E\+DK@{E\+DK}}\item[{\em 
+E\+DK\label{class_do_entry_ae28a7c17bc566a69a56738fba4c4b3e3a14885cca5644b12ecb3f08ffa3594b6b}
+}]\index{E\+D\+K\+\_\+\+X\+YZ@{E\+D\+K\+\_\+\+X\+YZ}!Do\+Entry@{Do\+Entry}}\index{Do\+Entry@{Do\+Entry}!E\+D\+K\+\_\+\+X\+YZ@{E\+D\+K\+\_\+\+X\+YZ}}\item[{\em 
+E\+D\+K\+\_\+\+X\+YZ\label{class_do_entry_ae28a7c17bc566a69a56738fba4c4b3e3a536643d13249ec77642634c28a96d1d7}
+}]\index{C\+S\+I\+M\+A\+B\+S\+E\+D3@{C\+S\+I\+M\+A\+B\+S\+E\+D3}!Do\+Entry@{Do\+Entry}}\index{Do\+Entry@{Do\+Entry}!C\+S\+I\+M\+A\+B\+S\+E\+D3@{C\+S\+I\+M\+A\+B\+S\+E\+D3}}\item[{\em 
+C\+S\+I\+M\+A\+B\+S\+E\+D3\label{class_do_entry_ae28a7c17bc566a69a56738fba4c4b3e3ab40e96dc7b02b5272abdf18142ef773d}
+}]\index{C\+S\+I\+M\+R\+E\+L\+E\+D3@{C\+S\+I\+M\+R\+E\+L\+E\+D3}!Do\+Entry@{Do\+Entry}}\index{Do\+Entry@{Do\+Entry}!C\+S\+I\+M\+R\+E\+L\+E\+D3@{C\+S\+I\+M\+R\+E\+L\+E\+D3}}\item[{\em 
+C\+S\+I\+M\+R\+E\+L\+E\+D3\label{class_do_entry_ae28a7c17bc566a69a56738fba4c4b3e3aebd03d8cde7d407173f753bca5ac8cd2}
+}]\index{C\+S\+I\+M\+R\+E\+L\+E\+D1@{C\+S\+I\+M\+R\+E\+L\+E\+D1}!Do\+Entry@{Do\+Entry}}\index{Do\+Entry@{Do\+Entry}!C\+S\+I\+M\+R\+E\+L\+E\+D1@{C\+S\+I\+M\+R\+E\+L\+E\+D1}}\item[{\em 
+C\+S\+I\+M\+R\+E\+L\+E\+D1\label{class_do_entry_ae28a7c17bc566a69a56738fba4c4b3e3a9cfac333f13caab40768bae49ef4e65c}
+}]\index{C\+S\+I\+M\+A\+B\+S\+E\+D1@{C\+S\+I\+M\+A\+B\+S\+E\+D1}!Do\+Entry@{Do\+Entry}}\index{Do\+Entry@{Do\+Entry}!C\+S\+I\+M\+A\+B\+S\+E\+D1@{C\+S\+I\+M\+A\+B\+S\+E\+D1}}\item[{\em 
+C\+S\+I\+M\+A\+B\+S\+E\+D1\label{class_do_entry_ae28a7c17bc566a69a56738fba4c4b3e3a8bb7f3dd90ea9be962c93d5abd503cf9}
+}]\index{S\+T\+A\+T\+D\+A\+TA@{S\+T\+A\+T\+D\+A\+TA}!Do\+Entry@{Do\+Entry}}\index{Do\+Entry@{Do\+Entry}!S\+T\+A\+T\+D\+A\+TA@{S\+T\+A\+T\+D\+A\+TA}}\item[{\em 
+S\+T\+A\+T\+D\+A\+TA\label{class_do_entry_ae28a7c17bc566a69a56738fba4c4b3e3afbc448b14928897cf1727d865dd4099c}
+}]\index{S\+T\+A\+T\+D\+A\+T\+A\+C\+ON@{S\+T\+A\+T\+D\+A\+T\+A\+C\+ON}!Do\+Entry@{Do\+Entry}}\index{Do\+Entry@{Do\+Entry}!S\+T\+A\+T\+D\+A\+T\+A\+C\+ON@{S\+T\+A\+T\+D\+A\+T\+A\+C\+ON}}\item[{\em 
+S\+T\+A\+T\+D\+A\+T\+A\+C\+ON\label{class_do_entry_ae28a7c17bc566a69a56738fba4c4b3e3a54e7ef6b902c83fb67d355c54042f2ad}
+}]\index{G\+E\+R\+S\+T\+D\+A\+T\+A\+C\+ON@{G\+E\+R\+S\+T\+D\+A\+T\+A\+C\+ON}!Do\+Entry@{Do\+Entry}}\index{Do\+Entry@{Do\+Entry}!G\+E\+R\+S\+T\+D\+A\+T\+A\+C\+ON@{G\+E\+R\+S\+T\+D\+A\+T\+A\+C\+ON}}\item[{\em 
+G\+E\+R\+S\+T\+D\+A\+T\+A\+C\+ON\label{class_do_entry_ae28a7c17bc566a69a56738fba4c4b3e3a1946255a9bc87788268cfb75329bc8c9}
+}]\index{G\+E\+R\+S\+T\+D\+A\+TA@{G\+E\+R\+S\+T\+D\+A\+TA}!Do\+Entry@{Do\+Entry}}\index{Do\+Entry@{Do\+Entry}!G\+E\+R\+S\+T\+D\+A\+TA@{G\+E\+R\+S\+T\+D\+A\+TA}}\item[{\em 
+G\+E\+R\+S\+T\+D\+A\+TA\label{class_do_entry_ae28a7c17bc566a69a56738fba4c4b3e3a167c6cb3f1cd580c35270e8f92d1cb35}
+}]\index{O\+K\+\_\+\+M\+E\+A\+N1\+C\+E\+LL@{O\+K\+\_\+\+M\+E\+A\+N1\+C\+E\+LL}!Do\+Entry@{Do\+Entry}}\index{Do\+Entry@{Do\+Entry}!O\+K\+\_\+\+M\+E\+A\+N1\+C\+E\+LL@{O\+K\+\_\+\+M\+E\+A\+N1\+C\+E\+LL}}\item[{\em 
+O\+K\+\_\+\+M\+E\+A\+N1\+C\+E\+LL\label{class_do_entry_ae28a7c17bc566a69a56738fba4c4b3e3affd6e03cd3eb01061269ad475c434d46}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 28 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!River\+Sediment\+Model\+Type@{River\+Sediment\+Model\+Type}}
+\index{River\+Sediment\+Model\+Type@{River\+Sediment\+Model\+Type}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{River\+Sediment\+Model\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Do\+Entry\+::\+River\+Sediment\+Model\+Type}}\label{class_do_entry_acb1f523bbc393a12c10525ef1f41bc5f}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{O\+L\+D\+\_\+\+R\+O\+U\+T\+I\+NG@{O\+L\+D\+\_\+\+R\+O\+U\+T\+I\+NG}!Do\+Entry@{Do\+Entry}}\index{Do\+Entry@{Do\+Entry}!O\+L\+D\+\_\+\+R\+O\+U\+T\+I\+NG@{O\+L\+D\+\_\+\+R\+O\+U\+T\+I\+NG}}\item[{\em 
+O\+L\+D\+\_\+\+R\+O\+U\+T\+I\+NG\label{class_do_entry_acb1f523bbc393a12c10525ef1f41bc5fa49762df2817f49d14b708b6724443e18}
+}]\index{M\+U\+S\+K\+I\+N\+G\+U\+M\+\_\+\+S\+S\+T\+R\+A\+N\+S\+P\+O\+RT@{M\+U\+S\+K\+I\+N\+G\+U\+M\+\_\+\+S\+S\+T\+R\+A\+N\+S\+P\+O\+RT}!Do\+Entry@{Do\+Entry}}\index{Do\+Entry@{Do\+Entry}!M\+U\+S\+K\+I\+N\+G\+U\+M\+\_\+\+S\+S\+T\+R\+A\+N\+S\+P\+O\+RT@{M\+U\+S\+K\+I\+N\+G\+U\+M\+\_\+\+S\+S\+T\+R\+A\+N\+S\+P\+O\+RT}}\item[{\em 
+M\+U\+S\+K\+I\+N\+G\+U\+M\+\_\+\+S\+S\+T\+R\+A\+N\+S\+P\+O\+RT\label{class_do_entry_acb1f523bbc393a12c10525ef1f41bc5fa0e1b10235cb3f4f1186a5e61cf039c3c}
+}]\index{M\+U\+S\+K\+I\+N\+G\+U\+M\+\_\+\+B\+E\+D\+L\+O\+AD@{M\+U\+S\+K\+I\+N\+G\+U\+M\+\_\+\+B\+E\+D\+L\+O\+AD}!Do\+Entry@{Do\+Entry}}\index{Do\+Entry@{Do\+Entry}!M\+U\+S\+K\+I\+N\+G\+U\+M\+\_\+\+B\+E\+D\+L\+O\+AD@{M\+U\+S\+K\+I\+N\+G\+U\+M\+\_\+\+B\+E\+D\+L\+O\+AD}}\item[{\em 
+M\+U\+S\+K\+I\+N\+G\+U\+M\+\_\+\+B\+E\+D\+L\+O\+AD\label{class_do_entry_acb1f523bbc393a12c10525ef1f41bc5fa36c5922aa620a861afe3ddb34753d564}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 38 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!Scenario@{Scenario}}
+\index{Scenario@{Scenario}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{Scenario}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Do\+Entry\+::\+Scenario}}\label{class_do_entry_a591c5fba5936bb7f2a22ba31233d4fb1}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{L\+E\+S\+S\+\_\+\+R\+A\+IN@{L\+E\+S\+S\+\_\+\+R\+A\+IN}!Do\+Entry@{Do\+Entry}}\index{Do\+Entry@{Do\+Entry}!L\+E\+S\+S\+\_\+\+R\+A\+IN@{L\+E\+S\+S\+\_\+\+R\+A\+IN}}\item[{\em 
+L\+E\+S\+S\+\_\+\+R\+A\+IN\label{class_do_entry_a591c5fba5936bb7f2a22ba31233d4fb1a077a84faa91f7a6c6d31e4b6f0b64272}
+}]\index{N\+O\+\_\+\+T\+R\+E\+ND@{N\+O\+\_\+\+T\+R\+E\+ND}!Do\+Entry@{Do\+Entry}}\index{Do\+Entry@{Do\+Entry}!N\+O\+\_\+\+T\+R\+E\+ND@{N\+O\+\_\+\+T\+R\+E\+ND}}\item[{\em 
+N\+O\+\_\+\+T\+R\+E\+ND\label{class_do_entry_a591c5fba5936bb7f2a22ba31233d4fb1aaa54422a44da1ba4284e06a78017efc3}
+}]\index{M\+O\+R\+E\+\_\+\+R\+A\+IN@{M\+O\+R\+E\+\_\+\+R\+A\+IN}!Do\+Entry@{Do\+Entry}}\index{Do\+Entry@{Do\+Entry}!M\+O\+R\+E\+\_\+\+R\+A\+IN@{M\+O\+R\+E\+\_\+\+R\+A\+IN}}\item[{\em 
+M\+O\+R\+E\+\_\+\+R\+A\+IN\label{class_do_entry_a591c5fba5936bb7f2a22ba31233d4fb1ab987dd21f695244c63cae889955e22ed}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 23 do arquivo Do\+Entry.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Do\+Entry@{Do\+Entry}!Do\+Entry@{Do\+Entry}}
+\index{Do\+Entry@{Do\+Entry}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{Do\+Entry()}]{\setlength{\rightskip}{0pt plus 5cm}Do\+Entry\+::\+Do\+Entry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a55ff36dff162113bfdd21c89af287522}
+\index{Do\+Entry@{Do\+Entry}!````~Do\+Entry@{$\sim$\+Do\+Entry}}
+\index{````~Do\+Entry@{$\sim$\+Do\+Entry}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{$\sim$\+Do\+Entry()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Do\+Entry\+::$\sim$\+Do\+Entry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_do_entry_aa59a385ca0561d2d7673ef306ffc09f6}
+
+
+\subsection{Métodos}
+\index{Do\+Entry@{Do\+Entry}!get\+Do\+Hourly\+Version@{get\+Do\+Hourly\+Version}}
+\index{get\+Do\+Hourly\+Version@{get\+Do\+Hourly\+Version}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Do\+Hourly\+Version() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::get\+Do\+Hourly\+Version (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_acf27bee3b283e32ec9e8c2a40510480d}
+\index{Do\+Entry@{Do\+Entry}!get\+Do\+Latflow\+Between\+TC@{get\+Do\+Latflow\+Between\+TC}}
+\index{get\+Do\+Latflow\+Between\+TC@{get\+Do\+Latflow\+Between\+TC}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Do\+Latflow\+Between\+T\+C() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::get\+Do\+Latflow\+Between\+TC (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_aae9e3809b3b58e9ccd7eb28b31171f61}
+\index{Do\+Entry@{Do\+Entry}!get\+Do\+Reservoir\+Calculations@{get\+Do\+Reservoir\+Calculations}}
+\index{get\+Do\+Reservoir\+Calculations@{get\+Do\+Reservoir\+Calculations}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Do\+Reservoir\+Calculations() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::get\+Do\+Reservoir\+Calculations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_a7aa5f622d17ede00122a9cc6d2f6bd21}
+\index{Do\+Entry@{Do\+Entry}!get\+Do\+Scaling@{get\+Do\+Scaling}}
+\index{get\+Do\+Scaling@{get\+Do\+Scaling}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Do\+Scaling() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::get\+Do\+Scaling (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_ad26df4f7de52bd426dd2e6847cd21851}
+\index{Do\+Entry@{Do\+Entry}!get\+Do\+Sediment@{get\+Do\+Sediment}}
+\index{get\+Do\+Sediment@{get\+Do\+Sediment}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Do\+Sediment() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::get\+Do\+Sediment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_a2c7961fa7c76185a5137e5bb4f9e8713}
+\index{Do\+Entry@{Do\+Entry}!get\+Do\+Water\+Transpositions@{get\+Do\+Water\+Transpositions}}
+\index{get\+Do\+Water\+Transpositions@{get\+Do\+Water\+Transpositions}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Do\+Water\+Transpositions() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::get\+Do\+Water\+Transpositions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_a17f3ce8310bfd6d1be4f1b4c25abed26}
+\index{Do\+Entry@{Do\+Entry}!get\+Grain\+Class\+Number@{get\+Grain\+Class\+Number}}
+\index{get\+Grain\+Class\+Number@{get\+Grain\+Class\+Number}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Grain\+Class\+Number() const }]{\setlength{\rightskip}{0pt plus 5cm}int Do\+Entry\+::get\+Grain\+Class\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_ae6029d682c4b75bb79394a6d0fcfdba2}
+\index{Do\+Entry@{Do\+Entry}!get\+Header@{get\+Header}}
+\index{get\+Header@{get\+Header}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Header()}]{\setlength{\rightskip}{0pt plus 5cm}static wx\+String Do\+Entry\+::get\+Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_do_entry_af867d89e0af3c208ca914990b577fabd}
+\index{Do\+Entry@{Do\+Entry}!get\+Hydraulic\+Conduct\+Factor@{get\+Hydraulic\+Conduct\+Factor}}
+\index{get\+Hydraulic\+Conduct\+Factor@{get\+Hydraulic\+Conduct\+Factor}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Hydraulic\+Conduct\+Factor() const }]{\setlength{\rightskip}{0pt plus 5cm}double Do\+Entry\+::get\+Hydraulic\+Conduct\+Factor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_aacec6e1cba66f664ea749e6fc9b2098c}
+\index{Do\+Entry@{Do\+Entry}!get\+Include\+Dam\+Calculations@{get\+Include\+Dam\+Calculations}}
+\index{get\+Include\+Dam\+Calculations@{get\+Include\+Dam\+Calculations}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Include\+Dam\+Calculations() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::get\+Include\+Dam\+Calculations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_abf682a27fbeb34e0c3e0df446e9bb990}
+\index{Do\+Entry@{Do\+Entry}!get\+Input\+Path@{get\+Input\+Path}}
+\index{get\+Input\+Path@{get\+Input\+Path}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Input\+Path() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Do\+Entry\+::get\+Input\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_adb6de36761bf3ffca527efe5a8715494}
+\index{Do\+Entry@{Do\+Entry}!get\+Interception\+Capacity@{get\+Interception\+Capacity}}
+\index{get\+Interception\+Capacity@{get\+Interception\+Capacity}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Interception\+Capacity() const }]{\setlength{\rightskip}{0pt plus 5cm}double Do\+Entry\+::get\+Interception\+Capacity (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_aa7cc8ae9a19c904084cf236d3386c77b}
+\index{Do\+Entry@{Do\+Entry}!get\+Interception\+Routine\+Type@{get\+Interception\+Routine\+Type}}
+\index{get\+Interception\+Routine\+Type@{get\+Interception\+Routine\+Type}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Interception\+Routine\+Type() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interception\+Routine\+Type} Do\+Entry\+::get\+Interception\+Routine\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_ab531ebc365f2161dd725a44e5e3a750f}
+\index{Do\+Entry@{Do\+Entry}!get\+Load\+State\+Of\+Storages@{get\+Load\+State\+Of\+Storages}}
+\index{get\+Load\+State\+Of\+Storages@{get\+Load\+State\+Of\+Storages}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Load\+State\+Of\+Storages() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::get\+Load\+State\+Of\+Storages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_ad6fb92c48dc5ac65e3a890400336c997}
+\index{Do\+Entry@{Do\+Entry}!get\+Number\+Of\+Combinations@{get\+Number\+Of\+Combinations}}
+\index{get\+Number\+Of\+Combinations@{get\+Number\+Of\+Combinations}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Number\+Of\+Combinations() const }]{\setlength{\rightskip}{0pt plus 5cm}int Do\+Entry\+::get\+Number\+Of\+Combinations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_a766bd9491b5895181a4315d4b757d848}
+\index{Do\+Entry@{Do\+Entry}!get\+Number\+Of\+Subbasin@{get\+Number\+Of\+Subbasin}}
+\index{get\+Number\+Of\+Subbasin@{get\+Number\+Of\+Subbasin}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Number\+Of\+Subbasin() const }]{\setlength{\rightskip}{0pt plus 5cm}int Do\+Entry\+::get\+Number\+Of\+Subbasin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_a125cf565a6f431341a60f80930eba300}
+\index{Do\+Entry@{Do\+Entry}!get\+Output\+Path@{get\+Output\+Path}}
+\index{get\+Output\+Path@{get\+Output\+Path}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Output\+Path() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Do\+Entry\+::get\+Output\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_a11463ce0b6ca3ba2644afe7d77503164}
+\index{Do\+Entry@{Do\+Entry}!get\+Precipitation\+Interpolation\+Type@{get\+Precipitation\+Interpolation\+Type}}
+\index{get\+Precipitation\+Interpolation\+Type@{get\+Precipitation\+Interpolation\+Type}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Precipitation\+Interpolation\+Type() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Precipitation\+Interpolation\+Type} Do\+Entry\+::get\+Precipitation\+Interpolation\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_aa61a91c2ddab611fb82af9ea721de40a}
+\index{Do\+Entry@{Do\+Entry}!get\+Reservoir\+Sediment\+Model\+Type@{get\+Reservoir\+Sediment\+Model\+Type}}
+\index{get\+Reservoir\+Sediment\+Model\+Type@{get\+Reservoir\+Sediment\+Model\+Type}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Reservoir\+Sediment\+Model\+Type() const }]{\setlength{\rightskip}{0pt plus 5cm}int Do\+Entry\+::get\+Reservoir\+Sediment\+Model\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_ae5fb0339a3e21871b631f1a652d9e013}
+\index{Do\+Entry@{Do\+Entry}!get\+River\+Sediment\+Model\+Type@{get\+River\+Sediment\+Model\+Type}}
+\index{get\+River\+Sediment\+Model\+Type@{get\+River\+Sediment\+Model\+Type}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+River\+Sediment\+Model\+Type() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf River\+Sediment\+Model\+Type} Do\+Entry\+::get\+River\+Sediment\+Model\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_a1588b068648a6d238631635719944379}
+\index{Do\+Entry@{Do\+Entry}!get\+Rout\+Latflow@{get\+Rout\+Latflow}}
+\index{get\+Rout\+Latflow@{get\+Rout\+Latflow}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Rout\+Latflow() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::get\+Rout\+Latflow (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_aa51b3f7b2f9966870a9f29725e8af555}
+\index{Do\+Entry@{Do\+Entry}!get\+Save\+State\+Of\+Storages@{get\+Save\+State\+Of\+Storages}}
+\index{get\+Save\+State\+Of\+Storages@{get\+Save\+State\+Of\+Storages}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Save\+State\+Of\+Storages() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::get\+Save\+State\+Of\+Storages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_afd5d6cfd71c341e08dfe2bdeed40a78f}
+\index{Do\+Entry@{Do\+Entry}!get\+Scenario@{get\+Scenario}}
+\index{get\+Scenario@{get\+Scenario}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Scenario() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scenario} Do\+Entry\+::get\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_aee63a2a355b465c154f12e4942ed1c94}
+\index{Do\+Entry@{Do\+Entry}!get\+Sediment\+Transport\+Model\+Type@{get\+Sediment\+Transport\+Model\+Type}}
+\index{get\+Sediment\+Transport\+Model\+Type@{get\+Sediment\+Transport\+Model\+Type}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Sediment\+Transport\+Model\+Type() const }]{\setlength{\rightskip}{0pt plus 5cm}int Do\+Entry\+::get\+Sediment\+Transport\+Model\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_a4611dae162e36edf0b6b9b2882fb70b6}
+\index{Do\+Entry@{Do\+Entry}!get\+Sensitivity\+Factor@{get\+Sensitivity\+Factor}}
+\index{get\+Sensitivity\+Factor@{get\+Sensitivity\+Factor}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Sensitivity\+Factor() const }]{\setlength{\rightskip}{0pt plus 5cm}double Do\+Entry\+::get\+Sensitivity\+Factor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_a834c04e4030b180953d29cd1537f6fe5}
+\index{Do\+Entry@{Do\+Entry}!get\+Simulation\+End@{get\+Simulation\+End}}
+\index{get\+Simulation\+End@{get\+Simulation\+End}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Simulation\+End() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Time Do\+Entry\+::get\+Simulation\+End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_a710e4c555cc609c67d213d79edfa20c0}
+\index{Do\+Entry@{Do\+Entry}!get\+Simulation\+Start@{get\+Simulation\+Start}}
+\index{get\+Simulation\+Start@{get\+Simulation\+Start}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Simulation\+Start() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Time Do\+Entry\+::get\+Simulation\+Start (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_ab7152c56b9dca00ed2ba014808c1b7aa}
+\index{Do\+Entry@{Do\+Entry}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+String() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Do\+Entry\+::get\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_a21a9c3776637040ce3a3e78410ab5c89}
+\index{Do\+Entry@{Do\+Entry}!get\+Subsurface\+Runoff@{get\+Subsurface\+Runoff}}
+\index{get\+Subsurface\+Runoff@{get\+Subsurface\+Runoff}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Subsurface\+Runoff() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::get\+Subsurface\+Runoff (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_a7034bd31c426c1d32d1045dc9083c23f}
+\index{Do\+Entry@{Do\+Entry}!get\+Surface\+Runoff@{get\+Surface\+Runoff}}
+\index{get\+Surface\+Runoff@{get\+Surface\+Runoff}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Surface\+Runoff() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::get\+Surface\+Runoff (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_a8c08b3b11cafc9d74b7d83a91c72c67f}
+\index{Do\+Entry@{Do\+Entry}!get\+Time\+Step@{get\+Time\+Step}}
+\index{get\+Time\+Step@{get\+Time\+Step}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Time\+Step() const }]{\setlength{\rightskip}{0pt plus 5cm}int Do\+Entry\+::get\+Time\+Step (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_ad964ab7f8dc52efa5e48e7e878639b4c}
+\index{Do\+Entry@{Do\+Entry}!get\+Total\+Soil@{get\+Total\+Soil}}
+\index{get\+Total\+Soil@{get\+Total\+Soil}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Total\+Soil() const }]{\setlength{\rightskip}{0pt plus 5cm}int Do\+Entry\+::get\+Total\+Soil (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_af8e39ef8e9c3c6bc0b058b258a621273}
+\index{Do\+Entry@{Do\+Entry}!get\+Total\+Soter@{get\+Total\+Soter}}
+\index{get\+Total\+Soter@{get\+Total\+Soter}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Total\+Soter() const }]{\setlength{\rightskip}{0pt plus 5cm}int Do\+Entry\+::get\+Total\+Soter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_a56f82b1a570959a320526f93e4b7ed0d}
+\index{Do\+Entry@{Do\+Entry}!get\+Total\+TC@{get\+Total\+TC}}
+\index{get\+Total\+TC@{get\+Total\+TC}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Total\+T\+C() const }]{\setlength{\rightskip}{0pt plus 5cm}int Do\+Entry\+::get\+Total\+TC (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_a0c04d6e1918d2115724f8ea56712b341}
+\index{Do\+Entry@{Do\+Entry}!get\+Total\+Vegetation@{get\+Total\+Vegetation}}
+\index{get\+Total\+Vegetation@{get\+Total\+Vegetation}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Total\+Vegetation() const }]{\setlength{\rightskip}{0pt plus 5cm}int Do\+Entry\+::get\+Total\+Vegetation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_a28ef058af4c0f09371a898b833eacab7}
+\index{Do\+Entry@{Do\+Entry}!get\+Use\+Rainfall\+Input@{get\+Use\+Rainfall\+Input}}
+\index{get\+Use\+Rainfall\+Input@{get\+Use\+Rainfall\+Input}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{get\+Use\+Rainfall\+Input() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::get\+Use\+Rainfall\+Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_do_entry_ae97ef1f2918550342ab41e3647e1cb73}
+\index{Do\+Entry@{Do\+Entry}!set\+Do\+Hourly\+Version@{set\+Do\+Hourly\+Version}}
+\index{set\+Do\+Hourly\+Version@{set\+Do\+Hourly\+Version}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Do\+Hourly\+Version(bool do\+Hourly\+Version)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Do\+Hourly\+Version (
+\begin{DoxyParamCaption}
+\item[{bool}]{do\+Hourly\+Version}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_aa5ed1135614bef79a32fc52c8aabfb38}
+\index{Do\+Entry@{Do\+Entry}!set\+Do\+Latflow\+Between\+TC@{set\+Do\+Latflow\+Between\+TC}}
+\index{set\+Do\+Latflow\+Between\+TC@{set\+Do\+Latflow\+Between\+TC}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Do\+Latflow\+Between\+T\+C(bool do\+Latflow\+Between\+T\+C)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Do\+Latflow\+Between\+TC (
+\begin{DoxyParamCaption}
+\item[{bool}]{do\+Latflow\+Between\+TC}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a817a15868cf48357c1622d735c2f33dc}
+\index{Do\+Entry@{Do\+Entry}!set\+Do\+Reservoir\+Calculations@{set\+Do\+Reservoir\+Calculations}}
+\index{set\+Do\+Reservoir\+Calculations@{set\+Do\+Reservoir\+Calculations}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Do\+Reservoir\+Calculations(bool do\+Reservoir\+Calculations)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Do\+Reservoir\+Calculations (
+\begin{DoxyParamCaption}
+\item[{bool}]{do\+Reservoir\+Calculations}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a93584241f5e7dd997140df8780311fc6}
+\index{Do\+Entry@{Do\+Entry}!set\+Do\+Scaling@{set\+Do\+Scaling}}
+\index{set\+Do\+Scaling@{set\+Do\+Scaling}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Do\+Scaling(bool do\+Scaling)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Do\+Scaling (
+\begin{DoxyParamCaption}
+\item[{bool}]{do\+Scaling}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a2d2067e7cfd1f8d1cecb77de0001bcd9}
+\index{Do\+Entry@{Do\+Entry}!set\+Do\+Sediment@{set\+Do\+Sediment}}
+\index{set\+Do\+Sediment@{set\+Do\+Sediment}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Do\+Sediment(bool do\+Sediment)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Do\+Sediment (
+\begin{DoxyParamCaption}
+\item[{bool}]{do\+Sediment}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_accf0b2cd1fed1b2f74d53273cde5ad95}
+\index{Do\+Entry@{Do\+Entry}!set\+Do\+Water\+Transpositions@{set\+Do\+Water\+Transpositions}}
+\index{set\+Do\+Water\+Transpositions@{set\+Do\+Water\+Transpositions}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Do\+Water\+Transpositions(bool do\+Water\+Transpositions)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Do\+Water\+Transpositions (
+\begin{DoxyParamCaption}
+\item[{bool}]{do\+Water\+Transpositions}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_ae414c3031cd61f41d74d20862bf052f2}
+\index{Do\+Entry@{Do\+Entry}!set\+Grain\+Class\+Number@{set\+Grain\+Class\+Number}}
+\index{set\+Grain\+Class\+Number@{set\+Grain\+Class\+Number}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Grain\+Class\+Number(int grain\+Class\+Number)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Grain\+Class\+Number (
+\begin{DoxyParamCaption}
+\item[{int}]{grain\+Class\+Number}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a20adbeb72895feee7a28e652d947952d}
+\index{Do\+Entry@{Do\+Entry}!set\+Hydraulic\+Conduct\+Factor@{set\+Hydraulic\+Conduct\+Factor}}
+\index{set\+Hydraulic\+Conduct\+Factor@{set\+Hydraulic\+Conduct\+Factor}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Hydraulic\+Conduct\+Factor(double hydraulic\+Conduct\+Factor)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Hydraulic\+Conduct\+Factor (
+\begin{DoxyParamCaption}
+\item[{double}]{hydraulic\+Conduct\+Factor}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a3a23e29d9e898cc6d30f3a7cf40febc3}
+\index{Do\+Entry@{Do\+Entry}!set\+Include\+Dam\+Calculations@{set\+Include\+Dam\+Calculations}}
+\index{set\+Include\+Dam\+Calculations@{set\+Include\+Dam\+Calculations}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Include\+Dam\+Calculations(bool include\+Dam\+Calculations)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Include\+Dam\+Calculations (
+\begin{DoxyParamCaption}
+\item[{bool}]{include\+Dam\+Calculations}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_aa060581e3786e8b3e011e041b4cfe4c7}
+\index{Do\+Entry@{Do\+Entry}!set\+Input\+Path@{set\+Input\+Path}}
+\index{set\+Input\+Path@{set\+Input\+Path}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Input\+Path(const wx\+String \&input\+Path)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Input\+Path (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{input\+Path}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a5a8a734238fef3abd1fe6dd2aadfe3c2}
+\index{Do\+Entry@{Do\+Entry}!set\+Interception\+Capacity@{set\+Interception\+Capacity}}
+\index{set\+Interception\+Capacity@{set\+Interception\+Capacity}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Interception\+Capacity(double interception\+Capacity)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Interception\+Capacity (
+\begin{DoxyParamCaption}
+\item[{double}]{interception\+Capacity}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_afa8ab109159d0278210f50ff4c320103}
+\index{Do\+Entry@{Do\+Entry}!set\+Interception\+Routine\+Type@{set\+Interception\+Routine\+Type}}
+\index{set\+Interception\+Routine\+Type@{set\+Interception\+Routine\+Type}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Interception\+Routine\+Type(\+Interception\+Routine\+Type interception\+Routine\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Interception\+Routine\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Interception\+Routine\+Type}}]{interception\+Routine\+Type}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a6593162de0c80483512276e1bbc39582}
+\index{Do\+Entry@{Do\+Entry}!set\+Load\+State\+Of\+Storages@{set\+Load\+State\+Of\+Storages}}
+\index{set\+Load\+State\+Of\+Storages@{set\+Load\+State\+Of\+Storages}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Load\+State\+Of\+Storages(bool load\+State\+Of\+Storages)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Load\+State\+Of\+Storages (
+\begin{DoxyParamCaption}
+\item[{bool}]{load\+State\+Of\+Storages}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_ada8701b86f9cfbe73dc76cf721702f81}
+\index{Do\+Entry@{Do\+Entry}!set\+Number\+Of\+Combinations@{set\+Number\+Of\+Combinations}}
+\index{set\+Number\+Of\+Combinations@{set\+Number\+Of\+Combinations}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Number\+Of\+Combinations(int number\+Of\+Combinations)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Number\+Of\+Combinations (
+\begin{DoxyParamCaption}
+\item[{int}]{number\+Of\+Combinations}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_af8ec9f803c3707490ea5aa3c11eac400}
+\index{Do\+Entry@{Do\+Entry}!set\+Number\+Of\+Subbasin@{set\+Number\+Of\+Subbasin}}
+\index{set\+Number\+Of\+Subbasin@{set\+Number\+Of\+Subbasin}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Number\+Of\+Subbasin(int number\+Of\+Subbasin)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Number\+Of\+Subbasin (
+\begin{DoxyParamCaption}
+\item[{int}]{number\+Of\+Subbasin}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a8561ba4a00653048854eb694c0f6a330}
+\index{Do\+Entry@{Do\+Entry}!set\+Output\+Path@{set\+Output\+Path}}
+\index{set\+Output\+Path@{set\+Output\+Path}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Output\+Path(const wx\+String \&output\+Path)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Output\+Path (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{output\+Path}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a8ee9b4e9d098e142dfc327ad4b728c90}
+\index{Do\+Entry@{Do\+Entry}!set\+Precipitation\+Interpolation\+Type@{set\+Precipitation\+Interpolation\+Type}}
+\index{set\+Precipitation\+Interpolation\+Type@{set\+Precipitation\+Interpolation\+Type}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Precipitation\+Interpolation\+Type(\+Precipitation\+Interpolation\+Type precipitation\+Interpolation\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Precipitation\+Interpolation\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Precipitation\+Interpolation\+Type}}]{precipitation\+Interpolation\+Type}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a5bd9ec8186c531c4e21936c545784493}
+\index{Do\+Entry@{Do\+Entry}!set\+Reservoir\+Sediment\+Model\+Type@{set\+Reservoir\+Sediment\+Model\+Type}}
+\index{set\+Reservoir\+Sediment\+Model\+Type@{set\+Reservoir\+Sediment\+Model\+Type}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Reservoir\+Sediment\+Model\+Type(int reservoir\+Sediment\+Model\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Reservoir\+Sediment\+Model\+Type (
+\begin{DoxyParamCaption}
+\item[{int}]{reservoir\+Sediment\+Model\+Type}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a7dc6c028ddffdabcf3822e075ab5f500}
+\index{Do\+Entry@{Do\+Entry}!set\+River\+Sediment\+Model\+Type@{set\+River\+Sediment\+Model\+Type}}
+\index{set\+River\+Sediment\+Model\+Type@{set\+River\+Sediment\+Model\+Type}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+River\+Sediment\+Model\+Type(\+River\+Sediment\+Model\+Type river\+Sediment\+Model\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+River\+Sediment\+Model\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf River\+Sediment\+Model\+Type}}]{river\+Sediment\+Model\+Type}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a0419b87ad2c7f75eb9f89010de0a487d}
+\index{Do\+Entry@{Do\+Entry}!set\+Rout\+Latflow@{set\+Rout\+Latflow}}
+\index{set\+Rout\+Latflow@{set\+Rout\+Latflow}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Rout\+Latflow(bool rout\+Latflow)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Rout\+Latflow (
+\begin{DoxyParamCaption}
+\item[{bool}]{rout\+Latflow}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_acbcae62f52ee41dd57bff2cfbf77fcf3}
+\index{Do\+Entry@{Do\+Entry}!set\+Save\+State\+Of\+Storages@{set\+Save\+State\+Of\+Storages}}
+\index{set\+Save\+State\+Of\+Storages@{set\+Save\+State\+Of\+Storages}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Save\+State\+Of\+Storages(bool save\+State\+Of\+Storages)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Save\+State\+Of\+Storages (
+\begin{DoxyParamCaption}
+\item[{bool}]{save\+State\+Of\+Storages}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a5c927c1c7b1180d6da0eda5d38e7936a}
+\index{Do\+Entry@{Do\+Entry}!set\+Scenario@{set\+Scenario}}
+\index{set\+Scenario@{set\+Scenario}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Scenario(\+Scenario scenario)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Scenario (
+\begin{DoxyParamCaption}
+\item[{{\bf Scenario}}]{scenario}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a5ed10e73744ac5a34381ec20a2727920}
+\index{Do\+Entry@{Do\+Entry}!set\+Sediment\+Transport\+Model\+Type@{set\+Sediment\+Transport\+Model\+Type}}
+\index{set\+Sediment\+Transport\+Model\+Type@{set\+Sediment\+Transport\+Model\+Type}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Sediment\+Transport\+Model\+Type(int sediment\+Transport\+Model\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Sediment\+Transport\+Model\+Type (
+\begin{DoxyParamCaption}
+\item[{int}]{sediment\+Transport\+Model\+Type}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a96fbafe34b87e59a85f80b3d52e61269}
+\index{Do\+Entry@{Do\+Entry}!set\+Sensitivity\+Factor@{set\+Sensitivity\+Factor}}
+\index{set\+Sensitivity\+Factor@{set\+Sensitivity\+Factor}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Sensitivity\+Factor(double sensitivity\+Factor)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Sensitivity\+Factor (
+\begin{DoxyParamCaption}
+\item[{double}]{sensitivity\+Factor}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a3d07658ea533cc7741c5e3ac08ed2293}
+\index{Do\+Entry@{Do\+Entry}!set\+Simulation\+End@{set\+Simulation\+End}}
+\index{set\+Simulation\+End@{set\+Simulation\+End}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Simulation\+End(const wx\+Date\+Time \&simulation\+End)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Simulation\+End (
+\begin{DoxyParamCaption}
+\item[{const wx\+Date\+Time \&}]{simulation\+End}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a7af56953fa8ab74ccb03f10659d4223b}
+\index{Do\+Entry@{Do\+Entry}!set\+Simulation\+Start@{set\+Simulation\+Start}}
+\index{set\+Simulation\+Start@{set\+Simulation\+Start}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Simulation\+Start(const wx\+Date\+Time \&simulation\+Start)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Simulation\+Start (
+\begin{DoxyParamCaption}
+\item[{const wx\+Date\+Time \&}]{simulation\+Start}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_ab6a97ca75e9c313508c7c20dce3bb66e}
+\index{Do\+Entry@{Do\+Entry}!set\+Subsurface\+Runoff@{set\+Subsurface\+Runoff}}
+\index{set\+Subsurface\+Runoff@{set\+Subsurface\+Runoff}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Subsurface\+Runoff(bool subsurface\+Runoff)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Subsurface\+Runoff (
+\begin{DoxyParamCaption}
+\item[{bool}]{subsurface\+Runoff}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a3e57cb89a9967803b9f5650b151ac511}
+\index{Do\+Entry@{Do\+Entry}!set\+Surface\+Runoff@{set\+Surface\+Runoff}}
+\index{set\+Surface\+Runoff@{set\+Surface\+Runoff}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Surface\+Runoff(bool surface\+Runoff)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Surface\+Runoff (
+\begin{DoxyParamCaption}
+\item[{bool}]{surface\+Runoff}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_aca1f6a2cdc1d6c90fdb9a3fd41cb7074}
+\index{Do\+Entry@{Do\+Entry}!set\+Time\+Step@{set\+Time\+Step}}
+\index{set\+Time\+Step@{set\+Time\+Step}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Time\+Step(int time\+Step)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Time\+Step (
+\begin{DoxyParamCaption}
+\item[{int}]{time\+Step}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_ac4a65f1cf50a1c0ab2913789e2bce10c}
+\index{Do\+Entry@{Do\+Entry}!set\+Total\+Soil@{set\+Total\+Soil}}
+\index{set\+Total\+Soil@{set\+Total\+Soil}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Total\+Soil(int total\+Soil)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Total\+Soil (
+\begin{DoxyParamCaption}
+\item[{int}]{total\+Soil}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_ad2470ddbaa4fe86a74f6405d721f52ef}
+\index{Do\+Entry@{Do\+Entry}!set\+Total\+Soter@{set\+Total\+Soter}}
+\index{set\+Total\+Soter@{set\+Total\+Soter}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Total\+Soter(int total\+Soter)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Total\+Soter (
+\begin{DoxyParamCaption}
+\item[{int}]{total\+Soter}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a5c4c59d6ce3de07b73f5c370321fd6f1}
+\index{Do\+Entry@{Do\+Entry}!set\+Total\+TC@{set\+Total\+TC}}
+\index{set\+Total\+TC@{set\+Total\+TC}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Total\+T\+C(int total\+T\+C)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Total\+TC (
+\begin{DoxyParamCaption}
+\item[{int}]{total\+TC}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a9a8361d506cf1d5098b570ea6a5810c0}
+\index{Do\+Entry@{Do\+Entry}!set\+Total\+Vegetation@{set\+Total\+Vegetation}}
+\index{set\+Total\+Vegetation@{set\+Total\+Vegetation}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Total\+Vegetation(int total\+Vegetation)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Total\+Vegetation (
+\begin{DoxyParamCaption}
+\item[{int}]{total\+Vegetation}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_ad5ade04d313cc52acb62e2c313ffa6bf}
+\index{Do\+Entry@{Do\+Entry}!set\+Use\+Rainfall\+Input@{set\+Use\+Rainfall\+Input}}
+\index{set\+Use\+Rainfall\+Input@{set\+Use\+Rainfall\+Input}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{set\+Use\+Rainfall\+Input(bool use\+Rainfall\+Input)}]{\setlength{\rightskip}{0pt plus 5cm}void Do\+Entry\+::set\+Use\+Rainfall\+Input (
+\begin{DoxyParamCaption}
+\item[{bool}]{use\+Rainfall\+Input}
+\end{DoxyParamCaption}
+)}\label{class_do_entry_a0079b7b9e1bbdedccf29ae7237025a1b}
+
+
+\subsection{Atributos}
+\index{Do\+Entry@{Do\+Entry}!D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+R\+A\+I\+N\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+U\+M\+B\+ER@{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+R\+A\+I\+N\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+U\+M\+B\+ER}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+R\+A\+I\+N\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+U\+M\+B\+ER@{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+R\+A\+I\+N\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+U\+M\+B\+ER}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+R\+A\+I\+N\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+U\+M\+B\+ER}]{\setlength{\rightskip}{0pt plus 5cm}const int Do\+Entry\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+G\+R\+A\+I\+N\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+U\+M\+B\+ER\hspace{0.3cm}{\ttfamily [static]}}\label{class_do_entry_ad3269be7d1153397ab04c896a4d2c71d}
+
+
+Definição na linha 48 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+Y\+D\+R\+A\+U\+L\+I\+C\+\_\+\+C\+O\+N\+D\+U\+C\+T\+\_\+\+F\+A\+C\+T\+OR@{D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+Y\+D\+R\+A\+U\+L\+I\+C\+\_\+\+C\+O\+N\+D\+U\+C\+T\+\_\+\+F\+A\+C\+T\+OR}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+Y\+D\+R\+A\+U\+L\+I\+C\+\_\+\+C\+O\+N\+D\+U\+C\+T\+\_\+\+F\+A\+C\+T\+OR@{D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+Y\+D\+R\+A\+U\+L\+I\+C\+\_\+\+C\+O\+N\+D\+U\+C\+T\+\_\+\+F\+A\+C\+T\+OR}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+Y\+D\+R\+A\+U\+L\+I\+C\+\_\+\+C\+O\+N\+D\+U\+C\+T\+\_\+\+F\+A\+C\+T\+OR}]{\setlength{\rightskip}{0pt plus 5cm}const double Do\+Entry\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+H\+Y\+D\+R\+A\+U\+L\+I\+C\+\_\+\+C\+O\+N\+D\+U\+C\+T\+\_\+\+F\+A\+C\+T\+OR\hspace{0.3cm}{\ttfamily [static]}}\label{class_do_entry_a9041560410f2ba465094d637a384a558}
+
+
+Definição na linha 44 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+T\+E\+R\+C\+E\+P\+T\+I\+O\+N\+\_\+\+C\+A\+P\+A\+C\+I\+TY@{D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+T\+E\+R\+C\+E\+P\+T\+I\+O\+N\+\_\+\+C\+A\+P\+A\+C\+I\+TY}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+T\+E\+R\+C\+E\+P\+T\+I\+O\+N\+\_\+\+C\+A\+P\+A\+C\+I\+TY@{D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+T\+E\+R\+C\+E\+P\+T\+I\+O\+N\+\_\+\+C\+A\+P\+A\+C\+I\+TY}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+T\+E\+R\+C\+E\+P\+T\+I\+O\+N\+\_\+\+C\+A\+P\+A\+C\+I\+TY}]{\setlength{\rightskip}{0pt plus 5cm}const double Do\+Entry\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+I\+N\+T\+E\+R\+C\+E\+P\+T\+I\+O\+N\+\_\+\+C\+A\+P\+A\+C\+I\+TY\hspace{0.3cm}{\ttfamily [static]}}\label{class_do_entry_ad30f8409f78fa75daef8b113c08608f1}
+
+
+Definição na linha 45 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE@{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE@{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE}]{\setlength{\rightskip}{0pt plus 5cm}const int Do\+Entry\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE\hspace{0.3cm}{\ttfamily [static]}}\label{class_do_entry_a47ef6915e55a32cd5a96b1f0f6688788}
+
+
+Definição na linha 50 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE@{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE@{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE}]{\setlength{\rightskip}{0pt plus 5cm}const int Do\+Entry\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE\hspace{0.3cm}{\ttfamily [static]}}\label{class_do_entry_a5bbb9bfffbc0b63aac9acf15570a3323}
+
+
+Definição na linha 49 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+\_\+\+F\+A\+C\+T\+OR@{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+\_\+\+F\+A\+C\+T\+OR}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+\_\+\+F\+A\+C\+T\+OR@{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+\_\+\+F\+A\+C\+T\+OR}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+\_\+\+F\+A\+C\+T\+OR}]{\setlength{\rightskip}{0pt plus 5cm}const double Do\+Entry\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+\_\+\+F\+A\+C\+T\+OR\hspace{0.3cm}{\ttfamily [static]}}\label{class_do_entry_adb19cbaddfd10e01b2614af71572ae83}
+
+
+Definição na linha 46 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+EP@{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+EP}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+EP@{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+EP}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+EP}]{\setlength{\rightskip}{0pt plus 5cm}const int Do\+Entry\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+EP\hspace{0.3cm}{\ttfamily [static]}}\label{class_do_entry_a6e17c6610ce78600fd8f51e09d8f047f}
+
+
+Definição na linha 47 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!do\+Hourly\+Version@{do\+Hourly\+Version}}
+\index{do\+Hourly\+Version@{do\+Hourly\+Version}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{do\+Hourly\+Version}]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::do\+Hourly\+Version\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_ad08f44cd2d044b1642d4e933940b80b9}
+
+
+Definição na linha 73 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!do\+Latflow\+Between\+TC@{do\+Latflow\+Between\+TC}}
+\index{do\+Latflow\+Between\+TC@{do\+Latflow\+Between\+TC}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{do\+Latflow\+Between\+TC}]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::do\+Latflow\+Between\+TC\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_ac40e54f1835c2a09a291819ae5a75a6a}
+
+
+Definição na linha 68 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!do\+Reservoir\+Calculations@{do\+Reservoir\+Calculations}}
+\index{do\+Reservoir\+Calculations@{do\+Reservoir\+Calculations}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{do\+Reservoir\+Calculations}]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::do\+Reservoir\+Calculations\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_a6e277271eda6f89c0a7bc6102af4b71d}
+
+
+Definição na linha 66 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!do\+Scaling@{do\+Scaling}}
+\index{do\+Scaling@{do\+Scaling}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{do\+Scaling}]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::do\+Scaling\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_a58b35df38ff2774a4aa8fd2e98127d7b}
+
+
+Definição na linha 74 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!do\+Sediment@{do\+Sediment}}
+\index{do\+Sediment@{do\+Sediment}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{do\+Sediment}]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::do\+Sediment\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_a6643e97d25534e3cd736f109e9904934}
+
+
+Definição na linha 76 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!do\+Water\+Transpositions@{do\+Water\+Transpositions}}
+\index{do\+Water\+Transpositions@{do\+Water\+Transpositions}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{do\+Water\+Transpositions}]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::do\+Water\+Transpositions\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_a42669ff615a49e29e1fb27ae7207b1e8}
+
+
+Definição na linha 72 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!grain\+Class\+Number@{grain\+Class\+Number}}
+\index{grain\+Class\+Number@{grain\+Class\+Number}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{grain\+Class\+Number}]{\setlength{\rightskip}{0pt plus 5cm}int Do\+Entry\+::grain\+Class\+Number\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_a903aaa236cf3fbcaeed2cb3be254e690}
+
+
+Definição na linha 89 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!hydraulic\+Conduct\+Factor@{hydraulic\+Conduct\+Factor}}
+\index{hydraulic\+Conduct\+Factor@{hydraulic\+Conduct\+Factor}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{hydraulic\+Conduct\+Factor}]{\setlength{\rightskip}{0pt plus 5cm}double Do\+Entry\+::hydraulic\+Conduct\+Factor\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_aa35b60b4168d121f3bc6a82c42e63347}
+
+
+Definição na linha 85 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!include\+Dam\+Calculations@{include\+Dam\+Calculations}}
+\index{include\+Dam\+Calculations@{include\+Dam\+Calculations}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{include\+Dam\+Calculations}]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::include\+Dam\+Calculations\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_a4ea914dd883b0c11d89e2c8cce156fa7}
+
+
+Definição na linha 67 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!input\+Path@{input\+Path}}
+\index{input\+Path@{input\+Path}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{input\+Path}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Do\+Entry\+::input\+Path\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_a86e155b4dafd8ca3eb6c5b26504d96c3}
+
+
+Definição na linha 56 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!interception\+Capacity@{interception\+Capacity}}
+\index{interception\+Capacity@{interception\+Capacity}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{interception\+Capacity}]{\setlength{\rightskip}{0pt plus 5cm}double Do\+Entry\+::interception\+Capacity\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_a3a8bda6a1207cfffbfc8f1e2fab565b5}
+
+
+Definição na linha 86 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!interception\+Routine\+Type@{interception\+Routine\+Type}}
+\index{interception\+Routine\+Type@{interception\+Routine\+Type}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{interception\+Routine\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interception\+Routine\+Type} Do\+Entry\+::interception\+Routine\+Type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_aa569c3c4df679f75a5265822d30d8991}
+
+
+Definição na linha 82 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!load\+State\+Of\+Storages@{load\+State\+Of\+Storages}}
+\index{load\+State\+Of\+Storages@{load\+State\+Of\+Storages}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{load\+State\+Of\+Storages}]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::load\+State\+Of\+Storages\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_a0d4ba74cdd84a4d3eae5c4e5be44ddb3}
+
+
+Definição na linha 77 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!number\+Of\+Combinations@{number\+Of\+Combinations}}
+\index{number\+Of\+Combinations@{number\+Of\+Combinations}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{number\+Of\+Combinations}]{\setlength{\rightskip}{0pt plus 5cm}int Do\+Entry\+::number\+Of\+Combinations\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_a21014342cc86c5728aa129c31044bc3e}
+
+
+Definição na linha 60 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!number\+Of\+Subbasin@{number\+Of\+Subbasin}}
+\index{number\+Of\+Subbasin@{number\+Of\+Subbasin}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{number\+Of\+Subbasin}]{\setlength{\rightskip}{0pt plus 5cm}int Do\+Entry\+::number\+Of\+Subbasin\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_a969341c7fa7691eac14ee45bde7932c4}
+
+
+Definição na linha 59 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!output\+Path@{output\+Path}}
+\index{output\+Path@{output\+Path}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{output\+Path}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Do\+Entry\+::output\+Path\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_a6b8186ef799a7c16a11ce68ec3545876}
+
+
+Definição na linha 56 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!precipitation\+Interpolation\+Type@{precipitation\+Interpolation\+Type}}
+\index{precipitation\+Interpolation\+Type@{precipitation\+Interpolation\+Type}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{precipitation\+Interpolation\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Precipitation\+Interpolation\+Type} Do\+Entry\+::precipitation\+Interpolation\+Type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_a54da5b28edd66c517234a3133c8bebd3}
+
+
+Definição na linha 81 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!reservoir\+Sediment\+Model\+Type@{reservoir\+Sediment\+Model\+Type}}
+\index{reservoir\+Sediment\+Model\+Type@{reservoir\+Sediment\+Model\+Type}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{reservoir\+Sediment\+Model\+Type}]{\setlength{\rightskip}{0pt plus 5cm}int Do\+Entry\+::reservoir\+Sediment\+Model\+Type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_a88dd2e2a0b7f9542b6259ea7457d67bf}
+
+
+Definição na linha 91 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!river\+Sediment\+Model\+Type@{river\+Sediment\+Model\+Type}}
+\index{river\+Sediment\+Model\+Type@{river\+Sediment\+Model\+Type}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{river\+Sediment\+Model\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf River\+Sediment\+Model\+Type} Do\+Entry\+::river\+Sediment\+Model\+Type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_ae8b082b5739b0780c172bec2a89eb457}
+
+
+Definição na linha 83 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!rout\+Latflow@{rout\+Latflow}}
+\index{rout\+Latflow@{rout\+Latflow}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{rout\+Latflow}]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::rout\+Latflow\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_adb037d085bdb9104c7ee9ddadff706cd}
+
+
+Definição na linha 69 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!save\+State\+Of\+Storages@{save\+State\+Of\+Storages}}
+\index{save\+State\+Of\+Storages@{save\+State\+Of\+Storages}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{save\+State\+Of\+Storages}]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::save\+State\+Of\+Storages\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_a19858ec30f46cacb12c15722f8c2a8dc}
+
+
+Definição na linha 78 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!scenario@{scenario}}
+\index{scenario@{scenario}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{scenario}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Scenario} Do\+Entry\+::scenario\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_a0ff4dabd33dfa73c4fc6b69e877f5990}
+
+
+Definição na linha 80 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!sediment\+Transport\+Model\+Type@{sediment\+Transport\+Model\+Type}}
+\index{sediment\+Transport\+Model\+Type@{sediment\+Transport\+Model\+Type}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{sediment\+Transport\+Model\+Type}]{\setlength{\rightskip}{0pt plus 5cm}int Do\+Entry\+::sediment\+Transport\+Model\+Type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_ac0ec97c3f9099eba8f99e87e91890ece}
+
+
+Definição na linha 90 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!sensitivity\+Factor@{sensitivity\+Factor}}
+\index{sensitivity\+Factor@{sensitivity\+Factor}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{sensitivity\+Factor}]{\setlength{\rightskip}{0pt plus 5cm}double Do\+Entry\+::sensitivity\+Factor\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_afeebfaace660017ba2101393e538f58e}
+
+
+Definição na linha 87 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!simulation\+End@{simulation\+End}}
+\index{simulation\+End@{simulation\+End}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{simulation\+End}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Time Do\+Entry\+::simulation\+End\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_aa97d5812897dc35a81af33a9b06f1e85}
+
+
+Definição na linha 57 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!simulation\+Start@{simulation\+Start}}
+\index{simulation\+Start@{simulation\+Start}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{simulation\+Start}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Time Do\+Entry\+::simulation\+Start\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_a24eb492de315eced1900df791e0eb59d}
+
+
+Definição na linha 57 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!subsurface\+Runoff@{subsurface\+Runoff}}
+\index{subsurface\+Runoff@{subsurface\+Runoff}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{subsurface\+Runoff}]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::subsurface\+Runoff\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_ab507a1ee21b92ebb0a761f2a0f3e8817}
+
+
+Definição na linha 71 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!surface\+Runoff@{surface\+Runoff}}
+\index{surface\+Runoff@{surface\+Runoff}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{surface\+Runoff}]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::surface\+Runoff\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_aa92df794c4437a69c505239231841126}
+
+
+Definição na linha 70 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!time\+Step@{time\+Step}}
+\index{time\+Step@{time\+Step}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{time\+Step}]{\setlength{\rightskip}{0pt plus 5cm}int Do\+Entry\+::time\+Step\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_aba19d02ea5cf490b3b4f4b77cf0109a2}
+
+
+Definição na linha 88 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!total\+Soil@{total\+Soil}}
+\index{total\+Soil@{total\+Soil}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{total\+Soil}]{\setlength{\rightskip}{0pt plus 5cm}int Do\+Entry\+::total\+Soil\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_aa343766e2f750facb25a0ca2d93c7a27}
+
+
+Definição na linha 63 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!total\+Soter@{total\+Soter}}
+\index{total\+Soter@{total\+Soter}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{total\+Soter}]{\setlength{\rightskip}{0pt plus 5cm}int Do\+Entry\+::total\+Soter\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_a973fb8d84f4a4db16bd3d2d48a2886b5}
+
+
+Definição na linha 61 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!total\+TC@{total\+TC}}
+\index{total\+TC@{total\+TC}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{total\+TC}]{\setlength{\rightskip}{0pt plus 5cm}int Do\+Entry\+::total\+TC\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_aacf50f7d95e83a89e8d6b08c67bb4df1}
+
+
+Definição na linha 62 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!total\+Vegetation@{total\+Vegetation}}
+\index{total\+Vegetation@{total\+Vegetation}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{total\+Vegetation}]{\setlength{\rightskip}{0pt plus 5cm}int Do\+Entry\+::total\+Vegetation\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_a2f7981482f6f2393c003945a58c72441}
+
+
+Definição na linha 64 do arquivo Do\+Entry.\+h.
+
+\index{Do\+Entry@{Do\+Entry}!use\+Rainfall\+Input@{use\+Rainfall\+Input}}
+\index{use\+Rainfall\+Input@{use\+Rainfall\+Input}!Do\+Entry@{Do\+Entry}}
+\subsubsection[{use\+Rainfall\+Input}]{\setlength{\rightskip}{0pt plus 5cm}bool Do\+Entry\+::use\+Rainfall\+Input\hspace{0.3cm}{\ttfamily [protected]}}\label{class_do_entry_af3c5fc83838a6ae165668b4a9f992990}
+
+
+Definição na linha 75 do arquivo Do\+Entry.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Do\+Entry.\+h}\end{DoxyCompactItemize}

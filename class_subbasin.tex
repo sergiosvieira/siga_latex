@@ -1,0 +1,153 @@
+\section{Referência da Classe Subbasin}
+\label{class_subbasin}\index{Subbasin@{Subbasin}}
+
+
+{\ttfamily \#include $<$Subbasin.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+short {\bf get\+Number\+SA} ()
+\item 
+double {\bf percent\+Area} (unsigned short source\+Area)
+\item 
+{\bf Subbasin} ()
+\item 
+virtual {\bf $\sim$\+Subbasin} ()
+\item 
+void {\bf insert\+Source\+Area} (const wx\+String \&name, {\bf type\+SA} type, double {\bf area}, double C\+N2)
+\item 
+void {\bf remove\+Source\+Area} (unsigned int id)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf area}
+\item 
+map$<$ unsigned int, {\bf Source\+Area} $\ast$ $>$ {\bf source\+Areas}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 13 do arquivo Subbasin.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Subbasin@{Subbasin}!Subbasin@{Subbasin}}
+\index{Subbasin@{Subbasin}!Subbasin@{Subbasin}}
+\subsubsection[{Subbasin()}]{\setlength{\rightskip}{0pt plus 5cm}Subbasin\+::\+Subbasin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_subbasin_af3a5510dfa6a080f9439582f33e285c9}
+Construtor 
+
+Definição na linha 41 do arquivo Subbasin.\+h.
+
+\index{Subbasin@{Subbasin}!````~Subbasin@{$\sim$\+Subbasin}}
+\index{````~Subbasin@{$\sim$\+Subbasin}!Subbasin@{Subbasin}}
+\subsubsection[{$\sim$\+Subbasin()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Subbasin\+::$\sim$\+Subbasin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_subbasin_affeee053c2711ff8f2791c9ffbb227bc}
+Destrutor 
+
+Definição na linha 46 do arquivo Subbasin.\+h.
+
+
+
+\subsection{Métodos}
+\index{Subbasin@{Subbasin}!get\+Number\+SA@{get\+Number\+SA}}
+\index{get\+Number\+SA@{get\+Number\+SA}!Subbasin@{Subbasin}}
+\subsubsection[{get\+Number\+S\+A()}]{\setlength{\rightskip}{0pt plus 5cm}short Subbasin\+::get\+Number\+SA (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_subbasin_aab1c8f7e4cfe83e24f1350d941ca40b1}
+Retorna o numero de areas fontes 
+
+Definição na linha 27 do arquivo Subbasin.\+h.
+
+\index{Subbasin@{Subbasin}!insert\+Source\+Area@{insert\+Source\+Area}}
+\index{insert\+Source\+Area@{insert\+Source\+Area}!Subbasin@{Subbasin}}
+\subsubsection[{insert\+Source\+Area(const wx\+String \&name, type\+S\+A type, double area, double C\+N2)}]{\setlength{\rightskip}{0pt plus 5cm}void Subbasin\+::insert\+Source\+Area (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{name, }
+\item[{{\bf type\+SA}}]{type, }
+\item[{double}]{area, }
+\item[{double}]{C\+N2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_subbasin_aa62ae80faac512343768db0f4276e410}
+Insere uma area fonte 
+\begin{DoxyParams}{Parâmetros}
+{\em name} & Nome \\
+\hline
+{\em type} & Tipo \\
+\hline
+{\em area} & Area \\
+\hline
+{\em C\+N2} & C\+N2 \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 59 do arquivo Subbasin.\+h.
+
+\index{Subbasin@{Subbasin}!percent\+Area@{percent\+Area}}
+\index{percent\+Area@{percent\+Area}!Subbasin@{Subbasin}}
+\subsubsection[{percent\+Area(unsigned short source\+Area)}]{\setlength{\rightskip}{0pt plus 5cm}double Subbasin\+::percent\+Area (
+\begin{DoxyParamCaption}
+\item[{unsigned short}]{source\+Area}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_subbasin_a69e062b8ffd00a2e7fce9aa5387e2f0f}
+Retorna a porcentagem que a area fonte fornecida representa em rela��o a area total da sub-\/bacia 
+\begin{DoxyParams}{Parâmetros}
+{\em soucer\+Area} & Area fonte \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 32 do arquivo Subbasin.\+h.
+
+\index{Subbasin@{Subbasin}!remove\+Source\+Area@{remove\+Source\+Area}}
+\index{remove\+Source\+Area@{remove\+Source\+Area}!Subbasin@{Subbasin}}
+\subsubsection[{remove\+Source\+Area(unsigned int id)}]{\setlength{\rightskip}{0pt plus 5cm}void Subbasin\+::remove\+Source\+Area (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_subbasin_aac5f6bbdc1d9975b9eb0dff59e1c8160}
+Remove uma area fonte 
+\begin{DoxyParams}{Parâmetros}
+{\em id} & Identificador da area fonte \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 68 do arquivo Subbasin.\+h.
+
+
+
+\subsection{Atributos}
+\index{Subbasin@{Subbasin}!area@{area}}
+\index{area@{area}!Subbasin@{Subbasin}}
+\subsubsection[{area}]{\setlength{\rightskip}{0pt plus 5cm}double Subbasin\+::area}\label{class_subbasin_ad5f96c6159224db97c26db12f58986a4}
+
+
+Definição na linha 16 do arquivo Subbasin.\+h.
+
+\index{Subbasin@{Subbasin}!source\+Areas@{source\+Areas}}
+\index{source\+Areas@{source\+Areas}!Subbasin@{Subbasin}}
+\subsubsection[{source\+Areas}]{\setlength{\rightskip}{0pt plus 5cm}map$<$unsigned int,{\bf Source\+Area}$\ast$$>$ Subbasin\+::source\+Areas}\label{class_subbasin_aa1101ddfab09fef841fc3cfaa1aa275c}
+\doxyref{1..$\ast$  Source\+Area }{pag.}{}
+
+Definição na linha 23 do arquivo Subbasin.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Subbasin.\+h}\end{DoxyCompactItemize}

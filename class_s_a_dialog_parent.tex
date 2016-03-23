@@ -1,0 +1,181 @@
+\section{ReferÃªncia da Classe S\+A\+Dialog\+Parent}
+\label{class_s_a_dialog_parent}\index{S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}}
+
+
+{\ttfamily \#include $<$S\+A\+Dialog\+Parent.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+
+
+Superclasse de {\bf S\+A\+C\+N3S}, {\bf S\+A\+H\+Y\+M\+OD}, {\bf S\+A\+S\+M\+AP} e {\bf S\+A\+S\+M\+A\+PM}.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+A\+Dialog\+Parent} (wx\+Window $\ast${\bf parent})
+\item 
+{\bf $\sim$\+S\+A\+Dialog\+Parent} ()
+\item 
+void {\bf on\+Select\+Function} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Run} (wx\+Command\+Event \&event)
+\item 
+virtual void {\bf run} ()=0
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+{\bf D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix\+Viewer} $\ast$ {\bf mv}
+\item 
+int {\bf iterations}
+\item 
+{\bf Interval} {\bf interval}
+\item 
+{\bf Node} $\ast$ {\bf node}
+\item 
+vector$<$ int $>$ {\bf N\+Obj}
+\item 
+{\bf Obj\+Function} $\ast$ {\bf Function}
+\item 
+wx\+Box\+Sizer $\ast$ {\bf bs\+Models}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 24 do arquivo S\+A\+Dialog\+Parent.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}!S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}}
+\index{S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}!S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}}
+\subsubsection[{S\+A\+Dialog\+Parent(wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}S\+A\+Dialog\+Parent\+::\+S\+A\+Dialog\+Parent (
+\begin{DoxyParamCaption}
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_s_a_dialog_parent_a092293933b64fcdaf638f5e509bd9341}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em parent} & Componente onde será inserido \\
+\hline
+\end{DoxyParams}
+\index{S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}!````~S\+A\+Dialog\+Parent@{$\sim$\+S\+A\+Dialog\+Parent}}
+\index{````~S\+A\+Dialog\+Parent@{$\sim$\+S\+A\+Dialog\+Parent}!S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}}
+\subsubsection[{$\sim$\+S\+A\+Dialog\+Parent()}]{\setlength{\rightskip}{0pt plus 5cm}S\+A\+Dialog\+Parent\+::$\sim$\+S\+A\+Dialog\+Parent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_a_dialog_parent_ad62ad1f4a18c65d3e5b30e04039ab094}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+A\+Dialog\+Parent\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_s_a_dialog_parent_ae49f637b52e867313079d1caa059f365}
+Verifica se todos os valores foram preenchidos \index{S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}!D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}!S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}}
+\subsubsection[{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+L\+E()}]{\setlength{\rightskip}{0pt plus 5cm}S\+A\+Dialog\+Parent\+::\+D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_a_dialog_parent_af3ad85037103436b31e99547cb28ecd9}
+Tabela de eventos \index{S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}!on\+Run@{on\+Run}}
+\index{on\+Run@{on\+Run}!S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}}
+\subsubsection[{on\+Run(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+Dialog\+Parent\+::on\+Run (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_a_dialog_parent_ad9a117d2a143d4b7b5b51fc25f206e44}
+Evento de execução \index{S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}!on\+Select\+Function@{on\+Select\+Function}}
+\index{on\+Select\+Function@{on\+Select\+Function}!S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}}
+\subsubsection[{on\+Select\+Function(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+Dialog\+Parent\+::on\+Select\+Function (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_a_dialog_parent_a75d1662b6168d160b3ec8021b38d5930}
+Evento de seleção de função objetivo \index{S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}!run@{run}}
+\index{run@{run}!S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}}
+\subsubsection[{run()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+A\+Dialog\+Parent\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_a_dialog_parent_ad8733b34e6cbc39c21c9b4c54e36f44e}
+Executa 
+
+ReimplementaÃ§Ã£o de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_a747fb799cb1c6c59194fdf5de8cd39c1}.
+
+
+
+Implementado por {\bf S\+A\+H\+Y\+M\+OD} \doxyref{}{pag.}{class_s_a_h_y_m_o_d_ac13fb5a19556d86b4e56c16779287b1e}, {\bf S\+A\+C\+N3S} \doxyref{}{pag.}{class_s_a_c_n3_s_a35e82df48c27aa44faed666041111fb4}, {\bf S\+A\+S\+M\+AP} \doxyref{}{pag.}{class_s_a_s_m_a_p_a4254860d90d39d81c41176c21228cf38} e {\bf S\+A\+S\+M\+A\+PM} \doxyref{}{pag.}{class_s_a_s_m_a_p_m_ac01feff56d2a8b605c18dbdc85a1f64a}.
+
+
+
+\subsection{Atributos}
+\index{S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}!bs\+Models@{bs\+Models}}
+\index{bs\+Models@{bs\+Models}!S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}}
+\subsubsection[{bs\+Models}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Box\+Sizer$\ast$ S\+A\+Dialog\+Parent\+::bs\+Models}\label{class_s_a_dialog_parent_a122f54c723be1770d1a66857ce362dd8}
+Sizer no qual os modelos serão inseridos na interface 
+
+DefiniÃ§Ã£o na linha 59 do arquivo S\+A\+Dialog\+Parent.\+h.
+
+\index{S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}!Function@{Function}}
+\index{Function@{Function}!S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}}
+\subsubsection[{Function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Obj\+Function}$\ast$ S\+A\+Dialog\+Parent\+::\+Function}\label{class_s_a_dialog_parent_a247a7a6e81e32831d57cd2f548431d2d}
+Instância das funções objetivo 
+
+DefiniÃ§Ã£o na linha 55 do arquivo S\+A\+Dialog\+Parent.\+h.
+
+\index{S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}!interval@{interval}}
+\index{interval@{interval}!S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}}
+\subsubsection[{interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} S\+A\+Dialog\+Parent\+::interval}\label{class_s_a_dialog_parent_a4624d1173cddeb6a96e0b7de4f6b4038}
+Intervalo (Capturado da Calibração) 
+
+DefiniÃ§Ã£o na linha 43 do arquivo S\+A\+Dialog\+Parent.\+h.
+
+\index{S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}!iterations@{iterations}}
+\index{iterations@{iterations}!S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}}
+\subsubsection[{iterations}]{\setlength{\rightskip}{0pt plus 5cm}int S\+A\+Dialog\+Parent\+::iterations}\label{class_s_a_dialog_parent_a54800c9aa02a9f5c357a0ac3a16b40c0}
+Número de iterações 
+
+DefiniÃ§Ã£o na linha 39 do arquivo S\+A\+Dialog\+Parent.\+h.
+
+\index{S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}!mv@{mv}}
+\index{mv@{mv}!S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}}
+\subsubsection[{mv}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix\+Viewer}$\ast$ S\+A\+Dialog\+Parent\+::mv}\label{class_s_a_dialog_parent_a155cded47a2b73642266a80ce725753d}
+\doxyref{Matrix\+Viewer}{pag.}{class_matrix_viewer} 
+
+DefiniÃ§Ã£o na linha 35 do arquivo S\+A\+Dialog\+Parent.\+h.
+
+\index{S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}!N\+Obj@{N\+Obj}}
+\index{N\+Obj@{N\+Obj}!S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}}
+\subsubsection[{N\+Obj}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ S\+A\+Dialog\+Parent\+::\+N\+Obj}\label{class_s_a_dialog_parent_acc21d10bcc53e16358b14fc43c7568b8}
+Função Objetivo a ser analisada (N\+Obj guarda apenas um valor) 
+
+DefiniÃ§Ã£o na linha 51 do arquivo S\+A\+Dialog\+Parent.\+h.
+
+\index{S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}!node@{node}}
+\index{node@{node}!S\+A\+Dialog\+Parent@{S\+A\+Dialog\+Parent}}
+\subsubsection[{node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ S\+A\+Dialog\+Parent\+::node}\label{class_s_a_dialog_parent_a4c2167ff8baaef7dca5c7c0b52f0500f}
+Nó selecionado (Capturado da Calibração) 
+
+DefiniÃ§Ã£o na linha 47 do arquivo S\+A\+Dialog\+Parent.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+A\+Dialog\+Parent.\+h}\end{DoxyCompactItemize}

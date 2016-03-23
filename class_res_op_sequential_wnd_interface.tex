@@ -1,0 +1,185 @@
+\section{Referência da Classe Res\+Op\+Sequential\+Wnd\+Interface}
+\label{class_res_op_sequential_wnd_interface}\index{Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Sequential\+Wnd\+Interface.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Sequential\+Interface}.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bf I\+D\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+I\+ZE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Sequential\+Wnd\+Interface} ({\bf S\+I\+GA} $\ast${\bf main}, wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent})
+\item 
+void {\bf on\+Choice} (wx\+Command\+Event \&event)
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Sequential\+Wnd\+Interface} ()
+\item 
+void {\bf set\+Info} ()
+\item 
+void {\bf set\+Info} ({\bf Res\+Op\+Element} $\ast$a\+\_\+element)
+\item 
+void {\bf set\+Info} ({\bf Res\+Op\+Element} $\ast$a\+\_\+element, int a\+\_\+window\+\_\+exec\+\_\+length)
+\item 
+void {\bf show\+Results} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Choice $\ast$ {\bf c\+Size}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Choice}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf create\+Results} ({\bf Res\+Op\+Sequential\+Wnd\+Reservoir} $\ast$element)
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 15 do arquivo Res\+Op\+Sequential\+Wnd\+Interface.\+h.
+
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{class_res_op_sequential_wnd_interface_a2039ad05c18bf779f07b48be26cdfed2}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+I\+ZE@{I\+D\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+I\+ZE}!Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}}\index{Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}!I\+D\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+I\+ZE@{I\+D\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+I\+ZE}}\item[{\em 
+I\+D\+\_\+\+W\+I\+N\+D\+O\+W\+\_\+\+S\+I\+ZE\label{class_res_op_sequential_wnd_interface_a2039ad05c18bf779f07b48be26cdfed2a813ca732631104935f0037aa1203eee0}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 19 do arquivo Res\+Op\+Sequential\+Wnd\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}!Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}}
+\index{Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}!Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}}
+\subsubsection[{Res\+Op\+Sequential\+Wnd\+Interface(\+S\+I\+G\+A $\ast$main, wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Sequential\+Wnd\+Interface\+::\+Res\+Op\+Sequential\+Wnd\+Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+GA} $\ast$}]{main, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_res_op_sequential_wnd_interface_aff2cebd96b51ed2db3790fbf25e3bdae}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em main} & Aplicativo \\
+\hline
+{\em frame} & Janela principal \\
+\hline
+{\em parent} & Janela onde est� contida a interface \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}!````~Res\+Op\+Sequential\+Wnd\+Interface@{$\sim$\+Res\+Op\+Sequential\+Wnd\+Interface}}
+\index{````~Res\+Op\+Sequential\+Wnd\+Interface@{$\sim$\+Res\+Op\+Sequential\+Wnd\+Interface}!Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}}
+\subsubsection[{$\sim$\+Res\+Op\+Sequential\+Wnd\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Sequential\+Wnd\+Interface\+::$\sim$\+Res\+Op\+Sequential\+Wnd\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_sequential_wnd_interface_a9c3262dbf0b564e14b94c686e59cf798}
+Destrutor 
+
+\subsection{Métodos}
+\index{Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}!create\+Results@{create\+Results}}
+\index{create\+Results@{create\+Results}!Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}}
+\subsubsection[{create\+Results(\+Res\+Op\+Sequential\+Wnd\+Reservoir $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Sequential\+Wnd\+Interface\+::create\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Wnd\+Reservoir} $\ast$}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_wnd_interface_addb8ed12adf50e79b235b789ac2d0204}
+Cria a interface de resultados \index{Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}!on\+Choice@{on\+Choice}}
+\index{on\+Choice@{on\+Choice}!Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}}
+\subsubsection[{on\+Choice(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Sequential\+Wnd\+Interface\+::on\+Choice (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_res_op_sequential_wnd_interface_a29036a7df8c0fd8b39d7ee3231fc5ed7}
+\index{Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Sequential\+Wnd\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_sequential_wnd_interface_a91eda865c083fcb1bda3b9db970d8e9f}
+Carega os dados do elemento na interface 
+
+Reimplementação de {\bf Res\+Op\+Sequential\+Interface} \doxyref{}{pag.}{class_res_op_sequential_interface_a26bdf00f02ad82bba87ebdf4bf801f0a}.
+
+\index{Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}}
+\subsubsection[{set\+Info(\+Res\+Op\+Element $\ast$a\+\_\+element)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Sequential\+Wnd\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{a\+\_\+element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_sequential_wnd_interface_a0c6f024750efeb2f80575c230b774503}
+Load data from the element passed as argument 
+
+Reimplementação de {\bf Res\+Op\+Sequential\+Interface} \doxyref{}{pag.}{class_res_op_sequential_interface_a250d2db78270ebe4e6f41e8ba27ef4a7}.
+
+\index{Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}}
+\subsubsection[{set\+Info(\+Res\+Op\+Element $\ast$a\+\_\+element, int a\+\_\+window\+\_\+exec\+\_\+length)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Sequential\+Wnd\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{a\+\_\+element, }
+\item[{int}]{a\+\_\+window\+\_\+exec\+\_\+length}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_sequential_wnd_interface_a3e5f4699ad4fbf0b69d297b998183d83}
+
+
+Reimplementação de {\bf Res\+Op\+Component\+Interface} \doxyref{}{pag.}{class_res_op_component_interface_a0a76261ae6dc99f2c36a9f999e9008bb}.
+
+\index{Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}}
+\subsubsection[{show\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Sequential\+Wnd\+Interface\+::show\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_sequential_wnd_interface_a5d611f3454490e4abd983be237d2369c}
+Apresenta resultados do modelo para o n� fornecido. (m�todo abstrato) 
+\begin{DoxyParams}{Parâmetros}
+{\em cahnge} & Montar os resultados caso seja true. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Res\+Op\+Sequential\+Interface} \doxyref{}{pag.}{class_res_op_sequential_interface_a36e8d32a355755b467617a8fe869b612}.
+
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}!c\+Size@{c\+Size}}
+\index{c\+Size@{c\+Size}!Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}}
+\subsubsection[{c\+Size}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Res\+Op\+Sequential\+Wnd\+Interface\+::c\+Size}\label{class_res_op_sequential_wnd_interface_a9854753d58660913a4f6769beafd9d24}
+Seletor de tamanho da janela 
+
+Definição na linha 35 do arquivo Res\+Op\+Sequential\+Wnd\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}!s\+Choice@{s\+Choice}}
+\index{s\+Choice@{s\+Choice}!Res\+Op\+Sequential\+Wnd\+Interface@{Res\+Op\+Sequential\+Wnd\+Interface}}
+\subsubsection[{s\+Choice}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer$\ast$ Res\+Op\+Sequential\+Wnd\+Interface\+::s\+Choice}\label{class_res_op_sequential_wnd_interface_a5829f57cbe2a2ca623bf359d83510cb1}
+Sizer para seletor de tamanho da janela 
+
+Definição na linha 40 do arquivo Res\+Op\+Sequential\+Wnd\+Interface.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Sequential\+Wnd\+Interface.\+h}\end{DoxyCompactItemize}

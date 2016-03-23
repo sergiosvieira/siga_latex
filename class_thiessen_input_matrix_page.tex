@@ -1,0 +1,154 @@
+\section{ReferÃªncia da Classe Thiessen\+Input\+Matrix\+Page}
+\label{class_thiessen_input_matrix_page}\index{Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}}
+
+
+{\ttfamily \#include $<$Thiessen\+Input\+Matrix\+Page.\+h$>$}
+
+
+
+Herdeiro de wx\+Wizard\+Page\+Simple.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Thiessen\+Input\+Matrix\+Page} (wx\+Wizard $\ast$a\+\_\+parent, {\bf Thiessen\+Wizard\+::k\+Thiessen\+Data} $\ast$a\+\_\+thiessen\+Data)
+\item 
+void {\bf On\+Wizard\+Page\+Changing} (wx\+Wizard\+Event \&event)
+\item 
+bool {\bf has\+Common\+Stations} ()
+\item 
+bool {\bf check\+Station\+I\+Ds\+In\+Polygons} (std\+::vector$<$ int $>$ common\+Ids)
+\item 
+{\bf Rainfall\+Matrix} $\ast$ {\bf rainfall\+Matrix} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Thiessen\+Wizard\+::k\+Thiessen\+Data} $\ast$ {\bf m\+\_\+thiessen\+Data}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf bitmap\+Input\+Matrix}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf bitmap\+Input\+Thiessen\+Matrix}
+\item 
+wx\+Button $\ast$ {\bf bt\+Input\+Matrix}
+\item 
+wx\+Button $\ast$ {\bf m\+\_\+generate\+Thiessen\+Button}
+\item 
+wx\+Bitmap {\bf bitmap\+Ok}
+\item 
+wx\+Bitmap {\bf bitmap\+Empty}
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+Esta classe é usada para definir a segunda página da wizard do \doxyref{Thiessen}{pag.}{class_thiessen}. Ela é responsável por pegar a matriz de entrada com as séries temporais para ser usada no cálculo de \doxyref{Thiessen}{pag.}{class_thiessen}. 
+
+DefiniÃ§Ã£o na linha 33 do arquivo Thiessen\+Input\+Matrix\+Page.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}!Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}}
+\index{Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}!Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}}
+\subsubsection[{Thiessen\+Input\+Matrix\+Page(wx\+Wizard $\ast$a\+\_\+parent, Thiessen\+Wizard\+::k\+Thiessen\+Data $\ast$a\+\_\+thiessen\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Thiessen\+Input\+Matrix\+Page\+::\+Thiessen\+Input\+Matrix\+Page (
+\begin{DoxyParamCaption}
+\item[{wx\+Wizard $\ast$}]{a\+\_\+parent, }
+\item[{{\bf Thiessen\+Wizard\+::k\+Thiessen\+Data} $\ast$}]{a\+\_\+thiessen\+Data}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_input_matrix_page_aeaadb8f4dd4a4a4e7c794f3ef22dc76c}
+
+
+\subsection{MÃ©todos}
+\index{Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}!check\+Station\+I\+Ds\+In\+Polygons@{check\+Station\+I\+Ds\+In\+Polygons}}
+\index{check\+Station\+I\+Ds\+In\+Polygons@{check\+Station\+I\+Ds\+In\+Polygons}!Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}}
+\subsubsection[{check\+Station\+I\+Ds\+In\+Polygons(std\+::vector$<$ int $>$ common\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}bool Thiessen\+Input\+Matrix\+Page\+::check\+Station\+I\+Ds\+In\+Polygons (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ int $>$}]{common\+Ids}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_input_matrix_page_af2acf3b7f14ef870ebb7041c5e56cf01}
+Verifica se existe pelo menos uma estação válida dentro de pelo menos um polígono (sub-\/bacia). É necessário que a estação esteja também na matriz de dados informada pela wizard do \doxyref{Thiessen}{pag.}{class_thiessen}. Essa checagem é necessária para o método Polígono a Polígono (cálculo do \doxyref{Thiessen}{pag.}{class_thiessen}). 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em common\+Ids} & -\/ Ids das estações comuns entre a matriz de dados e o shapefile de pontos. \\
+\hline
+\end{DoxyParams}
+\index{Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}!has\+Common\+Stations@{has\+Common\+Stations}}
+\index{has\+Common\+Stations@{has\+Common\+Stations}!Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}}
+\subsubsection[{has\+Common\+Stations()}]{\setlength{\rightskip}{0pt plus 5cm}bool Thiessen\+Input\+Matrix\+Page\+::has\+Common\+Stations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_input_matrix_page_a9588c23d6ddb8106d057b5a9f973934f}
+Checa se há I\+Ds comuns entre a matriz de dados e o shapefile de pontos \index{Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}!On\+Wizard\+Page\+Changing@{On\+Wizard\+Page\+Changing}}
+\index{On\+Wizard\+Page\+Changing@{On\+Wizard\+Page\+Changing}!Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}}
+\subsubsection[{On\+Wizard\+Page\+Changing(wx\+Wizard\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Input\+Matrix\+Page\+::\+On\+Wizard\+Page\+Changing (
+\begin{DoxyParamCaption}
+\item[{wx\+Wizard\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_input_matrix_page_ad5359beafa77f3ec6922b64aff9be9f6}
+Função para verificar se todos os campos foram preenchidos corretamente e para transferir os dados para seus respectivos lugares \index{Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}!rainfall\+Matrix@{rainfall\+Matrix}}
+\index{rainfall\+Matrix@{rainfall\+Matrix}!Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}}
+\subsubsection[{rainfall\+Matrix()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rainfall\+Matrix}$\ast$ Thiessen\+Input\+Matrix\+Page\+::rainfall\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_input_matrix_page_a99faae558415b5f274a9aa26eeffa7dc}
+Tabela de evento 
+
+\subsection{Atributos}
+\index{Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}!bitmap\+Empty@{bitmap\+Empty}}
+\index{bitmap\+Empty@{bitmap\+Empty}!Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}}
+\subsubsection[{bitmap\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Thiessen\+Input\+Matrix\+Page\+::bitmap\+Empty\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_input_matrix_page_a2609f406d2f7c88ea0190b4383ec0103}
+
+
+DefiniÃ§Ã£o na linha 70 do arquivo Thiessen\+Input\+Matrix\+Page.\+h.
+
+\index{Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}!bitmap\+Input\+Matrix@{bitmap\+Input\+Matrix}}
+\index{bitmap\+Input\+Matrix@{bitmap\+Input\+Matrix}!Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}}
+\subsubsection[{bitmap\+Input\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Thiessen\+Input\+Matrix\+Page\+::bitmap\+Input\+Matrix\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_input_matrix_page_af7da2b2e5f2f5b7e37959a8eb7bc4291}
+Botão informativo de matrix carregada/não carregada 
+
+DefiniÃ§Ã£o na linha 54 do arquivo Thiessen\+Input\+Matrix\+Page.\+h.
+
+\index{Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}!bitmap\+Input\+Thiessen\+Matrix@{bitmap\+Input\+Thiessen\+Matrix}}
+\index{bitmap\+Input\+Thiessen\+Matrix@{bitmap\+Input\+Thiessen\+Matrix}!Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}}
+\subsubsection[{bitmap\+Input\+Thiessen\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Thiessen\+Input\+Matrix\+Page\+::bitmap\+Input\+Thiessen\+Matrix\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_input_matrix_page_a3e941d4645cffdc1bc92d3a9b33e21b4}
+Botão informativo de matrix carregada/não carregada 
+
+DefiniÃ§Ã£o na linha 58 do arquivo Thiessen\+Input\+Matrix\+Page.\+h.
+
+\index{Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}!bitmap\+Ok@{bitmap\+Ok}}
+\index{bitmap\+Ok@{bitmap\+Ok}!Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}}
+\subsubsection[{bitmap\+Ok}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Thiessen\+Input\+Matrix\+Page\+::bitmap\+Ok\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_input_matrix_page_ae7d72138fd91b8353f4f0d00b5ff336d}
+Figura para serie carregada/não carregada 
+
+DefiniÃ§Ã£o na linha 70 do arquivo Thiessen\+Input\+Matrix\+Page.\+h.
+
+\index{Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}!bt\+Input\+Matrix@{bt\+Input\+Matrix}}
+\index{bt\+Input\+Matrix@{bt\+Input\+Matrix}!Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}}
+\subsubsection[{bt\+Input\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Thiessen\+Input\+Matrix\+Page\+::bt\+Input\+Matrix\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_input_matrix_page_a01d36e3013886da84b08d9b9a24fc5a7}
+Botões de entrada da matrix 
+
+DefiniÃ§Ã£o na linha 62 do arquivo Thiessen\+Input\+Matrix\+Page.\+h.
+
+\index{Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}!m\+\_\+generate\+Thiessen\+Button@{m\+\_\+generate\+Thiessen\+Button}}
+\index{m\+\_\+generate\+Thiessen\+Button@{m\+\_\+generate\+Thiessen\+Button}!Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}}
+\subsubsection[{m\+\_\+generate\+Thiessen\+Button}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Thiessen\+Input\+Matrix\+Page\+::m\+\_\+generate\+Thiessen\+Button\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_input_matrix_page_a8e1f1b4acc97cd85002af0447e909b07}
+Botão usado para gerar matriz de thiessen 
+
+DefiniÃ§Ã£o na linha 66 do arquivo Thiessen\+Input\+Matrix\+Page.\+h.
+
+\index{Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}!m\+\_\+thiessen\+Data@{m\+\_\+thiessen\+Data}}
+\index{m\+\_\+thiessen\+Data@{m\+\_\+thiessen\+Data}!Thiessen\+Input\+Matrix\+Page@{Thiessen\+Input\+Matrix\+Page}}
+\subsubsection[{m\+\_\+thiessen\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Thiessen\+Wizard\+::k\+Thiessen\+Data}$\ast$ Thiessen\+Input\+Matrix\+Page\+::m\+\_\+thiessen\+Data}\label{class_thiessen_input_matrix_page_a8a10bbc030e59fb976f53a51343db961}
+Aponta para uma estrutura responsável por coletar as opções escolhidas pelo usuário através do funcionamento do wizard 
+
+DefiniÃ§Ã£o na linha 83 do arquivo Thiessen\+Input\+Matrix\+Page.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Thiessen\+Input\+Matrix\+Page.\+h}\end{DoxyCompactItemize}

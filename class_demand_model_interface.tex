@@ -1,0 +1,292 @@
+\section{Referência da Classe Demand\+Model\+Interface}
+\label{class_demand_model_interface}\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+
+
+{\ttfamily \#include $<$Demand\+Model\+Interface.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+{\bf I\+D\+\_\+\+N\+A\+T\+I\+N\+F\+L\+OW}, 
+{\bf I\+D\+\_\+\+D\+E\+M\+A\+ND}, 
+{\bf I\+D\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+D\+E\+M\+A\+ND}, 
+{\bf I\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+D\+E\+M\+A\+ND}, 
+\\*
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+ES}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Demand\+Model\+Interface} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent})
+\item 
+{\bf $\sim$\+Demand\+Model\+Interface} (void)
+\item 
+void {\bf on\+Change\+Spin} (wx\+Spin\+Event \&event)
+\item 
+void {\bf on\+Change\+Grid} (wx\+Grid\+Event \&event)
+\item 
+void {\bf on\+Open\+Demand} (wx\+Command\+Event \&)
+\item 
+void {\bf on\+Open\+Nat\+Inflow} (wx\+Command\+Event \&)
+\item 
+void {\bf set\+Info} ({\bf Demand\+Model} $\ast$model)
+\item 
+void {\bf show\+Results} ({\bf Demand\+Result} $\ast$results, bool change=false)
+\item 
+void {\bf set\+Interval} ({\bf Interval} interval)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ unsigned int $>$ {\bf lnk\+Row}
+\item 
+vector$<$ unsigned int $>$ {\bf res\+Row}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Priority}
+\item 
+{\bf S\+I\+G\+A\+Grid} $\ast$ {\bf grid\+Ret}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf spin\+Priority}
+\item 
+{\bf S\+I\+G\+A\+Grid} $\ast$ {\bf grid\+Src}
+\item 
+wx\+Button $\ast$ {\bf bt\+Demand}
+\item 
+wx\+Button $\ast$ {\bf bt\+Nat\+Inflow}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf bitmap\+Demand}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf bitmap\+Nat\+Inflow}
+\item 
+wx\+Bitmap {\bf bitmap\+Ok}
+\item 
+wx\+Bitmap {\bf bitmap\+Empty}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+Interface da Demanda 
+
+Definição na linha 16 do arquivo Demand\+Model\+Interface.\+h.
+
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{class_demand_model_interface_aa7265478449f6db6d85326b13d20211b}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+N\+A\+T\+I\+N\+F\+L\+OW@{I\+D\+\_\+\+N\+A\+T\+I\+N\+F\+L\+OW}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!I\+D\+\_\+\+N\+A\+T\+I\+N\+F\+L\+OW@{I\+D\+\_\+\+N\+A\+T\+I\+N\+F\+L\+OW}}\item[{\em 
+I\+D\+\_\+\+N\+A\+T\+I\+N\+F\+L\+OW\label{class_demand_model_interface_aa7265478449f6db6d85326b13d20211bae969fe39820018020e66caeb110a4b1f}
+}]\index{I\+D\+\_\+\+D\+E\+M\+A\+ND@{I\+D\+\_\+\+D\+E\+M\+A\+ND}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!I\+D\+\_\+\+D\+E\+M\+A\+ND@{I\+D\+\_\+\+D\+E\+M\+A\+ND}}\item[{\em 
+I\+D\+\_\+\+D\+E\+M\+A\+ND\label{class_demand_model_interface_aa7265478449f6db6d85326b13d20211ba4558d97c63969e6fc4fc8f66631e1de1}
+}]\index{I\+D\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+D\+E\+M\+A\+ND@{I\+D\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+D\+E\+M\+A\+ND}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!I\+D\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+D\+E\+M\+A\+ND@{I\+D\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+D\+E\+M\+A\+ND}}\item[{\em 
+I\+D\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+D\+E\+M\+A\+ND\label{class_demand_model_interface_aa7265478449f6db6d85326b13d20211ba8ee7d189358448e3ce150a03645af595}
+}]\index{I\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+D\+E\+M\+A\+ND@{I\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+D\+E\+M\+A\+ND}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!I\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+D\+E\+M\+A\+ND@{I\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+D\+E\+M\+A\+ND}}\item[{\em 
+I\+D\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+D\+E\+M\+A\+ND\label{class_demand_model_interface_aa7265478449f6db6d85326b13d20211ba1547ce87ed5808e5fd38880ddf5e9506}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+ES@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+ES}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+ES@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+ES}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+ES\label{class_demand_model_interface_aa7265478449f6db6d85326b13d20211baf7feb30400d9cb4c2be18ad31871c1d1}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 19 do arquivo Demand\+Model\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\subsubsection[{Demand\+Model\+Interface(wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Demand\+Model\+Interface\+::\+Demand\+Model\+Interface (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_demand_model_interface_afe49f96a4f6361c92690f6863b8729e0}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & Janela principal \\
+\hline
+{\em parent} & Janela que a cont�m \\
+\hline
+\end{DoxyParams}
+\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!````~Demand\+Model\+Interface@{$\sim$\+Demand\+Model\+Interface}}
+\index{````~Demand\+Model\+Interface@{$\sim$\+Demand\+Model\+Interface}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\subsubsection[{$\sim$\+Demand\+Model\+Interface(void)}]{\setlength{\rightskip}{0pt plus 5cm}Demand\+Model\+Interface\+::$\sim$\+Demand\+Model\+Interface (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_demand_model_interface_a7623d74145c55a017ab090b21ff622c0}
+Destrutor 
+
+Definição na linha 76 do arquivo Demand\+Model\+Interface.\+h.
+
+
+
+\subsection{Métodos}
+\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!on\+Change\+Grid@{on\+Change\+Grid}}
+\index{on\+Change\+Grid@{on\+Change\+Grid}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\subsubsection[{on\+Change\+Grid(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Demand\+Model\+Interface\+::on\+Change\+Grid (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_demand_model_interface_a230e8a7cfb869fbd306a9cb170b49a14}
+Defini��o de valores retornados \index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!on\+Change\+Spin@{on\+Change\+Spin}}
+\index{on\+Change\+Spin@{on\+Change\+Spin}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\subsubsection[{on\+Change\+Spin(wx\+Spin\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Demand\+Model\+Interface\+::on\+Change\+Spin (
+\begin{DoxyParamCaption}
+\item[{wx\+Spin\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_demand_model_interface_a996d5bd65cb3ecfe49701b48c9aaf6c3}
+Defini��o da Prioridade \index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!on\+Open\+Demand@{on\+Open\+Demand}}
+\index{on\+Open\+Demand@{on\+Open\+Demand}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\subsubsection[{on\+Open\+Demand(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Demand\+Model\+Interface\+::on\+Open\+Demand (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_demand_model_interface_a5cdcc6fd580fd0244ecc82b6acca9461}
+Defini��o dos reservat�rios que suprem a demanda Abre a janela das demandas \index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!on\+Open\+Nat\+Inflow@{on\+Open\+Nat\+Inflow}}
+\index{on\+Open\+Nat\+Inflow@{on\+Open\+Nat\+Inflow}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\subsubsection[{on\+Open\+Nat\+Inflow(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Demand\+Model\+Interface\+::on\+Open\+Nat\+Inflow (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_demand_model_interface_acddf15cac505badbb8fc911ea4be325e}
+Evento de leitura da s�rie de vaz�o natural incremental \index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\subsubsection[{set\+Info(\+Demand\+Model $\ast$model)}]{\setlength{\rightskip}{0pt plus 5cm}void Demand\+Model\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Demand\+Model} $\ast$}]{model}
+\end{DoxyParamCaption}
+)}\label{class_demand_model_interface_a8838854505ee91af71c3f575f43565a9}
+Atualiza a interface 
+\begin{DoxyParams}{Parâmetros}
+{\em model} & Ponteiro para o modelo \\
+\hline
+\end{DoxyParams}
+\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!set\+Interval@{set\+Interval}}
+\index{set\+Interval@{set\+Interval}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\subsubsection[{set\+Interval(\+Interval interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Demand\+Model\+Interface\+::set\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)}\label{class_demand_model_interface_a3fe5c8f0c74ec105bc0c7cd105e596e5}
+Inserir intervalo de simula��o 
+\begin{DoxyParams}{Parâmetros}
+{\em interval} & Intervalo \\
+\hline
+\end{DoxyParams}
+\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\subsubsection[{show\+Results(\+Demand\+Result $\ast$results, bool change=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Demand\+Model\+Interface\+::show\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Demand\+Result} $\ast$}]{results, }
+\item[{bool}]{change = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_demand_model_interface_afc3f3ef0bed271a1a92e49ddfb8229fb}
+Resultados para a demanda 
+\begin{DoxyParams}{Parâmetros}
+{\em results} & Resultados \\
+\hline
+{\em change} & Monta a janela de resultados se true, caso contrario, mostra a janela de resultados \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!bitmap\+Demand@{bitmap\+Demand}}
+\index{bitmap\+Demand@{bitmap\+Demand}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\subsubsection[{bitmap\+Demand}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Demand\+Model\+Interface\+::bitmap\+Demand}\label{class_demand_model_interface_ad4e4366861907abf56f669d72108998e}
+Bitmap para bot�es 
+
+Definição na linha 59 do arquivo Demand\+Model\+Interface.\+h.
+
+\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!bitmap\+Empty@{bitmap\+Empty}}
+\index{bitmap\+Empty@{bitmap\+Empty}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\subsubsection[{bitmap\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Demand\+Model\+Interface\+::bitmap\+Empty}\label{class_demand_model_interface_aecf225dce01db9fccfb5681eb357e687}
+
+
+Definição na linha 64 do arquivo Demand\+Model\+Interface.\+h.
+
+\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!bitmap\+Nat\+Inflow@{bitmap\+Nat\+Inflow}}
+\index{bitmap\+Nat\+Inflow@{bitmap\+Nat\+Inflow}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\subsubsection[{bitmap\+Nat\+Inflow}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button $\ast$ Demand\+Model\+Interface\+::bitmap\+Nat\+Inflow}\label{class_demand_model_interface_ad5d67afdb96b3b422858eb2df826e450}
+
+
+Definição na linha 59 do arquivo Demand\+Model\+Interface.\+h.
+
+\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!bitmap\+Ok@{bitmap\+Ok}}
+\index{bitmap\+Ok@{bitmap\+Ok}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\subsubsection[{bitmap\+Ok}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Demand\+Model\+Interface\+::bitmap\+Ok}\label{class_demand_model_interface_aca63de5238d5d0668324471af160f4df}
+Imagem de lido e n�o lido para as series de entrada 
+
+Definição na linha 64 do arquivo Demand\+Model\+Interface.\+h.
+
+\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!bt\+Demand@{bt\+Demand}}
+\index{bt\+Demand@{bt\+Demand}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\subsubsection[{bt\+Demand}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Demand\+Model\+Interface\+::bt\+Demand}\label{class_demand_model_interface_a253d5745813f2460123f089ab3d66f83}
+Bot�es 
+
+Definição na linha 54 do arquivo Demand\+Model\+Interface.\+h.
+
+\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!bt\+Nat\+Inflow@{bt\+Nat\+Inflow}}
+\index{bt\+Nat\+Inflow@{bt\+Nat\+Inflow}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\subsubsection[{bt\+Nat\+Inflow}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button $\ast$ Demand\+Model\+Interface\+::bt\+Nat\+Inflow}\label{class_demand_model_interface_a7beb5620d3b7e839be4ee0f39b63f042}
+
+
+Definição na linha 54 do arquivo Demand\+Model\+Interface.\+h.
+
+\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!grid\+Ret@{grid\+Ret}}
+\index{grid\+Ret@{grid\+Ret}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\subsubsection[{grid\+Ret}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Grid}$\ast$ Demand\+Model\+Interface\+::grid\+Ret}\label{class_demand_model_interface_a264aaeb9b5b497849837af11a2cf73f7}
+Tabela de retornos 
+
+Definição na linha 38 do arquivo Demand\+Model\+Interface.\+h.
+
+\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!grid\+Src@{grid\+Src}}
+\index{grid\+Src@{grid\+Src}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\subsubsection[{grid\+Src}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Grid}$\ast$ Demand\+Model\+Interface\+::grid\+Src}\label{class_demand_model_interface_a5e921fbca774293e662e789572f737c6}
+Seletor de reservat�rios 
+
+Definição na linha 49 do arquivo Demand\+Model\+Interface.\+h.
+
+\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!lnk\+Row@{lnk\+Row}}
+\index{lnk\+Row@{lnk\+Row}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\subsubsection[{lnk\+Row}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$unsigned int$>$ Demand\+Model\+Interface\+::lnk\+Row}\label{class_demand_model_interface_a4b739bca3efc5f6aff08caa0c81732cf}
+
+
+Definição na linha 28 do arquivo Demand\+Model\+Interface.\+h.
+
+\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!res\+Row@{res\+Row}}
+\index{res\+Row@{res\+Row}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\subsubsection[{res\+Row}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$unsigned int$>$ Demand\+Model\+Interface\+::res\+Row}\label{class_demand_model_interface_aba473a458c36e728442d162776b625d9}
+
+
+Definição na linha 29 do arquivo Demand\+Model\+Interface.\+h.
+
+\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!spin\+Priority@{spin\+Priority}}
+\index{spin\+Priority@{spin\+Priority}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\subsubsection[{spin\+Priority}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl$\ast$ Demand\+Model\+Interface\+::spin\+Priority}\label{class_demand_model_interface_a18c2c5711d01c46b734b669ade4f4161}
+Seletor de prioridades 
+
+Definição na linha 43 do arquivo Demand\+Model\+Interface.\+h.
+
+\index{Demand\+Model\+Interface@{Demand\+Model\+Interface}!tc\+Priority@{tc\+Priority}}
+\index{tc\+Priority@{tc\+Priority}!Demand\+Model\+Interface@{Demand\+Model\+Interface}}
+\subsubsection[{tc\+Priority}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl$\ast$ Demand\+Model\+Interface\+::tc\+Priority}\label{class_demand_model_interface_a97ed16e601f553e969b6f603005817b3}
+Caixa de texto 
+
+Definição na linha 33 do arquivo Demand\+Model\+Interface.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Demand\+Model\+Interface.\+h}\end{DoxyCompactItemize}

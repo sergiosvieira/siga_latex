@@ -1,0 +1,259 @@
+\section{Referência da Classe DateX}
+\label{class_date_x}\index{DateX@{DateX}}
+
+
+{\ttfamily \#include $<$Date.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf DateX} ()
+\item 
+{\bf DateX} (std\+::string \&date\+\_\+str)
+\item 
+{\bf DateX} (const {\bf DateX} \&date)
+\item 
+{\bf DateX} (uint16\+\_\+t day, uint16\+\_\+t month, uint32\+\_\+t year)
+\item 
+{\bf DateX} (uint16\+\_\+t month, uint32\+\_\+t year)
+\item 
+uint32\+\_\+t {\bf get\+Year} () const 
+\item 
+uint16\+\_\+t {\bf get\+Month} () const 
+\item 
+uint16\+\_\+t {\bf get\+Day} () const 
+\item 
+bool {\bf set\+DateX} (uint16\+\_\+t day, uint16\+\_\+t month, uint32\+\_\+t year)
+\item 
+void {\bf set\+DateX} ({\bf DateX} \&date)
+\item 
+void {\bf increment} (uint32\+\_\+t days=1, uint32\+\_\+t months=0, uint32\+\_\+t years=0)
+\item 
+void {\bf decrement} (uint32\+\_\+t days=1, uint32\+\_\+t months=0, uint32\+\_\+t years=0)
+\item 
+std\+::string {\bf to\+String} (bool include\+\_\+days=true, bool include\+\_\+month=true)
+\item 
+{\bf DateX} {\bf operator+} ({\bf DateX} \&date)
+\item 
+bool {\bf operator$<$} ({\bf DateX} \&date)
+\item 
+bool {\bf operator$>$} ({\bf DateX} \&date)
+\item 
+bool {\bf operator==} ({\bf DateX} \&date)
+\item 
+bool {\bf operator$<$=} ({\bf DateX} \&date)
+\item 
+bool {\bf operator$>$=} ({\bf DateX} \&date)
+\item 
+uint16\+\_\+t {\bf get\+Days\+Of\+Month} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static bool {\bf parse\+String} (std\+::string \&date\+\_\+str, {\bf DateX} \&parsed\+\_\+date, std\+::string format=\char`\"{}@d/@m/@y\char`\"{})
+\item 
+static bool {\bf is\+Leap\+Year} (uint32\+\_\+t year)
+\item 
+static {\bf DateX} {\bf get\+Current\+Date} ()
+\item 
+static uint16\+\_\+t {\bf get\+Days\+Of\+Month} (uint16\+\_\+t month, uint32\+\_\+t year)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 14 do arquivo Core/\+Date.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{DateX@{DateX}!DateX@{DateX}}
+\index{DateX@{DateX}!DateX@{DateX}}
+\subsubsection[{Date\+X()}]{\setlength{\rightskip}{0pt plus 5cm}Date\+X\+::\+DateX (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_date_x_a5376ca436f5a761ca4a5a39601bce63a}
+\index{DateX@{DateX}!DateX@{DateX}}
+\index{DateX@{DateX}!DateX@{DateX}}
+\subsubsection[{Date\+X(std\+::string \&date\+\_\+str)}]{\setlength{\rightskip}{0pt plus 5cm}Date\+X\+::\+DateX (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{date\+\_\+str}
+\end{DoxyParamCaption}
+)}\label{class_date_x_a87bf93b158db8369d1de006ba7b0af5f}
+\index{DateX@{DateX}!DateX@{DateX}}
+\index{DateX@{DateX}!DateX@{DateX}}
+\subsubsection[{Date\+X(const Date\+X \&date)}]{\setlength{\rightskip}{0pt plus 5cm}Date\+X\+::\+DateX (
+\begin{DoxyParamCaption}
+\item[{const {\bf DateX} \&}]{date}
+\end{DoxyParamCaption}
+)}\label{class_date_x_aedf63124876c5a096e70e41d5d36c221}
+\index{DateX@{DateX}!DateX@{DateX}}
+\index{DateX@{DateX}!DateX@{DateX}}
+\subsubsection[{Date\+X(uint16\+\_\+t day, uint16\+\_\+t month, uint32\+\_\+t year)}]{\setlength{\rightskip}{0pt plus 5cm}Date\+X\+::\+DateX (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{day, }
+\item[{uint16\+\_\+t}]{month, }
+\item[{uint32\+\_\+t}]{year}
+\end{DoxyParamCaption}
+)}\label{class_date_x_a0edf1a2a34429d7e652b8fc536c98059}
+\index{DateX@{DateX}!DateX@{DateX}}
+\index{DateX@{DateX}!DateX@{DateX}}
+\subsubsection[{Date\+X(uint16\+\_\+t month, uint32\+\_\+t year)}]{\setlength{\rightskip}{0pt plus 5cm}Date\+X\+::\+DateX (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{month, }
+\item[{uint32\+\_\+t}]{year}
+\end{DoxyParamCaption}
+)}\label{class_date_x_a10286d6fee59e05ad50ed7ae119c51a2}
+
+
+\subsection{Métodos}
+\index{DateX@{DateX}!decrement@{decrement}}
+\index{decrement@{decrement}!DateX@{DateX}}
+\subsubsection[{decrement(uint32\+\_\+t days=1, uint32\+\_\+t months=0, uint32\+\_\+t years=0)}]{\setlength{\rightskip}{0pt plus 5cm}void Date\+X\+::decrement (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{days = {\ttfamily 1}, }
+\item[{uint32\+\_\+t}]{months = {\ttfamily 0}, }
+\item[{uint32\+\_\+t}]{years = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_date_x_af41932b092ce0aedf4dcb1a8f17ac49f}
+\index{DateX@{DateX}!get\+Current\+Date@{get\+Current\+Date}}
+\index{get\+Current\+Date@{get\+Current\+Date}!DateX@{DateX}}
+\subsubsection[{get\+Current\+Date()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf DateX} Date\+X\+::get\+Current\+Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_date_x_a39056f49232e22bd9d742e798fe68a39}
+\index{DateX@{DateX}!get\+Day@{get\+Day}}
+\index{get\+Day@{get\+Day}!DateX@{DateX}}
+\subsubsection[{get\+Day() const }]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t Date\+X\+::get\+Day (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_date_x_a3bbe74cec77b69608701f07591b09e41}
+\index{DateX@{DateX}!get\+Days\+Of\+Month@{get\+Days\+Of\+Month}}
+\index{get\+Days\+Of\+Month@{get\+Days\+Of\+Month}!DateX@{DateX}}
+\subsubsection[{get\+Days\+Of\+Month()}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t Date\+X\+::get\+Days\+Of\+Month (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_date_x_a7e350b5b0b337a14812e648d35291926}
+\index{DateX@{DateX}!get\+Days\+Of\+Month@{get\+Days\+Of\+Month}}
+\index{get\+Days\+Of\+Month@{get\+Days\+Of\+Month}!DateX@{DateX}}
+\subsubsection[{get\+Days\+Of\+Month(uint16\+\_\+t month, uint32\+\_\+t year)}]{\setlength{\rightskip}{0pt plus 5cm}static uint16\+\_\+t Date\+X\+::get\+Days\+Of\+Month (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{month, }
+\item[{uint32\+\_\+t}]{year}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_date_x_aba4795658e6c6e9f479f49184c0991e5}
+\index{DateX@{DateX}!get\+Month@{get\+Month}}
+\index{get\+Month@{get\+Month}!DateX@{DateX}}
+\subsubsection[{get\+Month() const }]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t Date\+X\+::get\+Month (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_date_x_a0f2f4d521ab1acd88cd24d4a733b2ab7}
+\index{DateX@{DateX}!get\+Year@{get\+Year}}
+\index{get\+Year@{get\+Year}!DateX@{DateX}}
+\subsubsection[{get\+Year() const }]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t Date\+X\+::get\+Year (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_date_x_a2cd74b5bd1bb3e3812ab8a5fa87667e3}
+\index{DateX@{DateX}!increment@{increment}}
+\index{increment@{increment}!DateX@{DateX}}
+\subsubsection[{increment(uint32\+\_\+t days=1, uint32\+\_\+t months=0, uint32\+\_\+t years=0)}]{\setlength{\rightskip}{0pt plus 5cm}void Date\+X\+::increment (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{days = {\ttfamily 1}, }
+\item[{uint32\+\_\+t}]{months = {\ttfamily 0}, }
+\item[{uint32\+\_\+t}]{years = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_date_x_a226fc30063b9d58059e6c7d0fbc88f84}
+\index{DateX@{DateX}!is\+Leap\+Year@{is\+Leap\+Year}}
+\index{is\+Leap\+Year@{is\+Leap\+Year}!DateX@{DateX}}
+\subsubsection[{is\+Leap\+Year(uint32\+\_\+t year)}]{\setlength{\rightskip}{0pt plus 5cm}static bool Date\+X\+::is\+Leap\+Year (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{year}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_date_x_a752d916ca864718e0ea66617bc421227}
+\index{DateX@{DateX}!operator+@{operator+}}
+\index{operator+@{operator+}!DateX@{DateX}}
+\subsubsection[{operator+(\+Date\+X \&date)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf DateX} Date\+X\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf DateX} \&}]{date}
+\end{DoxyParamCaption}
+)}\label{class_date_x_acde242a647d750891f99e2a8dfbe81dc}
+\index{DateX@{DateX}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!DateX@{DateX}}
+\subsubsection[{operator$<$(\+Date\+X \&date)}]{\setlength{\rightskip}{0pt plus 5cm}bool Date\+X\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{{\bf DateX} \&}]{date}
+\end{DoxyParamCaption}
+)}\label{class_date_x_ad527bc82dfdc3da2104bfc882f43f121}
+\index{DateX@{DateX}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!DateX@{DateX}}
+\subsubsection[{operator$<$=(\+Date\+X \&date)}]{\setlength{\rightskip}{0pt plus 5cm}bool Date\+X\+::operator$<$= (
+\begin{DoxyParamCaption}
+\item[{{\bf DateX} \&}]{date}
+\end{DoxyParamCaption}
+)}\label{class_date_x_a951bb8f28d4bcd36769876bf59d42929}
+\index{DateX@{DateX}!operator==@{operator==}}
+\index{operator==@{operator==}!DateX@{DateX}}
+\subsubsection[{operator==(\+Date\+X \&date)}]{\setlength{\rightskip}{0pt plus 5cm}bool Date\+X\+::operator== (
+\begin{DoxyParamCaption}
+\item[{{\bf DateX} \&}]{date}
+\end{DoxyParamCaption}
+)}\label{class_date_x_a20afe74cb3c1908db2e372360d5467e4}
+\index{DateX@{DateX}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!DateX@{DateX}}
+\subsubsection[{operator$>$(\+Date\+X \&date)}]{\setlength{\rightskip}{0pt plus 5cm}bool Date\+X\+::operator$>$ (
+\begin{DoxyParamCaption}
+\item[{{\bf DateX} \&}]{date}
+\end{DoxyParamCaption}
+)}\label{class_date_x_ac2b4a802c3a634c8f15b34d7fab11b17}
+\index{DateX@{DateX}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!DateX@{DateX}}
+\subsubsection[{operator$>$=(\+Date\+X \&date)}]{\setlength{\rightskip}{0pt plus 5cm}bool Date\+X\+::operator$>$= (
+\begin{DoxyParamCaption}
+\item[{{\bf DateX} \&}]{date}
+\end{DoxyParamCaption}
+)}\label{class_date_x_a35a959cb0e429b16a2c882fc0d1ea0a2}
+\index{DateX@{DateX}!parse\+String@{parse\+String}}
+\index{parse\+String@{parse\+String}!DateX@{DateX}}
+\subsubsection[{parse\+String(std\+::string \&date\+\_\+str, Date\+X \&parsed\+\_\+date, std\+::string format="""@d/"@m/"@y"")}]{\setlength{\rightskip}{0pt plus 5cm}static bool Date\+X\+::parse\+String (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{date\+\_\+str, }
+\item[{{\bf DateX} \&}]{parsed\+\_\+date, }
+\item[{std\+::string}]{format = {\ttfamily \char`\"{}@d/@m/@y\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_date_x_a563b484b780e799416f46bad8f0bc1f7}
+\index{DateX@{DateX}!set\+DateX@{set\+DateX}}
+\index{set\+DateX@{set\+DateX}!DateX@{DateX}}
+\subsubsection[{set\+Date\+X(uint16\+\_\+t day, uint16\+\_\+t month, uint32\+\_\+t year)}]{\setlength{\rightskip}{0pt plus 5cm}bool Date\+X\+::set\+DateX (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{day, }
+\item[{uint16\+\_\+t}]{month, }
+\item[{uint32\+\_\+t}]{year}
+\end{DoxyParamCaption}
+)}\label{class_date_x_a83f7e92b07fe8760d6fa247b8c72029c}
+\index{DateX@{DateX}!set\+DateX@{set\+DateX}}
+\index{set\+DateX@{set\+DateX}!DateX@{DateX}}
+\subsubsection[{set\+Date\+X(\+Date\+X \&date)}]{\setlength{\rightskip}{0pt plus 5cm}void Date\+X\+::set\+DateX (
+\begin{DoxyParamCaption}
+\item[{{\bf DateX} \&}]{date}
+\end{DoxyParamCaption}
+)}\label{class_date_x_a96c753d58a1effc0e71c6b901d4d75bd}
+\index{DateX@{DateX}!to\+String@{to\+String}}
+\index{to\+String@{to\+String}!DateX@{DateX}}
+\subsubsection[{to\+String(bool include\+\_\+days=true, bool include\+\_\+month=true)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Date\+X\+::to\+String (
+\begin{DoxyParamCaption}
+\item[{bool}]{include\+\_\+days = {\ttfamily true}, }
+\item[{bool}]{include\+\_\+month = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_date_x_aa9de37b1e0104d762fa0cf84ecff9eb2}
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Core/\+Date.\+h}\end{DoxyCompactItemize}

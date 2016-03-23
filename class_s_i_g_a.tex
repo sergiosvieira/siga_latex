@@ -1,0 +1,427 @@
+\section{Refer√™ncia da Classe S\+I\+GA}
+\label{class_s_i_g_a}\index{S\+I\+GA@{S\+I\+GA}}
+
+
+{\ttfamily \#include $<$S\+I\+G\+A.\+h$>$}
+
+
+
+Herdeiro de wx\+App.
+
+\subsection*{Tipos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Version\+Log} \{ {\bf O\+L\+D\+\_\+\+V\+E\+R\+S\+I\+ON} = 1, 
+{\bf D\+N\+O\+CS}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bf release\+Date} ()
+\item 
+virtual bool {\bf On\+Init} ()
+\item 
+void {\bf on\+Select\+Element} ()
+\item 
+virtual void {\bf on\+Delete\+Elements} (vector$<$ {\bf Element\+ID} $>$ \&elements\+\_\+ids\+\_\+vector)
+\item 
+void {\bf on\+Changing\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ elemet\+Ids)
+\item 
+void {\bf on\+Changed\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ elemet\+Ids)
+\item 
+void {\bf update\+Result\+Serie} (const wx\+String \&section, {\bf Serie} $\ast$serie)
+\item 
+void {\bf remove\+Result\+Serie} (const wx\+String \&section, const wx\+String \&unit=wx\+Empty\+String, const wx\+String \&name=wx\+Empty\+String)
+\item 
+void {\bf update\+Result\+Viewer} ()
+\item 
+void {\bf open\+Project} (wx\+String name, int project\+Type=0)
+\item 
+void {\bf save\+Project} (wx\+String name)
+\item 
+void {\bf save\+Project\+Auto} (wx\+String name)
+\item 
+void {\bf new\+Project} ()
+\item 
+void {\bf property\+Project} ()
+\item 
+void {\bf close\+Project} ()
+\item 
+{\bf Component} $\ast$ {\bf get\+Component} (wx\+String name)
+\item 
+int {\bf get\+Component\+Id} (wx\+String name)
+\item 
+int {\bf get\+Component\+Idon\+Notecomponets} (wx\+String name)
+\item 
+int {\bf get\+Component\+Idon\+Notecomponets} (int idc)
+\item 
+void {\bf set\+Visible\+Component} (int idc, bool show)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf clear\+Vector\+Zoom\+Canvas} ()
+\item 
+void {\bf update\+Tree\+Series} ({\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$)
+\item 
+wx\+Locale $\ast$ {\bf get\+Locale} () const 
+\item 
+void {\bf change\+Language} (wx\+Language new\+Language)
+\item 
+void {\bf join\+Project} (wx\+String name, int project\+Type)
+\item 
+{\bf S\+I\+G\+A\+Frame} $\ast$ {\bf get\+Siga\+Frame} ()
+\end{DoxyCompactItemize}
+\subsection*{M√©todos P√∫blicos Est√°ticos}
+\begin{DoxyCompactItemize}
+\item 
+static bool {\bf check\+Project\+Compatibility} (double project\+Version)
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Version\+Log} {\bf siga\+Version}
+\item 
+wx\+String {\bf update\+Version}
+\item 
+wx\+String {\bf update\+Version\+Date}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Est√°ticos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ {\bf Temp\+Dir}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf S\+I\+G\+A\+Frame}
+\item 
+class {\bf S\+I\+G\+A\+Conf\+File}
+\item 
+class {\bf Conf\+File}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 47 do arquivo S\+I\+G\+A.\+h.
+
+
+
+\subsection{Enumera√ß√µes}
+\index{S\+I\+GA@{S\+I\+GA}!Version\+Log@{Version\+Log}}
+\index{Version\+Log@{Version\+Log}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{Version\+Log}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf S\+I\+G\+A\+::\+Version\+Log}}\label{class_s_i_g_a_a674bbd08128d1551dd74e61dfbf0c4db}
+Vers„o usada para compatibilidade de projetos. Sempre quando a estrutura ou a logica de salvamento/carregamento de projetos fora alterada, deve-\/se criar uma nova versao para os projetos n„o compatÌveis ou defasados serem identificados \begin{Desc}
+\item[Valores de enumera√ß√µes]\par
+\begin{description}
+\index{O\+L\+D\+\_\+\+V\+E\+R\+S\+I\+ON@{O\+L\+D\+\_\+\+V\+E\+R\+S\+I\+ON}!S\+I\+GA@{S\+I\+GA}}\index{S\+I\+GA@{S\+I\+GA}!O\+L\+D\+\_\+\+V\+E\+R\+S\+I\+ON@{O\+L\+D\+\_\+\+V\+E\+R\+S\+I\+ON}}\item[{\em 
+O\+L\+D\+\_\+\+V\+E\+R\+S\+I\+ON\label{class_s_i_g_a_a674bbd08128d1551dd74e61dfbf0c4dbaf033e2fa1bb7823d408a4e42fbab7f5e}
+}]\index{D\+N\+O\+CS@{D\+N\+O\+CS}!S\+I\+GA@{S\+I\+GA}}\index{S\+I\+GA@{S\+I\+GA}!D\+N\+O\+CS@{D\+N\+O\+CS}}\item[{\em 
+D\+N\+O\+CS\label{class_s_i_g_a_a674bbd08128d1551dd74e61dfbf0c4dba93f9a332678796006c05a86c3f5000c6}
+}]\end{description}
+\end{Desc}
+
+
+Defini√ß√£o na linha 160 do arquivo S\+I\+G\+A.\+h.
+
+
+
+\subsection{M√©todos}
+\index{S\+I\+GA@{S\+I\+GA}!change\+Language@{change\+Language}}
+\index{change\+Language@{change\+Language}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{change\+Language(wx\+Language new\+Language)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+::change\+Language (
+\begin{DoxyParamCaption}
+\item[{wx\+Language}]{new\+Language}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_a4dc640ce24175ec8bf5505febede1cc6}
+Muda a linguagem do \doxyref{S\+I\+GA}{pag.}{class_s_i_g_a} (pode ser usada temporariamente para fins de convers„o de double)
+
+
+\begin{DoxyParams}{Par√¢metros}
+{\em new\+Language} & Nova lingua a ser usada (wx\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+P\+O\+R\+T\+U\+G\+U\+E\+S\+E\+\_\+\+B\+R\+A\+Z\+I\+L\+I\+AN, wx\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+E\+N\+G\+L\+I\+SH) \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+GA@{S\+I\+GA}!check\+Project\+Compatibility@{check\+Project\+Compatibility}}
+\index{check\+Project\+Compatibility@{check\+Project\+Compatibility}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{check\+Project\+Compatibility(double project\+Version)}]{\setlength{\rightskip}{0pt plus 5cm}static bool S\+I\+G\+A\+::check\+Project\+Compatibility (
+\begin{DoxyParamCaption}
+\item[{double}]{project\+Version}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_i_g_a_abacfbe013d68b230c589bd590cd58c9a}
+Compara as versıes do projeto e a do siga e verifica se s„o incompatÌveis e podem apresentar falhas de carregamento de projeto.
+
+
+\begin{DoxyParams}{Par√¢metros}
+{\em project\+Version} & Vers„o em que o projeto foi salvo pela ˙ltima vez \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna true em caso de compatibilidade, e false em caso de incompatibilidade. 
+\end{DoxyReturn}
+\index{S\+I\+GA@{S\+I\+GA}!clear@{clear}}
+\index{clear@{clear}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_a62eab76f08f7b99b886ac616f700c727}
+Chama o metodo de limpesa de todos os componentes \index{S\+I\+GA@{S\+I\+GA}!clear\+Vector\+Zoom\+Canvas@{clear\+Vector\+Zoom\+Canvas}}
+\index{clear\+Vector\+Zoom\+Canvas@{clear\+Vector\+Zoom\+Canvas}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{clear\+Vector\+Zoom\+Canvas()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+::clear\+Vector\+Zoom\+Canvas (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_aa5627808261e76405ea4885c8686d0f1}
+Limpa o vetor de zoom do \doxyref{Net\+Canvas}{pag.}{class_net_canvas} \index{S\+I\+GA@{S\+I\+GA}!close\+Project@{close\+Project}}
+\index{close\+Project@{close\+Project}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{close\+Project()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+::close\+Project (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_a9eb1e5adf9ec0fbf92b66a620d9bf0cd}
+\index{S\+I\+GA@{S\+I\+GA}!get\+Component@{get\+Component}}
+\index{get\+Component@{get\+Component}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{get\+Component(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component}$\ast$ S\+I\+G\+A\+::get\+Component (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_a479821d1b8395fb8facd4de87b6be0df}
+Retorna o componente pelo nome recebido 
+\begin{DoxyParams}{Par√¢metros}
+{\em name} & Nome do componente \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+GA@{S\+I\+GA}!get\+Component\+Id@{get\+Component\+Id}}
+\index{get\+Component\+Id@{get\+Component\+Id}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{get\+Component\+Id(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}int S\+I\+G\+A\+::get\+Component\+Id (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_a8f95bd202e7d8d6634a7ebca643cdcf6}
+Verifica qual a p·gina, pelo nome dela, e retorna o id para o select\+Nodes 
+\begin{DoxyParams}{Par√¢metros}
+{\em name} & Nome \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+GA@{S\+I\+GA}!get\+Component\+Idon\+Notecomponets@{get\+Component\+Idon\+Notecomponets}}
+\index{get\+Component\+Idon\+Notecomponets@{get\+Component\+Idon\+Notecomponets}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{get\+Component\+Idon\+Notecomponets(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}int S\+I\+G\+A\+::get\+Component\+Idon\+Notecomponets (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_a245985bd30ad939997b68cdc490ccceb}
+Verifica qual a p·gina, pelo nome dela, e retorna o id para o set\+Visible\+Component 
+\begin{DoxyParams}{Par√¢metros}
+{\em name} & Nome \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+GA@{S\+I\+GA}!get\+Component\+Idon\+Notecomponets@{get\+Component\+Idon\+Notecomponets}}
+\index{get\+Component\+Idon\+Notecomponets@{get\+Component\+Idon\+Notecomponets}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{get\+Component\+Idon\+Notecomponets(int idc)}]{\setlength{\rightskip}{0pt plus 5cm}int S\+I\+G\+A\+::get\+Component\+Idon\+Notecomponets (
+\begin{DoxyParamCaption}
+\item[{int}]{idc}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_aab9218eb8dee4271cd224298d85a1768}
+\index{S\+I\+GA@{S\+I\+GA}!get\+Locale@{get\+Locale}}
+\index{get\+Locale@{get\+Locale}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{get\+Locale() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+Locale$\ast$ S\+I\+G\+A\+::get\+Locale (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_s_i_g_a_a2ac6a40acd5261e67260a15c68d8024a}
+\index{S\+I\+GA@{S\+I\+GA}!get\+Siga\+Frame@{get\+Siga\+Frame}}
+\index{get\+Siga\+Frame@{get\+Siga\+Frame}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{get\+Siga\+Frame()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Frame}$\ast$ S\+I\+G\+A\+::get\+Siga\+Frame (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_af493d0f68ddc5805d9bee133c327cf53}
+\index{S\+I\+GA@{S\+I\+GA}!join\+Project@{join\+Project}}
+\index{join\+Project@{join\+Project}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{join\+Project(wx\+String name, int project\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+::join\+Project (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name, }
+\item[{int}]{project\+Type}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_af42072365c594e3f849635f18f6b9699}
+\index{S\+I\+GA@{S\+I\+GA}!new\+Project@{new\+Project}}
+\index{new\+Project@{new\+Project}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{new\+Project()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+::new\+Project (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_ae79284107361b1855d9f4005db6f6c7a}
+\index{S\+I\+GA@{S\+I\+GA}!on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}}
+\index{on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{on\+Changed\+Element\+Type(vector$<$ Element\+I\+D $>$ elemet\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+::on\+Changed\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{elemet\+Ids}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_ac23913ded6f02323e129ceb1a92d5470}
+\index{S\+I\+GA@{S\+I\+GA}!on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}}
+\index{on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{on\+Changing\+Element\+Type(vector$<$ Element\+I\+D $>$ elemet\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+::on\+Changing\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{elemet\+Ids}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_ae0c926b5b0a03cb20d75b94ad85e9700}
+Passa o(s) link(s) a ser(em) deletado(s) em todos os modulos \index{S\+I\+GA@{S\+I\+GA}!on\+Delete\+Elements@{on\+Delete\+Elements}}
+\index{on\+Delete\+Elements@{on\+Delete\+Elements}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{on\+Delete\+Elements(vector$<$ Element\+I\+D $>$ \&elements\+\_\+ids\+\_\+vector)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+I\+G\+A\+::on\+Delete\+Elements (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$ \&}]{elements\+\_\+ids\+\_\+vector}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_i_g_a_aab9a194fbee9faa0f230759149e1766f}
+Passa o(s) nÛ(s) a ser(em) deletado(s) em todos os modulos \index{S\+I\+GA@{S\+I\+GA}!On\+Init@{On\+Init}}
+\index{On\+Init@{On\+Init}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{On\+Init()}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool S\+I\+G\+A\+::\+On\+Init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_i_g_a_a87a46a2f577105b6b98b85675384093c}
+\index{S\+I\+GA@{S\+I\+GA}!on\+Select\+Element@{on\+Select\+Element}}
+\index{on\+Select\+Element@{on\+Select\+Element}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{on\+Select\+Element()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+::on\+Select\+Element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_a25fc534f23e77b2b3a18508c0d7b8ccc}
+Passa o elemento selecionado para os modulos \index{S\+I\+GA@{S\+I\+GA}!open\+Project@{open\+Project}}
+\index{open\+Project@{open\+Project}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{open\+Project(wx\+String name, int project\+Type=0)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+::open\+Project (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name, }
+\item[{int}]{project\+Type = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_ac51c89fd4ebf613a8742d2585aa04beb}
+Abre um projeto salvo \index{S\+I\+GA@{S\+I\+GA}!property\+Project@{property\+Project}}
+\index{property\+Project@{property\+Project}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{property\+Project()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+::property\+Project (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_a3f7d739fd9ee0bb6f748b9e2e6c09e66}
+\index{S\+I\+GA@{S\+I\+GA}!release\+Date@{release\+Date}}
+\index{release\+Date@{release\+Date}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{release\+Date()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string S\+I\+G\+A\+::release\+Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_ac025fee351cb7d32e8b48932779c8765}
+\index{S\+I\+GA@{S\+I\+GA}!remove\+Result\+Serie@{remove\+Result\+Serie}}
+\index{remove\+Result\+Serie@{remove\+Result\+Serie}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{remove\+Result\+Serie(const wx\+String \&section, const wx\+String \&unit=wx\+Empty\+String, const wx\+String \&name=wx\+Empty\+String)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+::remove\+Result\+Serie (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{section, }
+\item[{const wx\+String \&}]{unit = {\ttfamily wxEmptyString}, }
+\item[{const wx\+String \&}]{name = {\ttfamily wxEmptyString}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_a0a187b4eb34747d18371a1019687dc8f}
+Remove uma serie ou seÁ„o do modulo de resultados \index{S\+I\+GA@{S\+I\+GA}!save\+Project@{save\+Project}}
+\index{save\+Project@{save\+Project}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{save\+Project(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+::save\+Project (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_a5d54d4e445dfda348004de8acdc6d4ce}
+Salva as informaÁıes inseridas e os resultados em um projeto substituindo o existente \index{S\+I\+GA@{S\+I\+GA}!save\+Project\+Auto@{save\+Project\+Auto}}
+\index{save\+Project\+Auto@{save\+Project\+Auto}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{save\+Project\+Auto(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+::save\+Project\+Auto (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_ad845d7a52a40ec7afa0f2056f74ed479}
+Salva as informaÁıes inseridas e os resultados em um projeto substituindo o existente \index{S\+I\+GA@{S\+I\+GA}!set\+Visible\+Component@{set\+Visible\+Component}}
+\index{set\+Visible\+Component@{set\+Visible\+Component}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{set\+Visible\+Component(int idc, bool show)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+::set\+Visible\+Component (
+\begin{DoxyParamCaption}
+\item[{int}]{idc, }
+\item[{bool}]{show}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_a640230e54803d7d0dcbd7c7c6930360b}
+Deixa um componente com sua interface visivel ou n„o
+
+void set\+Visible\+Component(wx\+String name, bool show); \index{S\+I\+GA@{S\+I\+GA}!update\+Result\+Serie@{update\+Result\+Serie}}
+\index{update\+Result\+Serie@{update\+Result\+Serie}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{update\+Result\+Serie(const wx\+String \&section, Serie $\ast$serie)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+::update\+Result\+Serie (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{section, }
+\item[{{\bf Serie} $\ast$}]{serie}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_ad645738713431029a82b0550928b5f61}
+Modificar uma serie no modulo de resultados \index{S\+I\+GA@{S\+I\+GA}!update\+Result\+Viewer@{update\+Result\+Viewer}}
+\index{update\+Result\+Viewer@{update\+Result\+Viewer}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{update\+Result\+Viewer()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+::update\+Result\+Viewer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_a8a4a329840ec2205f7e8e5fdd7edbcbb}
+Atualiza os desenhos na planilha do modulo de Reltados \index{S\+I\+GA@{S\+I\+GA}!update\+Tree\+Series@{update\+Tree\+Series}}
+\index{update\+Tree\+Series@{update\+Tree\+Series}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{update\+Tree\+Series(\+S\+I\+G\+A\+Tree\+Ctrl $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+::update\+Tree\+Series (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_a1d3682bf468ff0c7079f7869f2e4a278}
+Atualiza as series do tc\+Data\+Serie 
+
+\subsection{Amigas e Fun√ß√µes Relacionadas}
+\index{S\+I\+GA@{S\+I\+GA}!Conf\+File@{Conf\+File}}
+\index{Conf\+File@{Conf\+File}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{Conf\+File}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Conf\+File}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_i_g_a_a3caec9931dca4f40c0a205e05c211daf}
+
+
+Defini√ß√£o na linha 119 do arquivo S\+I\+G\+A.\+h.
+
+\index{S\+I\+GA@{S\+I\+GA}!S\+I\+G\+A\+Conf\+File@{S\+I\+G\+A\+Conf\+File}}
+\index{S\+I\+G\+A\+Conf\+File@{S\+I\+G\+A\+Conf\+File}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{S\+I\+G\+A\+Conf\+File}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf S\+I\+G\+A\+Conf\+File}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_i_g_a_aa10fc9434866d586ffa1111ca126717a}
+
+
+Defini√ß√£o na linha 118 do arquivo S\+I\+G\+A.\+h.
+
+\index{S\+I\+GA@{S\+I\+GA}!S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}}
+\index{S\+I\+G\+A\+Frame@{S\+I\+G\+A\+Frame}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{S\+I\+G\+A\+Frame}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf S\+I\+G\+A\+Frame}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_i_g_a_a9d47c290d5cd19d44bd1f4e8a4817caa}
+DeclaraÁ„o de classe amiga 
+
+Defini√ß√£o na linha 117 do arquivo S\+I\+G\+A.\+h.
+
+
+
+\subsection{Atributos}
+\index{S\+I\+GA@{S\+I\+GA}!siga\+Version@{siga\+Version}}
+\index{siga\+Version@{siga\+Version}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{siga\+Version}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Version\+Log} S\+I\+G\+A\+::siga\+Version}\label{class_s_i_g_a_a6ff87b6b5f419eba580a1a6b9d340cdb}
+
+
+Defini√ß√£o na linha 166 do arquivo S\+I\+G\+A.\+h.
+
+\index{S\+I\+GA@{S\+I\+GA}!Temp\+Dir@{Temp\+Dir}}
+\index{Temp\+Dir@{Temp\+Dir}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{Temp\+Dir}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ S\+I\+G\+A\+::\+Temp\+Dir\hspace{0.3cm}{\ttfamily [static]}}\label{class_s_i_g_a_a90a1d26e523c11bc5ac05dfb8b79358e}
+
+
+Defini√ß√£o na linha 51 do arquivo S\+I\+G\+A.\+h.
+
+\index{S\+I\+GA@{S\+I\+GA}!update\+Version@{update\+Version}}
+\index{update\+Version@{update\+Version}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{update\+Version}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+::update\+Version}\label{class_s_i_g_a_ad3b55da5e9168299c72ee9fd2f9f771c}
+Vers„o usada para alertas de updates. Sempre quando uma alteraÁ„o importante for feita no \doxyref{S\+I\+GA}{pag.}{class_s_i_g_a} e deseja-\/se informar os usu·rios sobre esta atualizaÁ„o (via Web\+Service), deve-\/se usar este atributo. 
+
+Defini√ß√£o na linha 173 do arquivo S\+I\+G\+A.\+h.
+
+\index{S\+I\+GA@{S\+I\+GA}!update\+Version\+Date@{update\+Version\+Date}}
+\index{update\+Version\+Date@{update\+Version\+Date}!S\+I\+GA@{S\+I\+GA}}
+\subsubsection[{update\+Version\+Date}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+::update\+Version\+Date}\label{class_s_i_g_a_a4a1f02804f167b4e345c58357e58550b}
+
+
+Defini√ß√£o na linha 174 do arquivo S\+I\+G\+A.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+G\+A.\+h}\end{DoxyCompactItemize}

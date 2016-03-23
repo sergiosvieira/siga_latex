@@ -1,0 +1,143 @@
+\section{Referência da Classe S\+M\+A\+P\+H\+Scenario}
+\label{class_s_m_a_p_h_scenario}\index{S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}}
+
+
+{\ttfamily \#include $<$S\+M\+A\+P\+H\+Scenario.\+h$>$}
+
+
+
+Herdeiro de {\bf Hidro\+Scenario}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+M\+A\+P\+H\+Scenario} ({\bf S\+M\+A\+P\+H\+Model} $\ast$parent, {\bf Date} interval\+Begin, {\bf Date} interval\+End)
+\item 
+{\bf $\sim$\+S\+M\+A\+P\+H\+Scenario} ()
+\item 
+bool {\bf empty} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+M\+A\+P\+H\+Param} $\ast$ {\bf param}
+\item 
+{\bf Serie} $\ast$ {\bf precipitation}
+\item 
+{\bf Serie} $\ast$ {\bf etp}
+\item 
+wx\+String {\bf etp\+File\+Name}
+\item 
+wx\+String {\bf prec\+File\+Name}
+\item 
+double {\bf Tuin}
+\item 
+double {\bf Ebin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 17 do arquivo S\+M\+A\+P\+H\+Scenario.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}!S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}}
+\index{S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}!S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}}
+\subsubsection[{S\+M\+A\+P\+H\+Scenario(\+S\+M\+A\+P\+H\+Model $\ast$parent, Date interval\+Begin, Date interval\+End)}]{\setlength{\rightskip}{0pt plus 5cm}S\+M\+A\+P\+H\+Scenario\+::\+S\+M\+A\+P\+H\+Scenario (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+M\+A\+P\+H\+Model} $\ast$}]{parent, }
+\item[{{\bf Date}}]{interval\+Begin, }
+\item[{{\bf Date}}]{interval\+End}
+\end{DoxyParamCaption}
+)}\label{class_s_m_a_p_h_scenario_a8d3601b99bdab0dad01747f3e6a4946e}
+Construtor \index{S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}!````~S\+M\+A\+P\+H\+Scenario@{$\sim$\+S\+M\+A\+P\+H\+Scenario}}
+\index{````~S\+M\+A\+P\+H\+Scenario@{$\sim$\+S\+M\+A\+P\+H\+Scenario}!S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}}
+\subsubsection[{$\sim$\+S\+M\+A\+P\+H\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}S\+M\+A\+P\+H\+Scenario\+::$\sim$\+S\+M\+A\+P\+H\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_m_a_p_h_scenario_afbfba7fffbd30f40bce46e7c17bf52cf}
+Destruidor 
+
+\subsection{Métodos}
+\index{S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+M\+A\+P\+H\+Scenario\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_s_m_a_p_h_scenario_a713caf63b50a76b4ccf2360aac2e0eff}
+Avalia se todas as informa��es importantes para o modelo foram informadas 
+\begin{DoxyParams}{Parâmetros}
+{\em dialog} & Caixa de dialogo onde os erros ser�o apresentados \\
+\hline
+\end{DoxyParams}
+\index{S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}!empty@{empty}}
+\index{empty@{empty}!S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+M\+A\+P\+H\+Scenario\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_m_a_p_h_scenario_a6539c8d17a8d331b22c6c1cb3094cdc2}
+retorna se existe algum valor no modelo 
+
+\subsection{Atributos}
+\index{S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}!Ebin@{Ebin}}
+\index{Ebin@{Ebin}!S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}}
+\subsubsection[{Ebin}]{\setlength{\rightskip}{0pt plus 5cm}double S\+M\+A\+P\+H\+Scenario\+::\+Ebin}\label{class_s_m_a_p_h_scenario_aa3d5179b8d56f1e0fe26a341b265e43e}
+1 Vaz�o b�sica inicial (m3/s) 
+
+Definição na linha 54 do arquivo S\+M\+A\+P\+H\+Scenario.\+h.
+
+\index{S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}!etp@{etp}}
+\index{etp@{etp}!S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}}
+\subsubsection[{etp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ S\+M\+A\+P\+H\+Scenario\+::etp}\label{class_s_m_a_p_h_scenario_a1f24cd2613fecc45177bcf3c21a7c9c1}
+1 
+
+Definição na linha 38 do arquivo S\+M\+A\+P\+H\+Scenario.\+h.
+
+\index{S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}!etp\+File\+Name@{etp\+File\+Name}}
+\index{etp\+File\+Name@{etp\+File\+Name}!S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}}
+\subsubsection[{etp\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+M\+A\+P\+H\+Scenario\+::etp\+File\+Name}\label{class_s_m_a_p_h_scenario_a0ff67e1e7703315b3dbfb7c2f1716d0f}
+Nomes dos arquivos de precipita��o e evapora��o 
+
+Definição na linha 42 do arquivo S\+M\+A\+P\+H\+Scenario.\+h.
+
+\index{S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}!param@{param}}
+\index{param@{param}!S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}}
+\subsubsection[{param}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+M\+A\+P\+H\+Param}$\ast$ S\+M\+A\+P\+H\+Scenario\+::param}\label{class_s_m_a_p_h_scenario_a3c62d42de2fe39600e015d4c71d5d27b}
+Aponta para a interface Par�metros do modelo S\+M\+A\+PH 
+
+Definição na linha 28 do arquivo S\+M\+A\+P\+H\+Scenario.\+h.
+
+\index{S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}!prec\+File\+Name@{prec\+File\+Name}}
+\index{prec\+File\+Name@{prec\+File\+Name}!S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}}
+\subsubsection[{prec\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+M\+A\+P\+H\+Scenario\+::prec\+File\+Name}\label{class_s_m_a_p_h_scenario_a188481e1b15d3abc5488655db3362b11}
+
+
+Definição na linha 42 do arquivo S\+M\+A\+P\+H\+Scenario.\+h.
+
+\index{S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}!precipitation@{precipitation}}
+\index{precipitation@{precipitation}!S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}}
+\subsubsection[{precipitation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ S\+M\+A\+P\+H\+Scenario\+::precipitation}\label{class_s_m_a_p_h_scenario_adab49078bc66392fd85b6ba7747b7d41}
+1 
+
+Definição na linha 33 do arquivo S\+M\+A\+P\+H\+Scenario.\+h.
+
+\index{S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}!Tuin@{Tuin}}
+\index{Tuin@{Tuin}!S\+M\+A\+P\+H\+Scenario@{S\+M\+A\+P\+H\+Scenario}}
+\subsubsection[{Tuin}]{\setlength{\rightskip}{0pt plus 5cm}double S\+M\+A\+P\+H\+Scenario\+::\+Tuin}\label{class_s_m_a_p_h_scenario_a3cfb9a04082df0ab8483ce1661ea9602}
+1 Teor de umidade inicial (ad.) 
+
+Definição na linha 48 do arquivo S\+M\+A\+P\+H\+Scenario.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+M\+A\+P\+H\+Scenario.\+h}\end{DoxyCompactItemize}

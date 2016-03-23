@@ -1,0 +1,123 @@
+\section{Referência da Classe Res\+Op\+Junction\+Interface}
+\label{class_res_op_junction_interface}\index{Res\+Op\+Junction\+Interface@{Res\+Op\+Junction\+Interface}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Junction\+Interface.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Element\+Interface}.
+
+
+
+Superclasse de {\bf Res\+Op\+Junction\+Net\+Flow\+Interface} e {\bf Res\+Op\+Junction\+Seq\+Interface}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Junction\+Interface} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent})
+\item 
+{\bf $\sim$\+Res\+Op\+Junction\+Interface} ()
+\item 
+virtual void {\bf set\+Info} ({\bf Res\+Op\+Element} $\ast$model)
+\item 
+virtual void {\bf show\+Results} ({\bf Res\+Op\+Element} $\ast$element)=0
+\item 
+virtual {\bf Serie\+Viewer} $\ast$ {\bf create\+Results} ({\bf Res\+Op\+Element} $\ast$element)
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+Interface da Demanda 
+
+Definição na linha 19 do arquivo Res\+Op\+Junction\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Junction\+Interface@{Res\+Op\+Junction\+Interface}!Res\+Op\+Junction\+Interface@{Res\+Op\+Junction\+Interface}}
+\index{Res\+Op\+Junction\+Interface@{Res\+Op\+Junction\+Interface}!Res\+Op\+Junction\+Interface@{Res\+Op\+Junction\+Interface}}
+\subsubsection[{Res\+Op\+Junction\+Interface(wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Junction\+Interface\+::\+Res\+Op\+Junction\+Interface (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_res_op_junction_interface_a279e4a130954cf929808b50c95b11635}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & Janela principal \\
+\hline
+{\em parent} & Janela que a cont�m \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Junction\+Interface@{Res\+Op\+Junction\+Interface}!````~Res\+Op\+Junction\+Interface@{$\sim$\+Res\+Op\+Junction\+Interface}}
+\index{````~Res\+Op\+Junction\+Interface@{$\sim$\+Res\+Op\+Junction\+Interface}!Res\+Op\+Junction\+Interface@{Res\+Op\+Junction\+Interface}}
+\subsubsection[{$\sim$\+Res\+Op\+Junction\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Junction\+Interface\+::$\sim$\+Res\+Op\+Junction\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_junction_interface_a40503361da65c49dddb768e7f3f9de8e}
+Destrutor 
+
+\subsection{Métodos}
+\index{Res\+Op\+Junction\+Interface@{Res\+Op\+Junction\+Interface}!create\+Results@{create\+Results}}
+\index{create\+Results@{create\+Results}!Res\+Op\+Junction\+Interface@{Res\+Op\+Junction\+Interface}}
+\subsubsection[{create\+Results(\+Res\+Op\+Element $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Serie\+Viewer}$\ast$ Res\+Op\+Junction\+Interface\+::create\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_junction_interface_acc85189f95e4f157311ffe22a403b4d3}
+Cria os resultados 
+
+Implementa {\bf Res\+Op\+Element\+Interface} \doxyref{}{pag.}{class_res_op_element_interface_ad806bc55cd20d4fc875b61e81c9a32cf}.
+
+
+
+Reimplementado por {\bf Res\+Op\+Junction\+Net\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_junction_net_flow_interface_a5cfe46ff6ad29a30c96ab0352a37dfd2} e {\bf Res\+Op\+Junction\+Seq\+Interface} \doxyref{}{pag.}{class_res_op_junction_seq_interface_aba05f88d1ad29520212c578d0bf79c7c}.
+
+\index{Res\+Op\+Junction\+Interface@{Res\+Op\+Junction\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+Op\+Junction\+Interface@{Res\+Op\+Junction\+Interface}}
+\subsubsection[{set\+Info(\+Res\+Op\+Element $\ast$model)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Junction\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{model}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_junction_interface_a2e7e3e788428ba538968355b3c914a9b}
+Atualiza a interface 
+\begin{DoxyParams}{Parâmetros}
+{\em model} & Ponteiro para o modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Res\+Op\+Element\+Interface} \doxyref{}{pag.}{class_res_op_element_interface_a91e5085dcd270c60167d8ee990546083}.
+
+
+
+Reimplementado por {\bf Res\+Op\+Junction\+Net\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_junction_net_flow_interface_a9c371479b2b373053ccf4c7b5ac15dc4} e {\bf Res\+Op\+Junction\+Seq\+Interface} \doxyref{}{pag.}{class_res_op_junction_seq_interface_a6b2854d5fd479745ed163d2d1fc10011}.
+
+\index{Res\+Op\+Junction\+Interface@{Res\+Op\+Junction\+Interface}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!Res\+Op\+Junction\+Interface@{Res\+Op\+Junction\+Interface}}
+\subsubsection[{show\+Results(\+Res\+Op\+Element $\ast$element)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Junction\+Interface\+::show\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_junction_interface_a649f59b2b85c4b381e1c99f6cde7653e}
+Mostra os resultados para o modelo 
+\begin{DoxyParams}{Parâmetros}
+{\em change} & Monta a janela de resultados se true, caso contrario, mostra a janela de resultados \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Element\+Interface} \doxyref{}{pag.}{class_res_op_element_interface_aaf3340d6104bde40590320657c6e38ba}.
+
+
+
+Implementado por {\bf Res\+Op\+Junction\+Net\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_junction_net_flow_interface_a12b916baac8a5183f4d50adcf8e7c963} e {\bf Res\+Op\+Junction\+Seq\+Interface} \doxyref{}{pag.}{class_res_op_junction_seq_interface_a5d5f9191b66a710f82f899081d19f0d0}.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Junction\+Interface.\+h}\end{DoxyCompactItemize}

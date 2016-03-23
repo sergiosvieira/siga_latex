@@ -1,0 +1,169 @@
+\section{Refer√™ncia da Classe Ui\+Utils}
+\label{class_ui_utils}\index{Ui\+Utils@{Ui\+Utils}}
+
+
+{\ttfamily \#include $<$Ui\+Utils.\+h$>$}
+
+\subsection*{Tipos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bf Default\+Screen\+Resolution} = 1024, 
+{\bf Small\+Screen\+Resolution} = 860, 
+{\bf Big\+Screen\+Resolution} = 1280
+ \}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Ui\+Utils} ()
+\item 
+{\bf $\sim$\+Ui\+Utils} ()
+\end{DoxyCompactItemize}
+\subsection*{M√©todos P√∫blicos Est√°ticos}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bf centralize\+My\+Dialog} (wx\+Dialog \&a\+\_\+my\+Dialog, int a\+\_\+screen\+Size\+Default={\bf Default\+Screen\+Resolution}, bool a\+\_\+is\+Helper=false, std\+::pair$<$ float, float $>$ a\+\_\+pair\+Padding\+Width=std\+::pair$<$ float, float $>$(0.\+9f, 0.\+8f), std\+::pair$<$ float, float $>$ a\+\_\+pair\+Padding\+Height=std\+::pair$<$ float, float $>$(0.\+9f, 0.\+8f))
+\item 
+static const std\+::string {\bf get\+Xrc\+Path} (std\+::string a\+\_\+xrc\+Name)
+\item 
+static void {\bf enable\+Components} (std\+::vector$<$ wx\+Control $\ast$ $>$ \&a\+\_\+vector, bool a\+\_\+value)
+\item 
+static void {\bf resize} (wx\+Dialog \&a\+\_\+dialog, const wx\+Size \&a\+\_\+minimun\+Resolution, float a\+\_\+rate\+Resolution\+Size=1.f)
+\item 
+static void {\bf force\+Position} (wx\+Dialog \&a\+\_\+dialog)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Est√°ticos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+static const wx\+Size {\bf minimum\+Resolution}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 11 do arquivo Ui\+Utils.\+h.
+
+
+
+\subsection{Enumera√ß√µes}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{class_ui_utils_afe48a6870c58093000d81306d781e700}
+\begin{Desc}
+\item[Valores de enumera√ß√µes]\par
+\begin{description}
+\index{Default\+Screen\+Resolution@{Default\+Screen\+Resolution}!Ui\+Utils@{Ui\+Utils}}\index{Ui\+Utils@{Ui\+Utils}!Default\+Screen\+Resolution@{Default\+Screen\+Resolution}}\item[{\em 
+Default\+Screen\+Resolution\label{class_ui_utils_afe48a6870c58093000d81306d781e700aec97ba54cf0cf140278bc3ee20758ad2}
+}]\index{Small\+Screen\+Resolution@{Small\+Screen\+Resolution}!Ui\+Utils@{Ui\+Utils}}\index{Ui\+Utils@{Ui\+Utils}!Small\+Screen\+Resolution@{Small\+Screen\+Resolution}}\item[{\em 
+Small\+Screen\+Resolution\label{class_ui_utils_afe48a6870c58093000d81306d781e700a77b2379c9545d375db134f48ce84c9f9}
+}]\index{Big\+Screen\+Resolution@{Big\+Screen\+Resolution}!Ui\+Utils@{Ui\+Utils}}\index{Ui\+Utils@{Ui\+Utils}!Big\+Screen\+Resolution@{Big\+Screen\+Resolution}}\item[{\em 
+Big\+Screen\+Resolution\label{class_ui_utils_afe48a6870c58093000d81306d781e700a2a7bf342454edcc0621633d15f61d21b}
+}]\end{description}
+\end{Desc}
+
+
+Defini√ß√£o na linha 15 do arquivo Ui\+Utils.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Ui\+Utils@{Ui\+Utils}!Ui\+Utils@{Ui\+Utils}}
+\index{Ui\+Utils@{Ui\+Utils}!Ui\+Utils@{Ui\+Utils}}
+\subsubsection[{Ui\+Utils()}]{\setlength{\rightskip}{0pt plus 5cm}Ui\+Utils\+::\+Ui\+Utils (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_ui_utils_af2fe30849d938bc964735f191dae1dc3}
+\index{Ui\+Utils@{Ui\+Utils}!````~Ui\+Utils@{$\sim$\+Ui\+Utils}}
+\index{````~Ui\+Utils@{$\sim$\+Ui\+Utils}!Ui\+Utils@{Ui\+Utils}}
+\subsubsection[{$\sim$\+Ui\+Utils()}]{\setlength{\rightskip}{0pt plus 5cm}Ui\+Utils\+::$\sim$\+Ui\+Utils (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_ui_utils_aa5dc6492d6781ec41eb4ec83fd16cf3c}
+
+
+\subsection{M√©todos}
+\index{Ui\+Utils@{Ui\+Utils}!centralize\+My\+Dialog@{centralize\+My\+Dialog}}
+\index{centralize\+My\+Dialog@{centralize\+My\+Dialog}!Ui\+Utils@{Ui\+Utils}}
+\subsubsection[{centralize\+My\+Dialog(wx\+Dialog \&a\+\_\+my\+Dialog, int a\+\_\+screen\+Size\+Default=\+Default\+Screen\+Resolution, bool a\+\_\+is\+Helper=false, std\+::pair$<$ float, float $>$ a\+\_\+pair\+Padding\+Width=std\+::pair$<$ float, float $>$(0.\+9f, 0.\+8f), std\+::pair$<$ float, float $>$ a\+\_\+pair\+Padding\+Height=std\+::pair$<$ float, float $>$(0.\+9f, 0.\+8f))}]{\setlength{\rightskip}{0pt plus 5cm}static void Ui\+Utils\+::centralize\+My\+Dialog (
+\begin{DoxyParamCaption}
+\item[{wx\+Dialog \&}]{a\+\_\+my\+Dialog, }
+\item[{int}]{a\+\_\+screen\+Size\+Default = {\ttfamily {\bf Default\+Screen\+Resolution}}, }
+\item[{bool}]{a\+\_\+is\+Helper = {\ttfamily false}, }
+\item[{std\+::pair$<$ float, float $>$}]{a\+\_\+pair\+Padding\+Width = {\ttfamily std\+:\+:pair$<$~float,~float~$>$(0.9f,~0.8f)}, }
+\item[{std\+::pair$<$ float, float $>$}]{a\+\_\+pair\+Padding\+Height = {\ttfamily std\+:\+:pair$<$~float,~float~$>$(0.9f,~0.8f)}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_ui_utils_a2feab96f4cd2ff4c6c010abd83a576d7}
+Redimensiona o wx\+Dialog de acordo com as proporÁıes da tela, redimensionando sua proporÁıes 
+\begin{DoxyParams}{Par√¢metros}
+{\em a\+\_\+my\+Dialog} & -\/ Ponteiro do wx\+Dialog a ser centralizado \\
+\hline
+{\em a\+\_\+screen\+Size\+Default} & -\/ A partir da resoluÁ„o 1024xxxx o c·cudo da tela dever· mudar \\
+\hline
+{\em a\+\_\+is\+Helper} & -\/ As dimensıes ser„o modificadas em padr„o para 60\% em altura e largura para todas as dialog\textquotesingle{}s helpers do sistema \\
+\hline
+{\em a\+\_\+pair\+Padding\+Width} & -\/ Valor em \% para ajustar a tela de acordo com a resoluÁ„o na largura. (screen\+Width $>$ 1024 ? first \+: second) \\
+\hline
+{\em a\+\_\+pair\+Padding\+Height} & -\/ Valor em \% para ajustar a tela de acordo com a resoluÁ„o na altura. (screen\+Height $>$ 1024 ? first \+: second) \\
+\hline
+\end{DoxyParams}
+\index{Ui\+Utils@{Ui\+Utils}!enable\+Components@{enable\+Components}}
+\index{enable\+Components@{enable\+Components}!Ui\+Utils@{Ui\+Utils}}
+\subsubsection[{enable\+Components(std\+::vector$<$ wx\+Control $\ast$ $>$ \&a\+\_\+vector, bool a\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}static void Ui\+Utils\+::enable\+Components (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ wx\+Control $\ast$ $>$ \&}]{a\+\_\+vector, }
+\item[{bool}]{a\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_ui_utils_aa2507d695350b13d18a59e0f678bb21f}
+\index{Ui\+Utils@{Ui\+Utils}!force\+Position@{force\+Position}}
+\index{force\+Position@{force\+Position}!Ui\+Utils@{Ui\+Utils}}
+\subsubsection[{force\+Position(wx\+Dialog \&a\+\_\+dialog)}]{\setlength{\rightskip}{0pt plus 5cm}static void Ui\+Utils\+::force\+Position (
+\begin{DoxyParamCaption}
+\item[{wx\+Dialog \&}]{a\+\_\+dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_ui_utils_a9a1512e0f1a21fb53b198b721c5de6e2}
+ForÁa a posiÁ„o da janela para o centro da tela. Em alguns casos, sÛ o a funaÁ„o \doxyref{centralize\+My\+Dialog()}{pag.}{class_ui_utils_a2feab96f4cd2ff4c6c010abd83a576d7} n„o È suficiente para que a dialog se posicione na posiÁ„o correta nesses casos ent„o È necess·rio forÁarmos o reposionamento da dialog, forÁando-\/a a ficar centralizada na tela 
+\begin{DoxyParams}{Par√¢metros}
+{\em wx\+Dialog} & \\
+\hline
+\end{DoxyParams}
+\index{Ui\+Utils@{Ui\+Utils}!get\+Xrc\+Path@{get\+Xrc\+Path}}
+\index{get\+Xrc\+Path@{get\+Xrc\+Path}!Ui\+Utils@{Ui\+Utils}}
+\subsubsection[{get\+Xrc\+Path(std\+::string a\+\_\+xrc\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}static const std\+::string Ui\+Utils\+::get\+Xrc\+Path (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{a\+\_\+xrc\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_ui_utils_a4711f8a65558136d8c55ee2d75492797}
+Recebe o nome do arquivo X\+RC e retorna o path do arquivo. \index{Ui\+Utils@{Ui\+Utils}!resize@{resize}}
+\index{resize@{resize}!Ui\+Utils@{Ui\+Utils}}
+\subsubsection[{resize(wx\+Dialog \&a\+\_\+dialog, const wx\+Size \&a\+\_\+minimun\+Resolution, float a\+\_\+rate\+Resolution\+Size=1.\+f)}]{\setlength{\rightskip}{0pt plus 5cm}static void Ui\+Utils\+::resize (
+\begin{DoxyParamCaption}
+\item[{wx\+Dialog \&}]{a\+\_\+dialog, }
+\item[{const wx\+Size \&}]{a\+\_\+minimun\+Resolution, }
+\item[{float}]{a\+\_\+rate\+Resolution\+Size = {\ttfamily 1.f}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_ui_utils_ae4a6ed40a39d4647969692efb5a3f3d0}
+Redimensiona uma wx\+Dialog no intervalo [a\+\_\+minimum\+Resolution, current resolution $\ast$ a\+\_\+rate\+Resolution\+Size] 
+\begin{DoxyParams}{Par√¢metros}
+{\em wx\+Dialog} & \\
+\hline
+{\em wx\+Size} & -\/ ResoluÁ„o mÌnima permitida \\
+\hline
+{\em float} & -\/ Taxa de ajuste da resoluÁ„o atual $>$ 0 e $<$= 1 \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{Ui\+Utils@{Ui\+Utils}!minimum\+Resolution@{minimum\+Resolution}}
+\index{minimum\+Resolution@{minimum\+Resolution}!Ui\+Utils@{Ui\+Utils}}
+\subsubsection[{minimum\+Resolution}]{\setlength{\rightskip}{0pt plus 5cm}const wx\+Size Ui\+Utils\+::minimum\+Resolution\hspace{0.3cm}{\ttfamily [static]}}\label{class_ui_utils_af4454e5015ee7729e3abb3942bd96ceb}
+
+
+Defini√ß√£o na linha 14 do arquivo Ui\+Utils.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Ui\+Utils.\+h}\end{DoxyCompactItemize}

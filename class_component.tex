@@ -1,0 +1,284 @@
+\section{Referência da Classe Component}
+\label{class_component}\index{Component@{Component}}
+
+
+{\ttfamily \#include $<$Component.\+h$>$}
+
+
+
+Superclasse de {\bf Aff\+Prev\+Main}, {\bf Demand\+Main}, {\bf Flow\+Forecast\+Main}, {\bf Hidro\+Main}, {\bf Net\+Main}, {\bf Opt\+Main}, {\bf Out\+Main}, {\bf Quality\+Main}, {\bf Res\+Op\+Ctrl} e {\bf Res\+Op\+Main}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Component} (wx\+String {\bf name})
+\item 
+virtual void {\bf update\+Tree\+Item} ({\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$)
+\item 
+virtual void {\bf on\+Init} ({\bf S\+I\+GA} $\ast${\bf main}, wx\+Frame $\ast$frame, wx\+Window $\ast$parent)=0
+\item 
+virtual void {\bf on\+Select\+Element} ()=0
+\item 
+virtual void {\bf on\+Changed\+Component} ()=0
+\item 
+virtual void {\bf on\+Changing\+Component} ()=0
+\item 
+virtual void {\bf on\+Delete\+Elements} (vector$<$ {\bf Element\+ID} $>$ \&elements\+\_\+ids\+\_\+vector)=0
+\item 
+virtual void {\bf on\+Changing\+Time\+Interval} ({\bf Date\+::\+Time\+Interval})=0
+\item 
+virtual void {\bf on\+Changing\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ element\+Ids)=0
+\item 
+virtual void {\bf on\+Changed\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ element\+Ids)=0
+\item 
+virtual void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)=0
+\item 
+virtual void {\bf on\+Join\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+virtual void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)=0
+\item 
+virtual void {\bf clear} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Element} $\ast$ {\bf selected\+Element}
+\item 
+wx\+String {\bf name}
+\item 
+{\bf S\+I\+GA} $\ast$ {\bf main}
+\item 
+{\bf Component\+Interface} $\ast$ {\bf inter}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 18 do arquivo Component.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Component@{Component}!Component@{Component}}
+\index{Component@{Component}!Component@{Component}}
+\subsubsection[{Component(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}Component\+::\+Component (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_component_a5b2a4bae87b1cbbc65c1912b198e728e}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em name} & Nome \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 41 do arquivo Component.\+h.
+
+
+
+\subsection{Métodos}
+\index{Component@{Component}!clear@{clear}}
+\index{clear@{clear}!Component@{Component}}
+\subsubsection[{clear()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_component_a3155a0112bacea4b0af7b131c0e3f011}
+
+
+Implementado por {\bf Hidro\+Main} \doxyref{}{pag.}{class_hidro_main_aa98c230833231c591758a374ed736ba0}, {\bf Quality\+Main} \doxyref{}{pag.}{class_quality_main_a08ed1af8235b7325ba6047f983a900d9}, {\bf Res\+Op\+Main} \doxyref{}{pag.}{class_res_op_main_a2b201d875c9997434950a3ef44b4617e}, {\bf Aff\+Prev\+Main} \doxyref{}{pag.}{class_aff_prev_main_a0c75580e83fc7a87c2ef2c3548c66f0f}, {\bf Out\+Main} \doxyref{}{pag.}{class_out_main_ab50d4d71b3772f816c2eee24f7819b2c}, {\bf Opt\+Main} \doxyref{}{pag.}{class_opt_main_a583f0d1a4cfe3cc6261f973387a7eccc}, {\bf Net\+Main} \doxyref{}{pag.}{class_net_main_a5b739fde035ca818bbea6e879e041b60} e {\bf Res\+Op\+Ctrl} \doxyref{}{pag.}{class_res_op_ctrl_aadb197431d65fda8c38447cec4c6582a}.
+
+\index{Component@{Component}!on\+Changed\+Component@{on\+Changed\+Component}}
+\index{on\+Changed\+Component@{on\+Changed\+Component}!Component@{Component}}
+\subsubsection[{on\+Changed\+Component()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+::on\+Changed\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_component_a528080e8ef4be5f15e8a268ef8a06bd6}
+Evento de entrada no modulo Deve ser reimplementado no m�dulo se deseja realizar algo 
+
+Implementado por {\bf Hidro\+Main} \doxyref{}{pag.}{class_hidro_main_a8c8e5bcd260aaa93f59cfa879adb428f}, {\bf Res\+Op\+Main} \doxyref{}{pag.}{class_res_op_main_a4ceb119b8627bbe61ad6a9a312705500}, {\bf Quality\+Main} \doxyref{}{pag.}{class_quality_main_a4ccc4ba4f317dbc15a85ff4b8fbcae38}, {\bf Out\+Main} \doxyref{}{pag.}{class_out_main_a9b7aa2568fa7fa3196f00686ec24b6cb}, {\bf Opt\+Main} \doxyref{}{pag.}{class_opt_main_ad85b7f2fb0d3253e4ba2ae058fa01098}, {\bf Aff\+Prev\+Main} \doxyref{}{pag.}{class_aff_prev_main_a196d3370a726b3798c4f38e20b60f360}, {\bf Net\+Main} \doxyref{}{pag.}{class_net_main_a0df7ec97555ae75d3f5a7f9344f9afdf} e {\bf Res\+Op\+Ctrl} \doxyref{}{pag.}{class_res_op_ctrl_a3aaaf6f89329035fbf2d356263b91289}.
+
+\index{Component@{Component}!on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}}
+\index{on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}!Component@{Component}}
+\subsubsection[{on\+Changed\+Element\+Type(vector$<$ Element\+I\+D $>$ element\+Ids)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+::on\+Changed\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{element\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_component_a49dc89aa957ef7a7fdb37c6b55041261}
+
+
+Implementado por {\bf Hidro\+Main} \doxyref{}{pag.}{class_hidro_main_a62bea2cd76bbafb4908a3df18a2ee49d}, {\bf Res\+Op\+Ctrl} \doxyref{}{pag.}{class_res_op_ctrl_a2023c0b2fc80da9dd8a71565b42cd67b}, {\bf Out\+Main} \doxyref{}{pag.}{class_out_main_a4a1c598474166ff74b2bfb7c0a64cea9}, {\bf Opt\+Main} \doxyref{}{pag.}{class_opt_main_afbbbd65bdc97ad5e84e9168a01bdf25a} e {\bf Net\+Main} \doxyref{}{pag.}{class_net_main_af48e169e5b973ddb79b89c9d89e7b783}.
+
+\index{Component@{Component}!on\+Changing\+Component@{on\+Changing\+Component}}
+\index{on\+Changing\+Component@{on\+Changing\+Component}!Component@{Component}}
+\subsubsection[{on\+Changing\+Component()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+::on\+Changing\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_component_a86d6778195457395b75c8995e98075f1}
+Evento de saida do modulo Deve ser reimplementado no m�dulo se deseja realizar algo 
+
+Implementado por {\bf Hidro\+Main} \doxyref{}{pag.}{class_hidro_main_a97fe3c7f3a2ae8dbf56fe04df276ea60}, {\bf Res\+Op\+Main} \doxyref{}{pag.}{class_res_op_main_a97dab008c3cb79a0eb4b683789d33730}, {\bf Quality\+Main} \doxyref{}{pag.}{class_quality_main_a4aebe2540c3bc00d2e5eeb701090f1ce}, {\bf Out\+Main} \doxyref{}{pag.}{class_out_main_a37d6c70f8a87dfbed333a42028dbc8d8}, {\bf Opt\+Main} \doxyref{}{pag.}{class_opt_main_a8ecfcc1e165d724b7467780ad7f56827}, {\bf Aff\+Prev\+Main} \doxyref{}{pag.}{class_aff_prev_main_a58794e21373359c3ab2a373268ff256f}, {\bf Net\+Main} \doxyref{}{pag.}{class_net_main_a5e7f3ab04bf81473f13a83a48d02015e} e {\bf Res\+Op\+Ctrl} \doxyref{}{pag.}{class_res_op_ctrl_a253ecc7a46f1bc53c36e74bda51450d3}.
+
+\index{Component@{Component}!on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}}
+\index{on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}!Component@{Component}}
+\subsubsection[{on\+Changing\+Element\+Type(vector$<$ Element\+I\+D $>$ element\+Ids)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+::on\+Changing\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{element\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_component_a959af092622ea87958a2858d0e2d0ce1}
+
+
+Implementado por {\bf Hidro\+Main} \doxyref{}{pag.}{class_hidro_main_a9e3040a44e4dd190d8dba9981d83106e}, {\bf Res\+Op\+Ctrl} \doxyref{}{pag.}{class_res_op_ctrl_a36ea73331e0bfe17cc3c16c03c370be8}, {\bf Out\+Main} \doxyref{}{pag.}{class_out_main_a23f465f26d76230870210bb434bd3387}, {\bf Opt\+Main} \doxyref{}{pag.}{class_opt_main_adcb2c40f8107d3a1f4d673264e1ec60c} e {\bf Net\+Main} \doxyref{}{pag.}{class_net_main_a77bc06a76a732735536132d618ae01e8}.
+
+\index{Component@{Component}!on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}}
+\index{on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}!Component@{Component}}
+\subsubsection[{on\+Changing\+Time\+Interval(\+Date\+::\+Time\+Interval)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+::on\+Changing\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_component_a3e49742b76123d86cd3fec640ba57dd8}
+
+
+Implementado por {\bf Res\+Op\+Main} \doxyref{}{pag.}{class_res_op_main_a067281bb99636cef48d9d1a1ceb9d686}, {\bf Hidro\+Main} \doxyref{}{pag.}{class_hidro_main_af9828a51aeda748c069eae87b2133daf}, {\bf Quality\+Main} \doxyref{}{pag.}{class_quality_main_a00881a297543e48193afb144116a8952}, {\bf Res\+Op\+Ctrl} \doxyref{}{pag.}{class_res_op_ctrl_a1934e5de040c468c08a317a7e2af3c95}, {\bf Out\+Main} \doxyref{}{pag.}{class_out_main_aadcba5e89cb93ea9c7762eb9c8dfb8fb}, {\bf Aff\+Prev\+Main} \doxyref{}{pag.}{class_aff_prev_main_ae9bdd166968a0f02a766f715793c8572}, {\bf Opt\+Main} \doxyref{}{pag.}{class_opt_main_a785b6b1a1422802e5866af5c22c9ebd5} e {\bf Net\+Main} \doxyref{}{pag.}{class_net_main_af1e66c41cf1731310ece21c843b1cbd9}.
+
+\index{Component@{Component}!on\+Delete\+Elements@{on\+Delete\+Elements}}
+\index{on\+Delete\+Elements@{on\+Delete\+Elements}!Component@{Component}}
+\subsubsection[{on\+Delete\+Elements(vector$<$ Element\+I\+D $>$ \&elements\+\_\+ids\+\_\+vector)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+::on\+Delete\+Elements (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$ \&}]{elements\+\_\+ids\+\_\+vector}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_component_ad77e22c15657b1a02cf967a59ddbc2cd}
+Apaga os dados do(s) n�(s) selecionados Deve ser reimplementado no m�dulo se deseja realizar algo 
+\begin{DoxyParams}{Parâmetros}
+{\em node\+Ids} & Identificador do(s) n�(s) selecionado(s) \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Hidro\+Main} \doxyref{}{pag.}{class_hidro_main_a9d8537691fd73491860eb56cbe006c78}, {\bf Out\+Main} \doxyref{}{pag.}{class_out_main_a72ce0516fc28965ad3a6aa2b5c1ea8db}, {\bf Opt\+Main} \doxyref{}{pag.}{class_opt_main_a299495e1faa266971a1f100a344d59a0}, {\bf Net\+Main} \doxyref{}{pag.}{class_net_main_afc1e39a328fe2cc8d9dd930db8f0a695} e {\bf Res\+Op\+Ctrl} \doxyref{}{pag.}{class_res_op_ctrl_af6c42f81c5bf7549b2f4cadea57b3f68}.
+
+\index{Component@{Component}!on\+Init@{on\+Init}}
+\index{on\+Init@{on\+Init}!Component@{Component}}
+\subsubsection[{on\+Init(\+S\+I\+G\+A $\ast$main, wx\+Frame $\ast$frame, wx\+Window $\ast$parent)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+::on\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+GA} $\ast$}]{main, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_component_aa781bddb43637778a628acbe21a78a01}
+Inicializa a instancia do \doxyref{Component}{pag.}{class_component} 
+\begin{DoxyParams}{Parâmetros}
+{\em main} & Classe base \\
+\hline
+{\em frame} & Janela onde a interface ser� inserida \\
+\hline
+{\em parent} & Componente onde a interface sera inserida \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Res\+Op\+Ctrl} \doxyref{}{pag.}{class_res_op_ctrl_a55316a5718ad1148d5df7aa8a2766f5f}, {\bf Hidro\+Main} \doxyref{}{pag.}{class_hidro_main_aed44c4e8868aa61b491f8a3b6d35d267}, {\bf Res\+Op\+Main} \doxyref{}{pag.}{class_res_op_main_ab3161de255dccb7d8319634db95cdc8f}, {\bf Quality\+Main} \doxyref{}{pag.}{class_quality_main_ad833494330f49e840a3cf6c5371a96e4}, {\bf Out\+Main} \doxyref{}{pag.}{class_out_main_ac6cff1c588ff0fdd94f3cce1ba6c996c}, {\bf Opt\+Main} \doxyref{}{pag.}{class_opt_main_a1eec826f0dd270b041838e821e44e920}, {\bf Aff\+Prev\+Main} \doxyref{}{pag.}{class_aff_prev_main_a48f76f846449f23aa7af85f3643ba1c0} e {\bf Net\+Main} \doxyref{}{pag.}{class_net_main_a2d28f0f21da412cde587d9887698e8fd}.
+
+\index{Component@{Component}!on\+Join\+Load\+Project@{on\+Join\+Load\+Project}}
+\index{on\+Join\+Load\+Project@{on\+Join\+Load\+Project}!Component@{Component}}
+\subsubsection[{on\+Join\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+::on\+Join\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_component_a784aadb17920e2a13cc3589284562de5}
+
+
+Reimplementado por {\bf Net\+Main} \doxyref{}{pag.}{class_net_main_a3653126e962c4e6226a3da8f13e564fe}.
+
+
+
+Definição na linha 90 do arquivo Component.\+h.
+
+\index{Component@{Component}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Component@{Component}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_component_a755c932409c320f6a057abf6c4ebc5e4}
+Abre o projeto 
+
+Implementado por {\bf Res\+Op\+Main} \doxyref{}{pag.}{class_res_op_main_a79152f4a082c85b5341a732e5776f982}, {\bf Hidro\+Main} \doxyref{}{pag.}{class_hidro_main_ac75d4e28f94973e7903980311678e6d0}, {\bf Quality\+Main} \doxyref{}{pag.}{class_quality_main_a6df6e48e08ac8d97676eeb3a7d0f18c4}, {\bf Res\+Op\+Ctrl} \doxyref{}{pag.}{class_res_op_ctrl_a9b844808c259f63d9db4884ff78eba5e}, {\bf Out\+Main} \doxyref{}{pag.}{class_out_main_a480c382cb183ae06bea403961fdc1140}, {\bf Aff\+Prev\+Main} \doxyref{}{pag.}{class_aff_prev_main_ac5d89d3599a8e8264affbd91505f2246}, {\bf Opt\+Main} \doxyref{}{pag.}{class_opt_main_afeab0fe2181774d81abd6c880fcfe57d} e {\bf Net\+Main} \doxyref{}{pag.}{class_net_main_a646b40200daaec3e5dcd46bf1099aa8d}.
+
+\index{Component@{Component}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Component@{Component}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_component_ad6ccdceebf942b62e75f0255319c9fab}
+Salva o projeto 
+
+Implementado por {\bf Res\+Op\+Main} \doxyref{}{pag.}{class_res_op_main_a1fc486606530d9cbd568982ebac88358}, {\bf Hidro\+Main} \doxyref{}{pag.}{class_hidro_main_a7695ef501a44b4734be62e015f831032}, {\bf Quality\+Main} \doxyref{}{pag.}{class_quality_main_a427eb2125d72f1b3cec942af1bed875c}, {\bf Res\+Op\+Ctrl} \doxyref{}{pag.}{class_res_op_ctrl_a79864de203926ad35d0139989ff3442a}, {\bf Out\+Main} \doxyref{}{pag.}{class_out_main_a0552f30b4e35f8bbe87d941fc06bb718}, {\bf Aff\+Prev\+Main} \doxyref{}{pag.}{class_aff_prev_main_a14afae1738bae5d073ccce05f4b52190}, {\bf Opt\+Main} \doxyref{}{pag.}{class_opt_main_a3588235be334a390084d9dccaf55e17c} e {\bf Net\+Main} \doxyref{}{pag.}{class_net_main_a50c69f5690f915dd3a1799a535b9bd80}.
+
+\index{Component@{Component}!on\+Select\+Element@{on\+Select\+Element}}
+\index{on\+Select\+Element@{on\+Select\+Element}!Component@{Component}}
+\subsubsection[{on\+Select\+Element()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+::on\+Select\+Element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_component_a886fc9240f1faf7948ad00aec78c50c3}
+Seleciona os dados do elemento selecionado Deve ser reimplementado em todos os m�dulos 
+
+Implementado por {\bf Hidro\+Main} \doxyref{}{pag.}{class_hidro_main_a87b8abf9817b59e572b9f8012fc0d1c2}, {\bf Quality\+Main} \doxyref{}{pag.}{class_quality_main_a08e390fbbd56a215dc613b00f208cf0d}, {\bf Out\+Main} \doxyref{}{pag.}{class_out_main_aaa60736fe087401861f93222372327cf}, {\bf Net\+Main} \doxyref{}{pag.}{class_net_main_a4e6d8d3def544245e63a3222e0905caf}, {\bf Opt\+Main} \doxyref{}{pag.}{class_opt_main_ae6004b9c1b37ad603c47fe78b0cac75f} e {\bf Res\+Op\+Ctrl} \doxyref{}{pag.}{class_res_op_ctrl_adee463c6940c6f21e145496a2790192d}.
+
+\index{Component@{Component}!update\+Tree\+Item@{update\+Tree\+Item}}
+\index{update\+Tree\+Item@{update\+Tree\+Item}!Component@{Component}}
+\subsubsection[{update\+Tree\+Item(\+S\+I\+G\+A\+Tree\+Ctrl $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Component\+::update\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_component_a29b14a3db0650e8c62711bb9edea68a1}
+Atualiza os itens do treectrl 
+
+Reimplementado por {\bf Hidro\+Main} \doxyref{}{pag.}{class_hidro_main_a44981c30113ac36cd2b301f1f9d00570}, {\bf Quality\+Main} \doxyref{}{pag.}{class_quality_main_ac75a7ad4013448dbff98cc6f2d42eea2}, {\bf Opt\+Main} \doxyref{}{pag.}{class_opt_main_aae39a4377ce415b1f741418c2974e8be} e {\bf Aff\+Prev\+Main} \doxyref{}{pag.}{class_aff_prev_main_a7fada3f6f40be28eec24a46af08b89ad}.
+
+
+
+Definição na linha 45 do arquivo Component.\+h.
+
+
+
+\subsection{Atributos}
+\index{Component@{Component}!inter@{inter}}
+\index{inter@{inter}!Component@{Component}}
+\subsubsection[{inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component\+Interface}$\ast$ Component\+::inter}\label{class_component_aef48e31445f84952020e8b5fd4043d0c}
+Aponta para a interface  1..$\ast$ 
+
+Definição na linha 36 do arquivo Component.\+h.
+
+\index{Component@{Component}!main@{main}}
+\index{main@{main}!Component@{Component}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+GA}$\ast$ Component\+::main}\label{class_component_aa94e975474c09084983b46b05c1b6ffd}
+Aponta para Classe principal 
+
+Definição na linha 31 do arquivo Component.\+h.
+
+\index{Component@{Component}!name@{name}}
+\index{name@{name}!Component@{Component}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Component\+::name}\label{class_component_a940e67d6f3ee9c7778ce91ba29a94c40}
+Nome do m�dulo 
+
+Definição na linha 27 do arquivo Component.\+h.
+
+\index{Component@{Component}!selected\+Element@{selected\+Element}}
+\index{selected\+Element@{selected\+Element}!Component@{Component}}
+\subsubsection[{selected\+Element}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Element}$\ast$ Component\+::selected\+Element}\label{class_component_a7638f8c0cb3b64476e8a6fada60c9f43}
+Elemento selecionado 
+
+Definição na linha 23 do arquivo Component.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Component.\+h}\end{DoxyCompactItemize}

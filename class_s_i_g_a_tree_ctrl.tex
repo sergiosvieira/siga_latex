@@ -1,0 +1,229 @@
+\section{ReferÃªncia da Classe S\+I\+G\+A\+Tree\+Ctrl}
+\label{class_s_i_g_a_tree_ctrl}\index{S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}}
+
+
+{\ttfamily \#include $<$S\+I\+G\+A\+Tree\+Ctrl.\+h$>$}
+
+
+
+Herdeiro de wx\+Tree\+Ctrl.
+
+\subsection*{Tipos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Tree\+Image} \{ {\bf U\+N\+C\+H\+E\+CK} = 0, 
+{\bf C\+H\+E\+CK}, 
+{\bf F\+O\+L\+D\+ER}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+G\+A\+Tree\+Ctrl} (wx\+Window $\ast$parent, wx\+Window\+ID id, wx\+Point pos, wx\+Size size, long style)
+\item 
+{\bf $\sim$\+S\+I\+G\+A\+Tree\+Ctrl} ()
+\item 
+void {\bf on\+Delete\+Item} (wx\+Tree\+Event \&event)
+\item 
+wx\+Tree\+Item\+Id {\bf has\+Section} (wx\+Tree\+Item\+Id parent\+Id, wx\+String section)
+\item 
+void {\bf insert\+Tree\+Item} ({\bf S\+I\+G\+A\+Tree\+Item\+Data} $\ast$d\+Data)
+\item 
+void {\bf insert\+Tree\+Serie} ({\bf Draw\+Serie} $\ast$d\+Serie)
+\item 
+void {\bf insert\+Tree\+Matrix} ({\bf Draw\+Matrix} $\ast$d\+Matrix)
+\item 
+void {\bf remove\+Tree\+Item} (wx\+String name, {\bf S\+I\+G\+A\+Tree\+Item\+Data} $\ast$d\+Data)
+\item 
+void {\bf remove\+Tree\+Serie} (wx\+String name, {\bf Draw\+Serie} $\ast$d\+Serie)
+\item 
+void {\bf remove\+Tree\+Matrix} (wx\+String name, {\bf Draw\+Matrix} $\ast$d\+Matrix)
+\item 
+void {\bf check\+Tree\+Item} (wx\+Tree\+Item\+Id parent\+Id, bool {\bf check})
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 15 do arquivo S\+I\+G\+A\+Tree\+Ctrl.\+h.
+
+
+
+\subsection{EnumeraÃ§Ãµes}
+\index{S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}!Tree\+Image@{Tree\+Image}}
+\index{Tree\+Image@{Tree\+Image}!S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}}
+\subsubsection[{Tree\+Image}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf S\+I\+G\+A\+Tree\+Ctrl\+::\+Tree\+Image}}\label{class_s_i_g_a_tree_ctrl_a91429283cc1c9bfbba5d296e1d824895}
+Identificador para Imagem do Tree\+Ctrl \begin{Desc}
+\item[Valores de enumeraÃ§Ãµes]\par
+\begin{description}
+\index{U\+N\+C\+H\+E\+CK@{U\+N\+C\+H\+E\+CK}!S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}}\index{S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}!U\+N\+C\+H\+E\+CK@{U\+N\+C\+H\+E\+CK}}\item[{\em 
+U\+N\+C\+H\+E\+CK\label{class_s_i_g_a_tree_ctrl_a91429283cc1c9bfbba5d296e1d824895a9d02f9f66f2006e2d7adccf07a7122ca}
+}]\index{C\+H\+E\+CK@{C\+H\+E\+CK}!S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}}\index{S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}!C\+H\+E\+CK@{C\+H\+E\+CK}}\item[{\em 
+C\+H\+E\+CK\label{class_s_i_g_a_tree_ctrl_a91429283cc1c9bfbba5d296e1d824895a627ed89af307ce9bdb4e16dec05c65cd}
+}]\index{F\+O\+L\+D\+ER@{F\+O\+L\+D\+ER}!S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}}\index{S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}!F\+O\+L\+D\+ER@{F\+O\+L\+D\+ER}}\item[{\em 
+F\+O\+L\+D\+ER\label{class_s_i_g_a_tree_ctrl_a91429283cc1c9bfbba5d296e1d824895a781506857a6c8b7497d86c3da9729ecc}
+}]\end{description}
+\end{Desc}
+
+
+DefiniÃ§Ã£o na linha 22 do arquivo S\+I\+G\+A\+Tree\+Ctrl.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}!S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}}
+\index{S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}!S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}}
+\subsubsection[{S\+I\+G\+A\+Tree\+Ctrl(wx\+Window $\ast$parent, wx\+Window\+I\+D id, wx\+Point pos, wx\+Size size, long style)}]{\setlength{\rightskip}{0pt plus 5cm}S\+I\+G\+A\+Tree\+Ctrl\+::\+S\+I\+G\+A\+Tree\+Ctrl (
+\begin{DoxyParamCaption}
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{wx\+Window\+ID}]{id, }
+\item[{wx\+Point}]{pos, }
+\item[{wx\+Size}]{size, }
+\item[{long}]{style}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tree_ctrl_ad3b811424116a86823ccaa444da937a4}
+Construtor \index{S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}!````~S\+I\+G\+A\+Tree\+Ctrl@{$\sim$\+S\+I\+G\+A\+Tree\+Ctrl}}
+\index{````~S\+I\+G\+A\+Tree\+Ctrl@{$\sim$\+S\+I\+G\+A\+Tree\+Ctrl}!S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}}
+\subsubsection[{$\sim$\+S\+I\+G\+A\+Tree\+Ctrl()}]{\setlength{\rightskip}{0pt plus 5cm}S\+I\+G\+A\+Tree\+Ctrl\+::$\sim$\+S\+I\+G\+A\+Tree\+Ctrl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tree_ctrl_a6621c14bb6381aa395afdb75dad7bbc0}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}!check\+Tree\+Item@{check\+Tree\+Item}}
+\index{check\+Tree\+Item@{check\+Tree\+Item}!S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}}
+\subsubsection[{check\+Tree\+Item(wx\+Tree\+Item\+Id parent\+Id, bool check)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Tree\+Ctrl\+::check\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{parent\+Id, }
+\item[{bool}]{check}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tree_ctrl_a9f92c5d3f7d6d9659eafa90e352bfa51}
+Marca/desmarca o item do tree. Usado quando muda a seleção do nó. \index{S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}!has\+Section@{has\+Section}}
+\index{has\+Section@{has\+Section}!S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}}
+\subsubsection[{has\+Section(wx\+Tree\+Item\+Id parent\+Id, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Item\+Id S\+I\+G\+A\+Tree\+Ctrl\+::has\+Section (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{parent\+Id, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tree_ctrl_a7ec4cac32211084578343bc73c2a0232}
+Verifica se existe uma seção com o nome enviado e retorna o identificador da seção ou (wx\+Tree\+Item\+Id)0 se não houver seção 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em parent\+Id} & Id da seção anterior \\
+\hline
+{\em section} & Nome da seção \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}!insert\+Tree\+Item@{insert\+Tree\+Item}}
+\index{insert\+Tree\+Item@{insert\+Tree\+Item}!S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}}
+\subsubsection[{insert\+Tree\+Item(\+S\+I\+G\+A\+Tree\+Item\+Data $\ast$d\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Tree\+Ctrl\+::insert\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Tree\+Item\+Data} $\ast$}]{d\+Data}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tree_ctrl_a01ab2930d222e680ce7eb36352ca0767}
+Insere uma serie no treectrl de acordo com a estrutura enviada 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em root} & Identificador da raiz \\
+\hline
+{\em name} & Sub-\/seções enviadas de forma 1/2/3/.../ \\
+\hline
+{\em serie} & Ponteiro para a serie \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}!insert\+Tree\+Matrix@{insert\+Tree\+Matrix}}
+\index{insert\+Tree\+Matrix@{insert\+Tree\+Matrix}!S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}}
+\subsubsection[{insert\+Tree\+Matrix(\+Draw\+Matrix $\ast$d\+Matrix)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Tree\+Ctrl\+::insert\+Tree\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Matrix} $\ast$}]{d\+Matrix}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tree_ctrl_ace87c0b1480edebba68cd0a2ece5b4aa}
+Insere uma serie no treectrl de acordo com a estrutura enviada 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em root} & Identificador da raiz \\
+\hline
+{\em name} & Sub-\/seções enviadas de forma 1/2/3/.../ \\
+\hline
+{\em serie} & Ponteiro para a serie \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}!insert\+Tree\+Serie@{insert\+Tree\+Serie}}
+\index{insert\+Tree\+Serie@{insert\+Tree\+Serie}!S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}}
+\subsubsection[{insert\+Tree\+Serie(\+Draw\+Serie $\ast$d\+Serie)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Tree\+Ctrl\+::insert\+Tree\+Serie (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Serie} $\ast$}]{d\+Serie}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tree_ctrl_a285d32c760a3243cea040d4f41bd3892}
+Insere uma serie no treectrl de acordo com a estrutura enviada 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em root} & Identificador da raiz \\
+\hline
+{\em name} & Sub-\/seções enviadas de forma 1/2/3/.../ \\
+\hline
+{\em serie} & Ponteiro para a serie \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}!on\+Delete\+Item@{on\+Delete\+Item}}
+\index{on\+Delete\+Item@{on\+Delete\+Item}!S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}}
+\subsubsection[{on\+Delete\+Item(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Tree\+Ctrl\+::on\+Delete\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tree_ctrl_a66f9cf3b440580ad1420f8593ea10639}
+Evento chamado ao deletar os items \index{S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}!remove\+Tree\+Item@{remove\+Tree\+Item}}
+\index{remove\+Tree\+Item@{remove\+Tree\+Item}!S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}}
+\subsubsection[{remove\+Tree\+Item(wx\+String name, S\+I\+G\+A\+Tree\+Item\+Data $\ast$d\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Tree\+Ctrl\+::remove\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name, }
+\item[{{\bf S\+I\+G\+A\+Tree\+Item\+Data} $\ast$}]{d\+Data}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tree_ctrl_adb936131297458887ae0266fe0d6bb97}
+Remove uma serie do treectrl de acordo com a estrutura enviada 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em root} & Identificador da raiz \\
+\hline
+{\em name} & Sub-\/seções enviadas de forma 1/2/3/.../ \\
+\hline
+{\em serie} & Ponteiro para a serie \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}!remove\+Tree\+Matrix@{remove\+Tree\+Matrix}}
+\index{remove\+Tree\+Matrix@{remove\+Tree\+Matrix}!S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}}
+\subsubsection[{remove\+Tree\+Matrix(wx\+String name, Draw\+Matrix $\ast$d\+Matrix)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Tree\+Ctrl\+::remove\+Tree\+Matrix (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name, }
+\item[{{\bf Draw\+Matrix} $\ast$}]{d\+Matrix}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tree_ctrl_afcf69a3f494e7cee73c9653a836b1648}
+Remove uma serie do treectrl de acordo com a estrutura enviada 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em root} & Identificador da raiz \\
+\hline
+{\em name} & Sub-\/seções enviadas de forma 1/2/3/.../ \\
+\hline
+{\em serie} & Ponteiro para a serie \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}!remove\+Tree\+Serie@{remove\+Tree\+Serie}}
+\index{remove\+Tree\+Serie@{remove\+Tree\+Serie}!S\+I\+G\+A\+Tree\+Ctrl@{S\+I\+G\+A\+Tree\+Ctrl}}
+\subsubsection[{remove\+Tree\+Serie(wx\+String name, Draw\+Serie $\ast$d\+Serie)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Tree\+Ctrl\+::remove\+Tree\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name, }
+\item[{{\bf Draw\+Serie} $\ast$}]{d\+Serie}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tree_ctrl_aa7f11f1ebba390463b4dbada626722dd}
+Remove uma serie do treectrl de acordo com a estrutura enviada 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em root} & Identificador da raiz \\
+\hline
+{\em name} & Sub-\/seções enviadas de forma 1/2/3/.../ \\
+\hline
+{\em serie} & Ponteiro para a serie \\
+\hline
+\end{DoxyParams}
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+G\+A\+Tree\+Ctrl.\+h}\end{DoxyCompactItemize}

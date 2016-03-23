@@ -1,0 +1,162 @@
+\section{ReferÃªncia da Classe Thiessen}
+\label{class_thiessen}\index{Thiessen@{Thiessen}}
+
+
+{\ttfamily \#include $<$Thiessen.\+h$>$}
+
+
+
+Herdeiro de {\bf Interpolation}.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Thiessen} ({\bf Thiessen\+Data} $\ast$thiessen\+Data)
+\item 
+virtual {\bf $\sim$\+Thiessen} ()
+\item 
+bool {\bf Thiessen\+All\+In\+One} (vector$<$ {\bf Thiessen\+Result} $>$ \&output\+Results, const vector$<$ vector$<$ int $>$ $>$ \&actives\+P\+CD, const wx\+String \&thiessen\+Final)
+\item 
+bool {\bf Thiessen\+Per\+Polygons} (vector$<$ {\bf Thiessen\+Result} $>$ \&output\+Results, const vector$<$ vector$<$ int $>$ $>$ \&actives\+P\+CD, const wx\+String \&thiessen\+Final, vector$<$ map$<$ vector$<$ int $>$, {\bf Thiessen\+Result} $>$ $>$ \&thiessen\+Results\+Table\+Per\+Basin, vector$<$ vector$<$ int $>$ $>$ \&points\+In\+Polygon, int inside=0)
+\end{DoxyCompactItemize}
+\subsection*{Atributos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Thiessen\+Data} $\ast$ {\bf m\+\_\+thiessen\+Data}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+O\+G\+R\+S\+F\+Driver $\ast$ {\bf po\+Driver}
+\item 
+int {\bf S\+U\+B\+B\+A\+S\+I\+N\+\_\+\+I\+D\+\_\+\+I\+N\+D\+EX}
+\item 
+int {\bf S\+T\+A\+T\+I\+O\+N\+\_\+\+I\+D\+\_\+\+I\+N\+D\+EX}
+\end{DoxyCompactItemize}
+\subsection*{Atributos EstÃ¡ticos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ {\bf psz\+Driver\+Name}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 15 do arquivo Thiessen.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Thiessen@{Thiessen}!Thiessen@{Thiessen}}
+\index{Thiessen@{Thiessen}!Thiessen@{Thiessen}}
+\subsubsection[{Thiessen(\+Thiessen\+Data $\ast$thiessen\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}Thiessen\+::\+Thiessen (
+\begin{DoxyParamCaption}
+\item[{{\bf Thiessen\+Data} $\ast$}]{thiessen\+Data}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_a2ea76251072d6ef73d7c09da72e1444e}
+\index{Thiessen@{Thiessen}!````~Thiessen@{$\sim$\+Thiessen}}
+\index{````~Thiessen@{$\sim$\+Thiessen}!Thiessen@{Thiessen}}
+\subsubsection[{$\sim$\+Thiessen()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Thiessen\+::$\sim$\+Thiessen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_thiessen_a34ce4545e46167d7e500b2bd632b8af3}
+
+
+\subsection{MÃ©todos}
+\index{Thiessen@{Thiessen}!Thiessen\+All\+In\+One@{Thiessen\+All\+In\+One}}
+\index{Thiessen\+All\+In\+One@{Thiessen\+All\+In\+One}!Thiessen@{Thiessen}}
+\subsubsection[{Thiessen\+All\+In\+One(vector$<$ Thiessen\+Result $>$ \&output\+Results, const vector$<$ vector$<$ int $>$ $>$ \&actives\+P\+C\+D, const wx\+String \&thiessen\+Final)}]{\setlength{\rightskip}{0pt plus 5cm}bool Thiessen\+::\+Thiessen\+All\+In\+One (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Thiessen\+Result} $>$ \&}]{output\+Results, }
+\item[{const vector$<$ vector$<$ int $>$ $>$ \&}]{actives\+P\+CD, }
+\item[{const wx\+String \&}]{thiessen\+Final}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_a5c33075df7d07b76404be75228cf9958}
+Função para calcular os polígonos de thiessen para o shapefile de sub-\/bacias todo de uma vez só 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em output\+Results} & O\+UT vetor de saida dos resultados calculados pelo \doxyref{Thiessen}{pag.}{class_thiessen}. \\
+\hline
+{\em actives\+P\+CD} & IN informa quais estações estão ativas (linha 0 -\/ id das estações, linha 1-\/ status da estação (ativa ou inativa) \\
+\hline
+{\em thiessen\+Final} & IN nome do shapefile final com o resultado do cálculo de \doxyref{Thiessen}{pag.}{class_thiessen} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+false -\/ Se encontrar algum erro 
+\end{DoxyReturn}
+\index{Thiessen@{Thiessen}!Thiessen\+Per\+Polygons@{Thiessen\+Per\+Polygons}}
+\index{Thiessen\+Per\+Polygons@{Thiessen\+Per\+Polygons}!Thiessen@{Thiessen}}
+\subsubsection[{Thiessen\+Per\+Polygons(vector$<$ Thiessen\+Result $>$ \&output\+Results, const vector$<$ vector$<$ int $>$ $>$ \&actives\+P\+C\+D, const wx\+String \&thiessen\+Final, vector$<$ map$<$ vector$<$ int $>$, Thiessen\+Result $>$ $>$ \&thiessen\+Results\+Table\+Per\+Basin, vector$<$ vector$<$ int $>$ $>$ \&points\+In\+Polygon, int inside=0)}]{\setlength{\rightskip}{0pt plus 5cm}bool Thiessen\+::\+Thiessen\+Per\+Polygons (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Thiessen\+Result} $>$ \&}]{output\+Results, }
+\item[{const vector$<$ vector$<$ int $>$ $>$ \&}]{actives\+P\+CD, }
+\item[{const wx\+String \&}]{thiessen\+Final, }
+\item[{vector$<$ map$<$ vector$<$ int $>$, {\bf Thiessen\+Result} $>$ $>$ \&}]{thiessen\+Results\+Table\+Per\+Basin, }
+\item[{vector$<$ vector$<$ int $>$ $>$ \&}]{points\+In\+Polygon, }
+\item[{int}]{inside = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_a6fe0bdfc80bc171c734dc8c51c5e5ada}
+Função para calcular os polígonos de thiessen para cada sub-\/bacia independentemente 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em output\+Results} & O\+UT vetor de saida dos resultados calculados pelo \doxyref{Thiessen}{pag.}{class_thiessen}. \\
+\hline
+{\em actives\+P\+CD} & -\/ informa quais estações estão ativas (linha 0 -\/ id das estações, linha 1-\/ status da estação (ativa ou inativa) \\
+\hline
+{\em thiessen\+Final} & -\/ nome do shapefile final com o resultado do cálculo de \doxyref{Thiessen}{pag.}{class_thiessen} \\
+\hline
+{\em thiessen\+Results\+Table\+Per\+Basin} & -\/ vetor que contém as tabelas hash (map) de configurações para cada sub-\/bacia \\
+\hline
+{\em points\+In\+Polygon} & -\/ vetor que contém os pontos que estão dentro de cada polígono (independente de o posto estar ativo ou não) \\
+\hline
+{\em inside} & -\/ escolhe somente os pontos dentro do polígono ou somente os pontos dentro da bounding box \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+false -\/ Se encontrar algum erro 
+\end{DoxyReturn}
+
+
+\subsection{Atributos}
+\index{Thiessen@{Thiessen}!m\+\_\+thiessen\+Data@{m\+\_\+thiessen\+Data}}
+\index{m\+\_\+thiessen\+Data@{m\+\_\+thiessen\+Data}!Thiessen@{Thiessen}}
+\subsubsection[{m\+\_\+thiessen\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Thiessen\+Data}$\ast$ Thiessen\+::m\+\_\+thiessen\+Data}\label{class_thiessen_a2719c09142c65e2477099f876a00b9a0}
+
+
+DefiniÃ§Ã£o na linha 42 do arquivo Thiessen.\+h.
+
+\index{Thiessen@{Thiessen}!po\+Driver@{po\+Driver}}
+\index{po\+Driver@{po\+Driver}!Thiessen@{Thiessen}}
+\subsubsection[{po\+Driver}]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+S\+F\+Driver$\ast$ Thiessen\+::po\+Driver\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_a277d9a68d06df0ebf4eaa2e5e0e94ede}
+
+
+DefiniÃ§Ã£o na linha 47 do arquivo Thiessen.\+h.
+
+\index{Thiessen@{Thiessen}!psz\+Driver\+Name@{psz\+Driver\+Name}}
+\index{psz\+Driver\+Name@{psz\+Driver\+Name}!Thiessen@{Thiessen}}
+\subsubsection[{psz\+Driver\+Name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Thiessen\+::psz\+Driver\+Name\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\label{class_thiessen_aac8b67bac5cfbd2c73bdc875e9446bf1}
+
+
+DefiniÃ§Ã£o na linha 46 do arquivo Thiessen.\+h.
+
+\index{Thiessen@{Thiessen}!S\+T\+A\+T\+I\+O\+N\+\_\+\+I\+D\+\_\+\+I\+N\+D\+EX@{S\+T\+A\+T\+I\+O\+N\+\_\+\+I\+D\+\_\+\+I\+N\+D\+EX}}
+\index{S\+T\+A\+T\+I\+O\+N\+\_\+\+I\+D\+\_\+\+I\+N\+D\+EX@{S\+T\+A\+T\+I\+O\+N\+\_\+\+I\+D\+\_\+\+I\+N\+D\+EX}!Thiessen@{Thiessen}}
+\subsubsection[{S\+T\+A\+T\+I\+O\+N\+\_\+\+I\+D\+\_\+\+I\+N\+D\+EX}]{\setlength{\rightskip}{0pt plus 5cm}int Thiessen\+::\+S\+T\+A\+T\+I\+O\+N\+\_\+\+I\+D\+\_\+\+I\+N\+D\+EX\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_a43e90eebbb6f447804687efc268b4cc0}
+
+
+DefiniÃ§Ã£o na linha 50 do arquivo Thiessen.\+h.
+
+\index{Thiessen@{Thiessen}!S\+U\+B\+B\+A\+S\+I\+N\+\_\+\+I\+D\+\_\+\+I\+N\+D\+EX@{S\+U\+B\+B\+A\+S\+I\+N\+\_\+\+I\+D\+\_\+\+I\+N\+D\+EX}}
+\index{S\+U\+B\+B\+A\+S\+I\+N\+\_\+\+I\+D\+\_\+\+I\+N\+D\+EX@{S\+U\+B\+B\+A\+S\+I\+N\+\_\+\+I\+D\+\_\+\+I\+N\+D\+EX}!Thiessen@{Thiessen}}
+\subsubsection[{S\+U\+B\+B\+A\+S\+I\+N\+\_\+\+I\+D\+\_\+\+I\+N\+D\+EX}]{\setlength{\rightskip}{0pt plus 5cm}int Thiessen\+::\+S\+U\+B\+B\+A\+S\+I\+N\+\_\+\+I\+D\+\_\+\+I\+N\+D\+EX\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_a72b43142ca143ee9f9ae545fe0b32d82}
+
+
+DefiniÃ§Ã£o na linha 49 do arquivo Thiessen.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Thiessen.\+h}\end{DoxyCompactItemize}

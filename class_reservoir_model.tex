@@ -1,0 +1,326 @@
+\section{Refer√™ncia da Classe Reservoir\+Model}
+\label{class_reservoir_model}\index{Reservoir\+Model@{Reservoir\+Model}}
+
+
+{\ttfamily \#include $<$Reservoir\+Model.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Model}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Reservoir\+Model} ({\bf Date} initial\+Date, {\bf Date} final\+Date, {\bf Node} $\ast${\bf node})
+\item 
+{\bf $\sim$\+Reservoir\+Model} ()
+\item 
+void {\bf clear} ()
+\item 
+bool {\bf empty} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf run} ({\bf Date} i)
+\item 
+void {\bf set\+Alloc\+Vert} ({\bf Date} date, double value)
+\item 
+double {\bf nat\+Ch\+Demand} ({\bf Date} date)
+\item 
+void {\bf aloc\+Results} ()
+\item 
+int {\bf get\+Id} ()
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Serie} $\ast$ {\bf etp}
+\item 
+{\bf Serie} $\ast$ {\bf prec}
+\item 
+wx\+String {\bf etp\+File\+Name}
+\item 
+wx\+String {\bf prec\+File\+Name}
+\item 
+wx\+String {\bf qnat\+File\+Name}
+\item 
+wx\+String {\bf qreg\+File\+Name}
+\item 
+wx\+String {\bf cav\+File\+Name}
+\item 
+double {\bf vol\+Max}
+\item 
+double {\bf vol\+Min}
+\item 
+double {\bf vol\+Init}
+\item 
+{\bf Res\+C\+AV} $\ast$ {\bf C\+AV}
+\item 
+double {\bf L\+Vert}
+\item 
+double {\bf C\+Vert}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+Cada inst‚ncia de modelo È feita para um nÛ especÌfico 
+
+Defini√ß√£o na linha 13 do arquivo Reservoir\+Model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Reservoir\+Model@{Reservoir\+Model}!Reservoir\+Model@{Reservoir\+Model}}
+\index{Reservoir\+Model@{Reservoir\+Model}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{Reservoir\+Model(\+Date initial\+Date, Date final\+Date, Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}Reservoir\+Model\+::\+Reservoir\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{initial\+Date, }
+\item[{{\bf Date}}]{final\+Date, }
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_reservoir_model_a7becfbabe86b3e4fd79c775c6e0765bc}
+Construtor padr„o da classe \doxyref{Res\+Op\+Model}{pag.}{class_res_op_model} 
+\begin{DoxyParams}{Par√¢metros}
+{\em initial\+Date} & Inicio do intervalo \\
+\hline
+{\em final\+Date} & Final do Intervalo \\
+\hline
+{\em node} & NÛ de interesse \\
+\hline
+\end{DoxyParams}
+\index{Reservoir\+Model@{Reservoir\+Model}!````~Reservoir\+Model@{$\sim$\+Reservoir\+Model}}
+\index{````~Reservoir\+Model@{$\sim$\+Reservoir\+Model}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{$\sim$\+Reservoir\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Reservoir\+Model\+::$\sim$\+Reservoir\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_reservoir_model_acabe77c0fa6f0b3f9cb320e089bb9a25}
+Destrutor padr„o da classe \doxyref{Res\+Op\+Model}{pag.}{class_res_op_model} 
+
+\subsection{M√©todos}
+\index{Reservoir\+Model@{Reservoir\+Model}!aloc\+Results@{aloc\+Results}}
+\index{aloc\+Results@{aloc\+Results}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{aloc\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}void Reservoir\+Model\+::aloc\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_reservoir_model_a44413894fdc2088a366c44c2def16fb6}
+AlocaÁ„o de Resultados 
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_af26524ca25da5eb051f825a941c91488}.
+
+\index{Reservoir\+Model@{Reservoir\+Model}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Reservoir\+Model\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_reservoir_model_a0cdd572eff51f1c4997815032f4b5f4b}
+Checa se as informaÁıes est„o completas 
+\begin{DoxyParams}{Par√¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_a5967e944c8fce5e6ca9ba1f8890ad56d}.
+
+\index{Reservoir\+Model@{Reservoir\+Model}!clear@{clear}}
+\index{clear@{clear}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Reservoir\+Model\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_reservoir_model_a82f4fc2f0d0217c63d8574751e97d1d6}
+Limpa os dados 
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_a6473b3e6e73183d74801546e8816f55a}.
+
+\index{Reservoir\+Model@{Reservoir\+Model}!empty@{empty}}
+\index{empty@{empty}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool Reservoir\+Model\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_reservoir_model_a47f1f2a08f795a159a2ab731c9131f2f}
+retorna se existe algum valor no modelo 
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_adf9cc2f68809802cb9e4d55ed2522078}.
+
+\index{Reservoir\+Model@{Reservoir\+Model}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{get\+Id()}]{\setlength{\rightskip}{0pt plus 5cm}int Reservoir\+Model\+::get\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_reservoir_model_a6d5dc1397f635834d94de6af5f816df2}
+Retorna o identificador do elemento associado 
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_ac9ebfb85cf8c0bf9b2e8c3de070d7292}.
+
+\index{Reservoir\+Model@{Reservoir\+Model}!nat\+Ch\+Demand@{nat\+Ch\+Demand}}
+\index{nat\+Ch\+Demand@{nat\+Ch\+Demand}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{nat\+Ch\+Demand(\+Date date)}]{\setlength{\rightskip}{0pt plus 5cm}double Reservoir\+Model\+::nat\+Ch\+Demand (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{date}
+\end{DoxyParamCaption}
+)}\label{class_reservoir_model_a42dc98910033ed0006e0574c5aca8701}
+Retorna o valor da demanda alocada no canal natural \index{Reservoir\+Model@{Reservoir\+Model}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Reservoir\+Model\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_reservoir_model_acc1a61ab308a2f43bc6b8176ec706de4}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementa√ß√£o de {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_a99781b8784bfcdcb228d6f63e72f2088}.
+
+\index{Reservoir\+Model@{Reservoir\+Model}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Reservoir\+Model\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_reservoir_model_ab1395e2b282e3ef6f1712f2fba0f7a40}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementa√ß√£o de {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_a16eefd6636a24d9feb11388ecc2bb306}.
+
+\index{Reservoir\+Model@{Reservoir\+Model}!run@{run}}
+\index{run@{run}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{run(\+Date i)}]{\setlength{\rightskip}{0pt plus 5cm}void Reservoir\+Model\+::run (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_reservoir_model_ae5658c44a637254632faeafa2d35db8e}
+SimulaÁ„o 
+\begin{DoxyParams}{Par√¢metros}
+{\em i} & Dia a ser simulado \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Model} \doxyref{}{pag.}{class_res_op_model_a5cb0cdd25cceb57244a687bf598483ce}.
+
+\index{Reservoir\+Model@{Reservoir\+Model}!set\+Alloc\+Vert@{set\+Alloc\+Vert}}
+\index{set\+Alloc\+Vert@{set\+Alloc\+Vert}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{set\+Alloc\+Vert(\+Date date, double value)}]{\setlength{\rightskip}{0pt plus 5cm}void Reservoir\+Model\+::set\+Alloc\+Vert (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{date, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_reservoir_model_a157e6b9cb680faa8a7836effdf51b373}
+Totaliza o volume a ser liberado do reservatÛrio Realiza a repartiÁ„o da liberaÁ„o e suas respectivas alocaÁıes Aloca o vertimento no canal natural 
+
+\subsection{Atributos}
+\index{Reservoir\+Model@{Reservoir\+Model}!C\+AV@{C\+AV}}
+\index{C\+AV@{C\+AV}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{C\+AV}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+C\+AV}$\ast$ Reservoir\+Model\+::\+C\+AV}\label{class_reservoir_model_a4a21daea930fd224b43c97fdd9b3125f}
+
+
+Defini√ß√£o na linha 35 do arquivo Reservoir\+Model.\+h.
+
+\index{Reservoir\+Model@{Reservoir\+Model}!cav\+File\+Name@{cav\+File\+Name}}
+\index{cav\+File\+Name@{cav\+File\+Name}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{cav\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Reservoir\+Model\+::cav\+File\+Name}\label{class_reservoir_model_a2f0bf2fff475a562e384ff21c7c43331}
+
+
+Defini√ß√£o na linha 26 do arquivo Reservoir\+Model.\+h.
+
+\index{Reservoir\+Model@{Reservoir\+Model}!C\+Vert@{C\+Vert}}
+\index{C\+Vert@{C\+Vert}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{C\+Vert}]{\setlength{\rightskip}{0pt plus 5cm}double Reservoir\+Model\+::\+C\+Vert}\label{class_reservoir_model_ad976fc38b1c7cb01bd93f76c1395a349}
+
+
+Defini√ß√£o na linha 41 do arquivo Reservoir\+Model.\+h.
+
+\index{Reservoir\+Model@{Reservoir\+Model}!etp@{etp}}
+\index{etp@{etp}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{etp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ Reservoir\+Model\+::etp}\label{class_reservoir_model_a74bf764b1511f2cbdfc2b6f215379be3}
+SÈries 
+
+Defini√ß√£o na linha 20 do arquivo Reservoir\+Model.\+h.
+
+\index{Reservoir\+Model@{Reservoir\+Model}!etp\+File\+Name@{etp\+File\+Name}}
+\index{etp\+File\+Name@{etp\+File\+Name}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{etp\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Reservoir\+Model\+::etp\+File\+Name}\label{class_reservoir_model_a4759e22f561f824f1a6c8594b8d69ece}
+Nome dos arquivos lidos de evapotranspiraÁ„p, precipitaÁ„o, vaz„o incremental e \doxyref{C\+A\+V( cota, area e volume )}{pag.}{_res_op_serie_constants_8h_af9306d1f384dd4697bbe88b8a156493da0bb9b8a5508d5b557b385d895d22b59e} 
+
+Defini√ß√£o na linha 26 do arquivo Reservoir\+Model.\+h.
+
+\index{Reservoir\+Model@{Reservoir\+Model}!L\+Vert@{L\+Vert}}
+\index{L\+Vert@{L\+Vert}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{L\+Vert}]{\setlength{\rightskip}{0pt plus 5cm}double Reservoir\+Model\+::\+L\+Vert}\label{class_reservoir_model_a55f3d962c5d12560fc231a45459d1b76}
+Dados do Vertedor 
+
+Defini√ß√£o na linha 40 do arquivo Reservoir\+Model.\+h.
+
+\index{Reservoir\+Model@{Reservoir\+Model}!prec@{prec}}
+\index{prec@{prec}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{prec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ Reservoir\+Model\+::prec}\label{class_reservoir_model_a614b893494e94cc5400a8b4dbf826280}
+
+
+Defini√ß√£o na linha 21 do arquivo Reservoir\+Model.\+h.
+
+\index{Reservoir\+Model@{Reservoir\+Model}!prec\+File\+Name@{prec\+File\+Name}}
+\index{prec\+File\+Name@{prec\+File\+Name}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{prec\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Reservoir\+Model\+::prec\+File\+Name}\label{class_reservoir_model_ab2087ab29c441306a9dd38524daea420}
+
+
+Defini√ß√£o na linha 26 do arquivo Reservoir\+Model.\+h.
+
+\index{Reservoir\+Model@{Reservoir\+Model}!qnat\+File\+Name@{qnat\+File\+Name}}
+\index{qnat\+File\+Name@{qnat\+File\+Name}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{qnat\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Reservoir\+Model\+::qnat\+File\+Name}\label{class_reservoir_model_a9d7d5696d5add5a51516bb92fe18ff40}
+
+
+Defini√ß√£o na linha 26 do arquivo Reservoir\+Model.\+h.
+
+\index{Reservoir\+Model@{Reservoir\+Model}!qreg\+File\+Name@{qreg\+File\+Name}}
+\index{qreg\+File\+Name@{qreg\+File\+Name}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{qreg\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Reservoir\+Model\+::qreg\+File\+Name}\label{class_reservoir_model_a5c17ec91cb7396924e3252ac5bdcf209}
+
+
+Defini√ß√£o na linha 26 do arquivo Reservoir\+Model.\+h.
+
+\index{Reservoir\+Model@{Reservoir\+Model}!vol\+Init@{vol\+Init}}
+\index{vol\+Init@{vol\+Init}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{vol\+Init}]{\setlength{\rightskip}{0pt plus 5cm}double Reservoir\+Model\+::vol\+Init}\label{class_reservoir_model_aabd2ecbc98c3f17fe466d039ad69e59e}
+
+
+Defini√ß√£o na linha 33 do arquivo Reservoir\+Model.\+h.
+
+\index{Reservoir\+Model@{Reservoir\+Model}!vol\+Max@{vol\+Max}}
+\index{vol\+Max@{vol\+Max}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{vol\+Max}]{\setlength{\rightskip}{0pt plus 5cm}double Reservoir\+Model\+::vol\+Max}\label{class_reservoir_model_ab849a3ff73ba8c024c36fbaa9419b0f0}
+CaracterÌsticas do ReservatÛrio 
+
+Defini√ß√£o na linha 31 do arquivo Reservoir\+Model.\+h.
+
+\index{Reservoir\+Model@{Reservoir\+Model}!vol\+Min@{vol\+Min}}
+\index{vol\+Min@{vol\+Min}!Reservoir\+Model@{Reservoir\+Model}}
+\subsubsection[{vol\+Min}]{\setlength{\rightskip}{0pt plus 5cm}double Reservoir\+Model\+::vol\+Min}\label{class_reservoir_model_ae868f7727925503affbff43e2ade3f79}
+
+
+Defini√ß√£o na linha 32 do arquivo Reservoir\+Model.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Reservoir\+Model.\+h}\end{DoxyCompactItemize}

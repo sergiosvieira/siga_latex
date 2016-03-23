@@ -1,0 +1,170 @@
+\section{Referência da Classe S\+Draw\+Matrix}
+\label{class_s_draw_matrix}\index{S\+Draw\+Matrix@{S\+Draw\+Matrix}}
+
+
+{\ttfamily \#include $<$S\+Draw\+Matrix.\+h$>$}
+
+
+
+Herdeiro de {\bf Info\+Matrix$<$ double $>$}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+Draw\+Matrix} (unsigned int n, unsigned int m, const wx\+String \&{\bf name}=wx\+Empty\+String, const wx\+String \&{\bf token}=wx\+Empty\+String)
+\item 
+{\bf S\+Draw\+Matrix} (const {\bf S\+Matrix}$<$ double $>$ \&original\+Matrix, const wx\+String \&{\bf name}=wx\+Empty\+String, const wx\+String \&{\bf token}=wx\+Empty\+String)
+\item 
+const vector$<$ {\bf Column\+Draw\+Info} $>$ {\bf get\+Cols\+Draw\+Info} () const 
+\item 
+const wx\+String \& {\bf get\+Sections} () const 
+\item 
+{\bf S\+Draw\+Matrix\+N\+S\+::\+Matrix\+Draw\+Type} {\bf get\+Type} () const 
+\item 
+void {\bf set\+Cols\+Draw\+Info} (const vector$<$ {\bf Column\+Draw\+Info} $>$ \&new\+Cols\+Draw\+Info)
+\item 
+void {\bf set\+Sections} (const wx\+String \&new\+Sections)
+\item 
+void {\bf set\+Type} ({\bf S\+Draw\+Matrix\+N\+S\+::\+Matrix\+Draw\+Type} new\+Type)
+\item 
+virtual {\bf $\sim$\+S\+Draw\+Matrix} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ {\bf Column\+Draw\+Info} $>$ {\bf cols\+Draw\+Info}
+\item 
+wx\+String {\bf sections}
+\item 
+{\bf S\+Draw\+Matrix\+N\+S\+::\+Matrix\+Draw\+Type} {\bf type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 21 do arquivo S\+Draw\+Matrix.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{S\+Draw\+Matrix@{S\+Draw\+Matrix}!S\+Draw\+Matrix@{S\+Draw\+Matrix}}
+\index{S\+Draw\+Matrix@{S\+Draw\+Matrix}!S\+Draw\+Matrix@{S\+Draw\+Matrix}}
+\subsubsection[{S\+Draw\+Matrix(unsigned int n, unsigned int m, const wx\+String \&name=wx\+Empty\+String, const wx\+String \&token=wx\+Empty\+String)}]{\setlength{\rightskip}{0pt plus 5cm}S\+Draw\+Matrix\+::\+S\+Draw\+Matrix (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{n, }
+\item[{unsigned int}]{m, }
+\item[{const wx\+String \&}]{name = {\ttfamily wxEmptyString}, }
+\item[{const wx\+String \&}]{token = {\ttfamily wxEmptyString}}
+\end{DoxyParamCaption}
+)}\label{class_s_draw_matrix_a33aef4579ca20df33ecf2a26b4e7c5f4}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em n} & Numero de linhas da matriz (passado no construtor da classe base) \\
+\hline
+{\em m} & Numero de colunas da matriz (passado no construtor da classe base) \\
+\hline
+{\em name} & nome da matriz (passado no construtor da classe base) \\
+\hline
+{\em token} & token da matriz (passado no construtor da classe base) \\
+\hline
+\end{DoxyParams}
+\index{S\+Draw\+Matrix@{S\+Draw\+Matrix}!S\+Draw\+Matrix@{S\+Draw\+Matrix}}
+\index{S\+Draw\+Matrix@{S\+Draw\+Matrix}!S\+Draw\+Matrix@{S\+Draw\+Matrix}}
+\subsubsection[{S\+Draw\+Matrix(const S\+Matrix$<$ double $>$ \&original\+Matrix, const wx\+String \&name=wx\+Empty\+String, const wx\+String \&token=wx\+Empty\+String)}]{\setlength{\rightskip}{0pt plus 5cm}S\+Draw\+Matrix\+::\+S\+Draw\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+Matrix}$<$ double $>$ \&}]{original\+Matrix, }
+\item[{const wx\+String \&}]{name = {\ttfamily wxEmptyString}, }
+\item[{const wx\+String \&}]{token = {\ttfamily wxEmptyString}}
+\end{DoxyParamCaption}
+)}\label{class_s_draw_matrix_a0d27645946a0623b8890f1bae3201e07}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em original\+Matriz} & Matriz dos valores a serem mostrados \\
+\hline
+{\em name} & nome da matriz (passado no construtor da classe base) \\
+\hline
+{\em token} & token da matriz (passado no construtor da classe base) \\
+\hline
+\end{DoxyParams}
+\index{S\+Draw\+Matrix@{S\+Draw\+Matrix}!````~S\+Draw\+Matrix@{$\sim$\+S\+Draw\+Matrix}}
+\index{````~S\+Draw\+Matrix@{$\sim$\+S\+Draw\+Matrix}!S\+Draw\+Matrix@{S\+Draw\+Matrix}}
+\subsubsection[{$\sim$\+S\+Draw\+Matrix()}]{\setlength{\rightskip}{0pt plus 5cm}virtual S\+Draw\+Matrix\+::$\sim$\+S\+Draw\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_draw_matrix_ad1995393e382c0cfd9c8c46a3d8973f6}
+
+
+\subsection{Métodos}
+\index{S\+Draw\+Matrix@{S\+Draw\+Matrix}!get\+Cols\+Draw\+Info@{get\+Cols\+Draw\+Info}}
+\index{get\+Cols\+Draw\+Info@{get\+Cols\+Draw\+Info}!S\+Draw\+Matrix@{S\+Draw\+Matrix}}
+\subsubsection[{get\+Cols\+Draw\+Info() const }]{\setlength{\rightskip}{0pt plus 5cm}const vector$<${\bf Column\+Draw\+Info}$>$ S\+Draw\+Matrix\+::get\+Cols\+Draw\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_s_draw_matrix_a3f89c260908c6afb80d9be5b58283d74}
+\index{S\+Draw\+Matrix@{S\+Draw\+Matrix}!get\+Sections@{get\+Sections}}
+\index{get\+Sections@{get\+Sections}!S\+Draw\+Matrix@{S\+Draw\+Matrix}}
+\subsubsection[{get\+Sections() const }]{\setlength{\rightskip}{0pt plus 5cm}const wx\+String\& S\+Draw\+Matrix\+::get\+Sections (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_s_draw_matrix_ad13a2be33a87d89e1f65f7e8a44121a8}
+\index{S\+Draw\+Matrix@{S\+Draw\+Matrix}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!S\+Draw\+Matrix@{S\+Draw\+Matrix}}
+\subsubsection[{get\+Type() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+Draw\+Matrix\+N\+S\+::\+Matrix\+Draw\+Type} S\+Draw\+Matrix\+::get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_s_draw_matrix_a9379867e0037a2f3da2654bee7cca41d}
+\index{S\+Draw\+Matrix@{S\+Draw\+Matrix}!set\+Cols\+Draw\+Info@{set\+Cols\+Draw\+Info}}
+\index{set\+Cols\+Draw\+Info@{set\+Cols\+Draw\+Info}!S\+Draw\+Matrix@{S\+Draw\+Matrix}}
+\subsubsection[{set\+Cols\+Draw\+Info(const vector$<$ Column\+Draw\+Info $>$ \&new\+Cols\+Draw\+Info)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+Draw\+Matrix\+::set\+Cols\+Draw\+Info (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ {\bf Column\+Draw\+Info} $>$ \&}]{new\+Cols\+Draw\+Info}
+\end{DoxyParamCaption}
+)}\label{class_s_draw_matrix_a8b2c693accd9e4ad5febc673c938d3da}
+\index{S\+Draw\+Matrix@{S\+Draw\+Matrix}!set\+Sections@{set\+Sections}}
+\index{set\+Sections@{set\+Sections}!S\+Draw\+Matrix@{S\+Draw\+Matrix}}
+\subsubsection[{set\+Sections(const wx\+String \&new\+Sections)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+Draw\+Matrix\+::set\+Sections (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{new\+Sections}
+\end{DoxyParamCaption}
+)}\label{class_s_draw_matrix_aa323a449cf2e2062a8c8acf5ddbce50a}
+\index{S\+Draw\+Matrix@{S\+Draw\+Matrix}!set\+Type@{set\+Type}}
+\index{set\+Type@{set\+Type}!S\+Draw\+Matrix@{S\+Draw\+Matrix}}
+\subsubsection[{set\+Type(\+S\+Draw\+Matrix\+N\+S\+::\+Matrix\+Draw\+Type new\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+Draw\+Matrix\+::set\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+Draw\+Matrix\+N\+S\+::\+Matrix\+Draw\+Type}}]{new\+Type}
+\end{DoxyParamCaption}
+)}\label{class_s_draw_matrix_a6adc962f273f31d41327b3f7ce5c2189}
+
+
+\subsection{Atributos}
+\index{S\+Draw\+Matrix@{S\+Draw\+Matrix}!cols\+Draw\+Info@{cols\+Draw\+Info}}
+\index{cols\+Draw\+Info@{cols\+Draw\+Info}!S\+Draw\+Matrix@{S\+Draw\+Matrix}}
+\subsubsection[{cols\+Draw\+Info}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Column\+Draw\+Info}$>$ S\+Draw\+Matrix\+::cols\+Draw\+Info\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_draw_matrix_adf501b8a81744d02e70fad6caf74bbe5}
+
+
+Definição na linha 26 do arquivo S\+Draw\+Matrix.\+h.
+
+\index{S\+Draw\+Matrix@{S\+Draw\+Matrix}!sections@{sections}}
+\index{sections@{sections}!S\+Draw\+Matrix@{S\+Draw\+Matrix}}
+\subsubsection[{sections}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+Draw\+Matrix\+::sections\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_draw_matrix_a49b5bb9a078f062a77455789d11ccfcc}
+
+
+Definição na linha 28 do arquivo S\+Draw\+Matrix.\+h.
+
+\index{S\+Draw\+Matrix@{S\+Draw\+Matrix}!type@{type}}
+\index{type@{type}!S\+Draw\+Matrix@{S\+Draw\+Matrix}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+Draw\+Matrix\+N\+S\+::\+Matrix\+Draw\+Type} S\+Draw\+Matrix\+::type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_draw_matrix_a325a590c58bbad3a57185edb18c4dbe2}
+
+
+Definição na linha 31 do arquivo S\+Draw\+Matrix.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+Draw\+Matrix.\+h}\end{DoxyCompactItemize}

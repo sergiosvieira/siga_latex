@@ -1,0 +1,359 @@
+\section{Referência da Classe String\+Utils}
+\label{class_string_utils}\index{String\+Utils@{String\+Utils}}
+
+
+{\ttfamily \#include $<$string-\/utils.\+h$>$}
+
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bf trim} (std\+::string \&a\+\_\+string)
+\item 
+static void {\bf split} (std\+::vector$<$ std\+::string $>$ \&a\+\_\+vector, const std\+::string \&a\+\_\+line, const std\+::string \&a\+\_\+delimiter)
+\begin{DoxyCompactList}\small\item\em split \end{DoxyCompactList}\item 
+static bool {\bf replace} (std\+::string \&a\+\_\+string, const std\+::string \&a\+\_\+string\+From, const std\+::string \&a\+\_\+string\+To)
+\begin{DoxyCompactList}\small\item\em replace \end{DoxyCompactList}\item 
+static void {\bf creates\+Layer\+Name} (std\+::string \&a\+\_\+layer\+Name, const std\+::string \&a\+\_\+input\+Name)
+\begin{DoxyCompactList}\small\item\em creates\+Layer\+Name \end{DoxyCompactList}\item 
+static void {\bf normalize} (std\+::string \&a\+\_\+normalized\+String, const std\+::string \&a\+\_\+string)
+\begin{DoxyCompactList}\small\item\em normalize input (remove unspecified characters) \end{DoxyCompactList}\item 
+static void {\bf extract\+Filename} (std\+::string \&a\+\_\+filename, const std\+::string \&a\+\_\+full\+Path)
+\begin{DoxyCompactList}\small\item\em get only file name from a full path string without extension \end{DoxyCompactList}\item 
+static void {\bf filename} (std\+::string \&a\+\_\+filename, const std\+::string \&a\+\_\+full\+Path)
+\begin{DoxyCompactList}\small\item\em get only file name from a full path string \end{DoxyCompactList}\item 
+static void {\bf basename} (std\+::string \&a\+\_\+basename, const std\+::string \&a\+\_\+path)
+\begin{DoxyCompactList}\small\item\em gets file name (without extension) from a file path \end{DoxyCompactList}\item 
+static void {\bf path} (std\+::string \&a\+\_\+path, const std\+::string \&a\+\_\+full\+Path)
+\begin{DoxyCompactList}\small\item\em remove file name from full path \end{DoxyCompactList}\item 
+static void {\bf join} (std\+::string \&a\+\_\+joinned\+Text, std\+::vector$<$ std\+::string $>$ \&a\+\_\+vector, const std\+::string \&a\+\_\+delimiter=\char`\"{};\char`\"{})
+\begin{DoxyCompactList}\small\item\em join a vector of string \end{DoxyCompactList}\item 
+static void {\bf concat} (std\+::string \&a\+\_\+output, const std\+::string \&a\+\_\+first, const std\+::string a\+\_\+second)
+\begin{DoxyCompactList}\small\item\em concat two strings \end{DoxyCompactList}\item 
+static void {\bf remove\+Unspecified\+Chars} (std\+::string \&a\+\_\+result\+Text, const std\+::string \&a\+\_\+text)
+\begin{DoxyCompactList}\small\item\em remove unspecified characters from string \end{DoxyCompactList}\item 
+static void {\bf debug\+J\+S\+ON} (Json\+::\+Value a\+\_\+json)
+\begin{DoxyCompactList}\small\item\em print json string \end{DoxyCompactList}\item 
+static float {\bf str\+To\+Float} (std\+::string \&a\+\_\+string\+Value, {\bf Convert\+String\+Error\+Code} \&a\+\_\+error\+Code)
+\begin{DoxyCompactList}\small\item\em convert string to float \end{DoxyCompactList}\item 
+static int {\bf str\+To\+Int} (const std\+::string \&a\+\_\+string\+Value, {\bf Convert\+String\+Error\+Code} \&a\+\_\+error\+Code)
+\begin{DoxyCompactList}\small\item\em convert string to int \end{DoxyCompactList}\item 
+static int {\bf is\+Integer} (const std\+::string \&a\+\_\+string)
+\begin{DoxyCompactList}\small\item\em checks if string is a integer value \end{DoxyCompactList}\item 
+static int {\bf is\+Float} (const std\+::string \&a\+\_\+string)
+\begin{DoxyCompactList}\small\item\em checks if string is a integer value \end{DoxyCompactList}\item 
+static std\+::string {\bf random\+Filename} (const std\+::string \&a\+\_\+filename, const std\+::string a\+\_\+extension)
+\item 
+static std\+::string {\bf current\+Date\+Time} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+C++ S\+TL Extends 
+
+Definição na linha 15 do arquivo string-\/utils.\+h.
+
+
+
+\subsection{Métodos}
+\index{String\+Utils@{String\+Utils}!basename@{basename}}
+\index{basename@{basename}!String\+Utils@{String\+Utils}}
+\subsubsection[{basename(std\+::string \&a\+\_\+basename, const std\+::string \&a\+\_\+path)}]{\setlength{\rightskip}{0pt plus 5cm}static void String\+Utils\+::basename (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+basename, }
+\item[{const std\+::string \&}]{a\+\_\+path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_string_utils_ab406ff8859e329426977caecc2ba42ee}
+
+
+gets file name (without extension) from a file path 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em std\+::string\&} & -\/ Result basename \\
+\hline
+{\em const} & std\+::string\& -\/ Input full path and filename \\
+\hline
+\end{DoxyParams}
+\index{String\+Utils@{String\+Utils}!concat@{concat}}
+\index{concat@{concat}!String\+Utils@{String\+Utils}}
+\subsubsection[{concat(std\+::string \&a\+\_\+output, const std\+::string \&a\+\_\+first, const std\+::string a\+\_\+second)}]{\setlength{\rightskip}{0pt plus 5cm}static void String\+Utils\+::concat (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+output, }
+\item[{const std\+::string \&}]{a\+\_\+first, }
+\item[{const std\+::string}]{a\+\_\+second}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_string_utils_ad2d9787e53145232760df6c92f81f5b7}
+
+
+concat two strings 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em std\+::string\&} & -\/ Result string \\
+\hline
+{\em const} & std\+::string\& -\/ First string \\
+\hline
+{\em const} & std\+::string\& -\/ Second string \\
+\hline
+\end{DoxyParams}
+\index{String\+Utils@{String\+Utils}!creates\+Layer\+Name@{creates\+Layer\+Name}}
+\index{creates\+Layer\+Name@{creates\+Layer\+Name}!String\+Utils@{String\+Utils}}
+\subsubsection[{creates\+Layer\+Name(std\+::string \&a\+\_\+layer\+Name, const std\+::string \&a\+\_\+input\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}static void String\+Utils\+::creates\+Layer\+Name (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+layer\+Name, }
+\item[{const std\+::string \&}]{a\+\_\+input\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_string_utils_a1023c3cdd32c3152295cf852fe0bf257}
+
+
+creates\+Layer\+Name 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em std\+::string\&} & -\/ Layer name result \\
+\hline
+{\em const} & std\+::string\& -\/ Input name \\
+\hline
+\end{DoxyParams}
+\index{String\+Utils@{String\+Utils}!current\+Date\+Time@{current\+Date\+Time}}
+\index{current\+Date\+Time@{current\+Date\+Time}!String\+Utils@{String\+Utils}}
+\subsubsection[{current\+Date\+Time()}]{\setlength{\rightskip}{0pt plus 5cm}static std\+::string String\+Utils\+::current\+Date\+Time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_string_utils_aefcb826eac537295a1b300898d4046fe}
+\index{String\+Utils@{String\+Utils}!debug\+J\+S\+ON@{debug\+J\+S\+ON}}
+\index{debug\+J\+S\+ON@{debug\+J\+S\+ON}!String\+Utils@{String\+Utils}}
+\subsubsection[{debug\+J\+S\+O\+N(\+Json\+::\+Value a\+\_\+json)}]{\setlength{\rightskip}{0pt plus 5cm}static void String\+Utils\+::debug\+J\+S\+ON (
+\begin{DoxyParamCaption}
+\item[{Json\+::\+Value}]{a\+\_\+json}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_string_utils_ab0dccb82db23370bdbb7c7486e0986e3}
+
+
+print json string 
+
+\index{String\+Utils@{String\+Utils}!extract\+Filename@{extract\+Filename}}
+\index{extract\+Filename@{extract\+Filename}!String\+Utils@{String\+Utils}}
+\subsubsection[{extract\+Filename(std\+::string \&a\+\_\+filename, const std\+::string \&a\+\_\+full\+Path)}]{\setlength{\rightskip}{0pt plus 5cm}static void String\+Utils\+::extract\+Filename (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+filename, }
+\item[{const std\+::string \&}]{a\+\_\+full\+Path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_string_utils_a7a96aebb4080b74c2e40befa3caac6df}
+
+
+get only file name from a full path string without extension 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em std\+::string\&} & -\/ output file name \\
+\hline
+{\em const} & std\+::string\& -\/ Input full path string \\
+\hline
+\end{DoxyParams}
+\index{String\+Utils@{String\+Utils}!filename@{filename}}
+\index{filename@{filename}!String\+Utils@{String\+Utils}}
+\subsubsection[{filename(std\+::string \&a\+\_\+filename, const std\+::string \&a\+\_\+full\+Path)}]{\setlength{\rightskip}{0pt plus 5cm}static void String\+Utils\+::filename (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+filename, }
+\item[{const std\+::string \&}]{a\+\_\+full\+Path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_string_utils_a64df74d050fdc8ecdb200ecaec90cbdb}
+
+
+get only file name from a full path string 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em std\+::string\&} & -\/ output file name \\
+\hline
+{\em const} & std\+::string\& -\/ Input full path string \\
+\hline
+\end{DoxyParams}
+\index{String\+Utils@{String\+Utils}!is\+Float@{is\+Float}}
+\index{is\+Float@{is\+Float}!String\+Utils@{String\+Utils}}
+\subsubsection[{is\+Float(const std\+::string \&a\+\_\+string)}]{\setlength{\rightskip}{0pt plus 5cm}static int String\+Utils\+::is\+Float (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+\_\+string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_string_utils_a2c519e97ed54ca0129293dc9e3411753}
+
+
+checks if string is a integer value 
+
+\index{String\+Utils@{String\+Utils}!is\+Integer@{is\+Integer}}
+\index{is\+Integer@{is\+Integer}!String\+Utils@{String\+Utils}}
+\subsubsection[{is\+Integer(const std\+::string \&a\+\_\+string)}]{\setlength{\rightskip}{0pt plus 5cm}static int String\+Utils\+::is\+Integer (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+\_\+string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_string_utils_a60f5e2f9c5ccda41074f22b1d75a2acb}
+
+
+checks if string is a integer value 
+
+\index{String\+Utils@{String\+Utils}!join@{join}}
+\index{join@{join}!String\+Utils@{String\+Utils}}
+\subsubsection[{join(std\+::string \&a\+\_\+joinned\+Text, std\+::vector$<$ std\+::string $>$ \&a\+\_\+vector, const std\+::string \&a\+\_\+delimiter="";"")}]{\setlength{\rightskip}{0pt plus 5cm}static void String\+Utils\+::join (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+joinned\+Text, }
+\item[{std\+::vector$<$ std\+::string $>$ \&}]{a\+\_\+vector, }
+\item[{const std\+::string \&}]{a\+\_\+delimiter = {\ttfamily \char`\"{};\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_string_utils_aae0081dfc095041aaff9674fbef9b188}
+
+
+join a vector of string 
+
+\index{String\+Utils@{String\+Utils}!normalize@{normalize}}
+\index{normalize@{normalize}!String\+Utils@{String\+Utils}}
+\subsubsection[{normalize(std\+::string \&a\+\_\+normalized\+String, const std\+::string \&a\+\_\+string)}]{\setlength{\rightskip}{0pt plus 5cm}static void String\+Utils\+::normalize (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+normalized\+String, }
+\item[{const std\+::string \&}]{a\+\_\+string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_string_utils_aab680af19f586227bc80a3b7e8a351cc}
+
+
+normalize input (remove unspecified characters) 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em std\+::string\&} & -\/ Normalized string result \\
+\hline
+{\em const} & std\+::string\& -\/ Input string \\
+\hline
+\end{DoxyParams}
+\index{String\+Utils@{String\+Utils}!path@{path}}
+\index{path@{path}!String\+Utils@{String\+Utils}}
+\subsubsection[{path(std\+::string \&a\+\_\+path, const std\+::string \&a\+\_\+full\+Path)}]{\setlength{\rightskip}{0pt plus 5cm}static void String\+Utils\+::path (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+path, }
+\item[{const std\+::string \&}]{a\+\_\+full\+Path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_string_utils_ae6d20dfeeb252f51f5d60b19e0a3f3f9}
+
+
+remove file name from full path 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em std\+::string\&} & -\/ result string, only path \\
+\hline
+{\em const} & std\+::string\& -\/ full path (path + filename) \\
+\hline
+\end{DoxyParams}
+\index{String\+Utils@{String\+Utils}!random\+Filename@{random\+Filename}}
+\index{random\+Filename@{random\+Filename}!String\+Utils@{String\+Utils}}
+\subsubsection[{random\+Filename(const std\+::string \&a\+\_\+filename, const std\+::string a\+\_\+extension)}]{\setlength{\rightskip}{0pt plus 5cm}static std\+::string String\+Utils\+::random\+Filename (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+\_\+filename, }
+\item[{const std\+::string}]{a\+\_\+extension}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_string_utils_a5d9da642fed7db80bbde67d874b5eac3}
+\index{String\+Utils@{String\+Utils}!remove\+Unspecified\+Chars@{remove\+Unspecified\+Chars}}
+\index{remove\+Unspecified\+Chars@{remove\+Unspecified\+Chars}!String\+Utils@{String\+Utils}}
+\subsubsection[{remove\+Unspecified\+Chars(std\+::string \&a\+\_\+result\+Text, const std\+::string \&a\+\_\+text)}]{\setlength{\rightskip}{0pt plus 5cm}static void String\+Utils\+::remove\+Unspecified\+Chars (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+result\+Text, }
+\item[{const std\+::string \&}]{a\+\_\+text}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_string_utils_afa5c7458b807920ed963a2d685f98869}
+
+
+remove unspecified characters from string 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em std\+::string\&} & -\/ Result text \\
+\hline
+{\em const} & std\+::string\& -\/ Input text \\
+\hline
+\end{DoxyParams}
+\index{String\+Utils@{String\+Utils}!replace@{replace}}
+\index{replace@{replace}!String\+Utils@{String\+Utils}}
+\subsubsection[{replace(std\+::string \&a\+\_\+string, const std\+::string \&a\+\_\+string\+From, const std\+::string \&a\+\_\+string\+To)}]{\setlength{\rightskip}{0pt plus 5cm}static bool String\+Utils\+::replace (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+string, }
+\item[{const std\+::string \&}]{a\+\_\+string\+From, }
+\item[{const std\+::string \&}]{a\+\_\+string\+To}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_string_utils_a4c6b9f47da21ee0c3bf72b320b5e2f59}
+
+
+replace 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+string} & \\
+\hline
+{\em a\+\_\+string\+From} & \\
+\hline
+{\em a\+\_\+string\+To} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+
+\end{DoxyReturn}
+\index{String\+Utils@{String\+Utils}!split@{split}}
+\index{split@{split}!String\+Utils@{String\+Utils}}
+\subsubsection[{split(std\+::vector$<$ std\+::string $>$ \&a\+\_\+vector, const std\+::string \&a\+\_\+line, const std\+::string \&a\+\_\+delimiter)}]{\setlength{\rightskip}{0pt plus 5cm}static void String\+Utils\+::split (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$ \&}]{a\+\_\+vector, }
+\item[{const std\+::string \&}]{a\+\_\+line, }
+\item[{const std\+::string \&}]{a\+\_\+delimiter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_string_utils_a4d050f2a07293e4c0b2caf002fee195f}
+
+
+split 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em std\+::vector$<$std\+::string$>$\&} & -\/ Result vector \\
+\hline
+{\em const} & std\+::string\& -\/ Input string line \\
+\hline
+{\em const} & std\+::string\& -\/ Delimiter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+
+\end{DoxyReturn}
+\index{String\+Utils@{String\+Utils}!str\+To\+Float@{str\+To\+Float}}
+\index{str\+To\+Float@{str\+To\+Float}!String\+Utils@{String\+Utils}}
+\subsubsection[{str\+To\+Float(std\+::string \&a\+\_\+string\+Value, Convert\+String\+Error\+Code \&a\+\_\+error\+Code)}]{\setlength{\rightskip}{0pt plus 5cm}static float String\+Utils\+::str\+To\+Float (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+string\+Value, }
+\item[{{\bf Convert\+String\+Error\+Code} \&}]{a\+\_\+error\+Code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_string_utils_a8c27769f449bb2c20c51a106a1754212}
+
+
+convert string to float 
+
+\index{String\+Utils@{String\+Utils}!str\+To\+Int@{str\+To\+Int}}
+\index{str\+To\+Int@{str\+To\+Int}!String\+Utils@{String\+Utils}}
+\subsubsection[{str\+To\+Int(const std\+::string \&a\+\_\+string\+Value, Convert\+String\+Error\+Code \&a\+\_\+error\+Code)}]{\setlength{\rightskip}{0pt plus 5cm}static int String\+Utils\+::str\+To\+Int (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+\_\+string\+Value, }
+\item[{{\bf Convert\+String\+Error\+Code} \&}]{a\+\_\+error\+Code}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_string_utils_acfbd6271fa14de723e2cd8c1f5c591f5}
+
+
+convert string to int 
+
+\index{String\+Utils@{String\+Utils}!trim@{trim}}
+\index{trim@{trim}!String\+Utils@{String\+Utils}}
+\subsubsection[{trim(std\+::string \&a\+\_\+string)}]{\setlength{\rightskip}{0pt plus 5cm}static void String\+Utils\+::trim (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+string}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_string_utils_a5e0015371d983b02c9686ddf47580471}
+brief remove left and right white spaces 
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf string-\/utils.\+h}\end{DoxyCompactItemize}

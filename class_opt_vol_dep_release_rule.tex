@@ -1,0 +1,379 @@
+\section{Referência da Classe Opt\+Vol\+Dep\+Release\+Rule}
+\label{class_opt_vol_dep_release_rule}\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+
+
+{\ttfamily \#include $<$Opt\+Vol\+Dep\+Release\+Rule.\+h$>$}
+
+
+
+Herdeiro de {\bf Vol\+Dep\+Release\+Rule}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Vol\+Dep\+Release\+Rule} ({\bf Node} $\ast${\bf node})
+\item 
+virtual {\bf $\sim$\+Opt\+Vol\+Dep\+Release\+Rule} ()
+\item 
+double {\bf get\+Release} ({\bf Date} date, {\bf Res\+Op\+Element} $\ast$model={\bf N\+U\+LL})
+\item 
+unsigned int {\bf get\+Number\+Of\+Variables} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog={\bf N\+U\+LL})
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String)
+\item 
+void {\bf on\+Save\+Conf} ({\bf S\+I\+G\+A\+Project} $\ast$, bool use\+Id=false, wx\+String section=\char`\"{}Vol\+Dep\+Release\+Rule\char`\"{})
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String)
+\item 
+void {\bf on\+Load\+Conf} ({\bf S\+I\+G\+A\+Project} $\ast$, bool use\+Id=false, wx\+String section=\char`\"{}Vol\+Dep\+Release\+Rule\char`\"{})
+\item 
+void {\bf set\+Variables} ({\bf Matrix} \&swarm\+Line, int i, int j)
+\item 
+bool {\bf check\+Limits} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf to\+Opt}
+\item 
+vector$<$ double $>$ {\bf opt\+Release}
+\item 
+vector$<$ bool $>$ {\bf decisions\+Var}
+\item 
+{\bf Matrix} $\ast$ {\bf opt\+Release2}
+\item 
+{\bf Matrix\+Boolean} $\ast$ {\bf decisions2\+Var}
+\item 
+double {\bf release2\+Otm}
+\item 
+vector$<$ double $>$ {\bf zones\+Opt1}
+\item 
+bool {\bf opt\+Zones1}
+\item 
+int {\bf n\+Zones1}
+\item 
+vector$<$ double $>$ {\bf zones\+Opt21}
+\item 
+bool {\bf opt\+Zones21}
+\item 
+int {\bf n\+Zones21}
+\item 
+vector$<$ double $>$ {\bf zones\+Opt22}
+\item 
+bool {\bf opt\+Zones22}
+\item 
+int {\bf n\+Zones22}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Rule} $\ast$ {\bf do\+Copy} ()
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 13 do arquivo Opt\+Vol\+Dep\+Release\+Rule.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{Opt\+Vol\+Dep\+Release\+Rule(\+Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}Opt\+Vol\+Dep\+Release\+Rule\+::\+Opt\+Vol\+Dep\+Release\+Rule (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_opt_vol_dep_release_rule_a142a10037bd8a7ae578f7c75f05e0104}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em node} & N� \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!````~Opt\+Vol\+Dep\+Release\+Rule@{$\sim$\+Opt\+Vol\+Dep\+Release\+Rule}}
+\index{````~Opt\+Vol\+Dep\+Release\+Rule@{$\sim$\+Opt\+Vol\+Dep\+Release\+Rule}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{$\sim$\+Opt\+Vol\+Dep\+Release\+Rule()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Opt\+Vol\+Dep\+Release\+Rule\+::$\sim$\+Opt\+Vol\+Dep\+Release\+Rule (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_vol_dep_release_rule_a40c2b21ad832c3ddde42db7a7dd8b9a2}
+Destrutor 
+
+\subsection{Métodos}
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog=\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}bool Opt\+Vol\+Dep\+Release\+Rule\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_vol_dep_release_rule_a931177fe51696f703aeb9bdc6b486684}
+Verifica se todas as informa��es necess�rias foram fornecidas 
+\begin{DoxyParams}{Parâmetros}
+{\em Caixa} & de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a4481f2d8103aa6f8326eb36e97098c49}.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!check\+Limits@{check\+Limits}}
+\index{check\+Limits@{check\+Limits}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{check\+Limits()}]{\setlength{\rightskip}{0pt plus 5cm}bool Opt\+Vol\+Dep\+Release\+Rule\+::check\+Limits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_vol_dep_release_rule_a1168267cfbd15b3b8544bdd63f116cde}
+Verifica se os limites das vari�veis est�o corretos 
+
+Reimplementação de {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a36a0a495fdb002998b2226e01690234d}.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{do\+Copy()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Rule}$\ast$ Opt\+Vol\+Dep\+Release\+Rule\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_opt_vol_dep_release_rule_a8d3627bdfb846b47130e28635898b3c9}
+Copia a regra 
+
+Reimplementação de {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_ad733056cd70cc3f82dddc5c2a3d750ac}.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!get\+Number\+Of\+Variables@{get\+Number\+Of\+Variables}}
+\index{get\+Number\+Of\+Variables@{get\+Number\+Of\+Variables}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{get\+Number\+Of\+Variables()}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Opt\+Vol\+Dep\+Release\+Rule\+::get\+Number\+Of\+Variables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_vol_dep_release_rule_ade437d4f2d14c5ff6ea23b0421652c63}
+Retorna o n�mero de variaveis de decis�o 
+
+Reimplementação de {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a29f46902e1d16bef75f0f12726455865}.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!get\+Release@{get\+Release}}
+\index{get\+Release@{get\+Release}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{get\+Release(\+Date date, Res\+Op\+Element $\ast$model=\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}double Opt\+Vol\+Dep\+Release\+Rule\+::get\+Release (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{date, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{model = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_vol_dep_release_rule_a4cbe7d244f4dc68305f654e883bfcb9d}
+Retorna valor da libera��o para a data fornecida 
+\begin{DoxyParams}{Parâmetros}
+{\em date} & Dia de consulta \\
+\hline
+{\em model} & Modelo a ser consultado \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a373a18576fe9e23c5408ba10b7a2efca}.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!on\+Load\+Conf@{on\+Load\+Conf}}
+\index{on\+Load\+Conf@{on\+Load\+Conf}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{on\+Load\+Conf(\+S\+I\+G\+A\+Project $\ast$, bool use\+Id=false, wx\+String section=""Vol\+Dep\+Release\+Rule"")}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Vol\+Dep\+Release\+Rule\+::on\+Load\+Conf (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{bool}]{use\+Id = {\ttfamily false}, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}VolDepReleaseRule\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_vol_dep_release_rule_a2504c9e8344a02e72b6ac53872c64dd0}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a98e5ae38c9fb00364f4db356dac31964}.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Vol\+Dep\+Release\+Rule\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_vol_dep_release_rule_a0d3afbf68f7eec82a3bc997753eda311}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a138d95e8f7744a58f4faee06de97f25a}.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!on\+Save\+Conf@{on\+Save\+Conf}}
+\index{on\+Save\+Conf@{on\+Save\+Conf}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{on\+Save\+Conf(\+S\+I\+G\+A\+Project $\ast$, bool use\+Id=false, wx\+String section=""Vol\+Dep\+Release\+Rule"")}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Vol\+Dep\+Release\+Rule\+::on\+Save\+Conf (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{bool}]{use\+Id = {\ttfamily false}, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}VolDepReleaseRule\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_vol_dep_release_rule_ace89b1877bdeb2261d909860c7435aa7}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a680528bffaa71dc852aa5df9e871f059}.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Vol\+Dep\+Release\+Rule\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_vol_dep_release_rule_ae47f53a85a2361528be4cdd0727cf96f}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a45c2796b4c5025f684f7b80556e19cc7}.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!set\+Variables@{set\+Variables}}
+\index{set\+Variables@{set\+Variables}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{set\+Variables(\+Matrix \&swarm\+Line, int i, int j)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Vol\+Dep\+Release\+Rule\+::set\+Variables (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{swarm\+Line, }
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_vol_dep_release_rule_ae86a488540ace7d5c0db30ce11e28053}
+Atribui solu��es as vari�veis de decis�o 
+\begin{DoxyParams}{Parâmetros}
+{\em swarm\+Line} & ... \\
+\hline
+{\em i} & \\
+\hline
+{\em j} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_af3ccf7736da32c27c54e99cbae53a041}.
+
+
+
+\subsection{Atributos}
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!decisions2\+Var@{decisions2\+Var}}
+\index{decisions2\+Var@{decisions2\+Var}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{decisions2\+Var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix\+Boolean}$\ast$ Opt\+Vol\+Dep\+Release\+Rule\+::decisions2\+Var}\label{class_opt_vol_dep_release_rule_a943882c5db3ec668b9a728b7da94a423}
+Vari�vel boleana que determina quem est� sendo otimizado 
+
+Definição na linha 48 do arquivo Opt\+Vol\+Dep\+Release\+Rule.\+h.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!decisions\+Var@{decisions\+Var}}
+\index{decisions\+Var@{decisions\+Var}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{decisions\+Var}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$bool$>$ Opt\+Vol\+Dep\+Release\+Rule\+::decisions\+Var}\label{class_opt_vol_dep_release_rule_a01bf5957ef012cad7d92cf16cea7ca25}
+Vari�vel boleana que determina quem est� sendo otimizado 
+
+Definição na linha 38 do arquivo Opt\+Vol\+Dep\+Release\+Rule.\+h.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!n\+Zones1@{n\+Zones1}}
+\index{n\+Zones1@{n\+Zones1}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{n\+Zones1}]{\setlength{\rightskip}{0pt plus 5cm}int Opt\+Vol\+Dep\+Release\+Rule\+::n\+Zones1}\label{class_opt_vol_dep_release_rule_a5de8104a11e619134155587ca4c7f8be}
+
+
+Definição na linha 57 do arquivo Opt\+Vol\+Dep\+Release\+Rule.\+h.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!n\+Zones21@{n\+Zones21}}
+\index{n\+Zones21@{n\+Zones21}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{n\+Zones21}]{\setlength{\rightskip}{0pt plus 5cm}int Opt\+Vol\+Dep\+Release\+Rule\+::n\+Zones21}\label{class_opt_vol_dep_release_rule_acf6f3760abcd56a564895e1e3f3b85c1}
+
+
+Definição na linha 61 do arquivo Opt\+Vol\+Dep\+Release\+Rule.\+h.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!n\+Zones22@{n\+Zones22}}
+\index{n\+Zones22@{n\+Zones22}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{n\+Zones22}]{\setlength{\rightskip}{0pt plus 5cm}int Opt\+Vol\+Dep\+Release\+Rule\+::n\+Zones22}\label{class_opt_vol_dep_release_rule_a4f4351288bbaf8427d8879ce7a705b83}
+
+
+Definição na linha 65 do arquivo Opt\+Vol\+Dep\+Release\+Rule.\+h.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!opt\+Release@{opt\+Release}}
+\index{opt\+Release@{opt\+Release}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{opt\+Release}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ Opt\+Vol\+Dep\+Release\+Rule\+::opt\+Release}\label{class_opt_vol_dep_release_rule_a88c98abd853f64dd19296845cbe2850d}
+dependendo de 1 reservat�rio, na otimiza��o 
+
+Definição na linha 33 do arquivo Opt\+Vol\+Dep\+Release\+Rule.\+h.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!opt\+Release2@{opt\+Release2}}
+\index{opt\+Release2@{opt\+Release2}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{opt\+Release2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix}$\ast$ Opt\+Vol\+Dep\+Release\+Rule\+::opt\+Release2}\label{class_opt_vol_dep_release_rule_a6104ebeb357ba97412a1b8a85acf373d}
+dependendo de 2 reservat�rios, na otimiza��o 
+
+Definição na linha 43 do arquivo Opt\+Vol\+Dep\+Release\+Rule.\+h.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!opt\+Zones1@{opt\+Zones1}}
+\index{opt\+Zones1@{opt\+Zones1}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{opt\+Zones1}]{\setlength{\rightskip}{0pt plus 5cm}bool Opt\+Vol\+Dep\+Release\+Rule\+::opt\+Zones1}\label{class_opt_vol_dep_release_rule_a6b2ceea56f5aa36c5a902257a5bbd314}
+
+
+Definição na linha 56 do arquivo Opt\+Vol\+Dep\+Release\+Rule.\+h.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!opt\+Zones21@{opt\+Zones21}}
+\index{opt\+Zones21@{opt\+Zones21}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{opt\+Zones21}]{\setlength{\rightskip}{0pt plus 5cm}bool Opt\+Vol\+Dep\+Release\+Rule\+::opt\+Zones21}\label{class_opt_vol_dep_release_rule_a5eef93b012f1807f842ceb6f1bb99075}
+
+
+Definição na linha 60 do arquivo Opt\+Vol\+Dep\+Release\+Rule.\+h.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!opt\+Zones22@{opt\+Zones22}}
+\index{opt\+Zones22@{opt\+Zones22}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{opt\+Zones22}]{\setlength{\rightskip}{0pt plus 5cm}bool Opt\+Vol\+Dep\+Release\+Rule\+::opt\+Zones22}\label{class_opt_vol_dep_release_rule_a87fde49368b6b4ef774dfb94a0e4cd8a}
+
+
+Definição na linha 64 do arquivo Opt\+Vol\+Dep\+Release\+Rule.\+h.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!release2\+Otm@{release2\+Otm}}
+\index{release2\+Otm@{release2\+Otm}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{release2\+Otm}]{\setlength{\rightskip}{0pt plus 5cm}double Opt\+Vol\+Dep\+Release\+Rule\+::release2\+Otm}\label{class_opt_vol_dep_release_rule_aba5a7f9ab1176b3dbf1c31b0b4d8ec29}
+Capacidade de libera��o, intervalo de vari���o das vari�veis de decis�o libera��o 
+
+Definição na linha 53 do arquivo Opt\+Vol\+Dep\+Release\+Rule.\+h.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!to\+Opt@{to\+Opt}}
+\index{to\+Opt@{to\+Opt}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{to\+Opt}]{\setlength{\rightskip}{0pt plus 5cm}bool Opt\+Vol\+Dep\+Release\+Rule\+::to\+Opt}\label{class_opt_vol_dep_release_rule_a29f83456bce5b1c27a2c93226ef1798c}
+Deve ser otimizado 
+
+Definição na linha 28 do arquivo Opt\+Vol\+Dep\+Release\+Rule.\+h.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!zones\+Opt1@{zones\+Opt1}}
+\index{zones\+Opt1@{zones\+Opt1}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{zones\+Opt1}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ Opt\+Vol\+Dep\+Release\+Rule\+::zones\+Opt1}\label{class_opt_vol_dep_release_rule_a176d286634190793470abf5661b1aff9}
+
+
+Definição na linha 55 do arquivo Opt\+Vol\+Dep\+Release\+Rule.\+h.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!zones\+Opt21@{zones\+Opt21}}
+\index{zones\+Opt21@{zones\+Opt21}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{zones\+Opt21}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ Opt\+Vol\+Dep\+Release\+Rule\+::zones\+Opt21}\label{class_opt_vol_dep_release_rule_a92a308c5b2a10fabdf1e7b9a6c0cfa2b}
+
+
+Definição na linha 59 do arquivo Opt\+Vol\+Dep\+Release\+Rule.\+h.
+
+\index{Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}!zones\+Opt22@{zones\+Opt22}}
+\index{zones\+Opt22@{zones\+Opt22}!Opt\+Vol\+Dep\+Release\+Rule@{Opt\+Vol\+Dep\+Release\+Rule}}
+\subsubsection[{zones\+Opt22}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ Opt\+Vol\+Dep\+Release\+Rule\+::zones\+Opt22}\label{class_opt_vol_dep_release_rule_ad08a31cea90b2be829bdfd585c0c8b6a}
+
+
+Definição na linha 63 do arquivo Opt\+Vol\+Dep\+Release\+Rule.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Vol\+Dep\+Release\+Rule.\+h}\end{DoxyCompactItemize}

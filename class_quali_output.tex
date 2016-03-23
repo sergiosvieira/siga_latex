@@ -1,0 +1,185 @@
+\section{ReferÃªncia da Classe Quali\+Output}
+\label{class_quali_output}\index{Quali\+Output@{Quali\+Output}}
+
+
+{\ttfamily \#include $<$Quali\+Output.\+h$>$}
+
+
+
+Herdeiro de {\bf Output}.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Quali\+Output} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast$parent\+Win, {\bf Out\+Main} $\ast${\bf parent}, wx\+String section\+Type)
+\item 
+virtual {\bf $\sim$\+Quali\+Output} ()
+\item 
+virtual void {\bf on\+Selected\+Element} ()
+\item 
+virtual void {\bf selected\+Nodes} ()
+\item 
+virtual void {\bf on\+Selected\+Links} ()
+\item 
+virtual bool {\bf check\+Results} ()
+\item 
+virtual int {\bf get\+Section\+Id} (wx\+String {\bf name})
+\item 
+virtual wx\+String {\bf get\+Chain} ()
+\item 
+virtual void {\bf on\+Changing\+Time\+Interval} ({\bf Date\+::\+Time\+Interval})
+\item 
+void {\bf on\+Changing\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ element\+Ids)
+\item 
+void {\bf on\+Changed\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ elemet\+Ids)
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 28 do arquivo Quali\+Output.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Quali\+Output@{Quali\+Output}!Quali\+Output@{Quali\+Output}}
+\index{Quali\+Output@{Quali\+Output}!Quali\+Output@{Quali\+Output}}
+\subsubsection[{Quali\+Output(wx\+Frame $\ast$frame, wx\+Window $\ast$parent\+Win, Out\+Main $\ast$parent, wx\+String section\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}Quali\+Output\+::\+Quali\+Output (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent\+Win, }
+\item[{{\bf Out\+Main} $\ast$}]{parent, }
+\item[{wx\+String}]{section\+Type}
+\end{DoxyParamCaption}
+)}\label{class_quali_output_ade903265db0c9ba348d750b044b0fa33}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em frame} & Janela onde será inserida a interface \\
+\hline
+{\em parent\+Win} & Componente a que pertence a interface \\
+\hline
+{\em parent} & Ponteiro para \doxyref{Out\+Main}{pag.}{class_out_main} \\
+\hline
+{\em section\+Type} & Tipo de seção \\
+\hline
+\end{DoxyParams}
+\index{Quali\+Output@{Quali\+Output}!````~Quali\+Output@{$\sim$\+Quali\+Output}}
+\index{````~Quali\+Output@{$\sim$\+Quali\+Output}!Quali\+Output@{Quali\+Output}}
+\subsubsection[{$\sim$\+Quali\+Output()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Quali\+Output\+::$\sim$\+Quali\+Output (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quali_output_a622eaf4b37d9df3780e9260a1d114a4d}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{Quali\+Output@{Quali\+Output}!check\+Results@{check\+Results}}
+\index{check\+Results@{check\+Results}!Quali\+Output@{Quali\+Output}}
+\subsubsection[{check\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Quali\+Output\+::check\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quali_output_a5bb8f497cddb4b0f1e3d7c30cab75539}
+Verifica se há resultados para abilitar ou desabilitar a interface 
+
+Implementa {\bf Output} \doxyref{}{pag.}{class_output_a0bc41722a48612f3947c85595d08e2cd}.
+
+\index{Quali\+Output@{Quali\+Output}!get\+Chain@{get\+Chain}}
+\index{get\+Chain@{get\+Chain}!Quali\+Output@{Quali\+Output}}
+\subsubsection[{get\+Chain()}]{\setlength{\rightskip}{0pt plus 5cm}virtual wx\+String Quali\+Output\+::get\+Chain (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quali_output_ac24280865b0e979edc217823bd3aaa9e}
+Retorna a estrutura para inserir/remover as series do treectrl 
+
+Implementa {\bf Output} \doxyref{}{pag.}{class_output_ab8eae45c5aa9498e650866f184aaeff7}.
+
+\index{Quali\+Output@{Quali\+Output}!get\+Section\+Id@{get\+Section\+Id}}
+\index{get\+Section\+Id@{get\+Section\+Id}!Quali\+Output@{Quali\+Output}}
+\subsubsection[{get\+Section\+Id(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Quali\+Output\+::get\+Section\+Id (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quali_output_abc34d423e4ffb0ad610309862478c37c}
+Retorna o identificador da seção pelo nome fornecido 
+
+ReimplementaÃ§Ã£o de {\bf Output} \doxyref{}{pag.}{class_output_a36f26c3a0ade3fee90e8776b464af80e}.
+
+\index{Quali\+Output@{Quali\+Output}!on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}}
+\index{on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}!Quali\+Output@{Quali\+Output}}
+\subsubsection[{on\+Changed\+Element\+Type(vector$<$ Element\+I\+D $>$ elemet\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Quali\+Output\+::on\+Changed\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{elemet\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quali_output_a7efc6370ea511f49e15943c2a9ef699f}
+
+
+Implementa {\bf Output} \doxyref{}{pag.}{class_output_ad4d608d78d6d5e2324fa64ba9aa85fb9}.
+
+\index{Quali\+Output@{Quali\+Output}!on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}}
+\index{on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}!Quali\+Output@{Quali\+Output}}
+\subsubsection[{on\+Changing\+Element\+Type(vector$<$ Element\+I\+D $>$ element\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Quali\+Output\+::on\+Changing\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{element\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quali_output_ac335f26c9c824f0f6a9227093351941e}
+Evento de mudança de tipo do elemento 
+
+Implementa {\bf Output} \doxyref{}{pag.}{class_output_addc3b605d368623bed09c322b0f4e7b4}.
+
+\index{Quali\+Output@{Quali\+Output}!on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}}
+\index{on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}!Quali\+Output@{Quali\+Output}}
+\subsubsection[{on\+Changing\+Time\+Interval(\+Date\+::\+Time\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Quali\+Output\+::on\+Changing\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quali_output_a6d567cb6f47aa15c25a53deee3bcb20b}
+Evento chamado quando o sistema muda de intervalo de tempo O modulo adapta os modelos de acordo com o intervalo de tempo definido 
+
+ReimplementaÃ§Ã£o de {\bf Output} \doxyref{}{pag.}{class_output_a3e51174cbed13a4407d4eccee839a4ce}.
+
+\index{Quali\+Output@{Quali\+Output}!on\+Selected\+Element@{on\+Selected\+Element}}
+\index{on\+Selected\+Element@{on\+Selected\+Element}!Quali\+Output@{Quali\+Output}}
+\subsubsection[{on\+Selected\+Element()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Quali\+Output\+::on\+Selected\+Element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quali_output_a2f656b26a85fff0225f80ddb60285fbe}
+Evento de seleção de nó Deve ser re-\/implementado 
+
+Implementa {\bf Output} \doxyref{}{pag.}{class_output_a4b8586aca4bb328726aa7dfab9b39728}.
+
+\index{Quali\+Output@{Quali\+Output}!on\+Selected\+Links@{on\+Selected\+Links}}
+\index{on\+Selected\+Links@{on\+Selected\+Links}!Quali\+Output@{Quali\+Output}}
+\subsubsection[{on\+Selected\+Links()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Quali\+Output\+::on\+Selected\+Links (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_quali_output_afe2434d6fac560975e3c60283e327dcc}
+Evento de seleção de trecho Deve ser re-\/implementado 
+
+ReimplementaÃ§Ã£o de {\bf Output} \doxyref{}{pag.}{class_output_aa89184577eb7477628bea81d9f582c6a}.
+
+
+
+DefiniÃ§Ã£o na linha 54 do arquivo Quali\+Output.\+h.
+
+\index{Quali\+Output@{Quali\+Output}!selected\+Nodes@{selected\+Nodes}}
+\index{selected\+Nodes@{selected\+Nodes}!Quali\+Output@{Quali\+Output}}
+\subsubsection[{selected\+Nodes()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Quali\+Output\+::selected\+Nodes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_quali_output_a5ec69c4995d330897416dd8fe10a2064}
+Evento de seleção de nó Deve ser re-\/implementado 
+
+Implementa {\bf Output} \doxyref{}{pag.}{class_output_aa432f06b5a38b14dac777a11215ab0d7}.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Quali\+Output.\+h}\end{DoxyCompactItemize}

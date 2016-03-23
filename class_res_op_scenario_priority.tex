@@ -1,0 +1,755 @@
+\section{Referência da Classe Res\+Op\+Scenario\+Priority}
+\label{class_res_op_scenario_priority}\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Scenario\+Priority.\+h$>$}
+
+
+
+Herdeiro de wx\+Window.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Scenario\+Priority} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+{\bf $\sim$\+Res\+Op\+Scenario\+Priority} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void {\bf init\+Ui} ()
+\begin{DoxyCompactList}\small\item\em Initializing the application. \end{DoxyCompactList}\item 
+void {\bf get\+Ui\+Components} (wx\+Dialog $\ast$a\+\_\+dialog)
+\begin{DoxyCompactList}\small\item\em Initialize Ui components. \end{DoxyCompactList}\item 
+void {\bf configure\+Components} ()
+\begin{DoxyCompactList}\small\item\em Setting components parameters from Ui. \end{DoxyCompactList}\item 
+int {\bf id\+Selected\+Demand} ()
+\begin{DoxyCompactList}\small\item\em Return the Demand\textquotesingle{}s ID, based on selection of row from grid of elements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Estáticos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+static int {\bf m\+\_\+col\+Clicked}
+\end{DoxyCompactItemize}
+\subsection*{Tipos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bf G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+LL}, 
+{\bf G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+PY}, 
+{\bf G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+P\+A\+S\+TE}
+ \}\begin{DoxyCompactList}\small\item\em Grid popup menu options. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf get\+Binds} ()
+\begin{DoxyCompactList}\small\item\em Create binds for component\textquotesingle{}s events. \end{DoxyCompactList}\item 
+void {\bf get\+Un\+Binds} ()
+\begin{DoxyCompactList}\small\item\em Do unbinds. \end{DoxyCompactList}\item 
+void {\bf configure\+Grid} (bool a\+\_\+opened\+By\+File=false)
+\begin{DoxyCompactList}\small\item\em Set grid of elements parameters. \end{DoxyCompactList}\item 
+void {\bf set\+Formating\+Cell\+Attr} ()
+\begin{DoxyCompactList}\small\item\em Set grid attributes. \end{DoxyCompactList}\item 
+std\+::string {\bf get\+Demand\+Type} (std\+::string \&a\+\_\+element\+Id)
+\begin{DoxyCompactList}\small\item\em Get the information of demand\textquotesingle{}s type. \end{DoxyCompactList}\item 
+void {\bf fill\+Grid} ()
+\begin{DoxyCompactList}\small\item\em Fill grid based on priority model. \end{DoxyCompactList}\item 
+void {\bf fill\+Grid} (std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ a\+\_\+model)
+\begin{DoxyCompactList}\small\item\em Fill grid based on sorted model. \end{DoxyCompactList}\item 
+void {\bf fill\+Grid\+By\+Model\+Data} (std\+::vector$<$ std\+::string $>$ a\+\_\+string\+Model)
+\begin{DoxyCompactList}\small\item\em Fill grid based on file. \end{DoxyCompactList}\item 
+void {\bf fill\+Rules} ()
+\item 
+void {\bf update\+All\+Priority\+Cells} (std\+::string a\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Fill grid with a const priorities values. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ {\bf prepare\+Grid\+Model\+To\+Save} ()
+\begin{DoxyCompactList}\small\item\em Prepare the grid\textquotesingle{}s model to be save on project. \end{DoxyCompactList}\item 
+bool {\bf fix\+Int\+Value} (std\+::string \&a\+\_\+cell\+Value)
+\begin{DoxyCompactList}\small\item\em Modify the cell value to acept only integer values. \end{DoxyCompactList}\item 
+void {\bf Select\+All} ()
+\begin{DoxyCompactList}\small\item\em Select all priority collumn data from grid. \end{DoxyCompactList}\item 
+void {\bf copy} ()
+\begin{DoxyCompactList}\small\item\em Copy the values from select cells in the grid. \end{DoxyCompactList}\item 
+void {\bf paste} ()
+\begin{DoxyCompactList}\small\item\em Paste on the grid the values before copied. \end{DoxyCompactList}\item 
+void {\bf on\+Open} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Clean} (wx\+Command\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Clean all priority data from grid. \end{DoxyCompactList}\item 
+void {\bf on\+File\+Save} (wx\+Command\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Refresh all data, fill grid with same elements of network ignoring all updates before. \end{DoxyCompactList}\item 
+void {\bf on\+Aplly\+Value} (wx\+Command\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Apply the chosen value and all prioritys from all demands on grid. \end{DoxyCompactList}\item 
+void {\bf on\+Edit\+Serie} (wx\+Command\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Allow to make editions on demand\textquotesingle{}s serie. \end{DoxyCompactList}\item 
+void {\bf on\+Help} (wx\+Command\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Show a dialog with documentation from application. \end{DoxyCompactList}\item 
+void {\bf on\+Save} (wx\+Command\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Save the data in the project and on a file chosen by user. \end{DoxyCompactList}\item 
+void {\bf on\+Cell\+Change} (wx\+Grid\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Control the input values and convert it to integer. \end{DoxyCompactList}\item 
+void {\bf on\+Selected\+Row} (wx\+Grid\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Control the selection of a row into grid. \end{DoxyCompactList}\item 
+void {\bf on\+Right\+Click} (wx\+Grid\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Show the menu popup with options\+: Select all, copy and paste. \end{DoxyCompactList}\item 
+void {\bf on\+Popu\+Menu} (wx\+Command\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Events from menu popup. \end{DoxyCompactList}\item 
+void {\bf on\+Key\+Up} (wx\+Key\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Key events to apply Ctrl+c and Ctrl+v on grid. \end{DoxyCompactList}\item 
+void {\bf On\+Grid\+Label\+Left\+Click} (wx\+Grid\+Event \&event)
+\begin{DoxyCompactList}\small\item\em Events from grid label left click. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static bool {\bf grid\+Sorter} (std\+::vector$<$ std\+::string $>$ \&a\+\_\+first, std\+::vector$<$ std\+::string $>$ \&a\+\_\+second)
+\begin{DoxyCompactList}\small\item\em Compare the grid\textquotesingle{}s values to make the new order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ {\bf main\+Dialog} = \char`\"{}Demand\+Priority\char`\"{}
+\begin{DoxyCompactList}\small\item\em Constants from ui Components. \end{DoxyCompactList}\item 
+char $\ast$ {\bf btn\+Open} = \char`\"{}m\+\_\+btn\+Open\char`\"{}
+\item 
+char $\ast$ {\bf btn\+Clear} = \char`\"{}m\+\_\+btn\+Clear\char`\"{}
+\item 
+char $\ast$ {\bf btn\+File\+Save} = \char`\"{}m\+\_\+btn\+File\+Save\char`\"{}
+\item 
+char $\ast$ {\bf btn\+File\+Save\+As} = \char`\"{}m\+\_\+btn\+File\+Save\+As\char`\"{}
+\item 
+char $\ast$ {\bf btn\+Edit\+Series} = \char`\"{}m\+\_\+btn\+Edit\+Series\char`\"{}
+\item 
+char $\ast$ {\bf btn\+Ajuda} = \char`\"{}m\+\_\+btn\+Ajuda\char`\"{}
+\item 
+char $\ast$ {\bf btn\+Aply} = \char`\"{}m\+\_\+btn\+Aply\+All\char`\"{}
+\item 
+char $\ast$ {\bf tree\+Ctrl\+Elements} = \char`\"{}m\+\_\+tree\+Elements\char`\"{}
+\item 
+char $\ast$ {\bf gridelements} = \char`\"{}m\+\_\+grid\+Result\char`\"{}
+\item 
+char $\ast$ {\bf text\+Value} = \char`\"{}m\+\_\+text\+Ctrl\+Const\+Value\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 25 do arquivo Res\+Op\+Scenario\+Priority.\+h.
+
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_aad5db7fe62d0cd04f6988c5cb0f7f4a5}
+
+
+Grid popup menu options. 
+
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+LL@{G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+LL}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+LL@{G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+LL}}\item[{\em 
+G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+LL\label{class_res_op_scenario_priority_aad5db7fe62d0cd04f6988c5cb0f7f4a5a04dd11ae972c7dfd26d0162fdc01e383}
+}]Select all. \index{G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+PY@{G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+PY}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+PY@{G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+PY}}\item[{\em 
+G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+PY\label{class_res_op_scenario_priority_aad5db7fe62d0cd04f6988c5cb0f7f4a5a57bc0fc911035a75b6321dd1bda84489}
+}]Copy. \index{G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+P\+A\+S\+TE@{G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+P\+A\+S\+TE}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+P\+A\+S\+TE@{G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+P\+A\+S\+TE}}\item[{\em 
+G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+P\+A\+S\+TE\label{class_res_op_scenario_priority_aad5db7fe62d0cd04f6988c5cb0f7f4a5aea1795b63aa3529dbc8b6540a6b527e0}
+}]Paste. \end{description}
+\end{Desc}
+
+
+Definição na linha 33 do arquivo Res\+Op\+Scenario\+Priority.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{Res\+Op\+Scenario\+Priority()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Scenario\+Priority\+::\+Res\+Op\+Scenario\+Priority (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_a833dbcab16524d60fe7f722064b67420}
+
+
+Constructor. 
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!````~Res\+Op\+Scenario\+Priority@{$\sim$\+Res\+Op\+Scenario\+Priority}}
+\index{````~Res\+Op\+Scenario\+Priority@{$\sim$\+Res\+Op\+Scenario\+Priority}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{$\sim$\+Res\+Op\+Scenario\+Priority()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Scenario\+Priority\+::$\sim$\+Res\+Op\+Scenario\+Priority (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_ac092ea6f43865dfcf6be19e332457690}
+
+
+Destructor. 
+
+
+
+\subsection{Métodos}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!configure\+Components@{configure\+Components}}
+\index{configure\+Components@{configure\+Components}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{configure\+Components()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::configure\+Components (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_aab6494ce27cea95f7b5a938613f2314b}
+
+
+Setting components parameters from Ui. 
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!configure\+Grid@{configure\+Grid}}
+\index{configure\+Grid@{configure\+Grid}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{configure\+Grid(bool a\+\_\+opened\+By\+File=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::configure\+Grid (
+\begin{DoxyParamCaption}
+\item[{bool}]{a\+\_\+opened\+By\+File = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_abae4aa98fb6be216f223210eba32456d}
+
+
+Set grid of elements parameters. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a} & boolean. Should be a true value when the model data was opened by file \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!copy@{copy}}
+\index{copy@{copy}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{copy()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_ae10ca5188e33ab06c137e81b4202eccd}
+
+
+Copy the values from select cells in the grid. 
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!fill\+Grid@{fill\+Grid}}
+\index{fill\+Grid@{fill\+Grid}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{fill\+Grid()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::fill\+Grid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_aa2d2cc23f0a282068686b4f1dd10f452}
+
+
+Fill grid based on priority model. 
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!fill\+Grid@{fill\+Grid}}
+\index{fill\+Grid@{fill\+Grid}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{fill\+Grid(std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ a\+\_\+model)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::fill\+Grid (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$}]{a\+\_\+model}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_ac69a20a342454cbe41519b986463725f}
+
+
+Fill grid based on sorted model. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+model} & data \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!fill\+Grid\+By\+Model\+Data@{fill\+Grid\+By\+Model\+Data}}
+\index{fill\+Grid\+By\+Model\+Data@{fill\+Grid\+By\+Model\+Data}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{fill\+Grid\+By\+Model\+Data(std\+::vector$<$ std\+::string $>$ a\+\_\+string\+Model)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::fill\+Grid\+By\+Model\+Data (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$}]{a\+\_\+string\+Model}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_aa49e0c9db22d85aa79d28e1d0e7c9e5b}
+
+
+Fill grid based on file. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a} & model data \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!fill\+Rules@{fill\+Rules}}
+\index{fill\+Rules@{fill\+Rules}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{fill\+Rules()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::fill\+Rules (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_ab8cf4ea463abb39c9a65f6515a60053b}
+Fill the grid with const priorities that already existed on project \index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!fix\+Int\+Value@{fix\+Int\+Value}}
+\index{fix\+Int\+Value@{fix\+Int\+Value}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{fix\+Int\+Value(std\+::string \&a\+\_\+cell\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+Priority\+::fix\+Int\+Value (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+cell\+Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a7bba41359a295523689c4d66d90b1be3}
+
+
+Modify the cell value to acept only integer values. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a} & cell value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true if it\textquotesingle{}s all ok 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!get\+Binds@{get\+Binds}}
+\index{get\+Binds@{get\+Binds}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{get\+Binds()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::get\+Binds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a34fb2c55df0b9f04eb8b1181f0b537cf}
+
+
+Create binds for component\textquotesingle{}s events. 
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!get\+Demand\+Type@{get\+Demand\+Type}}
+\index{get\+Demand\+Type@{get\+Demand\+Type}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{get\+Demand\+Type(std\+::string \&a\+\_\+element\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Res\+Op\+Scenario\+Priority\+::get\+Demand\+Type (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+element\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_ae3ee044d03bd7227e35318e5431353e1}
+
+
+Get the information of demand\textquotesingle{}s type. 
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!get\+Ui\+Components@{get\+Ui\+Components}}
+\index{get\+Ui\+Components@{get\+Ui\+Components}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{get\+Ui\+Components(wx\+Dialog $\ast$a\+\_\+dialog)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::get\+Ui\+Components (
+\begin{DoxyParamCaption}
+\item[{wx\+Dialog $\ast$}]{a\+\_\+dialog}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_ab9b8ba55bd4479993302d5fe693a8ef9}
+
+
+Initialize Ui components. 
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!get\+Un\+Binds@{get\+Un\+Binds}}
+\index{get\+Un\+Binds@{get\+Un\+Binds}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{get\+Un\+Binds()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::get\+Un\+Binds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a4700765f51b7556ea935b201ba605185}
+
+
+Do unbinds. 
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!grid\+Sorter@{grid\+Sorter}}
+\index{grid\+Sorter@{grid\+Sorter}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{grid\+Sorter(std\+::vector$<$ std\+::string $>$ \&a\+\_\+first, std\+::vector$<$ std\+::string $>$ \&a\+\_\+second)}]{\setlength{\rightskip}{0pt plus 5cm}static bool Res\+Op\+Scenario\+Priority\+::grid\+Sorter (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$ \&}]{a\+\_\+first, }
+\item[{std\+::vector$<$ std\+::string $>$ \&}]{a\+\_\+second}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\label{class_res_op_scenario_priority_a85410f1aba2d0d98b0a3edddb3b923cb}
+
+
+Compare the grid\textquotesingle{}s values to make the new order. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em vector.\+begin()} & \\
+\hline
+{\em vector.\+end()} & \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!id\+Selected\+Demand@{id\+Selected\+Demand}}
+\index{id\+Selected\+Demand@{id\+Selected\+Demand}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{id\+Selected\+Demand()}]{\setlength{\rightskip}{0pt plus 5cm}int Res\+Op\+Scenario\+Priority\+::id\+Selected\+Demand (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_a54f70b0e1369af5dde48c0355874b5b4}
+
+
+Return the Demand\textquotesingle{}s ID, based on selection of row from grid of elements. 
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!init\+Ui@{init\+Ui}}
+\index{init\+Ui@{init\+Ui}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{init\+Ui()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::init\+Ui (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_priority_a5ba3b1a91db8322335c35e919a6e86f8}
+
+
+Initializing the application. 
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!on\+Aplly\+Value@{on\+Aplly\+Value}}
+\index{on\+Aplly\+Value@{on\+Aplly\+Value}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{on\+Aplly\+Value(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::on\+Aplly\+Value (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_af6d21d492adb335d3e50296bbb4da277}
+
+
+Apply the chosen value and all prioritys from all demands on grid. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em command} & event \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!on\+Cell\+Change@{on\+Cell\+Change}}
+\index{on\+Cell\+Change@{on\+Cell\+Change}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{on\+Cell\+Change(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::on\+Cell\+Change (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a5a96077ea16ea54e7b4f6d833d60de94}
+
+
+Control the input values and convert it to integer. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em command} & event \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!on\+Clean@{on\+Clean}}
+\index{on\+Clean@{on\+Clean}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{on\+Clean(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::on\+Clean (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a87dcbaea5ab7de2eb5bab5fd49529f99}
+
+
+Clean all priority data from grid. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em command} & event \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!on\+Edit\+Serie@{on\+Edit\+Serie}}
+\index{on\+Edit\+Serie@{on\+Edit\+Serie}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{on\+Edit\+Serie(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::on\+Edit\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a910ebfac961f168aeda5e5d658e378f2}
+
+
+Allow to make editions on demand\textquotesingle{}s serie. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em command} & event \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!on\+File\+Save@{on\+File\+Save}}
+\index{on\+File\+Save@{on\+File\+Save}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{on\+File\+Save(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::on\+File\+Save (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a1b8ceed80958ad80b0190532e16ef441}
+
+
+Refresh all data, fill grid with same elements of network ignoring all updates before. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em command} & event \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!On\+Grid\+Label\+Left\+Click@{On\+Grid\+Label\+Left\+Click}}
+\index{On\+Grid\+Label\+Left\+Click@{On\+Grid\+Label\+Left\+Click}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{On\+Grid\+Label\+Left\+Click(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::\+On\+Grid\+Label\+Left\+Click (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a7bb4004cafa4ef9050d76cbf0bb75b76}
+
+
+Events from grid label left click. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em command} & events \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Veja também}
+\doxyref{on\+Right\+Click(wx\+Grid\+Event\& event)}{pag.}{class_res_op_scenario_priority_adf543a763c8c22c0031a7aa92ca6a3c7} 
+\end{DoxySeeAlso}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!on\+Help@{on\+Help}}
+\index{on\+Help@{on\+Help}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{on\+Help(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::on\+Help (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a8b021a347acb6814bde3515bb131cdca}
+
+
+Show a dialog with documentation from application. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em command} & event \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!on\+Key\+Up@{on\+Key\+Up}}
+\index{on\+Key\+Up@{on\+Key\+Up}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{on\+Key\+Up(wx\+Key\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::on\+Key\+Up (
+\begin{DoxyParamCaption}
+\item[{wx\+Key\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a793334ccce0daf822db1d7513e2aac54}
+
+
+Key events to apply Ctrl+c and Ctrl+v on grid. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em key} & event \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!on\+Open@{on\+Open}}
+\index{on\+Open@{on\+Open}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{on\+Open(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::on\+Open (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a1f333f0bc8ab72ebb9609cbb35e16f62}
+Events Show dialog to open a file (.dmp)
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em command} & event \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!on\+Popu\+Menu@{on\+Popu\+Menu}}
+\index{on\+Popu\+Menu@{on\+Popu\+Menu}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{on\+Popu\+Menu(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::on\+Popu\+Menu (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a15b947b8936d4ecfd58847d9bcb456e0}
+
+
+Events from menu popup. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em command} & event \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Veja também}
+\doxyref{on\+Right\+Click(wx\+Grid\+Event\& event)}{pag.}{class_res_op_scenario_priority_adf543a763c8c22c0031a7aa92ca6a3c7} 
+\end{DoxySeeAlso}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!on\+Right\+Click@{on\+Right\+Click}}
+\index{on\+Right\+Click@{on\+Right\+Click}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{on\+Right\+Click(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::on\+Right\+Click (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_adf543a763c8c22c0031a7aa92ca6a3c7}
+
+
+Show the menu popup with options\+: Select all, copy and paste. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em command} & event \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{Veja também}
+\doxyref{Select\+All()}{pag.}{class_res_op_scenario_priority_a8782192f7e21ad9273e5157c53c1e857} 
+
+\doxyref{copy()}{pag.}{class_res_op_scenario_priority_ae10ca5188e33ab06c137e81b4202eccd} 
+
+\doxyref{paste()}{pag.}{class_res_op_scenario_priority_a5f2099cef71464ec77b0598be5a165d8} 
+\end{DoxySeeAlso}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!on\+Save@{on\+Save}}
+\index{on\+Save@{on\+Save}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{on\+Save(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::on\+Save (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a12592122acd3b4088107a1060ca9d8f0}
+
+
+Save the data in the project and on a file chosen by user. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em command} & event \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!on\+Selected\+Row@{on\+Selected\+Row}}
+\index{on\+Selected\+Row@{on\+Selected\+Row}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{on\+Selected\+Row(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::on\+Selected\+Row (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a1fbcc20402d2658786accb4d0283b543}
+
+
+Control the selection of a row into grid. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em command} & event \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!paste@{paste}}
+\index{paste@{paste}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{paste()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::paste (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a5f2099cef71464ec77b0598be5a165d8}
+
+
+Paste on the grid the values before copied. 
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!prepare\+Grid\+Model\+To\+Save@{prepare\+Grid\+Model\+To\+Save}}
+\index{prepare\+Grid\+Model\+To\+Save@{prepare\+Grid\+Model\+To\+Save}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{prepare\+Grid\+Model\+To\+Save()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ Res\+Op\+Scenario\+Priority\+::prepare\+Grid\+Model\+To\+Save (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a9cdf8715d2a7e330d9bf7e6c65927851}
+
+
+Prepare the grid\textquotesingle{}s model to be save on project. 
+
+\begin{DoxyReturn}{Retorna}
+the prepared model 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!Select\+All@{Select\+All}}
+\index{Select\+All@{Select\+All}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{Select\+All()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::\+Select\+All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a8782192f7e21ad9273e5157c53c1e857}
+
+
+Select all priority collumn data from grid. 
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!set\+Formating\+Cell\+Attr@{set\+Formating\+Cell\+Attr}}
+\index{set\+Formating\+Cell\+Attr@{set\+Formating\+Cell\+Attr}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{set\+Formating\+Cell\+Attr()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::set\+Formating\+Cell\+Attr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_aa2ce292a1cbbc7189312540f3569d883}
+
+
+Set grid attributes. 
+
+Set the cell color if cell will can be edited or not \index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!update\+All\+Priority\+Cells@{update\+All\+Priority\+Cells}}
+\index{update\+All\+Priority\+Cells@{update\+All\+Priority\+Cells}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{update\+All\+Priority\+Cells(std\+::string a\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Priority\+::update\+All\+Priority\+Cells (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{a\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a80bdbf4c7835bd74f33b7289c7cd73be}
+
+
+Fill grid with a const priorities values. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em priority} & value \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!btn\+Ajuda@{btn\+Ajuda}}
+\index{btn\+Ajuda@{btn\+Ajuda}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{btn\+Ajuda}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Res\+Op\+Scenario\+Priority\+::btn\+Ajuda = \char`\"{}m\+\_\+btn\+Ajuda\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a265d98c5e27eea66ad5c77c6386b9ad5}
+
+
+Definição na linha 47 do arquivo Res\+Op\+Scenario\+Priority.\+h.
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!btn\+Aply@{btn\+Aply}}
+\index{btn\+Aply@{btn\+Aply}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{btn\+Aply}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Res\+Op\+Scenario\+Priority\+::btn\+Aply = \char`\"{}m\+\_\+btn\+Aply\+All\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_aa72bb501ae95a6f48e4e64c9e418a559}
+
+
+Definição na linha 48 do arquivo Res\+Op\+Scenario\+Priority.\+h.
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!btn\+Clear@{btn\+Clear}}
+\index{btn\+Clear@{btn\+Clear}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{btn\+Clear}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Res\+Op\+Scenario\+Priority\+::btn\+Clear = \char`\"{}m\+\_\+btn\+Clear\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_abf31eb51b930f59a649f44e20bf001cd}
+
+
+Definição na linha 43 do arquivo Res\+Op\+Scenario\+Priority.\+h.
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!btn\+Edit\+Series@{btn\+Edit\+Series}}
+\index{btn\+Edit\+Series@{btn\+Edit\+Series}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{btn\+Edit\+Series}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Res\+Op\+Scenario\+Priority\+::btn\+Edit\+Series = \char`\"{}m\+\_\+btn\+Edit\+Series\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a53809b1c00d952d6c18f367c9f847eb3}
+
+
+Definição na linha 46 do arquivo Res\+Op\+Scenario\+Priority.\+h.
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!btn\+File\+Save@{btn\+File\+Save}}
+\index{btn\+File\+Save@{btn\+File\+Save}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{btn\+File\+Save}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Res\+Op\+Scenario\+Priority\+::btn\+File\+Save = \char`\"{}m\+\_\+btn\+File\+Save\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a059651d1d57fa2a60aff07bacb2228ce}
+
+
+Definição na linha 44 do arquivo Res\+Op\+Scenario\+Priority.\+h.
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!btn\+File\+Save\+As@{btn\+File\+Save\+As}}
+\index{btn\+File\+Save\+As@{btn\+File\+Save\+As}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{btn\+File\+Save\+As}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Res\+Op\+Scenario\+Priority\+::btn\+File\+Save\+As = \char`\"{}m\+\_\+btn\+File\+Save\+As\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a6d470cdfec737e85b8862d68e58a09a4}
+
+
+Definição na linha 45 do arquivo Res\+Op\+Scenario\+Priority.\+h.
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!btn\+Open@{btn\+Open}}
+\index{btn\+Open@{btn\+Open}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{btn\+Open}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Res\+Op\+Scenario\+Priority\+::btn\+Open = \char`\"{}m\+\_\+btn\+Open\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_aee36276f7df5f6f278447df94417d9dd}
+
+
+Definição na linha 42 do arquivo Res\+Op\+Scenario\+Priority.\+h.
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!gridelements@{gridelements}}
+\index{gridelements@{gridelements}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{gridelements}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Res\+Op\+Scenario\+Priority\+::gridelements = \char`\"{}m\+\_\+grid\+Result\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a44f6770578244576d49e7802148deb7b}
+
+
+Definição na linha 50 do arquivo Res\+Op\+Scenario\+Priority.\+h.
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!m\+\_\+col\+Clicked@{m\+\_\+col\+Clicked}}
+\index{m\+\_\+col\+Clicked@{m\+\_\+col\+Clicked}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{m\+\_\+col\+Clicked}]{\setlength{\rightskip}{0pt plus 5cm}int Res\+Op\+Scenario\+Priority\+::m\+\_\+col\+Clicked\hspace{0.3cm}{\ttfamily [static]}}\label{class_res_op_scenario_priority_a1a3f24c829c4a7a3f3ccb2c7b552fc81}
+
+
+Definição na linha 29 do arquivo Res\+Op\+Scenario\+Priority.\+h.
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!main\+Dialog@{main\+Dialog}}
+\index{main\+Dialog@{main\+Dialog}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{main\+Dialog}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Res\+Op\+Scenario\+Priority\+::main\+Dialog = \char`\"{}Demand\+Priority\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a11c09eb2f583fd4ee9b06efdb56181f3}
+
+
+Constants from ui Components. 
+
+
+
+Definição na linha 41 do arquivo Res\+Op\+Scenario\+Priority.\+h.
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!text\+Value@{text\+Value}}
+\index{text\+Value@{text\+Value}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{text\+Value}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Res\+Op\+Scenario\+Priority\+::text\+Value = \char`\"{}m\+\_\+text\+Ctrl\+Const\+Value\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a8467ea080d314671ba0af1084edeb777}
+
+
+Definição na linha 51 do arquivo Res\+Op\+Scenario\+Priority.\+h.
+
+\index{Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}!tree\+Ctrl\+Elements@{tree\+Ctrl\+Elements}}
+\index{tree\+Ctrl\+Elements@{tree\+Ctrl\+Elements}!Res\+Op\+Scenario\+Priority@{Res\+Op\+Scenario\+Priority}}
+\subsubsection[{tree\+Ctrl\+Elements}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Res\+Op\+Scenario\+Priority\+::tree\+Ctrl\+Elements = \char`\"{}m\+\_\+tree\+Elements\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_priority_a331888318b02235e3139372abf9e3511}
+
+
+Definição na linha 49 do arquivo Res\+Op\+Scenario\+Priority.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Scenario\+Priority.\+h}\end{DoxyCompactItemize}

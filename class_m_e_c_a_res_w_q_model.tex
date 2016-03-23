@@ -1,0 +1,876 @@
+\section{Referência da Classe M\+E\+C\+A\+Res\+W\+Q\+Model}
+\label{class_m_e_c_a_res_w_q_model}\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+
+
+{\ttfamily \#include $<$M\+E\+C\+A\+Res\+W\+Q\+Model.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+W\+Q\+Model}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf M\+E\+C\+A\+Res\+W\+Q\+Model} ({\bf Node} $\ast${\bf node}, wx\+String {\bf name})
+\item 
+{\bf $\sim$\+M\+E\+C\+A\+Res\+W\+Q\+Model} ()
+\item 
+bool {\bf empty} ()
+\item 
+virtual bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+double {\bf Func\+KG} ({\bf Date} day, {\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$)
+\item 
+double {\bf Func\+RA} ({\bf Date} day)
+\item 
+double {\bf Func\+C\+GH} ({\bf Date} day)
+\item 
+double {\bf Func\+GC} ({\bf Date} day)
+\item 
+double {\bf Func\+RH} ({\bf Date} day)
+\item 
+double {\bf Func\+RC} ({\bf Date} day)
+\item 
+double {\bf Func\+DC} ({\bf Date} day)
+\item 
+double {\bf Func\+KP} ({\bf Date} day)
+\item 
+double {\bf Func\+KH} ({\bf Date} day)
+\item 
+double {\bf Func\+F\+AM} ({\bf Date} day)
+\item 
+double {\bf Func\+KN} ({\bf Date} day)
+\item 
+double {\bf Minor} (double a, double b)
+\item 
+bool {\bf run} ()
+\item 
+vector$<$ double $>$ {\bf Func\+R\+K4} (double xi, vector$<$ double $>$ yi, double dx, {\bf Date} day, vector$<$ double $>$($\ast$dy)(double, vector$<$ double $>$, {\bf Date}))
+\item 
+void {\bf clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ double $>$ {\bf derivatives} (double x, vector$<$ double $>$ y, {\bf Date} day)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Interval} {\bf interval}
+\item 
+{\bf M\+E\+C\+A\+Res\+Algae} $\ast$ {\bf algae}
+\item 
+{\bf M\+E\+C\+A\+Res\+Car\+Par} $\ast$ {\bf car\+Par}
+\item 
+{\bf M\+E\+C\+A\+Res\+Ps} $\ast$ {\bf Ps}
+\item 
+{\bf M\+E\+C\+A\+Res\+Car\+Dis} $\ast$ {\bf car\+Dis}
+\item 
+{\bf M\+E\+C\+A\+Res\+Carni} $\ast$ {\bf carni}
+\item 
+{\bf M\+E\+C\+A\+Res\+Herbi} $\ast$ {\bf herbi}
+\item 
+{\bf M\+E\+C\+A\+Res\+Ni} $\ast$ {\bf ni}
+\item 
+{\bf M\+E\+C\+A\+Res\+Na} $\ast$ {\bf na}
+\item 
+bool {\bf s\+Obs}
+\item 
+double {\bf Eut\+Vol}
+\item 
+double {\bf Eut\+Qin}
+\item 
+double {\bf Eut\+A\+Sup}
+\item 
+double {\bf Eut\+H\+Sup}
+\item 
+double {\bf Eut\+Hinf}
+\item 
+double {\bf Eut\+Insotim}
+\item 
+double {\bf Eut\+Kext}
+\item 
+double {\bf Eut\+K\+G\+Max}
+\item 
+double {\bf Eut\+R\+A\+Max}
+\item 
+double {\bf Eut\+G\+H\+Max}
+\item 
+double {\bf Eut\+R\+H\+Max}
+\item 
+double {\bf Eut\+R\+C\+Max}
+\item 
+double {\bf Eut\+D\+C\+Max}
+\item 
+double {\bf Eut\+K\+P\+Max}
+\item 
+double {\bf Eut\+K\+H\+Max}
+\item 
+double {\bf Eut\+Kn\+Ni}
+\item 
+double {\bf Eut\+G\+C\+Max}
+\item 
+double {\bf Eut\+Efih}
+\item 
+double {\bf Eut\+Efic}
+\item 
+double {\bf Eut\+A\+PA}
+\item 
+double {\bf Eut\+A\+PC}
+\item 
+double {\bf Eut\+A\+CA}
+\item 
+double {\bf Eut\+A\+PO}
+\item 
+double {\bf Eut\+A\+NC}
+\item 
+double {\bf Eut\+A\+NA}
+\item 
+double {\bf C\+GH}
+\item 
+double {\bf GC}
+\item 
+double {\bf KG}
+\item 
+double {\bf RA}
+\item 
+double {\bf RC}
+\item 
+double {\bf RH}
+\item 
+double {\bf DC}
+\item 
+double {\bf KP}
+\item 
+double {\bf KH}
+\item 
+double {\bf F\+AM}
+\item 
+double {\bf KN}
+\item 
+{\bf Serie} $\ast$ {\bf Hinf}
+\item 
+{\bf Serie} $\ast$ {\bf Q\+In}
+\item 
+{\bf Serie} $\ast$ {\bf temper}
+\item 
+{\bf Serie} $\ast$ {\bf Vol}
+\item 
+{\bf Serie} $\ast$ {\bf Asup}
+\item 
+double {\bf Eut\+Temper}
+\item 
+{\bf Serie} $\ast$ {\bf ins\+Time}
+\item 
+double {\bf Eut\+Ins\+Time}
+\item 
+{\bf Serie} $\ast$ {\bf ins\+Total}
+\item 
+double {\bf Eut\+Ins\+Total}
+\item 
+wx\+String {\bf temper\+File\+Name}
+\item 
+wx\+String {\bf q\+In\+File\+Name}
+\item 
+wx\+String {\bf q\+Out\+File\+Name}
+\item 
+wx\+String {\bf ins\+Total\+File\+Name}
+\item 
+wx\+String {\bf ins\+Time\+File\+Name}
+\item 
+wx\+String {\bf vol\+File\+Name}
+\item 
+wx\+String {\bf a\+Sup\+File\+Name}
+\item 
+wx\+String {\bf h\+Inf\+File\+Name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 37 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{M\+E\+C\+A\+Res\+W\+Q\+Model(\+Node $\ast$node, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+M\+E\+C\+A\+Res\+W\+Q\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_m_e_c_a_res_w_q_model_aaf607ddbf5d3e439431913b3a714b63d}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em node} & Nó \\
+\hline
+{\em name} & Nome do modelo \\
+\hline
+\end{DoxyParams}
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!````~M\+E\+C\+A\+Res\+W\+Q\+Model@{$\sim$\+M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\index{````~M\+E\+C\+A\+Res\+W\+Q\+Model@{$\sim$\+M\+E\+C\+A\+Res\+W\+Q\+Model}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{$\sim$\+M\+E\+C\+A\+Res\+W\+Q\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}M\+E\+C\+A\+Res\+W\+Q\+Model\+::$\sim$\+M\+E\+C\+A\+Res\+W\+Q\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_m_e_c_a_res_w_q_model_a3ece1793b9b7d6af172b6c7c4d09011b}
+Destrutor 
+
+\subsection{Métodos}
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool M\+E\+C\+A\+Res\+W\+Q\+Model\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_m_e_c_a_res_w_q_model_aef6bfbdd7998b8a4c51ee307e2ecb4ce}
+Verifica se as informações do módulo estão completas para que ele possa ser executado 
+\begin{DoxyParams}{Parâmetros}
+{\em dialog} & Caixa de dialog que armazena os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf W\+Q\+Model} \doxyref{}{pag.}{class_w_q_model_af34637ca0634f5c5b1a22f5429bd9f74}.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!clear@{clear}}
+\index{clear@{clear}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void M\+E\+C\+A\+Res\+W\+Q\+Model\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_m_e_c_a_res_w_q_model_a4ce55bc2f913f91135d0e681bb03e565}
+Retorna ao estado pós-\/construção 
+
+Implementa {\bf Res\+W\+Q\+Model} \doxyref{}{pag.}{class_res_w_q_model_adbdd8481b25ab3ffb5a3798a1b3a6a6c}.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!derivatives@{derivatives}}
+\index{derivatives@{derivatives}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{derivatives(double x, vector$<$ double $>$ y, Date day)}]{\setlength{\rightskip}{0pt plus 5cm}static vector$<$double$>$ M\+E\+C\+A\+Res\+W\+Q\+Model\+::derivatives (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{vector$<$ double $>$}]{y, }
+\item[{{\bf Date}}]{day}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_m_e_c_a_res_w_q_model_aa127d02f01c7b1f10065c82fcfaee6b4}
+Função a ser inserida. Ela calculará a derivada e retornará um valor para todos os poluentes ao mesmo tempo. 
+\begin{DoxyParams}{Parâmetros}
+{\em x} & Valor de x \\
+\hline
+{\em y} & Vetor com valores para as variaveis a serem calculadas \\
+\hline
+{\em day} & Dia a ser calculado \\
+\hline
+\end{DoxyParams}
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!empty@{empty}}
+\index{empty@{empty}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool M\+E\+C\+A\+Res\+W\+Q\+Model\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_m_e_c_a_res_w_q_model_a619ea337c672df671afe4d88452efca8}
+retorna se existe algum valor no modelo 
+
+Implementa {\bf W\+Q\+Model} \doxyref{}{pag.}{class_w_q_model_a7f948c4b2978edbf83071f13b7e418f0}.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Func\+C\+GH@{Func\+C\+GH}}
+\index{Func\+C\+GH@{Func\+C\+GH}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Func\+C\+G\+H(\+Date day)}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Func\+C\+GH (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{day}
+\end{DoxyParamCaption}
+)}\label{class_m_e_c_a_res_w_q_model_ab9813addddbb4fc669c7481ec78f9968}
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Func\+DC@{Func\+DC}}
+\index{Func\+DC@{Func\+DC}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Func\+D\+C(\+Date day)}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Func\+DC (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{day}
+\end{DoxyParamCaption}
+)}\label{class_m_e_c_a_res_w_q_model_a223188582252b56069f344f4956a286d}
+Definição da função de mortalidade dos Carnívoros, usado em Carnívoros, Fósforo e Nitrogênio. 
+\begin{DoxyParams}{Parâmetros}
+{\em day} & Dia para Simular \\
+\hline
+\end{DoxyParams}
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Func\+F\+AM@{Func\+F\+AM}}
+\index{Func\+F\+AM@{Func\+F\+AM}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Func\+F\+A\+M(\+Date day)}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Func\+F\+AM (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{day}
+\end{DoxyParamCaption}
+)}\label{class_m_e_c_a_res_w_q_model_a4b12cdc1d01064676adeadd7e2ef40ef}
+Definição da função de nitrogênio para amonia, usada em Amonia e Nitrato 
+\begin{DoxyParams}{Parâmetros}
+{\em day} & Dia para Simular \\
+\hline
+\end{DoxyParams}
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Func\+GC@{Func\+GC}}
+\index{Func\+GC@{Func\+GC}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Func\+G\+C(\+Date day)}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Func\+GC (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{day}
+\end{DoxyParamCaption}
+)}\label{class_m_e_c_a_res_w_q_model_aa5a24eedfdf2a2f77d0f1c8bc0157d0c}
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Func\+KG@{Func\+KG}}
+\index{Func\+KG@{Func\+KG}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Func\+K\+G(\+Date day, S\+I\+G\+A\+Errors\+Dialog $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Func\+KG (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{day, }
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_m_e_c_a_res_w_q_model_ae38dcea6a3b834a6602db8a503e2b83a}
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Func\+KH@{Func\+KH}}
+\index{Func\+KH@{Func\+KH}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Func\+K\+H(\+Date day)}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Func\+KH (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{day}
+\end{DoxyParamCaption}
+)}\label{class_m_e_c_a_res_w_q_model_a0e90ebe7abca6bd8861ac63e9fffcafc}
+Definição da função de hidrólise do carbono, usada em Carbono Dissolvido, Fosforo e Nitrogenio. 
+\begin{DoxyParams}{Parâmetros}
+{\em day} & Dia para Simular \\
+\hline
+\end{DoxyParams}
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Func\+KN@{Func\+KN}}
+\index{Func\+KN@{Func\+KN}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Func\+K\+N(\+Date day)}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Func\+KN (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{day}
+\end{DoxyParamCaption}
+)}\label{class_m_e_c_a_res_w_q_model_a0e72a83a786cb69dfce511e087314e21}
+Definição da função de nitrificação 
+\begin{DoxyParams}{Parâmetros}
+{\em day} & Dia para Simular \\
+\hline
+\end{DoxyParams}
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Func\+KP@{Func\+KP}}
+\index{Func\+KP@{Func\+KP}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Func\+K\+P(\+Date day)}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Func\+KP (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{day}
+\end{DoxyParamCaption}
+)}\label{class_m_e_c_a_res_w_q_model_adcd710a7570e934e3e364e71d1b7b20b}
+Definição da função de decomposição do carbono, usada em Carbono Particulado e Dissolvido. 
+\begin{DoxyParams}{Parâmetros}
+{\em day} & Dia para Simular \\
+\hline
+\end{DoxyParams}
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Func\+RA@{Func\+RA}}
+\index{Func\+RA@{Func\+RA}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Func\+R\+A(\+Date day)}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Func\+RA (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{day}
+\end{DoxyParamCaption}
+)}\label{class_m_e_c_a_res_w_q_model_aeff6c1ffd7f11ff840b8e095743745ad}
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Func\+RC@{Func\+RC}}
+\index{Func\+RC@{Func\+RC}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Func\+R\+C(\+Date day)}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Func\+RC (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{day}
+\end{DoxyParamCaption}
+)}\label{class_m_e_c_a_res_w_q_model_af07bafacba262202399355eacd1884a4}
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Func\+RH@{Func\+RH}}
+\index{Func\+RH@{Func\+RH}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Func\+R\+H(\+Date day)}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Func\+RH (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{day}
+\end{DoxyParamCaption}
+)}\label{class_m_e_c_a_res_w_q_model_ac15ebfec43c120b082bace54590eef41}
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Func\+R\+K4@{Func\+R\+K4}}
+\index{Func\+R\+K4@{Func\+R\+K4}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Func\+R\+K4(double xi, vector$<$ double $>$ yi, double dx, Date day, vector$<$ double $>$($\ast$dy)(double, vector$<$ double $>$, Date))}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Func\+R\+K4 (
+\begin{DoxyParamCaption}
+\item[{double}]{xi, }
+\item[{vector$<$ double $>$}]{yi, }
+\item[{double}]{dx, }
+\item[{{\bf Date}}]{day, }
+\item[{vector$<$ double $>$($\ast$)(double, vector$<$ double $>$, {\bf Date})}]{dy}
+\end{DoxyParamCaption}
+)}\label{class_m_e_c_a_res_w_q_model_a138590bdccfe83cd9a4e019c22b24beb}
+Função a ser inserida. Ela calculará a derivada quarta... 
+\begin{DoxyParams}{Parâmetros}
+{\em xi} & Valor inicial de x \\
+\hline
+{\em yi} & Vetor com valores iniciais para as variaveis a serem calculadas \\
+\hline
+{\em dx} & Passo \\
+\hline
+{\em day} & Dia a ser calculado \\
+\hline
+{\em vector$<$double$>$} & ($\ast$dy)(double, vector$<$double$>$, \doxyref{Date}{pag.}{class_date}) Ponteiro para função que efetuará a derivação \\
+\hline
+\end{DoxyParams}
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Minor@{Minor}}
+\index{Minor@{Minor}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Minor(double a, double b)}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Minor (
+\begin{DoxyParamCaption}
+\item[{double}]{a, }
+\item[{double}]{b}
+\end{DoxyParamCaption}
+)}\label{class_m_e_c_a_res_w_q_model_aa2e4af3b6cb3be39b99d56f0c6de91f6}
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!run@{run}}
+\index{run@{run}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}bool M\+E\+C\+A\+Res\+W\+Q\+Model\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_m_e_c_a_res_w_q_model_aa3949692d75f42cc3d93ab70e237c0fc}
+Executa o modelo juntamente com o poluente selecionado no choicebook dos poluentes 
+
+\subsection{Atributos}
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!algae@{algae}}
+\index{algae@{algae}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{algae}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+E\+C\+A\+Res\+Algae}$\ast$ M\+E\+C\+A\+Res\+W\+Q\+Model\+::algae}\label{class_m_e_c_a_res_w_q_model_aec5696eac557acb72bfd2ed3a8578b57}
+
+
+Definição na linha 47 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Asup@{Asup}}
+\index{Asup@{Asup}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Asup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Asup}\label{class_m_e_c_a_res_w_q_model_a67f5ab8657aa6af93a0b6f8759e7f917}
+Area para reservatório 
+
+Definição na linha 217 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!a\+Sup\+File\+Name@{a\+Sup\+File\+Name}}
+\index{a\+Sup\+File\+Name@{a\+Sup\+File\+Name}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{a\+Sup\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String M\+E\+C\+A\+Res\+W\+Q\+Model\+::a\+Sup\+File\+Name}\label{class_m_e_c_a_res_w_q_model_a18c236f48ce9660b0590097f60b4137e}
+
+
+Definição na linha 235 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!car\+Dis@{car\+Dis}}
+\index{car\+Dis@{car\+Dis}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{car\+Dis}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+E\+C\+A\+Res\+Car\+Dis}$\ast$ M\+E\+C\+A\+Res\+W\+Q\+Model\+::car\+Dis}\label{class_m_e_c_a_res_w_q_model_a0ddb664eabe3fa0e850d3694b678c5c5}
+
+
+Definição na linha 59 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!carni@{carni}}
+\index{carni@{carni}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{carni}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+E\+C\+A\+Res\+Carni}$\ast$ M\+E\+C\+A\+Res\+W\+Q\+Model\+::carni}\label{class_m_e_c_a_res_w_q_model_a7fb2b72cb2df7a9ccbeacc83212435fc}
+
+
+Definição na linha 63 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!car\+Par@{car\+Par}}
+\index{car\+Par@{car\+Par}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{car\+Par}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+E\+C\+A\+Res\+Car\+Par}$\ast$ M\+E\+C\+A\+Res\+W\+Q\+Model\+::car\+Par}\label{class_m_e_c_a_res_w_q_model_abfa441ef20d6f61d33a308f9e12edbd4}
+
+
+Definição na linha 51 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!C\+GH@{C\+GH}}
+\index{C\+GH@{C\+GH}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{C\+GH}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+C\+GH}\label{class_m_e_c_a_res_w_q_model_af4685bf7197c01a7636d521f3df82881}
+Variaveis auxiliares 
+
+Definição na linha 185 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!DC@{DC}}
+\index{DC@{DC}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{DC}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+DC}\label{class_m_e_c_a_res_w_q_model_a89a1a524d71cae17130b25ea1cc16d4c}
+
+
+Definição na linha 191 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+A\+CA@{Eut\+A\+CA}}
+\index{Eut\+A\+CA@{Eut\+A\+CA}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+A\+CA}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+A\+CA}\label{class_m_e_c_a_res_w_q_model_a9e7394dba8bb1bdad0565cbe47ce5a5e}
+
+
+Definição na linha 168 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+A\+NA@{Eut\+A\+NA}}
+\index{Eut\+A\+NA@{Eut\+A\+NA}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+A\+NA}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+A\+NA}\label{class_m_e_c_a_res_w_q_model_a62358f1277b0ef1de4dc954eba823d74}
+
+
+Definição na linha 180 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+A\+NC@{Eut\+A\+NC}}
+\index{Eut\+A\+NC@{Eut\+A\+NC}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+A\+NC}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+A\+NC}\label{class_m_e_c_a_res_w_q_model_a991ba4df24179da2ac19770c704690e4}
+
+
+Definição na linha 176 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+A\+PA@{Eut\+A\+PA}}
+\index{Eut\+A\+PA@{Eut\+A\+PA}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+A\+PA}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+A\+PA}\label{class_m_e_c_a_res_w_q_model_a452b467c689d2bfdb9918236d70db315}
+
+
+Definição na linha 160 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+A\+PC@{Eut\+A\+PC}}
+\index{Eut\+A\+PC@{Eut\+A\+PC}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+A\+PC}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+A\+PC}\label{class_m_e_c_a_res_w_q_model_ae099f4cfc891cbd8386e1686e6b0d08c}
+
+
+Definição na linha 164 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+A\+PO@{Eut\+A\+PO}}
+\index{Eut\+A\+PO@{Eut\+A\+PO}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+A\+PO}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+A\+PO}\label{class_m_e_c_a_res_w_q_model_a7d0bd924b50a196a65c22ef8dcfa4e5f}
+
+
+Definição na linha 172 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+A\+Sup@{Eut\+A\+Sup}}
+\index{Eut\+A\+Sup@{Eut\+A\+Sup}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+A\+Sup}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+A\+Sup}\label{class_m_e_c_a_res_w_q_model_a0efd198488754be6f4abb976cd656ab7}
+
+
+Definição na linha 91 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+D\+C\+Max@{Eut\+D\+C\+Max}}
+\index{Eut\+D\+C\+Max@{Eut\+D\+C\+Max}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+D\+C\+Max}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+D\+C\+Max}\label{class_m_e_c_a_res_w_q_model_a1d9c1214c4850be347fdba089a3c8612}
+
+
+Definição na linha 131 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+Efic@{Eut\+Efic}}
+\index{Eut\+Efic@{Eut\+Efic}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+Efic}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+Efic}\label{class_m_e_c_a_res_w_q_model_a8b21085e96038114491f1e7dba8284e9}
+
+
+Definição na linha 156 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+Efih@{Eut\+Efih}}
+\index{Eut\+Efih@{Eut\+Efih}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+Efih}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+Efih}\label{class_m_e_c_a_res_w_q_model_adf5619b4900c4062eba3ec97d6271c6d}
+
+
+Definição na linha 152 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+G\+C\+Max@{Eut\+G\+C\+Max}}
+\index{Eut\+G\+C\+Max@{Eut\+G\+C\+Max}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+G\+C\+Max}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+G\+C\+Max}\label{class_m_e_c_a_res_w_q_model_a9f9c052a241bcef7881d6b3fcb74b7af}
+
+
+Definição na linha 148 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+G\+H\+Max@{Eut\+G\+H\+Max}}
+\index{Eut\+G\+H\+Max@{Eut\+G\+H\+Max}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+G\+H\+Max}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+G\+H\+Max}\label{class_m_e_c_a_res_w_q_model_ad83ec8ec4dead837b22fa26df6f9a561}
+
+
+Definição na linha 119 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+Hinf@{Eut\+Hinf}}
+\index{Eut\+Hinf@{Eut\+Hinf}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+Hinf}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+Hinf}\label{class_m_e_c_a_res_w_q_model_a650b4dc1ff191e6eda00271cb5e6a911}
+
+
+Definição na linha 99 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+H\+Sup@{Eut\+H\+Sup}}
+\index{Eut\+H\+Sup@{Eut\+H\+Sup}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+H\+Sup}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+H\+Sup}\label{class_m_e_c_a_res_w_q_model_aa9b3ea2d80ad263c6d26babbd75a38cb}
+
+
+Definição na linha 95 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+Insotim@{Eut\+Insotim}}
+\index{Eut\+Insotim@{Eut\+Insotim}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+Insotim}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+Insotim}\label{class_m_e_c_a_res_w_q_model_a521ebb2bb549cbefbf0608a384da750b}
+
+
+Definição na linha 103 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+Ins\+Time@{Eut\+Ins\+Time}}
+\index{Eut\+Ins\+Time@{Eut\+Ins\+Time}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+Ins\+Time}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+Ins\+Time}\label{class_m_e_c_a_res_w_q_model_a111f463e129e0aa19f1a6a380bd38feb}
+
+
+Definição na linha 225 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+Ins\+Total@{Eut\+Ins\+Total}}
+\index{Eut\+Ins\+Total@{Eut\+Ins\+Total}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+Ins\+Total}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+Ins\+Total}\label{class_m_e_c_a_res_w_q_model_ac612bd20ed757f1aecc95d050c813941}
+
+
+Definição na linha 231 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+Kext@{Eut\+Kext}}
+\index{Eut\+Kext@{Eut\+Kext}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+Kext}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+Kext}\label{class_m_e_c_a_res_w_q_model_a1ec123bedbe154f51a3bb4b37719186e}
+
+
+Definição na linha 107 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+K\+G\+Max@{Eut\+K\+G\+Max}}
+\index{Eut\+K\+G\+Max@{Eut\+K\+G\+Max}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+K\+G\+Max}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+K\+G\+Max}\label{class_m_e_c_a_res_w_q_model_aa116748382d327ab1a091379c49e611c}
+
+
+Definição na linha 111 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+K\+H\+Max@{Eut\+K\+H\+Max}}
+\index{Eut\+K\+H\+Max@{Eut\+K\+H\+Max}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+K\+H\+Max}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+K\+H\+Max}\label{class_m_e_c_a_res_w_q_model_ad067d79ca339bd7f1204a6d47efe06ff}
+
+
+Definição na linha 139 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+Kn\+Ni@{Eut\+Kn\+Ni}}
+\index{Eut\+Kn\+Ni@{Eut\+Kn\+Ni}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+Kn\+Ni}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+Kn\+Ni}\label{class_m_e_c_a_res_w_q_model_affdc913e1a8ec44674aa5005d4aa4bc9}
+
+
+Definição na linha 144 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+K\+P\+Max@{Eut\+K\+P\+Max}}
+\index{Eut\+K\+P\+Max@{Eut\+K\+P\+Max}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+K\+P\+Max}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+K\+P\+Max}\label{class_m_e_c_a_res_w_q_model_a77e7a61a237dca68d653e5b77f1fceda}
+
+
+Definição na linha 135 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+Qin@{Eut\+Qin}}
+\index{Eut\+Qin@{Eut\+Qin}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+Qin}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+Qin}\label{class_m_e_c_a_res_w_q_model_a5e62a7cdab72a23c220ca278e4f4806f}
+
+
+Definição na linha 87 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+R\+A\+Max@{Eut\+R\+A\+Max}}
+\index{Eut\+R\+A\+Max@{Eut\+R\+A\+Max}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+R\+A\+Max}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+R\+A\+Max}\label{class_m_e_c_a_res_w_q_model_a9a1c9943000bdc4cfa02580eda4c5f93}
+
+
+Definição na linha 115 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+R\+C\+Max@{Eut\+R\+C\+Max}}
+\index{Eut\+R\+C\+Max@{Eut\+R\+C\+Max}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+R\+C\+Max}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+R\+C\+Max}\label{class_m_e_c_a_res_w_q_model_a974134f32265f1ca2bde0d313e65e9e7}
+
+
+Definição na linha 127 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+R\+H\+Max@{Eut\+R\+H\+Max}}
+\index{Eut\+R\+H\+Max@{Eut\+R\+H\+Max}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+R\+H\+Max}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+R\+H\+Max}\label{class_m_e_c_a_res_w_q_model_afbb7209fd93d1216c3575f7db112ea54}
+
+
+Definição na linha 123 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+Temper@{Eut\+Temper}}
+\index{Eut\+Temper@{Eut\+Temper}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+Temper}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+Temper}\label{class_m_e_c_a_res_w_q_model_ae902546de5621d5e61c74137035120e2}
+
+
+Definição na linha 219 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Eut\+Vol@{Eut\+Vol}}
+\index{Eut\+Vol@{Eut\+Vol}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Eut\+Vol}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Eut\+Vol}\label{class_m_e_c_a_res_w_q_model_af9c73c0dca50214db0d21c6feaba5626}
+
+
+Definição na linha 83 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!F\+AM@{F\+AM}}
+\index{F\+AM@{F\+AM}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{F\+AM}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+F\+AM}\label{class_m_e_c_a_res_w_q_model_adf8f5fab4f8078fac840a0114d3aa798}
+
+
+Definição na linha 194 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!GC@{GC}}
+\index{GC@{GC}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{GC}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+GC}\label{class_m_e_c_a_res_w_q_model_a116c834dbb6595370581a6a826b3580d}
+
+
+Definição na linha 186 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!herbi@{herbi}}
+\index{herbi@{herbi}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{herbi}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+E\+C\+A\+Res\+Herbi}$\ast$ M\+E\+C\+A\+Res\+W\+Q\+Model\+::herbi}\label{class_m_e_c_a_res_w_q_model_a76490b17e29ca7f392e255e879f764f7}
+
+
+Definição na linha 67 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Hinf@{Hinf}}
+\index{Hinf@{Hinf}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Hinf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Hinf}\label{class_m_e_c_a_res_w_q_model_a21cfa05c4905b5002da51a4187bafcc4}
+
+
+Definição na linha 201 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!h\+Inf\+File\+Name@{h\+Inf\+File\+Name}}
+\index{h\+Inf\+File\+Name@{h\+Inf\+File\+Name}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{h\+Inf\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String M\+E\+C\+A\+Res\+W\+Q\+Model\+::h\+Inf\+File\+Name}\label{class_m_e_c_a_res_w_q_model_a5071fd6dd436cbdfdfc26d1fdcdc274d}
+
+
+Definição na linha 235 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!ins\+Time@{ins\+Time}}
+\index{ins\+Time@{ins\+Time}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{ins\+Time}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ M\+E\+C\+A\+Res\+W\+Q\+Model\+::ins\+Time}\label{class_m_e_c_a_res_w_q_model_a68c2ff52d9b71bfa9cb62271a335dc49}
+Horeas de Insolação 
+
+Definição na linha 223 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!ins\+Time\+File\+Name@{ins\+Time\+File\+Name}}
+\index{ins\+Time\+File\+Name@{ins\+Time\+File\+Name}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{ins\+Time\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String M\+E\+C\+A\+Res\+W\+Q\+Model\+::ins\+Time\+File\+Name}\label{class_m_e_c_a_res_w_q_model_a2cc7b05b63b8b2f68c8020a0d3f0e4e0}
+
+
+Definição na linha 235 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!ins\+Total@{ins\+Total}}
+\index{ins\+Total@{ins\+Total}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{ins\+Total}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ M\+E\+C\+A\+Res\+W\+Q\+Model\+::ins\+Total}\label{class_m_e_c_a_res_w_q_model_a429a95a59ff3561dae93d2d4a9927861}
+
+
+Definição na linha 229 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!ins\+Total\+File\+Name@{ins\+Total\+File\+Name}}
+\index{ins\+Total\+File\+Name@{ins\+Total\+File\+Name}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{ins\+Total\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String M\+E\+C\+A\+Res\+W\+Q\+Model\+::ins\+Total\+File\+Name}\label{class_m_e_c_a_res_w_q_model_a44570c3f5230080e3977075ffcd978a5}
+
+
+Definição na linha 235 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!interval@{interval}}
+\index{interval@{interval}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} M\+E\+C\+A\+Res\+W\+Q\+Model\+::interval}\label{class_m_e_c_a_res_w_q_model_a329cb96a98ae142a68cd77260c31082a}
+Intervalo de simulação 
+
+Definição na linha 43 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!KG@{KG}}
+\index{KG@{KG}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{KG}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+KG}\label{class_m_e_c_a_res_w_q_model_a00e6d2b7afccd73ccbe3bea361460077}
+
+
+Definição na linha 187 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!KH@{KH}}
+\index{KH@{KH}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{KH}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+KH}\label{class_m_e_c_a_res_w_q_model_a953e0d272dbf2101c232c3a5174deb52}
+
+
+Definição na linha 193 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!KN@{KN}}
+\index{KN@{KN}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{KN}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+KN}\label{class_m_e_c_a_res_w_q_model_aa1b63e4a47a5cd1116f47e4bb56660e2}
+
+
+Definição na linha 195 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!KP@{KP}}
+\index{KP@{KP}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{KP}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+KP}\label{class_m_e_c_a_res_w_q_model_acb29a54c546415d3746b36850553f1ee}
+
+
+Definição na linha 192 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!na@{na}}
+\index{na@{na}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{na}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+E\+C\+A\+Res\+Na}$\ast$ M\+E\+C\+A\+Res\+W\+Q\+Model\+::na}\label{class_m_e_c_a_res_w_q_model_ad936502deaf572f32ad772ee3a7899ce}
+
+
+Definição na linha 75 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!ni@{ni}}
+\index{ni@{ni}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{ni}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+E\+C\+A\+Res\+Ni}$\ast$ M\+E\+C\+A\+Res\+W\+Q\+Model\+::ni}\label{class_m_e_c_a_res_w_q_model_a26d1b378d1a6b1a372a7ba6f1e7fb3d5}
+
+
+Definição na linha 71 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Ps@{Ps}}
+\index{Ps@{Ps}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Ps}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+E\+C\+A\+Res\+Ps}$\ast$ M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Ps}\label{class_m_e_c_a_res_w_q_model_aaf82abc8a2f5bac982562bb3569368fd}
+
+
+Definição na linha 55 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Q\+In@{Q\+In}}
+\index{Q\+In@{Q\+In}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Q\+In}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Q\+In}\label{class_m_e_c_a_res_w_q_model_a97369aa49ceed9d3709ec8ae008bbc32}
+
+
+Definição na linha 205 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!q\+In\+File\+Name@{q\+In\+File\+Name}}
+\index{q\+In\+File\+Name@{q\+In\+File\+Name}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{q\+In\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String M\+E\+C\+A\+Res\+W\+Q\+Model\+::q\+In\+File\+Name}\label{class_m_e_c_a_res_w_q_model_a7159f3200a700f663311b97deb1e344c}
+
+
+Definição na linha 235 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!q\+Out\+File\+Name@{q\+Out\+File\+Name}}
+\index{q\+Out\+File\+Name@{q\+Out\+File\+Name}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{q\+Out\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String M\+E\+C\+A\+Res\+W\+Q\+Model\+::q\+Out\+File\+Name}\label{class_m_e_c_a_res_w_q_model_a44c8dea56f6fe0dc3182471cb8d590c9}
+
+
+Definição na linha 235 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!RA@{RA}}
+\index{RA@{RA}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{RA}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+RA}\label{class_m_e_c_a_res_w_q_model_abdaa9712f9134529e2f5706ed37490ae}
+
+
+Definição na linha 188 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!RC@{RC}}
+\index{RC@{RC}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{RC}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+RC}\label{class_m_e_c_a_res_w_q_model_a9cc6fe7d44ed4db84e7d969420270c18}
+
+
+Definição na linha 189 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!RH@{RH}}
+\index{RH@{RH}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{RH}]{\setlength{\rightskip}{0pt plus 5cm}double M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+RH}\label{class_m_e_c_a_res_w_q_model_a8ed7677e6aeba21d8d840ce8efb6a68a}
+
+
+Definição na linha 190 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!s\+Obs@{s\+Obs}}
+\index{s\+Obs@{s\+Obs}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{s\+Obs}]{\setlength{\rightskip}{0pt plus 5cm}bool M\+E\+C\+A\+Res\+W\+Q\+Model\+::s\+Obs}\label{class_m_e_c_a_res_w_q_model_aec4d25d18dc8cd74d1f77402d097eab0}
+Bolenano para dizer se foi inserida uma serie observada 
+
+Definição na linha 79 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!temper@{temper}}
+\index{temper@{temper}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{temper}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ M\+E\+C\+A\+Res\+W\+Q\+Model\+::temper}\label{class_m_e_c_a_res_w_q_model_a12f3b365f5f665056d7005249259f9be}
+
+
+Definição na linha 209 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!temper\+File\+Name@{temper\+File\+Name}}
+\index{temper\+File\+Name@{temper\+File\+Name}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{temper\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String M\+E\+C\+A\+Res\+W\+Q\+Model\+::temper\+File\+Name}\label{class_m_e_c_a_res_w_q_model_ad9025c77e61e9cf9fc1290f255914342}
+
+
+Definição na linha 235 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!Vol@{Vol}}
+\index{Vol@{Vol}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{Vol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ M\+E\+C\+A\+Res\+W\+Q\+Model\+::\+Vol}\label{class_m_e_c_a_res_w_q_model_a75aa61df37e9a11bbc1428c98962a445}
+Volume para reservatóio 
+
+Definição na linha 213 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+\index{M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}!vol\+File\+Name@{vol\+File\+Name}}
+\index{vol\+File\+Name@{vol\+File\+Name}!M\+E\+C\+A\+Res\+W\+Q\+Model@{M\+E\+C\+A\+Res\+W\+Q\+Model}}
+\subsubsection[{vol\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String M\+E\+C\+A\+Res\+W\+Q\+Model\+::vol\+File\+Name}\label{class_m_e_c_a_res_w_q_model_aa101dd5c6037da318d201dcd6334a1c7}
+
+
+Definição na linha 235 do arquivo M\+E\+C\+A\+Res\+W\+Q\+Model.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf M\+E\+C\+A\+Res\+W\+Q\+Model.\+h}\end{DoxyCompactItemize}

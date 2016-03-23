@@ -1,0 +1,184 @@
+\section{Refer√™ncia da Classe Matrix\+Dialog}
+\label{class_matrix_dialog}\index{Matrix\+Dialog@{Matrix\+Dialog}}
+
+
+{\ttfamily \#include $<$Matrix\+Dialog.\+h$>$}
+
+
+
+Herdeiro de {\bf S\+I\+G\+A\+Dialog}.
+
+
+
+Superclasse de {\bf Thiessen\+Dialog}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix\+Dialog} ({\bf Matrix} $\ast$matrix, wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent}, wx\+Window\+ID id, const wx\+String \&title, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, bool check\+Num\+Col=false, int type=0, int pos\+FixedX=1)
+\item 
+virtual {\bf $\sim$\+Matrix\+Dialog} ()
+\item 
+void {\bf set\+Strings} (wx\+String matrix\+Name, wx\+String matrix\+Ext)
+\item 
+virtual void {\bf on\+Ok} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Clear} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Cancel} (wx\+Command\+Event \&event)
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix\+Dialog} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent}, wx\+Window\+ID id, const wx\+String \&title, const wx\+Point \&pos, const wx\+Size \&size)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix} $\ast$ {\bf original\+Matrix}
+\item 
+{\bf Matrix} $\ast$ {\bf temp\+Matrix}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 12 do arquivo Matrix\+Dialog.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Matrix\+Dialog@{Matrix\+Dialog}!Matrix\+Dialog@{Matrix\+Dialog}}
+\index{Matrix\+Dialog@{Matrix\+Dialog}!Matrix\+Dialog@{Matrix\+Dialog}}
+\subsubsection[{Matrix\+Dialog(wx\+Frame $\ast$frame, wx\+Window $\ast$parent, wx\+Window\+I\+D id, const wx\+String \&title, const wx\+Point \&pos, const wx\+Size \&size)}]{\setlength{\rightskip}{0pt plus 5cm}Matrix\+Dialog\+::\+Matrix\+Dialog (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{wx\+Window\+ID}]{id, }
+\item[{const wx\+String \&}]{title, }
+\item[{const wx\+Point \&}]{pos, }
+\item[{const wx\+Size \&}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_dialog_aeaca0d67282375c27a8ab12b8edc9e5c}
+Construtor protegido, usado para a implementaÁ„o do \doxyref{Thiessen\+Dialog}{pag.}{class_thiessen_dialog}, que sobrescreve o construtor normal do \doxyref{Matrix\+Dialog}{pag.}{class_matrix_dialog} \index{Matrix\+Dialog@{Matrix\+Dialog}!Matrix\+Dialog@{Matrix\+Dialog}}
+\index{Matrix\+Dialog@{Matrix\+Dialog}!Matrix\+Dialog@{Matrix\+Dialog}}
+\subsubsection[{Matrix\+Dialog(\+Matrix $\ast$matrix, wx\+Frame $\ast$frame, wx\+Window $\ast$parent, wx\+Window\+I\+D id, const wx\+String \&title, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, bool check\+Num\+Col=false, int type=0, int pos\+Fixed\+X=1)}]{\setlength{\rightskip}{0pt plus 5cm}Matrix\+Dialog\+::\+Matrix\+Dialog (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} $\ast$}]{matrix, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{wx\+Window\+ID}]{id, }
+\item[{const wx\+String \&}]{title, }
+\item[{const wx\+Point \&}]{pos = {\ttfamily wxDefaultPosition}, }
+\item[{const wx\+Size \&}]{size = {\ttfamily wxDefaultSize}, }
+\item[{bool}]{check\+Num\+Col = {\ttfamily false}, }
+\item[{int}]{type = {\ttfamily 0}, }
+\item[{int}]{pos\+FixedX = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\label{class_matrix_dialog_a8888bc025bfd3310ee112ac3c10cd584}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em matrix} & Matriz original a ser passada \\
+\hline
+{\em frame} & Janela que possui a interface \\
+\hline
+{\em parent} & Pai da janela \\
+\hline
+{\em id} & Identificador da janela \\
+\hline
+{\em title} & TÌtulo da janela \\
+\hline
+{\em pos} & PosiÁ„o da janela \\
+\hline
+{\em size} & Tamanho da janela \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Dialog@{Matrix\+Dialog}!````~Matrix\+Dialog@{$\sim$\+Matrix\+Dialog}}
+\index{````~Matrix\+Dialog@{$\sim$\+Matrix\+Dialog}!Matrix\+Dialog@{Matrix\+Dialog}}
+\subsubsection[{$\sim$\+Matrix\+Dialog()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Matrix\+Dialog\+::$\sim$\+Matrix\+Dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_matrix_dialog_a8e7e90f61dbefdaf5ec69005682ec340}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Matrix\+Dialog@{Matrix\+Dialog}!on\+Cancel@{on\+Cancel}}
+\index{on\+Cancel@{on\+Cancel}!Matrix\+Dialog@{Matrix\+Dialog}}
+\subsubsection[{on\+Cancel(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Dialog\+::on\+Cancel (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_matrix_dialog_a9fe16a3852ca3ec02ecf3a3b3d18a2fc}
+Evento que ocorre ao clicar em Cancelar 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Dialog@{Matrix\+Dialog}!on\+Clear@{on\+Clear}}
+\index{on\+Clear@{on\+Clear}!Matrix\+Dialog@{Matrix\+Dialog}}
+\subsubsection[{on\+Clear(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Dialog\+::on\+Clear (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_matrix_dialog_a3d2a92122af4a048a84eeeaa2b5775a1}
+Evento que ocorre ao clicar em Remover 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Dialog@{Matrix\+Dialog}!on\+Ok@{on\+Ok}}
+\index{on\+Ok@{on\+Ok}!Matrix\+Dialog@{Matrix\+Dialog}}
+\subsubsection[{on\+Ok(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Matrix\+Dialog\+::on\+Ok (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_matrix_dialog_ae644bb8c644617cc42d941bbade427ed}
+Evento que ocorre ao clicar em OK 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado por {\bf Thiessen\+Dialog} \doxyref{}{pag.}{class_thiessen_dialog_a1fc1d0e705a5290c2390b66e89843c10}.
+
+\index{Matrix\+Dialog@{Matrix\+Dialog}!set\+Strings@{set\+Strings}}
+\index{set\+Strings@{set\+Strings}!Matrix\+Dialog@{Matrix\+Dialog}}
+\subsubsection[{set\+Strings(wx\+String matrix\+Name, wx\+String matrix\+Ext)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Dialog\+::set\+Strings (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{matrix\+Name, }
+\item[{wx\+String}]{matrix\+Ext}
+\end{DoxyParamCaption}
+)}\label{class_matrix_dialog_ad0bf83d6d5591b386dd1f063292289dd}
+Alterar o tipo e extenÁ„o dos arquivos de configuraÁ„o 
+\begin{DoxyParams}{Par√¢metros}
+{\em matrix\+Name} & Tipo de matriz a ser salva/aberta \\
+\hline
+{\em matrix\+Ext} & ExtenÁ„o do arquivo \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{Matrix\+Dialog@{Matrix\+Dialog}!original\+Matrix@{original\+Matrix}}
+\index{original\+Matrix@{original\+Matrix}!Matrix\+Dialog@{Matrix\+Dialog}}
+\subsubsection[{original\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix}$\ast$ Matrix\+Dialog\+::original\+Matrix\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_dialog_a2985dcc9c1e7b684c1e22df0b103010d}
+Armazena a matriz original passada no construtor 
+
+Defini√ß√£o na linha 19 do arquivo Matrix\+Dialog.\+h.
+
+\index{Matrix\+Dialog@{Matrix\+Dialog}!temp\+Matrix@{temp\+Matrix}}
+\index{temp\+Matrix@{temp\+Matrix}!Matrix\+Dialog@{Matrix\+Dialog}}
+\subsubsection[{temp\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix}$\ast$ Matrix\+Dialog\+::temp\+Matrix\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_dialog_ac98e8c441a7124b29ea9bc6f339025cc}
+Armazena a matriz tempor·ria usada para criar o Matrix\+Diaog\+Content 
+
+Defini√ß√£o na linha 24 do arquivo Matrix\+Dialog.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix\+Dialog.\+h}\end{DoxyCompactItemize}

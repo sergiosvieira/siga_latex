@@ -1,0 +1,478 @@
+\section{Referência da Classe S\+I\+G\+A\+Grid}
+\label{class_s_i_g_a_grid}\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+
+
+{\ttfamily \#include $<$S\+I\+G\+A\+Grid.\+h$>$}
+
+
+
+Herdeiro de wx\+Grid.
+
+
+
+Superclasse de {\bf Matrix\+Plan\+Grid} e {\bf Serie\+Plan\+Grid}.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bf I\+D\+\_\+\+C\+H\+A\+N\+GE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+G\+A\+Grid} (wx\+Window $\ast$parent, wx\+Window\+ID id, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=0)
+\item 
+virtual {\bf $\sim$\+S\+I\+G\+A\+Grid} ()
+\item 
+void {\bf on\+Change} (wx\+Grid\+Event \&event)
+\item 
+virtual void {\bf Change\+Cel\+Value} (int, int, int current\+Cell\+Size=-\/1)
+\item 
+void {\bf On\+Scroll\+Event} (wx\+Scroll\+Win\+Event \&a\+\_\+event)
+\item 
+void {\bf on\+Key\+Up} (wx\+Key\+Event \&event)
+\item 
+virtual void {\bf on\+Right\+Up} (wx\+Grid\+Event \&event)
+\item 
+virtual void {\bf on\+Popup\+Menu} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Select\+Label} (wx\+Grid\+Event \&event)
+\item 
+void {\bf set\+Draw\+Serie} ({\bf Draw} $\ast$a\+\_\+draw\+Series)
+\item 
+void {\bf copy\+Cell\+Value} ()
+\item 
+void {\bf paste\+Cell\+Value} ()
+\item 
+void {\bf merge\+Cells} (unsigned int row, unsigned int col, unsigned int nrow, unsigned int ncol, bool align=true)
+\item 
+void {\bf remove\+Orig\+Label} ()
+\item 
+void {\bf remove\+Orig\+Row\+Label} ()
+\item 
+void {\bf remove\+Orig\+Col\+Label} ()
+\item 
+void {\bf remove\+All\+Rows} (bool update\+Labels=true)
+\item 
+void {\bf remove\+All\+Cols} (bool update\+Labels=true)
+\item 
+void {\bf set\+New\+Label} (wx\+String l\+Row=\char`\"{}\char`\"{}, wx\+String l\+Row2=\char`\"{}\char`\"{}, wx\+String l\+Col=\char`\"{}\char`\"{}, wx\+String l\+Col2=\char`\"{}\char`\"{})
+\item 
+void {\bf set\+Row\+Background} (unsigned int, wx\+Color)
+\item 
+void {\bf set\+Col\+Background} (unsigned int, wx\+Color)
+\item 
+void {\bf Set\+Row\+Read\+Only} (unsigned int row, bool write=false)
+\item 
+void {\bf Set\+Col\+Read\+Only} (unsigned int col, bool write=false)
+\item 
+void {\bf insert\+New\+Row\+Label\+Value} (unsigned int row, wx\+String label\+String, unsigned int col=0, bool write=false)
+\item 
+void {\bf insert\+New\+Col\+Label\+Value} (unsigned int col, wx\+String label\+String, unsigned int row=0, bool write=false)
+\item 
+void {\bf insert\+New\+Label\+Value} (wx\+String label\+String, unsigned int col, unsigned int row, bool write=false)
+\item 
+void {\bf criou\+Coluna\+Extra} (bool a\+\_\+criou\+Coluna\+Extra)
+\item 
+bool {\bf get\+Criou\+Coluna\+Extra} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Draw} $\ast$ {\bf m\+\_\+draw\+Series}
+\item 
+bool {\bf modified} = true
+\item 
+bool {\bf criou\+Coluna\+Extra\+Na\+Matriz}
+\item 
+vector$<$ pair$<$ int, int $>$ $>$ {\bf m\+\_\+pair\+Modified\+Cells}
+\item 
+wx\+Clipboard $\ast$ {\bf clip}
+\item 
+wx\+Menu $\ast$ {\bf popup\+Grid\+Menu}
+\item 
+int {\bf number\+Of\+Selected\+Rows\+To\+Copy}
+\item 
+bool {\bf can\+Fetch}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 27 do arquivo S\+I\+G\+A\+Grid.\+h.
+
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{class_s_i_g_a_grid_afdc407424d18e15bdd2fd5864745ebe6}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+C\+H\+A\+N\+GE@{I\+D\+\_\+\+C\+H\+A\+N\+GE}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!I\+D\+\_\+\+C\+H\+A\+N\+GE@{I\+D\+\_\+\+C\+H\+A\+N\+GE}}\item[{\em 
+I\+D\+\_\+\+C\+H\+A\+N\+GE\label{class_s_i_g_a_grid_afdc407424d18e15bdd2fd5864745ebe6aaf7df230185983b5694df50c65e7ce13}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 63 do arquivo S\+I\+G\+A\+Grid.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{S\+I\+G\+A\+Grid(wx\+Window $\ast$parent, wx\+Window\+I\+D id, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=0)}]{\setlength{\rightskip}{0pt plus 5cm}S\+I\+G\+A\+Grid\+::\+S\+I\+G\+A\+Grid (
+\begin{DoxyParamCaption}
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{wx\+Window\+ID}]{id, }
+\item[{const wx\+Point \&}]{pos = {\ttfamily wxDefaultPosition}, }
+\item[{const wx\+Size \&}]{size = {\ttfamily wxDefaultSize}, }
+\item[{long}]{style = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_add1c492599bf3ccc0bc5108803d52d4f}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em parent} & Pai da janela \\
+\hline
+{\em id} & Identificador da janela \\
+\hline
+{\em pos} & Posi��o inicial da janela \\
+\hline
+{\em size} & Tamanho inicial da janela \\
+\hline
+{\em style} & Estilo da janela \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!````~S\+I\+G\+A\+Grid@{$\sim$\+S\+I\+G\+A\+Grid}}
+\index{````~S\+I\+G\+A\+Grid@{$\sim$\+S\+I\+G\+A\+Grid}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{$\sim$\+S\+I\+G\+A\+Grid()}]{\setlength{\rightskip}{0pt plus 5cm}virtual S\+I\+G\+A\+Grid\+::$\sim$\+S\+I\+G\+A\+Grid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_i_g_a_grid_a50b4e975aa32b227c78855a68e1232ea}
+Destrutor 
+
+\subsection{Métodos}
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!Change\+Cel\+Value@{Change\+Cel\+Value}}
+\index{Change\+Cel\+Value@{Change\+Cel\+Value}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{Change\+Cel\+Value(int, int, int current\+Cell\+Size=-\/1)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+I\+G\+A\+Grid\+::\+Change\+Cel\+Value (
+\begin{DoxyParamCaption}
+\item[{int}]{, }
+\item[{int}]{, }
+\item[{int}]{current\+Cell\+Size = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_i_g_a_grid_a56cfe84868d6b4eedcec9e5afe35d396}
+
+
+Reimplementado por {\bf Matrix\+Plan\+Grid} \doxyref{}{pag.}{class_matrix_plan_grid_a547602837cb5c2bbcf4f6de72c7cf3d2}.
+
+
+
+Definição na linha 85 do arquivo S\+I\+G\+A\+Grid.\+h.
+
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!copy\+Cell\+Value@{copy\+Cell\+Value}}
+\index{copy\+Cell\+Value@{copy\+Cell\+Value}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{copy\+Cell\+Value()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::copy\+Cell\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_ac2b2b520f5f40ca8a8a782261be30db0}
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!criou\+Coluna\+Extra@{criou\+Coluna\+Extra}}
+\index{criou\+Coluna\+Extra@{criou\+Coluna\+Extra}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{criou\+Coluna\+Extra(bool a\+\_\+criou\+Coluna\+Extra)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::criou\+Coluna\+Extra (
+\begin{DoxyParamCaption}
+\item[{bool}]{a\+\_\+criou\+Coluna\+Extra}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_a55108671983611202bf11c719dc1b95e}
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!get\+Criou\+Coluna\+Extra@{get\+Criou\+Coluna\+Extra}}
+\index{get\+Criou\+Coluna\+Extra@{get\+Criou\+Coluna\+Extra}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{get\+Criou\+Coluna\+Extra()}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Grid\+::get\+Criou\+Coluna\+Extra (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_a307d172ab7371114fd296edbbbbf3621}
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!insert\+New\+Col\+Label\+Value@{insert\+New\+Col\+Label\+Value}}
+\index{insert\+New\+Col\+Label\+Value@{insert\+New\+Col\+Label\+Value}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{insert\+New\+Col\+Label\+Value(unsigned int col, wx\+String label\+String, unsigned int row=0, bool write=false)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::insert\+New\+Col\+Label\+Value (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{col, }
+\item[{wx\+String}]{label\+String, }
+\item[{unsigned int}]{row = {\ttfamily 0}, }
+\item[{bool}]{write = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_a671eb66b7da6bf0f2b9d003e9b52645c}
+Insere um Novo Rotulo para as Colunas \index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!insert\+New\+Label\+Value@{insert\+New\+Label\+Value}}
+\index{insert\+New\+Label\+Value@{insert\+New\+Label\+Value}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{insert\+New\+Label\+Value(wx\+String label\+String, unsigned int col, unsigned int row, bool write=false)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::insert\+New\+Label\+Value (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{label\+String, }
+\item[{unsigned int}]{col, }
+\item[{unsigned int}]{row, }
+\item[{bool}]{write = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_abecbfb81a7f32c824b867fea6a7a9f69}
+
+\begin{DoxyItemize}
+\item Insere um Novo Rotulo para Colunas e Linhas 
+\end{DoxyItemize}\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!insert\+New\+Row\+Label\+Value@{insert\+New\+Row\+Label\+Value}}
+\index{insert\+New\+Row\+Label\+Value@{insert\+New\+Row\+Label\+Value}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{insert\+New\+Row\+Label\+Value(unsigned int row, wx\+String label\+String, unsigned int col=0, bool write=false)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::insert\+New\+Row\+Label\+Value (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{row, }
+\item[{wx\+String}]{label\+String, }
+\item[{unsigned int}]{col = {\ttfamily 0}, }
+\item[{bool}]{write = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_af0354161e80157fbe8400c13cfdc8f93}
+Insere um Novo Rotulo para as Linhas \index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!merge\+Cells@{merge\+Cells}}
+\index{merge\+Cells@{merge\+Cells}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{merge\+Cells(unsigned int row, unsigned int col, unsigned int nrow, unsigned int ncol, bool align=true)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::merge\+Cells (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{row, }
+\item[{unsigned int}]{col, }
+\item[{unsigned int}]{nrow, }
+\item[{unsigned int}]{ncol, }
+\item[{bool}]{align = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_ad2dd8dda22431db5c39138aac5220a63}
+Mesclar celulas 
+\begin{DoxyParams}{Parâmetros}
+{\em row} & Linha Incial \\
+\hline
+{\em col} & Coluna Incial \\
+\hline
+{\em nrow} & Quantidade de Linhas a Mesclar \\
+\hline
+{\em ncol} & Quantidade de Colunas a Mesclar \\
+\hline
+{\em align} & Alinhamento Centralizado caso true \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!on\+Change@{on\+Change}}
+\index{on\+Change@{on\+Change}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{on\+Change(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::on\+Change (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_a99691fd57bdf4ab3785c5d9b0f40cbd4}
+Evento de mudan�a de grid 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!on\+Key\+Up@{on\+Key\+Up}}
+\index{on\+Key\+Up@{on\+Key\+Up}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{on\+Key\+Up(wx\+Key\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::on\+Key\+Up (
+\begin{DoxyParamCaption}
+\item[{wx\+Key\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_a211f5b9055ef6f9599829971caabfe4c}
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!on\+Popup\+Menu@{on\+Popup\+Menu}}
+\index{on\+Popup\+Menu@{on\+Popup\+Menu}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{on\+Popup\+Menu(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+I\+G\+A\+Grid\+::on\+Popup\+Menu (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_i_g_a_grid_a628bc26cc8a7ebf5fd090b56e84f3072}
+
+
+Reimplementado por {\bf Matrix\+Plan\+Grid} \doxyref{}{pag.}{class_matrix_plan_grid_ae7127e96793c676d1f48ec42f7170123}.
+
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!on\+Right\+Up@{on\+Right\+Up}}
+\index{on\+Right\+Up@{on\+Right\+Up}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{on\+Right\+Up(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+I\+G\+A\+Grid\+::on\+Right\+Up (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_i_g_a_grid_af9afdaa66f784f2a9e203cd9f9c0f5a2}
+
+
+Reimplementado por {\bf Matrix\+Plan\+Grid} \doxyref{}{pag.}{class_matrix_plan_grid_a3e632991806d3d088777995a53ccf5db}.
+
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!On\+Scroll\+Event@{On\+Scroll\+Event}}
+\index{On\+Scroll\+Event@{On\+Scroll\+Event}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{On\+Scroll\+Event(wx\+Scroll\+Win\+Event \&a\+\_\+event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::\+On\+Scroll\+Event (
+\begin{DoxyParamCaption}
+\item[{wx\+Scroll\+Win\+Event \&}]{a\+\_\+event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_a891c02dffe2a8b2c27d19ebff89dcd12}
+S\+C\+R\+O\+LL E\+V\+E\+N\+TS \index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!on\+Select\+Label@{on\+Select\+Label}}
+\index{on\+Select\+Label@{on\+Select\+Label}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{on\+Select\+Label(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::on\+Select\+Label (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_ac92b4b90011abb80d44b8353250a119c}
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!paste\+Cell\+Value@{paste\+Cell\+Value}}
+\index{paste\+Cell\+Value@{paste\+Cell\+Value}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{paste\+Cell\+Value()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::paste\+Cell\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_a4d390ef47b80c40014135dfab014b232}
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!remove\+All\+Cols@{remove\+All\+Cols}}
+\index{remove\+All\+Cols@{remove\+All\+Cols}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{remove\+All\+Cols(bool update\+Labels=true)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::remove\+All\+Cols (
+\begin{DoxyParamCaption}
+\item[{bool}]{update\+Labels = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_a7bc3e68acffaee020564e94bfc1da6d9}
+Remove Todas as colunas \index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!remove\+All\+Rows@{remove\+All\+Rows}}
+\index{remove\+All\+Rows@{remove\+All\+Rows}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{remove\+All\+Rows(bool update\+Labels=true)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::remove\+All\+Rows (
+\begin{DoxyParamCaption}
+\item[{bool}]{update\+Labels = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_ad4c5d828cddd3f62e85897714a32d981}
+Remove todas as linhas \index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!remove\+Orig\+Col\+Label@{remove\+Orig\+Col\+Label}}
+\index{remove\+Orig\+Col\+Label@{remove\+Orig\+Col\+Label}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{remove\+Orig\+Col\+Label()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::remove\+Orig\+Col\+Label (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_aee29166b82ffa8ac247f6435ddbffdaa}
+Remove o Rotulo Original das Linhas \index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!remove\+Orig\+Label@{remove\+Orig\+Label}}
+\index{remove\+Orig\+Label@{remove\+Orig\+Label}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{remove\+Orig\+Label()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::remove\+Orig\+Label (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_af05c9c33689616f78a6707a891260393}
+Remove o Rotulo Original \index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!remove\+Orig\+Row\+Label@{remove\+Orig\+Row\+Label}}
+\index{remove\+Orig\+Row\+Label@{remove\+Orig\+Row\+Label}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{remove\+Orig\+Row\+Label()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::remove\+Orig\+Row\+Label (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_a6e18439739a468bc9039814756c340ee}
+Remove o Rotulo Original das Linhas \index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!set\+Col\+Background@{set\+Col\+Background}}
+\index{set\+Col\+Background@{set\+Col\+Background}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{set\+Col\+Background(unsigned int, wx\+Color)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::set\+Col\+Background (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{int, }
+\item[{wx\+Color}]{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_ad57a1ec0373344693120d727c193bdbf}
+Define a Cor de Fundo de uma Coluna \index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!Set\+Col\+Read\+Only@{Set\+Col\+Read\+Only}}
+\index{Set\+Col\+Read\+Only@{Set\+Col\+Read\+Only}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{Set\+Col\+Read\+Only(unsigned int col, bool write=false)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::\+Set\+Col\+Read\+Only (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{col, }
+\item[{bool}]{write = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_a3b4474d8b7897bd32d02f2d886a5d21a}
+Define que uma Coluna N�o Pode ter seus Valores Alterados \index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!set\+Draw\+Serie@{set\+Draw\+Serie}}
+\index{set\+Draw\+Serie@{set\+Draw\+Serie}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{set\+Draw\+Serie(\+Draw $\ast$a\+\_\+draw\+Series)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::set\+Draw\+Serie (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw} $\ast$}]{a\+\_\+draw\+Series}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_a3b3310a3c83975732308ad272a8a8dd4}
+Seta a classe respons�vel pela otimiza��o da Grid \index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!set\+New\+Label@{set\+New\+Label}}
+\index{set\+New\+Label@{set\+New\+Label}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{set\+New\+Label(wx\+String l\+Row="""", wx\+String l\+Row2="""", wx\+String l\+Col="""", wx\+String l\+Col2="""")}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::set\+New\+Label (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{l\+Row = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{wx\+String}]{l\+Row2 = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{wx\+String}]{l\+Col = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{wx\+String}]{l\+Col2 = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_ae9b3c88b1f4e22bf22674938252c7beb}
+Define o Novo Rotulo 
+\begin{DoxyParams}{Parâmetros}
+{\em l\+Row} & Primeiro Rotulo das Linhas \\
+\hline
+{\em l\+Row2} & Segundo Rotulo das Linhas \\
+\hline
+{\em l\+Col} & Primeiro Rotulo das Colunas \\
+\hline
+{\em l\+Col2} & Segundo Rotulo das Colunas \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!set\+Row\+Background@{set\+Row\+Background}}
+\index{set\+Row\+Background@{set\+Row\+Background}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{set\+Row\+Background(unsigned int, wx\+Color)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::set\+Row\+Background (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{int, }
+\item[{wx\+Color}]{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_afd31d014f37d1016494a89e96094cdc9}
+Define a Cor de Fundo de uma Linha \index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!Set\+Row\+Read\+Only@{Set\+Row\+Read\+Only}}
+\index{Set\+Row\+Read\+Only@{Set\+Row\+Read\+Only}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{Set\+Row\+Read\+Only(unsigned int row, bool write=false)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Grid\+::\+Set\+Row\+Read\+Only (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{row, }
+\item[{bool}]{write = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_grid_afb2235706d051d33e3803e1690d3333c}
+Define que uma Linha N�o Pode ter seus Valores Alterados 
+
+\subsection{Atributos}
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!can\+Fetch@{can\+Fetch}}
+\index{can\+Fetch@{can\+Fetch}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{can\+Fetch}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Grid\+::can\+Fetch}\label{class_s_i_g_a_grid_acf3da93837ae9727c655f5bf0a9415dd}
+Allow to load more data to the grid 
+
+Definição na linha 61 do arquivo S\+I\+G\+A\+Grid.\+h.
+
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!clip@{clip}}
+\index{clip@{clip}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{clip}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Clipboard$\ast$ S\+I\+G\+A\+Grid\+::clip}\label{class_s_i_g_a_grid_a67971c4c22180268eb7df46019696841}
+Ponteiro para clipboard Utilizado no evento de copiar as informa��es do grid para area de transferencia 
+
+Definição na linha 46 do arquivo S\+I\+G\+A\+Grid.\+h.
+
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!criou\+Coluna\+Extra\+Na\+Matriz@{criou\+Coluna\+Extra\+Na\+Matriz}}
+\index{criou\+Coluna\+Extra\+Na\+Matriz@{criou\+Coluna\+Extra\+Na\+Matriz}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{criou\+Coluna\+Extra\+Na\+Matriz}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Grid\+::criou\+Coluna\+Extra\+Na\+Matriz}\label{class_s_i_g_a_grid_a810e55a2580ae5426f2824831004a75b}
+
+
+Definição na linha 38 do arquivo S\+I\+G\+A\+Grid.\+h.
+
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!m\+\_\+draw\+Series@{m\+\_\+draw\+Series}}
+\index{m\+\_\+draw\+Series@{m\+\_\+draw\+Series}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{m\+\_\+draw\+Series}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw}$\ast$ S\+I\+G\+A\+Grid\+::m\+\_\+draw\+Series}\label{class_s_i_g_a_grid_a2d1817119a7fa02c80b1a6a070d90d1d}
+
+
+Definição na linha 31 do arquivo S\+I\+G\+A\+Grid.\+h.
+
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!m\+\_\+pair\+Modified\+Cells@{m\+\_\+pair\+Modified\+Cells}}
+\index{m\+\_\+pair\+Modified\+Cells@{m\+\_\+pair\+Modified\+Cells}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{m\+\_\+pair\+Modified\+Cells}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ pair$<$int, int$>$ $>$ S\+I\+G\+A\+Grid\+::m\+\_\+pair\+Modified\+Cells}\label{class_s_i_g_a_grid_af86f81ab8a2993f084dc3d1816b498d5}
+
+
+Definição na linha 40 do arquivo S\+I\+G\+A\+Grid.\+h.
+
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!modified@{modified}}
+\index{modified@{modified}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{modified}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Grid\+::modified = true}\label{class_s_i_g_a_grid_a07b0147757f231b12f92d142b138812a}
+Grid foi modificado 
+
+Definição na linha 36 do arquivo S\+I\+G\+A\+Grid.\+h.
+
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!number\+Of\+Selected\+Rows\+To\+Copy@{number\+Of\+Selected\+Rows\+To\+Copy}}
+\index{number\+Of\+Selected\+Rows\+To\+Copy@{number\+Of\+Selected\+Rows\+To\+Copy}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{number\+Of\+Selected\+Rows\+To\+Copy}]{\setlength{\rightskip}{0pt plus 5cm}int S\+I\+G\+A\+Grid\+::number\+Of\+Selected\+Rows\+To\+Copy}\label{class_s_i_g_a_grid_a9d2617bb392effd025b68f7c25db06ba}
+Identificador 
+\begin{DoxyParams}{Parâmetros}
+{\em I\+D\+\_\+\+C\+H\+A\+N\+GE} & Identificador de mudanda de grid \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 56 do arquivo S\+I\+G\+A\+Grid.\+h.
+
+\index{S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}!popup\+Grid\+Menu@{popup\+Grid\+Menu}}
+\index{popup\+Grid\+Menu@{popup\+Grid\+Menu}!S\+I\+G\+A\+Grid@{S\+I\+G\+A\+Grid}}
+\subsubsection[{popup\+Grid\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Menu$\ast$ S\+I\+G\+A\+Grid\+::popup\+Grid\+Menu}\label{class_s_i_g_a_grid_a51b8228f5c060315de7f061e8a91b38a}
+
+
+Definição na linha 50 do arquivo S\+I\+G\+A\+Grid.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+G\+A\+Grid.\+h}\end{DoxyCompactItemize}

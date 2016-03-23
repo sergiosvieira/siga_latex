@@ -1,0 +1,345 @@
+\section{Referência da Classe C\+Date}
+\label{class_c_date}\index{C\+Date@{C\+Date}}
+
+
+{\ttfamily \#include $<$cdate.\+h$>$}
+
+
+
+Superclasse de {\bf C\+Timestamp}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf C\+Date} (const {\bf C\+Date} \&copy)
+\item 
+{\bf C\+Date} ({\bf Int32} julian\+Day=0)
+\item 
+{\bf C\+Date} ({\bf Int32} year, {\bf Int32} month, {\bf Int32} day)
+\item 
+{\bf C\+Date} ({\bf Int32} year, {\bf Int32} year\+Day)
+\item 
+{\bf C\+Date} (const std\+::string \&a\+\_\+date\+String, const std\+::string \&a\+\_\+date\+Format\+String)
+\item 
+{\bf $\sim$\+C\+Date} ()
+\item 
+{\bf C\+Date} \& {\bf operator=} (const {\bf C\+Date} \&assign)
+\item 
+bool {\bf operator==} (const {\bf C\+Date} \&compare) const 
+\item 
+bool {\bf operator$<$} (const {\bf C\+Date} \&compare) const 
+\item 
+{\bf C\+Date} {\bf operator+} ({\bf Int32} date\+Offset) const 
+\item 
+{\bf C\+Date} {\bf operator-\/} ({\bf Int32} date\+Offset) const 
+\item 
+{\bf Int32} {\bf operator-\/} (const {\bf C\+Date} \&other\+Date) const 
+\item 
+{\bf C\+Date} \& {\bf operator+=} ({\bf Int32} date\+Offset)
+\item 
+{\bf C\+Date} \& {\bf operator-\/=} ({\bf Int32} date\+Offset)
+\item 
+bool {\bf operator!=} (const {\bf C\+Date} \&other\+Date) const 
+\item 
+{\bf Int32} {\bf Get\+Year} () const 
+\item 
+{\bf Int32} {\bf Get\+Quarter} () const 
+\item 
+{\bf Int32} {\bf Get\+Month} () const 
+\item 
+{\bf Int32} {\bf Get\+Day} () const 
+\item 
+{\bf Int32} {\bf Get\+Day\+Of\+Year} () const 
+\item 
+{\bf Int32} {\bf Get\+Week\+Of\+Year} () const 
+\item 
+{\bf Int32} {\bf Get\+Year\+For\+Week\+Of\+Year} () const 
+\item 
+{\bf Int32} {\bf Get\+Day\+Of\+Week} () const 
+\item 
+{\bf Int32} {\bf Get\+Julian\+Day} () const 
+\item 
+std\+::string {\bf To\+String} () const 
+\item 
+std\+::string {\bf To\+String\+With\+Format} (const std\+::string \&a\+\_\+format) const 
+\item 
+bool {\bf From\+String} (const std\+::string \&date\+String)
+\item 
+bool {\bf From\+String\+With\+Format} (const std\+::string \&date\+String, const std\+::string \&date\+Format)
+\item 
+void {\bf Internal\+To\+JD} () const 
+\item 
+void {\bf Internal\+To\+Date} () const 
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf C\+Date} {\bf Get\+System\+Date} ()
+\item 
+static const std\+::string {\bf convert\+Date\+Format} (const std\+::string \&a\+\_\+string\+Date, const std\+::string \&a\+\_\+input\+Format, const std\+::string \&a\+\_\+output\+Format)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 108 do arquivo cdate.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{C\+Date@{C\+Date}!C\+Date@{C\+Date}}
+\index{C\+Date@{C\+Date}!C\+Date@{C\+Date}}
+\subsubsection[{C\+Date(const C\+Date \&copy)}]{\setlength{\rightskip}{0pt plus 5cm}C\+Date\+::\+C\+Date (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Date} \&}]{copy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c_date_ad939718fb30e0b6fdc9507c3ed5de430}
+
+
+Definição na linha 121 do arquivo cdate.\+h.
+
+\index{C\+Date@{C\+Date}!C\+Date@{C\+Date}}
+\index{C\+Date@{C\+Date}!C\+Date@{C\+Date}}
+\subsubsection[{C\+Date(\+Int32 julian\+Day=0)}]{\setlength{\rightskip}{0pt plus 5cm}C\+Date\+::\+C\+Date (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{julian\+Day = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c_date_ae776984901859453869452aa8b6ea03c}
+
+
+Definição na linha 123 do arquivo cdate.\+h.
+
+\index{C\+Date@{C\+Date}!C\+Date@{C\+Date}}
+\index{C\+Date@{C\+Date}!C\+Date@{C\+Date}}
+\subsubsection[{C\+Date(\+Int32 year, Int32 month, Int32 day)}]{\setlength{\rightskip}{0pt plus 5cm}C\+Date\+::\+C\+Date (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{year, }
+\item[{{\bf Int32}}]{month, }
+\item[{{\bf Int32}}]{day}
+\end{DoxyParamCaption}
+)}\label{class_c_date_a121eda5a56f699b4f86cb76991aa9040}
+\index{C\+Date@{C\+Date}!C\+Date@{C\+Date}}
+\index{C\+Date@{C\+Date}!C\+Date@{C\+Date}}
+\subsubsection[{C\+Date(\+Int32 year, Int32 year\+Day)}]{\setlength{\rightskip}{0pt plus 5cm}C\+Date\+::\+C\+Date (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{year, }
+\item[{{\bf Int32}}]{year\+Day}
+\end{DoxyParamCaption}
+)}\label{class_c_date_ac7e29380d66f7023b8588272158e7447}
+\index{C\+Date@{C\+Date}!C\+Date@{C\+Date}}
+\index{C\+Date@{C\+Date}!C\+Date@{C\+Date}}
+\subsubsection[{C\+Date(const std\+::string \&a\+\_\+date\+String, const std\+::string \&a\+\_\+date\+Format\+String)}]{\setlength{\rightskip}{0pt plus 5cm}C\+Date\+::\+C\+Date (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+\_\+date\+String, }
+\item[{const std\+::string \&}]{a\+\_\+date\+Format\+String}
+\end{DoxyParamCaption}
+)}\label{class_c_date_af2b24a36503b3f99400904787d8e5555}
+\index{C\+Date@{C\+Date}!````~C\+Date@{$\sim$\+C\+Date}}
+\index{````~C\+Date@{$\sim$\+C\+Date}!C\+Date@{C\+Date}}
+\subsubsection[{$\sim$\+C\+Date()}]{\setlength{\rightskip}{0pt plus 5cm}C\+Date\+::$\sim$\+C\+Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c_date_a27cb391423bff726cd1a9b1bed10eea9}
+
+
+Definição na linha 132 do arquivo cdate.\+h.
+
+
+
+\subsection{Métodos}
+\index{C\+Date@{C\+Date}!convert\+Date\+Format@{convert\+Date\+Format}}
+\index{convert\+Date\+Format@{convert\+Date\+Format}!C\+Date@{C\+Date}}
+\subsubsection[{convert\+Date\+Format(const std\+::string \&a\+\_\+string\+Date, const std\+::string \&a\+\_\+input\+Format, const std\+::string \&a\+\_\+output\+Format)}]{\setlength{\rightskip}{0pt plus 5cm}static const std\+::string C\+Date\+::convert\+Date\+Format (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+\_\+string\+Date, }
+\item[{const std\+::string \&}]{a\+\_\+input\+Format, }
+\item[{const std\+::string \&}]{a\+\_\+output\+Format}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_c_date_ad73bb6d96e2dcffa39ce1e2cde287835}
+\index{C\+Date@{C\+Date}!From\+String@{From\+String}}
+\index{From\+String@{From\+String}!C\+Date@{C\+Date}}
+\subsubsection[{From\+String(const std\+::string \&date\+String)}]{\setlength{\rightskip}{0pt plus 5cm}bool C\+Date\+::\+From\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{date\+String}
+\end{DoxyParamCaption}
+)}\label{class_c_date_ab91830423326b4398022f3f3380de56b}
+\index{C\+Date@{C\+Date}!From\+String\+With\+Format@{From\+String\+With\+Format}}
+\index{From\+String\+With\+Format@{From\+String\+With\+Format}!C\+Date@{C\+Date}}
+\subsubsection[{From\+String\+With\+Format(const std\+::string \&date\+String, const std\+::string \&date\+Format)}]{\setlength{\rightskip}{0pt plus 5cm}bool C\+Date\+::\+From\+String\+With\+Format (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{date\+String, }
+\item[{const std\+::string \&}]{date\+Format}
+\end{DoxyParamCaption}
+)}\label{class_c_date_a92b40ea9369e00a9a2173670745db688}
+\index{C\+Date@{C\+Date}!Get\+Day@{Get\+Day}}
+\index{Get\+Day@{Get\+Day}!C\+Date@{C\+Date}}
+\subsubsection[{Get\+Day() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int32} C\+Date\+::\+Get\+Day (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_c_date_ad3298c2bd6c51a1a7f5985b655d9319a}
+\index{C\+Date@{C\+Date}!Get\+Day\+Of\+Week@{Get\+Day\+Of\+Week}}
+\index{Get\+Day\+Of\+Week@{Get\+Day\+Of\+Week}!C\+Date@{C\+Date}}
+\subsubsection[{Get\+Day\+Of\+Week() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int32} C\+Date\+::\+Get\+Day\+Of\+Week (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_c_date_aebdb2f10d1eed70d8b501a79c97c8661}
+\index{C\+Date@{C\+Date}!Get\+Day\+Of\+Year@{Get\+Day\+Of\+Year}}
+\index{Get\+Day\+Of\+Year@{Get\+Day\+Of\+Year}!C\+Date@{C\+Date}}
+\subsubsection[{Get\+Day\+Of\+Year() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int32} C\+Date\+::\+Get\+Day\+Of\+Year (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_c_date_ac338419e23ee40f7cda2f02cb11b3e36}
+\index{C\+Date@{C\+Date}!Get\+Julian\+Day@{Get\+Julian\+Day}}
+\index{Get\+Julian\+Day@{Get\+Julian\+Day}!C\+Date@{C\+Date}}
+\subsubsection[{Get\+Julian\+Day() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int32} C\+Date\+::\+Get\+Julian\+Day (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_c_date_ad8664d1c82db8991ebeb63f6315dca45}
+\index{C\+Date@{C\+Date}!Get\+Month@{Get\+Month}}
+\index{Get\+Month@{Get\+Month}!C\+Date@{C\+Date}}
+\subsubsection[{Get\+Month() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int32} C\+Date\+::\+Get\+Month (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_c_date_a68c6caa776f8c104754fba60356792d6}
+\index{C\+Date@{C\+Date}!Get\+Quarter@{Get\+Quarter}}
+\index{Get\+Quarter@{Get\+Quarter}!C\+Date@{C\+Date}}
+\subsubsection[{Get\+Quarter() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int32} C\+Date\+::\+Get\+Quarter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_c_date_a7c6fd1281dd6c775fd149d2c60747519}
+\index{C\+Date@{C\+Date}!Get\+System\+Date@{Get\+System\+Date}}
+\index{Get\+System\+Date@{Get\+System\+Date}!C\+Date@{C\+Date}}
+\subsubsection[{Get\+System\+Date()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf C\+Date} C\+Date\+::\+Get\+System\+Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_c_date_a715f8d12372ce5394f8da78006221303}
+\index{C\+Date@{C\+Date}!Get\+Week\+Of\+Year@{Get\+Week\+Of\+Year}}
+\index{Get\+Week\+Of\+Year@{Get\+Week\+Of\+Year}!C\+Date@{C\+Date}}
+\subsubsection[{Get\+Week\+Of\+Year() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int32} C\+Date\+::\+Get\+Week\+Of\+Year (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_c_date_a4e4a81352dff4ed15cfed5c205f7fb12}
+\index{C\+Date@{C\+Date}!Get\+Year@{Get\+Year}}
+\index{Get\+Year@{Get\+Year}!C\+Date@{C\+Date}}
+\subsubsection[{Get\+Year() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int32} C\+Date\+::\+Get\+Year (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_c_date_a684a05b91ce53e04172629a8a78a7cf9}
+\index{C\+Date@{C\+Date}!Get\+Year\+For\+Week\+Of\+Year@{Get\+Year\+For\+Week\+Of\+Year}}
+\index{Get\+Year\+For\+Week\+Of\+Year@{Get\+Year\+For\+Week\+Of\+Year}!C\+Date@{C\+Date}}
+\subsubsection[{Get\+Year\+For\+Week\+Of\+Year() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int32} C\+Date\+::\+Get\+Year\+For\+Week\+Of\+Year (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_c_date_ad7d74e2f8c533399971a3b7b9cb37e62}
+\index{C\+Date@{C\+Date}!Internal\+To\+Date@{Internal\+To\+Date}}
+\index{Internal\+To\+Date@{Internal\+To\+Date}!C\+Date@{C\+Date}}
+\subsubsection[{Internal\+To\+Date() const }]{\setlength{\rightskip}{0pt plus 5cm}void C\+Date\+::\+Internal\+To\+Date (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_c_date_a2eb2ff76729dfffc13caf67822233554}
+\index{C\+Date@{C\+Date}!Internal\+To\+JD@{Internal\+To\+JD}}
+\index{Internal\+To\+JD@{Internal\+To\+JD}!C\+Date@{C\+Date}}
+\subsubsection[{Internal\+To\+J\+D() const }]{\setlength{\rightskip}{0pt plus 5cm}void C\+Date\+::\+Internal\+To\+JD (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_c_date_afa9c73f35b159c317f071d6a9dc037f9}
+\index{C\+Date@{C\+Date}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!C\+Date@{C\+Date}}
+\subsubsection[{operator"!=(const C\+Date \&other\+Date) const }]{\setlength{\rightskip}{0pt plus 5cm}bool C\+Date\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Date} \&}]{other\+Date}
+\end{DoxyParamCaption}
+) const}\label{class_c_date_a3fb58168cacb121396ba91e2030137be}
+\index{C\+Date@{C\+Date}!operator+@{operator+}}
+\index{operator+@{operator+}!C\+Date@{C\+Date}}
+\subsubsection[{operator+(\+Int32 date\+Offset) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Date} C\+Date\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{date\+Offset}
+\end{DoxyParamCaption}
+) const}\label{class_c_date_aee42b339f549af62211413ad1a6ab2d8}
+\index{C\+Date@{C\+Date}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!C\+Date@{C\+Date}}
+\subsubsection[{operator+=(\+Int32 date\+Offset)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Date}\& C\+Date\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{date\+Offset}
+\end{DoxyParamCaption}
+)}\label{class_c_date_a973145ffd1e971de262bbd4b3bd7245a}
+\index{C\+Date@{C\+Date}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!C\+Date@{C\+Date}}
+\subsubsection[{operator-\/(\+Int32 date\+Offset) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Date} C\+Date\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{date\+Offset}
+\end{DoxyParamCaption}
+) const}\label{class_c_date_a7bd9d66e576c09ca5ddd6ce036fbe46d}
+\index{C\+Date@{C\+Date}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!C\+Date@{C\+Date}}
+\subsubsection[{operator-\/(const C\+Date \&other\+Date) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Int32} C\+Date\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Date} \&}]{other\+Date}
+\end{DoxyParamCaption}
+) const}\label{class_c_date_a4b91b52edc6bef3c2601b703b29e9e5b}
+\index{C\+Date@{C\+Date}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!C\+Date@{C\+Date}}
+\subsubsection[{operator-\/=(\+Int32 date\+Offset)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Date}\& C\+Date\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{date\+Offset}
+\end{DoxyParamCaption}
+)}\label{class_c_date_a6cae8f3ec88a996118cb9481606e22d6}
+\index{C\+Date@{C\+Date}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!C\+Date@{C\+Date}}
+\subsubsection[{operator$<$(const C\+Date \&compare) const }]{\setlength{\rightskip}{0pt plus 5cm}bool C\+Date\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Date} \&}]{compare}
+\end{DoxyParamCaption}
+) const}\label{class_c_date_af6b02178502c7d929ebfbb9de4a648c2}
+\index{C\+Date@{C\+Date}!operator=@{operator=}}
+\index{operator=@{operator=}!C\+Date@{C\+Date}}
+\subsubsection[{operator=(const C\+Date \&assign)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Date}\& C\+Date\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Date} \&}]{assign}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c_date_a3583de76f66fa64639ac2d43a1617089}
+
+
+Definição na linha 137 do arquivo cdate.\+h.
+
+\index{C\+Date@{C\+Date}!operator==@{operator==}}
+\index{operator==@{operator==}!C\+Date@{C\+Date}}
+\subsubsection[{operator==(const C\+Date \&compare) const }]{\setlength{\rightskip}{0pt plus 5cm}bool C\+Date\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Date} \&}]{compare}
+\end{DoxyParamCaption}
+) const}\label{class_c_date_a81ff7fed309055b3c89a6e855bf2fe10}
+\index{C\+Date@{C\+Date}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!C\+Date@{C\+Date}}
+\subsubsection[{To\+String() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::string C\+Date\+::\+To\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_c_date_a97850d276fe05559a45fa952d1daaaab}
+\index{C\+Date@{C\+Date}!To\+String\+With\+Format@{To\+String\+With\+Format}}
+\index{To\+String\+With\+Format@{To\+String\+With\+Format}!C\+Date@{C\+Date}}
+\subsubsection[{To\+String\+With\+Format(const std\+::string \&a\+\_\+format) const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::string C\+Date\+::\+To\+String\+With\+Format (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+\_\+format}
+\end{DoxyParamCaption}
+) const}\label{class_c_date_afa6c38ac9742ca978a2f3208df595c35}
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf cdate.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,270 @@
+\section{ReferÃªncia da Classe Failure\+Number\+Obj\+Function}
+\label{class_failure_number_obj_function}\index{Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}}
+
+
+{\ttfamily \#include $<$Failure\+Number\+Obj\+Function.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Obj\+Function} e {\bf Res\+Op\+Obj\+Function}.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Failure\+Number\+Obj\+Function} ()
+\item 
+{\bf $\sim$\+Failure\+Number\+Obj\+Function} ()
+\item 
+double {\bf run} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+{\bf Failure\+Number\+Obj\+Function} (bool {\bf minimize}=true)
+\item 
+{\bf $\sim$\+Failure\+Number\+Obj\+Function} ()
+\item 
+double {\bf run} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements)
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String section)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String section)
+\end{DoxyCompactItemize}
+\subsection*{Atributos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ unsigned int $>$ {\bf id\+Sel\+Demands}
+\item 
+vector$<$ {\bf Element\+ID} $>$ {\bf id\+Sel\+Demands}
+\end{DoxyCompactItemize}
+\subsection*{MÃ©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Obj\+Function} $\ast$ {\bf do\+Copy} ()
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+Classe para função objetivo Número de Falhas 
+
+DefiniÃ§Ã£o na linha 9 do arquivo Obj\+Function/\+Failure\+Number/\+Failure\+Number\+Obj\+Function.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}!Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}}
+\index{Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}!Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}}
+\subsubsection[{Failure\+Number\+Obj\+Function()}]{\setlength{\rightskip}{0pt plus 5cm}Failure\+Number\+Obj\+Function\+::\+Failure\+Number\+Obj\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_failure_number_obj_function_a060c2637c8aa92228423d4a342575ef8}
+Construtor \index{Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}!````~Failure\+Number\+Obj\+Function@{$\sim$\+Failure\+Number\+Obj\+Function}}
+\index{````~Failure\+Number\+Obj\+Function@{$\sim$\+Failure\+Number\+Obj\+Function}!Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}}
+\subsubsection[{$\sim$\+Failure\+Number\+Obj\+Function()}]{\setlength{\rightskip}{0pt plus 5cm}Failure\+Number\+Obj\+Function\+::$\sim$\+Failure\+Number\+Obj\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_failure_number_obj_function_af2eb57dccb95e8aee5995cffdeecc3dc}
+Destrutor \index{Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}!Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}}
+\index{Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}!Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}}
+\subsubsection[{Failure\+Number\+Obj\+Function(bool minimize=true)}]{\setlength{\rightskip}{0pt plus 5cm}Failure\+Number\+Obj\+Function\+::\+Failure\+Number\+Obj\+Function (
+\begin{DoxyParamCaption}
+\item[{bool}]{minimize = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_failure_number_obj_function_a181ea7927bb0edd9dd6081392c7454a0}
+Construtor \index{Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}!````~Failure\+Number\+Obj\+Function@{$\sim$\+Failure\+Number\+Obj\+Function}}
+\index{````~Failure\+Number\+Obj\+Function@{$\sim$\+Failure\+Number\+Obj\+Function}!Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}}
+\subsubsection[{$\sim$\+Failure\+Number\+Obj\+Function()}]{\setlength{\rightskip}{0pt plus 5cm}Failure\+Number\+Obj\+Function\+::$\sim$\+Failure\+Number\+Obj\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_failure_number_obj_function_af2eb57dccb95e8aee5995cffdeecc3dc}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Failure\+Number\+Obj\+Function\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_failure_number_obj_function_acb3cd6747c399373bb31671040a050df}
+Checa se as informações estão completas 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a10a132bc689a51c9aecaa60de7983331}.
+
+\index{Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Failure\+Number\+Obj\+Function\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_failure_number_obj_function_acb3cd6747c399373bb31671040a050df}
+Checa se as informações estão completas 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a10a132bc689a51c9aecaa60de7983331}.
+
+\index{Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}!clear@{clear}}
+\index{clear@{clear}!Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Failure\+Number\+Obj\+Function\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_failure_number_obj_function_a2c8edf028712054e4a69f8b0c79f8926}
+Limpa Dados 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a0a924a09921115d1aaf93d716eef0f02}.
+
+\index{Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}!clear@{clear}}
+\index{clear@{clear}!Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Failure\+Number\+Obj\+Function\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_failure_number_obj_function_a2c8edf028712054e4a69f8b0c79f8926}
+Limpa Dados 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a0a924a09921115d1aaf93d716eef0f02}.
+
+\index{Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}}
+\subsubsection[{do\+Copy()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Obj\+Function}$\ast$ Failure\+Number\+Obj\+Function\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_failure_number_obj_function_a9e0058677a7229ae92b92c2099492df1}
+Copia a função Objetivo corretamente 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a11780e26a00ee5abf1304dfa872026f6}.
+
+\index{Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Failure\+Number\+Obj\+Function\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_failure_number_obj_function_a38ee679c6603d7ea61df9531cde52207}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_aa5cf9b1f0a157e6571ab2d6a29aa4885}.
+
+\index{Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Failure\+Number\+Obj\+Function\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_failure_number_obj_function_a0f7bc962ed4df67388205adb69ba48ca}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_abf817a6bd51617b6381e627336a8b15d}.
+
+\index{Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Failure\+Number\+Obj\+Function\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_failure_number_obj_function_afe1a22eed02d7481db1840cc5d05c41a}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a0adda529d70cc0557f7f700c944c52b9}.
+
+\index{Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Failure\+Number\+Obj\+Function\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_failure_number_obj_function_a3d8262d7d338301a5e798ab60d663f81}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a98425e92f67bc4f282c62c4b1c38a472}.
+
+\index{Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}!run@{run}}
+\index{run@{run}!Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}double Failure\+Number\+Obj\+Function\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_failure_number_obj_function_a718f56380f0eb1ed46deee68fa191ca0}
+Executa a função objetivo 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a4454977f68f8b6f3565e1f6e1c016f56}.
+
+\index{Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}!run@{run}}
+\index{run@{run}!Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}}
+\subsubsection[{run(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements)}]{\setlength{\rightskip}{0pt plus 5cm}double Failure\+Number\+Obj\+Function\+::run (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_failure_number_obj_function_a914af60bc43b791dfc29dd7bdc0b9fe9}
+Executa a função objetivo 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_ae8e96c0de73af8d11c6095f752de7fd4}.
+
+
+
+\subsection{Atributos}
+\index{Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}!id\+Sel\+Demands@{id\+Sel\+Demands}}
+\index{id\+Sel\+Demands@{id\+Sel\+Demands}!Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}}
+\subsubsection[{id\+Sel\+Demands}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$unsigned int$>$ Failure\+Number\+Obj\+Function\+::id\+Sel\+Demands}\label{class_failure_number_obj_function_a6b4918011bd2f70476cec63ffe1fad5a}
+Demandas do sistema utilizadas para cálculo do número de falhas 
+
+DefiniÃ§Ã£o na linha 16 do arquivo Obj\+Function/\+Failure\+Number/\+Failure\+Number\+Obj\+Function.\+h.
+
+\index{Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}!id\+Sel\+Demands@{id\+Sel\+Demands}}
+\index{id\+Sel\+Demands@{id\+Sel\+Demands}!Failure\+Number\+Obj\+Function@{Failure\+Number\+Obj\+Function}}
+\subsubsection[{id\+Sel\+Demands}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Element\+ID}$>$ Failure\+Number\+Obj\+Function\+::id\+Sel\+Demands}\label{class_failure_number_obj_function_a8f144f6d0d38b7f0a52e2600ffe7cc64}
+Demandas do sistema utilizadas para cálculo do número de falhas 
+
+DefiniÃ§Ã£o na linha 28 do arquivo /\+Obj\+Function/\+Failure\+Number/\+Failure\+Number\+Obj\+Function.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Obj\+Function/\+Failure\+Number/\+Failure\+Number\+Obj\+Function.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,347 @@
+\section{Referência da Classe Vector\+LayerM}
+\label{class_vector_layer_m}\index{Vector\+LayerM@{Vector\+LayerM}}
+
+
+{\ttfamily \#include $<$vectorlayer\+M.\+h$>$}
+
+
+
+Herdeiro de {\bf LayerM}.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Code\+Error} \{ \\*
+{\bf C\+E\+\_\+\+N\+O\+NE}, 
+{\bf C\+E\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}, 
+{\bf C\+E\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}, 
+{\bf C\+E\+\_\+\+G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}, 
+\\*
+{\bf C\+E\+\_\+\+G\+E\+O\+\_\+\+A\+N\+D\+\_\+\+U\+T\+M\+\_\+\+E\+R\+R\+OR}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Vector\+LayerM} ()
+\item 
+{\bf Vector\+LayerM} (const wx\+String \&vector\+File)
+\item 
+{\bf Vector\+LayerM} (O\+G\+R\+Data\+Source $\ast$datasource)
+\item 
+virtual {\bf $\sim$\+Vector\+LayerM} ()
+\item 
+bool {\bf is\+Ok} ()
+\item 
+{\bf Code\+Error} {\bf last\+Error} () const 
+\item 
+{\bf Projection\+Unit} {\bf projection\+Unit} ()
+\item 
+void {\bf set\+Pen} (const wx\+Pen \&layer\+Pen)
+\item 
+wx\+Pen {\bf get\+Pen} ()
+\item 
+void {\bf set\+Brush} (const wx\+Brush \&layer\+Brush)
+\item 
+wx\+Brush {\bf get\+Brush} ()
+\item 
+void {\bf set\+Symbol} (const wx\+Bitmap \&layer\+Symbol)
+\item 
+void {\bf set\+Font} (const wx\+Font \&layer\+Font)
+\item 
+wx\+String $\ast$ {\bf info} (wx\+Point \&dc\+Point)
+\item 
+{\bf O\+G\+R\+Vector} $\ast$ {\bf ogr\+Vector} () const 
+\item 
+O\+G\+R\+Data\+Source $\ast$ {\bf data\+Source} () const 
+\item 
+O\+G\+R\+Spatial\+Reference $\ast$ {\bf spatial\+Reference} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf initialize} ()
+\item 
+void {\bf default\+Symbol} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Code\+Error} {\bf m\+\_\+last\+Error} = {\bf C\+E\+\_\+\+N\+O\+NE}
+\item 
+wx\+Pen {\bf pen}
+\item 
+wx\+Brush {\bf brush}
+\item 
+wx\+Bitmap {\bf symbol}
+\item 
+wx\+Font {\bf font}
+\item 
+bool {\bf checked}
+\item 
+{\bf O\+G\+R\+Vector} $\ast$ {\bf m\+\_\+ogr\+Vector}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 12 do arquivo vectorlayer\+M.\+h.
+
+
+
+\subsection{Enumerações}
+\index{Vector\+LayerM@{Vector\+LayerM}!Code\+Error@{Code\+Error}}
+\index{Code\+Error@{Code\+Error}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{Code\+Error}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Vector\+Layer\+M\+::\+Code\+Error}}\label{class_vector_layer_m_a3eac5d1a67a02e73510f557279ba8aff}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{C\+E\+\_\+\+N\+O\+NE@{C\+E\+\_\+\+N\+O\+NE}!Vector\+LayerM@{Vector\+LayerM}}\index{Vector\+LayerM@{Vector\+LayerM}!C\+E\+\_\+\+N\+O\+NE@{C\+E\+\_\+\+N\+O\+NE}}\item[{\em 
+C\+E\+\_\+\+N\+O\+NE\label{class_vector_layer_m_a3eac5d1a67a02e73510f557279ba8affad862410fbe8ee6e41812571541b97247}
+}]\index{C\+E\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND@{C\+E\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}!Vector\+LayerM@{Vector\+LayerM}}\index{Vector\+LayerM@{Vector\+LayerM}!C\+E\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND@{C\+E\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}}\item[{\em 
+C\+E\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND\label{class_vector_layer_m_a3eac5d1a67a02e73510f557279ba8affac2e5bb15a9d427110ab67c5a6a4071d6}
+}]\index{C\+E\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND@{C\+E\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}!Vector\+LayerM@{Vector\+LayerM}}\index{Vector\+LayerM@{Vector\+LayerM}!C\+E\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND@{C\+E\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}}\item[{\em 
+C\+E\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND\label{class_vector_layer_m_a3eac5d1a67a02e73510f557279ba8affaeac061f9eabc6fceb5e8b5d68429f9f4}
+}]\index{C\+E\+\_\+\+G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND@{C\+E\+\_\+\+G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}!Vector\+LayerM@{Vector\+LayerM}}\index{Vector\+LayerM@{Vector\+LayerM}!C\+E\+\_\+\+G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND@{C\+E\+\_\+\+G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}}\item[{\em 
+C\+E\+\_\+\+G\+E\+O\+M\+E\+T\+R\+Y\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND\label{class_vector_layer_m_a3eac5d1a67a02e73510f557279ba8affa0de633fed86f7336a8879633cd7fa335}
+}]\index{C\+E\+\_\+\+G\+E\+O\+\_\+\+A\+N\+D\+\_\+\+U\+T\+M\+\_\+\+E\+R\+R\+OR@{C\+E\+\_\+\+G\+E\+O\+\_\+\+A\+N\+D\+\_\+\+U\+T\+M\+\_\+\+E\+R\+R\+OR}!Vector\+LayerM@{Vector\+LayerM}}\index{Vector\+LayerM@{Vector\+LayerM}!C\+E\+\_\+\+G\+E\+O\+\_\+\+A\+N\+D\+\_\+\+U\+T\+M\+\_\+\+E\+R\+R\+OR@{C\+E\+\_\+\+G\+E\+O\+\_\+\+A\+N\+D\+\_\+\+U\+T\+M\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+C\+E\+\_\+\+G\+E\+O\+\_\+\+A\+N\+D\+\_\+\+U\+T\+M\+\_\+\+E\+R\+R\+OR\label{class_vector_layer_m_a3eac5d1a67a02e73510f557279ba8affa022a9daba2d2c56a956998e135be10f0}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 15 do arquivo vectorlayer\+M.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Vector\+LayerM@{Vector\+LayerM}!Vector\+LayerM@{Vector\+LayerM}}
+\index{Vector\+LayerM@{Vector\+LayerM}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{Vector\+Layer\+M()}]{\setlength{\rightskip}{0pt plus 5cm}Vector\+Layer\+M\+::\+Vector\+LayerM (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vector_layer_m_ad2157b9a8722202a8ccaf6c2befab8fc}
+\index{Vector\+LayerM@{Vector\+LayerM}!Vector\+LayerM@{Vector\+LayerM}}
+\index{Vector\+LayerM@{Vector\+LayerM}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{Vector\+Layer\+M(const wx\+String \&vector\+File)}]{\setlength{\rightskip}{0pt plus 5cm}Vector\+Layer\+M\+::\+Vector\+LayerM (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{vector\+File}
+\end{DoxyParamCaption}
+)}\label{class_vector_layer_m_adb1554bae5e06c62114569914da73c20}
+\index{Vector\+LayerM@{Vector\+LayerM}!Vector\+LayerM@{Vector\+LayerM}}
+\index{Vector\+LayerM@{Vector\+LayerM}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{Vector\+Layer\+M(\+O\+G\+R\+Data\+Source $\ast$datasource)}]{\setlength{\rightskip}{0pt plus 5cm}Vector\+Layer\+M\+::\+Vector\+LayerM (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Data\+Source $\ast$}]{datasource}
+\end{DoxyParamCaption}
+)}\label{class_vector_layer_m_ad0884021023e83b1805b5a9cdbeb47f1}
+\index{Vector\+LayerM@{Vector\+LayerM}!````~Vector\+LayerM@{$\sim$\+Vector\+LayerM}}
+\index{````~Vector\+LayerM@{$\sim$\+Vector\+LayerM}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{$\sim$\+Vector\+Layer\+M()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Vector\+Layer\+M\+::$\sim$\+Vector\+LayerM (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_vector_layer_m_a6e83d629ab2bd1da4cb70cfd676ff017}
+
+
+\subsection{Métodos}
+\index{Vector\+LayerM@{Vector\+LayerM}!data\+Source@{data\+Source}}
+\index{data\+Source@{data\+Source}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{data\+Source() const }]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Data\+Source$\ast$ Vector\+Layer\+M\+::data\+Source (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_vector_layer_m_a114132b100f1f020f29644420839dbb4}
+\index{Vector\+LayerM@{Vector\+LayerM}!default\+Symbol@{default\+Symbol}}
+\index{default\+Symbol@{default\+Symbol}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{default\+Symbol()}]{\setlength{\rightskip}{0pt plus 5cm}void Vector\+Layer\+M\+::default\+Symbol (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_vector_layer_m_a14b668c1aed363b29aee46fca1d9251a}
+\index{Vector\+LayerM@{Vector\+LayerM}!get\+Brush@{get\+Brush}}
+\index{get\+Brush@{get\+Brush}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{get\+Brush()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Brush Vector\+Layer\+M\+::get\+Brush (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vector_layer_m_a8c9054c061cbe245c162e4d3de44db4b}
+
+
+Definição na linha 34 do arquivo vectorlayer\+M.\+h.
+
+\index{Vector\+LayerM@{Vector\+LayerM}!get\+Pen@{get\+Pen}}
+\index{get\+Pen@{get\+Pen}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{get\+Pen()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Pen Vector\+Layer\+M\+::get\+Pen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vector_layer_m_aee3fe329cc2ead701a42e22ec1854667}
+
+
+Definição na linha 31 do arquivo vectorlayer\+M.\+h.
+
+\index{Vector\+LayerM@{Vector\+LayerM}!info@{info}}
+\index{info@{info}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{info(wx\+Point \&dc\+Point)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String$\ast$ Vector\+Layer\+M\+::info (
+\begin{DoxyParamCaption}
+\item[{wx\+Point \&}]{dc\+Point}
+\end{DoxyParamCaption}
+)}\label{class_vector_layer_m_af5f558ea5b8d7cd1a6712d8d1ba0a797}
+\index{Vector\+LayerM@{Vector\+LayerM}!initialize@{initialize}}
+\index{initialize@{initialize}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{initialize()}]{\setlength{\rightskip}{0pt plus 5cm}void Vector\+Layer\+M\+::initialize (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_vector_layer_m_a41033e724ac20aacb3ced1f7d8bb9c20}
+\index{Vector\+LayerM@{Vector\+LayerM}!is\+Ok@{is\+Ok}}
+\index{is\+Ok@{is\+Ok}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{is\+Ok()}]{\setlength{\rightskip}{0pt plus 5cm}bool Vector\+Layer\+M\+::is\+Ok (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_vector_layer_m_a2af3437d86b4bf472939a9ad0a5930ff}
+Verifica se um shape ou raster foi carregado corretamente 
+
+Implementa {\bf LayerM} \doxyref{}{pag.}{class_layer_m_abd6d06ea13da9592fd09c6dd274fc09d}.
+
+\index{Vector\+LayerM@{Vector\+LayerM}!last\+Error@{last\+Error}}
+\index{last\+Error@{last\+Error}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{last\+Error() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Code\+Error} Vector\+Layer\+M\+::last\+Error (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_vector_layer_m_a90864ac7b722cc673618d3486574a674}
+\index{Vector\+LayerM@{Vector\+LayerM}!ogr\+Vector@{ogr\+Vector}}
+\index{ogr\+Vector@{ogr\+Vector}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{ogr\+Vector() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf O\+G\+R\+Vector}$\ast$ Vector\+Layer\+M\+::ogr\+Vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_vector_layer_m_a52b124fcb2257ada24585bb7417c49b0}
+\index{Vector\+LayerM@{Vector\+LayerM}!projection\+Unit@{projection\+Unit}}
+\index{projection\+Unit@{projection\+Unit}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{projection\+Unit()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Projection\+Unit} Vector\+Layer\+M\+::projection\+Unit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_vector_layer_m_a7c033378b554e25240d1f6965579a9ea}
+
+
+Implementa {\bf LayerM} \doxyref{}{pag.}{class_layer_m_ae36e3daa042e3cf0a556a5693aba26b3}.
+
+\index{Vector\+LayerM@{Vector\+LayerM}!set\+Brush@{set\+Brush}}
+\index{set\+Brush@{set\+Brush}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{set\+Brush(const wx\+Brush \&layer\+Brush)}]{\setlength{\rightskip}{0pt plus 5cm}void Vector\+Layer\+M\+::set\+Brush (
+\begin{DoxyParamCaption}
+\item[{const wx\+Brush \&}]{layer\+Brush}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vector_layer_m_a72a150996b1fda64b08195982516b3ae}
+
+
+Definição na linha 33 do arquivo vectorlayer\+M.\+h.
+
+\index{Vector\+LayerM@{Vector\+LayerM}!set\+Font@{set\+Font}}
+\index{set\+Font@{set\+Font}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{set\+Font(const wx\+Font \&layer\+Font)}]{\setlength{\rightskip}{0pt plus 5cm}void Vector\+Layer\+M\+::set\+Font (
+\begin{DoxyParamCaption}
+\item[{const wx\+Font \&}]{layer\+Font}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vector_layer_m_a69c49b1a4073e9b4add9b2eeef480c52}
+
+
+Definição na linha 37 do arquivo vectorlayer\+M.\+h.
+
+\index{Vector\+LayerM@{Vector\+LayerM}!set\+Pen@{set\+Pen}}
+\index{set\+Pen@{set\+Pen}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{set\+Pen(const wx\+Pen \&layer\+Pen)}]{\setlength{\rightskip}{0pt plus 5cm}void Vector\+Layer\+M\+::set\+Pen (
+\begin{DoxyParamCaption}
+\item[{const wx\+Pen \&}]{layer\+Pen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vector_layer_m_abcc212c797303186e499a8c38c8b840b}
+
+
+Definição na linha 30 do arquivo vectorlayer\+M.\+h.
+
+\index{Vector\+LayerM@{Vector\+LayerM}!set\+Symbol@{set\+Symbol}}
+\index{set\+Symbol@{set\+Symbol}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{set\+Symbol(const wx\+Bitmap \&layer\+Symbol)}]{\setlength{\rightskip}{0pt plus 5cm}void Vector\+Layer\+M\+::set\+Symbol (
+\begin{DoxyParamCaption}
+\item[{const wx\+Bitmap \&}]{layer\+Symbol}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vector_layer_m_a6c500671ba787926bc671df64a31923a}
+
+
+Definição na linha 36 do arquivo vectorlayer\+M.\+h.
+
+\index{Vector\+LayerM@{Vector\+LayerM}!spatial\+Reference@{spatial\+Reference}}
+\index{spatial\+Reference@{spatial\+Reference}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{spatial\+Reference()}]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Spatial\+Reference$\ast$ Vector\+Layer\+M\+::spatial\+Reference (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_vector_layer_m_a5c2ccaadd32db60ec78a05a2d4bb4dd2}
+
+
+Implementa {\bf LayerM} \doxyref{}{pag.}{class_layer_m_a43ddb12a64dbb2483e7d8192feca4611}.
+
+
+
+\subsection{Atributos}
+\index{Vector\+LayerM@{Vector\+LayerM}!brush@{brush}}
+\index{brush@{brush}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{brush}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Brush Vector\+Layer\+M\+::brush\hspace{0.3cm}{\ttfamily [protected]}}\label{class_vector_layer_m_add805f8095dcaf3878c121fc1d021f0b}
+
+
+Definição na linha 48 do arquivo vectorlayer\+M.\+h.
+
+\index{Vector\+LayerM@{Vector\+LayerM}!checked@{checked}}
+\index{checked@{checked}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{checked}]{\setlength{\rightskip}{0pt plus 5cm}bool Vector\+Layer\+M\+::checked\hspace{0.3cm}{\ttfamily [protected]}}\label{class_vector_layer_m_aa55ed3040c61597fbfced657f234d6d7}
+
+
+Definição na linha 54 do arquivo vectorlayer\+M.\+h.
+
+\index{Vector\+LayerM@{Vector\+LayerM}!font@{font}}
+\index{font@{font}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{font}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Font Vector\+Layer\+M\+::font\hspace{0.3cm}{\ttfamily [protected]}}\label{class_vector_layer_m_a47e96103a2fd7f454fb6603f5e4b9dc9}
+
+
+Definição na linha 52 do arquivo vectorlayer\+M.\+h.
+
+\index{Vector\+LayerM@{Vector\+LayerM}!m\+\_\+last\+Error@{m\+\_\+last\+Error}}
+\index{m\+\_\+last\+Error@{m\+\_\+last\+Error}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{m\+\_\+last\+Error}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Code\+Error} Vector\+Layer\+M\+::m\+\_\+last\+Error = {\bf C\+E\+\_\+\+N\+O\+NE}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_vector_layer_m_a0d739fc2262098b19c3538e947fc238b}
+
+
+Definição na linha 44 do arquivo vectorlayer\+M.\+h.
+
+\index{Vector\+LayerM@{Vector\+LayerM}!m\+\_\+ogr\+Vector@{m\+\_\+ogr\+Vector}}
+\index{m\+\_\+ogr\+Vector@{m\+\_\+ogr\+Vector}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{m\+\_\+ogr\+Vector}]{\setlength{\rightskip}{0pt plus 5cm}{\bf O\+G\+R\+Vector}$\ast$ Vector\+Layer\+M\+::m\+\_\+ogr\+Vector\hspace{0.3cm}{\ttfamily [protected]}}\label{class_vector_layer_m_ab1056b27e2d17ab31ddca4eb08cdf7d0}
+
+
+Definição na linha 55 do arquivo vectorlayer\+M.\+h.
+
+\index{Vector\+LayerM@{Vector\+LayerM}!pen@{pen}}
+\index{pen@{pen}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{pen}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Pen Vector\+Layer\+M\+::pen\hspace{0.3cm}{\ttfamily [protected]}}\label{class_vector_layer_m_ac00e663c10ef296c75f924528b28c20d}
+
+
+Definição na linha 46 do arquivo vectorlayer\+M.\+h.
+
+\index{Vector\+LayerM@{Vector\+LayerM}!symbol@{symbol}}
+\index{symbol@{symbol}!Vector\+LayerM@{Vector\+LayerM}}
+\subsubsection[{symbol}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Vector\+Layer\+M\+::symbol\hspace{0.3cm}{\ttfamily [protected]}}\label{class_vector_layer_m_abea9f8fe624b2b998cc6af660d1f76fa}
+
+
+Definição na linha 50 do arquivo vectorlayer\+M.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf vectorlayer\+M.\+h}\end{DoxyCompactItemize}

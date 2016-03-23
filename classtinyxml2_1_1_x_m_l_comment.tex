@@ -1,0 +1,167 @@
+\section{Referência da Classe tinyxml2\+:\+:X\+M\+L\+Comment}
+\label{classtinyxml2_1_1_x_m_l_comment}\index{tinyxml2\+::\+X\+M\+L\+Comment@{tinyxml2\+::\+X\+M\+L\+Comment}}
+
+
+{\ttfamily \#include $<$tinyxml2.\+h$>$}
+
+
+
+Herdeiro de {\bf tinyxml2\+::\+X\+M\+L\+Node}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf X\+M\+L\+Comment} $\ast$ {\bf To\+Comment} ()
+\begin{DoxyCompactList}\small\item\em Safely cast to a Comment, or null. \end{DoxyCompactList}\item 
+virtual const {\bf X\+M\+L\+Comment} $\ast$ {\bf To\+Comment} () const 
+\item 
+virtual bool {\bf Accept} ({\bf X\+M\+L\+Visitor} $\ast$visitor) const 
+\item 
+virtual {\bf X\+M\+L\+Node} $\ast$ {\bf Shallow\+Clone} ({\bf X\+M\+L\+Document} $\ast$document) const 
+\item 
+virtual bool {\bf Shallow\+Equal} (const {\bf X\+M\+L\+Node} $\ast$compare) const 
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf X\+M\+L\+Comment} ({\bf X\+M\+L\+Document} $\ast$doc)
+\item 
+virtual {\bf $\sim$\+X\+M\+L\+Comment} ()
+\item 
+char $\ast$ {\bf Parse\+Deep} (char $\ast$, {\bf Str\+Pair} $\ast$end\+Tag)
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf X\+M\+L\+Document}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+An X\+ML Comment. 
+
+Definição na linha 921 do arquivo tinyxml2.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{tinyxml2\+::\+X\+M\+L\+Comment@{tinyxml2\+::\+X\+M\+L\+Comment}!X\+M\+L\+Comment@{X\+M\+L\+Comment}}
+\index{X\+M\+L\+Comment@{X\+M\+L\+Comment}!tinyxml2\+::\+X\+M\+L\+Comment@{tinyxml2\+::\+X\+M\+L\+Comment}}
+\subsubsection[{X\+M\+L\+Comment(\+X\+M\+L\+Document $\ast$doc)}]{\setlength{\rightskip}{0pt plus 5cm}tinyxml2\+::\+X\+M\+L\+Comment\+::\+X\+M\+L\+Comment (
+\begin{DoxyParamCaption}
+\item[{{\bf X\+M\+L\+Document} $\ast$}]{doc}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classtinyxml2_1_1_x_m_l_comment_ae6463adc3edd93a8e5a9b2b7e99cdf91}
+\index{tinyxml2\+::\+X\+M\+L\+Comment@{tinyxml2\+::\+X\+M\+L\+Comment}!````~X\+M\+L\+Comment@{$\sim$\+X\+M\+L\+Comment}}
+\index{````~X\+M\+L\+Comment@{$\sim$\+X\+M\+L\+Comment}!tinyxml2\+::\+X\+M\+L\+Comment@{tinyxml2\+::\+X\+M\+L\+Comment}}
+\subsubsection[{$\sim$\+X\+M\+L\+Comment()}]{\setlength{\rightskip}{0pt plus 5cm}virtual tinyxml2\+::\+X\+M\+L\+Comment\+::$\sim$\+X\+M\+L\+Comment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_comment_afc227c55a6fec1c388b21d63d24ddbb3}
+
+
+\subsection{Métodos}
+\index{tinyxml2\+::\+X\+M\+L\+Comment@{tinyxml2\+::\+X\+M\+L\+Comment}!Accept@{Accept}}
+\index{Accept@{Accept}!tinyxml2\+::\+X\+M\+L\+Comment@{tinyxml2\+::\+X\+M\+L\+Comment}}
+\subsubsection[{Accept(\+X\+M\+L\+Visitor $\ast$visitor) const }]{\setlength{\rightskip}{0pt plus 5cm}virtual bool tinyxml2\+::\+X\+M\+L\+Comment\+::\+Accept (
+\begin{DoxyParamCaption}
+\item[{{\bf X\+M\+L\+Visitor} $\ast$}]{visitor}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_comment_a26a5483766029fc221dad23b9602016e}
+Accept a hierarchical visit of the nodes in the Tiny\+X\+M\+L-\/2 D\+OM. Every node in the X\+ML tree will be conditionally visited and the host will be called back via the \doxyref{X\+M\+L\+Visitor}{pag.}{classtinyxml2_1_1_x_m_l_visitor} interface. This is essentially a S\+AX interface for Tiny\+X\+M\+L-\/2. (Note however it doesn\textquotesingle{}t re-\/parse the X\+ML for the callbacks, so the performance of Tiny\+X\+M\+L-\/2 is unchanged by using this interface versus any other.) The interface has been based on ideas from\+:
+\begin{DoxyItemize}
+\item {\tt http\+://www.\+saxproject.\+org/}
+\item {\tt http\+://c2.\+com/cgi/wiki?\+Hierarchical\+Visitor\+Pattern} Which are both good references for \char`\"{}visiting\char`\"{}. An example of using \doxyref{Accept()}{pag.}{classtinyxml2_1_1_x_m_l_comment_a26a5483766029fc221dad23b9602016e}\+: \begin{DoxyVerb}XMLPrinter printer;
+tinyxmlDoc.Accept( &printer );
+const char* xmlcstr = printer.CStr();
+\end{DoxyVerb}
+ 
+\end{DoxyItemize}
+
+Implementa {\bf tinyxml2\+::\+X\+M\+L\+Node} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_node_a366ad0e9b9ae8d1b18c00f903994b7a9}.
+
+\index{tinyxml2\+::\+X\+M\+L\+Comment@{tinyxml2\+::\+X\+M\+L\+Comment}!Parse\+Deep@{Parse\+Deep}}
+\index{Parse\+Deep@{Parse\+Deep}!tinyxml2\+::\+X\+M\+L\+Comment@{tinyxml2\+::\+X\+M\+L\+Comment}}
+\subsubsection[{Parse\+Deep(char $\ast$, Str\+Pair $\ast$end\+Tag)}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ tinyxml2\+::\+X\+M\+L\+Comment\+::\+Parse\+Deep (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{, }
+\item[{{\bf Str\+Pair} $\ast$}]{end\+Tag}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_comment_ae3abf65920d9c86e8f90c4a239783b05}
+
+
+Reimplementação de {\bf tinyxml2\+::\+X\+M\+L\+Node} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_node_a8263ad55d894578e8e72a65c56649138}.
+
+\index{tinyxml2\+::\+X\+M\+L\+Comment@{tinyxml2\+::\+X\+M\+L\+Comment}!Shallow\+Clone@{Shallow\+Clone}}
+\index{Shallow\+Clone@{Shallow\+Clone}!tinyxml2\+::\+X\+M\+L\+Comment@{tinyxml2\+::\+X\+M\+L\+Comment}}
+\subsubsection[{Shallow\+Clone(\+X\+M\+L\+Document $\ast$document) const }]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf X\+M\+L\+Node}$\ast$ tinyxml2\+::\+X\+M\+L\+Comment\+::\+Shallow\+Clone (
+\begin{DoxyParamCaption}
+\item[{{\bf X\+M\+L\+Document} $\ast$}]{document}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_comment_a47b3cdd2e1ad9735826e2d291d483e73}
+Make a copy of this node, but not its children. You may pass in a Document pointer that will be the owner of the new \doxyref{Node}{pag.}{class_node}. If the \textquotesingle{}document\textquotesingle{} is null, then the node returned will be allocated from the current Document. (this-\/$>$\doxyref{Get\+Document()}{pag.}{classtinyxml2_1_1_x_m_l_node_af343d1ef0b45c0020e62d784d7e67a68}) Note\+: if called on a \doxyref{X\+M\+L\+Document}{pag.}{classtinyxml2_1_1_x_m_l_document}, this will return null. 
+
+Implementa {\bf tinyxml2\+::\+X\+M\+L\+Node} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_node_a83e3524e2ecea25eeab630c7ab113627}.
+
+\index{tinyxml2\+::\+X\+M\+L\+Comment@{tinyxml2\+::\+X\+M\+L\+Comment}!Shallow\+Equal@{Shallow\+Equal}}
+\index{Shallow\+Equal@{Shallow\+Equal}!tinyxml2\+::\+X\+M\+L\+Comment@{tinyxml2\+::\+X\+M\+L\+Comment}}
+\subsubsection[{Shallow\+Equal(const X\+M\+L\+Node $\ast$compare) const }]{\setlength{\rightskip}{0pt plus 5cm}virtual bool tinyxml2\+::\+X\+M\+L\+Comment\+::\+Shallow\+Equal (
+\begin{DoxyParamCaption}
+\item[{const {\bf X\+M\+L\+Node} $\ast$}]{compare}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_comment_a3d458d319336a7fb8028979e1d91dbe9}
+Test if 2 nodes are the same, but don\textquotesingle{}t test children. The 2 nodes do not need to be in the same Document. Note\+: if called on a \doxyref{X\+M\+L\+Document}{pag.}{classtinyxml2_1_1_x_m_l_document}, this will return false. 
+
+Implementa {\bf tinyxml2\+::\+X\+M\+L\+Node} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_node_ac50408e91e095237f45716092ac2bddc}.
+
+\index{tinyxml2\+::\+X\+M\+L\+Comment@{tinyxml2\+::\+X\+M\+L\+Comment}!To\+Comment@{To\+Comment}}
+\index{To\+Comment@{To\+Comment}!tinyxml2\+::\+X\+M\+L\+Comment@{tinyxml2\+::\+X\+M\+L\+Comment}}
+\subsubsection[{To\+Comment()}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf X\+M\+L\+Comment}$\ast$ tinyxml2\+::\+X\+M\+L\+Comment\+::\+To\+Comment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_comment_a8093e1dc8a34fa446d9dc3fde0e6c0ee}
+
+
+Safely cast to a Comment, or null. 
+
+
+
+Reimplementação de {\bf tinyxml2\+::\+X\+M\+L\+Node} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_node_aff47671055aa99840a1c1ebd661e63e3}.
+
+
+
+Definição na linha 925 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Comment@{tinyxml2\+::\+X\+M\+L\+Comment}!To\+Comment@{To\+Comment}}
+\index{To\+Comment@{To\+Comment}!tinyxml2\+::\+X\+M\+L\+Comment@{tinyxml2\+::\+X\+M\+L\+Comment}}
+\subsubsection[{To\+Comment() const }]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf X\+M\+L\+Comment}$\ast$ tinyxml2\+::\+X\+M\+L\+Comment\+::\+To\+Comment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_comment_a422aabac22de7d9c9cad130897dd8b1c}
+
+
+Reimplementação de {\bf tinyxml2\+::\+X\+M\+L\+Node} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_node_a157ce3a00ea5ee5a85b7103138e85e8a}.
+
+
+
+Definição na linha 928 do arquivo tinyxml2.\+h.
+
+
+
+\subsection{Amigas e Funções Relacionadas}
+\index{tinyxml2\+::\+X\+M\+L\+Comment@{tinyxml2\+::\+X\+M\+L\+Comment}!X\+M\+L\+Document@{X\+M\+L\+Document}}
+\index{X\+M\+L\+Document@{X\+M\+L\+Document}!tinyxml2\+::\+X\+M\+L\+Comment@{tinyxml2\+::\+X\+M\+L\+Comment}}
+\subsubsection[{X\+M\+L\+Document}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf X\+M\+L\+Document}\hspace{0.3cm}{\ttfamily [friend]}}\label{classtinyxml2_1_1_x_m_l_comment_a4eee3bda60c60a30e4e8cd4ea91c4c6e}
+
+
+Definição na linha 923 do arquivo tinyxml2.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf tinyxml2.\+h}\end{DoxyCompactItemize}

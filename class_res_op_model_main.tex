@@ -1,0 +1,351 @@
+\section{ReferÃªncia da Classe Res\+Op\+Model\+Main}
+\label{class_res_op_model_main}\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Model\+Main.\+h$>$}
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Model\+Main} ({\bf Res\+Op\+Interface} $\ast${\bf main\+Inter})
+\item 
+{\bf $\sim$\+Res\+Op\+Model\+Main} ()
+\item 
+void {\bf set\+Info} ()
+\item 
+void {\bf insert\+Model} ()
+\item 
+void {\bf remove\+Model} (unsigned int id)
+\item 
+void {\bf show\+Results} (bool change)
+\item 
+void {\bf set\+Default\+Values} (char $\ast$file\+Name)
+\item 
+void {\bf save\+Default\+Values} (char $\ast$file\+Name)
+\item 
+void {\bf run} ({\bf Date} i)
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf aloc\+Results} ()
+\item 
+void {\bf choice\+Model} ()
+\item 
+int {\bf get\+Model\+Type} ()
+\item 
+bool {\bf check\+Dep} ({\bf Draw\+Node} $\ast$nd)
+\item 
+bool {\bf hason\+Vrun} (unsigned int nd\+Id)
+\item 
+void {\bf calc\+Seq} ()
+\item 
+void {\bf calc\+Alloc} ()
+\item 
+bool {\bf check\+Alloc} ({\bf Draw\+Node} $\ast$nd)
+\item 
+void {\bf get\+Res\+Up} ()
+\item 
+bool {\bf find\+Res\+Up} ({\bf Draw\+Node} $\ast$nd, {\bf Draw\+Node} $\ast$nd2={\bf N\+U\+LL})
+\item 
+void {\bf clear} ()
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Atributos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ {\bf Draw\+Node} $\ast$ $>$ {\bf vnodestorun}
+\item 
+vector$<$ unsigned int $>$ {\bf vidnodestorun}
+\item 
+vector$<$ unsigned int $>$ {\bf vrun}
+\item 
+{\bf Interval} {\bf interval}
+\item 
+map$<$ int, {\bf Res\+Op\+Model} $\ast$ $>$ {\bf models}
+\item 
+map$<$ {\bf res\+Op\+Model\+Type}, {\bf Component\+Interface} $\ast$ $>$ {\bf inter}
+\item 
+{\bf Res\+Op\+Interface} $\ast$ {\bf main\+Inter}
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 15 do arquivo Res\+Op\+Model\+Main.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{Res\+Op\+Model\+Main(\+Res\+Op\+Interface $\ast$main\+Inter)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Model\+Main\+::\+Res\+Op\+Model\+Main (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Interface} $\ast$}]{main\+Inter}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_a2a9b620f7ac65c3aacaefe8b837393b3}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em main\+Inter} & Interface da classe principal \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!````~Res\+Op\+Model\+Main@{$\sim$\+Res\+Op\+Model\+Main}}
+\index{````~Res\+Op\+Model\+Main@{$\sim$\+Res\+Op\+Model\+Main}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{$\sim$\+Res\+Op\+Model\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Model\+Main\+::$\sim$\+Res\+Op\+Model\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_a414d99ef9ecce0d6bd501d571c921f0d}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!aloc\+Results@{aloc\+Results}}
+\index{aloc\+Results@{aloc\+Results}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{aloc\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Model\+Main\+::aloc\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_a351ff02619484ebb62fc1d41eb5ccf47}
+Método que reinicia os resultados do sistema \index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!calc\+Alloc@{calc\+Alloc}}
+\index{calc\+Alloc@{calc\+Alloc}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{calc\+Alloc()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Model\+Main\+::calc\+Alloc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_a49cc2393b35ee19dd2bcf0c6fc2f40f9}
+Preenche mapa de automação da alocação \index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!calc\+Seq@{calc\+Seq}}
+\index{calc\+Seq@{calc\+Seq}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{calc\+Seq()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Model\+Main\+::calc\+Seq (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_aa13f25d548dadc1ce1b00cf7a7a4391c}
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!check\+Alloc@{check\+Alloc}}
+\index{check\+Alloc@{check\+Alloc}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{check\+Alloc(\+Draw\+Node $\ast$nd)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Model\+Main\+::check\+Alloc (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Node} $\ast$}]{nd}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_a63a7659a8ef009d02eb3dedbb2503934}
+Percorre rede acima do nó nd e preenche dados da alocação da demanda nos nós \index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Model\+Main\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_a3d09602fe04d9e1a1bfc1d07c364d063}
+Método que checa se as informações necessárias para o modelo foram preenchidas. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros encontrados \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!check\+Dep@{check\+Dep}}
+\index{check\+Dep@{check\+Dep}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{check\+Dep(\+Draw\+Node $\ast$nd)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Model\+Main\+::check\+Dep (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Node} $\ast$}]{nd}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_aad5631907da72ff6e03f297b0c15ede2}
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!choice\+Model@{choice\+Model}}
+\index{choice\+Model@{choice\+Model}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{choice\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Model\+Main\+::choice\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_aa15ba6acc855146726e4a7951801bb6e}
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!clear@{clear}}
+\index{clear@{clear}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Model\+Main\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_ac52abe3955ef4f66bc2c189888c0fa11}
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!find\+Res\+Up@{find\+Res\+Up}}
+\index{find\+Res\+Up@{find\+Res\+Up}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{find\+Res\+Up(\+Draw\+Node $\ast$nd, Draw\+Node $\ast$nd2=\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Model\+Main\+::find\+Res\+Up (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Node} $\ast$}]{nd, }
+\item[{{\bf Draw\+Node} $\ast$}]{nd2 = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_a44c7e928f5bd56accfa1ea6a22a887aa}
+Percorre a rede e preenche o mapa de reservatórios acima \index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!get\+Model\+Type@{get\+Model\+Type}}
+\index{get\+Model\+Type@{get\+Model\+Type}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{get\+Model\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}int Res\+Op\+Model\+Main\+::get\+Model\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_ad30f82bc5e8479f81d29339bee11fee2}
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!get\+Res\+Up@{get\+Res\+Up}}
+\index{get\+Res\+Up@{get\+Res\+Up}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{get\+Res\+Up()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Model\+Main\+::get\+Res\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_a0a3882b1c8628a4bb1605d236ce8f98e}
+Preenche o mapa de reservatórios acima \index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!hason\+Vrun@{hason\+Vrun}}
+\index{hason\+Vrun@{hason\+Vrun}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{hason\+Vrun(unsigned int nd\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Model\+Main\+::hason\+Vrun (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{nd\+Id}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_ae5ca777a99e7e3f01f53ac8a6c967859}
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!insert\+Model@{insert\+Model}}
+\index{insert\+Model@{insert\+Model}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{insert\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Model\+Main\+::insert\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_a7358b5f7c03c5239e88f8de4d728b694}
+Cria um modelo para um no (método abstrato) \index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Model\+Main\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_a06de0d8058e539fde31257bd9a0e1f94}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Model\+Main\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_ae3c7354cc45e2b23f2dddbd1018793c1}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!remove\+Model@{remove\+Model}}
+\index{remove\+Model@{remove\+Model}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{remove\+Model(unsigned int id)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Model\+Main\+::remove\+Model (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{id}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_a91f82985fbd08a2377069f48408f2a21}
+Destroi um modelo de um no que nao importa mais (deletado por exemplo) (método abstrato) 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em id} & Identificador do nó/trecho \\
+\hline
+{\em t} & Tipo de elemento ( nó ou trecho ) \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!run@{run}}
+\index{run@{run}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{run(\+Date i)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Model\+Main\+::run (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{i}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_a365edfe461646b2d9dc040799753d2d3}
+Método que executa o modelo para o nó. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em i} & Data a ser executado \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!save\+Default\+Values@{save\+Default\+Values}}
+\index{save\+Default\+Values@{save\+Default\+Values}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{save\+Default\+Values(char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Model\+Main\+::save\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_a7bea73f7236cbd6c33cbdd815db9db55}
+Método que salva os dados do modelo para um arquivo. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em file\+Name} & Nome do aquivo para salvar as informações. \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!set\+Default\+Values@{set\+Default\+Values}}
+\index{set\+Default\+Values@{set\+Default\+Values}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{set\+Default\+Values(char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Model\+Main\+::set\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_a68809f39e379568cbc3e3ffded0ae319}
+Método que recebe os dados do modelo de arquivo. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em file\+Name} & Nome do aquivo para salvar as informações. \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Model\+Main\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_a755a16a11919da28cf50687d48dd0e68}
+Insere informaçoes na interface (método abstrato) \index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{show\+Results(bool change)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Model\+Main\+::show\+Results (
+\begin{DoxyParamCaption}
+\item[{bool}]{change}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_main_abcb3ab99a9c396eaf03e3988a963581a}
+Apresenta resultados do modelo para o nó fornecido. (método abstrato) 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em cahnge} & Montar os resultados caso seja true. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!inter@{inter}}
+\index{inter@{inter}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{inter}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf res\+Op\+Model\+Type},{\bf Component\+Interface}$\ast$$>$ Res\+Op\+Model\+Main\+::inter}\label{class_res_op_model_main_af7ba0deb68868a8014394eeb6a3a9acc}
+Interface para cada tipo de modelo Será inserida na interface geral do modulo de operação de reservatório 
+
+DefiniÃ§Ã£o na linha 37 do arquivo Res\+Op\+Model\+Main.\+h.
+
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!interval@{interval}}
+\index{interval@{interval}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Res\+Op\+Model\+Main\+::interval}\label{class_res_op_model_main_a49755ae6e1972efdcd948b6c4f6cc9bd}
+Intervalo de simulação 
+
+DefiniÃ§Ã£o na linha 26 do arquivo Res\+Op\+Model\+Main.\+h.
+
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!main\+Inter@{main\+Inter}}
+\index{main\+Inter@{main\+Inter}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{main\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Interface}$\ast$ Res\+Op\+Model\+Main\+::main\+Inter}\label{class_res_op_model_main_a0fa9794bedd0c2bc452b5e1680989751}
+Aponta para a classe da interafce principal do modulo 
+
+DefiniÃ§Ã£o na linha 42 do arquivo Res\+Op\+Model\+Main.\+h.
+
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!models@{models}}
+\index{models@{models}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{models}]{\setlength{\rightskip}{0pt plus 5cm}map$<$int,{\bf Res\+Op\+Model}$\ast$$>$ Res\+Op\+Model\+Main\+::models}\label{class_res_op_model_main_ad1748ff2ac0660131c686da3622e58fd}
+Instâncias dos modelos para cada nó  \doxyref{Res\+Op\+Model}{pag.}{class_res_op_model} 
+
+DefiniÃ§Ã£o na linha 31 do arquivo Res\+Op\+Model\+Main.\+h.
+
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!vidnodestorun@{vidnodestorun}}
+\index{vidnodestorun@{vidnodestorun}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{vidnodestorun}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$unsigned int $>$ Res\+Op\+Model\+Main\+::vidnodestorun}\label{class_res_op_model_main_aa878555154bc64f3715a492c4f946703}
+
+
+DefiniÃ§Ã£o na linha 21 do arquivo Res\+Op\+Model\+Main.\+h.
+
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!vnodestorun@{vnodestorun}}
+\index{vnodestorun@{vnodestorun}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{vnodestorun}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Draw\+Node}$\ast$$>$ Res\+Op\+Model\+Main\+::vnodestorun}\label{class_res_op_model_main_a074ec610e7d80e779cb76172942d0e0e}
+
+
+DefiniÃ§Ã£o na linha 20 do arquivo Res\+Op\+Model\+Main.\+h.
+
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!vrun@{vrun}}
+\index{vrun@{vrun}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\subsubsection[{vrun}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$unsigned int $>$ Res\+Op\+Model\+Main\+::vrun}\label{class_res_op_model_main_a4a0e4ea06ce9adda03a12941dd4fcfa3}
+
+
+DefiniÃ§Ã£o na linha 22 do arquivo Res\+Op\+Model\+Main.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Model\+Main.\+h}\end{DoxyCompactItemize}

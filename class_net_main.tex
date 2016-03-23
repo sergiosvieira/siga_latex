@@ -1,0 +1,526 @@
+\section{Refer√™ncia da Classe Net\+Main}
+\label{class_net_main}\index{Net\+Main@{Net\+Main}}
+
+
+{\ttfamily \#include $<$Net\+Main.\+h$>$}
+
+
+
+Herdeiro de {\bf Component}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf on\+Remove\+Subnetwork} ({\bf Element\+ID} network\+\_\+id)
+\item 
+void {\bf on\+Add\+Subnetwork} ({\bf Element\+ID} network\+\_\+id)
+\item 
+void {\bf spatial\+Reference\+Parameters} (const std\+::string \&a\+\_\+parameters)
+\item 
+O\+G\+R\+Spatial\+Reference {\bf spatial\+Reference} ()
+\item 
+void {\bf highlight\+Sub\+Network} ({\bf Element\+ID} id)
+\item 
+void {\bf clear\+Selection} ()
+\item 
+void {\bf on\+Join\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+{\bf Net\+Main} ()
+\item 
+virtual {\bf $\sim$\+Net\+Main} ()
+\item 
+void {\bf on\+Init} ({\bf S\+I\+GA} $\ast$, wx\+Frame $\ast$, wx\+Window $\ast$)
+\item 
+void {\bf on\+Init} ({\bf S\+I\+GA} $\ast${\bf main}, wx\+Frame $\ast$frame, wx\+Window $\ast$parent, wx\+Panel $\ast$panel\+Paint, wx\+Sizer $\ast$sizer\+Paint)
+\item 
+void {\bf on\+Changed\+Component} ()
+\item 
+{\bf Net\+Canvas} \& {\bf get\+Canvas} ()
+\item 
+void {\bf canvas\+Refresh} (bool erase\+\_\+background=true)
+\item 
+void {\bf on\+Changing\+Component} ()
+\begin{DoxyCompactList}\small\item\em Evento de saida do modelo. \end{DoxyCompactList}\item 
+void {\bf on\+Select\+Element} ()
+\item 
+void {\bf on\+Delete\+Elements} (vector$<$ {\bf Element\+ID} $>$ \&element\+\_\+ids)
+\item 
+void {\bf on\+Changing\+Time\+Interval} ({\bf Date\+::\+Time\+Interval})
+\item 
+void {\bf on\+Changing\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ element\+Ids)
+\item 
+void {\bf on\+Changed\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ elemet\+Ids)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf set\+Shapefile\+U\+RL} (const wx\+String \&shape\+U\+RL, int pos)
+\item 
+void {\bf save\+Shapefile\+U\+RL} (const wx\+String \&shape\+U\+RL)
+\item 
+void {\bf delete\+Shapefile\+U\+RL} (unsigned int index)
+\item 
+void {\bf delete\+Shape\+File\+U\+RL} (const std\+::string \&a\+\_\+shape\+File)
+\item 
+void {\bf set\+Defective\+Layer} (wx\+String new\+Defective\+Layer)
+\item 
+wx\+String {\bf get\+Defective\+Layer} ()
+\item 
+int {\bf get\+Defective\+Layer\+Position} ()
+\item 
+vector$<$ wx\+String $>$ {\bf get\+Shapefile\+U\+RL} () const 
+\item 
+void {\bf set\+Shapefile\+U\+RL} (const vector$<$ wx\+String $>$ \&new\+List)
+\item 
+void {\bf set\+Unit\+Of\+Shapefile} ({\bf Projection\+Unit} new\+Value)
+\item 
+{\bf Projection\+Unit} {\bf get\+Unit\+Of\+Shapefile} ()
+\end{DoxyCompactItemize}
+\subsection*{M√©todos P√∫blicos Est√°ticos}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Net\+Main} \& {\bf Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ wx\+String $>$ {\bf shapefile\+U\+RL}
+\item 
+wx\+String {\bf defective\+Layer}
+\item 
+O\+G\+R\+Spatial\+Reference {\bf m\+\_\+spatial\+Reference}
+\item 
+{\bf Projection\+Unit} {\bf unit\+Of\+Shapefile}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descri√ß√£o Detalhada}
+Classe Principal da Rede de Fluxo 
+
+Defini√ß√£o na linha 21 do arquivo Net\+Main.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Net\+Main@{Net\+Main}!Net\+Main@{Net\+Main}}
+\index{Net\+Main@{Net\+Main}!Net\+Main@{Net\+Main}}
+\subsubsection[{Net\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}Net\+Main\+::\+Net\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_main_ac9d25e6da6c266b5034874031265c116}
+Construtor \index{Net\+Main@{Net\+Main}!````~Net\+Main@{$\sim$\+Net\+Main}}
+\index{````~Net\+Main@{$\sim$\+Net\+Main}!Net\+Main@{Net\+Main}}
+\subsubsection[{$\sim$\+Net\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Net\+Main\+::$\sim$\+Net\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_net_main_a1b64deb8c87d35a88ddfd6c0c1442f29}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Net\+Main@{Net\+Main}!canvas\+Refresh@{canvas\+Refresh}}
+\index{canvas\+Refresh@{canvas\+Refresh}!Net\+Main@{Net\+Main}}
+\subsubsection[{canvas\+Refresh(bool erase\+\_\+background=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::canvas\+Refresh (
+\begin{DoxyParamCaption}
+\item[{bool}]{erase\+\_\+background = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_net_main_a8899eff91e6f48dbc79aad34cfd98c8e}
+\index{Net\+Main@{Net\+Main}!clear@{clear}}
+\index{clear@{clear}!Net\+Main@{Net\+Main}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_net_main_a5b739fde035ca818bbea6e879e041b60}
+Chama o metodo clear de cada \doxyref{Hidro\+Model\+Main}{pag.}{class_hidro_model_main} 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a3155a0112bacea4b0af7b131c0e3f011}.
+
+\index{Net\+Main@{Net\+Main}!clear\+Selection@{clear\+Selection}}
+\index{clear\+Selection@{clear\+Selection}!Net\+Main@{Net\+Main}}
+\subsubsection[{clear\+Selection()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::clear\+Selection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_main_a393288f4172577c16ff7bc3b2e060618}
+\index{Net\+Main@{Net\+Main}!delete\+Shapefile\+U\+RL@{delete\+Shapefile\+U\+RL}}
+\index{delete\+Shapefile\+U\+RL@{delete\+Shapefile\+U\+RL}!Net\+Main@{Net\+Main}}
+\subsubsection[{delete\+Shapefile\+U\+R\+L(unsigned int index)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::delete\+Shapefile\+U\+RL (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{index}
+\end{DoxyParamCaption}
+)}\label{class_net_main_a2f4a3b443fb79716a2027eaa670664d5}
+deleta a referencia (path) do shapefile carregado no vetor de U\+R\+Ls (usado pelo Shapefile\+Manager) 
+\begin{DoxyParams}{Par√¢metros}
+{\em index} & o indice do elemento a ser removido \\
+\hline
+\end{DoxyParams}
+\index{Net\+Main@{Net\+Main}!delete\+Shape\+File\+U\+RL@{delete\+Shape\+File\+U\+RL}}
+\index{delete\+Shape\+File\+U\+RL@{delete\+Shape\+File\+U\+RL}!Net\+Main@{Net\+Main}}
+\subsubsection[{delete\+Shape\+File\+U\+R\+L(const std\+::string \&a\+\_\+shape\+File)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::delete\+Shape\+File\+U\+RL (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+\_\+shape\+File}
+\end{DoxyParamCaption}
+)}\label{class_net_main_a13ee31eb579b4238a7a71af2ff4ca771}
+\index{Net\+Main@{Net\+Main}!get\+Canvas@{get\+Canvas}}
+\index{get\+Canvas@{get\+Canvas}!Net\+Main@{Net\+Main}}
+\subsubsection[{get\+Canvas()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Net\+Canvas}\& Net\+Main\+::get\+Canvas (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_main_a4b6407153810c1c02a194a184164e0be}
+\index{Net\+Main@{Net\+Main}!get\+Defective\+Layer@{get\+Defective\+Layer}}
+\index{get\+Defective\+Layer@{get\+Defective\+Layer}!Net\+Main@{Net\+Main}}
+\subsubsection[{get\+Defective\+Layer()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Net\+Main\+::get\+Defective\+Layer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_main_ade6c72506373b3f50ef5c90e812c87e8}
+obtÈm o nome da camada com defeito por causa do n„o carregamento de um shape ou raster \index{Net\+Main@{Net\+Main}!get\+Defective\+Layer\+Position@{get\+Defective\+Layer\+Position}}
+\index{get\+Defective\+Layer\+Position@{get\+Defective\+Layer\+Position}!Net\+Main@{Net\+Main}}
+\subsubsection[{get\+Defective\+Layer\+Position()}]{\setlength{\rightskip}{0pt plus 5cm}int Net\+Main\+::get\+Defective\+Layer\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_main_a5da674d4d6a8f752ffc5d45b46fa1c6c}
+obtÈm a posiÁ„o da camada com defeito por causa do n„o carregamento de um shape ou raster \index{Net\+Main@{Net\+Main}!get\+Shapefile\+U\+RL@{get\+Shapefile\+U\+RL}}
+\index{get\+Shapefile\+U\+RL@{get\+Shapefile\+U\+RL}!Net\+Main@{Net\+Main}}
+\subsubsection[{get\+Shapefile\+U\+R\+L() const }]{\setlength{\rightskip}{0pt plus 5cm}vector$<$wx\+String$>$ Net\+Main\+::get\+Shapefile\+U\+RL (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_net_main_aa0cb45db040327c0b948ebb14185bbc5}
+\index{Net\+Main@{Net\+Main}!get\+Unit\+Of\+Shapefile@{get\+Unit\+Of\+Shapefile}}
+\index{get\+Unit\+Of\+Shapefile@{get\+Unit\+Of\+Shapefile}!Net\+Main@{Net\+Main}}
+\subsubsection[{get\+Unit\+Of\+Shapefile()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Projection\+Unit} Net\+Main\+::get\+Unit\+Of\+Shapefile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_main_a0efca49a6f1af0db1b599fd849efd589}
+Retorna a unidade de mediÁ„o do projeto\+: D\+E\+G\+R\+EE ou M\+E\+T\+ER \index{Net\+Main@{Net\+Main}!highlight\+Sub\+Network@{highlight\+Sub\+Network}}
+\index{highlight\+Sub\+Network@{highlight\+Sub\+Network}!Net\+Main@{Net\+Main}}
+\subsubsection[{highlight\+Sub\+Network(\+Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::highlight\+Sub\+Network (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)}\label{class_net_main_ad987cec43a3c5cf9858ee40e62f75a29}
+\index{Net\+Main@{Net\+Main}!Instance@{Instance}}
+\index{Instance@{Instance}!Net\+Main@{Net\+Main}}
+\subsubsection[{Instance()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Net\+Main}\& Net\+Main\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_net_main_a1bf32fef619a902e74d766657ba11e8e}
+\index{Net\+Main@{Net\+Main}!on\+Add\+Subnetwork@{on\+Add\+Subnetwork}}
+\index{on\+Add\+Subnetwork@{on\+Add\+Subnetwork}!Net\+Main@{Net\+Main}}
+\subsubsection[{on\+Add\+Subnetwork(\+Element\+I\+D network\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::on\+Add\+Subnetwork (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{network\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_net_main_a18c22863a642de3fb2684000edbbc256}
+\index{Net\+Main@{Net\+Main}!on\+Changed\+Component@{on\+Changed\+Component}}
+\index{on\+Changed\+Component@{on\+Changed\+Component}!Net\+Main@{Net\+Main}}
+\subsubsection[{on\+Changed\+Component()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::on\+Changed\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_net_main_a0df7ec97555ae75d3f5a7f9344f9afdf}
+Evento de mudanÁa para o modelo 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a528080e8ef4be5f15e8a268ef8a06bd6}.
+
+\index{Net\+Main@{Net\+Main}!on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}}
+\index{on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}!Net\+Main@{Net\+Main}}
+\subsubsection[{on\+Changed\+Element\+Type(vector$<$ Element\+I\+D $>$ elemet\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::on\+Changed\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{elemet\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_net_main_af48e169e5b973ddb79b89c9d89e7b783}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a49dc89aa957ef7a7fdb37c6b55041261}.
+
+\index{Net\+Main@{Net\+Main}!on\+Changing\+Component@{on\+Changing\+Component}}
+\index{on\+Changing\+Component@{on\+Changing\+Component}!Net\+Main@{Net\+Main}}
+\subsubsection[{on\+Changing\+Component()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::on\+Changing\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_net_main_a5e7f3ab04bf81473f13a83a48d02015e}
+
+
+Evento de saida do modelo. 
+
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a86d6778195457395b75c8995e98075f1}.
+
+\index{Net\+Main@{Net\+Main}!on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}}
+\index{on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}!Net\+Main@{Net\+Main}}
+\subsubsection[{on\+Changing\+Element\+Type(vector$<$ Element\+I\+D $>$ element\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::on\+Changing\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{element\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_net_main_a77bc06a76a732735536132d618ae01e8}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a959af092622ea87958a2858d0e2d0ce1}.
+
+\index{Net\+Main@{Net\+Main}!on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}}
+\index{on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}!Net\+Main@{Net\+Main}}
+\subsubsection[{on\+Changing\+Time\+Interval(\+Date\+::\+Time\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::on\+Changing\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_net_main_af1e66c41cf1731310ece21c843b1cbd9}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a3e49742b76123d86cd3fec640ba57dd8}.
+
+
+
+Defini√ß√£o na linha 66 do arquivo Net\+Main.\+h.
+
+\index{Net\+Main@{Net\+Main}!on\+Delete\+Elements@{on\+Delete\+Elements}}
+\index{on\+Delete\+Elements@{on\+Delete\+Elements}!Net\+Main@{Net\+Main}}
+\subsubsection[{on\+Delete\+Elements(vector$<$ Element\+I\+D $>$ \&element\+\_\+ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::on\+Delete\+Elements (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$ \&}]{elements\+\_\+ids\+\_\+vector}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_net_main_afc1e39a328fe2cc8d9dd930db8f0a695}
+Apaga os dados do(s) nÛ(s) selecionados Deve ser reimplementado no mÛdulo se deseja realizar algo 
+\begin{DoxyParams}{Par√¢metros}
+{\em node\+Ids} & Identificador do(s) nÛ(s) selecionado(s) \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_ad77e22c15657b1a02cf967a59ddbc2cd}.
+
+
+
+Defini√ß√£o na linha 64 do arquivo Net\+Main.\+h.
+
+\index{Net\+Main@{Net\+Main}!on\+Init@{on\+Init}}
+\index{on\+Init@{on\+Init}!Net\+Main@{Net\+Main}}
+\subsubsection[{on\+Init(\+S\+I\+G\+A $\ast$, wx\+Frame $\ast$, wx\+Window $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::on\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+GA} $\ast$}]{main, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_net_main_a2d28f0f21da412cde587d9887698e8fd}
+Inicializa a instancia do \doxyref{Component}{pag.}{class_component} 
+\begin{DoxyParams}{Par√¢metros}
+{\em main} & Classe base \\
+\hline
+{\em frame} & Janela onde a interface ser· inserida \\
+\hline
+{\em parent} & Componente onde a interface sera inserida \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_aa781bddb43637778a628acbe21a78a01}.
+
+
+
+Defini√ß√£o na linha 42 do arquivo Net\+Main.\+h.
+
+\index{Net\+Main@{Net\+Main}!on\+Init@{on\+Init}}
+\index{on\+Init@{on\+Init}!Net\+Main@{Net\+Main}}
+\subsubsection[{on\+Init(\+S\+I\+G\+A $\ast$main, wx\+Frame $\ast$frame, wx\+Window $\ast$parent, wx\+Panel $\ast$panel\+Paint, wx\+Sizer $\ast$sizer\+Paint)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::on\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+GA} $\ast$}]{main, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{wx\+Panel $\ast$}]{panel\+Paint, }
+\item[{wx\+Sizer $\ast$}]{sizer\+Paint}
+\end{DoxyParamCaption}
+)}\label{class_net_main_a33988557ba1f32d765deb892d4f6752c}
+Inicializa a instancia do \doxyref{Net\+Main}{pag.}{class_net_main} 
+\begin{DoxyParams}{Par√¢metros}
+{\em main} & Classe base \\
+\hline
+{\em frame} & Janela onde a interface ser· inserida \\
+\hline
+{\em parent} & Componente onde a interface sera inserida \\
+\hline
+{\em panel\+Paint} & Componente onde o canvas serÈ inserido \\
+\hline
+{\em sizer\+Paint} & Sizer onde o canvas ser· inserido \\
+\hline
+\end{DoxyParams}
+\index{Net\+Main@{Net\+Main}!on\+Join\+Load\+Project@{on\+Join\+Load\+Project}}
+\index{on\+Join\+Load\+Project@{on\+Join\+Load\+Project}!Net\+Main@{Net\+Main}}
+\subsubsection[{on\+Join\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::on\+Join\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_net_main_a3653126e962c4e6226a3da8f13e564fe}
+
+
+Reimplementa√ß√£o de {\bf Component} \doxyref{}{pag.}{class_component_a784aadb17920e2a13cc3589284562de5}.
+
+\index{Net\+Main@{Net\+Main}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Net\+Main@{Net\+Main}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_net_main_a646b40200daaec3e5dcd46bf1099aa8d}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a755c932409c320f6a057abf6c4ebc5e4}.
+
+\index{Net\+Main@{Net\+Main}!on\+Remove\+Subnetwork@{on\+Remove\+Subnetwork}}
+\index{on\+Remove\+Subnetwork@{on\+Remove\+Subnetwork}!Net\+Main@{Net\+Main}}
+\subsubsection[{on\+Remove\+Subnetwork(\+Element\+I\+D network\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::on\+Remove\+Subnetwork (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{network\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_net_main_a014851f1c68c5190a9daa8fad9781ae3}
+\index{Net\+Main@{Net\+Main}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Net\+Main@{Net\+Main}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_net_main_a50c69f5690f915dd3a1799a535b9bd80}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_ad6ccdceebf942b62e75f0255319c9fab}.
+
+\index{Net\+Main@{Net\+Main}!on\+Select\+Element@{on\+Select\+Element}}
+\index{on\+Select\+Element@{on\+Select\+Element}!Net\+Main@{Net\+Main}}
+\subsubsection[{on\+Select\+Element()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::on\+Select\+Element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_net_main_a4e6d8d3def544245e63a3222e0905caf}
+Seleciona os dados do elemento selecionado Deve ser reimplementado em todos os mÛdulos 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a886fc9240f1faf7948ad00aec78c50c3}.
+
+
+
+Defini√ß√£o na linha 63 do arquivo Net\+Main.\+h.
+
+\index{Net\+Main@{Net\+Main}!save\+Shapefile\+U\+RL@{save\+Shapefile\+U\+RL}}
+\index{save\+Shapefile\+U\+RL@{save\+Shapefile\+U\+RL}!Net\+Main@{Net\+Main}}
+\subsubsection[{save\+Shapefile\+U\+R\+L(const wx\+String \&shape\+U\+R\+L)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::save\+Shapefile\+U\+RL (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{shape\+U\+RL}
+\end{DoxyParamCaption}
+)}\label{class_net_main_aca63444518e61b049519679012429ab7}
+salva a referencia (path) do shapefile carregado no vetor de U\+R\+Ls (usado quando for salvar o projeto) 
+\begin{DoxyParams}{Par√¢metros}
+{\em shape\+U\+RL} & a U\+RL que aponta para o arquivo shape recÈm carregado \\
+\hline
+\end{DoxyParams}
+\index{Net\+Main@{Net\+Main}!set\+Defective\+Layer@{set\+Defective\+Layer}}
+\index{set\+Defective\+Layer@{set\+Defective\+Layer}!Net\+Main@{Net\+Main}}
+\subsubsection[{set\+Defective\+Layer(wx\+String new\+Defective\+Layer)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::set\+Defective\+Layer (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{new\+Defective\+Layer}
+\end{DoxyParamCaption}
+)}\label{class_net_main_a85a949b56ff60645b3ce12109ecb17bd}
+salva o n˙mero da camada com defeito por causa do n„o carregamento de um shape 
+\begin{DoxyParams}{Par√¢metros}
+{\em nome} & da camada defeituosa \\
+\hline
+\end{DoxyParams}
+\index{Net\+Main@{Net\+Main}!set\+Shapefile\+U\+RL@{set\+Shapefile\+U\+RL}}
+\index{set\+Shapefile\+U\+RL@{set\+Shapefile\+U\+RL}!Net\+Main@{Net\+Main}}
+\subsubsection[{set\+Shapefile\+U\+R\+L(const wx\+String \&shape\+U\+R\+L, int pos)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::set\+Shapefile\+U\+RL (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{shape\+U\+RL, }
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+)}\label{class_net_main_aa1cbd197652cc67a674a914281425cc5}
+salva a referencia (path) do shapefile carregado no vetor de U\+R\+Ls na posiÁ„o adequada (usado quando for resetar alguma U\+RL) 
+\begin{DoxyParams}{Par√¢metros}
+{\em shape\+U\+RL} & a U\+RL que aponta para o arquivo shape recÈm carregado \\
+\hline
+{\em pos} & a posiÁ„o no vetor que ser· resetada \\
+\hline
+\end{DoxyParams}
+\index{Net\+Main@{Net\+Main}!set\+Shapefile\+U\+RL@{set\+Shapefile\+U\+RL}}
+\index{set\+Shapefile\+U\+RL@{set\+Shapefile\+U\+RL}!Net\+Main@{Net\+Main}}
+\subsubsection[{set\+Shapefile\+U\+R\+L(const vector$<$ wx\+String $>$ \&new\+List)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::set\+Shapefile\+U\+RL (
+\begin{DoxyParamCaption}
+\item[{const vector$<$ wx\+String $>$ \&}]{new\+List}
+\end{DoxyParamCaption}
+)}\label{class_net_main_ad3126e9a2f7310c43e0026f33cbab639}
+\index{Net\+Main@{Net\+Main}!set\+Unit\+Of\+Shapefile@{set\+Unit\+Of\+Shapefile}}
+\index{set\+Unit\+Of\+Shapefile@{set\+Unit\+Of\+Shapefile}!Net\+Main@{Net\+Main}}
+\subsubsection[{set\+Unit\+Of\+Shapefile(\+Projection\+Unit new\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::set\+Unit\+Of\+Shapefile (
+\begin{DoxyParamCaption}
+\item[{{\bf Projection\+Unit}}]{new\+Value}
+\end{DoxyParamCaption}
+)}\label{class_net_main_a0e4385b1183f9e59770f0a8cab597c88}
+Define, de acordo com o primeiro shapefile inserido no \doxyref{S\+I\+GA}{pag.}{class_s_i_g_a}, a unidade de mediÁ„o do projeto\+: D\+E\+G\+R\+EE ou M\+E\+T\+ER \index{Net\+Main@{Net\+Main}!spatial\+Reference@{spatial\+Reference}}
+\index{spatial\+Reference@{spatial\+Reference}!Net\+Main@{Net\+Main}}
+\subsubsection[{spatial\+Reference()}]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Spatial\+Reference Net\+Main\+::spatial\+Reference (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_main_af404b34811a53b4439bbd600062c1fca}
+\index{Net\+Main@{Net\+Main}!spatial\+Reference\+Parameters@{spatial\+Reference\+Parameters}}
+\index{spatial\+Reference\+Parameters@{spatial\+Reference\+Parameters}!Net\+Main@{Net\+Main}}
+\subsubsection[{spatial\+Reference\+Parameters(const std\+::string \&a\+\_\+parameters)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Main\+::spatial\+Reference\+Parameters (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+\_\+parameters}
+\end{DoxyParamCaption}
+)}\label{class_net_main_a79503b22c3c22d27a1352888e6ba9313}
+
+
+\subsection{Atributos}
+\index{Net\+Main@{Net\+Main}!defective\+Layer@{defective\+Layer}}
+\index{defective\+Layer@{defective\+Layer}!Net\+Main@{Net\+Main}}
+\subsubsection[{defective\+Layer}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Net\+Main\+::defective\+Layer\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_main_a33055ae2a3d324c7da306cb2b42b2d9b}
+
+
+Defini√ß√£o na linha 24 do arquivo Net\+Main.\+h.
+
+\index{Net\+Main@{Net\+Main}!m\+\_\+spatial\+Reference@{m\+\_\+spatial\+Reference}}
+\index{m\+\_\+spatial\+Reference@{m\+\_\+spatial\+Reference}!Net\+Main@{Net\+Main}}
+\subsubsection[{m\+\_\+spatial\+Reference}]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Spatial\+Reference Net\+Main\+::m\+\_\+spatial\+Reference\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_main_a9b0379837d8acfa6e628988b9b21b721}
+
+
+Defini√ß√£o na linha 25 do arquivo Net\+Main.\+h.
+
+\index{Net\+Main@{Net\+Main}!shapefile\+U\+RL@{shapefile\+U\+RL}}
+\index{shapefile\+U\+RL@{shapefile\+U\+RL}!Net\+Main@{Net\+Main}}
+\subsubsection[{shapefile\+U\+RL}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$wx\+String$>$ Net\+Main\+::shapefile\+U\+RL\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_main_a0846a6a7b060f6aca157182f106b1a2e}
+
+
+Defini√ß√£o na linha 23 do arquivo Net\+Main.\+h.
+
+\index{Net\+Main@{Net\+Main}!unit\+Of\+Shapefile@{unit\+Of\+Shapefile}}
+\index{unit\+Of\+Shapefile@{unit\+Of\+Shapefile}!Net\+Main@{Net\+Main}}
+\subsubsection[{unit\+Of\+Shapefile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Projection\+Unit} Net\+Main\+::unit\+Of\+Shapefile\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_main_a9efbdbd01293960e5cc8515bca4140da}
+
+
+Defini√ß√£o na linha 142 do arquivo Net\+Main.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Net\+Main.\+h}\end{DoxyCompactItemize}

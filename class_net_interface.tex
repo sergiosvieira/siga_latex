@@ -1,0 +1,702 @@
+\section{Refer√™ncia da Classe Net\+Interface}
+\label{class_net_interface}\index{Net\+Interface@{Net\+Interface}}
+
+
+{\ttfamily \#include $<$Net\+Interface.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Net\+Interface} ({\bf S\+I\+GA} $\ast${\bf main}, wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent}, wx\+Panel $\ast$panel\+Paint, wx\+Sizer $\ast${\bf sizer\+Paint})
+\item 
+virtual {\bf $\sim$\+Net\+Interface} ()
+\item 
+void {\bf on\+Open\+Map} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Open\+Net} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Save\+Net} (wx\+Command\+Event \&event)
+\item 
+void {\bf load\+W\+A\+S\+A\+Input} (wx\+Command\+Event \&event)
+\item 
+void {\bf centralize\+Shapes} ()
+\item 
+bool {\bf load\+New\+Shape} (const wx\+String \&file, {\bf Shape\+Errors\+Dialog} \&shape\+Error\+Dialog)
+\item 
+void {\bf load\+New\+Shape} (O\+G\+R\+Data\+Source $\ast$datasource, {\bf Shape\+Errors\+Dialog} \&shape\+Error\+Dialog)
+\item 
+void {\bf get\+Color\+Layer} (unsigned int index)
+\item 
+void {\bf load\+New\+Raster} (const wx\+String \&file, {\bf Shape\+Errors\+Dialog} \&shape\+Error\+Dialog)
+\item 
+void {\bf on\+Clear} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Del\+Node\+Link} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Alter\+Node\+Type} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Alter\+Node\+Type\+Fast} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Alter\+Link\+Type} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Artficial\+Link\+Type} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Alter\+Link\+Bi} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Alter\+Link\+Type\+QL} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Alter\+Cb\+Selection} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Alter\+Cb\+Link\+Selection} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Center\+Element} (wx\+Command\+Event \&event)
+\item 
+virtual bool {\bf Show} (bool show=true)
+\item 
+void {\bf remove\+Elements} (std\+::vector$<$ {\bf Element\+ID} $>$ \&elements\+\_\+ids)
+\item 
+void {\bf del\+Node\+Link} ()
+\item 
+void {\bf set\+Info\+Link} ({\bf Element\+ID} link\+\_\+id)
+\item 
+void {\bf set\+Info\+Node} ({\bf Element\+ID} node\+\_\+id)
+\item 
+void {\bf refresh\+Element\+Combo\+Box} ()
+\item 
+void {\bf refresh\+Element\+Link\+Combo\+Box} ()
+\item 
+void {\bf enable\+Nodes\+Info} (bool enable)
+\item 
+void {\bf enable\+Links\+Info} (bool enable)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf update\+Selection\+By\+Node\+Type} ({\bf Node\+Type} m\+\_\+node\+Type)
+\item 
+void {\bf show\+Projection\+Converter\+Dialog} (O\+G\+R\+Layer $\ast$a\+\_\+src\+Layer, O\+G\+R\+Spatial\+Reference \&a\+\_\+src\+Spatial\+Reference, O\+G\+R\+Spatial\+Reference \&a\+\_\+dst\+Spatial\+Reference)
+\item 
+{\bf D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+GA} $\ast$ {\bf main}
+\item 
+wx\+Static\+Text $\ast$ {\bf st\+Net\+Name}
+\item 
+{\bf Net\+Text\+Ctrl} $\ast$ {\bf tc\+Net\+Name}
+\item 
+{\bf Net\+Canvas} $\ast$ {\bf canvas}
+\item 
+bool {\bf modified\+Node}
+\item 
+{\bf Node\+Type} {\bf last\+Node\+Type}
+\item 
+bool {\bf modified\+Link}
+\item 
+wx\+Check\+Box $\ast$ {\bf cb\+Link\+Type}
+\item 
+wx\+Check\+Box $\ast$ {\bf cb\+Link\+Bi}
+\item 
+wx\+Check\+Box $\ast$ {\bf cb\+Link\+QL}
+\item 
+wx\+Combo\+Box $\ast$ {\bf element\+Choices}
+\item 
+wx\+Combo\+Box $\ast$ {\bf element\+Link\+Choices}
+\item 
+wx\+Array\+String {\bf choices}
+\item 
+wx\+Array\+String {\bf link\+Choices}
+\item 
+wx\+Radio\+Box $\ast$ {\bf rb\+Link\+QL}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf select\+Element\+By\+Name} (const wx\+String \&a\+\_\+name)
+\item 
+void {\bf refresh\+Combobox} (wx\+Combo\+Box $\ast$a\+\_\+combo\+Box, {\bf Element\+Type} a\+\_\+type)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Colour {\bf shape\+Colors} [{\bf N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+L\+O\+RS}]
+\item 
+{\bf Net\+Text\+Ctrl} $\ast$ {\bf tc\+Node\+Slope}
+\item 
+{\bf Net\+Text\+Ctrl} $\ast$ {\bf tc\+Node\+Area}
+\item 
+{\bf Net\+Text\+Ctrl} $\ast$ {\bf tc\+Node\+Volume}
+\item 
+{\bf Net\+Text\+Ctrl} $\ast$ {\bf tc\+Node\+Name}
+\item 
+{\bf Lat\+Lon\+Text\+Ctrl} $\ast$ {\bf tc\+Node\+Lat}
+\item 
+{\bf Lat\+Lon\+Text\+Ctrl} $\ast$ {\bf tc\+Node\+Long}
+\item 
+{\bf Net\+Text\+Ctrl} $\ast$ {\bf tc\+Link\+Slope}
+\item 
+{\bf Net\+Text\+Ctrl} $\ast$ {\bf tc\+Link\+Volume}
+\item 
+{\bf Net\+Text\+Ctrl} $\ast$ {\bf tc\+Link\+Length}
+\item 
+{\bf Net\+Text\+Ctrl} $\ast$ {\bf tc\+Link\+Depth}
+\item 
+{\bf Net\+Text\+Ctrl} $\ast$ {\bf tc\+Link\+Name}
+\item 
+wx\+Choice $\ast$ {\bf ch\+Node\+Type}
+\item 
+wx\+Choice $\ast$ {\bf ch\+Link\+Type}
+\item 
+wx\+Sizer $\ast$ {\bf sizer\+Paint}
+\item 
+wx\+Bitmap {\bf bitmap\+Ok}
+\item 
+wx\+Bitmap {\bf bitmap\+Empty}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 139 do arquivo Net\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Net\+Interface@{Net\+Interface}!Net\+Interface@{Net\+Interface}}
+\index{Net\+Interface@{Net\+Interface}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{Net\+Interface(\+S\+I\+G\+A $\ast$main, wx\+Frame $\ast$frame, wx\+Window $\ast$parent, wx\+Panel $\ast$panel\+Paint, wx\+Sizer $\ast$sizer\+Paint)}]{\setlength{\rightskip}{0pt plus 5cm}Net\+Interface\+::\+Net\+Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+GA} $\ast$}]{main, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{wx\+Panel $\ast$}]{panel\+Paint, }
+\item[{wx\+Sizer $\ast$}]{sizer\+Paint}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_ad16b81af9a8dede5e725b1c5da8c95dc}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em main} & Classe principal \\
+\hline
+{\em frame} & Janela onde ser· inserida a interface \\
+\hline
+{\em parent} & Componente a que pertence \\
+\hline
+{\em panel\+Paint} & Painel onde o \doxyref{Net\+Canvas}{pag.}{class_net_canvas} ser· inserido \\
+\hline
+{\em sizer\+Paint} & Sizer do painel\+Paint \\
+\hline
+\end{DoxyParams}
+\index{Net\+Interface@{Net\+Interface}!````~Net\+Interface@{$\sim$\+Net\+Interface}}
+\index{````~Net\+Interface@{$\sim$\+Net\+Interface}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{$\sim$\+Net\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Net\+Interface\+::$\sim$\+Net\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_net_interface_a61f4401545096db9d7aceb2f371110f7}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Net\+Interface@{Net\+Interface}!centralize\+Shapes@{centralize\+Shapes}}
+\index{centralize\+Shapes@{centralize\+Shapes}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{centralize\+Shapes()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::centralize\+Shapes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a0bfef74fa7e74cd12c3bd7eae0d22d09}
+Evento chamado ao clicar no bot„o de Centralizar Shapes na barra de ferramentas de shapes. Este mÈtodo centraliza (ajusta o zoom e o pan) o canvas de modo que todos os shapes fiquem visÌveis \index{Net\+Interface@{Net\+Interface}!clear@{clear}}
+\index{clear@{clear}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a782e241c5ec54bc6bc4bc46208eb6e96}
+Limpa os parametros e deixa-\/os com os valores pÛs-\/construÁ„o \index{Net\+Interface@{Net\+Interface}!D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+L\+E()}]{\setlength{\rightskip}{0pt plus 5cm}Net\+Interface\+::\+D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a00ea6e5b510411f3e597e3bd7812ab3d}
+\index{Net\+Interface@{Net\+Interface}!del\+Node\+Link@{del\+Node\+Link}}
+\index{del\+Node\+Link@{del\+Node\+Link}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{del\+Node\+Link()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::del\+Node\+Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a462e7e34c6fc00d47dfe2d3c15f5acb0}
+\index{Net\+Interface@{Net\+Interface}!enable\+Links\+Info@{enable\+Links\+Info}}
+\index{enable\+Links\+Info@{enable\+Links\+Info}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{enable\+Links\+Info(bool enable)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::enable\+Links\+Info (
+\begin{DoxyParamCaption}
+\item[{bool}]{enable}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_aaf186a2bdfd92fb5875574185096cc89}
+Habilita ou desabilita a interface de entrada de dados para trecho \index{Net\+Interface@{Net\+Interface}!enable\+Nodes\+Info@{enable\+Nodes\+Info}}
+\index{enable\+Nodes\+Info@{enable\+Nodes\+Info}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{enable\+Nodes\+Info(bool enable)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::enable\+Nodes\+Info (
+\begin{DoxyParamCaption}
+\item[{bool}]{enable}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a3eba830ffdd33555bd4f35dbfe42ac66}
+Habilita ou desabilita a interface de entrada de dados para nÛ \index{Net\+Interface@{Net\+Interface}!get\+Color\+Layer@{get\+Color\+Layer}}
+\index{get\+Color\+Layer@{get\+Color\+Layer}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{get\+Color\+Layer(unsigned int index)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::get\+Color\+Layer (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{index}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a9fd1ee6a3c87ad2a58049f255f882327}
+\index{Net\+Interface@{Net\+Interface}!load\+New\+Raster@{load\+New\+Raster}}
+\index{load\+New\+Raster@{load\+New\+Raster}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{load\+New\+Raster(const wx\+String \&file, Shape\+Errors\+Dialog \&shape\+Error\+Dialog)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::load\+New\+Raster (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file, }
+\item[{{\bf Shape\+Errors\+Dialog} \&}]{shape\+Error\+Dialog}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_aae227b3fa19785041883d85bb2d04069}
+Cria um novo \doxyref{Raster\+Layer}{pag.}{class_raster_layer} que contem a imagem localizada em \textquotesingle{}file\textquotesingle{}
+
+
+\begin{DoxyParams}{Par√¢metros}
+{\em file} & String contendo a U\+RL do arquivo raster \\
+\hline
+{\em shape\+Error\+Dialog} & A dialog para mostrar o erro de carregamento do raster \\
+\hline
+\end{DoxyParams}
+\index{Net\+Interface@{Net\+Interface}!load\+New\+Shape@{load\+New\+Shape}}
+\index{load\+New\+Shape@{load\+New\+Shape}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{load\+New\+Shape(const wx\+String \&file, Shape\+Errors\+Dialog \&shape\+Error\+Dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Interface\+::load\+New\+Shape (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file, }
+\item[{{\bf Shape\+Errors\+Dialog} \&}]{shape\+Error\+Dialog}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a145ff1bb69b0718ab9d8b22c77b914cc}
+Cria uma nova Vector\+Layer que contem o shape 
+\begin{DoxyParams}{Par√¢metros}
+{\em -\/} & is\+Redraw\+: diz se a funÁ„o foi chamada pelo redraw \\
+\hline
+\end{DoxyParams}
+\index{Net\+Interface@{Net\+Interface}!load\+New\+Shape@{load\+New\+Shape}}
+\index{load\+New\+Shape@{load\+New\+Shape}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{load\+New\+Shape(\+O\+G\+R\+Data\+Source $\ast$datasource, Shape\+Errors\+Dialog \&shape\+Error\+Dialog)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::load\+New\+Shape (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Data\+Source $\ast$}]{datasource, }
+\item[{{\bf Shape\+Errors\+Dialog} \&}]{shape\+Error\+Dialog}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a7aac9535b6d2d26152ad9700b4128935}
+Cria uma nova Vector\+Layer a partir de um datasource G\+D\+AL \index{Net\+Interface@{Net\+Interface}!load\+W\+A\+S\+A\+Input@{load\+W\+A\+S\+A\+Input}}
+\index{load\+W\+A\+S\+A\+Input@{load\+W\+A\+S\+A\+Input}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{load\+W\+A\+S\+A\+Input(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::load\+W\+A\+S\+A\+Input (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a69a2f460ac9fdd8958efa378bdc0f5de}
+Evento de carregar entradas para o W\+A\+SA \index{Net\+Interface@{Net\+Interface}!on\+Alter\+Cb\+Link\+Selection@{on\+Alter\+Cb\+Link\+Selection}}
+\index{on\+Alter\+Cb\+Link\+Selection@{on\+Alter\+Cb\+Link\+Selection}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{on\+Alter\+Cb\+Link\+Selection(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::on\+Alter\+Cb\+Link\+Selection (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a5699b2945f18a47106292981109f8ba1}
+Evento de alterar o elemento link selecionado no combobox \index{Net\+Interface@{Net\+Interface}!on\+Alter\+Cb\+Selection@{on\+Alter\+Cb\+Selection}}
+\index{on\+Alter\+Cb\+Selection@{on\+Alter\+Cb\+Selection}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{on\+Alter\+Cb\+Selection(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::on\+Alter\+Cb\+Selection (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_ae5ae13841f230ba13fdea66443c9bd2c}
+Evento de alterar o elemento nÛ selecionado no combobox \index{Net\+Interface@{Net\+Interface}!on\+Alter\+Link\+Bi@{on\+Alter\+Link\+Bi}}
+\index{on\+Alter\+Link\+Bi@{on\+Alter\+Link\+Bi}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{on\+Alter\+Link\+Bi(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::on\+Alter\+Link\+Bi (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a5079ad5680016c13e0d31a44015c4e96}
+Evento de alterar o tipo de trecho entre bidirecional ou n„o \index{Net\+Interface@{Net\+Interface}!on\+Alter\+Link\+Type@{on\+Alter\+Link\+Type}}
+\index{on\+Alter\+Link\+Type@{on\+Alter\+Link\+Type}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{on\+Alter\+Link\+Type(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::on\+Alter\+Link\+Type (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_af9179c9604c5492166a610b60d3d1fe2}
+Evento de alterar o tipo de trecho \index{Net\+Interface@{Net\+Interface}!on\+Alter\+Link\+Type\+QL@{on\+Alter\+Link\+Type\+QL}}
+\index{on\+Alter\+Link\+Type\+QL@{on\+Alter\+Link\+Type\+QL}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{on\+Alter\+Link\+Type\+Q\+L(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::on\+Alter\+Link\+Type\+QL (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a1cee5654a01235b36ba59b2704fdb4ca}
+Evento de alterar o tipo de trecho entre com/sem propagaÁ„o lateral \index{Net\+Interface@{Net\+Interface}!on\+Alter\+Node\+Type@{on\+Alter\+Node\+Type}}
+\index{on\+Alter\+Node\+Type@{on\+Alter\+Node\+Type}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{on\+Alter\+Node\+Type(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::on\+Alter\+Node\+Type (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a4f492709054855b2f8ee2afe6574c566}
+Evento de alterar o tipo de nÛ \index{Net\+Interface@{Net\+Interface}!on\+Alter\+Node\+Type\+Fast@{on\+Alter\+Node\+Type\+Fast}}
+\index{on\+Alter\+Node\+Type\+Fast@{on\+Alter\+Node\+Type\+Fast}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{on\+Alter\+Node\+Type\+Fast(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::on\+Alter\+Node\+Type\+Fast (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_af6473d60feb16e693b57fb6feca60ac3}
+\index{Net\+Interface@{Net\+Interface}!on\+Artficial\+Link\+Type@{on\+Artficial\+Link\+Type}}
+\index{on\+Artficial\+Link\+Type@{on\+Artficial\+Link\+Type}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{on\+Artficial\+Link\+Type(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::on\+Artficial\+Link\+Type (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a28fe52ef953da0fb297818b8560578e0}
+Muda entre artificial e natural \index{Net\+Interface@{Net\+Interface}!on\+Center\+Element@{on\+Center\+Element}}
+\index{on\+Center\+Element@{on\+Center\+Element}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{on\+Center\+Element(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::on\+Center\+Element (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_af760a0f9d29005d6d3f641e3794b76e0}
+Evento de centralizar canvas no elemento selecionado pelo combobox \index{Net\+Interface@{Net\+Interface}!on\+Clear@{on\+Clear}}
+\index{on\+Clear@{on\+Clear}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{on\+Clear(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::on\+Clear (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_aa2160cf9dbca542ec61d130665ee1385}
+Evento de limpar a rede \index{Net\+Interface@{Net\+Interface}!on\+Del\+Node\+Link@{on\+Del\+Node\+Link}}
+\index{on\+Del\+Node\+Link@{on\+Del\+Node\+Link}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{on\+Del\+Node\+Link(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::on\+Del\+Node\+Link (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a8c17942e3c79ad5dc690af07f8f51f3d}
+Evento de deleÁ„o de nÛ Evento de deleÁ„o de trecho Evento de deleÁ„o de nÛ e trecho \index{Net\+Interface@{Net\+Interface}!on\+Open\+Map@{on\+Open\+Map}}
+\index{on\+Open\+Map@{on\+Open\+Map}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{on\+Open\+Map(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::on\+Open\+Map (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a8302d2337e4ccbe9aac9fd6afff2151e}
+Evento de abertura de figura para paisagem de fundo \index{Net\+Interface@{Net\+Interface}!on\+Open\+Net@{on\+Open\+Net}}
+\index{on\+Open\+Net@{on\+Open\+Net}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{on\+Open\+Net(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::on\+Open\+Net (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a365d7c5d7eecbf766cb7f290ff375e1c}
+Evento de abertura de rede \index{Net\+Interface@{Net\+Interface}!on\+Save\+Net@{on\+Save\+Net}}
+\index{on\+Save\+Net@{on\+Save\+Net}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{on\+Save\+Net(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::on\+Save\+Net (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a112dd161b7d7ecdbe69a62c8cbe1fee7}
+Evento de salvar a rede \index{Net\+Interface@{Net\+Interface}!refresh\+Combobox@{refresh\+Combobox}}
+\index{refresh\+Combobox@{refresh\+Combobox}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{refresh\+Combobox(wx\+Combo\+Box $\ast$a\+\_\+combo\+Box, Element\+Type a\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::refresh\+Combobox (
+\begin{DoxyParamCaption}
+\item[{wx\+Combo\+Box $\ast$}]{a\+\_\+combo\+Box, }
+\item[{{\bf Element\+Type}}]{a\+\_\+type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_interface_ae64c8e284084e017d677fb586997d917}
+MÈtodo auxiliar usado na atualizaÁ„o dos elementos do combobox \index{Net\+Interface@{Net\+Interface}!refresh\+Element\+Combo\+Box@{refresh\+Element\+Combo\+Box}}
+\index{refresh\+Element\+Combo\+Box@{refresh\+Element\+Combo\+Box}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{refresh\+Element\+Combo\+Box()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::refresh\+Element\+Combo\+Box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a4aa60f0f0da8aa979f842dab931b5ac4}
+Atualiza os elementos nas Combo\+Box de seleÁ„o \index{Net\+Interface@{Net\+Interface}!refresh\+Element\+Link\+Combo\+Box@{refresh\+Element\+Link\+Combo\+Box}}
+\index{refresh\+Element\+Link\+Combo\+Box@{refresh\+Element\+Link\+Combo\+Box}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{refresh\+Element\+Link\+Combo\+Box()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::refresh\+Element\+Link\+Combo\+Box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_ad75f1808410350dbb72ebbd9885c1250}
+\index{Net\+Interface@{Net\+Interface}!remove\+Elements@{remove\+Elements}}
+\index{remove\+Elements@{remove\+Elements}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{remove\+Elements(std\+::vector$<$ Element\+I\+D $>$ \&elements\+\_\+ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::remove\+Elements (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Element\+ID} $>$ \&}]{elements\+\_\+ids}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a08fc5c0e71754037025859c5aca126cf}
+Evento de deleÁ„o de nÛ e trecho \index{Net\+Interface@{Net\+Interface}!select\+Element\+By\+Name@{select\+Element\+By\+Name}}
+\index{select\+Element\+By\+Name@{select\+Element\+By\+Name}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{select\+Element\+By\+Name(const wx\+String \&a\+\_\+name)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::select\+Element\+By\+Name (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{a\+\_\+name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_interface_a42e1d7ab0a82854bb02ba864a05796fb}
+\index{Net\+Interface@{Net\+Interface}!set\+Info\+Link@{set\+Info\+Link}}
+\index{set\+Info\+Link@{set\+Info\+Link}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{set\+Info\+Link(\+Element\+I\+D link\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::set\+Info\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{link\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_abc41c26a817b471386a755cd6cf1e470}
+Deleta o(s) nÛ(s) selecionado(s) Deleta o(s) trecho(s) selecionado(s) Insere as informaÁıes do trecho \index{Net\+Interface@{Net\+Interface}!set\+Info\+Node@{set\+Info\+Node}}
+\index{set\+Info\+Node@{set\+Info\+Node}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{set\+Info\+Node(\+Element\+I\+D node\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::set\+Info\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{node\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a95aba240a9138fd05d21ba50a99022ff}
+Insere as informaÁıes do nÛ \index{Net\+Interface@{Net\+Interface}!Show@{Show}}
+\index{Show@{Show}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{Show(bool show=true)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Net\+Interface\+::\+Show (
+\begin{DoxyParamCaption}
+\item[{bool}]{show = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_net_interface_ae8915453c4a022bcd2980124d6b0a95e}
+Reescrevendo o evento do wx \index{Net\+Interface@{Net\+Interface}!show\+Projection\+Converter\+Dialog@{show\+Projection\+Converter\+Dialog}}
+\index{show\+Projection\+Converter\+Dialog@{show\+Projection\+Converter\+Dialog}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{show\+Projection\+Converter\+Dialog(\+O\+G\+R\+Layer $\ast$a\+\_\+src\+Layer, O\+G\+R\+Spatial\+Reference \&a\+\_\+src\+Spatial\+Reference, O\+G\+R\+Spatial\+Reference \&a\+\_\+dst\+Spatial\+Reference)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::show\+Projection\+Converter\+Dialog (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{a\+\_\+src\+Layer, }
+\item[{O\+G\+R\+Spatial\+Reference \&}]{a\+\_\+src\+Spatial\+Reference, }
+\item[{O\+G\+R\+Spatial\+Reference \&}]{a\+\_\+dst\+Spatial\+Reference}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a4dd1b16d0997602ed66761b71bfed46a}
+\index{Net\+Interface@{Net\+Interface}!update\+Selection\+By\+Node\+Type@{update\+Selection\+By\+Node\+Type}}
+\index{update\+Selection\+By\+Node\+Type@{update\+Selection\+By\+Node\+Type}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{update\+Selection\+By\+Node\+Type(\+Node\+Type m\+\_\+node\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Interface\+::update\+Selection\+By\+Node\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Node\+Type}}]{m\+\_\+node\+Type}
+\end{DoxyParamCaption}
+)}\label{class_net_interface_a362d392827f90b13bc7f906eeecc5129}
+Tabela de eventos 
+
+\subsection{Atributos}
+\index{Net\+Interface@{Net\+Interface}!bitmap\+Empty@{bitmap\+Empty}}
+\index{bitmap\+Empty@{bitmap\+Empty}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{bitmap\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Net\+Interface\+::bitmap\+Empty\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_interface_ae701575b0bd47f12c553ceabfe197d5a}
+
+
+Defini√ß√£o na linha 174 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!bitmap\+Ok@{bitmap\+Ok}}
+\index{bitmap\+Ok@{bitmap\+Ok}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{bitmap\+Ok}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Net\+Interface\+::bitmap\+Ok\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_interface_a184dd06048dd0f7f9c91fab22bd6e20e}
+Imagem de lido e n„o lido para o carregamento do shape de georreferenciamento 
+
+Defini√ß√£o na linha 174 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!canvas@{canvas}}
+\index{canvas@{canvas}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{canvas}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Net\+Canvas}$\ast$ Net\+Interface\+::canvas}\label{class_net_interface_a95e7bad99a121b8207e3e24af90384d1}
+Aponta para o \doxyref{Net\+Canvas}{pag.}{class_net_canvas} 
+
+Defini√ß√£o na linha 196 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!cb\+Link\+Bi@{cb\+Link\+Bi}}
+\index{cb\+Link\+Bi@{cb\+Link\+Bi}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{cb\+Link\+Bi}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box $\ast$ Net\+Interface\+::cb\+Link\+Bi}\label{class_net_interface_a13270fd7f82cfbd426a22e89f16d37bb}
+
+
+Defini√ß√£o na linha 213 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!cb\+Link\+QL@{cb\+Link\+QL}}
+\index{cb\+Link\+QL@{cb\+Link\+QL}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{cb\+Link\+QL}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box $\ast$ Net\+Interface\+::cb\+Link\+QL}\label{class_net_interface_aca5cb0d379f5127c2e6f8d5304a28546}
+
+
+Defini√ß√£o na linha 213 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!cb\+Link\+Type@{cb\+Link\+Type}}
+\index{cb\+Link\+Type@{cb\+Link\+Type}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{cb\+Link\+Type}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ Net\+Interface\+::cb\+Link\+Type}\label{class_net_interface_a4bf4b3a22806a9c6704ddc354ec61b27}
+Check\+Box para trecho e Georreferenciamento 
+
+Defini√ß√£o na linha 213 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!ch\+Link\+Type@{ch\+Link\+Type}}
+\index{ch\+Link\+Type@{ch\+Link\+Type}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{ch\+Link\+Type}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ Net\+Interface\+::ch\+Link\+Type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_interface_a9c54174058df3f88faae49426fc6fd4f}
+
+
+Defini√ß√£o na linha 162 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!ch\+Node\+Type@{ch\+Node\+Type}}
+\index{ch\+Node\+Type@{ch\+Node\+Type}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{ch\+Node\+Type}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Net\+Interface\+::ch\+Node\+Type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_interface_a08c0f32080101f5c4b81cd4053a221d6}
+Choice de seleÁ„o de tipo de nÛ/trecho 
+
+Defini√ß√£o na linha 162 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!choices@{choices}}
+\index{choices@{choices}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{choices}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Array\+String Net\+Interface\+::choices}\label{class_net_interface_a070ac6a170cea24c16d2a063d897abc1}
+Elementos para popular a combobox element\+Choices. 
+
+Defini√ß√£o na linha 228 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!element\+Choices@{element\+Choices}}
+\index{element\+Choices@{element\+Choices}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{element\+Choices}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Combo\+Box$\ast$ Net\+Interface\+::element\+Choices}\label{class_net_interface_a2399bf8c2f8e2c409a72367dbd7d6af5}
+Combo\+Box contendo os elementos nÛ 
+
+Defini√ß√£o na linha 218 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!element\+Link\+Choices@{element\+Link\+Choices}}
+\index{element\+Link\+Choices@{element\+Link\+Choices}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{element\+Link\+Choices}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Combo\+Box$\ast$ Net\+Interface\+::element\+Link\+Choices}\label{class_net_interface_aa03806b307748caa22a453dbd6062e39}
+Combo\+Box contendo os elementos trecho 
+
+Defini√ß√£o na linha 223 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!last\+Node\+Type@{last\+Node\+Type}}
+\index{last\+Node\+Type@{last\+Node\+Type}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{last\+Node\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node\+Type} Net\+Interface\+::last\+Node\+Type}\label{class_net_interface_a0ba39149c41d47b87ba5c156bb7c971b}
+
+
+Defini√ß√£o na linha 205 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!link\+Choices@{link\+Choices}}
+\index{link\+Choices@{link\+Choices}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{link\+Choices}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Array\+String Net\+Interface\+::link\+Choices}\label{class_net_interface_a1be42e6b4f5fdd5a2bec0525d1aba0bb}
+Elementos para popular a combobox element\+Link\+Choices. 
+
+Defini√ß√£o na linha 233 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!main@{main}}
+\index{main@{main}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+GA}$\ast$ Net\+Interface\+::main}\label{class_net_interface_acdc9c4e362fde6a15bad066312a10118}
+Aponta para \doxyref{S\+I\+GA}{pag.}{class_s_i_g_a} 
+
+Defini√ß√£o na linha 184 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!modified\+Link@{modified\+Link}}
+\index{modified\+Link@{modified\+Link}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{modified\+Link}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Interface\+::modified\+Link}\label{class_net_interface_afb219ec3c05bdaccd6c4f723602b0693}
+Diz o trecho foi modificado 
+
+Defini√ß√£o na linha 209 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!modified\+Node@{modified\+Node}}
+\index{modified\+Node@{modified\+Node}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{modified\+Node}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Interface\+::modified\+Node}\label{class_net_interface_a8c87dd734da8b02e79bea4d11c4051ae}
+Diz o nÛ foi modificado 
+
+Defini√ß√£o na linha 201 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!rb\+Link\+QL@{rb\+Link\+QL}}
+\index{rb\+Link\+QL@{rb\+Link\+QL}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{rb\+Link\+QL}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box$\ast$ Net\+Interface\+::rb\+Link\+QL}\label{class_net_interface_abb8966bc235c42a1629c1d09614d2b9b}
+Radio\+Box para trecho 
+
+Defini√ß√£o na linha 238 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!shape\+Colors@{shape\+Colors}}
+\index{shape\+Colors@{shape\+Colors}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{shape\+Colors}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Colour Net\+Interface\+::shape\+Colors[{\bf N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+L\+O\+RS}]\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_interface_a5a16ed6cd1f08cc51ebf50e8036e68c3}
+Cores aleatorias usadas no preenchimento dos poligonos dos shapes 
+
+Defini√ß√£o na linha 146 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!sizer\+Paint@{sizer\+Paint}}
+\index{sizer\+Paint@{sizer\+Paint}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{sizer\+Paint}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer$\ast$ Net\+Interface\+::sizer\+Paint\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_interface_a5e63a45fd27d38a71481228ad48e7ce2}
+Check\+Box para trecho Sizer do canvas 
+
+Defini√ß√£o na linha 170 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!st\+Net\+Name@{st\+Net\+Name}}
+\index{st\+Net\+Name@{st\+Net\+Name}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{st\+Net\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Net\+Interface\+::st\+Net\+Name}\label{class_net_interface_a83efa07187838218c3bf90bdb64fb89a}
+Texto estatico 
+
+Defini√ß√£o na linha 188 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!tc\+Link\+Depth@{tc\+Link\+Depth}}
+\index{tc\+Link\+Depth@{tc\+Link\+Depth}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{tc\+Link\+Depth}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Net\+Text\+Ctrl} $\ast$ Net\+Interface\+::tc\+Link\+Depth\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_interface_ae10eb72f2464fd06cfdaa14dce85ac68}
+
+
+Defini√ß√£o na linha 158 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!tc\+Link\+Length@{tc\+Link\+Length}}
+\index{tc\+Link\+Length@{tc\+Link\+Length}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{tc\+Link\+Length}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Net\+Text\+Ctrl} $\ast$ Net\+Interface\+::tc\+Link\+Length\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_interface_aece9fda6684dcf0297b3e05b6f8fd43f}
+
+
+Defini√ß√£o na linha 158 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!tc\+Link\+Name@{tc\+Link\+Name}}
+\index{tc\+Link\+Name@{tc\+Link\+Name}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{tc\+Link\+Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Net\+Text\+Ctrl} $\ast$ Net\+Interface\+::tc\+Link\+Name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_interface_aa0958403826f4b648ea07c9772d6d9f4}
+
+
+Defini√ß√£o na linha 158 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!tc\+Link\+Slope@{tc\+Link\+Slope}}
+\index{tc\+Link\+Slope@{tc\+Link\+Slope}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{tc\+Link\+Slope}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Net\+Text\+Ctrl}$\ast$ Net\+Interface\+::tc\+Link\+Slope\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_interface_ae6d5aeeed0fe0fd1187a723c36797989}
+Caixas de texto para informaÁıes do trecho 
+
+Defini√ß√£o na linha 158 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!tc\+Link\+Volume@{tc\+Link\+Volume}}
+\index{tc\+Link\+Volume@{tc\+Link\+Volume}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{tc\+Link\+Volume}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Net\+Text\+Ctrl} $\ast$ Net\+Interface\+::tc\+Link\+Volume\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_interface_a4bafe70ed5cdb467a5a43e7522c20db7}
+
+
+Defini√ß√£o na linha 158 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!tc\+Net\+Name@{tc\+Net\+Name}}
+\index{tc\+Net\+Name@{tc\+Net\+Name}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{tc\+Net\+Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Net\+Text\+Ctrl}$\ast$ Net\+Interface\+::tc\+Net\+Name}\label{class_net_interface_a2f4fcb9f0a580f962b3024db3bd3036e}
+Caixa de entrada de texto para nome da rede 
+
+Defini√ß√£o na linha 192 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!tc\+Node\+Area@{tc\+Node\+Area}}
+\index{tc\+Node\+Area@{tc\+Node\+Area}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{tc\+Node\+Area}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Net\+Text\+Ctrl} $\ast$ Net\+Interface\+::tc\+Node\+Area\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_interface_a600afaa0f9aab7462e47416587d7eaa5}
+
+
+Defini√ß√£o na linha 150 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!tc\+Node\+Lat@{tc\+Node\+Lat}}
+\index{tc\+Node\+Lat@{tc\+Node\+Lat}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{tc\+Node\+Lat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lat\+Lon\+Text\+Ctrl}$\ast$ Net\+Interface\+::tc\+Node\+Lat\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_interface_a9d4b9698df9483bb3bfc1b9b7661385c}
+Caixas de texto para informaÁıes de latitude e longitude 
+
+Defini√ß√£o na linha 154 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!tc\+Node\+Long@{tc\+Node\+Long}}
+\index{tc\+Node\+Long@{tc\+Node\+Long}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{tc\+Node\+Long}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Lat\+Lon\+Text\+Ctrl} $\ast$ Net\+Interface\+::tc\+Node\+Long\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_interface_a606503b498eb5f13a840e9c90a4c1235}
+
+
+Defini√ß√£o na linha 154 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!tc\+Node\+Name@{tc\+Node\+Name}}
+\index{tc\+Node\+Name@{tc\+Node\+Name}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{tc\+Node\+Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Net\+Text\+Ctrl} $\ast$ Net\+Interface\+::tc\+Node\+Name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_interface_ac73f89bd87f3b4e15065cb1d8e944ba8}
+
+
+Defini√ß√£o na linha 150 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!tc\+Node\+Slope@{tc\+Node\+Slope}}
+\index{tc\+Node\+Slope@{tc\+Node\+Slope}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{tc\+Node\+Slope}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Net\+Text\+Ctrl}$\ast$ Net\+Interface\+::tc\+Node\+Slope\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_interface_aae70963e3a4c7089790c74e6277b4069}
+Caixas de texto para informaÁıes do nÛ 
+
+Defini√ß√£o na linha 150 do arquivo Net\+Interface.\+h.
+
+\index{Net\+Interface@{Net\+Interface}!tc\+Node\+Volume@{tc\+Node\+Volume}}
+\index{tc\+Node\+Volume@{tc\+Node\+Volume}!Net\+Interface@{Net\+Interface}}
+\subsubsection[{tc\+Node\+Volume}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Net\+Text\+Ctrl} $\ast$ Net\+Interface\+::tc\+Node\+Volume\hspace{0.3cm}{\ttfamily [protected]}}\label{class_net_interface_ab9b19aeb009814164775d0ea9384879b}
+
+
+Defini√ß√£o na linha 150 do arquivo Net\+Interface.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Net\+Interface.\+h}\end{DoxyCompactItemize}

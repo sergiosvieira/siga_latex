@@ -1,0 +1,391 @@
+\section{ReferÃªncia da Classe Pumping\+Costs\+Dialog\+Content}
+\label{class_pumping_costs_dialog_content}\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+
+
+{\ttfamily \#include $<$Pumping\+Costs\+Dialog\+Content.\+h$>$}
+
+
+
+Herdeiro de {\bf S\+I\+G\+A\+Dialog\+Content} e {\bf S\+I\+G\+A\+Dialog\+Content}.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Pumping\+Costs\+Dialog\+Content} ({\bf Res\+Op\+Obj\+Function} $\ast${\bf function}, {\bf S\+I\+G\+A\+Dialog} $\ast$dialog)
+\item 
+{\bf $\sim$\+Pumping\+Costs\+Dialog\+Content} ()
+\item 
+void {\bf on\+Select\+Min\+Max} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Choice\+Pumping\+Links} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Change\+Notebook} (wx\+Notebook\+Event \&event)
+\item 
+void {\bf on\+Tool\+Options} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Change\+Grid} (wx\+Grid\+Event \&event)
+\item 
+void {\bf on\+Toggle\+Button} (wx\+Command\+Event \&event)
+\item 
+virtual void {\bf set\+Info} ()
+\item 
+{\bf D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE} ()
+\item 
+{\bf Pumping\+Costs\+Dialog\+Content} ({\bf Res\+Op\+Obj\+Function} $\ast${\bf function}, {\bf S\+I\+G\+A\+Dialog} $\ast$dialog)
+\item 
+{\bf Pumping\+Costs\+Dialog\+Content} ({\bf Res\+Op\+Obj\+Function} $\ast${\bf function}, {\bf S\+I\+G\+A\+Dialog} $\ast$dialog, {\bf Element\+ID} network\+\_\+id)
+\item 
+{\bf $\sim$\+Pumping\+Costs\+Dialog\+Content} ()
+\item 
+void {\bf on\+Select\+Min\+Max} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Choice\+Pumping\+Links} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Change\+Notebook} (wx\+Notebook\+Event \&event)
+\item 
+void {\bf on\+Tool\+Options} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Change\+Grid} (wx\+Grid\+Event \&event)
+\item 
+void {\bf on\+Toggle\+Button} (wx\+Command\+Event \&event)
+\item 
+virtual void {\bf set\+Info} ()
+\item 
+{\bf D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Radio\+Box $\ast$ {\bf rb\+Min\+Max}
+\item 
+wx\+Check\+List\+Box $\ast$ {\bf ch\+Pumping\+Links}
+\item 
+wx\+Notebook $\ast$ {\bf note}
+\item 
+{\bf S\+I\+G\+A\+Grid} $\ast$ {\bf grid\+Costs}
+\item 
+wx\+Toggle\+Button $\ast$ {\bf bt\+Wet\+Month} [12]
+\item 
+wx\+Tool\+Bar $\ast$ {\bf tools}
+\end{DoxyCompactItemize}
+\subsection*{MÃ©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf open\+Conf} ()
+\item 
+void {\bf save\+Conf} ()
+\item 
+void {\bf open\+Conf} ()
+\item 
+void {\bf save\+Conf} ()
+\item 
+void {\bf Init} ({\bf Element\+ID} network\+\_\+id=0)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Obj\+Function} $\ast$ {\bf function}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 40 do arquivo Obj\+Function/\+Pumping\+Costs/\+Pumping\+Costs\+Dialog\+Content.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{Pumping\+Costs\+Dialog\+Content(\+Res\+Op\+Obj\+Function $\ast$function, S\+I\+G\+A\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}Pumping\+Costs\+Dialog\+Content\+::\+Pumping\+Costs\+Dialog\+Content (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Obj\+Function} $\ast$}]{function, }
+\item[{{\bf S\+I\+G\+A\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_dialog_content_a533e7633ed39e25136e36b87e004aec7}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em function} & Ponteiro para a função objetivo \\
+\hline
+{\em dialog} & Caixa de dialogo a que pertence \\
+\hline
+\end{DoxyParams}
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!````~Pumping\+Costs\+Dialog\+Content@{$\sim$\+Pumping\+Costs\+Dialog\+Content}}
+\index{````~Pumping\+Costs\+Dialog\+Content@{$\sim$\+Pumping\+Costs\+Dialog\+Content}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{$\sim$\+Pumping\+Costs\+Dialog\+Content()}]{\setlength{\rightskip}{0pt plus 5cm}Pumping\+Costs\+Dialog\+Content\+::$\sim$\+Pumping\+Costs\+Dialog\+Content (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pumping_costs_dialog_content_ad04d6c83c6f9aeccb86066ba2e29f7b2}
+Destrutor 
+
+DefiniÃ§Ã£o na linha 99 do arquivo Obj\+Function/\+Pumping\+Costs/\+Pumping\+Costs\+Dialog\+Content.\+h.
+
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{Pumping\+Costs\+Dialog\+Content(\+Res\+Op\+Obj\+Function $\ast$function, S\+I\+G\+A\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}Pumping\+Costs\+Dialog\+Content\+::\+Pumping\+Costs\+Dialog\+Content (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Obj\+Function} $\ast$}]{function, }
+\item[{{\bf S\+I\+G\+A\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_dialog_content_a533e7633ed39e25136e36b87e004aec7}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em function} & Ponteiro para a função objetivo \\
+\hline
+{\em dialog} & Caixa de dialogo a que pertence \\
+\hline
+\end{DoxyParams}
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{Pumping\+Costs\+Dialog\+Content(\+Res\+Op\+Obj\+Function $\ast$function, S\+I\+G\+A\+Dialog $\ast$dialog, Element\+I\+D network\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}Pumping\+Costs\+Dialog\+Content\+::\+Pumping\+Costs\+Dialog\+Content (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Obj\+Function} $\ast$}]{function, }
+\item[{{\bf S\+I\+G\+A\+Dialog} $\ast$}]{dialog, }
+\item[{{\bf Element\+ID}}]{network\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_dialog_content_aa866b26ee9bf338983c36132901e4e71}
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!````~Pumping\+Costs\+Dialog\+Content@{$\sim$\+Pumping\+Costs\+Dialog\+Content}}
+\index{````~Pumping\+Costs\+Dialog\+Content@{$\sim$\+Pumping\+Costs\+Dialog\+Content}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{$\sim$\+Pumping\+Costs\+Dialog\+Content()}]{\setlength{\rightskip}{0pt plus 5cm}Pumping\+Costs\+Dialog\+Content\+::$\sim$\+Pumping\+Costs\+Dialog\+Content (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_pumping_costs_dialog_content_ad04d6c83c6f9aeccb86066ba2e29f7b2}
+Destrutor 
+
+DefiniÃ§Ã£o na linha 108 do arquivo /\+Obj\+Function/\+Pumping\+Costs/\+Pumping\+Costs\+Dialog\+Content.\+h.
+
+
+
+\subsection{MÃ©todos}
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+L\+E()}]{\setlength{\rightskip}{0pt plus 5cm}Pumping\+Costs\+Dialog\+Content\+::\+D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_dialog_content_a49f6fd791ab5f4f1446c83be47531023}
+Declaração da tabela de eventos \index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+L\+E()}]{\setlength{\rightskip}{0pt plus 5cm}Pumping\+Costs\+Dialog\+Content\+::\+D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_dialog_content_a49f6fd791ab5f4f1446c83be47531023}
+Declaração da tabela de eventos \index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!Init@{Init}}
+\index{Init@{Init}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{Init(\+Element\+I\+D network\+\_\+id=0)}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Dialog\+Content\+::\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{network\+\_\+id = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pumping_costs_dialog_content_a94b9245d7e32c1eed3257e8d0df67f99}
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!on\+Change\+Grid@{on\+Change\+Grid}}
+\index{on\+Change\+Grid@{on\+Change\+Grid}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{on\+Change\+Grid(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Dialog\+Content\+::on\+Change\+Grid (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_dialog_content_a5d0bf139e2101af8b96813f1f583efdf}
+Evento chamado quando ocorre modifição nos dados da liberação. \index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!on\+Change\+Grid@{on\+Change\+Grid}}
+\index{on\+Change\+Grid@{on\+Change\+Grid}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{on\+Change\+Grid(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Dialog\+Content\+::on\+Change\+Grid (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_dialog_content_a5d0bf139e2101af8b96813f1f583efdf}
+Evento chamado quando ocorre modifição nos dados da liberação. \index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!on\+Change\+Notebook@{on\+Change\+Notebook}}
+\index{on\+Change\+Notebook@{on\+Change\+Notebook}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{on\+Change\+Notebook(wx\+Notebook\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Dialog\+Content\+::on\+Change\+Notebook (
+\begin{DoxyParamCaption}
+\item[{wx\+Notebook\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_dialog_content_aa3b5f33e998e4ccfa2f2dd45c9d80f26}
+Evento de troca de paginas do notebook \index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!on\+Change\+Notebook@{on\+Change\+Notebook}}
+\index{on\+Change\+Notebook@{on\+Change\+Notebook}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{on\+Change\+Notebook(wx\+Notebook\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Dialog\+Content\+::on\+Change\+Notebook (
+\begin{DoxyParamCaption}
+\item[{wx\+Notebook\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_dialog_content_aa3b5f33e998e4ccfa2f2dd45c9d80f26}
+Evento de troca de paginas do notebook \index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!on\+Choice\+Pumping\+Links@{on\+Choice\+Pumping\+Links}}
+\index{on\+Choice\+Pumping\+Links@{on\+Choice\+Pumping\+Links}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{on\+Choice\+Pumping\+Links(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Dialog\+Content\+::on\+Choice\+Pumping\+Links (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_dialog_content_a85bf525dbb9ddd144d857fbc0ed3f7a4}
+Evento de selção de trechos a serem utilizados para o cálculo da função objetivo \index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!on\+Choice\+Pumping\+Links@{on\+Choice\+Pumping\+Links}}
+\index{on\+Choice\+Pumping\+Links@{on\+Choice\+Pumping\+Links}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{on\+Choice\+Pumping\+Links(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Dialog\+Content\+::on\+Choice\+Pumping\+Links (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_dialog_content_a85bf525dbb9ddd144d857fbc0ed3f7a4}
+Evento de selção de trechos a serem utilizados para o cálculo da função objetivo \index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!on\+Select\+Min\+Max@{on\+Select\+Min\+Max}}
+\index{on\+Select\+Min\+Max@{on\+Select\+Min\+Max}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{on\+Select\+Min\+Max(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Dialog\+Content\+::on\+Select\+Min\+Max (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_dialog_content_ab6c245f89b8e4c64b1ba2b6c58d5fdc3}
+Evento que define a opção de otimização da função objetivo \index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!on\+Select\+Min\+Max@{on\+Select\+Min\+Max}}
+\index{on\+Select\+Min\+Max@{on\+Select\+Min\+Max}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{on\+Select\+Min\+Max(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Dialog\+Content\+::on\+Select\+Min\+Max (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_dialog_content_ab6c245f89b8e4c64b1ba2b6c58d5fdc3}
+Evento que define a opção de otimização da função objetivo \index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!on\+Toggle\+Button@{on\+Toggle\+Button}}
+\index{on\+Toggle\+Button@{on\+Toggle\+Button}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{on\+Toggle\+Button(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Dialog\+Content\+::on\+Toggle\+Button (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_dialog_content_a6748bc734abf75615446d4e568607d63}
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!on\+Toggle\+Button@{on\+Toggle\+Button}}
+\index{on\+Toggle\+Button@{on\+Toggle\+Button}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{on\+Toggle\+Button(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Dialog\+Content\+::on\+Toggle\+Button (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_dialog_content_a6748bc734abf75615446d4e568607d63}
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!on\+Tool\+Options@{on\+Tool\+Options}}
+\index{on\+Tool\+Options@{on\+Tool\+Options}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{on\+Tool\+Options(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Dialog\+Content\+::on\+Tool\+Options (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_dialog_content_a25f49233df0c9f2128d2498ae47d3065}
+Captura eventos da barra de ferramentas \index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!on\+Tool\+Options@{on\+Tool\+Options}}
+\index{on\+Tool\+Options@{on\+Tool\+Options}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{on\+Tool\+Options(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Dialog\+Content\+::on\+Tool\+Options (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_dialog_content_a25f49233df0c9f2128d2498ae47d3065}
+Captura eventos da barra de ferramentas \index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!open\+Conf@{open\+Conf}}
+\index{open\+Conf@{open\+Conf}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{open\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Dialog\+Content\+::open\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_pumping_costs_dialog_content_ab08d0ecd6aac5911802d118f308ed3f5}
+Abrir regra de arquivo 
+
+ReimplementaÃ§Ã£o de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abf3660e2c31c95afab763b4b520e26e9}.
+
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!open\+Conf@{open\+Conf}}
+\index{open\+Conf@{open\+Conf}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{open\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Dialog\+Content\+::open\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_pumping_costs_dialog_content_ab08d0ecd6aac5911802d118f308ed3f5}
+Abrir regra de arquivo 
+
+ReimplementaÃ§Ã£o de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abf3660e2c31c95afab763b4b520e26e9}.
+
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!save\+Conf@{save\+Conf}}
+\index{save\+Conf@{save\+Conf}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{save\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Dialog\+Content\+::save\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_pumping_costs_dialog_content_a842d09d5a6d4c916e3cea73fce5aacf8}
+Salvar regra em arquivo 
+
+ReimplementaÃ§Ã£o de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abcef0436251918c1eab033a80b40c626}.
+
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!save\+Conf@{save\+Conf}}
+\index{save\+Conf@{save\+Conf}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{save\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Dialog\+Content\+::save\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_pumping_costs_dialog_content_a842d09d5a6d4c916e3cea73fce5aacf8}
+Salvar regra em arquivo 
+
+ReimplementaÃ§Ã£o de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abcef0436251918c1eab033a80b40c626}.
+
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Pumping\+Costs\+Dialog\+Content\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_pumping_costs_dialog_content_a5fc77aeb223237acefdabe8b0ce558b3}
+Atualiza a interface 
+
+ReimplementaÃ§Ã£o de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_aced556e5caf584b7335135d337895154}.
+
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Pumping\+Costs\+Dialog\+Content\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_pumping_costs_dialog_content_a5fc77aeb223237acefdabe8b0ce558b3}
+Atualiza a interface 
+
+ReimplementaÃ§Ã£o de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_aced556e5caf584b7335135d337895154}.
+
+
+
+\subsection{Atributos}
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!bt\+Wet\+Month@{bt\+Wet\+Month}}
+\index{bt\+Wet\+Month@{bt\+Wet\+Month}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{bt\+Wet\+Month}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Toggle\+Button $\ast$ Pumping\+Costs\+Dialog\+Content\+::bt\+Wet\+Month}\label{class_pumping_costs_dialog_content_aad2e61a80582cacf2951adf175c49387}
+Botões para cada mês úmido 
+
+DefiniÃ§Ã£o na linha 82 do arquivo Obj\+Function/\+Pumping\+Costs/\+Pumping\+Costs\+Dialog\+Content.\+h.
+
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!ch\+Pumping\+Links@{ch\+Pumping\+Links}}
+\index{ch\+Pumping\+Links@{ch\+Pumping\+Links}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{ch\+Pumping\+Links}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+List\+Box $\ast$ Pumping\+Costs\+Dialog\+Content\+::ch\+Pumping\+Links}\label{class_pumping_costs_dialog_content_a3b8786739a9a5482aeb98c32904575e3}
+Check\+List\+Box dos trechos com bombeamento presentes no sistema 
+
+DefiniÃ§Ã£o na linha 69 do arquivo Obj\+Function/\+Pumping\+Costs/\+Pumping\+Costs\+Dialog\+Content.\+h.
+
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!function@{function}}
+\index{function@{function}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Obj\+Function} $\ast$ Pumping\+Costs\+Dialog\+Content\+::function\hspace{0.3cm}{\ttfamily [protected]}}\label{class_pumping_costs_dialog_content_ac7695c5d53011bd187c03598d01c33ba}
+Ponteiro para função 
+
+DefiniÃ§Ã£o na linha 47 do arquivo Obj\+Function/\+Pumping\+Costs/\+Pumping\+Costs\+Dialog\+Content.\+h.
+
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!grid\+Costs@{grid\+Costs}}
+\index{grid\+Costs@{grid\+Costs}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{grid\+Costs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Grid} $\ast$ Pumping\+Costs\+Dialog\+Content\+::grid\+Costs}\label{class_pumping_costs_dialog_content_a0dcc78fb39796ed39b78d779db7eb8b7}
+Interface para custos 
+
+DefiniÃ§Ã£o na linha 78 do arquivo Obj\+Function/\+Pumping\+Costs/\+Pumping\+Costs\+Dialog\+Content.\+h.
+
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!note@{note}}
+\index{note@{note}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{note}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Notebook $\ast$ Pumping\+Costs\+Dialog\+Content\+::note}\label{class_pumping_costs_dialog_content_ad8e14d20dd80bd3a4b2aa93d49d57bed}
+Caderno com abas para informações de custo dos trechos 
+
+DefiniÃ§Ã£o na linha 74 do arquivo Obj\+Function/\+Pumping\+Costs/\+Pumping\+Costs\+Dialog\+Content.\+h.
+
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!rb\+Min\+Max@{rb\+Min\+Max}}
+\index{rb\+Min\+Max@{rb\+Min\+Max}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{rb\+Min\+Max}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box $\ast$ Pumping\+Costs\+Dialog\+Content\+::rb\+Min\+Max}\label{class_pumping_costs_dialog_content_a9d10e95285db813971021db6727cf0f6}
+Radio\+Box para escolha entre minimização e maximização 
+
+DefiniÃ§Ã£o na linha 64 do arquivo Obj\+Function/\+Pumping\+Costs/\+Pumping\+Costs\+Dialog\+Content.\+h.
+
+\index{Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}!tools@{tools}}
+\index{tools@{tools}!Pumping\+Costs\+Dialog\+Content@{Pumping\+Costs\+Dialog\+Content}}
+\subsubsection[{tools}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tool\+Bar $\ast$ Pumping\+Costs\+Dialog\+Content\+::tools}\label{class_pumping_costs_dialog_content_a2c2e7fd4a39ef8ab9dd6906350e33ca6}
+Barra de ferramentas 
+
+DefiniÃ§Ã£o na linha 87 do arquivo Obj\+Function/\+Pumping\+Costs/\+Pumping\+Costs\+Dialog\+Content.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Obj\+Function/\+Pumping\+Costs/\+Pumping\+Costs\+Dialog\+Content.\+h}\end{DoxyCompactItemize}

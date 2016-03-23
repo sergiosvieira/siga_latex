@@ -1,0 +1,349 @@
+\section{Referência da Classe Draw\+Link}
+\label{class_draw_link}\index{Draw\+Link@{Draw\+Link}}
+
+
+{\ttfamily \#include $<$Draw\+Link.\+h$>$}
+
+
+
+Herdeiro de {\bf Draw\+Element}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Draw\+Link} ({\bf Element\+ID} {\bf id}, {\bf Link\+Type} {\bf type}, std\+::string {\bf name}, const wx\+Point \&point\+\_\+origin, const wx\+Point \&point\+\_\+end, double {\bf scale}=1.\+0)
+\item 
+{\bf $\sim$\+Draw\+Link} ()
+\item 
+void {\bf draw} (wx\+DC \&dc, bool draw\+\_\+label=true)
+\item 
+void {\bf draw\+Arrow} (wx\+DC \&dc, {\bf Line} line)
+\item 
+void {\bf draw\+Pump} (wx\+DC \&dc, {\bf Line} line)
+\item 
+void {\bf draw\+Bars} (wx\+DC \&dc, {\bf Line} line)
+\item 
+void {\bf draw\+Triple\+Arrow} (wx\+DC \&dc, {\bf Line} line)
+\item 
+void {\bf draw\+Type} (wx\+DC \&dc, {\bf Line} line)
+\begin{DoxyCompactList}\small\item\em draws the link by its type \end{DoxyCompactList}\item 
+bool {\bf hit\+Test} (const wx\+Point \&point)
+\begin{DoxyCompactList}\small\item\em test if the point intersects the link \end{DoxyCompactList}\item 
+bool {\bf set\+Scale} (double value)
+\item 
+bool {\bf is\+Artificial} ()
+\item 
+void {\bf set\+Artificial} (bool {\bf check})
+\item 
+bool {\bf is\+Bidirectional} ()
+\item 
+void {\bf set\+Bidirectional} (bool value)
+\item 
+bool {\bf has\+Lateral\+Inflow} ()
+\item 
+void {\bf set\+Lateral\+Inflow} (bool value)
+\item 
+{\bf Link\+Type} {\bf type} ()
+\item 
+void {\bf set\+Type} ({\bf Link\+Type} value)
+\item 
+wx\+Point {\bf div\+Point} ()
+\item 
+bool {\bf has\+Div\+Point} ()
+\item 
+void {\bf set\+Div\+Point} (const wx\+Point \&point)
+\item 
+void {\bf remove\+Div\+Point} ()
+\item 
+void {\bf set\+Position} (const wx\+Point \&point\+\_\+origin, const wx\+Point \&point\+\_\+end)
+\item 
+wx\+Point {\bf point\+Origin} ()
+\item 
+wx\+Point {\bf point\+End} ()
+\item 
+void {\bf set\+Nodes} ({\bf Draw\+Node} \&source\+\_\+node, {\bf Draw\+Node} \&destiny\+\_\+node)
+\item 
+void {\bf source\+Draw\+Node} ({\bf Draw\+Node} \&a\+\_\+source\+Node)
+\item 
+void {\bf destiny\+Draw\+Node} ({\bf Draw\+Node} \&a\+\_\+destiny\+Node)
+\item 
+void {\bf last\+Div\+Point\+Position} (const wx\+Point \&a\+\_\+position)
+\item 
+wx\+Point {\bf last\+Div\+Point\+Position} () const 
+\item 
+void {\bf last\+Div\+Point\+Coordinate} (const wx\+Real\+Point \&a\+\_\+position)
+\item 
+wx\+Point {\bf last\+Div\+Point\+Coordinate} () const 
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 16 do arquivo Draw\+Link.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Draw\+Link@{Draw\+Link}!Draw\+Link@{Draw\+Link}}
+\index{Draw\+Link@{Draw\+Link}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{Draw\+Link(\+Element\+I\+D id, Link\+Type type, std\+::string name, const wx\+Point \&point\+\_\+origin, const wx\+Point \&point\+\_\+end, double scale=1.\+0)}]{\setlength{\rightskip}{0pt plus 5cm}Draw\+Link\+::\+Draw\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{{\bf Link\+Type}}]{type, }
+\item[{std\+::string}]{name, }
+\item[{const wx\+Point \&}]{point\+\_\+origin, }
+\item[{const wx\+Point \&}]{point\+\_\+end, }
+\item[{double}]{scale = {\ttfamily 1.0}}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_aa323905c246979f27aa09a8e219a26fa}
+\index{Draw\+Link@{Draw\+Link}!````~Draw\+Link@{$\sim$\+Draw\+Link}}
+\index{````~Draw\+Link@{$\sim$\+Draw\+Link}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{$\sim$\+Draw\+Link()}]{\setlength{\rightskip}{0pt plus 5cm}Draw\+Link\+::$\sim$\+Draw\+Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_a52e82e719c40ac8b2050d68f444b86b7}
+
+
+\subsection{Métodos}
+\index{Draw\+Link@{Draw\+Link}!destiny\+Draw\+Node@{destiny\+Draw\+Node}}
+\index{destiny\+Draw\+Node@{destiny\+Draw\+Node}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{destiny\+Draw\+Node(\+Draw\+Node \&a\+\_\+destiny\+Node)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Link\+::destiny\+Draw\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Node} \&}]{a\+\_\+destiny\+Node}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_adf94d4f5c0f61967784919d2fe96d0af}
+\index{Draw\+Link@{Draw\+Link}!div\+Point@{div\+Point}}
+\index{div\+Point@{div\+Point}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{div\+Point()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point Draw\+Link\+::div\+Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_a8532ed35964e878bf689d021e2c8c804}
+\index{Draw\+Link@{Draw\+Link}!draw@{draw}}
+\index{draw@{draw}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{draw(wx\+D\+C \&dc, bool draw\+\_\+label=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Link\+::draw (
+\begin{DoxyParamCaption}
+\item[{wx\+DC \&}]{dc, }
+\item[{bool}]{draw\+\_\+label = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_draw_link_ad1707245132cda700be94e79a742f998}
+Desenha Elemento 
+
+Implementa {\bf Draw\+Element} \doxyref{}{pag.}{class_draw_element_aedbc12a3e68d98089eda003a4b39a298}.
+
+\index{Draw\+Link@{Draw\+Link}!draw\+Arrow@{draw\+Arrow}}
+\index{draw\+Arrow@{draw\+Arrow}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{draw\+Arrow(wx\+D\+C \&dc, Line line)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Link\+::draw\+Arrow (
+\begin{DoxyParamCaption}
+\item[{wx\+DC \&}]{dc, }
+\item[{{\bf Line}}]{line}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_aa53002fcb05d121f222c3c178a6061c5}
+\index{Draw\+Link@{Draw\+Link}!draw\+Bars@{draw\+Bars}}
+\index{draw\+Bars@{draw\+Bars}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{draw\+Bars(wx\+D\+C \&dc, Line line)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Link\+::draw\+Bars (
+\begin{DoxyParamCaption}
+\item[{wx\+DC \&}]{dc, }
+\item[{{\bf Line}}]{line}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_ab1d068e4ecbaa58432582bb7a2ccd4f0}
+\index{Draw\+Link@{Draw\+Link}!draw\+Pump@{draw\+Pump}}
+\index{draw\+Pump@{draw\+Pump}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{draw\+Pump(wx\+D\+C \&dc, Line line)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Link\+::draw\+Pump (
+\begin{DoxyParamCaption}
+\item[{wx\+DC \&}]{dc, }
+\item[{{\bf Line}}]{line}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_a64cf35c6d0fe8f3bf67cc2a98c0d71d7}
+\index{Draw\+Link@{Draw\+Link}!draw\+Triple\+Arrow@{draw\+Triple\+Arrow}}
+\index{draw\+Triple\+Arrow@{draw\+Triple\+Arrow}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{draw\+Triple\+Arrow(wx\+D\+C \&dc, Line line)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Link\+::draw\+Triple\+Arrow (
+\begin{DoxyParamCaption}
+\item[{wx\+DC \&}]{dc, }
+\item[{{\bf Line}}]{line}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_a680e04a82933ef0f9d1a2834db8ff8da}
+\index{Draw\+Link@{Draw\+Link}!draw\+Type@{draw\+Type}}
+\index{draw\+Type@{draw\+Type}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{draw\+Type(wx\+D\+C \&dc, Line line)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Link\+::draw\+Type (
+\begin{DoxyParamCaption}
+\item[{wx\+DC \&}]{dc, }
+\item[{{\bf Line}}]{line}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_a16cd29a0903951b6b68139b2bcf029d4}
+
+
+draws the link by its type 
+
+\index{Draw\+Link@{Draw\+Link}!has\+Div\+Point@{has\+Div\+Point}}
+\index{has\+Div\+Point@{has\+Div\+Point}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{has\+Div\+Point()}]{\setlength{\rightskip}{0pt plus 5cm}bool Draw\+Link\+::has\+Div\+Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_a6e4e7c854287fa1a31c4b99919327a87}
+\index{Draw\+Link@{Draw\+Link}!has\+Lateral\+Inflow@{has\+Lateral\+Inflow}}
+\index{has\+Lateral\+Inflow@{has\+Lateral\+Inflow}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{has\+Lateral\+Inflow()}]{\setlength{\rightskip}{0pt plus 5cm}bool Draw\+Link\+::has\+Lateral\+Inflow (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_aa84594a717687af6cd2a8f664e309d0d}
+\index{Draw\+Link@{Draw\+Link}!hit\+Test@{hit\+Test}}
+\index{hit\+Test@{hit\+Test}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{hit\+Test(const wx\+Point \&point)}]{\setlength{\rightskip}{0pt plus 5cm}bool Draw\+Link\+::hit\+Test (
+\begin{DoxyParamCaption}
+\item[{const wx\+Point \&}]{point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_draw_link_a7a5a119a4f93eb573810b890062cdc48}
+
+
+test if the point intersects the link 
+
+
+
+Implementa {\bf Draw\+Element} \doxyref{}{pag.}{class_draw_element_a45023dd33ca511fcb32b86e4dc50de67}.
+
+\index{Draw\+Link@{Draw\+Link}!is\+Artificial@{is\+Artificial}}
+\index{is\+Artificial@{is\+Artificial}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{is\+Artificial()}]{\setlength{\rightskip}{0pt plus 5cm}bool Draw\+Link\+::is\+Artificial (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_a068c90fe3959f5d10ec54dd675ae25e7}
+\index{Draw\+Link@{Draw\+Link}!is\+Bidirectional@{is\+Bidirectional}}
+\index{is\+Bidirectional@{is\+Bidirectional}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{is\+Bidirectional()}]{\setlength{\rightskip}{0pt plus 5cm}bool Draw\+Link\+::is\+Bidirectional (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_a8b52945871f8d15ebd8d4972144ff09c}
+\index{Draw\+Link@{Draw\+Link}!last\+Div\+Point\+Coordinate@{last\+Div\+Point\+Coordinate}}
+\index{last\+Div\+Point\+Coordinate@{last\+Div\+Point\+Coordinate}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{last\+Div\+Point\+Coordinate(const wx\+Real\+Point \&a\+\_\+position)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Link\+::last\+Div\+Point\+Coordinate (
+\begin{DoxyParamCaption}
+\item[{const wx\+Real\+Point \&}]{a\+\_\+position}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_a64b8a2c2452f56c2807f6107df12f5ea}
+\index{Draw\+Link@{Draw\+Link}!last\+Div\+Point\+Coordinate@{last\+Div\+Point\+Coordinate}}
+\index{last\+Div\+Point\+Coordinate@{last\+Div\+Point\+Coordinate}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{last\+Div\+Point\+Coordinate() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point Draw\+Link\+::last\+Div\+Point\+Coordinate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_draw_link_a76ed2e84ef9b1861f6fe256c4606683f}
+\index{Draw\+Link@{Draw\+Link}!last\+Div\+Point\+Position@{last\+Div\+Point\+Position}}
+\index{last\+Div\+Point\+Position@{last\+Div\+Point\+Position}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{last\+Div\+Point\+Position(const wx\+Point \&a\+\_\+position)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Link\+::last\+Div\+Point\+Position (
+\begin{DoxyParamCaption}
+\item[{const wx\+Point \&}]{a\+\_\+position}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_aa345d573abbc6896d63192f65f02ae0e}
+\index{Draw\+Link@{Draw\+Link}!last\+Div\+Point\+Position@{last\+Div\+Point\+Position}}
+\index{last\+Div\+Point\+Position@{last\+Div\+Point\+Position}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{last\+Div\+Point\+Position() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point Draw\+Link\+::last\+Div\+Point\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_draw_link_a5d8c8fd560e2932127c35e2d1f3c8bda}
+\index{Draw\+Link@{Draw\+Link}!point\+End@{point\+End}}
+\index{point\+End@{point\+End}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{point\+End()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point Draw\+Link\+::point\+End (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_ac4f30293acc6bfe5b6f70b3587247675}
+\index{Draw\+Link@{Draw\+Link}!point\+Origin@{point\+Origin}}
+\index{point\+Origin@{point\+Origin}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{point\+Origin()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point Draw\+Link\+::point\+Origin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_a9587e8f65604ac388d92cf8277787468}
+\index{Draw\+Link@{Draw\+Link}!remove\+Div\+Point@{remove\+Div\+Point}}
+\index{remove\+Div\+Point@{remove\+Div\+Point}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{remove\+Div\+Point()}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Link\+::remove\+Div\+Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_a3aad202fff77a3dee2f7fb9dd0b706f6}
+\index{Draw\+Link@{Draw\+Link}!set\+Artificial@{set\+Artificial}}
+\index{set\+Artificial@{set\+Artificial}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{set\+Artificial(bool check)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Link\+::set\+Artificial (
+\begin{DoxyParamCaption}
+\item[{bool}]{check}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_a2768d0628e59a3caf5a626d02bf48419}
+\index{Draw\+Link@{Draw\+Link}!set\+Bidirectional@{set\+Bidirectional}}
+\index{set\+Bidirectional@{set\+Bidirectional}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{set\+Bidirectional(bool value)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Link\+::set\+Bidirectional (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_a999bc1242891269ca962d6321ef306de}
+\index{Draw\+Link@{Draw\+Link}!set\+Div\+Point@{set\+Div\+Point}}
+\index{set\+Div\+Point@{set\+Div\+Point}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{set\+Div\+Point(const wx\+Point \&point)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Link\+::set\+Div\+Point (
+\begin{DoxyParamCaption}
+\item[{const wx\+Point \&}]{point}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_a0a82538ad0ed4a662a1d60b79b8ac6ff}
+\index{Draw\+Link@{Draw\+Link}!set\+Lateral\+Inflow@{set\+Lateral\+Inflow}}
+\index{set\+Lateral\+Inflow@{set\+Lateral\+Inflow}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{set\+Lateral\+Inflow(bool value)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Link\+::set\+Lateral\+Inflow (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_a1dd73a086a39aa910955d2d15a7666c9}
+\index{Draw\+Link@{Draw\+Link}!set\+Nodes@{set\+Nodes}}
+\index{set\+Nodes@{set\+Nodes}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{set\+Nodes(\+Draw\+Node \&source\+\_\+node, Draw\+Node \&destiny\+\_\+node)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Link\+::set\+Nodes (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Node} \&}]{source\+\_\+node, }
+\item[{{\bf Draw\+Node} \&}]{destiny\+\_\+node}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_aaecf273c14a42e53cd69dea618ff3205}
+\index{Draw\+Link@{Draw\+Link}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{set\+Position(const wx\+Point \&point\+\_\+origin, const wx\+Point \&point\+\_\+end)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Link\+::set\+Position (
+\begin{DoxyParamCaption}
+\item[{const wx\+Point \&}]{point\+\_\+origin, }
+\item[{const wx\+Point \&}]{point\+\_\+end}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_a7973484920aa10a0659930f06b5099c7}
+\index{Draw\+Link@{Draw\+Link}!set\+Scale@{set\+Scale}}
+\index{set\+Scale@{set\+Scale}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{set\+Scale(double value)}]{\setlength{\rightskip}{0pt plus 5cm}bool Draw\+Link\+::set\+Scale (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_a01e7669f0df85af1aa64fa74f8fdc1ed}
+\index{Draw\+Link@{Draw\+Link}!set\+Type@{set\+Type}}
+\index{set\+Type@{set\+Type}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{set\+Type(\+Link\+Type value)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Link\+::set\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Type}}]{value}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_af0a327f0b5c77ee563abe28084ac4756}
+\index{Draw\+Link@{Draw\+Link}!source\+Draw\+Node@{source\+Draw\+Node}}
+\index{source\+Draw\+Node@{source\+Draw\+Node}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{source\+Draw\+Node(\+Draw\+Node \&a\+\_\+source\+Node)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Link\+::source\+Draw\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Node} \&}]{a\+\_\+source\+Node}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_aa1682c72a05d53977c9fd3ccb0c3ec49}
+\index{Draw\+Link@{Draw\+Link}!type@{type}}
+\index{type@{type}!Draw\+Link@{Draw\+Link}}
+\subsubsection[{type()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Link\+Type} Draw\+Link\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_link_a816e2d54988b38214307e64e2810b9db}
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Draw\+Link.\+h}\end{DoxyCompactItemize}

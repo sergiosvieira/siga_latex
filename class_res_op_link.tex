@@ -1,0 +1,135 @@
+\section{ReferÃªncia da Classe Res\+Op\+Link}
+\label{class_res_op_link}\index{Res\+Op\+Link@{Res\+Op\+Link}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Link.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Element}.
+
+
+
+Superclasse de {\bf Res\+Op\+Network\+Flow\+Link} e {\bf Res\+Op\+Sequential\+Link}.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Link} ({\bf Date} initial\+Date, {\bf Date} final\+Date, {\bf Link} $\ast${\bf link})
+\item 
+double {\bf traffic\+Loss} ()
+\item 
+double {\bf set\+Traffic\+Loss} (double value)
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Link} ()
+\item 
+virtual void {\bf update\+Allocation\+Matrix} ({\bf Node} $\ast${\bf node})=0
+\end{DoxyCompactItemize}
+\subsection*{MÃ©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf Res\+Op\+Element} $\ast$ {\bf do\+Copy} ()=0
+\item 
+void {\bf do\+Create\+Results} ({\bf Interval} interval)
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+Cada instância de modelo é feita para um nó específico 
+
+DefiniÃ§Ã£o na linha 17 do arquivo Res\+Op\+Link.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Link@{Res\+Op\+Link}!Res\+Op\+Link@{Res\+Op\+Link}}
+\index{Res\+Op\+Link@{Res\+Op\+Link}!Res\+Op\+Link@{Res\+Op\+Link}}
+\subsubsection[{Res\+Op\+Link(\+Date initial\+Date, Date final\+Date, Link $\ast$link)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Link\+::\+Res\+Op\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{initial\+Date, }
+\item[{{\bf Date}}]{final\+Date, }
+\item[{{\bf Link} $\ast$}]{link}
+\end{DoxyParamCaption}
+)}\label{class_res_op_link_ace04babd6009f7ef8dfaa931960462ef}
+\doxyref{Link}{pag.}{class_link} de interesse
+
+Link$\ast$ link; Construtor padrão da classe \doxyref{Res\+Op\+Element}{pag.}{class_res_op_element} 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em initial\+Date} & Inicio do intervalo \\
+\hline
+{\em final\+Date} & Final do Intervalo \\
+\hline
+{\em link} & Trecho de interesse \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Link@{Res\+Op\+Link}!````~Res\+Op\+Link@{$\sim$\+Res\+Op\+Link}}
+\index{````~Res\+Op\+Link@{$\sim$\+Res\+Op\+Link}!Res\+Op\+Link@{Res\+Op\+Link}}
+\subsubsection[{$\sim$\+Res\+Op\+Link()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Link\+::$\sim$\+Res\+Op\+Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_link_a54ba38b67c714b5bd271790aab7d7e40}
+Destrutor padrão da classe \doxyref{Res\+Op\+Element}{pag.}{class_res_op_element} 
+
+\subsection{MÃ©todos}
+\index{Res\+Op\+Link@{Res\+Op\+Link}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!Res\+Op\+Link@{Res\+Op\+Link}}
+\subsubsection[{do\+Copy()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Res\+Op\+Element}$\ast$ Res\+Op\+Link\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{class_res_op_link_aed1e711f022dd5e352805f03b4dbd47b}
+Copia dos dados especificos 
+
+Implementa {\bf Res\+Op\+Element} \doxyref{}{pag.}{class_res_op_element_a88fe7190d68429d2f9623160df266dc9}.
+
+
+
+Implementado por {\bf Res\+Op\+Network\+Flow\+Link} \doxyref{}{pag.}{class_res_op_network_flow_link_a6ef8b41c4da8b0dbdcc6635c6d2037a0} e {\bf Res\+Op\+Sequential\+Link} \doxyref{}{pag.}{class_res_op_sequential_link_a290b95a0c8c3fd232a9f3438f6bd947d}.
+
+\index{Res\+Op\+Link@{Res\+Op\+Link}!do\+Create\+Results@{do\+Create\+Results}}
+\index{do\+Create\+Results@{do\+Create\+Results}!Res\+Op\+Link@{Res\+Op\+Link}}
+\subsubsection[{do\+Create\+Results(\+Interval interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Link\+::do\+Create\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_op_link_ad6b35c5676bf7ca56d31867ab2cc36fd}
+
+
+Implementa {\bf Res\+Op\+Element} \doxyref{}{pag.}{class_res_op_element_a7733b727336bb90ee33299b55d46b335}.
+
+\index{Res\+Op\+Link@{Res\+Op\+Link}!set\+Traffic\+Loss@{set\+Traffic\+Loss}}
+\index{set\+Traffic\+Loss@{set\+Traffic\+Loss}!Res\+Op\+Link@{Res\+Op\+Link}}
+\subsubsection[{set\+Traffic\+Loss(double value)}]{\setlength{\rightskip}{0pt plus 5cm}double Res\+Op\+Link\+::set\+Traffic\+Loss (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_res_op_link_ab5301fd69564492ae90209f4f4b31615}
+\index{Res\+Op\+Link@{Res\+Op\+Link}!traffic\+Loss@{traffic\+Loss}}
+\index{traffic\+Loss@{traffic\+Loss}!Res\+Op\+Link@{Res\+Op\+Link}}
+\subsubsection[{traffic\+Loss()}]{\setlength{\rightskip}{0pt plus 5cm}double Res\+Op\+Link\+::traffic\+Loss (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_link_afee9ee43155929c458a1c463b36f8b4d}
+\index{Res\+Op\+Link@{Res\+Op\+Link}!update\+Allocation\+Matrix@{update\+Allocation\+Matrix}}
+\index{update\+Allocation\+Matrix@{update\+Allocation\+Matrix}!Res\+Op\+Link@{Res\+Op\+Link}}
+\subsubsection[{update\+Allocation\+Matrix(\+Node $\ast$node)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Link\+::update\+Allocation\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_link_a8a00d6dd26f650e5a68a50895a830273}
+Define o cabeçalho da alloc; 
+
+Implementa {\bf Res\+Op\+Element} \doxyref{}{pag.}{class_res_op_element_ad75ced5fbb62038bec3e527d4730ebc4}.
+
+
+
+Implementado por {\bf Res\+Op\+Sequential\+Link} \doxyref{}{pag.}{class_res_op_sequential_link_ab70aac9fcf36898aa8fe90e35a0a6144} e {\bf Res\+Op\+Network\+Flow\+Link} \doxyref{}{pag.}{class_res_op_network_flow_link_a256d9b4cac056c63332f72e65cc13076}.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Link.\+h}\end{DoxyCompactItemize}

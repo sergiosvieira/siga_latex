@@ -1,0 +1,540 @@
+\section{Referência da Classe Soil\+File\+Entry}
+\label{class_soil_file_entry}\index{Soil\+File\+Entry@{Soil\+File\+Entry}}
+
+
+{\ttfamily \#include $<$Soil\+File\+Entry.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Soil\+File\+Entry} ()
+\item 
+{\bf Soil\+File\+Entry} (int {\bf soil\+ID})
+\item 
+virtual {\bf $\sim$\+Soil\+File\+Entry} ()
+\item 
+void {\bf set\+Soil\+ID} (int new\+Value)
+\item 
+void {\bf set\+Number\+Horizons} (unsigned int new\+Value)
+\item 
+void {\bf set\+Res} (const std\+::vector$<$ double $>$ \&new\+Values)
+\item 
+void {\bf set\+P\+WP} (const std\+::vector$<$ double $>$ \&new\+Values)
+\item 
+void {\bf set\+F\+K25} (const std\+::vector$<$ double $>$ \&new\+Values)
+\item 
+void {\bf set\+F\+K18} (const std\+::vector$<$ double $>$ \&new\+Values)
+\item 
+void {\bf set\+N\+FK} (const std\+::vector$<$ double $>$ \&new\+Values)
+\item 
+void {\bf set\+Saturated} (const std\+::vector$<$ double $>$ \&new\+Values)
+\item 
+void {\bf set\+Depth} (const std\+::vector$<$ double $>$ \&new\+Values)
+\item 
+void {\bf set\+KS} (const std\+::vector$<$ double $>$ \&new\+Values)
+\item 
+void {\bf set\+Suction} (const std\+::vector$<$ double $>$ \&new\+Values)
+\item 
+void {\bf set\+Pore\+Size\+Index} (const std\+::vector$<$ double $>$ \&new\+Values)
+\item 
+void {\bf set\+Bubble\+Pressure} (const std\+::vector$<$ double $>$ \&new\+Values)
+\item 
+void {\bf set\+Coarse\+Frag} (const std\+::vector$<$ double $>$ \&new\+Values)
+\item 
+void {\bf set\+Shrinks} (const std\+::vector$<$ int $>$ \&new\+Values)
+\item 
+void {\bf set\+Bedrock} (int new\+Value)
+\item 
+void {\bf set\+Alluvial} (int new\+Value)
+\item 
+int {\bf get\+Soil\+ID} () const 
+\item 
+unsigned int {\bf get\+Number\+Horizons} () const 
+\item 
+std\+::vector$<$ double $>$ {\bf get\+Res} () const 
+\item 
+std\+::vector$<$ double $>$ {\bf get\+P\+WP} () const 
+\item 
+std\+::vector$<$ double $>$ {\bf get\+F\+K25} () const 
+\item 
+std\+::vector$<$ double $>$ {\bf get\+F\+K18} () const 
+\item 
+std\+::vector$<$ double $>$ {\bf get\+N\+FK} () const 
+\item 
+std\+::vector$<$ double $>$ {\bf get\+Saturated} () const 
+\item 
+std\+::vector$<$ double $>$ {\bf get\+Depth} () const 
+\item 
+std\+::vector$<$ double $>$ {\bf get\+KS} () const 
+\item 
+std\+::vector$<$ double $>$ {\bf get\+Suction} () const 
+\item 
+std\+::vector$<$ double $>$ {\bf get\+Pore\+Size\+Index} () const 
+\item 
+std\+::vector$<$ double $>$ {\bf get\+Bubble\+Pressure} () const 
+\item 
+std\+::vector$<$ double $>$ {\bf get\+Coarse\+Frag} () const 
+\item 
+std\+::vector$<$ int $>$ {\bf get\+Shrinks} () const 
+\item 
+int {\bf get\+Bedrock} () const 
+\item 
+int {\bf get\+Alluvial} () const 
+\item 
+wx\+String {\bf get\+String} () const 
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static wx\+String {\bf get\+Header} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf soil\+ID}
+\item 
+unsigned int {\bf number\+Horizons}
+\item 
+std\+::vector$<$ double $>$ {\bf res}
+\item 
+std\+::vector$<$ double $>$ {\bf P\+WP}
+\item 
+std\+::vector$<$ double $>$ {\bf F\+K25}
+\item 
+std\+::vector$<$ double $>$ {\bf F\+K18}
+\item 
+std\+::vector$<$ double $>$ {\bf n\+FK}
+\item 
+std\+::vector$<$ double $>$ {\bf saturated}
+\item 
+std\+::vector$<$ double $>$ {\bf depth}
+\item 
+std\+::vector$<$ double $>$ {\bf KS}
+\item 
+std\+::vector$<$ double $>$ {\bf suction}
+\item 
+std\+::vector$<$ double $>$ {\bf pore\+Size\+Index}
+\item 
+std\+::vector$<$ double $>$ {\bf bubble\+Pressure}
+\item 
+std\+::vector$<$ double $>$ {\bf coarse\+Frag}
+\item 
+std\+::vector$<$ int $>$ {\bf shrinks}
+\item 
+int {\bf bedrock}
+\item 
+int {\bf alluvial}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 12 do arquivo Soil\+File\+Entry.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{Soil\+File\+Entry()}]{\setlength{\rightskip}{0pt plus 5cm}Soil\+File\+Entry\+::\+Soil\+File\+Entry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_soil_file_entry_ab68a12e4c2682673a2c5e004af67f24b}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{Soil\+File\+Entry(int soil\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}Soil\+File\+Entry\+::\+Soil\+File\+Entry (
+\begin{DoxyParamCaption}
+\item[{int}]{soil\+ID}
+\end{DoxyParamCaption}
+)}\label{class_soil_file_entry_a035908efdd98c20f5c641a9bbd26e42c}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!````~Soil\+File\+Entry@{$\sim$\+Soil\+File\+Entry}}
+\index{````~Soil\+File\+Entry@{$\sim$\+Soil\+File\+Entry}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{$\sim$\+Soil\+File\+Entry()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Soil\+File\+Entry\+::$\sim$\+Soil\+File\+Entry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_soil_file_entry_a72e7efac32b613e395f341475d10a6ba}
+
+
+\subsection{Métodos}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!get\+Alluvial@{get\+Alluvial}}
+\index{get\+Alluvial@{get\+Alluvial}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{get\+Alluvial() const }]{\setlength{\rightskip}{0pt plus 5cm}int Soil\+File\+Entry\+::get\+Alluvial (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_file_entry_a098815297070bf8a9e67f3f842f2987f}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!get\+Bedrock@{get\+Bedrock}}
+\index{get\+Bedrock@{get\+Bedrock}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{get\+Bedrock() const }]{\setlength{\rightskip}{0pt plus 5cm}int Soil\+File\+Entry\+::get\+Bedrock (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_file_entry_a4e8091d88d0cdebd8f3e12d2a6bd86db}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!get\+Bubble\+Pressure@{get\+Bubble\+Pressure}}
+\index{get\+Bubble\+Pressure@{get\+Bubble\+Pressure}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{get\+Bubble\+Pressure() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::get\+Bubble\+Pressure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_file_entry_a0b1bb618fdfbe9a206371690b893f267}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!get\+Coarse\+Frag@{get\+Coarse\+Frag}}
+\index{get\+Coarse\+Frag@{get\+Coarse\+Frag}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{get\+Coarse\+Frag() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::get\+Coarse\+Frag (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_file_entry_a57ebc4f224b7b9b4e121164f5f4fe304}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!get\+Depth@{get\+Depth}}
+\index{get\+Depth@{get\+Depth}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{get\+Depth() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::get\+Depth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_file_entry_a15584d7e6495438f68d6f0bd5954865a}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!get\+F\+K18@{get\+F\+K18}}
+\index{get\+F\+K18@{get\+F\+K18}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{get\+F\+K18() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::get\+F\+K18 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_file_entry_a9baed7f43a55b9b6ac30219729421890}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!get\+F\+K25@{get\+F\+K25}}
+\index{get\+F\+K25@{get\+F\+K25}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{get\+F\+K25() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::get\+F\+K25 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_file_entry_a3520e185bd3e6f1b68b868d6f3dbf3eb}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!get\+Header@{get\+Header}}
+\index{get\+Header@{get\+Header}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{get\+Header()}]{\setlength{\rightskip}{0pt plus 5cm}static wx\+String Soil\+File\+Entry\+::get\+Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_soil_file_entry_ada753fc1bda37527494cde81bd34a459}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!get\+KS@{get\+KS}}
+\index{get\+KS@{get\+KS}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{get\+K\+S() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::get\+KS (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_file_entry_aa54978afb68b3e952a7adbd8edf4da1d}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!get\+N\+FK@{get\+N\+FK}}
+\index{get\+N\+FK@{get\+N\+FK}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{get\+N\+F\+K() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::get\+N\+FK (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_file_entry_a20afa753f8da318174a5c83f7167ba2b}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!get\+Number\+Horizons@{get\+Number\+Horizons}}
+\index{get\+Number\+Horizons@{get\+Number\+Horizons}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{get\+Number\+Horizons() const }]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Soil\+File\+Entry\+::get\+Number\+Horizons (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_file_entry_a09a80cc2707ae1151db846756fbd9917}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!get\+Pore\+Size\+Index@{get\+Pore\+Size\+Index}}
+\index{get\+Pore\+Size\+Index@{get\+Pore\+Size\+Index}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{get\+Pore\+Size\+Index() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::get\+Pore\+Size\+Index (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_file_entry_a5ba8c7515a1bb6f900a582e6e5d7bf03}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!get\+P\+WP@{get\+P\+WP}}
+\index{get\+P\+WP@{get\+P\+WP}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{get\+P\+W\+P() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::get\+P\+WP (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_file_entry_a7497ca473cc32212becc53d541a8fefa}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!get\+Res@{get\+Res}}
+\index{get\+Res@{get\+Res}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{get\+Res() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::get\+Res (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_file_entry_af4c3d6c5e4b156cdce68e215bb5958ea}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!get\+Saturated@{get\+Saturated}}
+\index{get\+Saturated@{get\+Saturated}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{get\+Saturated() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::get\+Saturated (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_file_entry_add1813201f71555aa7212568eb923034}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!get\+Shrinks@{get\+Shrinks}}
+\index{get\+Shrinks@{get\+Shrinks}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{get\+Shrinks() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ Soil\+File\+Entry\+::get\+Shrinks (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_file_entry_ad58c99ae10fca6c64d2fa7d05fe6ee39}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!get\+Soil\+ID@{get\+Soil\+ID}}
+\index{get\+Soil\+ID@{get\+Soil\+ID}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{get\+Soil\+I\+D() const }]{\setlength{\rightskip}{0pt plus 5cm}int Soil\+File\+Entry\+::get\+Soil\+ID (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_file_entry_ad7cf3ad33a2426e78e44d99b5d4fa4ac}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{get\+String() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Soil\+File\+Entry\+::get\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_file_entry_a4cfae75f03264a04eb8c6672d0a2fb6d}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!get\+Suction@{get\+Suction}}
+\index{get\+Suction@{get\+Suction}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{get\+Suction() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::get\+Suction (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_file_entry_a8dd78cc92fe4213edb72e2686f06a8c2}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!set\+Alluvial@{set\+Alluvial}}
+\index{set\+Alluvial@{set\+Alluvial}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{set\+Alluvial(int new\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+File\+Entry\+::set\+Alluvial (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Value}
+\end{DoxyParamCaption}
+)}\label{class_soil_file_entry_a60f5925f3d2f7f8d6ee995a3b1033f05}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!set\+Bedrock@{set\+Bedrock}}
+\index{set\+Bedrock@{set\+Bedrock}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{set\+Bedrock(int new\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+File\+Entry\+::set\+Bedrock (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Value}
+\end{DoxyParamCaption}
+)}\label{class_soil_file_entry_a6a6566127c50532ae5bc5825efc1479a}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!set\+Bubble\+Pressure@{set\+Bubble\+Pressure}}
+\index{set\+Bubble\+Pressure@{set\+Bubble\+Pressure}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{set\+Bubble\+Pressure(const std\+::vector$<$ double $>$ \&new\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+File\+Entry\+::set\+Bubble\+Pressure (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ double $>$ \&}]{new\+Values}
+\end{DoxyParamCaption}
+)}\label{class_soil_file_entry_ac86f9faa82c42dd0473ef2eb8f53192c}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!set\+Coarse\+Frag@{set\+Coarse\+Frag}}
+\index{set\+Coarse\+Frag@{set\+Coarse\+Frag}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{set\+Coarse\+Frag(const std\+::vector$<$ double $>$ \&new\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+File\+Entry\+::set\+Coarse\+Frag (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ double $>$ \&}]{new\+Values}
+\end{DoxyParamCaption}
+)}\label{class_soil_file_entry_abdc881ec17c15998713a5adc00afcb90}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!set\+Depth@{set\+Depth}}
+\index{set\+Depth@{set\+Depth}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{set\+Depth(const std\+::vector$<$ double $>$ \&new\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+File\+Entry\+::set\+Depth (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ double $>$ \&}]{new\+Values}
+\end{DoxyParamCaption}
+)}\label{class_soil_file_entry_a984190fbb5fe9f259b2969e2f5994cdf}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!set\+F\+K18@{set\+F\+K18}}
+\index{set\+F\+K18@{set\+F\+K18}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{set\+F\+K18(const std\+::vector$<$ double $>$ \&new\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+File\+Entry\+::set\+F\+K18 (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ double $>$ \&}]{new\+Values}
+\end{DoxyParamCaption}
+)}\label{class_soil_file_entry_a428b1789d05847bfd5dd055a6cb321d7}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!set\+F\+K25@{set\+F\+K25}}
+\index{set\+F\+K25@{set\+F\+K25}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{set\+F\+K25(const std\+::vector$<$ double $>$ \&new\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+File\+Entry\+::set\+F\+K25 (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ double $>$ \&}]{new\+Values}
+\end{DoxyParamCaption}
+)}\label{class_soil_file_entry_a92ccf92bb7f07ff419a49fc0661958db}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!set\+KS@{set\+KS}}
+\index{set\+KS@{set\+KS}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{set\+K\+S(const std\+::vector$<$ double $>$ \&new\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+File\+Entry\+::set\+KS (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ double $>$ \&}]{new\+Values}
+\end{DoxyParamCaption}
+)}\label{class_soil_file_entry_afdef0b83647083896a7c3ba238751b38}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!set\+N\+FK@{set\+N\+FK}}
+\index{set\+N\+FK@{set\+N\+FK}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{set\+N\+F\+K(const std\+::vector$<$ double $>$ \&new\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+File\+Entry\+::set\+N\+FK (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ double $>$ \&}]{new\+Values}
+\end{DoxyParamCaption}
+)}\label{class_soil_file_entry_ad1d64a558be4171e8dece623e6b78da0}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!set\+Number\+Horizons@{set\+Number\+Horizons}}
+\index{set\+Number\+Horizons@{set\+Number\+Horizons}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{set\+Number\+Horizons(unsigned int new\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+File\+Entry\+::set\+Number\+Horizons (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{new\+Value}
+\end{DoxyParamCaption}
+)}\label{class_soil_file_entry_a8c478528b6c8ced7980686cfa97021c0}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!set\+Pore\+Size\+Index@{set\+Pore\+Size\+Index}}
+\index{set\+Pore\+Size\+Index@{set\+Pore\+Size\+Index}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{set\+Pore\+Size\+Index(const std\+::vector$<$ double $>$ \&new\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+File\+Entry\+::set\+Pore\+Size\+Index (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ double $>$ \&}]{new\+Values}
+\end{DoxyParamCaption}
+)}\label{class_soil_file_entry_ae7f04420c7c432b778ea8f0c03971da7}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!set\+P\+WP@{set\+P\+WP}}
+\index{set\+P\+WP@{set\+P\+WP}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{set\+P\+W\+P(const std\+::vector$<$ double $>$ \&new\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+File\+Entry\+::set\+P\+WP (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ double $>$ \&}]{new\+Values}
+\end{DoxyParamCaption}
+)}\label{class_soil_file_entry_a484a00c40b421254b4decfc99026e6b9}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!set\+Res@{set\+Res}}
+\index{set\+Res@{set\+Res}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{set\+Res(const std\+::vector$<$ double $>$ \&new\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+File\+Entry\+::set\+Res (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ double $>$ \&}]{new\+Values}
+\end{DoxyParamCaption}
+)}\label{class_soil_file_entry_aba629d745fc0743b0fffb1679c56bca4}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!set\+Saturated@{set\+Saturated}}
+\index{set\+Saturated@{set\+Saturated}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{set\+Saturated(const std\+::vector$<$ double $>$ \&new\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+File\+Entry\+::set\+Saturated (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ double $>$ \&}]{new\+Values}
+\end{DoxyParamCaption}
+)}\label{class_soil_file_entry_a106732ca00e7c3e5feb92e8cebe9b43f}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!set\+Shrinks@{set\+Shrinks}}
+\index{set\+Shrinks@{set\+Shrinks}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{set\+Shrinks(const std\+::vector$<$ int $>$ \&new\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+File\+Entry\+::set\+Shrinks (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ int $>$ \&}]{new\+Values}
+\end{DoxyParamCaption}
+)}\label{class_soil_file_entry_a19498582c74079c8f73209b0e6219505}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!set\+Soil\+ID@{set\+Soil\+ID}}
+\index{set\+Soil\+ID@{set\+Soil\+ID}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{set\+Soil\+I\+D(int new\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+File\+Entry\+::set\+Soil\+ID (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Value}
+\end{DoxyParamCaption}
+)}\label{class_soil_file_entry_a3c6a342b6f872e7472e2ee2fbe6c74e8}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!set\+Suction@{set\+Suction}}
+\index{set\+Suction@{set\+Suction}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{set\+Suction(const std\+::vector$<$ double $>$ \&new\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+File\+Entry\+::set\+Suction (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ double $>$ \&}]{new\+Values}
+\end{DoxyParamCaption}
+)}\label{class_soil_file_entry_aa8795a3389bbb605cbf7046db3e4037e}
+
+
+\subsection{Atributos}
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!alluvial@{alluvial}}
+\index{alluvial@{alluvial}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{alluvial}]{\setlength{\rightskip}{0pt plus 5cm}int Soil\+File\+Entry\+::alluvial\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_file_entry_a61d8b3ee9ee6fa95ed87426c0266d8f0}
+
+
+Definição na linha 31 do arquivo Soil\+File\+Entry.\+h.
+
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!bedrock@{bedrock}}
+\index{bedrock@{bedrock}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{bedrock}]{\setlength{\rightskip}{0pt plus 5cm}int Soil\+File\+Entry\+::bedrock\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_file_entry_a2aa4e045992015b143d191ea43e00a43}
+
+
+Definição na linha 30 do arquivo Soil\+File\+Entry.\+h.
+
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!bubble\+Pressure@{bubble\+Pressure}}
+\index{bubble\+Pressure@{bubble\+Pressure}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{bubble\+Pressure}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::bubble\+Pressure\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_file_entry_a6c6f128298022b66387ef28a968adbdf}
+
+
+Definição na linha 27 do arquivo Soil\+File\+Entry.\+h.
+
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!coarse\+Frag@{coarse\+Frag}}
+\index{coarse\+Frag@{coarse\+Frag}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{coarse\+Frag}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::coarse\+Frag\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_file_entry_a5ca20da03170318b4c82509b654386fa}
+
+
+Definição na linha 28 do arquivo Soil\+File\+Entry.\+h.
+
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!depth@{depth}}
+\index{depth@{depth}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{depth}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::depth\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_file_entry_a94600de5cb38b5c645a8dcd3445c751c}
+
+
+Definição na linha 23 do arquivo Soil\+File\+Entry.\+h.
+
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!F\+K18@{F\+K18}}
+\index{F\+K18@{F\+K18}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{F\+K18}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::\+F\+K18\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_file_entry_add276a190add8be8edf358743ca3987d}
+
+
+Definição na linha 20 do arquivo Soil\+File\+Entry.\+h.
+
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!F\+K25@{F\+K25}}
+\index{F\+K25@{F\+K25}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{F\+K25}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::\+F\+K25\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_file_entry_a1679a0f9daccb1408ca931457427a157}
+
+
+Definição na linha 19 do arquivo Soil\+File\+Entry.\+h.
+
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!KS@{KS}}
+\index{KS@{KS}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{KS}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::\+KS\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_file_entry_aa2ba04b0fa02d7570d87651e539161c6}
+
+
+Definição na linha 24 do arquivo Soil\+File\+Entry.\+h.
+
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!n\+FK@{n\+FK}}
+\index{n\+FK@{n\+FK}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{n\+FK}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::n\+FK\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_file_entry_a8a0a659515d4347e329a6f6b802d1848}
+
+
+Definição na linha 21 do arquivo Soil\+File\+Entry.\+h.
+
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!number\+Horizons@{number\+Horizons}}
+\index{number\+Horizons@{number\+Horizons}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{number\+Horizons}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Soil\+File\+Entry\+::number\+Horizons\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_file_entry_a6d0e77eb1c29ed7665c704b9257c23b8}
+
+
+Definição na linha 16 do arquivo Soil\+File\+Entry.\+h.
+
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!pore\+Size\+Index@{pore\+Size\+Index}}
+\index{pore\+Size\+Index@{pore\+Size\+Index}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{pore\+Size\+Index}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::pore\+Size\+Index\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_file_entry_a1a0fe6828522dfa9c02f8ae0cb6e3862}
+
+
+Definição na linha 26 do arquivo Soil\+File\+Entry.\+h.
+
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!P\+WP@{P\+WP}}
+\index{P\+WP@{P\+WP}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{P\+WP}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::\+P\+WP\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_file_entry_a92c8c82c79cafd0f8adb1da799ec2f6d}
+
+
+Definição na linha 18 do arquivo Soil\+File\+Entry.\+h.
+
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!res@{res}}
+\index{res@{res}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{res}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::res\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_file_entry_aeaff769b6ab4dd8a2c148a7753fe9311}
+
+
+Definição na linha 17 do arquivo Soil\+File\+Entry.\+h.
+
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!saturated@{saturated}}
+\index{saturated@{saturated}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{saturated}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::saturated\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_file_entry_ad70f39cce89e35fce298e7e44ecb2276}
+
+
+Definição na linha 22 do arquivo Soil\+File\+Entry.\+h.
+
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!shrinks@{shrinks}}
+\index{shrinks@{shrinks}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{shrinks}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ Soil\+File\+Entry\+::shrinks\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_file_entry_a59c3d1a058a6fef46bd031bf59d5e68b}
+
+
+Definição na linha 29 do arquivo Soil\+File\+Entry.\+h.
+
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!soil\+ID@{soil\+ID}}
+\index{soil\+ID@{soil\+ID}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{soil\+ID}]{\setlength{\rightskip}{0pt plus 5cm}int Soil\+File\+Entry\+::soil\+ID\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_file_entry_a371763dc14ee6e2d744b87b8a401af32}
+
+
+Definição na linha 15 do arquivo Soil\+File\+Entry.\+h.
+
+\index{Soil\+File\+Entry@{Soil\+File\+Entry}!suction@{suction}}
+\index{suction@{suction}!Soil\+File\+Entry@{Soil\+File\+Entry}}
+\subsubsection[{suction}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+File\+Entry\+::suction\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_file_entry_ae41f2528f8c0c4613f638c9446039fb8}
+
+
+Definição na linha 25 do arquivo Soil\+File\+Entry.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Soil\+File\+Entry.\+h}\end{DoxyCompactItemize}

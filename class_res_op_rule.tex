@@ -1,0 +1,477 @@
+\section{ReferÃªncia da Classe Res\+Op\+Rule}
+\label{class_res_op_rule}\index{Res\+Op\+Rule@{Res\+Op\+Rule}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Rule.\+h$>$}
+
+
+
+Superclasse de {\bf Const\+Release\+Rule}, {\bf Const\+Release\+Rule}, {\bf Demand\+Release\+Rule}, {\bf One\+Priority\+Rule}, {\bf Periodic\+Release\+Rule}, {\bf Periodic\+Release\+Rule}, {\bf Vol\+Dep\+Release\+Rule}, {\bf Vol\+Dep\+Release\+Rule} e {\bf Zones\+Priority\+Rule}.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Rule} ({\bf Node} $\ast${\bf node})
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Rule} ()
+\item 
+virtual bool {\bf empty} ()=0
+\item 
+virtual double {\bf get\+Release} ({\bf Date} date, {\bf Res\+Op\+Model} $\ast$model={\bf N\+U\+LL})=0
+\item 
+virtual double {\bf set\+Allocations} ({\bf Date} index, double value)
+\item 
+virtual bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)=0
+\item 
+double {\bf get\+Release\+Part} (int id\+Link, double release)
+\item 
+virtual double {\bf get\+Number\+Of\+Variables} ()=0
+\item 
+virtual void {\bf set\+Variables} ({\bf Matrix} \&swarm\+Line, int i, int j)=0
+\item 
+virtual bool {\bf check\+Limits} ()=0
+\item 
+virtual void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)=0
+\item 
+virtual void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)=0
+\item 
+{\bf Res\+Op\+Rule} ({\bf Node} $\ast${\bf node})
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Rule} ()
+\item 
+{\bf Res\+Op\+Rule\+Type} {\bf get\+Type} ()
+\item 
+virtual double {\bf get\+Release} ({\bf Date} date, {\bf Res\+Op\+Element} $\ast$model={\bf N\+U\+LL})=0
+\item 
+virtual unsigned int {\bf get\+Number\+Of\+Variables} ()
+\item 
+virtual void {\bf set\+Variables} ({\bf Matrix} \&, int, int)
+\item 
+virtual bool {\bf check\+Limits} ()
+\item 
+{\bf Res\+Op\+Rule} $\ast$ {\bf copy\+Rule} ()
+\item 
+virtual bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog={\bf N\+U\+LL})=0
+\item 
+virtual void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String)=0
+\item 
+virtual void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String)=0
+\end{DoxyCompactItemize}
+\subsection*{Atributos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf to\+Opt}
+\item 
+double {\bf n\+Variables}
+\item 
+{\bf Node} $\ast$ {\bf node}
+\item 
+bool {\bf enable}
+\item 
+{\bf Res\+Op\+Rule\+Type} {\bf rule\+Type}
+\end{DoxyCompactItemize}
+\subsection*{MÃ©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf Res\+Op\+Rule} $\ast$ {\bf do\+Copy} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 14 do arquivo Rule/\+Res\+Op\+Rule.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{Res\+Op\+Rule(\+Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Rule\+::\+Res\+Op\+Rule (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_res_op_rule_a46e181cdbfa49fa498276cf8c1e10aa5}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em node} & Nó \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!````~Res\+Op\+Rule@{$\sim$\+Res\+Op\+Rule}}
+\index{````~Res\+Op\+Rule@{$\sim$\+Res\+Op\+Rule}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{$\sim$\+Res\+Op\+Rule()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Rule\+::$\sim$\+Res\+Op\+Rule (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_rule_ad3fb4aefe3255ea277956813f88cf288}
+Destrutor \index{Res\+Op\+Rule@{Res\+Op\+Rule}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{Res\+Op\+Rule(\+Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Rule\+::\+Res\+Op\+Rule (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_res_op_rule_a46e181cdbfa49fa498276cf8c1e10aa5}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em node} & Nó \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!````~Res\+Op\+Rule@{$\sim$\+Res\+Op\+Rule}}
+\index{````~Res\+Op\+Rule@{$\sim$\+Res\+Op\+Rule}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{$\sim$\+Res\+Op\+Rule()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Rule\+::$\sim$\+Res\+Op\+Rule (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_rule_ad3fb4aefe3255ea277956813f88cf288}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+Rule\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_a92c1f57de54c45ae7e2d754b2eb2814c}
+Verifica se todas as informações necessárias foram fornecidas 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a1ac90da046fb9acb3739be5751edb3e5}, {\bf Opt\+Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_opt_vol_dep_release_rule_a931177fe51696f703aeb9bdc6b486684}, {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a4481f2d8103aa6f8326eb36e97098c49}, {\bf Demand\+Release\+Rule} \doxyref{}{pag.}{class_demand_release_rule_a25faef99d8dd55759cf031331721ce9b}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_aa28ab9bcbbb73ee44c584d1ab026c2ff}, {\bf One\+Priority\+Rule} \doxyref{}{pag.}{class_one_priority_rule_a2256c5ff42ec0ea7f10ec2deff122307}, {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_aa3c1b836f18f85dcd99be7fa47218562}, {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_ae21e3954940d1aae3327ca71abab7136}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_a087a1b14f94d02ecde752f89e03abe4b}, {\bf Zones\+Priority\+Rule} \doxyref{}{pag.}{class_zones_priority_rule_afbc5d118266cb0457cec4d02c0a242a5}, {\bf Opt\+Const\+Release\+Rule} \doxyref{}{pag.}{class_opt_const_release_rule_ab802498d44f4f7a9ef1d5ef6ae0f0a65} e {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_a4c22e4ecf8da985c05b66189aff69dab}.
+
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog=\+N\+U\+L\+L)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+Rule\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_a34eb722bc5e42362c19c3d647b5b5ef8}
+Verifica se todas as informações necessárias foram fornecidas 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros. Se o valor especificado for N\+U\+LL (default), o check\+Completeness não irá reportar mensagens de erro (apenas irá returnar false no primeiro valor falhado ou que estiver faltando). \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a1ac90da046fb9acb3739be5751edb3e5}, {\bf Opt\+Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_opt_vol_dep_release_rule_a931177fe51696f703aeb9bdc6b486684}, {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a4481f2d8103aa6f8326eb36e97098c49}, {\bf Demand\+Release\+Rule} \doxyref{}{pag.}{class_demand_release_rule_a25faef99d8dd55759cf031331721ce9b}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_aa28ab9bcbbb73ee44c584d1ab026c2ff}, {\bf One\+Priority\+Rule} \doxyref{}{pag.}{class_one_priority_rule_a2256c5ff42ec0ea7f10ec2deff122307}, {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_aa3c1b836f18f85dcd99be7fa47218562}, {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_ae21e3954940d1aae3327ca71abab7136}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_a087a1b14f94d02ecde752f89e03abe4b}, {\bf Zones\+Priority\+Rule} \doxyref{}{pag.}{class_zones_priority_rule_afbc5d118266cb0457cec4d02c0a242a5}, {\bf Opt\+Const\+Release\+Rule} \doxyref{}{pag.}{class_opt_const_release_rule_ab802498d44f4f7a9ef1d5ef6ae0f0a65} e {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_a4c22e4ecf8da985c05b66189aff69dab}.
+
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!check\+Limits@{check\+Limits}}
+\index{check\+Limits@{check\+Limits}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{check\+Limits()}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+Rule\+::check\+Limits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_res_op_rule_a9d36466fe5e7a883dc04990ce654d428}
+Verifica se os limites das variáveis estão corretos 
+
+Reimplementado por {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_ab80144da81f1fb429cf53eaec0adf84e}, {\bf Opt\+Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_opt_vol_dep_release_rule_a1168267cfbd15b3b8544bdd63f116cde}, {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a36a0a495fdb002998b2226e01690234d}, {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_a58fec4c99c9990ae4aa72670f2bde7bc}, {\bf Opt\+Const\+Release\+Rule} \doxyref{}{pag.}{class_opt_const_release_rule_a97a3f4eb541548d5b18607a54864b6f2}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_a730ca42f56887dd47f5d2d4f9a905e14}, {\bf Demand\+Release\+Rule} \doxyref{}{pag.}{class_demand_release_rule_aa89f4ed011d8402b7bbe48806a6d4988}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_afd12f5a765c0337c9f271d25f1aa5475}, {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_a03010403e3b7b7d6b9f57e5adc11d4f0}, {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_ac01921016fc1550fad6c7d0b82cc95f0} e {\bf One\+Priority\+Rule} \doxyref{}{pag.}{class_one_priority_rule_a4339dba1aa4a3f508f8012c3c238cdc4}.
+
+
+
+DefiniÃ§Ã£o na linha 87 do arquivo /\+Rule/\+Res\+Op\+Rule.\+h.
+
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!check\+Limits@{check\+Limits}}
+\index{check\+Limits@{check\+Limits}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{check\+Limits()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+Rule\+::check\+Limits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_af456c09bcb136f90564faecb0330afc6}
+Verifica se os limites das variáveis estão corretos 
+
+Implementado por {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_ab80144da81f1fb429cf53eaec0adf84e}, {\bf Opt\+Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_opt_vol_dep_release_rule_a1168267cfbd15b3b8544bdd63f116cde}, {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a36a0a495fdb002998b2226e01690234d}, {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_a58fec4c99c9990ae4aa72670f2bde7bc}, {\bf Opt\+Const\+Release\+Rule} \doxyref{}{pag.}{class_opt_const_release_rule_a97a3f4eb541548d5b18607a54864b6f2}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_a730ca42f56887dd47f5d2d4f9a905e14}, {\bf Demand\+Release\+Rule} \doxyref{}{pag.}{class_demand_release_rule_aa89f4ed011d8402b7bbe48806a6d4988}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_afd12f5a765c0337c9f271d25f1aa5475}, {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_a03010403e3b7b7d6b9f57e5adc11d4f0}, {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_ac01921016fc1550fad6c7d0b82cc95f0} e {\bf One\+Priority\+Rule} \doxyref{}{pag.}{class_one_priority_rule_a4339dba1aa4a3f508f8012c3c238cdc4}.
+
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!copy\+Rule@{copy\+Rule}}
+\index{copy\+Rule@{copy\+Rule}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{copy\+Rule()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Rule}$\ast$ Res\+Op\+Rule\+::copy\+Rule (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_rule_a68e0296797d51ac048d0f23b5df4f8dc}
+Copia a regra \index{Res\+Op\+Rule@{Res\+Op\+Rule}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{do\+Copy()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Res\+Op\+Rule}$\ast$ Res\+Op\+Rule\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{class_res_op_rule_a0612d8b6a8607563b24ae0fb163e537e}
+Copia a regra 
+
+Implementado por {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_ad733056cd70cc3f82dddc5c2a3d750ac}, {\bf Demand\+Release\+Rule} \doxyref{}{pag.}{class_demand_release_rule_a465d4bd7c5fc0333357b70632b21f923}, {\bf Opt\+Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_opt_vol_dep_release_rule_a8d3627bdfb846b47130e28635898b3c9}, {\bf Opt\+Const\+Release\+Rule} \doxyref{}{pag.}{class_opt_const_release_rule_a8e697ebf9f4375bf59076bdff4e5742e}, {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_ac050e0e7582d4f54b28c1d3214a08d7b}, {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_a941b2b979a5b2f5414ea9b808af5b90d}, {\bf One\+Priority\+Rule} \doxyref{}{pag.}{class_one_priority_rule_a4f1eabe067f0974c79897a1f4fd73533}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_a8311baed7d385ce30c90d36cc9ab666f} e {\bf Zones\+Priority\+Rule} \doxyref{}{pag.}{class_zones_priority_rule_a14db23fd267675298260bbba6f681c9e}.
+
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!empty@{empty}}
+\index{empty@{empty}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{empty()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+Rule\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_a9f7ce7398ba87a1324799f8ef9444fc3}
+retorna se existe algum valor no modelo 
+
+Implementado por {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a10d82429c5d369366994524cb834a6c2}, {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a10d82429c5d369366994524cb834a6c2}, {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_ad6f90dc8354bd2849f5e895c67c3386c}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_ae3a530fd578201d0ad8b7039b4c39f0e} e {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_ae3a530fd578201d0ad8b7039b4c39f0e}.
+
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!get\+Number\+Of\+Variables@{get\+Number\+Of\+Variables}}
+\index{get\+Number\+Of\+Variables@{get\+Number\+Of\+Variables}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{get\+Number\+Of\+Variables()}]{\setlength{\rightskip}{0pt plus 5cm}virtual unsigned int Res\+Op\+Rule\+::get\+Number\+Of\+Variables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_res_op_rule_a7966fb578be5c6ac628ae1ccaaf96c35}
+Retorna o número de variaveis de decisão 
+
+Reimplementado por {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a508e4aea2655d62047e6f4ea26097988}, {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a29f46902e1d16bef75f0f12726455865}, {\bf Opt\+Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_opt_vol_dep_release_rule_ade437d4f2d14c5ff6ea23b0421652c63}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_a1f7895e690f1bd446c3c6cc952d3f786}, {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_a23768fd8e92c7c5fbcf7c3df0e04ca10}, {\bf Demand\+Release\+Rule} \doxyref{}{pag.}{class_demand_release_rule_a4753f68b2d5b5eaffb68b174bee6d361}, {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_aa5b34d1165f94f3f395cba72b6e904b2}, {\bf Zones\+Priority\+Rule} \doxyref{}{pag.}{class_zones_priority_rule_ad294e68312543afb3d1adbfef8433c67}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_a281a960b570bdd7a0fcd865b9cbe0d28}, {\bf Opt\+Const\+Release\+Rule} \doxyref{}{pag.}{class_opt_const_release_rule_a63d413785f32a211054d02870325f922}, {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_af30ee8221a4da6a2560153ac6c5c58ed} e {\bf One\+Priority\+Rule} \doxyref{}{pag.}{class_one_priority_rule_ad37e0b51709ca5906c0cf86821d6090f}.
+
+
+
+DefiniÃ§Ã£o na linha 74 do arquivo /\+Rule/\+Res\+Op\+Rule.\+h.
+
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!get\+Number\+Of\+Variables@{get\+Number\+Of\+Variables}}
+\index{get\+Number\+Of\+Variables@{get\+Number\+Of\+Variables}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{get\+Number\+Of\+Variables()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual double Res\+Op\+Rule\+::get\+Number\+Of\+Variables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_acc94bc0a231a0b68eed13fc9cd5d9f76}
+Retorna a quantidade de variáveis de decisão 
+
+Implementado por {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a508e4aea2655d62047e6f4ea26097988}, {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a29f46902e1d16bef75f0f12726455865}, {\bf Opt\+Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_opt_vol_dep_release_rule_ade437d4f2d14c5ff6ea23b0421652c63}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_a1f7895e690f1bd446c3c6cc952d3f786}, {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_a23768fd8e92c7c5fbcf7c3df0e04ca10}, {\bf Demand\+Release\+Rule} \doxyref{}{pag.}{class_demand_release_rule_a4753f68b2d5b5eaffb68b174bee6d361}, {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_aa5b34d1165f94f3f395cba72b6e904b2}, {\bf Zones\+Priority\+Rule} \doxyref{}{pag.}{class_zones_priority_rule_ad294e68312543afb3d1adbfef8433c67}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_a281a960b570bdd7a0fcd865b9cbe0d28}, {\bf Opt\+Const\+Release\+Rule} \doxyref{}{pag.}{class_opt_const_release_rule_a63d413785f32a211054d02870325f922}, {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_af30ee8221a4da6a2560153ac6c5c58ed} e {\bf One\+Priority\+Rule} \doxyref{}{pag.}{class_one_priority_rule_ad37e0b51709ca5906c0cf86821d6090f}.
+
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!get\+Release@{get\+Release}}
+\index{get\+Release@{get\+Release}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{get\+Release(\+Date date, Res\+Op\+Element $\ast$model=\+N\+U\+L\+L)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual double Res\+Op\+Rule\+::get\+Release (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{date, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{model = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_ad90bdc6f396abae2110a1093f9b8570d}
+Retorna valor da liberação para a data fornecida 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em date} & Dia da consulta \\
+\hline
+{\em model} & Modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a373a18576fe9e23c5408ba10b7a2efca}, {\bf Opt\+Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_opt_vol_dep_release_rule_a4cbe7d244f4dc68305f654e883bfcb9d}, {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_a490385cef41f478f9f8592ec1d22b300}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_a77c509392d70821f049b1e51aa2e0e36}, {\bf Demand\+Release\+Rule} \doxyref{}{pag.}{class_demand_release_rule_a3358d92a1911fb80db30d6a6abf58736}, {\bf Zones\+Priority\+Rule} \doxyref{}{pag.}{class_zones_priority_rule_a240508e6c7f978275a0f5a2af27e720e}, {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_a0299dc786018cd2c43d55912935fc896} e {\bf One\+Priority\+Rule} \doxyref{}{pag.}{class_one_priority_rule_abd353fe6f6beccc99f2338e67f626caa}.
+
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!get\+Release@{get\+Release}}
+\index{get\+Release@{get\+Release}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{get\+Release(\+Date date, Res\+Op\+Model $\ast$model=\+N\+U\+L\+L)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual double Res\+Op\+Rule\+::get\+Release (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{date, }
+\item[{{\bf Res\+Op\+Model} $\ast$}]{model = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_abcca2d6f73e88f2bc31cdae042a8a4dd}
+Retorna valor da liberação para a data fornecida 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em date} & Dia da consulta \\
+\hline
+{\em model} & Modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_afe31fe8f965ee9738616371959a17c57}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_ae5d5e5bea438abb02fb2825c334b50c1} e {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_af10b8beaf1afb65be7ca277b1a1e0338}.
+
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!get\+Release\+Part@{get\+Release\+Part}}
+\index{get\+Release\+Part@{get\+Release\+Part}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{get\+Release\+Part(int id\+Link, double release)}]{\setlength{\rightskip}{0pt plus 5cm}double Res\+Op\+Rule\+::get\+Release\+Part (
+\begin{DoxyParamCaption}
+\item[{int}]{id\+Link, }
+\item[{double}]{release}
+\end{DoxyParamCaption}
+)}\label{class_res_op_rule_a95623c8ca45bb5e0f559a00c9bf76493}
+Retorna valor de liberação a ser alocado no link indicado 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em id\+Link} & Identificador do trecho \\
+\hline
+{\em release} & ... \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{get\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Rule\+Type} Res\+Op\+Rule\+::get\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_rule_a333155426cc4f842eed1103af5af167c}
+Retorna o tipo de regra \index{Res\+Op\+Rule@{Res\+Op\+Rule}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_a30647c2585e5b4c83b8301e5d954fa7d}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a138d95e8f7744a58f4faee06de97f25a}, {\bf Opt\+Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_opt_vol_dep_release_rule_a0d3afbf68f7eec82a3bc997753eda311}, {\bf Demand\+Release\+Rule} \doxyref{}{pag.}{class_demand_release_rule_a387856df3e33614f4e6fe8d0d30e4dbb}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_af2e8fb8c20a2d8263677877ab31f7534}, {\bf One\+Priority\+Rule} \doxyref{}{pag.}{class_one_priority_rule_a175eb88e454309660ec069bb5acfa7ef}, {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_ae7b201263a7c1cb8e1d0812ae56432cb}, {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_ab0cf365139280489663e8cb57b15e071}, {\bf Zones\+Priority\+Rule} \doxyref{}{pag.}{class_zones_priority_rule_adeb7824d70524b400afb1d143dcb4d7d} e {\bf Opt\+Const\+Release\+Rule} \doxyref{}{pag.}{class_opt_const_release_rule_a81136173c9562ec6cc322fd84752c165}.
+
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_a3964b7a6529f6165ebf43d56b90a00c2}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_ad463a47a4eb8a711e0fa7a98c3d3604f}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_a8204365dff2102df473011d186182a1c} e {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_ab20779f4d293015e414545f75ecdc9f2}.
+
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_af5abd8c4a528a9fd23c101bb216aa3f4}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a45c2796b4c5025f684f7b80556e19cc7}, {\bf Opt\+Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_opt_vol_dep_release_rule_ae47f53a85a2361528be4cdd0727cf96f}, {\bf Demand\+Release\+Rule} \doxyref{}{pag.}{class_demand_release_rule_acf4996e22a731a9dd565ca303b108239}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_a63bfed947f67a84e9e13043a0beb30c8}, {\bf One\+Priority\+Rule} \doxyref{}{pag.}{class_one_priority_rule_acccbd930592526fc9c4ca517edb873fe}, {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_ae7a6e06ddaeb0ffa69795cb8a7c4b7da}, {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_aec85f10f5a83b795fa1331db854de5af}, {\bf Zones\+Priority\+Rule} \doxyref{}{pag.}{class_zones_priority_rule_a6ddab3c74695a1c63de138dffadd9bd1} e {\bf Opt\+Const\+Release\+Rule} \doxyref{}{pag.}{class_opt_const_release_rule_a843e91d8f8cfdf7dd8a5d5c0bbdcf99e}.
+
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_a59070fd6577b96779a64fe20ab9147b0}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_af22bab64e11a0cb6e4d7019e908975e7}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_a68c80219e65367ee18a8b0583010f384} e {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_aa606b97fa74b8cbabd7b664ab71b71b7}.
+
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!set\+Allocations@{set\+Allocations}}
+\index{set\+Allocations@{set\+Allocations}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{set\+Allocations(\+Date index, double value)}]{\setlength{\rightskip}{0pt plus 5cm}virtual double Res\+Op\+Rule\+::set\+Allocations (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{index, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_rule_a5422f17d11786ddf0206fbf4b4c3ba6d}
+Aloca liberações para os diversos links de saída 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em Dia} & da alocação \\
+\hline
+{\em res\+Model} & Modelo \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!set\+Variables@{set\+Variables}}
+\index{set\+Variables@{set\+Variables}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{set\+Variables(\+Matrix \&, int, int)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+::set\+Variables (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{, }
+\item[{int}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_res_op_rule_abd13d3444d8eae965f4e442d59925a75}
+Atribui soluções as variáveis de decisão 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em swarm\+Line} & ... \\
+\hline
+{\em i} & \\
+\hline
+{\em j} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado por {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a1b27b7a85581828f83d9e797fdcedf5d}, {\bf Opt\+Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_opt_vol_dep_release_rule_ae86a488540ace7d5c0db30ce11e28053}, {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_af3ccf7736da32c27c54e99cbae53a041}, {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_af602e965e2155963f28b60d7b864af97}, {\bf Opt\+Const\+Release\+Rule} \doxyref{}{pag.}{class_opt_const_release_rule_a462e399d4185fa40dda8831862fc58c0}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_af5c526286eb8195f3b6504df85dafec4}, {\bf Demand\+Release\+Rule} \doxyref{}{pag.}{class_demand_release_rule_ae5c2a075a1952193688e8ddadf25d13a}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_a75762b57598774c51de98f79e05e6c25}, {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_ada018446842a6f0a81cb41210d714b31}, {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_a990a3839d33d18b4f5228c0b2621b9f6} e {\bf One\+Priority\+Rule} \doxyref{}{pag.}{class_one_priority_rule_a377f594c2d9adf5f109ec5f34efe68e9}.
+
+
+
+DefiniÃ§Ã£o na linha 82 do arquivo /\+Rule/\+Res\+Op\+Rule.\+h.
+
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!set\+Variables@{set\+Variables}}
+\index{set\+Variables@{set\+Variables}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{set\+Variables(\+Matrix \&swarm\+Line, int i, int j)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+::set\+Variables (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{swarm\+Line, }
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_a47cb3428a0b155d5be583f7970a1acf8}
+Atribui soluções as variáveis de decisão 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em swarm\+Line} & ... \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_a1b27b7a85581828f83d9e797fdcedf5d}, {\bf Opt\+Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_opt_vol_dep_release_rule_ae86a488540ace7d5c0db30ce11e28053}, {\bf Vol\+Dep\+Release\+Rule} \doxyref{}{pag.}{class_vol_dep_release_rule_af3ccf7736da32c27c54e99cbae53a041}, {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_af602e965e2155963f28b60d7b864af97}, {\bf Opt\+Const\+Release\+Rule} \doxyref{}{pag.}{class_opt_const_release_rule_a462e399d4185fa40dda8831862fc58c0}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_af5c526286eb8195f3b6504df85dafec4}, {\bf Demand\+Release\+Rule} \doxyref{}{pag.}{class_demand_release_rule_ae5c2a075a1952193688e8ddadf25d13a}, {\bf Periodic\+Release\+Rule} \doxyref{}{pag.}{class_periodic_release_rule_a75762b57598774c51de98f79e05e6c25}, {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_ada018446842a6f0a81cb41210d714b31}, {\bf Const\+Release\+Rule} \doxyref{}{pag.}{class_const_release_rule_a990a3839d33d18b4f5228c0b2621b9f6} e {\bf One\+Priority\+Rule} \doxyref{}{pag.}{class_one_priority_rule_a377f594c2d9adf5f109ec5f34efe68e9}.
+
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!enable@{enable}}
+\index{enable@{enable}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{enable}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Rule\+::enable}\label{class_res_op_rule_a251898236383f2e50e3454deadb91914}
+Matriz com alocações para os links
+
+Matrix$\ast$ alloc; Links selecionados para alocação
+
+vector$<$unsigned int$>$ id\+Sel\+Links\+Down; Links disponíveis
+
+vector$<$\+Draw\+Link$\ast$$>$ links\+Sorted; Utiliza ou não regra para liberação do reservatório
+
+Utiliza ou não regra para liberação do reservatório 
+
+DefiniÃ§Ã£o na linha 51 do arquivo Rule/\+Res\+Op\+Rule.\+h.
+
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!node@{node}}
+\index{node@{node}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node} $\ast$ Res\+Op\+Rule\+::node}\label{class_res_op_rule_abd72aa5640fa0466a35652d5affa1333}
+Nó de interesse 
+
+DefiniÃ§Ã£o na linha 31 do arquivo Rule/\+Res\+Op\+Rule.\+h.
+
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!n\+Variables@{n\+Variables}}
+\index{n\+Variables@{n\+Variables}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{n\+Variables}]{\setlength{\rightskip}{0pt plus 5cm}double Res\+Op\+Rule\+::n\+Variables}\label{class_res_op_rule_ab4b2c1bc5523f43cee2ca2350fdff937}
+Quantidade de variáveis de decisão 
+
+DefiniÃ§Ã£o na linha 26 do arquivo Rule/\+Res\+Op\+Rule.\+h.
+
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!rule\+Type@{rule\+Type}}
+\index{rule\+Type@{rule\+Type}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{rule\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Rule\+Type} Res\+Op\+Rule\+::rule\+Type}\label{class_res_op_rule_a63be1439fc82e4273962fbd1439eea4a}
+Tipo de regra 
+
+DefiniÃ§Ã£o na linha 36 do arquivo /\+Rule/\+Res\+Op\+Rule.\+h.
+
+\index{Res\+Op\+Rule@{Res\+Op\+Rule}!to\+Opt@{to\+Opt}}
+\index{to\+Opt@{to\+Opt}!Res\+Op\+Rule@{Res\+Op\+Rule}}
+\subsubsection[{to\+Opt}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Rule\+::to\+Opt}\label{class_res_op_rule_a9fc9348501ade7d5623c375a947e0771}
+Define se a regra será ou não otimizada, true (otimiza) 
+
+DefiniÃ§Ã£o na linha 21 do arquivo Rule/\+Res\+Op\+Rule.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Rule/\+Res\+Op\+Rule.\+h}\end{DoxyCompactItemize}

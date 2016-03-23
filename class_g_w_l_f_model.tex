@@ -1,0 +1,347 @@
+\section{Referência da Classe G\+W\+L\+F\+Model}
+\label{class_g_w_l_f_model}\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+
+
+{\ttfamily \#include $<$G\+W\+L\+F\+Model.\+h$>$}
+
+
+
+Herdeiro de {\bf Hidro\+Model}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Hidro\+Model} $\ast$ {\bf copy} ()
+\item 
+{\bf G\+W\+L\+F\+Model} ({\bf Node} $\ast${\bf node}, wx\+String {\bf name})
+\item 
+{\bf G\+W\+L\+F\+Model} ({\bf Link} $\ast${\bf link}, wx\+String {\bf name})
+\item 
+virtual {\bf $\sim$\+G\+W\+L\+F\+Model} ()
+\item 
+bool {\bf run} ()
+\item 
+bool {\bf run\+Acc} ()
+\item 
+bool {\bf run\+Acc\+Node} ()
+\item 
+bool {\bf run\+Acc\+Link} ()
+\item 
+void {\bf clear} ()
+\item 
+void {\bf create\+Results} ({\bf Interval} interval)
+\item 
+bool {\bf empty} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Subbasin} $\ast$ {\bf subbasin}
+\item 
+bool {\bf bool\+Basin}
+\item 
+bool {\bf bool\+Temper}
+\item 
+bool {\bf bool\+Prec}
+\item 
+bool {\bf bool\+Snow}
+\item 
+bool {\bf bool\+Runoff}
+\item 
+bool {\bf bool\+Soil}
+\item 
+{\bf Serie} $\ast$ {\bf temper}
+\item 
+{\bf Serie} $\ast$ {\bf precipitation}
+\item 
+{\bf G\+W\+L\+F\+Snow\+Pack} $\ast$ {\bf snow\+Pack}
+\item 
+{\bf G\+W\+L\+F\+Runoff} $\ast$ {\bf runoff}
+\item 
+{\bf G\+W\+L\+F\+Soil\+Water} $\ast$ {\bf soil\+Water}
+\item 
+wx\+String {\bf temper\+File\+Name}
+\item 
+wx\+String {\bf prec\+File\+Name}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf cancel\+By\+Progress\+Bar} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 20 do arquivo G\+W\+L\+F\+Model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{G\+W\+L\+F\+Model(\+Node $\ast$node, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}G\+W\+L\+F\+Model\+::\+G\+W\+L\+F\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_model_a05e9dca120438b0ecb503f9ffca65a26}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em node} & N� \\
+\hline
+\end{DoxyParams}
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{G\+W\+L\+F\+Model(\+Link $\ast$link, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}G\+W\+L\+F\+Model\+::\+G\+W\+L\+F\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_model_a18bdd0ba9912565a7dc5431fbbdd9030}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em interval\+Begin} & Dia de inicio \\
+\hline
+{\em interval\+End} & Dia de fim \\
+\hline
+{\em link} & Trecho \\
+\hline
+\end{DoxyParams}
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!````~G\+W\+L\+F\+Model@{$\sim$\+G\+W\+L\+F\+Model}}
+\index{````~G\+W\+L\+F\+Model@{$\sim$\+G\+W\+L\+F\+Model}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{$\sim$\+G\+W\+L\+F\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}virtual G\+W\+L\+F\+Model\+::$\sim$\+G\+W\+L\+F\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_model_a39ade8fa3cd82b908233abfaec8b563f}
+Destrutor 
+
+\subsection{Métodos}
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!cancel\+By\+Progress\+Bar@{cancel\+By\+Progress\+Bar}}
+\index{cancel\+By\+Progress\+Bar@{cancel\+By\+Progress\+Bar}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{cancel\+By\+Progress\+Bar()}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+W\+L\+F\+Model\+::cancel\+By\+Progress\+Bar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_g_w_l_f_model_ad371691b4bb271f22fd71474e87ad999}
+Mostra uma Message\+Box para o usu�rio perguntando se ele tem certeza de que deseja cancelar a execu��o.
+
+\begin{DoxyReturn}{Retorna}
+true se o usuario confirmou o cancelamento e a execucao deve terminar 
+\end{DoxyReturn}
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+W\+L\+F\+Model\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_model_a4c3d517d92faad02961eafce0a6e098d}
+Avalia se todas as informa��es importantes para o modelo formam informadas 
+\begin{DoxyParams}{Parâmetros}
+{\em dialog} & Caixa de dialogo onde os erros ser�o apresentados \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a9da83995bb3c4c4ab6eb3abe7dfcb431}.
+
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!clear@{clear}}
+\index{clear@{clear}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void G\+W\+L\+F\+Model\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_model_ae43b81c01d6f95696ac86775a10e4582}
+retorna se existe algum valor no modelo
+
+virtual bool \doxyref{empty()}{pag.}{class_g_w_l_f_model_a6de5ec25ddc056fbeda711ae74db0f63}; Retorna o valor das variaveis para o estado p�s-\/constru��o 
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a7a59ac6ccde3e96019caa55bb9f3f859}.
+
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!copy@{copy}}
+\index{copy@{copy}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{copy()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hidro\+Model}$\ast$ G\+W\+L\+F\+Model\+::copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_model_ac4f90344bb3b882e2014917dde9840cc}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_afef4c70600b8f9224c4ad0040363c5dc}.
+
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!create\+Results@{create\+Results}}
+\index{create\+Results@{create\+Results}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{create\+Results(\+Interval interval)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+W\+L\+F\+Model\+::create\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_model_a9b5844fc4fb393ee1237bdde2fbc336d}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a8ba135e8d5c7e454fa3278355e2d6a92}.
+
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!empty@{empty}}
+\index{empty@{empty}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+W\+L\+F\+Model\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_model_a6de5ec25ddc056fbeda711ae74db0f63}
+retorna se existe algum valor no modelo 
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_aac45c150ea104ed44e2d3349b83fbd40}.
+
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!run@{run}}
+\index{run@{run}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+W\+L\+F\+Model\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_model_a54a4eaafbddfb89438b2053ba0002ddc}
+Executar o modelo G\+W\+LF 
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_ac4b3587518c76af9ad3200646e28a367}.
+
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!run\+Acc@{run\+Acc}}
+\index{run\+Acc@{run\+Acc}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{run\+Acc()}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+W\+L\+F\+Model\+::run\+Acc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_model_a989849aa60d3ce3cd7a06e97a0688435}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a41ed38d63fb34c6a08badaee94e38dbe}.
+
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!run\+Acc\+Link@{run\+Acc\+Link}}
+\index{run\+Acc\+Link@{run\+Acc\+Link}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{run\+Acc\+Link()}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+W\+L\+F\+Model\+::run\+Acc\+Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_model_a46a34585dc04a01c6ad3b334a57c6654}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a6f35f954579dbbe3216d270e2406437a}.
+
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!run\+Acc\+Node@{run\+Acc\+Node}}
+\index{run\+Acc\+Node@{run\+Acc\+Node}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{run\+Acc\+Node()}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+W\+L\+F\+Model\+::run\+Acc\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_model_a0e8605c7d1aac9e2b918862c5c07c877}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a40997d872a7e0224915f2f8a92212d84}.
+
+
+
+\subsection{Atributos}
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!bool\+Basin@{bool\+Basin}}
+\index{bool\+Basin@{bool\+Basin}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{bool\+Basin}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+W\+L\+F\+Model\+::bool\+Basin}\label{class_g_w_l_f_model_a7e0e040e2316c71ca152cb49b4860c6e}
+
+
+Definição na linha 37 do arquivo G\+W\+L\+F\+Model.\+h.
+
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!bool\+Prec@{bool\+Prec}}
+\index{bool\+Prec@{bool\+Prec}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{bool\+Prec}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+W\+L\+F\+Model\+::bool\+Prec}\label{class_g_w_l_f_model_a5d55101a14c0bbb7500974c0127ac3c5}
+
+
+Definição na linha 37 do arquivo G\+W\+L\+F\+Model.\+h.
+
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!bool\+Runoff@{bool\+Runoff}}
+\index{bool\+Runoff@{bool\+Runoff}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{bool\+Runoff}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+W\+L\+F\+Model\+::bool\+Runoff}\label{class_g_w_l_f_model_abaa8e0b5baf285b4a1b2655c2e370cb4}
+
+
+Definição na linha 37 do arquivo G\+W\+L\+F\+Model.\+h.
+
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!bool\+Snow@{bool\+Snow}}
+\index{bool\+Snow@{bool\+Snow}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{bool\+Snow}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+W\+L\+F\+Model\+::bool\+Snow}\label{class_g_w_l_f_model_ad000c6f7d1d29f21ed13c45229ae2ff4}
+
+
+Definição na linha 37 do arquivo G\+W\+L\+F\+Model.\+h.
+
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!bool\+Soil@{bool\+Soil}}
+\index{bool\+Soil@{bool\+Soil}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{bool\+Soil}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+W\+L\+F\+Model\+::bool\+Soil}\label{class_g_w_l_f_model_af62cddc14e369f40a4072558125068a2}
+
+
+Definição na linha 37 do arquivo G\+W\+L\+F\+Model.\+h.
+
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!bool\+Temper@{bool\+Temper}}
+\index{bool\+Temper@{bool\+Temper}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{bool\+Temper}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+W\+L\+F\+Model\+::bool\+Temper}\label{class_g_w_l_f_model_abe75c154da26d3566bf6dda17cd2003f}
+
+
+Definição na linha 37 do arquivo G\+W\+L\+F\+Model.\+h.
+
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!prec\+File\+Name@{prec\+File\+Name}}
+\index{prec\+File\+Name@{prec\+File\+Name}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{prec\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String G\+W\+L\+F\+Model\+::prec\+File\+Name}\label{class_g_w_l_f_model_a33e91650cff41057ce3a343d6258efbe}
+
+
+Definição na linha 69 do arquivo G\+W\+L\+F\+Model.\+h.
+
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!precipitation@{precipitation}}
+\index{precipitation@{precipitation}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{precipitation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ G\+W\+L\+F\+Model\+::precipitation}\label{class_g_w_l_f_model_ad2d6c690ac229299b9492364f700ce9a}
+1 
+
+Definição na linha 46 do arquivo G\+W\+L\+F\+Model.\+h.
+
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!runoff@{runoff}}
+\index{runoff@{runoff}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{runoff}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+W\+L\+F\+Runoff}$\ast$ G\+W\+L\+F\+Model\+::runoff}\label{class_g_w_l_f_model_aedb80693819a313776e540129326fd76}
+\doxyref{1 }{pag.}{}
+
+Definição na linha 58 do arquivo G\+W\+L\+F\+Model.\+h.
+
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!snow\+Pack@{snow\+Pack}}
+\index{snow\+Pack@{snow\+Pack}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{snow\+Pack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+W\+L\+F\+Snow\+Pack}$\ast$ G\+W\+L\+F\+Model\+::snow\+Pack}\label{class_g_w_l_f_model_a9297ee969e040c1ce4c3dd7d62b38472}
+\doxyref{1 }{pag.}{}
+
+Definição na linha 52 do arquivo G\+W\+L\+F\+Model.\+h.
+
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!soil\+Water@{soil\+Water}}
+\index{soil\+Water@{soil\+Water}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{soil\+Water}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+W\+L\+F\+Soil\+Water}$\ast$ G\+W\+L\+F\+Model\+::soil\+Water}\label{class_g_w_l_f_model_ab44d94d0cd501aa0dcd3a69494f16579}
+\doxyref{1 }{pag.}{}
+
+Definição na linha 64 do arquivo G\+W\+L\+F\+Model.\+h.
+
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!subbasin@{subbasin}}
+\index{subbasin@{subbasin}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{subbasin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Subbasin}$\ast$ G\+W\+L\+F\+Model\+::subbasin}\label{class_g_w_l_f_model_a4b403a1d4d24479a0608334e2434ba03}
+Sub-\/bacia 
+
+Definição na linha 35 do arquivo G\+W\+L\+F\+Model.\+h.
+
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!temper@{temper}}
+\index{temper@{temper}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{temper}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ G\+W\+L\+F\+Model\+::temper}\label{class_g_w_l_f_model_aeb18aecbb4fd57623d187ffdd2a51e11}
+1 
+
+Definição na linha 41 do arquivo G\+W\+L\+F\+Model.\+h.
+
+\index{G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}!temper\+File\+Name@{temper\+File\+Name}}
+\index{temper\+File\+Name@{temper\+File\+Name}!G\+W\+L\+F\+Model@{G\+W\+L\+F\+Model}}
+\subsubsection[{temper\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String G\+W\+L\+F\+Model\+::temper\+File\+Name}\label{class_g_w_l_f_model_a11f7e253d4d3632c83a597284ef79a64}
+
+
+Definição na linha 69 do arquivo G\+W\+L\+F\+Model.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf G\+W\+L\+F\+Model.\+h}\end{DoxyCompactItemize}

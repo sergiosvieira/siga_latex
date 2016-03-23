@@ -1,0 +1,262 @@
+\section{Referência da Classe Coordinate\+Reference\+System\+Model}
+\label{class_coordinate_reference_system_model}\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+
+
+{\ttfamily \#include $<$Coordinate\+Reference\+System\+Model.\+h$>$}
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Geo\+S\+QL} \{ {\bf G\+S\+\_\+\+I\+S\+\_\+\+G\+EO} = 0, 
+{\bf G\+S\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+G\+EO}, 
+{\bf G\+S\+\_\+\+B\+O\+TH}
+ \}
+\item 
+typedef std\+::vector$<$ std\+::map$<$ std\+::string, std\+::string $>$ $>$ {\bf Rows}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Coordinate\+Reference\+System\+Model} (const char $\ast$a\+\_\+db\+Name)
+\item 
+{\bf $\sim$\+Coordinate\+Reference\+System\+Model} ()
+\item 
+int {\bf count} (const char $\ast$a\+\_\+filter=\char`\"{}\char`\"{})
+\item 
+int {\bf count\+Geo} (const char $\ast$a\+\_\+filter=\char`\"{}\char`\"{})
+\item 
+int {\bf count\+Not\+Geo} (const char $\ast$a\+\_\+filter=\char`\"{}\char`\"{})
+\item 
+{\bf Rows} {\bf all} (const char $\ast$a\+\_\+filter=\char`\"{}\char`\"{})
+\item 
+{\bf Rows} {\bf geo} (const char $\ast$a\+\_\+filter=\char`\"{}\char`\"{})
+\item 
+{\bf Rows} {\bf not\+Geo} (const char $\ast$a\+\_\+filter=\char`\"{}\char`\"{})
+\item 
+std\+::string {\bf parameters} ()
+\item 
+void {\bf parameters} (std\+::string a\+\_\+parameters)
+\item 
+std\+::string {\bf auth\+Name} ()
+\item 
+void {\bf auth\+Name} (std\+::string a\+\_\+auth\+Name)
+\item 
+std\+::string {\bf description} ()
+\item 
+void {\bf description} (std\+::string a\+\_\+description)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf assembly\+S\+QL} (std\+::string \&a\+\_\+sql, {\bf Geo\+S\+QL}, const char $\ast$a\+\_\+filter)
+\item 
+int {\bf count\+Row} ({\bf Geo\+S\+QL} a\+\_\+is\+Geo, const char $\ast$a\+\_\+filter)
+\item 
+void {\bf rows} ({\bf Rows} \&a\+\_\+rows, {\bf Geo\+S\+QL} a\+\_\+is\+Geo, const char $\ast$a\+\_\+filter)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bf m\+\_\+description} = \char`\"{}\char`\"{}
+\item 
+std\+::string {\bf m\+\_\+parameters} = \char`\"{}\char`\"{}
+\item 
+std\+::string {\bf m\+\_\+auth\+Name} = \char`\"{}\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+S\+TL S\+Q\+Lite 
+
+Definição na linha 11 do arquivo Coordinate\+Reference\+System\+Model.\+h.
+
+
+
+\subsection{Definições de Tipos}
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!Rows@{Rows}}
+\index{Rows@{Rows}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{Rows}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::vector$<$std\+::map$<$std\+::string, std\+::string$>$ $>$ {\bf Coordinate\+Reference\+System\+Model\+::\+Rows}}\label{class_coordinate_reference_system_model_a88cbf106a461542e9b804889fe2c4e0b}
+
+
+Definição na linha 14 do arquivo Coordinate\+Reference\+System\+Model.\+h.
+
+
+
+\subsection{Enumerações}
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!Geo\+S\+QL@{Geo\+S\+QL}}
+\index{Geo\+S\+QL@{Geo\+S\+QL}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{Geo\+S\+QL}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Coordinate\+Reference\+System\+Model\+::\+Geo\+S\+QL}}\label{class_coordinate_reference_system_model_ac73e2dacb4932ba266a8a5e81b1495eb}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{G\+S\+\_\+\+I\+S\+\_\+\+G\+EO@{G\+S\+\_\+\+I\+S\+\_\+\+G\+EO}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!G\+S\+\_\+\+I\+S\+\_\+\+G\+EO@{G\+S\+\_\+\+I\+S\+\_\+\+G\+EO}}\item[{\em 
+G\+S\+\_\+\+I\+S\+\_\+\+G\+EO\label{class_coordinate_reference_system_model_ac73e2dacb4932ba266a8a5e81b1495ebacb52f63aa3bf98c306b34ed38307951a}
+}]\index{G\+S\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+G\+EO@{G\+S\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+G\+EO}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!G\+S\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+G\+EO@{G\+S\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+G\+EO}}\item[{\em 
+G\+S\+\_\+\+I\+S\+\_\+\+N\+O\+T\+\_\+\+G\+EO\label{class_coordinate_reference_system_model_ac73e2dacb4932ba266a8a5e81b1495ebad8a8920519ec5ba2a9a95e50dd62d3b1}
+}]\index{G\+S\+\_\+\+B\+O\+TH@{G\+S\+\_\+\+B\+O\+TH}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!G\+S\+\_\+\+B\+O\+TH@{G\+S\+\_\+\+B\+O\+TH}}\item[{\em 
+G\+S\+\_\+\+B\+O\+TH\label{class_coordinate_reference_system_model_ac73e2dacb4932ba266a8a5e81b1495eba01905905bd6b9f005789576b05bd5a26}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 15 do arquivo Coordinate\+Reference\+System\+Model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{Coordinate\+Reference\+System\+Model(const char $\ast$a\+\_\+db\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}Coordinate\+Reference\+System\+Model\+::\+Coordinate\+Reference\+System\+Model (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+db\+Name}
+\end{DoxyParamCaption}
+)}\label{class_coordinate_reference_system_model_a01028c2f1981a8cb25dfd265f5a8c0d1}
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!````~Coordinate\+Reference\+System\+Model@{$\sim$\+Coordinate\+Reference\+System\+Model}}
+\index{````~Coordinate\+Reference\+System\+Model@{$\sim$\+Coordinate\+Reference\+System\+Model}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{$\sim$\+Coordinate\+Reference\+System\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Coordinate\+Reference\+System\+Model\+::$\sim$\+Coordinate\+Reference\+System\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_coordinate_reference_system_model_ab0cab393b1089dc912eb4df7d3b3bf56}
+
+
+\subsection{Métodos}
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!all@{all}}
+\index{all@{all}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{all(const char $\ast$a\+\_\+filter="""")}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rows} Coordinate\+Reference\+System\+Model\+::all (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+filter = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_coordinate_reference_system_model_ad0b00248604524d9b41d852cb1a0c23d}
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!assembly\+S\+QL@{assembly\+S\+QL}}
+\index{assembly\+S\+QL@{assembly\+S\+QL}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{assembly\+S\+Q\+L(std\+::string \&a\+\_\+sql, Geo\+S\+Q\+L, const char $\ast$a\+\_\+filter)}]{\setlength{\rightskip}{0pt plus 5cm}void Coordinate\+Reference\+System\+Model\+::assembly\+S\+QL (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+sql, }
+\item[{{\bf Geo\+S\+QL}}]{, }
+\item[{const char $\ast$}]{a\+\_\+filter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_coordinate_reference_system_model_aa1502e93e2403741243ec7c6d3301589}
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!auth\+Name@{auth\+Name}}
+\index{auth\+Name@{auth\+Name}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{auth\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Coordinate\+Reference\+System\+Model\+::auth\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_coordinate_reference_system_model_af3ae169b7dfe8eb3e01068409c0409ce}
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!auth\+Name@{auth\+Name}}
+\index{auth\+Name@{auth\+Name}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{auth\+Name(std\+::string a\+\_\+auth\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Coordinate\+Reference\+System\+Model\+::auth\+Name (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{a\+\_\+auth\+Name}
+\end{DoxyParamCaption}
+)}\label{class_coordinate_reference_system_model_a1499beb6daa4a58c8535ea1c5b45368a}
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!count@{count}}
+\index{count@{count}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{count(const char $\ast$a\+\_\+filter="""")}]{\setlength{\rightskip}{0pt plus 5cm}int Coordinate\+Reference\+System\+Model\+::count (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+filter = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_coordinate_reference_system_model_a85e2cb7e2b4231f6eb2c5791478d5ad7}
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!count\+Geo@{count\+Geo}}
+\index{count\+Geo@{count\+Geo}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{count\+Geo(const char $\ast$a\+\_\+filter="""")}]{\setlength{\rightskip}{0pt plus 5cm}int Coordinate\+Reference\+System\+Model\+::count\+Geo (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+filter = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_coordinate_reference_system_model_a4feadff6f4658d3acbbbd571ea599e74}
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!count\+Not\+Geo@{count\+Not\+Geo}}
+\index{count\+Not\+Geo@{count\+Not\+Geo}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{count\+Not\+Geo(const char $\ast$a\+\_\+filter="""")}]{\setlength{\rightskip}{0pt plus 5cm}int Coordinate\+Reference\+System\+Model\+::count\+Not\+Geo (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+filter = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_coordinate_reference_system_model_abf5a3e85f623ab9719654f90bb8aa38e}
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!count\+Row@{count\+Row}}
+\index{count\+Row@{count\+Row}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{count\+Row(\+Geo\+S\+Q\+L a\+\_\+is\+Geo, const char $\ast$a\+\_\+filter)}]{\setlength{\rightskip}{0pt plus 5cm}int Coordinate\+Reference\+System\+Model\+::count\+Row (
+\begin{DoxyParamCaption}
+\item[{{\bf Geo\+S\+QL}}]{a\+\_\+is\+Geo, }
+\item[{const char $\ast$}]{a\+\_\+filter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_coordinate_reference_system_model_ac18b10167a10fa8a9aa75c58b390c25c}
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!description@{description}}
+\index{description@{description}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{description()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Coordinate\+Reference\+System\+Model\+::description (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_coordinate_reference_system_model_ab55e467ec8759cd88dbecb005aa413d4}
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!description@{description}}
+\index{description@{description}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{description(std\+::string a\+\_\+description)}]{\setlength{\rightskip}{0pt plus 5cm}void Coordinate\+Reference\+System\+Model\+::description (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{a\+\_\+description}
+\end{DoxyParamCaption}
+)}\label{class_coordinate_reference_system_model_a18c67e5b1e96d9b690d3eac0a7edbf2f}
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!geo@{geo}}
+\index{geo@{geo}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{geo(const char $\ast$a\+\_\+filter="""")}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rows} Coordinate\+Reference\+System\+Model\+::geo (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+filter = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_coordinate_reference_system_model_a292774a69ced7f8ea6c79314dfab13e7}
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!not\+Geo@{not\+Geo}}
+\index{not\+Geo@{not\+Geo}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{not\+Geo(const char $\ast$a\+\_\+filter="""")}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rows} Coordinate\+Reference\+System\+Model\+::not\+Geo (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+filter = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_coordinate_reference_system_model_a2e64bead668da6ddfda8bedb45130c79}
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!parameters@{parameters}}
+\index{parameters@{parameters}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{parameters()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Coordinate\+Reference\+System\+Model\+::parameters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_coordinate_reference_system_model_a0a8d1f111eef8264dccccc1ed3393a3d}
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!parameters@{parameters}}
+\index{parameters@{parameters}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{parameters(std\+::string a\+\_\+parameters)}]{\setlength{\rightskip}{0pt plus 5cm}void Coordinate\+Reference\+System\+Model\+::parameters (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{a\+\_\+parameters}
+\end{DoxyParamCaption}
+)}\label{class_coordinate_reference_system_model_ad11f9bed6595293466e4c5e6b14a0115}
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!rows@{rows}}
+\index{rows@{rows}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{rows(\+Rows \&a\+\_\+rows, Geo\+S\+Q\+L a\+\_\+is\+Geo, const char $\ast$a\+\_\+filter)}]{\setlength{\rightskip}{0pt plus 5cm}void Coordinate\+Reference\+System\+Model\+::rows (
+\begin{DoxyParamCaption}
+\item[{{\bf Rows} \&}]{a\+\_\+rows, }
+\item[{{\bf Geo\+S\+QL}}]{a\+\_\+is\+Geo, }
+\item[{const char $\ast$}]{a\+\_\+filter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_coordinate_reference_system_model_a8fdec87df46c1413f4fa14a6084ce4a4}
+
+
+\subsection{Atributos}
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!m\+\_\+auth\+Name@{m\+\_\+auth\+Name}}
+\index{m\+\_\+auth\+Name@{m\+\_\+auth\+Name}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{m\+\_\+auth\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Coordinate\+Reference\+System\+Model\+::m\+\_\+auth\+Name = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_coordinate_reference_system_model_a4f2705945925f35843e4e206d9dacd43}
+
+
+Definição na linha 38 do arquivo Coordinate\+Reference\+System\+Model.\+h.
+
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!m\+\_\+description@{m\+\_\+description}}
+\index{m\+\_\+description@{m\+\_\+description}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{m\+\_\+description}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Coordinate\+Reference\+System\+Model\+::m\+\_\+description = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_coordinate_reference_system_model_a5b04b3972e0e1404806ce62e03760fb2}
+
+
+Definição na linha 36 do arquivo Coordinate\+Reference\+System\+Model.\+h.
+
+\index{Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}!m\+\_\+parameters@{m\+\_\+parameters}}
+\index{m\+\_\+parameters@{m\+\_\+parameters}!Coordinate\+Reference\+System\+Model@{Coordinate\+Reference\+System\+Model}}
+\subsubsection[{m\+\_\+parameters}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Coordinate\+Reference\+System\+Model\+::m\+\_\+parameters = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_coordinate_reference_system_model_a302f63827fa95fe00f76b3f53f505455}
+
+
+Definição na linha 37 do arquivo Coordinate\+Reference\+System\+Model.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Coordinate\+Reference\+System\+Model.\+h}\end{DoxyCompactItemize}

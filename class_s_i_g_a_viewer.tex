@@ -1,0 +1,314 @@
+\section{Referência da Classe S\+I\+G\+A\+Viewer}
+\label{class_s_i_g_a_viewer}\index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}
+
+
+{\ttfamily \#include $<$S\+I\+G\+A\+Viewer.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bf I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+C\+H\+O\+I\+CE} = wx\+I\+D\+\_\+\+H\+I\+G\+H\+E\+ST + 101
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+G\+A\+Viewer} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent}, int options={\bf B\+U\+T\+T\+O\+N\+\_\+\+S\+A\+VE})
+\item 
+{\bf $\sim$\+S\+I\+G\+A\+Viewer} ()
+\item 
+bool {\bf add\+Serie\+Viewer} (wx\+String page\+Id, wx\+Frame $\ast${\bf frame}, bool editable=false, wx\+String page\+Name=\char`\"{}\char`\"{})
+\item 
+bool {\bf insert\+Serie} (wx\+String page\+Id, {\bf Serie} $\ast$serie, bool inverse=false, bool show\+Plan=true, bool show\+Graph=false, wx\+String name=\char`\"{}\char`\"{}, bool draw\+Symbols=true, bool draw\+Lines=true)
+\item 
+bool {\bf remove\+Serie} (wx\+String page\+Id, {\bf Serie} $\ast$serie, wx\+String name=\char`\"{}\char`\"{})
+\item 
+void {\bf calculate\+Interval} (wx\+String page\+Id)
+\item 
+bool {\bf add\+Matrix\+Viewer} (wx\+String page\+Id, wx\+Frame $\ast${\bf frame}, bool any\+Matrix=true, bool just\+One=true, bool editable=false, wx\+String page\+Name=\char`\"{}\char`\"{})
+\item 
+bool {\bf insert\+Matrix} (wx\+String page\+Id, {\bf Matrix} matrix, wx\+String name, map$<$ unsigned int, {\bf Column\+Information} $\ast$ $>$, wx\+String section=\char`\"{}\char`\"{}, unsigned int type=0)
+\item 
+bool {\bf remove\+Matrix} (wx\+String page\+Id, {\bf Matrix} matrix, wx\+String name=\char`\"{}\char`\"{})
+\item 
+bool {\bf set\+Curve} (wx\+String page\+Id, {\bf Matrix} matrix, map$<$ unsigned int, {\bf Column\+Information} $\ast$ $>$ infos, {\bf Fit\+Curve} $\ast$fit)
+\item 
+bool {\bf set\+Fixed\+X\+Axis} (wx\+String page\+Id, bool fixedX, {\bf Matrix} fixed\+Matrix, {\bf Column\+Information} $\ast$fixed\+X\+Col\+Info, int fixed\+X\+Col)
+\item 
+{\bf Draw\+Matrix} $\ast$ {\bf get\+Fixed\+X\+Axis} (wx\+String page\+Id)
+\item 
+{\bf Matrix\+Viewer} $\ast$ {\bf get\+MV} (wx\+String page\+Id)
+\item 
+void {\bf save\+Conf} ()
+\item 
+bool {\bf remove\+Viewer} (wx\+String page\+Id)
+\item 
+bool {\bf remove\+Section} (wx\+String page\+Id, const wx\+String \&section, const wx\+String \&unit=wx\+Empty\+String, const wx\+String \&name=wx\+Empty\+String)
+\item 
+int {\bf update\+Serie} (wx\+String page\+Id, const wx\+String \&section, {\bf Serie} $\ast$serie)
+\item 
+void {\bf clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Choicebook $\ast$ {\bf cb\+Component}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 15 do arquivo S\+I\+G\+A\+Viewer.\+h.
+
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{class_s_i_g_a_viewer_a4b4a2cf3d0164d777a7ac9143c885af8}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+C\+H\+O\+I\+CE@{I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+C\+H\+O\+I\+CE}!S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}\index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}!I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+C\+H\+O\+I\+CE@{I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+C\+H\+O\+I\+CE}}\item[{\em 
+I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+C\+H\+O\+I\+CE\label{class_s_i_g_a_viewer_a4b4a2cf3d0164d777a7ac9143c885af8a457dfa1c89ac5d3405528db846a97d40}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 22 do arquivo S\+I\+G\+A\+Viewer.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}!S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}
+\index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}!S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}
+\subsubsection[{S\+I\+G\+A\+Viewer(wx\+Frame $\ast$frame, wx\+Window $\ast$parent, int options=\+B\+U\+T\+T\+O\+N\+\_\+\+S\+A\+V\+E)}]{\setlength{\rightskip}{0pt plus 5cm}S\+I\+G\+A\+Viewer\+::\+S\+I\+G\+A\+Viewer (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{int}]{options = {\ttfamily {\bf B\+U\+T\+T\+O\+N\+\_\+\+S\+A\+VE}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_viewer_ad8f44cb67567f5762346010166680aaa}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & Frame que contem a interface \\
+\hline
+{\em parent} & Pai da janela \\
+\hline
+{\em options} & Bot�es a serem desenhados \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}!````~S\+I\+G\+A\+Viewer@{$\sim$\+S\+I\+G\+A\+Viewer}}
+\index{````~S\+I\+G\+A\+Viewer@{$\sim$\+S\+I\+G\+A\+Viewer}!S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}
+\subsubsection[{$\sim$\+S\+I\+G\+A\+Viewer()}]{\setlength{\rightskip}{0pt plus 5cm}S\+I\+G\+A\+Viewer\+::$\sim$\+S\+I\+G\+A\+Viewer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_viewer_aa900593499ee0460460336cf84ec48a1}
+Destrutor 
+
+\subsection{Métodos}
+\index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}!add\+Matrix\+Viewer@{add\+Matrix\+Viewer}}
+\index{add\+Matrix\+Viewer@{add\+Matrix\+Viewer}!S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}
+\subsubsection[{add\+Matrix\+Viewer(wx\+String page\+Id, wx\+Frame $\ast$frame, bool any\+Matrix=true, bool just\+One=true, bool editable=false, wx\+String page\+Name="""")}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Viewer\+::add\+Matrix\+Viewer (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{page\+Id, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{bool}]{any\+Matrix = {\ttfamily true}, }
+\item[{bool}]{just\+One = {\ttfamily true}, }
+\item[{bool}]{editable = {\ttfamily false}, }
+\item[{wx\+String}]{page\+Name = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_viewer_a73867a363704baf3fbe7bdea6893327b}
+Adiciona um \doxyref{Matrix\+Viewer}{pag.}{class_matrix_viewer} \index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}!add\+Serie\+Viewer@{add\+Serie\+Viewer}}
+\index{add\+Serie\+Viewer@{add\+Serie\+Viewer}!S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}
+\subsubsection[{add\+Serie\+Viewer(wx\+String page\+Id, wx\+Frame $\ast$frame, bool editable=false, wx\+String page\+Name="""")}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Viewer\+::add\+Serie\+Viewer (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{page\+Id, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{bool}]{editable = {\ttfamily false}, }
+\item[{wx\+String}]{page\+Name = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_viewer_a75f385bca0cdf99781c2cb448c557554}
+Adiciona um \doxyref{Serie\+Viewer}{pag.}{class_serie_viewer} \index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}!calculate\+Interval@{calculate\+Interval}}
+\index{calculate\+Interval@{calculate\+Interval}!S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}
+\subsubsection[{calculate\+Interval(wx\+String page\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Viewer\+::calculate\+Interval (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{page\+Id}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_viewer_a2a48f66a683c12bb5d2ec8308bf21c98}
+Desenha e calcula o intervalo do \doxyref{Serie\+Plan}{pag.}{class_serie_plan} \index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}!clear@{clear}}
+\index{clear@{clear}!S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Viewer\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_viewer_a7db9063b5d875d64f5099032e44e9438}
+\index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}!get\+Fixed\+X\+Axis@{get\+Fixed\+X\+Axis}}
+\index{get\+Fixed\+X\+Axis@{get\+Fixed\+X\+Axis}!S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}
+\subsubsection[{get\+Fixed\+X\+Axis(wx\+String page\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Matrix}$\ast$ S\+I\+G\+A\+Viewer\+::get\+Fixed\+X\+Axis (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{page\+Id}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_viewer_a9001b2b70f65177d42c163c98e250a04}
+Retorna a matrix fixa caso haja \index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}!get\+MV@{get\+MV}}
+\index{get\+MV@{get\+MV}!S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}
+\subsubsection[{get\+M\+V(wx\+String page\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix\+Viewer}$\ast$ S\+I\+G\+A\+Viewer\+::get\+MV (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{page\+Id}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_viewer_ac12bea0f0dd4d81d24454f55de2e08fa}
+\index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}!insert\+Matrix@{insert\+Matrix}}
+\index{insert\+Matrix@{insert\+Matrix}!S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}
+\subsubsection[{insert\+Matrix(wx\+String page\+Id, Matrix matrix, wx\+String name, map$<$ unsigned int, Column\+Information $\ast$ $>$, wx\+String section="""", unsigned int type=0)}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Viewer\+::insert\+Matrix (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{page\+Id, }
+\item[{{\bf Matrix}}]{matrix, }
+\item[{wx\+String}]{name, }
+\item[{map$<$ unsigned int, {\bf Column\+Information} $\ast$ $>$}]{, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{unsigned int}]{type = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_viewer_a8160552ae875bc080ae14921d55a3587}
+Insere uma matriz ao visualizador correspondente \index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}!insert\+Serie@{insert\+Serie}}
+\index{insert\+Serie@{insert\+Serie}!S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}
+\subsubsection[{insert\+Serie(wx\+String page\+Id, Serie $\ast$serie, bool inverse=false, bool show\+Plan=true, bool show\+Graph=false, wx\+String name="""", bool draw\+Symbols=true, bool draw\+Lines=true)}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Viewer\+::insert\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{page\+Id, }
+\item[{{\bf Serie} $\ast$}]{serie, }
+\item[{bool}]{inverse = {\ttfamily false}, }
+\item[{bool}]{show\+Plan = {\ttfamily true}, }
+\item[{bool}]{show\+Graph = {\ttfamily false}, }
+\item[{wx\+String}]{name = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{bool}]{draw\+Symbols = {\ttfamily true}, }
+\item[{bool}]{draw\+Lines = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_viewer_aef034b30f4807936946121f3b26ad279}
+Insere uma serie ao visualizafor correspondente 
+\begin{DoxyParams}{Parâmetros}
+{\em serie} & \doxyref{Serie}{pag.}{class_serie} a ser inserida \\
+\hline
+{\em inverse} & Se a serie deve ser desenhada invertida \\
+\hline
+{\em show} & Se a serie deve iniciar desenhada \\
+\hline
+{\em show\+Plan} & Mostra a planilha \\
+\hline
+{\em show\+Graph} & Mostra a graph \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna se foi possivel ou n�o inserir a serie 
+\end{DoxyReturn}
+\index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}!remove\+Matrix@{remove\+Matrix}}
+\index{remove\+Matrix@{remove\+Matrix}!S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}
+\subsubsection[{remove\+Matrix(wx\+String page\+Id, Matrix matrix, wx\+String name="""")}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Viewer\+::remove\+Matrix (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{page\+Id, }
+\item[{{\bf Matrix}}]{matrix, }
+\item[{wx\+String}]{name = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_viewer_a1d4b77674019fb479f90f0bf4e0ea071}
+Remove uma matriz do visualizador correspondente \index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}!remove\+Section@{remove\+Section}}
+\index{remove\+Section@{remove\+Section}!S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}
+\subsubsection[{remove\+Section(wx\+String page\+Id, const wx\+String \&section, const wx\+String \&unit=wx\+Empty\+String, const wx\+String \&name=wx\+Empty\+String)}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Viewer\+::remove\+Section (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{page\+Id, }
+\item[{const wx\+String \&}]{section, }
+\item[{const wx\+String \&}]{unit = {\ttfamily wxEmptyString}, }
+\item[{const wx\+String \&}]{name = {\ttfamily wxEmptyString}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_viewer_af5adfcb9d8e935952260fbc178822586}
+\index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}!remove\+Serie@{remove\+Serie}}
+\index{remove\+Serie@{remove\+Serie}!S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}
+\subsubsection[{remove\+Serie(wx\+String page\+Id, Serie $\ast$serie, wx\+String name="""")}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Viewer\+::remove\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{page\+Id, }
+\item[{{\bf Serie} $\ast$}]{serie, }
+\item[{wx\+String}]{name = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_viewer_ad78214a467fed80a4430ad732f88efbc}
+Remove uma serie do visualizador correspondente 
+\begin{DoxyParams}{Parâmetros}
+{\em serie} & \doxyref{Serie}{pag.}{class_serie} a ser removida \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}!remove\+Viewer@{remove\+Viewer}}
+\index{remove\+Viewer@{remove\+Viewer}!S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}
+\subsubsection[{remove\+Viewer(wx\+String page\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Viewer\+::remove\+Viewer (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{page\+Id}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_viewer_a628d67240161721c0d4f576f720711bc}
+Adiciona um \doxyref{Serie\+Viewer}{pag.}{class_serie_viewer} \index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}!save\+Conf@{save\+Conf}}
+\index{save\+Conf@{save\+Conf}!S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}
+\subsubsection[{save\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Viewer\+::save\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_i_g_a_viewer_a33d9268e1ef97997afe72d1c34ce7d94}
+Salva configura��es 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abcef0436251918c1eab033a80b40c626}.
+
+\index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}!set\+Curve@{set\+Curve}}
+\index{set\+Curve@{set\+Curve}!S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}
+\subsubsection[{set\+Curve(wx\+String page\+Id, Matrix matrix, map$<$ unsigned int, Column\+Information $\ast$ $>$ infos, Fit\+Curve $\ast$fit)}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Viewer\+::set\+Curve (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{page\+Id, }
+\item[{{\bf Matrix}}]{matrix, }
+\item[{map$<$ unsigned int, {\bf Column\+Information} $\ast$ $>$}]{infos, }
+\item[{{\bf Fit\+Curve} $\ast$}]{fit}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_viewer_a58b115f680325573c48645ead9584d8a}
+Define a curva para o \doxyref{Matrix\+Viewer}{pag.}{class_matrix_viewer} selecionado 
+\begin{DoxyParams}{Parâmetros}
+{\em matrix} & Matriz \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}!set\+Fixed\+X\+Axis@{set\+Fixed\+X\+Axis}}
+\index{set\+Fixed\+X\+Axis@{set\+Fixed\+X\+Axis}!S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}
+\subsubsection[{set\+Fixed\+X\+Axis(wx\+String page\+Id, bool fixed\+X, Matrix fixed\+Matrix, Column\+Information $\ast$fixed\+X\+Col\+Info, int fixed\+X\+Col)}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Viewer\+::set\+Fixed\+X\+Axis (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{page\+Id, }
+\item[{bool}]{fixedX, }
+\item[{{\bf Matrix}}]{fixed\+Matrix, }
+\item[{{\bf Column\+Information} $\ast$}]{fixed\+X\+Col\+Info, }
+\item[{int}]{fixed\+X\+Col}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_viewer_ad2e8bc1e9078ba0bd12c19f2dab704b0}
+Define uma matriz que sera o eixo x para todas as matrizes que foram e forem inseridas \index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}!update\+Serie@{update\+Serie}}
+\index{update\+Serie@{update\+Serie}!S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}
+\subsubsection[{update\+Serie(wx\+String page\+Id, const wx\+String \&section, Serie $\ast$serie)}]{\setlength{\rightskip}{0pt plus 5cm}int S\+I\+G\+A\+Viewer\+::update\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{page\+Id, }
+\item[{const wx\+String \&}]{section, }
+\item[{{\bf Serie} $\ast$}]{serie}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_viewer_a2b6dbdd7aef9b14b8b0a63e5055ce7ef}
+Remove as series contidas num dado section, tanto no vetor do \doxyref{Serie\+Viewer}{pag.}{class_serie_viewer} como nas arvores do \doxyref{Serie\+Plan}{pag.}{class_serie_plan} e do \doxyref{Serie\+Graph}{pag.}{class_serie_graph} \begin{DoxyReturn}{Retorna}
+Retorna 0 para atualizado com sucesso, 1 se a serie a ser atualizada for a mesma, 
+
+2 caso n�o encontre um \doxyref{Draw\+Serie}{pag.}{class_draw_serie}, 3 quando n�o tiver encontrado a section enviada 
+
+e 4 caso n�o ache o \doxyref{Serie\+Viewer}{pag.}{class_serie_viewer} desejado 
+\end{DoxyReturn}
+
+
+\subsection{Atributos}
+\index{S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}!cb\+Component@{cb\+Component}}
+\index{cb\+Component@{cb\+Component}!S\+I\+G\+A\+Viewer@{S\+I\+G\+A\+Viewer}}
+\subsubsection[{cb\+Component}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choicebook$\ast$ S\+I\+G\+A\+Viewer\+::cb\+Component}\label{class_s_i_g_a_viewer_a1092e6d33be25fd843e70013a273c488}
+Seletor de Componente 
+
+Definição na linha 40 do arquivo S\+I\+G\+A\+Viewer.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+G\+A\+Viewer.\+h}\end{DoxyCompactItemize}

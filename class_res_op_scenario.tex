@@ -1,0 +1,635 @@
+\section{Refer√™ncia da Classe Res\+Op\+Scenario}
+\label{class_res_op_scenario}\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Scenario.\+h$>$}
+
+
+
+Superclasse de {\bf Res\+Op\+Batch\+Scenario}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf is\+Checked\+Demand\+Assurance\+Curve} ()
+\item 
+void {\bf check\+Demand\+Assurance\+Curve} (bool a\+\_\+value)
+\item 
+map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ $\ast$ {\bf get\+Data\+Map} ()
+\item 
+bool {\bf set\+Data\+Map} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&new\+Map, bool ignore\+Old)
+\item 
+virtual bool {\bf is\+Batch} () const 
+\item 
+{\bf Res\+Op\+Scenario} ()
+\item 
+{\bf Res\+Op\+Scenario} (wx\+String {\bf name}, int {\bf id})
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Scenario} ()
+\item 
+{\bf Res\+Op\+Element} $\ast$ {\bf get\+Element\+Data} ({\bf Element\+ID} element\+Id)
+\item 
+{\bf Interval} {\bf get\+Scenario\+Interval} ()
+\item 
+void {\bf set\+Scenario\+Interval} ({\bf Interval} new\+Interval)
+\item 
+wx\+String {\bf get\+Name} ()
+\item 
+void {\bf set\+Name} (wx\+String new\+Name)
+\item 
+{\bf Res\+Op\+Model\+Type} {\bf get\+Exec\+Model} ()
+\item 
+void {\bf set\+Exec\+Model} ({\bf Res\+Op\+Model\+Type} type)
+\item 
+{\bf Res\+Op\+Algorithm} $\ast$ {\bf get\+Algorithm} ()
+\item 
+int {\bf get\+Exec\+Window\+Lenght} ()
+\item 
+void {\bf remove\+Algorithm} ()
+\item 
+bool {\bf set\+Algorithm} ({\bf Res\+Op\+Algorithm\+Type} type, bool ignore\+Old=true)
+\item 
+bool {\bf set\+Exec\+Window\+Length} (int lenght)
+\item 
+int {\bf get\+Obj\+Function\+Count} ({\bf Element\+ID} network\+\_\+id)
+\item 
+map$<$ {\bf Res\+Op\+Objective\+Function\+Type}, {\bf Res\+Op\+Obj\+Function} $\ast$ $>$ $\ast$ {\bf get\+Obj\+Functions} ({\bf Element\+ID} network\+\_\+id)
+\item 
+int {\bf get\+Id} ()
+\item 
+int {\bf count\+Decisions\+Variables} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements)
+\item 
+void {\bf set\+Interval} ({\bf Interval} {\bf interval})
+\item 
+{\bf Interval} {\bf get\+Interval} ()
+\item 
+void {\bf update\+Results\+Series} ()
+\item 
+void {\bf save\+Results} (const char $\ast$a\+\_\+filename)
+\item 
+vector$<$ {\bf Scenario\+Results} $>$ {\bf scenario\+Results} ()
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf add\+Element\+Data} ({\bf Res\+Op\+Element} $\ast$new\+Data, bool ignore\+Old)
+\item 
+bool {\bf set\+Element\+Data} ({\bf Res\+Op\+Element} $\ast$new\+Data)
+\item 
+bool {\bf remove\+Element\+Data} ({\bf Element\+ID} element\+Id)
+\item 
+bool {\bf add\+Obj\+Function} ({\bf Res\+Op\+Objective\+Function\+Type} type)
+\item 
+void {\bf clear\+Object\+Functions} ()
+\item 
+bool {\bf remove\+Obj\+Function} ({\bf Res\+Op\+Objective\+Function\+Type} type)
+\item 
+{\bf Res\+Op\+Scenario} $\ast$ {\bf copy\+Scenario} ()
+\item 
+void {\bf set\+Id} (int {\bf id})
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog, std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ element\+\_\+map)
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog, std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ element\+\_\+map, std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ dependency\+\_\+map)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, float progress\+Increment=0.\+0)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Interval} {\bf interval}
+\item 
+int {\bf id}
+\item 
+{\bf Res\+Op\+Model\+Type} {\bf exec\+Model}
+\item 
+{\bf Res\+Op\+Algorithm} $\ast$ {\bf algorithm}
+\item 
+int {\bf exec\+Window\+Length}
+\item 
+map$<$ unsigned int, map$<$ {\bf Res\+Op\+Objective\+Function\+Type}, {\bf Res\+Op\+Obj\+Function} $\ast$ $>$ $>$ {\bf obj\+Functions}
+\item 
+map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ {\bf element\+Data}
+\item 
+wx\+String {\bf name}
+\item 
+bool {\bf m\+\_\+demand\+Assurance\+Curve}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Res\+Op\+Scenario\+Ctrl}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 24 do arquivo Res\+Op\+Scenario.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{Res\+Op\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Scenario\+::\+Res\+Op\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_a4c356ed88508db331c049570176a479f}
+Construtor \index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{Res\+Op\+Scenario(wx\+String name, int id)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Scenario\+::\+Res\+Op\+Scenario (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name, }
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ae5b19c589c548c5a41ba82cb79f92716}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em name} & Nome do scenario \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!````~Res\+Op\+Scenario@{$\sim$\+Res\+Op\+Scenario}}
+\index{````~Res\+Op\+Scenario@{$\sim$\+Res\+Op\+Scenario}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{$\sim$\+Res\+Op\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Scenario\+::$\sim$\+Res\+Op\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_scenario_a6baed7d7c7e8a9a4b076d2d862505cb2}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!add\+Element\+Data@{add\+Element\+Data}}
+\index{add\+Element\+Data@{add\+Element\+Data}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{add\+Element\+Data(\+Res\+Op\+Element $\ast$new\+Data, bool ignore\+Old)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+::add\+Element\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{new\+Data, }
+\item[{bool}]{ignore\+Old}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_a0870ecd545cc1bc197d49dc836428832}
+Adiciona dados de um elemento. Se j· houverem dados para o elemento ser· verificado o parametro \char`\"{}replace\char`\"{}. Se \char`\"{}ignore\+Old\char`\"{} for true, caso padr„o, os dados antigos ser„o apagados e os novos colocados no lugar. Caso contrario os dados novos n„o ser„o inseridos havendo dados pre-\/existentes. 
+\begin{DoxyParams}{Par√¢metros}
+{\em data} & Dado a ser adicionado \\
+\hline
+{\em replace} & Deve trocar os dados caso j· exist„o \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna true se for incerido com sucesso ou false no contrario 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!add\+Obj\+Function@{add\+Obj\+Function}}
+\index{add\+Obj\+Function@{add\+Obj\+Function}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{add\+Obj\+Function(\+Res\+Op\+Objective\+Function\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+::add\+Obj\+Function (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Objective\+Function\+Type}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_aaa98f281c1b70e5ad87f6d4ccf71053d}
+Adiciona um tipo funÁ„o objetivo na sua lista de execuÁıes 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo a ser adicionado \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_a3b90ee404f424bb5034f709cc9328f76}
+Verifica se os modelos tem dados completos \index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog, std\+::map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ element\+\_\+map)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog, }
+\item[{std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$}]{element\+\_\+map}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_a477ac7d6446befabf9223d06bde2c01a}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog, std\+::map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ element\+\_\+map, std\+::map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ dependency\+\_\+map)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog, }
+\item[{std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$}]{element\+\_\+map, }
+\item[{std\+::map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$}]{dependency\+\_\+map}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_af5e952cf25f2153e24617e8492408552}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!check\+Demand\+Assurance\+Curve@{check\+Demand\+Assurance\+Curve}}
+\index{check\+Demand\+Assurance\+Curve@{check\+Demand\+Assurance\+Curve}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{check\+Demand\+Assurance\+Curve(bool a\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+::check\+Demand\+Assurance\+Curve (
+\begin{DoxyParamCaption}
+\item[{bool}]{a\+\_\+value}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ab8c1df14a3c68f25efb0972e7397af69}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!clear\+Object\+Functions@{clear\+Object\+Functions}}
+\index{clear\+Object\+Functions@{clear\+Object\+Functions}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{clear\+Object\+Functions()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+::clear\+Object\+Functions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_aed7aa8652c04ca3153d5a58aac8fbb92}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!copy\+Scenario@{copy\+Scenario}}
+\index{copy\+Scenario@{copy\+Scenario}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{copy\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Scenario}$\ast$ Res\+Op\+Scenario\+::copy\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_a56ca9c6365c621712260cf62eeef2bad}
+Retorna uma copia do seu conteudo \begin{DoxyReturn}{Retorna}
+Uma copia sua 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!count\+Decisions\+Variables@{count\+Decisions\+Variables}}
+\index{count\+Decisions\+Variables@{count\+Decisions\+Variables}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{count\+Decisions\+Variables(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements)}]{\setlength{\rightskip}{0pt plus 5cm}int Res\+Op\+Scenario\+::count\+Decisions\+Variables (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_a72e95304a50f6e7fb2107932056ef069}
+Numero de variaveis de decis„o \index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!get\+Algorithm@{get\+Algorithm}}
+\index{get\+Algorithm@{get\+Algorithm}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{get\+Algorithm()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Algorithm}$\ast$ Res\+Op\+Scenario\+::get\+Algorithm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_a6a370120898e1c223eac1195c10d4fad}
+Retorna o modelo de execucao \begin{DoxyReturn}{Retorna}
+Typo de modelo 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!get\+Data\+Map@{get\+Data\+Map}}
+\index{get\+Data\+Map@{get\+Data\+Map}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{get\+Data\+Map()}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf Element\+ID}, {\bf Res\+Op\+Element}$\ast$$>$$\ast$ Res\+Op\+Scenario\+::get\+Data\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_a8f848cdac1338c75a3abb3fbbeb22f10}
+Retorna uma copia do mapa de dados \begin{DoxyReturn}{Retorna}
+Copia do mapa de dados 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!get\+Element\+Data@{get\+Element\+Data}}
+\index{get\+Element\+Data@{get\+Element\+Data}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{get\+Element\+Data(\+Element\+I\+D element\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Element}$\ast$ Res\+Op\+Scenario\+::get\+Element\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{element\+Id}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ae8e208a6cf1dc20f15b9e8c00b8d25f0}
+Pega os dados de um elemento. 
+\begin{DoxyParams}{Par√¢metros}
+{\em element\+Id} & Identificador do elemento \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Dado do elemento 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!get\+Exec\+Model@{get\+Exec\+Model}}
+\index{get\+Exec\+Model@{get\+Exec\+Model}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{get\+Exec\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Model\+Type} Res\+Op\+Scenario\+::get\+Exec\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_a3dceea1fb59f8b924640c25f4364a78f}
+Retorna o modelo de execucao \begin{DoxyReturn}{Retorna}
+Typo de modelo 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!get\+Exec\+Window\+Lenght@{get\+Exec\+Window\+Lenght}}
+\index{get\+Exec\+Window\+Lenght@{get\+Exec\+Window\+Lenght}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{get\+Exec\+Window\+Lenght()}]{\setlength{\rightskip}{0pt plus 5cm}int Res\+Op\+Scenario\+::get\+Exec\+Window\+Lenght (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_a8956bfdb744cfeee8dfc30ab3c2a3084}
+Retorna o tamanho da janela de execuÁ„o \index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{get\+Id()}]{\setlength{\rightskip}{0pt plus 5cm}int Res\+Op\+Scenario\+::get\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_aef916f17c4e88c9bcfbdfda3c24d48ed}
+Retorna o identificador unico do cenario \index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!get\+Interval@{get\+Interval}}
+\index{get\+Interval@{get\+Interval}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{get\+Interval()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Res\+Op\+Scenario\+::get\+Interval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_acbe20c05866611172442903ccc1f2791}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{get\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Res\+Op\+Scenario\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ac0a87e9b2fb879f63c603b46cc40a079}
+Retorna o nome do cenario \begin{DoxyReturn}{Retorna}
+Nome do cenario 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!get\+Obj\+Function\+Count@{get\+Obj\+Function\+Count}}
+\index{get\+Obj\+Function\+Count@{get\+Obj\+Function\+Count}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{get\+Obj\+Function\+Count(\+Element\+I\+D network\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}int Res\+Op\+Scenario\+::get\+Obj\+Function\+Count (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{network\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_a8005d2b22577e0fc45e92aded488a6e3}
+Retorna a quantidade de funÁıes objetivo na lista de execuÁ„o \index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!get\+Obj\+Functions@{get\+Obj\+Functions}}
+\index{get\+Obj\+Functions@{get\+Obj\+Functions}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{get\+Obj\+Functions(\+Element\+I\+D network\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf Res\+Op\+Objective\+Function\+Type}, {\bf Res\+Op\+Obj\+Function}$\ast$$>$$\ast$ Res\+Op\+Scenario\+::get\+Obj\+Functions (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{network\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_a591eadef2f8d182c9e0bb96a9f5257e5}
+Retorna as funÁıes objetivo da lista de execuÁ„o \index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!get\+Scenario\+Interval@{get\+Scenario\+Interval}}
+\index{get\+Scenario\+Interval@{get\+Scenario\+Interval}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{get\+Scenario\+Interval()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Res\+Op\+Scenario\+::get\+Scenario\+Interval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_a302e170951dc9df6903886e616afc7dc}
+Pega o intervalo de tempo \index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!is\+Batch@{is\+Batch}}
+\index{is\+Batch@{is\+Batch}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{is\+Batch() const }]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+Scenario\+::is\+Batch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_scenario_ae8f1de18b6590127b1373cd617ce1c12}
+
+
+Reimplementado por {\bf Res\+Op\+Batch\+Scenario} \doxyref{}{pag.}{class_res_op_batch_scenario_ac7fa9eb2ea4cc1074f7e7ebc7cfd1f56}.
+
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!is\+Checked\+Demand\+Assurance\+Curve@{is\+Checked\+Demand\+Assurance\+Curve}}
+\index{is\+Checked\+Demand\+Assurance\+Curve@{is\+Checked\+Demand\+Assurance\+Curve}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{is\+Checked\+Demand\+Assurance\+Curve()}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+::is\+Checked\+Demand\+Assurance\+Curve (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_abfd25cd38f7d2d8c47b03bdb9f7c65d9}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$proj, float progress\+Increment=0.\+0)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{float}]{progress\+Increment = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_ad051546351c52c583ea6060eaa74ab8c}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$proj)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_aee09fb6011aed23493104a4ab11b1b9e}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!remove\+Algorithm@{remove\+Algorithm}}
+\index{remove\+Algorithm@{remove\+Algorithm}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{remove\+Algorithm()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+::remove\+Algorithm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_a42cea457adbdc54955c66e3a0bc30053}
+Remove o algoritomo \index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!remove\+Element\+Data@{remove\+Element\+Data}}
+\index{remove\+Element\+Data@{remove\+Element\+Data}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{remove\+Element\+Data(\+Element\+I\+D element\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+::remove\+Element\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{element\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_aa041ae4b7a59ea500ab299d1594eccfa}
+Remove os dados de um elemento. Os dados ser„o deletados 
+\begin{DoxyParams}{Par√¢metros}
+{\em element\+Id} & Identificador do elemento \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna true se conseguir deletar os dados correspondentes ao elemento identificado. 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!remove\+Obj\+Function@{remove\+Obj\+Function}}
+\index{remove\+Obj\+Function@{remove\+Obj\+Function}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{remove\+Obj\+Function(\+Res\+Op\+Objective\+Function\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+::remove\+Obj\+Function (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Objective\+Function\+Type}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_ac621a2a05e2c9a7b7c37523551b72ba5}
+Remove um tipo funÁ„o objetivo da sua lista de execuÁıes 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo a ser adicionado \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!save\+Results@{save\+Results}}
+\index{save\+Results@{save\+Results}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{save\+Results(const char $\ast$a\+\_\+filename)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+::save\+Results (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+filename}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_a956c9581678a868918e84aa912ff55ce}
+saves the simulation results of each element on specified output file 
+\begin{DoxyParams}{Par√¢metros}
+{\em output} & filename \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!scenario\+Results@{scenario\+Results}}
+\index{scenario\+Results@{scenario\+Results}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{scenario\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Scenario\+Results}$>$ Res\+Op\+Scenario\+::scenario\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ae14f20f56918a278b58a410edcffc6f6}
+gets a vector of structs of scenario results \index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!set\+Algorithm@{set\+Algorithm}}
+\index{set\+Algorithm@{set\+Algorithm}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{set\+Algorithm(\+Res\+Op\+Algorithm\+Type type, bool ignore\+Old=true)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+::set\+Algorithm (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Algorithm\+Type}}]{type, }
+\item[{bool}]{ignore\+Old = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_ae352cc5913fff6c2d622b414f512f728}
+Define o tipo de modelo de execucao 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo de modelo \\
+\hline
+{\em ignore\+Old} & Se deve sobrescrever o existente \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!set\+Data\+Map@{set\+Data\+Map}}
+\index{set\+Data\+Map@{set\+Data\+Map}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{set\+Data\+Map(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&new\+Map, bool ignore\+Old)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+::set\+Data\+Map (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{new\+Map, }
+\item[{bool}]{ignore\+Old}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_aae37e425223644abccddb256285355af}
+Define um mapa de dados 
+\begin{DoxyParams}{Par√¢metros}
+{\em ignore\+Old} & Se deve sobrescrever o mapa existente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna true se n„o houver problemas. 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!set\+Element\+Data@{set\+Element\+Data}}
+\index{set\+Element\+Data@{set\+Element\+Data}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{set\+Element\+Data(\+Res\+Op\+Element $\ast$new\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+::set\+Element\+Data (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{new\+Data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_a77ef0f23cf00d196f5e65868f42f9190}
+Substitui os dados de um elemento. 
+\begin{DoxyParams}{Par√¢metros}
+{\em data} & Dado a ser adicionado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna true se for incerido com sucesso ou false no contrario 
+\end{DoxyReturn}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!set\+Exec\+Model@{set\+Exec\+Model}}
+\index{set\+Exec\+Model@{set\+Exec\+Model}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{set\+Exec\+Model(\+Res\+Op\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+::set\+Exec\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_a6b1049c103839de65978ae96e912b027}
+Define o tipo de modelo de execucao 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo de modelo \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!set\+Exec\+Window\+Length@{set\+Exec\+Window\+Length}}
+\index{set\+Exec\+Window\+Length@{set\+Exec\+Window\+Length}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{set\+Exec\+Window\+Length(int lenght)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+::set\+Exec\+Window\+Length (
+\begin{DoxyParamCaption}
+\item[{int}]{lenght}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_a156aed5a867593b69138b1d442407c72}
+Define o tamanho da janela de execuÁ„o 
+\begin{DoxyParams}{Par√¢metros}
+{\em lengh} & Tamanho a ser definido \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!set\+Id@{set\+Id}}
+\index{set\+Id@{set\+Id}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{set\+Id(int id)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+::set\+Id (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_a780a669e2aa41ce7ef1d01c85c92bb5d}
+define o identificador do cenario \index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!set\+Interval@{set\+Interval}}
+\index{set\+Interval@{set\+Interval}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{set\+Interval(\+Interval interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+::set\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_a34831374d4d9808b8ee741ac6d9b99e1}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{set\+Name(wx\+String new\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+::set\+Name (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{new\+Name}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_af851c87bdf7b9bb39873a62459264a1b}
+Define o nome do cenario 
+\begin{DoxyParams}{Par√¢metros}
+{\em new\+Name} & Novo nome do cenario \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!set\+Scenario\+Interval@{set\+Scenario\+Interval}}
+\index{set\+Scenario\+Interval@{set\+Scenario\+Interval}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{set\+Scenario\+Interval(\+Interval new\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+::set\+Scenario\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{new\+Interval}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_a0a1be6a75c0d4a6691d18db317943d4d}
+Pega o intervalo de tempo \index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!update\+Results\+Series@{update\+Results\+Series}}
+\index{update\+Results\+Series@{update\+Results\+Series}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{update\+Results\+Series()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+::update\+Results\+Series (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_a86d55d9b242897fa78af9894a1683d68}
+Atualiza os dados no modulo de resultados 
+
+\subsection{Amigas e Fun√ß√µes Relacionadas}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}}
+\index{Res\+Op\+Scenario\+Ctrl@{Res\+Op\+Scenario\+Ctrl}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{Res\+Op\+Scenario\+Ctrl}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Res\+Op\+Scenario\+Ctrl}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_res_op_scenario_a5c16ca9826a7abb61091220db5f31111}
+
+
+Defini√ß√£o na linha 26 do arquivo Res\+Op\+Scenario.\+h.
+
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!algorithm@{algorithm}}
+\index{algorithm@{algorithm}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{algorithm}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Algorithm}$\ast$ Res\+Op\+Scenario\+::algorithm\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_a068aed3f35cd8df6ed8dbd0e07f725f6}
+Tipo de algoritimo de otimizaÁ„o 
+
+Defini√ß√£o na linha 54 do arquivo Res\+Op\+Scenario.\+h.
+
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!element\+Data@{element\+Data}}
+\index{element\+Data@{element\+Data}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{element\+Data}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf Element\+ID}, {\bf Res\+Op\+Element}$\ast$$>$ Res\+Op\+Scenario\+::element\+Data\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_ab3d85f36cfdb1f778c7799b86b9a9316}
+Dados dos elementos 
+
+Defini√ß√£o na linha 70 do arquivo Res\+Op\+Scenario.\+h.
+
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!exec\+Model@{exec\+Model}}
+\index{exec\+Model@{exec\+Model}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{exec\+Model}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Model\+Type} Res\+Op\+Scenario\+::exec\+Model\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_a5aa28226c36c2c491570c8aa6167a308}
+Modelo de execucao 
+
+Defini√ß√£o na linha 49 do arquivo Res\+Op\+Scenario.\+h.
+
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!exec\+Window\+Length@{exec\+Window\+Length}}
+\index{exec\+Window\+Length@{exec\+Window\+Length}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{exec\+Window\+Length}]{\setlength{\rightskip}{0pt plus 5cm}int Res\+Op\+Scenario\+::exec\+Window\+Length\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_a24f6f04c4aec0926a7d15e1a67095016}
+Tamanho da janela de execuÁ„o. 
+
+Defini√ß√£o na linha 59 do arquivo Res\+Op\+Scenario.\+h.
+
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!id@{id}}
+\index{id@{id}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{id}]{\setlength{\rightskip}{0pt plus 5cm}int Res\+Op\+Scenario\+::id\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_ad2d035eafb88422183b7bbce5941660c}
+Identificador unico do cenario 
+
+Defini√ß√£o na linha 44 do arquivo Res\+Op\+Scenario.\+h.
+
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!interval@{interval}}
+\index{interval@{interval}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Res\+Op\+Scenario\+::interval\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_a5129ec29819ba0822c3efe0896a2f390}
+Intervalo de execuÁ„o 
+
+Defini√ß√£o na linha 39 do arquivo Res\+Op\+Scenario.\+h.
+
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!m\+\_\+demand\+Assurance\+Curve@{m\+\_\+demand\+Assurance\+Curve}}
+\index{m\+\_\+demand\+Assurance\+Curve@{m\+\_\+demand\+Assurance\+Curve}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{m\+\_\+demand\+Assurance\+Curve}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Scenario\+::m\+\_\+demand\+Assurance\+Curve\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_aab441bc8422e4f9d3792481ab9ffb60c}
+
+
+Defini√ß√£o na linha 147 do arquivo Res\+Op\+Scenario.\+h.
+
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!name@{name}}
+\index{name@{name}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Res\+Op\+Scenario\+::name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_a54b961964e93a30f28648f97f29d174e}
+Nome do cenario 
+
+Defini√ß√£o na linha 75 do arquivo Res\+Op\+Scenario.\+h.
+
+\index{Res\+Op\+Scenario@{Res\+Op\+Scenario}!obj\+Functions@{obj\+Functions}}
+\index{obj\+Functions@{obj\+Functions}!Res\+Op\+Scenario@{Res\+Op\+Scenario}}
+\subsubsection[{obj\+Functions}]{\setlength{\rightskip}{0pt plus 5cm}map$<$ unsigned int, map$<${\bf Res\+Op\+Objective\+Function\+Type}, {\bf Res\+Op\+Obj\+Function}$\ast$$>$ $>$ Res\+Op\+Scenario\+::obj\+Functions\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_a2914087c76b48e28d4bc1f0aac2c7545}
+Inst‚ncias das funÁıes objetivo  \doxyref{Res\+Op\+Obj\+Function}{pag.}{class_res_op_obj_function} 
+
+Defini√ß√£o na linha 65 do arquivo Res\+Op\+Scenario.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Scenario.\+h}\end{DoxyCompactItemize}

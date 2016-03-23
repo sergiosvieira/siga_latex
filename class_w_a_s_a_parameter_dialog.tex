@@ -1,0 +1,602 @@
+\section{Refer√™ncia da Classe W\+A\+S\+A\+Parameter\+Dialog}
+\label{class_w_a_s_a_parameter_dialog}\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+
+
+{\ttfamily \#include $<$W\+A\+S\+A\+Parameter\+Dialog.\+h$>$}
+
+
+
+Herdeiro de wx\+Dialog.
+
+\subsection*{Tipos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Soil\+Grid\+Status} \{ {\bf S\+O\+I\+L\+\_\+\+G\+R\+I\+D\+\_\+\+I\+N\+C\+O\+M\+P\+L\+E\+TE}, 
+{\bf S\+O\+I\+L\+\_\+\+G\+R\+I\+D\+\_\+\+C\+O\+M\+P\+L\+E\+TE}, 
+{\bf S\+O\+I\+L\+\_\+\+G\+R\+I\+D\+\_\+\+E\+R\+R\+OR}
+ \}
+\item 
+enum \{ \\*
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+\_\+\+O\+P\+EN}, 
+{\bf I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+S\+O\+T\+ER}, 
+{\bf I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+S\+O\+IL}, 
+{\bf I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON}, 
+\\*
+{\bf I\+D\+\_\+\+B\+T\+N\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+T\+O\+\_\+\+D\+E\+F\+A\+U\+L\+TS}, 
+{\bf I\+D\+\_\+\+B\+T\+N\+\_\+\+OK}, 
+{\bf I\+D\+\_\+\+B\+T\+N\+\_\+\+U\+S\+E\+\_\+\+D\+E\+F\+A\+U\+L\+TS}, 
+{\bf I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+R\+A\+IN}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf W\+A\+S\+A\+Parameter\+Dialog} (wx\+Window $\ast$parent, wx\+Window\+ID id=wx\+I\+D\+\_\+\+A\+NY, const wx\+String \&title=\+\_\+(\char`\"{}Entrada matricial de par‚metros\char`\"{}), const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Size(800, 800), long style=wx\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+I\+A\+L\+O\+G\+\_\+\+S\+T\+Y\+LE$\vert$wx\+R\+E\+S\+I\+Z\+E\+\_\+\+B\+O\+R\+D\+ER)
+\item 
+virtual {\bf $\sim$\+W\+A\+S\+A\+Parameter\+Dialog} ()
+\item 
+void {\bf set\+Soter\+File\+Entries} (const std\+::vector$<$ {\bf Soter\+File\+Entry} $>$ \&entries)
+\item 
+void {\bf set\+Soil\+File\+Entries} (const std\+::vector$<$ {\bf Soil\+File\+Entry} $>$ \&entries)
+\item 
+void {\bf set\+Vegetation\+File\+Entries} (const std\+::vector$<$ {\bf Vegetation\+File\+Entry} $>$ \&entries)
+\item 
+wx\+String {\bf get\+String\+From\+Soil\+Grid\+Status} ({\bf Soil\+Grid\+Status} status) const 
+\item 
+wx\+Colour {\bf get\+Colour\+From\+Soil\+Grid\+Status} ({\bf Soil\+Grid\+Status} status) const 
+\item 
+void {\bf set\+Soil\+Grid\+Status} ({\bf Soil\+Grid\+Status} status, int row=-\/1)
+\item 
+void {\bf set\+Fail\+Soil\+Grid\+Row} (int soil\+ID)
+\item 
+void {\bf set\+Fail\+Vegetation\+Grid\+Row} (int vegetation\+ID)
+\item 
+std\+::vector$<$ {\bf Soter\+File\+Entry} $>$ {\bf get\+Soter\+File\+Entries} () const 
+\item 
+std\+::vector$<$ {\bf Vegetation\+File\+Entry} $>$ {\bf get\+Vegetation\+File\+Entries} () const 
+\item 
+std\+::vector$<$ {\bf Soil\+File\+Entry} $>$ {\bf get\+Soil\+File\+Entries} () const 
+\item 
+void {\bf set\+Receive\+Path\+Input} (wx\+String input\+Path)
+\item 
+wx\+String {\bf get\+Receive\+Path\+Input} () const 
+\item 
+{\bf Do\+Entry} {\bf get\+Do\+Entry} () const 
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf on\+Open} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Change\+Soter\+Cell} (wx\+Grid\+Event \&event)
+\item 
+void {\bf on\+Click\+Restore\+To\+Defaults} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Click\+OK} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Click\+Use\+Defaults} (wx\+Command\+Event \&event)
+\item 
+void {\bf restore\+Soter\+To\+Defaults} ()
+\item 
+bool {\bf load\+Modelling\+Options} (const wx\+String \&file\+Path)
+\item 
+bool {\bf load\+Soter\+File} (const wx\+String \&file\+Path)
+\item 
+bool {\bf load\+Soil\+File} (const wx\+String \&file\+Path)
+\item 
+bool {\bf load\+Vegetation\+File} (const wx\+String \&file\+Path)
+\item 
+void {\bf update\+Modelling\+Options\+Parameters} ()
+\item 
+void {\bf update\+Soter\+File\+Entry\+Parameters} (const {\bf Soter\+File\+Entry} \&soter\+Parameters)
+\item 
+void {\bf update\+Vegetation\+File\+Entry\+Parameters} (const {\bf Vegetation\+File\+Entry} \&vegetation\+Parameters)
+\item 
+void {\bf update\+Soil\+File\+Entry\+Parameters} (const {\bf Soil\+File\+Entry} \&soil\+Parameters)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Tool\+Bar $\ast$ {\bf toolbar}
+\item 
+wx\+Notebook $\ast$ {\bf notebook}
+\item 
+wx\+Panel $\ast$ {\bf soter\+Panel}
+\item 
+wx\+Panel $\ast$ {\bf soil\+Panel}
+\item 
+wx\+Panel $\ast$ {\bf vegetation\+Panel}
+\item 
+wx\+Panel $\ast$ {\bf m\+\_\+rainny\+Panel}
+\item 
+wx\+Grid $\ast$ {\bf m\+\_\+rainny\+Grid}
+\item 
+{\bf W\+A\+S\+A\+Do\+Panel} $\ast$ {\bf do\+Panel}
+\item 
+wx\+Grid $\ast$ {\bf soter\+Grid}
+\item 
+wx\+Grid $\ast$ {\bf soil\+Grid}
+\item 
+wx\+Grid $\ast$ {\bf vegetation\+Grid}
+\item 
+wx\+Box\+Sizer $\ast$ {\bf buttons\+Sizer}
+\item 
+wx\+Button $\ast$ {\bf btn\+Restore\+To\+Defaults}
+\item 
+wx\+Button $\ast$ {\bf btn\+Ok}
+\item 
+wx\+Button $\ast$ {\bf btn\+Use\+Defaults}
+\item 
+{\bf Do\+Entry} {\bf do\+Entry}
+\item 
+std\+::vector$<$ {\bf Soter\+File\+Entry} $>$ {\bf soter\+File\+Entries}
+\item 
+std\+::vector$<$ {\bf Soil\+File\+Entry} $>$ {\bf soil\+File\+Entries}
+\item 
+std\+::vector$<$ {\bf Vegetation\+File\+Entry} $>$ {\bf vegetation\+File\+Entries}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 26 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+
+
+\subsection{Enumera√ß√µes}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{class_w_a_s_a_parameter_dialog_a9786e5275729fe11c5fc7902f59b7bb4}
+\begin{Desc}
+\item[Valores de enumera√ß√µes]\par
+\begin{description}
+\index{I\+D\+\_\+\+T\+O\+O\+L\+\_\+\+O\+P\+EN@{I\+D\+\_\+\+T\+O\+O\+L\+\_\+\+O\+P\+EN}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!I\+D\+\_\+\+T\+O\+O\+L\+\_\+\+O\+P\+EN@{I\+D\+\_\+\+T\+O\+O\+L\+\_\+\+O\+P\+EN}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+\_\+\+O\+P\+EN\label{class_w_a_s_a_parameter_dialog_a9786e5275729fe11c5fc7902f59b7bb4a1b1ea244dbe16c5bd97dce5bd1b5c74a}
+}]\index{I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+S\+O\+T\+ER@{I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+S\+O\+T\+ER}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+S\+O\+T\+ER@{I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+S\+O\+T\+ER}}\item[{\em 
+I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+S\+O\+T\+ER\label{class_w_a_s_a_parameter_dialog_a9786e5275729fe11c5fc7902f59b7bb4a811107f42baf54c71e694967a4f6a421}
+}]\index{I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+S\+O\+IL@{I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+S\+O\+IL}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+S\+O\+IL@{I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+S\+O\+IL}}\item[{\em 
+I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+S\+O\+IL\label{class_w_a_s_a_parameter_dialog_a9786e5275729fe11c5fc7902f59b7bb4a73548375d5e88d6f6fddc5cac601650d}
+}]\index{I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON@{I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON@{I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON}}\item[{\em 
+I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON\label{class_w_a_s_a_parameter_dialog_a9786e5275729fe11c5fc7902f59b7bb4a8286ccdd84145e2465ba9420c81e6fcc}
+}]\index{I\+D\+\_\+\+B\+T\+N\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+T\+O\+\_\+\+D\+E\+F\+A\+U\+L\+TS@{I\+D\+\_\+\+B\+T\+N\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+T\+O\+\_\+\+D\+E\+F\+A\+U\+L\+TS}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!I\+D\+\_\+\+B\+T\+N\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+T\+O\+\_\+\+D\+E\+F\+A\+U\+L\+TS@{I\+D\+\_\+\+B\+T\+N\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+T\+O\+\_\+\+D\+E\+F\+A\+U\+L\+TS}}\item[{\em 
+I\+D\+\_\+\+B\+T\+N\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+T\+O\+\_\+\+D\+E\+F\+A\+U\+L\+TS\label{class_w_a_s_a_parameter_dialog_a9786e5275729fe11c5fc7902f59b7bb4ab37a4fa904c637c7e21e5dcf2595c140}
+}]\index{I\+D\+\_\+\+B\+T\+N\+\_\+\+OK@{I\+D\+\_\+\+B\+T\+N\+\_\+\+OK}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!I\+D\+\_\+\+B\+T\+N\+\_\+\+OK@{I\+D\+\_\+\+B\+T\+N\+\_\+\+OK}}\item[{\em 
+I\+D\+\_\+\+B\+T\+N\+\_\+\+OK\label{class_w_a_s_a_parameter_dialog_a9786e5275729fe11c5fc7902f59b7bb4a4ed0ad7c2f6a4e69bcd9aaab339edbf4}
+}]\index{I\+D\+\_\+\+B\+T\+N\+\_\+\+U\+S\+E\+\_\+\+D\+E\+F\+A\+U\+L\+TS@{I\+D\+\_\+\+B\+T\+N\+\_\+\+U\+S\+E\+\_\+\+D\+E\+F\+A\+U\+L\+TS}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!I\+D\+\_\+\+B\+T\+N\+\_\+\+U\+S\+E\+\_\+\+D\+E\+F\+A\+U\+L\+TS@{I\+D\+\_\+\+B\+T\+N\+\_\+\+U\+S\+E\+\_\+\+D\+E\+F\+A\+U\+L\+TS}}\item[{\em 
+I\+D\+\_\+\+B\+T\+N\+\_\+\+U\+S\+E\+\_\+\+D\+E\+F\+A\+U\+L\+TS\label{class_w_a_s_a_parameter_dialog_a9786e5275729fe11c5fc7902f59b7bb4ae5edc5d7f8c2b0a28c7ff52dbd33f413}
+}]\index{I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+R\+A\+IN@{I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+R\+A\+IN}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+R\+A\+IN@{I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+R\+A\+IN}}\item[{\em 
+I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+R\+A\+IN\label{class_w_a_s_a_parameter_dialog_a9786e5275729fe11c5fc7902f59b7bb4a8de8e7fe4c2eaf53860aaaa99ec37a99}
+}]\end{description}
+\end{Desc}
+
+
+Defini√ß√£o na linha 142 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!Soil\+Grid\+Status@{Soil\+Grid\+Status}}
+\index{Soil\+Grid\+Status@{Soil\+Grid\+Status}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{Soil\+Grid\+Status}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf W\+A\+S\+A\+Parameter\+Dialog\+::\+Soil\+Grid\+Status}}\label{class_w_a_s_a_parameter_dialog_a5732059d33a1a09b49f52a67882d3b53}
+\begin{Desc}
+\item[Valores de enumera√ß√µes]\par
+\begin{description}
+\index{S\+O\+I\+L\+\_\+\+G\+R\+I\+D\+\_\+\+I\+N\+C\+O\+M\+P\+L\+E\+TE@{S\+O\+I\+L\+\_\+\+G\+R\+I\+D\+\_\+\+I\+N\+C\+O\+M\+P\+L\+E\+TE}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!S\+O\+I\+L\+\_\+\+G\+R\+I\+D\+\_\+\+I\+N\+C\+O\+M\+P\+L\+E\+TE@{S\+O\+I\+L\+\_\+\+G\+R\+I\+D\+\_\+\+I\+N\+C\+O\+M\+P\+L\+E\+TE}}\item[{\em 
+S\+O\+I\+L\+\_\+\+G\+R\+I\+D\+\_\+\+I\+N\+C\+O\+M\+P\+L\+E\+TE\label{class_w_a_s_a_parameter_dialog_a5732059d33a1a09b49f52a67882d3b53ac68c23fe31b65ac55d66df0a995e14ed}
+}]\index{S\+O\+I\+L\+\_\+\+G\+R\+I\+D\+\_\+\+C\+O\+M\+P\+L\+E\+TE@{S\+O\+I\+L\+\_\+\+G\+R\+I\+D\+\_\+\+C\+O\+M\+P\+L\+E\+TE}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!S\+O\+I\+L\+\_\+\+G\+R\+I\+D\+\_\+\+C\+O\+M\+P\+L\+E\+TE@{S\+O\+I\+L\+\_\+\+G\+R\+I\+D\+\_\+\+C\+O\+M\+P\+L\+E\+TE}}\item[{\em 
+S\+O\+I\+L\+\_\+\+G\+R\+I\+D\+\_\+\+C\+O\+M\+P\+L\+E\+TE\label{class_w_a_s_a_parameter_dialog_a5732059d33a1a09b49f52a67882d3b53a2b73edd14b45173f72b809266cea7749}
+}]\index{S\+O\+I\+L\+\_\+\+G\+R\+I\+D\+\_\+\+E\+R\+R\+OR@{S\+O\+I\+L\+\_\+\+G\+R\+I\+D\+\_\+\+E\+R\+R\+OR}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!S\+O\+I\+L\+\_\+\+G\+R\+I\+D\+\_\+\+E\+R\+R\+OR@{S\+O\+I\+L\+\_\+\+G\+R\+I\+D\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+S\+O\+I\+L\+\_\+\+G\+R\+I\+D\+\_\+\+E\+R\+R\+OR\label{class_w_a_s_a_parameter_dialog_a5732059d33a1a09b49f52a67882d3b53af96482caaac77af9e3ea8d415ee6ade5}
+}]\end{description}
+\end{Desc}
+
+
+Defini√ß√£o na linha 136 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{W\+A\+S\+A\+Parameter\+Dialog(wx\+Window $\ast$parent, wx\+Window\+I\+D id=wx\+I\+D\+\_\+\+A\+N\+Y, const wx\+String \&title=\+\_\+(""Entrada matricial de par‚metros""), const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Size(800, 800), long style=wx\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+I\+A\+L\+O\+G\+\_\+\+S\+T\+Y\+LE\texttt{"|}wx\+R\+E\+S\+I\+Z\+E\+\_\+\+B\+O\+R\+D\+E\+R)}]{\setlength{\rightskip}{0pt plus 5cm}W\+A\+S\+A\+Parameter\+Dialog\+::\+W\+A\+S\+A\+Parameter\+Dialog (
+\begin{DoxyParamCaption}
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{wx\+Window\+ID}]{id = {\ttfamily wxID\+\_\+ANY}, }
+\item[{const wx\+String \&}]{title = {\ttfamily \+\_\+(\char`\"{}Entrada~matricial~de~par‚metros\char`\"{})}, }
+\item[{const wx\+Point \&}]{pos = {\ttfamily wxDefaultPosition}, }
+\item[{const wx\+Size \&}]{size = {\ttfamily wxSize(800,~800)}, }
+\item[{long}]{style = {\ttfamily wxDEFAULT\+\_\+DIALOG\+\_\+STYLE$\vert$wxRESIZE\+\_\+BORDER}}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_parameter_dialog_a9478c31dbcf863aa7952bdfdcd52c9c9}
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!````~W\+A\+S\+A\+Parameter\+Dialog@{$\sim$\+W\+A\+S\+A\+Parameter\+Dialog}}
+\index{````~W\+A\+S\+A\+Parameter\+Dialog@{$\sim$\+W\+A\+S\+A\+Parameter\+Dialog}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{$\sim$\+W\+A\+S\+A\+Parameter\+Dialog()}]{\setlength{\rightskip}{0pt plus 5cm}virtual W\+A\+S\+A\+Parameter\+Dialog\+::$\sim$\+W\+A\+S\+A\+Parameter\+Dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_parameter_dialog_a587b97a9402b7c09c57c5d8601213079}
+
+
+\subsection{M√©todos}
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!get\+Colour\+From\+Soil\+Grid\+Status@{get\+Colour\+From\+Soil\+Grid\+Status}}
+\index{get\+Colour\+From\+Soil\+Grid\+Status@{get\+Colour\+From\+Soil\+Grid\+Status}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{get\+Colour\+From\+Soil\+Grid\+Status(\+Soil\+Grid\+Status status) const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+Colour W\+A\+S\+A\+Parameter\+Dialog\+::get\+Colour\+From\+Soil\+Grid\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf Soil\+Grid\+Status}}]{status}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_parameter_dialog_ae325810f348613d0973abe9170055184}
+Retorna uma cor padr„o de acordo com o status \index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!get\+Do\+Entry@{get\+Do\+Entry}}
+\index{get\+Do\+Entry@{get\+Do\+Entry}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{get\+Do\+Entry() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Do\+Entry} W\+A\+S\+A\+Parameter\+Dialog\+::get\+Do\+Entry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_parameter_dialog_aa184e5e9973dab57eeab676b12069d6d}
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!get\+Receive\+Path\+Input@{get\+Receive\+Path\+Input}}
+\index{get\+Receive\+Path\+Input@{get\+Receive\+Path\+Input}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{get\+Receive\+Path\+Input() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+String W\+A\+S\+A\+Parameter\+Dialog\+::get\+Receive\+Path\+Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_parameter_dialog_a948ae477d98b99d131eff54419fecf43}
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!get\+Soil\+File\+Entries@{get\+Soil\+File\+Entries}}
+\index{get\+Soil\+File\+Entries@{get\+Soil\+File\+Entries}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{get\+Soil\+File\+Entries() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Soil\+File\+Entry}$>$ W\+A\+S\+A\+Parameter\+Dialog\+::get\+Soil\+File\+Entries (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_parameter_dialog_a79c2b74abaf66075f02977f9c0b53cad}
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!get\+Soter\+File\+Entries@{get\+Soter\+File\+Entries}}
+\index{get\+Soter\+File\+Entries@{get\+Soter\+File\+Entries}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{get\+Soter\+File\+Entries() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Soter\+File\+Entry}$>$ W\+A\+S\+A\+Parameter\+Dialog\+::get\+Soter\+File\+Entries (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_parameter_dialog_a40f10d6a82a8cfe8d03fb57d1079166e}
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!get\+String\+From\+Soil\+Grid\+Status@{get\+String\+From\+Soil\+Grid\+Status}}
+\index{get\+String\+From\+Soil\+Grid\+Status@{get\+String\+From\+Soil\+Grid\+Status}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{get\+String\+From\+Soil\+Grid\+Status(\+Soil\+Grid\+Status status) const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+String W\+A\+S\+A\+Parameter\+Dialog\+::get\+String\+From\+Soil\+Grid\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf Soil\+Grid\+Status}}]{status}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_parameter_dialog_a24e4ed6b42a884545432cd73c839e586}
+Recebe um status da grid Soil e retorna a sua string de status. \index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!get\+Vegetation\+File\+Entries@{get\+Vegetation\+File\+Entries}}
+\index{get\+Vegetation\+File\+Entries@{get\+Vegetation\+File\+Entries}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{get\+Vegetation\+File\+Entries() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Vegetation\+File\+Entry}$>$ W\+A\+S\+A\+Parameter\+Dialog\+::get\+Vegetation\+File\+Entries (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_parameter_dialog_a8e93c7699a38fbb0e712b92b951bb783}
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!load\+Modelling\+Options@{load\+Modelling\+Options}}
+\index{load\+Modelling\+Options@{load\+Modelling\+Options}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{load\+Modelling\+Options(const wx\+String \&file\+Path)}]{\setlength{\rightskip}{0pt plus 5cm}bool W\+A\+S\+A\+Parameter\+Dialog\+::load\+Modelling\+Options (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_a1a730164b14daaa029854795252a8bf2}
+Faz o parsing no arquivo do.\+dat e carrega as suas informaÁıes para a interface de Modelling\+Options
+
+
+\begin{DoxyParams}{Par√¢metros}
+{\em file\+Path} & Caminho para o arquivo a ser lido \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true caso tenha carregado o arquivo corretamente. false, caso contr·rio. 
+\end{DoxyReturn}
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!load\+Soil\+File@{load\+Soil\+File}}
+\index{load\+Soil\+File@{load\+Soil\+File}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{load\+Soil\+File(const wx\+String \&file\+Path)}]{\setlength{\rightskip}{0pt plus 5cm}bool W\+A\+S\+A\+Parameter\+Dialog\+::load\+Soil\+File (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_ac2902482c160a27b2dc57b8bb1e8f46b}
+Carrega o arquivo de par‚metros do Soil
+
+\begin{DoxyReturn}{Retorna}
+true caso tenha carregado o arquivo corretamente. false, caso contr·rio. 
+\end{DoxyReturn}
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!load\+Soter\+File@{load\+Soter\+File}}
+\index{load\+Soter\+File@{load\+Soter\+File}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{load\+Soter\+File(const wx\+String \&file\+Path)}]{\setlength{\rightskip}{0pt plus 5cm}bool W\+A\+S\+A\+Parameter\+Dialog\+::load\+Soter\+File (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_a79e798e1f099543c5d23a9f00717bbe6}
+Carrega o arquivo de parametros agrupados por classes do Soter
+
+\begin{DoxyReturn}{Retorna}
+true caso tenha carregado o arquivo corretamente. false, caso contr·rio. 
+\end{DoxyReturn}
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!load\+Vegetation\+File@{load\+Vegetation\+File}}
+\index{load\+Vegetation\+File@{load\+Vegetation\+File}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{load\+Vegetation\+File(const wx\+String \&file\+Path)}]{\setlength{\rightskip}{0pt plus 5cm}bool W\+A\+S\+A\+Parameter\+Dialog\+::load\+Vegetation\+File (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_ab0e6c6b3a37508667d14f76118152125}
+Carrega o arquivo de par‚metros do Vegetation
+
+\begin{DoxyReturn}{Retorna}
+true caso tenha carregado o arquivo corretamente. false, caso contr·rio. 
+\end{DoxyReturn}
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!on\+Change\+Soter\+Cell@{on\+Change\+Soter\+Cell}}
+\index{on\+Change\+Soter\+Cell@{on\+Change\+Soter\+Cell}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{on\+Change\+Soter\+Cell(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Parameter\+Dialog\+::on\+Change\+Soter\+Cell (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_aee9ef7c5d04922d2d4b6b70e0143276a}
+Event Handler chamado ao se editar uma cÈlula da grid Soter \index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!on\+Click\+OK@{on\+Click\+OK}}
+\index{on\+Click\+OK@{on\+Click\+OK}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{on\+Click\+O\+K(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Parameter\+Dialog\+::on\+Click\+OK (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_ae4ee4304d2f15ccf0ad2be0aafaedd52}
+Event Handler chamado ao se clicar no bot„o \char`\"{}\+O\+K\char`\"{} \index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!on\+Click\+Restore\+To\+Defaults@{on\+Click\+Restore\+To\+Defaults}}
+\index{on\+Click\+Restore\+To\+Defaults@{on\+Click\+Restore\+To\+Defaults}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{on\+Click\+Restore\+To\+Defaults(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Parameter\+Dialog\+::on\+Click\+Restore\+To\+Defaults (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_a364b8467a9eeed0ab11de4658e04a1d8}
+Event Handler chamado ao se clicar no bot„o \char`\"{}\+Recarregar valores default\char`\"{} \index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!on\+Click\+Use\+Defaults@{on\+Click\+Use\+Defaults}}
+\index{on\+Click\+Use\+Defaults@{on\+Click\+Use\+Defaults}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{on\+Click\+Use\+Defaults(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Parameter\+Dialog\+::on\+Click\+Use\+Defaults (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_ac53a8c44102df7013c265a5b37507715}
+Event Handler chamado ao se clicar no bot„o \char`\"{}\+Usar valores default\char`\"{} \index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!on\+Open@{on\+Open}}
+\index{on\+Open@{on\+Open}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{on\+Open(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Parameter\+Dialog\+::on\+Open (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_a15f5f07d447b63a4d536b161ee38b286}
+Event Handler chamado ao se clicar no bot„o Abrir \index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!restore\+Soter\+To\+Defaults@{restore\+Soter\+To\+Defaults}}
+\index{restore\+Soter\+To\+Defaults@{restore\+Soter\+To\+Defaults}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{restore\+Soter\+To\+Defaults()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Parameter\+Dialog\+::restore\+Soter\+To\+Defaults (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_a3c486f565e184828635a6008b400848b}
+Recupera os valores default para a grid \index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!set\+Fail\+Soil\+Grid\+Row@{set\+Fail\+Soil\+Grid\+Row}}
+\index{set\+Fail\+Soil\+Grid\+Row@{set\+Fail\+Soil\+Grid\+Row}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{set\+Fail\+Soil\+Grid\+Row(int soil\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Parameter\+Dialog\+::set\+Fail\+Soil\+Grid\+Row (
+\begin{DoxyParamCaption}
+\item[{int}]{soil\+ID}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_parameter_dialog_ac7304d2fe4fa15c8fed74399dcd0aece}
+Procura pela linha na Soil\+Grid com o ID \textquotesingle{}soil\+ID\textquotesingle{} para configurar seu status para falhado
+
+
+\begin{DoxyParams}{Par√¢metros}
+{\em soil\+ID} & ID do solo cuja leitura falhou \\
+\hline
+\end{DoxyParams}
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!set\+Fail\+Vegetation\+Grid\+Row@{set\+Fail\+Vegetation\+Grid\+Row}}
+\index{set\+Fail\+Vegetation\+Grid\+Row@{set\+Fail\+Vegetation\+Grid\+Row}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{set\+Fail\+Vegetation\+Grid\+Row(int vegetation\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Parameter\+Dialog\+::set\+Fail\+Vegetation\+Grid\+Row (
+\begin{DoxyParamCaption}
+\item[{int}]{vegetation\+ID}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_parameter_dialog_a23c66a1e9c885e374e147aa686454894}
+Configura a linha na grid de vegetaÁ„o como falhada para o id \textquotesingle{}vegetation\+ID\textquotesingle{}
+
+
+\begin{DoxyParams}{Par√¢metros}
+{\em vegetation\+ID} & ID da vegetaÁ„o cuja leitura falhou \\
+\hline
+\end{DoxyParams}
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!set\+Receive\+Path\+Input@{set\+Receive\+Path\+Input}}
+\index{set\+Receive\+Path\+Input@{set\+Receive\+Path\+Input}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{set\+Receive\+Path\+Input(wx\+String input\+Path)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Parameter\+Dialog\+::set\+Receive\+Path\+Input (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{input\+Path}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_parameter_dialog_a1ff092dd659082bab877598a520b7054}
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!set\+Soil\+File\+Entries@{set\+Soil\+File\+Entries}}
+\index{set\+Soil\+File\+Entries@{set\+Soil\+File\+Entries}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{set\+Soil\+File\+Entries(const std\+::vector$<$ Soil\+File\+Entry $>$ \&entries)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Parameter\+Dialog\+::set\+Soil\+File\+Entries (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf Soil\+File\+Entry} $>$ \&}]{entries}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_parameter_dialog_ace552c55005616bb67fe41bcf8efe049}
+Recebe a lista de Soil\+File\+Entries que deve ser carregados na grid Soil \index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!set\+Soil\+Grid\+Status@{set\+Soil\+Grid\+Status}}
+\index{set\+Soil\+Grid\+Status@{set\+Soil\+Grid\+Status}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{set\+Soil\+Grid\+Status(\+Soil\+Grid\+Status status, int row=-\/1)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Parameter\+Dialog\+::set\+Soil\+Grid\+Status (
+\begin{DoxyParamCaption}
+\item[{{\bf Soil\+Grid\+Status}}]{status, }
+\item[{int}]{row = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_parameter_dialog_a2c96d1b7d8853382c7bd5ea5f592d9d5}
+Atualiza a linha ou toda a tabela de Soil com o novo status.
+
+
+\begin{DoxyParams}{Par√¢metros}
+{\em status} & Novo status a ser usado \\
+\hline
+{\em row} & Linha a ser atualizada da grid. Caso row n„o seja especificado (ou seja -\/1), toda a tabela È atualizada \\
+\hline
+\end{DoxyParams}
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!set\+Soter\+File\+Entries@{set\+Soter\+File\+Entries}}
+\index{set\+Soter\+File\+Entries@{set\+Soter\+File\+Entries}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{set\+Soter\+File\+Entries(const std\+::vector$<$ Soter\+File\+Entry $>$ \&entries)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Parameter\+Dialog\+::set\+Soter\+File\+Entries (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf Soter\+File\+Entry} $>$ \&}]{entries}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_parameter_dialog_a35e012fced4e56c0c8a94b7016b945bc}
+Recebe a lista de Soter\+File\+Entries que devem ser carregados na grid Soter \index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!set\+Vegetation\+File\+Entries@{set\+Vegetation\+File\+Entries}}
+\index{set\+Vegetation\+File\+Entries@{set\+Vegetation\+File\+Entries}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{set\+Vegetation\+File\+Entries(const std\+::vector$<$ Vegetation\+File\+Entry $>$ \&entries)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Parameter\+Dialog\+::set\+Vegetation\+File\+Entries (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ {\bf Vegetation\+File\+Entry} $>$ \&}]{entries}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_parameter_dialog_a55c6cfbb62d8a25387a02aa783f7d956}
+Recebe a lista de Vegetation\+File\+Entries que deve ser carregados na grid Vegetation \index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!update\+Modelling\+Options\+Parameters@{update\+Modelling\+Options\+Parameters}}
+\index{update\+Modelling\+Options\+Parameters@{update\+Modelling\+Options\+Parameters}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{update\+Modelling\+Options\+Parameters()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Parameter\+Dialog\+::update\+Modelling\+Options\+Parameters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_a1d5c58770899b3bd70f34bde117ff7c5}
+Atualiza a interface de acordo com o objeto \doxyref{W\+A\+S\+A\+Parameter\+Dialog\+::do\+Entry}{pag.}{class_w_a_s_a_parameter_dialog_a916bf25d75a990405e5cc97123d2c773} \index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!update\+Soil\+File\+Entry\+Parameters@{update\+Soil\+File\+Entry\+Parameters}}
+\index{update\+Soil\+File\+Entry\+Parameters@{update\+Soil\+File\+Entry\+Parameters}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{update\+Soil\+File\+Entry\+Parameters(const Soil\+File\+Entry \&soil\+Parameters)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Parameter\+Dialog\+::update\+Soil\+File\+Entry\+Parameters (
+\begin{DoxyParamCaption}
+\item[{const {\bf Soil\+File\+Entry} \&}]{soil\+Parameters}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_aa7233a4d7b01e664da9bd7e700301c25}
+Atualiza a lista de par‚metros dos Soil\+File\+Entries com os par‚metros carregados do arquivo. A atualizaÁ„o È feita em cima do par‚metro/atributo \doxyref{Soil\+File\+Entry\+::soil\+ID}{pag.}{class_soil_file_entry_a371763dc14ee6e2d744b87b8a401af32} \index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!update\+Soter\+File\+Entry\+Parameters@{update\+Soter\+File\+Entry\+Parameters}}
+\index{update\+Soter\+File\+Entry\+Parameters@{update\+Soter\+File\+Entry\+Parameters}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{update\+Soter\+File\+Entry\+Parameters(const Soter\+File\+Entry \&soter\+Parameters)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Parameter\+Dialog\+::update\+Soter\+File\+Entry\+Parameters (
+\begin{DoxyParamCaption}
+\item[{const {\bf Soter\+File\+Entry} \&}]{soter\+Parameters}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_af43a3b51110f309aa6fd85715abe286d}
+Atualiza a lista de par‚metros dos Soter\+File\+Entries com os parametros carregados do arquivo. A atualizaÁ„o È feita em cima do par‚metro/atributo \doxyref{Soter\+File\+Entry\+::lu\+Class}{pag.}{class_soter_file_entry_a52fd72c2944ee15b9021fb24c90e2eb0} \index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!update\+Vegetation\+File\+Entry\+Parameters@{update\+Vegetation\+File\+Entry\+Parameters}}
+\index{update\+Vegetation\+File\+Entry\+Parameters@{update\+Vegetation\+File\+Entry\+Parameters}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{update\+Vegetation\+File\+Entry\+Parameters(const Vegetation\+File\+Entry \&vegetation\+Parameters)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Parameter\+Dialog\+::update\+Vegetation\+File\+Entry\+Parameters (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vegetation\+File\+Entry} \&}]{vegetation\+Parameters}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_a1975bbc6564d471896cf46d22b5c0e07}
+Atualiza a lista de par‚metros dos Vegetation\+File\+Entries com os parametros carregados do arquivo. A atualizaÁ„o È feita em cima do par‚metro/atributo Vegetation\+File\+Entries\+::vegetation\+ID 
+
+\subsection{Atributos}
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!btn\+Ok@{btn\+Ok}}
+\index{btn\+Ok@{btn\+Ok}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{btn\+Ok}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ W\+A\+S\+A\+Parameter\+Dialog\+::btn\+Ok\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_af139800956994489ebad637c2de380ef}
+
+
+Defini√ß√£o na linha 43 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!btn\+Restore\+To\+Defaults@{btn\+Restore\+To\+Defaults}}
+\index{btn\+Restore\+To\+Defaults@{btn\+Restore\+To\+Defaults}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{btn\+Restore\+To\+Defaults}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ W\+A\+S\+A\+Parameter\+Dialog\+::btn\+Restore\+To\+Defaults\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_aff8959908c0cee7e98aca4f578263e89}
+
+
+Defini√ß√£o na linha 42 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!btn\+Use\+Defaults@{btn\+Use\+Defaults}}
+\index{btn\+Use\+Defaults@{btn\+Use\+Defaults}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{btn\+Use\+Defaults}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ W\+A\+S\+A\+Parameter\+Dialog\+::btn\+Use\+Defaults\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_a958a89242072dd932892b34e07d2e4e8}
+
+
+Defini√ß√£o na linha 44 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!buttons\+Sizer@{buttons\+Sizer}}
+\index{buttons\+Sizer@{buttons\+Sizer}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{buttons\+Sizer}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Box\+Sizer$\ast$ W\+A\+S\+A\+Parameter\+Dialog\+::buttons\+Sizer\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_a6413e6b706e6546b91d58df38039097e}
+
+
+Defini√ß√£o na linha 41 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!do\+Entry@{do\+Entry}}
+\index{do\+Entry@{do\+Entry}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{do\+Entry}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Do\+Entry} W\+A\+S\+A\+Parameter\+Dialog\+::do\+Entry\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_a916bf25d75a990405e5cc97123d2c773}
+
+
+Defini√ß√£o na linha 46 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!do\+Panel@{do\+Panel}}
+\index{do\+Panel@{do\+Panel}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{do\+Panel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+A\+S\+A\+Do\+Panel}$\ast$ W\+A\+S\+A\+Parameter\+Dialog\+::do\+Panel\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_a3e638407be415ad03e4fd310e954f2c1}
+
+
+Defini√ß√£o na linha 38 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!m\+\_\+rainny\+Grid@{m\+\_\+rainny\+Grid}}
+\index{m\+\_\+rainny\+Grid@{m\+\_\+rainny\+Grid}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{m\+\_\+rainny\+Grid}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Grid$\ast$ W\+A\+S\+A\+Parameter\+Dialog\+::m\+\_\+rainny\+Grid\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_a5f4cbde3fe75bd7d4b0e1db82b77f7c0}
+
+
+Defini√ß√£o na linha 37 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!m\+\_\+rainny\+Panel@{m\+\_\+rainny\+Panel}}
+\index{m\+\_\+rainny\+Panel@{m\+\_\+rainny\+Panel}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{m\+\_\+rainny\+Panel}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel$\ast$ W\+A\+S\+A\+Parameter\+Dialog\+::m\+\_\+rainny\+Panel\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_a36e5efc60573d5dad3030c3f086b1165}
+
+
+Defini√ß√£o na linha 36 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!notebook@{notebook}}
+\index{notebook@{notebook}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{notebook}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Notebook$\ast$ W\+A\+S\+A\+Parameter\+Dialog\+::notebook\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_a669d20f33177c2aac41f25ffe54ee4e2}
+
+
+Defini√ß√£o na linha 33 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!soil\+File\+Entries@{soil\+File\+Entries}}
+\index{soil\+File\+Entries@{soil\+File\+Entries}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{soil\+File\+Entries}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Soil\+File\+Entry}$>$ W\+A\+S\+A\+Parameter\+Dialog\+::soil\+File\+Entries\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_a9e191df8d8b3aefedf523a2768356913}
+
+
+Defini√ß√£o na linha 48 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!soil\+Grid@{soil\+Grid}}
+\index{soil\+Grid@{soil\+Grid}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{soil\+Grid}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Grid $\ast$ W\+A\+S\+A\+Parameter\+Dialog\+::soil\+Grid\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_af4bd5b5a427a7889fc892f4bd5966a73}
+
+
+Defini√ß√£o na linha 39 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!soil\+Panel@{soil\+Panel}}
+\index{soil\+Panel@{soil\+Panel}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{soil\+Panel}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel $\ast$ W\+A\+S\+A\+Parameter\+Dialog\+::soil\+Panel\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_a29180a02076121dd115d8ba8bdcdc6a3}
+
+
+Defini√ß√£o na linha 35 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!soter\+File\+Entries@{soter\+File\+Entries}}
+\index{soter\+File\+Entries@{soter\+File\+Entries}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{soter\+File\+Entries}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Soter\+File\+Entry}$>$ W\+A\+S\+A\+Parameter\+Dialog\+::soter\+File\+Entries\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_a3d18bcfca7822adc00eb4f5ea59b9296}
+
+
+Defini√ß√£o na linha 47 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!soter\+Grid@{soter\+Grid}}
+\index{soter\+Grid@{soter\+Grid}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{soter\+Grid}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Grid$\ast$ W\+A\+S\+A\+Parameter\+Dialog\+::soter\+Grid\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_a0f81d96f62c817f1e47154a2018d3008}
+
+
+Defini√ß√£o na linha 39 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!soter\+Panel@{soter\+Panel}}
+\index{soter\+Panel@{soter\+Panel}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{soter\+Panel}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel$\ast$ W\+A\+S\+A\+Parameter\+Dialog\+::soter\+Panel\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_a5191fccc4d3b66a9734f72b3c281ab84}
+
+
+Defini√ß√£o na linha 35 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!toolbar@{toolbar}}
+\index{toolbar@{toolbar}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{toolbar}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tool\+Bar$\ast$ W\+A\+S\+A\+Parameter\+Dialog\+::toolbar\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_adb521142ffa45dea6af32cdad2de3264}
+
+
+Defini√ß√£o na linha 32 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!vegetation\+File\+Entries@{vegetation\+File\+Entries}}
+\index{vegetation\+File\+Entries@{vegetation\+File\+Entries}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{vegetation\+File\+Entries}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Vegetation\+File\+Entry}$>$ W\+A\+S\+A\+Parameter\+Dialog\+::vegetation\+File\+Entries\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_a05b3c69645baa45abfe337dd098b788e}
+
+
+Defini√ß√£o na linha 49 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!vegetation\+Grid@{vegetation\+Grid}}
+\index{vegetation\+Grid@{vegetation\+Grid}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{vegetation\+Grid}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Grid $\ast$ W\+A\+S\+A\+Parameter\+Dialog\+::vegetation\+Grid\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_ac39b3f9192a23f3593dd9371a6bb59bc}
+
+
+Defini√ß√£o na linha 39 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+\index{W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}!vegetation\+Panel@{vegetation\+Panel}}
+\index{vegetation\+Panel@{vegetation\+Panel}!W\+A\+S\+A\+Parameter\+Dialog@{W\+A\+S\+A\+Parameter\+Dialog}}
+\subsubsection[{vegetation\+Panel}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel $\ast$ W\+A\+S\+A\+Parameter\+Dialog\+::vegetation\+Panel\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_parameter_dialog_a16bd2afed16e755deb768ea095d66b40}
+
+
+Defini√ß√£o na linha 35 do arquivo W\+A\+S\+A\+Parameter\+Dialog.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf W\+A\+S\+A\+Parameter\+Dialog.\+h}\end{DoxyCompactItemize}

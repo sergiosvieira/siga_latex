@@ -1,0 +1,194 @@
+\section{Referência da Classe Import\+Model}
+\label{class_import_model}\index{Import\+Model@{Import\+Model}}
+
+
+{\ttfamily \#include $<$import-\/model.\+h$>$}
+
+
+
+Herdeiro de {\bf Interface\+Model}.
+
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf Values\+Range}
+\begin{DoxyCompactList}\small\item\em Input file range of values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct {\bf Import\+Model\+::\+Values\+Range} {\bf Values\+Range}
+\begin{DoxyCompactList}\small\item\em Input file range of values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Import\+Model} ()
+\item 
+const {\bf Values\+Range} {\bf values} ()
+\item 
+void {\bf values} ({\bf Values\+Range} \&\&a\+\_\+values)
+\item 
+void {\bf max\+Rows} (int a\+\_\+value)
+\item 
+void {\bf max\+Cols} (int a\+\_\+value)
+\item 
+int {\bf max\+Rows} ()
+\item 
+int {\bf max\+Cols} ()
+\item 
+Json\+::\+Value {\bf json} ()
+\item 
+void {\bf load} (Json\+::\+Value \&a\+\_\+value)
+\item 
+const char $\ast$ {\bf root} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Estáticos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ {\bf k\+Root}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Values\+Range} {\bf m\+\_\+values}
+\item 
+int {\bf m\+\_\+max\+Rows}
+\item 
+int {\bf m\+\_\+max\+Cols}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Extends \doxyref{S\+I\+GA}{pag.}{class_s_i_g_a} 
+
+Definição na linha 10 do arquivo import-\/model.\+h.
+
+
+
+\subsection{Definições de Tipos}
+\index{Import\+Model@{Import\+Model}!Values\+Range@{Values\+Range}}
+\index{Values\+Range@{Values\+Range}!Import\+Model@{Import\+Model}}
+\subsubsection[{Values\+Range}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Import\+Model\+::\+Values\+Range}  {\bf Import\+Model\+::\+Values\+Range}}\label{class_import_model_ad77a2815ca308d91c5b2febb157ad9b4}
+
+
+Input file range of values. 
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Import\+Model@{Import\+Model}!Import\+Model@{Import\+Model}}
+\index{Import\+Model@{Import\+Model}!Import\+Model@{Import\+Model}}
+\subsubsection[{Import\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Import\+Model\+::\+Import\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_import_model_a22ff5c21a497371cad58ea0eabff1584}
+
+
+\subsection{Métodos}
+\index{Import\+Model@{Import\+Model}!json@{json}}
+\index{json@{json}!Import\+Model@{Import\+Model}}
+\subsubsection[{json()}]{\setlength{\rightskip}{0pt plus 5cm}Json\+::\+Value Import\+Model\+::json (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_import_model_ae60a8e67d5b252ab444b13afd837f9d2}
+Exemplo \{ \char`\"{}import\char`\"{}\+: \{ \char`\"{}max\+\_\+rows\char`\"{}\+: 76, \char`\"{}max\+\_\+cols\char`\"{}\+: 150, \char`\"{}values\char`\"{}\+: \{ \char`\"{}from\+\_\+row\char`\"{}\+: 1, \char`\"{}to\+\_\+row\char`\"{}\+: 50, \char`\"{}from\+\_\+col\char`\"{}\+: 5, \char`\"{}to\+\_\+col\char`\"{}\+: 200 \} \} \} \index{Import\+Model@{Import\+Model}!load@{load}}
+\index{load@{load}!Import\+Model@{Import\+Model}}
+\subsubsection[{load(\+Json\+::\+Value \&a\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}void Import\+Model\+::load (
+\begin{DoxyParamCaption}
+\item[{Json\+::\+Value \&}]{a\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_import_model_a611f623a858ea75f3fa042d49991a0a4}
+
+
+Implementa {\bf Interface\+Model} \doxyref{}{pag.}{class_interface_model_aabefd64dd681b6adf84eeaa3ba35e381}.
+
+\index{Import\+Model@{Import\+Model}!max\+Cols@{max\+Cols}}
+\index{max\+Cols@{max\+Cols}!Import\+Model@{Import\+Model}}
+\subsubsection[{max\+Cols(int a\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}void Import\+Model\+::max\+Cols (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+value}
+\end{DoxyParamCaption}
+)}\label{class_import_model_adb998ca74d00d990973e04f8bed86729}
+\index{Import\+Model@{Import\+Model}!max\+Cols@{max\+Cols}}
+\index{max\+Cols@{max\+Cols}!Import\+Model@{Import\+Model}}
+\subsubsection[{max\+Cols()}]{\setlength{\rightskip}{0pt plus 5cm}int Import\+Model\+::max\+Cols (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_import_model_ab4edcbb1e3c31d65476ef475ae298caf}
+\index{Import\+Model@{Import\+Model}!max\+Rows@{max\+Rows}}
+\index{max\+Rows@{max\+Rows}!Import\+Model@{Import\+Model}}
+\subsubsection[{max\+Rows(int a\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}void Import\+Model\+::max\+Rows (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+value}
+\end{DoxyParamCaption}
+)}\label{class_import_model_a9edb6b406f672a52334ee40ad617e8af}
+\index{Import\+Model@{Import\+Model}!max\+Rows@{max\+Rows}}
+\index{max\+Rows@{max\+Rows}!Import\+Model@{Import\+Model}}
+\subsubsection[{max\+Rows()}]{\setlength{\rightskip}{0pt plus 5cm}int Import\+Model\+::max\+Rows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_import_model_adb0255c09d62d11955bce5659120771d}
+\index{Import\+Model@{Import\+Model}!root@{root}}
+\index{root@{root}!Import\+Model@{Import\+Model}}
+\subsubsection[{root()}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Import\+Model\+::root (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_import_model_a4f2dcb66587ba1e1bd6357d4dc12754a}
+
+
+Implementa {\bf Interface\+Model} \doxyref{}{pag.}{class_interface_model_a48cdeaf2173330586130269911a91596}.
+
+\index{Import\+Model@{Import\+Model}!values@{values}}
+\index{values@{values}!Import\+Model@{Import\+Model}}
+\subsubsection[{values()}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf Values\+Range} Import\+Model\+::values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_import_model_a36abed96b9786372b6edc8ad3185b56d}
+\index{Import\+Model@{Import\+Model}!values@{values}}
+\index{values@{values}!Import\+Model@{Import\+Model}}
+\subsubsection[{values(\+Values\+Range \&\&a\+\_\+values)}]{\setlength{\rightskip}{0pt plus 5cm}void Import\+Model\+::values (
+\begin{DoxyParamCaption}
+\item[{{\bf Values\+Range} \&\&}]{a\+\_\+values}
+\end{DoxyParamCaption}
+)}\label{class_import_model_a0a0a9e17dd2f584ceaf6d260120c8f0e}
+
+
+\subsection{Atributos}
+\index{Import\+Model@{Import\+Model}!k\+Root@{k\+Root}}
+\index{k\+Root@{k\+Root}!Import\+Model@{Import\+Model}}
+\subsubsection[{k\+Root}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Import\+Model\+::k\+Root\hspace{0.3cm}{\ttfamily [static]}}\label{class_import_model_ace293042037d91b7e474df1138586556}
+
+
+Definição na linha 34 do arquivo import-\/model.\+h.
+
+\index{Import\+Model@{Import\+Model}!m\+\_\+max\+Cols@{m\+\_\+max\+Cols}}
+\index{m\+\_\+max\+Cols@{m\+\_\+max\+Cols}!Import\+Model@{Import\+Model}}
+\subsubsection[{m\+\_\+max\+Cols}]{\setlength{\rightskip}{0pt plus 5cm}int Import\+Model\+::m\+\_\+max\+Cols\hspace{0.3cm}{\ttfamily [protected]}}\label{class_import_model_afb64bd3bffa53a7dfc5aceb15e57b287}
+
+
+Definição na linha 64 do arquivo import-\/model.\+h.
+
+\index{Import\+Model@{Import\+Model}!m\+\_\+max\+Rows@{m\+\_\+max\+Rows}}
+\index{m\+\_\+max\+Rows@{m\+\_\+max\+Rows}!Import\+Model@{Import\+Model}}
+\subsubsection[{m\+\_\+max\+Rows}]{\setlength{\rightskip}{0pt plus 5cm}int Import\+Model\+::m\+\_\+max\+Rows\hspace{0.3cm}{\ttfamily [protected]}}\label{class_import_model_ab92a921436ab6d279c7c1520082be37d}
+
+
+Definição na linha 63 do arquivo import-\/model.\+h.
+
+\index{Import\+Model@{Import\+Model}!m\+\_\+values@{m\+\_\+values}}
+\index{m\+\_\+values@{m\+\_\+values}!Import\+Model@{Import\+Model}}
+\subsubsection[{m\+\_\+values}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Values\+Range} Import\+Model\+::m\+\_\+values\hspace{0.3cm}{\ttfamily [protected]}}\label{class_import_model_ac9c805d7398f2daa799705f296ffaae7}
+
+
+Definição na linha 62 do arquivo import-\/model.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf import-\/model.\+h}\end{DoxyCompactItemize}

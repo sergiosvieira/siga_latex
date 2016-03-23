@@ -1,0 +1,327 @@
+\section{Referência da Classe G\+W\+L\+F\+Basin\+W\+Q\+Model}
+\label{class_g_w_l_f_basin_w_q_model}\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+
+
+{\ttfamily \#include $<$G\+W\+L\+F\+Basin\+W\+Q\+Model.\+h$>$}
+
+
+
+Herdeiro de {\bf Basin\+W\+Q\+Model}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf G\+W\+L\+F\+Basin\+W\+Q\+Model} ({\bf Node} $\ast${\bf node}, wx\+String {\bf name})
+\item 
+{\bf G\+W\+L\+F\+Basin\+W\+Q\+Model} ({\bf Link} $\ast${\bf link}, wx\+String {\bf name})
+\item 
+{\bf $\sim$\+G\+W\+L\+F\+Basin\+W\+Q\+Model} ()
+\item 
+virtual bool {\bf empty} ()
+\item 
+virtual bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+bool {\bf run} ()
+\item 
+void {\bf clear} ()
+\item 
+{\bf G\+W\+L\+F\+Dissolved\+Nutrient} $\ast$ {\bf get\+Dis\+Pho} ()
+\item 
+{\bf G\+W\+L\+F\+Dissolved\+Nutrient} $\ast$ {\bf get\+Dis\+Nit} ()
+\item 
+{\bf G\+W\+L\+F\+Sediment} $\ast$ {\bf get\+Sediment} ()
+\item 
+{\bf G\+W\+L\+F\+Solid\+Nutrient} $\ast$ {\bf get\+Sol\+Pho} ()
+\item 
+{\bf G\+W\+L\+F\+Solid\+Nutrient} $\ast$ {\bf get\+Sol\+Nit} ()
+\item 
+double {\bf get\+S\+S\+Pop\+Norm} (int pos)
+\item 
+double {\bf get\+S\+S\+Pop\+Pond} (int pos)
+\item 
+double {\bf get\+S\+S\+Pop\+Circ} (int pos)
+\item 
+double {\bf get\+S\+S\+Pop\+Disc} (int pos)
+\item 
+double {\bf get\+Ann\+TC} ()
+\item 
+void {\bf set\+Ann\+TC} (double value)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf S\+S\+Pop\+Norm} [13]
+\item 
+double {\bf S\+S\+Pop\+Pond} [13]
+\item 
+double {\bf S\+S\+Pop\+Circ} [13]
+\item 
+double {\bf S\+S\+Pop\+Disc} [13]
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf G\+W\+L\+F\+Model} $\ast$ {\bf gwlf}
+\item 
+{\bf G\+W\+L\+F\+Dissolved\+Nutrient} $\ast$ {\bf dis\+Pho}
+\item 
+{\bf G\+W\+L\+F\+Dissolved\+Nutrient} $\ast$ {\bf dis\+Nit}
+\item 
+{\bf G\+W\+L\+F\+Sediment} $\ast$ {\bf sediment}
+\item 
+{\bf G\+W\+L\+F\+Solid\+Nutrient} $\ast$ {\bf sol\+Pho}
+\item 
+{\bf G\+W\+L\+F\+Solid\+Nutrient} $\ast$ {\bf sol\+Nit}
+\item 
+double {\bf ann\+TC}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 23 do arquivo G\+W\+L\+F\+Basin\+W\+Q\+Model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{G\+W\+L\+F\+Basin\+W\+Q\+Model(\+Node $\ast$node, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}G\+W\+L\+F\+Basin\+W\+Q\+Model\+::\+G\+W\+L\+F\+Basin\+W\+Q\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_basin_w_q_model_a20a973e9daf992384774d95616732516}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{G\+W\+L\+F\+Basin\+W\+Q\+Model(\+Link $\ast$link, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}G\+W\+L\+F\+Basin\+W\+Q\+Model\+::\+G\+W\+L\+F\+Basin\+W\+Q\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_basin_w_q_model_a0aca5ef946aa4cb3793464d79aab92f2}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!````~G\+W\+L\+F\+Basin\+W\+Q\+Model@{$\sim$\+G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\index{````~G\+W\+L\+F\+Basin\+W\+Q\+Model@{$\sim$\+G\+W\+L\+F\+Basin\+W\+Q\+Model}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{$\sim$\+G\+W\+L\+F\+Basin\+W\+Q\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}G\+W\+L\+F\+Basin\+W\+Q\+Model\+::$\sim$\+G\+W\+L\+F\+Basin\+W\+Q\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_basin_w_q_model_a6ea6c9215ce9945cc33aab4709226ed6}
+Destrutor 
+
+\subsection{Métodos}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool G\+W\+L\+F\+Basin\+W\+Q\+Model\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_basin_w_q_model_a28a0bd35b96321ebebc6538cfb0d2714}
+Verifica se todos os dados foram inseridos de maneira correta 
+\begin{DoxyParams}{Parâmetros}
+{\em dialog} & Caixa de dialogo que contem os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf W\+Q\+Model} \doxyref{}{pag.}{class_w_q_model_af34637ca0634f5c5b1a22f5429bd9f74}.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!clear@{clear}}
+\index{clear@{clear}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void G\+W\+L\+F\+Basin\+W\+Q\+Model\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_basin_w_q_model_a3463e9c76d9c68d286158a6ad52adc1b}
+Limpa os dados e deixa no estado de p�s-\/constru��o 
+
+Implementa {\bf Basin\+W\+Q\+Model} \doxyref{}{pag.}{class_basin_w_q_model_aff96ffbea8957994d81971daf45fe17c}.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!empty@{empty}}
+\index{empty@{empty}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool G\+W\+L\+F\+Basin\+W\+Q\+Model\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_g_w_l_f_basin_w_q_model_a5ed9ae549bff3c44f405d059ea208188}
+retorna se existe algum valor no modelo 
+
+Implementa {\bf W\+Q\+Model} \doxyref{}{pag.}{class_w_q_model_a7f948c4b2978edbf83071f13b7e418f0}.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!get\+Ann\+TC@{get\+Ann\+TC}}
+\index{get\+Ann\+TC@{get\+Ann\+TC}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{get\+Ann\+T\+C()}]{\setlength{\rightskip}{0pt plus 5cm}double G\+W\+L\+F\+Basin\+W\+Q\+Model\+::get\+Ann\+TC (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_basin_w_q_model_a49f798a20078214255886eaeddcb7307}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!get\+Dis\+Nit@{get\+Dis\+Nit}}
+\index{get\+Dis\+Nit@{get\+Dis\+Nit}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{get\+Dis\+Nit()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+W\+L\+F\+Dissolved\+Nutrient}$\ast$ G\+W\+L\+F\+Basin\+W\+Q\+Model\+::get\+Dis\+Nit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_basin_w_q_model_ae15e851e90c73f845b4f6dac82fbc325}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!get\+Dis\+Pho@{get\+Dis\+Pho}}
+\index{get\+Dis\+Pho@{get\+Dis\+Pho}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{get\+Dis\+Pho()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+W\+L\+F\+Dissolved\+Nutrient}$\ast$ G\+W\+L\+F\+Basin\+W\+Q\+Model\+::get\+Dis\+Pho (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_basin_w_q_model_ac9a9cf140c58cfaec52045665e04b508}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!get\+Sediment@{get\+Sediment}}
+\index{get\+Sediment@{get\+Sediment}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{get\+Sediment()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+W\+L\+F\+Sediment}$\ast$ G\+W\+L\+F\+Basin\+W\+Q\+Model\+::get\+Sediment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_basin_w_q_model_a45b3bee3e2b8935723bd4eb2b37b1483}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!get\+Sol\+Nit@{get\+Sol\+Nit}}
+\index{get\+Sol\+Nit@{get\+Sol\+Nit}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{get\+Sol\+Nit()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+W\+L\+F\+Solid\+Nutrient}$\ast$ G\+W\+L\+F\+Basin\+W\+Q\+Model\+::get\+Sol\+Nit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_basin_w_q_model_af18fd9e62b8249fe712208978afe8394}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!get\+Sol\+Pho@{get\+Sol\+Pho}}
+\index{get\+Sol\+Pho@{get\+Sol\+Pho}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{get\+Sol\+Pho()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+W\+L\+F\+Solid\+Nutrient}$\ast$ G\+W\+L\+F\+Basin\+W\+Q\+Model\+::get\+Sol\+Pho (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_basin_w_q_model_a894f9da62a59c69ca9ba343e3406c813}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!get\+S\+S\+Pop\+Circ@{get\+S\+S\+Pop\+Circ}}
+\index{get\+S\+S\+Pop\+Circ@{get\+S\+S\+Pop\+Circ}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{get\+S\+S\+Pop\+Circ(int pos)}]{\setlength{\rightskip}{0pt plus 5cm}double G\+W\+L\+F\+Basin\+W\+Q\+Model\+::get\+S\+S\+Pop\+Circ (
+\begin{DoxyParamCaption}
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_basin_w_q_model_a7a09fcfe34d3423de9a1525de73fab0c}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!get\+S\+S\+Pop\+Disc@{get\+S\+S\+Pop\+Disc}}
+\index{get\+S\+S\+Pop\+Disc@{get\+S\+S\+Pop\+Disc}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{get\+S\+S\+Pop\+Disc(int pos)}]{\setlength{\rightskip}{0pt plus 5cm}double G\+W\+L\+F\+Basin\+W\+Q\+Model\+::get\+S\+S\+Pop\+Disc (
+\begin{DoxyParamCaption}
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_basin_w_q_model_a1a9d84ffc6348bc4a306b3cc92becc11}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!get\+S\+S\+Pop\+Norm@{get\+S\+S\+Pop\+Norm}}
+\index{get\+S\+S\+Pop\+Norm@{get\+S\+S\+Pop\+Norm}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{get\+S\+S\+Pop\+Norm(int pos)}]{\setlength{\rightskip}{0pt plus 5cm}double G\+W\+L\+F\+Basin\+W\+Q\+Model\+::get\+S\+S\+Pop\+Norm (
+\begin{DoxyParamCaption}
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_basin_w_q_model_ab8743f369557f3dc06f744d3e94888e2}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!get\+S\+S\+Pop\+Pond@{get\+S\+S\+Pop\+Pond}}
+\index{get\+S\+S\+Pop\+Pond@{get\+S\+S\+Pop\+Pond}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{get\+S\+S\+Pop\+Pond(int pos)}]{\setlength{\rightskip}{0pt plus 5cm}double G\+W\+L\+F\+Basin\+W\+Q\+Model\+::get\+S\+S\+Pop\+Pond (
+\begin{DoxyParamCaption}
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_basin_w_q_model_aa386871269dc8f68cd22518dff609b70}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!run@{run}}
+\index{run@{run}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+W\+L\+F\+Basin\+W\+Q\+Model\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_basin_w_q_model_ae62d3b3dc3b095e3575e91c3e5a9dca1}
+Executa o modelo \index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!set\+Ann\+TC@{set\+Ann\+TC}}
+\index{set\+Ann\+TC@{set\+Ann\+TC}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{set\+Ann\+T\+C(double value)}]{\setlength{\rightskip}{0pt plus 5cm}void G\+W\+L\+F\+Basin\+W\+Q\+Model\+::set\+Ann\+TC (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_basin_w_q_model_a844f6e590b8687a2e7e527c385865d75}
+
+
+\subsection{Atributos}
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!ann\+TC@{ann\+TC}}
+\index{ann\+TC@{ann\+TC}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{ann\+TC}]{\setlength{\rightskip}{0pt plus 5cm}double G\+W\+L\+F\+Basin\+W\+Q\+Model\+::ann\+TC\hspace{0.3cm}{\ttfamily [protected]}}\label{class_g_w_l_f_basin_w_q_model_ac310b5396dc79bf4105f75de972abd42}
+Capacidade de transporte de sedimento anual 
+
+Definição na linha 54 do arquivo G\+W\+L\+F\+Basin\+W\+Q\+Model.\+h.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!dis\+Nit@{dis\+Nit}}
+\index{dis\+Nit@{dis\+Nit}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{dis\+Nit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+W\+L\+F\+Dissolved\+Nutrient}$\ast$ G\+W\+L\+F\+Basin\+W\+Q\+Model\+::dis\+Nit\hspace{0.3cm}{\ttfamily [protected]}}\label{class_g_w_l_f_basin_w_q_model_a9ca9ab19efc0e1dc97855baa9b4d978c}
+Nitrog�nio dissolvido 
+
+Definição na linha 36 do arquivo G\+W\+L\+F\+Basin\+W\+Q\+Model.\+h.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!dis\+Pho@{dis\+Pho}}
+\index{dis\+Pho@{dis\+Pho}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{dis\+Pho}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+W\+L\+F\+Dissolved\+Nutrient}$\ast$ G\+W\+L\+F\+Basin\+W\+Q\+Model\+::dis\+Pho\hspace{0.3cm}{\ttfamily [protected]}}\label{class_g_w_l_f_basin_w_q_model_a51239340ce7d43b07c0de5c1f98f20db}
+F�sforo dissolvido 
+
+Definição na linha 32 do arquivo G\+W\+L\+F\+Basin\+W\+Q\+Model.\+h.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!gwlf@{gwlf}}
+\index{gwlf@{gwlf}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{gwlf}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+W\+L\+F\+Model}$\ast$ G\+W\+L\+F\+Basin\+W\+Q\+Model\+::gwlf\hspace{0.3cm}{\ttfamily [protected]}}\label{class_g_w_l_f_basin_w_q_model_a36016be10de32c9de1d8e9aacd3847c0}
+Ponteiro para Modelo G\+W\+LF 
+
+Definição na linha 28 do arquivo G\+W\+L\+F\+Basin\+W\+Q\+Model.\+h.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!sediment@{sediment}}
+\index{sediment@{sediment}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{sediment}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+W\+L\+F\+Sediment}$\ast$ G\+W\+L\+F\+Basin\+W\+Q\+Model\+::sediment\hspace{0.3cm}{\ttfamily [protected]}}\label{class_g_w_l_f_basin_w_q_model_ae301b0932844c04ea449c9bcac832be2}
+Sedimentos 
+
+Definição na linha 40 do arquivo G\+W\+L\+F\+Basin\+W\+Q\+Model.\+h.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!sol\+Nit@{sol\+Nit}}
+\index{sol\+Nit@{sol\+Nit}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{sol\+Nit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+W\+L\+F\+Solid\+Nutrient}$\ast$ G\+W\+L\+F\+Basin\+W\+Q\+Model\+::sol\+Nit\hspace{0.3cm}{\ttfamily [protected]}}\label{class_g_w_l_f_basin_w_q_model_ae886798e98814a252f1e154228300594}
+Nitrog�nio s�lido 
+
+Definição na linha 48 do arquivo G\+W\+L\+F\+Basin\+W\+Q\+Model.\+h.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!sol\+Pho@{sol\+Pho}}
+\index{sol\+Pho@{sol\+Pho}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{sol\+Pho}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+W\+L\+F\+Solid\+Nutrient}$\ast$ G\+W\+L\+F\+Basin\+W\+Q\+Model\+::sol\+Pho\hspace{0.3cm}{\ttfamily [protected]}}\label{class_g_w_l_f_basin_w_q_model_a866b0e90e42e3248e83c56068a037e56}
+F�sforo s�lido 
+
+Definição na linha 44 do arquivo G\+W\+L\+F\+Basin\+W\+Q\+Model.\+h.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!S\+S\+Pop\+Circ@{S\+S\+Pop\+Circ}}
+\index{S\+S\+Pop\+Circ@{S\+S\+Pop\+Circ}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{S\+S\+Pop\+Circ}]{\setlength{\rightskip}{0pt plus 5cm}double G\+W\+L\+F\+Basin\+W\+Q\+Model\+::\+S\+S\+Pop\+Circ[13]}\label{class_g_w_l_f_basin_w_q_model_a6863ca97ac11fd5c1e24c2de9071c271}
+
+
+Definição na linha 66 do arquivo G\+W\+L\+F\+Basin\+W\+Q\+Model.\+h.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!S\+S\+Pop\+Disc@{S\+S\+Pop\+Disc}}
+\index{S\+S\+Pop\+Disc@{S\+S\+Pop\+Disc}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{S\+S\+Pop\+Disc}]{\setlength{\rightskip}{0pt plus 5cm}double G\+W\+L\+F\+Basin\+W\+Q\+Model\+::\+S\+S\+Pop\+Disc[13]}\label{class_g_w_l_f_basin_w_q_model_a5d71a45ca284e8b401d671fe7fd1a168}
+
+
+Definição na linha 67 do arquivo G\+W\+L\+F\+Basin\+W\+Q\+Model.\+h.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!S\+S\+Pop\+Norm@{S\+S\+Pop\+Norm}}
+\index{S\+S\+Pop\+Norm@{S\+S\+Pop\+Norm}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{S\+S\+Pop\+Norm}]{\setlength{\rightskip}{0pt plus 5cm}double G\+W\+L\+F\+Basin\+W\+Q\+Model\+::\+S\+S\+Pop\+Norm[13]}\label{class_g_w_l_f_basin_w_q_model_a2a2887ca74abd670aba22b95b38d97b5}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em node} & N� \\
+\hline
+{\em name} & Nome do modelo Populacao atendida por tipo de sistema septico \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 64 do arquivo G\+W\+L\+F\+Basin\+W\+Q\+Model.\+h.
+
+\index{G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}!S\+S\+Pop\+Pond@{S\+S\+Pop\+Pond}}
+\index{S\+S\+Pop\+Pond@{S\+S\+Pop\+Pond}!G\+W\+L\+F\+Basin\+W\+Q\+Model@{G\+W\+L\+F\+Basin\+W\+Q\+Model}}
+\subsubsection[{S\+S\+Pop\+Pond}]{\setlength{\rightskip}{0pt plus 5cm}double G\+W\+L\+F\+Basin\+W\+Q\+Model\+::\+S\+S\+Pop\+Pond[13]}\label{class_g_w_l_f_basin_w_q_model_a9f88d28297b560f1735813267edd859c}
+
+
+Definição na linha 65 do arquivo G\+W\+L\+F\+Basin\+W\+Q\+Model.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf G\+W\+L\+F\+Basin\+W\+Q\+Model.\+h}\end{DoxyCompactItemize}

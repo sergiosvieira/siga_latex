@@ -1,0 +1,179 @@
+\section{Referência da Classe W\+Q\+Model}
+\label{class_w_q_model}\index{W\+Q\+Model@{W\+Q\+Model}}
+
+
+{\ttfamily \#include $<$W\+Q\+Model.\+h$>$}
+
+
+
+Superclasse de {\bf Basin\+W\+Q\+Model}, {\bf Res\+W\+Q\+Model} e {\bf River\+W\+Q\+Model}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf W\+Q\+Model} ({\bf Node} $\ast${\bf node})
+\item 
+{\bf W\+Q\+Model} ({\bf Link} $\ast${\bf link})
+\item 
+virtual {\bf $\sim$\+W\+Q\+Model} ()
+\item 
+virtual bool {\bf empty} ()=0
+\item 
+virtual bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)=0
+\item 
+virtual void {\bf clear} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf quality\+Model\+Type} {\bf type}
+\item 
+wx\+String {\bf name}
+\item 
+{\bf W\+Q\+Result} $\ast$ {\bf results}
+\item 
+{\bf Node} $\ast$ {\bf node}
+\item 
+{\bf Link} $\ast$ {\bf link}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 16 do arquivo W\+Q\+Model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{W\+Q\+Model@{W\+Q\+Model}!W\+Q\+Model@{W\+Q\+Model}}
+\index{W\+Q\+Model@{W\+Q\+Model}!W\+Q\+Model@{W\+Q\+Model}}
+\subsubsection[{W\+Q\+Model(\+Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}W\+Q\+Model\+::\+W\+Q\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_w_q_model_af7d858b1d38f4a29369a147cda1d9da5}
+1..$\ast$
+
+vector$<$\+Pollutant$\ast$$>$ pollutants; Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em node} & N� \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 31 do arquivo W\+Q\+Model.\+h.
+
+\index{W\+Q\+Model@{W\+Q\+Model}!W\+Q\+Model@{W\+Q\+Model}}
+\index{W\+Q\+Model@{W\+Q\+Model}!W\+Q\+Model@{W\+Q\+Model}}
+\subsubsection[{W\+Q\+Model(\+Link $\ast$link)}]{\setlength{\rightskip}{0pt plus 5cm}W\+Q\+Model\+::\+W\+Q\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_w_q_model_a6049a263227651413b0064300dfe2dbe}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em link} & Trecho \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 36 do arquivo W\+Q\+Model.\+h.
+
+\index{W\+Q\+Model@{W\+Q\+Model}!````~W\+Q\+Model@{$\sim$\+W\+Q\+Model}}
+\index{````~W\+Q\+Model@{$\sim$\+W\+Q\+Model}!W\+Q\+Model@{W\+Q\+Model}}
+\subsubsection[{$\sim$\+W\+Q\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}virtual W\+Q\+Model\+::$\sim$\+W\+Q\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_w_q_model_ac555055d68be2c99294aaa66999b26b5}
+Destrutor 
+
+Definição na linha 40 do arquivo W\+Q\+Model.\+h.
+
+
+
+\subsection{Métodos}
+\index{W\+Q\+Model@{W\+Q\+Model}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!W\+Q\+Model@{W\+Q\+Model}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool W\+Q\+Model\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_w_q_model_af34637ca0634f5c5b1a22f5429bd9f74}
+verifica se as informa�oes estao completas 
+\begin{DoxyParams}{Parâmetros}
+{\em pollutant} & identificador do poluente selecionado \\
+\hline
+{\em dialog} & Caixa de dialogo que mostra todas informa�oes incompletas \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf M\+E\+C\+A\+Res\+W\+Q\+Model} \doxyref{}{pag.}{class_m_e_c_a_res_w_q_model_aef6bfbdd7998b8a4c51ee307e2ecb4ce}, {\bf M\+E\+N\+U\+Res\+W\+Q\+Model} \doxyref{}{pag.}{class_m_e_n_u_res_w_q_model_af795cf8a4200cd8141bf6ba7872236c4}, {\bf G\+W\+L\+F\+Basin\+W\+Q\+Model} \doxyref{}{pag.}{class_g_w_l_f_basin_w_q_model_a28a0bd35b96321ebebc6538cfb0d2714} e {\bf T\+A\+L\+River\+W\+Q\+Model} \doxyref{}{pag.}{class_t_a_l_river_w_q_model_a93015f5edbb6b8366783901f0b0c5528}.
+
+\index{W\+Q\+Model@{W\+Q\+Model}!clear@{clear}}
+\index{clear@{clear}!W\+Q\+Model@{W\+Q\+Model}}
+\subsubsection[{clear()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void W\+Q\+Model\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_w_q_model_ae0cfa3c85faff8478a781e6241d30034}
+Limpa as variaveis e as deixa no estado de p�s-\/constru��o 
+
+Implementado por {\bf M\+E\+C\+A\+Res\+W\+Q\+Model} \doxyref{}{pag.}{class_m_e_c_a_res_w_q_model_a4ce55bc2f913f91135d0e681bb03e565}, {\bf M\+E\+N\+U\+Res\+W\+Q\+Model} \doxyref{}{pag.}{class_m_e_n_u_res_w_q_model_a6e5759a8b261de53387d121ddd9421c4}, {\bf G\+W\+L\+F\+Basin\+W\+Q\+Model} \doxyref{}{pag.}{class_g_w_l_f_basin_w_q_model_a3463e9c76d9c68d286158a6ad52adc1b}, {\bf T\+A\+L\+River\+W\+Q\+Model} \doxyref{}{pag.}{class_t_a_l_river_w_q_model_a4740214616db93eb76d8abdd5e312de0}, {\bf Basin\+W\+Q\+Model} \doxyref{}{pag.}{class_basin_w_q_model_aff96ffbea8957994d81971daf45fe17c}, {\bf Res\+W\+Q\+Model} \doxyref{}{pag.}{class_res_w_q_model_adbdd8481b25ab3ffb5a3798a1b3a6a6c} e {\bf River\+W\+Q\+Model} \doxyref{}{pag.}{class_river_w_q_model_aa90fedd81f8b7c033fbee622ce48dcf1}.
+
+\index{W\+Q\+Model@{W\+Q\+Model}!empty@{empty}}
+\index{empty@{empty}!W\+Q\+Model@{W\+Q\+Model}}
+\subsubsection[{empty()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool W\+Q\+Model\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_w_q_model_a7f948c4b2978edbf83071f13b7e418f0}
+retorna se existe algum valor no modelo 
+
+Implementado por {\bf M\+E\+C\+A\+Res\+W\+Q\+Model} \doxyref{}{pag.}{class_m_e_c_a_res_w_q_model_a619ea337c672df671afe4d88452efca8}, {\bf M\+E\+N\+U\+Res\+W\+Q\+Model} \doxyref{}{pag.}{class_m_e_n_u_res_w_q_model_a392b29a255a5a602abc0529f7bcbacae}, {\bf G\+W\+L\+F\+Basin\+W\+Q\+Model} \doxyref{}{pag.}{class_g_w_l_f_basin_w_q_model_a5ed9ae549bff3c44f405d059ea208188} e {\bf T\+A\+L\+River\+W\+Q\+Model} \doxyref{}{pag.}{class_t_a_l_river_w_q_model_aa8ca1afa24e4f6438d3444a81f10d439}.
+
+
+
+\subsection{Atributos}
+\index{W\+Q\+Model@{W\+Q\+Model}!link@{link}}
+\index{link@{link}!W\+Q\+Model@{W\+Q\+Model}}
+\subsubsection[{link}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Link}$\ast$ W\+Q\+Model\+::link}\label{class_w_q_model_a7d01438d9c4a49e86b89635e56fe136e}
+Trecho selecionado 
+
+Definição na linha 53 do arquivo W\+Q\+Model.\+h.
+
+\index{W\+Q\+Model@{W\+Q\+Model}!name@{name}}
+\index{name@{name}!W\+Q\+Model@{W\+Q\+Model}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String W\+Q\+Model\+::name}\label{class_w_q_model_a6bc93dfd8470454d0951c013f5163047}
+Nome do modelo 
+
+Definição na linha 22 do arquivo W\+Q\+Model.\+h.
+
+\index{W\+Q\+Model@{W\+Q\+Model}!node@{node}}
+\index{node@{node}!W\+Q\+Model@{W\+Q\+Model}}
+\subsubsection[{node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ W\+Q\+Model\+::node}\label{class_w_q_model_a80f81887ddd7382fe5df9fadb3300054}
+No selecionado 
+
+Definição na linha 48 do arquivo W\+Q\+Model.\+h.
+
+\index{W\+Q\+Model@{W\+Q\+Model}!results@{results}}
+\index{results@{results}!W\+Q\+Model@{W\+Q\+Model}}
+\subsubsection[{results}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+Q\+Result}$\ast$ W\+Q\+Model\+::results}\label{class_w_q_model_a0d6eed4f96ea0487e3185183751c7fc1}
+0..$\ast$ 
+
+Definição na linha 40 do arquivo W\+Q\+Model.\+h.
+
+\index{W\+Q\+Model@{W\+Q\+Model}!type@{type}}
+\index{type@{type}!W\+Q\+Model@{W\+Q\+Model}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf quality\+Model\+Type} W\+Q\+Model\+::type}\label{class_w_q_model_a6fca6e3456d67da602e41b20a99ca954}
+
+
+Definição na linha 18 do arquivo W\+Q\+Model.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf W\+Q\+Model.\+h}\end{DoxyCompactItemize}

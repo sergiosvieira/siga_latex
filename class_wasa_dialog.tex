@@ -1,0 +1,708 @@
+\section{Referência da Classe Wasa\+Dialog}
+\label{class_wasa_dialog}\index{Wasa\+Dialog@{Wasa\+Dialog}}
+
+
+{\ttfamily \#include $<$Wasa\+Dialog.\+h$>$}
+
+
+
+Herdeiro de wx\+Dialog.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+B\+A\+S\+IN}, 
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+B\+A\+S\+IN}, 
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+B\+A\+S\+IN}, 
+{\bf I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+B\+A\+S\+IN}, 
+\\*
+{\bf I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+A\+S\+IN}, 
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+LU}, 
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+LU}, 
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+LU}, 
+\\*
+{\bf I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+LU}, 
+{\bf I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+LU}, 
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+S\+O\+IL}, 
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+S\+O\+IL}, 
+\\*
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+S\+O\+IL}, 
+{\bf I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+S\+O\+IL}, 
+{\bf I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+S\+O\+IL}, 
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON}, 
+\\*
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON}, 
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON}, 
+{\bf I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON}, 
+{\bf I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON}, 
+\\*
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+A\+S\+T\+E\+R\+\_\+\+E\+L\+E\+V\+A\+T\+I\+ON}, 
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+E\+L\+E\+V\+A\+T\+I\+ON}, 
+{\bf I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+E\+L\+E\+V\+A\+T\+I\+ON}, 
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+TC}, 
+\\*
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+TC}, 
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+TC}, 
+{\bf I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+TC}, 
+{\bf I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+TC}, 
+\\*
+{\bf I\+D\+\_\+\+T\+X\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE}, 
+{\bf I\+D\+\_\+\+B\+T\+N\+\_\+\+B\+R\+O\+W\+S\+E\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE}, 
+{\bf I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+I\+N\+\_\+\+A\+R\+E\+A\+\_\+\+R\+A\+TE}, 
+{\bf I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+I\+N\+\_\+\+A\+R\+E\+A\+\_\+\+R\+A\+T\+E\+\_\+2}, 
+\\*
+{\bf I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+I\+N\+\_\+\+C\+L\+A\+S\+S\+I\+F\+I\+C\+A\+T\+I\+ON}, 
+{\bf I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+A\+X\+\_\+\+C\+L\+A\+S\+S\+I\+F\+I\+C\+A\+T\+I\+ON}, 
+{\bf I\+D\+\_\+\+B\+T\+N\+\_\+\+G\+E\+N\+E\+R\+A\+TE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Wasa\+Dialog} (wx\+Window $\ast$parent, wx\+Window\+ID id=wx\+I\+D\+\_\+\+A\+NY, const wx\+String \&title=\+\_\+(\char`\"{}Interface de entrada do W\+A\+SA-\/S\+ED\char`\"{}), const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=wx\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+I\+A\+L\+O\+G\+\_\+\+S\+T\+Y\+LE)
+\item 
+virtual {\bf $\sim$\+Wasa\+Dialog} ()
+\item 
+void {\bf save\+In\+Model} () const 
+\item 
+void {\bf set\+Info} () const 
+\item 
+wx\+String {\bf getstr\+Output\+Dir} ()
+\item 
+wx\+String {\bf setstr\+Output\+Dir} (wx\+String {\bf str\+Output\+Dir})
+\item 
+{\bf D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf load\+Columns\+From\+Shape} (int shape\+Index, wx\+Choice \&column\+Choice)
+\item 
+void {\bf load\+Bands\+From\+Raster} (int raster\+Index, wx\+Choice \&band\+Coices)
+\item 
+void {\bf get\+Values\+From\+Column} (int shape\+Index, int col\+Index, wx\+Array\+String \&output\+List)
+\item 
+bool {\bf check\+T\+C\+Columns} (O\+G\+R\+Data\+Source $\ast$tc\+DS)
+\item 
+bool {\bf check\+Completeness} ()
+\item 
+O\+G\+R\+Data\+Source $\ast$ {\bf perform\+Soil\+Vegetation\+Intersection} (wx\+Progress\+Dialog $\ast$progress\+Dialog, int $\ast$current\+Progress)
+\item 
+O\+G\+R\+Data\+Source $\ast$ {\bf perform\+Final\+Intersection} (wx\+Progress\+Dialog $\ast$progress\+Dialog, int $\ast$current\+Progress, O\+G\+R\+Layer $\ast$tc\+Layer, O\+G\+R\+Layer $\ast$soil\+Vegetation\+Layer, double min\+Area\+Rate)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Choice $\ast$ {\bf choice\+Shape\+Basin}
+\item 
+wx\+Choice $\ast$ {\bf choice\+Col\+Basin}
+\item 
+wx\+Choice $\ast$ {\bf choice\+Ignored\+Basin}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf btn\+Ignored\+Basin}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf btn\+Clear\+Basin}
+\item 
+wx\+Choice $\ast$ {\bf choice\+Shape\+LU}
+\item 
+wx\+Choice $\ast$ {\bf choice\+Col\+LU}
+\item 
+wx\+Choice $\ast$ {\bf choice\+Ignored\+LU}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf btn\+Ignored\+LU}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf btn\+Clear\+LU}
+\item 
+wx\+Choice $\ast$ {\bf choice\+Shape\+Soil}
+\item 
+wx\+Choice $\ast$ {\bf choice\+Col\+Soil}
+\item 
+wx\+Choice $\ast$ {\bf choice\+Ignored\+Soil}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf btn\+Ignored\+Soil}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf btn\+Clear\+Soil}
+\item 
+wx\+Choice $\ast$ {\bf choice\+Shape\+Vegetation}
+\item 
+wx\+Choice $\ast$ {\bf choice\+Col\+Vegetation}
+\item 
+wx\+Choice $\ast$ {\bf choice\+Ignored\+Vegetation}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf btn\+Ignored\+Vegetation}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf btn\+Clear\+Vegetation}
+\item 
+wx\+Choice $\ast$ {\bf choice\+Raster\+Elevation}
+\item 
+wx\+Choice $\ast$ {\bf choice\+Col\+Elevation}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf btn\+Clear\+Elevation}
+\item 
+wx\+Choice $\ast$ {\bf choice\+Shape\+TC}
+\item 
+wx\+Choice $\ast$ {\bf choice\+Col\+TC}
+\item 
+wx\+Choice $\ast$ {\bf choice\+Ignored\+TC}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf btn\+Ignored\+TC}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf btn\+Clear\+TC}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf txt\+Output\+File}
+\item 
+wx\+Button $\ast$ {\bf btn\+Browse\+Output\+File}
+\item 
+wx\+String {\bf str\+Output\+File}
+\item 
+wx\+String {\bf str\+Output\+Dir}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf spin\+Min\+Area\+Rate}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf spin\+Min\+Area\+Rate2}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf spin\+Min\+Classification\+Limit}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf spin\+Max\+Classification\+Limit}
+\item 
+wx\+Button $\ast$ {\bf btn\+Generate}
+\item 
+std\+::vector$<$ {\bf Vector\+LayerM} $\ast$ $>$ {\bf shapes}
+\item 
+std\+::vector$<$ {\bf Raster\+Layer} $\ast$ $>$ {\bf rasters}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 27 do arquivo Wasa\+Dialog.\+h.
+
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981be}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+B\+A\+S\+IN@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+B\+A\+S\+IN}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+B\+A\+S\+IN@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+B\+A\+S\+IN}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+B\+A\+S\+IN\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981beaecb1fdaec8b2fbd5fb10bfa7286e7239}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+B\+A\+S\+IN@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+B\+A\+S\+IN}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+B\+A\+S\+IN@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+B\+A\+S\+IN}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+B\+A\+S\+IN\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981beaaaa135108b5a6aaaf74d380cd658d8bb}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+B\+A\+S\+IN@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+B\+A\+S\+IN}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+B\+A\+S\+IN@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+B\+A\+S\+IN}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+B\+A\+S\+IN\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981bea2d9d8d0720bbde55293c702894d85ec9}
+}]\index{I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+B\+A\+S\+IN@{I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+B\+A\+S\+IN}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+B\+A\+S\+IN@{I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+B\+A\+S\+IN}}\item[{\em 
+I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+B\+A\+S\+IN\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981bea1f0876ec7f3a15fa360eacba6b4c27a0}
+}]\index{I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+A\+S\+IN@{I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+A\+S\+IN}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+A\+S\+IN@{I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+A\+S\+IN}}\item[{\em 
+I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+B\+A\+S\+IN\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981beaded5615b3c988f433554451ebcd27499}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+LU@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+LU}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+LU@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+LU}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+LU\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981bea22197f5ec8965e3f1cbd6661bc53c275}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+LU@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+LU}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+LU@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+LU}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+LU\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981beab627a0e616dd3fec5988cc61e0451480}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+LU@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+LU}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+LU@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+LU}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+LU\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981beafe5613a011601a3cc50b24062b1d8d88}
+}]\index{I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+LU@{I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+LU}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+LU@{I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+LU}}\item[{\em 
+I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+LU\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981bea9aff6f300ebe2f681315f65632a87486}
+}]\index{I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+LU@{I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+LU}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+LU@{I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+LU}}\item[{\em 
+I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+LU\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981bea7bbcfe9862b497f1258b7362c1a02b5d}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+S\+O\+IL@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+S\+O\+IL}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+S\+O\+IL@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+S\+O\+IL}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+S\+O\+IL\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981beaa70d2d2e83e425e1e400d6d4b567ae3b}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+S\+O\+IL@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+S\+O\+IL}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+S\+O\+IL@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+S\+O\+IL}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+S\+O\+IL\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981beab2dbbafdcdf988e4bd21528413bbbe21}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+S\+O\+IL@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+S\+O\+IL}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+S\+O\+IL@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+S\+O\+IL}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+S\+O\+IL\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981bea0230e8be36e72bc483a3083e9fd25c7d}
+}]\index{I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+S\+O\+IL@{I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+S\+O\+IL}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+S\+O\+IL@{I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+S\+O\+IL}}\item[{\em 
+I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+S\+O\+IL\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981beafe3c901a8b3f9dea33af9f29c8b25e5f}
+}]\index{I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+S\+O\+IL@{I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+S\+O\+IL}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+S\+O\+IL@{I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+S\+O\+IL}}\item[{\em 
+I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+S\+O\+IL\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981bea7809b7adb49340d0d4712c1da284f103}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981beab393178d172e1d498ceace7e54fef174}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981bea71a7bcb61b28b3cc706b7ccdd196c53c}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981bea9be9b825e92a27f523372f6671ad03db}
+}]\index{I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON@{I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON@{I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON}}\item[{\em 
+I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981bea7a0d368821be86891268cc76a2c28d95}
+}]\index{I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON@{I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON@{I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON}}\item[{\em 
+I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981beab13a857dc045480590ff5163d33405fb}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+A\+S\+T\+E\+R\+\_\+\+E\+L\+E\+V\+A\+T\+I\+ON@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+A\+S\+T\+E\+R\+\_\+\+E\+L\+E\+V\+A\+T\+I\+ON}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+A\+S\+T\+E\+R\+\_\+\+E\+L\+E\+V\+A\+T\+I\+ON@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+A\+S\+T\+E\+R\+\_\+\+E\+L\+E\+V\+A\+T\+I\+ON}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+A\+S\+T\+E\+R\+\_\+\+E\+L\+E\+V\+A\+T\+I\+ON\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981bea24445741223eef74e88599bc0af62b0e}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+E\+L\+E\+V\+A\+T\+I\+ON@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+E\+L\+E\+V\+A\+T\+I\+ON}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+E\+L\+E\+V\+A\+T\+I\+ON@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+E\+L\+E\+V\+A\+T\+I\+ON}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+E\+L\+E\+V\+A\+T\+I\+ON\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981beaa44312e1d86d022aee1bf8ee682e1803}
+}]\index{I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+E\+L\+E\+V\+A\+T\+I\+ON@{I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+E\+L\+E\+V\+A\+T\+I\+ON}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+E\+L\+E\+V\+A\+T\+I\+ON@{I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+E\+L\+E\+V\+A\+T\+I\+ON}}\item[{\em 
+I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+E\+L\+E\+V\+A\+T\+I\+ON\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981beaeb79c2b6c522f162b45b3aa2c265cc59}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+TC@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+TC}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+TC@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+TC}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+TC\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981beaf141e12f4f29ee1e7b5c4e466ec890bd}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+TC@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+TC}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+TC@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+TC}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+\_\+\+TC\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981bead384d4e2f9771834849e0d46a769adc5}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+TC@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+TC}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+TC@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+TC}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+TC\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981beaa0c8040dfda8dbc4644c4a910d97a8c2}
+}]\index{I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+TC@{I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+TC}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+TC@{I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+TC}}\item[{\em 
+I\+D\+\_\+\+B\+T\+N\+\_\+\+I\+G\+N\+O\+R\+E\+D\+\_\+\+TC\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981bea60c2c9ea6f506a456c59eda27a944d2e}
+}]\index{I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+TC@{I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+TC}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+TC@{I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+TC}}\item[{\em 
+I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+L\+E\+A\+R\+\_\+\+TC\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981beac399937d5e2dfd1409c512495d1f1f1a}
+}]\index{I\+D\+\_\+\+T\+X\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE@{I\+D\+\_\+\+T\+X\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+T\+X\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE@{I\+D\+\_\+\+T\+X\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE}}\item[{\em 
+I\+D\+\_\+\+T\+X\+T\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981bea1bacc060e80736ab8cb34d18bcb79873}
+}]\index{I\+D\+\_\+\+B\+T\+N\+\_\+\+B\+R\+O\+W\+S\+E\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE@{I\+D\+\_\+\+B\+T\+N\+\_\+\+B\+R\+O\+W\+S\+E\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+B\+T\+N\+\_\+\+B\+R\+O\+W\+S\+E\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE@{I\+D\+\_\+\+B\+T\+N\+\_\+\+B\+R\+O\+W\+S\+E\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE}}\item[{\em 
+I\+D\+\_\+\+B\+T\+N\+\_\+\+B\+R\+O\+W\+S\+E\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981beaafb6f068045004f52f67e0467b8eaba4}
+}]\index{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+I\+N\+\_\+\+A\+R\+E\+A\+\_\+\+R\+A\+TE@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+I\+N\+\_\+\+A\+R\+E\+A\+\_\+\+R\+A\+TE}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+I\+N\+\_\+\+A\+R\+E\+A\+\_\+\+R\+A\+TE@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+I\+N\+\_\+\+A\+R\+E\+A\+\_\+\+R\+A\+TE}}\item[{\em 
+I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+I\+N\+\_\+\+A\+R\+E\+A\+\_\+\+R\+A\+TE\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981bead9cf71e6a0d8f532816e76c1de1d21a5}
+}]\index{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+I\+N\+\_\+\+A\+R\+E\+A\+\_\+\+R\+A\+T\+E\+\_\+2@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+I\+N\+\_\+\+A\+R\+E\+A\+\_\+\+R\+A\+T\+E\+\_\+2}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+I\+N\+\_\+\+A\+R\+E\+A\+\_\+\+R\+A\+T\+E\+\_\+2@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+I\+N\+\_\+\+A\+R\+E\+A\+\_\+\+R\+A\+T\+E\+\_\+2}}\item[{\em 
+I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+I\+N\+\_\+\+A\+R\+E\+A\+\_\+\+R\+A\+T\+E\+\_\+2\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981bea791f0b0d61fb931e93f730f8dcc2d0dd}
+}]\index{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+I\+N\+\_\+\+C\+L\+A\+S\+S\+I\+F\+I\+C\+A\+T\+I\+ON@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+I\+N\+\_\+\+C\+L\+A\+S\+S\+I\+F\+I\+C\+A\+T\+I\+ON}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+I\+N\+\_\+\+C\+L\+A\+S\+S\+I\+F\+I\+C\+A\+T\+I\+ON@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+I\+N\+\_\+\+C\+L\+A\+S\+S\+I\+F\+I\+C\+A\+T\+I\+ON}}\item[{\em 
+I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+I\+N\+\_\+\+C\+L\+A\+S\+S\+I\+F\+I\+C\+A\+T\+I\+ON\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981bea04ce53c31214aafad22213f1d1f03ecc}
+}]\index{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+A\+X\+\_\+\+C\+L\+A\+S\+S\+I\+F\+I\+C\+A\+T\+I\+ON@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+A\+X\+\_\+\+C\+L\+A\+S\+S\+I\+F\+I\+C\+A\+T\+I\+ON}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+A\+X\+\_\+\+C\+L\+A\+S\+S\+I\+F\+I\+C\+A\+T\+I\+ON@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+A\+X\+\_\+\+C\+L\+A\+S\+S\+I\+F\+I\+C\+A\+T\+I\+ON}}\item[{\em 
+I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+A\+X\+\_\+\+C\+L\+A\+S\+S\+I\+F\+I\+C\+A\+T\+I\+ON\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981bea15fe2c8dd9640912dded3f0376e1e31d}
+}]\index{I\+D\+\_\+\+B\+T\+N\+\_\+\+G\+E\+N\+E\+R\+A\+TE@{I\+D\+\_\+\+B\+T\+N\+\_\+\+G\+E\+N\+E\+R\+A\+TE}!Wasa\+Dialog@{Wasa\+Dialog}}\index{Wasa\+Dialog@{Wasa\+Dialog}!I\+D\+\_\+\+B\+T\+N\+\_\+\+G\+E\+N\+E\+R\+A\+TE@{I\+D\+\_\+\+B\+T\+N\+\_\+\+G\+E\+N\+E\+R\+A\+TE}}\item[{\em 
+I\+D\+\_\+\+B\+T\+N\+\_\+\+G\+E\+N\+E\+R\+A\+TE\label{class_wasa_dialog_a18cd20bdb51f31ed74205778303981bea8451f86aee4d6e6b7e137a9ff6f489c9}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 169 do arquivo Wasa\+Dialog.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Wasa\+Dialog@{Wasa\+Dialog}!Wasa\+Dialog@{Wasa\+Dialog}}
+\index{Wasa\+Dialog@{Wasa\+Dialog}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{Wasa\+Dialog(wx\+Window $\ast$parent, wx\+Window\+I\+D id=wx\+I\+D\+\_\+\+A\+N\+Y, const wx\+String \&title=\+\_\+(""Interface de entrada do W\+A\+S\+A-\/\+S\+ED""), const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=wx\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+I\+A\+L\+O\+G\+\_\+\+S\+T\+Y\+L\+E)}]{\setlength{\rightskip}{0pt plus 5cm}Wasa\+Dialog\+::\+Wasa\+Dialog (
+\begin{DoxyParamCaption}
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{wx\+Window\+ID}]{id = {\ttfamily wxID\+\_\+ANY}, }
+\item[{const wx\+String \&}]{title = {\ttfamily \+\_\+(\char`\"{}Interface~de~entrada~do~WASA-\/SED\char`\"{})}, }
+\item[{const wx\+Point \&}]{pos = {\ttfamily wxDefaultPosition}, }
+\item[{const wx\+Size \&}]{size = {\ttfamily wxDefaultSize}, }
+\item[{long}]{style = {\ttfamily wxDEFAULT\+\_\+DIALOG\+\_\+STYLE}}
+\end{DoxyParamCaption}
+)}\label{class_wasa_dialog_ac242d080bc29b452cea34cdd0f7984e6}
+\index{Wasa\+Dialog@{Wasa\+Dialog}!````~Wasa\+Dialog@{$\sim$\+Wasa\+Dialog}}
+\index{````~Wasa\+Dialog@{$\sim$\+Wasa\+Dialog}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{$\sim$\+Wasa\+Dialog()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Wasa\+Dialog\+::$\sim$\+Wasa\+Dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_wasa_dialog_a7ee1ee34f197b542a51a096fbf1307b0}
+
+
+\subsection{Métodos}
+\index{Wasa\+Dialog@{Wasa\+Dialog}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{check\+Completeness()}]{\setlength{\rightskip}{0pt plus 5cm}bool Wasa\+Dialog\+::check\+Completeness (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a397491b1fee255919f99051e2aee56a9}
+\index{Wasa\+Dialog@{Wasa\+Dialog}!check\+T\+C\+Columns@{check\+T\+C\+Columns}}
+\index{check\+T\+C\+Columns@{check\+T\+C\+Columns}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{check\+T\+C\+Columns(\+O\+G\+R\+Data\+Source $\ast$tc\+D\+S)}]{\setlength{\rightskip}{0pt plus 5cm}bool Wasa\+Dialog\+::check\+T\+C\+Columns (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Data\+Source $\ast$}]{tc\+DS}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a2ea9c17c325f21db8c537e44725bf589}
+Checa se o nome e a ordem das colunas da tabela de atributos do shapefile de TC � igual ao modelo de shapefile gerado pelo processo de gera��o automatica do W\+A\+SA
+
+\begin{DoxyReturn}{Retorna}
+true caso o TC seja consistente. false, cc. 
+\end{DoxyReturn}
+\index{Wasa\+Dialog@{Wasa\+Dialog}!D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+L\+E()}]{\setlength{\rightskip}{0pt plus 5cm}Wasa\+Dialog\+::\+D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_wasa_dialog_a848b920c1010aa5e63022980a1d0a830}
+\index{Wasa\+Dialog@{Wasa\+Dialog}!getstr\+Output\+Dir@{getstr\+Output\+Dir}}
+\index{getstr\+Output\+Dir@{getstr\+Output\+Dir}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{getstr\+Output\+Dir()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Wasa\+Dialog\+::getstr\+Output\+Dir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_wasa_dialog_a0464f63ad248800a183a815974e27291}
+\index{Wasa\+Dialog@{Wasa\+Dialog}!get\+Values\+From\+Column@{get\+Values\+From\+Column}}
+\index{get\+Values\+From\+Column@{get\+Values\+From\+Column}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{get\+Values\+From\+Column(int shape\+Index, int col\+Index, wx\+Array\+String \&output\+List)}]{\setlength{\rightskip}{0pt plus 5cm}void Wasa\+Dialog\+::get\+Values\+From\+Column (
+\begin{DoxyParamCaption}
+\item[{int}]{shape\+Index, }
+\item[{int}]{col\+Index, }
+\item[{wx\+Array\+String \&}]{output\+List}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_ac286f53625df79fbd1c4f56ff7fb748b}
+Esta funcao recebe a coluna de um shape/raster e carrega todos os seus valores sem redundancias no wx\+Array\+String especificado
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em shape\+Index} & Indice do shape selecionado (de acordo com sua wx\+Choice) \\
+\hline
+{\em col\+Index} & Indice da coluna selecionada (de acordo com sua wx\+Choice) \\
+\hline
+{\em output\+List} & Array\+String onde ser�o carregados as informa��es dos valores \\
+\hline
+\end{DoxyParams}
+\index{Wasa\+Dialog@{Wasa\+Dialog}!load\+Bands\+From\+Raster@{load\+Bands\+From\+Raster}}
+\index{load\+Bands\+From\+Raster@{load\+Bands\+From\+Raster}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{load\+Bands\+From\+Raster(int raster\+Index, wx\+Choice \&band\+Coices)}]{\setlength{\rightskip}{0pt plus 5cm}void Wasa\+Dialog\+::load\+Bands\+From\+Raster (
+\begin{DoxyParamCaption}
+\item[{int}]{raster\+Index, }
+\item[{wx\+Choice \&}]{band\+Coices}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a8e5737ad97204f1c2ea6e54cb0e7ef94}
+Esta fun��o pega a lista de bands do raster e povoa um determinado wx\+Choice com o nome delas.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em raster\+Index} & Indice do raster selecionado \\
+\hline
+{\em band\+Coices} & Choice onde ser�o carregados as informa��es das bands \\
+\hline
+\end{DoxyParams}
+\index{Wasa\+Dialog@{Wasa\+Dialog}!load\+Columns\+From\+Shape@{load\+Columns\+From\+Shape}}
+\index{load\+Columns\+From\+Shape@{load\+Columns\+From\+Shape}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{load\+Columns\+From\+Shape(int shape\+Index, wx\+Choice \&column\+Choice)}]{\setlength{\rightskip}{0pt plus 5cm}void Wasa\+Dialog\+::load\+Columns\+From\+Shape (
+\begin{DoxyParamCaption}
+\item[{int}]{shape\+Index, }
+\item[{wx\+Choice \&}]{column\+Choice}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_af0fd3e0d7243e2dbb6d8a8e60e639954}
+Esta fun��o pega a lista de colunas na tabela de atributos do shape e povoa um determinado wx\+Choice com o nome delas.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em shape\+Index} & Indice do shape selecionado \\
+\hline
+{\em column\+Choice} & Choice onde ser�o carregados as informa��es das colunas \\
+\hline
+\end{DoxyParams}
+\index{Wasa\+Dialog@{Wasa\+Dialog}!perform\+Final\+Intersection@{perform\+Final\+Intersection}}
+\index{perform\+Final\+Intersection@{perform\+Final\+Intersection}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{perform\+Final\+Intersection(wx\+Progress\+Dialog $\ast$progress\+Dialog, int $\ast$current\+Progress, O\+G\+R\+Layer $\ast$tc\+Layer, O\+G\+R\+Layer $\ast$soil\+Vegetation\+Layer, double min\+Area\+Rate)}]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Data\+Source$\ast$ Wasa\+Dialog\+::perform\+Final\+Intersection (
+\begin{DoxyParamCaption}
+\item[{wx\+Progress\+Dialog $\ast$}]{progress\+Dialog, }
+\item[{int $\ast$}]{current\+Progress, }
+\item[{O\+G\+R\+Layer $\ast$}]{tc\+Layer, }
+\item[{O\+G\+R\+Layer $\ast$}]{soil\+Vegetation\+Layer, }
+\item[{double}]{min\+Area\+Rate}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a09bf7921a1adb16259acfba8c0fe1252}
+\index{Wasa\+Dialog@{Wasa\+Dialog}!perform\+Soil\+Vegetation\+Intersection@{perform\+Soil\+Vegetation\+Intersection}}
+\index{perform\+Soil\+Vegetation\+Intersection@{perform\+Soil\+Vegetation\+Intersection}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{perform\+Soil\+Vegetation\+Intersection(wx\+Progress\+Dialog $\ast$progress\+Dialog, int $\ast$current\+Progress)}]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Data\+Source$\ast$ Wasa\+Dialog\+::perform\+Soil\+Vegetation\+Intersection (
+\begin{DoxyParamCaption}
+\item[{wx\+Progress\+Dialog $\ast$}]{progress\+Dialog, }
+\item[{int $\ast$}]{current\+Progress}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a5a9a8ae2c209dfc92c045fc462df82d2}
+\index{Wasa\+Dialog@{Wasa\+Dialog}!save\+In\+Model@{save\+In\+Model}}
+\index{save\+In\+Model@{save\+In\+Model}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{save\+In\+Model() const }]{\setlength{\rightskip}{0pt plus 5cm}void Wasa\+Dialog\+::save\+In\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_wasa_dialog_aa6032e51165a54f527ac77672dd85e8a}
+Salva os dados informados no \doxyref{Wasa\+Dialog}{pag.}{class_wasa_dialog} dentro do Wasa\+Model \index{Wasa\+Dialog@{Wasa\+Dialog}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{set\+Info() const }]{\setlength{\rightskip}{0pt plus 5cm}void Wasa\+Dialog\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_wasa_dialog_a8d660d3991187ab9d03d475539328ad7}
+Pega as informa��es do Wasa\+Model e coloca na interface \index{Wasa\+Dialog@{Wasa\+Dialog}!setstr\+Output\+Dir@{setstr\+Output\+Dir}}
+\index{setstr\+Output\+Dir@{setstr\+Output\+Dir}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{setstr\+Output\+Dir(wx\+String str\+Output\+Dir)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Wasa\+Dialog\+::setstr\+Output\+Dir (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{str\+Output\+Dir}
+\end{DoxyParamCaption}
+)}\label{class_wasa_dialog_a8cc2d930bc66e3d16e8b544417bd8e8c}
+
+
+\subsection{Atributos}
+\index{Wasa\+Dialog@{Wasa\+Dialog}!btn\+Browse\+Output\+File@{btn\+Browse\+Output\+File}}
+\index{btn\+Browse\+Output\+File@{btn\+Browse\+Output\+File}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{btn\+Browse\+Output\+File}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Wasa\+Dialog\+::btn\+Browse\+Output\+File\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a5b5e6cd51dd5f24e8be78994f96673ae}
+
+
+Definição na linha 112 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!btn\+Clear\+Basin@{btn\+Clear\+Basin}}
+\index{btn\+Clear\+Basin@{btn\+Clear\+Basin}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{btn\+Clear\+Basin}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Wasa\+Dialog\+::btn\+Clear\+Basin\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_ab8565120942bb2381bcc01edd22518d2}
+
+
+Definição na linha 76 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!btn\+Clear\+Elevation@{btn\+Clear\+Elevation}}
+\index{btn\+Clear\+Elevation@{btn\+Clear\+Elevation}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{btn\+Clear\+Elevation}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Wasa\+Dialog\+::btn\+Clear\+Elevation\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_ac5a7a2f73748c316346caf830dad52da}
+
+
+Definição na linha 102 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!btn\+Clear\+LU@{btn\+Clear\+LU}}
+\index{btn\+Clear\+LU@{btn\+Clear\+LU}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{btn\+Clear\+LU}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Wasa\+Dialog\+::btn\+Clear\+LU\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a34bc908f64357932968d2e9c6eae7a77}
+
+
+Definição na linha 83 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!btn\+Clear\+Soil@{btn\+Clear\+Soil}}
+\index{btn\+Clear\+Soil@{btn\+Clear\+Soil}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{btn\+Clear\+Soil}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Wasa\+Dialog\+::btn\+Clear\+Soil\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a1ca410a745797fb85fa80b2c2019cb47}
+
+
+Definição na linha 90 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!btn\+Clear\+TC@{btn\+Clear\+TC}}
+\index{btn\+Clear\+TC@{btn\+Clear\+TC}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{btn\+Clear\+TC}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Wasa\+Dialog\+::btn\+Clear\+TC\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a67febfa5d69f2a57363dda42eea929ae}
+
+
+Definição na linha 109 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!btn\+Clear\+Vegetation@{btn\+Clear\+Vegetation}}
+\index{btn\+Clear\+Vegetation@{btn\+Clear\+Vegetation}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{btn\+Clear\+Vegetation}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Wasa\+Dialog\+::btn\+Clear\+Vegetation\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a66571baa0b9a5de38bce8304779b79b0}
+
+
+Definição na linha 97 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!btn\+Generate@{btn\+Generate}}
+\index{btn\+Generate@{btn\+Generate}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{btn\+Generate}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Wasa\+Dialog\+::btn\+Generate\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_ac2ed0283f090853f98da0290aa3e2d8f}
+
+
+Definição na linha 122 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!btn\+Ignored\+Basin@{btn\+Ignored\+Basin}}
+\index{btn\+Ignored\+Basin@{btn\+Ignored\+Basin}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{btn\+Ignored\+Basin}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Wasa\+Dialog\+::btn\+Ignored\+Basin\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a9c0113bca6ae26adc52db9d549e7fe45}
+
+
+Definição na linha 75 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!btn\+Ignored\+LU@{btn\+Ignored\+LU}}
+\index{btn\+Ignored\+LU@{btn\+Ignored\+LU}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{btn\+Ignored\+LU}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Wasa\+Dialog\+::btn\+Ignored\+LU\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_ab9454ccea1f7d3494497bab73d162ebf}
+
+
+Definição na linha 82 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!btn\+Ignored\+Soil@{btn\+Ignored\+Soil}}
+\index{btn\+Ignored\+Soil@{btn\+Ignored\+Soil}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{btn\+Ignored\+Soil}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Wasa\+Dialog\+::btn\+Ignored\+Soil\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a43dcc6186f1df883fbffadad76b4347f}
+
+
+Definição na linha 89 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!btn\+Ignored\+TC@{btn\+Ignored\+TC}}
+\index{btn\+Ignored\+TC@{btn\+Ignored\+TC}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{btn\+Ignored\+TC}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Wasa\+Dialog\+::btn\+Ignored\+TC\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a7ad0a06ebb1dcc9cb81c7f3916b98213}
+
+
+Definição na linha 108 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!btn\+Ignored\+Vegetation@{btn\+Ignored\+Vegetation}}
+\index{btn\+Ignored\+Vegetation@{btn\+Ignored\+Vegetation}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{btn\+Ignored\+Vegetation}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Wasa\+Dialog\+::btn\+Ignored\+Vegetation\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_aad619f08c1816c9c4b5c250d0047439a}
+
+
+Definição na linha 96 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!choice\+Col\+Basin@{choice\+Col\+Basin}}
+\index{choice\+Col\+Basin@{choice\+Col\+Basin}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{choice\+Col\+Basin}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Wasa\+Dialog\+::choice\+Col\+Basin\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a608e0d1c49275a6af25d9e228aa62c44}
+
+
+Definição na linha 73 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!choice\+Col\+Elevation@{choice\+Col\+Elevation}}
+\index{choice\+Col\+Elevation@{choice\+Col\+Elevation}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{choice\+Col\+Elevation}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Wasa\+Dialog\+::choice\+Col\+Elevation\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a8ec8b31be472dd4bae0d6c50f3216d9e}
+
+
+Definição na linha 101 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!choice\+Col\+LU@{choice\+Col\+LU}}
+\index{choice\+Col\+LU@{choice\+Col\+LU}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{choice\+Col\+LU}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Wasa\+Dialog\+::choice\+Col\+LU\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a42311a0fe6f38107fbb6e7ab86879ced}
+
+
+Definição na linha 80 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!choice\+Col\+Soil@{choice\+Col\+Soil}}
+\index{choice\+Col\+Soil@{choice\+Col\+Soil}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{choice\+Col\+Soil}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Wasa\+Dialog\+::choice\+Col\+Soil\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_ae4c060ae014e03de6e5a5a9c3cbc7cb0}
+
+
+Definição na linha 87 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!choice\+Col\+TC@{choice\+Col\+TC}}
+\index{choice\+Col\+TC@{choice\+Col\+TC}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{choice\+Col\+TC}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Wasa\+Dialog\+::choice\+Col\+TC\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_afa7a62bb68eeefcb78039bd68161ee8d}
+
+
+Definição na linha 106 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!choice\+Col\+Vegetation@{choice\+Col\+Vegetation}}
+\index{choice\+Col\+Vegetation@{choice\+Col\+Vegetation}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{choice\+Col\+Vegetation}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Wasa\+Dialog\+::choice\+Col\+Vegetation\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a778ab04246b13033a6d381a7db4fb1ff}
+
+
+Definição na linha 94 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!choice\+Ignored\+Basin@{choice\+Ignored\+Basin}}
+\index{choice\+Ignored\+Basin@{choice\+Ignored\+Basin}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{choice\+Ignored\+Basin}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Wasa\+Dialog\+::choice\+Ignored\+Basin\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_adcf3a4879c37058462f73085a580e0bb}
+
+
+Definição na linha 74 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!choice\+Ignored\+LU@{choice\+Ignored\+LU}}
+\index{choice\+Ignored\+LU@{choice\+Ignored\+LU}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{choice\+Ignored\+LU}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Wasa\+Dialog\+::choice\+Ignored\+LU\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a4d49f7bbdbfc8e74ed035cf3a213dee9}
+
+
+Definição na linha 81 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!choice\+Ignored\+Soil@{choice\+Ignored\+Soil}}
+\index{choice\+Ignored\+Soil@{choice\+Ignored\+Soil}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{choice\+Ignored\+Soil}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Wasa\+Dialog\+::choice\+Ignored\+Soil\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_aa8abd14b4738c6b7cf75d52966fe4c72}
+
+
+Definição na linha 88 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!choice\+Ignored\+TC@{choice\+Ignored\+TC}}
+\index{choice\+Ignored\+TC@{choice\+Ignored\+TC}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{choice\+Ignored\+TC}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Wasa\+Dialog\+::choice\+Ignored\+TC\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a89fc6a1aabed9981c46fc78e649613b0}
+
+
+Definição na linha 107 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!choice\+Ignored\+Vegetation@{choice\+Ignored\+Vegetation}}
+\index{choice\+Ignored\+Vegetation@{choice\+Ignored\+Vegetation}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{choice\+Ignored\+Vegetation}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Wasa\+Dialog\+::choice\+Ignored\+Vegetation\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_acefb6ab9bb2f69f821e70a8f7bafe877}
+
+
+Definição na linha 95 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!choice\+Raster\+Elevation@{choice\+Raster\+Elevation}}
+\index{choice\+Raster\+Elevation@{choice\+Raster\+Elevation}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{choice\+Raster\+Elevation}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Wasa\+Dialog\+::choice\+Raster\+Elevation\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a9c318146b90600cbd0bb573016cd2c6d}
+
+
+Definição na linha 100 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!choice\+Shape\+Basin@{choice\+Shape\+Basin}}
+\index{choice\+Shape\+Basin@{choice\+Shape\+Basin}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{choice\+Shape\+Basin}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Wasa\+Dialog\+::choice\+Shape\+Basin\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a2d19fc359f05845c54b79f6019500e90}
+Metodo auxiliar para checar uma express�o e adicionar a mensagem de erro � dialog de erro.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em expression} & Express�o a ser testada a veracidade \\
+\hline
+{\em error\+Dialog} & Dialog que contera os erros \\
+\hline
+{\em error\+Msg} & Mensagem de erro a ser adicionada caso \textquotesingle{}expression\textquotesingle{} seja falsa \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 72 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!choice\+Shape\+LU@{choice\+Shape\+LU}}
+\index{choice\+Shape\+LU@{choice\+Shape\+LU}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{choice\+Shape\+LU}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Wasa\+Dialog\+::choice\+Shape\+LU\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a6b01564f44e25384aa4c16850762d746}
+
+
+Definição na linha 79 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!choice\+Shape\+Soil@{choice\+Shape\+Soil}}
+\index{choice\+Shape\+Soil@{choice\+Shape\+Soil}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{choice\+Shape\+Soil}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Wasa\+Dialog\+::choice\+Shape\+Soil\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a69ac9aa284e16185f9574af2f15a048f}
+
+
+Definição na linha 86 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!choice\+Shape\+TC@{choice\+Shape\+TC}}
+\index{choice\+Shape\+TC@{choice\+Shape\+TC}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{choice\+Shape\+TC}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Wasa\+Dialog\+::choice\+Shape\+TC\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a4d7d9adaa94cf3bcf6484e13fecf25ce}
+
+
+Definição na linha 105 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!choice\+Shape\+Vegetation@{choice\+Shape\+Vegetation}}
+\index{choice\+Shape\+Vegetation@{choice\+Shape\+Vegetation}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{choice\+Shape\+Vegetation}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Wasa\+Dialog\+::choice\+Shape\+Vegetation\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a81b072c7931b8fea23b26d0cba7493a6}
+
+
+Definição na linha 93 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!rasters@{rasters}}
+\index{rasters@{rasters}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{rasters}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Raster\+Layer}$\ast$$>$ Wasa\+Dialog\+::rasters\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a729270c04fb29f451878cf2f2c9aa9eb}
+
+
+Definição na linha 125 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!shapes@{shapes}}
+\index{shapes@{shapes}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{shapes}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Vector\+LayerM}$\ast$$>$ Wasa\+Dialog\+::shapes\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a843fe48a077cca116203fbb3303cc4bf}
+
+
+Definição na linha 124 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!spin\+Max\+Classification\+Limit@{spin\+Max\+Classification\+Limit}}
+\index{spin\+Max\+Classification\+Limit@{spin\+Max\+Classification\+Limit}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{spin\+Max\+Classification\+Limit}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl$\ast$ Wasa\+Dialog\+::spin\+Max\+Classification\+Limit\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a13614e5d11578abf405f844b252deb6e}
+
+
+Definição na linha 120 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!spin\+Min\+Area\+Rate@{spin\+Min\+Area\+Rate}}
+\index{spin\+Min\+Area\+Rate@{spin\+Min\+Area\+Rate}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{spin\+Min\+Area\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl$\ast$ Wasa\+Dialog\+::spin\+Min\+Area\+Rate\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a9bd75b5f8619bd6db8f5632b26a602ec}
+
+
+Definição na linha 116 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!spin\+Min\+Area\+Rate2@{spin\+Min\+Area\+Rate2}}
+\index{spin\+Min\+Area\+Rate2@{spin\+Min\+Area\+Rate2}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{spin\+Min\+Area\+Rate2}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl$\ast$ Wasa\+Dialog\+::spin\+Min\+Area\+Rate2\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_ad67479896e780d220aa98dbc99f8551a}
+
+
+Definição na linha 117 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!spin\+Min\+Classification\+Limit@{spin\+Min\+Classification\+Limit}}
+\index{spin\+Min\+Classification\+Limit@{spin\+Min\+Classification\+Limit}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{spin\+Min\+Classification\+Limit}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl$\ast$ Wasa\+Dialog\+::spin\+Min\+Classification\+Limit\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_a3853bfcc734c1c33e93876b34c21fbbe}
+
+
+Definição na linha 119 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!str\+Output\+Dir@{str\+Output\+Dir}}
+\index{str\+Output\+Dir@{str\+Output\+Dir}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{str\+Output\+Dir}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Wasa\+Dialog\+::str\+Output\+Dir\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_ad9328b09df11932e3d9ef54d174dd2cc}
+
+
+Definição na linha 114 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!str\+Output\+File@{str\+Output\+File}}
+\index{str\+Output\+File@{str\+Output\+File}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{str\+Output\+File}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Wasa\+Dialog\+::str\+Output\+File\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_aae74cd73658b00527384f95bcc04dc71}
+
+
+Definição na linha 113 do arquivo Wasa\+Dialog.\+h.
+
+\index{Wasa\+Dialog@{Wasa\+Dialog}!txt\+Output\+File@{txt\+Output\+File}}
+\index{txt\+Output\+File@{txt\+Output\+File}!Wasa\+Dialog@{Wasa\+Dialog}}
+\subsubsection[{txt\+Output\+File}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl$\ast$ Wasa\+Dialog\+::txt\+Output\+File\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wasa_dialog_aa98a7a87314bf4a09277610c47336a58}
+
+
+Definição na linha 111 do arquivo Wasa\+Dialog.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Wasa\+Dialog.\+h}\end{DoxyCompactItemize}

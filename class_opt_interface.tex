@@ -1,0 +1,444 @@
+\section{Referência da Classe Opt\+Interface}
+\label{class_opt_interface}\index{Opt\+Interface@{Opt\+Interface}}
+
+
+{\ttfamily \#include $<$Opt\+Interface.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf on\+Choice\+Algo} (wx\+Choicebook\+Event \&event)
+\item 
+void {\bf on\+Choice\+Module} (wx\+Choicebook\+Event \&event)
+\item 
+void {\bf show\+Res} (bool change=false)
+\item 
+void {\bf on\+Open\+SA} (wx\+Command\+Event \&event)
+\item 
+void {\bf show\+SA} ()
+\item 
+void {\bf on\+Set\+Start\+Interval} (wx\+Date\+Event \&event)
+\item 
+void {\bf on\+Set\+Start\+Hour} (wx\+Spin\+Event \&event)
+\item 
+void {\bf on\+Set\+End\+Interval} (wx\+Date\+Event \&event)
+\item 
+void {\bf on\+Set\+End\+Hour} (wx\+Spin\+Event \&event)
+\item 
+void {\bf set\+Info} ()
+\item 
+{\bf Opt\+Interface} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent})
+\item 
+{\bf $\sim$\+Opt\+Interface} ()
+\item 
+void {\bf on\+Changing\+Time\+Interval} ({\bf Date\+::\+Time\+Interval} time\+Interval)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Check\+Esq\+Enable} (wx\+Command\+Event \&event)
+\item 
+bool {\bf is\+Esq\+Checked} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ {\bf opt\+Module\+Type}, {\bf Component\+Interface} $\ast$ $>$ {\bf module\+Inter}
+\item 
+map$<$ {\bf opt\+Algo\+Type}, {\bf Component\+Interface} $\ast$ $>$ {\bf algo\+Inter}
+\item 
+{\bf Component\+Interface} $\ast$ {\bf obj\+Inter}
+\item 
+wx\+Check\+Box $\ast$ {\bf m\+\_\+chk\+V\+Scroll}
+\item 
+wx\+Check\+Box $\ast$ {\bf cb\+Esq\+Enable}
+\item 
+wx\+Radio\+Box $\ast$ {\bf rb\+Teste}
+\item 
+wx\+Button $\ast$ {\bf button1}
+\item 
+wx\+Choicebook $\ast$ {\bf cb\+Algo}
+\item 
+wx\+Choicebook $\ast$ {\bf cb\+Module}
+\item 
+wx\+Check\+List\+Box $\ast$ {\bf ch\+Fun\+Obj}
+\item 
+wx\+Date\+Picker\+Ctrl $\ast$ {\bf dp\+Esq\+Start\+Interval}
+\item 
+wx\+Date\+Picker\+Ctrl $\ast$ {\bf dp\+Esq\+End\+Interval}
+\item 
+wx\+Date\+Picker\+Ctrl $\ast$ {\bf dp\+Cal\+Start\+Interval}
+\item 
+wx\+Date\+Picker\+Ctrl $\ast$ {\bf dp\+Cal\+End\+Interval}
+\item 
+wx\+Date\+Picker\+Ctrl $\ast$ {\bf dp\+Val\+Start\+Interval}
+\item 
+wx\+Date\+Picker\+Ctrl $\ast$ {\bf dp\+Val\+End\+Interval}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf sc\+Start\+Hour\+Esq}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf sc\+End\+Hour\+Esq}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf sc\+Start\+Hour\+Cal}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf sc\+End\+Hour\+Cal}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf sc\+Start\+Hour\+Val}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf sc\+End\+Hour\+Val}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 46 do arquivo Opt\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Opt\+Interface@{Opt\+Interface}!Opt\+Interface@{Opt\+Interface}}
+\index{Opt\+Interface@{Opt\+Interface}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{Opt\+Interface(wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Opt\+Interface\+::\+Opt\+Interface (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_opt_interface_a0f8a0e6dd71b08ac41eed114598718a2}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & Janela onde ser� inserida \\
+\hline
+{\em parent} & Componente onde ser� inserido \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Interface@{Opt\+Interface}!````~Opt\+Interface@{$\sim$\+Opt\+Interface}}
+\index{````~Opt\+Interface@{$\sim$\+Opt\+Interface}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{$\sim$\+Opt\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}Opt\+Interface\+::$\sim$\+Opt\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_opt_interface_a53179019648387ae6e97620a65a7fda4}
+Destrutor 
+
+\subsection{Métodos}
+\index{Opt\+Interface@{Opt\+Interface}!is\+Esq\+Checked@{is\+Esq\+Checked}}
+\index{is\+Esq\+Checked@{is\+Esq\+Checked}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{is\+Esq\+Checked()}]{\setlength{\rightskip}{0pt plus 5cm}bool Opt\+Interface\+::is\+Esq\+Checked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_opt_interface_ae6d536c5fdecaaf3fd93d26c56ff9d3d}
+Evento chamado para identificar o estado do cb\+Esq\+Enable se o usu�rio est� usando per�odo de aquecimento \index{Opt\+Interface@{Opt\+Interface}!on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}}
+\index{on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{on\+Changing\+Time\+Interval(\+Date\+::\+Time\+Interval time\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Interface\+::on\+Changing\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval}
+\end{DoxyParamCaption}
+)}\label{class_opt_interface_a4063063d58a17d2179f9b3efde11d220}
+Evento chamado quando o sistema muda de intervalo de tempo O modulo adapta os modelos de acordo com o intervalo de tempo definido \index{Opt\+Interface@{Opt\+Interface}!on\+Check\+Esq\+Enable@{on\+Check\+Esq\+Enable}}
+\index{on\+Check\+Esq\+Enable@{on\+Check\+Esq\+Enable}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{on\+Check\+Esq\+Enable(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Interface\+::on\+Check\+Esq\+Enable (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_opt_interface_a46420010ec8fe4a61a57c7fbf586d137}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Interface@{Opt\+Interface}!on\+Choice\+Algo@{on\+Choice\+Algo}}
+\index{on\+Choice\+Algo@{on\+Choice\+Algo}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{on\+Choice\+Algo(wx\+Choicebook\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Interface\+::on\+Choice\+Algo (
+\begin{DoxyParamCaption}
+\item[{wx\+Choicebook\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_opt_interface_a7087fc5cc12e8ca89adcd6ba5c5fee14}
+Evento de mudan�a do algoritimo 
+\begin{DoxyParams}{Parâmetros}
+{\em Event} & Evento recebido \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Interface@{Opt\+Interface}!on\+Choice\+Module@{on\+Choice\+Module}}
+\index{on\+Choice\+Module@{on\+Choice\+Module}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{on\+Choice\+Module(wx\+Choicebook\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Interface\+::on\+Choice\+Module (
+\begin{DoxyParamCaption}
+\item[{wx\+Choicebook\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_opt_interface_aa589d01996331c4e930a8ddd3c2aae00}
+Evento de mudan�a de modulo 
+\begin{DoxyParams}{Parâmetros}
+{\em Event} & Evento recebido \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Interface@{Opt\+Interface}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Interface\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_opt_interface_ab742bf32a2b56a18883c803db85a0ec9}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 186 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!on\+Open\+SA@{on\+Open\+SA}}
+\index{on\+Open\+SA@{on\+Open\+SA}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{on\+Open\+S\+A(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Interface\+::on\+Open\+SA (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_opt_interface_a47f49b9dc7acf33472759e767a6b3216}
+Evento de abrir analise de sensibilidade \index{Opt\+Interface@{Opt\+Interface}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Interface\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_opt_interface_aed8374e9f6397af26781b7268a5609e6}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 181 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!on\+Set\+End\+Hour@{on\+Set\+End\+Hour}}
+\index{on\+Set\+End\+Hour@{on\+Set\+End\+Hour}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{on\+Set\+End\+Hour(wx\+Spin\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Interface\+::on\+Set\+End\+Hour (
+\begin{DoxyParamCaption}
+\item[{wx\+Spin\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_opt_interface_ab2cddf694e829c98335580310329bb6d}
+Evento de mudan�a do fim da hora do intervalo de simula��o -\/ spin\+Ctrl \index{Opt\+Interface@{Opt\+Interface}!on\+Set\+End\+Interval@{on\+Set\+End\+Interval}}
+\index{on\+Set\+End\+Interval@{on\+Set\+End\+Interval}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{on\+Set\+End\+Interval(wx\+Date\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Interface\+::on\+Set\+End\+Interval (
+\begin{DoxyParamCaption}
+\item[{wx\+Date\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_opt_interface_a55223b9c9f273d40e974498f85d1711c}
+Evento de mudan�a do fim do intervalo de simula��o \index{Opt\+Interface@{Opt\+Interface}!on\+Set\+Start\+Hour@{on\+Set\+Start\+Hour}}
+\index{on\+Set\+Start\+Hour@{on\+Set\+Start\+Hour}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{on\+Set\+Start\+Hour(wx\+Spin\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Interface\+::on\+Set\+Start\+Hour (
+\begin{DoxyParamCaption}
+\item[{wx\+Spin\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_opt_interface_ad1ac560fcbc4d9792c9c3e106163753b}
+Evento de mudan�a do inicio da hora do intervalo de simula��o -\/ spin\+Ctrl \index{Opt\+Interface@{Opt\+Interface}!on\+Set\+Start\+Interval@{on\+Set\+Start\+Interval}}
+\index{on\+Set\+Start\+Interval@{on\+Set\+Start\+Interval}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{on\+Set\+Start\+Interval(wx\+Date\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Interface\+::on\+Set\+Start\+Interval (
+\begin{DoxyParamCaption}
+\item[{wx\+Date\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_opt_interface_a8ef83d9b76384a4259a3efbfae54efa4}
+Evento de mudan�a do inicio do intervalo de de simula��o \index{Opt\+Interface@{Opt\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_interface_aa9d7a3fc06032ff314864b63028e6028}
+Inserir informa��es 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_aced556e5caf584b7335135d337895154}.
+
+\index{Opt\+Interface@{Opt\+Interface}!show\+Res@{show\+Res}}
+\index{show\+Res@{show\+Res}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{show\+Res(bool change=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Interface\+::show\+Res (
+\begin{DoxyParamCaption}
+\item[{bool}]{change = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_opt_interface_aef779e6c298f84ba4f11f76a96f63a05}
+Mostrar os resultados \index{Opt\+Interface@{Opt\+Interface}!show\+SA@{show\+SA}}
+\index{show\+SA@{show\+SA}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{show\+S\+A()}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Interface\+::show\+SA (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_opt_interface_a9ce5ce8e34f052c2932fff3a9220ac9d}
+Mostrar analise de sensibilidade 
+
+\subsection{Atributos}
+\index{Opt\+Interface@{Opt\+Interface}!algo\+Inter@{algo\+Inter}}
+\index{algo\+Inter@{algo\+Inter}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{algo\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf opt\+Algo\+Type},{\bf Component\+Interface}$\ast$$>$ Opt\+Interface\+::algo\+Inter}\label{class_opt_interface_a0fe2e744f30b470313af747bd60720d5}
+Aponta para as interfaces dos algoritimos 
+
+Definição na linha 79 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!button1@{button1}}
+\index{button1@{button1}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{button1}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Opt\+Interface\+::button1}\label{class_opt_interface_a52dcf6bb15cc6dd059714428c4d3c512}
+
+
+Definição na linha 102 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!cb\+Algo@{cb\+Algo}}
+\index{cb\+Algo@{cb\+Algo}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{cb\+Algo}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choicebook$\ast$ Opt\+Interface\+::cb\+Algo}\label{class_opt_interface_adda8c369d80c71cbcbd9952a475b547f}
+Choicebook dos algorimos 
+
+Definição na linha 106 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!cb\+Esq\+Enable@{cb\+Esq\+Enable}}
+\index{cb\+Esq\+Enable@{cb\+Esq\+Enable}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{cb\+Esq\+Enable}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ Opt\+Interface\+::cb\+Esq\+Enable}\label{class_opt_interface_a59beb655da57d5788d1a269da82cc568}
+Check para selecionar o uso ou n�o do per�odo de esquentamento 
+
+Definição na linha 93 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!cb\+Module@{cb\+Module}}
+\index{cb\+Module@{cb\+Module}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{cb\+Module}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choicebook$\ast$ Opt\+Interface\+::cb\+Module}\label{class_opt_interface_a303fc07c17f03142a3d581873b7a729f}
+Choicebook dos modulos 
+
+Definição na linha 110 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!ch\+Fun\+Obj@{ch\+Fun\+Obj}}
+\index{ch\+Fun\+Obj@{ch\+Fun\+Obj}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{ch\+Fun\+Obj}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+List\+Box$\ast$ Opt\+Interface\+::ch\+Fun\+Obj}\label{class_opt_interface_ae9318906d9c0230d497c6a87719b92c1}
+Sele��o das fun��es objetivo 
+
+Definição na linha 114 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!dp\+Cal\+End\+Interval@{dp\+Cal\+End\+Interval}}
+\index{dp\+Cal\+End\+Interval@{dp\+Cal\+End\+Interval}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{dp\+Cal\+End\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Picker\+Ctrl $\ast$ Opt\+Interface\+::dp\+Cal\+End\+Interval}\label{class_opt_interface_a11872b9319d45aca26e50987be669676}
+
+
+Definição na linha 118 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!dp\+Cal\+Start\+Interval@{dp\+Cal\+Start\+Interval}}
+\index{dp\+Cal\+Start\+Interval@{dp\+Cal\+Start\+Interval}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{dp\+Cal\+Start\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Picker\+Ctrl $\ast$ Opt\+Interface\+::dp\+Cal\+Start\+Interval}\label{class_opt_interface_a651ff094e2c79b58b6e56b4f68e18579}
+
+
+Definição na linha 118 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!dp\+Esq\+End\+Interval@{dp\+Esq\+End\+Interval}}
+\index{dp\+Esq\+End\+Interval@{dp\+Esq\+End\+Interval}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{dp\+Esq\+End\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Picker\+Ctrl $\ast$ Opt\+Interface\+::dp\+Esq\+End\+Interval}\label{class_opt_interface_a9a4bc2e1816609cc395adae344a109de}
+
+
+Definição na linha 118 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!dp\+Esq\+Start\+Interval@{dp\+Esq\+Start\+Interval}}
+\index{dp\+Esq\+Start\+Interval@{dp\+Esq\+Start\+Interval}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{dp\+Esq\+Start\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Picker\+Ctrl$\ast$ Opt\+Interface\+::dp\+Esq\+Start\+Interval}\label{class_opt_interface_a0b81e4098e2ea84a340a94224832284a}
+Controladores de data 
+
+Definição na linha 118 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!dp\+Val\+End\+Interval@{dp\+Val\+End\+Interval}}
+\index{dp\+Val\+End\+Interval@{dp\+Val\+End\+Interval}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{dp\+Val\+End\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Picker\+Ctrl $\ast$ Opt\+Interface\+::dp\+Val\+End\+Interval}\label{class_opt_interface_a79a150deb153a14f869486d3f4136d30}
+
+
+Definição na linha 118 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!dp\+Val\+Start\+Interval@{dp\+Val\+Start\+Interval}}
+\index{dp\+Val\+Start\+Interval@{dp\+Val\+Start\+Interval}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{dp\+Val\+Start\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Picker\+Ctrl $\ast$ Opt\+Interface\+::dp\+Val\+Start\+Interval}\label{class_opt_interface_a89ef65017e8e5cf329a532b5e495cf91}
+
+
+Definição na linha 118 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!m\+\_\+chk\+V\+Scroll@{m\+\_\+chk\+V\+Scroll}}
+\index{m\+\_\+chk\+V\+Scroll@{m\+\_\+chk\+V\+Scroll}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{m\+\_\+chk\+V\+Scroll}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ Opt\+Interface\+::m\+\_\+chk\+V\+Scroll}\label{class_opt_interface_ada7c4098f1327299d2ba808cbf42e50d}
+
+
+Definição na linha 88 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!module\+Inter@{module\+Inter}}
+\index{module\+Inter@{module\+Inter}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{module\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf opt\+Module\+Type},{\bf Component\+Interface}$\ast$$>$ Opt\+Interface\+::module\+Inter}\label{class_opt_interface_a0ecb58596b7a4be48bdabe4c0a240f4d}
+Aponta para as interfaces dos modulos 
+
+Definição na linha 75 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!obj\+Inter@{obj\+Inter}}
+\index{obj\+Inter@{obj\+Inter}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{obj\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component\+Interface}$\ast$ Opt\+Interface\+::obj\+Inter}\label{class_opt_interface_ad97de9ec94dfecf4f6d2ed294cc96cae}
+interface das fun��es objetivo 
+
+Definição na linha 83 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!rb\+Teste@{rb\+Teste}}
+\index{rb\+Teste@{rb\+Teste}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{rb\+Teste}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box$\ast$ Opt\+Interface\+::rb\+Teste}\label{class_opt_interface_a5cbe570ef68a6859995d13e3b1755576}
+
+
+Definição na linha 98 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!sc\+End\+Hour\+Cal@{sc\+End\+Hour\+Cal}}
+\index{sc\+End\+Hour\+Cal@{sc\+End\+Hour\+Cal}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{sc\+End\+Hour\+Cal}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl $\ast$ Opt\+Interface\+::sc\+End\+Hour\+Cal\hspace{0.3cm}{\ttfamily [protected]}}\label{class_opt_interface_a1d75cad666d5b123ae04cd7bd67f8dc4}
+
+
+Definição na linha 70 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!sc\+End\+Hour\+Esq@{sc\+End\+Hour\+Esq}}
+\index{sc\+End\+Hour\+Esq@{sc\+End\+Hour\+Esq}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{sc\+End\+Hour\+Esq}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl $\ast$ Opt\+Interface\+::sc\+End\+Hour\+Esq\hspace{0.3cm}{\ttfamily [protected]}}\label{class_opt_interface_aeb915be479d68bc807d7326c9444d7d2}
+
+
+Definição na linha 70 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!sc\+End\+Hour\+Val@{sc\+End\+Hour\+Val}}
+\index{sc\+End\+Hour\+Val@{sc\+End\+Hour\+Val}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{sc\+End\+Hour\+Val}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl $\ast$ Opt\+Interface\+::sc\+End\+Hour\+Val\hspace{0.3cm}{\ttfamily [protected]}}\label{class_opt_interface_a5a05c34684a10e4b1e2a32f627ba2bf0}
+
+
+Definição na linha 70 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!sc\+Start\+Hour\+Cal@{sc\+Start\+Hour\+Cal}}
+\index{sc\+Start\+Hour\+Cal@{sc\+Start\+Hour\+Cal}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{sc\+Start\+Hour\+Cal}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl $\ast$ Opt\+Interface\+::sc\+Start\+Hour\+Cal\hspace{0.3cm}{\ttfamily [protected]}}\label{class_opt_interface_ae803b66e67e767555f3f882003cac7e9}
+
+
+Definição na linha 70 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!sc\+Start\+Hour\+Esq@{sc\+Start\+Hour\+Esq}}
+\index{sc\+Start\+Hour\+Esq@{sc\+Start\+Hour\+Esq}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{sc\+Start\+Hour\+Esq}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl$\ast$ Opt\+Interface\+::sc\+Start\+Hour\+Esq\hspace{0.3cm}{\ttfamily [protected]}}\label{class_opt_interface_a7f4aaac1097ad98e6baffb6c066ab04f}
+Spin\+Ctrl para controlar a hora 
+\begin{DoxyParams}{Parâmetros}
+{\em sc\+Start\+Hour} & Hora de inicio \\
+\hline
+{\em sc\+End\+Hour} & Hora de fim \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 70 do arquivo Opt\+Interface.\+h.
+
+\index{Opt\+Interface@{Opt\+Interface}!sc\+Start\+Hour\+Val@{sc\+Start\+Hour\+Val}}
+\index{sc\+Start\+Hour\+Val@{sc\+Start\+Hour\+Val}!Opt\+Interface@{Opt\+Interface}}
+\subsubsection[{sc\+Start\+Hour\+Val}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl $\ast$ Opt\+Interface\+::sc\+Start\+Hour\+Val\hspace{0.3cm}{\ttfamily [protected]}}\label{class_opt_interface_a0177f4dafefdc0f86bbeff01abe9ff49}
+
+
+Definição na linha 70 do arquivo Opt\+Interface.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Interface.\+h}\end{DoxyCompactItemize}

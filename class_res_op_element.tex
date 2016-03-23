@@ -1,0 +1,439 @@
+\section{Refer√™ncia da Classe Res\+Op\+Element}
+\label{class_res_op_element}\index{Res\+Op\+Element@{Res\+Op\+Element}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Element.\+h$>$}
+
+
+
+Superclasse de {\bf Res\+Op\+Basin}, {\bf Res\+Op\+Demand}, {\bf Res\+Op\+Junction}, {\bf Res\+Op\+Link} e {\bf Res\+Op\+Reservoir}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix} \& {\bf alloc} ()
+\item 
+void {\bf alloc} ({\bf Matrix} \&a\+\_\+alloc)
+\item 
+std\+::string {\bf get\+Code} ()
+\item 
+void {\bf set\+Code} (std\+::string \&code)
+\item 
+std\+::map$<$ {\bf Directory\+ID}, std\+::string $>$ $\ast$ {\bf get\+Elements\+Path} ()
+\item 
+void {\bf set\+Element\+Path} ({\bf Directory\+ID}, wx\+String path)
+\item 
+{\bf Res\+Op\+Element} ({\bf Date} initial\+Date, {\bf Date} final\+Date, {\bf Node} $\ast$n, {\bf Link} $\ast$l)
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Element} ()
+\item 
+unsigned int {\bf get\+Id} ()
+\begin{DoxyCompactList}\small\item\em Retorna o identificador do elemento associado. \end{DoxyCompactList}\item 
+wx\+String {\bf get\+Name} ()
+\begin{DoxyCompactList}\small\item\em Retorna o nome do Elemento. \end{DoxyCompactList}\item 
+{\bf Res\+Op\+Element\+Type} {\bf element\+Type} () const 
+\begin{DoxyCompactList}\small\item\em Retorna o tipo de \doxyref{Res\+Op\+Element}{pag.}{class_res_op_element} diferenciado. \end{DoxyCompactList}\item 
+{\bf Res\+Op\+Model\+Type} {\bf get\+Exec\+Type} ()
+\begin{DoxyCompactList}\small\item\em Retorna o tipo de modelo de execuÁ„o. \end{DoxyCompactList}\item 
+void {\bf set\+Exec\+Type} ({\bf Res\+Op\+Model\+Type} n\+Type)
+\begin{DoxyCompactList}\small\item\em Define o modelo de execuÁ„o. \end{DoxyCompactList}\item 
+{\bf Res\+Op\+Element} $\ast$ {\bf copy\+Data} ()
+\begin{DoxyCompactList}\small\item\em Copia o seu conteudo. \end{DoxyCompactList}\item 
+void {\bf create\+Results} ({\bf Interval} interval)
+\begin{DoxyCompactList}\small\item\em Cria os resultados. \end{DoxyCompactList}\item 
+virtual void {\bf update\+Allocation\+Matrix} ({\bf Node} $\ast${\bf node})=0
+\begin{DoxyCompactList}\small\item\em Define o cabeÁalho da alloc;. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{M√©todos P√∫blicos Est√°ticos}
+\begin{DoxyCompactItemize}
+\item 
+static const wx\+String {\bf element\+Type\+To\+Str} ({\bf Res\+Op\+Element\+Type} {\bf type})
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+String {\bf alloc\+File\+Name}
+\item 
+{\bf Res\+Op\+Element\+Type} {\bf type}
+\begin{DoxyCompactList}\small\item\em Tipo de elemento. \end{DoxyCompactList}\item 
+{\bf Res\+Op\+Model\+Type} {\bf exec\+Type}
+\begin{DoxyCompactList}\small\item\em Tipo de execuÁ„o. \end{DoxyCompactList}\item 
+bool {\bf re\+Run}
+\begin{DoxyCompactList}\small\item\em Deve ser executado. \end{DoxyCompactList}\item 
+{\bf Node} $\ast$ {\bf node}
+\begin{DoxyCompactList}\small\item\em Ponteiro para o nÛ \end{DoxyCompactList}\item 
+{\bf Link} $\ast$ {\bf link}
+\begin{DoxyCompactList}\small\item\em Ponteiro para o trecho. \end{DoxyCompactList}\item 
+{\bf Serie} $\ast$ {\bf nat\+Inflow}
+\begin{DoxyCompactList}\small\item\em Vaz„o natual da bacia incremental. \end{DoxyCompactList}\item 
+wx\+String {\bf nat\+Inflow\+File\+Name}
+\begin{DoxyCompactList}\small\item\em Nome do arquivo lido vaz„o natural da bacia incremental. \end{DoxyCompactList}\item 
+{\bf Res\+Op\+Result} $\ast$ {\bf results}
+\begin{DoxyCompactList}\small\item\em Resultados do modelo para simulaÁ„o. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Est√°ticos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+static bool {\bf open\+Path\+Selector}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf Res\+Op\+Element} $\ast$ {\bf do\+Copy} ()=0
+\begin{DoxyCompactList}\small\item\em Copia dos dados especificos. \end{DoxyCompactList}\item 
+virtual void {\bf do\+Create\+Results} ({\bf Interval} interval)=0
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix} {\bf m\+\_\+alloc}
+\begin{DoxyCompactList}\small\item\em Matriz de alocaÁ„o. \end{DoxyCompactList}\item 
+map$<$ {\bf Directory\+ID}, string $>$ {\bf m\+\_\+elements\+Path}
+\item 
+std\+::string {\bf m\+\_\+code}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 36 do arquivo Res\+Op\+Element.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Element@{Res\+Op\+Element}!Res\+Op\+Element@{Res\+Op\+Element}}
+\index{Res\+Op\+Element@{Res\+Op\+Element}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{Res\+Op\+Element(\+Date initial\+Date, Date final\+Date, Node $\ast$n, Link $\ast$l)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Element\+::\+Res\+Op\+Element (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{initial\+Date, }
+\item[{{\bf Date}}]{final\+Date, }
+\item[{{\bf Node} $\ast$}]{n, }
+\item[{{\bf Link} $\ast$}]{l}
+\end{DoxyParamCaption}
+)}\label{class_res_op_element_a35cf9fd3d5bfb114903eb3b9bfbde90b}
+Construtor padr„o da classe \doxyref{Res\+Op\+Element}{pag.}{class_res_op_element} 
+\begin{DoxyParams}{Par√¢metros}
+{\em initial\+Date} & Inicio do intervalo \\
+\hline
+{\em final\+Date} & Final do Intervalo \\
+\hline
+{\em n} & Ponteiro para nÛ \\
+\hline
+{\em l} & Ponteiro para trecho \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Element@{Res\+Op\+Element}!````~Res\+Op\+Element@{$\sim$\+Res\+Op\+Element}}
+\index{````~Res\+Op\+Element@{$\sim$\+Res\+Op\+Element}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{$\sim$\+Res\+Op\+Element()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Element\+::$\sim$\+Res\+Op\+Element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_element_a1b8c0cbe60ca681339b83bdbd2ceb178}
+
+
+\subsection{M√©todos}
+\index{Res\+Op\+Element@{Res\+Op\+Element}!alloc@{alloc}}
+\index{alloc@{alloc}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{alloc()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix}\& Res\+Op\+Element\+::alloc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_element_a3551de932e6046d1711d847143d31ae3}
+\index{Res\+Op\+Element@{Res\+Op\+Element}!alloc@{alloc}}
+\index{alloc@{alloc}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{alloc(\+Matrix \&a\+\_\+alloc)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Element\+::alloc (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{a\+\_\+alloc}
+\end{DoxyParamCaption}
+)}\label{class_res_op_element_a6d0a3faa6f5b1ad658d57e8745302b87}
+\index{Res\+Op\+Element@{Res\+Op\+Element}!copy\+Data@{copy\+Data}}
+\index{copy\+Data@{copy\+Data}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{copy\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Element}$\ast$ Res\+Op\+Element\+::copy\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_element_ab7e99681dca090a08d3cf2dcb379f0fa}
+
+
+Copia o seu conteudo. 
+
+\index{Res\+Op\+Element@{Res\+Op\+Element}!create\+Results@{create\+Results}}
+\index{create\+Results@{create\+Results}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{create\+Results(\+Interval interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Element\+::create\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)}\label{class_res_op_element_a783c1d19f7eb1dfb38a83e742e9e9832}
+
+
+Cria os resultados. 
+
+\index{Res\+Op\+Element@{Res\+Op\+Element}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{do\+Copy()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Res\+Op\+Element}$\ast$ Res\+Op\+Element\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{class_res_op_element_a88fe7190d68429d2f9623160df266dc9}
+
+
+Copia dos dados especificos. 
+
+
+
+Implementado por {\bf Res\+Op\+Link} \doxyref{}{pag.}{class_res_op_link_aed1e711f022dd5e352805f03b4dbd47b}, {\bf Res\+Op\+Demand} \doxyref{}{pag.}{class_res_op_demand_a1b89fcb1f3f07767fb24169f9af2e2f3}, {\bf Res\+Op\+Reservoir} \doxyref{}{pag.}{class_res_op_reservoir_af91f15be0c2231ead9cc3a5f934205b1}, {\bf Res\+Op\+Network\+Flow\+Demand} \doxyref{}{pag.}{class_res_op_network_flow_demand_ad5194ffc7f29e5f41ed723fc19c0d631}, {\bf Res\+Op\+Network\+Flow\+Link} \doxyref{}{pag.}{class_res_op_network_flow_link_a6ef8b41c4da8b0dbdcc6635c6d2037a0}, {\bf Res\+Op\+Sequential\+Link} \doxyref{}{pag.}{class_res_op_sequential_link_a290b95a0c8c3fd232a9f3438f6bd947d}, {\bf Res\+Op\+Junction} \doxyref{}{pag.}{class_res_op_junction_ab3e1d3718a11ba779d3753db9f83589c}, {\bf Res\+Op\+Network\+Flow\+Junction} \doxyref{}{pag.}{class_res_op_network_flow_junction_a11aade6030335e1ff1069031e6a863b7}, {\bf Res\+Op\+Sequential\+Demand} \doxyref{}{pag.}{class_res_op_sequential_demand_a10d16b2560c7373a105391f3db061d53}, {\bf Res\+Op\+Sequential\+Junction} \doxyref{}{pag.}{class_res_op_sequential_junction_a102d12105d52b6563a4cf07a288862eb}, {\bf Res\+Op\+Network\+Flow\+Reservoir} \doxyref{}{pag.}{class_res_op_network_flow_reservoir_a4ba9500b9217d2382f89884643289534}, {\bf Res\+Op\+Basin} \doxyref{}{pag.}{class_res_op_basin_aa6fb4c88feec7cd4e7dcd0f9214f162a}, {\bf Res\+Op\+Sequential\+Basin} \doxyref{}{pag.}{class_res_op_sequential_basin_a389ad609afefe5a247f2ee9d5ca063a3}, {\bf Res\+Op\+Sequential\+Reservoir} \doxyref{}{pag.}{class_res_op_sequential_reservoir_a50f4b6ad7a55ee2666bbf4b5dce25064}, {\bf Res\+Op\+Network\+Flow\+Basin} \doxyref{}{pag.}{class_res_op_network_flow_basin_af1a2b66ea98109bdfc3216642784b053}, {\bf Res\+Op\+Network\+Flow\+Wnd\+Reservoir} \doxyref{}{pag.}{class_res_op_network_flow_wnd_reservoir_ad18be16323edfdc87cdc222a5f3de759} e {\bf Res\+Op\+Sequential\+Wnd\+Reservoir} \doxyref{}{pag.}{class_res_op_sequential_wnd_reservoir_a492b6dd9534fb99f0b4779255abf2625}.
+
+\index{Res\+Op\+Element@{Res\+Op\+Element}!do\+Create\+Results@{do\+Create\+Results}}
+\index{do\+Create\+Results@{do\+Create\+Results}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{do\+Create\+Results(\+Interval interval)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Element\+::do\+Create\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{class_res_op_element_a7733b727336bb90ee33299b55d46b335}
+
+
+Implementado por {\bf Res\+Op\+Link} \doxyref{}{pag.}{class_res_op_link_ad6b35c5676bf7ca56d31867ab2cc36fd}, {\bf Res\+Op\+Demand} \doxyref{}{pag.}{class_res_op_demand_adc5d94ce3087c48c7b8ae9c320897d9f}, {\bf Res\+Op\+Reservoir} \doxyref{}{pag.}{class_res_op_reservoir_a3b9086bdf6e48a318b12d83e0737d0f6}, {\bf Res\+Op\+Junction} \doxyref{}{pag.}{class_res_op_junction_a001c990b9db697609e9b38ae8640174e}, {\bf Res\+Op\+Network\+Flow\+Reservoir} \doxyref{}{pag.}{class_res_op_network_flow_reservoir_a5e138d93b71778400451e7f81868b5d0}, {\bf Res\+Op\+Basin} \doxyref{}{pag.}{class_res_op_basin_aaf2362882dc87976f01038588206ee9d}, {\bf Res\+Op\+Sequential\+Reservoir} \doxyref{}{pag.}{class_res_op_sequential_reservoir_a54e8b1c86719356ac618531b7c91d3fb}, {\bf Res\+Op\+Network\+Flow\+Wnd\+Reservoir} \doxyref{}{pag.}{class_res_op_network_flow_wnd_reservoir_af13a88abc3f68314d298d85e2c021828} e {\bf Res\+Op\+Sequential\+Wnd\+Reservoir} \doxyref{}{pag.}{class_res_op_sequential_wnd_reservoir_ad2bf024727f2be6f68e2968860c98188}.
+
+\index{Res\+Op\+Element@{Res\+Op\+Element}!element\+Type@{element\+Type}}
+\index{element\+Type@{element\+Type}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{element\+Type() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Element\+Type} Res\+Op\+Element\+::element\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_res_op_element_ab992593b0c45b4fb103806803d7ce27f}
+
+
+Retorna o tipo de \doxyref{Res\+Op\+Element}{pag.}{class_res_op_element} diferenciado. 
+
+\index{Res\+Op\+Element@{Res\+Op\+Element}!element\+Type\+To\+Str@{element\+Type\+To\+Str}}
+\index{element\+Type\+To\+Str@{element\+Type\+To\+Str}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{element\+Type\+To\+Str(\+Res\+Op\+Element\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}static const wx\+String Res\+Op\+Element\+::element\+Type\+To\+Str (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element\+Type}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_res_op_element_a67a740017b3565ff902f4814aada0dfc}
+\index{Res\+Op\+Element@{Res\+Op\+Element}!get\+Code@{get\+Code}}
+\index{get\+Code@{get\+Code}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{get\+Code()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Res\+Op\+Element\+::get\+Code (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_element_a287110b8aa7d3b7f10b3a310203ce1af}
+\index{Res\+Op\+Element@{Res\+Op\+Element}!get\+Elements\+Path@{get\+Elements\+Path}}
+\index{get\+Elements\+Path@{get\+Elements\+Path}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{get\+Elements\+Path()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ {\bf Directory\+ID}, std\+::string $>$$\ast$ Res\+Op\+Element\+::get\+Elements\+Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_element_ab44e2ea80a1cc057be03eb423ce5420f}
+\index{Res\+Op\+Element@{Res\+Op\+Element}!get\+Exec\+Type@{get\+Exec\+Type}}
+\index{get\+Exec\+Type@{get\+Exec\+Type}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{get\+Exec\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Model\+Type} Res\+Op\+Element\+::get\+Exec\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_element_a7192f6c1bb81d3a103c845eaf883b6bf}
+
+
+Retorna o tipo de modelo de execuÁ„o. 
+
+\index{Res\+Op\+Element@{Res\+Op\+Element}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{get\+Id()}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Res\+Op\+Element\+::get\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_element_afdc6085d3fe62429a1515c16451ff19f}
+
+
+Retorna o identificador do elemento associado. 
+
+\index{Res\+Op\+Element@{Res\+Op\+Element}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{get\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Res\+Op\+Element\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_element_a93944445bdfee74e8099ce7da374f9a5}
+
+
+Retorna o nome do Elemento. 
+
+\index{Res\+Op\+Element@{Res\+Op\+Element}!set\+Code@{set\+Code}}
+\index{set\+Code@{set\+Code}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{set\+Code(std\+::string \&code)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Element\+::set\+Code (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{code}
+\end{DoxyParamCaption}
+)}\label{class_res_op_element_a48e4aa6fddd2667a27b751d0ebb5452f}
+\index{Res\+Op\+Element@{Res\+Op\+Element}!set\+Element\+Path@{set\+Element\+Path}}
+\index{set\+Element\+Path@{set\+Element\+Path}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{set\+Element\+Path(\+Directory\+I\+D, wx\+String path)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Element\+::set\+Element\+Path (
+\begin{DoxyParamCaption}
+\item[{{\bf Directory\+ID}}]{, }
+\item[{wx\+String}]{path}
+\end{DoxyParamCaption}
+)}\label{class_res_op_element_ab86ac9c891fc2fa53bd7ad47e1c8bf16}
+\index{Res\+Op\+Element@{Res\+Op\+Element}!set\+Exec\+Type@{set\+Exec\+Type}}
+\index{set\+Exec\+Type@{set\+Exec\+Type}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{set\+Exec\+Type(\+Res\+Op\+Model\+Type n\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Element\+::set\+Exec\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Model\+Type}}]{n\+Type}
+\end{DoxyParamCaption}
+)}\label{class_res_op_element_a7273839b6ad2fb6a676f3432700279f7}
+
+
+Define o modelo de execuÁ„o. 
+
+\index{Res\+Op\+Element@{Res\+Op\+Element}!update\+Allocation\+Matrix@{update\+Allocation\+Matrix}}
+\index{update\+Allocation\+Matrix@{update\+Allocation\+Matrix}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{update\+Allocation\+Matrix(\+Node $\ast$node)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Element\+::update\+Allocation\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_element_ad75ced5fbb62038bec3e527d4730ebc4}
+
+
+Define o cabeÁalho da alloc;. 
+
+
+
+Implementado por {\bf Res\+Op\+Reservoir} \doxyref{}{pag.}{class_res_op_reservoir_a716f4a87aec746b7c2d5ee27210b318d}, {\bf Res\+Op\+Demand} \doxyref{}{pag.}{class_res_op_demand_ade035ecb9b7cee625c8b2c0f80bdfb44}, {\bf Res\+Op\+Network\+Flow\+Demand} \doxyref{}{pag.}{class_res_op_network_flow_demand_a452c762a981e98707b3c7b72af301447}, {\bf Res\+Op\+Network\+Flow\+Reservoir} \doxyref{}{pag.}{class_res_op_network_flow_reservoir_abfe9fb0c3f3d1b4d8f4711a1bd7516ea}, {\bf Res\+Op\+Sequential\+Link} \doxyref{}{pag.}{class_res_op_sequential_link_ab70aac9fcf36898aa8fe90e35a0a6144}, {\bf Res\+Op\+Sequential\+Reservoir} \doxyref{}{pag.}{class_res_op_sequential_reservoir_a4ad3b886e14dc0b50eac63adce956522}, {\bf Res\+Op\+Link} \doxyref{}{pag.}{class_res_op_link_a8a00d6dd26f650e5a68a50895a830273}, {\bf Res\+Op\+Sequential\+Basin} \doxyref{}{pag.}{class_res_op_sequential_basin_ae608f8d0581d57f4aa1c88fdb49cc19b}, {\bf Res\+Op\+Network\+Flow\+Link} \doxyref{}{pag.}{class_res_op_network_flow_link_a256d9b4cac056c63332f72e65cc13076}, {\bf Res\+Op\+Junction} \doxyref{}{pag.}{class_res_op_junction_a9db7c309b563398399d3b7fab0bef33a}, {\bf Res\+Op\+Network\+Flow\+Junction} \doxyref{}{pag.}{class_res_op_network_flow_junction_adaf3467e95a1baafb367d5998b278a02}, {\bf Res\+Op\+Sequential\+Demand} \doxyref{}{pag.}{class_res_op_sequential_demand_a5e7d06533447f926f9988266796c325f}, {\bf Res\+Op\+Sequential\+Junction} \doxyref{}{pag.}{class_res_op_sequential_junction_a3bb1265ab21bc699c7feb973b6bdb03d}, {\bf Res\+Op\+Basin} \doxyref{}{pag.}{class_res_op_basin_a1f8582862c5ca1406ca108fe68cd7a4f} e {\bf Res\+Op\+Network\+Flow\+Basin} \doxyref{}{pag.}{class_res_op_network_flow_basin_aa9c2ce491ee6bf2856396f3072d7f395}.
+
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Element@{Res\+Op\+Element}!alloc\+File\+Name@{alloc\+File\+Name}}
+\index{alloc\+File\+Name@{alloc\+File\+Name}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{alloc\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Res\+Op\+Element\+::alloc\+File\+Name}\label{class_res_op_element_a4098232d3783aedf5b6e4f2e15b24bf0}
+
+
+Defini√ß√£o na linha 57 do arquivo Res\+Op\+Element.\+h.
+
+\index{Res\+Op\+Element@{Res\+Op\+Element}!exec\+Type@{exec\+Type}}
+\index{exec\+Type@{exec\+Type}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{exec\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Model\+Type} Res\+Op\+Element\+::exec\+Type}\label{class_res_op_element_a033b5587a4794eb068242b20c9bef384}
+
+
+Tipo de execuÁ„o. 
+
+
+
+Defini√ß√£o na linha 61 do arquivo Res\+Op\+Element.\+h.
+
+\index{Res\+Op\+Element@{Res\+Op\+Element}!link@{link}}
+\index{link@{link}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{link}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Link}$\ast$ Res\+Op\+Element\+::link}\label{class_res_op_element_a5d95e35ae13babc28587aa3727158a99}
+
+
+Ponteiro para o trecho. 
+
+
+
+Defini√ß√£o na linha 66 do arquivo Res\+Op\+Element.\+h.
+
+\index{Res\+Op\+Element@{Res\+Op\+Element}!m\+\_\+alloc@{m\+\_\+alloc}}
+\index{m\+\_\+alloc@{m\+\_\+alloc}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{m\+\_\+alloc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Res\+Op\+Element\+::m\+\_\+alloc\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_element_acf7b77b1ad777b687da162ba50b869e0}
+
+
+Matriz de alocaÁ„o. 
+
+
+
+Defini√ß√£o na linha 38 do arquivo Res\+Op\+Element.\+h.
+
+\index{Res\+Op\+Element@{Res\+Op\+Element}!m\+\_\+code@{m\+\_\+code}}
+\index{m\+\_\+code@{m\+\_\+code}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{m\+\_\+code}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Res\+Op\+Element\+::m\+\_\+code\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_element_a9325fd19d913dfd75ee3f5f9a54e9672}
+
+
+Defini√ß√£o na linha 104 do arquivo Res\+Op\+Element.\+h.
+
+\index{Res\+Op\+Element@{Res\+Op\+Element}!m\+\_\+elements\+Path@{m\+\_\+elements\+Path}}
+\index{m\+\_\+elements\+Path@{m\+\_\+elements\+Path}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{m\+\_\+elements\+Path}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf Directory\+ID}, string$>$ Res\+Op\+Element\+::m\+\_\+elements\+Path\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_element_af478eefaf308e13ebff54bb8c5da53cf}
+
+\begin{DoxyItemize}
+\item Used to store a path of series, cavs, etc.. 
+\end{DoxyItemize}
+
+Defini√ß√£o na linha 102 do arquivo Res\+Op\+Element.\+h.
+
+\index{Res\+Op\+Element@{Res\+Op\+Element}!nat\+Inflow@{nat\+Inflow}}
+\index{nat\+Inflow@{nat\+Inflow}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{nat\+Inflow}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ Res\+Op\+Element\+::nat\+Inflow}\label{class_res_op_element_a4baeab786a8c850c5017612d61421de7}
+
+
+Vaz„o natual da bacia incremental. 
+
+
+
+Defini√ß√£o na linha 68 do arquivo Res\+Op\+Element.\+h.
+
+\index{Res\+Op\+Element@{Res\+Op\+Element}!nat\+Inflow\+File\+Name@{nat\+Inflow\+File\+Name}}
+\index{nat\+Inflow\+File\+Name@{nat\+Inflow\+File\+Name}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{nat\+Inflow\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Res\+Op\+Element\+::nat\+Inflow\+File\+Name}\label{class_res_op_element_a16d6e419f1e12108f912ac5edf907803}
+
+
+Nome do arquivo lido vaz„o natural da bacia incremental. 
+
+
+
+Defini√ß√£o na linha 70 do arquivo Res\+Op\+Element.\+h.
+
+\index{Res\+Op\+Element@{Res\+Op\+Element}!node@{node}}
+\index{node@{node}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ Res\+Op\+Element\+::node}\label{class_res_op_element_a84df0d9a5db133ffa71f56df83dbd67b}
+
+
+Ponteiro para o nÛ 
+
+
+
+Defini√ß√£o na linha 64 do arquivo Res\+Op\+Element.\+h.
+
+\index{Res\+Op\+Element@{Res\+Op\+Element}!open\+Path\+Selector@{open\+Path\+Selector}}
+\index{open\+Path\+Selector@{open\+Path\+Selector}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{open\+Path\+Selector}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Element\+::open\+Path\+Selector\hspace{0.3cm}{\ttfamily [static]}}\label{class_res_op_element_a4550c52fdda382242a68e8b2814f7a59}
+
+
+Defini√ß√£o na linha 53 do arquivo Res\+Op\+Element.\+h.
+
+\index{Res\+Op\+Element@{Res\+Op\+Element}!re\+Run@{re\+Run}}
+\index{re\+Run@{re\+Run}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{re\+Run}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Element\+::re\+Run}\label{class_res_op_element_a2d62b00cb86ff7095069f78667207239}
+
+
+Deve ser executado. 
+
+
+
+Defini√ß√£o na linha 62 do arquivo Res\+Op\+Element.\+h.
+
+\index{Res\+Op\+Element@{Res\+Op\+Element}!results@{results}}
+\index{results@{results}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{results}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Result}$\ast$ Res\+Op\+Element\+::results}\label{class_res_op_element_ada46d604b389d438913145ac08993e38}
+
+
+Resultados do modelo para simulaÁ„o. 
+
+
+
+Defini√ß√£o na linha 72 do arquivo Res\+Op\+Element.\+h.
+
+\index{Res\+Op\+Element@{Res\+Op\+Element}!type@{type}}
+\index{type@{type}!Res\+Op\+Element@{Res\+Op\+Element}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Element\+Type} Res\+Op\+Element\+::type}\label{class_res_op_element_a7e8828a97f3704575cc5d1912b76cad1}
+
+
+Tipo de elemento. 
+
+
+
+Defini√ß√£o na linha 59 do arquivo Res\+Op\+Element.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Element.\+h}\end{DoxyCompactItemize}

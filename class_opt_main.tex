@@ -1,0 +1,307 @@
+\section{Referência da Classe Opt\+Main}
+\label{class_opt_main}\index{Opt\+Main@{Opt\+Main}}
+
+
+{\ttfamily \#include $<$Opt\+Main.\+h$>$}
+
+
+
+Herdeiro de {\bf Component}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf on\+Init} ({\bf S\+I\+GA} $\ast${\bf main}, wx\+Frame $\ast$frame, wx\+Window $\ast$parent)
+\item 
+virtual void {\bf update\+Tree\+Item} ({\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$)
+\item 
+void {\bf on\+Select\+Element} ()
+\item 
+void {\bf on\+Select\+Links} ()
+\item 
+virtual void {\bf on\+Changed\+Component} ()
+\item 
+virtual void {\bf on\+Changing\+Component} ()
+\item 
+void {\bf clear} ()
+\item 
+void {\bf on\+Delete\+Elements} (vector$<$ {\bf Element\+ID} $>$ \&element\+\_\+ids)
+\item 
+void {\bf create\+Node} ({\bf Element} $\ast$element, {\bf Opt\+Interface} $\ast$main\+Inter)
+\item 
+void {\bf remove\+Node} ({\bf Element\+ID} id)
+\item 
+{\bf Opt\+Node} $\ast$ {\bf get\+Opt\+Node} ({\bf Element\+ID} id)
+\item 
+{\bf Opt\+Node} $\ast$ {\bf get\+Opt\+Node} ()
+\item 
+void {\bf on\+Changing\+Time\+Interval} ({\bf Date\+::\+Time\+Interval} time\+Interval)
+\item 
+void {\bf on\+Changing\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ element\+Ids)
+\item 
+void {\bf on\+Changed\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ elemet\+Ids)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Opt\+Main} \& {\bf Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf opt\+Module\+Type} {\bf selected\+Module\+Type}
+\item 
+{\bf opt\+Algo\+Type} {\bf selected\+Algo\+Type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 18 do arquivo Opt\+Main.\+h.
+
+
+
+\subsection{Métodos}
+\index{Opt\+Main@{Opt\+Main}!clear@{clear}}
+\index{clear@{clear}!Opt\+Main@{Opt\+Main}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Main\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_main_a583f0d1a4cfe3cc6261f973387a7eccc}
+Chama o metodo clear de cada \doxyref{Hidro\+Model\+Main}{pag.}{class_hidro_model_main} 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a3155a0112bacea4b0af7b131c0e3f011}.
+
+\index{Opt\+Main@{Opt\+Main}!create\+Node@{create\+Node}}
+\index{create\+Node@{create\+Node}!Opt\+Main@{Opt\+Main}}
+\subsubsection[{create\+Node(\+Element $\ast$element, Opt\+Interface $\ast$main\+Inter)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Main\+::create\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Element} $\ast$}]{element, }
+\item[{{\bf Opt\+Interface} $\ast$}]{main\+Inter}
+\end{DoxyParamCaption}
+)}\label{class_opt_main_a51be7924a808fbb489e1b498c8f28b3b}
+Cria \doxyref{Opt\+Node}{pag.}{class_opt_node} caso ele ainda nao exista para o no selecionado 
+\begin{DoxyParams}{Parâmetros}
+{\em node} & N� \\
+\hline
+{\em main\+Inter} & Interface \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Main@{Opt\+Main}!get\+Opt\+Node@{get\+Opt\+Node}}
+\index{get\+Opt\+Node@{get\+Opt\+Node}!Opt\+Main@{Opt\+Main}}
+\subsubsection[{get\+Opt\+Node(\+Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Opt\+Node}$\ast$ Opt\+Main\+::get\+Opt\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)}\label{class_opt_main_a0bfa0172b9913a9194bacd5f85e0d61a}
+Retorna um \doxyref{Opt\+Node}{pag.}{class_opt_node} 
+\begin{DoxyParams}{Parâmetros}
+{\em id} & Identificador \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Main@{Opt\+Main}!get\+Opt\+Node@{get\+Opt\+Node}}
+\index{get\+Opt\+Node@{get\+Opt\+Node}!Opt\+Main@{Opt\+Main}}
+\subsubsection[{get\+Opt\+Node()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Opt\+Node}$\ast$ Opt\+Main\+::get\+Opt\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_opt_main_acb54a11d189e5b2c4d609454f062285e}
+Retorna o \doxyref{Opt\+Node}{pag.}{class_opt_node} do n� selecionado \index{Opt\+Main@{Opt\+Main}!Instance@{Instance}}
+\index{Instance@{Instance}!Opt\+Main@{Opt\+Main}}
+\subsubsection[{Instance()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Opt\+Main}\& Opt\+Main\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_opt_main_a698a07f1f2ee88726f275a377707cebb}
+Recupera a instancia da classe \index{Opt\+Main@{Opt\+Main}!on\+Changed\+Component@{on\+Changed\+Component}}
+\index{on\+Changed\+Component@{on\+Changed\+Component}!Opt\+Main@{Opt\+Main}}
+\subsubsection[{on\+Changed\+Component()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Main\+::on\+Changed\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_main_ad85b7f2fb0d3253e4ba2ae058fa01098}
+Evento de mudan�a para o modelo 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a528080e8ef4be5f15e8a268ef8a06bd6}.
+
+\index{Opt\+Main@{Opt\+Main}!on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}}
+\index{on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}!Opt\+Main@{Opt\+Main}}
+\subsubsection[{on\+Changed\+Element\+Type(vector$<$ Element\+I\+D $>$ elemet\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Main\+::on\+Changed\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{elemet\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_main_afbbbd65bdc97ad5e84e9168a01bdf25a}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a49dc89aa957ef7a7fdb37c6b55041261}.
+
+\index{Opt\+Main@{Opt\+Main}!on\+Changing\+Component@{on\+Changing\+Component}}
+\index{on\+Changing\+Component@{on\+Changing\+Component}!Opt\+Main@{Opt\+Main}}
+\subsubsection[{on\+Changing\+Component()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Main\+::on\+Changing\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_main_a8ecfcc1e165d724b7467780ad7f56827}
+Evento de saida do modelo 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a86d6778195457395b75c8995e98075f1}.
+
+\index{Opt\+Main@{Opt\+Main}!on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}}
+\index{on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}!Opt\+Main@{Opt\+Main}}
+\subsubsection[{on\+Changing\+Element\+Type(vector$<$ Element\+I\+D $>$ element\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Main\+::on\+Changing\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{element\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_main_adcb2c40f8107d3a1f4d673264e1ec60c}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a959af092622ea87958a2858d0e2d0ce1}.
+
+\index{Opt\+Main@{Opt\+Main}!on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}}
+\index{on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}!Opt\+Main@{Opt\+Main}}
+\subsubsection[{on\+Changing\+Time\+Interval(\+Date\+::\+Time\+Interval time\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Main\+::on\+Changing\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_main_a785b6b1a1422802e5866af5c22c9ebd5}
+Evento chamado quando o sistema muda de intervalo de tempo O modulo adapta os modelos de acordo com o intervalo de tempo definido 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a3e49742b76123d86cd3fec640ba57dd8}.
+
+\index{Opt\+Main@{Opt\+Main}!on\+Delete\+Elements@{on\+Delete\+Elements}}
+\index{on\+Delete\+Elements@{on\+Delete\+Elements}!Opt\+Main@{Opt\+Main}}
+\subsubsection[{on\+Delete\+Elements(vector$<$ Element\+I\+D $>$ \&element\+\_\+ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Main\+::on\+Delete\+Elements (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$ \&}]{element\+\_\+ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_main_a299495e1faa266971a1f100a344d59a0}
+Chamado quando algum no eh deletado 
+\begin{DoxyParams}{Parâmetros}
+{\em node\+Ids} & N�s a serem deletados \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_ad77e22c15657b1a02cf967a59ddbc2cd}.
+
+\index{Opt\+Main@{Opt\+Main}!on\+Init@{on\+Init}}
+\index{on\+Init@{on\+Init}!Opt\+Main@{Opt\+Main}}
+\subsubsection[{on\+Init(\+S\+I\+G\+A $\ast$main, wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Main\+::on\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+GA} $\ast$}]{main, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_main_a1eec826f0dd270b041838e821e44e920}
+Guarda qual o modelo que esta sendo utilizado no momento Inicializa a instancia do \doxyref{Opt\+Main}{pag.}{class_opt_main} 
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & Janela onde a interface ser� inserida \\
+\hline
+{\em parent} & Componente onde a interface sera inserida \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_aa781bddb43637778a628acbe21a78a01}.
+
+\index{Opt\+Main@{Opt\+Main}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Opt\+Main@{Opt\+Main}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Main\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_main_afeab0fe2181774d81abd6c880fcfe57d}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a755c932409c320f6a057abf6c4ebc5e4}.
+
+\index{Opt\+Main@{Opt\+Main}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Opt\+Main@{Opt\+Main}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Main\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_main_a3588235be334a390084d9dccaf55e17c}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_ad6ccdceebf942b62e75f0255319c9fab}.
+
+\index{Opt\+Main@{Opt\+Main}!on\+Select\+Element@{on\+Select\+Element}}
+\index{on\+Select\+Element@{on\+Select\+Element}!Opt\+Main@{Opt\+Main}}
+\subsubsection[{on\+Select\+Element()}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Main\+::on\+Select\+Element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_main_ae6004b9c1b37ad603c47fe78b0cac75f}
+Chamado quando algum no eh selecionado 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a886fc9240f1faf7948ad00aec78c50c3}.
+
+\index{Opt\+Main@{Opt\+Main}!on\+Select\+Links@{on\+Select\+Links}}
+\index{on\+Select\+Links@{on\+Select\+Links}!Opt\+Main@{Opt\+Main}}
+\subsubsection[{on\+Select\+Links()}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Main\+::on\+Select\+Links (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_opt_main_ad46f885cd81dfa8ae8fd78eec607e281}
+Chamado quando algum trecho eh selecionado \index{Opt\+Main@{Opt\+Main}!remove\+Node@{remove\+Node}}
+\index{remove\+Node@{remove\+Node}!Opt\+Main@{Opt\+Main}}
+\subsubsection[{remove\+Node(\+Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Main\+::remove\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)}\label{class_opt_main_a74528b46004e9f07a86a548843033dfe}
+Remove n� 
+\begin{DoxyParams}{Parâmetros}
+{\em id} & Identificador \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Main@{Opt\+Main}!update\+Tree\+Item@{update\+Tree\+Item}}
+\index{update\+Tree\+Item@{update\+Tree\+Item}!Opt\+Main@{Opt\+Main}}
+\subsubsection[{update\+Tree\+Item(\+S\+I\+G\+A\+Tree\+Ctrl $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Main\+::update\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_main_aae39a4377ce415b1f741418c2974e8be}
+Atualiza os ponteiros das suas series no Tree\+Ctrl de integra��o 
+
+Reimplementação de {\bf Component} \doxyref{}{pag.}{class_component_a29b14a3db0650e8c62711bb9edea68a1}.
+
+
+
+\subsection{Atributos}
+\index{Opt\+Main@{Opt\+Main}!selected\+Algo\+Type@{selected\+Algo\+Type}}
+\index{selected\+Algo\+Type@{selected\+Algo\+Type}!Opt\+Main@{Opt\+Main}}
+\subsubsection[{selected\+Algo\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf opt\+Algo\+Type} Opt\+Main\+::selected\+Algo\+Type}\label{class_opt_main_a37d1d7655f675838bf7f6ad87a662f7c}
+Guarda qual o algoritmo que esta sendo utilizado no momento 
+
+Definição na linha 40 do arquivo Opt\+Main.\+h.
+
+\index{Opt\+Main@{Opt\+Main}!selected\+Module\+Type@{selected\+Module\+Type}}
+\index{selected\+Module\+Type@{selected\+Module\+Type}!Opt\+Main@{Opt\+Main}}
+\subsubsection[{selected\+Module\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf opt\+Module\+Type} Opt\+Main\+::selected\+Module\+Type}\label{class_opt_main_ade4c34f7c80a10d83e1c8586c3d07b7d}
+Guarda qual o m�dulo que esta sendo utilizado no momento 
+
+Definição na linha 36 do arquivo Opt\+Main.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Main.\+h}\end{DoxyCompactItemize}

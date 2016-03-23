@@ -1,0 +1,233 @@
+\section{Refer√™ncia da Classe One\+Priority\+Rule}
+\label{class_one_priority_rule}\index{One\+Priority\+Rule@{One\+Priority\+Rule}}
+
+
+{\ttfamily \#include $<$One\+Priority\+Rule.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Rule}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf One\+Priority\+Rule} ({\bf Node} $\ast${\bf node})
+\item 
+virtual {\bf $\sim$\+One\+Priority\+Rule} ()
+\item 
+virtual double {\bf get\+Release} ({\bf Date} date, {\bf Res\+Op\+Element} $\ast$model={\bf N\+U\+LL})
+\item 
+virtual unsigned int {\bf get\+Number\+Of\+Variables} ()
+\item 
+virtual void {\bf set\+Variables} ({\bf Matrix} \&, int, int)
+\item 
+virtual bool {\bf check\+Limits} ()
+\item 
+int {\bf get\+Priority} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog={\bf N\+U\+LL})
+\item 
+virtual void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String)
+\item 
+virtual void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String)
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf priority}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Rule} $\ast$ {\bf do\+Copy} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 11 do arquivo One\+Priority\+Rule.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{One\+Priority\+Rule@{One\+Priority\+Rule}!One\+Priority\+Rule@{One\+Priority\+Rule}}
+\index{One\+Priority\+Rule@{One\+Priority\+Rule}!One\+Priority\+Rule@{One\+Priority\+Rule}}
+\subsubsection[{One\+Priority\+Rule(\+Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}One\+Priority\+Rule\+::\+One\+Priority\+Rule (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_one_priority_rule_a6a3695b56496db4b932be9bf9a4a7b10}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em node} & NÛ \\
+\hline
+\end{DoxyParams}
+\index{One\+Priority\+Rule@{One\+Priority\+Rule}!````~One\+Priority\+Rule@{$\sim$\+One\+Priority\+Rule}}
+\index{````~One\+Priority\+Rule@{$\sim$\+One\+Priority\+Rule}!One\+Priority\+Rule@{One\+Priority\+Rule}}
+\subsubsection[{$\sim$\+One\+Priority\+Rule()}]{\setlength{\rightskip}{0pt plus 5cm}virtual One\+Priority\+Rule\+::$\sim$\+One\+Priority\+Rule (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_one_priority_rule_a71aff9a51732689307530725fd5e70dd}
+Destrutor 
+
+\subsection{M√©todos}
+\index{One\+Priority\+Rule@{One\+Priority\+Rule}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!One\+Priority\+Rule@{One\+Priority\+Rule}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog=\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}bool One\+Priority\+Rule\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_one_priority_rule_a2256c5ff42ec0ea7f10ec2deff122307}
+Verifica se todas as informaÁıes necess·rias foram fornecidas 
+\begin{DoxyParams}{Par√¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_a92c1f57de54c45ae7e2d754b2eb2814c}.
+
+\index{One\+Priority\+Rule@{One\+Priority\+Rule}!check\+Limits@{check\+Limits}}
+\index{check\+Limits@{check\+Limits}!One\+Priority\+Rule@{One\+Priority\+Rule}}
+\subsubsection[{check\+Limits()}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool One\+Priority\+Rule\+::check\+Limits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_one_priority_rule_a4339dba1aa4a3f508f8012c3c238cdc4}
+Verifica se os limites das vari·veis est„o corretos 
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_af456c09bcb136f90564faecb0330afc6}.
+
+
+
+Defini√ß√£o na linha 61 do arquivo One\+Priority\+Rule.\+h.
+
+\index{One\+Priority\+Rule@{One\+Priority\+Rule}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!One\+Priority\+Rule@{One\+Priority\+Rule}}
+\subsubsection[{do\+Copy()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Rule}$\ast$ One\+Priority\+Rule\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_one_priority_rule_a4f1eabe067f0974c79897a1f4fd73533}
+Copia a regra 
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_a0612d8b6a8607563b24ae0fb163e537e}.
+
+\index{One\+Priority\+Rule@{One\+Priority\+Rule}!get\+Number\+Of\+Variables@{get\+Number\+Of\+Variables}}
+\index{get\+Number\+Of\+Variables@{get\+Number\+Of\+Variables}!One\+Priority\+Rule@{One\+Priority\+Rule}}
+\subsubsection[{get\+Number\+Of\+Variables()}]{\setlength{\rightskip}{0pt plus 5cm}virtual unsigned int One\+Priority\+Rule\+::get\+Number\+Of\+Variables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_one_priority_rule_ad37e0b51709ca5906c0cf86821d6090f}
+Retorna o n˙mero de variaveis de decis„o 
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_acc94bc0a231a0b68eed13fc9cd5d9f76}.
+
+
+
+Defini√ß√£o na linha 48 do arquivo One\+Priority\+Rule.\+h.
+
+\index{One\+Priority\+Rule@{One\+Priority\+Rule}!get\+Priority@{get\+Priority}}
+\index{get\+Priority@{get\+Priority}!One\+Priority\+Rule@{One\+Priority\+Rule}}
+\subsubsection[{get\+Priority()}]{\setlength{\rightskip}{0pt plus 5cm}int One\+Priority\+Rule\+::get\+Priority (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_one_priority_rule_a1ca4fe13e060718cab4a0bf8f63162ee}
+Retorna valor da prioridade \index{One\+Priority\+Rule@{One\+Priority\+Rule}!get\+Release@{get\+Release}}
+\index{get\+Release@{get\+Release}!One\+Priority\+Rule@{One\+Priority\+Rule}}
+\subsubsection[{get\+Release(\+Date date, Res\+Op\+Element $\ast$model=\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}virtual double One\+Priority\+Rule\+::get\+Release (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{date, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{model = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_one_priority_rule_abd353fe6f6beccc99f2338e67f626caa}
+Retorna valor da liberaÁ„o para a data fornecida 
+\begin{DoxyParams}{Par√¢metros}
+{\em date} & Data de pesquisa \\
+\hline
+{\em model} & Modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_ad90bdc6f396abae2110a1093f9b8570d}.
+
+\index{One\+Priority\+Rule@{One\+Priority\+Rule}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!One\+Priority\+Rule@{One\+Priority\+Rule}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void One\+Priority\+Rule\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_one_priority_rule_a175eb88e454309660ec069bb5acfa7ef}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_a30647c2585e5b4c83b8301e5d954fa7d}.
+
+\index{One\+Priority\+Rule@{One\+Priority\+Rule}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!One\+Priority\+Rule@{One\+Priority\+Rule}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void One\+Priority\+Rule\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_one_priority_rule_acccbd930592526fc9c4ca517edb873fe}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_af5abd8c4a528a9fd23c101bb216aa3f4}.
+
+\index{One\+Priority\+Rule@{One\+Priority\+Rule}!set\+Variables@{set\+Variables}}
+\index{set\+Variables@{set\+Variables}!One\+Priority\+Rule@{One\+Priority\+Rule}}
+\subsubsection[{set\+Variables(\+Matrix \&, int, int)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void One\+Priority\+Rule\+::set\+Variables (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{, }
+\item[{int}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_one_priority_rule_a377f594c2d9adf5f109ec5f34efe68e9}
+Atribui soluÁıes as vari·veis de decis„o 
+\begin{DoxyParams}{Par√¢metros}
+{\em swarm\+Line} & ... \\
+\hline
+{\em i} & \\
+\hline
+{\em j} & \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_a47cb3428a0b155d5be583f7970a1acf8}.
+
+
+
+Defini√ß√£o na linha 56 do arquivo One\+Priority\+Rule.\+h.
+
+
+
+\subsection{Atributos}
+\index{One\+Priority\+Rule@{One\+Priority\+Rule}!priority@{priority}}
+\index{priority@{priority}!One\+Priority\+Rule@{One\+Priority\+Rule}}
+\subsubsection[{priority}]{\setlength{\rightskip}{0pt plus 5cm}int One\+Priority\+Rule\+::priority}\label{class_one_priority_rule_aa50f1b8340861af231d60b8864d538d0}
+Prioridade 
+
+Defini√ß√£o na linha 25 do arquivo One\+Priority\+Rule.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf One\+Priority\+Rule.\+h}\end{DoxyCompactItemize}

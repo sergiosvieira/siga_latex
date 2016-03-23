@@ -1,0 +1,151 @@
+\section{Referência da Classe Shapefile}
+\label{class_shapefile}\index{Shapefile@{Shapefile}}
+
+
+Class used to load and retrive informations of a shapefile.  
+
+
+
+
+{\ttfamily \#include $<$shapefile.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Shapefile} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+{\bf $\sim$\+Shapefile} ()
+\begin{DoxyCompactList}\small\item\em default destructor \end{DoxyCompactList}\item 
+int {\bf features} (int a\+\_\+layer\+Index)
+\begin{DoxyCompactList}\small\item\em features \end{DoxyCompactList}\item 
+std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ {\bf all\+Features} (int a\+\_\+layer\+Index)
+\begin{DoxyCompactList}\small\item\em a vector of features of specified layer \end{DoxyCompactList}\item 
+O\+G\+R\+Layer $\ast$ {\bf layer} (int a\+\_\+layer\+Index)
+\begin{DoxyCompactList}\small\item\em a specified layer \end{DoxyCompactList}\item 
+int {\bf load\+Shapefile} (const char $\ast$a\+\_\+shapefile, {\bf Progress\+Callback} a\+\_\+function)
+\begin{DoxyCompactList}\small\item\em load a shapefile \end{DoxyCompactList}\item 
+O\+G\+R\+Data\+Source $\ast$ {\bf data\+Source} ()
+\begin{DoxyCompactList}\small\item\em data srouce of the loaded shapefile \end{DoxyCompactList}\item 
+std\+::string {\bf filename} ()
+\begin{DoxyCompactList}\small\item\em gets shapefile filename \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Class used to load and retrive informations of a shapefile. 
+
+Definição na linha 18 do arquivo shapefile.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Shapefile@{Shapefile}!Shapefile@{Shapefile}}
+\index{Shapefile@{Shapefile}!Shapefile@{Shapefile}}
+\subsubsection[{Shapefile()}]{\setlength{\rightskip}{0pt plus 5cm}Shapefile\+::\+Shapefile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_shapefile_a889bdbb878d8b6ee95fea89f4d239286}
+
+
+default constructor 
+
+\index{Shapefile@{Shapefile}!````~Shapefile@{$\sim$\+Shapefile}}
+\index{````~Shapefile@{$\sim$\+Shapefile}!Shapefile@{Shapefile}}
+\subsubsection[{$\sim$\+Shapefile()}]{\setlength{\rightskip}{0pt plus 5cm}Shapefile\+::$\sim$\+Shapefile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_shapefile_af6ce27dd21a77f8e18a66c576bda6358}
+
+
+default destructor 
+
+
+
+\subsection{Métodos}
+\index{Shapefile@{Shapefile}!all\+Features@{all\+Features}}
+\index{all\+Features@{all\+Features}!Shapefile@{Shapefile}}
+\subsubsection[{all\+Features(int a\+\_\+layer\+Index)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$O\+G\+R\+Feature$\ast$$>$ Shapefile\+::all\+Features (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+layer\+Index}
+\end{DoxyParamCaption}
+)}\label{class_shapefile_a349c76424e53b532ed581c7ae2721e69}
+
+
+a vector of features of specified layer 
+
+\begin{DoxyReturn}{Retorna}
+
+\end{DoxyReturn}
+\index{Shapefile@{Shapefile}!data\+Source@{data\+Source}}
+\index{data\+Source@{data\+Source}!Shapefile@{Shapefile}}
+\subsubsection[{data\+Source()}]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Data\+Source$\ast$ Shapefile\+::data\+Source (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_shapefile_a3c78328c76137aef9382aa196da6355e}
+
+
+data srouce of the loaded shapefile 
+
+\index{Shapefile@{Shapefile}!features@{features}}
+\index{features@{features}!Shapefile@{Shapefile}}
+\subsubsection[{features(int a\+\_\+layer\+Index)}]{\setlength{\rightskip}{0pt plus 5cm}int Shapefile\+::features (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+layer\+Index}
+\end{DoxyParamCaption}
+)}\label{class_shapefile_a74de750f0bf7d57de9e570a39c7d88c8}
+
+
+features 
+
+\begin{DoxyReturn}{Retorna}
+
+\end{DoxyReturn}
+\index{Shapefile@{Shapefile}!filename@{filename}}
+\index{filename@{filename}!Shapefile@{Shapefile}}
+\subsubsection[{filename()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Shapefile\+::filename (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_shapefile_a1a3a0307b0cde4baef5fd58097f7de93}
+
+
+gets shapefile filename 
+
+\index{Shapefile@{Shapefile}!layer@{layer}}
+\index{layer@{layer}!Shapefile@{Shapefile}}
+\subsubsection[{layer(int a\+\_\+layer\+Index)}]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Layer$\ast$ Shapefile\+::layer (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+layer\+Index}
+\end{DoxyParamCaption}
+)}\label{class_shapefile_a25d98a629fc51a4d316a932f5937c427}
+
+
+a specified layer 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+layer\+Index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+
+\end{DoxyReturn}
+\index{Shapefile@{Shapefile}!load\+Shapefile@{load\+Shapefile}}
+\index{load\+Shapefile@{load\+Shapefile}!Shapefile@{Shapefile}}
+\subsubsection[{load\+Shapefile(const char $\ast$a\+\_\+shapefile, Progress\+Callback a\+\_\+function)}]{\setlength{\rightskip}{0pt plus 5cm}int Shapefile\+::load\+Shapefile (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+shapefile, }
+\item[{{\bf Progress\+Callback}}]{a\+\_\+function}
+\end{DoxyParamCaption}
+)}\label{class_shapefile_a125136807357a1002685000ed32a91c0}
+
+
+load a shapefile 
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf shapefile.\+h}\end{DoxyCompactItemize}

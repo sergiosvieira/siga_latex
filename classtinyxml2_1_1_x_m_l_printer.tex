@@ -1,0 +1,517 @@
+\section{Referência da Classe tinyxml2\+:\+:X\+M\+L\+Printer}
+\label{classtinyxml2_1_1_x_m_l_printer}\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+
+
+{\ttfamily \#include $<$tinyxml2.\+h$>$}
+
+
+
+Herdeiro de {\bf tinyxml2\+::\+X\+M\+L\+Visitor}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf X\+M\+L\+Printer} (F\+I\+LE $\ast$file=0, bool compact=false, int depth=0)
+\item 
+virtual {\bf $\sim$\+X\+M\+L\+Printer} ()
+\item 
+void {\bf Push\+Header} (bool write\+B\+OM, bool write\+Declaration)
+\item 
+void {\bf Open\+Element} (const char $\ast$name, bool compact\+Mode=false)
+\item 
+void {\bf Push\+Attribute} (const char $\ast$name, const char $\ast$value)
+\begin{DoxyCompactList}\small\item\em If streaming, add an attribute to an open element. \end{DoxyCompactList}\item 
+void {\bf Push\+Attribute} (const char $\ast$name, int value)
+\item 
+void {\bf Push\+Attribute} (const char $\ast$name, unsigned value)
+\item 
+void {\bf Push\+Attribute} (const char $\ast$name, bool value)
+\item 
+void {\bf Push\+Attribute} (const char $\ast$name, double value)
+\item 
+virtual void {\bf Close\+Element} (bool compact\+Mode=false)
+\begin{DoxyCompactList}\small\item\em If streaming, close the \doxyref{Element}{pag.}{class_element}. \end{DoxyCompactList}\item 
+void {\bf Push\+Text} (const char $\ast$text, bool cdata=false)
+\begin{DoxyCompactList}\small\item\em Add a text node. \end{DoxyCompactList}\item 
+void {\bf Push\+Text} (int value)
+\begin{DoxyCompactList}\small\item\em Add a text node from an integer. \end{DoxyCompactList}\item 
+void {\bf Push\+Text} (unsigned value)
+\begin{DoxyCompactList}\small\item\em Add a text node from an unsigned. \end{DoxyCompactList}\item 
+void {\bf Push\+Text} (bool value)
+\begin{DoxyCompactList}\small\item\em Add a text node from a bool. \end{DoxyCompactList}\item 
+void {\bf Push\+Text} (float value)
+\begin{DoxyCompactList}\small\item\em Add a text node from a float. \end{DoxyCompactList}\item 
+void {\bf Push\+Text} (double value)
+\begin{DoxyCompactList}\small\item\em Add a text node from a double. \end{DoxyCompactList}\item 
+void {\bf Push\+Comment} (const char $\ast$comment)
+\begin{DoxyCompactList}\small\item\em Add a comment. \end{DoxyCompactList}\item 
+void {\bf Push\+Declaration} (const char $\ast$value)
+\item 
+void {\bf Push\+Unknown} (const char $\ast$value)
+\item 
+virtual bool {\bf Visit\+Enter} (const {\bf X\+M\+L\+Document} \&)
+\begin{DoxyCompactList}\small\item\em Visit a document. \end{DoxyCompactList}\item 
+virtual bool {\bf Visit\+Exit} (const {\bf X\+M\+L\+Document} \&)
+\begin{DoxyCompactList}\small\item\em Visit a document. \end{DoxyCompactList}\item 
+virtual bool {\bf Visit\+Enter} (const {\bf X\+M\+L\+Element} \&element, const {\bf X\+M\+L\+Attribute} $\ast$attribute)
+\begin{DoxyCompactList}\small\item\em Visit an element. \end{DoxyCompactList}\item 
+virtual bool {\bf Visit\+Exit} (const {\bf X\+M\+L\+Element} \&element)
+\begin{DoxyCompactList}\small\item\em Visit an element. \end{DoxyCompactList}\item 
+virtual bool {\bf Visit} (const {\bf X\+M\+L\+Text} \&text)
+\begin{DoxyCompactList}\small\item\em Visit a text node. \end{DoxyCompactList}\item 
+virtual bool {\bf Visit} (const {\bf X\+M\+L\+Comment} \&comment)
+\begin{DoxyCompactList}\small\item\em Visit a comment node. \end{DoxyCompactList}\item 
+virtual bool {\bf Visit} (const {\bf X\+M\+L\+Declaration} \&declaration)
+\begin{DoxyCompactList}\small\item\em Visit a declaration. \end{DoxyCompactList}\item 
+virtual bool {\bf Visit} (const {\bf X\+M\+L\+Unknown} \&unknown)
+\begin{DoxyCompactList}\small\item\em Visit an unknown node. \end{DoxyCompactList}\item 
+const char $\ast$ {\bf C\+Str} () const 
+\item 
+int {\bf C\+Str\+Size} () const 
+\item 
+void {\bf Clear\+Buffer} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool {\bf Compact\+Mode} (const {\bf X\+M\+L\+Element} \&)
+\item 
+virtual void {\bf Print\+Space} (int depth)
+\item 
+void {\bf Print} (const char $\ast$format,...)
+\item 
+void {\bf Seal\+Element\+If\+Just\+Opened} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf \+\_\+element\+Just\+Opened}
+\item 
+{\bf Dyn\+Array}$<$ const char $\ast$, 10 $>$ {\bf \+\_\+stack}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Printing functionality. The \doxyref{X\+M\+L\+Printer}{pag.}{classtinyxml2_1_1_x_m_l_printer} gives you more options than the \doxyref{X\+M\+L\+Document\+::\+Print()}{pag.}{classtinyxml2_1_1_x_m_l_document_a686ea28672c0e0c60383ec28148c1ac0} method. It can\+:
+\begin{DoxyEnumerate}
+\item Print to memory.
+\item Print to a file you provide.
+\item Print X\+ML without a \doxyref{X\+M\+L\+Document}{pag.}{classtinyxml2_1_1_x_m_l_document}. Print to Memory \begin{DoxyVerb}XMLPrinter printer;
+doc.Print( &printer );
+SomeFunction( printer.CStr() );
+\end{DoxyVerb}
+ Print to a File You provide the file pointer. \begin{DoxyVerb}XMLPrinter printer( fp );
+doc.Print( &printer );
+\end{DoxyVerb}
+ Print without a \doxyref{X\+M\+L\+Document}{pag.}{classtinyxml2_1_1_x_m_l_document} When loading, an X\+ML parser is very useful. However, sometimes when saving, it just gets in the way. The code is often set up for streaming, and constructing the D\+OM is just overhead. The Printer supports the streaming case. The following code prints out a trivially simple X\+ML file without ever creating an X\+ML document. \begin{DoxyVerb}XMLPrinter printer( fp );
+printer.OpenElement( "foo" );
+printer.PushAttribute( "foo", "bar" );
+printer.CloseElement();
+\end{DoxyVerb}
+ 
+\end{DoxyEnumerate}
+
+Definição na linha 1918 do arquivo tinyxml2.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!X\+M\+L\+Printer@{X\+M\+L\+Printer}}
+\index{X\+M\+L\+Printer@{X\+M\+L\+Printer}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{X\+M\+L\+Printer(\+F\+I\+L\+E $\ast$file=0, bool compact=false, int depth=0)}]{\setlength{\rightskip}{0pt plus 5cm}tinyxml2\+::\+X\+M\+L\+Printer\+::\+X\+M\+L\+Printer (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{file = {\ttfamily 0}, }
+\item[{bool}]{compact = {\ttfamily false}, }
+\item[{int}]{depth = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_printer_aa6d3841c069085f5b8a27bc7103c04f7}
+Construct the printer. If the F\+I\+L\+E$\ast$ is specified, this will print to the F\+I\+LE. Else it will print to memory, and the result is available in \doxyref{C\+Str()}{pag.}{classtinyxml2_1_1_x_m_l_printer_a4a1b788e11b540921ec50687cd2b24a9}. If \textquotesingle{}compact\textquotesingle{} is set to true, then output is created with only required whitespace and newlines. \index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!````~X\+M\+L\+Printer@{$\sim$\+X\+M\+L\+Printer}}
+\index{````~X\+M\+L\+Printer@{$\sim$\+X\+M\+L\+Printer}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{$\sim$\+X\+M\+L\+Printer()}]{\setlength{\rightskip}{0pt plus 5cm}virtual tinyxml2\+::\+X\+M\+L\+Printer\+::$\sim$\+X\+M\+L\+Printer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_printer_af4caefa48ea6436898fb1807de8d14c0}
+
+
+Definição na linha 1928 do arquivo tinyxml2.\+h.
+
+
+
+\subsection{Métodos}
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Clear\+Buffer@{Clear\+Buffer}}
+\index{Clear\+Buffer@{Clear\+Buffer}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Clear\+Buffer()}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Clear\+Buffer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_printer_a216157765b7267bf389975b1cbf9a909}
+If in print to memory mode, reset the buffer to the beginning. 
+
+Definição na linha 1996 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Close\+Element@{Close\+Element}}
+\index{Close\+Element@{Close\+Element}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Close\+Element(bool compact\+Mode=false)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Close\+Element (
+\begin{DoxyParamCaption}
+\item[{bool}]{compact\+Mode = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_printer_ad04d29562b46fcdb23ab320f8b664240}
+
+
+If streaming, close the \doxyref{Element}{pag.}{class_element}. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Compact\+Mode@{Compact\+Mode}}
+\index{Compact\+Mode@{Compact\+Mode}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Compact\+Mode(const X\+M\+L\+Element \&)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool tinyxml2\+::\+X\+M\+L\+Printer\+::\+Compact\+Mode (
+\begin{DoxyParamCaption}
+\item[{const {\bf X\+M\+L\+Element} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_printer_a38e1ed5a779bdf63eda9e808f7a6de66}
+
+
+Definição na linha 2002 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!C\+Str@{C\+Str}}
+\index{C\+Str@{C\+Str}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{C\+Str() const }]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ tinyxml2\+::\+X\+M\+L\+Printer\+::\+C\+Str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_printer_a4a1b788e11b540921ec50687cd2b24a9}
+If in print to memory mode, return a pointer to the X\+ML file in memory. 
+
+Definição na linha 1981 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!C\+Str\+Size@{C\+Str\+Size}}
+\index{C\+Str\+Size@{C\+Str\+Size}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{C\+Str\+Size() const }]{\setlength{\rightskip}{0pt plus 5cm}int tinyxml2\+::\+X\+M\+L\+Printer\+::\+C\+Str\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_printer_a02c3c5f8c6c007dcbaf10595d9e22bf0}
+If in print to memory mode, return the size of the X\+ML file in memory. (Note the size returned includes the terminating null.) 
+
+Definição na linha 1989 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Open\+Element@{Open\+Element}}
+\index{Open\+Element@{Open\+Element}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Open\+Element(const char $\ast$name, bool compact\+Mode=false)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Open\+Element (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{bool}]{compact\+Mode = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_printer_a20fb06c83bd13e5140d7dd13af06c010}
+If streaming, start writing an element. The element must be closed with \doxyref{Close\+Element()}{pag.}{classtinyxml2_1_1_x_m_l_printer_ad04d29562b46fcdb23ab320f8b664240} \index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Print@{Print}}
+\index{Print@{Print}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Print(const char $\ast$format,...)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Print (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{format, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classtinyxml2_1_1_x_m_l_printer_ab30210a7f32e45634e7a45137bf6fdf6}
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Print\+Space@{Print\+Space}}
+\index{Print\+Space@{Print\+Space}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Print\+Space(int depth)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Print\+Space (
+\begin{DoxyParamCaption}
+\item[{int}]{depth}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_printer_a01148e2ebe6776e38c5a3e41bc5feb74}
+Prints out the space before an element. You may override to change the space and tabs used. A \doxyref{Print\+Space()}{pag.}{classtinyxml2_1_1_x_m_l_printer_a01148e2ebe6776e38c5a3e41bc5feb74} override should call \doxyref{Print()}{pag.}{classtinyxml2_1_1_x_m_l_printer_ab30210a7f32e45634e7a45137bf6fdf6}. \index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Push\+Attribute@{Push\+Attribute}}
+\index{Push\+Attribute@{Push\+Attribute}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Push\+Attribute(const char $\ast$name, const char $\ast$value)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Push\+Attribute (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_printer_a9a4e2c9348b42e147629d5a99f4af3f0}
+
+
+If streaming, add an attribute to an open element. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Push\+Attribute@{Push\+Attribute}}
+\index{Push\+Attribute@{Push\+Attribute}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Push\+Attribute(const char $\ast$name, int value)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Push\+Attribute (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_printer_a69120c82088597372d28d0a98f2ee7a1}
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Push\+Attribute@{Push\+Attribute}}
+\index{Push\+Attribute@{Push\+Attribute}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Push\+Attribute(const char $\ast$name, unsigned value)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Push\+Attribute (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{unsigned}]{value}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_printer_aa41039e51990aaf5342f3e0575a692c4}
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Push\+Attribute@{Push\+Attribute}}
+\index{Push\+Attribute@{Push\+Attribute}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Push\+Attribute(const char $\ast$name, bool value)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Push\+Attribute (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_printer_a51f7950d7b7a19f0d3a0d549a318d45f}
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Push\+Attribute@{Push\+Attribute}}
+\index{Push\+Attribute@{Push\+Attribute}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Push\+Attribute(const char $\ast$name, double value)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Push\+Attribute (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_printer_a1714867af40e68ca404c3e84b6cac2a6}
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Push\+Comment@{Push\+Comment}}
+\index{Push\+Comment@{Push\+Comment}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Push\+Comment(const char $\ast$comment)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Push\+Comment (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{comment}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_printer_afc8416814219591c2fd5656e0c233140}
+
+
+Add a comment. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Push\+Declaration@{Push\+Declaration}}
+\index{Push\+Declaration@{Push\+Declaration}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Push\+Declaration(const char $\ast$value)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Push\+Declaration (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_printer_a2fe3565e262594efc6c0276723c83fe7}
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Push\+Header@{Push\+Header}}
+\index{Push\+Header@{Push\+Header}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Push\+Header(bool write\+B\+O\+M, bool write\+Declaration)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Push\+Header (
+\begin{DoxyParamCaption}
+\item[{bool}]{write\+B\+OM, }
+\item[{bool}]{write\+Declaration}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_printer_a178c608ce8476043d5d6513819cde903}
+If streaming, write the B\+OM and declaration. \index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Push\+Text@{Push\+Text}}
+\index{Push\+Text@{Push\+Text}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Push\+Text(const char $\ast$text, bool cdata=false)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Push\+Text (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{text, }
+\item[{bool}]{cdata = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_printer_a1cc16a9362df4332012cb13cff6441b3}
+
+
+Add a text node. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Push\+Text@{Push\+Text}}
+\index{Push\+Text@{Push\+Text}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Push\+Text(int value)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Push\+Text (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_printer_a3e0d4d78de25d4cf081009e1431cea7e}
+
+
+Add a text node from an integer. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Push\+Text@{Push\+Text}}
+\index{Push\+Text@{Push\+Text}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Push\+Text(unsigned value)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Push\+Text (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{value}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_printer_a661fb50e7e0a4918d2d259cb0fae647e}
+
+
+Add a text node from an unsigned. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Push\+Text@{Push\+Text}}
+\index{Push\+Text@{Push\+Text}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Push\+Text(bool value)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Push\+Text (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_printer_a4390e5fa1ed05189a8686647345ab29f}
+
+
+Add a text node from a bool. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Push\+Text@{Push\+Text}}
+\index{Push\+Text@{Push\+Text}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Push\+Text(float value)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Push\+Text (
+\begin{DoxyParamCaption}
+\item[{float}]{value}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_printer_a1dbb1390e829d0673af66b9cd1928bd7}
+
+
+Add a text node from a float. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Push\+Text@{Push\+Text}}
+\index{Push\+Text@{Push\+Text}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Push\+Text(double value)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Push\+Text (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_printer_aa715302dfc09473c77c853cbd5431965}
+
+
+Add a text node from a double. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Push\+Unknown@{Push\+Unknown}}
+\index{Push\+Unknown@{Push\+Unknown}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Push\+Unknown(const char $\ast$value)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Push\+Unknown (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_printer_ab1efc6d1548505e9984185f58f54b713}
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Seal\+Element\+If\+Just\+Opened@{Seal\+Element\+If\+Just\+Opened}}
+\index{Seal\+Element\+If\+Just\+Opened@{Seal\+Element\+If\+Just\+Opened}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Seal\+Element\+If\+Just\+Opened()}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Printer\+::\+Seal\+Element\+If\+Just\+Opened (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classtinyxml2_1_1_x_m_l_printer_ac6e2c72c5d796f5b4de6ce81ca95e3fa}
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Visit@{Visit}}
+\index{Visit@{Visit}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Visit(const X\+M\+L\+Text \&text)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool tinyxml2\+::\+X\+M\+L\+Printer\+::\+Visit (
+\begin{DoxyParamCaption}
+\item[{const {\bf X\+M\+L\+Text} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_printer_a275ae25544a12199ae40b6994ca6e4de}
+
+
+Visit a text node. 
+
+
+
+Reimplementação de {\bf tinyxml2\+::\+X\+M\+L\+Visitor} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_visitor_af30233565856480ea48b6fa0d6dec65b}.
+
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Visit@{Visit}}
+\index{Visit@{Visit}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Visit(const X\+M\+L\+Comment \&comment)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool tinyxml2\+::\+X\+M\+L\+Printer\+::\+Visit (
+\begin{DoxyParamCaption}
+\item[{const {\bf X\+M\+L\+Comment} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_printer_a3f16a30be1537ac141d9bd2db824ba9e}
+
+
+Visit a comment node. 
+
+
+
+Reimplementação de {\bf tinyxml2\+::\+X\+M\+L\+Visitor} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_visitor_acc8147fb5a85f6c65721654e427752d7}.
+
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Visit@{Visit}}
+\index{Visit@{Visit}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Visit(const X\+M\+L\+Declaration \&declaration)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool tinyxml2\+::\+X\+M\+L\+Printer\+::\+Visit (
+\begin{DoxyParamCaption}
+\item[{const {\bf X\+M\+L\+Declaration} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_printer_a9ceff5cd85e5db65838962174fcdcc46}
+
+
+Visit a declaration. 
+
+
+
+Reimplementação de {\bf tinyxml2\+::\+X\+M\+L\+Visitor} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_visitor_adc75bd459fc7ba8223b50f0616767f9a}.
+
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Visit@{Visit}}
+\index{Visit@{Visit}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Visit(const X\+M\+L\+Unknown \&unknown)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool tinyxml2\+::\+X\+M\+L\+Printer\+::\+Visit (
+\begin{DoxyParamCaption}
+\item[{const {\bf X\+M\+L\+Unknown} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_printer_aa15e1da81e17dea5da6499ac5b08d9d8}
+
+
+Visit an unknown node. 
+
+
+
+Reimplementação de {\bf tinyxml2\+::\+X\+M\+L\+Visitor} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_visitor_a14e4748387c34bf53d24e8119bb1f292}.
+
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Visit\+Enter@{Visit\+Enter}}
+\index{Visit\+Enter@{Visit\+Enter}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Visit\+Enter(const X\+M\+L\+Document \&)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool tinyxml2\+::\+X\+M\+L\+Printer\+::\+Visit\+Enter (
+\begin{DoxyParamCaption}
+\item[{const {\bf X\+M\+L\+Document} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_printer_ae966b988a7a28c41e91c5ca17fb2054b}
+
+
+Visit a document. 
+
+
+
+Reimplementação de {\bf tinyxml2\+::\+X\+M\+L\+Visitor} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_visitor_acb3c22fc5f60eb9db98f533f2761f67d}.
+
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Visit\+Enter@{Visit\+Enter}}
+\index{Visit\+Enter@{Visit\+Enter}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Visit\+Enter(const X\+M\+L\+Element \&element, const X\+M\+L\+Attribute $\ast$attribute)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool tinyxml2\+::\+X\+M\+L\+Printer\+::\+Visit\+Enter (
+\begin{DoxyParamCaption}
+\item[{const {\bf X\+M\+L\+Element} \&}]{, }
+\item[{const {\bf X\+M\+L\+Attribute} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_printer_a2ce2aa508c21ac91615093ddb9c282c5}
+
+
+Visit an element. 
+
+
+
+Reimplementação de {\bf tinyxml2\+::\+X\+M\+L\+Visitor} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_visitor_af97980a17dd4e37448b181f5ddfa92b5}.
+
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Visit\+Exit@{Visit\+Exit}}
+\index{Visit\+Exit@{Visit\+Exit}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Visit\+Exit(const X\+M\+L\+Document \&)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool tinyxml2\+::\+X\+M\+L\+Printer\+::\+Visit\+Exit (
+\begin{DoxyParamCaption}
+\item[{const {\bf X\+M\+L\+Document} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_printer_a15fc1f2b922f540917dcf52808737b29}
+
+
+Visit a document. 
+
+
+
+Reimplementação de {\bf tinyxml2\+::\+X\+M\+L\+Visitor} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_visitor_a170e9989cd046ba904f302d087e07086}.
+
+
+
+Definição na linha 1965 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!Visit\+Exit@{Visit\+Exit}}
+\index{Visit\+Exit@{Visit\+Exit}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{Visit\+Exit(const X\+M\+L\+Element \&element)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool tinyxml2\+::\+X\+M\+L\+Printer\+::\+Visit\+Exit (
+\begin{DoxyParamCaption}
+\item[{const {\bf X\+M\+L\+Element} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_printer_ae99e0a7086543591edfb565f24689098}
+
+
+Visit an element. 
+
+
+
+Reimplementação de {\bf tinyxml2\+::\+X\+M\+L\+Visitor} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_visitor_a772f10ddc83f881956d32628faa16eb6}.
+
+
+
+\subsection{Atributos}
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!\+\_\+element\+Just\+Opened@{\+\_\+element\+Just\+Opened}}
+\index{\+\_\+element\+Just\+Opened@{\+\_\+element\+Just\+Opened}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{\+\_\+element\+Just\+Opened}]{\setlength{\rightskip}{0pt plus 5cm}bool tinyxml2\+::\+X\+M\+L\+Printer\+::\+\_\+element\+Just\+Opened\hspace{0.3cm}{\ttfamily [protected]}}\label{classtinyxml2_1_1_x_m_l_printer_ac07169d58b465214a2b1fa306e617c26}
+
+
+Definição na linha 2011 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}!\+\_\+stack@{\+\_\+stack}}
+\index{\+\_\+stack@{\+\_\+stack}!tinyxml2\+::\+X\+M\+L\+Printer@{tinyxml2\+::\+X\+M\+L\+Printer}}
+\subsubsection[{\+\_\+stack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Dyn\+Array}$<$ const char$\ast$, 10 $>$ tinyxml2\+::\+X\+M\+L\+Printer\+::\+\_\+stack\hspace{0.3cm}{\ttfamily [protected]}}\label{classtinyxml2_1_1_x_m_l_printer_a99d59e67e084714541bee3ae43884bef}
+
+
+Definição na linha 2012 do arquivo tinyxml2.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf tinyxml2.\+h}\end{DoxyCompactItemize}

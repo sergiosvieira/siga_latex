@@ -1,0 +1,62 @@
+\section{Referência do Arquivo import-\/window-\/controller.cpp}
+\label{import-window-controller_8cpp}\index{import-\/window-\/controller.\+cpp@{import-\/window-\/controller.\+cpp}}
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/import-\/window-\/controller.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Siga\+Converter/\+Time\+Serie\+Tree.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Siga\+Converter/\+Time\+Serie\+Tree\+Formatter.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Import\+Window/\+Binary\+Converter/\+C\+T\+L\+File.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Ui\+Utils.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}wx/progdlg.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$cstddef$>$}\\*
+{\ttfamily \#include $<$cassert$>$}\\*
+{\ttfamily \#include $<$climits$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$functional$>$}\\*
+{\ttfamily \#include $<$wx/xrc/xmlres.\+h$>$}\\*
+{\ttfamily \#include $<$wx/dialog.\+h$>$}\\*
+{\ttfamily \#include $<$wx/button.\+h$>$}\\*
+{\ttfamily \#include $<$wx/grid.\+h$>$}\\*
+{\ttfamily \#include $<$wx/gauge.\+h$>$}\\*
+{\ttfamily \#include $<$wx/range.\+h$>$}\\*
+{\ttfamily \#include $<$wx/filefn.\+h$>$}\\*
+{\ttfamily \#include $<$wx/stdpaths.\+h$>$}\\*
+{\ttfamily \#include $<$wx/msgdlg.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/string-\/utils.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}csv\+\_\+parser.\+hpp\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/siga-\/converter.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/filesystem.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/md5.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/import-\/window-\/model.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Import\+Window/import-\/window-\/header.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Import\+Window/\+Interfaces/interface-\/controller.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Import\+Window/\+Interfaces/interface-\/model.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Import\+Window/import-\/window-\/preview-\/controller.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/json-\/utils.\+h\char`\"{}}\\*
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf F\+R\+E\+E\+\_\+\+M\+EM}(ptr)
+\end{DoxyCompactItemize}
+
+
+\subsection{Definições e macros}
+\index{import-\/window-\/controller.\+cpp@{import-\/window-\/controller.\+cpp}!F\+R\+E\+E\+\_\+\+M\+EM@{F\+R\+E\+E\+\_\+\+M\+EM}}
+\index{F\+R\+E\+E\+\_\+\+M\+EM@{F\+R\+E\+E\+\_\+\+M\+EM}!import-\/window-\/controller.\+cpp@{import-\/window-\/controller.\+cpp}}
+\subsubsection[{F\+R\+E\+E\+\_\+\+M\+EM}]{\setlength{\rightskip}{0pt plus 5cm}\#define F\+R\+E\+E\+\_\+\+M\+EM(
+\begin{DoxyParamCaption}
+\item[{}]{ptr}
+\end{DoxyParamCaption}
+)}\label{import-window-controller_8cpp_af9b624d03d71058edb155918ea9d491e}
+{\bfseries Valor\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if} (ptr != \textcolor{keyword}{nullptr})     \(\backslash\)
+\{                       \(\backslash\)
+    delete ptr;         \(\backslash\)
+    ptr = \textcolor{keyword}{nullptr};      \(\backslash\)
+\}
+\end{DoxyCode}
+This class deal with the import series window events Autor\+: {\tt sergiosvieira@gmail.\+com} 
+
+Definição na linha 13 do arquivo import-\/window-\/controller.\+cpp.
+

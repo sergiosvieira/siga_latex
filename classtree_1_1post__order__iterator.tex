@@ -1,0 +1,213 @@
+\section{Referência da Classe tree$<$ T, tree\+\_\+node\+\_\+allocator $>$\+:\+:post\+\_\+order\+\_\+iterator}
+\label{classtree_1_1post__order__iterator}\index{tree$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::post\+\_\+order\+\_\+iterator@{tree$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::post\+\_\+order\+\_\+iterator}}
+
+
+Depth-\/first iterator, first accessing the children, then the node itself.  
+
+
+
+
+{\ttfamily \#include $<$tree.\+h$>$}
+
+
+
+Herdeiro de {\bf tree$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::iterator\+\_\+base}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf post\+\_\+order\+\_\+iterator} ()
+\item 
+{\bf post\+\_\+order\+\_\+iterator} ({\bf tree\+\_\+node} $\ast$)
+\item 
+{\bf post\+\_\+order\+\_\+iterator} (const {\bf iterator\+\_\+base} \&)
+\item 
+{\bf post\+\_\+order\+\_\+iterator} (const {\bf sibling\+\_\+iterator} \&)
+\item 
+bool {\bf operator==} (const {\bf post\+\_\+order\+\_\+iterator} \&) const 
+\item 
+bool {\bf operator!=} (const {\bf post\+\_\+order\+\_\+iterator} \&) const 
+\item 
+{\bf post\+\_\+order\+\_\+iterator} \& {\bf operator++} ()
+\item 
+{\bf post\+\_\+order\+\_\+iterator} \& {\bf operator-\/-\/} ()
+\item 
+{\bf post\+\_\+order\+\_\+iterator} {\bf operator++} (int)
+\item 
+{\bf post\+\_\+order\+\_\+iterator} {\bf operator-\/-\/} (int)
+\item 
+{\bf post\+\_\+order\+\_\+iterator} \& {\bf operator+=} (unsigned int)
+\item 
+{\bf post\+\_\+order\+\_\+iterator} \& {\bf operator-\/=} (unsigned int)
+\item 
+void {\bf descend\+\_\+all} ()
+\begin{DoxyCompactList}\small\item\em Set iterator to the first child as deep as possible down the tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+\subsubsection*{template$<$class T, class tree\+\_\+node\+\_\+allocator = std\+::allocator$<$tree\+\_\+node\+\_\+$<$\+T$>$ $>$$>$\\*
+class tree$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::post\+\_\+order\+\_\+iterator}
+
+Depth-\/first iterator, first accessing the children, then the node itself. 
+
+Definição na linha 140 do arquivo tree.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}!post\+\_\+order\+\_\+iterator@{post\+\_\+order\+\_\+iterator}}
+\index{post\+\_\+order\+\_\+iterator@{post\+\_\+order\+\_\+iterator}!tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}}
+\subsubsection[{post\+\_\+order\+\_\+iterator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T , class tree\+\_\+node\+\_\+allocator $>$ {\bf tree}$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::post\+\_\+order\+\_\+iterator\+::post\+\_\+order\+\_\+iterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classtree_1_1post__order__iterator_af6d2a1ff77da1ca318447faef819fb22}
+
+
+Definição na linha 2196 do arquivo tree.\+h.
+
+\index{tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}!post\+\_\+order\+\_\+iterator@{post\+\_\+order\+\_\+iterator}}
+\index{post\+\_\+order\+\_\+iterator@{post\+\_\+order\+\_\+iterator}!tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}}
+\subsubsection[{post\+\_\+order\+\_\+iterator(tree\+\_\+node $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T , class tree\+\_\+node\+\_\+allocator $>$ {\bf tree}$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::post\+\_\+order\+\_\+iterator\+::post\+\_\+order\+\_\+iterator (
+\begin{DoxyParamCaption}
+\item[{{\bf tree\+\_\+node} $\ast$}]{tn}
+\end{DoxyParamCaption}
+)}\label{classtree_1_1post__order__iterator_aadd3e555f6a69c1799cb5b9b12e3ef48}
+
+
+Definição na linha 2202 do arquivo tree.\+h.
+
+\index{tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}!post\+\_\+order\+\_\+iterator@{post\+\_\+order\+\_\+iterator}}
+\index{post\+\_\+order\+\_\+iterator@{post\+\_\+order\+\_\+iterator}!tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}}
+\subsubsection[{post\+\_\+order\+\_\+iterator(const iterator\+\_\+base \&)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T , class tree\+\_\+node\+\_\+allocator $>$ {\bf tree}$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::post\+\_\+order\+\_\+iterator\+::post\+\_\+order\+\_\+iterator (
+\begin{DoxyParamCaption}
+\item[{const {\bf iterator\+\_\+base} \&}]{other}
+\end{DoxyParamCaption}
+)}\label{classtree_1_1post__order__iterator_abbe898c229fab7e833da744a76aca5ab}
+
+
+Definição na linha 2208 do arquivo tree.\+h.
+
+\index{tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}!post\+\_\+order\+\_\+iterator@{post\+\_\+order\+\_\+iterator}}
+\index{post\+\_\+order\+\_\+iterator@{post\+\_\+order\+\_\+iterator}!tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}}
+\subsubsection[{post\+\_\+order\+\_\+iterator(const sibling\+\_\+iterator \&)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T , class tree\+\_\+node\+\_\+allocator $>$ {\bf tree}$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::post\+\_\+order\+\_\+iterator\+::post\+\_\+order\+\_\+iterator (
+\begin{DoxyParamCaption}
+\item[{const {\bf sibling\+\_\+iterator} \&}]{other}
+\end{DoxyParamCaption}
+)}\label{classtree_1_1post__order__iterator_ad1bba922181132f5c41a6ebd5230abe9}
+
+
+Definição na linha 2214 do arquivo tree.\+h.
+
+
+
+\subsection{Métodos}
+\index{tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}!descend\+\_\+all@{descend\+\_\+all}}
+\index{descend\+\_\+all@{descend\+\_\+all}!tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}}
+\subsubsection[{descend\+\_\+all()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T , class tree\+\_\+node\+\_\+allocator $>$ void {\bf tree}$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::post\+\_\+order\+\_\+iterator\+::descend\+\_\+all (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classtree_1_1post__order__iterator_aca4676b4986854521cfa2c7d84f62204}
+
+
+Set iterator to the first child as deep as possible down the tree. 
+
+
+
+Definição na linha 2302 do arquivo tree.\+h.
+
+\index{tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}}
+\subsubsection[{operator"!=(const post\+\_\+order\+\_\+iterator \&) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T , class tree\+\_\+node\+\_\+allocator $>$ bool {\bf tree}$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::post\+\_\+order\+\_\+iterator\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf post\+\_\+order\+\_\+iterator} \&}]{other}
+\end{DoxyParamCaption}
+) const}\label{classtree_1_1post__order__iterator_a59f0d0d145f27ed094a69214e1831102}
+
+
+Definição na linha 1983 do arquivo tree.\+h.
+
+\index{tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}}
+\subsubsection[{operator++()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T , class tree\+\_\+node\+\_\+allocator $>$ {\bf tree}$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::{\bf post\+\_\+order\+\_\+iterator} \& {\bf tree}$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::post\+\_\+order\+\_\+iterator\+::operator++ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classtree_1_1post__order__iterator_ababa42c4ecb0a0bb8b21b0c28dfa3009}
+
+
+Definição na linha 2228 do arquivo tree.\+h.
+
+\index{tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}!operator++@{operator++}}
+\index{operator++@{operator++}!tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}}
+\subsubsection[{operator++(int)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T , class tree\+\_\+node\+\_\+allocator $>$ {\bf tree}$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::{\bf post\+\_\+order\+\_\+iterator} {\bf tree}$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::post\+\_\+order\+\_\+iterator\+::operator++ (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\label{classtree_1_1post__order__iterator_a7041325e846017886e7c43d9c1c2cddb}
+
+
+Definição na linha 2265 do arquivo tree.\+h.
+
+\index{tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}}
+\subsubsection[{operator+=(unsigned int)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T , class tree\+\_\+node\+\_\+allocator $>$ {\bf tree}$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::{\bf post\+\_\+order\+\_\+iterator} \& {\bf tree}$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::post\+\_\+order\+\_\+iterator\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{num}
+\end{DoxyParamCaption}
+)}\label{classtree_1_1post__order__iterator_a0b6c2246f41b0a2ff8e4c9d9efcee879}
+
+
+Definição na linha 2282 do arquivo tree.\+h.
+
+\index{tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}}
+\subsubsection[{operator-\/-\/()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T , class tree\+\_\+node\+\_\+allocator $>$ {\bf tree}$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::{\bf post\+\_\+order\+\_\+iterator} \& {\bf tree}$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::post\+\_\+order\+\_\+iterator\+::operator-\/-\/ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classtree_1_1post__order__iterator_af70bbd10b24ca0cf1c674e4ef40899db}
+
+
+Definição na linha 2249 do arquivo tree.\+h.
+
+\index{tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}}
+\subsubsection[{operator-\/-\/(int)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T , class tree\+\_\+node\+\_\+allocator $>$ {\bf tree}$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::{\bf post\+\_\+order\+\_\+iterator} {\bf tree}$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::post\+\_\+order\+\_\+iterator\+::operator-\/-\/ (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\label{classtree_1_1post__order__iterator_af2c0df6c235853aa2191d02a557a1fea}
+
+
+Definição na linha 2273 do arquivo tree.\+h.
+
+\index{tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}}
+\subsubsection[{operator-\/=(unsigned int)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T , class tree\+\_\+node\+\_\+allocator $>$ {\bf tree}$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::{\bf post\+\_\+order\+\_\+iterator} \& {\bf tree}$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::post\+\_\+order\+\_\+iterator\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{num}
+\end{DoxyParamCaption}
+)}\label{classtree_1_1post__order__iterator_a93b7ddae75f30985a0d81f38bcbaa306}
+
+
+Definição na linha 2292 do arquivo tree.\+h.
+
+\index{tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}!operator==@{operator==}}
+\index{operator==@{operator==}!tree\+::post\+\_\+order\+\_\+iterator@{tree\+::post\+\_\+order\+\_\+iterator}}
+\subsubsection[{operator==(const post\+\_\+order\+\_\+iterator \&) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T , class tree\+\_\+node\+\_\+allocator $>$ bool {\bf tree}$<$ T, tree\+\_\+node\+\_\+allocator $>$\+::post\+\_\+order\+\_\+iterator\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf post\+\_\+order\+\_\+iterator} \&}]{other}
+\end{DoxyParamCaption}
+) const}\label{classtree_1_1post__order__iterator_ab1303f191d6bc8a62e5f03fa53466ec4}
+
+
+Definição na linha 1990 do arquivo tree.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf tree.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,311 @@
+\section{Referência da Classe Soil\+Vegetation\+File\+Entry}
+\label{class_soil_vegetation_file_entry}\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+
+
+{\ttfamily \#include $<$Soil\+Vegetation\+File\+Entry.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Soil\+Vegetation\+File\+Entry} ()
+\item 
+virtual {\bf $\sim$\+Soil\+Vegetation\+File\+Entry} ()
+\item 
+int {\bf get\+Subbasin\+ID} () const 
+\item 
+int {\bf get\+L\+U\+ID} () const 
+\item 
+int {\bf get\+T\+C\+ID} () const 
+\item 
+double {\bf get\+Fraction\+Rocky} () const 
+\item 
+unsigned int {\bf get\+Nbr\+S\+VC} () const 
+\item 
+std\+::vector$<$ int $>$ {\bf get\+Soil\+I\+Ds} () const 
+\item 
+std\+::vector$<$ int $>$ {\bf get\+Vegetation\+I\+Ds} () const 
+\item 
+std\+::vector$<$ double $>$ {\bf get\+Fractions} () const 
+\item 
+void {\bf set\+Subbasin\+ID} (int new\+Value)
+\item 
+void {\bf set\+L\+U\+ID} (int new\+Value)
+\item 
+void {\bf set\+T\+C\+ID} (int new\+Value)
+\item 
+void {\bf set\+Fraction\+Rocky} (double new\+Value)
+\item 
+void {\bf set\+Nbr\+S\+VC} (unsigned int new\+Value)
+\item 
+void {\bf set\+Soil\+I\+Ds} (const std\+::vector$<$ int $>$ \&new\+Values)
+\item 
+void {\bf set\+Vegetation\+I\+Ds} (const std\+::vector$<$ int $>$ \&new\+Values)
+\item 
+void {\bf set\+Fractions} (const std\+::vector$<$ double $>$ \&new\+Values)
+\item 
+wx\+String {\bf get\+String} () const 
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static wx\+String {\bf get\+Header} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Estáticos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+static const double {\bf D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+R\+A\+C\+T\+I\+O\+N\+\_\+\+R\+O\+C\+KY}
+\item 
+static const int {\bf M\+A\+X\+\_\+\+V\+A\+L\+U\+ES}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf subbasin\+ID}
+\item 
+int {\bf lu\+ID}
+\item 
+int {\bf tc\+ID}
+\item 
+double {\bf fraction\+Rocky}
+\item 
+unsigned int {\bf nbr\+S\+VC}
+\item 
+std\+::vector$<$ int $>$ {\bf soil\+I\+Ds}
+\item 
+std\+::vector$<$ int $>$ {\bf vegetation\+I\+Ds}
+\item 
+std\+::vector$<$ double $>$ {\bf fractions}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Essa classe apenas representa uma lina do arquivo de entrada \textquotesingle{}hymo.\+dat\textquotesingle{}
+
+Para mais informa��es informa��es t�cnicas sobre os atributos dessa classe, vide o documento \char`\"{}\+Wasa\+\_\+\+Documentation.\+doc\char`\"{} 
+
+Definição na linha 19 do arquivo Soil\+Vegetation\+File\+Entry.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{Soil\+Vegetation\+File\+Entry()}]{\setlength{\rightskip}{0pt plus 5cm}Soil\+Vegetation\+File\+Entry\+::\+Soil\+Vegetation\+File\+Entry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_soil_vegetation_file_entry_a958dd3070d3e012d96856e5c1cd9a574}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!````~Soil\+Vegetation\+File\+Entry@{$\sim$\+Soil\+Vegetation\+File\+Entry}}
+\index{````~Soil\+Vegetation\+File\+Entry@{$\sim$\+Soil\+Vegetation\+File\+Entry}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{$\sim$\+Soil\+Vegetation\+File\+Entry()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Soil\+Vegetation\+File\+Entry\+::$\sim$\+Soil\+Vegetation\+File\+Entry (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_soil_vegetation_file_entry_aeaee8268c11894c2a15029c8d8a8c248}
+
+
+\subsection{Métodos}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!get\+Fraction\+Rocky@{get\+Fraction\+Rocky}}
+\index{get\+Fraction\+Rocky@{get\+Fraction\+Rocky}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{get\+Fraction\+Rocky() const }]{\setlength{\rightskip}{0pt plus 5cm}double Soil\+Vegetation\+File\+Entry\+::get\+Fraction\+Rocky (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_vegetation_file_entry_a2732d15a4343e4a0cb7569acc3037fcb}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!get\+Fractions@{get\+Fractions}}
+\index{get\+Fractions@{get\+Fractions}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{get\+Fractions() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+Vegetation\+File\+Entry\+::get\+Fractions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_vegetation_file_entry_ab3c192b67c4cd6b7304f413844578cf0}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!get\+Header@{get\+Header}}
+\index{get\+Header@{get\+Header}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{get\+Header()}]{\setlength{\rightskip}{0pt plus 5cm}static wx\+String Soil\+Vegetation\+File\+Entry\+::get\+Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_soil_vegetation_file_entry_a5b79372239a640717bae8a322dfd945c}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!get\+L\+U\+ID@{get\+L\+U\+ID}}
+\index{get\+L\+U\+ID@{get\+L\+U\+ID}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{get\+L\+U\+I\+D() const }]{\setlength{\rightskip}{0pt plus 5cm}int Soil\+Vegetation\+File\+Entry\+::get\+L\+U\+ID (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_vegetation_file_entry_a3cf380c78024bce27981cf473871a209}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!get\+Nbr\+S\+VC@{get\+Nbr\+S\+VC}}
+\index{get\+Nbr\+S\+VC@{get\+Nbr\+S\+VC}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{get\+Nbr\+S\+V\+C() const }]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Soil\+Vegetation\+File\+Entry\+::get\+Nbr\+S\+VC (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_vegetation_file_entry_ab644bfb3d573678a7c58190eeeb21701}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!get\+Soil\+I\+Ds@{get\+Soil\+I\+Ds}}
+\index{get\+Soil\+I\+Ds@{get\+Soil\+I\+Ds}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{get\+Soil\+I\+Ds() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ Soil\+Vegetation\+File\+Entry\+::get\+Soil\+I\+Ds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_vegetation_file_entry_a85c7dbe32339d38672ff4a5afee313cc}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{get\+String() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Soil\+Vegetation\+File\+Entry\+::get\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_vegetation_file_entry_a3ae0d52b3a2a812bdff65e066887d5ac}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!get\+Subbasin\+ID@{get\+Subbasin\+ID}}
+\index{get\+Subbasin\+ID@{get\+Subbasin\+ID}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{get\+Subbasin\+I\+D() const }]{\setlength{\rightskip}{0pt plus 5cm}int Soil\+Vegetation\+File\+Entry\+::get\+Subbasin\+ID (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_vegetation_file_entry_a9239ff16625e39fbdd9189cb810ff5d8}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!get\+T\+C\+ID@{get\+T\+C\+ID}}
+\index{get\+T\+C\+ID@{get\+T\+C\+ID}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{get\+T\+C\+I\+D() const }]{\setlength{\rightskip}{0pt plus 5cm}int Soil\+Vegetation\+File\+Entry\+::get\+T\+C\+ID (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_vegetation_file_entry_a0bb5b2f2ca5228c5af3e4626ebab3276}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!get\+Vegetation\+I\+Ds@{get\+Vegetation\+I\+Ds}}
+\index{get\+Vegetation\+I\+Ds@{get\+Vegetation\+I\+Ds}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{get\+Vegetation\+I\+Ds() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ Soil\+Vegetation\+File\+Entry\+::get\+Vegetation\+I\+Ds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_soil_vegetation_file_entry_a40d33bc2a6ba76bb1d656a6558b86dfd}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!set\+Fraction\+Rocky@{set\+Fraction\+Rocky}}
+\index{set\+Fraction\+Rocky@{set\+Fraction\+Rocky}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{set\+Fraction\+Rocky(double new\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+Vegetation\+File\+Entry\+::set\+Fraction\+Rocky (
+\begin{DoxyParamCaption}
+\item[{double}]{new\+Value}
+\end{DoxyParamCaption}
+)}\label{class_soil_vegetation_file_entry_ac75d26c754686a9c015c77f25d9c2b08}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!set\+Fractions@{set\+Fractions}}
+\index{set\+Fractions@{set\+Fractions}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{set\+Fractions(const std\+::vector$<$ double $>$ \&new\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+Vegetation\+File\+Entry\+::set\+Fractions (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ double $>$ \&}]{new\+Values}
+\end{DoxyParamCaption}
+)}\label{class_soil_vegetation_file_entry_a1967293479071887b8ad57eaea0f8b26}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!set\+L\+U\+ID@{set\+L\+U\+ID}}
+\index{set\+L\+U\+ID@{set\+L\+U\+ID}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{set\+L\+U\+I\+D(int new\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+Vegetation\+File\+Entry\+::set\+L\+U\+ID (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Value}
+\end{DoxyParamCaption}
+)}\label{class_soil_vegetation_file_entry_a6e6e1d52005c581727f63bf3bbd985bd}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!set\+Nbr\+S\+VC@{set\+Nbr\+S\+VC}}
+\index{set\+Nbr\+S\+VC@{set\+Nbr\+S\+VC}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{set\+Nbr\+S\+V\+C(unsigned int new\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+Vegetation\+File\+Entry\+::set\+Nbr\+S\+VC (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{new\+Value}
+\end{DoxyParamCaption}
+)}\label{class_soil_vegetation_file_entry_a56f62659b38abcdbf9b6f4e81f42cae8}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!set\+Soil\+I\+Ds@{set\+Soil\+I\+Ds}}
+\index{set\+Soil\+I\+Ds@{set\+Soil\+I\+Ds}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{set\+Soil\+I\+Ds(const std\+::vector$<$ int $>$ \&new\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+Vegetation\+File\+Entry\+::set\+Soil\+I\+Ds (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ int $>$ \&}]{new\+Values}
+\end{DoxyParamCaption}
+)}\label{class_soil_vegetation_file_entry_a4f7a29ebb2f7625693194b847350f7f2}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!set\+Subbasin\+ID@{set\+Subbasin\+ID}}
+\index{set\+Subbasin\+ID@{set\+Subbasin\+ID}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{set\+Subbasin\+I\+D(int new\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+Vegetation\+File\+Entry\+::set\+Subbasin\+ID (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Value}
+\end{DoxyParamCaption}
+)}\label{class_soil_vegetation_file_entry_ab85f26681321f38632321fefd78909d3}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!set\+T\+C\+ID@{set\+T\+C\+ID}}
+\index{set\+T\+C\+ID@{set\+T\+C\+ID}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{set\+T\+C\+I\+D(int new\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+Vegetation\+File\+Entry\+::set\+T\+C\+ID (
+\begin{DoxyParamCaption}
+\item[{int}]{new\+Value}
+\end{DoxyParamCaption}
+)}\label{class_soil_vegetation_file_entry_a9fa42824379150f00fb899b5e178e17a}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!set\+Vegetation\+I\+Ds@{set\+Vegetation\+I\+Ds}}
+\index{set\+Vegetation\+I\+Ds@{set\+Vegetation\+I\+Ds}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{set\+Vegetation\+I\+Ds(const std\+::vector$<$ int $>$ \&new\+Values)}]{\setlength{\rightskip}{0pt plus 5cm}void Soil\+Vegetation\+File\+Entry\+::set\+Vegetation\+I\+Ds (
+\begin{DoxyParamCaption}
+\item[{const std\+::vector$<$ int $>$ \&}]{new\+Values}
+\end{DoxyParamCaption}
+)}\label{class_soil_vegetation_file_entry_acef5503d1201e81da4899d017770c1d3}
+
+
+\subsection{Atributos}
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+R\+A\+C\+T\+I\+O\+N\+\_\+\+R\+O\+C\+KY@{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+R\+A\+C\+T\+I\+O\+N\+\_\+\+R\+O\+C\+KY}}
+\index{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+R\+A\+C\+T\+I\+O\+N\+\_\+\+R\+O\+C\+KY@{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+R\+A\+C\+T\+I\+O\+N\+\_\+\+R\+O\+C\+KY}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+R\+A\+C\+T\+I\+O\+N\+\_\+\+R\+O\+C\+KY}]{\setlength{\rightskip}{0pt plus 5cm}const double Soil\+Vegetation\+File\+Entry\+::\+D\+E\+F\+A\+U\+L\+T\+\_\+\+F\+R\+A\+C\+T\+I\+O\+N\+\_\+\+R\+O\+C\+KY\hspace{0.3cm}{\ttfamily [static]}}\label{class_soil_vegetation_file_entry_a1a5bd3e8e8534d99d7437202f0178200}
+
+
+Definição na linha 36 do arquivo Soil\+Vegetation\+File\+Entry.\+h.
+
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!fraction\+Rocky@{fraction\+Rocky}}
+\index{fraction\+Rocky@{fraction\+Rocky}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{fraction\+Rocky}]{\setlength{\rightskip}{0pt plus 5cm}double Soil\+Vegetation\+File\+Entry\+::fraction\+Rocky\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_vegetation_file_entry_a380de3068dc05f28958369139e7def3a}
+
+
+Definição na linha 26 do arquivo Soil\+Vegetation\+File\+Entry.\+h.
+
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!fractions@{fractions}}
+\index{fractions@{fractions}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{fractions}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$double$>$ Soil\+Vegetation\+File\+Entry\+::fractions\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_vegetation_file_entry_a5ce7f777aae1f0748c7e5ca14e05f372}
+
+
+Definição na linha 33 do arquivo Soil\+Vegetation\+File\+Entry.\+h.
+
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!lu\+ID@{lu\+ID}}
+\index{lu\+ID@{lu\+ID}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{lu\+ID}]{\setlength{\rightskip}{0pt plus 5cm}int Soil\+Vegetation\+File\+Entry\+::lu\+ID\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_vegetation_file_entry_a4f7c0bb3db34c547f9b1aff78d80303f}
+
+
+Definição na linha 24 do arquivo Soil\+Vegetation\+File\+Entry.\+h.
+
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!M\+A\+X\+\_\+\+V\+A\+L\+U\+ES@{M\+A\+X\+\_\+\+V\+A\+L\+U\+ES}}
+\index{M\+A\+X\+\_\+\+V\+A\+L\+U\+ES@{M\+A\+X\+\_\+\+V\+A\+L\+U\+ES}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{M\+A\+X\+\_\+\+V\+A\+L\+U\+ES}]{\setlength{\rightskip}{0pt plus 5cm}const int Soil\+Vegetation\+File\+Entry\+::\+M\+A\+X\+\_\+\+V\+A\+L\+U\+ES\hspace{0.3cm}{\ttfamily [static]}}\label{class_soil_vegetation_file_entry_a50bb84e9d53d80b415b7e13d59c4b09b}
+
+
+Definição na linha 40 do arquivo Soil\+Vegetation\+File\+Entry.\+h.
+
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!nbr\+S\+VC@{nbr\+S\+VC}}
+\index{nbr\+S\+VC@{nbr\+S\+VC}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{nbr\+S\+VC}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Soil\+Vegetation\+File\+Entry\+::nbr\+S\+VC\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_vegetation_file_entry_ad160ba00025b758725b544185b0e5848}
+
+
+Definição na linha 29 do arquivo Soil\+Vegetation\+File\+Entry.\+h.
+
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!soil\+I\+Ds@{soil\+I\+Ds}}
+\index{soil\+I\+Ds@{soil\+I\+Ds}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{soil\+I\+Ds}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ Soil\+Vegetation\+File\+Entry\+::soil\+I\+Ds\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_vegetation_file_entry_aa960fd20e567d247da7332eb8ed4fc91}
+
+
+Definição na linha 32 do arquivo Soil\+Vegetation\+File\+Entry.\+h.
+
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!subbasin\+ID@{subbasin\+ID}}
+\index{subbasin\+ID@{subbasin\+ID}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{subbasin\+ID}]{\setlength{\rightskip}{0pt plus 5cm}int Soil\+Vegetation\+File\+Entry\+::subbasin\+ID\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_vegetation_file_entry_acd5d8f5779e83905741e31db311b7a19}
+
+
+Definição na linha 24 do arquivo Soil\+Vegetation\+File\+Entry.\+h.
+
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!tc\+ID@{tc\+ID}}
+\index{tc\+ID@{tc\+ID}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{tc\+ID}]{\setlength{\rightskip}{0pt plus 5cm}int Soil\+Vegetation\+File\+Entry\+::tc\+ID\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_vegetation_file_entry_a0c90e56a72dc06ab6a060b735c6481aa}
+
+
+Definição na linha 24 do arquivo Soil\+Vegetation\+File\+Entry.\+h.
+
+\index{Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}!vegetation\+I\+Ds@{vegetation\+I\+Ds}}
+\index{vegetation\+I\+Ds@{vegetation\+I\+Ds}!Soil\+Vegetation\+File\+Entry@{Soil\+Vegetation\+File\+Entry}}
+\subsubsection[{vegetation\+I\+Ds}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ Soil\+Vegetation\+File\+Entry\+::vegetation\+I\+Ds\hspace{0.3cm}{\ttfamily [protected]}}\label{class_soil_vegetation_file_entry_afa781253dc6d9befce18aa066a7a1b2d}
+
+
+Definição na linha 32 do arquivo Soil\+Vegetation\+File\+Entry.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Soil\+Vegetation\+File\+Entry.\+h}\end{DoxyCompactItemize}

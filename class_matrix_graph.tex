@@ -1,0 +1,280 @@
+\section{Referência da Classe Matrix\+Graph}
+\label{class_matrix_graph}\index{Matrix\+Graph@{Matrix\+Graph}}
+
+
+{\ttfamily \#include $<$Matrix\+Graph.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf get\+Index\+Dot} ()
+\item 
+void {\bf set\+Index\+Dot} (int index)
+\item 
+bool {\bf draw} (int id)
+\item 
+bool {\bf erase} (int)
+\item 
+void {\bf set\+Curve} (int id)
+\item 
+{\bf Matrix\+Graph} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent}, {\bf Matrix\+Viewer} $\ast${\bf viewer}, bool {\bf any\+Matrix}, bool {\bf just\+One}, bool fit)
+\item 
+{\bf $\sim$\+Matrix\+Graph} ()
+\item 
+void {\bf insert\+Matrix} ({\bf Draw\+Matrix} $\ast$matrix)
+\item 
+void {\bf remove\+Matrix} ({\bf Draw\+Matrix} $\ast$d\+Matrix, wx\+String name)
+\item 
+void {\bf set\+Info} ()
+\item 
+void {\bf redraw\+Fit\+Curve} ()
+\item 
+void {\bf redraw\+All} ()
+\item 
+void {\bf clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf fit\+Alfa}
+\item 
+double {\bf fit\+Beta}
+\item 
+wx\+Menu $\ast$ {\bf popup\+Menu}
+\item 
+wx\+Tree\+Item\+Id {\bf r\+Id}
+\item 
+bool {\bf any\+Matrix}
+\item 
+bool {\bf just\+One}
+\item 
+bool {\bf d\+Fit}
+\item 
+wx\+Plot\+Ctrl $\ast$ {\bf plot}
+\item 
+wx\+Button $\ast$ {\bf m\+\_\+btn\+Chage\+Grid}
+\item 
+{\bf Matrix\+Viewer} $\ast$ {\bf viewer}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+Mostra as series de forma grafica 
+
+Definição na linha 36 do arquivo Matrix\+Graph.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Matrix\+Graph@{Matrix\+Graph}!Matrix\+Graph@{Matrix\+Graph}}
+\index{Matrix\+Graph@{Matrix\+Graph}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{Matrix\+Graph(wx\+Frame $\ast$frame, wx\+Window $\ast$parent, Matrix\+Viewer $\ast$viewer, bool any\+Matrix, bool just\+One, bool fit)}]{\setlength{\rightskip}{0pt plus 5cm}Matrix\+Graph\+::\+Matrix\+Graph (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{{\bf Matrix\+Viewer} $\ast$}]{viewer, }
+\item[{bool}]{any\+Matrix, }
+\item[{bool}]{just\+One, }
+\item[{bool}]{fit}
+\end{DoxyParamCaption}
+)}\label{class_matrix_graph_aab81b2734749ba0de9b48ff2930c8ddf}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & Frame que possui a interface \\
+\hline
+{\em parent} & Pai da janela \\
+\hline
+{\em viewer} & Janela de initerface \\
+\hline
+{\em any\+Matrix} & Escolher colunas de diferentes matrizes para desenha-\/las uma contra a outra \\
+\hline
+{\em just\+One} & Desenha apenas um gr�fico. Ap�s uma sele��o valida de desenhar n�o permite que mais nenhuma coluna para desenhar. \\
+\hline
+{\em fit} & Se havera uma curva de ajuste associada. \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Graph@{Matrix\+Graph}!````~Matrix\+Graph@{$\sim$\+Matrix\+Graph}}
+\index{````~Matrix\+Graph@{$\sim$\+Matrix\+Graph}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{$\sim$\+Matrix\+Graph()}]{\setlength{\rightskip}{0pt plus 5cm}Matrix\+Graph\+::$\sim$\+Matrix\+Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_matrix_graph_a23f3e36d3a246cc96398eb3c51b5ca7c}
+Destrutor 
+
+\subsection{Métodos}
+\index{Matrix\+Graph@{Matrix\+Graph}!clear@{clear}}
+\index{clear@{clear}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Graph\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_matrix_graph_ade0cf39255258851c5166044994d8e39}
+Limpa o gr�fico \index{Matrix\+Graph@{Matrix\+Graph}!draw@{draw}}
+\index{draw@{draw}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{draw(int id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Matrix\+Graph\+::draw (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}\label{class_matrix_graph_a897a03d13d8411b66fb2e901924a35db}
+Desenha \index{Matrix\+Graph@{Matrix\+Graph}!erase@{erase}}
+\index{erase@{erase}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{erase(int)}]{\setlength{\rightskip}{0pt plus 5cm}bool Matrix\+Graph\+::erase (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\label{class_matrix_graph_a95a81d2f0d784010ca48b3ca9a391bf3}
+Apaga \index{Matrix\+Graph@{Matrix\+Graph}!get\+Index\+Dot@{get\+Index\+Dot}}
+\index{get\+Index\+Dot@{get\+Index\+Dot}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{get\+Index\+Dot()}]{\setlength{\rightskip}{0pt plus 5cm}int Matrix\+Graph\+::get\+Index\+Dot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_matrix_graph_add1ea23d64d8b019f6d75e231c4321aa}
+\index{Matrix\+Graph@{Matrix\+Graph}!insert\+Matrix@{insert\+Matrix}}
+\index{insert\+Matrix@{insert\+Matrix}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{insert\+Matrix(\+Draw\+Matrix $\ast$matrix)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Graph\+::insert\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Matrix} $\ast$}]{matrix}
+\end{DoxyParamCaption}
+)}\label{class_matrix_graph_a5818ca52ac781b09c6e3fa62b828a851}
+Insere matriz 
+\begin{DoxyParams}{Parâmetros}
+{\em matrix} & Matriz a ser inserida \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Graph@{Matrix\+Graph}!redraw\+All@{redraw\+All}}
+\index{redraw\+All@{redraw\+All}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{redraw\+All()}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Graph\+::redraw\+All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_matrix_graph_af6946dc9e0b688e0bab042a63e7b4f2e}
+Redesenha os graficos \index{Matrix\+Graph@{Matrix\+Graph}!redraw\+Fit\+Curve@{redraw\+Fit\+Curve}}
+\index{redraw\+Fit\+Curve@{redraw\+Fit\+Curve}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{redraw\+Fit\+Curve()}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Graph\+::redraw\+Fit\+Curve (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_matrix_graph_ada3b388b9ea89c88cb7cf9b136bf2e2f}
+Redesenha a curva de ajuste \index{Matrix\+Graph@{Matrix\+Graph}!remove\+Matrix@{remove\+Matrix}}
+\index{remove\+Matrix@{remove\+Matrix}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{remove\+Matrix(\+Draw\+Matrix $\ast$d\+Matrix, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Graph\+::remove\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Matrix} $\ast$}]{d\+Matrix, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_matrix_graph_ada71f5619f0f51ddb9890d1df3d7b332}
+Remove matriz 
+\begin{DoxyParams}{Parâmetros}
+{\em matrix} & Matriz a ser inserida \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Graph@{Matrix\+Graph}!set\+Curve@{set\+Curve}}
+\index{set\+Curve@{set\+Curve}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{set\+Curve(int id)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Graph\+::set\+Curve (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}\label{class_matrix_graph_a19b7846f650a37d8c53b603cb584378e}
+Define uma curva de ajuste \index{Matrix\+Graph@{Matrix\+Graph}!set\+Index\+Dot@{set\+Index\+Dot}}
+\index{set\+Index\+Dot@{set\+Index\+Dot}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{set\+Index\+Dot(int index)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Graph\+::set\+Index\+Dot (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\label{class_matrix_graph_a654f6b54153890d346bd59c8f206df5c}
+Define o ponto selecionado \index{Matrix\+Graph@{Matrix\+Graph}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Graph\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_matrix_graph_a95374ceb5f01b862390fc13f690d905b}
+Seta os par�metros para calculo do modelo 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_aced556e5caf584b7335135d337895154}.
+
+
+
+\subsection{Atributos}
+\index{Matrix\+Graph@{Matrix\+Graph}!any\+Matrix@{any\+Matrix}}
+\index{any\+Matrix@{any\+Matrix}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{any\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}bool Matrix\+Graph\+::any\+Matrix}\label{class_matrix_graph_a09c1e7bbf55beebfab60cbef808429d9}
+Permite montar gr�fico com colunas de diferentes matrizes 
+
+Definição na linha 278 do arquivo Matrix\+Graph.\+h.
+
+\index{Matrix\+Graph@{Matrix\+Graph}!d\+Fit@{d\+Fit}}
+\index{d\+Fit@{d\+Fit}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{d\+Fit}]{\setlength{\rightskip}{0pt plus 5cm}bool Matrix\+Graph\+::d\+Fit}\label{class_matrix_graph_a547d108c50e144b0633f4d89bbd54061}
+
+
+Definição na linha 286 do arquivo Matrix\+Graph.\+h.
+
+\index{Matrix\+Graph@{Matrix\+Graph}!fit\+Alfa@{fit\+Alfa}}
+\index{fit\+Alfa@{fit\+Alfa}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{fit\+Alfa}]{\setlength{\rightskip}{0pt plus 5cm}double Matrix\+Graph\+::fit\+Alfa}\label{class_matrix_graph_a1b34e99f420a88dbc9dc59091410e5f3}
+Alfa e beta da curva de ajuste 
+
+Definição na linha 266 do arquivo Matrix\+Graph.\+h.
+
+\index{Matrix\+Graph@{Matrix\+Graph}!fit\+Beta@{fit\+Beta}}
+\index{fit\+Beta@{fit\+Beta}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{fit\+Beta}]{\setlength{\rightskip}{0pt plus 5cm}double Matrix\+Graph\+::fit\+Beta}\label{class_matrix_graph_a1f1bebe957647a5e9ac1c816892ba347}
+
+
+Definição na linha 266 do arquivo Matrix\+Graph.\+h.
+
+\index{Matrix\+Graph@{Matrix\+Graph}!just\+One@{just\+One}}
+\index{just\+One@{just\+One}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{just\+One}]{\setlength{\rightskip}{0pt plus 5cm}bool Matrix\+Graph\+::just\+One}\label{class_matrix_graph_a719cd96e6c82e30b3c36dd4b7b082a49}
+Mostra apenas um gr�fico 
+
+Definição na linha 282 do arquivo Matrix\+Graph.\+h.
+
+\index{Matrix\+Graph@{Matrix\+Graph}!m\+\_\+btn\+Chage\+Grid@{m\+\_\+btn\+Chage\+Grid}}
+\index{m\+\_\+btn\+Chage\+Grid@{m\+\_\+btn\+Chage\+Grid}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{m\+\_\+btn\+Chage\+Grid}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Matrix\+Graph\+::m\+\_\+btn\+Chage\+Grid}\label{class_matrix_graph_ac479d1a6a1f643f752fa61074ab68531}
+Quando precionado, se um ponto no graph estiver selecionado, muda para a planilha selecionando a linha equivalente ao ponto 
+
+Definição na linha 294 do arquivo Matrix\+Graph.\+h.
+
+\index{Matrix\+Graph@{Matrix\+Graph}!plot@{plot}}
+\index{plot@{plot}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{plot}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Plot\+Ctrl$\ast$ Matrix\+Graph\+::plot}\label{class_matrix_graph_aff2b6ad4b1b2a6f926f7afc68ec1aa1b}
+Regi�o de desenho 
+
+Definição na linha 290 do arquivo Matrix\+Graph.\+h.
+
+\index{Matrix\+Graph@{Matrix\+Graph}!popup\+Menu@{popup\+Menu}}
+\index{popup\+Menu@{popup\+Menu}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{popup\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Menu$\ast$ Matrix\+Graph\+::popup\+Menu}\label{class_matrix_graph_ab196034790fb26f47b72ff052da08530}
+Menu de popup 
+
+Definição na linha 270 do arquivo Matrix\+Graph.\+h.
+
+\index{Matrix\+Graph@{Matrix\+Graph}!r\+Id@{r\+Id}}
+\index{r\+Id@{r\+Id}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{r\+Id}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Item\+Id Matrix\+Graph\+::r\+Id}\label{class_matrix_graph_ae045a344ba0f52366cfc7a7b7b1c61b2}
+Identificador do treectrl da informa��o da coluna selecionada 
+
+Definição na linha 274 do arquivo Matrix\+Graph.\+h.
+
+\index{Matrix\+Graph@{Matrix\+Graph}!viewer@{viewer}}
+\index{viewer@{viewer}!Matrix\+Graph@{Matrix\+Graph}}
+\subsubsection[{viewer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix\+Viewer}$\ast$ Matrix\+Graph\+::viewer}\label{class_matrix_graph_a7766c45f7a256bc7333e91d8bf5dd9a5}
+Aponta para a janela de interface 
+
+Definição na linha 312 do arquivo Matrix\+Graph.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix\+Graph.\+h}\end{DoxyCompactItemize}

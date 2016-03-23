@@ -1,0 +1,123 @@
+\section{Referência da Classe Res\+Op\+Link\+Interface}
+\label{class_res_op_link_interface}\index{Res\+Op\+Link\+Interface@{Res\+Op\+Link\+Interface}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Link\+Interface.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Element\+Interface}.
+
+
+
+Superclasse de {\bf Res\+Op\+Link\+Net\+Flow\+Interface} e {\bf Res\+Op\+Link\+Seq\+Interface}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Link\+Interface} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent})
+\item 
+{\bf $\sim$\+Res\+Op\+Link\+Interface} ()
+\item 
+virtual void {\bf set\+Info} ({\bf Res\+Op\+Element} $\ast$model)
+\item 
+virtual void {\bf show\+Results} ({\bf Res\+Op\+Element} $\ast$element)=0
+\item 
+virtual {\bf Serie\+Viewer} $\ast$ {\bf create\+Results} ({\bf Res\+Op\+Element} $\ast$element)
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+Interface da \doxyref{Link}{pag.}{class_link} 
+
+Definição na linha 19 do arquivo Res\+Op\+Link\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Link\+Interface@{Res\+Op\+Link\+Interface}!Res\+Op\+Link\+Interface@{Res\+Op\+Link\+Interface}}
+\index{Res\+Op\+Link\+Interface@{Res\+Op\+Link\+Interface}!Res\+Op\+Link\+Interface@{Res\+Op\+Link\+Interface}}
+\subsubsection[{Res\+Op\+Link\+Interface(wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Link\+Interface\+::\+Res\+Op\+Link\+Interface (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_res_op_link_interface_a9bca528571569fa55a73034234c3fe2b}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & Janela principal \\
+\hline
+{\em parent} & Janela que a cont�m \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Link\+Interface@{Res\+Op\+Link\+Interface}!````~Res\+Op\+Link\+Interface@{$\sim$\+Res\+Op\+Link\+Interface}}
+\index{````~Res\+Op\+Link\+Interface@{$\sim$\+Res\+Op\+Link\+Interface}!Res\+Op\+Link\+Interface@{Res\+Op\+Link\+Interface}}
+\subsubsection[{$\sim$\+Res\+Op\+Link\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Link\+Interface\+::$\sim$\+Res\+Op\+Link\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_link_interface_af619262d2d384689bf4304079748564b}
+Destrutor 
+
+\subsection{Métodos}
+\index{Res\+Op\+Link\+Interface@{Res\+Op\+Link\+Interface}!create\+Results@{create\+Results}}
+\index{create\+Results@{create\+Results}!Res\+Op\+Link\+Interface@{Res\+Op\+Link\+Interface}}
+\subsubsection[{create\+Results(\+Res\+Op\+Element $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Serie\+Viewer}$\ast$ Res\+Op\+Link\+Interface\+::create\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_link_interface_a1f3e5a94a289057ce69fa6e7e737a76e}
+Cria os resultados 
+
+Implementa {\bf Res\+Op\+Element\+Interface} \doxyref{}{pag.}{class_res_op_element_interface_ad806bc55cd20d4fc875b61e81c9a32cf}.
+
+
+
+Reimplementado por {\bf Res\+Op\+Link\+Seq\+Interface} \doxyref{}{pag.}{class_res_op_link_seq_interface_a7ffdfe2575777c498b921ae98036dd9c} e {\bf Res\+Op\+Link\+Net\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_link_net_flow_interface_a7065bdca633e6af9094db313bd010072}.
+
+\index{Res\+Op\+Link\+Interface@{Res\+Op\+Link\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+Op\+Link\+Interface@{Res\+Op\+Link\+Interface}}
+\subsubsection[{set\+Info(\+Res\+Op\+Element $\ast$model)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Link\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{model}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_link_interface_a6f5d52b5f350241f9b496769552f6cd9}
+Atualiza a interface 
+\begin{DoxyParams}{Parâmetros}
+{\em model} & Ponteiro para o modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Res\+Op\+Element\+Interface} \doxyref{}{pag.}{class_res_op_element_interface_a91e5085dcd270c60167d8ee990546083}.
+
+
+
+Reimplementado por {\bf Res\+Op\+Link\+Seq\+Interface} \doxyref{}{pag.}{class_res_op_link_seq_interface_a7b0715609b20ea3bfe980c928c1e1e72} e {\bf Res\+Op\+Link\+Net\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_link_net_flow_interface_a6523f07aa580f8bd91f56cac81f8bb9f}.
+
+\index{Res\+Op\+Link\+Interface@{Res\+Op\+Link\+Interface}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!Res\+Op\+Link\+Interface@{Res\+Op\+Link\+Interface}}
+\subsubsection[{show\+Results(\+Res\+Op\+Element $\ast$element)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Link\+Interface\+::show\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_link_interface_ab9599cf06bb08e75e6299b5c8d235b73}
+Mostra os resultados para o modelo 
+\begin{DoxyParams}{Parâmetros}
+{\em change} & Monta a janela de resultados se true, caso contrario, mostra a janela de resultados \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Element\+Interface} \doxyref{}{pag.}{class_res_op_element_interface_aaf3340d6104bde40590320657c6e38ba}.
+
+
+
+Implementado por {\bf Res\+Op\+Link\+Seq\+Interface} \doxyref{}{pag.}{class_res_op_link_seq_interface_aef663c7b709d6f3e0b02430b069442dc} e {\bf Res\+Op\+Link\+Net\+Flow\+Interface} \doxyref{}{pag.}{class_res_op_link_net_flow_interface_a36e208e9a9d8faf7c6154fdd4965af82}.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Link\+Interface.\+h}\end{DoxyCompactItemize}

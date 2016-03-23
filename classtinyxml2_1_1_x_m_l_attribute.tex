@@ -1,0 +1,305 @@
+\section{Referência da Classe tinyxml2\+:\+:X\+M\+L\+Attribute}
+\label{classtinyxml2_1_1_x_m_l_attribute}\index{tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}}
+
+
+{\ttfamily \#include $<$tinyxml2.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ {\bf Name} () const 
+\begin{DoxyCompactList}\small\item\em The name of the attribute. \end{DoxyCompactList}\item 
+const char $\ast$ {\bf Value} () const 
+\begin{DoxyCompactList}\small\item\em The value of the attribute. \end{DoxyCompactList}\item 
+const {\bf X\+M\+L\+Attribute} $\ast$ {\bf Next} () const 
+\begin{DoxyCompactList}\small\item\em The next attribute in the list. \end{DoxyCompactList}\item 
+int {\bf Int\+Value} () const 
+\item 
+unsigned {\bf Unsigned\+Value} () const 
+\begin{DoxyCompactList}\small\item\em Query as an unsigned integer. See \doxyref{Int\+Value()}{pag.}{classtinyxml2_1_1_x_m_l_attribute_a949d02a5888092cc68c1e29185301863} \end{DoxyCompactList}\item 
+bool {\bf Bool\+Value} () const 
+\begin{DoxyCompactList}\small\item\em Query as a boolean. See \doxyref{Int\+Value()}{pag.}{classtinyxml2_1_1_x_m_l_attribute_a949d02a5888092cc68c1e29185301863} \end{DoxyCompactList}\item 
+double {\bf Double\+Value} () const 
+\begin{DoxyCompactList}\small\item\em Query as a double. See \doxyref{Int\+Value()}{pag.}{classtinyxml2_1_1_x_m_l_attribute_a949d02a5888092cc68c1e29185301863} \end{DoxyCompactList}\item 
+float {\bf Float\+Value} () const 
+\begin{DoxyCompactList}\small\item\em Query as a float. See \doxyref{Int\+Value()}{pag.}{classtinyxml2_1_1_x_m_l_attribute_a949d02a5888092cc68c1e29185301863} \end{DoxyCompactList}\item 
+{\bf X\+M\+L\+Error} {\bf Query\+Int\+Value} (int $\ast$value) const 
+\item 
+{\bf X\+M\+L\+Error} {\bf Query\+Unsigned\+Value} (unsigned int $\ast$value) const 
+\begin{DoxyCompactList}\small\item\em See Query\+Int\+Value. \end{DoxyCompactList}\item 
+{\bf X\+M\+L\+Error} {\bf Query\+Bool\+Value} (bool $\ast$value) const 
+\begin{DoxyCompactList}\small\item\em See Query\+Int\+Value. \end{DoxyCompactList}\item 
+{\bf X\+M\+L\+Error} {\bf Query\+Double\+Value} (double $\ast$value) const 
+\begin{DoxyCompactList}\small\item\em See Query\+Int\+Value. \end{DoxyCompactList}\item 
+{\bf X\+M\+L\+Error} {\bf Query\+Float\+Value} (float $\ast$value) const 
+\begin{DoxyCompactList}\small\item\em See Query\+Int\+Value. \end{DoxyCompactList}\item 
+void {\bf Set\+Attribute} (const char $\ast$value)
+\begin{DoxyCompactList}\small\item\em Set the attribute to a string value. \end{DoxyCompactList}\item 
+void {\bf Set\+Attribute} (int value)
+\begin{DoxyCompactList}\small\item\em Set the attribute to value. \end{DoxyCompactList}\item 
+void {\bf Set\+Attribute} (unsigned value)
+\begin{DoxyCompactList}\small\item\em Set the attribute to value. \end{DoxyCompactList}\item 
+void {\bf Set\+Attribute} (bool value)
+\begin{DoxyCompactList}\small\item\em Set the attribute to value. \end{DoxyCompactList}\item 
+void {\bf Set\+Attribute} (double value)
+\begin{DoxyCompactList}\small\item\em Set the attribute to value. \end{DoxyCompactList}\item 
+void {\bf Set\+Attribute} (float value)
+\begin{DoxyCompactList}\small\item\em Set the attribute to value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf X\+M\+L\+Element}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+An attribute is a name-\/value pair. Elements have an arbitrary number of attributes, each with a unique name. \begin{DoxyNote}{Observação}
+The attributes are not X\+M\+L\+Nodes. You may only query the \doxyref{Next()}{pag.}{classtinyxml2_1_1_x_m_l_attribute_a7fd852d6185af90361ec1bc9a7681ad6} attribute in a list. 
+\end{DoxyNote}
+
+
+Definição na linha 1026 do arquivo tinyxml2.\+h.
+
+
+
+\subsection{Métodos}
+\index{tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}!Bool\+Value@{Bool\+Value}}
+\index{Bool\+Value@{Bool\+Value}!tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}}
+\subsubsection[{Bool\+Value() const }]{\setlength{\rightskip}{0pt plus 5cm}bool tinyxml2\+::\+X\+M\+L\+Attribute\+::\+Bool\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_attribute_afb444b7a12527f836aa161b54b2f7ce7}
+
+
+Query as a boolean. See \doxyref{Int\+Value()}{pag.}{classtinyxml2_1_1_x_m_l_attribute_a949d02a5888092cc68c1e29185301863} 
+
+
+
+Definição na linha 1057 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}!Double\+Value@{Double\+Value}}
+\index{Double\+Value@{Double\+Value}!tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}}
+\subsubsection[{Double\+Value() const }]{\setlength{\rightskip}{0pt plus 5cm}double tinyxml2\+::\+X\+M\+L\+Attribute\+::\+Double\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_attribute_a336153e5aa1b7ccd6502fc249bfb3fd7}
+
+
+Query as a double. See \doxyref{Int\+Value()}{pag.}{classtinyxml2_1_1_x_m_l_attribute_a949d02a5888092cc68c1e29185301863} 
+
+
+
+Definição na linha 1063 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}!Float\+Value@{Float\+Value}}
+\index{Float\+Value@{Float\+Value}!tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}}
+\subsubsection[{Float\+Value() const }]{\setlength{\rightskip}{0pt plus 5cm}float tinyxml2\+::\+X\+M\+L\+Attribute\+::\+Float\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_attribute_ae3d51ff98eacc1dc46efcfdaee5c84ad}
+
+
+Query as a float. See \doxyref{Int\+Value()}{pag.}{classtinyxml2_1_1_x_m_l_attribute_a949d02a5888092cc68c1e29185301863} 
+
+
+
+Definição na linha 1069 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}!Int\+Value@{Int\+Value}}
+\index{Int\+Value@{Int\+Value}!tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}}
+\subsubsection[{Int\+Value() const }]{\setlength{\rightskip}{0pt plus 5cm}int tinyxml2\+::\+X\+M\+L\+Attribute\+::\+Int\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_attribute_a949d02a5888092cc68c1e29185301863}
+Int\+Value interprets the attribute as an integer, and returns the value. If the value isn\textquotesingle{}t an integer, 0 will be returned. There is no error checking; use \doxyref{Query\+Int\+Value()}{pag.}{classtinyxml2_1_1_x_m_l_attribute_ad510a83c4ff2755844bb250b125d28ff} if you need error checking. 
+
+Definição na linha 1045 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}!Name@{Name}}
+\index{Name@{Name}!tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}}
+\subsubsection[{Name() const }]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ tinyxml2\+::\+X\+M\+L\+Attribute\+::\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classtinyxml2_1_1_x_m_l_attribute_a631990ac0d176e38fc291b17b295a62d}
+
+
+The name of the attribute. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}!Next@{Next}}
+\index{Next@{Next}!tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}}
+\subsubsection[{Next() const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf X\+M\+L\+Attribute}$\ast$ tinyxml2\+::\+X\+M\+L\+Attribute\+::\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_attribute_a7fd852d6185af90361ec1bc9a7681ad6}
+
+
+The next attribute in the list. 
+
+
+
+Definição na linha 1037 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}!Query\+Bool\+Value@{Query\+Bool\+Value}}
+\index{Query\+Bool\+Value@{Query\+Bool\+Value}!tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}}
+\subsubsection[{Query\+Bool\+Value(bool $\ast$value) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Error} tinyxml2\+::\+X\+M\+L\+Attribute\+::\+Query\+Bool\+Value (
+\begin{DoxyParamCaption}
+\item[{bool $\ast$}]{value}
+\end{DoxyParamCaption}
+) const}\label{classtinyxml2_1_1_x_m_l_attribute_a9e9b94369f182df72aaac9acd04afead}
+
+
+See Query\+Int\+Value. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}!Query\+Double\+Value@{Query\+Double\+Value}}
+\index{Query\+Double\+Value@{Query\+Double\+Value}!tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}}
+\subsubsection[{Query\+Double\+Value(double $\ast$value) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Error} tinyxml2\+::\+X\+M\+L\+Attribute\+::\+Query\+Double\+Value (
+\begin{DoxyParamCaption}
+\item[{double $\ast$}]{value}
+\end{DoxyParamCaption}
+) const}\label{classtinyxml2_1_1_x_m_l_attribute_a0872c05edea2a7cde4bd96c1e9cb2fc4}
+
+
+See Query\+Int\+Value. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}!Query\+Float\+Value@{Query\+Float\+Value}}
+\index{Query\+Float\+Value@{Query\+Float\+Value}!tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}}
+\subsubsection[{Query\+Float\+Value(float $\ast$value) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Error} tinyxml2\+::\+X\+M\+L\+Attribute\+::\+Query\+Float\+Value (
+\begin{DoxyParamCaption}
+\item[{float $\ast$}]{value}
+\end{DoxyParamCaption}
+) const}\label{classtinyxml2_1_1_x_m_l_attribute_afb254627c296d1d70b755397d32fece8}
+
+
+See Query\+Int\+Value. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}!Query\+Int\+Value@{Query\+Int\+Value}}
+\index{Query\+Int\+Value@{Query\+Int\+Value}!tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}}
+\subsubsection[{Query\+Int\+Value(int $\ast$value) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Error} tinyxml2\+::\+X\+M\+L\+Attribute\+::\+Query\+Int\+Value (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{value}
+\end{DoxyParamCaption}
+) const}\label{classtinyxml2_1_1_x_m_l_attribute_ad510a83c4ff2755844bb250b125d28ff}
+Query\+Int\+Value interprets the attribute as an integer, and returns the value in the provided parameter. The function will return X\+M\+L\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR on success, and X\+M\+L\+\_\+\+W\+R\+O\+N\+G\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+T\+Y\+PE if the conversion is not successful. \index{tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}!Query\+Unsigned\+Value@{Query\+Unsigned\+Value}}
+\index{Query\+Unsigned\+Value@{Query\+Unsigned\+Value}!tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}}
+\subsubsection[{Query\+Unsigned\+Value(unsigned int $\ast$value) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Error} tinyxml2\+::\+X\+M\+L\+Attribute\+::\+Query\+Unsigned\+Value (
+\begin{DoxyParamCaption}
+\item[{unsigned int $\ast$}]{value}
+\end{DoxyParamCaption}
+) const}\label{classtinyxml2_1_1_x_m_l_attribute_ac93f5981adfd62ac4ea76bfa668ee2b4}
+
+
+See Query\+Int\+Value. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}!Set\+Attribute@{Set\+Attribute}}
+\index{Set\+Attribute@{Set\+Attribute}!tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}}
+\subsubsection[{Set\+Attribute(const char $\ast$value)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Attribute\+::\+Set\+Attribute (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{value}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_attribute_a406d2c4a13c7af99a65edb59dd9f7581}
+
+
+Set the attribute to a string value. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}!Set\+Attribute@{Set\+Attribute}}
+\index{Set\+Attribute@{Set\+Attribute}!tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}}
+\subsubsection[{Set\+Attribute(int value)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Attribute\+::\+Set\+Attribute (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_attribute_ad86d7d7058d76761c3a80662566a57e5}
+
+
+Set the attribute to value. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}!Set\+Attribute@{Set\+Attribute}}
+\index{Set\+Attribute@{Set\+Attribute}!tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}}
+\subsubsection[{Set\+Attribute(unsigned value)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Attribute\+::\+Set\+Attribute (
+\begin{DoxyParamCaption}
+\item[{unsigned}]{value}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_attribute_ae70468c0f6df2748ba3529c716999fae}
+
+
+Set the attribute to value. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}!Set\+Attribute@{Set\+Attribute}}
+\index{Set\+Attribute@{Set\+Attribute}!tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}}
+\subsubsection[{Set\+Attribute(bool value)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Attribute\+::\+Set\+Attribute (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_attribute_ab3516def4fe058fe328f2b89fc2d77da}
+
+
+Set the attribute to value. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}!Set\+Attribute@{Set\+Attribute}}
+\index{Set\+Attribute@{Set\+Attribute}!tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}}
+\subsubsection[{Set\+Attribute(double value)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Attribute\+::\+Set\+Attribute (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_attribute_a9a65ab3147abe8ccbbd373ce8791e818}
+
+
+Set the attribute to value. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}!Set\+Attribute@{Set\+Attribute}}
+\index{Set\+Attribute@{Set\+Attribute}!tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}}
+\subsubsection[{Set\+Attribute(float value)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Attribute\+::\+Set\+Attribute (
+\begin{DoxyParamCaption}
+\item[{float}]{value}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_attribute_ae95e843313aaf5d56c32530b6456df02}
+
+
+Set the attribute to value. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}!Unsigned\+Value@{Unsigned\+Value}}
+\index{Unsigned\+Value@{Unsigned\+Value}!tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}}
+\subsubsection[{Unsigned\+Value() const }]{\setlength{\rightskip}{0pt plus 5cm}unsigned tinyxml2\+::\+X\+M\+L\+Attribute\+::\+Unsigned\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_attribute_a4c7a179907836a136d1ce5acbe53389d}
+
+
+Query as an unsigned integer. See \doxyref{Int\+Value()}{pag.}{classtinyxml2_1_1_x_m_l_attribute_a949d02a5888092cc68c1e29185301863} 
+
+
+
+Definição na linha 1051 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}!Value@{Value}}
+\index{Value@{Value}!tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}}
+\subsubsection[{Value() const }]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ tinyxml2\+::\+X\+M\+L\+Attribute\+::\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classtinyxml2_1_1_x_m_l_attribute_adf884db24f469f8a99a14ae786d4ddd7}
+
+
+The value of the attribute. 
+
+
+
+\subsection{Amigas e Funções Relacionadas}
+\index{tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}!X\+M\+L\+Element@{X\+M\+L\+Element}}
+\index{X\+M\+L\+Element@{X\+M\+L\+Element}!tinyxml2\+::\+X\+M\+L\+Attribute@{tinyxml2\+::\+X\+M\+L\+Attribute}}
+\subsubsection[{X\+M\+L\+Element}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf X\+M\+L\+Element}\hspace{0.3cm}{\ttfamily [friend]}}\label{classtinyxml2_1_1_x_m_l_attribute_ac2fba9b6e452829dd892f7392c24e0eb}
+
+
+Definição na linha 1028 do arquivo tinyxml2.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf tinyxml2.\+h}\end{DoxyCompactItemize}

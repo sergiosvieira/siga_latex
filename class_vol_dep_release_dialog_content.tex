@@ -1,0 +1,1142 @@
+\section{Referência da Classe Vol\+Dep\+Release\+Dialog\+Content}
+\label{class_vol_dep_release_dialog_content}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+
+
+{\ttfamily \#include $<$Vol\+Dep\+Release\+Dialog\+Content.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Rule\+Dialog\+Content} e {\bf Res\+Op\+Rule\+Dialog\+Content}.
+
+
+
+Superclasse de {\bf Opt\+Vol\+Dep\+Release\+Dialog\+Content}.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+{\bf I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+E\+S1} = 16, 
+{\bf I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+S1}, 
+{\bf I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+E\+S2}, 
+{\bf I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+S2}, 
+\\*
+{\bf I\+D\+\_\+\+R\+B\+\_\+\+A\+M\+O\+U\+NT}, 
+{\bf I\+D\+\_\+\+R\+B\+\_\+\+T\+Y\+PE}, 
+{\bf I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+E\+S\+R\+EL}, 
+{\bf I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+S\+R\+EL}, 
+\\*
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S\+R\+EL}, 
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S1}, 
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S2}, 
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S\+\_\+\+P\+E\+R\+I\+O\+D\+IC}, 
+\\*
+{\bf I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+Z\+O\+N\+E\+S1}, 
+{\bf I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+Z\+O\+N\+E\+S2}, 
+{\bf I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+R\+E\+L\+E\+A\+SE}, 
+{\bf I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+O\+T\+M\+\_\+\+O\+NE}, 
+\\*
+{\bf I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+O\+TM}, 
+{\bf I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+Z\+O\+N\+E1\+R\+E\+L\+E\+A\+SE}, 
+{\bf I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S\+\_\+\+R\+A\+NG}, 
+{\bf I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S1\+\_\+\+R\+A\+NG}, 
+\\*
+{\bf I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S2\+\_\+\+R\+A\+NG}, 
+{\bf I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S\+\_\+\+S\+P\+IN}, 
+{\bf I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S1\+\_\+\+S\+P\+IN}, 
+{\bf I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S2\+\_\+\+S\+P\+IN}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Vol\+Dep\+Release\+Dialog\+Content} ({\bf Vol\+Dep\+Release\+Rule} $\ast${\bf rule}, {\bf S\+I\+G\+A\+Dialog} $\ast$dialog)
+\item 
+{\bf $\sim$\+Vol\+Dep\+Release\+Dialog\+Content} ()
+\item 
+void {\bf set\+Info} ()
+\item 
+void {\bf on\+Change\+Grid} (wx\+Grid\+Event \&event)
+\item 
+void {\bf on\+Change} (wx\+Grid\+Event \&event)
+\item 
+void {\bf on\+Change\+Radio\+Box} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Change\+Check\+Box} (wx\+Command\+Event \&event)
+\item 
+void {\bf change\+Check\+Box} ()
+\item 
+void {\bf on\+Change\+Spin} (wx\+Spin\+Event \&event)
+\item 
+void {\bf on\+Insert} (wx\+Command\+Event \&event)
+\item 
+void {\bf insert\+Grid} (int id\+Grid)
+\item 
+void {\bf on\+Remove} (wx\+Command\+Event \&event)
+\item 
+void {\bf remove\+Grid} (int id\+Grid)
+\item 
+void {\bf on\+Select\+Dep} (wx\+Command\+Event \&event)
+\item 
+{\bf D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE} ()
+\item 
+{\bf Vol\+Dep\+Release\+Dialog\+Content} ({\bf Vol\+Dep\+Release\+Rule} $\ast${\bf rule}, {\bf S\+I\+G\+A\+Dialog} $\ast$dialog)
+\item 
+{\bf $\sim$\+Vol\+Dep\+Release\+Dialog\+Content} ()
+\item 
+void {\bf create\+Settings\+Tools\+Ui} ()
+\item 
+void {\bf create\+One\+Dependence\+Ui} ()
+\item 
+void {\bf create\+Duo\+Dependence\+Ui} ()
+\item 
+void {\bf create\+Duo\+Periodic\+Release} ()
+\item 
+void {\bf create\+Reservoir\+Combos\+Ui} ()
+\item 
+void {\bf set\+Type\+Of\+Visualization} (size\+\_\+t a\+\_\+selection)
+\item 
+bool {\bf is\+Periodic} ()
+\item 
+void {\bf fill\+Grid} ({\bf Vol\+Dep\+Release\+Rule} $\ast$a\+\_\+vol\+Dep\+Rule, size\+\_\+t a\+\_\+type\+Of\+Visualization)
+\item 
+void {\bf fill\+Periodic\+Grid\+For\+One\+Release} ({\bf Vol\+Dep\+Release\+Rule} $\ast$a\+\_\+vol\+Dep\+Rule)
+\item 
+void {\bf update\+Grid\+Labels} ()
+\item 
+void {\bf update\+Grid\+Rows\+And\+Cols} ()
+\item 
+void {\bf hide\+Periodic\+Ui\+Elements} ()
+\item 
+virtual void {\bf set\+Info} ()
+\item 
+void {\bf on\+Change\+Grid} (wx\+Grid\+Event \&event)
+\item 
+virtual void {\bf change\+Grid} (wx\+Grid\+Event \&event)
+\item 
+void {\bf on\+Change\+Radio\+Box} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Change\+Radio\+Box\+Type} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Insert} (wx\+Command\+Event \&event)
+\item 
+virtual void {\bf insert\+Grid} (int id\+Grid)
+\item 
+void {\bf on\+Remove} (wx\+Command\+Event \&event)
+\item 
+virtual void {\bf remove\+Grid} (int id\+Grid)
+\item 
+void {\bf on\+Select\+Dep} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Select\+Month} (wx\+Command\+Event \&event)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Radio\+Box $\ast$ {\bf rb\+Amount}
+\item 
+wx\+Check\+Box $\ast$ {\bf rb\+Optimz1\+Res}
+\item 
+wx\+Check\+Box $\ast$ {\bf rb\+Optimz1\+Res1}
+\item 
+wx\+Check\+Box $\ast$ {\bf rb\+Optimz2\+Res1}
+\item 
+wx\+Check\+Box $\ast$ {\bf rb\+Optimz1\+Res2}
+\item 
+wx\+Check\+Box $\ast$ {\bf rb\+Optimz2\+Res2}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Res}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Res1}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Res2}
+\item 
+wx\+Box\+Sizer $\ast$ {\bf bs\+Zone\+Rel\+Otm}
+\item 
+wx\+Box\+Sizer $\ast$ {\bf bs\+Zone\+Rel\+Otm1}
+\item 
+wx\+Box\+Sizer $\ast$ {\bf bs\+Zone\+Rel\+Otm2}
+\item 
+wx\+Box\+Sizer $\ast$ {\bf bs\+Zone1}
+\item 
+wx\+Box\+Sizer $\ast$ {\bf bs\+Zone2}
+\item 
+wx\+Box\+Sizer $\ast$ {\bf bs\+Zone0}
+\item 
+{\bf S\+I\+G\+A\+Grid} $\ast$ {\bf grid\+Release}
+\item 
+{\bf S\+I\+G\+A\+Grid} $\ast$ {\bf grid\+Release\+Otm1}
+\item 
+{\bf S\+I\+G\+A\+Grid} $\ast$ {\bf grid\+Release\+Otm}
+\item 
+{\bf S\+I\+G\+A\+Grid} $\ast$ {\bf grid\+Res\+Rel}
+\item 
+{\bf S\+I\+G\+A\+Grid} $\ast$ {\bf grid\+Res1}
+\item 
+{\bf S\+I\+G\+A\+Grid} $\ast$ {\bf grid\+Res2}
+\item 
+{\bf S\+I\+G\+A\+Grid} $\ast$ {\bf grid\+Zones\+Rel}
+\item 
+wx\+Sizer $\ast$ {\bf bs\+Zone\+Rel}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Release}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Release\+Otm1}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Release\+Otm}
+\item 
+wx\+Sizer $\ast$ {\bf b\+Horiz}
+\item 
+wx\+Sizer $\ast$ {\bf b\+Horiz0}
+\item 
+wx\+Sizer $\ast$ {\bf b\+Horiz\+One}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Optimz1}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Optimz2}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf spin\+Res}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf spin\+Res1}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf spin\+Res2}
+\item 
+wx\+Tool\+Bar $\ast$ {\bf tools\+Res}
+\item 
+wx\+Tool\+Bar $\ast$ {\bf tools\+Res1}
+\item 
+wx\+Tool\+Bar $\ast$ {\bf tools\+Res2}
+\item 
+wx\+String {\bf name\+Node21}
+\item 
+wx\+String {\bf name\+Node22}
+\item 
+wx\+Radio\+Box $\ast$ {\bf rb\+Type}
+\item 
+wx\+Choice $\ast$ {\bf m\+\_\+cb\+Release\+Periodic}
+\item 
+wx\+Static\+Box\+Sizer $\ast$ {\bf bs\+Zone1}
+\item 
+wx\+Static\+Box\+Sizer $\ast$ {\bf bs\+Zone2}
+\item 
+wx\+Static\+Box\+Sizer $\ast$ {\bf bs\+Zone0}
+\item 
+{\bf S\+I\+G\+A\+Grid} $\ast$ {\bf m\+\_\+grid\+Release\+Periodic}
+\item 
+{\bf S\+I\+G\+A\+Grid} $\ast$ {\bf m\+\_\+grid\+Release2}
+\item 
+wx\+Sizer $\ast$ {\bf bs\+Image}
+\item 
+wx\+Static\+Box\+Sizer $\ast$ {\bf m\+\_\+sb\+Sizer\+Reservoir}
+\item 
+wx\+Static\+Box\+Sizer $\ast$ {\bf m\+\_\+sb\+Sizer\+Periodic\+Reservoir}
+\item 
+wx\+Static\+Box\+Sizer $\ast$ {\bf m\+\_\+sb\+Release}
+\item 
+size\+\_\+t {\bf m\+\_\+type\+Of\+Visualization}
+\item 
+{\bf Vol\+Dep\+Release\+Rule} $\ast$ {\bf m\+\_\+rule}
+\item 
+bool {\bf m\+\_\+otimization\+Model\+Is\+Show}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf open\+Conf} ()
+\item 
+void {\bf save\+Conf} ()
+\item 
+virtual void {\bf open\+Conf} ()
+\item 
+virtual void {\bf save\+Conf} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf oper\+Type} {\bf sel}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 47 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458}
+Tipo de opera��o
+
+oper\+Type sel; \begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+E\+S1@{I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+E\+S1}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+E\+S1@{I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+E\+S1}}\item[{\em 
+I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+E\+S1\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458a5ded7a69938192e9bddea45cbe753f5e}
+}]\index{I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+S1@{I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+S1}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+S1@{I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+S1}}\item[{\em 
+I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+S1\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458a13273536b3f5e00fc0b1b23ea67d0d35}
+}]\index{I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+E\+S2@{I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+E\+S2}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+E\+S2@{I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+E\+S2}}\item[{\em 
+I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+E\+S2\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458a8d3cef4540bf9e901f5c911ed92aa0b8}
+}]\index{I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+S2@{I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+S2}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+S2@{I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+S2}}\item[{\em 
+I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+S2\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458ab71961f0733b8268b32932fc687fc939}
+}]\index{I\+D\+\_\+\+R\+B\+\_\+\+A\+M\+O\+U\+NT@{I\+D\+\_\+\+R\+B\+\_\+\+A\+M\+O\+U\+NT}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+R\+B\+\_\+\+A\+M\+O\+U\+NT@{I\+D\+\_\+\+R\+B\+\_\+\+A\+M\+O\+U\+NT}}\item[{\em 
+I\+D\+\_\+\+R\+B\+\_\+\+A\+M\+O\+U\+NT\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458ae1807b35ce5929491ab470cb66b741f6}
+}]\index{I\+D\+\_\+\+R\+B\+\_\+\+T\+Y\+PE@{I\+D\+\_\+\+R\+B\+\_\+\+T\+Y\+PE}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+R\+B\+\_\+\+T\+Y\+PE@{I\+D\+\_\+\+R\+B\+\_\+\+T\+Y\+PE}}\item[{\em 
+I\+D\+\_\+\+R\+B\+\_\+\+T\+Y\+PE\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458a4eda8798bff722471d03f515c82e2ea3}
+}]\index{I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+E\+S\+R\+EL@{I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+E\+S\+R\+EL}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+E\+S\+R\+EL@{I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+E\+S\+R\+EL}}\item[{\em 
+I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+E\+S\+R\+EL\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458acc134cfc10ea7ac7dc20d1265d98c7a2}
+}]\index{I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+S\+R\+EL@{I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+S\+R\+EL}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+S\+R\+EL@{I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+S\+R\+EL}}\item[{\em 
+I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+E\+S\+R\+EL\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458a83442e4829b4242ac1bb4c79c00d77ae}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S\+R\+EL@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S\+R\+EL}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S\+R\+EL@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S\+R\+EL}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S\+R\+EL\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458a18e7a0925199b4778581b51e6265508a}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S1@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S1}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S1@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S1}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S1\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458aac24a707b6fa395c2628b18e1b8d1336}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S2@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S2}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S2@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S2}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S2\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458aac208045db9cfa6c41e0ef1936f5890b}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S\+\_\+\+P\+E\+R\+I\+O\+D\+IC@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S\+\_\+\+P\+E\+R\+I\+O\+D\+IC}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S\+\_\+\+P\+E\+R\+I\+O\+D\+IC@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S\+\_\+\+P\+E\+R\+I\+O\+D\+IC}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+R\+E\+S\+\_\+\+P\+E\+R\+I\+O\+D\+IC\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458a2e9fbfe551d02e4b6fa2d74ed553a186}
+}]\index{I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+Z\+O\+N\+E\+S1@{I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+Z\+O\+N\+E\+S1}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+Z\+O\+N\+E\+S1@{I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+Z\+O\+N\+E\+S1}}\item[{\em 
+I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+Z\+O\+N\+E\+S1\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458ad02fdcbd0f6e05fc56661bfbde8990ba}
+}]\index{I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+Z\+O\+N\+E\+S2@{I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+Z\+O\+N\+E\+S2}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+Z\+O\+N\+E\+S2@{I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+Z\+O\+N\+E\+S2}}\item[{\em 
+I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+Z\+O\+N\+E\+S2\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458af728fb148617370f6d44de3be62538d6}
+}]\index{I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+R\+E\+L\+E\+A\+SE@{I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+R\+E\+L\+E\+A\+SE}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+R\+E\+L\+E\+A\+SE@{I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+R\+E\+L\+E\+A\+SE}}\item[{\em 
+I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+R\+E\+L\+E\+A\+SE\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458a6f81b6c24209c3eca1eff20014841d99}
+}]\index{I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+O\+T\+M\+\_\+\+O\+NE@{I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+O\+T\+M\+\_\+\+O\+NE}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+O\+T\+M\+\_\+\+O\+NE@{I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+O\+T\+M\+\_\+\+O\+NE}}\item[{\em 
+I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+O\+T\+M\+\_\+\+O\+NE\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458a60b5f77935a6575f6c47ce39fc422f61}
+}]\index{I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+O\+TM@{I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+O\+TM}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+O\+TM@{I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+O\+TM}}\item[{\em 
+I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+R\+E\+L\+E\+A\+S\+E\+\_\+\+O\+TM\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458aec93a85786b169aafc442fc64673c0f8}
+}]\index{I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+Z\+O\+N\+E1\+R\+E\+L\+E\+A\+SE@{I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+Z\+O\+N\+E1\+R\+E\+L\+E\+A\+SE}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+Z\+O\+N\+E1\+R\+E\+L\+E\+A\+SE@{I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+Z\+O\+N\+E1\+R\+E\+L\+E\+A\+SE}}\item[{\em 
+I\+D\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+Z\+O\+N\+E1\+R\+E\+L\+E\+A\+SE\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458aee2414ad3c632af466501183059d4992}
+}]\index{I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S\+\_\+\+R\+A\+NG@{I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S\+\_\+\+R\+A\+NG}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S\+\_\+\+R\+A\+NG@{I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S\+\_\+\+R\+A\+NG}}\item[{\em 
+I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S\+\_\+\+R\+A\+NG\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458a9712284fec2848c498efa26a46d3372d}
+}]\index{I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S1\+\_\+\+R\+A\+NG@{I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S1\+\_\+\+R\+A\+NG}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S1\+\_\+\+R\+A\+NG@{I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S1\+\_\+\+R\+A\+NG}}\item[{\em 
+I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S1\+\_\+\+R\+A\+NG\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458a107712f9e635c8eca68959a919db868f}
+}]\index{I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S2\+\_\+\+R\+A\+NG@{I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S2\+\_\+\+R\+A\+NG}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S2\+\_\+\+R\+A\+NG@{I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S2\+\_\+\+R\+A\+NG}}\item[{\em 
+I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S2\+\_\+\+R\+A\+NG\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458a40ac0f44631d8fafe872c32d50a30e59}
+}]\index{I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S\+\_\+\+S\+P\+IN@{I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S\+\_\+\+S\+P\+IN}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S\+\_\+\+S\+P\+IN@{I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S\+\_\+\+S\+P\+IN}}\item[{\em 
+I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S\+\_\+\+S\+P\+IN\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458a5fc7a8d68e1cea2c1e05100597147d48}
+}]\index{I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S1\+\_\+\+S\+P\+IN@{I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S1\+\_\+\+S\+P\+IN}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S1\+\_\+\+S\+P\+IN@{I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S1\+\_\+\+S\+P\+IN}}\item[{\em 
+I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S1\+\_\+\+S\+P\+IN\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458ac2aa705a75060bd0790818765e5344a4}
+}]\index{I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S2\+\_\+\+S\+P\+IN@{I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S2\+\_\+\+S\+P\+IN}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S2\+\_\+\+S\+P\+IN@{I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S2\+\_\+\+S\+P\+IN}}\item[{\em 
+I\+D\+\_\+\+C\+H\+K\+\_\+\+R\+E\+S2\+\_\+\+S\+P\+IN\label{class_vol_dep_release_dialog_content_a89ba6286ee64c99579fe39a029ca9458ae193ec995273e3df13e727bebda76d16}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 38 do arquivo /\+Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{Vol\+Dep\+Release\+Dialog\+Content(\+Vol\+Dep\+Release\+Rule $\ast$rule, S\+I\+G\+A\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}Vol\+Dep\+Release\+Dialog\+Content\+::\+Vol\+Dep\+Release\+Dialog\+Content (
+\begin{DoxyParamCaption}
+\item[{{\bf Vol\+Dep\+Release\+Rule} $\ast$}]{rule, }
+\item[{{\bf S\+I\+G\+A\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_aba445c71b681c09db80ff760ce1abb53}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em rule} & Regra de opera��o \\
+\hline
+{\em dialog} & Caixa de dialogo a que pertence \\
+\hline
+\end{DoxyParams}
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!````~Vol\+Dep\+Release\+Dialog\+Content@{$\sim$\+Vol\+Dep\+Release\+Dialog\+Content}}
+\index{````~Vol\+Dep\+Release\+Dialog\+Content@{$\sim$\+Vol\+Dep\+Release\+Dialog\+Content}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{$\sim$\+Vol\+Dep\+Release\+Dialog\+Content()}]{\setlength{\rightskip}{0pt plus 5cm}Vol\+Dep\+Release\+Dialog\+Content\+::$\sim$\+Vol\+Dep\+Release\+Dialog\+Content (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vol_dep_release_dialog_content_a2a92eb802dd2d2ab2148e16571b98126}
+Destrutor 
+
+Definição na linha 117 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{Vol\+Dep\+Release\+Dialog\+Content(\+Vol\+Dep\+Release\+Rule $\ast$rule, S\+I\+G\+A\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}Vol\+Dep\+Release\+Dialog\+Content\+::\+Vol\+Dep\+Release\+Dialog\+Content (
+\begin{DoxyParamCaption}
+\item[{{\bf Vol\+Dep\+Release\+Rule} $\ast$}]{rule, }
+\item[{{\bf S\+I\+G\+A\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_aba445c71b681c09db80ff760ce1abb53}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em rule} & Regra de opera��o \\
+\hline
+{\em dialog} & Caixa de dialogo a que pertence \\
+\hline
+\end{DoxyParams}
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!````~Vol\+Dep\+Release\+Dialog\+Content@{$\sim$\+Vol\+Dep\+Release\+Dialog\+Content}}
+\index{````~Vol\+Dep\+Release\+Dialog\+Content@{$\sim$\+Vol\+Dep\+Release\+Dialog\+Content}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{$\sim$\+Vol\+Dep\+Release\+Dialog\+Content()}]{\setlength{\rightskip}{0pt plus 5cm}Vol\+Dep\+Release\+Dialog\+Content\+::$\sim$\+Vol\+Dep\+Release\+Dialog\+Content (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_vol_dep_release_dialog_content_a2a92eb802dd2d2ab2148e16571b98126}
+Destrutor 
+
+Definição na linha 130 do arquivo /\+Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+
+
+\subsection{Métodos}
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!change\+Check\+Box@{change\+Check\+Box}}
+\index{change\+Check\+Box@{change\+Check\+Box}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{change\+Check\+Box()}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::change\+Check\+Box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a145cf7d53989bbf02b0f5006382cc7cc}
+Quando escolhida Otimiza��o por faixas. \index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!change\+Grid@{change\+Grid}}
+\index{change\+Grid@{change\+Grid}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{change\+Grid(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Vol\+Dep\+Release\+Dialog\+Content\+::change\+Grid (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_vol_dep_release_dialog_content_ac7642bae7e2048772c70efea2398f35b}
+
+
+Reimplementado por {\bf Opt\+Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_vol_dep_release_dialog_content_a7a9d0cf38f506014f22bc11180fe08b4}.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!create\+Duo\+Dependence\+Ui@{create\+Duo\+Dependence\+Ui}}
+\index{create\+Duo\+Dependence\+Ui@{create\+Duo\+Dependence\+Ui}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{create\+Duo\+Dependence\+Ui()}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::create\+Duo\+Dependence\+Ui (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a18d9afcc0560163389963227bcfa176b}
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!create\+Duo\+Periodic\+Release@{create\+Duo\+Periodic\+Release}}
+\index{create\+Duo\+Periodic\+Release@{create\+Duo\+Periodic\+Release}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{create\+Duo\+Periodic\+Release()}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::create\+Duo\+Periodic\+Release (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_aa2ceeb53eb6cf54eb0bc218a03cbdc67}
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!create\+One\+Dependence\+Ui@{create\+One\+Dependence\+Ui}}
+\index{create\+One\+Dependence\+Ui@{create\+One\+Dependence\+Ui}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{create\+One\+Dependence\+Ui()}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::create\+One\+Dependence\+Ui (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a1bf167274bd2482b02ab90a2d7f05c0e}
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!create\+Reservoir\+Combos\+Ui@{create\+Reservoir\+Combos\+Ui}}
+\index{create\+Reservoir\+Combos\+Ui@{create\+Reservoir\+Combos\+Ui}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{create\+Reservoir\+Combos\+Ui()}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::create\+Reservoir\+Combos\+Ui (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a4b4c50425a306850fe95786bcbdac71d}
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!create\+Settings\+Tools\+Ui@{create\+Settings\+Tools\+Ui}}
+\index{create\+Settings\+Tools\+Ui@{create\+Settings\+Tools\+Ui}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{create\+Settings\+Tools\+Ui()}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::create\+Settings\+Tools\+Ui (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a23e1d4ade940832447a93ba32408447f}
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+L\+E()}]{\setlength{\rightskip}{0pt plus 5cm}Vol\+Dep\+Release\+Dialog\+Content\+::\+D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a40263ef5229916fb92eb6837717e40bb}
+Declara��o da tabela de eventos \index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!fill\+Grid@{fill\+Grid}}
+\index{fill\+Grid@{fill\+Grid}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{fill\+Grid(\+Vol\+Dep\+Release\+Rule $\ast$a\+\_\+vol\+Dep\+Rule, size\+\_\+t a\+\_\+type\+Of\+Visualization)}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::fill\+Grid (
+\begin{DoxyParamCaption}
+\item[{{\bf Vol\+Dep\+Release\+Rule} $\ast$}]{a\+\_\+vol\+Dep\+Rule, }
+\item[{size\+\_\+t}]{a\+\_\+type\+Of\+Visualization}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_ac1fd38f52cdc817c02b0985101d70e60}
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!fill\+Periodic\+Grid\+For\+One\+Release@{fill\+Periodic\+Grid\+For\+One\+Release}}
+\index{fill\+Periodic\+Grid\+For\+One\+Release@{fill\+Periodic\+Grid\+For\+One\+Release}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{fill\+Periodic\+Grid\+For\+One\+Release(\+Vol\+Dep\+Release\+Rule $\ast$a\+\_\+vol\+Dep\+Rule)}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::fill\+Periodic\+Grid\+For\+One\+Release (
+\begin{DoxyParamCaption}
+\item[{{\bf Vol\+Dep\+Release\+Rule} $\ast$}]{a\+\_\+vol\+Dep\+Rule}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_ae6dbae978e3474fd9d5e14df65f1439d}
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!hide\+Periodic\+Ui\+Elements@{hide\+Periodic\+Ui\+Elements}}
+\index{hide\+Periodic\+Ui\+Elements@{hide\+Periodic\+Ui\+Elements}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{hide\+Periodic\+Ui\+Elements()}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::hide\+Periodic\+Ui\+Elements (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a002204c1f602bdd944271fc304293f0d}
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!insert\+Grid@{insert\+Grid}}
+\index{insert\+Grid@{insert\+Grid}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{insert\+Grid(int id\+Grid)}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::insert\+Grid (
+\begin{DoxyParamCaption}
+\item[{int}]{id\+Grid}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a4ca92fa783aac2e71bfcd37bd0240776}
+Inserir linhas 
+\begin{DoxyParams}{Parâmetros}
+{\em id\+Grid} & Identificador da tabela que gera o evento \\
+\hline
+\end{DoxyParams}
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!insert\+Grid@{insert\+Grid}}
+\index{insert\+Grid@{insert\+Grid}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{insert\+Grid(int id\+Grid)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Vol\+Dep\+Release\+Dialog\+Content\+::insert\+Grid (
+\begin{DoxyParamCaption}
+\item[{int}]{id\+Grid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_vol_dep_release_dialog_content_ac658f373f1a7b2e4afe3abf7a828aa70}
+Inserir linhas 
+\begin{DoxyParams}{Parâmetros}
+{\em id\+Grid} & Identificador da tabela que gera o evento \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado por {\bf Opt\+Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_vol_dep_release_dialog_content_af7598699539662f558d7d64c49d1c7dc}.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!is\+Periodic@{is\+Periodic}}
+\index{is\+Periodic@{is\+Periodic}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{is\+Periodic()}]{\setlength{\rightskip}{0pt plus 5cm}bool Vol\+Dep\+Release\+Dialog\+Content\+::is\+Periodic (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a7f35aa4a28d3284a9ecfdcddbd2c38b7}
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!on\+Change@{on\+Change}}
+\index{on\+Change@{on\+Change}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{on\+Change(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::on\+Change (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a718c097141a98019b4ba86d4ce136afe}
+Evento chamado quando ocorre modifi��o em alguns dos componentes da interface \index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!on\+Change\+Check\+Box@{on\+Change\+Check\+Box}}
+\index{on\+Change\+Check\+Box@{on\+Change\+Check\+Box}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{on\+Change\+Check\+Box(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::on\+Change\+Check\+Box (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a9ee550d8eb8a6adf24db0bf3751192a5}
+Evento de marcar/desmarcar o checkbox. \index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!on\+Change\+Grid@{on\+Change\+Grid}}
+\index{on\+Change\+Grid@{on\+Change\+Grid}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{on\+Change\+Grid(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::on\+Change\+Grid (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_vol_dep_release_dialog_content_ab84a4db1f6c0cf3ed87eb9c11998722f}
+Evento chamado quando ocorre modifi��o nos dados da libera��o. 
+
+Implementa {\bf Res\+Op\+Rule\+Dialog\+Content} \doxyref{}{pag.}{class_res_op_rule_dialog_content_a62a6dfd063fc5ddb7ea9af463300e8f1}.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!on\+Change\+Grid@{on\+Change\+Grid}}
+\index{on\+Change\+Grid@{on\+Change\+Grid}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{on\+Change\+Grid(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::on\+Change\+Grid (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_vol_dep_release_dialog_content_ab84a4db1f6c0cf3ed87eb9c11998722f}
+Evento chamado quando ocorre modifi��o nos dados da libera��o. 
+
+Implementa {\bf Res\+Op\+Rule\+Dialog\+Content} \doxyref{}{pag.}{class_res_op_rule_dialog_content_a62a6dfd063fc5ddb7ea9af463300e8f1}.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!on\+Change\+Radio\+Box@{on\+Change\+Radio\+Box}}
+\index{on\+Change\+Radio\+Box@{on\+Change\+Radio\+Box}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{on\+Change\+Radio\+Box(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::on\+Change\+Radio\+Box (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_aae36752adad252a10acf38a6658268bc}
+Quando escolhido uma ou mais depend�ncias de volumes. \index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!on\+Change\+Radio\+Box@{on\+Change\+Radio\+Box}}
+\index{on\+Change\+Radio\+Box@{on\+Change\+Radio\+Box}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{on\+Change\+Radio\+Box(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::on\+Change\+Radio\+Box (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_aae36752adad252a10acf38a6658268bc}
+Evento chamado quando ocorre modifi��o em alguns dos componentes da interface
+
+void \doxyref{on\+Change(wx\+Grid\+Event\& event)}{pag.}{class_vol_dep_release_dialog_content_a718c097141a98019b4ba86d4ce136afe}; virtual void change(wx\+Grid\+Event\& event); Quando escolhido uma ou mais depend�ncias de volumes. \index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!on\+Change\+Radio\+Box\+Type@{on\+Change\+Radio\+Box\+Type}}
+\index{on\+Change\+Radio\+Box\+Type@{on\+Change\+Radio\+Box\+Type}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{on\+Change\+Radio\+Box\+Type(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::on\+Change\+Radio\+Box\+Type (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a0b1259465d6177b1a0f65896555f6a5c}
+Quando escolhido uma vis�o est�tica ou peri�divca das depend�ncias de volumes. \index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!on\+Change\+Spin@{on\+Change\+Spin}}
+\index{on\+Change\+Spin@{on\+Change\+Spin}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{on\+Change\+Spin(wx\+Spin\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::on\+Change\+Spin (
+\begin{DoxyParamCaption}
+\item[{wx\+Spin\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a45164458778a11e2db5c435952a67d1d}
+Quantidades de faixas a serem otimizadas. \index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!on\+Insert@{on\+Insert}}
+\index{on\+Insert@{on\+Insert}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{on\+Insert(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::on\+Insert (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a00f9d2dc659d74ab2aae15ec16a9a286}
+Evento de inserir linhas \index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!on\+Insert@{on\+Insert}}
+\index{on\+Insert@{on\+Insert}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{on\+Insert(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::on\+Insert (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a00f9d2dc659d74ab2aae15ec16a9a286}
+Evento de inserir linhas \index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!on\+Remove@{on\+Remove}}
+\index{on\+Remove@{on\+Remove}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{on\+Remove(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::on\+Remove (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a50a2c24a0cbb3f1c03b68d5a0d2c5617}
+Evento de remove linhas \index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!on\+Remove@{on\+Remove}}
+\index{on\+Remove@{on\+Remove}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{on\+Remove(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::on\+Remove (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a50a2c24a0cbb3f1c03b68d5a0d2c5617}
+Evento de remove linhas \index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!on\+Select\+Dep@{on\+Select\+Dep}}
+\index{on\+Select\+Dep@{on\+Select\+Dep}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{on\+Select\+Dep(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::on\+Select\+Dep (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a82f4f683847fc7413b56e841bd9e0702}
+Evento de escolha dos reservat�rios \index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!on\+Select\+Dep@{on\+Select\+Dep}}
+\index{on\+Select\+Dep@{on\+Select\+Dep}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{on\+Select\+Dep(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::on\+Select\+Dep (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a82f4f683847fc7413b56e841bd9e0702}
+Evento de escolha dos reservat�rios \index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!on\+Select\+Month@{on\+Select\+Month}}
+\index{on\+Select\+Month@{on\+Select\+Month}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{on\+Select\+Month(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::on\+Select\+Month (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_acafe6e9df9fc2a7e74d4a96f808357f0}
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!open\+Conf@{open\+Conf}}
+\index{open\+Conf@{open\+Conf}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{open\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Vol\+Dep\+Release\+Dialog\+Content\+::open\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_vol_dep_release_dialog_content_addf5e8f5218453c89c341de489183ef7}
+Abrir regra de arquivo 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abf3660e2c31c95afab763b4b520e26e9}.
+
+
+
+Reimplementado por {\bf Opt\+Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_vol_dep_release_dialog_content_aaaab485415ea819936d920b5cca6f53d}.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!open\+Conf@{open\+Conf}}
+\index{open\+Conf@{open\+Conf}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{open\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::open\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_vol_dep_release_dialog_content_a183e1fbd5efc2bfc24e24e0daa649a61}
+Abrir regra de arquivo 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abf3660e2c31c95afab763b4b520e26e9}.
+
+
+
+Reimplementado por {\bf Opt\+Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_vol_dep_release_dialog_content_aaaab485415ea819936d920b5cca6f53d}.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!remove\+Grid@{remove\+Grid}}
+\index{remove\+Grid@{remove\+Grid}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{remove\+Grid(int id\+Grid)}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::remove\+Grid (
+\begin{DoxyParamCaption}
+\item[{int}]{id\+Grid}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_aff25d2100a9dec9cdda258999d42fc0a}
+Remove linhas 
+\begin{DoxyParams}{Parâmetros}
+{\em id\+Grid} & Identificador da tabela que gera o evento \\
+\hline
+\end{DoxyParams}
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!remove\+Grid@{remove\+Grid}}
+\index{remove\+Grid@{remove\+Grid}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{remove\+Grid(int id\+Grid)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Vol\+Dep\+Release\+Dialog\+Content\+::remove\+Grid (
+\begin{DoxyParamCaption}
+\item[{int}]{id\+Grid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_vol_dep_release_dialog_content_a89dadcfbb3ac873d385965f646582ba2}
+Remove linhas 
+\begin{DoxyParams}{Parâmetros}
+{\em id\+Grid} & Identificador da tabela que gera o evento \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado por {\bf Opt\+Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_vol_dep_release_dialog_content_a931de1859e5194923baf91573a338b5d}.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!save\+Conf@{save\+Conf}}
+\index{save\+Conf@{save\+Conf}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{save\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Vol\+Dep\+Release\+Dialog\+Content\+::save\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_vol_dep_release_dialog_content_a4d84251cca235f798d6e92fdc248c2e5}
+Salvar regra em arquivo 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abcef0436251918c1eab033a80b40c626}.
+
+
+
+Reimplementado por {\bf Opt\+Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_vol_dep_release_dialog_content_a140af9eb63dceb9da89145c2a4c5d7cf}.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!save\+Conf@{save\+Conf}}
+\index{save\+Conf@{save\+Conf}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{save\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::save\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_vol_dep_release_dialog_content_a8fef56741f70c88b165419b5b5eff10a}
+Salvar regra em arquivo 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abcef0436251918c1eab033a80b40c626}.
+
+
+
+Reimplementado por {\bf Opt\+Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_vol_dep_release_dialog_content_a140af9eb63dceb9da89145c2a4c5d7cf}.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_vol_dep_release_dialog_content_af6e69e8269dd08979c968d2b4fea4056}
+Atualiza a interface 
+
+Reimplementação de {\bf Res\+Op\+Rule\+Dialog\+Content} \doxyref{}{pag.}{class_res_op_rule_dialog_content_a836a256a089fd38f217bcf220c037d3a}.
+
+
+
+Reimplementado por {\bf Opt\+Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_vol_dep_release_dialog_content_abc00841fc1aa1350a438d72138800f7b}.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Vol\+Dep\+Release\+Dialog\+Content\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_vol_dep_release_dialog_content_a0d523ea0cb85f62206d05f0e1924f408}
+Atualiza a interface 
+
+Reimplementação de {\bf Res\+Op\+Rule\+Dialog\+Content} \doxyref{}{pag.}{class_res_op_rule_dialog_content_a836a256a089fd38f217bcf220c037d3a}.
+
+
+
+Reimplementado por {\bf Opt\+Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_vol_dep_release_dialog_content_abc00841fc1aa1350a438d72138800f7b}.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!set\+Type\+Of\+Visualization@{set\+Type\+Of\+Visualization}}
+\index{set\+Type\+Of\+Visualization@{set\+Type\+Of\+Visualization}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{set\+Type\+Of\+Visualization(size\+\_\+t a\+\_\+selection)}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::set\+Type\+Of\+Visualization (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{a\+\_\+selection}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a97c025851a1bcb3d12a0bdc2f8dc3550}
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!update\+Grid\+Labels@{update\+Grid\+Labels}}
+\index{update\+Grid\+Labels@{update\+Grid\+Labels}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{update\+Grid\+Labels()}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::update\+Grid\+Labels (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a6164b08587629f2d70cab132e313a460}
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!update\+Grid\+Rows\+And\+Cols@{update\+Grid\+Rows\+And\+Cols}}
+\index{update\+Grid\+Rows\+And\+Cols@{update\+Grid\+Rows\+And\+Cols}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{update\+Grid\+Rows\+And\+Cols()}]{\setlength{\rightskip}{0pt plus 5cm}void Vol\+Dep\+Release\+Dialog\+Content\+::update\+Grid\+Rows\+And\+Cols (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_vol_dep_release_dialog_content_a9d25c29005a18fa637956963e3e411b1}
+
+
+\subsection{Atributos}
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!b\+Horiz@{b\+Horiz}}
+\index{b\+Horiz@{b\+Horiz}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{b\+Horiz}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::b\+Horiz}\label{class_vol_dep_release_dialog_content_a193c729003daa1fe5637c7e4955142aa}
+
+
+Definição na linha 90 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!b\+Horiz0@{b\+Horiz0}}
+\index{b\+Horiz0@{b\+Horiz0}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{b\+Horiz0}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::b\+Horiz0}\label{class_vol_dep_release_dialog_content_a125ee75501a77375d913de5b6c4617d1}
+
+
+Definição na linha 90 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!b\+Horiz\+One@{b\+Horiz\+One}}
+\index{b\+Horiz\+One@{b\+Horiz\+One}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{b\+Horiz\+One}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::b\+Horiz\+One}\label{class_vol_dep_release_dialog_content_a58ddc270aa60b8c0789103967e83b69f}
+
+
+Definição na linha 90 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!bs\+Image@{bs\+Image}}
+\index{bs\+Image@{bs\+Image}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{bs\+Image}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::bs\+Image}\label{class_vol_dep_release_dialog_content_a602b2eba61a5ff1665a0ecfd414a3f97}
+
+
+Definição na linha 97 do arquivo /\+Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!bs\+Zone0@{bs\+Zone0}}
+\index{bs\+Zone0@{bs\+Zone0}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{bs\+Zone0}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Box\+Sizer $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::bs\+Zone0}\label{class_vol_dep_release_dialog_content_a6b15404eda7b7a82f07147a9a49d964f}
+
+
+Definição na linha 82 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!bs\+Zone0@{bs\+Zone0}}
+\index{bs\+Zone0@{bs\+Zone0}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{bs\+Zone0}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Box\+Sizer $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::bs\+Zone0}\label{class_vol_dep_release_dialog_content_a268d673d91bb5b83fba119175fcc3232}
+
+
+Definição na linha 86 do arquivo /\+Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!bs\+Zone1@{bs\+Zone1}}
+\index{bs\+Zone1@{bs\+Zone1}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{bs\+Zone1}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Box\+Sizer $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::bs\+Zone1}\label{class_vol_dep_release_dialog_content_a1260fb24171ff36007d435824f5f918b}
+
+
+Definição na linha 82 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!bs\+Zone1@{bs\+Zone1}}
+\index{bs\+Zone1@{bs\+Zone1}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{bs\+Zone1}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Box\+Sizer$\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::bs\+Zone1}\label{class_vol_dep_release_dialog_content_a8a263ab818db158261cb560bb83091e3}
+
+
+Definição na linha 86 do arquivo /\+Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!bs\+Zone2@{bs\+Zone2}}
+\index{bs\+Zone2@{bs\+Zone2}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{bs\+Zone2}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Box\+Sizer $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::bs\+Zone2}\label{class_vol_dep_release_dialog_content_a89125377bb8927adc2716a966e88414a}
+
+
+Definição na linha 82 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!bs\+Zone2@{bs\+Zone2}}
+\index{bs\+Zone2@{bs\+Zone2}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{bs\+Zone2}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Box\+Sizer $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::bs\+Zone2}\label{class_vol_dep_release_dialog_content_acbb45ce18d1b39c4e8022ebfbaedbacb}
+
+
+Definição na linha 86 do arquivo /\+Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!bs\+Zone\+Rel@{bs\+Zone\+Rel}}
+\index{bs\+Zone\+Rel@{bs\+Zone\+Rel}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{bs\+Zone\+Rel}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer$\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::bs\+Zone\+Rel}\label{class_vol_dep_release_dialog_content_a35be03fde25d3ba538b44f7d936d9437}
+
+
+Definição na linha 90 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!bs\+Zone\+Rel\+Otm@{bs\+Zone\+Rel\+Otm}}
+\index{bs\+Zone\+Rel\+Otm@{bs\+Zone\+Rel\+Otm}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{bs\+Zone\+Rel\+Otm}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Box\+Sizer$\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::bs\+Zone\+Rel\+Otm}\label{class_vol_dep_release_dialog_content_ade1464c01f2abc1c9b8920ba4ed7e28b}
+
+
+Definição na linha 82 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!bs\+Zone\+Rel\+Otm1@{bs\+Zone\+Rel\+Otm1}}
+\index{bs\+Zone\+Rel\+Otm1@{bs\+Zone\+Rel\+Otm1}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{bs\+Zone\+Rel\+Otm1}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Box\+Sizer $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::bs\+Zone\+Rel\+Otm1}\label{class_vol_dep_release_dialog_content_a0d27ddea1ecb55c33336321ede4221b0}
+
+
+Definição na linha 82 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!bs\+Zone\+Rel\+Otm2@{bs\+Zone\+Rel\+Otm2}}
+\index{bs\+Zone\+Rel\+Otm2@{bs\+Zone\+Rel\+Otm2}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{bs\+Zone\+Rel\+Otm2}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Box\+Sizer $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::bs\+Zone\+Rel\+Otm2}\label{class_vol_dep_release_dialog_content_a0e039ce4903648cd678253478b59abea}
+
+
+Definição na linha 82 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!cb\+Res@{cb\+Res}}
+\index{cb\+Res@{cb\+Res}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{cb\+Res}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::cb\+Res}\label{class_vol_dep_release_dialog_content_ac1cece9e93fd668dd495ef0915a63698}
+
+
+Definição na linha 78 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!cb\+Res1@{cb\+Res1}}
+\index{cb\+Res1@{cb\+Res1}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{cb\+Res1}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::cb\+Res1}\label{class_vol_dep_release_dialog_content_aefced3e2afa6e3c66a4f16673cb4ab1c}
+
+
+Definição na linha 78 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!cb\+Res2@{cb\+Res2}}
+\index{cb\+Res2@{cb\+Res2}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{cb\+Res2}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::cb\+Res2}\label{class_vol_dep_release_dialog_content_a6322adcd7bfdf35c05b5d34531ad0ff2}
+
+
+Definição na linha 78 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!grid\+Release@{grid\+Release}}
+\index{grid\+Release@{grid\+Release}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{grid\+Release}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Grid} $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::grid\+Release}\label{class_vol_dep_release_dialog_content_a09585a8bba21d48fb0957a19aee6d858}
+
+
+Definição na linha 86 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!grid\+Release\+Otm@{grid\+Release\+Otm}}
+\index{grid\+Release\+Otm@{grid\+Release\+Otm}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{grid\+Release\+Otm}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Grid} $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::grid\+Release\+Otm}\label{class_vol_dep_release_dialog_content_a0c469dbb9536816e493fb49bb4e7d9b6}
+
+
+Definição na linha 86 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!grid\+Release\+Otm1@{grid\+Release\+Otm1}}
+\index{grid\+Release\+Otm1@{grid\+Release\+Otm1}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{grid\+Release\+Otm1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Grid} $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::grid\+Release\+Otm1}\label{class_vol_dep_release_dialog_content_ae1424bf7f8c167d30950fc8a4bf895f8}
+
+
+Definição na linha 86 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!grid\+Res1@{grid\+Res1}}
+\index{grid\+Res1@{grid\+Res1}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{grid\+Res1}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Grid} $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::grid\+Res1}\label{class_vol_dep_release_dialog_content_a8e5c82600125c76c1ec44f5c1b3864d1}
+
+
+Definição na linha 86 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!grid\+Res2@{grid\+Res2}}
+\index{grid\+Res2@{grid\+Res2}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{grid\+Res2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Grid} $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::grid\+Res2}\label{class_vol_dep_release_dialog_content_a262bfff2f128e14035bf9508e1dff4b5}
+
+
+Definição na linha 86 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!grid\+Res\+Rel@{grid\+Res\+Rel}}
+\index{grid\+Res\+Rel@{grid\+Res\+Rel}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{grid\+Res\+Rel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Grid} $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::grid\+Res\+Rel}\label{class_vol_dep_release_dialog_content_a1d3a441543da1a4c1a96e2c0705c0de6}
+
+
+Definição na linha 86 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!grid\+Zones\+Rel@{grid\+Zones\+Rel}}
+\index{grid\+Zones\+Rel@{grid\+Zones\+Rel}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{grid\+Zones\+Rel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Grid} $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::grid\+Zones\+Rel}\label{class_vol_dep_release_dialog_content_aeaf9352d8c7d341619dc3f5a441b66ec}
+
+
+Definição na linha 86 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!m\+\_\+cb\+Release\+Periodic@{m\+\_\+cb\+Release\+Periodic}}
+\index{m\+\_\+cb\+Release\+Periodic@{m\+\_\+cb\+Release\+Periodic}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{m\+\_\+cb\+Release\+Periodic}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::m\+\_\+cb\+Release\+Periodic}\label{class_vol_dep_release_dialog_content_ac4d78ea0e6e7da02b8c8c3705f3a9362}
+
+
+Definição na linha 82 do arquivo /\+Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!m\+\_\+grid\+Release2@{m\+\_\+grid\+Release2}}
+\index{m\+\_\+grid\+Release2@{m\+\_\+grid\+Release2}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{m\+\_\+grid\+Release2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Grid}$\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::m\+\_\+grid\+Release2}\label{class_vol_dep_release_dialog_content_a13ac15431acdff5d683d0d7424c72396}
+
+
+Definição na linha 93 do arquivo /\+Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!m\+\_\+grid\+Release\+Periodic@{m\+\_\+grid\+Release\+Periodic}}
+\index{m\+\_\+grid\+Release\+Periodic@{m\+\_\+grid\+Release\+Periodic}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{m\+\_\+grid\+Release\+Periodic}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Grid}$\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::m\+\_\+grid\+Release\+Periodic}\label{class_vol_dep_release_dialog_content_a5eb5c6ce0216767e658b536dcf42fc30}
+
+
+Definição na linha 92 do arquivo /\+Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!m\+\_\+otimization\+Model\+Is\+Show@{m\+\_\+otimization\+Model\+Is\+Show}}
+\index{m\+\_\+otimization\+Model\+Is\+Show@{m\+\_\+otimization\+Model\+Is\+Show}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{m\+\_\+otimization\+Model\+Is\+Show}]{\setlength{\rightskip}{0pt plus 5cm}bool Vol\+Dep\+Release\+Dialog\+Content\+::m\+\_\+otimization\+Model\+Is\+Show}\label{class_vol_dep_release_dialog_content_ad4636980e2d81a385170549b6a03e600}
+
+
+Definição na linha 118 do arquivo /\+Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!m\+\_\+rule@{m\+\_\+rule}}
+\index{m\+\_\+rule@{m\+\_\+rule}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{m\+\_\+rule}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Vol\+Dep\+Release\+Rule}$\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::m\+\_\+rule}\label{class_vol_dep_release_dialog_content_a3655183ca1b5c80e24203f37ef14eb83}
+
+
+Definição na linha 117 do arquivo /\+Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!m\+\_\+sb\+Release@{m\+\_\+sb\+Release}}
+\index{m\+\_\+sb\+Release@{m\+\_\+sb\+Release}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{m\+\_\+sb\+Release}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Box\+Sizer $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::m\+\_\+sb\+Release}\label{class_vol_dep_release_dialog_content_ab56c47da9f9779ebb9dad21094edb61f}
+
+
+Definição na linha 98 do arquivo /\+Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!m\+\_\+sb\+Sizer\+Periodic\+Reservoir@{m\+\_\+sb\+Sizer\+Periodic\+Reservoir}}
+\index{m\+\_\+sb\+Sizer\+Periodic\+Reservoir@{m\+\_\+sb\+Sizer\+Periodic\+Reservoir}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{m\+\_\+sb\+Sizer\+Periodic\+Reservoir}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Box\+Sizer $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::m\+\_\+sb\+Sizer\+Periodic\+Reservoir}\label{class_vol_dep_release_dialog_content_a341415ef80b63077c4dd2438e6e4fa07}
+
+
+Definição na linha 98 do arquivo /\+Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!m\+\_\+sb\+Sizer\+Reservoir@{m\+\_\+sb\+Sizer\+Reservoir}}
+\index{m\+\_\+sb\+Sizer\+Reservoir@{m\+\_\+sb\+Sizer\+Reservoir}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{m\+\_\+sb\+Sizer\+Reservoir}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Box\+Sizer$\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::m\+\_\+sb\+Sizer\+Reservoir}\label{class_vol_dep_release_dialog_content_a046374d4ea96b4d314da1b5d342e731b}
+
+
+Definição na linha 98 do arquivo /\+Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!m\+\_\+type\+Of\+Visualization@{m\+\_\+type\+Of\+Visualization}}
+\index{m\+\_\+type\+Of\+Visualization@{m\+\_\+type\+Of\+Visualization}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{m\+\_\+type\+Of\+Visualization}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Vol\+Dep\+Release\+Dialog\+Content\+::m\+\_\+type\+Of\+Visualization}\label{class_vol_dep_release_dialog_content_abf47286628ac4fee5a2e88aaa03935d0}
+Quarda o tipo de visualiza��o das dependencias do armazenamento\+: I\+D\+\_\+\+S\+T\+A\+T\+IC e I\+D\+\_\+\+P\+E\+R\+I\+O\+D\+IC 
+
+Definição na linha 115 do arquivo /\+Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!name\+Node21@{name\+Node21}}
+\index{name\+Node21@{name\+Node21}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{name\+Node21}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Vol\+Dep\+Release\+Dialog\+Content\+::name\+Node21}\label{class_vol_dep_release_dialog_content_aaf95a427d147b9adb1803e973a024252}
+
+
+Definição na linha 106 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!name\+Node22@{name\+Node22}}
+\index{name\+Node22@{name\+Node22}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{name\+Node22}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Vol\+Dep\+Release\+Dialog\+Content\+::name\+Node22}\label{class_vol_dep_release_dialog_content_ac53ba9876ce09ac8c219b8e22eb119be}
+
+
+Definição na linha 106 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!rb\+Amount@{rb\+Amount}}
+\index{rb\+Amount@{rb\+Amount}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{rb\+Amount}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::rb\+Amount}\label{class_vol_dep_release_dialog_content_a697bf00540a700ca941da3b6875ec48b}
+
+
+Definição na linha 70 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!rb\+Optimz1\+Res@{rb\+Optimz1\+Res}}
+\index{rb\+Optimz1\+Res@{rb\+Optimz1\+Res}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{rb\+Optimz1\+Res}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::rb\+Optimz1\+Res}\label{class_vol_dep_release_dialog_content_a18ea8d9d48c6512a489553e05388eaba}
+
+
+Definição na linha 74 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!rb\+Optimz1\+Res1@{rb\+Optimz1\+Res1}}
+\index{rb\+Optimz1\+Res1@{rb\+Optimz1\+Res1}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{rb\+Optimz1\+Res1}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::rb\+Optimz1\+Res1}\label{class_vol_dep_release_dialog_content_ab71890e23affda354f1ae13327953587}
+
+
+Definição na linha 74 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!rb\+Optimz1\+Res2@{rb\+Optimz1\+Res2}}
+\index{rb\+Optimz1\+Res2@{rb\+Optimz1\+Res2}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{rb\+Optimz1\+Res2}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::rb\+Optimz1\+Res2}\label{class_vol_dep_release_dialog_content_ae8b3a1a7586cd576644b13f5e5189783}
+
+
+Definição na linha 74 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!rb\+Optimz2\+Res1@{rb\+Optimz2\+Res1}}
+\index{rb\+Optimz2\+Res1@{rb\+Optimz2\+Res1}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{rb\+Optimz2\+Res1}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::rb\+Optimz2\+Res1}\label{class_vol_dep_release_dialog_content_a0f056b264e2d7e8be7b76b2b9aa41eef}
+
+
+Definição na linha 74 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!rb\+Optimz2\+Res2@{rb\+Optimz2\+Res2}}
+\index{rb\+Optimz2\+Res2@{rb\+Optimz2\+Res2}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{rb\+Optimz2\+Res2}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::rb\+Optimz2\+Res2}\label{class_vol_dep_release_dialog_content_aa83ba0b6f27f3459552548383a8b5c3c}
+
+
+Definição na linha 74 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!rb\+Type@{rb\+Type}}
+\index{rb\+Type@{rb\+Type}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{rb\+Type}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box$\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::rb\+Type}\label{class_vol_dep_release_dialog_content_aa728d537782b663ac4ee1b9b6b2e52c4}
+
+
+Definição na linha 78 do arquivo /\+Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!sel@{sel}}
+\index{sel@{sel}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{sel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf oper\+Type} Vol\+Dep\+Release\+Dialog\+Content\+::sel\hspace{0.3cm}{\ttfamily [protected]}}\label{class_vol_dep_release_dialog_content_a5353e2d3b3df3cb3e729e95987022116}
+Tipo de opera��o 
+
+Definição na linha 64 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!s\+Optimz1@{s\+Optimz1}}
+\index{s\+Optimz1@{s\+Optimz1}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{s\+Optimz1}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::s\+Optimz1}\label{class_vol_dep_release_dialog_content_a2a85c233697bc6bf6c0c44cf62a2946a}
+bs\+Zone\+Rel\+Otm, $\ast$bs\+Zone\+Rel\+Otm1, $\ast$bs\+Zone\+Rel\+Otm2, 
+
+Definição na linha 94 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!s\+Optimz2@{s\+Optimz2}}
+\index{s\+Optimz2@{s\+Optimz2}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{s\+Optimz2}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::s\+Optimz2}\label{class_vol_dep_release_dialog_content_a5166ecc11e7acf2c3b0eb519990905b9}
+
+
+Definição na linha 94 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!spin\+Res@{spin\+Res}}
+\index{spin\+Res@{spin\+Res}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{spin\+Res}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl$\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::spin\+Res}\label{class_vol_dep_release_dialog_content_a7df4609237f894d711f7434ecfd87afa}
+
+
+Definição na linha 98 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!spin\+Res1@{spin\+Res1}}
+\index{spin\+Res1@{spin\+Res1}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{spin\+Res1}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::spin\+Res1}\label{class_vol_dep_release_dialog_content_a267335a7c6ca7b24020ac034a4c05694}
+
+
+Definição na linha 98 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!spin\+Res2@{spin\+Res2}}
+\index{spin\+Res2@{spin\+Res2}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{spin\+Res2}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::spin\+Res2}\label{class_vol_dep_release_dialog_content_ac866a00d89649b5dc2b7dc6d9bda41e1}
+
+
+Definição na linha 98 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!s\+Release@{s\+Release}}
+\index{s\+Release@{s\+Release}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{s\+Release}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::s\+Release}\label{class_vol_dep_release_dialog_content_a269d90a8d7a83deda68b7b8ce17413da}
+
+
+Definição na linha 90 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!s\+Release\+Otm@{s\+Release\+Otm}}
+\index{s\+Release\+Otm@{s\+Release\+Otm}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{s\+Release\+Otm}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::s\+Release\+Otm}\label{class_vol_dep_release_dialog_content_aa308822c7d6cd5c96edb68484ad8482b}
+
+
+Definição na linha 90 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!s\+Release\+Otm1@{s\+Release\+Otm1}}
+\index{s\+Release\+Otm1@{s\+Release\+Otm1}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{s\+Release\+Otm1}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::s\+Release\+Otm1}\label{class_vol_dep_release_dialog_content_afd28d43f27a661aab309f176ea7ffb47}
+
+
+Definição na linha 90 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!tools\+Res@{tools\+Res}}
+\index{tools\+Res@{tools\+Res}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{tools\+Res}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tool\+Bar $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::tools\+Res}\label{class_vol_dep_release_dialog_content_ad3bb71d82e224ebe2f9b94e7be49cde1}
+
+
+Definição na linha 102 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!tools\+Res1@{tools\+Res1}}
+\index{tools\+Res1@{tools\+Res1}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{tools\+Res1}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tool\+Bar $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::tools\+Res1}\label{class_vol_dep_release_dialog_content_afa33a0c24b84d610d89e046ae641e530}
+
+
+Definição na linha 102 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+\index{Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}!tools\+Res2@{tools\+Res2}}
+\index{tools\+Res2@{tools\+Res2}!Vol\+Dep\+Release\+Dialog\+Content@{Vol\+Dep\+Release\+Dialog\+Content}}
+\subsubsection[{tools\+Res2}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tool\+Bar $\ast$ Vol\+Dep\+Release\+Dialog\+Content\+::tools\+Res2}\label{class_vol_dep_release_dialog_content_ae7d90a0a79061733ecfe3d3debfc0910}
+
+
+Definição na linha 102 do arquivo Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Rule/\+Vol\+Dep\+Release/\+Vol\+Dep\+Release\+Dialog\+Content.\+h}\end{DoxyCompactItemize}

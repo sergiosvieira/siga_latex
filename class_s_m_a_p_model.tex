@@ -1,0 +1,287 @@
+\section{Referência da Classe S\+M\+A\+P\+Model}
+\label{class_s_m_a_p_model}\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+
+
+{\ttfamily \#include $<$S\+M\+A\+P\+Model.\+h$>$}
+
+
+
+Herdeiro de {\bf Hidro\+Model}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Hidro\+Model} $\ast$ {\bf copy} ()
+\item 
+{\bf S\+M\+A\+P\+Model} ({\bf Node} $\ast${\bf node}, wx\+String {\bf name})
+\item 
+{\bf S\+M\+A\+P\+Model} ({\bf Link} $\ast${\bf link}, wx\+String {\bf name})
+\item 
+virtual {\bf $\sim$\+S\+M\+A\+P\+Model} ()
+\item 
+bool {\bf run} ()
+\item 
+bool {\bf run} ({\bf Interval} $\ast$exec\+Interval)
+\item 
+bool {\bf run\+Acc} ()
+\item 
+bool {\bf run\+Acc\+Node} ()
+\item 
+bool {\bf run\+Acc\+Link} ()
+\item 
+void {\bf clear} ()
+\item 
+void {\bf create\+Results} ({\bf Interval} interval)
+\item 
+virtual bool {\bf empty} ()
+\item 
+virtual bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+M\+A\+P\+Interface} $\ast$ {\bf inter}
+\item 
+{\bf S\+M\+A\+P\+Param} $\ast$ {\bf param}
+\item 
+{\bf Serie} $\ast$ {\bf precipitation}
+\item 
+{\bf Serie} $\ast$ {\bf etp}
+\item 
+double {\bf Tuin}
+\item 
+double {\bf Ebin}
+\item 
+wx\+String {\bf etp\+File\+Name}
+\item 
+wx\+String {\bf prec\+File\+Name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 15 do arquivo S\+M\+A\+P\+Model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\subsubsection[{S\+M\+A\+P\+Model(\+Node $\ast$node, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}S\+M\+A\+P\+Model\+::\+S\+M\+A\+P\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_s_m_a_p_model_a31c3fde042a9aa2c74dbafec78d7b9d8}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em interval\+Begin} & Dia de inicio \\
+\hline
+{\em interval\+End} & Dia de fim \\
+\hline
+{\em node} & N� \\
+\hline
+\end{DoxyParams}
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\subsubsection[{S\+M\+A\+P\+Model(\+Link $\ast$link, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}S\+M\+A\+P\+Model\+::\+S\+M\+A\+P\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_s_m_a_p_model_afa8de64d3e4db49587b5f3c91f950eea}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em interval\+Begin} & Dia de inicio \\
+\hline
+{\em interval\+End} & Dia de fim \\
+\hline
+{\em link} & Trecho \\
+\hline
+\end{DoxyParams}
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!````~S\+M\+A\+P\+Model@{$\sim$\+S\+M\+A\+P\+Model}}
+\index{````~S\+M\+A\+P\+Model@{$\sim$\+S\+M\+A\+P\+Model}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\subsubsection[{$\sim$\+S\+M\+A\+P\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}virtual S\+M\+A\+P\+Model\+::$\sim$\+S\+M\+A\+P\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_m_a_p_model_a00e6a7c6cc92d2491b97f84fd1e97a12}
+Destrutor 
+
+\subsection{Métodos}
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool S\+M\+A\+P\+Model\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_m_a_p_model_aee340fa2a50adff552d6402cb3d390d5}
+Avalia se todas as informa��es importantes para o modelo formam informadas 
+\begin{DoxyParams}{Parâmetros}
+{\em dialog} & Caixa de dialogo onde os erros ser�o apresentados \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a9da83995bb3c4c4ab6eb3abe7dfcb431}.
+
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!clear@{clear}}
+\index{clear@{clear}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+M\+A\+P\+Model\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_m_a_p_model_a7069043de13e88c14c2259cfc4ae79d8}
+Retorna o valor das variaveis para o estado p�s-\/constru��o 
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a7a59ac6ccde3e96019caa55bb9f3f859}.
+
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!copy@{copy}}
+\index{copy@{copy}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\subsubsection[{copy()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hidro\+Model}$\ast$ S\+M\+A\+P\+Model\+::copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_m_a_p_model_a7163eda02a65cae20388096d18d0f381}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_afef4c70600b8f9224c4ad0040363c5dc}.
+
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!create\+Results@{create\+Results}}
+\index{create\+Results@{create\+Results}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\subsubsection[{create\+Results(\+Interval interval)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+M\+A\+P\+Model\+::create\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_m_a_p_model_ad66f3b5f5a373058763834841ce6e187}
+Cria os resultados 
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a8ba135e8d5c7e454fa3278355e2d6a92}.
+
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!empty@{empty}}
+\index{empty@{empty}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool S\+M\+A\+P\+Model\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_m_a_p_model_a5ac601f6a36840d8b2a54fb827173971}
+retorna se existe algum valor no modelo 
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_aac45c150ea104ed44e2d3349b83fbd40}.
+
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!run@{run}}
+\index{run@{run}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+M\+A\+P\+Model\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_m_a_p_model_a9ff459a8195bcdb8ae637886eff347f8}
+Executar o modelo S\+M\+AP 
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_ac4b3587518c76af9ad3200646e28a367}.
+
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!run@{run}}
+\index{run@{run}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\subsubsection[{run(\+Interval $\ast$exec\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+M\+A\+P\+Model\+::run (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval} $\ast$}]{exec\+Interval}
+\end{DoxyParamCaption}
+)}\label{class_s_m_a_p_model_a2634471c6973e3df3fad690454b33784}
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!run\+Acc@{run\+Acc}}
+\index{run\+Acc@{run\+Acc}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\subsubsection[{run\+Acc()}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+M\+A\+P\+Model\+::run\+Acc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_m_a_p_model_a824739a908fb4dd71890d537f3e444d8}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a41ed38d63fb34c6a08badaee94e38dbe}.
+
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!run\+Acc\+Link@{run\+Acc\+Link}}
+\index{run\+Acc\+Link@{run\+Acc\+Link}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\subsubsection[{run\+Acc\+Link()}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+M\+A\+P\+Model\+::run\+Acc\+Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_m_a_p_model_a2d8d8e1969bafc7aa77fb376097ac3d6}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a6f35f954579dbbe3216d270e2406437a}.
+
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!run\+Acc\+Node@{run\+Acc\+Node}}
+\index{run\+Acc\+Node@{run\+Acc\+Node}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\subsubsection[{run\+Acc\+Node()}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+M\+A\+P\+Model\+::run\+Acc\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_m_a_p_model_a3a20e0e0613eb21bae818507e0a8264f}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a40997d872a7e0224915f2f8a92212d84}.
+
+
+
+\subsection{Atributos}
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!Ebin@{Ebin}}
+\index{Ebin@{Ebin}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\subsubsection[{Ebin}]{\setlength{\rightskip}{0pt plus 5cm}double S\+M\+A\+P\+Model\+::\+Ebin}\label{class_s_m_a_p_model_a91bd4aa00d8cf9e60f3a84e977b3ede6}
+1 Vaz�o b�sica inicial (m3/s) 
+
+Definição na linha 48 do arquivo S\+M\+A\+P\+Model.\+h.
+
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!etp@{etp}}
+\index{etp@{etp}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\subsubsection[{etp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ S\+M\+A\+P\+Model\+::etp}\label{class_s_m_a_p_model_a037266f18b06dd36af8421f1c2ca73b1}
+1 
+
+Definição na linha 36 do arquivo S\+M\+A\+P\+Model.\+h.
+
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!etp\+File\+Name@{etp\+File\+Name}}
+\index{etp\+File\+Name@{etp\+File\+Name}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\subsubsection[{etp\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+M\+A\+P\+Model\+::etp\+File\+Name}\label{class_s_m_a_p_model_ac2b784d3434ae77c14403eed136e831d}
+Nomes dos arquivos de precipita��o e evapora��o 
+
+Definição na linha 105 do arquivo S\+M\+A\+P\+Model.\+h.
+
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!inter@{inter}}
+\index{inter@{inter}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\subsubsection[{inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+M\+A\+P\+Interface}$\ast$ S\+M\+A\+P\+Model\+::inter}\label{class_s_m_a_p_model_ac7b7fdf6c5519d43297518b2b08fc824}
+Aponta para a interface 
+
+Definição na linha 22 do arquivo S\+M\+A\+P\+Model.\+h.
+
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!param@{param}}
+\index{param@{param}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\subsubsection[{param}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+M\+A\+P\+Param}$\ast$ S\+M\+A\+P\+Model\+::param}\label{class_s_m_a_p_model_adf9a6c87b48fc6d96872394abbc7e2b5}
+Par�metros do modelo S\+M\+AP 
+
+Definição na linha 26 do arquivo S\+M\+A\+P\+Model.\+h.
+
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!prec\+File\+Name@{prec\+File\+Name}}
+\index{prec\+File\+Name@{prec\+File\+Name}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\subsubsection[{prec\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+M\+A\+P\+Model\+::prec\+File\+Name}\label{class_s_m_a_p_model_a0ae7b8064adb3f1502138792c9611564}
+
+
+Definição na linha 105 do arquivo S\+M\+A\+P\+Model.\+h.
+
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!precipitation@{precipitation}}
+\index{precipitation@{precipitation}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\subsubsection[{precipitation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ S\+M\+A\+P\+Model\+::precipitation}\label{class_s_m_a_p_model_ac8a4bf69b673380903b1544fcf23fbc0}
+1 
+
+Definição na linha 31 do arquivo S\+M\+A\+P\+Model.\+h.
+
+\index{S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}!Tuin@{Tuin}}
+\index{Tuin@{Tuin}!S\+M\+A\+P\+Model@{S\+M\+A\+P\+Model}}
+\subsubsection[{Tuin}]{\setlength{\rightskip}{0pt plus 5cm}double S\+M\+A\+P\+Model\+::\+Tuin}\label{class_s_m_a_p_model_ab758bf12aae8bbd879e275fe8032b814}
+1 Teor de umidade inicial (ad.) 
+
+Definição na linha 42 do arquivo S\+M\+A\+P\+Model.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+M\+A\+P\+Model.\+h}\end{DoxyCompactItemize}

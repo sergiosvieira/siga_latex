@@ -1,0 +1,336 @@
+\section{ReferÃªncia da Classe W\+A\+S\+A\+Model\+Main}
+\label{class_w_a_s_a_model_main}\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+
+
+{\ttfamily \#include $<$W\+A\+S\+A\+Model\+Main.\+h$>$}
+
+
+
+Herdeiro de {\bf Hidro\+Model\+Main}.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf W\+A\+S\+A\+Model\+Main} ({\bf Hidro\+Interface} $\ast$parent)
+\item 
+virtual {\bf $\sim$\+W\+A\+S\+A\+Model\+Main} ()
+\item 
+void {\bf set\+Info} ()
+\item 
+void {\bf update\+Tree\+Item} ({\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$)
+\item 
+{\bf Hidro\+Model} $\ast$ {\bf create\+Model} ({\bf Node} \&node)
+\item 
+{\bf Hidro\+Model} $\ast$ {\bf create\+Model} ({\bf Link} \&link)
+\item 
+void {\bf insert\+Model} ({\bf Node} \&node)
+\item 
+void {\bf insert\+Model} ({\bf Link} \&link)
+\item 
+void {\bf remove\+Model} ({\bf Element\+ID} id)
+\item 
+void {\bf show\+Results} ()
+\item 
+void {\bf create\+Results} ({\bf Element\+ID} id)
+\item 
+void {\bf set\+Default\+Values} (const wx\+String \&file\+Name)
+\item 
+void {\bf save\+Default\+Values} (const wx\+String \&file\+Name)
+\item 
+bool {\bf run} ({\bf Element\+ID} id)
+\item 
+void {\bf on\+Changing\+Time\+Interval} ({\bf Date\+::\+Time\+Interval} time\+Interval)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Hidro\+Model} $\ast$model, const wx\+String \&section)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Hidro\+Model} $\ast$model, const wx\+String \&section)
+\item 
+void {\bf update\+Results\+Series} ({\bf Hidro\+Model} $\ast$model, const wx\+String \&scenario\+Name)
+\item 
+void {\bf update\+Results\+Series\+In} ({\bf Hidro\+Model} $\ast$model, const wx\+String \&scenario\+Name)
+\item 
+void {\bf update\+Results\+Series\+Out} ({\bf Hidro\+Model} $\ast$model, const wx\+String \&scenario\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+Classe principal de controle do Modelo Hidrologico W\+A\+SA 
+
+DefiniÃ§Ã£o na linha 14 do arquivo W\+A\+S\+A\+Model\+Main.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}!W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}!W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+\subsubsection[{W\+A\+S\+A\+Model\+Main(\+Hidro\+Interface $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}W\+A\+S\+A\+Model\+Main\+::\+W\+A\+S\+A\+Model\+Main (
+\begin{DoxyParamCaption}
+\item[{{\bf Hidro\+Interface} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_main_ada6cf689dc9b58dff8dcbfb4c6a1a298}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em parent} & Ponteiro para \doxyref{Hidro\+Interface}{pag.}{class_hidro_interface} \\
+\hline
+\end{DoxyParams}
+\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}!````~W\+A\+S\+A\+Model\+Main@{$\sim$\+W\+A\+S\+A\+Model\+Main}}
+\index{````~W\+A\+S\+A\+Model\+Main@{$\sim$\+W\+A\+S\+A\+Model\+Main}!W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+\subsubsection[{$\sim$\+W\+A\+S\+A\+Model\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}virtual W\+A\+S\+A\+Model\+Main\+::$\sim$\+W\+A\+S\+A\+Model\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_main_a906a0e7aeb6fb8f9cf36ed23b9fef28d}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}!create\+Model@{create\+Model}}
+\index{create\+Model@{create\+Model}!W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+\subsubsection[{create\+Model(\+Node \&node)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hidro\+Model}$\ast$ W\+A\+S\+A\+Model\+Main\+::create\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} \&}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_main_a729d321e8cf3e174f7c1fb2264d25481}
+
+
+Implementa {\bf Hidro\+Model\+Main} \doxyref{}{pag.}{class_hidro_model_main_a7e889b433dff9d38dbd38478456808d6}.
+
+\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}!create\+Model@{create\+Model}}
+\index{create\+Model@{create\+Model}!W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+\subsubsection[{create\+Model(\+Link \&link)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hidro\+Model}$\ast$ W\+A\+S\+A\+Model\+Main\+::create\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} \&}]{link}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_main_aa6e9f6fa8572dce2296b2244fc497989}
+
+
+Implementa {\bf Hidro\+Model\+Main} \doxyref{}{pag.}{class_hidro_model_main_acdbb1274c38ad79583b77b1a6d3b7414}.
+
+\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}!create\+Results@{create\+Results}}
+\index{create\+Results@{create\+Results}!W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+\subsubsection[{create\+Results(\+Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+Main\+::create\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_main_a856ab2b7f4beca8fd0a1456e4dd8b27d}
+
+
+Implementa {\bf Hidro\+Model\+Main} \doxyref{}{pag.}{class_hidro_model_main_a50116c0cfafdd7d75f1fcefd51597489}.
+
+\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}!insert\+Model@{insert\+Model}}
+\index{insert\+Model@{insert\+Model}!W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+\subsubsection[{insert\+Model(\+Node \&node)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+Main\+::insert\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} \&}]{node}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_main_a5eaf074605b1eecb685fdc7b288c1fe4}
+Cria uma nova instancia do modelo S\+M\+AP para o nó. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em node} & Nó \\
+\hline
+\end{DoxyParams}
+\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}!insert\+Model@{insert\+Model}}
+\index{insert\+Model@{insert\+Model}!W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+\subsubsection[{insert\+Model(\+Link \&link)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+Main\+::insert\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} \&}]{link}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_main_acbd4021862bfe25090353467866c3539}
+Cria uma nova instancia do modelo S\+M\+AP para o nó. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em link} & Trecho \\
+\hline
+\end{DoxyParams}
+\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}!on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}}
+\index{on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}!W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+\subsubsection[{on\+Changing\+Time\+Interval(\+Date\+::\+Time\+Interval time\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+Main\+::on\+Changing\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_main_a8dbe8fd551f9ebd3077454fd63986a8b}
+Evento chamado quando o sistema muda de intervalo de tempo O modulo adapta os modelos de acordo com o intervalo de tempo definido 
+
+ReimplementaÃ§Ã£o de {\bf Hidro\+Model\+Main} \doxyref{}{pag.}{class_hidro_model_main_af8ca7e3423aaa44ee33b782a9ebf569d}.
+
+\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Hidro\+Model $\ast$model, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+Main\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Hidro\+Model} $\ast$}]{model, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_main_aa755f381883305a263a69340ccfa7237}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Hidro\+Model\+Main} \doxyref{}{pag.}{class_hidro_model_main_ae3e3d7e8954c7ff49682fd9afba37776}.
+
+\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Hidro\+Model $\ast$model, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+Main\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Hidro\+Model} $\ast$}]{model, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_main_a84ae2bfceffe499264a341fd0771e009}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Hidro\+Model\+Main} \doxyref{}{pag.}{class_hidro_model_main_ad196416816373415f0750b41f4c42bea}.
+
+\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}!remove\+Model@{remove\+Model}}
+\index{remove\+Model@{remove\+Model}!W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+\subsubsection[{remove\+Model(\+Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+Main\+::remove\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_model_main_a8608a34cf54b67ccc7f8c2b14c8468da}
+Remove a instancia do modelo S\+M\+AP para o nó. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em node\+Id} & Id do nó especifico \\
+\hline
+\end{DoxyParams}
+\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}!run@{run}}
+\index{run@{run}!W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+\subsubsection[{run(\+Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}bool W\+A\+S\+A\+Model\+Main\+::run (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_main_a042b14daac78414afb5cc57209b334aa}
+Executa o modelo hidrológico S\+M\+AP para o nó. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em node} & Nó \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Hidro\+Model\+Main} \doxyref{}{pag.}{class_hidro_model_main_af686014b551d0725587c9056e68c62ac}.
+
+\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}!save\+Default\+Values@{save\+Default\+Values}}
+\index{save\+Default\+Values@{save\+Default\+Values}!W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+\subsubsection[{save\+Default\+Values(const wx\+String \&file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+Main\+::save\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_main_a5995fe7e6317ba34119afae0e8b03a23}
+Salva os dados do modelo hidrológico S\+M\+AP de um nó para um arquivo 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em file\+Name} & Nome do arquivo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Hidro\+Model\+Main} \doxyref{}{pag.}{class_hidro_model_main_a42d73f66fcd0e359fc6c92d0ff077bec}.
+
+\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}!set\+Default\+Values@{set\+Default\+Values}}
+\index{set\+Default\+Values@{set\+Default\+Values}!W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+\subsubsection[{set\+Default\+Values(const wx\+String \&file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+Main\+::set\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_main_a66b8ac7e21bfd3e993b12dfe80b8bdb2}
+Recebe os dados do modelo hidrológico S\+M\+AP de um arquivo para um nó 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em file\+Name} & Nome do arquivo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Hidro\+Model\+Main} \doxyref{}{pag.}{class_hidro_model_main_a421bc8b74d60e615d9dd7e02d9bd94fa}.
+
+\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+Main\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_main_ae79271ec1b4dca69ae5c3abb511d8268}
+Atualiza as informações do nó com os parametros do modelo. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em node} & Nó \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Hidro\+Model\+Main} \doxyref{}{pag.}{class_hidro_model_main_a8975262ac23d92b9cced93b0f9761cfe}.
+
+\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+\subsubsection[{show\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+Main\+::show\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_main_a43a0fa89d054fae9b2c4cabecd947111}
+Mostra os resultados correspondentes ao modelo hidrológico S\+M\+AP 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em node} & Nó \\
+\hline
+{\em change} & Diferencia se a chamada foi feita atraves do botão de visualização ou de rodar o modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Hidro\+Model\+Main} \doxyref{}{pag.}{class_hidro_model_main_ae423b01182997f5f8733d9e19eb54f6d}.
+
+\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}!update\+Results\+Series@{update\+Results\+Series}}
+\index{update\+Results\+Series@{update\+Results\+Series}!W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+\subsubsection[{update\+Results\+Series(\+Hidro\+Model $\ast$model, const wx\+String \&scenario\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+Main\+::update\+Results\+Series (
+\begin{DoxyParamCaption}
+\item[{{\bf Hidro\+Model} $\ast$}]{model, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_main_a18549cdd8b32354ff749f5d73da6a79c}
+Adciona as series que existirem daquele modelo no modulo de Resultados Lembrete\+: Caso haja uma alteração no nome ou na unidade da serie será necessario mudar neste metodo também 
+
+Implementa {\bf Hidro\+Model\+Main} \doxyref{}{pag.}{class_hidro_model_main_afa800c54e88fff145afc41328b7b3d56}.
+
+\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}!update\+Results\+Series\+In@{update\+Results\+Series\+In}}
+\index{update\+Results\+Series\+In@{update\+Results\+Series\+In}!W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+\subsubsection[{update\+Results\+Series\+In(\+Hidro\+Model $\ast$model, const wx\+String \&scenario\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+Main\+::update\+Results\+Series\+In (
+\begin{DoxyParamCaption}
+\item[{{\bf Hidro\+Model} $\ast$}]{model, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_main_a666ace139bf9a475ba9c3984d22b34ea}
+
+
+Implementa {\bf Hidro\+Model\+Main} \doxyref{}{pag.}{class_hidro_model_main_ae1bea312dee4b9886e430a02b0a60aa3}.
+
+\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}!update\+Results\+Series\+Out@{update\+Results\+Series\+Out}}
+\index{update\+Results\+Series\+Out@{update\+Results\+Series\+Out}!W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+\subsubsection[{update\+Results\+Series\+Out(\+Hidro\+Model $\ast$model, const wx\+String \&scenario\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+Main\+::update\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Hidro\+Model} $\ast$}]{model, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_main_af46c3f1a58ce7cb91a97901bedd82f1e}
+
+
+Implementa {\bf Hidro\+Model\+Main} \doxyref{}{pag.}{class_hidro_model_main_aa96224a9bbbafe15f1861aee2734c5ca}.
+
+\index{W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}!update\+Tree\+Item@{update\+Tree\+Item}}
+\index{update\+Tree\+Item@{update\+Tree\+Item}!W\+A\+S\+A\+Model\+Main@{W\+A\+S\+A\+Model\+Main}}
+\subsubsection[{update\+Tree\+Item(\+S\+I\+G\+A\+Tree\+Ctrl $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Model\+Main\+::update\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_model_main_a13211d67d6ae9ff524c9e999bac58419}
+Atualiza os ponteiros das suas series no Tree\+Ctrl de integração 
+
+Implementa {\bf Hidro\+Model\+Main} \doxyref{}{pag.}{class_hidro_model_main_a968d4b37614511a4dcf0bf4040d9a822}.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf W\+A\+S\+A\+Model\+Main.\+h}\end{DoxyCompactItemize}

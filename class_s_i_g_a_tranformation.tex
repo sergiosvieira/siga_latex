@@ -1,0 +1,228 @@
+\section{Referência da Classe S\+I\+G\+A\+Tranformation}
+\label{class_s_i_g_a_tranformation}\index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}
+
+
+{\ttfamily \#include $<$S\+I\+G\+A\+Tranformation.\+h$>$}
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf transformation\+Type\+Up} \{ \\*
+{\bf T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+EA} = 0, 
+{\bf T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+ED}, 
+{\bf T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+AX}, 
+{\bf T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+IN}, 
+\\*
+{\bf T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+A\+DD}
+ \}
+\item 
+enum {\bf transformation\+Type\+Down} \{ {\bf T\+R\+A\+N\+S\+\_\+\+D\+O\+W\+N\+\_\+\+R\+EP} = 0, 
+{\bf T\+R\+A\+N\+S\+\_\+\+D\+O\+W\+N\+\_\+\+D\+IV}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf delete\+Transformations} ()
+\item 
+void {\bf redefine\+Serie} ({\bf Serie} $\ast$new\+Serie)
+\item 
+bool {\bf convert} ({\bf Date\+::\+Time\+Interval} convert\+\_\+interval, {\bf Serie} $\ast$result)
+\item 
+{\bf S\+I\+G\+A\+Tranformation} ()
+\item 
+{\bf S\+I\+G\+A\+Tranformation} ({\bf Serie} $\ast$serie, {\bf transformation\+Type\+Up} type\+Up, {\bf transformation\+Type\+Down} type\+Down, int deltaT)
+\item 
+virtual {\bf $\sim$\+S\+I\+G\+A\+Tranformation} ()
+\item 
+{\bf Serie} $\ast$ {\bf get\+Original\+Serie} ()
+\item 
+{\bf Serie} $\ast$ {\bf get\+Hourly\+Serie} ()
+\item 
+{\bf Serie} $\ast$ {\bf get\+Diary\+Serie} ()
+\item 
+{\bf Serie} $\ast$ {\bf get\+Monthly\+Serie} ()
+\item 
+{\bf Serie} $\ast$ {\bf get\+Annual\+Serie} ()
+\item 
+int {\bf get\+DeltaT} () const 
+\item 
+{\bf transformation\+Type\+Up} {\bf get\+Up\+Type} () const 
+\item 
+{\bf transformation\+Type\+Down} {\bf get\+Down\+Type} () const 
+\item 
+void {\bf set\+Original\+Serie} ({\bf Serie} $\ast$serie)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 11 do arquivo S\+I\+G\+A\+Tranformation.\+h.
+
+
+
+\subsection{Enumerações}
+\index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!transformation\+Type\+Down@{transformation\+Type\+Down}}
+\index{transformation\+Type\+Down@{transformation\+Type\+Down}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}
+\subsubsection[{transformation\+Type\+Down}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Down}}\label{class_s_i_g_a_tranformation_a50954eb1d7c9d660e65507b52be4af5c}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{T\+R\+A\+N\+S\+\_\+\+D\+O\+W\+N\+\_\+\+R\+EP@{T\+R\+A\+N\+S\+\_\+\+D\+O\+W\+N\+\_\+\+R\+EP}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}\index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!T\+R\+A\+N\+S\+\_\+\+D\+O\+W\+N\+\_\+\+R\+EP@{T\+R\+A\+N\+S\+\_\+\+D\+O\+W\+N\+\_\+\+R\+EP}}\item[{\em 
+T\+R\+A\+N\+S\+\_\+\+D\+O\+W\+N\+\_\+\+R\+EP\label{class_s_i_g_a_tranformation_a50954eb1d7c9d660e65507b52be4af5ca8b7a08d0a42140f139b20e8a7e734594}
+}]\index{T\+R\+A\+N\+S\+\_\+\+D\+O\+W\+N\+\_\+\+D\+IV@{T\+R\+A\+N\+S\+\_\+\+D\+O\+W\+N\+\_\+\+D\+IV}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}\index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!T\+R\+A\+N\+S\+\_\+\+D\+O\+W\+N\+\_\+\+D\+IV@{T\+R\+A\+N\+S\+\_\+\+D\+O\+W\+N\+\_\+\+D\+IV}}\item[{\em 
+T\+R\+A\+N\+S\+\_\+\+D\+O\+W\+N\+\_\+\+D\+IV\label{class_s_i_g_a_tranformation_a50954eb1d7c9d660e65507b52be4af5ca19aef291f5f586d75e466c213d685d0b}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 25 do arquivo S\+I\+G\+A\+Tranformation.\+h.
+
+\index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!transformation\+Type\+Up@{transformation\+Type\+Up}}
+\index{transformation\+Type\+Up@{transformation\+Type\+Up}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}
+\subsubsection[{transformation\+Type\+Up}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf S\+I\+G\+A\+Tranformation\+::transformation\+Type\+Up}}\label{class_s_i_g_a_tranformation_af7499731d4a9b1a368dbd62ec873247a}
+Tipo de transforma��o \begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+EA@{T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+EA}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}\index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+EA@{T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+EA}}\item[{\em 
+T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+EA\label{class_s_i_g_a_tranformation_af7499731d4a9b1a368dbd62ec873247aa1d1fa684bb1904e1ece028bb90ab68b6}
+}]\index{T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+ED@{T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+ED}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}\index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+ED@{T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+ED}}\item[{\em 
+T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+ED\label{class_s_i_g_a_tranformation_af7499731d4a9b1a368dbd62ec873247aa0b47736cd2a24242550a6664eb664604}
+}]\index{T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+AX@{T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+AX}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}\index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+AX@{T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+AX}}\item[{\em 
+T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+AX\label{class_s_i_g_a_tranformation_af7499731d4a9b1a368dbd62ec873247aae64e4cc47a4d7ec7733f6a2ca2833684}
+}]\index{T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+IN@{T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+IN}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}\index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+IN@{T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+IN}}\item[{\em 
+T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+M\+IN\label{class_s_i_g_a_tranformation_af7499731d4a9b1a368dbd62ec873247aab8e36d9995c6421e89889b990e4e5578}
+}]\index{T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+A\+DD@{T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+A\+DD}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}\index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+A\+DD@{T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+A\+DD}}\item[{\em 
+T\+R\+A\+N\+S\+\_\+\+U\+P\+\_\+\+A\+DD\label{class_s_i_g_a_tranformation_af7499731d4a9b1a368dbd62ec873247aaf9ca72db9ace8d16fbf14f8dd7a1ed7c}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 17 do arquivo S\+I\+G\+A\+Tranformation.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}
+\index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}
+\subsubsection[{S\+I\+G\+A\+Tranformation()}]{\setlength{\rightskip}{0pt plus 5cm}S\+I\+G\+A\+Tranformation\+::\+S\+I\+G\+A\+Tranformation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tranformation_a5cd76eea538f408b7a960945db3b21cc}
+Construtor \index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}
+\index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}
+\subsubsection[{S\+I\+G\+A\+Tranformation(\+Serie $\ast$serie, transformation\+Type\+Up type\+Up, transformation\+Type\+Down type\+Down, int delta\+T)}]{\setlength{\rightskip}{0pt plus 5cm}S\+I\+G\+A\+Tranformation\+::\+S\+I\+G\+A\+Tranformation (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie} $\ast$}]{serie, }
+\item[{{\bf transformation\+Type\+Up}}]{type\+Up, }
+\item[{{\bf transformation\+Type\+Down}}]{type\+Down, }
+\item[{int}]{deltaT}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tranformation_ad7af780c081af639a6d419477db96fa5}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em serie} & \doxyref{Serie}{pag.}{class_serie} associada \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!````~S\+I\+G\+A\+Tranformation@{$\sim$\+S\+I\+G\+A\+Tranformation}}
+\index{````~S\+I\+G\+A\+Tranformation@{$\sim$\+S\+I\+G\+A\+Tranformation}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}
+\subsubsection[{$\sim$\+S\+I\+G\+A\+Tranformation()}]{\setlength{\rightskip}{0pt plus 5cm}virtual S\+I\+G\+A\+Tranformation\+::$\sim$\+S\+I\+G\+A\+Tranformation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_i_g_a_tranformation_a0cefa466ea01d94babda9437bb124747}
+Destrutor 
+
+\subsection{Métodos}
+\index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!convert@{convert}}
+\index{convert@{convert}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}
+\subsubsection[{convert(\+Date\+::\+Time\+Interval convert\+\_\+interval, Serie $\ast$result)}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Tranformation\+::convert (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{convert\+\_\+interval, }
+\item[{{\bf Serie} $\ast$}]{result}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tranformation_ad62bd2855f7a17f623c9d5168d922d45}
+\index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!delete\+Transformations@{delete\+Transformations}}
+\index{delete\+Transformations@{delete\+Transformations}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}
+\subsubsection[{delete\+Transformations()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Tranformation\+::delete\+Transformations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tranformation_a728257143e09590752af733eec1f53d0}
+\index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!get\+Annual\+Serie@{get\+Annual\+Serie}}
+\index{get\+Annual\+Serie@{get\+Annual\+Serie}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}
+\subsubsection[{get\+Annual\+Serie()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ S\+I\+G\+A\+Tranformation\+::get\+Annual\+Serie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tranformation_a63d2e10371835b0c058c1382eca0308e}
+Retorna a \doxyref{Serie}{pag.}{class_serie} anual \index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!get\+DeltaT@{get\+DeltaT}}
+\index{get\+DeltaT@{get\+DeltaT}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}
+\subsubsection[{get\+Delta\+T() const }]{\setlength{\rightskip}{0pt plus 5cm}int S\+I\+G\+A\+Tranformation\+::get\+DeltaT (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_s_i_g_a_tranformation_a6856f32070345a31bd16df6de6346b10}
+Retrna o intervalo de tempo \index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!get\+Diary\+Serie@{get\+Diary\+Serie}}
+\index{get\+Diary\+Serie@{get\+Diary\+Serie}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}
+\subsubsection[{get\+Diary\+Serie()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ S\+I\+G\+A\+Tranformation\+::get\+Diary\+Serie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tranformation_a7e1799c880626577b7bfa07a59e415ce}
+Retorna a \doxyref{Serie}{pag.}{class_serie} diaria \index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!get\+Down\+Type@{get\+Down\+Type}}
+\index{get\+Down\+Type@{get\+Down\+Type}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}
+\subsubsection[{get\+Down\+Type() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf transformation\+Type\+Down} S\+I\+G\+A\+Tranformation\+::get\+Down\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_s_i_g_a_tranformation_ad0cc039c57349647eafeeb6b9f391e18}
+tipo de transforma��o reversa \index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!get\+Hourly\+Serie@{get\+Hourly\+Serie}}
+\index{get\+Hourly\+Serie@{get\+Hourly\+Serie}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}
+\subsubsection[{get\+Hourly\+Serie()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ S\+I\+G\+A\+Tranformation\+::get\+Hourly\+Serie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tranformation_a42e96a038da2622c1b93615838742d22}
+Retorna a \doxyref{Serie}{pag.}{class_serie} horaria \index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!get\+Monthly\+Serie@{get\+Monthly\+Serie}}
+\index{get\+Monthly\+Serie@{get\+Monthly\+Serie}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}
+\subsubsection[{get\+Monthly\+Serie()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ S\+I\+G\+A\+Tranformation\+::get\+Monthly\+Serie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tranformation_a61e2e7b8fdfc274380fe9a0cd141a68d}
+Retorna a \doxyref{Serie}{pag.}{class_serie} mensal \index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!get\+Original\+Serie@{get\+Original\+Serie}}
+\index{get\+Original\+Serie@{get\+Original\+Serie}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}
+\subsubsection[{get\+Original\+Serie()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ S\+I\+G\+A\+Tranformation\+::get\+Original\+Serie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tranformation_a94681676aa60a075deb6765cd21f97bd}
+Calcula as series da classe Retorna a \doxyref{Serie}{pag.}{class_serie} original \index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!get\+Up\+Type@{get\+Up\+Type}}
+\index{get\+Up\+Type@{get\+Up\+Type}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}
+\subsubsection[{get\+Up\+Type() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf transformation\+Type\+Up} S\+I\+G\+A\+Tranformation\+::get\+Up\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_s_i_g_a_tranformation_acbafc494d6329d114fc9c4a74a3f901d}
+tipo de transforma��o direta \index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!redefine\+Serie@{redefine\+Serie}}
+\index{redefine\+Serie@{redefine\+Serie}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}
+\subsubsection[{redefine\+Serie(\+Serie $\ast$new\+Serie)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Tranformation\+::redefine\+Serie (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie} $\ast$}]{new\+Serie}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tranformation_aeedbc78caedd8c32203f02428145ff23}
+\index{S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}!set\+Original\+Serie@{set\+Original\+Serie}}
+\index{set\+Original\+Serie@{set\+Original\+Serie}!S\+I\+G\+A\+Tranformation@{S\+I\+G\+A\+Tranformation}}
+\subsubsection[{set\+Original\+Serie(\+Serie $\ast$serie)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Tranformation\+::set\+Original\+Serie (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie} $\ast$}]{serie}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_tranformation_a640385f8ee60bf8173170dd3ffd0e8a5}
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+G\+A\+Tranformation.\+h}\end{DoxyCompactItemize}

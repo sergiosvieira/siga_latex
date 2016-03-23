@@ -1,0 +1,828 @@
+\section{Referência da Classe tinyxml2\+:\+:X\+M\+L\+Node}
+\label{classtinyxml2_1_1_x_m_l_node}\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+
+
+{\ttfamily \#include $<$tinyxml2.\+h$>$}
+
+
+
+Superclasse de {\bf tinyxml2\+::\+X\+M\+L\+Comment}, {\bf tinyxml2\+::\+X\+M\+L\+Declaration}, {\bf tinyxml2\+::\+X\+M\+L\+Document}, {\bf tinyxml2\+::\+X\+M\+L\+Element}, {\bf tinyxml2\+::\+X\+M\+L\+Text} e {\bf tinyxml2\+::\+X\+M\+L\+Unknown}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+const {\bf X\+M\+L\+Document} $\ast$ {\bf Get\+Document} () const 
+\begin{DoxyCompactList}\small\item\em Get the \doxyref{X\+M\+L\+Document}{pag.}{classtinyxml2_1_1_x_m_l_document} that owns this \doxyref{X\+M\+L\+Node}{pag.}{classtinyxml2_1_1_x_m_l_node}. \end{DoxyCompactList}\item 
+{\bf X\+M\+L\+Document} $\ast$ {\bf Get\+Document} ()
+\begin{DoxyCompactList}\small\item\em Get the \doxyref{X\+M\+L\+Document}{pag.}{classtinyxml2_1_1_x_m_l_document} that owns this \doxyref{X\+M\+L\+Node}{pag.}{classtinyxml2_1_1_x_m_l_node}. \end{DoxyCompactList}\item 
+virtual {\bf X\+M\+L\+Element} $\ast$ {\bf To\+Element} ()
+\begin{DoxyCompactList}\small\item\em Safely cast to an \doxyref{Element}{pag.}{class_element}, or null. \end{DoxyCompactList}\item 
+virtual {\bf X\+M\+L\+Text} $\ast$ {\bf To\+Text} ()
+\begin{DoxyCompactList}\small\item\em Safely cast to Text, or null. \end{DoxyCompactList}\item 
+virtual {\bf X\+M\+L\+Comment} $\ast$ {\bf To\+Comment} ()
+\begin{DoxyCompactList}\small\item\em Safely cast to a Comment, or null. \end{DoxyCompactList}\item 
+virtual {\bf X\+M\+L\+Document} $\ast$ {\bf To\+Document} ()
+\begin{DoxyCompactList}\small\item\em Safely cast to a Document, or null. \end{DoxyCompactList}\item 
+virtual {\bf X\+M\+L\+Declaration} $\ast$ {\bf To\+Declaration} ()
+\begin{DoxyCompactList}\small\item\em Safely cast to a Declaration, or null. \end{DoxyCompactList}\item 
+virtual {\bf X\+M\+L\+Unknown} $\ast$ {\bf To\+Unknown} ()
+\begin{DoxyCompactList}\small\item\em Safely cast to an Unknown, or null. \end{DoxyCompactList}\item 
+virtual const {\bf X\+M\+L\+Element} $\ast$ {\bf To\+Element} () const 
+\item 
+virtual const {\bf X\+M\+L\+Text} $\ast$ {\bf To\+Text} () const 
+\item 
+virtual const {\bf X\+M\+L\+Comment} $\ast$ {\bf To\+Comment} () const 
+\item 
+virtual const {\bf X\+M\+L\+Document} $\ast$ {\bf To\+Document} () const 
+\item 
+virtual const {\bf X\+M\+L\+Declaration} $\ast$ {\bf To\+Declaration} () const 
+\item 
+virtual const {\bf X\+M\+L\+Unknown} $\ast$ {\bf To\+Unknown} () const 
+\item 
+const char $\ast$ {\bf Value} () const 
+\item 
+void {\bf Set\+Value} (const char $\ast$val, bool static\+Mem=false)
+\item 
+const {\bf X\+M\+L\+Node} $\ast$ {\bf Parent} () const 
+\begin{DoxyCompactList}\small\item\em Get the parent of this node on the D\+OM. \end{DoxyCompactList}\item 
+{\bf X\+M\+L\+Node} $\ast$ {\bf Parent} ()
+\item 
+bool {\bf No\+Children} () const 
+\begin{DoxyCompactList}\small\item\em Returns true if this node has no children. \end{DoxyCompactList}\item 
+const {\bf X\+M\+L\+Node} $\ast$ {\bf First\+Child} () const 
+\begin{DoxyCompactList}\small\item\em Get the first child node, or null if none exists. \end{DoxyCompactList}\item 
+{\bf X\+M\+L\+Node} $\ast$ {\bf First\+Child} ()
+\item 
+const {\bf X\+M\+L\+Element} $\ast$ {\bf First\+Child\+Element} (const char $\ast$value=0) const 
+\item 
+{\bf X\+M\+L\+Element} $\ast$ {\bf First\+Child\+Element} (const char $\ast$value=0)
+\item 
+const {\bf X\+M\+L\+Node} $\ast$ {\bf Last\+Child} () const 
+\begin{DoxyCompactList}\small\item\em Get the last child node, or null if none exists. \end{DoxyCompactList}\item 
+{\bf X\+M\+L\+Node} $\ast$ {\bf Last\+Child} ()
+\item 
+const {\bf X\+M\+L\+Element} $\ast$ {\bf Last\+Child\+Element} (const char $\ast$value=0) const 
+\item 
+{\bf X\+M\+L\+Element} $\ast$ {\bf Last\+Child\+Element} (const char $\ast$value=0)
+\item 
+const {\bf X\+M\+L\+Node} $\ast$ {\bf Previous\+Sibling} () const 
+\begin{DoxyCompactList}\small\item\em Get the previous (left) sibling node of this node. \end{DoxyCompactList}\item 
+{\bf X\+M\+L\+Node} $\ast$ {\bf Previous\+Sibling} ()
+\item 
+const {\bf X\+M\+L\+Element} $\ast$ {\bf Previous\+Sibling\+Element} (const char $\ast$value=0) const 
+\begin{DoxyCompactList}\small\item\em Get the previous (left) sibling element of this node, with an optionally supplied name. \end{DoxyCompactList}\item 
+{\bf X\+M\+L\+Element} $\ast$ {\bf Previous\+Sibling\+Element} (const char $\ast$value=0)
+\item 
+const {\bf X\+M\+L\+Node} $\ast$ {\bf Next\+Sibling} () const 
+\begin{DoxyCompactList}\small\item\em Get the next (right) sibling node of this node. \end{DoxyCompactList}\item 
+{\bf X\+M\+L\+Node} $\ast$ {\bf Next\+Sibling} ()
+\item 
+const {\bf X\+M\+L\+Element} $\ast$ {\bf Next\+Sibling\+Element} (const char $\ast$value=0) const 
+\begin{DoxyCompactList}\small\item\em Get the next (right) sibling element of this node, with an optionally supplied name. \end{DoxyCompactList}\item 
+{\bf X\+M\+L\+Element} $\ast$ {\bf Next\+Sibling\+Element} (const char $\ast$value=0)
+\item 
+{\bf X\+M\+L\+Node} $\ast$ {\bf Insert\+End\+Child} ({\bf X\+M\+L\+Node} $\ast$add\+This)
+\item 
+{\bf X\+M\+L\+Node} $\ast$ {\bf Link\+End\+Child} ({\bf X\+M\+L\+Node} $\ast$add\+This)
+\item 
+{\bf X\+M\+L\+Node} $\ast$ {\bf Insert\+First\+Child} ({\bf X\+M\+L\+Node} $\ast$add\+This)
+\item 
+{\bf X\+M\+L\+Node} $\ast$ {\bf Insert\+After\+Child} ({\bf X\+M\+L\+Node} $\ast$after\+This, {\bf X\+M\+L\+Node} $\ast$add\+This)
+\item 
+void {\bf Delete\+Children} ()
+\item 
+void {\bf Delete\+Child} ({\bf X\+M\+L\+Node} $\ast$node)
+\item 
+virtual {\bf X\+M\+L\+Node} $\ast$ {\bf Shallow\+Clone} ({\bf X\+M\+L\+Document} $\ast$document) const  =0
+\item 
+virtual bool {\bf Shallow\+Equal} (const {\bf X\+M\+L\+Node} $\ast$compare) const  =0
+\item 
+virtual bool {\bf Accept} ({\bf X\+M\+L\+Visitor} $\ast$visitor) const  =0
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf X\+M\+L\+Node} ({\bf X\+M\+L\+Document} $\ast$)
+\item 
+virtual {\bf $\sim$\+X\+M\+L\+Node} ()
+\item 
+virtual char $\ast$ {\bf Parse\+Deep} (char $\ast$, {\bf Str\+Pair} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf X\+M\+L\+Document} $\ast$ {\bf \+\_\+document}
+\item 
+{\bf X\+M\+L\+Node} $\ast$ {\bf \+\_\+parent}
+\item 
+{\bf Str\+Pair} {\bf \+\_\+value}
+\item 
+{\bf X\+M\+L\+Node} $\ast$ {\bf \+\_\+first\+Child}
+\item 
+{\bf X\+M\+L\+Node} $\ast$ {\bf \+\_\+last\+Child}
+\item 
+{\bf X\+M\+L\+Node} $\ast$ {\bf \+\_\+prev}
+\item 
+{\bf X\+M\+L\+Node} $\ast$ {\bf \+\_\+next}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf X\+M\+L\+Document}
+\item 
+class {\bf X\+M\+L\+Element}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+\doxyref{X\+M\+L\+Node}{pag.}{classtinyxml2_1_1_x_m_l_node} is a base class for every object that is in the X\+ML Document Object Model (D\+OM), except X\+M\+L\+Attributes. Nodes have siblings, a parent, and children which can be navigated. A node is always in a \doxyref{X\+M\+L\+Document}{pag.}{classtinyxml2_1_1_x_m_l_document}. The type of a \doxyref{X\+M\+L\+Node}{pag.}{classtinyxml2_1_1_x_m_l_node} can be queried, and it can be cast to its more defined type. A \doxyref{X\+M\+L\+Document}{pag.}{classtinyxml2_1_1_x_m_l_document} allocates memory for all its Nodes. When the \doxyref{X\+M\+L\+Document}{pag.}{classtinyxml2_1_1_x_m_l_document} gets deleted, all its Nodes will also be deleted. \begin{DoxyVerb}A Document can contain: Element (container or leaf)
+Comment (leaf)
+Unknown (leaf)
+Declaration( leaf )
+An Element can contain: Element (container or leaf)
+Text    (leaf)
+Attributes (not on tree)
+Comment (leaf)
+Unknown (leaf)
+\end{DoxyVerb}
+ 
+
+Definição na linha 610 do arquivo tinyxml2.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!X\+M\+L\+Node@{X\+M\+L\+Node}}
+\index{X\+M\+L\+Node@{X\+M\+L\+Node}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{X\+M\+L\+Node(\+X\+M\+L\+Document $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}tinyxml2\+::\+X\+M\+L\+Node\+::\+X\+M\+L\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf X\+M\+L\+Document} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{classtinyxml2_1_1_x_m_l_node_a29868df6ca383d574f584dfdd15105b6}
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!````~X\+M\+L\+Node@{$\sim$\+X\+M\+L\+Node}}
+\index{````~X\+M\+L\+Node@{$\sim$\+X\+M\+L\+Node}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{$\sim$\+X\+M\+L\+Node()}]{\setlength{\rightskip}{0pt plus 5cm}virtual tinyxml2\+::\+X\+M\+L\+Node\+::$\sim$\+X\+M\+L\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_node_a8ae1bcd23a08ce5c5f97b2ab347b0893}
+
+
+\subsection{Métodos}
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Accept@{Accept}}
+\index{Accept@{Accept}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Accept(\+X\+M\+L\+Visitor $\ast$visitor) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool tinyxml2\+::\+X\+M\+L\+Node\+::\+Accept (
+\begin{DoxyParamCaption}
+\item[{{\bf X\+M\+L\+Visitor} $\ast$}]{visitor}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classtinyxml2_1_1_x_m_l_node_a366ad0e9b9ae8d1b18c00f903994b7a9}
+Accept a hierarchical visit of the nodes in the Tiny\+X\+M\+L-\/2 D\+OM. Every node in the X\+ML tree will be conditionally visited and the host will be called back via the \doxyref{X\+M\+L\+Visitor}{pag.}{classtinyxml2_1_1_x_m_l_visitor} interface. This is essentially a S\+AX interface for Tiny\+X\+M\+L-\/2. (Note however it doesn\textquotesingle{}t re-\/parse the X\+ML for the callbacks, so the performance of Tiny\+X\+M\+L-\/2 is unchanged by using this interface versus any other.) The interface has been based on ideas from\+:
+\begin{DoxyItemize}
+\item {\tt http\+://www.\+saxproject.\+org/}
+\item {\tt http\+://c2.\+com/cgi/wiki?\+Hierarchical\+Visitor\+Pattern} Which are both good references for \char`\"{}visiting\char`\"{}. An example of using \doxyref{Accept()}{pag.}{classtinyxml2_1_1_x_m_l_node_a366ad0e9b9ae8d1b18c00f903994b7a9}\+: \begin{DoxyVerb}XMLPrinter printer;
+tinyxmlDoc.Accept( &printer );
+const char* xmlcstr = printer.CStr();
+\end{DoxyVerb}
+ 
+\end{DoxyItemize}
+
+Implementado por {\bf tinyxml2\+::\+X\+M\+L\+Document} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_document_a9b4e5cc94ea5bdb92e8491e3d67b091c}, {\bf tinyxml2\+::\+X\+M\+L\+Element} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_element_a05e68f7c6d4559027d213c719393da41}, {\bf tinyxml2\+::\+X\+M\+L\+Unknown} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_unknown_ac691f4efd84cad997b93c158e391e461}, {\bf tinyxml2\+::\+X\+M\+L\+Declaration} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_declaration_a528fcf8e5da7af659df984e9d15e450b}, {\bf tinyxml2\+::\+X\+M\+L\+Comment} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_comment_a26a5483766029fc221dad23b9602016e} e {\bf tinyxml2\+::\+X\+M\+L\+Text} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_text_a5182333a5bad80566a0c6e475e828d1d}.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Delete\+Child@{Delete\+Child}}
+\index{Delete\+Child@{Delete\+Child}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Delete\+Child(\+X\+M\+L\+Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Node\+::\+Delete\+Child (
+\begin{DoxyParamCaption}
+\item[{{\bf X\+M\+L\+Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_node_a363b6edbd6ebd55f8387d2b89f2b0921}
+Delete a child of this node. \index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Delete\+Children@{Delete\+Children}}
+\index{Delete\+Children@{Delete\+Children}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Delete\+Children()}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Node\+::\+Delete\+Children (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_node_a0360085cc54df5bff85d5c5da13afdce}
+Delete all the children of this node. \index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!First\+Child@{First\+Child}}
+\index{First\+Child@{First\+Child}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{First\+Child() const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf X\+M\+L\+Node}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+First\+Child (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_node_a60e923d13d7dc01f45ab90a2f948b02a}
+
+
+Get the first child node, or null if none exists. 
+
+
+
+Definição na linha 700 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!First\+Child@{First\+Child}}
+\index{First\+Child@{First\+Child}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{First\+Child()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Node}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+First\+Child (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_node_a2d6c70c475146b48bc93a7fafdeff5e0}
+
+
+Definição na linha 704 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!First\+Child\+Element@{First\+Child\+Element}}
+\index{First\+Child\+Element@{First\+Child\+Element}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{First\+Child\+Element(const char $\ast$value=0) const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf X\+M\+L\+Element}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+First\+Child\+Element (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{value = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}\label{classtinyxml2_1_1_x_m_l_node_a137cb425e4953e884003c9d654b918ec}
+Get the first child element, or optionally the first child element with the specified name. \index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!First\+Child\+Element@{First\+Child\+Element}}
+\index{First\+Child\+Element@{First\+Child\+Element}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{First\+Child\+Element(const char $\ast$value=0)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Element}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+First\+Child\+Element (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{value = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_node_a7614c3b4eea1ff11b2aa90b0f92f6dba}
+
+
+Definição na linha 713 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Get\+Document@{Get\+Document}}
+\index{Get\+Document@{Get\+Document}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Get\+Document() const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf X\+M\+L\+Document}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Get\+Document (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_node_add244bca368083fa29698db8dcf147ca}
+
+
+Get the \doxyref{X\+M\+L\+Document}{pag.}{classtinyxml2_1_1_x_m_l_document} that owns this \doxyref{X\+M\+L\+Node}{pag.}{classtinyxml2_1_1_x_m_l_node}. 
+
+
+
+Definição na linha 617 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Get\+Document@{Get\+Document}}
+\index{Get\+Document@{Get\+Document}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Get\+Document()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Document}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Get\+Document (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_node_af343d1ef0b45c0020e62d784d7e67a68}
+
+
+Get the \doxyref{X\+M\+L\+Document}{pag.}{classtinyxml2_1_1_x_m_l_document} that owns this \doxyref{X\+M\+L\+Node}{pag.}{classtinyxml2_1_1_x_m_l_node}. 
+
+
+
+Definição na linha 621 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Insert\+After\+Child@{Insert\+After\+Child}}
+\index{Insert\+After\+Child@{Insert\+After\+Child}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Insert\+After\+Child(\+X\+M\+L\+Node $\ast$after\+This, X\+M\+L\+Node $\ast$add\+This)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Node}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Insert\+After\+Child (
+\begin{DoxyParamCaption}
+\item[{{\bf X\+M\+L\+Node} $\ast$}]{after\+This, }
+\item[{{\bf X\+M\+L\+Node} $\ast$}]{add\+This}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_node_a85adb8f0b7477eec30f9a41d420b09c2}
+Add a node after the specified child node. If the child node is already part of the document, it is moved from its old location to the new location. Returns the add\+This argument or 0 if the after\+This node is not a child of this node, or if the node does not belong to the same document. \index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Insert\+End\+Child@{Insert\+End\+Child}}
+\index{Insert\+End\+Child@{Insert\+End\+Child}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Insert\+End\+Child(\+X\+M\+L\+Node $\ast$add\+This)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Node}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Insert\+End\+Child (
+\begin{DoxyParamCaption}
+\item[{{\bf X\+M\+L\+Node} $\ast$}]{add\+This}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_node_aeb249ed60f4e8bfad3709151c3ee4286}
+Add a child node as the last (right) child. If the child node is already part of the document, it is moved from its old location to the new location. Returns the add\+This argument or 0 if the node does not belong to the same document. \index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Insert\+First\+Child@{Insert\+First\+Child}}
+\index{Insert\+First\+Child@{Insert\+First\+Child}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Insert\+First\+Child(\+X\+M\+L\+Node $\ast$add\+This)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Node}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Insert\+First\+Child (
+\begin{DoxyParamCaption}
+\item[{{\bf X\+M\+L\+Node} $\ast$}]{add\+This}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_node_a8ff7dc071f3a1a6ae2ac25a37492865d}
+Add a child node as the first (left) child. If the child node is already part of the document, it is moved from its old location to the new location. Returns the add\+This argument or 0 if the node does not belong to the same document. \index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Last\+Child@{Last\+Child}}
+\index{Last\+Child@{Last\+Child}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Last\+Child() const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf X\+M\+L\+Node}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Last\+Child (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_node_a6088246532b02895beb0e6fa561a7f3b}
+
+
+Get the last child node, or null if none exists. 
+
+
+
+Definição na linha 718 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Last\+Child@{Last\+Child}}
+\index{Last\+Child@{Last\+Child}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Last\+Child()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Node}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Last\+Child (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_node_ad7552c8cb1dc0cb6f3bdc14a9d115dbf}
+
+
+Definição na linha 722 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Last\+Child\+Element@{Last\+Child\+Element}}
+\index{Last\+Child\+Element@{Last\+Child\+Element}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Last\+Child\+Element(const char $\ast$value=0) const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf X\+M\+L\+Element}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Last\+Child\+Element (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{value = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}\label{classtinyxml2_1_1_x_m_l_node_afce7cdcc313ca1484329e11482c52d03}
+Get the last child element or optionally the last child element with the specified name. \index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Last\+Child\+Element@{Last\+Child\+Element}}
+\index{Last\+Child\+Element@{Last\+Child\+Element}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Last\+Child\+Element(const char $\ast$value=0)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Element}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Last\+Child\+Element (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{value = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_node_a125423acf3170b130634638c5afc0639}
+
+
+Definição na linha 731 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Link\+End\+Child@{Link\+End\+Child}}
+\index{Link\+End\+Child@{Link\+End\+Child}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Link\+End\+Child(\+X\+M\+L\+Node $\ast$add\+This)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Node}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Link\+End\+Child (
+\begin{DoxyParamCaption}
+\item[{{\bf X\+M\+L\+Node} $\ast$}]{add\+This}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_node_a663e3a5a378169fd477378f4d17a7649}
+
+
+Definição na linha 776 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Next\+Sibling@{Next\+Sibling}}
+\index{Next\+Sibling@{Next\+Sibling}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Next\+Sibling() const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf X\+M\+L\+Node}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Next\+Sibling (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_node_abba1df37581d89dccc45acdc55750ba2}
+
+
+Get the next (right) sibling node of this node. 
+
+
+
+Definição na linha 752 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Next\+Sibling@{Next\+Sibling}}
+\index{Next\+Sibling@{Next\+Sibling}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Next\+Sibling()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Node}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Next\+Sibling (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_node_aeb7d4dfd8fb924ef86e7cb72183acbac}
+
+
+Definição na linha 756 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Next\+Sibling\+Element@{Next\+Sibling\+Element}}
+\index{Next\+Sibling\+Element@{Next\+Sibling\+Element}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Next\+Sibling\+Element(const char $\ast$value=0) const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf X\+M\+L\+Element}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Next\+Sibling\+Element (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{value = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}\label{classtinyxml2_1_1_x_m_l_node_a2249a29baa8378fa45df6ba07c9c67de}
+
+
+Get the next (right) sibling element of this node, with an optionally supplied name. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Next\+Sibling\+Element@{Next\+Sibling\+Element}}
+\index{Next\+Sibling\+Element@{Next\+Sibling\+Element}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Next\+Sibling\+Element(const char $\ast$value=0)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Element}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Next\+Sibling\+Element (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{value = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_node_acf735bf653016792522305d8ad4b3029}
+
+
+Definição na linha 763 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!No\+Children@{No\+Children}}
+\index{No\+Children@{No\+Children}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{No\+Children() const }]{\setlength{\rightskip}{0pt plus 5cm}bool tinyxml2\+::\+X\+M\+L\+Node\+::\+No\+Children (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_node_a96afe34a9ccd0ed4c0cff32beb42cc6c}
+
+
+Returns true if this node has no children. 
+
+
+
+Definição na linha 695 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Parent@{Parent}}
+\index{Parent@{Parent}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Parent() const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf X\+M\+L\+Node}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Parent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_node_a4e39bdcf9bfafa55d04857ece6aaf64e}
+
+
+Get the parent of this node on the D\+OM. 
+
+
+
+Definição na linha 686 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Parent@{Parent}}
+\index{Parent@{Parent}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Parent()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Node}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Parent (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_node_a76029693a5a54fbb721a41d7a0ca8a97}
+
+
+Definição na linha 690 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Parse\+Deep@{Parse\+Deep}}
+\index{Parse\+Deep@{Parse\+Deep}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Parse\+Deep(char $\ast$, Str\+Pair $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}virtual char$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Parse\+Deep (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{, }
+\item[{{\bf Str\+Pair} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_node_a8263ad55d894578e8e72a65c56649138}
+
+
+Reimplementado por {\bf tinyxml2\+::\+X\+M\+L\+Element} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_element_a4062a36d52a61950768f93f3bb2ee46a}, {\bf tinyxml2\+::\+X\+M\+L\+Unknown} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_unknown_aa2d7b6bce2e6299247f5b83873ff215d}, {\bf tinyxml2\+::\+X\+M\+L\+Declaration} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_declaration_a2f899611c8c34e35a59e005b07316fc3}, {\bf tinyxml2\+::\+X\+M\+L\+Comment} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_comment_ae3abf65920d9c86e8f90c4a239783b05} e {\bf tinyxml2\+::\+X\+M\+L\+Text} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_text_a29f626cc5bf9d536e21fe033ecd5994a}.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Previous\+Sibling@{Previous\+Sibling}}
+\index{Previous\+Sibling@{Previous\+Sibling}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Previous\+Sibling() const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf X\+M\+L\+Node}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Previous\+Sibling (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_node_a4cb1bf63e9de55129d21a7be60685fd4}
+
+
+Get the previous (left) sibling node of this node. 
+
+
+
+Definição na linha 736 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Previous\+Sibling@{Previous\+Sibling}}
+\index{Previous\+Sibling@{Previous\+Sibling}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Previous\+Sibling()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Node}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Previous\+Sibling (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_node_ae760e5e7e766df1d2cf3bb4a847876d6}
+
+
+Definição na linha 740 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Previous\+Sibling\+Element@{Previous\+Sibling\+Element}}
+\index{Previous\+Sibling\+Element@{Previous\+Sibling\+Element}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Previous\+Sibling\+Element(const char $\ast$value=0) const }]{\setlength{\rightskip}{0pt plus 5cm}const {\bf X\+M\+L\+Element}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Previous\+Sibling\+Element (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{value = {\ttfamily 0}}
+\end{DoxyParamCaption}
+) const}\label{classtinyxml2_1_1_x_m_l_node_adae859aab94a6f11102d2b1a0c29d9ef}
+
+
+Get the previous (left) sibling element of this node, with an optionally supplied name. 
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Previous\+Sibling\+Element@{Previous\+Sibling\+Element}}
+\index{Previous\+Sibling\+Element@{Previous\+Sibling\+Element}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Previous\+Sibling\+Element(const char $\ast$value=0)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Element}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Previous\+Sibling\+Element (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{value = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_x_m_l_node_ae9177fdc49cb89879f333581d5f734f1}
+
+
+Definição na linha 747 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Set\+Value@{Set\+Value}}
+\index{Set\+Value@{Set\+Value}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Set\+Value(const char $\ast$val, bool static\+Mem=false)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+X\+M\+L\+Node\+::\+Set\+Value (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{val, }
+\item[{bool}]{static\+Mem = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_x_m_l_node_a09dd68cf9eae137579f6e50f36487513}
+Set the Value of an X\+ML node. \begin{DoxySeeAlso}{Veja também}
+\doxyref{Value()}{pag.}{classtinyxml2_1_1_x_m_l_node_a7682be117e3b2b4ebfd517c1acaaadbf} 
+\end{DoxySeeAlso}
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Shallow\+Clone@{Shallow\+Clone}}
+\index{Shallow\+Clone@{Shallow\+Clone}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Shallow\+Clone(\+X\+M\+L\+Document $\ast$document) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf X\+M\+L\+Node}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Shallow\+Clone (
+\begin{DoxyParamCaption}
+\item[{{\bf X\+M\+L\+Document} $\ast$}]{document}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classtinyxml2_1_1_x_m_l_node_a83e3524e2ecea25eeab630c7ab113627}
+Make a copy of this node, but not its children. You may pass in a Document pointer that will be the owner of the new \doxyref{Node}{pag.}{class_node}. If the \textquotesingle{}document\textquotesingle{} is null, then the node returned will be allocated from the current Document. (this-\/$>$\doxyref{Get\+Document()}{pag.}{classtinyxml2_1_1_x_m_l_node_af343d1ef0b45c0020e62d784d7e67a68}) Note\+: if called on a \doxyref{X\+M\+L\+Document}{pag.}{classtinyxml2_1_1_x_m_l_document}, this will return null. 
+
+Implementado por {\bf tinyxml2\+::\+X\+M\+L\+Document} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_document_a57c8511ed9f83aa3e20909a3db3f83d0}, {\bf tinyxml2\+::\+X\+M\+L\+Element} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_element_a0ab7c8cff5ae8d25b50439ed7bc10eee}, {\bf tinyxml2\+::\+X\+M\+L\+Unknown} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_unknown_a85892945cf7f657375060db7518963c8}, {\bf tinyxml2\+::\+X\+M\+L\+Declaration} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_declaration_aa32470d6ce85a79710698d655eb71f20}, {\bf tinyxml2\+::\+X\+M\+L\+Comment} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_comment_a47b3cdd2e1ad9735826e2d291d483e73} e {\bf tinyxml2\+::\+X\+M\+L\+Text} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_text_abe78bbe18798e36912df53193bfdb5bd}.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Shallow\+Equal@{Shallow\+Equal}}
+\index{Shallow\+Equal@{Shallow\+Equal}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Shallow\+Equal(const X\+M\+L\+Node $\ast$compare) const  =0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool tinyxml2\+::\+X\+M\+L\+Node\+::\+Shallow\+Equal (
+\begin{DoxyParamCaption}
+\item[{const {\bf X\+M\+L\+Node} $\ast$}]{compare}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classtinyxml2_1_1_x_m_l_node_ac50408e91e095237f45716092ac2bddc}
+Test if 2 nodes are the same, but don\textquotesingle{}t test children. The 2 nodes do not need to be in the same Document. Note\+: if called on a \doxyref{X\+M\+L\+Document}{pag.}{classtinyxml2_1_1_x_m_l_document}, this will return false. 
+
+Implementado por {\bf tinyxml2\+::\+X\+M\+L\+Document} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_document_a12eac66c6e45d074d5cc47319868cd66}, {\bf tinyxml2\+::\+X\+M\+L\+Element} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_element_aba63b0ae2cdd65f30c09ba8ee725c89c}, {\bf tinyxml2\+::\+X\+M\+L\+Unknown} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_unknown_a9984ca7c35092be6f6f5d3dee47a9de7}, {\bf tinyxml2\+::\+X\+M\+L\+Declaration} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_declaration_a5e3abcc3fbbda61764883d5f61539684}, {\bf tinyxml2\+::\+X\+M\+L\+Comment} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_comment_a3d458d319336a7fb8028979e1d91dbe9} e {\bf tinyxml2\+::\+X\+M\+L\+Text} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_text_af0285e689403c7061522746f34fce8df}.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!To\+Comment@{To\+Comment}}
+\index{To\+Comment@{To\+Comment}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{To\+Comment()}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf X\+M\+L\+Comment}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+To\+Comment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_node_aff47671055aa99840a1c1ebd661e63e3}
+
+
+Safely cast to a Comment, or null. 
+
+
+
+Reimplementado por {\bf tinyxml2\+::\+X\+M\+L\+Comment} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_comment_a8093e1dc8a34fa446d9dc3fde0e6c0ee}.
+
+
+
+Definição na linha 634 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!To\+Comment@{To\+Comment}}
+\index{To\+Comment@{To\+Comment}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{To\+Comment() const }]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf X\+M\+L\+Comment}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+To\+Comment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_node_a157ce3a00ea5ee5a85b7103138e85e8a}
+
+
+Reimplementado por {\bf tinyxml2\+::\+X\+M\+L\+Comment} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_comment_a422aabac22de7d9c9cad130897dd8b1c}.
+
+
+
+Definição na linha 656 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!To\+Declaration@{To\+Declaration}}
+\index{To\+Declaration@{To\+Declaration}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{To\+Declaration()}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf X\+M\+L\+Declaration}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+To\+Declaration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_node_a174fd4c22c010b58138c1b84a0dfbd51}
+
+
+Safely cast to a Declaration, or null. 
+
+
+
+Reimplementado por {\bf tinyxml2\+::\+X\+M\+L\+Declaration} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_declaration_a159d8ac45865215e88059ea1e5b52fc5}.
+
+
+
+Definição na linha 642 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!To\+Declaration@{To\+Declaration}}
+\index{To\+Declaration@{To\+Declaration}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{To\+Declaration() const }]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf X\+M\+L\+Declaration}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+To\+Declaration (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_node_aedae0bbb58d533a4b8a61042388b49e5}
+
+
+Reimplementado por {\bf tinyxml2\+::\+X\+M\+L\+Declaration} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_declaration_af724607a5fa810496fd6a21f5975a643}.
+
+
+
+Definição na linha 662 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!To\+Document@{To\+Document}}
+\index{To\+Document@{To\+Document}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{To\+Document()}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf X\+M\+L\+Document}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+To\+Document (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_node_a836e2966ed736fc3c94f70e12a2a3357}
+
+
+Safely cast to a Document, or null. 
+
+
+
+Reimplementado por {\bf tinyxml2\+::\+X\+M\+L\+Document} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_document_a3e185f880882bd978367bb55937735ec}.
+
+
+
+Definição na linha 638 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!To\+Document@{To\+Document}}
+\index{To\+Document@{To\+Document}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{To\+Document() const }]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf X\+M\+L\+Document}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+To\+Document (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_node_a3ff975733a17d6ced3539b45544c8bf6}
+
+
+Reimplementado por {\bf tinyxml2\+::\+X\+M\+L\+Document} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_document_a15eb1a62afa18c66808031da647d1129}.
+
+
+
+Definição na linha 659 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!To\+Element@{To\+Element}}
+\index{To\+Element@{To\+Element}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{To\+Element()}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf X\+M\+L\+Element}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+To\+Element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_node_aab516e699567f75cc9ab2ef2eee501e8}
+
+
+Safely cast to an \doxyref{Element}{pag.}{class_element}, or null. 
+
+
+
+Reimplementado por {\bf tinyxml2\+::\+X\+M\+L\+Element} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_element_ad9ff5c2dbc15df36cf664ce1b0ea0a5d}.
+
+
+
+Definição na linha 626 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!To\+Element@{To\+Element}}
+\index{To\+Element@{To\+Element}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{To\+Element() const }]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf X\+M\+L\+Element}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+To\+Element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_node_acbaec609797ddabb4f9dcf38ee91262e}
+
+
+Reimplementado por {\bf tinyxml2\+::\+X\+M\+L\+Element} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_element_a55acab615353ddabab48271f95816b0d}.
+
+
+
+Definição na linha 650 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!To\+Text@{To\+Text}}
+\index{To\+Text@{To\+Text}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{To\+Text()}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf X\+M\+L\+Text}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+To\+Text (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_node_a41c55dab9162d1eb62db2008430e376b}
+
+
+Safely cast to Text, or null. 
+
+
+
+Reimplementado por {\bf tinyxml2\+::\+X\+M\+L\+Text} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_text_ab1213b4ddebe9b17ec7e7040e9f1caf7}.
+
+
+
+Definição na linha 630 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!To\+Text@{To\+Text}}
+\index{To\+Text@{To\+Text}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{To\+Text() const }]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf X\+M\+L\+Text}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+To\+Text (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_node_a89009ffc1b9f5d692bf8d4c9f18c3bec}
+
+
+Reimplementado por {\bf tinyxml2\+::\+X\+M\+L\+Text} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_text_a1e53cbc60968fe966790a65eaf87baaa}.
+
+
+
+Definição na linha 653 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!To\+Unknown@{To\+Unknown}}
+\index{To\+Unknown@{To\+Unknown}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{To\+Unknown()}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf X\+M\+L\+Unknown}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+To\+Unknown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_node_a8675a74aa0ada6eccab0c77ef3e5b9bd}
+
+
+Safely cast to an Unknown, or null. 
+
+
+
+Reimplementado por {\bf tinyxml2\+::\+X\+M\+L\+Unknown} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_unknown_af4374856421921cad578c8affae872b6}.
+
+
+
+Definição na linha 646 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!To\+Unknown@{To\+Unknown}}
+\index{To\+Unknown@{To\+Unknown}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{To\+Unknown() const }]{\setlength{\rightskip}{0pt plus 5cm}virtual const {\bf X\+M\+L\+Unknown}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+To\+Unknown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classtinyxml2_1_1_x_m_l_node_a71f5ae90296dbe67979f83fe97073efa}
+
+
+Reimplementado por {\bf tinyxml2\+::\+X\+M\+L\+Unknown} \doxyref{}{pag.}{classtinyxml2_1_1_x_m_l_unknown_a257987e79955399e6e9f119b58d4bb30}.
+
+
+
+Definição na linha 665 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!Value@{Value}}
+\index{Value@{Value}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{Value() const }]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{classtinyxml2_1_1_x_m_l_node_a7682be117e3b2b4ebfd517c1acaaadbf}
+The meaning of \textquotesingle{}value\textquotesingle{} changes for the specific type. \begin{DoxyVerb}Document:   empty (NULL is returned, not an empty string)
+Element:    name of the element
+Comment:    the comment text
+Unknown:    the tag contents
+Text:       the text string
+\end{DoxyVerb}
+ 
+
+\subsection{Amigas e Funções Relacionadas}
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!X\+M\+L\+Document@{X\+M\+L\+Document}}
+\index{X\+M\+L\+Document@{X\+M\+L\+Document}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{X\+M\+L\+Document}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf X\+M\+L\+Document}\hspace{0.3cm}{\ttfamily [friend]}}\label{classtinyxml2_1_1_x_m_l_node_a4eee3bda60c60a30e4e8cd4ea91c4c6e}
+
+
+Definição na linha 612 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!X\+M\+L\+Element@{X\+M\+L\+Element}}
+\index{X\+M\+L\+Element@{X\+M\+L\+Element}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{X\+M\+L\+Element}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf X\+M\+L\+Element}\hspace{0.3cm}{\ttfamily [friend]}}\label{classtinyxml2_1_1_x_m_l_node_ac2fba9b6e452829dd892f7392c24e0eb}
+
+
+Definição na linha 613 do arquivo tinyxml2.\+h.
+
+
+
+\subsection{Atributos}
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!\+\_\+document@{\+\_\+document}}
+\index{\+\_\+document@{\+\_\+document}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{\+\_\+document}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Document}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+\_\+document\hspace{0.3cm}{\ttfamily [protected]}}\label{classtinyxml2_1_1_x_m_l_node_a8d2d2be0bb6797625551eb0e91f0ff62}
+
+
+Definição na linha 849 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!\+\_\+first\+Child@{\+\_\+first\+Child}}
+\index{\+\_\+first\+Child@{\+\_\+first\+Child}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{\+\_\+first\+Child}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Node}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+\_\+first\+Child\hspace{0.3cm}{\ttfamily [protected]}}\label{classtinyxml2_1_1_x_m_l_node_aa20c91e4213dc930c5bdf420322ca342}
+
+
+Definição na linha 853 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!\+\_\+last\+Child@{\+\_\+last\+Child}}
+\index{\+\_\+last\+Child@{\+\_\+last\+Child}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{\+\_\+last\+Child}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Node}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+\_\+last\+Child\hspace{0.3cm}{\ttfamily [protected]}}\label{classtinyxml2_1_1_x_m_l_node_a099b6560ae44ab9edb8453aaf1a3747b}
+
+
+Definição na linha 854 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!\+\_\+next@{\+\_\+next}}
+\index{\+\_\+next@{\+\_\+next}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{\+\_\+next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Node}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+\_\+next\hspace{0.3cm}{\ttfamily [protected]}}\label{classtinyxml2_1_1_x_m_l_node_a27e985496b37dd00eb5b9cf59b9e3fb1}
+
+
+Definição na linha 857 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!\+\_\+parent@{\+\_\+parent}}
+\index{\+\_\+parent@{\+\_\+parent}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{\+\_\+parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Node}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+\_\+parent\hspace{0.3cm}{\ttfamily [protected]}}\label{classtinyxml2_1_1_x_m_l_node_a176dd1c4965c21c366de192164aa2c13}
+
+
+Definição na linha 850 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!\+\_\+prev@{\+\_\+prev}}
+\index{\+\_\+prev@{\+\_\+prev}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{\+\_\+prev}]{\setlength{\rightskip}{0pt plus 5cm}{\bf X\+M\+L\+Node}$\ast$ tinyxml2\+::\+X\+M\+L\+Node\+::\+\_\+prev\hspace{0.3cm}{\ttfamily [protected]}}\label{classtinyxml2_1_1_x_m_l_node_a9739eb0fb9a1188266052055e7a6bf6b}
+
+
+Definição na linha 856 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}!\+\_\+value@{\+\_\+value}}
+\index{\+\_\+value@{\+\_\+value}!tinyxml2\+::\+X\+M\+L\+Node@{tinyxml2\+::\+X\+M\+L\+Node}}
+\subsubsection[{\+\_\+value}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Str\+Pair} tinyxml2\+::\+X\+M\+L\+Node\+::\+\_\+value\hspace{0.3cm}{\ttfamily [mutable]}, {\ttfamily [protected]}}\label{classtinyxml2_1_1_x_m_l_node_a3ea9884098b8379de2bb5ab3fc85c0fc}
+
+
+Definição na linha 851 do arquivo tinyxml2.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf tinyxml2.\+h}\end{DoxyCompactItemize}

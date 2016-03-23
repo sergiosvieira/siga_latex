@@ -1,0 +1,252 @@
+\section{Referência da Classe Interval}
+\label{class_interval}\index{Interval@{Interval}}
+
+
+{\ttfamily \#include $<$Interval.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Interval} ({\bf Date} {\bf begin}={\bf Date}((unsigned int) 0), {\bf Date} {\bf end}={\bf Date}((unsigned int) 1), int deltaT=6)
+\item 
+{\bf Interval} ({\bf Date} {\bf begin}, {\bf Date} {\bf end}, {\bf Date\+::\+Time\+Interval} time\+Interval, int deltaT=6)
+\item 
+{\bf Interval} (const wx\+Date\+Time \&{\bf begin}, const wx\+Date\+Time \&{\bf end}, {\bf Date\+::\+Time\+Interval} time\+Interval, int start\+Hour=0, int end\+Hour=0, int deltaT=6)
+\item 
+virtual {\bf $\sim$\+Interval} ()
+\item 
+void {\bf set\+Time\+Interval} ({\bf Date\+::\+Time\+Interval} time\+Interval)
+\item 
+{\bf Date\+::\+Time\+Interval} {\bf get\+Time\+Interval} () const 
+\item 
+unsigned int {\bf size} () const 
+\item 
+unsigned int {\bf number\+Of\+Days} () const 
+\item 
+unsigned int {\bf number\+Of\+Months} () const 
+\item 
+unsigned int {\bf number\+Of\+Years} () const 
+\item 
+void {\bf set\+DeltaT} (int value)
+\item 
+int {\bf get\+DeltaT} () const 
+\item 
+bool {\bf operator==} (const {\bf Interval} \&) const 
+\item 
+bool {\bf operator!=} (const {\bf Interval} \&) const 
+\item 
+bool {\bf is\+Valid} () const 
+\item 
+bool {\bf is\+Inside} (const {\bf Interval} \&) const 
+\item 
+bool {\bf is\+Date\+Inside} (const {\bf Date} \&) const 
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Date} {\bf begin}
+\item 
+{\bf Date} {\bf end}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Representa um intervalo de tempo 
+
+Definição na linha 15 do arquivo Interval.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Interval@{Interval}!Interval@{Interval}}
+\index{Interval@{Interval}!Interval@{Interval}}
+\subsubsection[{Interval(\+Date begin=\+Date((unsigned int) 0), Date end=\+Date((unsigned int) 1), int delta\+T=6)}]{\setlength{\rightskip}{0pt plus 5cm}Interval\+::\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{begin = {\ttfamily {\bf Date}((unsigned~int)~0)}, }
+\item[{{\bf Date}}]{end = {\ttfamily {\bf Date}((unsigned~int)~1)}, }
+\item[{int}]{deltaT = {\ttfamily 6}}
+\end{DoxyParamCaption}
+)}\label{class_interval_a6a3c12b75160418e23fe1d99021c3d1e}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em begin} & Dia de inicio \\
+\hline
+{\em end} & Dia de fim \\
+\hline
+\end{DoxyParams}
+\index{Interval@{Interval}!Interval@{Interval}}
+\index{Interval@{Interval}!Interval@{Interval}}
+\subsubsection[{Interval(\+Date begin, Date end, Date\+::\+Time\+Interval time\+Interval, int delta\+T=6)}]{\setlength{\rightskip}{0pt plus 5cm}Interval\+::\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{begin, }
+\item[{{\bf Date}}]{end, }
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval, }
+\item[{int}]{deltaT = {\ttfamily 6}}
+\end{DoxyParamCaption}
+)}\label{class_interval_a92f78df7c4aba0c67903c5e5dc769fb5}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em begin} & Dia de inicio \\
+\hline
+{\em end} & Dia de fim \\
+\hline
+{\em time\+Interval} & tipo de intervalo \\
+\hline
+\end{DoxyParams}
+\index{Interval@{Interval}!Interval@{Interval}}
+\index{Interval@{Interval}!Interval@{Interval}}
+\subsubsection[{Interval(const wx\+Date\+Time \&begin, const wx\+Date\+Time \&end, Date\+::\+Time\+Interval time\+Interval, int start\+Hour=0, int end\+Hour=0, int delta\+T=6)}]{\setlength{\rightskip}{0pt plus 5cm}Interval\+::\+Interval (
+\begin{DoxyParamCaption}
+\item[{const wx\+Date\+Time \&}]{begin, }
+\item[{const wx\+Date\+Time \&}]{end, }
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval, }
+\item[{int}]{start\+Hour = {\ttfamily 0}, }
+\item[{int}]{end\+Hour = {\ttfamily 0}, }
+\item[{int}]{deltaT = {\ttfamily 6}}
+\end{DoxyParamCaption}
+)}\label{class_interval_a675496e272ab54fb4d5c693677f792bb}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em begin} & Dia de inicio \\
+\hline
+{\em end} & Dia de fim \\
+\hline
+{\em time\+Interval} & tipo de intervalo \\
+\hline
+{\em Hora} & de in�cio \\
+\hline
+{\em Hora} & de fim \\
+\hline
+{\em Delta} & \\
+\hline
+\end{DoxyParams}
+\index{Interval@{Interval}!````~Interval@{$\sim$\+Interval}}
+\index{````~Interval@{$\sim$\+Interval}!Interval@{Interval}}
+\subsubsection[{$\sim$\+Interval()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Interval\+::$\sim$\+Interval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_interval_a8790f78f5ddf42b5e4a2b3b69cdb5f60}
+Destrutor 
+
+\subsection{Métodos}
+\index{Interval@{Interval}!get\+DeltaT@{get\+DeltaT}}
+\index{get\+DeltaT@{get\+DeltaT}!Interval@{Interval}}
+\subsubsection[{get\+Delta\+T() const }]{\setlength{\rightskip}{0pt plus 5cm}int Interval\+::get\+DeltaT (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_interval_a8869167f9a7ffa082bfd819b079f4ae1}
+\begin{DoxyReturn}{Retorna}
+Retorna o intervalo de tempo para series horarias 
+\end{DoxyReturn}
+\index{Interval@{Interval}!get\+Time\+Interval@{get\+Time\+Interval}}
+\index{get\+Time\+Interval@{get\+Time\+Interval}!Interval@{Interval}}
+\subsubsection[{get\+Time\+Interval() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Date\+::\+Time\+Interval} Interval\+::get\+Time\+Interval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_interval_a312c25100520fe70b183c0df1ac751ae}
+Retorna o tipo de intervalo de tempo \index{Interval@{Interval}!is\+Date\+Inside@{is\+Date\+Inside}}
+\index{is\+Date\+Inside@{is\+Date\+Inside}!Interval@{Interval}}
+\subsubsection[{is\+Date\+Inside(const Date \&) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Interval\+::is\+Date\+Inside (
+\begin{DoxyParamCaption}
+\item[{const {\bf Date} \&}]{}
+\end{DoxyParamCaption}
+) const}\label{class_interval_a5b39634cef47d3b79e60ee05b21d75e6}
+Verifica se � uma data est� contida no intervalo \index{Interval@{Interval}!is\+Inside@{is\+Inside}}
+\index{is\+Inside@{is\+Inside}!Interval@{Interval}}
+\subsubsection[{is\+Inside(const Interval \&) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Interval\+::is\+Inside (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interval} \&}]{}
+\end{DoxyParamCaption}
+) const}\label{class_interval_a26f75972d2719378d0ef2b5680021a0a}
+Verifica se � um intervalo esta contido em outro \index{Interval@{Interval}!is\+Valid@{is\+Valid}}
+\index{is\+Valid@{is\+Valid}!Interval@{Interval}}
+\subsubsection[{is\+Valid() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Interval\+::is\+Valid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_interval_a2aedb0c7a22a661f6320dbd43dc1067c}
+Verifica se � um intervalo valido \index{Interval@{Interval}!number\+Of\+Days@{number\+Of\+Days}}
+\index{number\+Of\+Days@{number\+Of\+Days}!Interval@{Interval}}
+\subsubsection[{number\+Of\+Days() const }]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Interval\+::number\+Of\+Days (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_interval_ad3a82329b5e7717d26d0e5058336707f}
+Retorna a quantidade de dias do intervalo \index{Interval@{Interval}!number\+Of\+Months@{number\+Of\+Months}}
+\index{number\+Of\+Months@{number\+Of\+Months}!Interval@{Interval}}
+\subsubsection[{number\+Of\+Months() const }]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Interval\+::number\+Of\+Months (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_interval_aea6d372427c9fe30c43527540fb51065}
+Retorna a quantidade de messes no intervalo \index{Interval@{Interval}!number\+Of\+Years@{number\+Of\+Years}}
+\index{number\+Of\+Years@{number\+Of\+Years}!Interval@{Interval}}
+\subsubsection[{number\+Of\+Years() const }]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Interval\+::number\+Of\+Years (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_interval_a851c801467cd7794440a99b0f80f232c}
+Retorna a quantidade de anos no intervalo \index{Interval@{Interval}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Interval@{Interval}}
+\subsubsection[{operator"!=(const Interval \&) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Interval\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interval} \&}]{}
+\end{DoxyParamCaption}
+) const}\label{class_interval_aa54b3f9af3cae550abf185b30e09ab4d}
+\index{Interval@{Interval}!operator==@{operator==}}
+\index{operator==@{operator==}!Interval@{Interval}}
+\subsubsection[{operator==(const Interval \&) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Interval\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interval} \&}]{}
+\end{DoxyParamCaption}
+) const}\label{class_interval_a281ae5910a685a8685e3446f2048cc95}
+Compara dois intervalos \index{Interval@{Interval}!set\+DeltaT@{set\+DeltaT}}
+\index{set\+DeltaT@{set\+DeltaT}!Interval@{Interval}}
+\subsubsection[{set\+Delta\+T(int value)}]{\setlength{\rightskip}{0pt plus 5cm}void Interval\+::set\+DeltaT (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_interval_ac2285be2d443290ec074430080a2c8e4}
+Define o intervalo de tempo para datas horarias 
+
+Definição na linha 91 do arquivo Interval.\+h.
+
+\index{Interval@{Interval}!set\+Time\+Interval@{set\+Time\+Interval}}
+\index{set\+Time\+Interval@{set\+Time\+Interval}!Interval@{Interval}}
+\subsubsection[{set\+Time\+Interval(\+Date\+::\+Time\+Interval time\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Interval\+::set\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval}
+\end{DoxyParamCaption}
+)}\label{class_interval_a469c33784e399f4b31aeb213a2144511}
+Define o tipo de intervalo de tempo \index{Interval@{Interval}!size@{size}}
+\index{size@{size}!Interval@{Interval}}
+\subsubsection[{size() const }]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Interval\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_interval_a554c3a7fc1eeed35dcfa3ee513156b98}
+Retorna, de acordo com o o tipo de intervalo de tempo, o tamanho do intervalo 
+
+\subsection{Atributos}
+\index{Interval@{Interval}!begin@{begin}}
+\index{begin@{begin}!Interval@{Interval}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Date} Interval\+::begin}\label{class_interval_a837eb57a1521931f2ced4323b28e5cb2}
+In�cio do intervalo 
+
+Definição na linha 25 do arquivo Interval.\+h.
+
+\index{Interval@{Interval}!end@{end}}
+\index{end@{end}!Interval@{Interval}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Date} Interval\+::end}\label{class_interval_af2c3c2903f890fb6b55767e1dbc601fc}
+Fim do intervalo 
+
+Definição na linha 29 do arquivo Interval.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Interval.\+h}\end{DoxyCompactItemize}

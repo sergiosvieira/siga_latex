@@ -1,0 +1,536 @@
+\section{Referência da Classe Net\+Canvas\+Element\+Manager}
+\label{class_net_canvas_element_manager}\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+
+
+{\ttfamily \#include $<$Net\+Canvas\+Element\+Manager.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Net\+Canvas\+Element\+Manager} ()
+\item 
+{\bf $\sim$\+Net\+Canvas\+Element\+Manager} ()
+\item 
+{\bf Draw\+Node} $\ast$ {\bf add\+Node} ({\bf Node\+Type} type, const wx\+Point \&screen\+\_\+point, double scale=1.\+0)
+\item 
+{\bf Draw\+Node} $\ast$ {\bf add\+Node} ({\bf Node\+Type} type, const wx\+Real\+Point \&world\+\_\+point, double scale=1.\+0)
+\item 
+bool {\bf add\+Node\+And\+Link} ({\bf Draw\+Node} $\ast$\&draw\+\_\+node, {\bf Draw\+Link} $\ast$\&draw\+\_\+link, {\bf Node\+Type} type, const wx\+Point \&point, {\bf Link\+Type} link\+\_\+type, {\bf Element\+ID} source\+\_\+node\+\_\+id)
+\item 
+{\bf Draw\+Link} $\ast$ {\bf add\+Link} ({\bf Link\+Type} type, {\bf Element\+ID} node\+\_\+origin\+\_\+id, {\bf Element\+ID} node\+\_\+destiny\+\_\+id, double scale=1.\+0, bool bidirectional=false, bool lateral\+\_\+inflow=false, bool artificial=false)
+\item 
+bool {\bf set\+Link\+Nodes} ({\bf Element\+ID} link\+\_\+id, {\bf Element\+ID} node\+\_\+origin\+\_\+id, {\bf Element\+ID} node\+\_\+destiny\+\_\+id)
+\begin{DoxyCompactList}\small\item\em this method does not synchronize the node with the \doxyref{Network}{pag.}{class_network} manager, and it S\+H\+A\+LL be used only when the user is holding the mouse positioning the new link \end{DoxyCompactList}\item 
+{\bf Draw\+Node} $\ast$ {\bf create\+Temporary\+Node} ({\bf Node\+Type} type, const wx\+Point \&point, double scale=1.\+0)
+\item 
+void {\bf delete\+Temporary\+Node} ()
+\begin{DoxyCompactList}\small\item\em this method does not synchronize the link with the \doxyref{Network}{pag.}{class_network} manager, and it S\+H\+A\+LL be used only when the user is holding the mouse positioning the new link \end{DoxyCompactList}\item 
+{\bf Draw\+Link} $\ast$ {\bf create\+Temporary\+Link} ({\bf Link\+Type} type, const wx\+Point \&point\+\_\+origin, const wx\+Point \&point\+\_\+end, double scale=1.\+0, bool bidirectional=false, bool lateral\+\_\+inflow=false, bool artificial=false)
+\item 
+void {\bf delete\+Temporary\+Link} ()
+\item 
+bool {\bf get\+Draw\+Element} ({\bf Element\+ID} id, {\bf Draw\+Element} $\ast$\&draw\+\_\+element)
+\item 
+bool {\bf get\+Draw\+Element} (const wx\+Point \&a\+\_\+position, {\bf Draw\+Element} $\ast$\&draw\+\_\+element) const 
+\item 
+bool {\bf get\+Draw\+Node} (const wx\+Point \&point, {\bf Draw\+Node} $\ast$\&draw\+\_\+node)
+\item 
+bool {\bf get\+Draw\+Node} ({\bf Element\+ID} id, {\bf Draw\+Node} $\ast$\&draw\+\_\+node)
+\item 
+bool {\bf get\+Draw\+Link} (const wx\+Point \&point, {\bf Draw\+Link} $\ast$\&draw\+\_\+link)
+\item 
+bool {\bf get\+Draw\+Link} ({\bf Element\+ID} id, {\bf Draw\+Link} $\ast$\&draw\+\_\+link)
+\item 
+bool {\bf get\+Draw\+Label} (wx\+DC \&dc, const wx\+Point \&point, {\bf Draw\+Label} $\ast$\&draw\+\_\+label)
+\item 
+bool {\bf remove\+Element} ({\bf Element\+ID} id)
+\item 
+void {\bf remove\+Elements} (std\+::vector$<$ {\bf Element\+ID} $>$ \&ids)
+\item 
+bool {\bf add\+Div\+Point} ({\bf Element\+ID} \&a\+\_\+id, wx\+Point \&a\+\_\+point)
+\item 
+bool {\bf remove\+Div\+Point} ({\bf Element\+ID} \&a\+\_\+id, wx\+Point \&a\+\_\+point)
+\item 
+void {\bf change\+Node\+Type} ({\bf Element\+ID} id, {\bf Node\+Type} type)
+\item 
+void {\bf change\+Nodes\+Type} (std\+::vector$<$ {\bf Element\+ID} $>$ \&node\+\_\+ids, {\bf Node\+Type} type)
+\item 
+void {\bf change\+Demand\+Type} ({\bf Element\+ID} id, {\bf Demand\+Type} new\+\_\+type)
+\item 
+void {\bf change\+Demands\+Type} (std\+::vector$<$ {\bf Element\+ID} $>$ \&node\+\_\+ids, {\bf Demand\+Type} new\+\_\+type)
+\item 
+void {\bf change\+Link\+Type} ({\bf Element\+ID} id, {\bf Link\+Type} type)
+\item 
+void {\bf change\+Links\+Type} (std\+::vector$<$ {\bf Element\+ID} $>$ \&link\+\_\+ids, {\bf Link\+Type} type)
+\item 
+void {\bf change\+Link\+Properties} ({\bf Element\+ID} id, bool artificial, bool lateral\+\_\+inflow, bool bidirectional)
+\item 
+void {\bf change\+Links\+Properties} (std\+::vector$<$ {\bf Element\+ID} $>$ \&link\+\_\+ids, bool artificial, bool lateral\+\_\+inflow, bool bidirectional)
+\item 
+void {\bf move\+Element} ({\bf Element\+ID} a\+\_\+id, const wx\+Point \&a\+\_\+new\+Position\+Difference)
+\item 
+void {\bf move\+Elements} (std\+::vector$<$ {\bf Element\+ID} $>$ a\+\_\+id\+Vector, const wx\+Point \&a\+\_\+new\+Position\+Difference)
+\item 
+bool {\bf set\+Element\+Name} ({\bf Element\+ID} id, std\+::string name)
+\item 
+void {\bf synchronize\+Draw\+Elements} ()
+\item 
+void {\bf undo} ()
+\item 
+void {\bf redo} ()
+\item 
+void {\bf clear\+Command\+Stack} ()
+\item 
+void {\bf clear} ()
+\item 
+std\+::vector$<$ {\bf Draw\+Element} $\ast$ $>$ {\bf draw\+Elements\+By\+Name} (const wx\+String \&a\+\_\+element\+Name)
+\item 
+std\+::vector$<$ {\bf Draw\+Node} $\ast$ $>$ {\bf draw\+Nodes\+By\+Name} (const wx\+String \&a\+\_\+element\+Name)
+\item 
+std\+::map$<$ {\bf Element\+ID}, {\bf Draw\+Element} $\ast$ $>$ \& {\bf draw\+Elements\+Map} ()
+\item 
+bool {\bf attach\+Node} ({\bf Node} \&node, {\bf Draw\+Node} \&draw\+\_\+node)
+\begin{DoxyCompactList}\small\item\em Attach the node specified -\/ This method S\+H\+A\+LL only be called by the \doxyref{Command}{pag.}{class_command} Classes. \end{DoxyCompactList}\item 
+{\bf Draw\+Node} $\ast$ {\bf detach\+Node} ({\bf Element\+ID} id)
+\begin{DoxyCompactList}\small\item\em Detach the node specified without delete it -\/ This method S\+H\+A\+LL only be called by the \doxyref{Command}{pag.}{class_command} Classes. \end{DoxyCompactList}\item 
+bool {\bf attach\+Link} ({\bf Link} \&link, {\bf Draw\+Link} \&draw\+\_\+link)
+\begin{DoxyCompactList}\small\item\em Attach the link -\/ This method S\+H\+A\+LL only be called by the \doxyref{Command}{pag.}{class_command} Classes. \end{DoxyCompactList}\item 
+{\bf Draw\+Link} $\ast$ {\bf detach\+Link} ({\bf Element\+ID} id)
+\begin{DoxyCompactList}\small\item\em Detach a link without deleting it -\/ This method S\+H\+A\+LL only be called by the \doxyref{Command}{pag.}{class_command} Classes. \end{DoxyCompactList}\item 
+bool {\bf delete\+External\+Element} ({\bf Draw\+Element} $\ast$element)
+\begin{DoxyCompactList}\small\item\em Delete an element that is not present in the list -\/ This method S\+H\+A\+LL only be called by the \doxyref{Command}{pag.}{class_command} Classes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Net\+Conf\+File}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 15 do arquivo Net\+Canvas\+Element\+Manager.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{Net\+Canvas\+Element\+Manager()}]{\setlength{\rightskip}{0pt plus 5cm}Net\+Canvas\+Element\+Manager\+::\+Net\+Canvas\+Element\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a42f7381ab69ff2c87ea222ed8e6049a4}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!````~Net\+Canvas\+Element\+Manager@{$\sim$\+Net\+Canvas\+Element\+Manager}}
+\index{````~Net\+Canvas\+Element\+Manager@{$\sim$\+Net\+Canvas\+Element\+Manager}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{$\sim$\+Net\+Canvas\+Element\+Manager()}]{\setlength{\rightskip}{0pt plus 5cm}Net\+Canvas\+Element\+Manager\+::$\sim$\+Net\+Canvas\+Element\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a972f04e8c0649838e2493ca203152ade}
+
+
+\subsection{Métodos}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!add\+Div\+Point@{add\+Div\+Point}}
+\index{add\+Div\+Point@{add\+Div\+Point}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{add\+Div\+Point(\+Element\+I\+D \&a\+\_\+id, wx\+Point \&a\+\_\+point)}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+Element\+Manager\+::add\+Div\+Point (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID} \&}]{a\+\_\+id, }
+\item[{wx\+Point \&}]{a\+\_\+point}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_aee49e894a8e4af80ccd6ee0f52ba604f}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!add\+Link@{add\+Link}}
+\index{add\+Link@{add\+Link}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{add\+Link(\+Link\+Type type, Element\+I\+D node\+\_\+origin\+\_\+id, Element\+I\+D node\+\_\+destiny\+\_\+id, double scale=1.\+0, bool bidirectional=false, bool lateral\+\_\+inflow=false, bool artificial=false)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Link}$\ast$ Net\+Canvas\+Element\+Manager\+::add\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Type}}]{type, }
+\item[{{\bf Element\+ID}}]{node\+\_\+origin\+\_\+id, }
+\item[{{\bf Element\+ID}}]{node\+\_\+destiny\+\_\+id, }
+\item[{double}]{scale = {\ttfamily 1.0}, }
+\item[{bool}]{bidirectional = {\ttfamily false}, }
+\item[{bool}]{lateral\+\_\+inflow = {\ttfamily false}, }
+\item[{bool}]{artificial = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_ac43f36d68941c625df71f09ea760bcde}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!add\+Node@{add\+Node}}
+\index{add\+Node@{add\+Node}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{add\+Node(\+Node\+Type type, const wx\+Point \&screen\+\_\+point, double scale=1.\+0)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Node}$\ast$ Net\+Canvas\+Element\+Manager\+::add\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Node\+Type}}]{type, }
+\item[{const wx\+Point \&}]{screen\+\_\+point, }
+\item[{double}]{scale = {\ttfamily 1.0}}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_ad38d20f837c91b791516b7cbe98c18ea}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!add\+Node@{add\+Node}}
+\index{add\+Node@{add\+Node}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{add\+Node(\+Node\+Type type, const wx\+Real\+Point \&world\+\_\+point, double scale=1.\+0)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Node}$\ast$ Net\+Canvas\+Element\+Manager\+::add\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Node\+Type}}]{type, }
+\item[{const wx\+Real\+Point \&}]{world\+\_\+point, }
+\item[{double}]{scale = {\ttfamily 1.0}}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a0d63ed7f1b378ff00ad836537f202bae}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!add\+Node\+And\+Link@{add\+Node\+And\+Link}}
+\index{add\+Node\+And\+Link@{add\+Node\+And\+Link}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{add\+Node\+And\+Link(\+Draw\+Node $\ast$\&draw\+\_\+node, Draw\+Link $\ast$\&draw\+\_\+link, Node\+Type type, const wx\+Point \&point, Link\+Type link\+\_\+type, Element\+I\+D source\+\_\+node\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+Element\+Manager\+::add\+Node\+And\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Node} $\ast$\&}]{draw\+\_\+node, }
+\item[{{\bf Draw\+Link} $\ast$\&}]{draw\+\_\+link, }
+\item[{{\bf Node\+Type}}]{type, }
+\item[{const wx\+Point \&}]{point, }
+\item[{{\bf Link\+Type}}]{link\+\_\+type, }
+\item[{{\bf Element\+ID}}]{source\+\_\+node\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a6c8f882061d9e482de1d05e46d158bd1}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!attach\+Link@{attach\+Link}}
+\index{attach\+Link@{attach\+Link}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{attach\+Link(\+Link \&link, Draw\+Link \&draw\+\_\+link)}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+Element\+Manager\+::attach\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} \&}]{link, }
+\item[{{\bf Draw\+Link} \&}]{draw\+\_\+link}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_adadfd44b0c76eb1fcff56c46fd7c06c2}
+
+
+Attach the link -\/ This method S\+H\+A\+LL only be called by the \doxyref{Command}{pag.}{class_command} Classes. 
+
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!attach\+Node@{attach\+Node}}
+\index{attach\+Node@{attach\+Node}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{attach\+Node(\+Node \&node, Draw\+Node \&draw\+\_\+node)}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+Element\+Manager\+::attach\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} \&}]{node, }
+\item[{{\bf Draw\+Node} \&}]{draw\+\_\+node}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a425af0e904c39fc8397430872d2f83bf}
+
+
+Attach the node specified -\/ This method S\+H\+A\+LL only be called by the \doxyref{Command}{pag.}{class_command} Classes. 
+
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!change\+Demands\+Type@{change\+Demands\+Type}}
+\index{change\+Demands\+Type@{change\+Demands\+Type}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{change\+Demands\+Type(std\+::vector$<$ Element\+I\+D $>$ \&node\+\_\+ids, Demand\+Type new\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+Element\+Manager\+::change\+Demands\+Type (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Element\+ID} $>$ \&}]{node\+\_\+ids, }
+\item[{{\bf Demand\+Type}}]{new\+\_\+type}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_ae9c6aacf2a77de23452d54b5ebc742bd}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!change\+Demand\+Type@{change\+Demand\+Type}}
+\index{change\+Demand\+Type@{change\+Demand\+Type}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{change\+Demand\+Type(\+Element\+I\+D id, Demand\+Type new\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+Element\+Manager\+::change\+Demand\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{{\bf Demand\+Type}}]{new\+\_\+type}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_accea5648b0868b11b65902f0c9955d0a}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!change\+Link\+Properties@{change\+Link\+Properties}}
+\index{change\+Link\+Properties@{change\+Link\+Properties}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{change\+Link\+Properties(\+Element\+I\+D id, bool artificial, bool lateral\+\_\+inflow, bool bidirectional)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+Element\+Manager\+::change\+Link\+Properties (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{bool}]{artificial, }
+\item[{bool}]{lateral\+\_\+inflow, }
+\item[{bool}]{bidirectional}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_afb336cb18b213d7e75f9aebc147a175e}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!change\+Links\+Properties@{change\+Links\+Properties}}
+\index{change\+Links\+Properties@{change\+Links\+Properties}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{change\+Links\+Properties(std\+::vector$<$ Element\+I\+D $>$ \&link\+\_\+ids, bool artificial, bool lateral\+\_\+inflow, bool bidirectional)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+Element\+Manager\+::change\+Links\+Properties (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Element\+ID} $>$ \&}]{link\+\_\+ids, }
+\item[{bool}]{artificial, }
+\item[{bool}]{lateral\+\_\+inflow, }
+\item[{bool}]{bidirectional}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a88350e8e9755d75369494d50692a9613}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!change\+Links\+Type@{change\+Links\+Type}}
+\index{change\+Links\+Type@{change\+Links\+Type}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{change\+Links\+Type(std\+::vector$<$ Element\+I\+D $>$ \&link\+\_\+ids, Link\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+Element\+Manager\+::change\+Links\+Type (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Element\+ID} $>$ \&}]{link\+\_\+ids, }
+\item[{{\bf Link\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a7706d4a74e45645f45e003165add1a56}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!change\+Link\+Type@{change\+Link\+Type}}
+\index{change\+Link\+Type@{change\+Link\+Type}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{change\+Link\+Type(\+Element\+I\+D id, Link\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+Element\+Manager\+::change\+Link\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{{\bf Link\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a68087e38621aed5a64b6c131b7dc6cca}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!change\+Nodes\+Type@{change\+Nodes\+Type}}
+\index{change\+Nodes\+Type@{change\+Nodes\+Type}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{change\+Nodes\+Type(std\+::vector$<$ Element\+I\+D $>$ \&node\+\_\+ids, Node\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+Element\+Manager\+::change\+Nodes\+Type (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Element\+ID} $>$ \&}]{node\+\_\+ids, }
+\item[{{\bf Node\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_aec789a9be4ae5070ba8b7ec24d57814f}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!change\+Node\+Type@{change\+Node\+Type}}
+\index{change\+Node\+Type@{change\+Node\+Type}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{change\+Node\+Type(\+Element\+I\+D id, Node\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+Element\+Manager\+::change\+Node\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{{\bf Node\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a2f79d1590aaa6ca54e3b4d6f8c5dab27}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!clear@{clear}}
+\index{clear@{clear}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+Element\+Manager\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a775c37fcc71db821f83016f6c8b1413c}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!clear\+Command\+Stack@{clear\+Command\+Stack}}
+\index{clear\+Command\+Stack@{clear\+Command\+Stack}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{clear\+Command\+Stack()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+Element\+Manager\+::clear\+Command\+Stack (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a1c056e24288597ca9225eb19b39cddb9}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!create\+Temporary\+Link@{create\+Temporary\+Link}}
+\index{create\+Temporary\+Link@{create\+Temporary\+Link}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{create\+Temporary\+Link(\+Link\+Type type, const wx\+Point \&point\+\_\+origin, const wx\+Point \&point\+\_\+end, double scale=1.\+0, bool bidirectional=false, bool lateral\+\_\+inflow=false, bool artificial=false)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Link}$\ast$ Net\+Canvas\+Element\+Manager\+::create\+Temporary\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Type}}]{type, }
+\item[{const wx\+Point \&}]{point\+\_\+origin, }
+\item[{const wx\+Point \&}]{point\+\_\+end, }
+\item[{double}]{scale = {\ttfamily 1.0}, }
+\item[{bool}]{bidirectional = {\ttfamily false}, }
+\item[{bool}]{lateral\+\_\+inflow = {\ttfamily false}, }
+\item[{bool}]{artificial = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_aba44a6e47f5fb9dcd5292cb416ecab80}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!create\+Temporary\+Node@{create\+Temporary\+Node}}
+\index{create\+Temporary\+Node@{create\+Temporary\+Node}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{create\+Temporary\+Node(\+Node\+Type type, const wx\+Point \&point, double scale=1.\+0)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Node}$\ast$ Net\+Canvas\+Element\+Manager\+::create\+Temporary\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Node\+Type}}]{type, }
+\item[{const wx\+Point \&}]{point, }
+\item[{double}]{scale = {\ttfamily 1.0}}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_ab66e44d1c168fc801c2cf41c24e437d2}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!delete\+External\+Element@{delete\+External\+Element}}
+\index{delete\+External\+Element@{delete\+External\+Element}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{delete\+External\+Element(\+Draw\+Element $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+Element\+Manager\+::delete\+External\+Element (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_afafe1cc4b39e8149e63fbcb0cdc2c452}
+
+
+Delete an element that is not present in the list -\/ This method S\+H\+A\+LL only be called by the \doxyref{Command}{pag.}{class_command} Classes. 
+
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!delete\+Temporary\+Link@{delete\+Temporary\+Link}}
+\index{delete\+Temporary\+Link@{delete\+Temporary\+Link}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{delete\+Temporary\+Link()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+Element\+Manager\+::delete\+Temporary\+Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a0b003cc65a6868e67408c1eaeb8d8520}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!delete\+Temporary\+Node@{delete\+Temporary\+Node}}
+\index{delete\+Temporary\+Node@{delete\+Temporary\+Node}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{delete\+Temporary\+Node()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+Element\+Manager\+::delete\+Temporary\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a545a43da7bbfdc6bf16e7d1eafdc4e2b}
+
+
+this method does not synchronize the link with the \doxyref{Network}{pag.}{class_network} manager, and it S\+H\+A\+LL be used only when the user is holding the mouse positioning the new link 
+
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!detach\+Link@{detach\+Link}}
+\index{detach\+Link@{detach\+Link}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{detach\+Link(\+Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Link}$\ast$ Net\+Canvas\+Element\+Manager\+::detach\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_af82cbe0376339c8ab70d7a0df2a6fdaa}
+
+
+Detach a link without deleting it -\/ This method S\+H\+A\+LL only be called by the \doxyref{Command}{pag.}{class_command} Classes. 
+
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!detach\+Node@{detach\+Node}}
+\index{detach\+Node@{detach\+Node}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{detach\+Node(\+Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Node}$\ast$ Net\+Canvas\+Element\+Manager\+::detach\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_ae4de085c2defd3797f57a10e210132b9}
+
+
+Detach the node specified without delete it -\/ This method S\+H\+A\+LL only be called by the \doxyref{Command}{pag.}{class_command} Classes. 
+
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!draw\+Elements\+By\+Name@{draw\+Elements\+By\+Name}}
+\index{draw\+Elements\+By\+Name@{draw\+Elements\+By\+Name}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{draw\+Elements\+By\+Name(const wx\+String \&a\+\_\+element\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Draw\+Element}$\ast$$>$ Net\+Canvas\+Element\+Manager\+::draw\+Elements\+By\+Name (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{a\+\_\+element\+Name}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a6476c18de81ba8005a43ce3c913a61b6}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!draw\+Elements\+Map@{draw\+Elements\+Map}}
+\index{draw\+Elements\+Map@{draw\+Elements\+Map}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{draw\+Elements\+Map()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ {\bf Element\+ID}, {\bf Draw\+Element}$\ast$ $>$\& Net\+Canvas\+Element\+Manager\+::draw\+Elements\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a63dd31be79fd639c816ec0c3c9c528e7}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!draw\+Nodes\+By\+Name@{draw\+Nodes\+By\+Name}}
+\index{draw\+Nodes\+By\+Name@{draw\+Nodes\+By\+Name}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{draw\+Nodes\+By\+Name(const wx\+String \&a\+\_\+element\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Draw\+Node}$\ast$$>$ Net\+Canvas\+Element\+Manager\+::draw\+Nodes\+By\+Name (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{a\+\_\+element\+Name}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a2c8dee5d52215d0410523991b80d4c44}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!get\+Draw\+Element@{get\+Draw\+Element}}
+\index{get\+Draw\+Element@{get\+Draw\+Element}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{get\+Draw\+Element(\+Element\+I\+D id, Draw\+Element $\ast$\&draw\+\_\+element)}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+Element\+Manager\+::get\+Draw\+Element (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{{\bf Draw\+Element} $\ast$\&}]{draw\+\_\+element}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a5c652b991e75225dcf7e973dc3941855}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!get\+Draw\+Element@{get\+Draw\+Element}}
+\index{get\+Draw\+Element@{get\+Draw\+Element}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{get\+Draw\+Element(const wx\+Point \&a\+\_\+position, Draw\+Element $\ast$\&draw\+\_\+element) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+Element\+Manager\+::get\+Draw\+Element (
+\begin{DoxyParamCaption}
+\item[{const wx\+Point \&}]{a\+\_\+position, }
+\item[{{\bf Draw\+Element} $\ast$\&}]{draw\+\_\+element}
+\end{DoxyParamCaption}
+) const}\label{class_net_canvas_element_manager_a5bec199fd19bb93b40a779d6d1122a23}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!get\+Draw\+Label@{get\+Draw\+Label}}
+\index{get\+Draw\+Label@{get\+Draw\+Label}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{get\+Draw\+Label(wx\+D\+C \&dc, const wx\+Point \&point, Draw\+Label $\ast$\&draw\+\_\+label)}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+Element\+Manager\+::get\+Draw\+Label (
+\begin{DoxyParamCaption}
+\item[{wx\+DC \&}]{dc, }
+\item[{const wx\+Point \&}]{point, }
+\item[{{\bf Draw\+Label} $\ast$\&}]{draw\+\_\+label}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a221c7e9908853c4d89072dd704c6268d}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!get\+Draw\+Link@{get\+Draw\+Link}}
+\index{get\+Draw\+Link@{get\+Draw\+Link}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{get\+Draw\+Link(const wx\+Point \&point, Draw\+Link $\ast$\&draw\+\_\+link)}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+Element\+Manager\+::get\+Draw\+Link (
+\begin{DoxyParamCaption}
+\item[{const wx\+Point \&}]{point, }
+\item[{{\bf Draw\+Link} $\ast$\&}]{draw\+\_\+link}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_ae7af247a6f4a4ff613be9f4bceb3ed7c}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!get\+Draw\+Link@{get\+Draw\+Link}}
+\index{get\+Draw\+Link@{get\+Draw\+Link}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{get\+Draw\+Link(\+Element\+I\+D id, Draw\+Link $\ast$\&draw\+\_\+link)}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+Element\+Manager\+::get\+Draw\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{{\bf Draw\+Link} $\ast$\&}]{draw\+\_\+link}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_ab53397c71862b88bf4121ac57466cfba}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!get\+Draw\+Node@{get\+Draw\+Node}}
+\index{get\+Draw\+Node@{get\+Draw\+Node}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{get\+Draw\+Node(const wx\+Point \&point, Draw\+Node $\ast$\&draw\+\_\+node)}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+Element\+Manager\+::get\+Draw\+Node (
+\begin{DoxyParamCaption}
+\item[{const wx\+Point \&}]{point, }
+\item[{{\bf Draw\+Node} $\ast$\&}]{draw\+\_\+node}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_aeda2bc9cb34b47dfba9d2afaaf2e3ca3}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!get\+Draw\+Node@{get\+Draw\+Node}}
+\index{get\+Draw\+Node@{get\+Draw\+Node}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{get\+Draw\+Node(\+Element\+I\+D id, Draw\+Node $\ast$\&draw\+\_\+node)}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+Element\+Manager\+::get\+Draw\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{{\bf Draw\+Node} $\ast$\&}]{draw\+\_\+node}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a6f30907157642d216d75e4f388b3bc1b}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!move\+Element@{move\+Element}}
+\index{move\+Element@{move\+Element}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{move\+Element(\+Element\+I\+D a\+\_\+id, const wx\+Point \&a\+\_\+new\+Position\+Difference)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+Element\+Manager\+::move\+Element (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{a\+\_\+id, }
+\item[{const wx\+Point \&}]{a\+\_\+new\+Position\+Difference}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a1ffe0eb3d733151ce4ae76a713926e47}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!move\+Elements@{move\+Elements}}
+\index{move\+Elements@{move\+Elements}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{move\+Elements(std\+::vector$<$ Element\+I\+D $>$ a\+\_\+id\+Vector, const wx\+Point \&a\+\_\+new\+Position\+Difference)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+Element\+Manager\+::move\+Elements (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Element\+ID} $>$}]{a\+\_\+id\+Vector, }
+\item[{const wx\+Point \&}]{a\+\_\+new\+Position\+Difference}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_aa4513e777d0a40fb33e2b412c75ac996}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!redo@{redo}}
+\index{redo@{redo}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{redo()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+Element\+Manager\+::redo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a98510e9831d5c167033a58d1d2ee71b7}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!remove\+Div\+Point@{remove\+Div\+Point}}
+\index{remove\+Div\+Point@{remove\+Div\+Point}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{remove\+Div\+Point(\+Element\+I\+D \&a\+\_\+id, wx\+Point \&a\+\_\+point)}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+Element\+Manager\+::remove\+Div\+Point (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID} \&}]{a\+\_\+id, }
+\item[{wx\+Point \&}]{a\+\_\+point}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a1d4b8aea43f1d9402ea72ab8d5d03d2b}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!remove\+Element@{remove\+Element}}
+\index{remove\+Element@{remove\+Element}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{remove\+Element(\+Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+Element\+Manager\+::remove\+Element (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_acc3ad54cd85f4cc7e0efc913f6da604a}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!remove\+Elements@{remove\+Elements}}
+\index{remove\+Elements@{remove\+Elements}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{remove\+Elements(std\+::vector$<$ Element\+I\+D $>$ \&ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+Element\+Manager\+::remove\+Elements (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Element\+ID} $>$ \&}]{ids}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a3889b3832b3f654bc45f3ec348fa04d6}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!set\+Element\+Name@{set\+Element\+Name}}
+\index{set\+Element\+Name@{set\+Element\+Name}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{set\+Element\+Name(\+Element\+I\+D id, std\+::string name)}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+Element\+Manager\+::set\+Element\+Name (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a12b87d513708a20b8bb5ba3103a9845b}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!set\+Link\+Nodes@{set\+Link\+Nodes}}
+\index{set\+Link\+Nodes@{set\+Link\+Nodes}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{set\+Link\+Nodes(\+Element\+I\+D link\+\_\+id, Element\+I\+D node\+\_\+origin\+\_\+id, Element\+I\+D node\+\_\+destiny\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Net\+Canvas\+Element\+Manager\+::set\+Link\+Nodes (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{link\+\_\+id, }
+\item[{{\bf Element\+ID}}]{node\+\_\+origin\+\_\+id, }
+\item[{{\bf Element\+ID}}]{node\+\_\+destiny\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_ac1fc9e3bc27351b7f8f45cee457c6027}
+
+
+this method does not synchronize the node with the \doxyref{Network}{pag.}{class_network} manager, and it S\+H\+A\+LL be used only when the user is holding the mouse positioning the new link 
+
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!synchronize\+Draw\+Elements@{synchronize\+Draw\+Elements}}
+\index{synchronize\+Draw\+Elements@{synchronize\+Draw\+Elements}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{synchronize\+Draw\+Elements()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+Element\+Manager\+::synchronize\+Draw\+Elements (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a4bdb5996aa04f44f001fae5504bd2f95}
+This method uses the information from \doxyref{Network}{pag.}{class_network} manager class to get information related to the elements added and then it create the respective Draw\+Elements ! \index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!undo@{undo}}
+\index{undo@{undo}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{undo()}]{\setlength{\rightskip}{0pt plus 5cm}void Net\+Canvas\+Element\+Manager\+::undo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_net_canvas_element_manager_a176c0a60e64464efc1d80cad45b4c5ba}
+
+
+\subsection{Amigas e Funções Relacionadas}
+\index{Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}!Net\+Conf\+File@{Net\+Conf\+File}}
+\index{Net\+Conf\+File@{Net\+Conf\+File}!Net\+Canvas\+Element\+Manager@{Net\+Canvas\+Element\+Manager}}
+\subsubsection[{Net\+Conf\+File}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Net\+Conf\+File}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_net_canvas_element_manager_a6adc5b278749b0910ab670afada281e1}
+
+
+Definição na linha 16 do arquivo Net\+Canvas\+Element\+Manager.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Net\+Canvas\+Element\+Manager.\+h}\end{DoxyCompactItemize}

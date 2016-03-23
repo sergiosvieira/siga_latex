@@ -1,0 +1,219 @@
+\section{Referência da Template de Classe SerieX$<$ Key\+Type, Value\+Type $>$}
+\label{class_serie_x}\index{Serie\+X$<$ Key\+Type, Value\+Type $>$@{Serie\+X$<$ Key\+Type, Value\+Type $>$}}
+
+
+{\ttfamily \#include $<$Serie\+Impl.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf SerieX} ()
+\item 
+{\bf SerieX} (std\+::string {\bf name}, {\bf Serie\+Header} \&header)
+\item 
+bool {\bf value} (Key\+Type key, std\+::vector$<$ Value\+Type $>$ \&result)
+\item 
+void {\bf set\+Value} (Key\+Type key, std\+::vector$<$ Value\+Type $>$ \&{\bf value})
+\item 
+bool {\bf remove\+Value} (Key\+Type key)
+\item 
+std\+::string {\bf name} ()
+\item 
+std\+::string {\bf set\+Name} ()
+\item 
+void {\bf set\+Header} ({\bf Serie\+Header} \&header)
+\item 
+std\+::string {\bf collumn\+Name} (uint32\+\_\+t collumn\+\_\+number) const 
+\item 
+std\+::string {\bf collumn\+Unit} (uint32\+\_\+t collumn\+\_\+number) const 
+\item 
+uint64\+\_\+t {\bf lines\+Number} () const 
+\item 
+uint32\+\_\+t {\bf collumns\+Number} () const 
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ Key\+Type, std\+::vector$<$ Value\+Type $>$ $>$ {\bf m\+\_\+content}
+\item 
+std\+::string {\bf m\+\_\+serie\+\_\+name}
+\item 
+{\bf Serie\+Header} {\bf m\+\_\+serie\+\_\+header}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+\subsubsection*{template$<$class Key\+Type, class Value\+Type$>$\\*
+class Serie\+X$<$ Key\+Type, Value\+Type $>$}
+
+
+
+Definição na linha 11 do arquivo Serie\+Impl.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{SerieX@{SerieX}!SerieX@{SerieX}}
+\index{SerieX@{SerieX}!SerieX@{SerieX}}
+\subsubsection[{Serie\+X()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key\+Type , class Value\+Type $>$ {\bf SerieX}$<$ Key\+Type, Value\+Type $>$\+::{\bf SerieX} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_x_a27f723e3a6ce1f7cd5f99001d96c25fd}
+
+
+Definição na linha 4 do arquivo Serie\+Impl.\+cpp.
+
+\index{SerieX@{SerieX}!SerieX@{SerieX}}
+\index{SerieX@{SerieX}!SerieX@{SerieX}}
+\subsubsection[{Serie\+X(std\+::string name, Serie\+Header \&header)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key\+Type , class Value\+Type $>$ {\bf SerieX}$<$ Key\+Type, Value\+Type $>$\+::{\bf SerieX} (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name, }
+\item[{{\bf Serie\+Header} \&}]{header}
+\end{DoxyParamCaption}
+)}\label{class_serie_x_a73ad691761f0bf711a711528c7dfcb39}
+
+
+Definição na linha 9 do arquivo Serie\+Impl.\+cpp.
+
+
+
+\subsection{Métodos}
+\index{SerieX@{SerieX}!collumn\+Name@{collumn\+Name}}
+\index{collumn\+Name@{collumn\+Name}!SerieX@{SerieX}}
+\subsubsection[{collumn\+Name(uint32\+\_\+t collumn\+\_\+number) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key\+Type , class Value\+Type $>$ std\+::string {\bf SerieX}$<$ Key\+Type, Value\+Type $>$\+::collumn\+Name (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{collumn\+\_\+number}
+\end{DoxyParamCaption}
+) const}\label{class_serie_x_a839a4f89eff2634b40bb0d1975ec7a70}
+
+
+Definição na linha 53 do arquivo Serie\+Impl.\+cpp.
+
+\index{SerieX@{SerieX}!collumns\+Number@{collumns\+Number}}
+\index{collumns\+Number@{collumns\+Number}!SerieX@{SerieX}}
+\subsubsection[{collumns\+Number() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key\+Type , class Value\+Type $>$ uint32\+\_\+t {\bf SerieX}$<$ Key\+Type, Value\+Type $>$\+::collumns\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_serie_x_a3eb68a3067a2c6e54f2f7e80b4c85b1d}
+
+
+Definição na linha 68 do arquivo Serie\+Impl.\+cpp.
+
+\index{SerieX@{SerieX}!collumn\+Unit@{collumn\+Unit}}
+\index{collumn\+Unit@{collumn\+Unit}!SerieX@{SerieX}}
+\subsubsection[{collumn\+Unit(uint32\+\_\+t collumn\+\_\+number) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key\+Type , class Value\+Type $>$ std\+::string {\bf SerieX}$<$ Key\+Type, Value\+Type $>$\+::collumn\+Unit (
+\begin{DoxyParamCaption}
+\item[{uint32\+\_\+t}]{collumn\+\_\+number}
+\end{DoxyParamCaption}
+) const}\label{class_serie_x_ae867e37dffa52b773326f3d22f7e788c}
+
+
+Definição na linha 58 do arquivo Serie\+Impl.\+cpp.
+
+\index{SerieX@{SerieX}!lines\+Number@{lines\+Number}}
+\index{lines\+Number@{lines\+Number}!SerieX@{SerieX}}
+\subsubsection[{lines\+Number() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key\+Type , class Value\+Type $>$ uint64\+\_\+t {\bf SerieX}$<$ Key\+Type, Value\+Type $>$\+::lines\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_serie_x_a1de45e6e800f0b68b8dbf985466a4503}
+
+
+Definição na linha 63 do arquivo Serie\+Impl.\+cpp.
+
+\index{SerieX@{SerieX}!name@{name}}
+\index{name@{name}!SerieX@{SerieX}}
+\subsubsection[{name()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key\+Type , class Value\+Type $>$ std\+::string {\bf SerieX}$<$ Key\+Type, Value\+Type $>$\+::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_x_ab558091e015648957da1254168779ef6}
+
+
+Definição na linha 48 do arquivo Serie\+Impl.\+cpp.
+
+\index{SerieX@{SerieX}!remove\+Value@{remove\+Value}}
+\index{remove\+Value@{remove\+Value}!SerieX@{SerieX}}
+\subsubsection[{remove\+Value(\+Key\+Type key)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key\+Type, class Value\+Type $>$ bool {\bf SerieX}$<$ Key\+Type, Value\+Type $>$\+::remove\+Value (
+\begin{DoxyParamCaption}
+\item[{Key\+Type}]{key}
+\end{DoxyParamCaption}
+)}\label{class_serie_x_ac66e39cfdd5116471e2cb46248764ea3}
+
+
+Definição na linha 26 do arquivo Serie\+Impl.\+cpp.
+
+\index{SerieX@{SerieX}!set\+Header@{set\+Header}}
+\index{set\+Header@{set\+Header}!SerieX@{SerieX}}
+\subsubsection[{set\+Header(\+Serie\+Header \&header)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key\+Type , class Value\+Type $>$ void {\bf SerieX}$<$ Key\+Type, Value\+Type $>$\+::set\+Header (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie\+Header} \&}]{header}
+\end{DoxyParamCaption}
+)}\label{class_serie_x_afc954747639c1b7a53b1648b0cc43641}
+
+
+Definição na linha 43 do arquivo Serie\+Impl.\+cpp.
+
+\index{SerieX@{SerieX}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!SerieX@{SerieX}}
+\subsubsection[{set\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key\+Type, class Value\+Type$>$ std\+::string {\bf SerieX}$<$ Key\+Type, Value\+Type $>$\+::set\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_x_a938406b4ddcd70748e693b2063fe3083}
+\index{SerieX@{SerieX}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!SerieX@{SerieX}}
+\subsubsection[{set\+Value(\+Key\+Type key, std\+::vector$<$ Value\+Type $>$ \&value)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key\+Type, class Value\+Type$>$ void {\bf SerieX}$<$ Key\+Type, Value\+Type $>$\+::set\+Value (
+\begin{DoxyParamCaption}
+\item[{Key\+Type}]{key, }
+\item[{std\+::vector$<$ Value\+Type $>$ \&}]{value}
+\end{DoxyParamCaption}
+)}\label{class_serie_x_a11aa007cd27c62bcfd0746ec1e18f904}
+
+
+Definição na linha 38 do arquivo Serie\+Impl.\+cpp.
+
+\index{SerieX@{SerieX}!value@{value}}
+\index{value@{value}!SerieX@{SerieX}}
+\subsubsection[{value(\+Key\+Type key, std\+::vector$<$ Value\+Type $>$ \&result)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key\+Type, class Value\+Type$>$ bool {\bf SerieX}$<$ Key\+Type, Value\+Type $>$\+::value (
+\begin{DoxyParamCaption}
+\item[{Key\+Type}]{key, }
+\item[{std\+::vector$<$ Value\+Type $>$ \&}]{result}
+\end{DoxyParamCaption}
+)}\label{class_serie_x_acab57de241f9ab5451b896d25b8eaa44}
+
+
+Definição na linha 14 do arquivo Serie\+Impl.\+cpp.
+
+
+
+\subsection{Atributos}
+\index{SerieX@{SerieX}!m\+\_\+content@{m\+\_\+content}}
+\index{m\+\_\+content@{m\+\_\+content}!SerieX@{SerieX}}
+\subsubsection[{m\+\_\+content}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key\+Type, class Value\+Type$>$ std\+::map$<$ Key\+Type, std\+::vector$<$ Value\+Type $>$ $>$ {\bf SerieX}$<$ Key\+Type, Value\+Type $>$\+::m\+\_\+content\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_x_aade7e95c5fdce162a995bc019bdc5c5a}
+
+
+Definição na linha 32 do arquivo Serie\+Impl.\+h.
+
+\index{SerieX@{SerieX}!m\+\_\+serie\+\_\+header@{m\+\_\+serie\+\_\+header}}
+\index{m\+\_\+serie\+\_\+header@{m\+\_\+serie\+\_\+header}!SerieX@{SerieX}}
+\subsubsection[{m\+\_\+serie\+\_\+header}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key\+Type, class Value\+Type$>$ {\bf Serie\+Header} {\bf SerieX}$<$ Key\+Type, Value\+Type $>$\+::m\+\_\+serie\+\_\+header\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_x_aba9460f5fe9c870169b82b13a1aac104}
+
+
+Definição na linha 35 do arquivo Serie\+Impl.\+h.
+
+\index{SerieX@{SerieX}!m\+\_\+serie\+\_\+name@{m\+\_\+serie\+\_\+name}}
+\index{m\+\_\+serie\+\_\+name@{m\+\_\+serie\+\_\+name}!SerieX@{SerieX}}
+\subsubsection[{m\+\_\+serie\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class Key\+Type, class Value\+Type$>$ std\+::string {\bf SerieX}$<$ Key\+Type, Value\+Type $>$\+::m\+\_\+serie\+\_\+name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_x_a38ba642e7a1c65f7224fb211e10e4ebb}
+
+
+Definição na linha 34 do arquivo Serie\+Impl.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Serie\+Impl.\+h}\item 
+{\bf Serie\+Impl.\+cpp}\end{DoxyCompactItemize}

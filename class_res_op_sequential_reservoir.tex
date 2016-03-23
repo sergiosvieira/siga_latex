@@ -1,0 +1,160 @@
+\section{Referência da Classe Res\+Op\+Sequential\+Reservoir}
+\label{class_res_op_sequential_reservoir}\index{Res\+Op\+Sequential\+Reservoir@{Res\+Op\+Sequential\+Reservoir}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Sequential\+Reservoir.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Reservoir}.
+
+
+
+Superclasse de {\bf Res\+Op\+Sequential\+Wnd\+Reservoir}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Sequential\+Reservoir} ({\bf Date} initial\+Date, {\bf Date} final\+Date, {\bf Node} $\ast${\bf node})
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Sequential\+Reservoir} ()
+\item 
+void {\bf update\+Allocation\+Matrix} ({\bf Node} $\ast$a\+\_\+node)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Rule} $\ast$ {\bf rule}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf Res\+Op\+Element} $\ast$ {\bf do\+Copy} ()
+\item 
+virtual void {\bf do\+Create\+Results} ({\bf Interval} interval)
+\item 
+void {\bf create\+Matrix\+Grid} ({\bf Node} $\ast$a\+\_\+node, int a\+\_\+rows, {\bf Matrix} $\ast$a\+\_\+source\+Matrix=nullptr)
+\item 
+void {\bf update\+Matrix\+Grid} ({\bf Node} $\ast$a\+\_\+node)
+\item 
+void {\bf update\+Matrix\+Grid\+Values} ({\bf Matrix} \&a\+\_\+matrix, {\bf Node} $\ast$a\+\_\+node)
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 13 do arquivo Res\+Op\+Sequential\+Reservoir.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Sequential\+Reservoir@{Res\+Op\+Sequential\+Reservoir}!Res\+Op\+Sequential\+Reservoir@{Res\+Op\+Sequential\+Reservoir}}
+\index{Res\+Op\+Sequential\+Reservoir@{Res\+Op\+Sequential\+Reservoir}!Res\+Op\+Sequential\+Reservoir@{Res\+Op\+Sequential\+Reservoir}}
+\subsubsection[{Res\+Op\+Sequential\+Reservoir(\+Date initial\+Date, Date final\+Date, Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Sequential\+Reservoir\+::\+Res\+Op\+Sequential\+Reservoir (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{initial\+Date, }
+\item[{{\bf Date}}]{final\+Date, }
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_res_op_sequential_reservoir_abdbe4b14b8944c48b5d7ebb9bf2d0625}
+Construtor padr�o da classe \doxyref{Res\+Op\+Sequential\+Reservoir}{pag.}{class_res_op_sequential_reservoir} 
+\begin{DoxyParams}{Parâmetros}
+{\em initial\+Date} & Inicio do intervalo \\
+\hline
+{\em final\+Date} & Final do Intervalo \\
+\hline
+{\em node} & N� de interesse \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Sequential\+Reservoir@{Res\+Op\+Sequential\+Reservoir}!````~Res\+Op\+Sequential\+Reservoir@{$\sim$\+Res\+Op\+Sequential\+Reservoir}}
+\index{````~Res\+Op\+Sequential\+Reservoir@{$\sim$\+Res\+Op\+Sequential\+Reservoir}!Res\+Op\+Sequential\+Reservoir@{Res\+Op\+Sequential\+Reservoir}}
+\subsubsection[{$\sim$\+Res\+Op\+Sequential\+Reservoir()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Sequential\+Reservoir\+::$\sim$\+Res\+Op\+Sequential\+Reservoir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_sequential_reservoir_a9c81708e971f7eccc36c5d610453ba4d}
+Destrutor 
+
+\subsection{Métodos}
+\index{Res\+Op\+Sequential\+Reservoir@{Res\+Op\+Sequential\+Reservoir}!create\+Matrix\+Grid@{create\+Matrix\+Grid}}
+\index{create\+Matrix\+Grid@{create\+Matrix\+Grid}!Res\+Op\+Sequential\+Reservoir@{Res\+Op\+Sequential\+Reservoir}}
+\subsubsection[{create\+Matrix\+Grid(\+Node $\ast$a\+\_\+node, int a\+\_\+rows, Matrix $\ast$a\+\_\+source\+Matrix=nullptr)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Sequential\+Reservoir\+::create\+Matrix\+Grid (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{a\+\_\+node, }
+\item[{int}]{a\+\_\+rows, }
+\item[{{\bf Matrix} $\ast$}]{a\+\_\+source\+Matrix = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_reservoir_af54fa7f1137722cde1e79d771e90c9c6}
+\index{Res\+Op\+Sequential\+Reservoir@{Res\+Op\+Sequential\+Reservoir}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!Res\+Op\+Sequential\+Reservoir@{Res\+Op\+Sequential\+Reservoir}}
+\subsubsection[{do\+Copy()}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Res\+Op\+Element}$\ast$ Res\+Op\+Sequential\+Reservoir\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_op_sequential_reservoir_a50f4b6ad7a55ee2666bbf4b5dce25064}
+Copia dos dados especificos 
+
+Implementa {\bf Res\+Op\+Reservoir} \doxyref{}{pag.}{class_res_op_reservoir_af91f15be0c2231ead9cc3a5f934205b1}.
+
+
+
+Reimplementado por {\bf Res\+Op\+Sequential\+Wnd\+Reservoir} \doxyref{}{pag.}{class_res_op_sequential_wnd_reservoir_a492b6dd9534fb99f0b4779255abf2625}.
+
+\index{Res\+Op\+Sequential\+Reservoir@{Res\+Op\+Sequential\+Reservoir}!do\+Create\+Results@{do\+Create\+Results}}
+\index{do\+Create\+Results@{do\+Create\+Results}!Res\+Op\+Sequential\+Reservoir@{Res\+Op\+Sequential\+Reservoir}}
+\subsubsection[{do\+Create\+Results(\+Interval interval)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Sequential\+Reservoir\+::do\+Create\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_op_sequential_reservoir_a54e8b1c86719356ac618531b7c91d3fb}
+
+
+Reimplementação de {\bf Res\+Op\+Reservoir} \doxyref{}{pag.}{class_res_op_reservoir_a3b9086bdf6e48a318b12d83e0737d0f6}.
+
+
+
+Reimplementado por {\bf Res\+Op\+Sequential\+Wnd\+Reservoir} \doxyref{}{pag.}{class_res_op_sequential_wnd_reservoir_ad2bf024727f2be6f68e2968860c98188}.
+
+\index{Res\+Op\+Sequential\+Reservoir@{Res\+Op\+Sequential\+Reservoir}!update\+Allocation\+Matrix@{update\+Allocation\+Matrix}}
+\index{update\+Allocation\+Matrix@{update\+Allocation\+Matrix}!Res\+Op\+Sequential\+Reservoir@{Res\+Op\+Sequential\+Reservoir}}
+\subsubsection[{update\+Allocation\+Matrix(\+Node $\ast$a\+\_\+node)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Sequential\+Reservoir\+::update\+Allocation\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{a\+\_\+node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_sequential_reservoir_a4ad3b886e14dc0b50eac63adce956522}
+Define o cabe�alho da alloc; 
+
+Implementa {\bf Res\+Op\+Reservoir} \doxyref{}{pag.}{class_res_op_reservoir_a716f4a87aec746b7c2d5ee27210b318d}.
+
+\index{Res\+Op\+Sequential\+Reservoir@{Res\+Op\+Sequential\+Reservoir}!update\+Matrix\+Grid@{update\+Matrix\+Grid}}
+\index{update\+Matrix\+Grid@{update\+Matrix\+Grid}!Res\+Op\+Sequential\+Reservoir@{Res\+Op\+Sequential\+Reservoir}}
+\subsubsection[{update\+Matrix\+Grid(\+Node $\ast$a\+\_\+node)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Sequential\+Reservoir\+::update\+Matrix\+Grid (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{a\+\_\+node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_reservoir_a9a274e6ba1860f4ca26dc03e3a1bebe2}
+\index{Res\+Op\+Sequential\+Reservoir@{Res\+Op\+Sequential\+Reservoir}!update\+Matrix\+Grid\+Values@{update\+Matrix\+Grid\+Values}}
+\index{update\+Matrix\+Grid\+Values@{update\+Matrix\+Grid\+Values}!Res\+Op\+Sequential\+Reservoir@{Res\+Op\+Sequential\+Reservoir}}
+\subsubsection[{update\+Matrix\+Grid\+Values(\+Matrix \&a\+\_\+matrix, Node $\ast$a\+\_\+node)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Sequential\+Reservoir\+::update\+Matrix\+Grid\+Values (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{a\+\_\+matrix, }
+\item[{{\bf Node} $\ast$}]{a\+\_\+node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_reservoir_aa2968c491683ae61977b9c85d937cd92}
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Sequential\+Reservoir@{Res\+Op\+Sequential\+Reservoir}!rule@{rule}}
+\index{rule@{rule}!Res\+Op\+Sequential\+Reservoir@{Res\+Op\+Sequential\+Reservoir}}
+\subsubsection[{rule}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Rule}$\ast$ Res\+Op\+Sequential\+Reservoir\+::rule}\label{class_res_op_sequential_reservoir_afb25281a80d0238c0ed08661cf81e5b0}
+Regra de libera��o 
+
+Definição na linha 30 do arquivo Res\+Op\+Sequential\+Reservoir.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Sequential\+Reservoir.\+h}\end{DoxyCompactItemize}

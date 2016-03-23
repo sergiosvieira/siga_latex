@@ -1,0 +1,464 @@
+\section{Refer√™ncia da Classe Res\+Op\+Scenario\+Page}
+\label{class_res_op_scenario_page}\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Scenario\+Page.\+h$>$}
+
+
+
+Herdeiro de {\bf S\+I\+G\+A\+Scenario\+Page}.
+
+
+
+Superclasse de {\bf Res\+Op\+Batch\+Scenario\+Page} e {\bf Res\+Op\+Scenario\+Wizard\+Dialog\+Page}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Scenario\+Page} (wx\+Window $\ast$pai, wx\+Window\+ID id=wx\+I\+D\+\_\+\+A\+NY, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=wx\+T\+A\+B\+\_\+\+T\+R\+A\+V\+E\+R\+S\+AL, const wx\+String \&name=\char`\"{}Scenario\+Page\char`\"{})
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Scenario\+Page} ()
+\item 
+{\bf Component\+Interface} $\ast$ {\bf get\+Selected\+Interface} ()
+\item 
+void {\bf set\+Exec\+Interfaces} ({\bf Res\+Op\+Sequential\+Interface} $\ast$s\+Inter, {\bf Res\+Op\+Sequential\+Wnd\+Interface} $\ast$w\+Inter, {\bf Res\+Op\+Sequential\+Opt\+Interface} $\ast$o\+Inter, {\bf Res\+Op\+Network\+Flow\+Interface} $\ast$n\+F\+Inter, {\bf Res\+Op\+Network\+Flow\+Wnd\+Interface} $\ast$w\+N\+F\+Inter)
+\item 
+void {\bf set\+Seq\+Interfaces} ({\bf Res\+Op\+Sequential\+Interface} $\ast$inter)
+\item 
+void {\bf set\+Seq\+Wnd\+Interfaces} ({\bf Res\+Op\+Sequential\+Wnd\+Interface} $\ast$inter)
+\item 
+void {\bf set\+Seq\+Opt\+Interfaces} ({\bf Res\+Op\+Sequential\+Opt\+Interface} $\ast$inter)
+\item 
+void {\bf set\+Net\+Flow\+Interfaces} ({\bf Res\+Op\+Network\+Flow\+Interface} $\ast$inter)
+\item 
+void {\bf set\+Net\+Flow\+Wnd\+Interfaces} ({\bf Res\+Op\+Network\+Flow\+Wnd\+Interface} $\ast$inter)
+\item 
+virtual void {\bf show\+Exec\+Interface} ({\bf Res\+Op\+Model\+Type} selection\+Type)
+\item 
+void {\bf show\+Main\+Radio\+Box} (bool show=true)
+\item 
+virtual void {\bf set\+Main\+Radio\+Box\+Selection} ({\bf Res\+Op\+Model\+Type} selection\+Type)
+\item 
+virtual void {\bf set\+Main\+Radio\+Box\+Selection} (int selection\+Index)
+\item 
+virtual void {\bf create\+Interface} ()
+\item 
+virtual void {\bf change\+Date} (const {\bf Interval} \&)
+\item 
+void {\bf select\+Main\+Radio\+Box} (wx\+Command\+Event \&evento)
+\item 
+void {\bf adjust\+Interval\+Range} (const {\bf Interval} \&interval)
+\item 
+virtual void {\bf refresh} ()
+\item 
+void {\bf enable\+Inter} (bool value=true)
+\item 
+virtual void {\bf on\+No\+Element\+Selected} ()
+\item 
+virtual bool {\bf is\+Batch} () const 
+\item 
+void {\bf hide\+Selected\+Operation\+Interface} ()
+\item 
+void {\bf update\+Networks\+Radio\+Box} ()
+\item 
+void {\bf on\+Select\+Network} (wx\+Command\+Event \&event)
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Radio\+Box $\ast$ {\bf networks\+\_\+radio\+\_\+box\+\_\+}
+\item 
+int {\bf networks\+\_\+radio\+\_\+box\+\_\+index\+\_\+}
+\item 
+std\+::map$<$ unsigned int, unsigned int $>$ {\bf networks\+\_\+to\+\_\+element\+\_\+id\+\_\+map\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf on\+Check\+Demand\+Assurance\+Curve} (wx\+Command\+Event \&a\+\_\+event)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Sequential\+Interface} $\ast$ {\bf seq\+Inter}
+\item 
+{\bf Res\+Op\+Sequential\+Wnd\+Interface} $\ast$ {\bf seq\+Wnd\+Inter}
+\item 
+{\bf Res\+Op\+Sequential\+Opt\+Interface} $\ast$ {\bf seq\+Opt\+Inter}
+\item 
+{\bf Res\+Op\+Network\+Flow\+Interface} $\ast$ {\bf net\+Flow\+Inter}
+\item 
+{\bf Res\+Op\+Network\+Flow\+Wnd\+Interface} $\ast$ {\bf net\+Flow\+Wnd\+Inter}
+\item 
+wx\+Check\+Box $\ast$ {\bf m\+\_\+demand\+Assurance\+Curve\+Check\+Box}
+\item 
+wx\+Static\+Box\+Sizer $\ast$ {\bf m\+\_\+demand\+Assurance\+Curve\+Static\+Box}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 23 do arquivo Res\+Op\+Scenario\+Page.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{Res\+Op\+Scenario\+Page(wx\+Window $\ast$pai, wx\+Window\+I\+D id=wx\+I\+D\+\_\+\+A\+N\+Y, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=wx\+T\+A\+B\+\_\+\+T\+R\+A\+V\+E\+R\+S\+A\+L, const wx\+String \&name=""Scenario\+Page"")}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Scenario\+Page\+::\+Res\+Op\+Scenario\+Page (
+\begin{DoxyParamCaption}
+\item[{wx\+Window $\ast$}]{pai, }
+\item[{wx\+Window\+ID}]{id = {\ttfamily wxID\+\_\+ANY}, }
+\item[{const wx\+Point \&}]{pos = {\ttfamily wxDefaultPosition}, }
+\item[{const wx\+Size \&}]{size = {\ttfamily wxDefaultSize}, }
+\item[{long}]{style = {\ttfamily wxTAB\+\_\+TRAVERSAL}, }
+\item[{const wx\+String \&}]{name = {\ttfamily \char`\"{}ScenarioPage\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_page_a47b5470daf620446076ab5b2ceac4237}
+Construtor \index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!````~Res\+Op\+Scenario\+Page@{$\sim$\+Res\+Op\+Scenario\+Page}}
+\index{````~Res\+Op\+Scenario\+Page@{$\sim$\+Res\+Op\+Scenario\+Page}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{$\sim$\+Res\+Op\+Scenario\+Page()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Scenario\+Page\+::$\sim$\+Res\+Op\+Scenario\+Page (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_scenario_page_aff9e685bdcd99b960fe7990f43694bca}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!adjust\+Interval\+Range@{adjust\+Interval\+Range}}
+\index{adjust\+Interval\+Range@{adjust\+Interval\+Range}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{adjust\+Interval\+Range(const Interval \&interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Page\+::adjust\+Interval\+Range (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interval} \&}]{interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_scenario_page_a2fdfb624cbca1ef4d7b35fc1856e6986}
+Ajusta o range dos date picker 
+
+Reimplementa√ß√£o de {\bf S\+I\+G\+A\+Scenario\+Page} \doxyref{}{pag.}{class_s_i_g_a_scenario_page_aacfb2ecddc588b17abad6a404dcb7b5c}.
+
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!change\+Date@{change\+Date}}
+\index{change\+Date@{change\+Date}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{change\+Date(const Interval \&)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Scenario\+Page\+::change\+Date (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interval} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_scenario_page_a929c63972de21a5f7f676daa0e419a47}
+PropagaÁ„o do envento de mudanÁa de data inicial 
+
+Implementa {\bf S\+I\+G\+A\+Scenario\+Page} \doxyref{}{pag.}{class_s_i_g_a_scenario_page_a9a8ef11fd984c9ad188bef8e1eac6bd0}.
+
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!create\+Interface@{create\+Interface}}
+\index{create\+Interface@{create\+Interface}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{create\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Scenario\+Page\+::create\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_scenario_page_a8638f97322c5463a205f9b12fca14fbe}
+Instancia os widgets e organiza o layout da pagina 
+
+Reimplementa√ß√£o de {\bf S\+I\+G\+A\+Scenario\+Page} \doxyref{}{pag.}{class_s_i_g_a_scenario_page_a2582c1b3c09f5de36206223334812aa4}.
+
+
+
+Reimplementado por {\bf Res\+Op\+Scenario\+Wizard\+Dialog\+Page} \doxyref{}{pag.}{class_res_op_scenario_wizard_dialog_page_a6c25be8cf581da27a2905bfbefbd6bff} e {\bf Res\+Op\+Batch\+Scenario\+Page} \doxyref{}{pag.}{class_res_op_batch_scenario_page_acc17518b1dca718e9995528d9f35a0ab}.
+
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!enable\+Inter@{enable\+Inter}}
+\index{enable\+Inter@{enable\+Inter}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{enable\+Inter(bool value=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Page\+::enable\+Inter (
+\begin{DoxyParamCaption}
+\item[{bool}]{value = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_page_ae71ad09cca200a63074f79f64399580a}
+Esconde e desabilita a interface selecionada \index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!get\+Selected\+Interface@{get\+Selected\+Interface}}
+\index{get\+Selected\+Interface@{get\+Selected\+Interface}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{get\+Selected\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component\+Interface}$\ast$ Res\+Op\+Scenario\+Page\+::get\+Selected\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_page_acd2ea26a829d4538d9f51c815c920af4}
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!hide\+Selected\+Operation\+Interface@{hide\+Selected\+Operation\+Interface}}
+\index{hide\+Selected\+Operation\+Interface@{hide\+Selected\+Operation\+Interface}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{hide\+Selected\+Operation\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Page\+::hide\+Selected\+Operation\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_page_a2501a81c67fcb52a1f83e81ff7ff05cd}
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!is\+Batch@{is\+Batch}}
+\index{is\+Batch@{is\+Batch}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{is\+Batch() const }]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+Scenario\+Page\+::is\+Batch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_scenario_page_adee651eed39eafc114254aab559bb93e}
+
+
+Reimplementado por {\bf Res\+Op\+Batch\+Scenario\+Page} \doxyref{}{pag.}{class_res_op_batch_scenario_page_a94f55d39a32a5875ce65c3805560fc48}.
+
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!on\+Check\+Demand\+Assurance\+Curve@{on\+Check\+Demand\+Assurance\+Curve}}
+\index{on\+Check\+Demand\+Assurance\+Curve@{on\+Check\+Demand\+Assurance\+Curve}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{on\+Check\+Demand\+Assurance\+Curve(wx\+Command\+Event \&a\+\_\+event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Page\+::on\+Check\+Demand\+Assurance\+Curve (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{a\+\_\+event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_page_a3b7eb536a3e5a8e2e2faed6faf59b43d}
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!on\+No\+Element\+Selected@{on\+No\+Element\+Selected}}
+\index{on\+No\+Element\+Selected@{on\+No\+Element\+Selected}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{on\+No\+Element\+Selected()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Scenario\+Page\+::on\+No\+Element\+Selected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_scenario_page_aa439ff6d982d69e9e403f41f212df424}
+MÈtodo chamado quando nenhum elemento estiver habilitado. Em quase todos os casos, toda a interface ser· desabilitada (enable\+Inter(false)), exceto pela interface de otimizaÁ„o, que deve continuar mostrando as Abas de FunÁ„o Objetivo e TÈcnicas de OtimizaÁ„o 
+
+Reimplementado por {\bf Res\+Op\+Batch\+Scenario\+Page} \doxyref{}{pag.}{class_res_op_batch_scenario_page_a0f0e1c7f5528498bd6eeaa09824d2100}.
+
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!on\+Select\+Network@{on\+Select\+Network}}
+\index{on\+Select\+Network@{on\+Select\+Network}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{on\+Select\+Network(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Page\+::on\+Select\+Network (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_page_a0412fd28fc2d49de71f11b8117624764}
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!refresh@{refresh}}
+\index{refresh@{refresh}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{refresh()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Scenario\+Page\+::refresh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_scenario_page_a87ff8c1bce195cf15b76019569347c4b}
+Atualiza as interfaces 
+
+Reimplementa√ß√£o de {\bf S\+I\+G\+A\+Scenario\+Page} \doxyref{}{pag.}{class_s_i_g_a_scenario_page_a88c954c5d92736d0faddf25729e6a429}.
+
+
+
+Reimplementado por {\bf Res\+Op\+Scenario\+Wizard\+Dialog\+Page} \doxyref{}{pag.}{class_res_op_scenario_wizard_dialog_page_a14ec584b5011256a69a8daa20fb5f10a}.
+
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!select\+Main\+Radio\+Box@{select\+Main\+Radio\+Box}}
+\index{select\+Main\+Radio\+Box@{select\+Main\+Radio\+Box}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{select\+Main\+Radio\+Box(wx\+Command\+Event \&evento)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Page\+::select\+Main\+Radio\+Box (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{evento}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_scenario_page_ac62adc4ee647d619b07988b54d635cf2}
+PropagaÁ„o do envento de mudanÁa do radio box 
+
+Reimplementa√ß√£o de {\bf S\+I\+G\+A\+Scenario\+Page} \doxyref{}{pag.}{class_s_i_g_a_scenario_page_ab6a19eae8ba3d5a68f56479bcdbd8fd8}.
+
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!set\+Exec\+Interfaces@{set\+Exec\+Interfaces}}
+\index{set\+Exec\+Interfaces@{set\+Exec\+Interfaces}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{set\+Exec\+Interfaces(\+Res\+Op\+Sequential\+Interface $\ast$s\+Inter, Res\+Op\+Sequential\+Wnd\+Interface $\ast$w\+Inter, Res\+Op\+Sequential\+Opt\+Interface $\ast$o\+Inter, Res\+Op\+Network\+Flow\+Interface $\ast$n\+F\+Inter, Res\+Op\+Network\+Flow\+Wnd\+Interface $\ast$w\+N\+F\+Inter)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Page\+::set\+Exec\+Interfaces (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Interface} $\ast$}]{s\+Inter, }
+\item[{{\bf Res\+Op\+Sequential\+Wnd\+Interface} $\ast$}]{w\+Inter, }
+\item[{{\bf Res\+Op\+Sequential\+Opt\+Interface} $\ast$}]{o\+Inter, }
+\item[{{\bf Res\+Op\+Network\+Flow\+Interface} $\ast$}]{n\+F\+Inter, }
+\item[{{\bf Res\+Op\+Network\+Flow\+Wnd\+Interface} $\ast$}]{w\+N\+F\+Inter}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_page_ab0544d7247f17145431bcbc654e0b541}
+Define as interfaces que estar„o contidas no ceanrio por tipo 
+\begin{DoxyParams}{Par√¢metros}
+{\em s\+Inter} & Interface do modelo sequencial \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!set\+Main\+Radio\+Box\+Selection@{set\+Main\+Radio\+Box\+Selection}}
+\index{set\+Main\+Radio\+Box\+Selection@{set\+Main\+Radio\+Box\+Selection}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{set\+Main\+Radio\+Box\+Selection(\+Res\+Op\+Model\+Type selection\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Scenario\+Page\+::set\+Main\+Radio\+Box\+Selection (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Model\+Type}}]{selection\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_scenario_page_abe39f88ce9d532ff8b40c7162528b067}
+Processa uma seleÁ„o do Radio Box 
+
+Reimplementado por {\bf Res\+Op\+Scenario\+Wizard\+Dialog\+Page} \doxyref{}{pag.}{class_res_op_scenario_wizard_dialog_page_ae107f8a4a68142332e05ce0a8d646258}.
+
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!set\+Main\+Radio\+Box\+Selection@{set\+Main\+Radio\+Box\+Selection}}
+\index{set\+Main\+Radio\+Box\+Selection@{set\+Main\+Radio\+Box\+Selection}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{set\+Main\+Radio\+Box\+Selection(int selection\+Index)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Scenario\+Page\+::set\+Main\+Radio\+Box\+Selection (
+\begin{DoxyParamCaption}
+\item[{int}]{selection\+Index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_scenario_page_a6a9dccfef048f50a5f4c1ed986832683}
+
+
+Implementa {\bf S\+I\+G\+A\+Scenario\+Page} \doxyref{}{pag.}{class_s_i_g_a_scenario_page_ae016a197443fe3b88df0a05d9d71b9e9}.
+
+
+
+Reimplementado por {\bf Res\+Op\+Scenario\+Wizard\+Dialog\+Page} \doxyref{}{pag.}{class_res_op_scenario_wizard_dialog_page_aa6eaa0a135754c962899d1f0efcb96b7}.
+
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!set\+Net\+Flow\+Interfaces@{set\+Net\+Flow\+Interfaces}}
+\index{set\+Net\+Flow\+Interfaces@{set\+Net\+Flow\+Interfaces}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{set\+Net\+Flow\+Interfaces(\+Res\+Op\+Network\+Flow\+Interface $\ast$inter)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Page\+::set\+Net\+Flow\+Interfaces (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Network\+Flow\+Interface} $\ast$}]{inter}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_page_ab185a0acb54b5336cf6241fb4085dacc}
+Define a interface do modelo de classico 
+\begin{DoxyParams}{Par√¢metros}
+{\em inter} & Interface \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!set\+Net\+Flow\+Wnd\+Interfaces@{set\+Net\+Flow\+Wnd\+Interfaces}}
+\index{set\+Net\+Flow\+Wnd\+Interfaces@{set\+Net\+Flow\+Wnd\+Interfaces}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{set\+Net\+Flow\+Wnd\+Interfaces(\+Res\+Op\+Network\+Flow\+Wnd\+Interface $\ast$inter)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Page\+::set\+Net\+Flow\+Wnd\+Interfaces (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Network\+Flow\+Wnd\+Interface} $\ast$}]{inter}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_page_a9401bcc4305c01763c227704df0a7bca}
+Define a interface do modelo de classico 
+\begin{DoxyParams}{Par√¢metros}
+{\em inter} & Interface \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!set\+Seq\+Interfaces@{set\+Seq\+Interfaces}}
+\index{set\+Seq\+Interfaces@{set\+Seq\+Interfaces}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{set\+Seq\+Interfaces(\+Res\+Op\+Sequential\+Interface $\ast$inter)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Page\+::set\+Seq\+Interfaces (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Interface} $\ast$}]{inter}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_page_a56d42557576f3d65785df387c16c2c76}
+Define a interface do modelo sequencial 
+\begin{DoxyParams}{Par√¢metros}
+{\em inter} & Interface \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!set\+Seq\+Opt\+Interfaces@{set\+Seq\+Opt\+Interfaces}}
+\index{set\+Seq\+Opt\+Interfaces@{set\+Seq\+Opt\+Interfaces}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{set\+Seq\+Opt\+Interfaces(\+Res\+Op\+Sequential\+Opt\+Interface $\ast$inter)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Page\+::set\+Seq\+Opt\+Interfaces (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Opt\+Interface} $\ast$}]{inter}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_page_af7e6f61c454d250ae42b253a91c124c7}
+Define a interface do modelo de otimizaÁ„o do sequencial 
+\begin{DoxyParams}{Par√¢metros}
+{\em inter} & Interface \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!set\+Seq\+Wnd\+Interfaces@{set\+Seq\+Wnd\+Interfaces}}
+\index{set\+Seq\+Wnd\+Interfaces@{set\+Seq\+Wnd\+Interfaces}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{set\+Seq\+Wnd\+Interfaces(\+Res\+Op\+Sequential\+Wnd\+Interface $\ast$inter)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Page\+::set\+Seq\+Wnd\+Interfaces (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Wnd\+Interface} $\ast$}]{inter}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_page_af0e8a419d88d9e4c377dc4da68f74c0a}
+Define a interface do modelo de janelas do sequencial 
+\begin{DoxyParams}{Par√¢metros}
+{\em inter} & Interface \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!show\+Exec\+Interface@{show\+Exec\+Interface}}
+\index{show\+Exec\+Interface@{show\+Exec\+Interface}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{show\+Exec\+Interface(\+Res\+Op\+Model\+Type selection\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Scenario\+Page\+::show\+Exec\+Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Model\+Type}}]{selection\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_scenario_page_a1c3784bb9763c9e20232761f86eb6a5a}
+Mostra a interface do tipo \textquotesingle{}selection\+Type\textquotesingle{} e esconde todas as outras. trata o caso de haver ou n„o elemento selecionado, e verifica tambÈm se for Otimizador para adicionar ou n„o asbas necess·rias.
+
+
+\begin{DoxyParams}{Par√¢metros}
+{\em selection\+Type} & Tipo da interface do mÈtodo de execuÁ„o a ser mostrada. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado por {\bf Res\+Op\+Batch\+Scenario\+Page} \doxyref{}{pag.}{class_res_op_batch_scenario_page_a91a844c7e90448a4060ff613b78149ad}.
+
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!show\+Main\+Radio\+Box@{show\+Main\+Radio\+Box}}
+\index{show\+Main\+Radio\+Box@{show\+Main\+Radio\+Box}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{show\+Main\+Radio\+Box(bool show=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Page\+::show\+Main\+Radio\+Box (
+\begin{DoxyParamCaption}
+\item[{bool}]{show = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_scenario_page_a4de227fbefc1d428a8ee11ef780c0a11}
+Mostra/\+Esconde o radiobox principal 
+
+Reimplementa√ß√£o de {\bf S\+I\+G\+A\+Scenario\+Page} \doxyref{}{pag.}{class_s_i_g_a_scenario_page_aeed48c81aa90789bb4a0e6d70467d345}.
+
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!update\+Networks\+Radio\+Box@{update\+Networks\+Radio\+Box}}
+\index{update\+Networks\+Radio\+Box@{update\+Networks\+Radio\+Box}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{update\+Networks\+Radio\+Box()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Scenario\+Page\+::update\+Networks\+Radio\+Box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_scenario_page_a0236c3dc0a4109041930c975c752a5c1}
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!m\+\_\+demand\+Assurance\+Curve\+Check\+Box@{m\+\_\+demand\+Assurance\+Curve\+Check\+Box}}
+\index{m\+\_\+demand\+Assurance\+Curve\+Check\+Box@{m\+\_\+demand\+Assurance\+Curve\+Check\+Box}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{m\+\_\+demand\+Assurance\+Curve\+Check\+Box}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ Res\+Op\+Scenario\+Page\+::m\+\_\+demand\+Assurance\+Curve\+Check\+Box\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_page_a79b736bc7ac26100b04e8733f354196c}
+
+
+Defini√ß√£o na linha 36 do arquivo Res\+Op\+Scenario\+Page.\+h.
+
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!m\+\_\+demand\+Assurance\+Curve\+Static\+Box@{m\+\_\+demand\+Assurance\+Curve\+Static\+Box}}
+\index{m\+\_\+demand\+Assurance\+Curve\+Static\+Box@{m\+\_\+demand\+Assurance\+Curve\+Static\+Box}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{m\+\_\+demand\+Assurance\+Curve\+Static\+Box}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Box\+Sizer$\ast$ Res\+Op\+Scenario\+Page\+::m\+\_\+demand\+Assurance\+Curve\+Static\+Box\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_page_a5e16ef7eae8a56c140e1975d07784b45}
+
+
+Defini√ß√£o na linha 37 do arquivo Res\+Op\+Scenario\+Page.\+h.
+
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!net\+Flow\+Inter@{net\+Flow\+Inter}}
+\index{net\+Flow\+Inter@{net\+Flow\+Inter}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{net\+Flow\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Network\+Flow\+Interface}$\ast$ Res\+Op\+Scenario\+Page\+::net\+Flow\+Inter\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_page_a26e98100ed9006adbedf3a8c090c38b2}
+
+
+Defini√ß√£o na linha 34 do arquivo Res\+Op\+Scenario\+Page.\+h.
+
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!net\+Flow\+Wnd\+Inter@{net\+Flow\+Wnd\+Inter}}
+\index{net\+Flow\+Wnd\+Inter@{net\+Flow\+Wnd\+Inter}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{net\+Flow\+Wnd\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Network\+Flow\+Wnd\+Interface}$\ast$ Res\+Op\+Scenario\+Page\+::net\+Flow\+Wnd\+Inter\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_page_ad290c7b6eb87160d9ae693095cfa8aca}
+
+
+Defini√ß√£o na linha 35 do arquivo Res\+Op\+Scenario\+Page.\+h.
+
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!networks\+\_\+radio\+\_\+box\+\_\+@{networks\+\_\+radio\+\_\+box\+\_\+}}
+\index{networks\+\_\+radio\+\_\+box\+\_\+@{networks\+\_\+radio\+\_\+box\+\_\+}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{networks\+\_\+radio\+\_\+box\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box$\ast$ Res\+Op\+Scenario\+Page\+::networks\+\_\+radio\+\_\+box\+\_\+}\label{class_res_op_scenario_page_a8e1835d2cc2452edb5b718e632f9a074}
+
+
+Defini√ß√£o na linha 154 do arquivo Res\+Op\+Scenario\+Page.\+h.
+
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!networks\+\_\+radio\+\_\+box\+\_\+index\+\_\+@{networks\+\_\+radio\+\_\+box\+\_\+index\+\_\+}}
+\index{networks\+\_\+radio\+\_\+box\+\_\+index\+\_\+@{networks\+\_\+radio\+\_\+box\+\_\+index\+\_\+}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{networks\+\_\+radio\+\_\+box\+\_\+index\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}int Res\+Op\+Scenario\+Page\+::networks\+\_\+radio\+\_\+box\+\_\+index\+\_\+}\label{class_res_op_scenario_page_af4a69bf65c319c2787c1465179004eca}
+
+
+Defini√ß√£o na linha 155 do arquivo Res\+Op\+Scenario\+Page.\+h.
+
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!networks\+\_\+to\+\_\+element\+\_\+id\+\_\+map\+\_\+@{networks\+\_\+to\+\_\+element\+\_\+id\+\_\+map\+\_\+}}
+\index{networks\+\_\+to\+\_\+element\+\_\+id\+\_\+map\+\_\+@{networks\+\_\+to\+\_\+element\+\_\+id\+\_\+map\+\_\+}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{networks\+\_\+to\+\_\+element\+\_\+id\+\_\+map\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ unsigned int, unsigned int $>$ Res\+Op\+Scenario\+Page\+::networks\+\_\+to\+\_\+element\+\_\+id\+\_\+map\+\_\+}\label{class_res_op_scenario_page_a1dcf0a2f5e9508cd040710e3d11d99a1}
+
+
+Defini√ß√£o na linha 157 do arquivo Res\+Op\+Scenario\+Page.\+h.
+
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!seq\+Inter@{seq\+Inter}}
+\index{seq\+Inter@{seq\+Inter}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{seq\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Sequential\+Interface}$\ast$ Res\+Op\+Scenario\+Page\+::seq\+Inter\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_page_aaf1a84e0416302d5dfc923bb0f9ccfcc}
+Interface do modelo sequencial 
+
+Defini√ß√£o na linha 31 do arquivo Res\+Op\+Scenario\+Page.\+h.
+
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!seq\+Opt\+Inter@{seq\+Opt\+Inter}}
+\index{seq\+Opt\+Inter@{seq\+Opt\+Inter}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{seq\+Opt\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Sequential\+Opt\+Interface}$\ast$ Res\+Op\+Scenario\+Page\+::seq\+Opt\+Inter\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_page_acf1c6f44955502bd2502a0515673f16b}
+
+
+Defini√ß√£o na linha 33 do arquivo Res\+Op\+Scenario\+Page.\+h.
+
+\index{Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}!seq\+Wnd\+Inter@{seq\+Wnd\+Inter}}
+\index{seq\+Wnd\+Inter@{seq\+Wnd\+Inter}!Res\+Op\+Scenario\+Page@{Res\+Op\+Scenario\+Page}}
+\subsubsection[{seq\+Wnd\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Sequential\+Wnd\+Interface}$\ast$ Res\+Op\+Scenario\+Page\+::seq\+Wnd\+Inter\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_scenario_page_a9096b560b0d42a76385f703ace828079}
+
+
+Defini√ß√£o na linha 32 do arquivo Res\+Op\+Scenario\+Page.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Scenario\+Page.\+h}\end{DoxyCompactItemize}

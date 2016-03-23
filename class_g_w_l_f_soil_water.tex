@@ -1,0 +1,184 @@
+\section{Referência da Classe G\+W\+L\+F\+Soil\+Water}
+\label{class_g_w_l_f_soil_water}\index{G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}}
+
+
+{\ttfamily \#include $<$G\+W\+L\+F\+Soil\+Water.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf run} ()
+\item 
+{\bf G\+W\+L\+F\+Soil\+Water} ({\bf G\+W\+L\+F\+Model} $\ast${\bf parent})
+\item 
+{\bf $\sim$\+G\+W\+L\+F\+Soil\+Water} ()
+\item 
+double {\bf get\+Potential\+Evap} (double temper, float {\bf day\+Light\+Hours})
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+float {\bf ini\+Unsat\+Zone}
+\item 
+float {\bf ini\+Shallow\+Zone}
+\item 
+float {\bf field\+Cap}
+\item 
+float {\bf rec\+Coef}
+\item 
+float {\bf deep\+Sep\+Coef}
+\item 
+float {\bf leak\+Coef}
+\item 
+float {\bf day\+Light\+Hours} [13]
+\item 
+float {\bf evap\+Factor} [13]
+\item 
+{\bf Serie} $\ast$ {\bf unsat\+Zone}
+\item 
+{\bf Serie} $\ast$ {\bf shallow\+Zone}
+\item 
+{\bf G\+W\+L\+F\+Model} $\ast$ {\bf parent}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 15 do arquivo G\+W\+L\+F\+Soil\+Water.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}!G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}}
+\index{G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}!G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}}
+\subsubsection[{G\+W\+L\+F\+Soil\+Water(\+G\+W\+L\+F\+Model $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}G\+W\+L\+F\+Soil\+Water\+::\+G\+W\+L\+F\+Soil\+Water (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+W\+L\+F\+Model} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_soil_water_acc3b5fcb89f7507c32768e86cf77af6f}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em parent} & Ponteiro para o modelo G\+W\+LF \\
+\hline
+\end{DoxyParams}
+\index{G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}!````~G\+W\+L\+F\+Soil\+Water@{$\sim$\+G\+W\+L\+F\+Soil\+Water}}
+\index{````~G\+W\+L\+F\+Soil\+Water@{$\sim$\+G\+W\+L\+F\+Soil\+Water}!G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}}
+\subsubsection[{$\sim$\+G\+W\+L\+F\+Soil\+Water()}]{\setlength{\rightskip}{0pt plus 5cm}G\+W\+L\+F\+Soil\+Water\+::$\sim$\+G\+W\+L\+F\+Soil\+Water (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_soil_water_ad34a941390ebcf6975cdbbe67caf247c}
+Destrutor 
+
+\subsection{Métodos}
+\index{G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}!get\+Potential\+Evap@{get\+Potential\+Evap}}
+\index{get\+Potential\+Evap@{get\+Potential\+Evap}!G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}}
+\subsubsection[{get\+Potential\+Evap(double temper, float day\+Light\+Hours)}]{\setlength{\rightskip}{0pt plus 5cm}double G\+W\+L\+F\+Soil\+Water\+::get\+Potential\+Evap (
+\begin{DoxyParamCaption}
+\item[{double}]{temper, }
+\item[{float}]{day\+Light\+Hours}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_soil_water_aef26dad96b6360c5843b8fa44554eeb2}
+Retorna o potencial de evapora��o 
+\begin{DoxyParams}{Parâmetros}
+{\em temper} & M�dia da temperatura mensal. \\
+\hline
+{\em day\+Light\+Hours} & Hora de Luz do dia (dado mensal) \\
+\hline
+\end{DoxyParams}
+\index{G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}!run@{run}}
+\index{run@{run}!G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}void G\+W\+L\+F\+Soil\+Water\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_soil_water_a068b50e1ceb02047b1ba0081cd89e709}
+Executa o calculo de sedimento acumulado 
+
+\subsection{Atributos}
+\index{G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}!day\+Light\+Hours@{day\+Light\+Hours}}
+\index{day\+Light\+Hours@{day\+Light\+Hours}!G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}}
+\subsubsection[{day\+Light\+Hours}]{\setlength{\rightskip}{0pt plus 5cm}float G\+W\+L\+F\+Soil\+Water\+::day\+Light\+Hours[13]}\label{class_g_w_l_f_soil_water_af769a4275d88d713f9e8dda250b24619}
+Horas de luz no dia (dado mensal) 
+
+Definição na linha 45 do arquivo G\+W\+L\+F\+Soil\+Water.\+h.
+
+\index{G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}!deep\+Sep\+Coef@{deep\+Sep\+Coef}}
+\index{deep\+Sep\+Coef@{deep\+Sep\+Coef}!G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}}
+\subsubsection[{deep\+Sep\+Coef}]{\setlength{\rightskip}{0pt plus 5cm}float G\+W\+L\+F\+Soil\+Water\+::deep\+Sep\+Coef}\label{class_g_w_l_f_soil_water_a0cc11654e98f545f700fc582d7c7a392}
+Deep Seepage Coenficient 
+
+Definição na linha 37 do arquivo G\+W\+L\+F\+Soil\+Water.\+h.
+
+\index{G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}!evap\+Factor@{evap\+Factor}}
+\index{evap\+Factor@{evap\+Factor}!G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}}
+\subsubsection[{evap\+Factor}]{\setlength{\rightskip}{0pt plus 5cm}float G\+W\+L\+F\+Soil\+Water\+::evap\+Factor[13]}\label{class_g_w_l_f_soil_water_aeaed0867c9bbc9d55684a442a99bd8bf}
+Fator de Evapora��o (dado mensal) 
+
+Definição na linha 49 do arquivo G\+W\+L\+F\+Soil\+Water.\+h.
+
+\index{G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}!field\+Cap@{field\+Cap}}
+\index{field\+Cap@{field\+Cap}!G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}}
+\subsubsection[{field\+Cap}]{\setlength{\rightskip}{0pt plus 5cm}float G\+W\+L\+F\+Soil\+Water\+::field\+Cap}\label{class_g_w_l_f_soil_water_a562e11994400a7fea018dbc0e6555e4f}
+Capacidade de campo 
+
+Definição na linha 29 do arquivo G\+W\+L\+F\+Soil\+Water.\+h.
+
+\index{G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}!ini\+Shallow\+Zone@{ini\+Shallow\+Zone}}
+\index{ini\+Shallow\+Zone@{ini\+Shallow\+Zone}!G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}}
+\subsubsection[{ini\+Shallow\+Zone}]{\setlength{\rightskip}{0pt plus 5cm}float G\+W\+L\+F\+Soil\+Water\+::ini\+Shallow\+Zone}\label{class_g_w_l_f_soil_water_a105bf9609d5fbcbbce173f28c8acc062}
+
+\begin{DoxyItemize}
+\item Valor de zona saturada referente ao primeiro dia 
+\end{DoxyItemize}
+
+Definição na linha 24 do arquivo G\+W\+L\+F\+Soil\+Water.\+h.
+
+\index{G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}!ini\+Unsat\+Zone@{ini\+Unsat\+Zone}}
+\index{ini\+Unsat\+Zone@{ini\+Unsat\+Zone}!G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}}
+\subsubsection[{ini\+Unsat\+Zone}]{\setlength{\rightskip}{0pt plus 5cm}float G\+W\+L\+F\+Soil\+Water\+::ini\+Unsat\+Zone}\label{class_g_w_l_f_soil_water_ac848ecc624daad8229e04a853e64f987}
+Valor de zona n�o-\/saturada referente ao primeiro dia 
+
+Definição na linha 20 do arquivo G\+W\+L\+F\+Soil\+Water.\+h.
+
+\index{G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}!leak\+Coef@{leak\+Coef}}
+\index{leak\+Coef@{leak\+Coef}!G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}}
+\subsubsection[{leak\+Coef}]{\setlength{\rightskip}{0pt plus 5cm}float G\+W\+L\+F\+Soil\+Water\+::leak\+Coef}\label{class_g_w_l_f_soil_water_a688b4a697a7a4d92a6f1a653c53cce68}
+Coeficiente de vazamento da zona saturada 
+
+Definição na linha 41 do arquivo G\+W\+L\+F\+Soil\+Water.\+h.
+
+\index{G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}!parent@{parent}}
+\index{parent@{parent}!G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}}
+\subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+W\+L\+F\+Model}$\ast$ G\+W\+L\+F\+Soil\+Water\+::parent}\label{class_g_w_l_f_soil_water_a20cff0dd1e423adbac7fca38a01ae705}
+Ponteiro para o modelo G\+W\+LF 
+
+Definição na linha 62 do arquivo G\+W\+L\+F\+Soil\+Water.\+h.
+
+\index{G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}!rec\+Coef@{rec\+Coef}}
+\index{rec\+Coef@{rec\+Coef}!G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}}
+\subsubsection[{rec\+Coef}]{\setlength{\rightskip}{0pt plus 5cm}float G\+W\+L\+F\+Soil\+Water\+::rec\+Coef}\label{class_g_w_l_f_soil_water_ac19d2e477ebc2ed08e27b8c213026b6b}
+Coeficiente de recess�o 
+
+Definição na linha 33 do arquivo G\+W\+L\+F\+Soil\+Water.\+h.
+
+\index{G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}!shallow\+Zone@{shallow\+Zone}}
+\index{shallow\+Zone@{shallow\+Zone}!G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}}
+\subsubsection[{shallow\+Zone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ G\+W\+L\+F\+Soil\+Water\+::shallow\+Zone}\label{class_g_w_l_f_soil_water_aab9b3b870835f2047670fedc349bfbf0}
+\doxyref{Serie}{pag.}{class_serie} de zona saturada 
+
+Definição na linha 57 do arquivo G\+W\+L\+F\+Soil\+Water.\+h.
+
+\index{G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}!unsat\+Zone@{unsat\+Zone}}
+\index{unsat\+Zone@{unsat\+Zone}!G\+W\+L\+F\+Soil\+Water@{G\+W\+L\+F\+Soil\+Water}}
+\subsubsection[{unsat\+Zone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ G\+W\+L\+F\+Soil\+Water\+::unsat\+Zone}\label{class_g_w_l_f_soil_water_a056e139d8aa5e7bdfb92d6328a8854db}
+\doxyref{Serie}{pag.}{class_serie} de zona n�o-\/saturada 
+
+Definição na linha 53 do arquivo G\+W\+L\+F\+Soil\+Water.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf G\+W\+L\+F\+Soil\+Water.\+h}\end{DoxyCompactItemize}

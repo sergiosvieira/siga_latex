@@ -1,0 +1,405 @@
+\section{Referência da Classe Opt\+Sequential\+Model\+Ctrl}
+\label{class_opt_sequential_model_ctrl}\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+
+
+{\ttfamily \#include $<$Opt\+Sequential\+Model\+Ctrl.\+h$>$}
+
+
+
+Herdeiro de {\bf Sequential\+Model\+Ctrl}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Sequential\+Model\+Ctrl} ({\bf Res\+Op\+Interface} $\ast${\bf main\+Inter})
+\item 
+virtual {\bf $\sim$\+Opt\+Sequential\+Model\+Ctrl} ()
+\item 
+bool {\bf run} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, {\bf Res\+Op\+Scenario} $\ast$scen)
+\item 
+bool {\bf run\+Isolated} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&dependency\+\_\+map, {\bf Res\+Op\+Scenario} $\ast$scen, {\bf Element\+ID} network\+\_\+id)
+\item 
+void {\bf set\+Default\+Values} (char $\ast$file\+Name, {\bf Res\+Op\+Element} $\ast$element)
+\item 
+void {\bf save\+Default\+Values} (char $\ast$file\+Name, {\bf Res\+Op\+Element} $\ast$element)
+\item 
+double {\bf count\+Decisions\+Variables} ({\bf Res\+Op\+Scenario} $\ast$scenario)
+\item 
+void {\bf set\+Decisions\+Variables} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, {\bf Interval} interval, {\bf Matrix} \&variables)
+\item 
+bool {\bf check\+Limits} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements)
+\item 
+{\bf Matrix} {\bf calc\+Fitness} ({\bf Matrix} swarm, {\bf Res\+Op\+Scenario} $\ast$scen)
+\item 
+{\bf Matrix} {\bf calc\+Fitness} ({\bf Matrix} swarm, {\bf Res\+Op\+Scenario} $\ast$scen, map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&dependency\+\_\+map, {\bf Element\+ID} network\+\_\+id)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Element} $\ast$element, wx\+String section)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Element} $\ast$element, wx\+String section)
+\item 
+void {\bf update\+Results\+Series\+In} ({\bf Res\+Op\+Element} $\ast$element, const wx\+String \&scenario\+Name)
+\item 
+void {\bf update\+Results\+Series\+Out} ({\bf Res\+Op\+Element} $\ast$element, const wx\+String \&scenario\+Name)
+\item 
+void {\bf remove\+Results\+Series\+Out} ({\bf Res\+Op\+Element} $\ast$element, const wx\+String \&scenario\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf save\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Basin} $\ast$element, wx\+String section)
+\item 
+void {\bf save\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Demand} $\ast$element, wx\+String section)
+\item 
+void {\bf save\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Junction} $\ast$element, wx\+String section)
+\item 
+void {\bf save\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Link} $\ast$element, wx\+String section)
+\item 
+void {\bf save\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Reservoir} $\ast$element, wx\+String section)
+\item 
+void {\bf load\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Basin} $\ast$element, wx\+String section)
+\item 
+void {\bf load\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Demand} $\ast$element, wx\+String section)
+\item 
+virtual void {\bf load\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Junction} $\ast$element, wx\+String section)
+\item 
+void {\bf load\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Link} $\ast$element, wx\+String section)
+\item 
+void {\bf load\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Reservoir} $\ast$element, wx\+String section)
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 20 do arquivo Opt\+Sequential\+Model\+Ctrl.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{Opt\+Sequential\+Model\+Ctrl(\+Res\+Op\+Interface $\ast$main\+Inter)}]{\setlength{\rightskip}{0pt plus 5cm}Opt\+Sequential\+Model\+Ctrl\+::\+Opt\+Sequential\+Model\+Ctrl (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Interface} $\ast$}]{main\+Inter}
+\end{DoxyParamCaption}
+)}\label{class_opt_sequential_model_ctrl_a8a5c4f5c7673f0baaed5f7a6edc9bd5e}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em main\+Inter} & Interface da classe principal \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!````~Opt\+Sequential\+Model\+Ctrl@{$\sim$\+Opt\+Sequential\+Model\+Ctrl}}
+\index{````~Opt\+Sequential\+Model\+Ctrl@{$\sim$\+Opt\+Sequential\+Model\+Ctrl}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{$\sim$\+Opt\+Sequential\+Model\+Ctrl()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Opt\+Sequential\+Model\+Ctrl\+::$\sim$\+Opt\+Sequential\+Model\+Ctrl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_sequential_model_ctrl_a6bc005cb32201d58e13566c0e4dbbdcb}
+Destrutor 
+
+\subsection{Métodos}
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!calc\+Fitness@{calc\+Fitness}}
+\index{calc\+Fitness@{calc\+Fitness}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{calc\+Fitness(\+Matrix swarm, Res\+Op\+Scenario $\ast$scen)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Opt\+Sequential\+Model\+Ctrl\+::calc\+Fitness (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{swarm, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_sequential_model_ctrl_abb27ef7a3448488141c4c85a8225c429}
+Calcula o fitness associado a solu��o 
+
+Reimplementação de {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_abe53ef873929d103dffabab60703ae13}.
+
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!calc\+Fitness@{calc\+Fitness}}
+\index{calc\+Fitness@{calc\+Fitness}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{calc\+Fitness(\+Matrix swarm, Res\+Op\+Scenario $\ast$scen, map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, std\+::map$<$ Element\+I\+D, std\+::vector$<$ Res\+Op\+Element $\ast$ $>$ $>$ \&dependency\+\_\+map, Element\+I\+D network\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Opt\+Sequential\+Model\+Ctrl\+::calc\+Fitness (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{swarm, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen, }
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&}]{dependency\+\_\+map, }
+\item[{{\bf Element\+ID}}]{network\+\_\+id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_sequential_model_ctrl_adf5bef7b5862d7a64684c078b5e88ee5}
+
+
+Reimplementação de {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_a7c80e7dd5289c4b75cc19fbd15fd7888}.
+
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!check\+Limits@{check\+Limits}}
+\index{check\+Limits@{check\+Limits}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{check\+Limits(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements)}]{\setlength{\rightskip}{0pt plus 5cm}bool Opt\+Sequential\+Model\+Ctrl\+::check\+Limits (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements}
+\end{DoxyParamCaption}
+)}\label{class_opt_sequential_model_ctrl_a814addc17be6556b0c1f152965270b96}
+Verifica se os limites das vari�veis est�o corretos \index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!count\+Decisions\+Variables@{count\+Decisions\+Variables}}
+\index{count\+Decisions\+Variables@{count\+Decisions\+Variables}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{count\+Decisions\+Variables(\+Res\+Op\+Scenario $\ast$scenario)}]{\setlength{\rightskip}{0pt plus 5cm}double Opt\+Sequential\+Model\+Ctrl\+::count\+Decisions\+Variables (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scenario}
+\end{DoxyParamCaption}
+)}\label{class_opt_sequential_model_ctrl_ad959a7bf3a98ec1323d45e663cf442bc}
+M�todo para contar as vari�veis de decis�o \index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!load\+Element\+Project@{load\+Element\+Project}}
+\index{load\+Element\+Project@{load\+Element\+Project}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{load\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Basin $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Sequential\+Model\+Ctrl\+::load\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Basin} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_opt_sequential_model_ctrl_a6f92b46c566a6fdd1a60479654fc3473}
+Salva uma bacia no projeto 
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_ad5e880b216e2b8a11ae4a395e9ceea29}.
+
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!load\+Element\+Project@{load\+Element\+Project}}
+\index{load\+Element\+Project@{load\+Element\+Project}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{load\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Demand $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Sequential\+Model\+Ctrl\+::load\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Demand} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_opt_sequential_model_ctrl_aaab608dcd7b37e0f407838f711e4ff0f}
+Salva uma Demanda no projeto 
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a5ee68ae2df30e9ebd289eea3684a7915}.
+
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!load\+Element\+Project@{load\+Element\+Project}}
+\index{load\+Element\+Project@{load\+Element\+Project}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{load\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Junction $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Sequential\+Model\+Ctrl\+::load\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Junction} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_opt_sequential_model_ctrl_a5ddee931261580c3b87a2ccd3168696e}
+Salva uma jun��o no projeto 
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a3b9d2604e74e94bc1e305c50a5e20480}.
+
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!load\+Element\+Project@{load\+Element\+Project}}
+\index{load\+Element\+Project@{load\+Element\+Project}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{load\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Link $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Sequential\+Model\+Ctrl\+::load\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Link} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_opt_sequential_model_ctrl_a59390b2d9e373aec471392bfcb688f16}
+Salva um trecho no projeto 
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_afdf6883c502eaf5b1502e0a169499c4e}.
+
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!load\+Element\+Project@{load\+Element\+Project}}
+\index{load\+Element\+Project@{load\+Element\+Project}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{load\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Reservoir $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Sequential\+Model\+Ctrl\+::load\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Reservoir} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_opt_sequential_model_ctrl_a544890018aacc05e4752bed4550edab1}
+Salva um reservatorio no projeto 
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_ac986604e0a6f67f47840da5febbcfe7f}.
+
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Element $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Sequential\+Model\+Ctrl\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_sequential_model_ctrl_ab7fc34ed404d7c8c3c0f406f63392201}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a95c27eb2fadc30bc4125b6b98d98af60}.
+
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Element $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Sequential\+Model\+Ctrl\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_sequential_model_ctrl_a2bd6a4409aa1e6fc4309d94739057320}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a3c069ea2a8bd558a51b1263debd4be21}.
+
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!remove\+Results\+Series\+Out@{remove\+Results\+Series\+Out}}
+\index{remove\+Results\+Series\+Out@{remove\+Results\+Series\+Out}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{remove\+Results\+Series\+Out(\+Res\+Op\+Element $\ast$element, const wx\+String \&scenario\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Sequential\+Model\+Ctrl\+::remove\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_sequential_model_ctrl_a73f5d120df88fe7ee22890fd84223e36}
+
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a09317165d8a530334c8a6ab6a6bf04f3}.
+
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!run@{run}}
+\index{run@{run}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{run(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, Res\+Op\+Scenario $\ast$scen)}]{\setlength{\rightskip}{0pt plus 5cm}bool Opt\+Sequential\+Model\+Ctrl\+::run (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_sequential_model_ctrl_a038eac23adc538863fab0df35fe653f4}
+M�todo abstrato que executa a tecnica 
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a6473739febbf5714e21fc9d84bf5dc1b}.
+
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!run\+Isolated@{run\+Isolated}}
+\index{run\+Isolated@{run\+Isolated}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{run\+Isolated(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, std\+::map$<$ Element\+I\+D, std\+::vector$<$ Res\+Op\+Element $\ast$ $>$ $>$ \&dependency\+\_\+map, Res\+Op\+Scenario $\ast$scen, Element\+I\+D network\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Opt\+Sequential\+Model\+Ctrl\+::run\+Isolated (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&}]{dependency\+\_\+map, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen, }
+\item[{{\bf Element\+ID}}]{network\+\_\+id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_sequential_model_ctrl_a31f03d1f715fa51e563ed6455cff455f}
+
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a4df78d34e8be3743175013142b2a7d77}.
+
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!save\+Default\+Values@{save\+Default\+Values}}
+\index{save\+Default\+Values@{save\+Default\+Values}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{save\+Default\+Values(char $\ast$file\+Name, Res\+Op\+Element $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Sequential\+Model\+Ctrl\+::save\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)}\label{class_opt_sequential_model_ctrl_ae65d5c2e1093aa67dd5b30e8baa4ac19}
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!save\+Element\+Project@{save\+Element\+Project}}
+\index{save\+Element\+Project@{save\+Element\+Project}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{save\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Basin $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Sequential\+Model\+Ctrl\+::save\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Basin} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_opt_sequential_model_ctrl_a03b5722a25ecb05021a456796a5238ce}
+Salva uma bacia no projeto 
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a2989dd3b87fa6c06595983707c6e9002}.
+
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!save\+Element\+Project@{save\+Element\+Project}}
+\index{save\+Element\+Project@{save\+Element\+Project}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{save\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Demand $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Sequential\+Model\+Ctrl\+::save\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Demand} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_opt_sequential_model_ctrl_a9b1466f53277ea1c4c6548796e0d8978}
+Salva uma Demanda no projeto 
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a6b518decbb8f6fc18f270dd644b38ab4}.
+
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!save\+Element\+Project@{save\+Element\+Project}}
+\index{save\+Element\+Project@{save\+Element\+Project}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{save\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Junction $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Sequential\+Model\+Ctrl\+::save\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Junction} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_opt_sequential_model_ctrl_ac34ba8b6d33e24954c08e8f6a04cca7f}
+Salva uma jun��o no projeto 
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_acb6d04404fdb32312a2f094768512a59}.
+
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!save\+Element\+Project@{save\+Element\+Project}}
+\index{save\+Element\+Project@{save\+Element\+Project}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{save\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Link $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Sequential\+Model\+Ctrl\+::save\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Link} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_opt_sequential_model_ctrl_aa253956d28129010875b3474647a84d3}
+Salva um trecho no projeto 
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_af8337e2d3b45e64c347ba06e8cfb9549}.
+
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!save\+Element\+Project@{save\+Element\+Project}}
+\index{save\+Element\+Project@{save\+Element\+Project}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{save\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Reservoir $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Sequential\+Model\+Ctrl\+::save\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Reservoir} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_opt_sequential_model_ctrl_a11b8c5a474c64f9b65abb697e3bb3dcd}
+Salva um reservatorio no projeto 
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a2fa9b55b693ace322a539f30bde40876}.
+
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!set\+Decisions\+Variables@{set\+Decisions\+Variables}}
+\index{set\+Decisions\+Variables@{set\+Decisions\+Variables}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{set\+Decisions\+Variables(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, Interval interval, Matrix \&variables)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Sequential\+Model\+Ctrl\+::set\+Decisions\+Variables (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{{\bf Interval}}]{interval, }
+\item[{{\bf Matrix} \&}]{variables}
+\end{DoxyParamCaption}
+)}\label{class_opt_sequential_model_ctrl_a4992a0b5d59ff73992bd03286ad1c28c}
+M�todo para atribuir solu��es as respectivas vari�veis \index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!set\+Default\+Values@{set\+Default\+Values}}
+\index{set\+Default\+Values@{set\+Default\+Values}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{set\+Default\+Values(char $\ast$file\+Name, Res\+Op\+Element $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Sequential\+Model\+Ctrl\+::set\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)}\label{class_opt_sequential_model_ctrl_a470cc0c2cbb6fb5b2aaf617d75b7b4eb}
+M�todo que checa se as informa��es necess�rias foram preenchidas. 
+\begin{DoxyParams}{Parâmetros}
+{\em dialog} & Caixa de dialogo contendo os erros\\
+\hline
+\end{DoxyParams}
+bool check\+Completeness(map$<$unsigned int, Res\+Op\+Element$\ast$$>$ \&elements, Res\+Op\+Scenario$\ast$ scen); \index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!update\+Results\+Series\+In@{update\+Results\+Series\+In}}
+\index{update\+Results\+Series\+In@{update\+Results\+Series\+In}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+In(\+Res\+Op\+Element $\ast$element, const wx\+String \&scenario\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Sequential\+Model\+Ctrl\+::update\+Results\+Series\+In (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_sequential_model_ctrl_a7ee7a528b299901594ead60cd387f7fb}
+Adciona as series que existirem daquele modelo no modulo de Resultados Lembrete\+: Caso haja uma altera��o no nome ou na unidade da serie ser� necessario mudar neste metodo tamb�m 
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a1ee8984ad133648dbd693c30264b0bc8}.
+
+\index{Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}!update\+Results\+Series\+Out@{update\+Results\+Series\+Out}}
+\index{update\+Results\+Series\+Out@{update\+Results\+Series\+Out}!Opt\+Sequential\+Model\+Ctrl@{Opt\+Sequential\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+Out(\+Res\+Op\+Element $\ast$element, const wx\+String \&scenario\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Sequential\+Model\+Ctrl\+::update\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_sequential_model_ctrl_a4beaf00655aceb99ae6cbf9544cac1a5}
+
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a02aeb41e81b93f371c9a8823bd1d7eb2}.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Sequential\+Model\+Ctrl.\+h}\end{DoxyCompactItemize}

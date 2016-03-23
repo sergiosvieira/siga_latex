@@ -1,0 +1,186 @@
+\section{Referência da Classe tinyxml2\+:\+:Str\+Pair}
+\label{classtinyxml2_1_1_str_pair}\index{tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}}
+
+
+{\ttfamily \#include $<$tinyxml2.\+h$>$}
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+{\bf N\+E\+E\+D\+S\+\_\+\+E\+N\+T\+I\+T\+Y\+\_\+\+P\+R\+O\+C\+E\+S\+S\+I\+NG} = 0x01, 
+{\bf N\+E\+E\+D\+S\+\_\+\+N\+E\+W\+L\+I\+N\+E\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+A\+T\+I\+ON} = 0x02, 
+{\bf N\+E\+E\+D\+S\+\_\+\+W\+H\+I\+T\+E\+S\+P\+A\+C\+E\+\_\+\+C\+O\+L\+L\+A\+P\+S\+I\+NG} = 0x04, 
+{\bf T\+E\+X\+T\+\_\+\+E\+L\+E\+M\+E\+NT} = N\+E\+E\+D\+S\+\_\+\+E\+N\+T\+I\+T\+Y\+\_\+\+P\+R\+O\+C\+E\+S\+S\+I\+NG $\vert$ N\+E\+E\+D\+S\+\_\+\+N\+E\+W\+L\+I\+N\+E\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+A\+T\+I\+ON, 
+\\*
+{\bf T\+E\+X\+T\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+L\+E\+A\+V\+E\+\_\+\+E\+N\+T\+I\+T\+I\+ES} = N\+E\+E\+D\+S\+\_\+\+N\+E\+W\+L\+I\+N\+E\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+A\+T\+I\+ON, 
+{\bf A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+N\+A\+ME} = 0, 
+{\bf A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+V\+A\+L\+UE} = N\+E\+E\+D\+S\+\_\+\+E\+N\+T\+I\+T\+Y\+\_\+\+P\+R\+O\+C\+E\+S\+S\+I\+NG $\vert$ N\+E\+E\+D\+S\+\_\+\+N\+E\+W\+L\+I\+N\+E\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+A\+T\+I\+ON, 
+{\bf A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+V\+A\+L\+U\+E\+\_\+\+L\+E\+A\+V\+E\+\_\+\+E\+N\+T\+I\+T\+I\+ES} = N\+E\+E\+D\+S\+\_\+\+N\+E\+W\+L\+I\+N\+E\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+A\+T\+I\+ON, 
+\\*
+{\bf C\+O\+M\+M\+E\+NT} = N\+E\+E\+D\+S\+\_\+\+N\+E\+W\+L\+I\+N\+E\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+A\+T\+I\+ON
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Str\+Pair} ()
+\item 
+{\bf $\sim$\+Str\+Pair} ()
+\item 
+void {\bf Set} (char $\ast$start, char $\ast$end, int flags)
+\item 
+const char $\ast$ {\bf Get\+Str} ()
+\item 
+bool {\bf Empty} () const 
+\item 
+void {\bf Set\+Interned\+Str} (const char $\ast$str)
+\item 
+void {\bf Set\+Str} (const char $\ast$str, int flags=0)
+\item 
+char $\ast$ {\bf Parse\+Text} (char $\ast$in, const char $\ast$end\+Tag, int str\+Flags)
+\item 
+char $\ast$ {\bf Parse\+Name} (char $\ast$in)
+\item 
+void {\bf Transfer\+To} ({\bf Str\+Pair} $\ast$other)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 112 do arquivo tinyxml2.\+h.
+
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{classtinyxml2_1_1_str_pair_a830b6d6d55445d376603409e66f83fdb}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{N\+E\+E\+D\+S\+\_\+\+E\+N\+T\+I\+T\+Y\+\_\+\+P\+R\+O\+C\+E\+S\+S\+I\+NG@{N\+E\+E\+D\+S\+\_\+\+E\+N\+T\+I\+T\+Y\+\_\+\+P\+R\+O\+C\+E\+S\+S\+I\+NG}!tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}}\index{tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}!N\+E\+E\+D\+S\+\_\+\+E\+N\+T\+I\+T\+Y\+\_\+\+P\+R\+O\+C\+E\+S\+S\+I\+NG@{N\+E\+E\+D\+S\+\_\+\+E\+N\+T\+I\+T\+Y\+\_\+\+P\+R\+O\+C\+E\+S\+S\+I\+NG}}\item[{\em 
+N\+E\+E\+D\+S\+\_\+\+E\+N\+T\+I\+T\+Y\+\_\+\+P\+R\+O\+C\+E\+S\+S\+I\+NG\label{classtinyxml2_1_1_str_pair_a830b6d6d55445d376603409e66f83fdba4f1e01a55f8efe4ca72c32d454060237}
+}]\index{N\+E\+E\+D\+S\+\_\+\+N\+E\+W\+L\+I\+N\+E\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+A\+T\+I\+ON@{N\+E\+E\+D\+S\+\_\+\+N\+E\+W\+L\+I\+N\+E\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+A\+T\+I\+ON}!tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}}\index{tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}!N\+E\+E\+D\+S\+\_\+\+N\+E\+W\+L\+I\+N\+E\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+A\+T\+I\+ON@{N\+E\+E\+D\+S\+\_\+\+N\+E\+W\+L\+I\+N\+E\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+A\+T\+I\+ON}}\item[{\em 
+N\+E\+E\+D\+S\+\_\+\+N\+E\+W\+L\+I\+N\+E\+\_\+\+N\+O\+R\+M\+A\+L\+I\+Z\+A\+T\+I\+ON\label{classtinyxml2_1_1_str_pair_a830b6d6d55445d376603409e66f83fdba8f2045d56e70745d718672c0da91d0e0}
+}]\index{N\+E\+E\+D\+S\+\_\+\+W\+H\+I\+T\+E\+S\+P\+A\+C\+E\+\_\+\+C\+O\+L\+L\+A\+P\+S\+I\+NG@{N\+E\+E\+D\+S\+\_\+\+W\+H\+I\+T\+E\+S\+P\+A\+C\+E\+\_\+\+C\+O\+L\+L\+A\+P\+S\+I\+NG}!tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}}\index{tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}!N\+E\+E\+D\+S\+\_\+\+W\+H\+I\+T\+E\+S\+P\+A\+C\+E\+\_\+\+C\+O\+L\+L\+A\+P\+S\+I\+NG@{N\+E\+E\+D\+S\+\_\+\+W\+H\+I\+T\+E\+S\+P\+A\+C\+E\+\_\+\+C\+O\+L\+L\+A\+P\+S\+I\+NG}}\item[{\em 
+N\+E\+E\+D\+S\+\_\+\+W\+H\+I\+T\+E\+S\+P\+A\+C\+E\+\_\+\+C\+O\+L\+L\+A\+P\+S\+I\+NG\label{classtinyxml2_1_1_str_pair_a830b6d6d55445d376603409e66f83fdba13996e9d4ed18fd2d6af59bbab291b63}
+}]\index{T\+E\+X\+T\+\_\+\+E\+L\+E\+M\+E\+NT@{T\+E\+X\+T\+\_\+\+E\+L\+E\+M\+E\+NT}!tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}}\index{tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}!T\+E\+X\+T\+\_\+\+E\+L\+E\+M\+E\+NT@{T\+E\+X\+T\+\_\+\+E\+L\+E\+M\+E\+NT}}\item[{\em 
+T\+E\+X\+T\+\_\+\+E\+L\+E\+M\+E\+NT\label{classtinyxml2_1_1_str_pair_a830b6d6d55445d376603409e66f83fdbaae519eb5a639858591763aa5fc6cc953}
+}]\index{T\+E\+X\+T\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+L\+E\+A\+V\+E\+\_\+\+E\+N\+T\+I\+T\+I\+ES@{T\+E\+X\+T\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+L\+E\+A\+V\+E\+\_\+\+E\+N\+T\+I\+T\+I\+ES}!tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}}\index{tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}!T\+E\+X\+T\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+L\+E\+A\+V\+E\+\_\+\+E\+N\+T\+I\+T\+I\+ES@{T\+E\+X\+T\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+L\+E\+A\+V\+E\+\_\+\+E\+N\+T\+I\+T\+I\+ES}}\item[{\em 
+T\+E\+X\+T\+\_\+\+E\+L\+E\+M\+E\+N\+T\+\_\+\+L\+E\+A\+V\+E\+\_\+\+E\+N\+T\+I\+T\+I\+ES\label{classtinyxml2_1_1_str_pair_a830b6d6d55445d376603409e66f83fdba96be48cf899bfeea0aa227f984f1fa63}
+}]\index{A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+N\+A\+ME@{A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+N\+A\+ME}!tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}}\index{tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}!A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+N\+A\+ME@{A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+N\+A\+ME}}\item[{\em 
+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+N\+A\+ME\label{classtinyxml2_1_1_str_pair_a830b6d6d55445d376603409e66f83fdbaaab1cbefaa977e6f772b4e2575417aeb}
+}]\index{A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+V\+A\+L\+UE@{A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+V\+A\+L\+UE}!tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}}\index{tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}!A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+V\+A\+L\+UE@{A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+V\+A\+L\+UE}}\item[{\em 
+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+V\+A\+L\+UE\label{classtinyxml2_1_1_str_pair_a830b6d6d55445d376603409e66f83fdba6d72f9ce15f50e8bcd680edf66235dfd}
+}]\index{A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+V\+A\+L\+U\+E\+\_\+\+L\+E\+A\+V\+E\+\_\+\+E\+N\+T\+I\+T\+I\+ES@{A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+V\+A\+L\+U\+E\+\_\+\+L\+E\+A\+V\+E\+\_\+\+E\+N\+T\+I\+T\+I\+ES}!tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}}\index{tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}!A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+V\+A\+L\+U\+E\+\_\+\+L\+E\+A\+V\+E\+\_\+\+E\+N\+T\+I\+T\+I\+ES@{A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+V\+A\+L\+U\+E\+\_\+\+L\+E\+A\+V\+E\+\_\+\+E\+N\+T\+I\+T\+I\+ES}}\item[{\em 
+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+V\+A\+L\+U\+E\+\_\+\+L\+E\+A\+V\+E\+\_\+\+E\+N\+T\+I\+T\+I\+ES\label{classtinyxml2_1_1_str_pair_a830b6d6d55445d376603409e66f83fdba2decbd2513ac14f8befa987938326399}
+}]\index{C\+O\+M\+M\+E\+NT@{C\+O\+M\+M\+E\+NT}!tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}}\index{tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}!C\+O\+M\+M\+E\+NT@{C\+O\+M\+M\+E\+NT}}\item[{\em 
+C\+O\+M\+M\+E\+NT\label{classtinyxml2_1_1_str_pair_a830b6d6d55445d376603409e66f83fdba067a6ec90c8beea1cf5992930d93bffa}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 115 do arquivo tinyxml2.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}!Str\+Pair@{Str\+Pair}}
+\index{Str\+Pair@{Str\+Pair}!tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}}
+\subsubsection[{Str\+Pair()}]{\setlength{\rightskip}{0pt plus 5cm}tinyxml2\+::\+Str\+Pair\+::\+Str\+Pair (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_str_pair_a69153963f7052de9f767d3d8c1623a70}
+
+
+Definição na linha 128 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}!````~Str\+Pair@{$\sim$\+Str\+Pair}}
+\index{````~Str\+Pair@{$\sim$\+Str\+Pair}!tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}}
+\subsubsection[{$\sim$\+Str\+Pair()}]{\setlength{\rightskip}{0pt plus 5cm}tinyxml2\+::\+Str\+Pair\+::$\sim$\+Str\+Pair (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_str_pair_a60bed84d2503296e1c2a73fcef1431f9}
+
+
+\subsection{Métodos}
+\index{tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}!Empty@{Empty}}
+\index{Empty@{Empty}!tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}}
+\subsubsection[{Empty() const }]{\setlength{\rightskip}{0pt plus 5cm}bool tinyxml2\+::\+Str\+Pair\+::\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_str_pair_affa1043e73a18f05d5d2faec055725a7}
+
+
+Definição na linha 140 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}!Get\+Str@{Get\+Str}}
+\index{Get\+Str@{Get\+Str}!tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}}
+\subsubsection[{Get\+Str()}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ tinyxml2\+::\+Str\+Pair\+::\+Get\+Str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_str_pair_a27290a8fec20c0a6ccf9d8362f5c3b1d}
+\index{tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}!Parse\+Name@{Parse\+Name}}
+\index{Parse\+Name@{Parse\+Name}!tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}}
+\subsubsection[{Parse\+Name(char $\ast$in)}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ tinyxml2\+::\+Str\+Pair\+::\+Parse\+Name (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{in}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_str_pair_a8452c0c7f140d4d613134e952ce54f14}
+\index{tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}!Parse\+Text@{Parse\+Text}}
+\index{Parse\+Text@{Parse\+Text}!tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}}
+\subsubsection[{Parse\+Text(char $\ast$in, const char $\ast$end\+Tag, int str\+Flags)}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ tinyxml2\+::\+Str\+Pair\+::\+Parse\+Text (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{in, }
+\item[{const char $\ast$}]{end\+Tag, }
+\item[{int}]{str\+Flags}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_str_pair_a7ff60a4aaea3ad696e940ecd31806a29}
+\index{tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}!Set@{Set}}
+\index{Set@{Set}!tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}}
+\subsubsection[{Set(char $\ast$start, char $\ast$end, int flags)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+Str\+Pair\+::\+Set (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{start, }
+\item[{char $\ast$}]{end, }
+\item[{int}]{flags}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_str_pair_a4f05549373394266a1eecba26813c166}
+
+
+Definição na linha 131 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}!Set\+Interned\+Str@{Set\+Interned\+Str}}
+\index{Set\+Interned\+Str@{Set\+Interned\+Str}!tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}}
+\subsubsection[{Set\+Interned\+Str(const char $\ast$str)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+Str\+Pair\+::\+Set\+Interned\+Str (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classtinyxml2_1_1_str_pair_a2baf6230e18333e02ab65d0897ee3941}
+
+
+Definição na linha 144 do arquivo tinyxml2.\+h.
+
+\index{tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}!Set\+Str@{Set\+Str}}
+\index{Set\+Str@{Set\+Str}!tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}}
+\subsubsection[{Set\+Str(const char $\ast$str, int flags=0)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+Str\+Pair\+::\+Set\+Str (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str, }
+\item[{int}]{flags = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_str_pair_a1f82ec6b5bee35ee7466d8565e43b1de}
+\index{tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}!Transfer\+To@{Transfer\+To}}
+\index{Transfer\+To@{Transfer\+To}!tinyxml2\+::\+Str\+Pair@{tinyxml2\+::\+Str\+Pair}}
+\subsubsection[{Transfer\+To(\+Str\+Pair $\ast$other)}]{\setlength{\rightskip}{0pt plus 5cm}void tinyxml2\+::\+Str\+Pair\+::\+Transfer\+To (
+\begin{DoxyParamCaption}
+\item[{{\bf Str\+Pair} $\ast$}]{other}
+\end{DoxyParamCaption}
+)}\label{classtinyxml2_1_1_str_pair_a35f795b1557fe5fdcbd93d3cc5d6b939}
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf tinyxml2.\+h}\end{DoxyCompactItemize}

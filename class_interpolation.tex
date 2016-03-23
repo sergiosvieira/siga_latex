@@ -1,0 +1,248 @@
+\section{ReferÃªncia da Classe Interpolation}
+\label{class_interpolation}\index{Interpolation@{Interpolation}}
+
+
+{\ttfamily \#include $<$Interpolation.\+h$>$}
+
+
+
+Superclasse de {\bf Thiessen}.
+
+\subsection*{Tipos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bf P\+O\+L\+Y\+G\+ON}, 
+{\bf B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+B\+OX}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Interpolation} ()
+\item 
+{\bf $\sim$\+Interpolation} ()
+\item 
+vector$<$ O\+G\+R\+Point $\ast$ $>$ {\bf get\+Points\+Of\+Polygon} (O\+G\+R\+Layer $\ast$station\+Layer, O\+G\+R\+Polygon $\ast$basin\+Polygon, vector$<$ O\+G\+R\+Feature $\ast$ $>$ $\ast$features, vector$<$ vector$<$ int $>$ $>$ actives\+P\+CD, int col\+Index\+Point)
+\item 
+vector$<$ int $>$ {\bf get\+All\+Points\+Of\+Polygon} (O\+G\+R\+Layer $\ast$station\+Layer, O\+G\+R\+Polygon $\ast$basin\+Polygon, int col\+Index\+Point)
+\item 
+vector$<$ O\+G\+R\+Point $\ast$ $>$ {\bf get\+Points\+Of\+Shape} (O\+G\+R\+Layer $\ast$station\+Layer, O\+G\+R\+Layer $\ast$basin\+Layer, vector$<$ O\+G\+R\+Feature $\ast$ $>$ $\ast$features, vector$<$ vector$<$ int $>$ $>$ actives\+P\+CD, int inside=0, int col\+Index\+Point=0)
+\item 
+vector$<$ O\+G\+R\+Point $\ast$ $>$ {\bf get\+Common\+Points\+Of\+Shape} (O\+G\+R\+Layer $\ast$station\+Layer, O\+G\+R\+Layer $\ast$basin\+Layer, vector$<$ O\+G\+R\+Feature $\ast$ $>$ $\ast$features, std\+::vector$<$ int $>$ common\+Ids, int col\+Index\+Point)
+\item 
+void {\bf extend\+Line} (float \&x1, float \&y1, float \&x2, float \&y2, float dist=0.\+0001)
+\item 
+void {\bf union\+Of\+Lines} (O\+G\+R\+Multi\+Line\+String $\ast$mls, float x1, float y1, float x2, float y2)
+\item 
+vector$<$ int $>$ {\bf get\+I\+Ds\+Of\+Points} (O\+G\+R\+Layer $\ast$station\+Layer, O\+G\+R\+Layer $\ast$basin\+Layer, int points\+Col\+Index)
+\item 
+bool {\bf has\+At\+Least\+One\+Station\+Id\+In\+A\+Polygon} (O\+G\+R\+Layer $\ast$station\+Layer, O\+G\+R\+Layer $\ast$basin\+Layer, std\+::vector$<$ int $>$ common\+Ids, int col\+Index\+Point)
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 16 do arquivo Interpolation.\+h.
+
+
+
+\subsection{EnumeraÃ§Ãµes}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{class_interpolation_ae8bdcc2d3675379889bd673d483496dc}
+\begin{Desc}
+\item[Valores de enumeraÃ§Ãµes]\par
+\begin{description}
+\index{P\+O\+L\+Y\+G\+ON@{P\+O\+L\+Y\+G\+ON}!Interpolation@{Interpolation}}\index{Interpolation@{Interpolation}!P\+O\+L\+Y\+G\+ON@{P\+O\+L\+Y\+G\+ON}}\item[{\em 
+P\+O\+L\+Y\+G\+ON\label{class_interpolation_ae8bdcc2d3675379889bd673d483496dca59bb23c036edb2050dde9c9c7e22c13d}
+}]\index{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+B\+OX@{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+B\+OX}!Interpolation@{Interpolation}}\index{Interpolation@{Interpolation}!B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+B\+OX@{B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+B\+OX}}\item[{\em 
+B\+O\+U\+N\+D\+I\+N\+G\+\_\+\+B\+OX\label{class_interpolation_ae8bdcc2d3675379889bd673d483496dca415107528e8c6c5881ecdc480328f972}
+}]\end{description}
+\end{Desc}
+
+
+DefiniÃ§Ã£o na linha 22 do arquivo Interpolation.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Interpolation@{Interpolation}!Interpolation@{Interpolation}}
+\index{Interpolation@{Interpolation}!Interpolation@{Interpolation}}
+\subsubsection[{Interpolation()}]{\setlength{\rightskip}{0pt plus 5cm}Interpolation\+::\+Interpolation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_interpolation_a89f5aeecb99847995c53142b5d53eabe}
+\index{Interpolation@{Interpolation}!````~Interpolation@{$\sim$\+Interpolation}}
+\index{````~Interpolation@{$\sim$\+Interpolation}!Interpolation@{Interpolation}}
+\subsubsection[{$\sim$\+Interpolation()}]{\setlength{\rightskip}{0pt plus 5cm}Interpolation\+::$\sim$\+Interpolation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_interpolation_abf2892aa4680f5b6abe7787390b0813e}
+
+
+\subsection{MÃ©todos}
+\index{Interpolation@{Interpolation}!extend\+Line@{extend\+Line}}
+\index{extend\+Line@{extend\+Line}!Interpolation@{Interpolation}}
+\subsubsection[{extend\+Line(float \&x1, float \&y1, float \&x2, float \&y2, float dist=0.\+0001)}]{\setlength{\rightskip}{0pt plus 5cm}void Interpolation\+::extend\+Line (
+\begin{DoxyParamCaption}
+\item[{float \&}]{x1, }
+\item[{float \&}]{y1, }
+\item[{float \&}]{x2, }
+\item[{float \&}]{y2, }
+\item[{float}]{dist = {\ttfamily 0.0001}}
+\end{DoxyParamCaption}
+)}\label{class_interpolation_a63eabba374965e03611640db7dbc0c7a}
+Função para esticar a linha 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em dist} & -\/ estica \textquotesingle{}dist\textquotesingle{} no eixo x tanto no start quanto no end point da linha \\
+\hline
+\end{DoxyParams}
+\index{Interpolation@{Interpolation}!get\+All\+Points\+Of\+Polygon@{get\+All\+Points\+Of\+Polygon}}
+\index{get\+All\+Points\+Of\+Polygon@{get\+All\+Points\+Of\+Polygon}!Interpolation@{Interpolation}}
+\subsubsection[{get\+All\+Points\+Of\+Polygon(\+O\+G\+R\+Layer $\ast$station\+Layer, O\+G\+R\+Polygon $\ast$basin\+Polygon, int col\+Index\+Point)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ Interpolation\+::get\+All\+Points\+Of\+Polygon (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{station\+Layer, }
+\item[{O\+G\+R\+Polygon $\ast$}]{basin\+Polygon, }
+\item[{int}]{col\+Index\+Point}
+\end{DoxyParamCaption}
+)}\label{class_interpolation_ae53ff7a94dc43f2aef2a6a35e9e23a94}
+Função para pegar os pontos dentro de um polígono 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em station\+Layer} & -\/ layer de pontos \\
+\hline
+{\em basin\+Polygon} & -\/ polígono \\
+\hline
+{\em col\+Index\+Point} & -\/ Índice da coluna de I\+Ds do shapefile de pontos \\
+\hline
+\end{DoxyParams}
+\index{Interpolation@{Interpolation}!get\+Common\+Points\+Of\+Shape@{get\+Common\+Points\+Of\+Shape}}
+\index{get\+Common\+Points\+Of\+Shape@{get\+Common\+Points\+Of\+Shape}!Interpolation@{Interpolation}}
+\subsubsection[{get\+Common\+Points\+Of\+Shape(\+O\+G\+R\+Layer $\ast$station\+Layer, O\+G\+R\+Layer $\ast$basin\+Layer, vector$<$ O\+G\+R\+Feature $\ast$ $>$ $\ast$features, std\+::vector$<$ int $>$ common\+Ids, int col\+Index\+Point)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$O\+G\+R\+Point$\ast$$>$ Interpolation\+::get\+Common\+Points\+Of\+Shape (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{station\+Layer, }
+\item[{O\+G\+R\+Layer $\ast$}]{basin\+Layer, }
+\item[{vector$<$ O\+G\+R\+Feature $\ast$ $>$ $\ast$}]{features, }
+\item[{std\+::vector$<$ int $>$}]{common\+Ids, }
+\item[{int}]{col\+Index\+Point}
+\end{DoxyParamCaption}
+)}\label{class_interpolation_afc7ee31be5fcc6cdc367b208a0c5381b}
+Função para pegar os pontos de um shape. Esses pontos precisam estar também na matriz de dados informada pela wizard do \doxyref{Thiessen}{pag.}{class_thiessen}. Essa função é independente se tem informação ou não em alguma data. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em station\+Layer} & -\/ layer de pontos \\
+\hline
+{\em basin\+Layer} & -\/ layer de polígonos \\
+\hline
+{\em features} & -\/ retorna um vetor com todas as features da layer. I\+M\+P\+O\+R\+T\+A\+N\+TE\+: D\+E\+P\+O\+IS DE U\+S\+AR AS F\+E\+A\+T\+U\+R\+ES, D\+E\+S\+T\+R\+U\+I-\/\+L\+AS C\+OM O\+G\+R\+F\+E\+A\+T\+U\+R\+E\+::\+D\+E\+S\+T\+R\+O\+Y\+F\+E\+A\+T\+U\+RE!!! \\
+\hline
+{\em common\+Ids} & -\/ Ids das estações comuns entre a matriz de dados e o shapefile de pontos. \\
+\hline
+{\em col\+Index\+Point} & -\/ Índice da coluna de I\+Ds do shapefile de pontos \\
+\hline
+\end{DoxyParams}
+\index{Interpolation@{Interpolation}!get\+I\+Ds\+Of\+Points@{get\+I\+Ds\+Of\+Points}}
+\index{get\+I\+Ds\+Of\+Points@{get\+I\+Ds\+Of\+Points}!Interpolation@{Interpolation}}
+\subsubsection[{get\+I\+Ds\+Of\+Points(\+O\+G\+R\+Layer $\ast$station\+Layer, O\+G\+R\+Layer $\ast$basin\+Layer, int points\+Col\+Index)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ Interpolation\+::get\+I\+Ds\+Of\+Points (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{station\+Layer, }
+\item[{O\+G\+R\+Layer $\ast$}]{basin\+Layer, }
+\item[{int}]{points\+Col\+Index}
+\end{DoxyParamCaption}
+)}\label{class_interpolation_a0ddb7f49ab14e962eeb7f33ebaf298f4}
+Função para pegar os I\+Ds dos pontos do shapefile de pontos 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em station\+Layer} & -\/ layer de pontos \\
+\hline
+{\em basin\+Layer} & -\/ layer de polígonos \\
+\hline
+{\em points\+Col\+Index} & -\/ Indice da coluna(field) da layer que contem os pontos \\
+\hline
+\end{DoxyParams}
+\index{Interpolation@{Interpolation}!get\+Points\+Of\+Polygon@{get\+Points\+Of\+Polygon}}
+\index{get\+Points\+Of\+Polygon@{get\+Points\+Of\+Polygon}!Interpolation@{Interpolation}}
+\subsubsection[{get\+Points\+Of\+Polygon(\+O\+G\+R\+Layer $\ast$station\+Layer, O\+G\+R\+Polygon $\ast$basin\+Polygon, vector$<$ O\+G\+R\+Feature $\ast$ $>$ $\ast$features, vector$<$ vector$<$ int $>$ $>$ actives\+P\+C\+D, int col\+Index\+Point)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$O\+G\+R\+Point$\ast$$>$ Interpolation\+::get\+Points\+Of\+Polygon (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{station\+Layer, }
+\item[{O\+G\+R\+Polygon $\ast$}]{basin\+Polygon, }
+\item[{vector$<$ O\+G\+R\+Feature $\ast$ $>$ $\ast$}]{features, }
+\item[{vector$<$ vector$<$ int $>$ $>$}]{actives\+P\+CD, }
+\item[{int}]{col\+Index\+Point}
+\end{DoxyParamCaption}
+)}\label{class_interpolation_a54bfd2a661b719356e0aef1bc3046428}
+Função para pegar os pontos dentro de um polígono 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em station\+Layer} & -\/ layer de pontos \\
+\hline
+{\em basin\+Polygon} & -\/ polígono \\
+\hline
+{\em features} & -\/ retorna um vetor com todas as features da layer. I\+M\+P\+O\+R\+T\+A\+N\+TE\+: D\+E\+P\+O\+IS DE U\+S\+AR AS F\+E\+A\+T\+U\+R\+ES, D\+E\+S\+T\+R\+U\+I-\/\+L\+AS C\+OM O\+G\+R\+F\+E\+A\+T\+U\+R\+E\+::\+D\+E\+S\+T\+R\+O\+Y\+F\+E\+A\+T\+U\+RE!!! \\
+\hline
+{\em actives\+P\+CD} & -\/ informa quais estações estão ativas (linha 0 -\/ id das estações, linha 1-\/ status da estação (ativa ou inativa) \\
+\hline
+{\em col\+Index\+Point} & -\/ Índice da coluna de I\+Ds do shapefile de pontos \\
+\hline
+\end{DoxyParams}
+\index{Interpolation@{Interpolation}!get\+Points\+Of\+Shape@{get\+Points\+Of\+Shape}}
+\index{get\+Points\+Of\+Shape@{get\+Points\+Of\+Shape}!Interpolation@{Interpolation}}
+\subsubsection[{get\+Points\+Of\+Shape(\+O\+G\+R\+Layer $\ast$station\+Layer, O\+G\+R\+Layer $\ast$basin\+Layer, vector$<$ O\+G\+R\+Feature $\ast$ $>$ $\ast$features, vector$<$ vector$<$ int $>$ $>$ actives\+P\+C\+D, int inside=0, int col\+Index\+Point=0)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$O\+G\+R\+Point$\ast$$>$ Interpolation\+::get\+Points\+Of\+Shape (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{station\+Layer, }
+\item[{O\+G\+R\+Layer $\ast$}]{basin\+Layer, }
+\item[{vector$<$ O\+G\+R\+Feature $\ast$ $>$ $\ast$}]{features, }
+\item[{vector$<$ vector$<$ int $>$ $>$}]{actives\+P\+CD, }
+\item[{int}]{inside = {\ttfamily 0}, }
+\item[{int}]{col\+Index\+Point = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_interpolation_a53bc5878aaeba623047ebc42d71b2a28}
+Função para pegar os pontos de um shape levando em conta se o ponto possui informação para uma data (actives\+P\+CD) 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em station\+Layer} & -\/ layer de pontos \\
+\hline
+{\em basin\+Layer} & -\/ layer de polígonos \\
+\hline
+{\em features} & -\/ retorna um vetor com todas as features da layer. I\+M\+P\+O\+R\+T\+A\+N\+TE\+: D\+E\+P\+O\+IS DE U\+S\+AR AS F\+E\+A\+T\+U\+R\+ES, D\+E\+S\+T\+R\+U\+I-\/\+L\+AS C\+OM O\+G\+R\+F\+E\+A\+T\+U\+R\+E\+::\+D\+E\+S\+T\+R\+O\+Y\+F\+E\+A\+T\+U\+RE!!! \\
+\hline
+{\em actives\+P\+CD} & -\/ informa quais estações estão ativas (linha 0 -\/ id das estações, linha 1-\/ status da estação (ativa ou inativa) \\
+\hline
+{\em inside} & -\/ escolhe somente os pontos dentro do polígono ou somente os pontos dentro da bounding box \\
+\hline
+{\em col\+Index\+Point} & -\/ Índice da coluna de I\+Ds do shapefile de pontos \\
+\hline
+\end{DoxyParams}
+\index{Interpolation@{Interpolation}!has\+At\+Least\+One\+Station\+Id\+In\+A\+Polygon@{has\+At\+Least\+One\+Station\+Id\+In\+A\+Polygon}}
+\index{has\+At\+Least\+One\+Station\+Id\+In\+A\+Polygon@{has\+At\+Least\+One\+Station\+Id\+In\+A\+Polygon}!Interpolation@{Interpolation}}
+\subsubsection[{has\+At\+Least\+One\+Station\+Id\+In\+A\+Polygon(\+O\+G\+R\+Layer $\ast$station\+Layer, O\+G\+R\+Layer $\ast$basin\+Layer, std\+::vector$<$ int $>$ common\+Ids, int col\+Index\+Point)}]{\setlength{\rightskip}{0pt plus 5cm}bool Interpolation\+::has\+At\+Least\+One\+Station\+Id\+In\+A\+Polygon (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Layer $\ast$}]{station\+Layer, }
+\item[{O\+G\+R\+Layer $\ast$}]{basin\+Layer, }
+\item[{std\+::vector$<$ int $>$}]{common\+Ids, }
+\item[{int}]{col\+Index\+Point}
+\end{DoxyParamCaption}
+)}\label{class_interpolation_a17c5a60fb50ebed0fafdb35a23a08835}
+Verifica se existe pelo menos uma estação válida dentro de pelo menos um polígono (sub-\/bacia). É necessário que a estação esteja também na matriz de dados informada pela wizard do \doxyref{Thiessen}{pag.}{class_thiessen}. Essa checagem é necessária para o método Polígono a Polígono (cálculo do \doxyref{Thiessen}{pag.}{class_thiessen}). 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em station\+Layer} & -\/ layer de pontos \\
+\hline
+{\em basin\+Layer} & -\/ layer de polígonos \\
+\hline
+{\em common\+Ids} & -\/ Ids das estações comuns entre a matriz de dados e o shapefile de pontos. \\
+\hline
+{\em col\+Index\+Point} & -\/ Índice da coluna de I\+Ds do shapefile de pontos \\
+\hline
+\end{DoxyParams}
+\index{Interpolation@{Interpolation}!union\+Of\+Lines@{union\+Of\+Lines}}
+\index{union\+Of\+Lines@{union\+Of\+Lines}!Interpolation@{Interpolation}}
+\subsubsection[{union\+Of\+Lines(\+O\+G\+R\+Multi\+Line\+String $\ast$mls, float x1, float y1, float x2, float y2)}]{\setlength{\rightskip}{0pt plus 5cm}void Interpolation\+::union\+Of\+Lines (
+\begin{DoxyParamCaption}
+\item[{O\+G\+R\+Multi\+Line\+String $\ast$}]{mls, }
+\item[{float}]{x1, }
+\item[{float}]{y1, }
+\item[{float}]{x2, }
+\item[{float}]{y2}
+\end{DoxyParamCaption}
+)}\label{class_interpolation_a5b57221903eef592f22f17383589cf84}
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Interpolation.\+h}\end{DoxyCompactItemize}

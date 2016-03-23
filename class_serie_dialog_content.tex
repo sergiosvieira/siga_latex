@@ -1,0 +1,582 @@
+\section{Referência da Classe Serie\+Dialog\+Content}
+\label{class_serie_dialog_content}\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+
+
+{\ttfamily \#include $<$Serie\+Dialog\+Content.\+h$>$}
+
+
+
+Herdeiro de {\bf S\+I\+G\+A\+Dialog\+Content}.
+
+
+
+Superclasse de {\bf Serie\+Import\+Dialog\+Content}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf is\+Edited} ()
+\item 
+bool {\bf is\+Imported} ()
+\item 
+bool {\bf is\+Opened} ()
+\item 
+{\bf Serie\+Dialog\+Content} ({\bf Serie} $\ast${\bf serie}, {\bf Serie\+Dialog} $\ast$dialog, bool create\+Tool\+Bar, int convert\+FF, bool show\+Tree\+Elements\+Plan=false, wx\+String token=\char`\"{}\char`\"{})
+\item 
+{\bf Serie} $\ast$ {\bf get\+Serie} ()
+\item 
+{\bf Serie\+Viewer} $\ast$ {\bf get\+Serie\+Viewer} ()
+\item 
+{\bf $\sim$\+Serie\+Dialog\+Content} ()
+\item 
+void {\bf configure\+Serie} ({\bf Serie} $\ast$a\+\_\+serie, {\bf Serie\+Viewer} $\ast$a\+\_\+serie\+Viwer, wx\+String \&unit)
+\item 
+void {\bf open\+Conf} ()
+\item 
+void {\bf save\+Conf} ()
+\item 
+void {\bf import} ()
+\item 
+void {\bf changed\+Content} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Ok} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Cancel} (wx\+Command\+Event \&event)
+\item 
+void {\bf export\+Series\+To\+Thiessen\+Matrix} (wx\+Command\+Event \&event)
+\item 
+bool {\bf export\+Serie\+To\+Matrix} (std\+::string $\ast$a\+\_\+output\+Filename)
+\item 
+vector$<$ {\bf Draw\+Serie} $\ast$ $>$ {\bf get\+Selected\+Series} () const 
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf imported}
+\item 
+bool {\bf opened}
+\item 
+int {\bf convert}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+S\+Name}
+\item 
+wx\+Choice $\ast$ {\bf c\+S\+Unit}
+\item 
+wx\+Check\+Box $\ast$ {\bf cb\+Inverse}
+\item 
+wx\+Check\+Box $\ast$ {\bf cb\+Line}
+\item 
+wx\+Check\+Box $\ast$ {\bf cb\+Symbol}
+\item 
+wx\+Check\+Box $\ast$ {\bf cb\+S0}
+\item 
+wx\+Check\+Box $\ast$ {\bf cb\+S1}
+\item 
+wx\+Check\+Box $\ast$ {\bf cb\+S2}
+\item 
+wx\+Check\+Box $\ast$ {\bf cb\+S3}
+\item 
+wx\+Check\+Box $\ast$ {\bf cb\+S4}
+\item 
+wx\+Check\+Box $\ast$ {\bf cb\+S5}
+\item 
+wx\+Check\+Box $\ast$ {\bf cb\+S6}
+\end{DoxyCompactItemize}
+\subsection*{Tipos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bf I\+D\+\_\+\+C\+H\+E\+CK}, 
+{\bf I\+D\+\_\+\+T\+C\+\_\+\+N\+A\+ME}, 
+{\bf I\+D\+\_\+\+T\+C\+\_\+\+U\+N\+IT}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+S\+\_\+\+T\+O\+\_\+\+T\+M\+T\+RX}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf on\+Name\+Change} (wx\+Command\+Event \&event)
+\item 
+void {\bf name\+Change} (int id)
+\item 
+void {\bf on\+Unit\+Change} (wx\+Command\+Event \&event)
+\item 
+void {\bf unit\+Change} (int id)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Serie} $\ast$ {\bf serie}
+\item 
+wx\+String {\bf serie\+Name}
+\item 
+wx\+String {\bf serie\+Ext}
+\item 
+{\bf Serie\+Viewer} $\ast$ {\bf sv}
+\item 
+wx\+Dialog $\ast$ {\bf confirmation\+Dialog}
+\item 
+wx\+Check\+Box $\ast$ {\bf check}
+\item 
+bool {\bf same\+Choice}
+\item 
+bool {\bf choice}
+\item 
+bool {\bf adv\+Tool\+Bar}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Options}
+\item 
+wx\+String {\bf m\+\_\+origin\+Token}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf S\+I\+G\+A\+Data\+Dialog}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 17 do arquivo Serie\+Dialog\+Content.\+h.
+
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_dialog_content_addff924f5f95c298344f3fd177a8546f}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+C\+H\+E\+CK@{I\+D\+\_\+\+C\+H\+E\+CK}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!I\+D\+\_\+\+C\+H\+E\+CK@{I\+D\+\_\+\+C\+H\+E\+CK}}\item[{\em 
+I\+D\+\_\+\+C\+H\+E\+CK\label{class_serie_dialog_content_addff924f5f95c298344f3fd177a8546fae814707c2d14b8984d278103c9be2b50}
+}]\index{I\+D\+\_\+\+T\+C\+\_\+\+N\+A\+ME@{I\+D\+\_\+\+T\+C\+\_\+\+N\+A\+ME}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!I\+D\+\_\+\+T\+C\+\_\+\+N\+A\+ME@{I\+D\+\_\+\+T\+C\+\_\+\+N\+A\+ME}}\item[{\em 
+I\+D\+\_\+\+T\+C\+\_\+\+N\+A\+ME\label{class_serie_dialog_content_addff924f5f95c298344f3fd177a8546fa7aa539245ca29edb18bc90fb7e5e3137}
+}]\index{I\+D\+\_\+\+T\+C\+\_\+\+U\+N\+IT@{I\+D\+\_\+\+T\+C\+\_\+\+U\+N\+IT}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!I\+D\+\_\+\+T\+C\+\_\+\+U\+N\+IT@{I\+D\+\_\+\+T\+C\+\_\+\+U\+N\+IT}}\item[{\em 
+I\+D\+\_\+\+T\+C\+\_\+\+U\+N\+IT\label{class_serie_dialog_content_addff924f5f95c298344f3fd177a8546fa5f132509acae09d8ced7d08f02203ae5}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+S\+\_\+\+T\+O\+\_\+\+T\+M\+T\+RX@{I\+D\+\_\+\+T\+O\+O\+L\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+S\+\_\+\+T\+O\+\_\+\+T\+M\+T\+RX}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!I\+D\+\_\+\+T\+O\+O\+L\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+S\+\_\+\+T\+O\+\_\+\+T\+M\+T\+RX@{I\+D\+\_\+\+T\+O\+O\+L\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+S\+\_\+\+T\+O\+\_\+\+T\+M\+T\+RX}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+S\+\_\+\+T\+O\+\_\+\+T\+M\+T\+RX\label{class_serie_dialog_content_addff924f5f95c298344f3fd177a8546faaa02b59ae9f34f1d826e817f6dc45b98}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 21 do arquivo Serie\+Dialog\+Content.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{Serie\+Dialog\+Content(\+Serie $\ast$serie, Serie\+Dialog $\ast$dialog, bool create\+Tool\+Bar, int convert\+F\+F, bool show\+Tree\+Elements\+Plan=false, wx\+String token="""")}]{\setlength{\rightskip}{0pt plus 5cm}Serie\+Dialog\+Content\+::\+Serie\+Dialog\+Content (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie} $\ast$}]{serie, }
+\item[{{\bf Serie\+Dialog} $\ast$}]{dialog, }
+\item[{bool}]{create\+Tool\+Bar, }
+\item[{int}]{convert\+FF, }
+\item[{bool}]{show\+Tree\+Elements\+Plan = {\ttfamily false}, }
+\item[{wx\+String}]{token = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_serie_dialog_content_a440b337bdb01193388786cdb0b957d6a}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em serie} & \doxyref{Serie}{pag.}{class_serie} passada para ser usada na exibi��o dos dados \\
+\hline
+{\em dialog} & Caixa de dialogo ondo o conteudo ser� colocado \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!````~Serie\+Dialog\+Content@{$\sim$\+Serie\+Dialog\+Content}}
+\index{````~Serie\+Dialog\+Content@{$\sim$\+Serie\+Dialog\+Content}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{$\sim$\+Serie\+Dialog\+Content()}]{\setlength{\rightskip}{0pt plus 5cm}Serie\+Dialog\+Content\+::$\sim$\+Serie\+Dialog\+Content (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_dialog_content_afb89f02332fc685864b04e23857a9689}
+Destrutor 
+
+\subsection{Métodos}
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!changed\+Content@{changed\+Content}}
+\index{changed\+Content@{changed\+Content}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{changed\+Content(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Dialog\+Content\+::changed\+Content (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_serie_dialog_content_a05061d3b1d1b9c9a4bd18e9e83b235b9}
+Chamado ao precionar o bot�o OK \index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!configure\+Serie@{configure\+Serie}}
+\index{configure\+Serie@{configure\+Serie}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{configure\+Serie(\+Serie $\ast$a\+\_\+serie, Serie\+Viewer $\ast$a\+\_\+serie\+Viwer, wx\+String \&unit)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Dialog\+Content\+::configure\+Serie (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie} $\ast$}]{a\+\_\+serie, }
+\item[{{\bf Serie\+Viewer} $\ast$}]{a\+\_\+serie\+Viwer, }
+\item[{wx\+String \&}]{unit}
+\end{DoxyParamCaption}
+)}\label{class_serie_dialog_content_aae194409ab80e680d65991988e3f98c8}
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!export\+Series\+To\+Thiessen\+Matrix@{export\+Series\+To\+Thiessen\+Matrix}}
+\index{export\+Series\+To\+Thiessen\+Matrix@{export\+Series\+To\+Thiessen\+Matrix}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{export\+Series\+To\+Thiessen\+Matrix(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Dialog\+Content\+::export\+Series\+To\+Thiessen\+Matrix (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_serie_dialog_content_a3e52d974edbe9a9f19ffb3d775e75cc6}
+Evento que ocorre ao clicar na ferramenta \char`\"{}\+Exportar Series para Matrix de Thiessen\char`\"{} 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!export\+Serie\+To\+Matrix@{export\+Serie\+To\+Matrix}}
+\index{export\+Serie\+To\+Matrix@{export\+Serie\+To\+Matrix}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{export\+Serie\+To\+Matrix(std\+::string $\ast$a\+\_\+output\+Filename)}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Dialog\+Content\+::export\+Serie\+To\+Matrix (
+\begin{DoxyParamCaption}
+\item[{std\+::string $\ast$}]{a\+\_\+output\+Filename}
+\end{DoxyParamCaption}
+)}\label{class_serie_dialog_content_ac0d16f083257391b87dfb4de08576d93}
+exporta serie para matrix \index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!get\+Selected\+Series@{get\+Selected\+Series}}
+\index{get\+Selected\+Series@{get\+Selected\+Series}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{get\+Selected\+Series() const }]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Draw\+Serie}$\ast$$>$ Serie\+Dialog\+Content\+::get\+Selected\+Series (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_serie_dialog_content_ab53b573c3c0e0d2df7d65118513a5db4}
+Retorna as s�ries selecionadas (desenhadas) no plan ou no graph \index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!get\+Serie@{get\+Serie}}
+\index{get\+Serie@{get\+Serie}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{get\+Serie()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ Serie\+Dialog\+Content\+::get\+Serie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_serie_dialog_content_aedcd2fb2477c3b479d4da1d646556881}
+Retorna o ponteiro para a serie armazenada 
+
+Definição na linha 135 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!get\+Serie\+Viewer@{get\+Serie\+Viewer}}
+\index{get\+Serie\+Viewer@{get\+Serie\+Viewer}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{get\+Serie\+Viewer()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie\+Viewer}$\ast$ Serie\+Dialog\+Content\+::get\+Serie\+Viewer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_serie_dialog_content_aee6ae5f4c7a9a1467fe13c81669caf0a}
+Retorna o ponteiro para \doxyref{Serie\+Viewer}{pag.}{class_serie_viewer} 
+
+Definição na linha 139 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!import@{import}}
+\index{import@{import}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{import()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Dialog\+Content\+::import (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_serie_dialog_content_a7945f42c6284d607175c9e9246437a41}
+Importa serie de algum modelo do \doxyref{S\+I\+GA}{pag.}{class_s_i_g_a} 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_aec4cb2ab2c83295cdd930b10ef188016}.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!is\+Edited@{is\+Edited}}
+\index{is\+Edited@{is\+Edited}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{is\+Edited()}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Dialog\+Content\+::is\+Edited (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_dialog_content_aef8adb0cff52bb4b49b7984fa500099f}
+Diz se a serie foi alterada \index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!is\+Imported@{is\+Imported}}
+\index{is\+Imported@{is\+Imported}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{is\+Imported()}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Dialog\+Content\+::is\+Imported (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_serie_dialog_content_a16d7cd0b28054f7d754aa42117d145ac}
+Diz se a serie foi importada 
+
+Definição na linha 87 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!is\+Opened@{is\+Opened}}
+\index{is\+Opened@{is\+Opened}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{is\+Opened()}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Dialog\+Content\+::is\+Opened (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_serie_dialog_content_ad99cba4ea29a0479a7d7cbfa62381c6f}
+True se uma serie tiver sido aberta e n�o salva, false para caso n�o tenha aberto uma serie ou a serie j� tenha sido salva Diz se a serie foi aberta 
+
+Definição na linha 98 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!name\+Change@{name\+Change}}
+\index{name\+Change@{name\+Change}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{name\+Change(int id)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Dialog\+Content\+::name\+Change (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_dialog_content_aa9e56bf8bc3a2d8b405132f4ca79e473}
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!on\+Cancel@{on\+Cancel}}
+\index{on\+Cancel@{on\+Cancel}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{on\+Cancel(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Dialog\+Content\+::on\+Cancel (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_serie_dialog_content_a88f1028fa949b08807b2948dcc37df90}
+Evento que ocorre ao clicar em Cancelar 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!on\+Name\+Change@{on\+Name\+Change}}
+\index{on\+Name\+Change@{on\+Name\+Change}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{on\+Name\+Change(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Dialog\+Content\+::on\+Name\+Change (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_dialog_content_a8fa1c3fe4b5bf08e4291a98df6056ab9}
+Evento de perda de foco do wx\+Text\+Ctrl \index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!on\+Ok@{on\+Ok}}
+\index{on\+Ok@{on\+Ok}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{on\+Ok(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Dialog\+Content\+::on\+Ok (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_serie_dialog_content_ab204617f97aab44afb4f92aea537c6c5}
+Evento que ocorre ao clicar em OK 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!on\+Unit\+Change@{on\+Unit\+Change}}
+\index{on\+Unit\+Change@{on\+Unit\+Change}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{on\+Unit\+Change(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Dialog\+Content\+::on\+Unit\+Change (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_dialog_content_a12e317c175e9b774097f61481a79ea95}
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!open\+Conf@{open\+Conf}}
+\index{open\+Conf@{open\+Conf}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{open\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Dialog\+Content\+::open\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_serie_dialog_content_abda1c36fdd6e9bcef1e31a8031dc3456}
+Alterar o tipo e exten��o dos arquivos 
+\begin{DoxyParams}{Parâmetros}
+{\em matrix\+Name} & Tipo de matriz a ser salva/aberta \\
+\hline
+{\em matrix\+Ext} & Exten��o do arquivo Abrir S�rie \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abf3660e2c31c95afab763b4b520e26e9}.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!save\+Conf@{save\+Conf}}
+\index{save\+Conf@{save\+Conf}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{save\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Dialog\+Content\+::save\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_serie_dialog_content_af60cb6f059b4395ae7483e86ce22d1d0}
+Salvar S�rie 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abcef0436251918c1eab033a80b40c626}.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!unit\+Change@{unit\+Change}}
+\index{unit\+Change@{unit\+Change}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{unit\+Change(int id)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Dialog\+Content\+::unit\+Change (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_dialog_content_abdf9dc1f7c14e54283ed9c9d0bd9144c}
+
+
+\subsection{Amigas e Funções Relacionadas}
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!S\+I\+G\+A\+Data\+Dialog@{S\+I\+G\+A\+Data\+Dialog}}
+\index{S\+I\+G\+A\+Data\+Dialog@{S\+I\+G\+A\+Data\+Dialog}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{S\+I\+G\+A\+Data\+Dialog}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf S\+I\+G\+A\+Data\+Dialog}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_serie_dialog_content_a284cd921f212bb2cad532bb49d056030}
+
+
+Definição na linha 19 do arquivo Serie\+Dialog\+Content.\+h.
+
+
+
+\subsection{Atributos}
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!adv\+Tool\+Bar@{adv\+Tool\+Bar}}
+\index{adv\+Tool\+Bar@{adv\+Tool\+Bar}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{adv\+Tool\+Bar}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Dialog\+Content\+::adv\+Tool\+Bar\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_dialog_content_a2fedd7f5288b5e50de66907d92d88b28}
+Barra de configura��es avan�ada 
+
+Definição na linha 64 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!cb\+Inverse@{cb\+Inverse}}
+\index{cb\+Inverse@{cb\+Inverse}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{cb\+Inverse}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ Serie\+Dialog\+Content\+::cb\+Inverse}\label{class_serie_dialog_content_a296ab82d925bec5db1d907010ff941a6}
+Invertida, linha e simbolo 
+
+Definição na linha 121 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!cb\+Line@{cb\+Line}}
+\index{cb\+Line@{cb\+Line}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{cb\+Line}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box $\ast$ Serie\+Dialog\+Content\+::cb\+Line}\label{class_serie_dialog_content_ac8eb5aaa527414e2a6643126a75a1748}
+
+
+Definição na linha 121 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!cb\+S0@{cb\+S0}}
+\index{cb\+S0@{cb\+S0}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{cb\+S0}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ Serie\+Dialog\+Content\+::cb\+S0}\label{class_serie_dialog_content_af0c6892fa83f9c66817e794b1f3da7d5}
+Status da ana 
+
+Definição na linha 125 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!cb\+S1@{cb\+S1}}
+\index{cb\+S1@{cb\+S1}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{cb\+S1}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box $\ast$ Serie\+Dialog\+Content\+::cb\+S1}\label{class_serie_dialog_content_a4f401882a51c0d1aa7c8c3dc6eb8280c}
+
+
+Definição na linha 125 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!cb\+S2@{cb\+S2}}
+\index{cb\+S2@{cb\+S2}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{cb\+S2}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box $\ast$ Serie\+Dialog\+Content\+::cb\+S2}\label{class_serie_dialog_content_a0141b94be12360b965cd13bc9adff3cd}
+
+
+Definição na linha 125 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!cb\+S3@{cb\+S3}}
+\index{cb\+S3@{cb\+S3}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{cb\+S3}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box $\ast$ Serie\+Dialog\+Content\+::cb\+S3}\label{class_serie_dialog_content_a758460d5aa97f024292a1cb4b02cf0f2}
+
+
+Definição na linha 125 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!cb\+S4@{cb\+S4}}
+\index{cb\+S4@{cb\+S4}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{cb\+S4}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box $\ast$ Serie\+Dialog\+Content\+::cb\+S4}\label{class_serie_dialog_content_a2751c63792cacbab77d32bfd5084cd43}
+
+
+Definição na linha 125 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!cb\+S5@{cb\+S5}}
+\index{cb\+S5@{cb\+S5}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{cb\+S5}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box $\ast$ Serie\+Dialog\+Content\+::cb\+S5}\label{class_serie_dialog_content_a9e977d65ebd85a76b5be0d4bc350e03f}
+
+
+Definição na linha 125 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!cb\+S6@{cb\+S6}}
+\index{cb\+S6@{cb\+S6}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{cb\+S6}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box $\ast$ Serie\+Dialog\+Content\+::cb\+S6}\label{class_serie_dialog_content_a6b4cc1f4b62b44bb1c74536122337c20}
+
+
+Definição na linha 125 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!cb\+Symbol@{cb\+Symbol}}
+\index{cb\+Symbol@{cb\+Symbol}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{cb\+Symbol}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box $\ast$ Serie\+Dialog\+Content\+::cb\+Symbol}\label{class_serie_dialog_content_a3048ca8338c008e5477beee0418f4f3d}
+
+
+Definição na linha 121 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!check@{check}}
+\index{check@{check}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{check}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ Serie\+Dialog\+Content\+::check\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_dialog_content_a4f017773d4ae91616d9d67888a5b5f07}
+
+
+Definição na linha 52 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!choice@{choice}}
+\index{choice@{choice}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{choice}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Dialog\+Content\+::choice\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_dialog_content_aa0c65785b9403ac08e8547e73954b749}
+
+
+Definição na linha 60 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!confirmation\+Dialog@{confirmation\+Dialog}}
+\index{confirmation\+Dialog@{confirmation\+Dialog}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{confirmation\+Dialog}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Dialog$\ast$ Serie\+Dialog\+Content\+::confirmation\+Dialog\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_dialog_content_ae668bccab682b1a6e4d5c96aa66de1f1}
+
+
+Definição na linha 48 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!convert@{convert}}
+\index{convert@{convert}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{convert}]{\setlength{\rightskip}{0pt plus 5cm}int Serie\+Dialog\+Content\+::convert}\label{class_serie_dialog_content_a65cbaf351757bbc340eaff50a987a146}
+Deve converter o arquivo lido
+
+T\+A\+B\+E\+LA DE T\+I\+P\+OS DE C\+O\+N\+V\+E\+R\+S�O (open\+Conf/save\+Conf)\+: 0\+: Sem Convers�o 1\+: Old Format \doxyref{S\+I\+GA}{pag.}{class_s_i_g_a} 2\+: F\+U\+N\+C\+E\+ME To \doxyref{S\+I\+GA}{pag.}{class_s_i_g_a} 3\+: A\+NA Pluviometria/\+Precipitacao To \doxyref{S\+I\+GA}{pag.}{class_s_i_g_a} 4\+: A\+NA Lev To \doxyref{S\+I\+GA}{pag.}{class_s_i_g_a} (provavelmente n�o � usado... descartar?) 5\+: A\+NA Q(Vaz�o) To \doxyref{S\+I\+GA}{pag.}{class_s_i_g_a} (Fluviometria) 6\+: load\+Time\+Based\+Series 
+
+Definição na linha 112 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!c\+S\+Unit@{c\+S\+Unit}}
+\index{c\+S\+Unit@{c\+S\+Unit}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{c\+S\+Unit}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Serie\+Dialog\+Content\+::c\+S\+Unit}\label{class_serie_dialog_content_a57ad98c1ac65d8872489622cad197d63}
+
+
+Definição na linha 117 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!imported@{imported}}
+\index{imported@{imported}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{imported}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Dialog\+Content\+::imported}\label{class_serie_dialog_content_ae39c4b07ec9526bbfec7021fbce41acf}
+True se a serie tiver sido importada, false caso n�o tenha sido 
+
+Definição na linha 87 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!m\+\_\+origin\+Token@{m\+\_\+origin\+Token}}
+\index{m\+\_\+origin\+Token@{m\+\_\+origin\+Token}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{m\+\_\+origin\+Token}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Serie\+Dialog\+Content\+::m\+\_\+origin\+Token\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_dialog_content_aabf7a1cb1a8702c2d54223159032445a}
+
+
+Definição na linha 70 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!opened@{opened}}
+\index{opened@{opened}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{opened}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Dialog\+Content\+::opened}\label{class_serie_dialog_content_a63db9a76191cf672a74aac5af1643505}
+
+
+Definição na linha 98 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!same\+Choice@{same\+Choice}}
+\index{same\+Choice@{same\+Choice}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{same\+Choice}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Dialog\+Content\+::same\+Choice\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_dialog_content_a19c7c0184d08cebe86db19933c4fbabe}
+
+
+Definição na linha 56 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!serie@{serie}}
+\index{serie@{serie}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{serie}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ Serie\+Dialog\+Content\+::serie\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_dialog_content_aa3c9d5c0e9f708a115cd178267a710f2}
+Ponteiro para serie 
+
+Definição na linha 32 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!serie\+Ext@{serie\+Ext}}
+\index{serie\+Ext@{serie\+Ext}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{serie\+Ext}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Serie\+Dialog\+Content\+::serie\+Ext\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_dialog_content_adaa9c3d65dd3eaf42195ab8b29972205}
+Extens�o da \doxyref{Serie}{pag.}{class_serie} 
+
+Definição na linha 40 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!serie\+Name@{serie\+Name}}
+\index{serie\+Name@{serie\+Name}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{serie\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Serie\+Dialog\+Content\+::serie\+Name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_dialog_content_a6b3d624df7e4ecece6cb85410d6d652f}
+Nome da \doxyref{Serie}{pag.}{class_serie} 
+
+Definição na linha 36 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!s\+Options@{s\+Options}}
+\index{s\+Options@{s\+Options}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{s\+Options}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer$\ast$ Serie\+Dialog\+Content\+::s\+Options\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_dialog_content_a02f74f4d362bee19e39724ac62793bdb}
+Sizer das op��es 
+
+Definição na linha 68 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!sv@{sv}}
+\index{sv@{sv}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{sv}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie\+Viewer}$\ast$ Serie\+Dialog\+Content\+::sv\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_dialog_content_a03f31d6b01125f8c01c183fda0662d0c}
+Ponteiro para visualizador da serie 
+
+Definição na linha 44 do arquivo Serie\+Dialog\+Content.\+h.
+
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!tc\+S\+Name@{tc\+S\+Name}}
+\index{tc\+S\+Name@{tc\+S\+Name}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\subsubsection[{tc\+S\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl$\ast$ Serie\+Dialog\+Content\+::tc\+S\+Name}\label{class_serie_dialog_content_a1fb390c35a4691b405da0211f3b37108}
+Nome e unidade 
+
+Definição na linha 116 do arquivo Serie\+Dialog\+Content.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Serie\+Dialog\+Content.\+h}\end{DoxyCompactItemize}

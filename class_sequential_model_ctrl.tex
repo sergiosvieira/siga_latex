@@ -1,0 +1,1030 @@
+\section{ReferÃªncia da Classe Sequential\+Model\+Ctrl}
+\label{class_sequential_model_ctrl}\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+
+
+{\ttfamily \#include $<$Sequential\+Model\+Ctrl.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Model\+Ctrl}.
+
+
+
+Superclasse de {\bf Opt\+Sequential\+Model\+Ctrl} e {\bf Wnd\+Sequential\+Model\+Ctrl}.
+
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf Demand\+Release\+Struct}
+\end{DoxyCompactItemize}
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Sequential\+Model\+Ctrl} ({\bf Res\+Op\+Interface} $\ast${\bf main\+Inter})
+\item 
+virtual {\bf $\sim$\+Sequential\+Model\+Ctrl} ()
+\item 
+virtual bool {\bf run} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, {\bf Res\+Op\+Scenario} $\ast$scen)
+\item 
+virtual bool {\bf run\+Isolated} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&dependency\+\_\+map, {\bf Res\+Op\+Scenario} $\ast$scen, {\bf Element\+ID} network\+\_\+id)
+\item 
+bool {\bf run\+Sequence} (vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&sequence, map$<$ {\bf Res\+Op\+Element} $\ast$, bool $>$ \&reservoir\+Solved, const {\bf Interval} \&interval, {\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$result\+Error\+Dialog, std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&dependency\+\_\+map, int $\ast$delta\+Int=nullptr, int a\+\_\+counter=1, bool first\+Execution=true)
+\item 
+bool {\bf run\+Demand\+Garantee\+Curve\+In\+Sequential\+Mode} (vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&sequence, map$<$ {\bf Res\+Op\+Element} $\ast$, bool $>$ \&reservoir\+Solved, const {\bf Interval} \&interval, {\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$result\+Error\+Dialog, std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&dependency\+\_\+map, int $\ast$delta\+Int={\bf N\+U\+LL}, int a\+\_\+counter=1, bool first\+Execution=true)
+\item 
+bool {\bf is\+Prog\+Dialog\+Of\+Sqt\+Mdl\+Ctrl} ()
+\item 
+virtual bool {\bf check\+Completeness} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, {\bf Res\+Op\+Scenario} $\ast$scen)
+\item 
+virtual void {\bf clear\+Old\+Results} (vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&sequence, const {\bf Interval} \&interval)
+\item 
+bool {\bf empty} ({\bf Res\+Op\+Element} $\ast$data)
+\item 
+void {\bf set\+Default\+Values} (const wx\+String \&file\+Name, {\bf Res\+Op\+Element} $\ast$element\+Data)
+\item 
+void {\bf save\+Default\+Values} (const wx\+String \&file\+Name, {\bf Res\+Op\+Element} $\ast$element\+Data)
+\item 
+void {\bf create\+Results\+From\+Results\+Elements\+Map} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, {\bf Interval} interval)
+\item 
+double {\bf get\+Release} ({\bf Res\+Op\+Element} $\ast$element, {\bf Date} date)
+\item 
+void {\bf set\+Allocations} ({\bf Res\+Op\+Element} $\ast$element, {\bf Date} date, double value)
+\item 
+double {\bf alloc\+Release} ({\bf Res\+Op\+Element} $\ast$element, {\bf Date} index, double value)
+\item 
+virtual void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Element} $\ast$element, wx\+String section)
+\item 
+virtual void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Element} $\ast$element, wx\+String section)
+\item 
+void {\bf update\+Results\+Series} ({\bf Res\+Op\+Element} $\ast$element, const wx\+String \&scenario\+Name)
+\item 
+virtual void {\bf update\+Results\+Series\+In} ({\bf Res\+Op\+Element} $\ast$element, const wx\+String \&scenario\+Name)
+\item 
+virtual void {\bf update\+Results\+Series\+Out} ({\bf Res\+Op\+Element} $\ast$element, const wx\+String \&scenario\+Name)
+\item 
+virtual void {\bf remove\+Results\+Series\+Out} ({\bf Res\+Op\+Element} $\ast$element, const wx\+String \&scenario\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Tipos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct {\bf Sequential\+Model\+Ctrl\+::\+Demand\+Release\+Struct} {\bf Demand\+Release\+Struct}
+\item 
+typedef std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Demand\+Release\+Struct} $>$ $>$ {\bf Demand\+Release\+Map}
+\end{DoxyCompactItemize}
+\subsection*{MÃ©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ {\bf sequential\+Results\+Elements\+Vector} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, std\+::set$<$ {\bf Element\+ID} $>$ \&dependency\+\_\+set)
+\item 
+bool {\bf check\+Dep} ({\bf Element} $\ast$element, vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ sequence, std\+::set$<$ {\bf Element\+ID} $>$ \&dependency\+\_\+set)
+\item 
+bool {\bf hason\+Vrun} ({\bf Element\+ID} nd\+Id, vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ sequence)
+\item 
+bool {\bf run\+Reservoir} ({\bf Res\+Op\+Sequential\+Reservoir} $\ast$reservoir, const {\bf Date} \&date, const {\bf Interval} \&exec\+Interval, double dependency\+\_\+inflow=0.\+0)
+\item 
+int {\bf find\+Reservoir\+Release} ({\bf Res\+Op\+Sequential\+Reservoir} $\ast$reservoir, const {\bf Date} \&date, const {\bf Interval} \&exec\+Interval)
+\item 
+double {\bf count\+Satisfied\+Demands} ({\bf Reservoir\+Result} $\ast$result, {\bf Demand\+Release\+Rule} $\ast$rule) const 
+\item 
+bool {\bf run\+Basin} ({\bf Res\+Op\+Sequential\+Basin} $\ast$basin, const {\bf Date} \&date)
+\item 
+bool {\bf run\+Junction} ({\bf Res\+Op\+Sequential\+Junction} $\ast$junction, const {\bf Date} \&date, double dependency\+\_\+inflow=0.\+0)
+\item 
+bool {\bf run\+Demand} ({\bf Res\+Op\+Sequential\+Demand} $\ast$demand, const {\bf Date} \&date, double dependency\+\_\+inflow=0.\+0)
+\item 
+bool {\bf run\+Link} ({\bf Res\+Op\+Sequential\+Link} $\ast$link, const {\bf Date} \&date)
+\item 
+virtual void {\bf check\+Completeness\+Reservoir} ({\bf Res\+Op\+Sequential\+Reservoir} $\ast$reservoir, const {\bf Interval} \&exec\+Interval, {\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+virtual void {\bf check\+Completeness\+Basin} ({\bf Res\+Op\+Sequential\+Basin} $\ast$basin, const {\bf Interval} \&exec\+Interval, {\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+virtual void {\bf check\+Completeness\+Junction} ({\bf Res\+Op\+Sequential\+Junction} $\ast$junction, const {\bf Interval} \&exec\+Interval, {\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+virtual void {\bf check\+Completeness\+Demand} ({\bf Res\+Op\+Sequential\+Demand} $\ast$demand, const {\bf Interval} \&exec\+Interval, {\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+virtual void {\bf check\+Completeness\+Link} ({\bf Res\+Op\+Sequential\+Link} $\ast$link, const {\bf Interval} \&exec\+Interval, {\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf alloc\+Reservoir\+Vert} ({\bf Res\+Op\+Sequential\+Reservoir} $\ast$reservoir, {\bf Date} date, double value)
+\item 
+double {\bf alloc\+Demand\+Return} ({\bf Date} date, {\bf Res\+Op\+Sequential\+Demand} $\ast$demand)
+\item 
+void {\bf creates\+Demand\+Garantee\+For\+Results\+Elements} (std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&a\+\_\+results\+Elements\+Vector, double a\+\_\+value)
+\item 
+void {\bf set\+Demand\+Garantee\+For\+Results\+Elements} (std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&a\+\_\+results\+Elements\+Vector, double a\+\_\+value)
+\item 
+void {\bf store\+Results} (int a\+\_\+garantee, {\bf Demand\+Release\+Map} \&a\+\_\+demand\+Release\+Map, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&a\+\_\+results\+Elements\+Vector)
+\item 
+void {\bf store\+Demand\+Release\+Rule\+Values} (std\+::map$<$ {\bf Element\+ID}, {\bf Demand\+Release\+Struct} $>$ \&a\+\_\+demand\+Release\+Rule\+Map, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&a\+\_\+results\+Elements\+Vector)
+\item 
+void {\bf restore\+Demand\+Release\+Rule\+Values} (std\+::map$<$ {\bf Element\+ID}, {\bf Demand\+Release\+Struct} $>$ \&a\+\_\+demand\+Release\+Rule\+Map, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&a\+\_\+results\+Elements\+Vector)
+\item 
+void {\bf save\+Results} (const std\+::string \&a\+\_\+output\+File\+Name, std\+::array$<$ int, 10 $>$ \&a\+\_\+garantee\+Array, {\bf Demand\+Release\+Map} \&a\+\_\+demand\+Release\+Map)
+\item 
+void {\bf save\+Guarantee\+Results} (std\+::array$<$ int, 10 $>$ \&a\+\_\+garantee\+Array, {\bf Demand\+Release\+Map} \&a\+\_\+demand\+Result\+Map, wx\+String a\+\_\+section=\char`\"{}Curva\+De\+Garantia\char`\"{})
+\item 
+void {\bf iterate\+Through\+All\+Results\+Reservoir\+Demand\+Rule} (std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&a\+\_\+results\+Elements\+Vector, std\+::function$<$ void({\bf Demand\+Release\+Rule} \&)$>$ \&a\+\_\+function)
+\item 
+void {\bf iterate\+Through\+All\+Results\+Reservoir\+Demand\+Rule} (std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&a\+\_\+results\+Elements\+Vector, std\+::function$<$ void({\bf Res\+Op\+Sequential\+Reservoir} $\ast$)$>$ \&a\+\_\+function)
+\item 
+virtual void {\bf save\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Basin} $\ast$element, wx\+String section)
+\item 
+virtual void {\bf save\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Demand} $\ast$element, wx\+String section)
+\item 
+virtual void {\bf save\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Junction} $\ast$element, wx\+String section)
+\item 
+virtual void {\bf save\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Link} $\ast$element, wx\+String section)
+\item 
+virtual void {\bf save\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Reservoir} $\ast$element, wx\+String section)
+\item 
+virtual void {\bf load\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Basin} $\ast$element, wx\+String section)
+\item 
+virtual void {\bf load\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Demand} $\ast$element, wx\+String section)
+\item 
+virtual void {\bf load\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Junction} $\ast$element, wx\+String section)
+\item 
+virtual void {\bf load\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Link} $\ast$element, wx\+String section)
+\item 
+virtual void {\bf load\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Reservoir} $\ast$element, wx\+String section)
+\item 
+void {\bf update\+Results\+Series\+In} ({\bf Res\+Op\+Sequential\+Basin} $\ast$element, const wx\+String \&section)
+\item 
+void {\bf update\+Results\+Series\+Out} ({\bf Res\+Op\+Sequential\+Basin} $\ast$element, const wx\+String \&section)
+\item 
+void {\bf update\+Results\+Series\+In} ({\bf Res\+Op\+Sequential\+Demand} $\ast$element, const wx\+String \&section)
+\item 
+void {\bf update\+Results\+Series\+Out} ({\bf Res\+Op\+Sequential\+Demand} $\ast$element, const wx\+String \&section)
+\item 
+void {\bf update\+Results\+Series\+In} ({\bf Res\+Op\+Sequential\+Junction} $\ast$element, const wx\+String \&section)
+\item 
+void {\bf update\+Results\+Series\+Out} ({\bf Res\+Op\+Sequential\+Junction} $\ast$element, const wx\+String \&section)
+\item 
+void {\bf update\+Results\+Series\+In} ({\bf Res\+Op\+Sequential\+Link} $\ast$element, const wx\+String \&section)
+\item 
+void {\bf update\+Results\+Series\+Out} ({\bf Res\+Op\+Sequential\+Link} $\ast$element, const wx\+String \&section)
+\item 
+void {\bf update\+Results\+Series\+In} ({\bf Res\+Op\+Sequential\+Reservoir} $\ast$element, const wx\+String \&section)
+\item 
+void {\bf update\+Results\+Series\+Out} ({\bf Res\+Op\+Sequential\+Reservoir} $\ast$element, const wx\+String \&section)
+\item 
+double {\bf get\+Dependency\+Flow} (std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&a\+\_\+vector\+Of\+Results\+Elements, const {\bf Date} \&a\+\_\+date)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf last\+Release}
+\item 
+int {\bf count\+Found}
+\item 
+bool {\bf prog\+Dialog\+Sqt\+Ctrl}
+\item 
+bool {\bf increase\+Bar}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 28 do arquivo Sequential\+Model\+Ctrl.\+h.
+
+
+
+\subsection{DefiniÃ§Ãµes de Tipos}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!Demand\+Release\+Map@{Demand\+Release\+Map}}
+\index{Demand\+Release\+Map@{Demand\+Release\+Map}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{Demand\+Release\+Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::map$<${\bf Element\+ID}, std\+::vector$<${\bf Demand\+Release\+Struct}$>$ $>$ {\bf Sequential\+Model\+Ctrl\+::\+Demand\+Release\+Map}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_aa1586926970a1a0bf86b083d4a441bb3}
+
+
+DefiniÃ§Ã£o na linha 122 do arquivo Sequential\+Model\+Ctrl.\+h.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!Demand\+Release\+Struct@{Demand\+Release\+Struct}}
+\index{Demand\+Release\+Struct@{Demand\+Release\+Struct}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{Demand\+Release\+Struct}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Sequential\+Model\+Ctrl\+::\+Demand\+Release\+Struct}  {\bf Sequential\+Model\+Ctrl\+::\+Demand\+Release\+Struct}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_a84613cb1bfa1bdc9daf41fb2b820878f}
+Curva de Garantia de Demanda 
+
+\subsection{Construtores \& Destrutores}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{Sequential\+Model\+Ctrl(\+Res\+Op\+Interface $\ast$main\+Inter)}]{\setlength{\rightskip}{0pt plus 5cm}Sequential\+Model\+Ctrl\+::\+Sequential\+Model\+Ctrl (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Interface} $\ast$}]{main\+Inter}
+\end{DoxyParamCaption}
+)}\label{class_sequential_model_ctrl_a123f18572268d3488d8669d5784c8b4c}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em main\+Inter} & Interface da classe principal \\
+\hline
+\end{DoxyParams}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!````~Sequential\+Model\+Ctrl@{$\sim$\+Sequential\+Model\+Ctrl}}
+\index{````~Sequential\+Model\+Ctrl@{$\sim$\+Sequential\+Model\+Ctrl}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{$\sim$\+Sequential\+Model\+Ctrl()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Sequential\+Model\+Ctrl\+::$\sim$\+Sequential\+Model\+Ctrl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sequential_model_ctrl_a87b0bc776c9da8688e93a9594c1aa3bb}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!alloc\+Demand\+Return@{alloc\+Demand\+Return}}
+\index{alloc\+Demand\+Return@{alloc\+Demand\+Return}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{alloc\+Demand\+Return(\+Date date, Res\+Op\+Sequential\+Demand $\ast$demand)}]{\setlength{\rightskip}{0pt plus 5cm}double Sequential\+Model\+Ctrl\+::alloc\+Demand\+Return (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{date, }
+\item[{{\bf Res\+Op\+Sequential\+Demand} $\ast$}]{demand}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_aef8865fa568b1661c23855e24e40053c}
+Aloca usos não-\/consutivos \index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!alloc\+Release@{alloc\+Release}}
+\index{alloc\+Release@{alloc\+Release}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{alloc\+Release(\+Res\+Op\+Element $\ast$element, Date index, double value)}]{\setlength{\rightskip}{0pt plus 5cm}double Sequential\+Model\+Ctrl\+::alloc\+Release (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{{\bf Date}}]{index, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_sequential_model_ctrl_a7460cd21fe84d6a0f67b11de17b08e1f}
+Aloca liberações para os diversos links de saída 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em Dia} & da alocação \\
+\hline
+{\em res\+Model} & Modelo \\
+\hline
+\end{DoxyParams}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!alloc\+Reservoir\+Vert@{alloc\+Reservoir\+Vert}}
+\index{alloc\+Reservoir\+Vert@{alloc\+Reservoir\+Vert}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{alloc\+Reservoir\+Vert(\+Res\+Op\+Sequential\+Reservoir $\ast$reservoir, Date date, double value)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::alloc\+Reservoir\+Vert (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Reservoir} $\ast$}]{reservoir, }
+\item[{{\bf Date}}]{date, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_a24cb152624a942790f83f29cba9832f0}
+Aloca o vertimento no canal natural \index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{check\+Completeness(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, Res\+Op\+Scenario $\ast$scen)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Sequential\+Model\+Ctrl\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sequential_model_ctrl_ab6466b9954061cd8406ee93748bf7c81}
+Método que checa se as informações necessárias foram preenchidas. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_ad7995a59b64d8b31ea54d206059ebd50}.
+
+
+
+Reimplementado por {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_a4fbf4835a35acbdb2ed8ebef1749f67d}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!check\+Completeness\+Basin@{check\+Completeness\+Basin}}
+\index{check\+Completeness\+Basin@{check\+Completeness\+Basin}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{check\+Completeness\+Basin(\+Res\+Op\+Sequential\+Basin $\ast$basin, const Interval \&exec\+Interval, S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sequential\+Model\+Ctrl\+::check\+Completeness\+Basin (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Basin} $\ast$}]{basin, }
+\item[{const {\bf Interval} \&}]{exec\+Interval, }
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_sequential_model_ctrl_acd21ded7ae98cf17c742e0374008c7fe}
+
+
+Reimplementado por {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_ac0b61fe5b7e03c0a09386d9e8df5a78c}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!check\+Completeness\+Demand@{check\+Completeness\+Demand}}
+\index{check\+Completeness\+Demand@{check\+Completeness\+Demand}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{check\+Completeness\+Demand(\+Res\+Op\+Sequential\+Demand $\ast$demand, const Interval \&exec\+Interval, S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sequential\+Model\+Ctrl\+::check\+Completeness\+Demand (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Demand} $\ast$}]{demand, }
+\item[{const {\bf Interval} \&}]{exec\+Interval, }
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_sequential_model_ctrl_a2ef0fa4a694bba8f909d786af7b54300}
+
+
+Reimplementado por {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_ac392cfd590cc0ae4db77b9ea118019a4}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!check\+Completeness\+Junction@{check\+Completeness\+Junction}}
+\index{check\+Completeness\+Junction@{check\+Completeness\+Junction}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{check\+Completeness\+Junction(\+Res\+Op\+Sequential\+Junction $\ast$junction, const Interval \&exec\+Interval, S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sequential\+Model\+Ctrl\+::check\+Completeness\+Junction (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Junction} $\ast$}]{junction, }
+\item[{const {\bf Interval} \&}]{exec\+Interval, }
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_sequential_model_ctrl_a2dae2787918db5c3b8aade4566874a07}
+
+
+Reimplementado por {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_ab5b64c6de288029edf7554696b5c8fd0}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!check\+Completeness\+Link@{check\+Completeness\+Link}}
+\index{check\+Completeness\+Link@{check\+Completeness\+Link}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{check\+Completeness\+Link(\+Res\+Op\+Sequential\+Link $\ast$link, const Interval \&exec\+Interval, S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sequential\+Model\+Ctrl\+::check\+Completeness\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Link} $\ast$}]{link, }
+\item[{const {\bf Interval} \&}]{exec\+Interval, }
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_sequential_model_ctrl_a20a18746ff32b7b67aad1b2998afccc5}
+
+
+Reimplementado por {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_a1de6803059a1da50ac8c4d0ed4f53de8}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!check\+Completeness\+Reservoir@{check\+Completeness\+Reservoir}}
+\index{check\+Completeness\+Reservoir@{check\+Completeness\+Reservoir}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{check\+Completeness\+Reservoir(\+Res\+Op\+Sequential\+Reservoir $\ast$reservoir, const Interval \&exec\+Interval, S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sequential\+Model\+Ctrl\+::check\+Completeness\+Reservoir (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Reservoir} $\ast$}]{reservoir, }
+\item[{const {\bf Interval} \&}]{exec\+Interval, }
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_sequential_model_ctrl_a3cd232412ae6b530236700d94b7bfbe6}
+Método que checa se as informações necessárias foram preenchidas. 
+
+Reimplementado por {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_a23ce10c5b020156e312c0b2bde8db4ec}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!check\+Dep@{check\+Dep}}
+\index{check\+Dep@{check\+Dep}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{check\+Dep(\+Element $\ast$element, vector$<$ Res\+Op\+Element $\ast$ $>$ sequence, std\+::set$<$ Element\+I\+D $>$ \&dependency\+\_\+set)}]{\setlength{\rightskip}{0pt plus 5cm}bool Sequential\+Model\+Ctrl\+::check\+Dep (
+\begin{DoxyParamCaption}
+\item[{{\bf Element} $\ast$}]{element, }
+\item[{vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$}]{sequence, }
+\item[{std\+::set$<$ {\bf Element\+ID} $>$ \&}]{dependency\+\_\+set}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_af9e88653a4ae4c57e3dd577c49a11d7a}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!clear\+Old\+Results@{clear\+Old\+Results}}
+\index{clear\+Old\+Results@{clear\+Old\+Results}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{clear\+Old\+Results(vector$<$ Res\+Op\+Element $\ast$ $>$ \&sequence, const Interval \&interval)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sequential\+Model\+Ctrl\+::clear\+Old\+Results (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{sequence, }
+\item[{const {\bf Interval} \&}]{interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sequential_model_ctrl_a0ba7def2eff197e85c42ef344d55cd89}
+Limpa os resultados anteriores para todos os elementos da sequencia 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em sequence} & Sequencia de elementos da rede \\
+\hline
+{\em interval} & Intervalo de tempo da execução \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado por {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_a6433fb1e415b5c582fb01e1963a9b049}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!count\+Satisfied\+Demands@{count\+Satisfied\+Demands}}
+\index{count\+Satisfied\+Demands@{count\+Satisfied\+Demands}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{count\+Satisfied\+Demands(\+Reservoir\+Result $\ast$result, Demand\+Release\+Rule $\ast$rule) const }]{\setlength{\rightskip}{0pt plus 5cm}double Sequential\+Model\+Ctrl\+::count\+Satisfied\+Demands (
+\begin{DoxyParamCaption}
+\item[{{\bf Reservoir\+Result} $\ast$}]{result, }
+\item[{{\bf Demand\+Release\+Rule} $\ast$}]{rule}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_a069e718a994c344bc21d45c7f8355960}
+Procura na série de resultado e conta quantas demandas foram atendidas \index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!create\+Results\+From\+Results\+Elements\+Map@{create\+Results\+From\+Results\+Elements\+Map}}
+\index{create\+Results\+From\+Results\+Elements\+Map@{create\+Results\+From\+Results\+Elements\+Map}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{create\+Results\+From\+Results\+Elements\+Map(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, Interval interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::create\+Results\+From\+Results\+Elements\+Map (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)}\label{class_sequential_model_ctrl_a26e6a2885855095c78305813e9b1b05e}
+Método que reinicia os resultados do sistema \index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!creates\+Demand\+Garantee\+For\+Results\+Elements@{creates\+Demand\+Garantee\+For\+Results\+Elements}}
+\index{creates\+Demand\+Garantee\+For\+Results\+Elements@{creates\+Demand\+Garantee\+For\+Results\+Elements}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{creates\+Demand\+Garantee\+For\+Results\+Elements(std\+::vector$<$ Res\+Op\+Element $\ast$ $>$ \&a\+\_\+results\+Elements\+Vector, double a\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::creates\+Demand\+Garantee\+For\+Results\+Elements (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{a\+\_\+results\+Elements\+Vector, }
+\item[{double}]{a\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_a273a406cb4a51e6ff25503fd170ebae2}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!empty@{empty}}
+\index{empty@{empty}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{empty(\+Res\+Op\+Element $\ast$data)}]{\setlength{\rightskip}{0pt plus 5cm}bool Sequential\+Model\+Ctrl\+::empty (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sequential_model_ctrl_a157f6c227a3c1ff640077f9146a9a636}
+Retorna se existe algum valor no elemento 
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_a26d579005471dadbb2cb789aa79a58c1}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!find\+Reservoir\+Release@{find\+Reservoir\+Release}}
+\index{find\+Reservoir\+Release@{find\+Reservoir\+Release}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{find\+Reservoir\+Release(\+Res\+Op\+Sequential\+Reservoir $\ast$reservoir, const Date \&date, const Interval \&exec\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}int Sequential\+Model\+Ctrl\+::find\+Reservoir\+Release (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Reservoir} $\ast$}]{reservoir, }
+\item[{const {\bf Date} \&}]{date, }
+\item[{const {\bf Interval} \&}]{exec\+Interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_abe9f1a4872e31b99cb0f3597ef55fdf3}
+Verifica que o tipo de execução é por Garantia de Demanda. Se for, tenta achar um valor de vazão adequado. Senão, apenas execute normalmente \begin{DoxyReturn}{Retorna}
+0 -\/ Continua tentando encontrar a melhor vazão 
+
+1 -\/ Encontrou a melhor vazão 
+
+-\/1 -\/ Impossível de encontrar a melhor vazão 
+\end{DoxyReturn}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!get\+Dependency\+Flow@{get\+Dependency\+Flow}}
+\index{get\+Dependency\+Flow@{get\+Dependency\+Flow}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{get\+Dependency\+Flow(std\+::vector$<$ Res\+Op\+Element $\ast$ $>$ \&a\+\_\+vector\+Of\+Results\+Elements, const Date \&a\+\_\+date)}]{\setlength{\rightskip}{0pt plus 5cm}double Sequential\+Model\+Ctrl\+::get\+Dependency\+Flow (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{a\+\_\+vector\+Of\+Results\+Elements, }
+\item[{const {\bf Date} \&}]{a\+\_\+date}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_adc2be57a000873dcb32dac910c0e33dc}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!get\+Release@{get\+Release}}
+\index{get\+Release@{get\+Release}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{get\+Release(\+Res\+Op\+Element $\ast$element, Date date)}]{\setlength{\rightskip}{0pt plus 5cm}double Sequential\+Model\+Ctrl\+::get\+Release (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{{\bf Date}}]{date}
+\end{DoxyParamCaption}
+)}\label{class_sequential_model_ctrl_a74053d7fe92f48f54b6c59564dd0c174}
+Totaliza a liberação do elemento \index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!hason\+Vrun@{hason\+Vrun}}
+\index{hason\+Vrun@{hason\+Vrun}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{hason\+Vrun(\+Element\+I\+D nd\+Id, vector$<$ Res\+Op\+Element $\ast$ $>$ sequence)}]{\setlength{\rightskip}{0pt plus 5cm}bool Sequential\+Model\+Ctrl\+::hason\+Vrun (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{nd\+Id, }
+\item[{vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$}]{sequence}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_abd1b958ff7ffd2d4eee65cadae98eed3}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!is\+Prog\+Dialog\+Of\+Sqt\+Mdl\+Ctrl@{is\+Prog\+Dialog\+Of\+Sqt\+Mdl\+Ctrl}}
+\index{is\+Prog\+Dialog\+Of\+Sqt\+Mdl\+Ctrl@{is\+Prog\+Dialog\+Of\+Sqt\+Mdl\+Ctrl}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{is\+Prog\+Dialog\+Of\+Sqt\+Mdl\+Ctrl()}]{\setlength{\rightskip}{0pt plus 5cm}bool Sequential\+Model\+Ctrl\+::is\+Prog\+Dialog\+Of\+Sqt\+Mdl\+Ctrl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_sequential_model_ctrl_a2f1e7492053d554c309fa0636b6cf912}
+Função para saber se a Progress Dialog foi criada pela \doxyref{Sequential\+Model\+Ctrl}{pag.}{class_sequential_model_ctrl} \index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!iterate\+Through\+All\+Results\+Reservoir\+Demand\+Rule@{iterate\+Through\+All\+Results\+Reservoir\+Demand\+Rule}}
+\index{iterate\+Through\+All\+Results\+Reservoir\+Demand\+Rule@{iterate\+Through\+All\+Results\+Reservoir\+Demand\+Rule}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{iterate\+Through\+All\+Results\+Reservoir\+Demand\+Rule(std\+::vector$<$ Res\+Op\+Element $\ast$ $>$ \&a\+\_\+results\+Elements\+Vector, std\+::function$<$ void(\+Demand\+Release\+Rule \&)$>$ \&a\+\_\+function)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::iterate\+Through\+All\+Results\+Reservoir\+Demand\+Rule (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{a\+\_\+results\+Elements\+Vector, }
+\item[{std\+::function$<$ void({\bf Demand\+Release\+Rule} \&)$>$ \&}]{a\+\_\+function}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_a1c8024f036f6b8a8c6ed28e5dfa9cd9a}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!iterate\+Through\+All\+Results\+Reservoir\+Demand\+Rule@{iterate\+Through\+All\+Results\+Reservoir\+Demand\+Rule}}
+\index{iterate\+Through\+All\+Results\+Reservoir\+Demand\+Rule@{iterate\+Through\+All\+Results\+Reservoir\+Demand\+Rule}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{iterate\+Through\+All\+Results\+Reservoir\+Demand\+Rule(std\+::vector$<$ Res\+Op\+Element $\ast$ $>$ \&a\+\_\+results\+Elements\+Vector, std\+::function$<$ void(\+Res\+Op\+Sequential\+Reservoir $\ast$)$>$ \&a\+\_\+function)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::iterate\+Through\+All\+Results\+Reservoir\+Demand\+Rule (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{a\+\_\+results\+Elements\+Vector, }
+\item[{std\+::function$<$ void({\bf Res\+Op\+Sequential\+Reservoir} $\ast$)$>$ \&}]{a\+\_\+function}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_a424a9cd9cbb2fea14fdb6681aad0a8b3}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!load\+Element\+Project@{load\+Element\+Project}}
+\index{load\+Element\+Project@{load\+Element\+Project}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{load\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Basin $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sequential\+Model\+Ctrl\+::load\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Basin} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_sequential_model_ctrl_ad5e880b216e2b8a11ae4a395e9ceea29}
+Salva uma bacia no projeto 
+
+Reimplementado por {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_a6f92b46c566a6fdd1a60479654fc3473}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!load\+Element\+Project@{load\+Element\+Project}}
+\index{load\+Element\+Project@{load\+Element\+Project}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{load\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Demand $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sequential\+Model\+Ctrl\+::load\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Demand} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_sequential_model_ctrl_a5ee68ae2df30e9ebd289eea3684a7915}
+Salva uma Demanda no projeto 
+
+Reimplementado por {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_aaab608dcd7b37e0f407838f711e4ff0f}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!load\+Element\+Project@{load\+Element\+Project}}
+\index{load\+Element\+Project@{load\+Element\+Project}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{load\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Junction $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sequential\+Model\+Ctrl\+::load\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Junction} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_sequential_model_ctrl_a3b9d2604e74e94bc1e305c50a5e20480}
+Salva uma junção no projeto 
+
+Reimplementado por {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_a5ddee931261580c3b87a2ccd3168696e}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!load\+Element\+Project@{load\+Element\+Project}}
+\index{load\+Element\+Project@{load\+Element\+Project}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{load\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Link $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sequential\+Model\+Ctrl\+::load\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Link} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_sequential_model_ctrl_afdf6883c502eaf5b1502e0a169499c4e}
+Salva um trecho no projeto 
+
+Reimplementado por {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_a59390b2d9e373aec471392bfcb688f16}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!load\+Element\+Project@{load\+Element\+Project}}
+\index{load\+Element\+Project@{load\+Element\+Project}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{load\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Reservoir $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sequential\+Model\+Ctrl\+::load\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Reservoir} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_sequential_model_ctrl_ac986604e0a6f67f47840da5febbcfe7f}
+Salva um reservatorio no projeto 
+
+Reimplementado por {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_a544890018aacc05e4752bed4550edab1}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Element $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sequential\+Model\+Ctrl\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sequential_model_ctrl_a95c27eb2fadc30bc4125b6b98d98af60}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_af3faee21b4277854398b93b7fa53d0e2}.
+
+
+
+Reimplementado por {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_ab7fc34ed404d7c8c3c0f406f63392201} e {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_a78ddbd6c33c6dc7410d72cb732437779}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Element $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sequential\+Model\+Ctrl\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sequential_model_ctrl_a3c069ea2a8bd558a51b1263debd4be21}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_a11e561f391bee1bb76fc130a459736fb}.
+
+
+
+Reimplementado por {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_a2bd6a4409aa1e6fc4309d94739057320} e {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_a6effdf6b3d93ea38a9cda73600e8e6a7}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!remove\+Results\+Series\+Out@{remove\+Results\+Series\+Out}}
+\index{remove\+Results\+Series\+Out@{remove\+Results\+Series\+Out}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{remove\+Results\+Series\+Out(\+Res\+Op\+Element $\ast$element, const wx\+String \&scenario\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sequential\+Model\+Ctrl\+::remove\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sequential_model_ctrl_a09317165d8a530334c8a6ab6a6bf04f3}
+
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_a4de02f0f247b0c826dfe26ed09b812e7}.
+
+
+
+Reimplementado por {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_a73f5d120df88fe7ee22890fd84223e36} e {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_a6e16c42baf0b2cf8e1a90cc54e79be07}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!restore\+Demand\+Release\+Rule\+Values@{restore\+Demand\+Release\+Rule\+Values}}
+\index{restore\+Demand\+Release\+Rule\+Values@{restore\+Demand\+Release\+Rule\+Values}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{restore\+Demand\+Release\+Rule\+Values(std\+::map$<$ Element\+I\+D, Demand\+Release\+Struct $>$ \&a\+\_\+demand\+Release\+Rule\+Map, std\+::vector$<$ Res\+Op\+Element $\ast$ $>$ \&a\+\_\+results\+Elements\+Vector)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::restore\+Demand\+Release\+Rule\+Values (
+\begin{DoxyParamCaption}
+\item[{std\+::map$<$ {\bf Element\+ID}, {\bf Demand\+Release\+Struct} $>$ \&}]{a\+\_\+demand\+Release\+Rule\+Map, }
+\item[{std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{a\+\_\+results\+Elements\+Vector}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_abb6b665cac2f550aeb4455ba0d35d9c5}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!run@{run}}
+\index{run@{run}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{run(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, Res\+Op\+Scenario $\ast$scen)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Sequential\+Model\+Ctrl\+::run (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sequential_model_ctrl_a6473739febbf5714e21fc9d84bf5dc1b}
+Método abstrato que executa a tecnica 
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_aeaad0950868750f122df1dc2e37d06e7}.
+
+
+
+Reimplementado por {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_a56d5ddd6f0c281a4f57d5f92e05d0ad2} e {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_a038eac23adc538863fab0df35fe653f4}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!run\+Basin@{run\+Basin}}
+\index{run\+Basin@{run\+Basin}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{run\+Basin(\+Res\+Op\+Sequential\+Basin $\ast$basin, const Date \&date)}]{\setlength{\rightskip}{0pt plus 5cm}bool Sequential\+Model\+Ctrl\+::run\+Basin (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Basin} $\ast$}]{basin, }
+\item[{const {\bf Date} \&}]{date}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_add5cf3bfae19f84fc34df26371fcd8f6}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!run\+Demand@{run\+Demand}}
+\index{run\+Demand@{run\+Demand}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{run\+Demand(\+Res\+Op\+Sequential\+Demand $\ast$demand, const Date \&date, double dependency\+\_\+inflow=0.\+0)}]{\setlength{\rightskip}{0pt plus 5cm}bool Sequential\+Model\+Ctrl\+::run\+Demand (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Demand} $\ast$}]{demand, }
+\item[{const {\bf Date} \&}]{date, }
+\item[{double}]{dependency\+\_\+inflow = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_ada04de293ded88b8e08a23ce889630a4}
+Executa o balanço hídrico em demandas para uma data específica \index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!run\+Demand\+Garantee\+Curve\+In\+Sequential\+Mode@{run\+Demand\+Garantee\+Curve\+In\+Sequential\+Mode}}
+\index{run\+Demand\+Garantee\+Curve\+In\+Sequential\+Mode@{run\+Demand\+Garantee\+Curve\+In\+Sequential\+Mode}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{run\+Demand\+Garantee\+Curve\+In\+Sequential\+Mode(vector$<$ Res\+Op\+Element $\ast$ $>$ \&sequence, map$<$ Res\+Op\+Element $\ast$, bool $>$ \&reservoir\+Solved, const Interval \&interval, S\+I\+G\+A\+Errors\+Dialog $\ast$result\+Error\+Dialog, std\+::map$<$ Element\+I\+D, std\+::vector$<$ Res\+Op\+Element $\ast$ $>$ $>$ \&dependency\+\_\+map, int $\ast$delta\+Int=\+N\+U\+L\+L, int a\+\_\+counter=1, bool first\+Execution=true)}]{\setlength{\rightskip}{0pt plus 5cm}bool Sequential\+Model\+Ctrl\+::run\+Demand\+Garantee\+Curve\+In\+Sequential\+Mode (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{sequence, }
+\item[{map$<$ {\bf Res\+Op\+Element} $\ast$, bool $>$ \&}]{reservoir\+Solved, }
+\item[{const {\bf Interval} \&}]{interval, }
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{result\+Error\+Dialog, }
+\item[{std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&}]{dependency\+\_\+map, }
+\item[{int $\ast$}]{delta\+Int = {\ttfamily {\bf N\+U\+LL}}, }
+\item[{int}]{a\+\_\+counter = {\ttfamily 1}, }
+\item[{bool}]{first\+Execution = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_sequential_model_ctrl_a2520e56afa67ca56004c6565f2539a0c}
+\begin{DoxyReturn}{Retorna}
+true -\/ continua, false -\/ cancela 
+\end{DoxyReturn}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!run\+Isolated@{run\+Isolated}}
+\index{run\+Isolated@{run\+Isolated}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{run\+Isolated(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, std\+::map$<$ Element\+I\+D, std\+::vector$<$ Res\+Op\+Element $\ast$ $>$ $>$ \&dependency\+\_\+map, Res\+Op\+Scenario $\ast$scen, Element\+I\+D network\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Sequential\+Model\+Ctrl\+::run\+Isolated (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&}]{dependency\+\_\+map, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen, }
+\item[{{\bf Element\+ID}}]{network\+\_\+id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sequential_model_ctrl_a4df78d34e8be3743175013142b2a7d77}
+
+
+ReimplementaÃ§Ã£o de {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_ac62b6754d919c917c9314afd6cf4f52c}.
+
+
+
+Reimplementado por {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_a3e305554e664d10cfb0edafca3dac860} e {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_a31f03d1f715fa51e563ed6455cff455f}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!run\+Junction@{run\+Junction}}
+\index{run\+Junction@{run\+Junction}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{run\+Junction(\+Res\+Op\+Sequential\+Junction $\ast$junction, const Date \&date, double dependency\+\_\+inflow=0.\+0)}]{\setlength{\rightskip}{0pt plus 5cm}bool Sequential\+Model\+Ctrl\+::run\+Junction (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Junction} $\ast$}]{junction, }
+\item[{const {\bf Date} \&}]{date, }
+\item[{double}]{dependency\+\_\+inflow = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_ab53db7603ba8af96192693c2c6c29d05}
+Executa o balanço hídrico em nós de junção da rede para uma data específica \index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!run\+Link@{run\+Link}}
+\index{run\+Link@{run\+Link}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{run\+Link(\+Res\+Op\+Sequential\+Link $\ast$link, const Date \&date)}]{\setlength{\rightskip}{0pt plus 5cm}bool Sequential\+Model\+Ctrl\+::run\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Link} $\ast$}]{link, }
+\item[{const {\bf Date} \&}]{date}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_a5e752842950d002600be2fa6be4bea82}
+Executa o balanço hídrico em trechos para uma data específica \index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!run\+Reservoir@{run\+Reservoir}}
+\index{run\+Reservoir@{run\+Reservoir}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{run\+Reservoir(\+Res\+Op\+Sequential\+Reservoir $\ast$reservoir, const Date \&date, const Interval \&exec\+Interval, double dependency\+\_\+inflow=0.\+0)}]{\setlength{\rightskip}{0pt plus 5cm}bool Sequential\+Model\+Ctrl\+::run\+Reservoir (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Reservoir} $\ast$}]{reservoir, }
+\item[{const {\bf Date} \&}]{date, }
+\item[{const {\bf Interval} \&}]{exec\+Interval, }
+\item[{double}]{dependency\+\_\+inflow = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_aa2a76af95b82a1ba0973affae6729a0f}
+Executa o balanço hídrico em reservatórios para uma data específica \index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!run\+Sequence@{run\+Sequence}}
+\index{run\+Sequence@{run\+Sequence}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{run\+Sequence(vector$<$ Res\+Op\+Element $\ast$ $>$ \&sequence, map$<$ Res\+Op\+Element $\ast$, bool $>$ \&reservoir\+Solved, const Interval \&interval, S\+I\+G\+A\+Errors\+Dialog $\ast$result\+Error\+Dialog, std\+::map$<$ Element\+I\+D, std\+::vector$<$ Res\+Op\+Element $\ast$ $>$ $>$ \&dependency\+\_\+map, int $\ast$delta\+Int=nullptr, int a\+\_\+counter=1, bool first\+Execution=true)}]{\setlength{\rightskip}{0pt plus 5cm}bool Sequential\+Model\+Ctrl\+::run\+Sequence (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{sequence, }
+\item[{map$<$ {\bf Res\+Op\+Element} $\ast$, bool $>$ \&}]{reservoir\+Solved, }
+\item[{const {\bf Interval} \&}]{interval, }
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{result\+Error\+Dialog, }
+\item[{std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&}]{dependency\+\_\+map, }
+\item[{int $\ast$}]{delta\+Int = {\ttfamily nullptr}, }
+\item[{int}]{a\+\_\+counter = {\ttfamily 1}, }
+\item[{bool}]{first\+Execution = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_sequential_model_ctrl_ac9b2d763e22d397d25b93bfd227c93d2}
+Função que executa a rede de modo sequencial e gera os resultados 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em result\+Error\+Dialog} & Dialog para informar erros de resultados \\
+\hline
+{\em first\+Execution} & Booleano para informar se é a primeira execução (usado para o cálculo do chute da vazão inicial do método de garantia de demanda) \\
+\hline
+\end{DoxyParams}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!save\+Default\+Values@{save\+Default\+Values}}
+\index{save\+Default\+Values@{save\+Default\+Values}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{save\+Default\+Values(const wx\+String \&file\+Name, Res\+Op\+Element $\ast$element\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::save\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Name, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element\+Data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sequential_model_ctrl_ab7feb77d29560211d1db65b390b27fb7}
+
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_a25ac7b64ee885352ea5508abc1afe9e2}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!save\+Element\+Project@{save\+Element\+Project}}
+\index{save\+Element\+Project@{save\+Element\+Project}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{save\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Basin $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sequential\+Model\+Ctrl\+::save\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Basin} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_sequential_model_ctrl_a2989dd3b87fa6c06595983707c6e9002}
+Salva uma bacia no projeto 
+
+Reimplementado por {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_a03b5722a25ecb05021a456796a5238ce}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!save\+Element\+Project@{save\+Element\+Project}}
+\index{save\+Element\+Project@{save\+Element\+Project}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{save\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Demand $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sequential\+Model\+Ctrl\+::save\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Demand} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_sequential_model_ctrl_a6b518decbb8f6fc18f270dd644b38ab4}
+Salva uma Demanda no projeto 
+
+Reimplementado por {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_a9b1466f53277ea1c4c6548796e0d8978}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!save\+Element\+Project@{save\+Element\+Project}}
+\index{save\+Element\+Project@{save\+Element\+Project}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{save\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Junction $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sequential\+Model\+Ctrl\+::save\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Junction} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_sequential_model_ctrl_acb6d04404fdb32312a2f094768512a59}
+Salva uma junção no projeto 
+
+Reimplementado por {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_ac34ba8b6d33e24954c08e8f6a04cca7f}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!save\+Element\+Project@{save\+Element\+Project}}
+\index{save\+Element\+Project@{save\+Element\+Project}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{save\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Link $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sequential\+Model\+Ctrl\+::save\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Link} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_sequential_model_ctrl_af8337e2d3b45e64c347ba06e8cfb9549}
+Salva um trecho no projeto 
+
+Reimplementado por {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_aa253956d28129010875b3474647a84d3}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!save\+Element\+Project@{save\+Element\+Project}}
+\index{save\+Element\+Project@{save\+Element\+Project}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{save\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Reservoir $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sequential\+Model\+Ctrl\+::save\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Reservoir} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_sequential_model_ctrl_a2fa9b55b693ace322a539f30bde40876}
+Salva um reservatorio no projeto 
+
+Reimplementado por {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_a11b8c5a474c64f9b65abb697e3bb3dcd}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!save\+Guarantee\+Results@{save\+Guarantee\+Results}}
+\index{save\+Guarantee\+Results@{save\+Guarantee\+Results}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{save\+Guarantee\+Results(std\+::array$<$ int, 10 $>$ \&a\+\_\+garantee\+Array, Demand\+Release\+Map \&a\+\_\+demand\+Result\+Map, wx\+String a\+\_\+section=""Curva\+De\+Garantia"")}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::save\+Guarantee\+Results (
+\begin{DoxyParamCaption}
+\item[{std\+::array$<$ int, 10 $>$ \&}]{a\+\_\+garantee\+Array, }
+\item[{{\bf Demand\+Release\+Map} \&}]{a\+\_\+demand\+Result\+Map, }
+\item[{wx\+String}]{a\+\_\+section = {\ttfamily \char`\"{}CurvaDeGarantia\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_afeff038b22efd27b5852fd8a00cdfd31}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!save\+Results@{save\+Results}}
+\index{save\+Results@{save\+Results}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{save\+Results(const std\+::string \&a\+\_\+output\+File\+Name, std\+::array$<$ int, 10 $>$ \&a\+\_\+garantee\+Array, Demand\+Release\+Map \&a\+\_\+demand\+Release\+Map)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::save\+Results (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+\_\+output\+File\+Name, }
+\item[{std\+::array$<$ int, 10 $>$ \&}]{a\+\_\+garantee\+Array, }
+\item[{{\bf Demand\+Release\+Map} \&}]{a\+\_\+demand\+Release\+Map}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_a3fc0bace7b30abe73cd83c95ab1029c3}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!sequential\+Results\+Elements\+Vector@{sequential\+Results\+Elements\+Vector}}
+\index{sequential\+Results\+Elements\+Vector@{sequential\+Results\+Elements\+Vector}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{sequential\+Results\+Elements\+Vector(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, std\+::set$<$ Element\+I\+D $>$ \&dependency\+\_\+set)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Res\+Op\+Element}$\ast$$>$ Sequential\+Model\+Ctrl\+::sequential\+Results\+Elements\+Vector (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{std\+::set$<$ {\bf Element\+ID} $>$ \&}]{dependency\+\_\+set}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_aff6d97685d641e3d08b0afc807e3b225}
+Organiza a sequência de execução da rede \index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!set\+Allocations@{set\+Allocations}}
+\index{set\+Allocations@{set\+Allocations}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{set\+Allocations(\+Res\+Op\+Element $\ast$element, Date date, double value)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::set\+Allocations (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{{\bf Date}}]{date, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_sequential_model_ctrl_abd6a09e9fe17ea53d425621b156eb8fb}
+Realiza a alocação, do valor liberado pelo reservatório, segundo a função de alocação \index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!set\+Default\+Values@{set\+Default\+Values}}
+\index{set\+Default\+Values@{set\+Default\+Values}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{set\+Default\+Values(const wx\+String \&file\+Name, Res\+Op\+Element $\ast$element\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::set\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Name, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element\+Data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sequential_model_ctrl_a4e7ede8d0786069e261c700a1a88b13f}
+
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_a5bc33ce032ab0c182c73381bc168e30f}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!set\+Demand\+Garantee\+For\+Results\+Elements@{set\+Demand\+Garantee\+For\+Results\+Elements}}
+\index{set\+Demand\+Garantee\+For\+Results\+Elements@{set\+Demand\+Garantee\+For\+Results\+Elements}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{set\+Demand\+Garantee\+For\+Results\+Elements(std\+::vector$<$ Res\+Op\+Element $\ast$ $>$ \&a\+\_\+results\+Elements\+Vector, double a\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::set\+Demand\+Garantee\+For\+Results\+Elements (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{a\+\_\+results\+Elements\+Vector, }
+\item[{double}]{a\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_acdb9b8c9dece54f6825e8007a40ada15}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!store\+Demand\+Release\+Rule\+Values@{store\+Demand\+Release\+Rule\+Values}}
+\index{store\+Demand\+Release\+Rule\+Values@{store\+Demand\+Release\+Rule\+Values}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{store\+Demand\+Release\+Rule\+Values(std\+::map$<$ Element\+I\+D, Demand\+Release\+Struct $>$ \&a\+\_\+demand\+Release\+Rule\+Map, std\+::vector$<$ Res\+Op\+Element $\ast$ $>$ \&a\+\_\+results\+Elements\+Vector)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::store\+Demand\+Release\+Rule\+Values (
+\begin{DoxyParamCaption}
+\item[{std\+::map$<$ {\bf Element\+ID}, {\bf Demand\+Release\+Struct} $>$ \&}]{a\+\_\+demand\+Release\+Rule\+Map, }
+\item[{std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{a\+\_\+results\+Elements\+Vector}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_ac63681703e2df95367b564affd2bea69}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!store\+Results@{store\+Results}}
+\index{store\+Results@{store\+Results}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{store\+Results(int a\+\_\+garantee, Demand\+Release\+Map \&a\+\_\+demand\+Release\+Map, std\+::vector$<$ Res\+Op\+Element $\ast$ $>$ \&a\+\_\+results\+Elements\+Vector)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::store\+Results (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+garantee, }
+\item[{{\bf Demand\+Release\+Map} \&}]{a\+\_\+demand\+Release\+Map, }
+\item[{std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{a\+\_\+results\+Elements\+Vector}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_a2532f39d970915be7bffce6d3d66bcdf}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!update\+Results\+Series@{update\+Results\+Series}}
+\index{update\+Results\+Series@{update\+Results\+Series}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series(\+Res\+Op\+Element $\ast$element, const wx\+String \&scenario\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::update\+Results\+Series (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sequential_model_ctrl_afcfc82adffa56a447af28a93ffebf676}
+Adciona as series que existirem daquele modelo no modulo de Resultados Lembrete\+: Caso haja uma alteração no nome ou na unidade da serie será necessario mudar neste metodo também 
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_a169d6145edeff7dc8e88b7421b99e031}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!update\+Results\+Series\+In@{update\+Results\+Series\+In}}
+\index{update\+Results\+Series\+In@{update\+Results\+Series\+In}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+In(\+Res\+Op\+Element $\ast$element, const wx\+String \&scenario\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sequential\+Model\+Ctrl\+::update\+Results\+Series\+In (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sequential_model_ctrl_a1ee8984ad133648dbd693c30264b0bc8}
+
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_a5ab379d0dbc21cf439d0568359b23afd}.
+
+
+
+Reimplementado por {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_a7ee7a528b299901594ead60cd387f7fb} e {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_abdf99a49f3615d9c2602eb51b5d98789}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!update\+Results\+Series\+In@{update\+Results\+Series\+In}}
+\index{update\+Results\+Series\+In@{update\+Results\+Series\+In}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+In(\+Res\+Op\+Sequential\+Basin $\ast$element, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::update\+Results\+Series\+In (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Basin} $\ast$}]{element, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_a27f51d67d205aa40c829e2c77457f180}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!update\+Results\+Series\+In@{update\+Results\+Series\+In}}
+\index{update\+Results\+Series\+In@{update\+Results\+Series\+In}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+In(\+Res\+Op\+Sequential\+Demand $\ast$element, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::update\+Results\+Series\+In (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Demand} $\ast$}]{element, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_a7449e88b7f787838672e2256e5b1c45e}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!update\+Results\+Series\+In@{update\+Results\+Series\+In}}
+\index{update\+Results\+Series\+In@{update\+Results\+Series\+In}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+In(\+Res\+Op\+Sequential\+Junction $\ast$element, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::update\+Results\+Series\+In (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Junction} $\ast$}]{element, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_ac3e83ffdb04e54bdcc04d1f4f4e452c9}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!update\+Results\+Series\+In@{update\+Results\+Series\+In}}
+\index{update\+Results\+Series\+In@{update\+Results\+Series\+In}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+In(\+Res\+Op\+Sequential\+Link $\ast$element, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::update\+Results\+Series\+In (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Link} $\ast$}]{element, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_a7c1ab252615f5cd3f16e4745e1945189}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!update\+Results\+Series\+In@{update\+Results\+Series\+In}}
+\index{update\+Results\+Series\+In@{update\+Results\+Series\+In}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+In(\+Res\+Op\+Sequential\+Reservoir $\ast$element, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::update\+Results\+Series\+In (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Reservoir} $\ast$}]{element, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_ae787590360d64bdd0a06c3d6050a2abc}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!update\+Results\+Series\+Out@{update\+Results\+Series\+Out}}
+\index{update\+Results\+Series\+Out@{update\+Results\+Series\+Out}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+Out(\+Res\+Op\+Element $\ast$element, const wx\+String \&scenario\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sequential\+Model\+Ctrl\+::update\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sequential_model_ctrl_a02aeb41e81b93f371c9a8823bd1d7eb2}
+
+
+Implementa {\bf Res\+Op\+Model\+Ctrl} \doxyref{}{pag.}{class_res_op_model_ctrl_a52d3e5c6017434cea994eb1d85f93769}.
+
+
+
+Reimplementado por {\bf Opt\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_opt_sequential_model_ctrl_a4beaf00655aceb99ae6cbf9544cac1a5} e {\bf Wnd\+Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_wnd_sequential_model_ctrl_a874ee7d553fab150e74c72c611345123}.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!update\+Results\+Series\+Out@{update\+Results\+Series\+Out}}
+\index{update\+Results\+Series\+Out@{update\+Results\+Series\+Out}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+Out(\+Res\+Op\+Sequential\+Basin $\ast$element, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::update\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Basin} $\ast$}]{element, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_a8d5e00837aad5b8a1f5da2309608c05a}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!update\+Results\+Series\+Out@{update\+Results\+Series\+Out}}
+\index{update\+Results\+Series\+Out@{update\+Results\+Series\+Out}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+Out(\+Res\+Op\+Sequential\+Demand $\ast$element, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::update\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Demand} $\ast$}]{element, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_ab24026d06d266b598845f5a00b1d9176}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!update\+Results\+Series\+Out@{update\+Results\+Series\+Out}}
+\index{update\+Results\+Series\+Out@{update\+Results\+Series\+Out}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+Out(\+Res\+Op\+Sequential\+Junction $\ast$element, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::update\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Junction} $\ast$}]{element, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_a52da66fe3d7b4766b940077e3ea30360}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!update\+Results\+Series\+Out@{update\+Results\+Series\+Out}}
+\index{update\+Results\+Series\+Out@{update\+Results\+Series\+Out}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+Out(\+Res\+Op\+Sequential\+Link $\ast$element, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::update\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Link} $\ast$}]{element, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_afa065aa92f8a4284d07a7f2e3f132e99}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!update\+Results\+Series\+Out@{update\+Results\+Series\+Out}}
+\index{update\+Results\+Series\+Out@{update\+Results\+Series\+Out}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+Out(\+Res\+Op\+Sequential\+Reservoir $\ast$element, const wx\+String \&section)}]{\setlength{\rightskip}{0pt plus 5cm}void Sequential\+Model\+Ctrl\+::update\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Reservoir} $\ast$}]{element, }
+\item[{const wx\+String \&}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_af0506f8d57d624905e1a23e8b6aebc7b}
+
+
+\subsection{Atributos}
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!count\+Found@{count\+Found}}
+\index{count\+Found@{count\+Found}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{count\+Found}]{\setlength{\rightskip}{0pt plus 5cm}int Sequential\+Model\+Ctrl\+::count\+Found\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_aadfdfc7e5189a391e741b56c5541b160}
+
+
+DefiniÃ§Ã£o na linha 35 do arquivo Sequential\+Model\+Ctrl.\+h.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!increase\+Bar@{increase\+Bar}}
+\index{increase\+Bar@{increase\+Bar}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{increase\+Bar}]{\setlength{\rightskip}{0pt plus 5cm}bool Sequential\+Model\+Ctrl\+::increase\+Bar\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_a558869a3d54b9975ced6dc1bd63645d5}
+Variável para auxiliar a progress\+Dialog 
+
+DefiniÃ§Ã£o na linha 43 do arquivo Sequential\+Model\+Ctrl.\+h.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!last\+Release@{last\+Release}}
+\index{last\+Release@{last\+Release}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{last\+Release}]{\setlength{\rightskip}{0pt plus 5cm}double Sequential\+Model\+Ctrl\+::last\+Release\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_acc012e91e0ae9a04295f0e60839dfe81}
+Variáveis usadas para o cálculo da regra de garantia de demanda (com garantia de 100\% e 0\%) 
+
+DefiniÃ§Ã£o na linha 34 do arquivo Sequential\+Model\+Ctrl.\+h.
+
+\index{Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}!prog\+Dialog\+Sqt\+Ctrl@{prog\+Dialog\+Sqt\+Ctrl}}
+\index{prog\+Dialog\+Sqt\+Ctrl@{prog\+Dialog\+Sqt\+Ctrl}!Sequential\+Model\+Ctrl@{Sequential\+Model\+Ctrl}}
+\subsubsection[{prog\+Dialog\+Sqt\+Ctrl}]{\setlength{\rightskip}{0pt plus 5cm}bool Sequential\+Model\+Ctrl\+::prog\+Dialog\+Sqt\+Ctrl\hspace{0.3cm}{\ttfamily [protected]}}\label{class_sequential_model_ctrl_aa91d37651e6174c63c82855d3126665d}
+Variável para indicar se a Progress\+Dialog foi criada pela \doxyref{Sequential\+Model\+Ctrl}{pag.}{class_sequential_model_ctrl} 
+
+DefiniÃ§Ã£o na linha 39 do arquivo Sequential\+Model\+Ctrl.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Sequential\+Model\+Ctrl.\+h}\end{DoxyCompactItemize}

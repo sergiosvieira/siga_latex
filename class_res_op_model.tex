@@ -1,0 +1,337 @@
+\section{Refer√™ncia da Classe Res\+Op\+Model}
+\label{class_res_op_model}\index{Res\+Op\+Model@{Res\+Op\+Model}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Model.\+h$>$}
+
+
+
+Superclasse de {\bf Basin\+Model}, {\bf Demand\+Model}, {\bf Junction\+Model}, {\bf Link\+Model} e {\bf Reservoir\+Model}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Model} ({\bf Date} initial\+Date, {\bf Date} final\+Date, {\bf Node} $\ast$n, {\bf Link} $\ast$l)
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Model} ()
+\item 
+void {\bf on\+Changing\+Time\+Interval} ({\bf Date\+::\+Time\+Interval} time\+Interval)
+\item 
+virtual bool {\bf empty} ()=0
+\item 
+virtual bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)=0
+\item 
+virtual void {\bf run} ({\bf Date} i)=0
+\item 
+virtual void {\bf aloc\+Results} ()=0
+\item 
+virtual int {\bf get\+Id} ()=0
+\item 
+virtual void {\bf clear} ()=0
+\item 
+double {\bf get\+Release} ({\bf Date} date)
+\item 
+void {\bf set\+Allocations} ({\bf Date} date, double value)
+\item 
+void {\bf order\+Of\+Priority} ({\bf Matrix} $\ast$)
+\item 
+void {\bf update\+Demands} ({\bf Matrix} $\ast$)
+\item 
+virtual void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+virtual void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf type}
+\item 
+{\bf Node} $\ast$ {\bf node}
+\item 
+{\bf Link} $\ast$ {\bf link}
+\item 
+{\bf Interval} {\bf interval}
+\item 
+map$<$ unsigned int, unsigned int $>$ {\bf alloc}
+\item 
+vector$<$ unsigned int $>$ {\bf res\+Up}
+\item 
+{\bf Serie} $\ast$ {\bf nat\+Inflow}
+\item 
+wx\+String {\bf nat\+Inflow\+File\+Name}
+\item 
+{\bf Res\+Op\+Result} $\ast$ {\bf results}
+\item 
+{\bf Res\+Op\+Result} $\ast$ {\bf results\+Opt}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 16 do arquivo Res\+Op\+Model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Model@{Res\+Op\+Model}!Res\+Op\+Model@{Res\+Op\+Model}}
+\index{Res\+Op\+Model@{Res\+Op\+Model}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{Res\+Op\+Model(\+Date initial\+Date, Date final\+Date, Node $\ast$n, Link $\ast$l)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Model\+::\+Res\+Op\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{initial\+Date, }
+\item[{{\bf Date}}]{final\+Date, }
+\item[{{\bf Node} $\ast$}]{n, }
+\item[{{\bf Link} $\ast$}]{l}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_a1b3c480da65a58397d6363dd0524f5ef}
+Construtor padr„o da classe \doxyref{Res\+Op\+Model}{pag.}{class_res_op_model} 
+\begin{DoxyParams}{Par√¢metros}
+{\em initial\+Date} & Inicio do intervalo \\
+\hline
+{\em final\+Date} & Final do Intervalo \\
+\hline
+{\em n} & Ponteiro para nÛ \\
+\hline
+{\em l} & Ponteiro para trecho \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Model@{Res\+Op\+Model}!````~Res\+Op\+Model@{$\sim$\+Res\+Op\+Model}}
+\index{````~Res\+Op\+Model@{$\sim$\+Res\+Op\+Model}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{$\sim$\+Res\+Op\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Model\+::$\sim$\+Res\+Op\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_model_a53c856378ca15ca1ac93e45860cccea7}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Res\+Op\+Model@{Res\+Op\+Model}!aloc\+Results@{aloc\+Results}}
+\index{aloc\+Results@{aloc\+Results}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{aloc\+Results()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Model\+::aloc\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_model_af26524ca25da5eb051f825a941c91488}
+AlocaÁ„o de Resultados 
+
+Implementado por {\bf Reservoir\+Model} \doxyref{}{pag.}{class_reservoir_model_a44413894fdc2088a366c44c2def16fb6}, {\bf Demand\+Model} \doxyref{}{pag.}{class_demand_model_a8f244047859895c32f81ea17498254ca}, {\bf Link\+Model} \doxyref{}{pag.}{class_link_model_a10e217c96fcdd1a092b019c01913a149}, {\bf Junction\+Model} \doxyref{}{pag.}{class_junction_model_aa6dd014d865ceb40700d294ea30a05ba} e {\bf Basin\+Model} \doxyref{}{pag.}{class_basin_model_a24da1a0bb70b13857383f9223a37aeec}.
+
+\index{Res\+Op\+Model@{Res\+Op\+Model}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+Model\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_model_a5967e944c8fce5e6ca9ba1f8890ad56d}
+Checa se os campos da interface est„o preenchidos de forma correta 
+\begin{DoxyParams}{Par√¢metros}
+{\em dialog} & Caixa de dialogo onde seram mostrados os erros encontrados \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Reservoir\+Model} \doxyref{}{pag.}{class_reservoir_model_a0cdd572eff51f1c4997815032f4b5f4b}, {\bf Demand\+Model} \doxyref{}{pag.}{class_demand_model_afaecb35032a917f58e960fcb0a7e911a}, {\bf Link\+Model} \doxyref{}{pag.}{class_link_model_a2e1103058d3720a53282ab333974f157}, {\bf Junction\+Model} \doxyref{}{pag.}{class_junction_model_a8eda433363f58e1c5901adc8e5576c6f} e {\bf Basin\+Model} \doxyref{}{pag.}{class_basin_model_a240522dbedd1809b5bdb2c5c3097df57}.
+
+\index{Res\+Op\+Model@{Res\+Op\+Model}!clear@{clear}}
+\index{clear@{clear}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{clear()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Model\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_model_a6473b3e6e73183d74801546e8816f55a}
+Limpa os dados 
+
+Implementado por {\bf Basin\+Model} \doxyref{}{pag.}{class_basin_model_ae18565c56a0eb89f0e3621abc3f27ecc}, {\bf Reservoir\+Model} \doxyref{}{pag.}{class_reservoir_model_a82f4fc2f0d0217c63d8574751e97d1d6}, {\bf Demand\+Model} \doxyref{}{pag.}{class_demand_model_a1f73eb9fc8b554a599e08cbfa98e74b8}, {\bf Link\+Model} \doxyref{}{pag.}{class_link_model_aea8bffc44c3b47cf85d260b534630caf} e {\bf Junction\+Model} \doxyref{}{pag.}{class_junction_model_a700801b4591a705cf4ad2650bca8692b}.
+
+\index{Res\+Op\+Model@{Res\+Op\+Model}!empty@{empty}}
+\index{empty@{empty}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{empty()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+Model\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_model_adf9cc2f68809802cb9e4d55ed2522078}
+retorna se existe algum valor no modelo 
+
+Implementado por {\bf Basin\+Model} \doxyref{}{pag.}{class_basin_model_a3fef0be47805e23f802c6aa38504ef9d}, {\bf Reservoir\+Model} \doxyref{}{pag.}{class_reservoir_model_a47f1f2a08f795a159a2ab731c9131f2f}, {\bf Demand\+Model} \doxyref{}{pag.}{class_demand_model_a51682862768c5c5b077358e9e7d7d91f}, {\bf Link\+Model} \doxyref{}{pag.}{class_link_model_a9ae11d17458ae0a3611a366ba524fdbd} e {\bf Junction\+Model} \doxyref{}{pag.}{class_junction_model_a5365ad59500f4f5eb03da1d75b087b1f}.
+
+\index{Res\+Op\+Model@{Res\+Op\+Model}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{get\+Id()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Res\+Op\+Model\+::get\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_model_ac9ebfb85cf8c0bf9b2e8c3de070d7292}
+Retorna o identificador do elemento associado 
+
+Implementado por {\bf Reservoir\+Model} \doxyref{}{pag.}{class_reservoir_model_a6d5dc1397f635834d94de6af5f816df2}, {\bf Demand\+Model} \doxyref{}{pag.}{class_demand_model_a69459cf74ac461a78c7d2ddf3b690acc}, {\bf Link\+Model} \doxyref{}{pag.}{class_link_model_a4ef14ce3d31f24edfc649cc749d7ccbc}, {\bf Junction\+Model} \doxyref{}{pag.}{class_junction_model_a16fc10ad540dc3988a487a7fb478f4df} e {\bf Basin\+Model} \doxyref{}{pag.}{class_basin_model_a4e2fd5756ba546800e0acca2c25f37b3}.
+
+\index{Res\+Op\+Model@{Res\+Op\+Model}!get\+Release@{get\+Release}}
+\index{get\+Release@{get\+Release}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{get\+Release(\+Date date)}]{\setlength{\rightskip}{0pt plus 5cm}double Res\+Op\+Model\+::get\+Release (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{date}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_a07622fcff0044e44d8f31abadabfe6d3}
+Totaliza a liberaÁ„o para atender as demandas \index{Res\+Op\+Model@{Res\+Op\+Model}!on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}}
+\index{on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{on\+Changing\+Time\+Interval(\+Date\+::\+Time\+Interval time\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Model\+::on\+Changing\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_ae26b38fa882d9ef0d3df99349c0b26b2}
+Evento chamado quando o sistema muda de intervalo de tempo O modulo adapta os modelos de acordo com o intervalo de tempo definido \index{Res\+Op\+Model@{Res\+Op\+Model}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Model\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_res_op_model_a99781b8784bfcdcb228d6f63e72f2088}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado por {\bf Reservoir\+Model} \doxyref{}{pag.}{class_reservoir_model_acc1a61ab308a2f43bc6b8176ec706de4}, {\bf Demand\+Model} \doxyref{}{pag.}{class_demand_model_a0a498574499fd0038c1b0620bd98158e}, {\bf Basin\+Model} \doxyref{}{pag.}{class_basin_model_aa3d24c5e6a3ec5975829f17018e5bd39}, {\bf Link\+Model} \doxyref{}{pag.}{class_link_model_a0a4b3c3bc9204ad633cf446ddf7223ea} e {\bf Junction\+Model} \doxyref{}{pag.}{class_junction_model_ae9e48a75e4f971871acff92ea47641e7}.
+
+
+
+Defini√ß√£o na linha 152 do arquivo Res\+Op\+Model.\+h.
+
+\index{Res\+Op\+Model@{Res\+Op\+Model}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Model\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_res_op_model_a16eefd6636a24d9feb11388ecc2bb306}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado por {\bf Reservoir\+Model} \doxyref{}{pag.}{class_reservoir_model_ab1395e2b282e3ef6f1712f2fba0f7a40}, {\bf Demand\+Model} \doxyref{}{pag.}{class_demand_model_afc7bbf86f1421a01d48b54304d865fd4}, {\bf Basin\+Model} \doxyref{}{pag.}{class_basin_model_aaef1330da013e593302f20797f33f8a8}, {\bf Link\+Model} \doxyref{}{pag.}{class_link_model_aa86622be59c309ce36b1f476f50168a8} e {\bf Junction\+Model} \doxyref{}{pag.}{class_junction_model_a3b300cefc889e02ddf34b5bcdea2ccec}.
+
+
+
+Defini√ß√£o na linha 146 do arquivo Res\+Op\+Model.\+h.
+
+\index{Res\+Op\+Model@{Res\+Op\+Model}!order\+Of\+Priority@{order\+Of\+Priority}}
+\index{order\+Of\+Priority@{order\+Of\+Priority}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{order\+Of\+Priority(\+Matrix $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Model\+::order\+Of\+Priority (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_a0ec6bd4eb40cb4605a0ccd24b3a50b64}
+Retorna a ordem de atendimento em funÁ„o da prioridade \index{Res\+Op\+Model@{Res\+Op\+Model}!run@{run}}
+\index{run@{run}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{run(\+Date i)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Model\+::run (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_model_a5cb0cdd25cceb57244a687bf598483ce}
+Metodo para executar os calculos do modelo 
+\begin{DoxyParams}{Par√¢metros}
+{\em i} & Dia a ser executado \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Reservoir\+Model} \doxyref{}{pag.}{class_reservoir_model_ae5658c44a637254632faeafa2d35db8e}, {\bf Demand\+Model} \doxyref{}{pag.}{class_demand_model_ae7e0a52aa6e2ec5c25e3ab38f05032c9}, {\bf Link\+Model} \doxyref{}{pag.}{class_link_model_ab3735a8ca3738f67224b94b1eeb3dc5f}, {\bf Junction\+Model} \doxyref{}{pag.}{class_junction_model_a42a7eb3038173d2c959cbc7e54a7b78d} e {\bf Basin\+Model} \doxyref{}{pag.}{class_basin_model_adbebd8c1d9c48bfc5c98b50f11cc6584}.
+
+\index{Res\+Op\+Model@{Res\+Op\+Model}!set\+Allocations@{set\+Allocations}}
+\index{set\+Allocations@{set\+Allocations}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{set\+Allocations(\+Date date, double value)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Model\+::set\+Allocations (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{date, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_a44cce1d2ff9a803b7753bf938eb38bc9}
+Realiza a alocaÁ„o para atender as demandas \index{Res\+Op\+Model@{Res\+Op\+Model}!update\+Demands@{update\+Demands}}
+\index{update\+Demands@{update\+Demands}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{update\+Demands(\+Matrix $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Model\+::update\+Demands (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_model_af082cc43eae5c2402c77a503e3924a0a}
+Atualiza as demandas levando em consideraÁ„o os vertimentos 
+
+\subsection{Atributos}
+\index{Res\+Op\+Model@{Res\+Op\+Model}!alloc@{alloc}}
+\index{alloc@{alloc}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{alloc}]{\setlength{\rightskip}{0pt plus 5cm}map$<$unsigned int, unsigned int$>$ Res\+Op\+Model\+::alloc}\label{class_res_op_model_a662491c1065d9e5d737ff6dfff9da1e8}
+Mapa com informaÁıes para alocaÁ„o do nÛ 
+
+Defini√ß√£o na linha 43 do arquivo Res\+Op\+Model.\+h.
+
+\index{Res\+Op\+Model@{Res\+Op\+Model}!interval@{interval}}
+\index{interval@{interval}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Res\+Op\+Model\+::interval}\label{class_res_op_model_a3fbd09e68ed16e1838325f617f65b929}
+Intervalo 
+
+Defini√ß√£o na linha 38 do arquivo Res\+Op\+Model.\+h.
+
+\index{Res\+Op\+Model@{Res\+Op\+Model}!link@{link}}
+\index{link@{link}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{link}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Link}$\ast$ Res\+Op\+Model\+::link}\label{class_res_op_model_a429e1dcecbda1eeaa3b1f24a240353d3}
+Ponteiro para o trecho 
+
+Defini√ß√£o na linha 33 do arquivo Res\+Op\+Model.\+h.
+
+\index{Res\+Op\+Model@{Res\+Op\+Model}!nat\+Inflow@{nat\+Inflow}}
+\index{nat\+Inflow@{nat\+Inflow}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{nat\+Inflow}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ Res\+Op\+Model\+::nat\+Inflow}\label{class_res_op_model_a68657f2f0fd84d208e02f9942bf5fb45}
+Vaz„o natural da bacia incremental 
+
+Defini√ß√£o na linha 53 do arquivo Res\+Op\+Model.\+h.
+
+\index{Res\+Op\+Model@{Res\+Op\+Model}!nat\+Inflow\+File\+Name@{nat\+Inflow\+File\+Name}}
+\index{nat\+Inflow\+File\+Name@{nat\+Inflow\+File\+Name}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{nat\+Inflow\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Res\+Op\+Model\+::nat\+Inflow\+File\+Name}\label{class_res_op_model_a502f96d2e7dcf648aa04821faa1702ab}
+Nome do arquivo lido vaz„o natural da bacia incremental 
+
+Defini√ß√£o na linha 58 do arquivo Res\+Op\+Model.\+h.
+
+\index{Res\+Op\+Model@{Res\+Op\+Model}!node@{node}}
+\index{node@{node}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ Res\+Op\+Model\+::node}\label{class_res_op_model_a6ab87e7574642d51e22d8efb6e92a9dc}
+Pnteiro para o nÛ 
+
+Defini√ß√£o na linha 28 do arquivo Res\+Op\+Model.\+h.
+
+\index{Res\+Op\+Model@{Res\+Op\+Model}!results@{results}}
+\index{results@{results}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{results}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Result}$\ast$ Res\+Op\+Model\+::results}\label{class_res_op_model_ab19ba057c2a3484ec8e0d323f717dd92}
+Resultados do modelo para simulaÁ„o 
+
+Defini√ß√£o na linha 63 do arquivo Res\+Op\+Model.\+h.
+
+\index{Res\+Op\+Model@{Res\+Op\+Model}!results\+Opt@{results\+Opt}}
+\index{results\+Opt@{results\+Opt}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{results\+Opt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Result}$\ast$ Res\+Op\+Model\+::results\+Opt}\label{class_res_op_model_a60a1c176da429cb0b34a0d6bcb5b05c5}
+Resultados do modelo para otimizaÁ„o 
+
+Defini√ß√£o na linha 68 do arquivo Res\+Op\+Model.\+h.
+
+\index{Res\+Op\+Model@{Res\+Op\+Model}!res\+Up@{res\+Up}}
+\index{res\+Up@{res\+Up}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{res\+Up}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$unsigned int$>$ Res\+Op\+Model\+::res\+Up}\label{class_res_op_model_a802a7f4947842226c1a46e1edff97c97}
+ReservatÛrios de Montante 
+
+Defini√ß√£o na linha 48 do arquivo Res\+Op\+Model.\+h.
+
+\index{Res\+Op\+Model@{Res\+Op\+Model}!type@{type}}
+\index{type@{type}!Res\+Op\+Model@{Res\+Op\+Model}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}int Res\+Op\+Model\+::type}\label{class_res_op_model_a0b5763b462340444de305d383e0732e3}
+Typo de Model 
+
+Defini√ß√£o na linha 23 do arquivo Res\+Op\+Model.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Model.\+h}\end{DoxyCompactItemize}

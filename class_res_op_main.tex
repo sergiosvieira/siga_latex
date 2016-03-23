@@ -1,0 +1,690 @@
+\section{Refer√™ncia da Classe Res\+Op\+Main}
+\label{class_res_op_main}\index{Res\+Op\+Main@{Res\+Op\+Main}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Main.\+h$>$}
+
+
+
+Herdeiro de {\bf Component}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf on\+Init} ({\bf S\+I\+GA} $\ast${\bf main}, wx\+Frame $\ast$frame, wx\+Window $\ast$parent)
+\item 
+void {\bf on\+Changed\+Component} ()
+\item 
+void {\bf on\+Changing\+Component} ()
+\item 
+void {\bf on\+Select\+Nodes} ()
+\item 
+void {\bf on\+Delete\+Nodes} (vector$<$ unsigned int $>$ node\+Ids)
+\item 
+void {\bf on\+Select\+Links} ()
+\item 
+void {\bf on\+Delete\+Links} (vector$<$ unsigned int $>$ link\+Ids)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf create\+Model} ()
+\item 
+void {\bf create\+Model\+Main} ()
+\item 
+{\bf Res\+Op\+Model\+Main} $\ast$ {\bf get\+Model\+Main} ()
+\item 
+{\bf Res\+Op\+Model} $\ast$ {\bf get\+Model} (unsigned int id\+Node)
+\item 
+{\bf Res\+Op\+Model} $\ast$ {\bf get\+Model} ()
+\item 
+void {\bf create\+Tecnique} ()
+\item 
+void {\bf create\+Tecnique\+Main} (res\+Op\+Algorithm\+Type type)
+\item 
+{\bf Res\+Op\+Tecnique\+Main} $\ast$ {\bf get\+Tecnique\+Main} (res\+Op\+Algorithm\+Type type)
+\item 
+{\bf Res\+Op\+Tecnique} $\ast$ {\bf get\+Tecnique} (res\+Op\+Algorithm\+Type type)
+\item 
+{\bf Res\+Op\+Tecnique} $\ast$ {\bf get\+Tecnique} ()
+\item 
+void {\bf create\+Rule} ({\bf Draw\+Node} $\ast$node)
+\item 
+void {\bf create\+Rule} ({\bf Draw\+Node} $\ast$node, {\bf res\+Op\+Rule\+Type} d\+Rule)
+\item 
+void {\bf create\+Rule\+Main} ({\bf res\+Op\+Rule\+Type} type)
+\item 
+{\bf Res\+Op\+Rule\+Main} $\ast$ {\bf get\+Rule\+Main} ({\bf res\+Op\+Rule\+Type} type)
+\item 
+{\bf Res\+Op\+Rule\+Main} $\ast$ {\bf get\+Rule\+Main} ()
+\item 
+{\bf Res\+Op\+Rule} $\ast$ {\bf get\+Rule} ({\bf res\+Op\+Rule\+Type} type, unsigned int id\+Node)
+\item 
+{\bf Res\+Op\+Rule} $\ast$ {\bf get\+Rule} (unsigned int id\+Node)
+\item 
+{\bf Res\+Op\+Rule} $\ast$ {\bf get\+Rule} ({\bf res\+Op\+Rule\+Type} type)
+\item 
+{\bf Res\+Op\+Rule} $\ast$ {\bf get\+Rule} ()
+\item 
+{\bf Res\+Op\+Rule} $\ast$ {\bf get\+Used\+Rule} (unsigned int id\+Node)
+\item 
+{\bf res\+Op\+Rule\+Type} {\bf get\+Used\+Rule\+Type} ()
+\item 
+{\bf res\+Op\+Rule\+Type} {\bf get\+Used\+Rule\+Type} (unsigned int id\+Node)
+\item 
+void {\bf create\+Obj\+Function\+Main} ()
+\item 
+{\bf Res\+Op\+Obj\+Function\+Main} $\ast$ {\bf get\+Obj\+Function\+Main} ()
+\item 
+void {\bf on\+Changing\+Time\+Interval} ({\bf Date\+::\+Time\+Interval} time\+Interval)
+\item 
+void {\bf on\+Changing\+Element\+Type} (vector$<$ unsigned int $>$ element\+Ids)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{M√©todos P√∫blicos Est√°ticos}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Res\+Op\+Main} \& {\bf Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf oper\+Type} {\bf selected\+Operation\+Type}
+\item 
+{\bf res\+Op\+Model\+Type} {\bf selected\+Model\+Type}
+\item 
+{\bf res\+Op\+Rule\+Type} {\bf selected\+Rule\+Type}
+\item 
+map$<$ int, {\bf res\+Op\+Rule\+Type} $>$ {\bf used\+Rules\+Type}
+\item 
+{\bf Draw\+Node} $\ast$ {\bf selected\+Node}
+\item 
+{\bf Draw\+Link} $\ast$ {\bf selected\+Link}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Main} ()
+\item 
+{\bf $\sim$\+Res\+Op\+Main} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Model\+Main} $\ast$ {\bf models\+Main}
+\item 
+map$<$ {\bf res\+Op\+Rule\+Type}, {\bf Res\+Op\+Rule\+Main} $\ast$ $>$ {\bf rules\+Main}
+\item 
+map$<$ res\+Op\+Algorithm\+Type, {\bf Res\+Op\+Tecnique\+Main} $\ast$ $>$ {\bf algorithm\+Main}
+\item 
+{\bf Res\+Op\+Obj\+Function\+Main} $\ast$ {\bf functions\+Main}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Res\+Op\+Model\+Main}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 22 do arquivo Res\+Op\+Main.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Main@{Res\+Op\+Main}!Res\+Op\+Main@{Res\+Op\+Main}}
+\index{Res\+Op\+Main@{Res\+Op\+Main}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{Res\+Op\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Main\+::\+Res\+Op\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_main_afb9cb9aa715a65ad03bee138b395f064}
+Construtor \index{Res\+Op\+Main@{Res\+Op\+Main}!````~Res\+Op\+Main@{$\sim$\+Res\+Op\+Main}}
+\index{````~Res\+Op\+Main@{$\sim$\+Res\+Op\+Main}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{$\sim$\+Res\+Op\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Main\+::$\sim$\+Res\+Op\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_main_a1cbad2695d78ea63c08ebc83ee7f240f}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Res\+Op\+Main@{Res\+Op\+Main}!clear@{clear}}
+\index{clear@{clear}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Main\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_main_a2b201d875c9997434950a3ef44b4617e}
+Chama o metodo clear de cada \doxyref{Hidro\+Model\+Main}{pag.}{class_hidro_model_main} 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a3155a0112bacea4b0af7b131c0e3f011}.
+
+\index{Res\+Op\+Main@{Res\+Op\+Main}!create\+Model@{create\+Model}}
+\index{create\+Model@{create\+Model}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{create\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Main\+::create\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_a4e9e4e3cea0eeb2970a57bbc5fe1b034}
+Cria modelo caso ele ainda nao exista para o no selecionado \index{Res\+Op\+Main@{Res\+Op\+Main}!create\+Model\+Main@{create\+Model\+Main}}
+\index{create\+Model\+Main@{create\+Model\+Main}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{create\+Model\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Main\+::create\+Model\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_aaefa126407d8e1383edebaf5c13bad7e}
+Cria o objeto principal de cada tipo de modelo. O\+BS\+: Garanta que este metodo ser· chamado na ordem do enum res\+Op\+Model\+Type \index{Res\+Op\+Main@{Res\+Op\+Main}!create\+Obj\+Function\+Main@{create\+Obj\+Function\+Main}}
+\index{create\+Obj\+Function\+Main@{create\+Obj\+Function\+Main}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{create\+Obj\+Function\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Main\+::create\+Obj\+Function\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_afa2a692986cd9b7302abe1e51ace2132}
+Cria classe \doxyref{Res\+Op\+Obj\+Function\+Main}{pag.}{class_res_op_obj_function_main} caso ela ainda nao exista \index{Res\+Op\+Main@{Res\+Op\+Main}!create\+Rule@{create\+Rule}}
+\index{create\+Rule@{create\+Rule}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{create\+Rule(\+Draw\+Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Main\+::create\+Rule (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_ab5e30a4fab36d39df41c08057a63c505}
+Cria tecnica caso ele ainda nao exista de acordo com a tecnica selecionada 
+\begin{DoxyParams}{Par√¢metros}
+{\em node} & NÛ ao qual a tÈcnica ser· associada \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Main@{Res\+Op\+Main}!create\+Rule@{create\+Rule}}
+\index{create\+Rule@{create\+Rule}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{create\+Rule(\+Draw\+Node $\ast$node, res\+Op\+Rule\+Type d\+Rule)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Main\+::create\+Rule (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Node} $\ast$}]{node, }
+\item[{{\bf res\+Op\+Rule\+Type}}]{d\+Rule}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_ac134962320570a0c36256b0e61d13843}
+Cria tecnica caso ele ainda nao exista 
+\begin{DoxyParams}{Par√¢metros}
+{\em node} & NÛ ao qual a tÈcnica ser· associada \\
+\hline
+{\em d\+Rule} & Tipo de a ser criada \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Main@{Res\+Op\+Main}!create\+Rule\+Main@{create\+Rule\+Main}}
+\index{create\+Rule\+Main@{create\+Rule\+Main}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{create\+Rule\+Main(res\+Op\+Rule\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Main\+::create\+Rule\+Main (
+\begin{DoxyParamCaption}
+\item[{{\bf res\+Op\+Rule\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_ad21b688a4f92f99291fada1906b09438}
+Cria o objeto principal de cada tipo de regra O\+BS\+: Garanta que este metodo ser· chamado na ordem do enum res\+Op\+Rule\+Type 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo de regra de operaÁ„o \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Main@{Res\+Op\+Main}!create\+Tecnique@{create\+Tecnique}}
+\index{create\+Tecnique@{create\+Tecnique}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{create\+Tecnique()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Main\+::create\+Tecnique (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_ab71437a13ebd027b010102041720689f}
+Cria tecnica caso ele ainda nao exista \index{Res\+Op\+Main@{Res\+Op\+Main}!create\+Tecnique\+Main@{create\+Tecnique\+Main}}
+\index{create\+Tecnique\+Main@{create\+Tecnique\+Main}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{create\+Tecnique\+Main(res\+Op\+Algorithm\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Main\+::create\+Tecnique\+Main (
+\begin{DoxyParamCaption}
+\item[{res\+Op\+Algorithm\+Type}]{type}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_a42b09558233644f7089704e2080b77b3}
+Cria o objeto principal de cada tipo de tecnica O\+BS\+: Garanta que este metodo ser· chamado na ordem do enum res\+Op\+Algorithm\+Type 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo de tecnica de otimizaÁ„o \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Main@{Res\+Op\+Main}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{get\+Model(unsigned int id\+Node)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Model}$\ast$ Res\+Op\+Main\+::get\+Model (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{id\+Node}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_acb34a856ac70791d39fb4d8f187e69ec}
+Retorna a inst‚ncia do \doxyref{Res\+Op\+Model}{pag.}{class_res_op_model} correspondente ao id do nÛ fornecido do modelo utilizado no momento. 
+\begin{DoxyParams}{Par√¢metros}
+{\em id\+Node} & Id do nÛ selecionado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Res\+Op\+Model}{pag.}{class_res_op_model} 
+\end{DoxyReturn}
+\index{Res\+Op\+Main@{Res\+Op\+Main}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{get\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Model}$\ast$ Res\+Op\+Main\+::get\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_a5315bc1efbf2ceb3625a689f379da316}
+Retorna a inst‚ncia do modelo correspondente ao tipo de modelo utilizado para o nÛ selecionado. \begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Res\+Op\+Model}{pag.}{class_res_op_model} 
+\end{DoxyReturn}
+\index{Res\+Op\+Main@{Res\+Op\+Main}!get\+Model\+Main@{get\+Model\+Main}}
+\index{get\+Model\+Main@{get\+Model\+Main}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{get\+Model\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Model\+Main}$\ast$ Res\+Op\+Main\+::get\+Model\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_op_main_a3a7bf56062599b81af895e2cd6efd697}
+Retorna a inst‚ncia do \doxyref{Res\+Op\+Model\+Main}{pag.}{class_res_op_model_main} correspondente ao tipo de modelo que esta sendo utilizado no momento. \begin{DoxyReturn}{Retorna}
+Inst‚ncia \doxyref{Res\+Op\+Model\+Main}{pag.}{class_res_op_model_main} 
+\end{DoxyReturn}
+
+
+Defini√ß√£o na linha 156 do arquivo Res\+Op\+Main.\+h.
+
+\index{Res\+Op\+Main@{Res\+Op\+Main}!get\+Obj\+Function\+Main@{get\+Obj\+Function\+Main}}
+\index{get\+Obj\+Function\+Main@{get\+Obj\+Function\+Main}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{get\+Obj\+Function\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Obj\+Function\+Main}$\ast$ Res\+Op\+Main\+::get\+Obj\+Function\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_op_main_ac3c66660e3090eca36bdb9b3ff083e66}
+Retorna a inst‚ncia do \doxyref{Res\+Op\+Obj\+Function\+Main}{pag.}{class_res_op_obj_function_main} \begin{DoxyReturn}{Retorna}
+Inst‚ncia \doxyref{Res\+Op\+Obj\+Function\+Main}{pag.}{class_res_op_obj_function_main} 
+\end{DoxyReturn}
+
+
+Defini√ß√£o na linha 295 do arquivo Res\+Op\+Main.\+h.
+
+\index{Res\+Op\+Main@{Res\+Op\+Main}!get\+Rule@{get\+Rule}}
+\index{get\+Rule@{get\+Rule}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{get\+Rule(res\+Op\+Rule\+Type type, unsigned int id\+Node)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Rule}$\ast$ Res\+Op\+Main\+::get\+Rule (
+\begin{DoxyParamCaption}
+\item[{{\bf res\+Op\+Rule\+Type}}]{type, }
+\item[{unsigned int}]{id\+Node}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_a69990148f38ed884f3b0e077ed137690}
+Retorna a inst‚ncia do \doxyref{Res\+Op\+Rule}{pag.}{class_res_op_rule} correspondente ao tipo de regra fornecida e do id do nÛ fornecido. 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo de regra de operaÁ„o \\
+\hline
+{\em id\+Node} & Id do nÛ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Res\+Op\+Rule}{pag.}{class_res_op_rule} 
+\end{DoxyReturn}
+\index{Res\+Op\+Main@{Res\+Op\+Main}!get\+Rule@{get\+Rule}}
+\index{get\+Rule@{get\+Rule}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{get\+Rule(unsigned int id\+Node)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Rule}$\ast$ Res\+Op\+Main\+::get\+Rule (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{id\+Node}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_a198b13720bbef0177d676c55361b1302}
+Retorna a inst‚ncia do \doxyref{Res\+Op\+Rule}{pag.}{class_res_op_rule} correspondente ao id do nÛ fornecido da regra utilizada no momento. 
+\begin{DoxyParams}{Par√¢metros}
+{\em id\+Node} & Id do nÛ selecionado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Res\+Op\+Rule}{pag.}{class_res_op_rule} 
+\end{DoxyReturn}
+\index{Res\+Op\+Main@{Res\+Op\+Main}!get\+Rule@{get\+Rule}}
+\index{get\+Rule@{get\+Rule}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{get\+Rule(res\+Op\+Rule\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Rule}$\ast$ Res\+Op\+Main\+::get\+Rule (
+\begin{DoxyParamCaption}
+\item[{{\bf res\+Op\+Rule\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_a803ff99365bf7ccda5b970a6e9e3a1bc}
+Retorna a inst‚ncia do \doxyref{Res\+Op\+Rule}{pag.}{class_res_op_rule} correspondente ao tipo do regra fornecida 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo do regra de operaÁ„o \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Res\+Op\+Rule}{pag.}{class_res_op_rule} 
+\end{DoxyReturn}
+\index{Res\+Op\+Main@{Res\+Op\+Main}!get\+Rule@{get\+Rule}}
+\index{get\+Rule@{get\+Rule}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{get\+Rule()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Rule}$\ast$ Res\+Op\+Main\+::get\+Rule (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_a405797081f35fbf19f389b8872a32e70}
+Retorna a inst‚ncia da regra utilizada no momento \begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Res\+Op\+Rule}{pag.}{class_res_op_rule} 
+\end{DoxyReturn}
+\index{Res\+Op\+Main@{Res\+Op\+Main}!get\+Rule\+Main@{get\+Rule\+Main}}
+\index{get\+Rule\+Main@{get\+Rule\+Main}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{get\+Rule\+Main(res\+Op\+Rule\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Rule\+Main}$\ast$ Res\+Op\+Main\+::get\+Rule\+Main (
+\begin{DoxyParamCaption}
+\item[{{\bf res\+Op\+Rule\+Type}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_op_main_a1ebb144e271baacc779cf0140a3af741}
+Retorna a inst‚ncia do \doxyref{Res\+Op\+Rule\+Main}{pag.}{class_res_op_rule_main} correspondente ao tipo de regra fornecida. 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo do regra de operaÁ„o \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia \doxyref{Res\+Op\+Rule\+Main}{pag.}{class_res_op_rule_main} 
+\end{DoxyReturn}
+
+
+Defini√ß√£o na linha 233 do arquivo Res\+Op\+Main.\+h.
+
+\index{Res\+Op\+Main@{Res\+Op\+Main}!get\+Rule\+Main@{get\+Rule\+Main}}
+\index{get\+Rule\+Main@{get\+Rule\+Main}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{get\+Rule\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Rule\+Main}$\ast$ Res\+Op\+Main\+::get\+Rule\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_op_main_a57de194ce23675ed7f6ac2feb8807e01}
+Retorna a inst‚ncia do \doxyref{Res\+Op\+Rule\+Main}{pag.}{class_res_op_rule_main} correspondente ao tipo de regra que esta sendo utilizado no momento. \begin{DoxyReturn}{Retorna}
+Inst‚ncia \doxyref{Res\+Op\+Rule\+Main}{pag.}{class_res_op_rule_main} 
+\end{DoxyReturn}
+
+
+Defini√ß√£o na linha 239 do arquivo Res\+Op\+Main.\+h.
+
+\index{Res\+Op\+Main@{Res\+Op\+Main}!get\+Tecnique@{get\+Tecnique}}
+\index{get\+Tecnique@{get\+Tecnique}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{get\+Tecnique(res\+Op\+Algorithm\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Tecnique}$\ast$ Res\+Op\+Main\+::get\+Tecnique (
+\begin{DoxyParamCaption}
+\item[{res\+Op\+Algorithm\+Type}]{type}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_a7d72f562b51d335af67988235a956948}
+Retorna a inst‚ncia do \doxyref{Res\+Op\+Tecnique\+Main}{pag.}{class_res_op_tecnique_main} correspondente ao tipo de tecnica que esta sendo utilizado no momento. \begin{DoxyReturn}{Retorna}
+Inst‚ncia \doxyref{Res\+Op\+Tecnique\+Main}{pag.}{class_res_op_tecnique_main}
+\end{DoxyReturn}
+Res\+Op\+Tecnique\+Main$\ast$ \doxyref{get\+Tecnique\+Main()}{pag.}{class_res_op_main_a6e5d4cbf58b88f3b25d9dce3fe53546b}\{ return get\+Tecnique\+Main(this-\/$>$selected\+Tecnique\+Type); \}; Retorna a inst‚ncia do \doxyref{Res\+Op\+Tecnique}{pag.}{class_res_op_tecnique} correspondente ao tipo do tecnica fornecida 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo do tecnica de otimizacao \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Res\+Op\+Tecnique}{pag.}{class_res_op_tecnique} 
+\end{DoxyReturn}
+\index{Res\+Op\+Main@{Res\+Op\+Main}!get\+Tecnique@{get\+Tecnique}}
+\index{get\+Tecnique@{get\+Tecnique}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{get\+Tecnique()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Tecnique}$\ast$ Res\+Op\+Main\+::get\+Tecnique (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_a8fe602540387a69b312cbed03a8cbcac}
+Retorna a inst‚ncia do modelo correspondente ao tipo de tecnica utilizada no momento \begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Res\+Op\+Tecnique}{pag.}{class_res_op_tecnique} 
+\end{DoxyReturn}
+\index{Res\+Op\+Main@{Res\+Op\+Main}!get\+Tecnique\+Main@{get\+Tecnique\+Main}}
+\index{get\+Tecnique\+Main@{get\+Tecnique\+Main}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{get\+Tecnique\+Main(res\+Op\+Algorithm\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Tecnique\+Main}$\ast$ Res\+Op\+Main\+::get\+Tecnique\+Main (
+\begin{DoxyParamCaption}
+\item[{res\+Op\+Algorithm\+Type}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_op_main_a6e5d4cbf58b88f3b25d9dce3fe53546b}
+Retorna a inst‚ncia do \doxyref{Res\+Op\+Tecnique\+Main}{pag.}{class_res_op_tecnique_main} correspondente ao tipo de tecnica fornecida. 
+\begin{DoxyParams}{Par√¢metros}
+{\em type} & Tipo do tecnica de operaÁ„o \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia \doxyref{Res\+Op\+Tecnique\+Main}{pag.}{class_res_op_tecnique_main} 
+\end{DoxyReturn}
+
+
+Defini√ß√£o na linha 188 do arquivo Res\+Op\+Main.\+h.
+
+\index{Res\+Op\+Main@{Res\+Op\+Main}!get\+Used\+Rule@{get\+Used\+Rule}}
+\index{get\+Used\+Rule@{get\+Used\+Rule}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{get\+Used\+Rule(unsigned int id\+Node)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Rule}$\ast$ Res\+Op\+Main\+::get\+Used\+Rule (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{id\+Node}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_aa8de6eea604fd62c37f991699fab325f}
+Retorna a inst‚ncia da regra utilizada no momento para o nÛ desejado 
+\begin{DoxyParams}{Par√¢metros}
+{\em id\+Node} & Identificador do nÛ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Inst‚ncia do \doxyref{Res\+Op\+Rule}{pag.}{class_res_op_rule} 
+\end{DoxyReturn}
+\index{Res\+Op\+Main@{Res\+Op\+Main}!get\+Used\+Rule\+Type@{get\+Used\+Rule\+Type}}
+\index{get\+Used\+Rule\+Type@{get\+Used\+Rule\+Type}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{get\+Used\+Rule\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf res\+Op\+Rule\+Type} Res\+Op\+Main\+::get\+Used\+Rule\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_af19e45956ddf25a837cd206c1f618188}
+Retorna o tipo da regra utilizada pelo nÛ selecionado \index{Res\+Op\+Main@{Res\+Op\+Main}!get\+Used\+Rule\+Type@{get\+Used\+Rule\+Type}}
+\index{get\+Used\+Rule\+Type@{get\+Used\+Rule\+Type}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{get\+Used\+Rule\+Type(unsigned int id\+Node)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf res\+Op\+Rule\+Type} Res\+Op\+Main\+::get\+Used\+Rule\+Type (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{id\+Node}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_a83233ed202b14af2ffdfcc096554ff2f}
+Retorna o tipo da regra utilizada pelo nÛ passado \index{Res\+Op\+Main@{Res\+Op\+Main}!Instance@{Instance}}
+\index{Instance@{Instance}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{Instance()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Res\+Op\+Main}\& Res\+Op\+Main\+::\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_res_op_main_a2feea8a999cde22d6c6c949031f4966d}
+Recupera a instancia da classe \index{Res\+Op\+Main@{Res\+Op\+Main}!on\+Changed\+Component@{on\+Changed\+Component}}
+\index{on\+Changed\+Component@{on\+Changed\+Component}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{on\+Changed\+Component()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Main\+::on\+Changed\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_main_a4ceb119b8627bbe61ad6a9a312705500}
+Chamado quando entra no modelo 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a528080e8ef4be5f15e8a268ef8a06bd6}.
+
+\index{Res\+Op\+Main@{Res\+Op\+Main}!on\+Changing\+Component@{on\+Changing\+Component}}
+\index{on\+Changing\+Component@{on\+Changing\+Component}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{on\+Changing\+Component()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Main\+::on\+Changing\+Component (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_main_a97dab008c3cb79a0eb4b683789d33730}
+Chamado quando sai do modelo 
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a86d6778195457395b75c8995e98075f1}.
+
+\index{Res\+Op\+Main@{Res\+Op\+Main}!on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}}
+\index{on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{on\+Changing\+Element\+Type(vector$<$ unsigned int $>$ element\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Main\+::on\+Changing\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ unsigned int $>$}]{element\+Ids}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_aeee3de72228a9f8d15a691f549682bd3}
+\index{Res\+Op\+Main@{Res\+Op\+Main}!on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}}
+\index{on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{on\+Changing\+Time\+Interval(\+Date\+::\+Time\+Interval time\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Main\+::on\+Changing\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_main_a067281bb99636cef48d9d1a1ceb9d686}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a3e49742b76123d86cd3fec640ba57dd8}.
+
+\index{Res\+Op\+Main@{Res\+Op\+Main}!on\+Delete\+Links@{on\+Delete\+Links}}
+\index{on\+Delete\+Links@{on\+Delete\+Links}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{on\+Delete\+Links(vector$<$ unsigned int $>$ link\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Main\+::on\+Delete\+Links (
+\begin{DoxyParamCaption}
+\item[{vector$<$ unsigned int $>$}]{link\+Ids}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_adde785299015f41baac755d162b84175}
+Chamado quando algum link eh deletado 
+\begin{DoxyParams}{Par√¢metros}
+{\em link\+Ids} & Identificadores dos trechos deletados \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Main@{Res\+Op\+Main}!on\+Delete\+Nodes@{on\+Delete\+Nodes}}
+\index{on\+Delete\+Nodes@{on\+Delete\+Nodes}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{on\+Delete\+Nodes(vector$<$ unsigned int $>$ node\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Main\+::on\+Delete\+Nodes (
+\begin{DoxyParamCaption}
+\item[{vector$<$ unsigned int $>$}]{node\+Ids}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_abc9d637b98693fd2eb6d00219958df2a}
+Chamado quando algum no eh deletado 
+\begin{DoxyParams}{Par√¢metros}
+{\em node\+Ids} & Identificadores dos nÛs deletados \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Main@{Res\+Op\+Main}!on\+Init@{on\+Init}}
+\index{on\+Init@{on\+Init}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{on\+Init(\+S\+I\+G\+A $\ast$main, wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Main\+::on\+Init (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+GA} $\ast$}]{main, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_main_ab3161de255dccb7d8319634db95cdc8f}
+Inicializa a instancia do \doxyref{Opt\+Main}{pag.}{class_opt_main} 
+\begin{DoxyParams}{Par√¢metros}
+{\em frame} & Janela onde a interface ser· inserida \\
+\hline
+{\em parent} & Componente onde a interface sera inserida \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_aa781bddb43637778a628acbe21a78a01}.
+
+\index{Res\+Op\+Main@{Res\+Op\+Main}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Main\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_main_a79152f4a082c85b5341a732e5776f982}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_a755c932409c320f6a057abf6c4ebc5e4}.
+
+\index{Res\+Op\+Main@{Res\+Op\+Main}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Main\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_main_a1fc486606530d9cbd568982ebac88358}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Component} \doxyref{}{pag.}{class_component_ad6ccdceebf942b62e75f0255319c9fab}.
+
+\index{Res\+Op\+Main@{Res\+Op\+Main}!on\+Select\+Links@{on\+Select\+Links}}
+\index{on\+Select\+Links@{on\+Select\+Links}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{on\+Select\+Links()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Main\+::on\+Select\+Links (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_afd49b00eef75140db3433d30dd6c2135}
+Chamado quando algum trecho È selecionado \index{Res\+Op\+Main@{Res\+Op\+Main}!on\+Select\+Nodes@{on\+Select\+Nodes}}
+\index{on\+Select\+Nodes@{on\+Select\+Nodes}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{on\+Select\+Nodes()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Main\+::on\+Select\+Nodes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_main_a9f1c4fb16aff16f87e3995a198b79790}
+Chamado quando algum no eh selecionado 
+
+\subsection{Amigas e Fun√ß√µes Relacionadas}
+\index{Res\+Op\+Main@{Res\+Op\+Main}!Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}}
+\index{Res\+Op\+Model\+Main@{Res\+Op\+Model\+Main}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{Res\+Op\+Model\+Main}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Res\+Op\+Model\+Main}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_res_op_main_a71d75e9b088b2dd441393c994eae800c}
+
+
+Defini√ß√£o na linha 24 do arquivo Res\+Op\+Main.\+h.
+
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Main@{Res\+Op\+Main}!algorithm\+Main@{algorithm\+Main}}
+\index{algorithm\+Main@{algorithm\+Main}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{algorithm\+Main}]{\setlength{\rightskip}{0pt plus 5cm}map$<$res\+Op\+Algorithm\+Type,{\bf Res\+Op\+Tecnique\+Main}$\ast$$>$ Res\+Op\+Main\+::algorithm\+Main\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_main_aadd0fec426f5f4f129a6fa2aa7417216}
+Guarda as classes principais de cada tipo de tecnica  Cardinality 1..$\ast$  \doxyref{Res\+Op\+Tecnique\+Main}{pag.}{class_res_op_tecnique_main} 
+
+Defini√ß√£o na linha 45 do arquivo Res\+Op\+Main.\+h.
+
+\index{Res\+Op\+Main@{Res\+Op\+Main}!functions\+Main@{functions\+Main}}
+\index{functions\+Main@{functions\+Main}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{functions\+Main}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Obj\+Function\+Main}$\ast$ Res\+Op\+Main\+::functions\+Main\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_main_abae3154845355dd708642942995b29aa}
+Guarda as classes principais de cada tipo de modelo 
+
+Defini√ß√£o na linha 50 do arquivo Res\+Op\+Main.\+h.
+
+\index{Res\+Op\+Main@{Res\+Op\+Main}!models\+Main@{models\+Main}}
+\index{models\+Main@{models\+Main}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{models\+Main}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Model\+Main}$\ast$ Res\+Op\+Main\+::models\+Main\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_main_a81375ab0b82c730594784d85f1ca1f95}
+Guarda as classes principais de cada tipo de modelo 
+
+Defini√ß√£o na linha 30 do arquivo Res\+Op\+Main.\+h.
+
+\index{Res\+Op\+Main@{Res\+Op\+Main}!rules\+Main@{rules\+Main}}
+\index{rules\+Main@{rules\+Main}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{rules\+Main}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf res\+Op\+Rule\+Type},{\bf Res\+Op\+Rule\+Main}$\ast$$>$ Res\+Op\+Main\+::rules\+Main\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_main_a84382448de9f15c1ea799fb8f5d11357}
+Guarda as classes principais de cada tipo de regra  Cardinality 1..$\ast$  \doxyref{Res\+Op\+Rule\+Main}{pag.}{class_res_op_rule_main} 
+
+Defini√ß√£o na linha 37 do arquivo Res\+Op\+Main.\+h.
+
+\index{Res\+Op\+Main@{Res\+Op\+Main}!selected\+Link@{selected\+Link}}
+\index{selected\+Link@{selected\+Link}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{selected\+Link}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Link}$\ast$ Res\+Op\+Main\+::selected\+Link}\label{class_res_op_main_a3bf469d77da71dbb4d65d57442d1f388}
+Ponteiro para o nÛ selecionado (vem do \doxyref{Net\+Canvas}{pag.}{class_net_canvas}) 
+
+Defini√ß√£o na linha 91 do arquivo Res\+Op\+Main.\+h.
+
+\index{Res\+Op\+Main@{Res\+Op\+Main}!selected\+Model\+Type@{selected\+Model\+Type}}
+\index{selected\+Model\+Type@{selected\+Model\+Type}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{selected\+Model\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf res\+Op\+Model\+Type} Res\+Op\+Main\+::selected\+Model\+Type}\label{class_res_op_main_aaa8c1aad976c4d963c02d750d3f875c4}
+Guarda o tipo de modelo que esta sendo utilizado no momento 
+
+Defini√ß√£o na linha 70 do arquivo Res\+Op\+Main.\+h.
+
+\index{Res\+Op\+Main@{Res\+Op\+Main}!selected\+Node@{selected\+Node}}
+\index{selected\+Node@{selected\+Node}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{selected\+Node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Node}$\ast$ Res\+Op\+Main\+::selected\+Node}\label{class_res_op_main_a5297df6362542d9845a3318d6dd38a8d}
+Ponteiro para o nÛ selecionado (vem do \doxyref{Net\+Canvas}{pag.}{class_net_canvas}) 
+
+Defini√ß√£o na linha 86 do arquivo Res\+Op\+Main.\+h.
+
+\index{Res\+Op\+Main@{Res\+Op\+Main}!selected\+Operation\+Type@{selected\+Operation\+Type}}
+\index{selected\+Operation\+Type@{selected\+Operation\+Type}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{selected\+Operation\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf oper\+Type} Res\+Op\+Main\+::selected\+Operation\+Type}\label{class_res_op_main_adb9663dfbe2029783ea5011165256d60}
+Tipo de operaÁ„o selecionada 
+
+Defini√ß√£o na linha 65 do arquivo Res\+Op\+Main.\+h.
+
+\index{Res\+Op\+Main@{Res\+Op\+Main}!selected\+Rule\+Type@{selected\+Rule\+Type}}
+\index{selected\+Rule\+Type@{selected\+Rule\+Type}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{selected\+Rule\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf res\+Op\+Rule\+Type} Res\+Op\+Main\+::selected\+Rule\+Type}\label{class_res_op_main_a78c374102573e3398cb013d3cb1838cd}
+Guarda o tipo de regra que esta sendo utilizado no momento 
+
+Defini√ß√£o na linha 75 do arquivo Res\+Op\+Main.\+h.
+
+\index{Res\+Op\+Main@{Res\+Op\+Main}!used\+Rules\+Type@{used\+Rules\+Type}}
+\index{used\+Rules\+Type@{used\+Rules\+Type}!Res\+Op\+Main@{Res\+Op\+Main}}
+\subsubsection[{used\+Rules\+Type}]{\setlength{\rightskip}{0pt plus 5cm}map$<$int,{\bf res\+Op\+Rule\+Type}$>$ Res\+Op\+Main\+::used\+Rules\+Type}\label{class_res_op_main_a9db9d0ab0f40a987ebe095b72596f9ce}
+Regra utilizada para cada reservatÛrio  res\+Op\+Rule\+Type 
+
+Defini√ß√£o na linha 81 do arquivo Res\+Op\+Main.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Main.\+h}\end{DoxyCompactItemize}

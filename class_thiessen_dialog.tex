@@ -1,0 +1,144 @@
+\section{Referência da Classe Thiessen\+Dialog}
+\label{class_thiessen_dialog}\index{Thiessen\+Dialog@{Thiessen\+Dialog}}
+
+
+{\ttfamily \#include $<$Thiessen\+Dialog.\+h$>$}
+
+
+
+Herdeiro de {\bf Matrix\+Dialog}.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Dialog\+Type} \{ {\bf S\+T\+A\+T\+I\+ON}, 
+{\bf S\+U\+B\+B\+A\+S\+IN}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Thiessen\+Dialog} ({\bf Matrix} $\ast$a\+\_\+matrix, wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent}, wx\+Window\+ID id, const wx\+String \&title, {\bf Dialog\+Type} type, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, bool check\+Num\+Col=false, int pos\+FixedX=1)
+\item 
+void {\bf on\+Ok} (wx\+Command\+Event \&event)
+\item 
+{\bf Thiessen\+Viewer} $\ast$ {\bf get\+Thiessen\+Viewer} ()
+\item 
+{\bf $\sim$\+Thiessen\+Dialog} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Thiessen\+Dialog\+Content} $\ast$ {\bf m\+\_\+content}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 14 do arquivo Thiessen\+Dialog.\+h.
+
+
+
+\subsection{Enumerações}
+\index{Thiessen\+Dialog@{Thiessen\+Dialog}!Dialog\+Type@{Dialog\+Type}}
+\index{Dialog\+Type@{Dialog\+Type}!Thiessen\+Dialog@{Thiessen\+Dialog}}
+\subsubsection[{Dialog\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Thiessen\+Dialog\+::\+Dialog\+Type}}\label{class_thiessen_dialog_a83dd15ccad86bd391eb8a7f9b6d515ec}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{S\+T\+A\+T\+I\+ON@{S\+T\+A\+T\+I\+ON}!Thiessen\+Dialog@{Thiessen\+Dialog}}\index{Thiessen\+Dialog@{Thiessen\+Dialog}!S\+T\+A\+T\+I\+ON@{S\+T\+A\+T\+I\+ON}}\item[{\em 
+S\+T\+A\+T\+I\+ON\label{class_thiessen_dialog_a83dd15ccad86bd391eb8a7f9b6d515eca58bd61ca062329239835b3a33708948a}
+}]\index{S\+U\+B\+B\+A\+S\+IN@{S\+U\+B\+B\+A\+S\+IN}!Thiessen\+Dialog@{Thiessen\+Dialog}}\index{Thiessen\+Dialog@{Thiessen\+Dialog}!S\+U\+B\+B\+A\+S\+IN@{S\+U\+B\+B\+A\+S\+IN}}\item[{\em 
+S\+U\+B\+B\+A\+S\+IN\label{class_thiessen_dialog_a83dd15ccad86bd391eb8a7f9b6d515eca97b5c13fd8e69902ac07b28f09e0f18a}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 19 do arquivo Thiessen\+Dialog.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Thiessen\+Dialog@{Thiessen\+Dialog}!Thiessen\+Dialog@{Thiessen\+Dialog}}
+\index{Thiessen\+Dialog@{Thiessen\+Dialog}!Thiessen\+Dialog@{Thiessen\+Dialog}}
+\subsubsection[{Thiessen\+Dialog(\+Matrix $\ast$a\+\_\+matrix, wx\+Frame $\ast$frame, wx\+Window $\ast$parent, wx\+Window\+I\+D id, const wx\+String \&title, Dialog\+Type type, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, bool check\+Num\+Col=false, int pos\+Fixed\+X=1)}]{\setlength{\rightskip}{0pt plus 5cm}Thiessen\+Dialog\+::\+Thiessen\+Dialog (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} $\ast$}]{a\+\_\+matrix, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{wx\+Window\+ID}]{id, }
+\item[{const wx\+String \&}]{title, }
+\item[{{\bf Dialog\+Type}}]{type, }
+\item[{const wx\+Point \&}]{pos = {\ttfamily wxDefaultPosition}, }
+\item[{const wx\+Size \&}]{size = {\ttfamily wxDefaultSize}, }
+\item[{bool}]{check\+Num\+Col = {\ttfamily false}, }
+\item[{int}]{pos\+FixedX = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_dialog_a477e885eaa99aa911e75a5c17370bc8a}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em matrix} & Matriz original a ser passada \\
+\hline
+{\em frame} & Janela que possui a interface \\
+\hline
+{\em parent} & Pai da janela \\
+\hline
+{\em id} & Identificador da janela \\
+\hline
+{\em title} & T�tulo da janela \\
+\hline
+{\em pos} & Posi��o da janela \\
+\hline
+{\em size} & Tamanho da janela \\
+\hline
+\end{DoxyParams}
+\index{Thiessen\+Dialog@{Thiessen\+Dialog}!````~Thiessen\+Dialog@{$\sim$\+Thiessen\+Dialog}}
+\index{````~Thiessen\+Dialog@{$\sim$\+Thiessen\+Dialog}!Thiessen\+Dialog@{Thiessen\+Dialog}}
+\subsubsection[{$\sim$\+Thiessen\+Dialog()}]{\setlength{\rightskip}{0pt plus 5cm}Thiessen\+Dialog\+::$\sim$\+Thiessen\+Dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_dialog_ab02de3888f2c12023e83360a1e41b690}
+
+
+\subsection{Métodos}
+\index{Thiessen\+Dialog@{Thiessen\+Dialog}!get\+Thiessen\+Viewer@{get\+Thiessen\+Viewer}}
+\index{get\+Thiessen\+Viewer@{get\+Thiessen\+Viewer}!Thiessen\+Dialog@{Thiessen\+Dialog}}
+\subsubsection[{get\+Thiessen\+Viewer()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Thiessen\+Viewer}$\ast$ Thiessen\+Dialog\+::get\+Thiessen\+Viewer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_dialog_aeb79557b6ebe44f785e1c4c73a08977c}
+Retorna um ponteiro para thiessen\+Viewer (de \doxyref{Thiessen\+Dialog\+Content}{pag.}{class_thiessen_dialog_content}) \index{Thiessen\+Dialog@{Thiessen\+Dialog}!on\+Ok@{on\+Ok}}
+\index{on\+Ok@{on\+Ok}!Thiessen\+Dialog@{Thiessen\+Dialog}}
+\subsubsection[{on\+Ok(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Dialog\+::on\+Ok (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_thiessen_dialog_a1fc1d0e705a5290c2390b66e89843c10}
+Evento que ocorre ao clicar em OK 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Matrix\+Dialog} \doxyref{}{pag.}{class_matrix_dialog_ae644bb8c644617cc42d941bbade427ed}.
+
+
+
+\subsection{Atributos}
+\index{Thiessen\+Dialog@{Thiessen\+Dialog}!m\+\_\+content@{m\+\_\+content}}
+\index{m\+\_\+content@{m\+\_\+content}!Thiessen\+Dialog@{Thiessen\+Dialog}}
+\subsubsection[{m\+\_\+content}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Thiessen\+Dialog\+Content}$\ast$ Thiessen\+Dialog\+::m\+\_\+content\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_dialog_a250e7ad5b8110a908f302f121572d523}
+
+
+Definição na linha 17 do arquivo Thiessen\+Dialog.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Thiessen\+Dialog.\+h}\end{DoxyCompactItemize}

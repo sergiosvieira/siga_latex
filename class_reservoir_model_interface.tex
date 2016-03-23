@@ -1,0 +1,325 @@
+\section{Referência da Classe Reservoir\+Model\+Interface}
+\label{class_reservoir_model_interface}\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+
+
+{\ttfamily \#include $<$Reservoir\+Model\+Interface.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Reservoir\+Model\+Interface} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent})
+\item 
+{\bf $\sim$\+Reservoir\+Model\+Interface} ()
+\item 
+void {\bf on\+Open\+Prec} (wx\+Command\+Event \&)
+\item 
+void {\bf on\+Open\+Evap} (wx\+Command\+Event \&)
+\item 
+void {\bf on\+Open\+Nat\+Inflow} (wx\+Command\+Event \&)
+\item 
+void {\bf set\+Info} ({\bf Reservoir\+Model} $\ast$model)
+\item 
+void {\bf show\+Results} ({\bf Reservoir\+Result} $\ast$results, bool change=false)
+\item 
+void {\bf on\+Open\+C\+AV} (wx\+Command\+Event \&)
+\item 
+void {\bf set\+Interval} ({\bf Interval} interval)
+\item 
+{\bf D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Vol\+Init}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Vol\+Min}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Vol\+Max}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Vol\+Max\+Max}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+L\+Vert}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+C\+Vert}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+H\+Vert}
+\item 
+wx\+Button $\ast$ {\bf bt\+Prec}
+\item 
+wx\+Button $\ast$ {\bf bt\+Evap}
+\item 
+wx\+Button $\ast$ {\bf bt\+Nat\+Inflow}
+\item 
+wx\+Button $\ast$ {\bf bt\+C\+AV}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf bitmap\+Prec}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf bitmap\+Evap}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf bitmap\+Nat\+Inflow}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf bitmap\+C\+AV}
+\item 
+wx\+Bitmap {\bf bitmap\+Ok}
+\item 
+wx\+Bitmap {\bf bitmap\+Empty}
+\item 
+{\bf Res\+C\+A\+V\+Dialog} $\ast$ {\bf C\+A\+V\+Dialog}
+\item 
+{\bf Res\+Op\+Interface} $\ast$ {\bf main\+Inter}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 54 do arquivo Reservoir\+Model\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{Reservoir\+Model\+Interface(wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Reservoir\+Model\+Interface\+::\+Reservoir\+Model\+Interface (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_reservoir_model_interface_a8cc1f72a6681cc952c3d65d0b881b923}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & Janela principal \\
+\hline
+{\em parent} & Janela que a cont�m \\
+\hline
+\end{DoxyParams}
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!````~Reservoir\+Model\+Interface@{$\sim$\+Reservoir\+Model\+Interface}}
+\index{````~Reservoir\+Model\+Interface@{$\sim$\+Reservoir\+Model\+Interface}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{$\sim$\+Reservoir\+Model\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}Reservoir\+Model\+Interface\+::$\sim$\+Reservoir\+Model\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_reservoir_model_interface_a5f28fb741c5334f6aa77a1ad49193481}
+Destrutor 
+
+\subsection{Métodos}
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+L\+E()}]{\setlength{\rightskip}{0pt plus 5cm}Reservoir\+Model\+Interface\+::\+D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_reservoir_model_interface_a08b280b5783ff8d9f9d20dc34941677e}
+Declara��o de tabela de eventos \index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!on\+Open\+C\+AV@{on\+Open\+C\+AV}}
+\index{on\+Open\+C\+AV@{on\+Open\+C\+AV}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{on\+Open\+C\+A\+V(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Reservoir\+Model\+Interface\+::on\+Open\+C\+AV (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_reservoir_model_interface_a49af2431b06e5fd6d027a32ca5bc6c98}
+Evento de leitura do C\+AV \index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!on\+Open\+Evap@{on\+Open\+Evap}}
+\index{on\+Open\+Evap@{on\+Open\+Evap}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{on\+Open\+Evap(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Reservoir\+Model\+Interface\+::on\+Open\+Evap (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_reservoir_model_interface_a7cb3b5be35db89061455a1bad2571203}
+Evento de leitura da s�rie de evapora��o \index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!on\+Open\+Nat\+Inflow@{on\+Open\+Nat\+Inflow}}
+\index{on\+Open\+Nat\+Inflow@{on\+Open\+Nat\+Inflow}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{on\+Open\+Nat\+Inflow(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Reservoir\+Model\+Interface\+::on\+Open\+Nat\+Inflow (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_reservoir_model_interface_a4a743cdf1280d9df9b5558322490abfd}
+Evento de leitura da s�rie de vaz�o natural incremental \index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!on\+Open\+Prec@{on\+Open\+Prec}}
+\index{on\+Open\+Prec@{on\+Open\+Prec}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{on\+Open\+Prec(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Reservoir\+Model\+Interface\+::on\+Open\+Prec (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_reservoir_model_interface_a7143a9f8a54207a1a18d9d3db96d93bf}
+Evento de leitura da s�rie de precipita��o \index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{set\+Info(\+Reservoir\+Model $\ast$model)}]{\setlength{\rightskip}{0pt plus 5cm}void Reservoir\+Model\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Reservoir\+Model} $\ast$}]{model}
+\end{DoxyParamCaption}
+)}\label{class_reservoir_model_interface_a7191720c6170d08e5432d6bf78105e00}
+Atualiza dos valores na interface 
+\begin{DoxyParams}{Parâmetros}
+{\em model} & Ponteiro para o modelo \\
+\hline
+\end{DoxyParams}
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!set\+Interval@{set\+Interval}}
+\index{set\+Interval@{set\+Interval}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{set\+Interval(\+Interval interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Reservoir\+Model\+Interface\+::set\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)}\label{class_reservoir_model_interface_a05d1881b084ed0f5074d0a5772f0bf44}
+Inserir intervalo de simula��o 
+\begin{DoxyParams}{Parâmetros}
+{\em interval} & Intervalo \\
+\hline
+\end{DoxyParams}
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{show\+Results(\+Reservoir\+Result $\ast$results, bool change=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Reservoir\+Model\+Interface\+::show\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Reservoir\+Result} $\ast$}]{results, }
+\item[{bool}]{change = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_reservoir_model_interface_a56c59424cf52cfbbf5c4db1e7cae2127}
+Mostra os resultados para o modelo 
+\begin{DoxyParams}{Parâmetros}
+{\em results} & Resultados \\
+\hline
+{\em change} & Monta a janela de resultados se true, caso contrario, mostra a janela de resultados \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!bitmap\+C\+AV@{bitmap\+C\+AV}}
+\index{bitmap\+C\+AV@{bitmap\+C\+AV}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{bitmap\+C\+AV}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button $\ast$ Reservoir\+Model\+Interface\+::bitmap\+C\+AV}\label{class_reservoir_model_interface_aeb5f935071c2233685b588a71116f631}
+
+
+Definição na linha 68 do arquivo Reservoir\+Model\+Interface.\+h.
+
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!bitmap\+Empty@{bitmap\+Empty}}
+\index{bitmap\+Empty@{bitmap\+Empty}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{bitmap\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Reservoir\+Model\+Interface\+::bitmap\+Empty}\label{class_reservoir_model_interface_a462233e4bffe8bb732a11ed2fc62fb20}
+
+
+Definição na linha 72 do arquivo Reservoir\+Model\+Interface.\+h.
+
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!bitmap\+Evap@{bitmap\+Evap}}
+\index{bitmap\+Evap@{bitmap\+Evap}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{bitmap\+Evap}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button $\ast$ Reservoir\+Model\+Interface\+::bitmap\+Evap}\label{class_reservoir_model_interface_a5b041a66a24c42ea8b94a126baa80aef}
+
+
+Definição na linha 68 do arquivo Reservoir\+Model\+Interface.\+h.
+
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!bitmap\+Nat\+Inflow@{bitmap\+Nat\+Inflow}}
+\index{bitmap\+Nat\+Inflow@{bitmap\+Nat\+Inflow}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{bitmap\+Nat\+Inflow}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button $\ast$ Reservoir\+Model\+Interface\+::bitmap\+Nat\+Inflow}\label{class_reservoir_model_interface_a9d51378c859445285f18f01d78125818}
+
+
+Definição na linha 68 do arquivo Reservoir\+Model\+Interface.\+h.
+
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!bitmap\+Ok@{bitmap\+Ok}}
+\index{bitmap\+Ok@{bitmap\+Ok}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{bitmap\+Ok}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Reservoir\+Model\+Interface\+::bitmap\+Ok}\label{class_reservoir_model_interface_aecf74f388265f6ddfff67b42e31099d7}
+Imagem de lido e n�o lido para as series de entrada 
+
+Definição na linha 72 do arquivo Reservoir\+Model\+Interface.\+h.
+
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!bitmap\+Prec@{bitmap\+Prec}}
+\index{bitmap\+Prec@{bitmap\+Prec}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{bitmap\+Prec}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Reservoir\+Model\+Interface\+::bitmap\+Prec}\label{class_reservoir_model_interface_a51b3f8343de925a3ded0db0859227901}
+Bitmap que identifica se as series foram lidas ou n�o 
+
+Definição na linha 68 do arquivo Reservoir\+Model\+Interface.\+h.
+
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!bt\+C\+AV@{bt\+C\+AV}}
+\index{bt\+C\+AV@{bt\+C\+AV}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{bt\+C\+AV}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button $\ast$ Reservoir\+Model\+Interface\+::bt\+C\+AV}\label{class_reservoir_model_interface_a55cfeb01d200d393ce1ba54f224c9665}
+
+
+Definição na linha 64 do arquivo Reservoir\+Model\+Interface.\+h.
+
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!bt\+Evap@{bt\+Evap}}
+\index{bt\+Evap@{bt\+Evap}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{bt\+Evap}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button $\ast$ Reservoir\+Model\+Interface\+::bt\+Evap}\label{class_reservoir_model_interface_a2ee77890f8775124819ea0e956a6c326}
+
+
+Definição na linha 64 do arquivo Reservoir\+Model\+Interface.\+h.
+
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!bt\+Nat\+Inflow@{bt\+Nat\+Inflow}}
+\index{bt\+Nat\+Inflow@{bt\+Nat\+Inflow}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{bt\+Nat\+Inflow}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button $\ast$ Reservoir\+Model\+Interface\+::bt\+Nat\+Inflow}\label{class_reservoir_model_interface_a1fe096de1ee4d5d6416fe890550e9c0c}
+
+
+Definição na linha 64 do arquivo Reservoir\+Model\+Interface.\+h.
+
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!bt\+Prec@{bt\+Prec}}
+\index{bt\+Prec@{bt\+Prec}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{bt\+Prec}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Reservoir\+Model\+Interface\+::bt\+Prec}\label{class_reservoir_model_interface_a7cd2fefed435159f346f42e7245bc119}
+Bot�es para series de entrada 
+
+Definição na linha 64 do arquivo Reservoir\+Model\+Interface.\+h.
+
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!C\+A\+V\+Dialog@{C\+A\+V\+Dialog}}
+\index{C\+A\+V\+Dialog@{C\+A\+V\+Dialog}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{C\+A\+V\+Dialog}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+C\+A\+V\+Dialog}$\ast$ Reservoir\+Model\+Interface\+::\+C\+A\+V\+Dialog}\label{class_reservoir_model_interface_a90c73a1467d41ee79a366f66cb859070}
+Ponteiro para caixa de dialogo de \doxyref{C\+A\+V( cota, area e volume )}{pag.}{_res_op_serie_constants_8h_af9306d1f384dd4697bbe88b8a156493da0bb9b8a5508d5b557b385d895d22b59e} 
+
+Definição na linha 76 do arquivo Reservoir\+Model\+Interface.\+h.
+
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!main\+Inter@{main\+Inter}}
+\index{main\+Inter@{main\+Inter}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{main\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Interface}$\ast$ Reservoir\+Model\+Interface\+::main\+Inter}\label{class_reservoir_model_interface_af79cf35e854dd21b9bc42a6e8cf7d2e0}
+Aponta para a classe da interafce principal do modulo 
+
+Definição na linha 80 do arquivo Reservoir\+Model\+Interface.\+h.
+
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!tc\+C\+Vert@{tc\+C\+Vert}}
+\index{tc\+C\+Vert@{tc\+C\+Vert}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{tc\+C\+Vert}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ Reservoir\+Model\+Interface\+::tc\+C\+Vert}\label{class_reservoir_model_interface_a0ac5997c863e6d73dd12d366a59d67fe}
+
+
+Definição na linha 60 do arquivo Reservoir\+Model\+Interface.\+h.
+
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!tc\+H\+Vert@{tc\+H\+Vert}}
+\index{tc\+H\+Vert@{tc\+H\+Vert}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{tc\+H\+Vert}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ Reservoir\+Model\+Interface\+::tc\+H\+Vert}\label{class_reservoir_model_interface_a0e75af1513829cf2f6222b40b94da6aa}
+
+
+Definição na linha 60 do arquivo Reservoir\+Model\+Interface.\+h.
+
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!tc\+L\+Vert@{tc\+L\+Vert}}
+\index{tc\+L\+Vert@{tc\+L\+Vert}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{tc\+L\+Vert}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ Reservoir\+Model\+Interface\+::tc\+L\+Vert}\label{class_reservoir_model_interface_a0d7070d541e3a95debdf76b9c9d90fa7}
+
+
+Definição na linha 60 do arquivo Reservoir\+Model\+Interface.\+h.
+
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!tc\+Vol\+Init@{tc\+Vol\+Init}}
+\index{tc\+Vol\+Init@{tc\+Vol\+Init}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{tc\+Vol\+Init}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl$\ast$ Reservoir\+Model\+Interface\+::tc\+Vol\+Init}\label{class_reservoir_model_interface_ac0931606a4b138331128573388ce8f54}
+Controladores de volume inicial, minimo e maximo 
+
+Definição na linha 60 do arquivo Reservoir\+Model\+Interface.\+h.
+
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!tc\+Vol\+Max@{tc\+Vol\+Max}}
+\index{tc\+Vol\+Max@{tc\+Vol\+Max}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{tc\+Vol\+Max}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ Reservoir\+Model\+Interface\+::tc\+Vol\+Max}\label{class_reservoir_model_interface_adbba0dea5e816c385852c231c5ad9656}
+
+
+Definição na linha 60 do arquivo Reservoir\+Model\+Interface.\+h.
+
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!tc\+Vol\+Max\+Max@{tc\+Vol\+Max\+Max}}
+\index{tc\+Vol\+Max\+Max@{tc\+Vol\+Max\+Max}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{tc\+Vol\+Max\+Max}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ Reservoir\+Model\+Interface\+::tc\+Vol\+Max\+Max}\label{class_reservoir_model_interface_aa4151b008c63bba07ad425c7d56bf6fb}
+
+
+Definição na linha 60 do arquivo Reservoir\+Model\+Interface.\+h.
+
+\index{Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}!tc\+Vol\+Min@{tc\+Vol\+Min}}
+\index{tc\+Vol\+Min@{tc\+Vol\+Min}!Reservoir\+Model\+Interface@{Reservoir\+Model\+Interface}}
+\subsubsection[{tc\+Vol\+Min}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ Reservoir\+Model\+Interface\+::tc\+Vol\+Min}\label{class_reservoir_model_interface_a3ff5a5fb1929ae18dbfdbd7fa0a98c5e}
+
+
+Definição na linha 60 do arquivo Reservoir\+Model\+Interface.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Reservoir\+Model\+Interface.\+h}\end{DoxyCompactItemize}

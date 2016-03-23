@@ -1,0 +1,76 @@
+\section{Referência do Arquivo projection.\+h}
+\label{projection_8h}\index{projection.\+h@{projection.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$wx/wx.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}gdalraster.\+h\char`\"{}}\\*
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf imagem}
+\end{DoxyCompactItemize}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf PI}~3.\+14159265359
+\item 
+\#define {\bf S\+A\+T\+\_\+\+H\+E\+I\+G\+HT}~42164.\+0             /$\ast$ distancia do centro da Terra para o satelite     $\ast$/
+\item 
+\#define {\bf R\+\_\+\+EQ}~6378.\+169           /$\ast$ raio do centro da Terra ao equador               $\ast$/
+\item 
+\#define {\bf R\+\_\+\+P\+OL}~6356.\+5838          /$\ast$ raio do centro da Terra ao polo                  $\ast$/
+\item 
+\#define {\bf S\+U\+B\+\_\+\+L\+ON}~0.\+0             /$\ast$ longitude do ponto abaixo do satelite            $\ast$/
+\item 
+\#define {\bf C\+O\+L\+F\+I\+GL}~3712               /$\ast$ numero de colunas para figuras L\+R\+IT              $\ast$/
+\item 
+\#define {\bf C\+O\+L\+F\+I\+GH}~11136               /$\ast$ numero de colunas para figuras H\+R\+IT              $\ast$/
+\item 
+\#define {\bf T\+A\+M\+S\+E\+GL}~464               /$\ast$ tamanho do segmento em pixels para figuras L\+R\+IT  $\ast$/
+\item 
+\#define {\bf T\+A\+M\+S\+E\+GH}~464               /$\ast$ tamanho do segmento em pixels para figuras H\+R\+IT  $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char {\bf byte}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf ler\+Imagem} (wx\+Image \&, {\bf imagem} $\ast$)
+\item 
+void {\bf ler\+Imagem} (char $\ast$, {\bf imagem} $\ast$)
+\item 
+void {\bf escrever\+Imagem} (char $\ast$, {\bf imagem} $\ast$)
+\item 
+long {\bf pega\+Imagem\+Info} (F\+I\+LE $\ast$, long, long)
+\item 
+int {\bf ninto} (double val)
+\item 
+int {\bf geocoord2pixcoord} (double latitude, double longitude, int coff, int loff, double cfac, double lfac, int $\ast$column, int $\ast$row)
+\item 
+int {\bf geocoord2pixcoord2} (double latitude, double longitude, int first\+PixelX, int first\+PixelY, int coff, int loff, double cfac, double lfac, int $\ast$column, int $\ast$row)
+\item 
+int {\bf geocoord2mercator} (double latitude, double longitude, int coff, int loff, double cfac, double lfac, int $\ast$column, int $\ast$row)
+\item 
+int {\bf mercator2geocoord} (int column, int row, int coff, int loff, double cfac, double lfac, double $\ast$latitude, double $\ast$longitude)
+\item 
+void {\bf aloca\+Mem} (long, {\bf imagem} $\ast$)
+\item 
+void {\bf libera\+Mem} ({\bf imagem} $\ast$)
+\item 
+void {\bf preenche\+Cab} (int, int, {\bf imagem} $\ast$, {\bf imagem} $\ast$)
+\item 
+void {\bf mensagem} (char $\ast$)
+\item 
+wx\+Image {\bf mercator} (wx\+String resolution, int first\+PixelX, int first\+PixelY, wx\+Image \&in\+Image, double lat1, double lon1, double lat2, double lon2)
+\item 
+wx\+Image {\bf mercator} (wx\+String resolution, {\bf G\+D\+A\+L\+Raster} $\ast$in\+Image, double lat1, double lon1, double lat2, double lon2)
+\item 
+wx\+Image {\bf mercator} (wx\+String resolution, {\bf G\+D\+A\+L\+Raster} $\ast$in\+Image, double lat1, double lon1, double lat2, double lon2, double pixel\+Factor)
+\item 
+int {\bf pixcoord2geocoord} (int column, int row, int coff, int loff, double $\ast$latitude, double $\ast$longitude)
+\end{DoxyCompactItemize}

@@ -1,0 +1,377 @@
+\section{ReferÃªncia da Classe Res\+Op\+Obj\+Function}
+\label{class_res_op_obj_function}\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Obj\+Function.\+h$>$}
+
+
+
+Superclasse de {\bf Evaporation\+Losses\+Obj\+Function}, {\bf Evaporation\+Losses\+Obj\+Function}, {\bf Failure\+Number\+Obj\+Function}, {\bf Failure\+Number\+Obj\+Function}, {\bf Guarantee\+Obj\+Function}, {\bf Guarantee\+Obj\+Function}, {\bf Pumping\+Costs\+Obj\+Function}, {\bf Pumping\+Costs\+Obj\+Function}, {\bf Shortage\+Volume\+Obj\+Function} e {\bf Shortage\+Volume\+Obj\+Function}.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Obj\+Function} ()
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Obj\+Function} ()
+\item 
+wx\+String {\bf get\+Name} ()
+\item 
+wx\+String {\bf get\+Unit} ()
+\item 
+virtual double {\bf run} ()=0
+\item 
+virtual void {\bf clear} ()=0
+\item 
+virtual bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)=0
+\item 
+virtual void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)=0
+\item 
+virtual void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)=0
+\item 
+{\bf Res\+Op\+Obj\+Function} (wx\+String {\bf name}, wx\+String {\bf unit}, bool {\bf minimize})
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Obj\+Function} ()
+\item 
+wx\+String {\bf get\+Name} ()
+\item 
+wx\+String {\bf get\+Unit} ()
+\item 
+{\bf Res\+Op\+Objective\+Function\+Type} {\bf get\+Obj\+Type} ()
+\item 
+virtual double {\bf run} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements)=0
+\item 
+virtual void {\bf clear} ()=0
+\item 
+virtual bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)=0
+\item 
+virtual void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String)=0
+\item 
+virtual void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String)=0
+\item 
+{\bf Res\+Op\+Obj\+Function} $\ast$ {\bf copy\+Obj} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf type}
+\item 
+{\bf Interval} {\bf interval}
+\item 
+bool {\bf minimize}
+\end{DoxyCompactItemize}
+\subsection*{MÃ©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf Res\+Op\+Obj\+Function} $\ast$ {\bf do\+Copy} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Model\+Main} $\ast$ {\bf model\+Main}
+\item 
+wx\+String {\bf unit}
+\item 
+wx\+String {\bf name}
+\item 
+{\bf Res\+Op\+Objective\+Function\+Type} {\bf type}
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+Classe abstrata para funções objetivo do módulo de reservatórios 
+
+DefiniÃ§Ã£o na linha 13 do arquivo Obj\+Function/\+Res\+Op\+Obj\+Function.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{Res\+Op\+Obj\+Function()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Obj\+Function\+::\+Res\+Op\+Obj\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_abd611fb728674e44e3e66081233782e9}
+Construtor \index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!````~Res\+Op\+Obj\+Function@{$\sim$\+Res\+Op\+Obj\+Function}}
+\index{````~Res\+Op\+Obj\+Function@{$\sim$\+Res\+Op\+Obj\+Function}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{$\sim$\+Res\+Op\+Obj\+Function()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Obj\+Function\+::$\sim$\+Res\+Op\+Obj\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_obj_function_a46357f55e4984c28caea350d2a970ac2}
+Destrutor \index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{Res\+Op\+Obj\+Function(wx\+String name, wx\+String unit, bool minimize)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Obj\+Function\+::\+Res\+Op\+Obj\+Function (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name, }
+\item[{wx\+String}]{unit, }
+\item[{bool}]{minimize}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_a60d17f4eb6cd678b1c756db54eebf06b}
+Construtor \index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!````~Res\+Op\+Obj\+Function@{$\sim$\+Res\+Op\+Obj\+Function}}
+\index{````~Res\+Op\+Obj\+Function@{$\sim$\+Res\+Op\+Obj\+Function}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{$\sim$\+Res\+Op\+Obj\+Function()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Obj\+Function\+::$\sim$\+Res\+Op\+Obj\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_obj_function_a46357f55e4984c28caea350d2a970ac2}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+Obj\+Function\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_obj_function_a10a132bc689a51c9aecaa60de7983331}
+Checa se as informações estão completas 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Pumping\+Costs\+Obj\+Function} \doxyref{}{pag.}{class_pumping_costs_obj_function_a219a32df1e284992257e21496e559200}, {\bf Pumping\+Costs\+Obj\+Function} \doxyref{}{pag.}{class_pumping_costs_obj_function_a219a32df1e284992257e21496e559200}, {\bf Guarantee\+Obj\+Function} \doxyref{}{pag.}{class_guarantee_obj_function_af43f05d2f0fc16f111b72cebc00c5f2d}, {\bf Evaporation\+Losses\+Obj\+Function} \doxyref{}{pag.}{class_evaporation_losses_obj_function_a980f589d5b1fefab3c166f3e9c6925ba}, {\bf Failure\+Number\+Obj\+Function} \doxyref{}{pag.}{class_failure_number_obj_function_acb3cd6747c399373bb31671040a050df}, {\bf Shortage\+Volume\+Obj\+Function} \doxyref{}{pag.}{class_shortage_volume_obj_function_ae9710bff2cb632c22819b7d3d339ee17}, {\bf Guarantee\+Obj\+Function} \doxyref{}{pag.}{class_guarantee_obj_function_af43f05d2f0fc16f111b72cebc00c5f2d}, {\bf Evaporation\+Losses\+Obj\+Function} \doxyref{}{pag.}{class_evaporation_losses_obj_function_a980f589d5b1fefab3c166f3e9c6925ba}, {\bf Failure\+Number\+Obj\+Function} \doxyref{}{pag.}{class_failure_number_obj_function_acb3cd6747c399373bb31671040a050df} e {\bf Shortage\+Volume\+Obj\+Function} \doxyref{}{pag.}{class_shortage_volume_obj_function_ae9710bff2cb632c22819b7d3d339ee17}.
+
+\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+Obj\+Function\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_obj_function_a10a132bc689a51c9aecaa60de7983331}
+Checa se as informações estão completas 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Pumping\+Costs\+Obj\+Function} \doxyref{}{pag.}{class_pumping_costs_obj_function_a219a32df1e284992257e21496e559200}, {\bf Pumping\+Costs\+Obj\+Function} \doxyref{}{pag.}{class_pumping_costs_obj_function_a219a32df1e284992257e21496e559200}, {\bf Guarantee\+Obj\+Function} \doxyref{}{pag.}{class_guarantee_obj_function_af43f05d2f0fc16f111b72cebc00c5f2d}, {\bf Evaporation\+Losses\+Obj\+Function} \doxyref{}{pag.}{class_evaporation_losses_obj_function_a980f589d5b1fefab3c166f3e9c6925ba}, {\bf Failure\+Number\+Obj\+Function} \doxyref{}{pag.}{class_failure_number_obj_function_acb3cd6747c399373bb31671040a050df}, {\bf Shortage\+Volume\+Obj\+Function} \doxyref{}{pag.}{class_shortage_volume_obj_function_ae9710bff2cb632c22819b7d3d339ee17}, {\bf Guarantee\+Obj\+Function} \doxyref{}{pag.}{class_guarantee_obj_function_af43f05d2f0fc16f111b72cebc00c5f2d}, {\bf Evaporation\+Losses\+Obj\+Function} \doxyref{}{pag.}{class_evaporation_losses_obj_function_a980f589d5b1fefab3c166f3e9c6925ba}, {\bf Failure\+Number\+Obj\+Function} \doxyref{}{pag.}{class_failure_number_obj_function_acb3cd6747c399373bb31671040a050df} e {\bf Shortage\+Volume\+Obj\+Function} \doxyref{}{pag.}{class_shortage_volume_obj_function_ae9710bff2cb632c22819b7d3d339ee17}.
+
+\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!clear@{clear}}
+\index{clear@{clear}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{clear()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Obj\+Function\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_obj_function_a0a924a09921115d1aaf93d716eef0f02}
+Limpa Dados 
+
+Implementado por {\bf Pumping\+Costs\+Obj\+Function} \doxyref{}{pag.}{class_pumping_costs_obj_function_a497513a91909b72fb08d89eaafa7ec42}, {\bf Pumping\+Costs\+Obj\+Function} \doxyref{}{pag.}{class_pumping_costs_obj_function_a497513a91909b72fb08d89eaafa7ec42}, {\bf Evaporation\+Losses\+Obj\+Function} \doxyref{}{pag.}{class_evaporation_losses_obj_function_ab106b3f94d8b51d4245eb82108d2b6bc}, {\bf Guarantee\+Obj\+Function} \doxyref{}{pag.}{class_guarantee_obj_function_a2ae3e00dc70bc87ebe47e16293996b34}, {\bf Failure\+Number\+Obj\+Function} \doxyref{}{pag.}{class_failure_number_obj_function_a2c8edf028712054e4a69f8b0c79f8926}, {\bf Shortage\+Volume\+Obj\+Function} \doxyref{}{pag.}{class_shortage_volume_obj_function_aa2fcb89075800351cbfa3624e03e269c}, {\bf Evaporation\+Losses\+Obj\+Function} \doxyref{}{pag.}{class_evaporation_losses_obj_function_ab106b3f94d8b51d4245eb82108d2b6bc}, {\bf Guarantee\+Obj\+Function} \doxyref{}{pag.}{class_guarantee_obj_function_a2ae3e00dc70bc87ebe47e16293996b34}, {\bf Failure\+Number\+Obj\+Function} \doxyref{}{pag.}{class_failure_number_obj_function_a2c8edf028712054e4a69f8b0c79f8926} e {\bf Shortage\+Volume\+Obj\+Function} \doxyref{}{pag.}{class_shortage_volume_obj_function_aa2fcb89075800351cbfa3624e03e269c}.
+
+\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!clear@{clear}}
+\index{clear@{clear}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{clear()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Obj\+Function\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_obj_function_a0a924a09921115d1aaf93d716eef0f02}
+Limpa Dados 
+
+Implementado por {\bf Pumping\+Costs\+Obj\+Function} \doxyref{}{pag.}{class_pumping_costs_obj_function_a497513a91909b72fb08d89eaafa7ec42}, {\bf Pumping\+Costs\+Obj\+Function} \doxyref{}{pag.}{class_pumping_costs_obj_function_a497513a91909b72fb08d89eaafa7ec42}, {\bf Evaporation\+Losses\+Obj\+Function} \doxyref{}{pag.}{class_evaporation_losses_obj_function_ab106b3f94d8b51d4245eb82108d2b6bc}, {\bf Guarantee\+Obj\+Function} \doxyref{}{pag.}{class_guarantee_obj_function_a2ae3e00dc70bc87ebe47e16293996b34}, {\bf Failure\+Number\+Obj\+Function} \doxyref{}{pag.}{class_failure_number_obj_function_a2c8edf028712054e4a69f8b0c79f8926}, {\bf Shortage\+Volume\+Obj\+Function} \doxyref{}{pag.}{class_shortage_volume_obj_function_aa2fcb89075800351cbfa3624e03e269c}, {\bf Evaporation\+Losses\+Obj\+Function} \doxyref{}{pag.}{class_evaporation_losses_obj_function_ab106b3f94d8b51d4245eb82108d2b6bc}, {\bf Guarantee\+Obj\+Function} \doxyref{}{pag.}{class_guarantee_obj_function_a2ae3e00dc70bc87ebe47e16293996b34}, {\bf Failure\+Number\+Obj\+Function} \doxyref{}{pag.}{class_failure_number_obj_function_a2c8edf028712054e4a69f8b0c79f8926} e {\bf Shortage\+Volume\+Obj\+Function} \doxyref{}{pag.}{class_shortage_volume_obj_function_aa2fcb89075800351cbfa3624e03e269c}.
+
+\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!copy\+Obj@{copy\+Obj}}
+\index{copy\+Obj@{copy\+Obj}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{copy\+Obj()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Obj\+Function}$\ast$ Res\+Op\+Obj\+Function\+::copy\+Obj (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_aa30bfc8e255cf060a6741cf0635908f7}
+Copia a função objetivo \index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{do\+Copy()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Res\+Op\+Obj\+Function}$\ast$ Res\+Op\+Obj\+Function\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{class_res_op_obj_function_a11780e26a00ee5abf1304dfa872026f6}
+Copia a função Objetivo corretamente 
+
+Implementado por {\bf Evaporation\+Losses\+Obj\+Function} \doxyref{}{pag.}{class_evaporation_losses_obj_function_ad90eca917e71a07a38348d457010adc8}, {\bf Failure\+Number\+Obj\+Function} \doxyref{}{pag.}{class_failure_number_obj_function_a9e0058677a7229ae92b92c2099492df1}, {\bf Guarantee\+Obj\+Function} \doxyref{}{pag.}{class_guarantee_obj_function_a88a02f77ab678e2b36ba7a59fa3de55d}, {\bf Pumping\+Costs\+Obj\+Function} \doxyref{}{pag.}{class_pumping_costs_obj_function_a9d88de4a9229c19e9423e528a4018a63} e {\bf Shortage\+Volume\+Obj\+Function} \doxyref{}{pag.}{class_shortage_volume_obj_function_abce74dcf078c62ed6f71a0b6e14b7fd4}.
+
+\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{get\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Res\+Op\+Obj\+Function\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_ab19ed05eec1766ca349a97fc85be3f1c}
+Retorna o nome da função \index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{get\+Name()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Res\+Op\+Obj\+Function\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_ab19ed05eec1766ca349a97fc85be3f1c}
+Retorna o nome da função \index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!get\+Obj\+Type@{get\+Obj\+Type}}
+\index{get\+Obj\+Type@{get\+Obj\+Type}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{get\+Obj\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Objective\+Function\+Type} Res\+Op\+Obj\+Function\+::get\+Obj\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_a57fa5b3136892b63c5fc7d45525cf32a}
+Retorna o tipo de função objetivo \index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!get\+Unit@{get\+Unit}}
+\index{get\+Unit@{get\+Unit}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{get\+Unit()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Res\+Op\+Obj\+Function\+::get\+Unit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_a66ee5dad316f721631ede5e323fa6b80}
+Retorna a unidade da função \index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!get\+Unit@{get\+Unit}}
+\index{get\+Unit@{get\+Unit}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{get\+Unit()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Res\+Op\+Obj\+Function\+::get\+Unit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_obj_function_a66ee5dad316f721631ede5e323fa6b80}
+Retorna a unidade da função \index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Obj\+Function\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_obj_function_aa5cf9b1f0a157e6571ab2d6a29aa4885}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Pumping\+Costs\+Obj\+Function} \doxyref{}{pag.}{class_pumping_costs_obj_function_a64561b190a6a77535a4010882b4b42e4}, {\bf Evaporation\+Losses\+Obj\+Function} \doxyref{}{pag.}{class_evaporation_losses_obj_function_a2aac1de55fff09c55922e9a36f4e7b1e}, {\bf Guarantee\+Obj\+Function} \doxyref{}{pag.}{class_guarantee_obj_function_a2e985b6b3f95bb386c763f05873e2118}, {\bf Failure\+Number\+Obj\+Function} \doxyref{}{pag.}{class_failure_number_obj_function_a38ee679c6603d7ea61df9531cde52207} e {\bf Shortage\+Volume\+Obj\+Function} \doxyref{}{pag.}{class_shortage_volume_obj_function_ad6020e64f59a2b6512cec6689f60f0f7}.
+
+\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Obj\+Function\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_obj_function_abf817a6bd51617b6381e627336a8b15d}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Pumping\+Costs\+Obj\+Function} \doxyref{}{pag.}{class_pumping_costs_obj_function_a9a6e9d006ec64d17204573cabdf58eb6}, {\bf Evaporation\+Losses\+Obj\+Function} \doxyref{}{pag.}{class_evaporation_losses_obj_function_a0f1868cc27e4492408b939311d275597}, {\bf Guarantee\+Obj\+Function} \doxyref{}{pag.}{class_guarantee_obj_function_ac4f69204c11579b401b546055c9a0cff}, {\bf Failure\+Number\+Obj\+Function} \doxyref{}{pag.}{class_failure_number_obj_function_a0f7bc962ed4df67388205adb69ba48ca} e {\bf Shortage\+Volume\+Obj\+Function} \doxyref{}{pag.}{class_shortage_volume_obj_function_a1459a08d38062812b24edc42c7a4a938}.
+
+\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Obj\+Function\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_obj_function_a0adda529d70cc0557f7f700c944c52b9}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Pumping\+Costs\+Obj\+Function} \doxyref{}{pag.}{class_pumping_costs_obj_function_aed168153435eaf566ba70c7c484b3264}, {\bf Evaporation\+Losses\+Obj\+Function} \doxyref{}{pag.}{class_evaporation_losses_obj_function_a649671b90db70a49423955aa4564761f}, {\bf Guarantee\+Obj\+Function} \doxyref{}{pag.}{class_guarantee_obj_function_ae8bdaca4094173cce8dc14eb58063600}, {\bf Failure\+Number\+Obj\+Function} \doxyref{}{pag.}{class_failure_number_obj_function_afe1a22eed02d7481db1840cc5d05c41a} e {\bf Shortage\+Volume\+Obj\+Function} \doxyref{}{pag.}{class_shortage_volume_obj_function_afb074ccb973dfc3d8dc224d57b20e3ec}.
+
+\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Obj\+Function\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_obj_function_a98425e92f67bc4f282c62c4b1c38a472}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Pumping\+Costs\+Obj\+Function} \doxyref{}{pag.}{class_pumping_costs_obj_function_aec17258e06a15ec56b4cf1f1226e057e}, {\bf Evaporation\+Losses\+Obj\+Function} \doxyref{}{pag.}{class_evaporation_losses_obj_function_a6747573a0aebecfd6181b6f76afb0073}, {\bf Guarantee\+Obj\+Function} \doxyref{}{pag.}{class_guarantee_obj_function_ab41849c2f75d6929d5df72b019cdbfb9}, {\bf Failure\+Number\+Obj\+Function} \doxyref{}{pag.}{class_failure_number_obj_function_a3d8262d7d338301a5e798ab60d663f81} e {\bf Shortage\+Volume\+Obj\+Function} \doxyref{}{pag.}{class_shortage_volume_obj_function_a999929281b3a2699132d0c04f186fa18}.
+
+\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!run@{run}}
+\index{run@{run}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{run()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual double Res\+Op\+Obj\+Function\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_obj_function_a4454977f68f8b6f3565e1f6e1c016f56}
+Executa a função objetivo 
+
+Implementado por {\bf Pumping\+Costs\+Obj\+Function} \doxyref{}{pag.}{class_pumping_costs_obj_function_a25c2029aae64234b426e0ab47e88ef4e}, {\bf Guarantee\+Obj\+Function} \doxyref{}{pag.}{class_guarantee_obj_function_a40dfd4693edb8984ca29f3301a816d5a}, {\bf Evaporation\+Losses\+Obj\+Function} \doxyref{}{pag.}{class_evaporation_losses_obj_function_a873a2704210fb7f596dca41caf274842}, {\bf Failure\+Number\+Obj\+Function} \doxyref{}{pag.}{class_failure_number_obj_function_a718f56380f0eb1ed46deee68fa191ca0} e {\bf Shortage\+Volume\+Obj\+Function} \doxyref{}{pag.}{class_shortage_volume_obj_function_af3ccb27c18e87c06e00dcbf25dce7eca}.
+
+\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!run@{run}}
+\index{run@{run}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{run(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual double Res\+Op\+Obj\+Function\+::run (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_obj_function_ae8e96c0de73af8d11c6095f752de7fd4}
+Executa a função objetivo 
+
+Implementado por {\bf Pumping\+Costs\+Obj\+Function} \doxyref{}{pag.}{class_pumping_costs_obj_function_a755e70e5dec40f6d9e9576577310a4c1}, {\bf Guarantee\+Obj\+Function} \doxyref{}{pag.}{class_guarantee_obj_function_a64abd8e369c2c1ac0daa2aa4ff30b1b8}, {\bf Evaporation\+Losses\+Obj\+Function} \doxyref{}{pag.}{class_evaporation_losses_obj_function_a4f4fd28d440f6940cff6d968d1821aa2}, {\bf Failure\+Number\+Obj\+Function} \doxyref{}{pag.}{class_failure_number_obj_function_a914af60bc43b791dfc29dd7bdc0b9fe9} e {\bf Shortage\+Volume\+Obj\+Function} \doxyref{}{pag.}{class_shortage_volume_obj_function_a6858aaae4c8d95857ae080a4ee3d12c4}.
+
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!interval@{interval}}
+\index{interval@{interval}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Res\+Op\+Obj\+Function\+::interval}\label{class_res_op_obj_function_a82d863403cda9f7aa3f6a94719457981}
+Intervalo 
+
+DefiniÃ§Ã£o na linha 42 do arquivo Obj\+Function/\+Res\+Op\+Obj\+Function.\+h.
+
+\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!minimize@{minimize}}
+\index{minimize@{minimize}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{minimize}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Obj\+Function\+::minimize}\label{class_res_op_obj_function_a158c2c871f09f8afc791f8e667114f9e}
+type -\/$>$ true (minimização) e false (maximização) 
+
+DefiniÃ§Ã£o na linha 52 do arquivo /\+Obj\+Function/\+Res\+Op\+Obj\+Function.\+h.
+
+\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!model\+Main@{model\+Main}}
+\index{model\+Main@{model\+Main}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{model\+Main}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Model\+Main}$\ast$ Res\+Op\+Obj\+Function\+::model\+Main\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_obj_function_a140e2a18120d8f2a878c8b696984881c}
+Modelo em uso 
+
+DefiniÃ§Ã£o na linha 20 do arquivo Obj\+Function/\+Res\+Op\+Obj\+Function.\+h.
+
+\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!name@{name}}
+\index{name@{name}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Res\+Op\+Obj\+Function\+::name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_obj_function_a0268ce673ae7817d9a59a86258f5685b}
+Nome da função 
+
+DefiniÃ§Ã£o na linha 30 do arquivo Obj\+Function/\+Res\+Op\+Obj\+Function.\+h.
+
+\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!type@{type}}
+\index{type@{type}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Objective\+Function\+Type} Res\+Op\+Obj\+Function\+::type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_obj_function_a4ffe292bdbfc2dc0a739d892c6c2832e}
+Tiop de função objetivo 
+
+DefiniÃ§Ã£o na linha 25 do arquivo /\+Obj\+Function/\+Res\+Op\+Obj\+Function.\+h.
+
+\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!type@{type}}
+\index{type@{type}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Obj\+Function\+::type}\label{class_res_op_obj_function_a48ccf5d5c744c48d21b6fe51113035af}
+type -\/$>$ true (minimização) e false (maximização) 
+
+DefiniÃ§Ã£o na linha 37 do arquivo Obj\+Function/\+Res\+Op\+Obj\+Function.\+h.
+
+\index{Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}!unit@{unit}}
+\index{unit@{unit}!Res\+Op\+Obj\+Function@{Res\+Op\+Obj\+Function}}
+\subsubsection[{unit}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Res\+Op\+Obj\+Function\+::unit\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_obj_function_ad804b5e58a8c0fbda3a71454d769fd1c}
+Unidade da função objetivo
+
+Modelo em uso
+
+Res\+Op\+Model\+Main$\ast$ model\+Main; Unidade da função objetivo 
+
+DefiniÃ§Ã£o na linha 25 do arquivo Obj\+Function/\+Res\+Op\+Obj\+Function.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Obj\+Function/\+Res\+Op\+Obj\+Function.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,63 @@
+\section{ReferÃªncia do Arquivo string-\/utils.cpp}
+\label{string-utils_8cpp}\index{string-\/utils.\+cpp@{string-\/utils.\+cpp}}
+{\ttfamily \#include \char`\"{}..\textbackslash{}..\textbackslash{}include\textbackslash{}\+S\+I\+G\+A\textbackslash{}string-\/utils.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A\textbackslash{}string-\/utils.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/md5.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}unicode/translit.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}unicode/unistr.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}unicode/calendar.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}unicode/datefmt.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/unaccent.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$numeric$>$}\\*
+{\ttfamily \#include $<$wx\textbackslash{}log.\+h$>$}\\*
+\subsection*{FunÃ§Ãµes}
+\begin{DoxyCompactItemize}
+\item 
+Unicode\+String {\bf U\+N\+A\+C\+C\+E\+N\+T\+\_\+\+R\+U\+L\+ES} (\char`\"{}[\textbackslash{}\textbackslash{}u00\+C0-\/\textbackslash{}\textbackslash{}u00\+C6] $>$ A;\char`\"{}\char`\"{}[\textbackslash{}\textbackslash{}u00\+C8-\/\textbackslash{}\textbackslash{}u00\+CB] $>$ E;\char`\"{}\char`\"{}[\textbackslash{}\textbackslash{}u00\+CC-\/\textbackslash{}\textbackslash{}u00\+CF] $>$ I;\char`\"{}\char`\"{}[\textbackslash{}\textbackslash{}u00\+D2-\/\textbackslash{}\textbackslash{}u00\+D8] $>$ O;\char`\"{}\char`\"{}[\textbackslash{}\textbackslash{}u00\+D9-\/\textbackslash{}\textbackslash{}u00\+DC] $>$ U;\char`\"{}\char`\"{}[\textbackslash{}\textbackslash{}u00\+E0-\/\textbackslash{}\textbackslash{}u00\+E6] $>$ a;\char`\"{}\char`\"{}[\textbackslash{}\textbackslash{}u00\+E8-\/\textbackslash{}\textbackslash{}u00\+EB] $>$ e;\char`\"{}\char`\"{}[\textbackslash{}\textbackslash{}u00\+EC-\/\textbackslash{}\textbackslash{}u00\+EF] $>$ i;\char`\"{}\char`\"{}[\textbackslash{}\textbackslash{}u00\+F0-\/\textbackslash{}\textbackslash{}u00\+F8] $>$ o;\char`\"{}\char`\"{}[\textbackslash{}\textbackslash{}u00\+F9-\/\textbackslash{}\textbackslash{}u00\+FF] $>$ u;\char`\"{}\char`\"{}[\textbackslash{}\textbackslash{}u00\+E7] $>$ c;\char`\"{}\char`\"{}[\textbackslash{}\textbackslash{}u00\+C7] $>$ C;\char`\"{})
+\item 
+Unicode\+String {\bf I\+M\+P\+O\+R\+T\+\_\+\+R\+U\+L\+ES} (\char`\"{}[\textbackslash{}\textbackslash{}u03\+B2] $>$ á;\char`\"{}\char`\"{}[\textbackslash{}\textbackslash{}u03\+D0] $>$ á;\char`\"{}\char`\"{}[\textbackslash{}\textbackslash{}u00\+DF] $>$ á;\char`\"{}\char`\"{}[\textbackslash{}\textbackslash{}u00\+B3] $>$ ³;\char`\"{}\char`\"{}[\textbackslash{}\textbackslash{}u00\+C2] $>$ ;\char`\"{}\char`\"{}[\textbackslash{}\textbackslash{}u00\+E7] $>$ ç;\char`\"{}\char`\"{}[\textbackslash{}\textbackslash{}u00\+E3] $>$ ã;\char`\"{}\char`\"{}Ã§ $>$ ç;\char`\"{}\char`\"{}Ã£ $>$ ã;\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\subsection{FunÃ§Ãµes}
+\index{string-\/utils.\+cpp@{string-\/utils.\+cpp}!I\+M\+P\+O\+R\+T\+\_\+\+R\+U\+L\+ES@{I\+M\+P\+O\+R\+T\+\_\+\+R\+U\+L\+ES}}
+\index{I\+M\+P\+O\+R\+T\+\_\+\+R\+U\+L\+ES@{I\+M\+P\+O\+R\+T\+\_\+\+R\+U\+L\+ES}!string-\/utils.\+cpp@{string-\/utils.\+cpp}}
+\subsubsection[{I\+M\+P\+O\+R\+T\+\_\+\+R\+U\+L\+E\+S(""[\textbackslash{}\textbackslash{}u03\+B2] $>$ á;""""[\textbackslash{}\textbackslash{}u03\+D0] $>$ á;""""[\textbackslash{}\textbackslash{}u00\+DF] $>$ á;""""[\textbackslash{}\textbackslash{}u00\+B3] $>$ ³;""""[\textbackslash{}\textbackslash{}u00\+C2] $>$ ;""""[\textbackslash{}\textbackslash{}u00\+E7] $>$ ç;""""[\textbackslash{}\textbackslash{}u00\+E3] $>$ ã;""""Ã§ $>$ ç;""""Ã£ $>$ ã;"")}]{\setlength{\rightskip}{0pt plus 5cm}Unicode\+String I\+M\+P\+O\+R\+T\+\_\+\+R\+U\+L\+ES (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}}]{[\textbackslash{}\textbackslash{}u03\+B2], }
+\item[{á;\char`\"{}\char`\"{}}]{[\textbackslash{}\textbackslash{}u03\+D0], }
+\item[{á;\char`\"{}\char`\"{}}]{[\textbackslash{}\textbackslash{}u00\+D\+F], }
+\item[{á;\char`\"{}\char`\"{}}]{[\textbackslash{}\textbackslash{}u00\+B3], }
+\item[{³;\char`\"{}\char`\"{}}]{[\textbackslash{}\textbackslash{}u00\+C2], }
+\item[{;\char`\"{}\char`\"{}}]{[\textbackslash{}\textbackslash{}u00\+E7], }
+\item[{ç;\char`\"{}\char`\"{}}]{[\textbackslash{}\textbackslash{}u00\+E3], }
+\item[{ã;\char`\"{}\char`\"{}}]{Ã§, }
+\item[{ç;\char`\"{}\char`\"{}}]{Ã£, }
+\item[{ã;\char`\"{}}]{}
+\end{DoxyParamCaption}
+)}\label{string-utils_8cpp_affb4941457809bf8604fd6dfa1c30907}
+\index{string-\/utils.\+cpp@{string-\/utils.\+cpp}!U\+N\+A\+C\+C\+E\+N\+T\+\_\+\+R\+U\+L\+ES@{U\+N\+A\+C\+C\+E\+N\+T\+\_\+\+R\+U\+L\+ES}}
+\index{U\+N\+A\+C\+C\+E\+N\+T\+\_\+\+R\+U\+L\+ES@{U\+N\+A\+C\+C\+E\+N\+T\+\_\+\+R\+U\+L\+ES}!string-\/utils.\+cpp@{string-\/utils.\+cpp}}
+\subsubsection[{U\+N\+A\+C\+C\+E\+N\+T\+\_\+\+R\+U\+L\+E\+S(""[\textbackslash{}\textbackslash{}u00\+C0-\/\textbackslash{}\textbackslash{}u00\+C6] $>$ A;""""[\textbackslash{}\textbackslash{}u00\+C8-\/\textbackslash{}\textbackslash{}u00\+CB] $>$ E;""""[\textbackslash{}\textbackslash{}u00\+C\+C-\/\textbackslash{}\textbackslash{}u00\+CF] $>$ I;""""[\textbackslash{}\textbackslash{}u00\+D2-\/\textbackslash{}\textbackslash{}u00\+D8] $>$ O;""""[\textbackslash{}\textbackslash{}u00\+D9-\/\textbackslash{}\textbackslash{}u00\+DC] $>$ U;""""[\textbackslash{}\textbackslash{}u00\+E0-\/\textbackslash{}\textbackslash{}u00\+E6] $>$ a;""""[\textbackslash{}\textbackslash{}u00\+E8-\/\textbackslash{}\textbackslash{}u00\+EB] $>$ e;""""[\textbackslash{}\textbackslash{}u00\+E\+C-\/\textbackslash{}\textbackslash{}u00\+EF] $>$ i;""""[\textbackslash{}\textbackslash{}u00\+F0-\/\textbackslash{}\textbackslash{}u00\+F8] $>$ o;""""[\textbackslash{}\textbackslash{}u00\+F9-\/\textbackslash{}\textbackslash{}u00\+FF] $>$ u;""""[\textbackslash{}\textbackslash{}u00\+E7] $>$ c;""""[\textbackslash{}\textbackslash{}u00\+C7] $>$ C;"")}]{\setlength{\rightskip}{0pt plus 5cm}Unicode\+String U\+N\+A\+C\+C\+E\+N\+T\+\_\+\+R\+U\+L\+ES (
+\begin{DoxyParamCaption}
+\item[{\char`\"{}}]{[\textbackslash{}\textbackslash{}u00\+C0-\/\textbackslash{}\textbackslash{}u00\+C6], }
+\item[{A;\char`\"{}\char`\"{}}]{[\textbackslash{}\textbackslash{}u00\+C8-\/\textbackslash{}\textbackslash{}u00\+C\+B], }
+\item[{E;\char`\"{}\char`\"{}}]{[\textbackslash{}\textbackslash{}u00\+C\+C-\/\textbackslash{}\textbackslash{}u00\+C\+F], }
+\item[{I;\char`\"{}\char`\"{}}]{[\textbackslash{}\textbackslash{}u00\+D2-\/\textbackslash{}\textbackslash{}u00\+D8], }
+\item[{O;\char`\"{}\char`\"{}}]{[\textbackslash{}\textbackslash{}u00\+D9-\/\textbackslash{}\textbackslash{}u00\+D\+C], }
+\item[{U;\char`\"{}\char`\"{}}]{[\textbackslash{}\textbackslash{}u00\+E0-\/\textbackslash{}\textbackslash{}u00\+E6], }
+\item[{a;\char`\"{}\char`\"{}}]{[\textbackslash{}\textbackslash{}u00\+E8-\/\textbackslash{}\textbackslash{}u00\+E\+B], }
+\item[{e;\char`\"{}\char`\"{}}]{[\textbackslash{}\textbackslash{}u00\+E\+C-\/\textbackslash{}\textbackslash{}u00\+E\+F], }
+\item[{i;\char`\"{}\char`\"{}}]{[\textbackslash{}\textbackslash{}u00\+F0-\/\textbackslash{}\textbackslash{}u00\+F8], }
+\item[{o;\char`\"{}\char`\"{}}]{[\textbackslash{}\textbackslash{}u00\+F9-\/\textbackslash{}\textbackslash{}u00\+F\+F], }
+\item[{u;\char`\"{}\char`\"{}}]{[\textbackslash{}\textbackslash{}u00\+E7], }
+\item[{c;\char`\"{}\char`\"{}}]{[\textbackslash{}\textbackslash{}u00\+C7], }
+\item[{C;\char`\"{}}]{}
+\end{DoxyParamCaption}
+)}\label{string-utils_8cpp_a072c30ee1b11a0732c350f9f5d96f2e1}
+C++ wx\+Widgets 

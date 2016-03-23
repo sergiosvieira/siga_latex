@@ -1,0 +1,360 @@
+\section{Referência da Classe Aff\+Prev\+Interface}
+\label{class_aff_prev_interface}\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+
+
+{\ttfamily \#include $<$Aff\+Prev\+Interface.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Aff\+Prev\+Interface} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent}, int options={\bf B\+U\+T\+T\+O\+N\+\_\+\+N\+U\+LL})
+\item 
+{\bf $\sim$\+Aff\+Prev\+Interface} ()
+\item 
+void {\bf on\+Choice\+Demand} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Choice\+Interval} (wx\+Command\+Event \&event)
+\item 
+void {\bf choice\+Demand} (wx\+String node\+Name, bool select\+Node=true)
+\item 
+{\bf Aff\+Prev\+Demand\+Model} $\ast$ {\bf selected\+Demand} ()
+\item 
+virtual void {\bf set\+Info} ({\bf Aff\+Prev\+Model} $\ast$model)
+\item 
+void {\bf show\+Results} (bool change=false)
+\item 
+void {\bf on\+Add\+Scenario} (wx\+Command\+Event \&)
+\item 
+void {\bf add\+Scenario\+Page} (wx\+String name=\char`\"{}\char`\"{})
+\item 
+void {\bf on\+Removeselected\+Scenario} (wx\+Command\+Event \&)
+\item 
+void {\bf removeselected\+Scenario} ()
+\item 
+void {\bf delete\+Scenario\+Page} (int page)
+\item 
+void {\bf delete\+All\+Scenario\+Pages} ()
+\item 
+void {\bf on\+Choice\+Scenario} (wx\+Command\+Event \&event)
+\item 
+void {\bf choice\+Scenario} ()
+\item 
+void {\bf update\+Demand\+Interface} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Static\+Box\+Sizer $\ast$ {\bf sb\+Res\+Option}
+\item 
+wx\+Static\+Box\+Sizer $\ast$ {\bf sb\+Demand\+Options}
+\item 
+wx\+Date\+Picker\+Ctrl $\ast$ {\bf dp\+Start\+Interval}
+\item 
+wx\+Date\+Picker\+Ctrl $\ast$ {\bf dp\+End\+Interval}
+\item 
+{\bf Aff\+Prev\+Demand\+Model\+Interface} $\ast$ {\bf demand\+Interface}
+\item 
+{\bf Aff\+Prev\+Res\+Interface} $\ast$ {\bf reservoir\+Interface}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Start\+Interval}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Demand}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Scen}
+\item 
+wx\+Radio\+Box $\ast$ {\bf rb\+T\+SM}
+\item 
+wx\+Panel $\ast$ {\bf panel}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Scen\+Name}
+\item 
+wx\+Static\+Box\+Sizer $\ast$ {\bf bs\+Scen}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 76 do arquivo Aff\+Prev\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{Aff\+Prev\+Interface(wx\+Frame $\ast$frame, wx\+Window $\ast$parent, int options=\+B\+U\+T\+T\+O\+N\+\_\+\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}Aff\+Prev\+Interface\+::\+Aff\+Prev\+Interface (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{int}]{options = {\ttfamily {\bf B\+U\+T\+T\+O\+N\+\_\+\+N\+U\+LL}}}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_interface_a8e74044f68b1fff6b212994c378a48c9}
+Botão para editar valor de demanda
+
+wx\+Button $\ast$bt\+Demand; Botão com a figura do botão de edição de demanda
+
+wx\+Bitmap\+Button $\ast$bitmap\+Demand; Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & Janela onde a interface será inserida \\
+\hline
+{\em parent} & Componente a que pertence \\
+\hline
+{\em options} & Botão(ões) a ser(em) desenhado(s) \\
+\hline
+\end{DoxyParams}
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!````~Aff\+Prev\+Interface@{$\sim$\+Aff\+Prev\+Interface}}
+\index{````~Aff\+Prev\+Interface@{$\sim$\+Aff\+Prev\+Interface}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{$\sim$\+Aff\+Prev\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}Aff\+Prev\+Interface\+::$\sim$\+Aff\+Prev\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_interface_a5e01aad073bc076b90c8be30ff39976a}
+Destrutor 
+
+\subsection{Métodos}
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!add\+Scenario\+Page@{add\+Scenario\+Page}}
+\index{add\+Scenario\+Page@{add\+Scenario\+Page}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{add\+Scenario\+Page(wx\+String name="""")}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Interface\+::add\+Scenario\+Page (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_interface_aea7d3db9c11147886802e7c710f3638f}
+Adição de pagina do cenario \index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!choice\+Demand@{choice\+Demand}}
+\index{choice\+Demand@{choice\+Demand}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{choice\+Demand(wx\+String node\+Name, bool select\+Node=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Interface\+::choice\+Demand (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{node\+Name, }
+\item[{bool}]{select\+Node = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_interface_a76a30ec9383621e792c3291d75c58f2c}
+Trata a edição de demanda 
+\begin{DoxyParams}{Parâmetros}
+{\em node\+Name} & Nome do nó de demanda \\
+\hline
+{\em select\+Node} & Diz se deve ou não selecionar o nó \\
+\hline
+\end{DoxyParams}
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!choice\+Scenario@{choice\+Scenario}}
+\index{choice\+Scenario@{choice\+Scenario}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{choice\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Interface\+::choice\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_interface_a4cfe5a7749043c4441e33401a74dac11}
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!delete\+All\+Scenario\+Pages@{delete\+All\+Scenario\+Pages}}
+\index{delete\+All\+Scenario\+Pages@{delete\+All\+Scenario\+Pages}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{delete\+All\+Scenario\+Pages()}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Interface\+::delete\+All\+Scenario\+Pages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_interface_aa0fefd88a721650a3ae71ec2e7faaf54}
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!delete\+Scenario\+Page@{delete\+Scenario\+Page}}
+\index{delete\+Scenario\+Page@{delete\+Scenario\+Page}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{delete\+Scenario\+Page(int page)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Interface\+::delete\+Scenario\+Page (
+\begin{DoxyParamCaption}
+\item[{int}]{page}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_interface_a1550d84eb7346a07b8de2f63ccbe303d}
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!on\+Add\+Scenario@{on\+Add\+Scenario}}
+\index{on\+Add\+Scenario@{on\+Add\+Scenario}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{on\+Add\+Scenario(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Interface\+::on\+Add\+Scenario (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_interface_ad8600e7b1b7604b1cb393b33f83947c2}
+Evento de mudança do intervalo inicial
+
+void on\+Set\+Start\+Interval(wx\+Date\+Event\& event); Evento de mudança do intervalo final
+
+void on\+Set\+End\+Interval(wx\+Date\+Event\& event); Evento de adção de cenario \index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!on\+Choice\+Demand@{on\+Choice\+Demand}}
+\index{on\+Choice\+Demand@{on\+Choice\+Demand}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{on\+Choice\+Demand(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Interface\+::on\+Choice\+Demand (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_interface_ac393be99ac89ba7348130b21c07bc102}
+Evento de edição de demanda
+
+void on\+Demand(wx\+Command\+Event\& event); Evento de edição de demanda \index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!on\+Choice\+Interval@{on\+Choice\+Interval}}
+\index{on\+Choice\+Interval@{on\+Choice\+Interval}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{on\+Choice\+Interval(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Interface\+::on\+Choice\+Interval (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_interface_adb6c6a426209b3944bcdc06a80ad319a}
+Evento de edição do intervalo de tempo \index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!on\+Choice\+Scenario@{on\+Choice\+Scenario}}
+\index{on\+Choice\+Scenario@{on\+Choice\+Scenario}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{on\+Choice\+Scenario(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Interface\+::on\+Choice\+Scenario (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_interface_a77642159d1c852bf32b7ecf9e5fb5ac0}
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!on\+Removeselected\+Scenario@{on\+Removeselected\+Scenario}}
+\index{on\+Removeselected\+Scenario@{on\+Removeselected\+Scenario}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{on\+Removeselected\+Scenario(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Interface\+::on\+Removeselected\+Scenario (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_interface_a9cef8c0418da44d0876561fcf34e9825}
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!removeselected\+Scenario@{removeselected\+Scenario}}
+\index{removeselected\+Scenario@{removeselected\+Scenario}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{removeselected\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Interface\+::removeselected\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_interface_ac4f315d68619a7e068d869c2252a3c89}
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!selected\+Demand@{selected\+Demand}}
+\index{selected\+Demand@{selected\+Demand}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{selected\+Demand()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Aff\+Prev\+Demand\+Model}$\ast$ Aff\+Prev\+Interface\+::selected\+Demand (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_interface_aa696f1c32db0c081aba3ac942c9f9fe4}
+Retorna a demanda selecionada \index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{set\+Info(\+Aff\+Prev\+Model $\ast$model)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Aff\+Prev\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Aff\+Prev\+Model} $\ast$}]{model}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_interface_a9e33888d1fb29dd807609ebcc55549fe}
+Insere valores 
+\begin{DoxyParams}{Parâmetros}
+{\em model} & Modelo \\
+\hline
+\end{DoxyParams}
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{show\+Results(bool change=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Interface\+::show\+Results (
+\begin{DoxyParamCaption}
+\item[{bool}]{change = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_interface_a11bc7679f6a4ea50c662bfa2c4e0287c}
+Mostra janela com os resultados 
+\begin{DoxyParams}{Parâmetros}
+{\em change} & Monta a janela de resultados para caso true. False acareta em esconder/mostrar a janela de resultados. \\
+\hline
+\end{DoxyParams}
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!update\+Demand\+Interface@{update\+Demand\+Interface}}
+\index{update\+Demand\+Interface@{update\+Demand\+Interface}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{update\+Demand\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Interface\+::update\+Demand\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_interface_aaf01c60b3c70ac9f9a9b0fd667dfc842}
+Atualiza a interface 
+
+\subsection{Atributos}
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!bs\+Scen@{bs\+Scen}}
+\index{bs\+Scen@{bs\+Scen}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{bs\+Scen}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Box\+Sizer$\ast$ Aff\+Prev\+Interface\+::bs\+Scen}\label{class_aff_prev_interface_a5c50a0a90e43f1844f43fe07380dbc27}
+Static\+Box\+Sizer para os cenarios 
+
+Definição na linha 157 do arquivo Aff\+Prev\+Interface.\+h.
+
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!cb\+Demand@{cb\+Demand}}
+\index{cb\+Demand@{cb\+Demand}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{cb\+Demand}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Aff\+Prev\+Interface\+::cb\+Demand}\label{class_aff_prev_interface_ac42bd563363e16fc42b76ba6e8f78b86}
+
+
+Definição na linha 127 do arquivo Aff\+Prev\+Interface.\+h.
+
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!cb\+Scen@{cb\+Scen}}
+\index{cb\+Scen@{cb\+Scen}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{cb\+Scen}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice $\ast$ Aff\+Prev\+Interface\+::cb\+Scen}\label{class_aff_prev_interface_a56babda88c834e12b34a4d076f09d092}
+
+
+Definição na linha 127 do arquivo Aff\+Prev\+Interface.\+h.
+
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!cb\+Start\+Interval@{cb\+Start\+Interval}}
+\index{cb\+Start\+Interval@{cb\+Start\+Interval}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{cb\+Start\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Aff\+Prev\+Interface\+::cb\+Start\+Interval}\label{class_aff_prev_interface_a2c3080c35fa5e81efd5f452dbc7708c8}
+Quardão o periodo de simulação
+
+wx\+Date\+Picker\+Ctrl $\ast$dp\+Start\+Interval, $\ast$dp\+End\+Interval; 
+
+Definição na linha 122 do arquivo Aff\+Prev\+Interface.\+h.
+
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!demand\+Interface@{demand\+Interface}}
+\index{demand\+Interface@{demand\+Interface}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{demand\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Aff\+Prev\+Demand\+Model\+Interface}$\ast$ Aff\+Prev\+Interface\+::demand\+Interface}\label{class_aff_prev_interface_a496716deb736d9ceace6ac1d33f398a1}
+Interface da demanda 
+
+Definição na linha 111 do arquivo Aff\+Prev\+Interface.\+h.
+
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!dp\+End\+Interval@{dp\+End\+Interval}}
+\index{dp\+End\+Interval@{dp\+End\+Interval}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{dp\+End\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Picker\+Ctrl $\ast$ Aff\+Prev\+Interface\+::dp\+End\+Interval}\label{class_aff_prev_interface_a082d8e4599685945dcc466f002cae286}
+
+
+Definição na linha 107 do arquivo Aff\+Prev\+Interface.\+h.
+
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!dp\+Start\+Interval@{dp\+Start\+Interval}}
+\index{dp\+Start\+Interval@{dp\+Start\+Interval}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{dp\+Start\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Picker\+Ctrl$\ast$ Aff\+Prev\+Interface\+::dp\+Start\+Interval}\label{class_aff_prev_interface_a9eb4003fa59d64cf7ddda3be9524a0fe}
+Controlado de data inicial e final 
+\begin{DoxyParams}{Parâmetros}
+{\em dp\+Start\+Interval} & Data inicial \\
+\hline
+{\em dp\+End\+Interval} & Data final \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 107 do arquivo Aff\+Prev\+Interface.\+h.
+
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!panel@{panel}}
+\index{panel@{panel}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{panel}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel$\ast$ Aff\+Prev\+Interface\+::panel}\label{class_aff_prev_interface_a63ade9c06416ff42728bc549e1310aaf}
+Check para calcular a vazão Z\+E\+RO
+
+wx\+Check\+Box $\ast$cb\+Zero; Painal onde a interface dos cenarios será inserida 
+
+Definição na linha 147 do arquivo Aff\+Prev\+Interface.\+h.
+
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!rb\+T\+SM@{rb\+T\+SM}}
+\index{rb\+T\+SM@{rb\+T\+SM}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{rb\+T\+SM}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box$\ast$ Aff\+Prev\+Interface\+::rb\+T\+SM}\label{class_aff_prev_interface_ae667175652e1b046eef2c6275ce79400}
+Choice\+Book contendo os cenários
+
+wx\+Choicebook $\ast$cb\+Scen; Radio com as escolhas dos elementos a serem utilizados 
+
+Definição na linha 137 do arquivo Aff\+Prev\+Interface.\+h.
+
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!reservoir\+Interface@{reservoir\+Interface}}
+\index{reservoir\+Interface@{reservoir\+Interface}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{reservoir\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Aff\+Prev\+Res\+Interface}$\ast$ Aff\+Prev\+Interface\+::reservoir\+Interface}\label{class_aff_prev_interface_adf9323b57ce18310ae4cb15bd5411906}
+Interface da demanda 
+
+Definição na linha 116 do arquivo Aff\+Prev\+Interface.\+h.
+
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!sb\+Demand\+Options@{sb\+Demand\+Options}}
+\index{sb\+Demand\+Options@{sb\+Demand\+Options}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{sb\+Demand\+Options}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Box\+Sizer$\ast$ Aff\+Prev\+Interface\+::sb\+Demand\+Options}\label{class_aff_prev_interface_ad8428e1a1613d9befe2c6c166f80e327}
+
+
+Definição na linha 101 do arquivo Aff\+Prev\+Interface.\+h.
+
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!sb\+Res\+Option@{sb\+Res\+Option}}
+\index{sb\+Res\+Option@{sb\+Res\+Option}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{sb\+Res\+Option}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Box\+Sizer$\ast$ Aff\+Prev\+Interface\+::sb\+Res\+Option}\label{class_aff_prev_interface_a24bf0528edad2f777405780f1ed6d57f}
+
+
+Definição na linha 100 do arquivo Aff\+Prev\+Interface.\+h.
+
+\index{Aff\+Prev\+Interface@{Aff\+Prev\+Interface}!tc\+Scen\+Name@{tc\+Scen\+Name}}
+\index{tc\+Scen\+Name@{tc\+Scen\+Name}!Aff\+Prev\+Interface@{Aff\+Prev\+Interface}}
+\subsubsection[{tc\+Scen\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl$\ast$ Aff\+Prev\+Interface\+::tc\+Scen\+Name}\label{class_aff_prev_interface_aa61952f3099906bd381d67226ccf14a9}
+Caixa de texto contendo o nome do cenario 
+
+Definição na linha 152 do arquivo Aff\+Prev\+Interface.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Aff\+Prev\+Interface.\+h}\end{DoxyCompactItemize}

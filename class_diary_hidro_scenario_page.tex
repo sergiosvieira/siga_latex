@@ -1,0 +1,392 @@
+\section{Referência da Classe Diary\+Hidro\+Scenario\+Page}
+\label{class_diary_hidro_scenario_page}\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+
+
+{\ttfamily \#include $<$Diary\+Hidro\+Scenario\+Page.\+h$>$}
+
+
+
+Herdeiro de {\bf Hidro\+Scenario\+Page}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Diary\+Hidro\+Scenario\+Page} (wx\+Window $\ast$pai, wx\+Window\+ID id=wx\+I\+D\+\_\+\+A\+NY, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=wx\+T\+A\+B\+\_\+\+T\+R\+A\+V\+E\+R\+S\+AL, const wx\+String \&name=\char`\"{}Scenario\+Page\char`\"{})
+\item 
+void {\bf set\+Rain\+Radio\+Box\+Selection} (int selection\+Index)
+\item 
+void {\bf set\+Rain\+Radio\+Box\+Selection} ({\bf hidro\+Model\+Type} type, bool update\+Results=false)
+\item 
+void {\bf set\+Prop\+Radio\+Box\+Selection} ({\bf hidro\+Model\+Type} type, bool update\+Results=false)
+\item 
+void {\bf show\+Rain\+Radio\+Box} (bool show=true)
+\item 
+bool {\bf is\+Prop\+Radio\+Box\+Shown} () const 
+\item 
+void {\bf hide\+Prop\+Radio\+Box} ()
+\item 
+void {\bf show\+Prop\+Radio\+Box} (bool show=true)
+\item 
+void {\bf hide\+Current\+Interface} ()
+\item 
+void {\bf set\+Generic\+Interface} ({\bf Generic\+Interface} $\ast$inter)
+\item 
+void {\bf set\+G\+W\+L\+F\+Interface} ({\bf G\+W\+L\+F\+Interface} $\ast$inter)
+\item 
+void {\bf set\+S\+M\+A\+P\+Interface} ({\bf S\+M\+A\+P\+Interface} $\ast$inter)
+\item 
+void {\bf set\+H\+Y\+M\+O\+D\+Interface} ({\bf H\+Y\+M\+O\+D\+Interface} $\ast$inter)
+\item 
+void {\bf set\+S\+A\+C\+R\+Interface} ({\bf S\+A\+C\+R\+Interface} $\ast$inter)
+\item 
+void {\bf set\+M\+U\+S\+K\+Interface} ({\bf M\+U\+S\+K\+Interface} $\ast$inter)
+\item 
+void {\bf set\+W\+A\+S\+A\+Interface} ({\bf W\+A\+S\+A\+Interface} $\ast$inter)
+\item 
+void {\bf set\+Rain\+Interfaces} ({\bf Generic\+Interface} $\ast$, {\bf G\+W\+L\+F\+Interface} $\ast$, {\bf S\+M\+A\+P\+Interface} $\ast$, {\bf H\+Y\+M\+O\+D\+Interface} $\ast$, {\bf S\+A\+C\+R\+Interface} $\ast$, {\bf W\+A\+S\+A\+Interface} $\ast$)
+\item 
+void {\bf reparent\+Interfaces} ()
+\item 
+void {\bf set\+Active\+Interface} ({\bf hidro\+Model\+Type} type)
+\item 
+void {\bf update\+Interface} ()
+\item 
+void {\bf create\+Interface} ()
+\item 
+{\bf hidro\+Model\+Type} {\bf get\+Selected\+Model\+Type} ()
+\item 
+{\bf hidro\+Model\+Type} {\bf get\+Rain\+Selected\+Model\+Type} ()
+\item 
+{\bf hidro\+Model\+Type} {\bf get\+Prop\+Selected\+Model\+Type} ()
+\item 
+virtual {\bf $\sim$\+Diary\+Hidro\+Scenario\+Page} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Radio\+Box $\ast$ {\bf prop\+Radio\+Box}
+\item 
+wx\+Static\+Box\+Sizer $\ast$ {\bf sb\+Prop\+Interfaces}
+\item 
+{\bf Generic\+Interface} $\ast$ {\bf generic\+Interface}
+\item 
+{\bf G\+W\+L\+F\+Interface} $\ast$ {\bf gwlf\+Interface}
+\item 
+{\bf S\+M\+A\+P\+Interface} $\ast$ {\bf smap\+Interface}
+\item 
+{\bf H\+Y\+M\+O\+D\+Interface} $\ast$ {\bf hymod\+Interface}
+\item 
+{\bf S\+A\+C\+R\+Interface} $\ast$ {\bf sacr\+Interface}
+\item 
+{\bf W\+A\+S\+A\+Interface} $\ast$ {\bf wasa\+Interface}
+\item 
+{\bf M\+U\+S\+K\+Interface} $\ast$ {\bf musk\+Interface}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 29 do arquivo Diary\+Hidro\+Scenario\+Page.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{Diary\+Hidro\+Scenario\+Page(wx\+Window $\ast$pai, wx\+Window\+I\+D id=wx\+I\+D\+\_\+\+A\+N\+Y, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=wx\+T\+A\+B\+\_\+\+T\+R\+A\+V\+E\+R\+S\+A\+L, const wx\+String \&name=""Scenario\+Page"")}]{\setlength{\rightskip}{0pt plus 5cm}Diary\+Hidro\+Scenario\+Page\+::\+Diary\+Hidro\+Scenario\+Page (
+\begin{DoxyParamCaption}
+\item[{wx\+Window $\ast$}]{pai, }
+\item[{wx\+Window\+ID}]{id = {\ttfamily wxID\+\_\+ANY}, }
+\item[{const wx\+Point \&}]{pos = {\ttfamily wxDefaultPosition}, }
+\item[{const wx\+Size \&}]{size = {\ttfamily wxDefaultSize}, }
+\item[{long}]{style = {\ttfamily wxTAB\+\_\+TRAVERSAL}, }
+\item[{const wx\+String \&}]{name = {\ttfamily \char`\"{}ScenarioPage\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_diary_hidro_scenario_page_ae2978b7e728a51e9c3d3bd20bed5c96d}
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!````~Diary\+Hidro\+Scenario\+Page@{$\sim$\+Diary\+Hidro\+Scenario\+Page}}
+\index{````~Diary\+Hidro\+Scenario\+Page@{$\sim$\+Diary\+Hidro\+Scenario\+Page}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{$\sim$\+Diary\+Hidro\+Scenario\+Page()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Diary\+Hidro\+Scenario\+Page\+::$\sim$\+Diary\+Hidro\+Scenario\+Page (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_diary_hidro_scenario_page_a0effb2d5766d51cedb4d304832951615}
+
+
+\subsection{Métodos}
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!create\+Interface@{create\+Interface}}
+\index{create\+Interface@{create\+Interface}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{create\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}void Diary\+Hidro\+Scenario\+Page\+::create\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_diary_hidro_scenario_page_ac9f2037b425d29416ccc743870cb1071}
+Cria e inicializa a interface 
+
+Reimplementação de {\bf Hidro\+Scenario\+Page} \doxyref{}{pag.}{class_hidro_scenario_page_a19caa0bd5b2c12664656100e8aae1b78}.
+
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!get\+Prop\+Selected\+Model\+Type@{get\+Prop\+Selected\+Model\+Type}}
+\index{get\+Prop\+Selected\+Model\+Type@{get\+Prop\+Selected\+Model\+Type}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{get\+Prop\+Selected\+Model\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf hidro\+Model\+Type} Diary\+Hidro\+Scenario\+Page\+::get\+Prop\+Selected\+Model\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_diary_hidro_scenario_page_a24d5f3e371ca1e9a8a8f130fc4794303}
+Retorna o hidro\+Model\+Type a partir da sele��o atual do radio\+Box. \index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!get\+Rain\+Selected\+Model\+Type@{get\+Rain\+Selected\+Model\+Type}}
+\index{get\+Rain\+Selected\+Model\+Type@{get\+Rain\+Selected\+Model\+Type}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{get\+Rain\+Selected\+Model\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf hidro\+Model\+Type} Diary\+Hidro\+Scenario\+Page\+::get\+Rain\+Selected\+Model\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_diary_hidro_scenario_page_a8efda85f5ec9dd55a8b3fca474f60aee}
+Retorna o hidro\+Model\+Type a partir da sele��o atual do radio\+Box. \index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!get\+Selected\+Model\+Type@{get\+Selected\+Model\+Type}}
+\index{get\+Selected\+Model\+Type@{get\+Selected\+Model\+Type}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{get\+Selected\+Model\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf hidro\+Model\+Type} Diary\+Hidro\+Scenario\+Page\+::get\+Selected\+Model\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_diary_hidro_scenario_page_af60d47d20cf635cd240dbaa4799e5857}
+Retorna o hidro\+Model\+Type a partir da sele��o atual do radio\+Box. 
+
+Implementa {\bf Hidro\+Scenario\+Page} \doxyref{}{pag.}{class_hidro_scenario_page_a178d5d20c947749b5154cf559b62a359}.
+
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!hide\+Current\+Interface@{hide\+Current\+Interface}}
+\index{hide\+Current\+Interface@{hide\+Current\+Interface}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{hide\+Current\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}void Diary\+Hidro\+Scenario\+Page\+::hide\+Current\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_diary_hidro_scenario_page_aed1c13f612007a992c4f331c087f53a4}
+
+
+Reimplementação de {\bf Hidro\+Scenario\+Page} \doxyref{}{pag.}{class_hidro_scenario_page_ad275218e2bad335d41b380db1cdc0c79}.
+
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!hide\+Prop\+Radio\+Box@{hide\+Prop\+Radio\+Box}}
+\index{hide\+Prop\+Radio\+Box@{hide\+Prop\+Radio\+Box}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{hide\+Prop\+Radio\+Box()}]{\setlength{\rightskip}{0pt plus 5cm}void Diary\+Hidro\+Scenario\+Page\+::hide\+Prop\+Radio\+Box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_diary_hidro_scenario_page_ab67b185c511270fe1638c10ac70041d4}
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!is\+Prop\+Radio\+Box\+Shown@{is\+Prop\+Radio\+Box\+Shown}}
+\index{is\+Prop\+Radio\+Box\+Shown@{is\+Prop\+Radio\+Box\+Shown}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{is\+Prop\+Radio\+Box\+Shown() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Diary\+Hidro\+Scenario\+Page\+::is\+Prop\+Radio\+Box\+Shown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_diary_hidro_scenario_page_abc4e7dcf6cfba645ee14e83043f3e631}
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!reparent\+Interfaces@{reparent\+Interfaces}}
+\index{reparent\+Interfaces@{reparent\+Interfaces}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{reparent\+Interfaces()}]{\setlength{\rightskip}{0pt plus 5cm}void Diary\+Hidro\+Scenario\+Page\+::reparent\+Interfaces (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_diary_hidro_scenario_page_ad74d296d6f546241429a6e72ac2d21b2}
+
+
+Implementa {\bf Hidro\+Scenario\+Page} \doxyref{}{pag.}{class_hidro_scenario_page_ae89296d5c84b57d84108aaf695495b15}.
+
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!set\+Active\+Interface@{set\+Active\+Interface}}
+\index{set\+Active\+Interface@{set\+Active\+Interface}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{set\+Active\+Interface(hidro\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Diary\+Hidro\+Scenario\+Page\+::set\+Active\+Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf hidro\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_diary_hidro_scenario_page_a23ffc2a2d075e4a2cd55f18fd2630a02}
+Mostra a interface do tipo especificado e esconde as outras devidamente 
+
+Implementa {\bf Hidro\+Scenario\+Page} \doxyref{}{pag.}{class_hidro_scenario_page_ac9635c4bb9e580c547fb92de4476c07b}.
+
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!set\+Generic\+Interface@{set\+Generic\+Interface}}
+\index{set\+Generic\+Interface@{set\+Generic\+Interface}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{set\+Generic\+Interface(\+Generic\+Interface $\ast$inter)}]{\setlength{\rightskip}{0pt plus 5cm}void Diary\+Hidro\+Scenario\+Page\+::set\+Generic\+Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf Generic\+Interface} $\ast$}]{inter}
+\end{DoxyParamCaption}
+)}\label{class_diary_hidro_scenario_page_a8ebdfdb4d5f1e1a7c55de92298d52311}
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!set\+G\+W\+L\+F\+Interface@{set\+G\+W\+L\+F\+Interface}}
+\index{set\+G\+W\+L\+F\+Interface@{set\+G\+W\+L\+F\+Interface}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{set\+G\+W\+L\+F\+Interface(\+G\+W\+L\+F\+Interface $\ast$inter)}]{\setlength{\rightskip}{0pt plus 5cm}void Diary\+Hidro\+Scenario\+Page\+::set\+G\+W\+L\+F\+Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+W\+L\+F\+Interface} $\ast$}]{inter}
+\end{DoxyParamCaption}
+)}\label{class_diary_hidro_scenario_page_a38d297f447a8a9aafaeb47d10745ad8f}
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!set\+H\+Y\+M\+O\+D\+Interface@{set\+H\+Y\+M\+O\+D\+Interface}}
+\index{set\+H\+Y\+M\+O\+D\+Interface@{set\+H\+Y\+M\+O\+D\+Interface}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{set\+H\+Y\+M\+O\+D\+Interface(\+H\+Y\+M\+O\+D\+Interface $\ast$inter)}]{\setlength{\rightskip}{0pt plus 5cm}void Diary\+Hidro\+Scenario\+Page\+::set\+H\+Y\+M\+O\+D\+Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf H\+Y\+M\+O\+D\+Interface} $\ast$}]{inter}
+\end{DoxyParamCaption}
+)}\label{class_diary_hidro_scenario_page_a340d11297dcb6025022357d204b08cf3}
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!set\+M\+U\+S\+K\+Interface@{set\+M\+U\+S\+K\+Interface}}
+\index{set\+M\+U\+S\+K\+Interface@{set\+M\+U\+S\+K\+Interface}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{set\+M\+U\+S\+K\+Interface(\+M\+U\+S\+K\+Interface $\ast$inter)}]{\setlength{\rightskip}{0pt plus 5cm}void Diary\+Hidro\+Scenario\+Page\+::set\+M\+U\+S\+K\+Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf M\+U\+S\+K\+Interface} $\ast$}]{inter}
+\end{DoxyParamCaption}
+)}\label{class_diary_hidro_scenario_page_a0f350b5d0f809f7b8f0a71ff7c76b131}
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!set\+Prop\+Radio\+Box\+Selection@{set\+Prop\+Radio\+Box\+Selection}}
+\index{set\+Prop\+Radio\+Box\+Selection@{set\+Prop\+Radio\+Box\+Selection}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{set\+Prop\+Radio\+Box\+Selection(hidro\+Model\+Type type, bool update\+Results=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Diary\+Hidro\+Scenario\+Page\+::set\+Prop\+Radio\+Box\+Selection (
+\begin{DoxyParamCaption}
+\item[{{\bf hidro\+Model\+Type}}]{type, }
+\item[{bool}]{update\+Results = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_diary_hidro_scenario_page_a83d8382a05f771d6a59be67c6815874f}
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!set\+Rain\+Interfaces@{set\+Rain\+Interfaces}}
+\index{set\+Rain\+Interfaces@{set\+Rain\+Interfaces}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{set\+Rain\+Interfaces(\+Generic\+Interface $\ast$, G\+W\+L\+F\+Interface $\ast$, S\+M\+A\+P\+Interface $\ast$, H\+Y\+M\+O\+D\+Interface $\ast$, S\+A\+C\+R\+Interface $\ast$, W\+A\+S\+A\+Interface $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Diary\+Hidro\+Scenario\+Page\+::set\+Rain\+Interfaces (
+\begin{DoxyParamCaption}
+\item[{{\bf Generic\+Interface} $\ast$}]{, }
+\item[{{\bf G\+W\+L\+F\+Interface} $\ast$}]{, }
+\item[{{\bf S\+M\+A\+P\+Interface} $\ast$}]{, }
+\item[{{\bf H\+Y\+M\+O\+D\+Interface} $\ast$}]{, }
+\item[{{\bf S\+A\+C\+R\+Interface} $\ast$}]{, }
+\item[{{\bf W\+A\+S\+A\+Interface} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_diary_hidro_scenario_page_ad7ab2f379a2ac89af348e021fabf6879}
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!set\+Rain\+Radio\+Box\+Selection@{set\+Rain\+Radio\+Box\+Selection}}
+\index{set\+Rain\+Radio\+Box\+Selection@{set\+Rain\+Radio\+Box\+Selection}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{set\+Rain\+Radio\+Box\+Selection(int selection\+Index)}]{\setlength{\rightskip}{0pt plus 5cm}void Diary\+Hidro\+Scenario\+Page\+::set\+Rain\+Radio\+Box\+Selection (
+\begin{DoxyParamCaption}
+\item[{int}]{selection\+Index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_diary_hidro_scenario_page_acc83008bb4ffb4014b77ef30d1290176}
+
+
+Reimplementação de {\bf Hidro\+Scenario\+Page} \doxyref{}{pag.}{class_hidro_scenario_page_a20b6c0f70b6a1b092f54673bbffc7021}.
+
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!set\+Rain\+Radio\+Box\+Selection@{set\+Rain\+Radio\+Box\+Selection}}
+\index{set\+Rain\+Radio\+Box\+Selection@{set\+Rain\+Radio\+Box\+Selection}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{set\+Rain\+Radio\+Box\+Selection(hidro\+Model\+Type type, bool update\+Results=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Diary\+Hidro\+Scenario\+Page\+::set\+Rain\+Radio\+Box\+Selection (
+\begin{DoxyParamCaption}
+\item[{{\bf hidro\+Model\+Type}}]{type, }
+\item[{bool}]{update\+Results = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_diary_hidro_scenario_page_aff8478b8041006e7bbec8c683db1f2b8}
+
+
+Reimplementação de {\bf Hidro\+Scenario\+Page} \doxyref{}{pag.}{class_hidro_scenario_page_a7534b99ae19b4ed4f9461c0f0d71e2ad}.
+
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!set\+S\+A\+C\+R\+Interface@{set\+S\+A\+C\+R\+Interface}}
+\index{set\+S\+A\+C\+R\+Interface@{set\+S\+A\+C\+R\+Interface}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{set\+S\+A\+C\+R\+Interface(\+S\+A\+C\+R\+Interface $\ast$inter)}]{\setlength{\rightskip}{0pt plus 5cm}void Diary\+Hidro\+Scenario\+Page\+::set\+S\+A\+C\+R\+Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+A\+C\+R\+Interface} $\ast$}]{inter}
+\end{DoxyParamCaption}
+)}\label{class_diary_hidro_scenario_page_a41bfc978de20da1d804f3bd2eb6f7af7}
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!set\+S\+M\+A\+P\+Interface@{set\+S\+M\+A\+P\+Interface}}
+\index{set\+S\+M\+A\+P\+Interface@{set\+S\+M\+A\+P\+Interface}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{set\+S\+M\+A\+P\+Interface(\+S\+M\+A\+P\+Interface $\ast$inter)}]{\setlength{\rightskip}{0pt plus 5cm}void Diary\+Hidro\+Scenario\+Page\+::set\+S\+M\+A\+P\+Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+M\+A\+P\+Interface} $\ast$}]{inter}
+\end{DoxyParamCaption}
+)}\label{class_diary_hidro_scenario_page_a63c647beb69061b25d46f0722436a71f}
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!set\+W\+A\+S\+A\+Interface@{set\+W\+A\+S\+A\+Interface}}
+\index{set\+W\+A\+S\+A\+Interface@{set\+W\+A\+S\+A\+Interface}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{set\+W\+A\+S\+A\+Interface(\+W\+A\+S\+A\+Interface $\ast$inter)}]{\setlength{\rightskip}{0pt plus 5cm}void Diary\+Hidro\+Scenario\+Page\+::set\+W\+A\+S\+A\+Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf W\+A\+S\+A\+Interface} $\ast$}]{inter}
+\end{DoxyParamCaption}
+)}\label{class_diary_hidro_scenario_page_a24836706e82e68316a669a798ccc7708}
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!show\+Prop\+Radio\+Box@{show\+Prop\+Radio\+Box}}
+\index{show\+Prop\+Radio\+Box@{show\+Prop\+Radio\+Box}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{show\+Prop\+Radio\+Box(bool show=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Diary\+Hidro\+Scenario\+Page\+::show\+Prop\+Radio\+Box (
+\begin{DoxyParamCaption}
+\item[{bool}]{show = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_diary_hidro_scenario_page_a87f93f20ae9aade2c9dddb7dff147cdc}
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!show\+Rain\+Radio\+Box@{show\+Rain\+Radio\+Box}}
+\index{show\+Rain\+Radio\+Box@{show\+Rain\+Radio\+Box}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{show\+Rain\+Radio\+Box(bool show=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Diary\+Hidro\+Scenario\+Page\+::show\+Rain\+Radio\+Box (
+\begin{DoxyParamCaption}
+\item[{bool}]{show = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_diary_hidro_scenario_page_a4d987a776e0996d156eaf0afe8f009df}
+
+
+Reimplementação de {\bf Hidro\+Scenario\+Page} \doxyref{}{pag.}{class_hidro_scenario_page_ae906f6a456c21ee55458101febe528b4}.
+
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!update\+Interface@{update\+Interface}}
+\index{update\+Interface@{update\+Interface}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{update\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}void Diary\+Hidro\+Scenario\+Page\+::update\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_diary_hidro_scenario_page_a5d72f1147b7cf2e788455a011ee50ce5}
+Atualiza as interfaces de acordo com a opcao selecionada dos radioboxes 
+
+Implementa {\bf Hidro\+Scenario\+Page} \doxyref{}{pag.}{class_hidro_scenario_page_a82e6c3061ad5ae22f685fad07f0a8be3}.
+
+
+
+\subsection{Atributos}
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!generic\+Interface@{generic\+Interface}}
+\index{generic\+Interface@{generic\+Interface}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{generic\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Generic\+Interface}$\ast$ Diary\+Hidro\+Scenario\+Page\+::generic\+Interface\hspace{0.3cm}{\ttfamily [protected]}}\label{class_diary_hidro_scenario_page_a458062dd452a1a939ec3b2d4ec6e08df}
+
+
+Definição na linha 40 do arquivo Diary\+Hidro\+Scenario\+Page.\+h.
+
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!gwlf\+Interface@{gwlf\+Interface}}
+\index{gwlf\+Interface@{gwlf\+Interface}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{gwlf\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+W\+L\+F\+Interface}$\ast$ Diary\+Hidro\+Scenario\+Page\+::gwlf\+Interface\hspace{0.3cm}{\ttfamily [protected]}}\label{class_diary_hidro_scenario_page_a4ca9b543ab3e467b5a5bdeb1702c7b84}
+
+
+Definição na linha 41 do arquivo Diary\+Hidro\+Scenario\+Page.\+h.
+
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!hymod\+Interface@{hymod\+Interface}}
+\index{hymod\+Interface@{hymod\+Interface}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{hymod\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf H\+Y\+M\+O\+D\+Interface}$\ast$ Diary\+Hidro\+Scenario\+Page\+::hymod\+Interface\hspace{0.3cm}{\ttfamily [protected]}}\label{class_diary_hidro_scenario_page_a6decd4f58a40d58322dfb84242a60089}
+
+
+Definição na linha 43 do arquivo Diary\+Hidro\+Scenario\+Page.\+h.
+
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!musk\+Interface@{musk\+Interface}}
+\index{musk\+Interface@{musk\+Interface}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{musk\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+U\+S\+K\+Interface}$\ast$ Diary\+Hidro\+Scenario\+Page\+::musk\+Interface\hspace{0.3cm}{\ttfamily [protected]}}\label{class_diary_hidro_scenario_page_affaea41c3f713c94ade974f3ec098f91}
+
+
+Definição na linha 48 do arquivo Diary\+Hidro\+Scenario\+Page.\+h.
+
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!prop\+Radio\+Box@{prop\+Radio\+Box}}
+\index{prop\+Radio\+Box@{prop\+Radio\+Box}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{prop\+Radio\+Box}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box$\ast$ Diary\+Hidro\+Scenario\+Page\+::prop\+Radio\+Box\hspace{0.3cm}{\ttfamily [protected]}}\label{class_diary_hidro_scenario_page_a0918c4b4cc00964a8f145c466e46a16b}
+
+
+Definição na linha 34 do arquivo Diary\+Hidro\+Scenario\+Page.\+h.
+
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!sacr\+Interface@{sacr\+Interface}}
+\index{sacr\+Interface@{sacr\+Interface}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{sacr\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+A\+C\+R\+Interface}$\ast$ Diary\+Hidro\+Scenario\+Page\+::sacr\+Interface\hspace{0.3cm}{\ttfamily [protected]}}\label{class_diary_hidro_scenario_page_a2ff43ec9208ab8ca24ef51f89c180dfa}
+
+
+Definição na linha 44 do arquivo Diary\+Hidro\+Scenario\+Page.\+h.
+
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!sb\+Prop\+Interfaces@{sb\+Prop\+Interfaces}}
+\index{sb\+Prop\+Interfaces@{sb\+Prop\+Interfaces}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{sb\+Prop\+Interfaces}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Box\+Sizer$\ast$ Diary\+Hidro\+Scenario\+Page\+::sb\+Prop\+Interfaces\hspace{0.3cm}{\ttfamily [protected]}}\label{class_diary_hidro_scenario_page_a2aa46ee28191a062ee9e3f5b522592df}
+
+
+Definição na linha 37 do arquivo Diary\+Hidro\+Scenario\+Page.\+h.
+
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!smap\+Interface@{smap\+Interface}}
+\index{smap\+Interface@{smap\+Interface}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{smap\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+M\+A\+P\+Interface}$\ast$ Diary\+Hidro\+Scenario\+Page\+::smap\+Interface\hspace{0.3cm}{\ttfamily [protected]}}\label{class_diary_hidro_scenario_page_a35c11bee96d48f2f57038c4be4ff90bc}
+
+
+Definição na linha 42 do arquivo Diary\+Hidro\+Scenario\+Page.\+h.
+
+\index{Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}!wasa\+Interface@{wasa\+Interface}}
+\index{wasa\+Interface@{wasa\+Interface}!Diary\+Hidro\+Scenario\+Page@{Diary\+Hidro\+Scenario\+Page}}
+\subsubsection[{wasa\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\+A\+S\+A\+Interface}$\ast$ Diary\+Hidro\+Scenario\+Page\+::wasa\+Interface\hspace{0.3cm}{\ttfamily [protected]}}\label{class_diary_hidro_scenario_page_ab67788db51292485d5326d39230ccf4a}
+
+
+Definição na linha 45 do arquivo Diary\+Hidro\+Scenario\+Page.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Diary\+Hidro\+Scenario\+Page.\+h}\end{DoxyCompactItemize}

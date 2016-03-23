@@ -1,0 +1,117 @@
+\section{RefÃªncia do Namespace Web\+Services}
+\label{namespace_web_services}\index{Web\+Services@{Web\+Services}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ {\bf Ana}
+\item 
+ {\bf Funceme}
+\end{DoxyCompactItemize}
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Biding\+Object}
+\end{DoxyCompactItemize}
+\subsection*{EnumeraÃ§Ãµes}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Service\+Exception} \{ {\bf Connection\+Exception}, 
+{\bf Parsing\+Exception}
+ \}
+\item 
+enum {\bf Parsing\+Type} \{ {\bf Json\+Parsing}, 
+{\bf Xml\+Parsing}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{FunÃ§Ãµes}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\vector$<$ T $>$ {\bf load\+Objects\+From\+U\+RL} (const wx\+String \&service\+U\+RL, {\bf Parsing\+Type} parsing\+Type={\bf Json\+Parsing})
+\item 
+{\footnotesize template$<$class T $>$ }\\T {\bf load\+Object\+From\+U\+RL} (const wx\+String \&service\+U\+RL)
+\end{DoxyCompactItemize}
+
+
+\subsection{EnumeraÃ§Ãµes}
+\index{Web\+Services@{Web\+Services}!Parsing\+Type@{Parsing\+Type}}
+\index{Parsing\+Type@{Parsing\+Type}!Web\+Services@{Web\+Services}}
+\subsubsection[{Parsing\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Web\+Services\+::\+Parsing\+Type}}\label{namespace_web_services_ad8511d24d1c84c0aeb362689cd0c8757}
+Tipo de parsing a ser usado nas requisições a serviços \begin{Desc}
+\item[Valores de enumeraÃ§Ãµes]\par
+\begin{description}
+\index{Json\+Parsing@{Json\+Parsing}!Web\+Services@{Web\+Services}}\index{Web\+Services@{Web\+Services}!Json\+Parsing@{Json\+Parsing}}\item[{\em 
+Json\+Parsing\label{namespace_web_services_ad8511d24d1c84c0aeb362689cd0c8757a73d0db2df3cba8ebda84a0a1be360b74}
+}]\index{Xml\+Parsing@{Xml\+Parsing}!Web\+Services@{Web\+Services}}\index{Web\+Services@{Web\+Services}!Xml\+Parsing@{Xml\+Parsing}}\item[{\em 
+Xml\+Parsing\label{namespace_web_services_ad8511d24d1c84c0aeb362689cd0c8757a27aa9827a923b681e2cb6362b402cfca}
+}]\end{description}
+\end{Desc}
+
+
+DefiniÃ§Ã£o na linha 41 do arquivo Web\+Services.\+h.
+
+\index{Web\+Services@{Web\+Services}!Service\+Exception@{Service\+Exception}}
+\index{Service\+Exception@{Service\+Exception}!Web\+Services@{Web\+Services}}
+\subsubsection[{Service\+Exception}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Web\+Services\+::\+Service\+Exception}}\label{namespace_web_services_adff54d561ccf8e6a927aaf0e1c5caba9}
+\begin{Desc}
+\item[Valores de enumeraÃ§Ãµes]\par
+\begin{description}
+\index{Connection\+Exception@{Connection\+Exception}!Web\+Services@{Web\+Services}}\index{Web\+Services@{Web\+Services}!Connection\+Exception@{Connection\+Exception}}\item[{\em 
+Connection\+Exception\label{namespace_web_services_adff54d561ccf8e6a927aaf0e1c5caba9a4865c47b3fe4e488a44e3038b247bab0}
+}]Código que indica erros de conexão \index{Parsing\+Exception@{Parsing\+Exception}!Web\+Services@{Web\+Services}}\index{Web\+Services@{Web\+Services}!Parsing\+Exception@{Parsing\+Exception}}\item[{\em 
+Parsing\+Exception\label{namespace_web_services_adff54d561ccf8e6a927aaf0e1c5caba9a43cea26c4410d2041b32245ceef644a2}
+}]Código que indica erros de parsing \end{description}
+\end{Desc}
+
+
+DefiniÃ§Ã£o na linha 32 do arquivo Web\+Services.\+h.
+
+
+
+\subsection{FunÃ§Ãµes}
+\index{Web\+Services@{Web\+Services}!load\+Object\+From\+U\+RL@{load\+Object\+From\+U\+RL}}
+\index{load\+Object\+From\+U\+RL@{load\+Object\+From\+U\+RL}!Web\+Services@{Web\+Services}}
+\subsubsection[{load\+Object\+From\+U\+R\+L(const wx\+String \&service\+U\+R\+L)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T Web\+Services\+::load\+Object\+From\+U\+RL (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{service\+U\+RL}
+\end{DoxyParamCaption}
+)}\label{namespace_web_services_ae9ea386908394ff1f1807a6764fab33b}
+Faz uma requisição H\+T\+TP na url \textquotesingle{}service\+U\+RL\textquotesingle{}, faz o parsing no J\+S\+ON retornado, mapeia o objeto J\+S\+ON em uma classe de domínio e retorna o objeto mapeado
+
+O\+BS.\+: O Tipo T deve ser derivado de \doxyref{Biding\+Object}{pag.}{class_web_services_1_1_biding_object} (deve implementar o método \textquotesingle{}load\+From\textquotesingle{})
+
+
+\begin{DoxyParams}{ParÃ¢metros}
+{\em service\+U\+RL} & U\+RL do serviço a ser requisitado (ex.\+: wxT(\char`\"{}http\+://mobile.\+funceme.\+br/app/servico/reservatorio/40\char`\"{}) ) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+objeto T mapeado (derivado de \doxyref{Biding\+Object}{pag.}{class_web_services_1_1_biding_object}) 
+\end{DoxyReturn}
+
+
+DefiniÃ§Ã£o na linha 175 do arquivo Web\+Services.\+h.
+
+\index{Web\+Services@{Web\+Services}!load\+Objects\+From\+U\+RL@{load\+Objects\+From\+U\+RL}}
+\index{load\+Objects\+From\+U\+RL@{load\+Objects\+From\+U\+RL}!Web\+Services@{Web\+Services}}
+\subsubsection[{load\+Objects\+From\+U\+R\+L(const wx\+String \&service\+U\+R\+L, Parsing\+Type parsing\+Type=\+Json\+Parsing)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ vector$<$T$>$ Web\+Services\+::load\+Objects\+From\+U\+RL (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{service\+U\+RL, }
+\item[{{\bf Parsing\+Type}}]{parsing\+Type = {\ttfamily {\bf Json\+Parsing}}}
+\end{DoxyParamCaption}
+)}\label{namespace_web_services_ac0957e081d1649bbda81a3af36eadf81}
+Faz uma requisição H\+T\+TP na url \textquotesingle{}service\+U\+RL\textquotesingle{}, faz o parsing no X\+ML retornado, mapeia o objeto X\+ML em classes de domínio e retorna um vetor de objetos mapeados
+
+O\+BS.\+: O Tipo T deve ser derivado de \doxyref{Biding\+Object}{pag.}{class_web_services_1_1_biding_object} (deve implementar o método \textquotesingle{}load\+From\+X\+ML\textquotesingle{})
+
+
+\begin{DoxyParams}{ParÃ¢metros}
+{\em service\+U\+RL} & U\+RL do serviço a ser requisitado (ex.\+: wxT(\char`\"{}http\+://mobile.\+funceme.\+br/app/servico/reservatorio\char`\"{}) ) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+vector de objetos mapeados (derivados de \doxyref{Biding\+Object}{pag.}{class_web_services_1_1_biding_object}) 
+\end{DoxyReturn}
+
+
+DefiniÃ§Ã£o na linha 100 do arquivo Web\+Services.\+h.
+

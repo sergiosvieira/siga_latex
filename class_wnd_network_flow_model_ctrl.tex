@@ -1,0 +1,319 @@
+\section{Refer√™ncia da Classe Wnd\+Network\+Flow\+Model\+Ctrl}
+\label{class_wnd_network_flow_model_ctrl}\index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+
+
+{\ttfamily \#include $<$Wnd\+Network\+Flow\+Model\+Ctrl.\+h$>$}
+
+
+
+Herdeiro de {\bf Network\+Flow\+Model\+Ctrl}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Wnd\+Network\+Flow\+Model\+Ctrl} ({\bf Res\+Op\+Interface} $\ast${\bf main\+Inter})
+\item 
+virtual {\bf $\sim$\+Wnd\+Network\+Flow\+Model\+Ctrl} ()
+\item 
+bool {\bf run} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, {\bf Res\+Op\+Scenario} $\ast$scen)
+\item 
+virtual bool {\bf run\+Isolated} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&dependency\+\_\+map, {\bf Res\+Op\+Scenario} $\ast$scen, {\bf Element\+ID} network\+\_\+id)
+\item 
+bool {\bf check\+Completeness} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, {\bf Res\+Op\+Scenario} $\ast$scen)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Element} $\ast$element, wx\+String section)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Element} $\ast$element, wx\+String section)
+\item 
+void {\bf update\+Results\+Series\+In} ({\bf Res\+Op\+Element} $\ast$element, const wx\+String \&scenario\+Name)
+\item 
+void {\bf update\+Results\+Series\+Out} ({\bf Res\+Op\+Element} $\ast$element, const wx\+String \&scenario\+Name)
+\item 
+void {\bf remove\+Results\+Series\+Out} ({\bf Res\+Op\+Element} $\ast$element, const wx\+String \&scenario\+Name)
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf calc\+Prctiles} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements)
+\item 
+void {\bf check\+Completeness\+Reservoir} ({\bf Res\+Op\+Network\+Flow\+Reservoir} $\ast$reservoir, const {\bf Interval} \&exec\+Interval, {\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf check\+Completeness\+Basin} ({\bf Res\+Op\+Network\+Flow\+Basin} $\ast$basin, const {\bf Interval} \&exec\+Interval, {\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf check\+Completeness\+Junction} ({\bf Res\+Op\+Network\+Flow\+Junction} $\ast$junction, const {\bf Interval} \&exec\+Interval, {\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf check\+Completeness\+Demand} ({\bf Res\+Op\+Network\+Flow\+Demand} $\ast$demand, const {\bf Interval} \&exec\+Interval, {\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf check\+Completeness\+Link} ({\bf Res\+Op\+Network\+Flow\+Link} $\ast$link, const {\bf Interval} \&exec\+Interval, {\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+vector$<$ {\bf Interval} $>$ {\bf create\+Windows} ({\bf Res\+Op\+Scenario} $\ast$scen)
+\item 
+void {\bf save\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Network\+Flow\+Wnd\+Reservoir} $\ast$element, wx\+String section)
+\item 
+void {\bf load\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Network\+Flow\+Wnd\+Reservoir} $\ast$element, wx\+String section)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+set$<$ {\bf Date} $>$ {\bf date\+Black\+List}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 24 do arquivo Wnd\+Network\+Flow\+Model\+Ctrl.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}!Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+\index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}!Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{Wnd\+Network\+Flow\+Model\+Ctrl(\+Res\+Op\+Interface $\ast$main\+Inter)}]{\setlength{\rightskip}{0pt plus 5cm}Wnd\+Network\+Flow\+Model\+Ctrl\+::\+Wnd\+Network\+Flow\+Model\+Ctrl (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Interface} $\ast$}]{main\+Inter}
+\end{DoxyParamCaption}
+)}\label{class_wnd_network_flow_model_ctrl_a55cdf7441f91bcca30239479e331df09}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em main\+Inter} & Interface da classe principal \\
+\hline
+\end{DoxyParams}
+\index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}!````~Wnd\+Network\+Flow\+Model\+Ctrl@{$\sim$\+Wnd\+Network\+Flow\+Model\+Ctrl}}
+\index{````~Wnd\+Network\+Flow\+Model\+Ctrl@{$\sim$\+Wnd\+Network\+Flow\+Model\+Ctrl}!Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{$\sim$\+Wnd\+Network\+Flow\+Model\+Ctrl()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Wnd\+Network\+Flow\+Model\+Ctrl\+::$\sim$\+Wnd\+Network\+Flow\+Model\+Ctrl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_wnd_network_flow_model_ctrl_ad52faec47a80c4d7d7826d246b5e2dd1}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}!calc\+Prctiles@{calc\+Prctiles}}
+\index{calc\+Prctiles@{calc\+Prctiles}!Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{calc\+Prctiles(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Network\+Flow\+Model\+Ctrl\+::calc\+Prctiles (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wnd_network_flow_model_ctrl_aab0dc9c38e45c031a5b302a927a71825}
+Calcula os percentis para cada elemento \index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{check\+Completeness(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, Res\+Op\+Scenario $\ast$scen)}]{\setlength{\rightskip}{0pt plus 5cm}bool Wnd\+Network\+Flow\+Model\+Ctrl\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_wnd_network_flow_model_ctrl_ae93f1a99a8a30bc9093f3677f8777d9f}
+MÈtodo que checa se as informaÁıes necess·rias foram preenchidas. 
+\begin{DoxyParams}{Par√¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementa√ß√£o de {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl_a69a37247e2dfdea0eaf31aa3ef5db3f1}.
+
+\index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}!check\+Completeness\+Basin@{check\+Completeness\+Basin}}
+\index{check\+Completeness\+Basin@{check\+Completeness\+Basin}!Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{check\+Completeness\+Basin(\+Res\+Op\+Network\+Flow\+Basin $\ast$basin, const Interval \&exec\+Interval, S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Network\+Flow\+Model\+Ctrl\+::check\+Completeness\+Basin (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Network\+Flow\+Basin} $\ast$}]{basin, }
+\item[{const {\bf Interval} \&}]{exec\+Interval, }
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_wnd_network_flow_model_ctrl_aa81a023fe3915fee261f0965580c3f57}
+
+
+Reimplementa√ß√£o de {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl}.
+
+\index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}!check\+Completeness\+Demand@{check\+Completeness\+Demand}}
+\index{check\+Completeness\+Demand@{check\+Completeness\+Demand}!Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{check\+Completeness\+Demand(\+Res\+Op\+Network\+Flow\+Demand $\ast$demand, const Interval \&exec\+Interval, S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Network\+Flow\+Model\+Ctrl\+::check\+Completeness\+Demand (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Network\+Flow\+Demand} $\ast$}]{demand, }
+\item[{const {\bf Interval} \&}]{exec\+Interval, }
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_wnd_network_flow_model_ctrl_a2525f26a0b68e67ec2df37890fea31b2}
+
+
+Reimplementa√ß√£o de {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl}.
+
+\index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}!check\+Completeness\+Junction@{check\+Completeness\+Junction}}
+\index{check\+Completeness\+Junction@{check\+Completeness\+Junction}!Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{check\+Completeness\+Junction(\+Res\+Op\+Network\+Flow\+Junction $\ast$junction, const Interval \&exec\+Interval, S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Network\+Flow\+Model\+Ctrl\+::check\+Completeness\+Junction (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Network\+Flow\+Junction} $\ast$}]{junction, }
+\item[{const {\bf Interval} \&}]{exec\+Interval, }
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_wnd_network_flow_model_ctrl_a82ff746be58233ee148df1b8f620aef4}
+
+
+Reimplementa√ß√£o de {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl}.
+
+\index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}!check\+Completeness\+Link@{check\+Completeness\+Link}}
+\index{check\+Completeness\+Link@{check\+Completeness\+Link}!Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{check\+Completeness\+Link(\+Res\+Op\+Network\+Flow\+Link $\ast$link, const Interval \&exec\+Interval, S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Network\+Flow\+Model\+Ctrl\+::check\+Completeness\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Network\+Flow\+Link} $\ast$}]{link, }
+\item[{const {\bf Interval} \&}]{exec\+Interval, }
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_wnd_network_flow_model_ctrl_a970154ec5d2777875aaf9e0ba5340ba8}
+
+
+Reimplementa√ß√£o de {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl}.
+
+\index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}!check\+Completeness\+Reservoir@{check\+Completeness\+Reservoir}}
+\index{check\+Completeness\+Reservoir@{check\+Completeness\+Reservoir}!Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{check\+Completeness\+Reservoir(\+Res\+Op\+Network\+Flow\+Reservoir $\ast$reservoir, const Interval \&exec\+Interval, S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Network\+Flow\+Model\+Ctrl\+::check\+Completeness\+Reservoir (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Network\+Flow\+Reservoir} $\ast$}]{reservoir, }
+\item[{const {\bf Interval} \&}]{exec\+Interval, }
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_wnd_network_flow_model_ctrl_a190d057e35bb13773cab705d4f21797e}
+MÈtodo que checa se as informaÁıes necess·rias foram preenchidas. 
+
+Reimplementa√ß√£o de {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl}.
+
+\index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}!create\+Windows@{create\+Windows}}
+\index{create\+Windows@{create\+Windows}!Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{create\+Windows(\+Res\+Op\+Scenario $\ast$scen)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Interval}$>$ Wnd\+Network\+Flow\+Model\+Ctrl\+::create\+Windows (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wnd_network_flow_model_ctrl_a43ef2ebb75f0b377b3b6d7163b368248}
+Gera os intervalos das janelas de execuÁ„o \index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}!load\+Element\+Project@{load\+Element\+Project}}
+\index{load\+Element\+Project@{load\+Element\+Project}!Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{load\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Network\+Flow\+Wnd\+Reservoir $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Network\+Flow\+Model\+Ctrl\+::load\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Network\+Flow\+Wnd\+Reservoir} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wnd_network_flow_model_ctrl_a2fa3d317ece00aecaf7847de31a98546}
+Read the project the datas from Reservoir \doxyref{Element}{pag.}{class_element} \index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Element $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Network\+Flow\+Model\+Ctrl\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_wnd_network_flow_model_ctrl_abe5da58a5753d9e526e9ddf942b6873c}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementa√ß√£o de {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl_abbd5b9f90de5526b1ae204dbdb591a6d}.
+
+\index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Element $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Network\+Flow\+Model\+Ctrl\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_wnd_network_flow_model_ctrl_a52927e4927da8747b1fef5e6db029905}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementa√ß√£o de {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl_a1b6b5c0bb247ca33ec47e60ed2bf9127}.
+
+\index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}!remove\+Results\+Series\+Out@{remove\+Results\+Series\+Out}}
+\index{remove\+Results\+Series\+Out@{remove\+Results\+Series\+Out}!Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{remove\+Results\+Series\+Out(\+Res\+Op\+Element $\ast$element, const wx\+String \&scenario\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Network\+Flow\+Model\+Ctrl\+::remove\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_wnd_network_flow_model_ctrl_a12b2f8c6b5b40292d20b2d3e48d911e5}
+
+
+Reimplementa√ß√£o de {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl_a808263e193fc5af13b7271fbc245ae85}.
+
+\index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}!run@{run}}
+\index{run@{run}!Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{run(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, Res\+Op\+Scenario $\ast$scen)}]{\setlength{\rightskip}{0pt plus 5cm}bool Wnd\+Network\+Flow\+Model\+Ctrl\+::run (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_wnd_network_flow_model_ctrl_aeb4fd0c93e63c1ea42c3eac3b8a8a1b9}
+MÈtodo abstrato que executa a tecnica 
+
+Reimplementa√ß√£o de {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl_ad8d0cff475350a66f2276ce1a1f8c942}.
+
+\index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}!run\+Isolated@{run\+Isolated}}
+\index{run\+Isolated@{run\+Isolated}!Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{run\+Isolated(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, std\+::map$<$ Element\+I\+D, std\+::vector$<$ Res\+Op\+Element $\ast$ $>$ $>$ \&dependency\+\_\+map, Res\+Op\+Scenario $\ast$scen, Element\+I\+D network\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Wnd\+Network\+Flow\+Model\+Ctrl\+::run\+Isolated (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&}]{dependency\+\_\+map, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen, }
+\item[{{\bf Element\+ID}}]{network\+\_\+id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_wnd_network_flow_model_ctrl_a126eb2fb2fe9ccc4e83a3ef915322c79}
+
+
+Reimplementa√ß√£o de {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl_a1674c7c7a767bceed235bfdc43bf8424}.
+
+\index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}!save\+Element\+Project@{save\+Element\+Project}}
+\index{save\+Element\+Project@{save\+Element\+Project}!Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{save\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Network\+Flow\+Wnd\+Reservoir $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Network\+Flow\+Model\+Ctrl\+::save\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Network\+Flow\+Wnd\+Reservoir} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wnd_network_flow_model_ctrl_acd61629f0f84fd9c9df651d8c93a56d2}
+$\ast$$\ast$ MÈtodo que reinicia os resultados do sistema MÈtodo para contar as vari·veis de decis„o MÈtodo para atribuir soluÁıes as respectivas vari·veis Verifica se os limites das vari·veis est„o corretos Salva no projeto os dados do elemento Reservatorio \index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}!update\+Results\+Series\+In@{update\+Results\+Series\+In}}
+\index{update\+Results\+Series\+In@{update\+Results\+Series\+In}!Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+In(\+Res\+Op\+Element $\ast$element, const wx\+String \&scenario\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Network\+Flow\+Model\+Ctrl\+::update\+Results\+Series\+In (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_wnd_network_flow_model_ctrl_abee78fa3ee44cc89a0fcfbf71bf60972}
+Adciona as series que existirem daquele modelo no modulo de Resultados Lembrete\+: Caso haja uma alteraÁ„o no nome ou na unidade da serie ser· necessario mudar neste metodo tambÈm 
+
+Reimplementa√ß√£o de {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl_acbdbf8756473e3ea43428b7f95e91536}.
+
+\index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}!update\+Results\+Series\+Out@{update\+Results\+Series\+Out}}
+\index{update\+Results\+Series\+Out@{update\+Results\+Series\+Out}!Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+Out(\+Res\+Op\+Element $\ast$element, const wx\+String \&scenario\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Network\+Flow\+Model\+Ctrl\+::update\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_wnd_network_flow_model_ctrl_abb53922d4718191051f35ab73c0e035e}
+
+
+Reimplementa√ß√£o de {\bf Network\+Flow\+Model\+Ctrl} \doxyref{}{pag.}{class_network_flow_model_ctrl_a7f7bded7c5db877619f7ae5fd7486ce4}.
+
+
+
+\subsection{Atributos}
+\index{Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}!date\+Black\+List@{date\+Black\+List}}
+\index{date\+Black\+List@{date\+Black\+List}!Wnd\+Network\+Flow\+Model\+Ctrl@{Wnd\+Network\+Flow\+Model\+Ctrl}}
+\subsubsection[{date\+Black\+List}]{\setlength{\rightskip}{0pt plus 5cm}set$<${\bf Date}$>$ Wnd\+Network\+Flow\+Model\+Ctrl\+::date\+Black\+List\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wnd_network_flow_model_ctrl_a3a202919269fb41270860c15a9834944}
+Conjunto de datas que n„o tem valor 
+
+Defini√ß√£o na linha 98 do arquivo Wnd\+Network\+Flow\+Model\+Ctrl.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Wnd\+Network\+Flow\+Model\+Ctrl.\+h}\end{DoxyCompactItemize}

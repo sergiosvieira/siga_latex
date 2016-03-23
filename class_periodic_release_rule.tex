@@ -1,0 +1,491 @@
+\section{Refer√™ncia da Classe Periodic\+Release\+Rule}
+\label{class_periodic_release_rule}\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+
+
+{\ttfamily \#include $<$Periodic\+Release\+Rule.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Rule} e {\bf Res\+Op\+Rule}.
+
+
+
+Superclasse de {\bf Opt\+Periodic\+Release\+Rule}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Periodic\+Release\+Rule} ({\bf Node} $\ast${\bf node})
+\item 
+{\bf $\sim$\+Periodic\+Release\+Rule} ()
+\item 
+void {\bf clear} ()
+\item 
+bool {\bf empty} ()
+\item 
+double {\bf get\+Release} ({\bf Date} date, {\bf Res\+Op\+Model} $\ast$model={\bf N\+U\+LL})
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf set\+Variables} ({\bf Matrix} \&swarm\+Line, int i, int j)
+\item 
+bool {\bf check\+Limits} ()
+\item 
+double {\bf get\+Number\+Of\+Variables} ()
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+{\bf Periodic\+Release\+Rule} ({\bf Node} $\ast${\bf node})
+\item 
+virtual {\bf $\sim$\+Periodic\+Release\+Rule} ()
+\item 
+void {\bf clear} ()
+\item 
+bool {\bf empty} ()
+\item 
+virtual double {\bf get\+Release} ({\bf Date} date, {\bf Res\+Op\+Element} $\ast$model={\bf N\+U\+LL})
+\item 
+virtual unsigned int {\bf get\+Number\+Of\+Variables} ()
+\item 
+virtual void {\bf set\+Variables} ({\bf Matrix} \&, int, int)
+\item 
+virtual bool {\bf check\+Limits} ()
+\item 
+virtual bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog={\bf N\+U\+LL})
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String)
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ double $>$ {\bf release}
+\item 
+vector$<$ bool $>$ {\bf decisions\+Var}
+\item 
+vector$<$ double $>$ {\bf opt\+Release}
+\item 
+vector$<$ double $>$ {\bf opt\+Rel\+Range}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf Res\+Op\+Rule} $\ast$ {\bf do\+Copy} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 6 do arquivo Rule/\+Periodic\+Release/\+Periodic\+Release\+Rule.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{Periodic\+Release\+Rule(\+Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}Periodic\+Release\+Rule\+::\+Periodic\+Release\+Rule (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_periodic_release_rule_aa0c97a5d11a516595abf01bed8f4cec8}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em NÛ} & \\
+\hline
+\end{DoxyParams}
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!````~Periodic\+Release\+Rule@{$\sim$\+Periodic\+Release\+Rule}}
+\index{````~Periodic\+Release\+Rule@{$\sim$\+Periodic\+Release\+Rule}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{$\sim$\+Periodic\+Release\+Rule()}]{\setlength{\rightskip}{0pt plus 5cm}Periodic\+Release\+Rule\+::$\sim$\+Periodic\+Release\+Rule (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_periodic_release_rule_ae5db59fe3bafe7032521616a4e2ecb6c}
+Destrutor 
+
+Defini√ß√£o na linha 39 do arquivo Rule/\+Periodic\+Release/\+Periodic\+Release\+Rule.\+h.
+
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{Periodic\+Release\+Rule(\+Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}Periodic\+Release\+Rule\+::\+Periodic\+Release\+Rule (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_periodic_release_rule_aa0c97a5d11a516595abf01bed8f4cec8}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em NÛ} & \\
+\hline
+\end{DoxyParams}
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!````~Periodic\+Release\+Rule@{$\sim$\+Periodic\+Release\+Rule}}
+\index{````~Periodic\+Release\+Rule@{$\sim$\+Periodic\+Release\+Rule}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{$\sim$\+Periodic\+Release\+Rule()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Periodic\+Release\+Rule\+::$\sim$\+Periodic\+Release\+Rule (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_periodic_release_rule_a0f1810129df30a107372a3117bde31cb}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Periodic\+Release\+Rule\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_periodic_release_rule_a087a1b14f94d02ecde752f89e03abe4b}
+Retorna valor da liberaÁ„o para a data fornecida em funÁ„o das demandas diretamente ligadas ao reservatÛrio Verifica se todas as informaÁıes necess·rias foram fornecidas 
+\begin{DoxyParams}{Par√¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_a92c1f57de54c45ae7e2d754b2eb2814c}.
+
+
+
+Reimplementado por {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_aa3c1b836f18f85dcd99be7fa47218562}.
+
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog=\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Periodic\+Release\+Rule\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_periodic_release_rule_aa28ab9bcbbb73ee44c584d1ab026c2ff}
+Verifica se todas as informaÁıes necess·rias foram fornecidas 
+\begin{DoxyParams}{Par√¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_a92c1f57de54c45ae7e2d754b2eb2814c}.
+
+
+
+Reimplementado por {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_aa3c1b836f18f85dcd99be7fa47218562}.
+
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!check\+Limits@{check\+Limits}}
+\index{check\+Limits@{check\+Limits}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{check\+Limits()}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Periodic\+Release\+Rule\+::check\+Limits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_periodic_release_rule_afd12f5a765c0337c9f271d25f1aa5475}
+Verifica se os limites das vari·veis est„o corretos 
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_af456c09bcb136f90564faecb0330afc6}.
+
+
+
+Reimplementado por {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_a58fec4c99c9990ae4aa72670f2bde7bc}.
+
+
+
+Defini√ß√£o na linha 70 do arquivo /\+Rule/\+Periodic\+Release/\+Periodic\+Release\+Rule.\+h.
+
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!check\+Limits@{check\+Limits}}
+\index{check\+Limits@{check\+Limits}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{check\+Limits()}]{\setlength{\rightskip}{0pt plus 5cm}bool Periodic\+Release\+Rule\+::check\+Limits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_periodic_release_rule_a730ca42f56887dd47f5d2d4f9a905e14}
+Verifica se os limites das vari·veis est„o corretos 
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_af456c09bcb136f90564faecb0330afc6}.
+
+
+
+Reimplementado por {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_a58fec4c99c9990ae4aa72670f2bde7bc}.
+
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!clear@{clear}}
+\index{clear@{clear}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Periodic\+Release\+Rule\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_periodic_release_rule_ab96137674d005097bf32315c3eaea0b8}
+Limpa dados \index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!clear@{clear}}
+\index{clear@{clear}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Periodic\+Release\+Rule\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_periodic_release_rule_ab96137674d005097bf32315c3eaea0b8}
+Limpa dados \index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{do\+Copy()}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Res\+Op\+Rule}$\ast$ Periodic\+Release\+Rule\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_periodic_release_rule_a8311baed7d385ce30c90d36cc9ab666f}
+Copia a regra 
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_a0612d8b6a8607563b24ae0fb163e537e}.
+
+
+
+Reimplementado por {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_ac050e0e7582d4f54b28c1d3214a08d7b}.
+
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!empty@{empty}}
+\index{empty@{empty}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool Periodic\+Release\+Rule\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_periodic_release_rule_ae3a530fd578201d0ad8b7039b4c39f0e}
+retorna se existe algum valor no modelo 
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_a9f7ce7398ba87a1324799f8ef9444fc3}.
+
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!empty@{empty}}
+\index{empty@{empty}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool Periodic\+Release\+Rule\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_periodic_release_rule_ae3a530fd578201d0ad8b7039b4c39f0e}
+retorna se existe algum valor no modelo 
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_a9f7ce7398ba87a1324799f8ef9444fc3}.
+
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!get\+Number\+Of\+Variables@{get\+Number\+Of\+Variables}}
+\index{get\+Number\+Of\+Variables@{get\+Number\+Of\+Variables}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{get\+Number\+Of\+Variables()}]{\setlength{\rightskip}{0pt plus 5cm}virtual unsigned int Periodic\+Release\+Rule\+::get\+Number\+Of\+Variables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_periodic_release_rule_a281a960b570bdd7a0fcd865b9cbe0d28}
+Retorna o n˙mero de variaveis de decis„o 
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_acc94bc0a231a0b68eed13fc9cd5d9f76}.
+
+
+
+Reimplementado por {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_aa5b34d1165f94f3f395cba72b6e904b2}.
+
+
+
+Defini√ß√£o na linha 57 do arquivo /\+Rule/\+Periodic\+Release/\+Periodic\+Release\+Rule.\+h.
+
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!get\+Number\+Of\+Variables@{get\+Number\+Of\+Variables}}
+\index{get\+Number\+Of\+Variables@{get\+Number\+Of\+Variables}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{get\+Number\+Of\+Variables()}]{\setlength{\rightskip}{0pt plus 5cm}double Periodic\+Release\+Rule\+::get\+Number\+Of\+Variables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_periodic_release_rule_a1f7895e690f1bd446c3c6cc952d3f786}
+Retorna a quantidade de vari·veis de decis„o 
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_acc94bc0a231a0b68eed13fc9cd5d9f76}.
+
+
+
+Reimplementado por {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_aa5b34d1165f94f3f395cba72b6e904b2}.
+
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!get\+Release@{get\+Release}}
+\index{get\+Release@{get\+Release}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{get\+Release(\+Date date, Res\+Op\+Element $\ast$model=\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}virtual double Periodic\+Release\+Rule\+::get\+Release (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{date, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{model = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_periodic_release_rule_a77c509392d70821f049b1e51aa2e0e36}
+Retorna valor da liberaÁ„o para a data fornecida 
+\begin{DoxyParams}{Par√¢metros}
+{\em date} & Dia de consulta \\
+\hline
+{\em model} & Modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_ad90bdc6f396abae2110a1093f9b8570d}.
+
+
+
+Reimplementado por {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_a490385cef41f478f9f8592ec1d22b300}.
+
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!get\+Release@{get\+Release}}
+\index{get\+Release@{get\+Release}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{get\+Release(\+Date date, Res\+Op\+Model $\ast$model=\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}double Periodic\+Release\+Rule\+::get\+Release (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{date, }
+\item[{{\bf Res\+Op\+Model} $\ast$}]{model = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_periodic_release_rule_ae5d5e5bea438abb02fb2825c334b50c1}
+Retorna valor da liberaÁ„o para a data fornecida 
+\begin{DoxyParams}{Par√¢metros}
+{\em date} & Dia de consulta \\
+\hline
+{\em model} & Modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_abcca2d6f73e88f2bc31cdae042a8a4dd}.
+
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String)}]{\setlength{\rightskip}{0pt plus 5cm}void Periodic\+Release\+Rule\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_periodic_release_rule_af2e8fb8c20a2d8263677877ab31f7534}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_a30647c2585e5b4c83b8301e5d954fa7d}.
+
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Periodic\+Release\+Rule\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_periodic_release_rule_a8204365dff2102df473011d186182a1c}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_a3964b7a6529f6165ebf43d56b90a00c2}.
+
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String)}]{\setlength{\rightskip}{0pt plus 5cm}void Periodic\+Release\+Rule\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_periodic_release_rule_a63bfed947f67a84e9e13043a0beb30c8}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_af5abd8c4a528a9fd23c101bb216aa3f4}.
+
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Periodic\+Release\+Rule\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_periodic_release_rule_a68c80219e65367ee18a8b0583010f384}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_a59070fd6577b96779a64fe20ab9147b0}.
+
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!set\+Variables@{set\+Variables}}
+\index{set\+Variables@{set\+Variables}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{set\+Variables(\+Matrix \&, int, int)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Periodic\+Release\+Rule\+::set\+Variables (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{, }
+\item[{int}]{, }
+\item[{int}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_periodic_release_rule_a75762b57598774c51de98f79e05e6c25}
+Atribui soluÁıes as vari·veis de decis„o 
+\begin{DoxyParams}{Par√¢metros}
+{\em swarm\+Line} & ... \\
+\hline
+{\em i} & \\
+\hline
+{\em j} & \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_a47cb3428a0b155d5be583f7970a1acf8}.
+
+
+
+Reimplementado por {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_af602e965e2155963f28b60d7b864af97}.
+
+
+
+Defini√ß√£o na linha 65 do arquivo /\+Rule/\+Periodic\+Release/\+Periodic\+Release\+Rule.\+h.
+
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!set\+Variables@{set\+Variables}}
+\index{set\+Variables@{set\+Variables}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{set\+Variables(\+Matrix \&swarm\+Line, int i, int j)}]{\setlength{\rightskip}{0pt plus 5cm}void Periodic\+Release\+Rule\+::set\+Variables (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{swarm\+Line, }
+\item[{int}]{i, }
+\item[{int}]{j}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_periodic_release_rule_af5c526286eb8195f3b6504df85dafec4}
+Atribui soluÁıes as vari·veis de decis„o 
+\begin{DoxyParams}{Par√¢metros}
+{\em swarm\+Line} & ... \\
+\hline
+{\em i} & \\
+\hline
+{\em j} & \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Rule} \doxyref{}{pag.}{class_res_op_rule_a47cb3428a0b155d5be583f7970a1acf8}.
+
+
+
+Reimplementado por {\bf Opt\+Periodic\+Release\+Rule} \doxyref{}{pag.}{class_opt_periodic_release_rule_af602e965e2155963f28b60d7b864af97}.
+
+
+
+\subsection{Atributos}
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!decisions\+Var@{decisions\+Var}}
+\index{decisions\+Var@{decisions\+Var}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{decisions\+Var}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$bool$>$ Periodic\+Release\+Rule\+::decisions\+Var}\label{class_periodic_release_rule_a8b0abe9651378a98b34d57d518a848ba}
+Vari·vel boleana que determina quem est· sendo otimizado 
+
+Defini√ß√£o na linha 18 do arquivo Rule/\+Periodic\+Release/\+Periodic\+Release\+Rule.\+h.
+
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!opt\+Release@{opt\+Release}}
+\index{opt\+Release@{opt\+Release}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{opt\+Release}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ Periodic\+Release\+Rule\+::opt\+Release}\label{class_periodic_release_rule_a2ff634f0b4a75776ea44e86b9d97995a}
+Vaz„o n„o otimizada na otimizaÁ„o 
+
+Defini√ß√£o na linha 23 do arquivo Rule/\+Periodic\+Release/\+Periodic\+Release\+Rule.\+h.
+
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!opt\+Rel\+Range@{opt\+Rel\+Range}}
+\index{opt\+Rel\+Range@{opt\+Rel\+Range}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{opt\+Rel\+Range}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ Periodic\+Release\+Rule\+::opt\+Rel\+Range}\label{class_periodic_release_rule_adf58cd896fe9bb66ac16d6562be9a89b}
+Intervalo de variaÁ„o das liberaÁıes a serem otimizadas 
+
+Defini√ß√£o na linha 28 do arquivo Rule/\+Periodic\+Release/\+Periodic\+Release\+Rule.\+h.
+
+\index{Periodic\+Release\+Rule@{Periodic\+Release\+Rule}!release@{release}}
+\index{release@{release}!Periodic\+Release\+Rule@{Periodic\+Release\+Rule}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Periodic\+Release\+Rule\+::release}\label{class_periodic_release_rule_ade0c1cab44c4c8b866f9b36a2b90e647}
+Vaz„o regularizada para simulaÁ„o 
+
+Defini√ß√£o na linha 13 do arquivo Rule/\+Periodic\+Release/\+Periodic\+Release\+Rule.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Rule/\+Periodic\+Release/\+Periodic\+Release\+Rule.\+h}\end{DoxyCompactItemize}

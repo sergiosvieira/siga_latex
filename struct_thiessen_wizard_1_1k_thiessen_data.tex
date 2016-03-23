@@ -1,0 +1,143 @@
+\section{Referência da Estrutura Thiessen\+Wizard\+:\+:k\+Thiessen\+Data}
+\label{struct_thiessen_wizard_1_1k_thiessen_data}\index{Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}}
+
+
+{\ttfamily \#include $<$Thiessen\+Wizard.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf k\+Thiessen\+Data} ()
+\item 
+{\bf $\sim$k\+Thiessen\+Data} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Shapefile} $\ast$ {\bf stations\+Shapefile}
+\item 
+std\+::string {\bf stations\+I\+D\+Field\+Name}
+\item 
+{\bf Shapefile} $\ast$ {\bf basins\+Shapefile}
+\item 
+std\+::string {\bf basins\+I\+D\+Field\+Name}
+\item 
+O\+G\+R\+Data\+Source $\ast$ {\bf selected\+Stations\+Data\+Source}
+\item 
+O\+G\+R\+Data\+Source $\ast$ {\bf convex\+Hull\+Data\+Source}
+\item 
+{\bf Rainfall\+Matrix} $\ast$ {\bf rainfall\+Matrix}
+\item 
+int {\bf selected\+Method}
+\item 
+double {\bf distance}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Essa estrutura � usada para persistir as escolhas feitas pelo wizard.
+\begin{DoxyItemize}
+\item stations\+Shapefile aponta para o shapefile contendo os postos e stations\+I\+D\+Field\+Name guarda o nome do campo que identifica o posto
+\item basins\+Shapefile aponta para o shapefile contendo as bacias e basins\+I\+D\+Field\+Name guarda o nome do campo que identifica as bacias
+\item selected\+Method guarda o c�digo do m�todo que o usu�rio escolheu para calcular a precipita��o m�dia da bacia (M\+E\+T\+H\+O\+D\+\_\+\+B\+A\+S\+I\+N\+\_\+\+E\+X\+P\+A\+N\+S\+I\+ON ou M\+E\+T\+H\+O\+D\+\_\+\+S\+U\+B\+B\+A\+S\+I\+N\+\_\+\+E\+X\+P\+A\+N\+S\+I\+ON)
+\item distance guarda a dist�ncia usada no comando buffer. Isto � usado para determinar a expans�o do desenho da bacia que serve para selecionar mais ou menos postos. 
+\end{DoxyItemize}
+
+Definição na linha 48 do arquivo Thiessen\+Wizard.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}!k\+Thiessen\+Data@{k\+Thiessen\+Data}}
+\index{k\+Thiessen\+Data@{k\+Thiessen\+Data}!Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}}
+\subsubsection[{k\+Thiessen\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}Thiessen\+Wizard\+::k\+Thiessen\+Data\+::k\+Thiessen\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_thiessen_wizard_1_1k_thiessen_data_ab9e7edfe230f367cef7f4e7a994afa44}
+
+
+Definição na linha 59 do arquivo Thiessen\+Wizard.\+h.
+
+\index{Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}!````~k\+Thiessen\+Data@{$\sim$k\+Thiessen\+Data}}
+\index{````~k\+Thiessen\+Data@{$\sim$k\+Thiessen\+Data}!Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}}
+\subsubsection[{$\sim$k\+Thiessen\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}Thiessen\+Wizard\+::k\+Thiessen\+Data\+::$\sim$k\+Thiessen\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{struct_thiessen_wizard_1_1k_thiessen_data_a49e9ec1428ef1051a69bf1a503a04cbf}
+
+
+Definição na linha 62 do arquivo Thiessen\+Wizard.\+h.
+
+
+
+\subsection{Atributos}
+\index{Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}!basins\+I\+D\+Field\+Name@{basins\+I\+D\+Field\+Name}}
+\index{basins\+I\+D\+Field\+Name@{basins\+I\+D\+Field\+Name}!Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}}
+\subsubsection[{basins\+I\+D\+Field\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Thiessen\+Wizard\+::k\+Thiessen\+Data\+::basins\+I\+D\+Field\+Name}\label{struct_thiessen_wizard_1_1k_thiessen_data_a379623b04c4f87eb0434058980d1cc9a}
+
+
+Definição na linha 53 do arquivo Thiessen\+Wizard.\+h.
+
+\index{Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}!basins\+Shapefile@{basins\+Shapefile}}
+\index{basins\+Shapefile@{basins\+Shapefile}!Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}}
+\subsubsection[{basins\+Shapefile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Shapefile}$\ast$ Thiessen\+Wizard\+::k\+Thiessen\+Data\+::basins\+Shapefile}\label{struct_thiessen_wizard_1_1k_thiessen_data_a4c5713a6773ddc1f5db3beab0214f2b6}
+
+
+Definição na linha 52 do arquivo Thiessen\+Wizard.\+h.
+
+\index{Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}!convex\+Hull\+Data\+Source@{convex\+Hull\+Data\+Source}}
+\index{convex\+Hull\+Data\+Source@{convex\+Hull\+Data\+Source}!Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}}
+\subsubsection[{convex\+Hull\+Data\+Source}]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Data\+Source$\ast$ Thiessen\+Wizard\+::k\+Thiessen\+Data\+::convex\+Hull\+Data\+Source}\label{struct_thiessen_wizard_1_1k_thiessen_data_a16658f19fc2c639828f6e341db6ba07a}
+
+
+Definição na linha 55 do arquivo Thiessen\+Wizard.\+h.
+
+\index{Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}!distance@{distance}}
+\index{distance@{distance}!Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}}
+\subsubsection[{distance}]{\setlength{\rightskip}{0pt plus 5cm}double Thiessen\+Wizard\+::k\+Thiessen\+Data\+::distance}\label{struct_thiessen_wizard_1_1k_thiessen_data_a785d002fe6973a455e69b9b9d5cf5f49}
+
+
+Definição na linha 58 do arquivo Thiessen\+Wizard.\+h.
+
+\index{Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}!rainfall\+Matrix@{rainfall\+Matrix}}
+\index{rainfall\+Matrix@{rainfall\+Matrix}!Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}}
+\subsubsection[{rainfall\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Rainfall\+Matrix}$\ast$ Thiessen\+Wizard\+::k\+Thiessen\+Data\+::rainfall\+Matrix}\label{struct_thiessen_wizard_1_1k_thiessen_data_a1061c9bb5fc879ea3242441485cd32c4}
+
+
+Definição na linha 56 do arquivo Thiessen\+Wizard.\+h.
+
+\index{Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}!selected\+Method@{selected\+Method}}
+\index{selected\+Method@{selected\+Method}!Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}}
+\subsubsection[{selected\+Method}]{\setlength{\rightskip}{0pt plus 5cm}int Thiessen\+Wizard\+::k\+Thiessen\+Data\+::selected\+Method}\label{struct_thiessen_wizard_1_1k_thiessen_data_aa698ed8f387273c851d8516d767bbc4e}
+
+
+Definição na linha 57 do arquivo Thiessen\+Wizard.\+h.
+
+\index{Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}!selected\+Stations\+Data\+Source@{selected\+Stations\+Data\+Source}}
+\index{selected\+Stations\+Data\+Source@{selected\+Stations\+Data\+Source}!Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}}
+\subsubsection[{selected\+Stations\+Data\+Source}]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Data\+Source$\ast$ Thiessen\+Wizard\+::k\+Thiessen\+Data\+::selected\+Stations\+Data\+Source}\label{struct_thiessen_wizard_1_1k_thiessen_data_a5912feff0919ce49219218f8c659ebbc}
+
+
+Definição na linha 54 do arquivo Thiessen\+Wizard.\+h.
+
+\index{Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}!stations\+I\+D\+Field\+Name@{stations\+I\+D\+Field\+Name}}
+\index{stations\+I\+D\+Field\+Name@{stations\+I\+D\+Field\+Name}!Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}}
+\subsubsection[{stations\+I\+D\+Field\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Thiessen\+Wizard\+::k\+Thiessen\+Data\+::stations\+I\+D\+Field\+Name}\label{struct_thiessen_wizard_1_1k_thiessen_data_ac9db749d340d1a1fa31055d6eee12f39}
+
+
+Definição na linha 51 do arquivo Thiessen\+Wizard.\+h.
+
+\index{Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}!stations\+Shapefile@{stations\+Shapefile}}
+\index{stations\+Shapefile@{stations\+Shapefile}!Thiessen\+Wizard\+::k\+Thiessen\+Data@{Thiessen\+Wizard\+::k\+Thiessen\+Data}}
+\subsubsection[{stations\+Shapefile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Shapefile}$\ast$ Thiessen\+Wizard\+::k\+Thiessen\+Data\+::stations\+Shapefile}\label{struct_thiessen_wizard_1_1k_thiessen_data_a164e3e4beb09292615c40f5beb67dc01}
+
+
+Definição na linha 50 do arquivo Thiessen\+Wizard.\+h.
+
+
+
+A documentação para esta estrutura foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Thiessen\+Wizard.\+h}\end{DoxyCompactItemize}

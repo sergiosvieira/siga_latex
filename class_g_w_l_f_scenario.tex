@@ -1,0 +1,152 @@
+\section{Referência da Classe G\+W\+L\+F\+Scenario}
+\label{class_g_w_l_f_scenario}\index{G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}}
+
+
+{\ttfamily \#include $<$G\+W\+L\+F\+Scenario.\+h$>$}
+
+
+
+Herdeiro de {\bf Hidro\+Scenario}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf G\+W\+L\+F\+Scenario} ({\bf G\+W\+L\+F\+Model} $\ast$parent, {\bf Date} interval\+Begin, {\bf Date} interval\+End)
+\item 
+{\bf $\sim$\+G\+W\+L\+F\+Scenario} ()
+\item 
+bool {\bf empty} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Subbasin} $\ast$ {\bf subbasin}
+\item 
+{\bf Serie} $\ast$ {\bf temper}
+\item 
+{\bf Serie} $\ast$ {\bf precipitation}
+\item 
+{\bf G\+W\+L\+F\+Snow\+Pack} $\ast$ {\bf snow\+Pack}
+\item 
+{\bf G\+W\+L\+F\+Runoff} $\ast$ {\bf runoff}
+\item 
+{\bf G\+W\+L\+F\+Soil\+Water} $\ast$ {\bf soil\+Water}
+\item 
+wx\+String {\bf temper\+File\+Name}
+\item 
+wx\+String {\bf prec\+File\+Name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 20 do arquivo G\+W\+L\+F\+Scenario.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}!G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}}
+\index{G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}!G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}}
+\subsubsection[{G\+W\+L\+F\+Scenario(\+G\+W\+L\+F\+Model $\ast$parent, Date interval\+Begin, Date interval\+End)}]{\setlength{\rightskip}{0pt plus 5cm}G\+W\+L\+F\+Scenario\+::\+G\+W\+L\+F\+Scenario (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+W\+L\+F\+Model} $\ast$}]{parent, }
+\item[{{\bf Date}}]{interval\+Begin, }
+\item[{{\bf Date}}]{interval\+End}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_scenario_a5ce0b0bc950153ea2d4ea5017a6fd11e}
+Construtor \index{G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}!````~G\+W\+L\+F\+Scenario@{$\sim$\+G\+W\+L\+F\+Scenario}}
+\index{````~G\+W\+L\+F\+Scenario@{$\sim$\+G\+W\+L\+F\+Scenario}!G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}}
+\subsubsection[{$\sim$\+G\+W\+L\+F\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}G\+W\+L\+F\+Scenario\+::$\sim$\+G\+W\+L\+F\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_scenario_a8d159aca0b20da3b6880e316f71cd29f}
+Destrutor 
+
+\subsection{Métodos}
+\index{G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+W\+L\+F\+Scenario\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_scenario_a51ba2b725e07596e9dbea4d25f2cd759}
+Avalia se todas as informa��es importantes para o modelo formam informadas 
+\begin{DoxyParams}{Parâmetros}
+{\em dialog} & Caixa de dialogo onde os erros ser�o apresentados \\
+\hline
+\end{DoxyParams}
+\index{G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}!empty@{empty}}
+\index{empty@{empty}!G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool G\+W\+L\+F\+Scenario\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_scenario_acc7c2f9add4d587cbbf4879ac5c70009}
+retorna se existe algum valor no modelo 
+
+\subsection{Atributos}
+\index{G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}!prec\+File\+Name@{prec\+File\+Name}}
+\index{prec\+File\+Name@{prec\+File\+Name}!G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}}
+\subsubsection[{prec\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String G\+W\+L\+F\+Scenario\+::prec\+File\+Name}\label{class_g_w_l_f_scenario_af94264c8be5e86d3a544333db65ce453}
+
+
+Definição na linha 59 do arquivo G\+W\+L\+F\+Scenario.\+h.
+
+\index{G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}!precipitation@{precipitation}}
+\index{precipitation@{precipitation}!G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}}
+\subsubsection[{precipitation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ G\+W\+L\+F\+Scenario\+::precipitation}\label{class_g_w_l_f_scenario_a3eb410ce1a0df321ec81ca7a0294ae30}
+1 
+
+Definição na linha 36 do arquivo G\+W\+L\+F\+Scenario.\+h.
+
+\index{G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}!runoff@{runoff}}
+\index{runoff@{runoff}!G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}}
+\subsubsection[{runoff}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+W\+L\+F\+Runoff}$\ast$ G\+W\+L\+F\+Scenario\+::runoff}\label{class_g_w_l_f_scenario_a56799408fa283db8ae831112ebd56f99}
+\doxyref{1 }{pag.}{}
+
+Definição na linha 48 do arquivo G\+W\+L\+F\+Scenario.\+h.
+
+\index{G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}!snow\+Pack@{snow\+Pack}}
+\index{snow\+Pack@{snow\+Pack}!G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}}
+\subsubsection[{snow\+Pack}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+W\+L\+F\+Snow\+Pack}$\ast$ G\+W\+L\+F\+Scenario\+::snow\+Pack}\label{class_g_w_l_f_scenario_a52ab7bfdc8add5f74b0f4366c8e668ea}
+\doxyref{1 }{pag.}{}
+
+Definição na linha 42 do arquivo G\+W\+L\+F\+Scenario.\+h.
+
+\index{G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}!soil\+Water@{soil\+Water}}
+\index{soil\+Water@{soil\+Water}!G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}}
+\subsubsection[{soil\+Water}]{\setlength{\rightskip}{0pt plus 5cm}{\bf G\+W\+L\+F\+Soil\+Water}$\ast$ G\+W\+L\+F\+Scenario\+::soil\+Water}\label{class_g_w_l_f_scenario_a24ee63ea934c968eb90693933e823ae3}
+\doxyref{1 }{pag.}{}
+
+Definição na linha 54 do arquivo G\+W\+L\+F\+Scenario.\+h.
+
+\index{G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}!subbasin@{subbasin}}
+\index{subbasin@{subbasin}!G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}}
+\subsubsection[{subbasin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Subbasin}$\ast$ G\+W\+L\+F\+Scenario\+::subbasin}\label{class_g_w_l_f_scenario_a0ceb3ca21cd2e336ddb5f0de8ee668d8}
+Sub-\/bacia 
+
+Definição na linha 27 do arquivo G\+W\+L\+F\+Scenario.\+h.
+
+\index{G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}!temper@{temper}}
+\index{temper@{temper}!G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}}
+\subsubsection[{temper}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ G\+W\+L\+F\+Scenario\+::temper}\label{class_g_w_l_f_scenario_a6e321b93854c1ded4dfe199e6668c991}
+1 
+
+Definição na linha 31 do arquivo G\+W\+L\+F\+Scenario.\+h.
+
+\index{G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}!temper\+File\+Name@{temper\+File\+Name}}
+\index{temper\+File\+Name@{temper\+File\+Name}!G\+W\+L\+F\+Scenario@{G\+W\+L\+F\+Scenario}}
+\subsubsection[{temper\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String G\+W\+L\+F\+Scenario\+::temper\+File\+Name}\label{class_g_w_l_f_scenario_a42f3b1a3336b3b0ed35a6671c0e1adc1}
+
+
+Definição na linha 59 do arquivo G\+W\+L\+F\+Scenario.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf G\+W\+L\+F\+Scenario.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,385 @@
+\section{Refer√™ncia da Classe Res\+Op\+Rule\+Main}
+\label{class_res_op_rule_main}\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Rule\+Main.\+h$>$}
+
+
+
+Superclasse de {\bf Const\+Release\+Rule\+Main}, {\bf Const\+Release\+Rule\+Main}, {\bf Periodic\+Release\+Rule\+Main}, {\bf Periodic\+Release\+Rule\+Main}, {\bf Vol\+Dep\+Release\+Rule\+Main} e {\bf Vol\+Dep\+Release\+Rule\+Main}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Rule\+Main} ({\bf Res\+Op\+Interface} $\ast${\bf main\+Inter})
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Rule\+Main} ()
+\item 
+virtual void {\bf set\+Info} ({\bf Draw\+Node} $\ast$node)=0
+\item 
+virtual void {\bf insert\+Rule} ({\bf Draw\+Node} $\ast$node)=0
+\item 
+virtual void {\bf remove\+Rule} (unsigned int node\+Id)=0
+\item 
+virtual void {\bf set\+Default\+Values} (char $\ast$file\+Name)=0
+\item 
+virtual void {\bf save\+Default\+Values} (char $\ast$file\+Name)=0
+\item 
+virtual void {\bf clear} ()=0
+\item 
+virtual void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)=0
+\item 
+virtual void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)=0
+\item 
+{\bf Res\+Op\+Rule\+Main} ({\bf Res\+Op\+Interface} $\ast${\bf main\+Inter})
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Rule\+Main} ()
+\item 
+virtual void {\bf set\+Info} ({\bf Draw\+Node} $\ast$node)=0
+\item 
+virtual void {\bf insert\+Rule} ({\bf Draw\+Node} $\ast$node)=0
+\item 
+virtual void {\bf remove\+Rule} (unsigned int node\+Id)=0
+\item 
+virtual void {\bf set\+Default\+Values} (char $\ast$file\+Name)=0
+\item 
+virtual void {\bf save\+Default\+Values} (char $\ast$file\+Name)=0
+\item 
+virtual void {\bf clear} ()=0
+\item 
+virtual void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)=0
+\item 
+virtual void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)=0
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ int, {\bf Res\+Op\+Rule} $\ast$ $>$ {\bf rules}
+\item 
+{\bf Res\+Op\+Interface} $\ast$ {\bf main\+Inter}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 10 do arquivo Rule/\+Res\+Op\+Rule\+Main.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{Res\+Op\+Rule\+Main(\+Res\+Op\+Interface $\ast$main\+Inter)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Rule\+Main\+::\+Res\+Op\+Rule\+Main (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Interface} $\ast$}]{main\+Inter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_op_rule_main_ad2bad4dbb542b38471dc180b157e7012}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em main\+Inter} & Interface da classe principal \\
+\hline
+\end{DoxyParams}
+
+
+Defini√ß√£o na linha 29 do arquivo Rule/\+Res\+Op\+Rule\+Main.\+h.
+
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!````~Res\+Op\+Rule\+Main@{$\sim$\+Res\+Op\+Rule\+Main}}
+\index{````~Res\+Op\+Rule\+Main@{$\sim$\+Res\+Op\+Rule\+Main}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{$\sim$\+Res\+Op\+Rule\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Rule\+Main\+::$\sim$\+Res\+Op\+Rule\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_res_op_rule_main_acf8b63cce667f771c30c1c8c7075e43a}
+Destrutor 
+
+Defini√ß√£o na linha 34 do arquivo Rule/\+Res\+Op\+Rule\+Main.\+h.
+
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{Res\+Op\+Rule\+Main(\+Res\+Op\+Interface $\ast$main\+Inter)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Rule\+Main\+::\+Res\+Op\+Rule\+Main (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Interface} $\ast$}]{main\+Inter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_op_rule_main_ad2bad4dbb542b38471dc180b157e7012}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em main\+Inter} & Interface da classe principal \\
+\hline
+\end{DoxyParams}
+
+
+Defini√ß√£o na linha 34 do arquivo /\+Rule/\+Res\+Op\+Rule\+Main.\+h.
+
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!````~Res\+Op\+Rule\+Main@{$\sim$\+Res\+Op\+Rule\+Main}}
+\index{````~Res\+Op\+Rule\+Main@{$\sim$\+Res\+Op\+Rule\+Main}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{$\sim$\+Res\+Op\+Rule\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Rule\+Main\+::$\sim$\+Res\+Op\+Rule\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_res_op_rule_main_acf8b63cce667f771c30c1c8c7075e43a}
+Destrutor 
+
+Defini√ß√£o na linha 39 do arquivo /\+Rule/\+Res\+Op\+Rule\+Main.\+h.
+
+
+
+\subsection{M√©todos}
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!clear@{clear}}
+\index{clear@{clear}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{clear()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+Main\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_main_afccd10ddac80422cc35441b87505faab}
+Limpa os dados 
+
+Implementado por {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a348182a34d2554ee2a9e11bea1452eea}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a22dc17b9dd7ce871c4c4734bd4142380}, {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_a5fb41dfef1f9cf6413118a99d5098bf4}, {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a348182a34d2554ee2a9e11bea1452eea}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a22dc17b9dd7ce871c4c4734bd4142380} e {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_a5fb41dfef1f9cf6413118a99d5098bf4}.
+
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!clear@{clear}}
+\index{clear@{clear}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{clear()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+Main\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_main_afccd10ddac80422cc35441b87505faab}
+Limpa os dados 
+
+Implementado por {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a348182a34d2554ee2a9e11bea1452eea}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a22dc17b9dd7ce871c4c4734bd4142380}, {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_a5fb41dfef1f9cf6413118a99d5098bf4}, {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a348182a34d2554ee2a9e11bea1452eea}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a22dc17b9dd7ce871c4c4734bd4142380} e {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_a5fb41dfef1f9cf6413118a99d5098bf4}.
+
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!insert\+Rule@{insert\+Rule}}
+\index{insert\+Rule@{insert\+Rule}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{insert\+Rule(\+Draw\+Node $\ast$node)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+Main\+::insert\+Rule (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_main_af2553792ba240e7fdd7a200de3fee744}
+Cria uma regra (mÈtodo abstrato) 
+\begin{DoxyParams}{Par√¢metros}
+{\em node} & NÛ no qual se quer criar um modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a7e815afbb1c989b4fb1fc312e96d20a1}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a744b40400bc859edd69f4b0d616c860d}, {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_af2570d8179839eb8154924dca0b845bb}, {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a7e815afbb1c989b4fb1fc312e96d20a1}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a744b40400bc859edd69f4b0d616c860d} e {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_af2570d8179839eb8154924dca0b845bb}.
+
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!insert\+Rule@{insert\+Rule}}
+\index{insert\+Rule@{insert\+Rule}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{insert\+Rule(\+Draw\+Node $\ast$node)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+Main\+::insert\+Rule (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_main_af2553792ba240e7fdd7a200de3fee744}
+Cria uma regra (mÈtodo abstrato) 
+\begin{DoxyParams}{Par√¢metros}
+{\em node} & NÛ no qual se quer criar um modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a7e815afbb1c989b4fb1fc312e96d20a1}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a744b40400bc859edd69f4b0d616c860d}, {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_af2570d8179839eb8154924dca0b845bb}, {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a7e815afbb1c989b4fb1fc312e96d20a1}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a744b40400bc859edd69f4b0d616c860d} e {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_af2570d8179839eb8154924dca0b845bb}.
+
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+Main\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_main_a84f18a3e6191bb33437fa407bca87a70}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a769cdc11c0ba8f9b15bc89cb7e4eff5c}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_aaf0d9b8b6cb0af78737f690758e2ea00}, {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_a6ecaa75dd5f8c62323d56eca85f555e2}, {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a769cdc11c0ba8f9b15bc89cb7e4eff5c}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_aaf0d9b8b6cb0af78737f690758e2ea00} e {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_a6ecaa75dd5f8c62323d56eca85f555e2}.
+
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+Main\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_main_a84f18a3e6191bb33437fa407bca87a70}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a769cdc11c0ba8f9b15bc89cb7e4eff5c}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_aaf0d9b8b6cb0af78737f690758e2ea00}, {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_a6ecaa75dd5f8c62323d56eca85f555e2}, {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a769cdc11c0ba8f9b15bc89cb7e4eff5c}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_aaf0d9b8b6cb0af78737f690758e2ea00} e {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_a6ecaa75dd5f8c62323d56eca85f555e2}.
+
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+Main\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_main_ae60900768f60692c1791cfa39ef152fa}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a71ffb4584dd09495da534148aac3983e}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a4e22c4ea4b751465371117c6bbeac780}, {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_abc279602e319aa76b3b7af12d8a7134a}, {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a71ffb4584dd09495da534148aac3983e}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a4e22c4ea4b751465371117c6bbeac780} e {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_abc279602e319aa76b3b7af12d8a7134a}.
+
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+Main\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_main_ae60900768f60692c1791cfa39ef152fa}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a71ffb4584dd09495da534148aac3983e}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a4e22c4ea4b751465371117c6bbeac780}, {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_abc279602e319aa76b3b7af12d8a7134a}, {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a71ffb4584dd09495da534148aac3983e}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a4e22c4ea4b751465371117c6bbeac780} e {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_abc279602e319aa76b3b7af12d8a7134a}.
+
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!remove\+Rule@{remove\+Rule}}
+\index{remove\+Rule@{remove\+Rule}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{remove\+Rule(unsigned int node\+Id)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+Main\+::remove\+Rule (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{node\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_main_a9221138025702c3984198c9e92142035}
+Destroi uma regra que nao importa mais (mÈtodo abstrato) 
+\begin{DoxyParams}{Par√¢metros}
+{\em node\+Id} & Id do nÛ do qual se quer destruir o modelo. \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a01d09ae804bfec51a720d9873409c823}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a07f0204786152e7c29de2ffa7504325f}, {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_ae85906dcad5cf85d62ee4fc852d1db51}, {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a01d09ae804bfec51a720d9873409c823}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a07f0204786152e7c29de2ffa7504325f} e {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_ae85906dcad5cf85d62ee4fc852d1db51}.
+
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!remove\+Rule@{remove\+Rule}}
+\index{remove\+Rule@{remove\+Rule}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{remove\+Rule(unsigned int node\+Id)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+Main\+::remove\+Rule (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{node\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_main_a9221138025702c3984198c9e92142035}
+Destroi uma regra que nao importa mais (mÈtodo abstrato) 
+\begin{DoxyParams}{Par√¢metros}
+{\em node\+Id} & Id do nÛ do qual se quer destruir o modelo. \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a01d09ae804bfec51a720d9873409c823}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a07f0204786152e7c29de2ffa7504325f}, {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_ae85906dcad5cf85d62ee4fc852d1db51}, {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a01d09ae804bfec51a720d9873409c823}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a07f0204786152e7c29de2ffa7504325f} e {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_ae85906dcad5cf85d62ee4fc852d1db51}.
+
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!save\+Default\+Values@{save\+Default\+Values}}
+\index{save\+Default\+Values@{save\+Default\+Values}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{save\+Default\+Values(char $\ast$file\+Name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+Main\+::save\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_main_a4beb1e1b80da556ad623d786fcd86640}
+MÈtodo abstrato que salva os dados da regra para um arquivo. 
+
+Implementado por {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_acaddb4a6712cdb6441e0ab1717661d6e}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a4e937d8cfd0519775dbbad6b9a52bbc2}, {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_afa80564f6fc1e2e3a5a3b6195bbaeafe}, {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_acaddb4a6712cdb6441e0ab1717661d6e}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a4e937d8cfd0519775dbbad6b9a52bbc2} e {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_afa80564f6fc1e2e3a5a3b6195bbaeafe}.
+
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!save\+Default\+Values@{save\+Default\+Values}}
+\index{save\+Default\+Values@{save\+Default\+Values}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{save\+Default\+Values(char $\ast$file\+Name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+Main\+::save\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_main_a4beb1e1b80da556ad623d786fcd86640}
+MÈtodo abstrato que salva os dados da regra para um arquivo. 
+
+Implementado por {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_acaddb4a6712cdb6441e0ab1717661d6e}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a4e937d8cfd0519775dbbad6b9a52bbc2}, {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_afa80564f6fc1e2e3a5a3b6195bbaeafe}, {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_acaddb4a6712cdb6441e0ab1717661d6e}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a4e937d8cfd0519775dbbad6b9a52bbc2} e {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_afa80564f6fc1e2e3a5a3b6195bbaeafe}.
+
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!set\+Default\+Values@{set\+Default\+Values}}
+\index{set\+Default\+Values@{set\+Default\+Values}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{set\+Default\+Values(char $\ast$file\+Name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+Main\+::set\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_main_ad54190a07b8e9435e6205876813f46c1}
+MÈtodo abstrato que recebe os dados da regra de arquivo. 
+\begin{DoxyParams}{Par√¢metros}
+{\em file\+Name} & Nome do aquivo para salvar as informaÁıes. \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_ab4054c6ae7094e3a3810e8df10edc392}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a69a68290abf3fac59ca7a6ccf88e5a50}, {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_a32366eeebbdfac6b252f7699e555c03f}, {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_ab4054c6ae7094e3a3810e8df10edc392}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a69a68290abf3fac59ca7a6ccf88e5a50} e {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_a32366eeebbdfac6b252f7699e555c03f}.
+
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!set\+Default\+Values@{set\+Default\+Values}}
+\index{set\+Default\+Values@{set\+Default\+Values}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{set\+Default\+Values(char $\ast$file\+Name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+Main\+::set\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_main_ad54190a07b8e9435e6205876813f46c1}
+MÈtodo abstrato que recebe os dados da regra de arquivo. 
+\begin{DoxyParams}{Par√¢metros}
+{\em file\+Name} & Nome do aquivo para salvar as informaÁıes. \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_ab4054c6ae7094e3a3810e8df10edc392}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a69a68290abf3fac59ca7a6ccf88e5a50}, {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_a32366eeebbdfac6b252f7699e555c03f}, {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_ab4054c6ae7094e3a3810e8df10edc392}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a69a68290abf3fac59ca7a6ccf88e5a50} e {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_a32366eeebbdfac6b252f7699e555c03f}.
+
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{set\+Info(\+Draw\+Node $\ast$node)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+Main\+::set\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_main_a2b2d4c2cb1f34ac67a0fb9a71a649ed5}
+Insere informaÁoes na interface (mÈtodo abstrato) 
+\begin{DoxyParams}{Par√¢metros}
+{\em node} & NÛ no qual se quer inserir informaÁoes \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a05f6e18033f96a7e3557b71a4453dfde}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a147458efffb53689b551f3c38d5aa18e}, {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_abec0cacd47917c5f20095284ca3215c5}, {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a05f6e18033f96a7e3557b71a4453dfde}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a147458efffb53689b551f3c38d5aa18e} e {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_abec0cacd47917c5f20095284ca3215c5}.
+
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{set\+Info(\+Draw\+Node $\ast$node)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+Main\+::set\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_main_a2b2d4c2cb1f34ac67a0fb9a71a649ed5}
+Insere informaÁoes na interface (mÈtodo abstrato) 
+\begin{DoxyParams}{Par√¢metros}
+{\em node} & NÛ no qual se quer inserir informaÁoes \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a05f6e18033f96a7e3557b71a4453dfde}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a147458efffb53689b551f3c38d5aa18e}, {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_abec0cacd47917c5f20095284ca3215c5}, {\bf Const\+Release\+Rule\+Main} \doxyref{}{pag.}{class_const_release_rule_main_a05f6e18033f96a7e3557b71a4453dfde}, {\bf Periodic\+Release\+Rule\+Main} \doxyref{}{pag.}{class_periodic_release_rule_main_a147458efffb53689b551f3c38d5aa18e} e {\bf Vol\+Dep\+Release\+Rule\+Main} \doxyref{}{pag.}{class_vol_dep_release_rule_main_abec0cacd47917c5f20095284ca3215c5}.
+
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!main\+Inter@{main\+Inter}}
+\index{main\+Inter@{main\+Inter}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{main\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Interface} $\ast$ Res\+Op\+Rule\+Main\+::main\+Inter}\label{class_res_op_rule_main_a6170a428796d83606716e6110fc14a02}
+Aponta para a classe da interface principal do modulo 
+
+Defini√ß√£o na linha 23 do arquivo Rule/\+Res\+Op\+Rule\+Main.\+h.
+
+\index{Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}!rules@{rules}}
+\index{rules@{rules}!Res\+Op\+Rule\+Main@{Res\+Op\+Rule\+Main}}
+\subsubsection[{rules}]{\setlength{\rightskip}{0pt plus 5cm}map$<$ int, {\bf Res\+Op\+Rule} $\ast$ $>$ Res\+Op\+Rule\+Main\+::rules}\label{class_res_op_rule_main_a299ddc49a1243c6b0d525f7acb60dc0d}
+Inst‚ncias das regras para cada nÛ  \doxyref{Res\+Op\+Rule}{pag.}{class_res_op_rule} 
+
+Defini√ß√£o na linha 18 do arquivo Rule/\+Res\+Op\+Rule\+Main.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Rule/\+Res\+Op\+Rule\+Main.\+h}\end{DoxyCompactItemize}

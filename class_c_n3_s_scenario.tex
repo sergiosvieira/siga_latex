@@ -1,0 +1,107 @@
+\section{Referência da Classe C\+N3\+S\+Scenario}
+\label{class_c_n3_s_scenario}\index{C\+N3\+S\+Scenario@{C\+N3\+S\+Scenario}}
+
+
+{\ttfamily \#include $<$C\+N3\+S\+Scenario.\+h$>$}
+
+
+
+Herdeiro de {\bf Hidro\+Scenario}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf C\+N3\+S\+Scenario} ({\bf C\+N3\+S\+Model} $\ast$parent, {\bf Date} interval\+Begin, {\bf Date} interval\+End)
+\item 
+{\bf $\sim$\+C\+N3\+S\+Scenario} ()
+\item 
+bool {\bf empty} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf C\+N3\+S\+Param} $\ast$ {\bf param}
+\item 
+{\bf Serie} $\ast$ {\bf precipitation}
+\item 
+wx\+String {\bf prec\+File\+Name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 16 do arquivo C\+N3\+S\+Scenario.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{C\+N3\+S\+Scenario@{C\+N3\+S\+Scenario}!C\+N3\+S\+Scenario@{C\+N3\+S\+Scenario}}
+\index{C\+N3\+S\+Scenario@{C\+N3\+S\+Scenario}!C\+N3\+S\+Scenario@{C\+N3\+S\+Scenario}}
+\subsubsection[{C\+N3\+S\+Scenario(\+C\+N3\+S\+Model $\ast$parent, Date interval\+Begin, Date interval\+End)}]{\setlength{\rightskip}{0pt plus 5cm}C\+N3\+S\+Scenario\+::\+C\+N3\+S\+Scenario (
+\begin{DoxyParamCaption}
+\item[{{\bf C\+N3\+S\+Model} $\ast$}]{parent, }
+\item[{{\bf Date}}]{interval\+Begin, }
+\item[{{\bf Date}}]{interval\+End}
+\end{DoxyParamCaption}
+)}\label{class_c_n3_s_scenario_a57bd3e9e2d84271f0ec3baf4b5e26f3d}
+Construtor \index{C\+N3\+S\+Scenario@{C\+N3\+S\+Scenario}!````~C\+N3\+S\+Scenario@{$\sim$\+C\+N3\+S\+Scenario}}
+\index{````~C\+N3\+S\+Scenario@{$\sim$\+C\+N3\+S\+Scenario}!C\+N3\+S\+Scenario@{C\+N3\+S\+Scenario}}
+\subsubsection[{$\sim$\+C\+N3\+S\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}C\+N3\+S\+Scenario\+::$\sim$\+C\+N3\+S\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_c_n3_s_scenario_a2ae70b9983d765afa107571d5305596e}
+Destruidor 
+
+\subsection{Métodos}
+\index{C\+N3\+S\+Scenario@{C\+N3\+S\+Scenario}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!C\+N3\+S\+Scenario@{C\+N3\+S\+Scenario}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool C\+N3\+S\+Scenario\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_c_n3_s_scenario_a39c8c6720a0a5e7cc876571dedb002cb}
+Avalia se todas as informa��es importantes para o modelo foram informadas 
+\begin{DoxyParams}{Parâmetros}
+{\em dialog} & Caixa de dialogo onde os erros ser�o apresentados \\
+\hline
+\end{DoxyParams}
+\index{C\+N3\+S\+Scenario@{C\+N3\+S\+Scenario}!empty@{empty}}
+\index{empty@{empty}!C\+N3\+S\+Scenario@{C\+N3\+S\+Scenario}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool C\+N3\+S\+Scenario\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_c_n3_s_scenario_a75d0942fcf15eeb307a8aeb14abe50f6}
+retorna se existe algum valor no modelo 
+
+\subsection{Atributos}
+\index{C\+N3\+S\+Scenario@{C\+N3\+S\+Scenario}!param@{param}}
+\index{param@{param}!C\+N3\+S\+Scenario@{C\+N3\+S\+Scenario}}
+\subsubsection[{param}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+N3\+S\+Param}$\ast$ C\+N3\+S\+Scenario\+::param}\label{class_c_n3_s_scenario_a443e4c84dd6af6a35ab0bd8871e25755}
+Par�metros do modelo C\+N3S 
+
+Definição na linha 24 do arquivo C\+N3\+S\+Scenario.\+h.
+
+\index{C\+N3\+S\+Scenario@{C\+N3\+S\+Scenario}!prec\+File\+Name@{prec\+File\+Name}}
+\index{prec\+File\+Name@{prec\+File\+Name}!C\+N3\+S\+Scenario@{C\+N3\+S\+Scenario}}
+\subsubsection[{prec\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String C\+N3\+S\+Scenario\+::prec\+File\+Name}\label{class_c_n3_s_scenario_a2065ff52d2ab35d515c87ec133a5f1d3}
+Nomes dos arquivos de precipita��o 
+
+Definição na linha 34 do arquivo C\+N3\+S\+Scenario.\+h.
+
+\index{C\+N3\+S\+Scenario@{C\+N3\+S\+Scenario}!precipitation@{precipitation}}
+\index{precipitation@{precipitation}!C\+N3\+S\+Scenario@{C\+N3\+S\+Scenario}}
+\subsubsection[{precipitation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ C\+N3\+S\+Scenario\+::precipitation}\label{class_c_n3_s_scenario_a829b9f465b2a3dc4ca36a504d1019e6f}
+1 
+
+Definição na linha 29 do arquivo C\+N3\+S\+Scenario.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf C\+N3\+S\+Scenario.\+h}\end{DoxyCompactItemize}

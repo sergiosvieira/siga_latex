@@ -1,0 +1,386 @@
+\section{Referência da Classe Out\+Interface}
+\label{class_out_interface}\index{Out\+Interface@{Out\+Interface}}
+
+
+{\ttfamily \#include $<$Out\+Interface.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Tree\+Image} \{ {\bf U\+N\+C\+H\+E\+CK} = 0, 
+{\bf C\+H\+E\+CK}, 
+{\bf F\+O\+L\+D\+ER}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf on\+Select\+Serie} (wx\+Tree\+Event \&event)
+\item 
+{\bf Out\+Interface} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent})
+\item 
+{\bf $\sim$\+Out\+Interface} ()
+\item 
+void {\bf on\+Open\+Graph} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Choicebook} (wx\+Choicebook\+Event \&event)
+\item 
+{\bf Res\+Serie} $\ast$ {\bf get\+Res\+Serie} (wx\+Tree\+Item\+Id selection)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Tree\+Ctrl $\ast$ {\bf tc\+Open\+File}
+\item 
+{\bf S\+I\+G\+A\+Frame} $\ast$ {\bf frame}
+\item 
+wx\+Choicebook $\ast$ {\bf note\+Components}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Robustness}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Reliability}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Resilience}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Std\+Dev}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Median}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Mean}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+CV}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Min\+Value}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Max\+Value}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Reli\+Green}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Reli\+Yellow}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Resi\+Yellow}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Resi\+Red}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Per\+Days\+Yellow}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Per\+Days\+Red}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Per\+Days\+Yellow\+Red}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Max\+Con\+Days\+Yellow}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Max\+Con\+Days\+Red}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Max\+Con\+Days\+Yellow\+Red}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Max\+Ext\+Yellow}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf tc\+Max\+Ext\+Red}
+\item 
+wx\+Static\+Box $\ast$ {\bf box\+Stat}
+\item 
+wx\+Static\+Box $\ast$ {\bf box\+Stat\+Adv}
+\item 
+wx\+Button $\ast$ {\bf bt\+Zones}
+\item 
+{\bf Out\+Zones} $\ast$ {\bf out\+Zones}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 200 do arquivo Out\+Interface.\+h.
+
+
+
+\subsection{Enumerações}
+\index{Out\+Interface@{Out\+Interface}!Tree\+Image@{Tree\+Image}}
+\index{Tree\+Image@{Tree\+Image}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{Tree\+Image}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Out\+Interface\+::\+Tree\+Image}}\label{class_out_interface_ad77c6fb0272d3873be7e561ff440b923}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{U\+N\+C\+H\+E\+CK@{U\+N\+C\+H\+E\+CK}!Out\+Interface@{Out\+Interface}}\index{Out\+Interface@{Out\+Interface}!U\+N\+C\+H\+E\+CK@{U\+N\+C\+H\+E\+CK}}\item[{\em 
+U\+N\+C\+H\+E\+CK\label{class_out_interface_ad77c6fb0272d3873be7e561ff440b923a54c2bd9795faa28fb6fc58bd9d36563c}
+}]\index{C\+H\+E\+CK@{C\+H\+E\+CK}!Out\+Interface@{Out\+Interface}}\index{Out\+Interface@{Out\+Interface}!C\+H\+E\+CK@{C\+H\+E\+CK}}\item[{\em 
+C\+H\+E\+CK\label{class_out_interface_ad77c6fb0272d3873be7e561ff440b923affb55becaa5e0da9f14ee9027b5f0853}
+}]\index{F\+O\+L\+D\+ER@{F\+O\+L\+D\+ER}!Out\+Interface@{Out\+Interface}}\index{Out\+Interface@{Out\+Interface}!F\+O\+L\+D\+ER@{F\+O\+L\+D\+ER}}\item[{\em 
+F\+O\+L\+D\+ER\label{class_out_interface_ad77c6fb0272d3873be7e561ff440b923a81f1870bbc2b25863997f4b32a566d7c}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 251 do arquivo Out\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Out\+Interface@{Out\+Interface}!Out\+Interface@{Out\+Interface}}
+\index{Out\+Interface@{Out\+Interface}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{Out\+Interface(wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Out\+Interface\+::\+Out\+Interface (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_out_interface_ae6698b300334b36c7b6f6f6c28160412}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & Janela onde ser� inserida a interface \\
+\hline
+{\em parent} & Componente que cont�m a interface \\
+\hline
+\end{DoxyParams}
+\index{Out\+Interface@{Out\+Interface}!````~Out\+Interface@{$\sim$\+Out\+Interface}}
+\index{````~Out\+Interface@{$\sim$\+Out\+Interface}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{$\sim$\+Out\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}Out\+Interface\+::$\sim$\+Out\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_out_interface_ab95026eed0d1b0578a019067b2bb1bc8}
+Destrutor 
+
+\subsection{Métodos}
+\index{Out\+Interface@{Out\+Interface}!get\+Res\+Serie@{get\+Res\+Serie}}
+\index{get\+Res\+Serie@{get\+Res\+Serie}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{get\+Res\+Serie(wx\+Tree\+Item\+Id selection)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Serie}$\ast$ Out\+Interface\+::get\+Res\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{selection}
+\end{DoxyParamCaption}
+)}\label{class_out_interface_abb51e1c517f6de55bd041389ba3d6f54}
+\index{Out\+Interface@{Out\+Interface}!on\+Choicebook@{on\+Choicebook}}
+\index{on\+Choicebook@{on\+Choicebook}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{on\+Choicebook(wx\+Choicebook\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Interface\+::on\+Choicebook (
+\begin{DoxyParamCaption}
+\item[{wx\+Choicebook\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_out_interface_afc3bfed6679aba45eeff5d822eb76d43}
+Evento de troca de pagina do note\+Components 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Out\+Interface@{Out\+Interface}!on\+Open\+Graph@{on\+Open\+Graph}}
+\index{on\+Open\+Graph@{on\+Open\+Graph}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{on\+Open\+Graph(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Interface\+::on\+Open\+Graph (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_out_interface_a7e4736068a13aa752c01cfe6dcb2d5e4}
+N�o esta em uso \index{Out\+Interface@{Out\+Interface}!on\+Select\+Serie@{on\+Select\+Serie}}
+\index{on\+Select\+Serie@{on\+Select\+Serie}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{on\+Select\+Serie(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Out\+Interface\+::on\+Select\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_out_interface_aef5606dd80090b5e50680045c90889bb}
+
+
+\subsection{Atributos}
+\index{Out\+Interface@{Out\+Interface}!box\+Stat@{box\+Stat}}
+\index{box\+Stat@{box\+Stat}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{box\+Stat}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Box$\ast$ Out\+Interface\+::box\+Stat}\label{class_out_interface_ad68a4a9a94133434d29425531580243d}
+Static\+Box para estatisticas 
+
+Definição na linha 286 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!box\+Stat\+Adv@{box\+Stat\+Adv}}
+\index{box\+Stat\+Adv@{box\+Stat\+Adv}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{box\+Stat\+Adv}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Box $\ast$ Out\+Interface\+::box\+Stat\+Adv}\label{class_out_interface_a5c361a48e657d122c8f76664cfb5efbc}
+
+
+Definição na linha 286 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!bt\+Zones@{bt\+Zones}}
+\index{bt\+Zones@{bt\+Zones}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{bt\+Zones}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Out\+Interface\+::bt\+Zones}\label{class_out_interface_a28e13244779aab84cc56fa621b0b6227}
+Bot�o para abertura da interface de zonas 
+
+Definição na linha 290 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!frame@{frame}}
+\index{frame@{frame}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{frame}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Frame}$\ast$ Out\+Interface\+::frame}\label{class_out_interface_a682128ecfad0b83c72625563dd16becf}
+Ponteiro para janela principal 
+
+Definição na linha 264 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!note\+Components@{note\+Components}}
+\index{note\+Components@{note\+Components}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{note\+Components}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choicebook$\ast$ Out\+Interface\+::note\+Components}\label{class_out_interface_abbc332a18b4e9c314ee47fcbfa6b143c}
+Choicebook com os modulos 
+
+Definição na linha 268 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!out\+Zones@{out\+Zones}}
+\index{out\+Zones@{out\+Zones}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{out\+Zones}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Out\+Zones}$\ast$ Out\+Interface\+::out\+Zones}\label{class_out_interface_abc293079f1bc0421fc1cf65790409b6d}
+Interface das zonas 
+
+Definição na linha 294 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+CV@{tc\+CV}}
+\index{tc\+CV@{tc\+CV}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+CV}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ Out\+Interface\+::tc\+CV}\label{class_out_interface_af34a02adccd3a0d01f8e4f517f31a4f3}
+
+
+Definição na linha 277 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+Max\+Con\+Days\+Red@{tc\+Max\+Con\+Days\+Red}}
+\index{tc\+Max\+Con\+Days\+Red@{tc\+Max\+Con\+Days\+Red}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+Max\+Con\+Days\+Red}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ Out\+Interface\+::tc\+Max\+Con\+Days\+Red}\label{class_out_interface_a915e0f3bcdd63795cb1d6ee661e332e6}
+
+
+Definição na linha 281 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+Max\+Con\+Days\+Yellow@{tc\+Max\+Con\+Days\+Yellow}}
+\index{tc\+Max\+Con\+Days\+Yellow@{tc\+Max\+Con\+Days\+Yellow}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+Max\+Con\+Days\+Yellow}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl$\ast$ Out\+Interface\+::tc\+Max\+Con\+Days\+Yellow}\label{class_out_interface_a0e3775f49ddead4bcb5beedc7142572e}
+
+
+Definição na linha 281 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+Max\+Con\+Days\+Yellow\+Red@{tc\+Max\+Con\+Days\+Yellow\+Red}}
+\index{tc\+Max\+Con\+Days\+Yellow\+Red@{tc\+Max\+Con\+Days\+Yellow\+Red}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+Max\+Con\+Days\+Yellow\+Red}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ Out\+Interface\+::tc\+Max\+Con\+Days\+Yellow\+Red}\label{class_out_interface_ac81a6cdb920ce998d8dbcaf0291acd92}
+
+
+Definição na linha 281 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+Max\+Ext\+Red@{tc\+Max\+Ext\+Red}}
+\index{tc\+Max\+Ext\+Red@{tc\+Max\+Ext\+Red}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+Max\+Ext\+Red}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ Out\+Interface\+::tc\+Max\+Ext\+Red}\label{class_out_interface_a93f6feb3ab9cb723dacdba7d78b60458}
+
+
+Definição na linha 282 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+Max\+Ext\+Yellow@{tc\+Max\+Ext\+Yellow}}
+\index{tc\+Max\+Ext\+Yellow@{tc\+Max\+Ext\+Yellow}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+Max\+Ext\+Yellow}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl$\ast$ Out\+Interface\+::tc\+Max\+Ext\+Yellow}\label{class_out_interface_a2f22436f238ff394ae7d873aedf5f2d4}
+
+
+Definição na linha 282 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+Max\+Value@{tc\+Max\+Value}}
+\index{tc\+Max\+Value@{tc\+Max\+Value}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+Max\+Value}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ Out\+Interface\+::tc\+Max\+Value}\label{class_out_interface_a25bbf42046c7d0e86c798753d3a27b97}
+
+
+Definição na linha 278 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+Mean@{tc\+Mean}}
+\index{tc\+Mean@{tc\+Mean}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+Mean}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ Out\+Interface\+::tc\+Mean}\label{class_out_interface_a2da03632530cca024b3419e019950fad}
+
+
+Definição na linha 277 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+Median@{tc\+Median}}
+\index{tc\+Median@{tc\+Median}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+Median}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ Out\+Interface\+::tc\+Median}\label{class_out_interface_a76b00142d09cf5f103abc758e7804114}
+
+
+Definição na linha 277 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+Min\+Value@{tc\+Min\+Value}}
+\index{tc\+Min\+Value@{tc\+Min\+Value}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+Min\+Value}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl$\ast$ Out\+Interface\+::tc\+Min\+Value}\label{class_out_interface_a4a103622ffe5a13ec294796dc08e7455}
+
+
+Definição na linha 278 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+Open\+File@{tc\+Open\+File}}
+\index{tc\+Open\+File@{tc\+Open\+File}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+Open\+File}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Ctrl$\ast$ Out\+Interface\+::tc\+Open\+File}\label{class_out_interface_a20eb8fcc2bf387dc3d7063a9cfc01753}
+Tree\+Ctrl contendo os arquivos abertos 
+
+Definição na linha 260 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+Per\+Days\+Red@{tc\+Per\+Days\+Red}}
+\index{tc\+Per\+Days\+Red@{tc\+Per\+Days\+Red}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+Per\+Days\+Red}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ Out\+Interface\+::tc\+Per\+Days\+Red}\label{class_out_interface_aaf6f1b1cf1dc96c8ff04e451d870f1ac}
+
+
+Definição na linha 280 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+Per\+Days\+Yellow@{tc\+Per\+Days\+Yellow}}
+\index{tc\+Per\+Days\+Yellow@{tc\+Per\+Days\+Yellow}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+Per\+Days\+Yellow}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl$\ast$ Out\+Interface\+::tc\+Per\+Days\+Yellow}\label{class_out_interface_ad234149b87ac9a9bbb735569cb6d5a27}
+
+
+Definição na linha 280 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+Per\+Days\+Yellow\+Red@{tc\+Per\+Days\+Yellow\+Red}}
+\index{tc\+Per\+Days\+Yellow\+Red@{tc\+Per\+Days\+Yellow\+Red}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+Per\+Days\+Yellow\+Red}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ Out\+Interface\+::tc\+Per\+Days\+Yellow\+Red}\label{class_out_interface_a49ba704c73812b7a604473d1689f6db0}
+
+
+Definição na linha 280 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+Reliability@{tc\+Reliability}}
+\index{tc\+Reliability@{tc\+Reliability}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+Reliability}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ Out\+Interface\+::tc\+Reliability}\label{class_out_interface_abce1ee64a4b68e0e47e5885b94510311}
+
+
+Definição na linha 276 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+Reli\+Green@{tc\+Reli\+Green}}
+\index{tc\+Reli\+Green@{tc\+Reli\+Green}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+Reli\+Green}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl$\ast$ Out\+Interface\+::tc\+Reli\+Green}\label{class_out_interface_ab46dc100efcba1ed663fcb22a4f93d94}
+
+
+Definição na linha 279 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+Reli\+Yellow@{tc\+Reli\+Yellow}}
+\index{tc\+Reli\+Yellow@{tc\+Reli\+Yellow}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+Reli\+Yellow}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ Out\+Interface\+::tc\+Reli\+Yellow}\label{class_out_interface_abcd314e13f150df6f929ceeebef86eb4}
+
+
+Definição na linha 279 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+Resilience@{tc\+Resilience}}
+\index{tc\+Resilience@{tc\+Resilience}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+Resilience}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ Out\+Interface\+::tc\+Resilience}\label{class_out_interface_accb797b18eb0e954550bd471ae35169c}
+
+
+Definição na linha 276 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+Resi\+Red@{tc\+Resi\+Red}}
+\index{tc\+Resi\+Red@{tc\+Resi\+Red}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+Resi\+Red}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ Out\+Interface\+::tc\+Resi\+Red}\label{class_out_interface_a2a8fed1e1500a63a7b20e1366249a715}
+
+
+Definição na linha 279 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+Resi\+Yellow@{tc\+Resi\+Yellow}}
+\index{tc\+Resi\+Yellow@{tc\+Resi\+Yellow}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+Resi\+Yellow}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl $\ast$ Out\+Interface\+::tc\+Resi\+Yellow}\label{class_out_interface_a28da632dab441f2ce5da41298ac1b7a2}
+
+
+Definição na linha 279 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+Robustness@{tc\+Robustness}}
+\index{tc\+Robustness@{tc\+Robustness}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+Robustness}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl$\ast$ Out\+Interface\+::tc\+Robustness}\label{class_out_interface_ae3e7d1b9b59f4a95a7e72a13214127ff}
+Caixas de texto com os resultadosdas estatisticas 
+
+Definição na linha 276 do arquivo Out\+Interface.\+h.
+
+\index{Out\+Interface@{Out\+Interface}!tc\+Std\+Dev@{tc\+Std\+Dev}}
+\index{tc\+Std\+Dev@{tc\+Std\+Dev}!Out\+Interface@{Out\+Interface}}
+\subsubsection[{tc\+Std\+Dev}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl$\ast$ Out\+Interface\+::tc\+Std\+Dev}\label{class_out_interface_a38d09707117d315720aeafc63f03f1e2}
+
+
+Definição na linha 277 do arquivo Out\+Interface.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Out\+Interface.\+h}\end{DoxyCompactItemize}

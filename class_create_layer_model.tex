@@ -1,0 +1,513 @@
+\section{Referência da Classe Create\+Layer\+Model}
+\label{class_create_layer_model}\index{Create\+Layer\+Model@{Create\+Layer\+Model}}
+
+
+{\ttfamily \#include $<$Create\+Layer\+Model.\+h$>$}
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf File\+Format} \{ {\bf File\+Format\+::\+F\+F\+\_\+\+C\+SV}, 
+{\bf File\+Format\+::\+F\+F\+\_\+\+Custom}, 
+{\bf File\+Format\+::\+F\+F\+\_\+\+R\+S\+M97}
+ \}
+\item 
+typedef std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ {\bf Matrix\+Of\+Values}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bf filename} ()
+\item 
+void {\bf filename} (const std\+::string \&a\+\_\+filename)
+\item 
+{\bf File\+Format} {\bf file\+Format} ()
+\item 
+void {\bf file\+Format} (const {\bf File\+Format} \&a\+\_\+file\+Format)
+\item 
+bool {\bf is\+Comma} ()
+\item 
+void {\bf comma} (bool a\+\_\+flag)
+\item 
+bool {\bf is\+Tab} ()
+\item 
+void {\bf tab} (bool a\+\_\+flag)
+\item 
+bool {\bf is\+Space} ()
+\item 
+void {\bf space} (bool a\+\_\+flag)
+\item 
+bool {\bf is\+Colon} ()
+\item 
+void {\bf colon} (bool a\+\_\+flag)
+\item 
+bool {\bf is\+Semicolon} ()
+\item 
+void {\bf semicolon} (bool a\+\_\+flag)
+\item 
+bool {\bf is\+Include\+All\+Fields} ()
+\item 
+void {\bf include\+All\+Fields} (bool a\+\_\+flag)
+\item 
+int {\bf skip\+Lines} ()
+\item 
+void {\bf skip\+Lines} (int a\+\_\+lines)
+\item 
+bool {\bf is\+First\+Record\+Name\+Fields} ()
+\item 
+void {\bf first\+Record\+Name\+Fields} (bool a\+\_\+flag)
+\item 
+Vector\+Of\+String {\bf longitude} ()
+\item 
+void {\bf longitude} (Vector\+Of\+String a\+\_\+longitude)
+\item 
+int {\bf selected\+Longitude} ()
+\item 
+void {\bf selected\+Longitude} (int a\+\_\+index)
+\item 
+Vector\+Of\+String {\bf latitude} ()
+\item 
+void {\bf latitude} (Vector\+Of\+String a\+\_\+latitude)
+\item 
+int {\bf selected\+Latitude} ()
+\item 
+void {\bf selected\+Latitude} (int a\+\_\+index)
+\item 
+{\bf Matrix\+Of\+Values} {\bf values} (int a\+\_\+records\+Count=-\/1, {\bf Progress\+Callback} a\+\_\+progress=nullptr)
+\item 
+std\+::string {\bf project\+Parameters} () const 
+\item 
+void {\bf project\+Parameters} (const std\+::string \&a\+\_\+parameters)
+\item 
+Vector\+Of\+String {\bf fields} ()
+\item 
+void {\bf fields} (Vector\+Of\+String a\+\_\+fields)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bf m\+\_\+filename} = \char`\"{}\char`\"{}
+\item 
+{\bf File\+Format} {\bf m\+\_\+file\+Format} = {\bf File\+Format\+::\+F\+F\+\_\+\+C\+SV}
+\item 
+bool {\bf m\+\_\+comma} = true
+\item 
+bool {\bf m\+\_\+tab} = false
+\item 
+bool {\bf m\+\_\+space} = false
+\item 
+bool {\bf m\+\_\+colon} = false
+\item 
+bool {\bf m\+\_\+semicolon} = false
+\item 
+int {\bf m\+\_\+skip\+Lines} = 0
+\item 
+bool {\bf m\+\_\+first\+Record} = false
+\item 
+bool {\bf m\+\_\+include\+All\+Fields} = false
+\item 
+Vector\+Of\+String {\bf m\+\_\+longitude}
+\item 
+int {\bf m\+\_\+selected\+Longitude}
+\item 
+Vector\+Of\+String {\bf m\+\_\+latitude}
+\item 
+int {\bf m\+\_\+selected\+Latitude}
+\item 
+std\+::string {\bf m\+\_\+projection\+Parameters} = \char`\"{}\char`\"{}
+\item 
+Vector\+Of\+String {\bf m\+\_\+fields}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 8 do arquivo Create\+Layer\+Model.\+h.
+
+
+
+\subsection{Definições de Tipos}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!Matrix\+Of\+Values@{Matrix\+Of\+Values}}
+\index{Matrix\+Of\+Values@{Matrix\+Of\+Values}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{Matrix\+Of\+Values}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::vector$<$std\+::vector$<$std\+::string$>$ $>$ {\bf Create\+Layer\+Model\+::\+Matrix\+Of\+Values}}\label{class_create_layer_model_ad6cb89f9d36aab1268e26e39c28501a3}
+
+
+Definição na linha 12 do arquivo Create\+Layer\+Model.\+h.
+
+
+
+\subsection{Enumerações}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!File\+Format@{File\+Format}}
+\index{File\+Format@{File\+Format}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{File\+Format}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Create\+Layer\+Model\+::\+File\+Format}\hspace{0.3cm}{\ttfamily [strong]}}\label{class_create_layer_model_a1f53f2059cfe80031779c9ec1341c44f}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{F\+F\+\_\+\+C\+SV@{F\+F\+\_\+\+C\+SV}!Create\+Layer\+Model@{Create\+Layer\+Model}}\index{Create\+Layer\+Model@{Create\+Layer\+Model}!F\+F\+\_\+\+C\+SV@{F\+F\+\_\+\+C\+SV}}\item[{\em 
+F\+F\+\_\+\+C\+SV\label{class_create_layer_model_a1f53f2059cfe80031779c9ec1341c44fa72a8a46ce227952cc584edfdeeb8996b}
+}]\index{F\+F\+\_\+\+Custom@{F\+F\+\_\+\+Custom}!Create\+Layer\+Model@{Create\+Layer\+Model}}\index{Create\+Layer\+Model@{Create\+Layer\+Model}!F\+F\+\_\+\+Custom@{F\+F\+\_\+\+Custom}}\item[{\em 
+F\+F\+\_\+\+Custom\label{class_create_layer_model_a1f53f2059cfe80031779c9ec1341c44fa1d62b349e4aec75155b76fc894685931}
+}]\index{F\+F\+\_\+\+R\+S\+M97@{F\+F\+\_\+\+R\+S\+M97}!Create\+Layer\+Model@{Create\+Layer\+Model}}\index{Create\+Layer\+Model@{Create\+Layer\+Model}!F\+F\+\_\+\+R\+S\+M97@{F\+F\+\_\+\+R\+S\+M97}}\item[{\em 
+F\+F\+\_\+\+R\+S\+M97\label{class_create_layer_model_a1f53f2059cfe80031779c9ec1341c44fa4c06e7b825428ccdfc21686576dce6cc}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 13 do arquivo Create\+Layer\+Model.\+h.
+
+
+
+\subsection{Métodos}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!colon@{colon}}
+\index{colon@{colon}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{colon(bool a\+\_\+flag)}]{\setlength{\rightskip}{0pt plus 5cm}void Create\+Layer\+Model\+::colon (
+\begin{DoxyParamCaption}
+\item[{bool}]{a\+\_\+flag}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_acb3f2afb482c85dafca1194eb1d26642}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!comma@{comma}}
+\index{comma@{comma}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{comma(bool a\+\_\+flag)}]{\setlength{\rightskip}{0pt plus 5cm}void Create\+Layer\+Model\+::comma (
+\begin{DoxyParamCaption}
+\item[{bool}]{a\+\_\+flag}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_ab9445423a3225096cc950468cab8cfb3}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!fields@{fields}}
+\index{fields@{fields}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{fields()}]{\setlength{\rightskip}{0pt plus 5cm}Vector\+Of\+String Create\+Layer\+Model\+::fields (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_a5193f47379132a0c6d613d05e67eef59}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!fields@{fields}}
+\index{fields@{fields}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{fields(\+Vector\+Of\+String a\+\_\+fields)}]{\setlength{\rightskip}{0pt plus 5cm}void Create\+Layer\+Model\+::fields (
+\begin{DoxyParamCaption}
+\item[{Vector\+Of\+String}]{a\+\_\+fields}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_a0bc9dee0eec26677fd1f0867f16295b3}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!file\+Format@{file\+Format}}
+\index{file\+Format@{file\+Format}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{file\+Format()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf File\+Format} Create\+Layer\+Model\+::file\+Format (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_a14424642fb061b5cf40e35d2b734ef13}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!file\+Format@{file\+Format}}
+\index{file\+Format@{file\+Format}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{file\+Format(const File\+Format \&a\+\_\+file\+Format)}]{\setlength{\rightskip}{0pt plus 5cm}void Create\+Layer\+Model\+::file\+Format (
+\begin{DoxyParamCaption}
+\item[{const {\bf File\+Format} \&}]{a\+\_\+file\+Format}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_a6b8411f19d37ac5135325e6749faaa9e}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!filename@{filename}}
+\index{filename@{filename}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{filename()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Create\+Layer\+Model\+::filename (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_afc5ca0e291fbb8d203f9365eda87f573}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!filename@{filename}}
+\index{filename@{filename}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{filename(const std\+::string \&a\+\_\+filename)}]{\setlength{\rightskip}{0pt plus 5cm}void Create\+Layer\+Model\+::filename (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+\_\+filename}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_af1edcd06d5079a80f451cac5596b36fd}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!first\+Record\+Name\+Fields@{first\+Record\+Name\+Fields}}
+\index{first\+Record\+Name\+Fields@{first\+Record\+Name\+Fields}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{first\+Record\+Name\+Fields(bool a\+\_\+flag)}]{\setlength{\rightskip}{0pt plus 5cm}void Create\+Layer\+Model\+::first\+Record\+Name\+Fields (
+\begin{DoxyParamCaption}
+\item[{bool}]{a\+\_\+flag}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_a13a35e6ad4dc486ff3695938da5a6637}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!include\+All\+Fields@{include\+All\+Fields}}
+\index{include\+All\+Fields@{include\+All\+Fields}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{include\+All\+Fields(bool a\+\_\+flag)}]{\setlength{\rightskip}{0pt plus 5cm}void Create\+Layer\+Model\+::include\+All\+Fields (
+\begin{DoxyParamCaption}
+\item[{bool}]{a\+\_\+flag}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_ab68bb046a5076d68aaf0c01742ce491f}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!is\+Colon@{is\+Colon}}
+\index{is\+Colon@{is\+Colon}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{is\+Colon()}]{\setlength{\rightskip}{0pt plus 5cm}bool Create\+Layer\+Model\+::is\+Colon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_a3497fa6cbd0644c4082f9f270d2a8c91}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!is\+Comma@{is\+Comma}}
+\index{is\+Comma@{is\+Comma}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{is\+Comma()}]{\setlength{\rightskip}{0pt plus 5cm}bool Create\+Layer\+Model\+::is\+Comma (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_af46b77d911890c8645a8d202a3716538}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!is\+First\+Record\+Name\+Fields@{is\+First\+Record\+Name\+Fields}}
+\index{is\+First\+Record\+Name\+Fields@{is\+First\+Record\+Name\+Fields}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{is\+First\+Record\+Name\+Fields()}]{\setlength{\rightskip}{0pt plus 5cm}bool Create\+Layer\+Model\+::is\+First\+Record\+Name\+Fields (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_aecb09e1f0ca7aa5dc9da28c684e30f86}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!is\+Include\+All\+Fields@{is\+Include\+All\+Fields}}
+\index{is\+Include\+All\+Fields@{is\+Include\+All\+Fields}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{is\+Include\+All\+Fields()}]{\setlength{\rightskip}{0pt plus 5cm}bool Create\+Layer\+Model\+::is\+Include\+All\+Fields (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_ab13ffb7f0f6e037940e219341b8a3e0d}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!is\+Semicolon@{is\+Semicolon}}
+\index{is\+Semicolon@{is\+Semicolon}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{is\+Semicolon()}]{\setlength{\rightskip}{0pt plus 5cm}bool Create\+Layer\+Model\+::is\+Semicolon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_aeecb194e42c8b7b40179476c91e9ec59}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!is\+Space@{is\+Space}}
+\index{is\+Space@{is\+Space}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{is\+Space()}]{\setlength{\rightskip}{0pt plus 5cm}bool Create\+Layer\+Model\+::is\+Space (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_a59fd695e62591ad890e0d74f2b5dcf13}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!is\+Tab@{is\+Tab}}
+\index{is\+Tab@{is\+Tab}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{is\+Tab()}]{\setlength{\rightskip}{0pt plus 5cm}bool Create\+Layer\+Model\+::is\+Tab (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_aa88070bcac44f065c63974bf0703ca7d}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!latitude@{latitude}}
+\index{latitude@{latitude}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{latitude()}]{\setlength{\rightskip}{0pt plus 5cm}Vector\+Of\+String Create\+Layer\+Model\+::latitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_af827d1833777a946419879d23f0cb078}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!latitude@{latitude}}
+\index{latitude@{latitude}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{latitude(\+Vector\+Of\+String a\+\_\+latitude)}]{\setlength{\rightskip}{0pt plus 5cm}void Create\+Layer\+Model\+::latitude (
+\begin{DoxyParamCaption}
+\item[{Vector\+Of\+String}]{a\+\_\+latitude}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_a46c12fd5d858dc7606852108de1591de}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!longitude@{longitude}}
+\index{longitude@{longitude}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{longitude()}]{\setlength{\rightskip}{0pt plus 5cm}Vector\+Of\+String Create\+Layer\+Model\+::longitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_a233bc1e8f83630afa8980d41172c68eb}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!longitude@{longitude}}
+\index{longitude@{longitude}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{longitude(\+Vector\+Of\+String a\+\_\+longitude)}]{\setlength{\rightskip}{0pt plus 5cm}void Create\+Layer\+Model\+::longitude (
+\begin{DoxyParamCaption}
+\item[{Vector\+Of\+String}]{a\+\_\+longitude}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_aa5bd63a5bb9b5533f69fac2e156e761d}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!project\+Parameters@{project\+Parameters}}
+\index{project\+Parameters@{project\+Parameters}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{project\+Parameters() const }]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Create\+Layer\+Model\+::project\+Parameters (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_create_layer_model_a558a6b3cb9b4c0a089a9cd2f28eb6899}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!project\+Parameters@{project\+Parameters}}
+\index{project\+Parameters@{project\+Parameters}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{project\+Parameters(const std\+::string \&a\+\_\+parameters)}]{\setlength{\rightskip}{0pt plus 5cm}void Create\+Layer\+Model\+::project\+Parameters (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+\_\+parameters}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_af04a29b618c35a3573481d02e2fcaf61}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!selected\+Latitude@{selected\+Latitude}}
+\index{selected\+Latitude@{selected\+Latitude}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{selected\+Latitude()}]{\setlength{\rightskip}{0pt plus 5cm}int Create\+Layer\+Model\+::selected\+Latitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_a2f8ad7215449562a1ef3f2ae25bda5a8}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!selected\+Latitude@{selected\+Latitude}}
+\index{selected\+Latitude@{selected\+Latitude}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{selected\+Latitude(int a\+\_\+index)}]{\setlength{\rightskip}{0pt plus 5cm}void Create\+Layer\+Model\+::selected\+Latitude (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+index}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_af7af69b3a899f46c88cdc206e6d406de}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!selected\+Longitude@{selected\+Longitude}}
+\index{selected\+Longitude@{selected\+Longitude}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{selected\+Longitude()}]{\setlength{\rightskip}{0pt plus 5cm}int Create\+Layer\+Model\+::selected\+Longitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_a0b33383d2424c838c19eebe4036530e3}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!selected\+Longitude@{selected\+Longitude}}
+\index{selected\+Longitude@{selected\+Longitude}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{selected\+Longitude(int a\+\_\+index)}]{\setlength{\rightskip}{0pt plus 5cm}void Create\+Layer\+Model\+::selected\+Longitude (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+index}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_a65fa8021b45b37641769eb4232173a44}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!semicolon@{semicolon}}
+\index{semicolon@{semicolon}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{semicolon(bool a\+\_\+flag)}]{\setlength{\rightskip}{0pt plus 5cm}void Create\+Layer\+Model\+::semicolon (
+\begin{DoxyParamCaption}
+\item[{bool}]{a\+\_\+flag}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_aa5e71c701d8fa20d64ff0f55107501fa}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!skip\+Lines@{skip\+Lines}}
+\index{skip\+Lines@{skip\+Lines}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{skip\+Lines()}]{\setlength{\rightskip}{0pt plus 5cm}int Create\+Layer\+Model\+::skip\+Lines (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_a4a013d2665bdf615f4f6cf5192d2fa73}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!skip\+Lines@{skip\+Lines}}
+\index{skip\+Lines@{skip\+Lines}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{skip\+Lines(int a\+\_\+lines)}]{\setlength{\rightskip}{0pt plus 5cm}void Create\+Layer\+Model\+::skip\+Lines (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+lines}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_a5e1a49d50bbdb4fe63c5ca3ffcff388d}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!space@{space}}
+\index{space@{space}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{space(bool a\+\_\+flag)}]{\setlength{\rightskip}{0pt plus 5cm}void Create\+Layer\+Model\+::space (
+\begin{DoxyParamCaption}
+\item[{bool}]{a\+\_\+flag}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_a450e8916b33d70f6c6659f547d43524c}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!tab@{tab}}
+\index{tab@{tab}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{tab(bool a\+\_\+flag)}]{\setlength{\rightskip}{0pt plus 5cm}void Create\+Layer\+Model\+::tab (
+\begin{DoxyParamCaption}
+\item[{bool}]{a\+\_\+flag}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_a2e78910e25301b6341e149b062734c70}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!values@{values}}
+\index{values@{values}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{values(int a\+\_\+records\+Count=-\/1, Progress\+Callback a\+\_\+progress=nullptr)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix\+Of\+Values} Create\+Layer\+Model\+::values (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+records\+Count = {\ttfamily -\/1}, }
+\item[{{\bf Progress\+Callback}}]{a\+\_\+progress = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)}\label{class_create_layer_model_a5844a22f31cf9b782c497a0444f6d765}
+
+
+\subsection{Atributos}
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!m\+\_\+colon@{m\+\_\+colon}}
+\index{m\+\_\+colon@{m\+\_\+colon}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{m\+\_\+colon}]{\setlength{\rightskip}{0pt plus 5cm}bool Create\+Layer\+Model\+::m\+\_\+colon = false\hspace{0.3cm}{\ttfamily [protected]}}\label{class_create_layer_model_a993f313f951d19fa423ba7d21f237832}
+
+
+Definição na linha 58 do arquivo Create\+Layer\+Model.\+h.
+
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!m\+\_\+comma@{m\+\_\+comma}}
+\index{m\+\_\+comma@{m\+\_\+comma}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{m\+\_\+comma}]{\setlength{\rightskip}{0pt plus 5cm}bool Create\+Layer\+Model\+::m\+\_\+comma = true\hspace{0.3cm}{\ttfamily [protected]}}\label{class_create_layer_model_ad7f5074d9052346b4fc7f6fedb773255}
+
+
+Definição na linha 55 do arquivo Create\+Layer\+Model.\+h.
+
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!m\+\_\+fields@{m\+\_\+fields}}
+\index{m\+\_\+fields@{m\+\_\+fields}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{m\+\_\+fields}]{\setlength{\rightskip}{0pt plus 5cm}Vector\+Of\+String Create\+Layer\+Model\+::m\+\_\+fields\hspace{0.3cm}{\ttfamily [protected]}}\label{class_create_layer_model_a3c6c58dd716d30b5889ca58ea5b29990}
+
+
+Definição na linha 68 do arquivo Create\+Layer\+Model.\+h.
+
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!m\+\_\+file\+Format@{m\+\_\+file\+Format}}
+\index{m\+\_\+file\+Format@{m\+\_\+file\+Format}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{m\+\_\+file\+Format}]{\setlength{\rightskip}{0pt plus 5cm}{\bf File\+Format} Create\+Layer\+Model\+::m\+\_\+file\+Format = {\bf File\+Format\+::\+F\+F\+\_\+\+C\+SV}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_create_layer_model_a55c5d78766098f6fd659271f861f71bc}
+
+
+Definição na linha 54 do arquivo Create\+Layer\+Model.\+h.
+
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!m\+\_\+filename@{m\+\_\+filename}}
+\index{m\+\_\+filename@{m\+\_\+filename}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{m\+\_\+filename}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Create\+Layer\+Model\+::m\+\_\+filename = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_create_layer_model_a3b56f2a74a9710ec4e12acb038314d83}
+
+
+Definição na linha 53 do arquivo Create\+Layer\+Model.\+h.
+
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!m\+\_\+first\+Record@{m\+\_\+first\+Record}}
+\index{m\+\_\+first\+Record@{m\+\_\+first\+Record}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{m\+\_\+first\+Record}]{\setlength{\rightskip}{0pt plus 5cm}bool Create\+Layer\+Model\+::m\+\_\+first\+Record = false\hspace{0.3cm}{\ttfamily [protected]}}\label{class_create_layer_model_ad7c3d84b0dfe7cd6b2fe18bdb7d47ad2}
+
+
+Definição na linha 61 do arquivo Create\+Layer\+Model.\+h.
+
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!m\+\_\+include\+All\+Fields@{m\+\_\+include\+All\+Fields}}
+\index{m\+\_\+include\+All\+Fields@{m\+\_\+include\+All\+Fields}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{m\+\_\+include\+All\+Fields}]{\setlength{\rightskip}{0pt plus 5cm}bool Create\+Layer\+Model\+::m\+\_\+include\+All\+Fields = false\hspace{0.3cm}{\ttfamily [protected]}}\label{class_create_layer_model_a497563319572431f29fc4e2882044986}
+
+
+Definição na linha 62 do arquivo Create\+Layer\+Model.\+h.
+
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!m\+\_\+latitude@{m\+\_\+latitude}}
+\index{m\+\_\+latitude@{m\+\_\+latitude}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{m\+\_\+latitude}]{\setlength{\rightskip}{0pt plus 5cm}Vector\+Of\+String Create\+Layer\+Model\+::m\+\_\+latitude\hspace{0.3cm}{\ttfamily [protected]}}\label{class_create_layer_model_a0ced30e07e66592178c4bf22de6b1764}
+
+
+Definição na linha 65 do arquivo Create\+Layer\+Model.\+h.
+
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!m\+\_\+longitude@{m\+\_\+longitude}}
+\index{m\+\_\+longitude@{m\+\_\+longitude}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{m\+\_\+longitude}]{\setlength{\rightskip}{0pt plus 5cm}Vector\+Of\+String Create\+Layer\+Model\+::m\+\_\+longitude\hspace{0.3cm}{\ttfamily [protected]}}\label{class_create_layer_model_a16386ecbb7cd0567776a23b9242238f1}
+
+
+Definição na linha 63 do arquivo Create\+Layer\+Model.\+h.
+
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!m\+\_\+projection\+Parameters@{m\+\_\+projection\+Parameters}}
+\index{m\+\_\+projection\+Parameters@{m\+\_\+projection\+Parameters}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{m\+\_\+projection\+Parameters}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Create\+Layer\+Model\+::m\+\_\+projection\+Parameters = \char`\"{}\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_create_layer_model_ac4882ea0712229f67710641058b257af}
+
+
+Definição na linha 67 do arquivo Create\+Layer\+Model.\+h.
+
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!m\+\_\+selected\+Latitude@{m\+\_\+selected\+Latitude}}
+\index{m\+\_\+selected\+Latitude@{m\+\_\+selected\+Latitude}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{m\+\_\+selected\+Latitude}]{\setlength{\rightskip}{0pt plus 5cm}int Create\+Layer\+Model\+::m\+\_\+selected\+Latitude\hspace{0.3cm}{\ttfamily [protected]}}\label{class_create_layer_model_af997d3ccc2feb55902bc57bd012023ac}
+
+
+Definição na linha 66 do arquivo Create\+Layer\+Model.\+h.
+
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!m\+\_\+selected\+Longitude@{m\+\_\+selected\+Longitude}}
+\index{m\+\_\+selected\+Longitude@{m\+\_\+selected\+Longitude}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{m\+\_\+selected\+Longitude}]{\setlength{\rightskip}{0pt plus 5cm}int Create\+Layer\+Model\+::m\+\_\+selected\+Longitude\hspace{0.3cm}{\ttfamily [protected]}}\label{class_create_layer_model_acc88a360467ff1c75d269d9cc0bc9116}
+
+
+Definição na linha 64 do arquivo Create\+Layer\+Model.\+h.
+
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!m\+\_\+semicolon@{m\+\_\+semicolon}}
+\index{m\+\_\+semicolon@{m\+\_\+semicolon}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{m\+\_\+semicolon}]{\setlength{\rightskip}{0pt plus 5cm}bool Create\+Layer\+Model\+::m\+\_\+semicolon = false\hspace{0.3cm}{\ttfamily [protected]}}\label{class_create_layer_model_a2f7ef902ddf6a577ad524a278dcefb70}
+
+
+Definição na linha 59 do arquivo Create\+Layer\+Model.\+h.
+
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!m\+\_\+skip\+Lines@{m\+\_\+skip\+Lines}}
+\index{m\+\_\+skip\+Lines@{m\+\_\+skip\+Lines}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{m\+\_\+skip\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}int Create\+Layer\+Model\+::m\+\_\+skip\+Lines = 0\hspace{0.3cm}{\ttfamily [protected]}}\label{class_create_layer_model_a58368ce0e8aa6dcc07066da5d9f14280}
+
+
+Definição na linha 60 do arquivo Create\+Layer\+Model.\+h.
+
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!m\+\_\+space@{m\+\_\+space}}
+\index{m\+\_\+space@{m\+\_\+space}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{m\+\_\+space}]{\setlength{\rightskip}{0pt plus 5cm}bool Create\+Layer\+Model\+::m\+\_\+space = false\hspace{0.3cm}{\ttfamily [protected]}}\label{class_create_layer_model_a5df1995254d8dee6a71af3f740512a4a}
+
+
+Definição na linha 57 do arquivo Create\+Layer\+Model.\+h.
+
+\index{Create\+Layer\+Model@{Create\+Layer\+Model}!m\+\_\+tab@{m\+\_\+tab}}
+\index{m\+\_\+tab@{m\+\_\+tab}!Create\+Layer\+Model@{Create\+Layer\+Model}}
+\subsubsection[{m\+\_\+tab}]{\setlength{\rightskip}{0pt plus 5cm}bool Create\+Layer\+Model\+::m\+\_\+tab = false\hspace{0.3cm}{\ttfamily [protected]}}\label{class_create_layer_model_a20c69e497cde921350738937d7066ec3}
+
+
+Definição na linha 56 do arquivo Create\+Layer\+Model.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Create\+Layer\+Model.\+h}\end{DoxyCompactItemize}

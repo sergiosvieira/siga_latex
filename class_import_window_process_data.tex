@@ -1,0 +1,298 @@
+\section{Referência da Classe Import\+Window\+Process\+Data}
+\label{class_import_window_process_data}\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+
+
+{\ttfamily \#include $<$import-\/window-\/process-\/data.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Import\+Window\+Process\+Data} (wx\+Dialog $\ast$a\+\_\+parent, {\bf Time\+Serie\+Tree} $\ast$a\+\_\+time\+Serie\+Tree)
+\item 
+{\bf $\sim$\+Import\+Window\+Process\+Data} ()
+\item 
+void {\bf fill\+Grid\+With\+Values} (unsigned int a\+\_\+rows, unsigned int a\+\_\+cols, std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \&a\+\_\+values, char $\ast$a\+\_\+error, {\bf Progress\+Callback} a\+\_\+callback)
+\item 
+void {\bf select\+Period\+Type} ({\bf Time\+Serie\+Tree} \&a\+\_\+time\+Serie\+Tree)
+\item 
+void {\bf show} (wx\+Size \&a\+\_\+size)
+\item 
+void {\bf show} ()
+\item 
+void {\bf update\+Columns\+Labels} (std\+::vector$<$ std\+::string $>$ a\+\_\+labels)
+\item 
+wx\+Grid \& {\bf grid} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Estáticos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ {\bf k\+Class\+Name}
+\begin{DoxyCompactList}\small\item\em Object\textquotesingle{}s names. \end{DoxyCompactList}\item 
+static const char $\ast$ {\bf k\+Processed\+Data\+Grid}
+\item 
+static const char $\ast$ {\bf k\+Export\+Button}
+\item 
+static const char $\ast$ {\bf k\+Output\+Format}
+\item 
+static const char $\ast$ {\bf k\+Output\+Date\+Format}
+\item 
+static const char $\ast$ {\bf k\+Separator}
+\item 
+static const char $\ast$ {\bf k\+Output\+Type}
+\item 
+static const char $\ast$ {\bf k\+Period\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Time\+Serie\+Tree} $\ast$ {\bf m\+\_\+time\+Serie}
+\item 
+wx\+Grid $\ast$ {\bf m\+\_\+processed\+Data\+Grid}
+\item 
+wx\+Button $\ast$ {\bf m\+\_\+export\+Button}
+\item 
+wx\+Dialog $\ast$ {\bf m\+\_\+parent}
+\item 
+wx\+Dialog {\bf m\+\_\+dialog}
+\item 
+wx\+Radio\+Box $\ast$ {\bf m\+\_\+process\+Period\+Type}
+\item 
+wx\+Choice $\ast$ {\bf m\+\_\+process\+Output\+Format}
+\item 
+wx\+Choice $\ast$ {\bf m\+\_\+process\+Output\+Date\+Format}
+\item 
+wx\+Choice $\ast$ {\bf m\+\_\+process\+Separator}
+\item 
+wx\+Choice $\ast$ {\bf m\+\_\+process\+Output\+Type}
+\item 
+{\bf Progress\+Callback} {\bf m\+\_\+progress}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 21 do arquivo import-\/window-\/process-\/data.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{Import\+Window\+Process\+Data(wx\+Dialog $\ast$a\+\_\+parent, Time\+Serie\+Tree $\ast$a\+\_\+time\+Serie\+Tree)}]{\setlength{\rightskip}{0pt plus 5cm}Import\+Window\+Process\+Data\+::\+Import\+Window\+Process\+Data (
+\begin{DoxyParamCaption}
+\item[{wx\+Dialog $\ast$}]{a\+\_\+parent, }
+\item[{{\bf Time\+Serie\+Tree} $\ast$}]{a\+\_\+time\+Serie\+Tree}
+\end{DoxyParamCaption}
+)}\label{class_import_window_process_data_a503301d254986ec0570d01a96b4a1a52}
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!````~Import\+Window\+Process\+Data@{$\sim$\+Import\+Window\+Process\+Data}}
+\index{````~Import\+Window\+Process\+Data@{$\sim$\+Import\+Window\+Process\+Data}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{$\sim$\+Import\+Window\+Process\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}Import\+Window\+Process\+Data\+::$\sim$\+Import\+Window\+Process\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_import_window_process_data_a6c152ba21ea7cdbcebadb1a2f69cfc9b}
+
+
+\subsection{Métodos}
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!fill\+Grid\+With\+Values@{fill\+Grid\+With\+Values}}
+\index{fill\+Grid\+With\+Values@{fill\+Grid\+With\+Values}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{fill\+Grid\+With\+Values(unsigned int a\+\_\+rows, unsigned int a\+\_\+cols, std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \&a\+\_\+values, char $\ast$a\+\_\+error, Progress\+Callback a\+\_\+callback)}]{\setlength{\rightskip}{0pt plus 5cm}void Import\+Window\+Process\+Data\+::fill\+Grid\+With\+Values (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{a\+\_\+rows, }
+\item[{unsigned int}]{a\+\_\+cols, }
+\item[{std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \&}]{a\+\_\+values, }
+\item[{char $\ast$}]{a\+\_\+error, }
+\item[{{\bf Progress\+Callback}}]{a\+\_\+callback}
+\end{DoxyParamCaption}
+)}\label{class_import_window_process_data_aba83bd8568e71155b547938a229a3ca0}
+
+\begin{DoxyParams}{Parâmetros}
+{\em std\+::vector$<$std\+::string$>$\&\&} & \\
+\hline
+\end{DoxyParams}
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!grid@{grid}}
+\index{grid@{grid}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{grid()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Grid\& Import\+Window\+Process\+Data\+::grid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_import_window_process_data_a52c7ee4fbbf3063ac0c12654fff3e384}
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!select\+Period\+Type@{select\+Period\+Type}}
+\index{select\+Period\+Type@{select\+Period\+Type}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{select\+Period\+Type(\+Time\+Serie\+Tree \&a\+\_\+time\+Serie\+Tree)}]{\setlength{\rightskip}{0pt plus 5cm}void Import\+Window\+Process\+Data\+::select\+Period\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Time\+Serie\+Tree} \&}]{a\+\_\+time\+Serie\+Tree}
+\end{DoxyParamCaption}
+)}\label{class_import_window_process_data_a1a4391e3e6b8d9563c308bc94c1c16f8}
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!show@{show}}
+\index{show@{show}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{show(wx\+Size \&a\+\_\+size)}]{\setlength{\rightskip}{0pt plus 5cm}void Import\+Window\+Process\+Data\+::show (
+\begin{DoxyParamCaption}
+\item[{wx\+Size \&}]{a\+\_\+size}
+\end{DoxyParamCaption}
+)}\label{class_import_window_process_data_a2f00ec87b0a8f36c1f4cb57ebdc9fac6}
+
+\begin{DoxyParams}{Parâmetros}
+{\em wx\+Size\&} & \\
+\hline
+\end{DoxyParams}
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!show@{show}}
+\index{show@{show}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{show()}]{\setlength{\rightskip}{0pt plus 5cm}void Import\+Window\+Process\+Data\+::show (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_import_window_process_data_a7218e69432d2bdf740c684abe68b2bcc}
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!update\+Columns\+Labels@{update\+Columns\+Labels}}
+\index{update\+Columns\+Labels@{update\+Columns\+Labels}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{update\+Columns\+Labels(std\+::vector$<$ std\+::string $>$ a\+\_\+labels)}]{\setlength{\rightskip}{0pt plus 5cm}void Import\+Window\+Process\+Data\+::update\+Columns\+Labels (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$}]{a\+\_\+labels}
+\end{DoxyParamCaption}
+)}\label{class_import_window_process_data_af662b46e1ef900d3de9ba7f6f001880b}
+
+
+\subsection{Atributos}
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!k\+Class\+Name@{k\+Class\+Name}}
+\index{k\+Class\+Name@{k\+Class\+Name}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{k\+Class\+Name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Import\+Window\+Process\+Data\+::k\+Class\+Name\hspace{0.3cm}{\ttfamily [static]}}\label{class_import_window_process_data_ae75a920fbd1245faa97dc53fb15cc690}
+
+
+Object\textquotesingle{}s names. 
+
+
+
+Definição na linha 28 do arquivo import-\/window-\/process-\/data.\+h.
+
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!k\+Export\+Button@{k\+Export\+Button}}
+\index{k\+Export\+Button@{k\+Export\+Button}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{k\+Export\+Button}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Import\+Window\+Process\+Data\+::k\+Export\+Button\hspace{0.3cm}{\ttfamily [static]}}\label{class_import_window_process_data_aefeb165437f5de4210da320f533fbd41}
+
+
+Definição na linha 30 do arquivo import-\/window-\/process-\/data.\+h.
+
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!k\+Output\+Date\+Format@{k\+Output\+Date\+Format}}
+\index{k\+Output\+Date\+Format@{k\+Output\+Date\+Format}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{k\+Output\+Date\+Format}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Import\+Window\+Process\+Data\+::k\+Output\+Date\+Format\hspace{0.3cm}{\ttfamily [static]}}\label{class_import_window_process_data_a88ad24f1d76d89d36e965974b5cb6c67}
+
+
+Definição na linha 32 do arquivo import-\/window-\/process-\/data.\+h.
+
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!k\+Output\+Format@{k\+Output\+Format}}
+\index{k\+Output\+Format@{k\+Output\+Format}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{k\+Output\+Format}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Import\+Window\+Process\+Data\+::k\+Output\+Format\hspace{0.3cm}{\ttfamily [static]}}\label{class_import_window_process_data_a699ebaf4302427932a1eefcaf99ab3a1}
+
+
+Definição na linha 31 do arquivo import-\/window-\/process-\/data.\+h.
+
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!k\+Output\+Type@{k\+Output\+Type}}
+\index{k\+Output\+Type@{k\+Output\+Type}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{k\+Output\+Type}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Import\+Window\+Process\+Data\+::k\+Output\+Type\hspace{0.3cm}{\ttfamily [static]}}\label{class_import_window_process_data_a939fe2f1a8ebddde9bbec1f8e5c09c36}
+
+
+Definição na linha 34 do arquivo import-\/window-\/process-\/data.\+h.
+
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!k\+Period\+Type@{k\+Period\+Type}}
+\index{k\+Period\+Type@{k\+Period\+Type}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{k\+Period\+Type}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Import\+Window\+Process\+Data\+::k\+Period\+Type\hspace{0.3cm}{\ttfamily [static]}}\label{class_import_window_process_data_ae83473311ec4eb3504b6bd660f385a5c}
+
+
+Definição na linha 35 do arquivo import-\/window-\/process-\/data.\+h.
+
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!k\+Processed\+Data\+Grid@{k\+Processed\+Data\+Grid}}
+\index{k\+Processed\+Data\+Grid@{k\+Processed\+Data\+Grid}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{k\+Processed\+Data\+Grid}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Import\+Window\+Process\+Data\+::k\+Processed\+Data\+Grid\hspace{0.3cm}{\ttfamily [static]}}\label{class_import_window_process_data_a01dc66e3c596e2577baaeb6465a265bb}
+
+
+Definição na linha 29 do arquivo import-\/window-\/process-\/data.\+h.
+
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!k\+Separator@{k\+Separator}}
+\index{k\+Separator@{k\+Separator}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{k\+Separator}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Import\+Window\+Process\+Data\+::k\+Separator\hspace{0.3cm}{\ttfamily [static]}}\label{class_import_window_process_data_a2411df0ebb5380917dc1c0dc81ec2a7c}
+
+
+Definição na linha 33 do arquivo import-\/window-\/process-\/data.\+h.
+
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!m\+\_\+dialog@{m\+\_\+dialog}}
+\index{m\+\_\+dialog@{m\+\_\+dialog}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{m\+\_\+dialog}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Dialog Import\+Window\+Process\+Data\+::m\+\_\+dialog\hspace{0.3cm}{\ttfamily [protected]}}\label{class_import_window_process_data_ae3dcec987287c58b8099e7edda9fb685}
+
+
+Definição na linha 57 do arquivo import-\/window-\/process-\/data.\+h.
+
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!m\+\_\+export\+Button@{m\+\_\+export\+Button}}
+\index{m\+\_\+export\+Button@{m\+\_\+export\+Button}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{m\+\_\+export\+Button}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Import\+Window\+Process\+Data\+::m\+\_\+export\+Button\hspace{0.3cm}{\ttfamily [protected]}}\label{class_import_window_process_data_a0b88b36f521c6735a7e869d6584014f5}
+
+
+Definição na linha 55 do arquivo import-\/window-\/process-\/data.\+h.
+
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!m\+\_\+parent@{m\+\_\+parent}}
+\index{m\+\_\+parent@{m\+\_\+parent}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{m\+\_\+parent}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Dialog$\ast$ Import\+Window\+Process\+Data\+::m\+\_\+parent\hspace{0.3cm}{\ttfamily [protected]}}\label{class_import_window_process_data_a2ba9339f3f92a3b66165a63090f656d4}
+
+
+Definição na linha 56 do arquivo import-\/window-\/process-\/data.\+h.
+
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!m\+\_\+processed\+Data\+Grid@{m\+\_\+processed\+Data\+Grid}}
+\index{m\+\_\+processed\+Data\+Grid@{m\+\_\+processed\+Data\+Grid}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{m\+\_\+processed\+Data\+Grid}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Grid$\ast$ Import\+Window\+Process\+Data\+::m\+\_\+processed\+Data\+Grid\hspace{0.3cm}{\ttfamily [protected]}}\label{class_import_window_process_data_ac088a4073232ad2574418eda77b5f555}
+
+
+Definição na linha 54 do arquivo import-\/window-\/process-\/data.\+h.
+
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!m\+\_\+process\+Output\+Date\+Format@{m\+\_\+process\+Output\+Date\+Format}}
+\index{m\+\_\+process\+Output\+Date\+Format@{m\+\_\+process\+Output\+Date\+Format}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{m\+\_\+process\+Output\+Date\+Format}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Import\+Window\+Process\+Data\+::m\+\_\+process\+Output\+Date\+Format\hspace{0.3cm}{\ttfamily [protected]}}\label{class_import_window_process_data_abefc5b4c9cb93b4815fe8e29f626ce8b}
+
+
+Definição na linha 60 do arquivo import-\/window-\/process-\/data.\+h.
+
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!m\+\_\+process\+Output\+Format@{m\+\_\+process\+Output\+Format}}
+\index{m\+\_\+process\+Output\+Format@{m\+\_\+process\+Output\+Format}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{m\+\_\+process\+Output\+Format}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Import\+Window\+Process\+Data\+::m\+\_\+process\+Output\+Format\hspace{0.3cm}{\ttfamily [protected]}}\label{class_import_window_process_data_a0c7f6cff98fe6c0962a2a7f3be509cd3}
+
+
+Definição na linha 59 do arquivo import-\/window-\/process-\/data.\+h.
+
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!m\+\_\+process\+Output\+Type@{m\+\_\+process\+Output\+Type}}
+\index{m\+\_\+process\+Output\+Type@{m\+\_\+process\+Output\+Type}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{m\+\_\+process\+Output\+Type}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Import\+Window\+Process\+Data\+::m\+\_\+process\+Output\+Type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_import_window_process_data_a3cfc0e9c4c24ba3cd02962ff388b1eb8}
+
+
+Definição na linha 62 do arquivo import-\/window-\/process-\/data.\+h.
+
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!m\+\_\+process\+Period\+Type@{m\+\_\+process\+Period\+Type}}
+\index{m\+\_\+process\+Period\+Type@{m\+\_\+process\+Period\+Type}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{m\+\_\+process\+Period\+Type}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box$\ast$ Import\+Window\+Process\+Data\+::m\+\_\+process\+Period\+Type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_import_window_process_data_a8d45bc4e98c1c79410f451c9dc1cc0e6}
+
+
+Definição na linha 58 do arquivo import-\/window-\/process-\/data.\+h.
+
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!m\+\_\+process\+Separator@{m\+\_\+process\+Separator}}
+\index{m\+\_\+process\+Separator@{m\+\_\+process\+Separator}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{m\+\_\+process\+Separator}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Import\+Window\+Process\+Data\+::m\+\_\+process\+Separator\hspace{0.3cm}{\ttfamily [protected]}}\label{class_import_window_process_data_a0325bd257eeb4652e8c1c2abf985888e}
+
+
+Definição na linha 61 do arquivo import-\/window-\/process-\/data.\+h.
+
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!m\+\_\+progress@{m\+\_\+progress}}
+\index{m\+\_\+progress@{m\+\_\+progress}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{m\+\_\+progress}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Progress\+Callback} Import\+Window\+Process\+Data\+::m\+\_\+progress\hspace{0.3cm}{\ttfamily [protected]}}\label{class_import_window_process_data_a65360d8e68e2b44702210ccf8fa0a0c4}
+
+
+Definição na linha 63 do arquivo import-\/window-\/process-\/data.\+h.
+
+\index{Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}!m\+\_\+time\+Serie@{m\+\_\+time\+Serie}}
+\index{m\+\_\+time\+Serie@{m\+\_\+time\+Serie}!Import\+Window\+Process\+Data@{Import\+Window\+Process\+Data}}
+\subsubsection[{m\+\_\+time\+Serie}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Time\+Serie\+Tree}$\ast$ Import\+Window\+Process\+Data\+::m\+\_\+time\+Serie\hspace{0.3cm}{\ttfamily [protected]}}\label{class_import_window_process_data_a5ac35e04986d90d6969b834fbc53c53a}
+
+
+Definição na linha 53 do arquivo import-\/window-\/process-\/data.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf import-\/window-\/process-\/data.\+h}\end{DoxyCompactItemize}

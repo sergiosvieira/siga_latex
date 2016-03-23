@@ -1,0 +1,211 @@
+\section{Referência da Classe Profiles\+Model}
+\label{class_profiles_model}\index{Profiles\+Model@{Profiles\+Model}}
+
+
+{\ttfamily \#include $<$profiles-\/model.\+h$>$}
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Error\+Code} \{ {\bf N\+O\+NE}, 
+{\bf L\+O\+A\+D\+\_\+\+E\+R\+R\+OR}
+ \}
+\item 
+typedef std\+::vector$<$ Json\+::\+Value $>$\+::{\bf const\+\_\+iterator} {\bf const\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Profiles\+Model} ()
+\item 
+{\bf $\sim$\+Profiles\+Model} ()
+\item 
+void {\bf append\+Model} (const std\+::string \&a\+\_\+filename, {\bf Error\+Code} $\ast$a\+\_\+error=nullptr)
+\item 
+{\bf const\+\_\+iterator} {\bf begin} ()
+\item 
+{\bf const\+\_\+iterator} {\bf end} ()
+\item 
+Json\+::\+Value {\bf input\+Model\+At} (int a\+\_\+index)
+\item 
+Json\+::\+Value {\bf output\+Model\+At} (int a\+\_\+input\+Index, int a\+\_\+output\+Index)
+\item 
+Json\+::\+Value {\bf properties\+At} (int a\+\_\+input\+Index)
+\item 
+Json\+::\+Value {\bf binary\+At} (int a\+\_\+input\+Index)
+\item 
+Json\+::\+Value {\bf period\+Type\+At} (int a\+\_\+input\+Index)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Estáticos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ {\bf k\+Root}
+\item 
+static const char $\ast$ {\bf k\+Properties}
+\item 
+static const char $\ast$ {\bf k\+Binary\+Format}
+\item 
+static const char $\ast$ {\bf k\+Period\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ Json\+::\+Value $>$ {\bf m\+\_\+profiles}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+S\+TL Extends C++ 
+
+Definição na linha 13 do arquivo profiles-\/model.\+h.
+
+
+
+\subsection{Definições de Tipos}
+\index{Profiles\+Model@{Profiles\+Model}!const\+\_\+iterator@{const\+\_\+iterator}}
+\index{const\+\_\+iterator@{const\+\_\+iterator}!Profiles\+Model@{Profiles\+Model}}
+\subsubsection[{const\+\_\+iterator}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\+::vector$<$Json\+::\+Value$>$\+::{\bf const\+\_\+iterator} {\bf Profiles\+Model\+::const\+\_\+iterator}}\label{class_profiles_model_ad4a9f35b1b997b3cef78cc000ae21941}
+
+
+Definição na linha 20 do arquivo profiles-\/model.\+h.
+
+
+
+\subsection{Enumerações}
+\index{Profiles\+Model@{Profiles\+Model}!Error\+Code@{Error\+Code}}
+\index{Error\+Code@{Error\+Code}!Profiles\+Model@{Profiles\+Model}}
+\subsubsection[{Error\+Code}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Profiles\+Model\+::\+Error\+Code}}\label{class_profiles_model_ad14f3d48eebd9e0ff65b6b9f4c53d1c4}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{N\+O\+NE@{N\+O\+NE}!Profiles\+Model@{Profiles\+Model}}\index{Profiles\+Model@{Profiles\+Model}!N\+O\+NE@{N\+O\+NE}}\item[{\em 
+N\+O\+NE\label{class_profiles_model_ad14f3d48eebd9e0ff65b6b9f4c53d1c4aeb05919b67176c877bf7fcdb519f31f5}
+}]\index{L\+O\+A\+D\+\_\+\+E\+R\+R\+OR@{L\+O\+A\+D\+\_\+\+E\+R\+R\+OR}!Profiles\+Model@{Profiles\+Model}}\index{Profiles\+Model@{Profiles\+Model}!L\+O\+A\+D\+\_\+\+E\+R\+R\+OR@{L\+O\+A\+D\+\_\+\+E\+R\+R\+OR}}\item[{\em 
+L\+O\+A\+D\+\_\+\+E\+R\+R\+OR\label{class_profiles_model_ad14f3d48eebd9e0ff65b6b9f4c53d1c4a5039fd039fdeaee87113312b7d9f99f2}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 21 do arquivo profiles-\/model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Profiles\+Model@{Profiles\+Model}!Profiles\+Model@{Profiles\+Model}}
+\index{Profiles\+Model@{Profiles\+Model}!Profiles\+Model@{Profiles\+Model}}
+\subsubsection[{Profiles\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Profiles\+Model\+::\+Profiles\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_profiles_model_aef0dd981afada62c8b5750a6991a4209}
+\index{Profiles\+Model@{Profiles\+Model}!````~Profiles\+Model@{$\sim$\+Profiles\+Model}}
+\index{````~Profiles\+Model@{$\sim$\+Profiles\+Model}!Profiles\+Model@{Profiles\+Model}}
+\subsubsection[{$\sim$\+Profiles\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Profiles\+Model\+::$\sim$\+Profiles\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_profiles_model_a57f6e942d93bad716482e6788493d4b6}
+
+
+\subsection{Métodos}
+\index{Profiles\+Model@{Profiles\+Model}!append\+Model@{append\+Model}}
+\index{append\+Model@{append\+Model}!Profiles\+Model@{Profiles\+Model}}
+\subsubsection[{append\+Model(const std\+::string \&a\+\_\+filename, Error\+Code $\ast$a\+\_\+error=nullptr)}]{\setlength{\rightskip}{0pt plus 5cm}void Profiles\+Model\+::append\+Model (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+\_\+filename, }
+\item[{{\bf Error\+Code} $\ast$}]{a\+\_\+error = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)}\label{class_profiles_model_a3878e7642065e9e31ccc7547a9f3e3ec}
+\index{Profiles\+Model@{Profiles\+Model}!begin@{begin}}
+\index{begin@{begin}!Profiles\+Model@{Profiles\+Model}}
+\subsubsection[{begin()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const\+\_\+iterator} Profiles\+Model\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_profiles_model_adb62f188080fc58618302f0beb32711e}
+\index{Profiles\+Model@{Profiles\+Model}!binary\+At@{binary\+At}}
+\index{binary\+At@{binary\+At}!Profiles\+Model@{Profiles\+Model}}
+\subsubsection[{binary\+At(int a\+\_\+input\+Index)}]{\setlength{\rightskip}{0pt plus 5cm}Json\+::\+Value Profiles\+Model\+::binary\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+input\+Index}
+\end{DoxyParamCaption}
+)}\label{class_profiles_model_af970f1c08a25599f0748f935e35fe57a}
+\index{Profiles\+Model@{Profiles\+Model}!end@{end}}
+\index{end@{end}!Profiles\+Model@{Profiles\+Model}}
+\subsubsection[{end()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf const\+\_\+iterator} Profiles\+Model\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_profiles_model_ae6f9116558017d97f720ed796d951c09}
+\index{Profiles\+Model@{Profiles\+Model}!input\+Model\+At@{input\+Model\+At}}
+\index{input\+Model\+At@{input\+Model\+At}!Profiles\+Model@{Profiles\+Model}}
+\subsubsection[{input\+Model\+At(int a\+\_\+index)}]{\setlength{\rightskip}{0pt plus 5cm}Json\+::\+Value Profiles\+Model\+::input\+Model\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+index}
+\end{DoxyParamCaption}
+)}\label{class_profiles_model_a2c59d71e9854ca7f55c5fb5dfd4a717a}
+\index{Profiles\+Model@{Profiles\+Model}!output\+Model\+At@{output\+Model\+At}}
+\index{output\+Model\+At@{output\+Model\+At}!Profiles\+Model@{Profiles\+Model}}
+\subsubsection[{output\+Model\+At(int a\+\_\+input\+Index, int a\+\_\+output\+Index)}]{\setlength{\rightskip}{0pt plus 5cm}Json\+::\+Value Profiles\+Model\+::output\+Model\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+input\+Index, }
+\item[{int}]{a\+\_\+output\+Index}
+\end{DoxyParamCaption}
+)}\label{class_profiles_model_acf0188505c7e928730f6605a9eb7dd8c}
+\index{Profiles\+Model@{Profiles\+Model}!period\+Type\+At@{period\+Type\+At}}
+\index{period\+Type\+At@{period\+Type\+At}!Profiles\+Model@{Profiles\+Model}}
+\subsubsection[{period\+Type\+At(int a\+\_\+input\+Index)}]{\setlength{\rightskip}{0pt plus 5cm}Json\+::\+Value Profiles\+Model\+::period\+Type\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+input\+Index}
+\end{DoxyParamCaption}
+)}\label{class_profiles_model_ad18a5a4295a6d555e7e7b36f89e872c1}
+\index{Profiles\+Model@{Profiles\+Model}!properties\+At@{properties\+At}}
+\index{properties\+At@{properties\+At}!Profiles\+Model@{Profiles\+Model}}
+\subsubsection[{properties\+At(int a\+\_\+input\+Index)}]{\setlength{\rightskip}{0pt plus 5cm}Json\+::\+Value Profiles\+Model\+::properties\+At (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+input\+Index}
+\end{DoxyParamCaption}
+)}\label{class_profiles_model_ac7a5469f997c774827fe53fe106011c0}
+
+
+\subsection{Atributos}
+\index{Profiles\+Model@{Profiles\+Model}!k\+Binary\+Format@{k\+Binary\+Format}}
+\index{k\+Binary\+Format@{k\+Binary\+Format}!Profiles\+Model@{Profiles\+Model}}
+\subsubsection[{k\+Binary\+Format}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Profiles\+Model\+::k\+Binary\+Format\hspace{0.3cm}{\ttfamily [static]}}\label{class_profiles_model_a3a78edee052fdbf9e4ffb894c2feb42f}
+
+
+Definição na linha 18 do arquivo profiles-\/model.\+h.
+
+\index{Profiles\+Model@{Profiles\+Model}!k\+Period\+Type@{k\+Period\+Type}}
+\index{k\+Period\+Type@{k\+Period\+Type}!Profiles\+Model@{Profiles\+Model}}
+\subsubsection[{k\+Period\+Type}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Profiles\+Model\+::k\+Period\+Type\hspace{0.3cm}{\ttfamily [static]}}\label{class_profiles_model_a388efd77aaefa0ce4d687b3c79afbae6}
+
+
+Definição na linha 19 do arquivo profiles-\/model.\+h.
+
+\index{Profiles\+Model@{Profiles\+Model}!k\+Properties@{k\+Properties}}
+\index{k\+Properties@{k\+Properties}!Profiles\+Model@{Profiles\+Model}}
+\subsubsection[{k\+Properties}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Profiles\+Model\+::k\+Properties\hspace{0.3cm}{\ttfamily [static]}}\label{class_profiles_model_af38e5d375a7f0560d867e13a7c385b92}
+
+
+Definição na linha 17 do arquivo profiles-\/model.\+h.
+
+\index{Profiles\+Model@{Profiles\+Model}!k\+Root@{k\+Root}}
+\index{k\+Root@{k\+Root}!Profiles\+Model@{Profiles\+Model}}
+\subsubsection[{k\+Root}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Profiles\+Model\+::k\+Root\hspace{0.3cm}{\ttfamily [static]}}\label{class_profiles_model_a167d7ea088630f6e2f30f0ecb3aa61c3}
+
+
+Definição na linha 16 do arquivo profiles-\/model.\+h.
+
+\index{Profiles\+Model@{Profiles\+Model}!m\+\_\+profiles@{m\+\_\+profiles}}
+\index{m\+\_\+profiles@{m\+\_\+profiles}!Profiles\+Model@{Profiles\+Model}}
+\subsubsection[{m\+\_\+profiles}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$Json\+::\+Value$>$ Profiles\+Model\+::m\+\_\+profiles\hspace{0.3cm}{\ttfamily [protected]}}\label{class_profiles_model_a05540eae33d78259b6126d2d5997524e}
+
+
+Definição na linha 38 do arquivo profiles-\/model.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf profiles-\/model.\+h}\end{DoxyCompactItemize}

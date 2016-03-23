@@ -1,0 +1,747 @@
+\section{Refer√™ncia da Classe Res\+Op\+Interface}
+\label{class_res_op_interface}\index{Res\+Op\+Interface@{Res\+Op\+Interface}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Interface.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface} e {\bf Component\+Interface}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Interface} ({\bf S\+I\+GA} $\ast${\bf main}, wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent})
+\item 
+{\bf $\sim$\+Res\+Op\+Interface} ()
+\item 
+void {\bf on\+Change\+R\+B\+Oper} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Choice\+Model} (wx\+Choicebook\+Event \&event)
+\item 
+void {\bf on\+Choice\+Tecnique} (wx\+Choicebook\+Event \&event)
+\item 
+void {\bf on\+Set\+Start\+Interval} (wx\+Date\+Event \&event)
+\item 
+void {\bf on\+Set\+End\+Interval} (wx\+Date\+Event \&event)
+\item 
+void {\bf set\+Info} ()
+\item 
+void {\bf show\+Res} (bool change=false)
+\item 
+{\bf D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE} ()
+\item 
+{\bf Res\+Op\+Interface} ({\bf S\+I\+GA} $\ast${\bf main}, wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent})
+\item 
+{\bf $\sim$\+Res\+Op\+Interface} ()
+\item 
+{\bf Res\+Op\+Scenario\+Page} $\ast$ {\bf add\+Scenario\+Page} (const wx\+String \&name, int event\+Id, bool b\+Select=true, bool batch=false)
+\item 
+void {\bf add\+Scenario\+Page} ({\bf Res\+Op\+Scenario} $\ast$a\+\_\+scenario, unsigned int a\+\_\+index)
+\item 
+void {\bf remove\+All\+Pages} ()
+\item 
+void {\bf remove\+Selected\+Scenario} (size\+\_\+t page)
+\item 
+void {\bf on\+Change\+Selected\+Scenario} (wx\+Choicebook\+Event \&event)
+\item 
+void {\bf create\+Results} (int id, {\bf Res\+Op\+Model\+Type} type)
+\item 
+void {\bf adjust\+Interval\+Range} (const {\bf Interval} \&interval)
+\item 
+void {\bf update\+Interface} ({\bf Res\+Op\+Element} $\ast$element)
+\item 
+void {\bf show\+Res} (bool change=false)
+\item 
+void {\bf enable\+Net\+Priority} (bool a\+\_\+enable)
+\item 
+void {\bf on\+Set\+Interval} ({\bf Interval} interval)
+\item 
+{\bf D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Panel $\ast$ {\bf panel}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Model}
+\item 
+wx\+Sizer $\ast$ {\bf sta\+Model}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Tec}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Obj}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Rule}
+\item 
+wx\+Choicebook $\ast$ {\bf cb\+Tec}
+\item 
+wx\+Choicebook $\ast$ {\bf cb\+Rule}
+\item 
+wx\+Date\+Picker\+Ctrl $\ast$ {\bf dp\+Start\+Interval}
+\item 
+wx\+Date\+Picker\+Ctrl $\ast$ {\bf dp\+End\+Interval}
+\item 
+wx\+Radio\+Box $\ast$ {\bf rb\+Oper}
+\item 
+{\bf S\+I\+GA} $\ast$ {\bf main}
+\item 
+{\bf Component\+Interface} $\ast$ {\bf obj\+Inter}
+\item 
+{\bf Component\+Interface} $\ast$ {\bf rule\+Inter}
+\item 
+wx\+Choicebook $\ast$ {\bf nb\+Scen}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf open\+Conf} ()
+\item 
+void {\bf save\+Conf} ()
+\item 
+void {\bf run} ()
+\item 
+void {\bf run} (bool show\+Result=true)
+\item 
+bool {\bf check\+Completeness} ()
+\item 
+void {\bf aloc\+Results} ()
+\item 
+void {\bf open\+Result} ()
+\item 
+void {\bf open\+Conf} ()
+\item 
+void {\bf save\+Conf} ()
+\item 
+void {\bf run} ()
+\item 
+bool {\bf check\+Completeness} ()
+\item 
+void {\bf aloc\+Results} ()
+\item 
+void {\bf open\+Result} ()
+\item 
+void {\bf on\+Add\+Scenario} (wx\+Command\+Event \&)
+\item 
+void {\bf on\+Add\+Scenario\+Batch} (wx\+Command\+Event \&)
+\item 
+void {\bf on\+Scenario\+Wizard\+Click} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Scenario\+Wizard\+Copy\+Click} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Net\+Priority} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Run\+All} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Result\+All} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Update\+All} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Remove\+Selected\+Scenario} (wx\+Command\+Event \&)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Tool\+Bar $\ast$ {\bf tbar}
+\item 
+{\bf Res\+Op\+Sequential\+Interface} $\ast$ {\bf seq\+Interface}
+\item 
+{\bf Res\+Op\+Sequential\+Wnd\+Interface} $\ast$ {\bf seq\+Wnd\+Interface}
+\item 
+{\bf Res\+Op\+Sequential\+Opt\+Interface} $\ast$ {\bf seq\+Opt\+Interface}
+\item 
+{\bf Res\+Op\+Network\+Flow\+Interface} $\ast$ {\bf net\+Flow\+Inter}
+\item 
+{\bf Res\+Op\+Network\+Flow\+Wnd\+Interface} $\ast$ {\bf net\+Flow\+Wnd\+Inter}
+\item 
+{\bf Res\+Op\+Scenario\+Priority} $\ast$ {\bf net\+Priority}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Aff\+Prev\+Model\+Main}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 20 do arquivo Res\+Op\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{Res\+Op\+Interface(\+S\+I\+G\+A $\ast$main, wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Interface\+::\+Res\+Op\+Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+GA} $\ast$}]{main, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_a27d6bcae8398e063d3350dc858406a18}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em frame} & Janela onde a interface ser· inserida \\
+\hline
+{\em parent} & Componente onde a interface sera inserida \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!````~Res\+Op\+Interface@{$\sim$\+Res\+Op\+Interface}}
+\index{````~Res\+Op\+Interface@{$\sim$\+Res\+Op\+Interface}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{$\sim$\+Res\+Op\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Interface\+::$\sim$\+Res\+Op\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_aeabdea81d3c800a1583f0ffd2880e159}
+Destrutor \index{Res\+Op\+Interface@{Res\+Op\+Interface}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{Res\+Op\+Interface(\+S\+I\+G\+A $\ast$main, wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Interface\+::\+Res\+Op\+Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+GA} $\ast$}]{main, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_a27d6bcae8398e063d3350dc858406a18}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em frame} & Janela onde a interface ser· inserida \\
+\hline
+{\em parent} & Componente onde a interface sera inserida \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!````~Res\+Op\+Interface@{$\sim$\+Res\+Op\+Interface}}
+\index{````~Res\+Op\+Interface@{$\sim$\+Res\+Op\+Interface}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{$\sim$\+Res\+Op\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Interface\+::$\sim$\+Res\+Op\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_aeabdea81d3c800a1583f0ffd2880e159}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!add\+Scenario\+Page@{add\+Scenario\+Page}}
+\index{add\+Scenario\+Page@{add\+Scenario\+Page}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{add\+Scenario\+Page(const wx\+String \&name, int event\+Id, bool b\+Select=true, bool batch=false)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Scenario\+Page}$\ast$ Res\+Op\+Interface\+::add\+Scenario\+Page (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{name, }
+\item[{int}]{event\+Id, }
+\item[{bool}]{b\+Select = {\ttfamily true}, }
+\item[{bool}]{batch = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_a6dbdf26f31a29efd57cf4c2e965e074c}
+AdiÁ„o de pagina do cenario \index{Res\+Op\+Interface@{Res\+Op\+Interface}!add\+Scenario\+Page@{add\+Scenario\+Page}}
+\index{add\+Scenario\+Page@{add\+Scenario\+Page}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{add\+Scenario\+Page(\+Res\+Op\+Scenario $\ast$a\+\_\+scenario, unsigned int a\+\_\+index)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::add\+Scenario\+Page (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{a\+\_\+scenario, }
+\item[{unsigned int}]{a\+\_\+index}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_a5da1d179ab74ae5f2dad1061cd6c3625}
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!adjust\+Interval\+Range@{adjust\+Interval\+Range}}
+\index{adjust\+Interval\+Range@{adjust\+Interval\+Range}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{adjust\+Interval\+Range(const Interval \&interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::adjust\+Interval\+Range (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interval} \&}]{interval}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_a9d8a5963c2790b3818cda8581d6f62c1}
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!aloc\+Results@{aloc\+Results}}
+\index{aloc\+Results@{aloc\+Results}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{aloc\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::aloc\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_interface_a059c2e38143507a4261b4db91a626f6e}
+MÈtodo privado que aloca memoria para os resultados do sistema. \index{Res\+Op\+Interface@{Res\+Op\+Interface}!aloc\+Results@{aloc\+Results}}
+\index{aloc\+Results@{aloc\+Results}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{aloc\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::aloc\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_interface_a059c2e38143507a4261b4db91a626f6e}
+MÈtodo privado que aloca memoria para os resultados do sistema. \index{Res\+Op\+Interface@{Res\+Op\+Interface}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{check\+Completeness()}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Interface\+::check\+Completeness (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_interface_afdb3c44a587d95f9b27ba94a0d4b5744}
+MÈtodo privado que checa as informaÁıes do modelo. \index{Res\+Op\+Interface@{Res\+Op\+Interface}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{check\+Completeness()}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Interface\+::check\+Completeness (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_interface_afdb3c44a587d95f9b27ba94a0d4b5744}
+MÈtodo privado que checa as informaÁıes do modelo. \index{Res\+Op\+Interface@{Res\+Op\+Interface}!create\+Results@{create\+Results}}
+\index{create\+Results@{create\+Results}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{create\+Results(int id, Res\+Op\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::create\+Results (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{{\bf Res\+Op\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_ad7a0bab0dafee43f06e449a4ec8ad7ad}
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+L\+E()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Interface\+::\+D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_a63d811a18cfafbb9a6af1515759eb89b}
+DeclaraÁ„o de tabela de eventos \index{Res\+Op\+Interface@{Res\+Op\+Interface}!D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+L\+E()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Interface\+::\+D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_a63d811a18cfafbb9a6af1515759eb89b}
+DeclaraÁ„o de tabela de eventos \index{Res\+Op\+Interface@{Res\+Op\+Interface}!enable\+Net\+Priority@{enable\+Net\+Priority}}
+\index{enable\+Net\+Priority@{enable\+Net\+Priority}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{enable\+Net\+Priority(bool a\+\_\+enable)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::enable\+Net\+Priority (
+\begin{DoxyParamCaption}
+\item[{bool}]{a\+\_\+enable}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_a3d9cfaeab617d06ab3df6804ebc254a3}
+Set enable net priority \index{Res\+Op\+Interface@{Res\+Op\+Interface}!on\+Add\+Scenario@{on\+Add\+Scenario}}
+\index{on\+Add\+Scenario@{on\+Add\+Scenario}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{on\+Add\+Scenario(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::on\+Add\+Scenario (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_interface_a2e6ed70786afdcc10d3a630f42419b39}
+Evento de adiÁ„o de cenario \index{Res\+Op\+Interface@{Res\+Op\+Interface}!on\+Add\+Scenario\+Batch@{on\+Add\+Scenario\+Batch}}
+\index{on\+Add\+Scenario\+Batch@{on\+Add\+Scenario\+Batch}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{on\+Add\+Scenario\+Batch(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::on\+Add\+Scenario\+Batch (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_interface_ab82d383bf4a0b801620382e19aa7493f}
+Evento de adiÁ„o de cenario em batch \index{Res\+Op\+Interface@{Res\+Op\+Interface}!on\+Change\+R\+B\+Oper@{on\+Change\+R\+B\+Oper}}
+\index{on\+Change\+R\+B\+Oper@{on\+Change\+R\+B\+Oper}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{on\+Change\+R\+B\+Oper(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::on\+Change\+R\+B\+Oper (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_a36108f2da8cc5d1dfcffdc158f1e542d}
+Escolhe tipo de operaÁ„o \index{Res\+Op\+Interface@{Res\+Op\+Interface}!on\+Change\+Selected\+Scenario@{on\+Change\+Selected\+Scenario}}
+\index{on\+Change\+Selected\+Scenario@{on\+Change\+Selected\+Scenario}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{on\+Change\+Selected\+Scenario(wx\+Choicebook\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::on\+Change\+Selected\+Scenario (
+\begin{DoxyParamCaption}
+\item[{wx\+Choicebook\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_add840a89286a1d0ec252c5b73107942f}
+Evento de mudanÁa de cen·rio selecionado \index{Res\+Op\+Interface@{Res\+Op\+Interface}!on\+Choice\+Model@{on\+Choice\+Model}}
+\index{on\+Choice\+Model@{on\+Choice\+Model}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{on\+Choice\+Model(wx\+Choicebook\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::on\+Choice\+Model (
+\begin{DoxyParamCaption}
+\item[{wx\+Choicebook\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_ae4fa018ecea3f6de9f77e16beef4aa55}
+Chamado quando um modelo È escolhido. \index{Res\+Op\+Interface@{Res\+Op\+Interface}!on\+Choice\+Tecnique@{on\+Choice\+Tecnique}}
+\index{on\+Choice\+Tecnique@{on\+Choice\+Tecnique}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{on\+Choice\+Tecnique(wx\+Choicebook\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::on\+Choice\+Tecnique (
+\begin{DoxyParamCaption}
+\item[{wx\+Choicebook\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_a4d9cf595f59a700f566906968653fcca}
+Chamado quando uma tecnica È escolhida. \index{Res\+Op\+Interface@{Res\+Op\+Interface}!on\+Net\+Priority@{on\+Net\+Priority}}
+\index{on\+Net\+Priority@{on\+Net\+Priority}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{on\+Net\+Priority(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::on\+Net\+Priority (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_interface_a18ebfe3916ffd3f35f27def0bae3fc31}
+Event to open the Priority configure to network \index{Res\+Op\+Interface@{Res\+Op\+Interface}!on\+Remove\+Selected\+Scenario@{on\+Remove\+Selected\+Scenario}}
+\index{on\+Remove\+Selected\+Scenario@{on\+Remove\+Selected\+Scenario}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{on\+Remove\+Selected\+Scenario(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::on\+Remove\+Selected\+Scenario (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_interface_adf0c2aa5ac13f8e31c9bdd85a5d7c21a}
+Evento de remoÁ„o de cenario \index{Res\+Op\+Interface@{Res\+Op\+Interface}!on\+Result\+All@{on\+Result\+All}}
+\index{on\+Result\+All@{on\+Result\+All}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{on\+Result\+All(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::on\+Result\+All (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_interface_aca45c2fa2cadf1c1fee67b52187a2a91}
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!on\+Run\+All@{on\+Run\+All}}
+\index{on\+Run\+All@{on\+Run\+All}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{on\+Run\+All(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::on\+Run\+All (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_interface_ab8ef90547fb5b878acc9cff732914e8c}
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!on\+Scenario\+Wizard\+Click@{on\+Scenario\+Wizard\+Click}}
+\index{on\+Scenario\+Wizard\+Click@{on\+Scenario\+Wizard\+Click}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{on\+Scenario\+Wizard\+Click(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::on\+Scenario\+Wizard\+Click (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_interface_a47edb0b9476e0e6d57be77cceb23a53e}
+Event to open the scenario\textquotesingle{}s wizard \index{Res\+Op\+Interface@{Res\+Op\+Interface}!on\+Scenario\+Wizard\+Copy\+Click@{on\+Scenario\+Wizard\+Copy\+Click}}
+\index{on\+Scenario\+Wizard\+Copy\+Click@{on\+Scenario\+Wizard\+Copy\+Click}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{on\+Scenario\+Wizard\+Copy\+Click(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::on\+Scenario\+Wizard\+Copy\+Click (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_interface_af6ec2719a166024400947716d65a54b0}
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!on\+Set\+End\+Interval@{on\+Set\+End\+Interval}}
+\index{on\+Set\+End\+Interval@{on\+Set\+End\+Interval}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{on\+Set\+End\+Interval(wx\+Date\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::on\+Set\+End\+Interval (
+\begin{DoxyParamCaption}
+\item[{wx\+Date\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_aa633cc3530b38397199de48058370bb8}
+Chamado quando È setado a data final do periodo correspondente ao modelo Reservatorio 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!on\+Set\+Interval@{on\+Set\+Interval}}
+\index{on\+Set\+Interval@{on\+Set\+Interval}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{on\+Set\+Interval(\+Interval interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::on\+Set\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_a52f7d34262aec4b081ba3c2ce0d28e5a}
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!on\+Set\+Start\+Interval@{on\+Set\+Start\+Interval}}
+\index{on\+Set\+Start\+Interval@{on\+Set\+Start\+Interval}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{on\+Set\+Start\+Interval(wx\+Date\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::on\+Set\+Start\+Interval (
+\begin{DoxyParamCaption}
+\item[{wx\+Date\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_af45834cf3168b743c0f3dbd793625ee0}
+Chamado quando È setado a data inicial do periodo correspondente ao modelo Reservatorio 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!on\+Update\+All@{on\+Update\+All}}
+\index{on\+Update\+All@{on\+Update\+All}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{on\+Update\+All(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::on\+Update\+All (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_interface_a63b1e5f6052d5680cd495cbb7cfdb5e8}
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!open\+Conf@{open\+Conf}}
+\index{open\+Conf@{open\+Conf}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{open\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::open\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_op_interface_a5421f048ab54a4ef85be828fe6547e2a}
+MÈtodo privado que abre valores padr„o para o nÛ selecionado. 
+
+Reimplementa√ß√£o de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abf3660e2c31c95afab763b4b520e26e9}.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!open\+Conf@{open\+Conf}}
+\index{open\+Conf@{open\+Conf}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{open\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::open\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_op_interface_a5421f048ab54a4ef85be828fe6547e2a}
+MÈtodo privado que abre valores padr„o para o nÛ selecionado. 
+
+Reimplementa√ß√£o de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abf3660e2c31c95afab763b4b520e26e9}.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!open\+Result@{open\+Result}}
+\index{open\+Result@{open\+Result}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{open\+Result()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::open\+Result (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_op_interface_aa532fc4b11284f0800975e5ee19cd763}
+MÈtodo privado para exibir os resultados. 
+
+Reimplementa√ß√£o de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_a8d55317d894c2e893b6d0acca9b1ae8f}.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!open\+Result@{open\+Result}}
+\index{open\+Result@{open\+Result}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{open\+Result()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::open\+Result (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_op_interface_aa532fc4b11284f0800975e5ee19cd763}
+MÈtodo privado para exibir os resultados. 
+
+Reimplementa√ß√£o de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_a8d55317d894c2e893b6d0acca9b1ae8f}.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!remove\+All\+Pages@{remove\+All\+Pages}}
+\index{remove\+All\+Pages@{remove\+All\+Pages}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{remove\+All\+Pages()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::remove\+All\+Pages (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_a0aa461424fcb172ade2ba5903016c06c}
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!remove\+Selected\+Scenario@{remove\+Selected\+Scenario}}
+\index{remove\+Selected\+Scenario@{remove\+Selected\+Scenario}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{remove\+Selected\+Scenario(size\+\_\+t page)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::remove\+Selected\+Scenario (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{page}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_a0e55b1071f52f7ff9ffcfd3bcc722f38}
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!run@{run}}
+\index{run@{run}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_op_interface_a01ad206fac2f8c41052781ac7965fe79}
+MÈtodo privado que executa o modelo. 
+
+Reimplementa√ß√£o de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_a747fb799cb1c6c59194fdf5de8cd39c1}.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!run@{run}}
+\index{run@{run}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{run(bool show\+Result=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::run (
+\begin{DoxyParamCaption}
+\item[{bool}]{show\+Result = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_interface_ae0b9d96ed81c59d41ea6706acadc3d07}
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!run@{run}}
+\index{run@{run}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_op_interface_a01ad206fac2f8c41052781ac7965fe79}
+MÈtodo privado que executa o modelo. 
+
+Reimplementa√ß√£o de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_a747fb799cb1c6c59194fdf5de8cd39c1}.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!save\+Conf@{save\+Conf}}
+\index{save\+Conf@{save\+Conf}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{save\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::save\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_op_interface_af50649408de080ca6d71c8f2fffce066}
+MÈtodo privado que salva valores padr„o para o nÛ selecionado. 
+
+Reimplementa√ß√£o de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abcef0436251918c1eab033a80b40c626}.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!save\+Conf@{save\+Conf}}
+\index{save\+Conf@{save\+Conf}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{save\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::save\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_op_interface_af50649408de080ca6d71c8f2fffce066}
+MÈtodo privado que salva valores padr„o para o nÛ selecionado. 
+
+Reimplementa√ß√£o de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abcef0436251918c1eab033a80b40c626}.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_interface_a168a28715e29bc8ce37b50db9b2b3801}
+Seta os par‚metros para calculo do modelo Reservatorio 
+
+Reimplementa√ß√£o de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_aced556e5caf584b7335135d337895154}.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!show\+Res@{show\+Res}}
+\index{show\+Res@{show\+Res}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{show\+Res(bool change=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::show\+Res (
+\begin{DoxyParamCaption}
+\item[{bool}]{change = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_ae5b0e79b7643e59d216f6b02dc5b50d5}
+Apresenta resultados do modelo para o nÛ selecionado. \index{Res\+Op\+Interface@{Res\+Op\+Interface}!show\+Res@{show\+Res}}
+\index{show\+Res@{show\+Res}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{show\+Res(bool change=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::show\+Res (
+\begin{DoxyParamCaption}
+\item[{bool}]{change = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_ae5b0e79b7643e59d216f6b02dc5b50d5}
+Apresenta resultados do modelo para o nÛ selecionado. \index{Res\+Op\+Interface@{Res\+Op\+Interface}!update\+Interface@{update\+Interface}}
+\index{update\+Interface@{update\+Interface}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{update\+Interface(\+Res\+Op\+Element $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Interface\+::update\+Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)}\label{class_res_op_interface_ac7c4c30a769c509e605595415f9ac3bd}
+Atualiza a interface deacordo com o elemento selecionado 
+
+\subsection{Amigas e Fun√ß√µes Relacionadas}
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{Aff\+Prev\+Model\+Main}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Aff\+Prev\+Model\+Main}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_res_op_interface_a6e4638e66900e40d55d1256d3e7abddc}
+
+
+Defini√ß√£o na linha 21 do arquivo Res\+Op\+Interface.\+h.
+
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!cb\+Rule@{cb\+Rule}}
+\index{cb\+Rule@{cb\+Rule}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{cb\+Rule}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choicebook$\ast$ Res\+Op\+Interface\+::cb\+Rule}\label{class_res_op_interface_ae332e79d297b9641098be9a4cf5b7a79}
+
+
+Defini√ß√£o na linha 66 do arquivo Res\+Op\+Interface.\+h.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!cb\+Tec@{cb\+Tec}}
+\index{cb\+Tec@{cb\+Tec}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{cb\+Tec}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choicebook$\ast$ Res\+Op\+Interface\+::cb\+Tec}\label{class_res_op_interface_aa288c2136480c15400ea59b5ac984f9f}
+
+
+Defini√ß√£o na linha 62 do arquivo Res\+Op\+Interface.\+h.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!dp\+End\+Interval@{dp\+End\+Interval}}
+\index{dp\+End\+Interval@{dp\+End\+Interval}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{dp\+End\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Picker\+Ctrl $\ast$ Res\+Op\+Interface\+::dp\+End\+Interval}\label{class_res_op_interface_a46b6752db67b014940dc398df2a3685d}
+
+
+Defini√ß√£o na linha 73 do arquivo Res\+Op\+Interface.\+h.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!dp\+Start\+Interval@{dp\+Start\+Interval}}
+\index{dp\+Start\+Interval@{dp\+Start\+Interval}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{dp\+Start\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Picker\+Ctrl$\ast$ Res\+Op\+Interface\+::dp\+Start\+Interval}\label{class_res_op_interface_aaeaaf9dbbde0934f28f368394b391ed1}
+Controlado de data inicial e final 
+\begin{DoxyParams}{Par√¢metros}
+{\em dp\+Start\+Interval} & Data inicial \\
+\hline
+{\em dp\+End\+Interval} & Data final \\
+\hline
+\end{DoxyParams}
+
+
+Defini√ß√£o na linha 73 do arquivo Res\+Op\+Interface.\+h.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!main@{main}}
+\index{main@{main}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+GA} $\ast$ Res\+Op\+Interface\+::main}\label{class_res_op_interface_a52efbbfa2eba035f4a197bac2e666434}
+
+
+Defini√ß√£o na linha 79 do arquivo Res\+Op\+Interface.\+h.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!nb\+Scen@{nb\+Scen}}
+\index{nb\+Scen@{nb\+Scen}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{nb\+Scen}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choicebook$\ast$ Res\+Op\+Interface\+::nb\+Scen}\label{class_res_op_interface_ad695ecc1a015dd40ae8a2d088b5f4898}
+Notebook que contÈm os cenarios 
+
+Defini√ß√£o na linha 151 do arquivo /\+Res\+Op\+Interface.\+h.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!net\+Flow\+Inter@{net\+Flow\+Inter}}
+\index{net\+Flow\+Inter@{net\+Flow\+Inter}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{net\+Flow\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Network\+Flow\+Interface}$\ast$ Res\+Op\+Interface\+::net\+Flow\+Inter\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_interface_ac10d9b37e5182729ba666e627824a1a1}
+Interface para sequencial 
+
+Defini√ß√£o na linha 131 do arquivo /\+Res\+Op\+Interface.\+h.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!net\+Flow\+Wnd\+Inter@{net\+Flow\+Wnd\+Inter}}
+\index{net\+Flow\+Wnd\+Inter@{net\+Flow\+Wnd\+Inter}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{net\+Flow\+Wnd\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Network\+Flow\+Wnd\+Interface}$\ast$ Res\+Op\+Interface\+::net\+Flow\+Wnd\+Inter\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_interface_a52929bcb42e228bcf0092f1a0092e5c0}
+Interface para sequencial 
+
+Defini√ß√£o na linha 136 do arquivo /\+Res\+Op\+Interface.\+h.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!net\+Priority@{net\+Priority}}
+\index{net\+Priority@{net\+Priority}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{net\+Priority}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Scenario\+Priority}$\ast$ Res\+Op\+Interface\+::net\+Priority\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_interface_a245c5e7c5d179495cdf6431495d75b92}
+Interface to network Priority 
+
+Defini√ß√£o na linha 141 do arquivo /\+Res\+Op\+Interface.\+h.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!obj\+Inter@{obj\+Inter}}
+\index{obj\+Inter@{obj\+Inter}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{obj\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component\+Interface}$\ast$ Res\+Op\+Interface\+::obj\+Inter}\label{class_res_op_interface_a031b6807d3adcb17c3234b8257be5f0d}
+
+
+Defini√ß√£o na linha 80 do arquivo Res\+Op\+Interface.\+h.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!panel@{panel}}
+\index{panel@{panel}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{panel}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel $\ast$ Res\+Op\+Interface\+::panel}\label{class_res_op_interface_ab0cc58756c153cb4539685f709e90821}
+Painal onde a interface dos cenarios ser· inserida 
+
+Defini√ß√£o na linha 57 do arquivo Res\+Op\+Interface.\+h.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!rb\+Oper@{rb\+Oper}}
+\index{rb\+Oper@{rb\+Oper}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{rb\+Oper}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box$\ast$ Res\+Op\+Interface\+::rb\+Oper}\label{class_res_op_interface_a72487bdc850ba809d46c52b87823f117}
+
+
+Defini√ß√£o na linha 77 do arquivo Res\+Op\+Interface.\+h.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!rule\+Inter@{rule\+Inter}}
+\index{rule\+Inter@{rule\+Inter}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{rule\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component\+Interface} $\ast$ Res\+Op\+Interface\+::rule\+Inter}\label{class_res_op_interface_aa2cb01d4e7175820d07616c8dc801fa5}
+
+
+Defini√ß√£o na linha 80 do arquivo Res\+Op\+Interface.\+h.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!seq\+Interface@{seq\+Interface}}
+\index{seq\+Interface@{seq\+Interface}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{seq\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Sequential\+Interface}$\ast$ Res\+Op\+Interface\+::seq\+Interface\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_interface_a349700736d670653e71ee602068e8418}
+Interface para sequencial 
+
+Defini√ß√£o na linha 116 do arquivo /\+Res\+Op\+Interface.\+h.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!seq\+Opt\+Interface@{seq\+Opt\+Interface}}
+\index{seq\+Opt\+Interface@{seq\+Opt\+Interface}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{seq\+Opt\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Sequential\+Opt\+Interface}$\ast$ Res\+Op\+Interface\+::seq\+Opt\+Interface\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_interface_a94494aff6664f7be2f717acde1ac6574}
+Interface para sequencial 
+
+Defini√ß√£o na linha 126 do arquivo /\+Res\+Op\+Interface.\+h.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!seq\+Wnd\+Interface@{seq\+Wnd\+Interface}}
+\index{seq\+Wnd\+Interface@{seq\+Wnd\+Interface}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{seq\+Wnd\+Interface}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Sequential\+Wnd\+Interface}$\ast$ Res\+Op\+Interface\+::seq\+Wnd\+Interface\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_interface_ade5758aae6a1592dc38626636125706a}
+Interface para sequencial 
+
+Defini√ß√£o na linha 121 do arquivo /\+Res\+Op\+Interface.\+h.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!s\+Model@{s\+Model}}
+\index{s\+Model@{s\+Model}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{s\+Model}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer$\ast$ Res\+Op\+Interface\+::s\+Model}\label{class_res_op_interface_a3d746136ad25c919f74a2e3ad4b3d6f9}
+
+
+Defini√ß√£o na linha 58 do arquivo Res\+Op\+Interface.\+h.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!s\+Obj@{s\+Obj}}
+\index{s\+Obj@{s\+Obj}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{s\+Obj}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Res\+Op\+Interface\+::s\+Obj}\label{class_res_op_interface_a45fb1144b8fe800e5267f235c25d3ae0}
+
+
+Defini√ß√£o na linha 58 do arquivo Res\+Op\+Interface.\+h.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!s\+Rule@{s\+Rule}}
+\index{s\+Rule@{s\+Rule}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{s\+Rule}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Res\+Op\+Interface\+::s\+Rule}\label{class_res_op_interface_af0ceb09ff24cbbc9461b25f81f6d8783}
+
+
+Defini√ß√£o na linha 58 do arquivo Res\+Op\+Interface.\+h.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!sta\+Model@{sta\+Model}}
+\index{sta\+Model@{sta\+Model}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{sta\+Model}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Res\+Op\+Interface\+::sta\+Model}\label{class_res_op_interface_a63192fa02e24a049bf5954b8144f0f34}
+
+
+Defini√ß√£o na linha 58 do arquivo Res\+Op\+Interface.\+h.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!s\+Tec@{s\+Tec}}
+\index{s\+Tec@{s\+Tec}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{s\+Tec}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Res\+Op\+Interface\+::s\+Tec}\label{class_res_op_interface_a6edfe083809db6a01174767342e2b5fd}
+
+
+Defini√ß√£o na linha 58 do arquivo Res\+Op\+Interface.\+h.
+
+\index{Res\+Op\+Interface@{Res\+Op\+Interface}!tbar@{tbar}}
+\index{tbar@{tbar}!Res\+Op\+Interface@{Res\+Op\+Interface}}
+\subsubsection[{tbar}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tool\+Bar$\ast$ Res\+Op\+Interface\+::tbar\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_interface_a1a7f4bd2e044837272ea544998a3858b}
+
+
+Defini√ß√£o na linha 81 do arquivo /\+Res\+Op\+Interface.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Interface.\+h}\end{DoxyCompactItemize}

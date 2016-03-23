@@ -1,0 +1,282 @@
+\section{Referência da Classe Opt\+Module}
+\label{class_opt_module}\index{Opt\+Module@{Opt\+Module}}
+
+
+{\ttfamily \#include $<$Opt\+Module.\+h$>$}
+
+
+
+Superclasse de {\bf Opt\+Hydrology}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Module} ({\bf Node} $\ast${\bf node}, {\bf Opt\+Interface} $\ast${\bf main\+Inter})
+\item 
+virtual {\bf $\sim$\+Opt\+Module} ()
+\item 
+virtual void {\bf set\+Info} ()=0
+\item 
+virtual void {\bf update\+Tree\+Item} ({\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$)=0
+\item 
+virtual void {\bf show\+SA} ()=0
+\item 
+virtual void {\bf insert\+Model} ({\bf opt\+Model\+Type} type)=0
+\item 
+virtual void {\bf remove\+Model} ({\bf opt\+Model\+Type} type)
+\item 
+virtual void {\bf set\+Default\+Values} (const wx\+String \&file\+Name)=0
+\item 
+virtual void {\bf save\+Default\+Values} (const wx\+String \&file\+Name)=0
+\item 
+{\bf Opt\+Model} $\ast$ {\bf get\+Model} ({\bf opt\+Model\+Type} type)
+\item 
+{\bf Opt\+Model} $\ast$ {\bf get\+Model} ()
+\item 
+int {\bf get\+Model\+Id} (wx\+String name)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Node} $\ast$ {\bf node}
+\item 
+{\bf Interval} {\bf interval}
+\item 
+map$<$ {\bf opt\+Model\+Type}, {\bf Opt\+Model} $\ast$ $>$ {\bf models}
+\item 
+{\bf Opt\+Interface} $\ast$ {\bf main\+Inter}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 15 do arquivo Opt\+Module.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Opt\+Module@{Opt\+Module}!Opt\+Module@{Opt\+Module}}
+\index{Opt\+Module@{Opt\+Module}!Opt\+Module@{Opt\+Module}}
+\subsubsection[{Opt\+Module(\+Node $\ast$node, Opt\+Interface $\ast$main\+Inter)}]{\setlength{\rightskip}{0pt plus 5cm}Opt\+Module\+::\+Opt\+Module (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node, }
+\item[{{\bf Opt\+Interface} $\ast$}]{main\+Inter}
+\end{DoxyParamCaption}
+)}\label{class_opt_module_a49c315d4b3e81b0e40377bc7700726ad}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em node} & N� \\
+\hline
+{\em main\+Inter} & Interface \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Module@{Opt\+Module}!````~Opt\+Module@{$\sim$\+Opt\+Module}}
+\index{````~Opt\+Module@{$\sim$\+Opt\+Module}!Opt\+Module@{Opt\+Module}}
+\subsubsection[{$\sim$\+Opt\+Module()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Opt\+Module\+::$\sim$\+Opt\+Module (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_module_af3a37b32e8f29481e2daa3ea0dca6f3d}
+Destrutor 
+
+\subsection{Métodos}
+\index{Opt\+Module@{Opt\+Module}!clear@{clear}}
+\index{clear@{clear}!Opt\+Module@{Opt\+Module}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Module\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_opt_module_a4da81e54827ee22aaf05fdb13b23968f}
+Limpa os valores e retorna ao estado p�s-\/constru��o \index{Opt\+Module@{Opt\+Module}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!Opt\+Module@{Opt\+Module}}
+\subsubsection[{get\+Model(opt\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Opt\+Model}$\ast$ Opt\+Module\+::get\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf opt\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_opt_module_ad5a35a744dae7d26fe5beb19154e9daa}
+Retorna um \doxyref{Opt\+Model}{pag.}{class_opt_model} 
+\begin{DoxyParams}{Parâmetros}
+{\em type} & Tipo \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Module@{Opt\+Module}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!Opt\+Module@{Opt\+Module}}
+\subsubsection[{get\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Opt\+Model}$\ast$ Opt\+Module\+::get\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_opt_module_ad7ae9f729b95a31ef2635430533e0262}
+Retorna um \doxyref{Opt\+Model}{pag.}{class_opt_model} selecionado \index{Opt\+Module@{Opt\+Module}!get\+Model\+Id@{get\+Model\+Id}}
+\index{get\+Model\+Id@{get\+Model\+Id}!Opt\+Module@{Opt\+Module}}
+\subsubsection[{get\+Model\+Id(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}int Opt\+Module\+::get\+Model\+Id (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_opt_module_a5e220849f0d9d6b0c5153d2eaf9ca51e}
+Retorna o identificador pelo nome 
+\begin{DoxyParams}{Parâmetros}
+{\em name} & Nome \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Module@{Opt\+Module}!insert\+Model@{insert\+Model}}
+\index{insert\+Model@{insert\+Model}!Opt\+Module@{Opt\+Module}}
+\subsubsection[{insert\+Model(opt\+Model\+Type type)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Module\+::insert\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf opt\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_opt_module_a27badad18ac3d7107f28b1c350e343a9}
+Cria um modelo 
+\begin{DoxyParams}{Parâmetros}
+{\em type} & Tipo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Opt\+Hydrology} \doxyref{}{pag.}{class_opt_hydrology_a3445ef2cc69890c7dbc918ca07f4fa43}.
+
+\index{Opt\+Module@{Opt\+Module}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Opt\+Module@{Opt\+Module}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Module\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_opt_module_a072249dcf8a2d06860b7ea91e4ed475d}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Module@{Opt\+Module}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Opt\+Module@{Opt\+Module}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Module\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_opt_module_adc7a6a4f35b384382d41c230539dca6f}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Module@{Opt\+Module}!remove\+Model@{remove\+Model}}
+\index{remove\+Model@{remove\+Model}!Opt\+Module@{Opt\+Module}}
+\subsubsection[{remove\+Model(opt\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Module\+::remove\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf opt\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_module_af9189e5f0c58bf73984c5e861d1f06a3}
+Destroi um modelo de um no que nao importa mais (deletado por exemplo) 
+\begin{DoxyParams}{Parâmetros}
+{\em type} & Tipo \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Module@{Opt\+Module}!save\+Default\+Values@{save\+Default\+Values}}
+\index{save\+Default\+Values@{save\+Default\+Values}!Opt\+Module@{Opt\+Module}}
+\subsubsection[{save\+Default\+Values(const wx\+String \&file\+Name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Module\+::save\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_opt_module_a28cbd004d46da8f3602c7812b0abb42b}
+Escrita de arquivo padr�o 
+\begin{DoxyParams}{Parâmetros}
+{\em file\+Name} & Nome do arquivo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Opt\+Hydrology} \doxyref{}{pag.}{class_opt_hydrology_a639d1d802839ff94e3de86234d227747}.
+
+\index{Opt\+Module@{Opt\+Module}!set\+Default\+Values@{set\+Default\+Values}}
+\index{set\+Default\+Values@{set\+Default\+Values}!Opt\+Module@{Opt\+Module}}
+\subsubsection[{set\+Default\+Values(const wx\+String \&file\+Name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Module\+::set\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_opt_module_a583ed097de47c6b1a9198ec87804f0b2}
+Leitura de arquivo padr�o 
+\begin{DoxyParams}{Parâmetros}
+{\em file\+Name} & nome do arquivo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Opt\+Hydrology} \doxyref{}{pag.}{class_opt_hydrology_abffc4f75e145de02af84a4ed61db7876}.
+
+\index{Opt\+Module@{Opt\+Module}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Opt\+Module@{Opt\+Module}}
+\subsubsection[{set\+Info()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Module\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_opt_module_a5213be1a34e164536157b8e8dda781ae}
+Insere informa�oes na interface 
+
+Implementado por {\bf Opt\+Hydrology} \doxyref{}{pag.}{class_opt_hydrology_a988b2b648e8c2ef62fd801c3e1402074}.
+
+\index{Opt\+Module@{Opt\+Module}!show\+SA@{show\+SA}}
+\index{show\+SA@{show\+SA}!Opt\+Module@{Opt\+Module}}
+\subsubsection[{show\+S\+A()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Module\+::show\+SA (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_opt_module_a380d10adaad95dcb0bf37f411daeec18}
+An�lise de Sensibilidade 
+
+Implementado por {\bf Opt\+Hydrology} \doxyref{}{pag.}{class_opt_hydrology_a56e24a6a69ee197e6dc6d61dfd44ad0a}.
+
+\index{Opt\+Module@{Opt\+Module}!update\+Tree\+Item@{update\+Tree\+Item}}
+\index{update\+Tree\+Item@{update\+Tree\+Item}!Opt\+Module@{Opt\+Module}}
+\subsubsection[{update\+Tree\+Item(\+S\+I\+G\+A\+Tree\+Ctrl $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Module\+::update\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_opt_module_a045cdbb7768151c0a744bedc061e060c}
+Atualiza os ponteiros das suas series no Tree\+Ctrl de integra��o 
+
+Implementado por {\bf Opt\+Hydrology} \doxyref{}{pag.}{class_opt_hydrology_a3e9caaf576ac827d1209966b6db6467f}.
+
+
+
+\subsection{Atributos}
+\index{Opt\+Module@{Opt\+Module}!interval@{interval}}
+\index{interval@{interval}!Opt\+Module@{Opt\+Module}}
+\subsubsection[{interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Opt\+Module\+::interval}\label{class_opt_module_aa42eb51b0c92f41d3638c82d77b3009b}
+Intervalo de simulacao 
+
+Definição na linha 26 do arquivo Opt\+Module.\+h.
+
+\index{Opt\+Module@{Opt\+Module}!main\+Inter@{main\+Inter}}
+\index{main\+Inter@{main\+Inter}!Opt\+Module@{Opt\+Module}}
+\subsubsection[{main\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Opt\+Interface}$\ast$ Opt\+Module\+::main\+Inter}\label{class_opt_module_a98becef43bd6469a4abbb341901d6a22}
+Guarda qual o modelo que esta sendo utilizado no momento
+
+opt\+Model\+Type selected\+Model\+Type; Aponta para a classe da interafce principal do modulo 
+
+Definição na linha 39 do arquivo Opt\+Module.\+h.
+
+\index{Opt\+Module@{Opt\+Module}!models@{models}}
+\index{models@{models}!Opt\+Module@{Opt\+Module}}
+\subsubsection[{models}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf opt\+Model\+Type},{\bf Opt\+Model}$\ast$$>$ Opt\+Module\+::models}\label{class_opt_module_a9d8326b9c16ff77441d70489e3a5a9db}
+Instancias dos modelos 
+
+Definição na linha 30 do arquivo Opt\+Module.\+h.
+
+\index{Opt\+Module@{Opt\+Module}!node@{node}}
+\index{node@{node}!Opt\+Module@{Opt\+Module}}
+\subsubsection[{node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ Opt\+Module\+::node}\label{class_opt_module_aee76a8733ba58fd28867bb59c7d829b0}
+N� presente 
+
+Definição na linha 21 do arquivo Opt\+Module.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Module.\+h}\end{DoxyCompactItemize}

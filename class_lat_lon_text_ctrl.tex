@@ -1,0 +1,125 @@
+\section{Referência da Classe Lat\+Lon\+Text\+Ctrl}
+\label{class_lat_lon_text_ctrl}\index{Lat\+Lon\+Text\+Ctrl@{Lat\+Lon\+Text\+Ctrl}}
+
+
+{\ttfamily \#include $<$Net\+Interface.\+h$>$}
+
+
+
+Herdeiro de wx\+Text\+Ctrl.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Lat\+Lon\+Text\+Ctrl} (wx\+Window $\ast$parent, wx\+Window\+ID id, const wx\+String \&value=\char`\"{}\char`\"{}, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=0, const wx\+Validator \&validator=wx\+Default\+Validator, const wx\+String \&name=wx\+Text\+Ctrl\+Name\+Str)
+\item 
+void {\bf enter\+Latitude} (wx\+Command\+Event \&event)
+\item 
+void {\bf enter\+Longitude} (wx\+Command\+Event \&event)
+\item 
+void {\bf set\+Value} (unsigned int param, double value)
+\item 
+int {\bf lat\+To\+Pixel} (double d\+Lat)
+\item 
+int {\bf long\+To\+Pixel} (double d\+Long)
+\item 
+{\bf D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Interface da latitude e longitude 
+
+Definição na linha 27 do arquivo Net\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Lat\+Lon\+Text\+Ctrl@{Lat\+Lon\+Text\+Ctrl}!Lat\+Lon\+Text\+Ctrl@{Lat\+Lon\+Text\+Ctrl}}
+\index{Lat\+Lon\+Text\+Ctrl@{Lat\+Lon\+Text\+Ctrl}!Lat\+Lon\+Text\+Ctrl@{Lat\+Lon\+Text\+Ctrl}}
+\subsubsection[{Lat\+Lon\+Text\+Ctrl(wx\+Window $\ast$parent, wx\+Window\+I\+D id, const wx\+String \&value="""", const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=0, const wx\+Validator \&validator=wx\+Default\+Validator, const wx\+String \&name=wx\+Text\+Ctrl\+Name\+Str)}]{\setlength{\rightskip}{0pt plus 5cm}Lat\+Lon\+Text\+Ctrl\+::\+Lat\+Lon\+Text\+Ctrl (
+\begin{DoxyParamCaption}
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{wx\+Window\+ID}]{id, }
+\item[{const wx\+String \&}]{value = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{const wx\+Point \&}]{pos = {\ttfamily wxDefaultPosition}, }
+\item[{const wx\+Size \&}]{size = {\ttfamily wxDefaultSize}, }
+\item[{long}]{style = {\ttfamily 0}, }
+\item[{const wx\+Validator \&}]{validator = {\ttfamily wxDefaultValidator}, }
+\item[{const wx\+String \&}]{name = {\ttfamily wxTextCtrlNameStr}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_lat_lon_text_ctrl_a76511c40fa9fba6f2839cb5d72d1d18a}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em parent} & Componente a que pertence \\
+\hline
+{\em id} & Identificador \\
+\hline
+{\em value} & Valor padr�o \\
+\hline
+{\em pos} & Posi��o inicial \\
+\hline
+{\em size} & Tamanho inicial \\
+\hline
+{\em style} & Estilo \\
+\hline
+{\em validator} & Vaidador \\
+\hline
+{\em name} & Nome \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 41 do arquivo Net\+Interface.\+h.
+
+
+
+\subsection{Métodos}
+\index{Lat\+Lon\+Text\+Ctrl@{Lat\+Lon\+Text\+Ctrl}!D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}!Lat\+Lon\+Text\+Ctrl@{Lat\+Lon\+Text\+Ctrl}}
+\subsubsection[{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+L\+E()}]{\setlength{\rightskip}{0pt plus 5cm}Lat\+Lon\+Text\+Ctrl\+::\+D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_lat_lon_text_ctrl_a12553b2f283d028226411f903aa7738a}
+\index{Lat\+Lon\+Text\+Ctrl@{Lat\+Lon\+Text\+Ctrl}!enter\+Latitude@{enter\+Latitude}}
+\index{enter\+Latitude@{enter\+Latitude}!Lat\+Lon\+Text\+Ctrl@{Lat\+Lon\+Text\+Ctrl}}
+\subsubsection[{enter\+Latitude(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Lat\+Lon\+Text\+Ctrl\+::enter\+Latitude (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_lat_lon_text_ctrl_a908829d64a0541fbce71de8e7e9ad15b}
+\index{Lat\+Lon\+Text\+Ctrl@{Lat\+Lon\+Text\+Ctrl}!enter\+Longitude@{enter\+Longitude}}
+\index{enter\+Longitude@{enter\+Longitude}!Lat\+Lon\+Text\+Ctrl@{Lat\+Lon\+Text\+Ctrl}}
+\subsubsection[{enter\+Longitude(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Lat\+Lon\+Text\+Ctrl\+::enter\+Longitude (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_lat_lon_text_ctrl_a3691f5d5ccdebf10e9b80098352c196e}
+\index{Lat\+Lon\+Text\+Ctrl@{Lat\+Lon\+Text\+Ctrl}!lat\+To\+Pixel@{lat\+To\+Pixel}}
+\index{lat\+To\+Pixel@{lat\+To\+Pixel}!Lat\+Lon\+Text\+Ctrl@{Lat\+Lon\+Text\+Ctrl}}
+\subsubsection[{lat\+To\+Pixel(double d\+Lat)}]{\setlength{\rightskip}{0pt plus 5cm}int Lat\+Lon\+Text\+Ctrl\+::lat\+To\+Pixel (
+\begin{DoxyParamCaption}
+\item[{double}]{d\+Lat}
+\end{DoxyParamCaption}
+)}\label{class_lat_lon_text_ctrl_a27837186477e38c70411b6d705cd7d79}
+\index{Lat\+Lon\+Text\+Ctrl@{Lat\+Lon\+Text\+Ctrl}!long\+To\+Pixel@{long\+To\+Pixel}}
+\index{long\+To\+Pixel@{long\+To\+Pixel}!Lat\+Lon\+Text\+Ctrl@{Lat\+Lon\+Text\+Ctrl}}
+\subsubsection[{long\+To\+Pixel(double d\+Long)}]{\setlength{\rightskip}{0pt plus 5cm}int Lat\+Lon\+Text\+Ctrl\+::long\+To\+Pixel (
+\begin{DoxyParamCaption}
+\item[{double}]{d\+Long}
+\end{DoxyParamCaption}
+)}\label{class_lat_lon_text_ctrl_aafe2595f70bc9f8c4ba7c91806721f67}
+\index{Lat\+Lon\+Text\+Ctrl@{Lat\+Lon\+Text\+Ctrl}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!Lat\+Lon\+Text\+Ctrl@{Lat\+Lon\+Text\+Ctrl}}
+\subsubsection[{set\+Value(unsigned int param, double value)}]{\setlength{\rightskip}{0pt plus 5cm}void Lat\+Lon\+Text\+Ctrl\+::set\+Value (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{param, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_lat_lon_text_ctrl_af2e8d55efe9fc11db23af11d9e866310}
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Net\+Interface.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,416 @@
+\section{Referência da Classe Network}
+\label{class_network}\index{Network@{Network}}
+
+
+{\ttfamily \#include $<$Network.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Node} \& {\bf add\+Node} ({\bf Node\+Type} type={\bf Node\+Type\+::\+Basin}, double latitude=0.\+0, double longitude=0.\+0)
+\begin{DoxyCompactList}\small\item\em Creates a new node. \end{DoxyCompactList}\item 
+bool {\bf add\+Link} ({\bf Element\+ID} node\+\_\+origin\+\_\+id, {\bf Element\+ID} node\+\_\+destiny\+\_\+id, {\bf Link} $\ast$\&result, {\bf Link\+Type} type={\bf Link\+Type\+::\+Default}, bool bidirectional=false, bool lateral\+\_\+inflow=false, bool artificial=false)
+\item 
+bool {\bf remove\+Element} ({\bf Element\+ID} id)
+\begin{DoxyCompactList}\small\item\em remove the element by the id specified if it exists -\/ returns true if the removal was successful, false otherwise \end{DoxyCompactList}\item 
+bool {\bf get\+Node} ({\bf Element\+ID} id, {\bf Node} $\ast$\&result)
+\begin{DoxyCompactList}\small\item\em returns true and fills the pointer result with the node\textquotesingle{}s pointer if it exists \end{DoxyCompactList}\item 
+bool {\bf get\+Link} ({\bf Element\+ID} id, {\bf Link} $\ast$\&result)
+\begin{DoxyCompactList}\small\item\em returns true and fills the pointer result with the link\textquotesingle{}s pointer if it exists \end{DoxyCompactList}\item 
+bool {\bf get\+Element} ({\bf Element\+ID} id, {\bf Element} $\ast$\&result)
+\begin{DoxyCompactList}\small\item\em returns true and fills the pointer result with the element\textquotesingle{}s pointer if it exists \end{DoxyCompactList}\item 
+bool {\bf get\+Element\+Label} ({\bf Element\+ID} id, std\+::string \&label)
+\begin{DoxyCompactList}\small\item\em returns the label from the \doxyref{Element}{pag.}{class_element} \end{DoxyCompactList}\item 
+bool {\bf set\+Node\+Type} ({\bf Node} \&node, {\bf Node\+Type} new\+\_\+type)
+\item 
+bool {\bf set\+Node\+Type} ({\bf Element\+ID} node\+\_\+id, {\bf Node\+Type} new\+\_\+type)
+\item 
+bool {\bf set\+Link\+Type} ({\bf Link} \&link, {\bf Link\+Type} new\+\_\+type)
+\item 
+bool {\bf set\+Link\+Type} ({\bf Element\+ID} link\+\_\+id, {\bf Link\+Type} new\+\_\+type)
+\item 
+bool {\bf set\+Link\+Nodes} ({\bf Element\+ID} link\+\_\+id, {\bf Element\+ID} node\+\_\+origin\+\_\+id, {\bf Element\+ID} node\+\_\+destiny\+\_\+id)
+\item 
+bool {\bf set\+Element\+ID} ({\bf Element\+ID} old\+\_\+id, {\bf Element\+ID} new\+\_\+id)
+\item 
+bool {\bf module\+Element\+Info} ({\bf Element\+ID} id, std\+::pair$<$ {\bf Module\+ID}, {\bf Module\+Scenario\+ID} $>$ \&key, {\bf Module\+Element\+Info} $\ast$\&result)
+\item 
+bool {\bf set\+Module\+Element\+Info} ({\bf Element\+ID} id, std\+::pair$<$ {\bf Module\+ID}, {\bf Module\+Scenario\+ID} $>$ \&key, {\bf Module\+Element\+Info} \&info)
+\item 
+bool {\bf remove\+Module\+Element\+Info} ({\bf Element\+ID} id, std\+::pair$<$ {\bf Module\+ID}, {\bf Module\+Scenario\+ID} $>$ \&key)
+\item 
+bool {\bf attach\+Node} ({\bf Node} \&node)
+\begin{DoxyCompactList}\small\item\em this method adds the node passed if it id does not match with the id of any element added \end{DoxyCompactList}\item 
+{\bf Node} $\ast$ {\bf detach\+Node} ({\bf Element\+ID} id)
+\begin{DoxyCompactList}\small\item\em this method removes the node from the list, but it does N\+OT delete the node itself \end{DoxyCompactList}\item 
+bool {\bf attach\+Link} ({\bf Link} \&link)
+\begin{DoxyCompactList}\small\item\em this method adds the link passed if it id does not match with the id of any element added \end{DoxyCompactList}\item 
+{\bf Link} $\ast$ {\bf detach\+Link} ({\bf Element\+ID} id)
+\begin{DoxyCompactList}\small\item\em this method detaches the link from the map but does not delete it \end{DoxyCompactList}\item 
+std\+::map$<$ {\bf Element\+ID}, {\bf Node} $\ast$ $>$ \& {\bf nodes\+Map} ()
+\begin{DoxyCompactList}\small\item\em return the map of all nodes \end{DoxyCompactList}\item 
+std\+::map$<$ {\bf Element\+ID}, {\bf Link} $\ast$ $>$ \& {\bf links\+Map} ()
+\begin{DoxyCompactList}\small\item\em return the map of all links \end{DoxyCompactList}\item 
+std\+::map$<$ {\bf Element\+ID}, {\bf Element} $\ast$ $>$ \& {\bf elements\+Map} ()
+\begin{DoxyCompactList}\small\item\em return the map of all elements \end{DoxyCompactList}\item 
+bool {\bf get\+Subnetwork} ({\bf Element\+ID} root\+\_\+id, std\+::vector$<$ {\bf Element\+ID} $>$ \&subnetwork\+\_\+ids\+\_\+vec, std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Element\+ID} $>$ $>$ \&dependency\+\_\+map)
+\item 
+std\+::vector$<$ {\bf Node} $\ast$ $>$ {\bf subnetworks\+Roots} ()
+\begin{DoxyCompactList}\small\item\em All nodes that are root of a subnetwork. \end{DoxyCompactList}\item 
+bool {\bf mark\+Node\+As\+Subnetwork} ({\bf Element\+ID} node\+\_\+id)
+\item 
+bool {\bf unmark\+Node\+As\+Subnetwork} ({\bf Element\+ID} node\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Delete an element that is not present in the list -\/ This method S\+H\+A\+LL only be called by the \doxyref{Command}{pag.}{class_command} Classes. \end{DoxyCompactList}\item 
+bool {\bf delete\+External\+Element} ({\bf Element} $\ast$element)
+\item 
+void {\bf clear} ()
+\item 
+{\bf Element\+ID} {\bf next\+ID} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf Network} \& {\bf instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Network} ()
+\item 
+{\bf $\sim$\+Network} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 19 do arquivo Network.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Network@{Network}!Network@{Network}}
+\index{Network@{Network}!Network@{Network}}
+\subsubsection[{Network()}]{\setlength{\rightskip}{0pt plus 5cm}Network\+::\+Network (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_a3cc2fb4f8fa4d507077e8da85ce5a1c8}
+\index{Network@{Network}!````~Network@{$\sim$\+Network}}
+\index{````~Network@{$\sim$\+Network}!Network@{Network}}
+\subsubsection[{$\sim$\+Network()}]{\setlength{\rightskip}{0pt plus 5cm}Network\+::$\sim$\+Network (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_network_a7a4e19cdb4bf0c7ecf82baa643831492}
+
+
+\subsection{Métodos}
+\index{Network@{Network}!add\+Link@{add\+Link}}
+\index{add\+Link@{add\+Link}!Network@{Network}}
+\subsubsection[{add\+Link(\+Element\+I\+D node\+\_\+origin\+\_\+id, Element\+I\+D node\+\_\+destiny\+\_\+id, Link $\ast$\&result, Link\+Type type=\+Link\+Type\+::\+Default, bool bidirectional=false, bool lateral\+\_\+inflow=false, bool artificial=false)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+::add\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{node\+\_\+origin\+\_\+id, }
+\item[{{\bf Element\+ID}}]{node\+\_\+destiny\+\_\+id, }
+\item[{{\bf Link} $\ast$\&}]{result, }
+\item[{{\bf Link\+Type}}]{type = {\ttfamily {\bf Link\+Type\+::\+Default}}, }
+\item[{bool}]{bidirectional = {\ttfamily false}, }
+\item[{bool}]{lateral\+\_\+inflow = {\ttfamily false}, }
+\item[{bool}]{artificial = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_network_a08b5ba8107e237f763022bf90dd67fa9}
+\index{Network@{Network}!add\+Node@{add\+Node}}
+\index{add\+Node@{add\+Node}!Network@{Network}}
+\subsubsection[{add\+Node(\+Node\+Type type=\+Node\+Type\+::\+Basin, double latitude=0.\+0, double longitude=0.\+0)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}\& Network\+::add\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Node\+Type}}]{type = {\ttfamily {\bf Node\+Type\+::\+Basin}}, }
+\item[{double}]{latitude = {\ttfamily 0.0}, }
+\item[{double}]{longitude = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)}\label{class_network_a906314cd364e43a0b63803beaab3b028}
+
+
+Creates a new node. 
+
+\index{Network@{Network}!attach\+Link@{attach\+Link}}
+\index{attach\+Link@{attach\+Link}!Network@{Network}}
+\subsubsection[{attach\+Link(\+Link \&link)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+::attach\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} \&}]{link}
+\end{DoxyParamCaption}
+)}\label{class_network_a97af4871cfcf111f302043a00d8a3b4e}
+
+
+this method adds the link passed if it id does not match with the id of any element added 
+
+\index{Network@{Network}!attach\+Node@{attach\+Node}}
+\index{attach\+Node@{attach\+Node}!Network@{Network}}
+\subsubsection[{attach\+Node(\+Node \&node)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+::attach\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} \&}]{node}
+\end{DoxyParamCaption}
+)}\label{class_network_a60877e0104cc6a4843878d5c408228c0}
+
+
+this method adds the node passed if it id does not match with the id of any element added 
+
+\index{Network@{Network}!clear@{clear}}
+\index{clear@{clear}!Network@{Network}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Network\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_network_ac318ee133974ab6e7d3fd47682b80cad}
+\index{Network@{Network}!delete\+External\+Element@{delete\+External\+Element}}
+\index{delete\+External\+Element@{delete\+External\+Element}!Network@{Network}}
+\subsubsection[{delete\+External\+Element(\+Element $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+::delete\+External\+Element (
+\begin{DoxyParamCaption}
+\item[{{\bf Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)}\label{class_network_a61d9892bb6f69d59b1392ae81a0b77d7}
+\index{Network@{Network}!detach\+Link@{detach\+Link}}
+\index{detach\+Link@{detach\+Link}!Network@{Network}}
+\subsubsection[{detach\+Link(\+Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Link}$\ast$ Network\+::detach\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)}\label{class_network_aee321e373d9de304e4155641088b28b8}
+
+
+this method detaches the link from the map but does not delete it 
+
+\index{Network@{Network}!detach\+Node@{detach\+Node}}
+\index{detach\+Node@{detach\+Node}!Network@{Network}}
+\subsubsection[{detach\+Node(\+Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ Network\+::detach\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)}\label{class_network_ac31b8e3e240714d5791e4c81e4da6485}
+
+
+this method removes the node from the list, but it does N\+OT delete the node itself 
+
+\index{Network@{Network}!elements\+Map@{elements\+Map}}
+\index{elements\+Map@{elements\+Map}!Network@{Network}}
+\subsubsection[{elements\+Map()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ {\bf Element\+ID}, {\bf Element}$\ast$ $>$\& Network\+::elements\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_network_a948def794f54b55a6ec00e85d84e6bc4}
+
+
+return the map of all elements 
+
+Return all elements that are part of the subnetwork of the root element \index{Network@{Network}!get\+Element@{get\+Element}}
+\index{get\+Element@{get\+Element}!Network@{Network}}
+\subsubsection[{get\+Element(\+Element\+I\+D id, Element $\ast$\&result)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+::get\+Element (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{{\bf Element} $\ast$\&}]{result}
+\end{DoxyParamCaption}
+)}\label{class_network_a4c66d7a40c40cb61c2b2a7b825cc42ee}
+
+
+returns true and fills the pointer result with the element\textquotesingle{}s pointer if it exists 
+
+\index{Network@{Network}!get\+Element\+Label@{get\+Element\+Label}}
+\index{get\+Element\+Label@{get\+Element\+Label}!Network@{Network}}
+\subsubsection[{get\+Element\+Label(\+Element\+I\+D id, std\+::string \&label)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+::get\+Element\+Label (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{std\+::string \&}]{label}
+\end{DoxyParamCaption}
+)}\label{class_network_abe9b929247940348191b40ad6f342b85}
+
+
+returns the label from the \doxyref{Element}{pag.}{class_element} 
+
+\index{Network@{Network}!get\+Link@{get\+Link}}
+\index{get\+Link@{get\+Link}!Network@{Network}}
+\subsubsection[{get\+Link(\+Element\+I\+D id, Link $\ast$\&result)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+::get\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{{\bf Link} $\ast$\&}]{result}
+\end{DoxyParamCaption}
+)}\label{class_network_aab641237bda1a169869a1355fc065257}
+
+
+returns true and fills the pointer result with the link\textquotesingle{}s pointer if it exists 
+
+\index{Network@{Network}!get\+Node@{get\+Node}}
+\index{get\+Node@{get\+Node}!Network@{Network}}
+\subsubsection[{get\+Node(\+Element\+I\+D id, Node $\ast$\&result)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+::get\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{{\bf Node} $\ast$\&}]{result}
+\end{DoxyParamCaption}
+)}\label{class_network_ad59e9a0f87d46a051aff44610c3d9c75}
+
+
+returns true and fills the pointer result with the node\textquotesingle{}s pointer if it exists 
+
+\index{Network@{Network}!get\+Subnetwork@{get\+Subnetwork}}
+\index{get\+Subnetwork@{get\+Subnetwork}!Network@{Network}}
+\subsubsection[{get\+Subnetwork(\+Element\+I\+D root\+\_\+id, std\+::vector$<$ Element\+I\+D $>$ \&subnetwork\+\_\+ids\+\_\+vec, std\+::map$<$ Element\+I\+D, std\+::vector$<$ Element\+I\+D $>$ $>$ \&dependency\+\_\+map)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+::get\+Subnetwork (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{root\+\_\+id, }
+\item[{std\+::vector$<$ {\bf Element\+ID} $>$ \&}]{subnetwork\+\_\+ids\+\_\+vec, }
+\item[{std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Element\+ID} $>$ $>$ \&}]{dependency\+\_\+map}
+\end{DoxyParamCaption}
+)}\label{class_network_ad1b1f2ee9342a84f56423190944e0333}
+\index{Network@{Network}!instance@{instance}}
+\index{instance@{instance}!Network@{Network}}
+\subsubsection[{instance()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Network}\& Network\+::instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_network_ae45535f2c600248f0441b706b396fe68}
+\index{Network@{Network}!links\+Map@{links\+Map}}
+\index{links\+Map@{links\+Map}!Network@{Network}}
+\subsubsection[{links\+Map()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ {\bf Element\+ID}, {\bf Link}$\ast$ $>$\& Network\+::links\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_network_a726de48a0669b78ef68c992d37feb399}
+
+
+return the map of all links 
+
+\index{Network@{Network}!mark\+Node\+As\+Subnetwork@{mark\+Node\+As\+Subnetwork}}
+\index{mark\+Node\+As\+Subnetwork@{mark\+Node\+As\+Subnetwork}!Network@{Network}}
+\subsubsection[{mark\+Node\+As\+Subnetwork(\+Element\+I\+D node\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+::mark\+Node\+As\+Subnetwork (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{node\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_network_a5079283a4dedeb2213cfcce31bbf0794}
+\index{Network@{Network}!module\+Element\+Info@{module\+Element\+Info}}
+\index{module\+Element\+Info@{module\+Element\+Info}!Network@{Network}}
+\subsubsection[{module\+Element\+Info(\+Element\+I\+D id, std\+::pair$<$ Module\+I\+D, Module\+Scenario\+I\+D $>$ \&key, Module\+Element\+Info $\ast$\&result)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+::module\+Element\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{std\+::pair$<$ {\bf Module\+ID}, {\bf Module\+Scenario\+ID} $>$ \&}]{key, }
+\item[{{\bf Module\+Element\+Info} $\ast$\&}]{result}
+\end{DoxyParamCaption}
+)}\label{class_network_a35f66a734a7e3fd7a6e3b2daa35fe088}
+\index{Network@{Network}!next\+ID@{next\+ID}}
+\index{next\+ID@{next\+ID}!Network@{Network}}
+\subsubsection[{next\+I\+D()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Element\+ID} Network\+::next\+ID (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_network_a85e7ecd28d2b03e185960272ce91cf35}
+\index{Network@{Network}!nodes\+Map@{nodes\+Map}}
+\index{nodes\+Map@{nodes\+Map}!Network@{Network}}
+\subsubsection[{nodes\+Map()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ {\bf Element\+ID}, {\bf Node}$\ast$ $>$\& Network\+::nodes\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_network_adacc472ec06c670bcb183d64252c58f8}
+
+
+return the map of all nodes 
+
+\index{Network@{Network}!remove\+Element@{remove\+Element}}
+\index{remove\+Element@{remove\+Element}!Network@{Network}}
+\subsubsection[{remove\+Element(\+Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+::remove\+Element (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)}\label{class_network_a25d08c3928c9afde78f365aa2990d830}
+
+
+remove the element by the id specified if it exists -\/ returns true if the removal was successful, false otherwise 
+
+\index{Network@{Network}!remove\+Module\+Element\+Info@{remove\+Module\+Element\+Info}}
+\index{remove\+Module\+Element\+Info@{remove\+Module\+Element\+Info}!Network@{Network}}
+\subsubsection[{remove\+Module\+Element\+Info(\+Element\+I\+D id, std\+::pair$<$ Module\+I\+D, Module\+Scenario\+I\+D $>$ \&key)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+::remove\+Module\+Element\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{std\+::pair$<$ {\bf Module\+ID}, {\bf Module\+Scenario\+ID} $>$ \&}]{key}
+\end{DoxyParamCaption}
+)}\label{class_network_a1a20aa78a5e767ecd50f64a50593efe3}
+\index{Network@{Network}!set\+Element\+ID@{set\+Element\+ID}}
+\index{set\+Element\+ID@{set\+Element\+ID}!Network@{Network}}
+\subsubsection[{set\+Element\+I\+D(\+Element\+I\+D old\+\_\+id, Element\+I\+D new\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+::set\+Element\+ID (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{old\+\_\+id, }
+\item[{{\bf Element\+ID}}]{new\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_network_ab1ac1b5cda4d5ea2bdf093d64e803b9b}
+\index{Network@{Network}!set\+Link\+Nodes@{set\+Link\+Nodes}}
+\index{set\+Link\+Nodes@{set\+Link\+Nodes}!Network@{Network}}
+\subsubsection[{set\+Link\+Nodes(\+Element\+I\+D link\+\_\+id, Element\+I\+D node\+\_\+origin\+\_\+id, Element\+I\+D node\+\_\+destiny\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+::set\+Link\+Nodes (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{link\+\_\+id, }
+\item[{{\bf Element\+ID}}]{node\+\_\+origin\+\_\+id, }
+\item[{{\bf Element\+ID}}]{node\+\_\+destiny\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_network_a6e23a0fafb4e240bd7ba5c108c0e5f67}
+\index{Network@{Network}!set\+Link\+Type@{set\+Link\+Type}}
+\index{set\+Link\+Type@{set\+Link\+Type}!Network@{Network}}
+\subsubsection[{set\+Link\+Type(\+Link \&link, Link\+Type new\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+::set\+Link\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} \&}]{link, }
+\item[{{\bf Link\+Type}}]{new\+\_\+type}
+\end{DoxyParamCaption}
+)}\label{class_network_a770f38b7e6fcbf6fae4baadb9d2ed6cf}
+\index{Network@{Network}!set\+Link\+Type@{set\+Link\+Type}}
+\index{set\+Link\+Type@{set\+Link\+Type}!Network@{Network}}
+\subsubsection[{set\+Link\+Type(\+Element\+I\+D link\+\_\+id, Link\+Type new\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+::set\+Link\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{link\+\_\+id, }
+\item[{{\bf Link\+Type}}]{new\+\_\+type}
+\end{DoxyParamCaption}
+)}\label{class_network_a47aab0a2e73e06f876b54caa2a494b62}
+\index{Network@{Network}!set\+Module\+Element\+Info@{set\+Module\+Element\+Info}}
+\index{set\+Module\+Element\+Info@{set\+Module\+Element\+Info}!Network@{Network}}
+\subsubsection[{set\+Module\+Element\+Info(\+Element\+I\+D id, std\+::pair$<$ Module\+I\+D, Module\+Scenario\+I\+D $>$ \&key, Module\+Element\+Info \&info)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+::set\+Module\+Element\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{std\+::pair$<$ {\bf Module\+ID}, {\bf Module\+Scenario\+ID} $>$ \&}]{key, }
+\item[{{\bf Module\+Element\+Info} \&}]{info}
+\end{DoxyParamCaption}
+)}\label{class_network_a6ed7434ceb6bec34ad1ea7b4f4105b0a}
+\index{Network@{Network}!set\+Node\+Type@{set\+Node\+Type}}
+\index{set\+Node\+Type@{set\+Node\+Type}!Network@{Network}}
+\subsubsection[{set\+Node\+Type(\+Node \&node, Node\+Type new\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+::set\+Node\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} \&}]{node, }
+\item[{{\bf Node\+Type}}]{new\+\_\+type}
+\end{DoxyParamCaption}
+)}\label{class_network_a12a62e9750840e78d5f68b965c98d670}
+\index{Network@{Network}!set\+Node\+Type@{set\+Node\+Type}}
+\index{set\+Node\+Type@{set\+Node\+Type}!Network@{Network}}
+\subsubsection[{set\+Node\+Type(\+Element\+I\+D node\+\_\+id, Node\+Type new\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+::set\+Node\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{node\+\_\+id, }
+\item[{{\bf Node\+Type}}]{new\+\_\+type}
+\end{DoxyParamCaption}
+)}\label{class_network_a341b766edcc58ff8c65001ff3872ca21}
+\index{Network@{Network}!subnetworks\+Roots@{subnetworks\+Roots}}
+\index{subnetworks\+Roots@{subnetworks\+Roots}!Network@{Network}}
+\subsubsection[{subnetworks\+Roots()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ {\bf Node}$\ast$ $>$ Network\+::subnetworks\+Roots (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_network_a1d83b5f450007e5e92324d7fa1ddcca2}
+
+
+All nodes that are root of a subnetwork. 
+
+\index{Network@{Network}!unmark\+Node\+As\+Subnetwork@{unmark\+Node\+As\+Subnetwork}}
+\index{unmark\+Node\+As\+Subnetwork@{unmark\+Node\+As\+Subnetwork}!Network@{Network}}
+\subsubsection[{unmark\+Node\+As\+Subnetwork(\+Element\+I\+D node\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Network\+::unmark\+Node\+As\+Subnetwork (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{node\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_network_aba9743e22559b337e3b7aebef71e3257}
+
+
+Delete an element that is not present in the list -\/ This method S\+H\+A\+LL only be called by the \doxyref{Command}{pag.}{class_command} Classes. 
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Network.\+h}\end{DoxyCompactItemize}

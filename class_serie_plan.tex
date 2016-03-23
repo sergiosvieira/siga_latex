@@ -1,0 +1,845 @@
+\section{Refer√™ncia da Classe Serie\+Plan}
+\label{class_serie_plan}\index{Serie\+Plan@{Serie\+Plan}}
+
+
+{\ttfamily \#include $<$Serie\+Plan.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Serie\+Plan} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent}, {\bf Serie\+Viewer} $\ast${\bf viewer}, bool editable, bool manual\+Inserction)
+\item 
+{\bf $\sim$\+Serie\+Plan} ()
+\item 
+void {\bf update\+Draw\+Serie} ()
+\item 
+void {\bf set\+Active\+Element} (int a\+\_\+id)
+\item 
+int {\bf get\+Active\+Element} ()
+\item 
+void {\bf fill\+Tree\+Ctrl\+With\+Elements} (wx\+Tree\+Ctrl $\ast$a\+\_\+tree)
+\item 
+void {\bf Enable\+Radiobox\+Button} ()
+\item 
+void {\bf draw} ()
+\item 
+void {\bf draw\+One\+Serie\+Hour} ()
+\item 
+void {\bf draw\+One\+Serie\+Day} ()
+\item 
+void {\bf draw\+One\+Serie\+Month} ()
+\item 
+void {\bf draw\+Hour} ()
+\item 
+void {\bf draw\+Day} ()
+\item 
+void {\bf draw\+Month} ()
+\item 
+void {\bf draw\+Year} ()
+\item 
+void {\bf set\+Interval} ({\bf Interval} inter)
+\item 
+{\bf Interval} {\bf get\+Interval} ()
+\item 
+void {\bf clear} ()
+\item 
+wx\+Tree\+Item\+Id {\bf has\+Section} (wx\+Tree\+Item\+Id parent\+Id, wx\+String section)
+\item 
+void {\bf insert\+Tree\+Item} (wx\+Tree\+Item\+Id root, {\bf Draw\+Serie} $\ast$d\+Serie)
+\item 
+void {\bf remove\+Tree\+Item} (wx\+Tree\+Item\+Id root, {\bf Draw\+Serie} $\ast$d\+Serie)
+\item 
+void {\bf remove\+Tree\+Item\+Serie} (const wx\+Tree\+Item\+Id \&id)
+\item 
+void {\bf clear\+Grid} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf edited}
+\item 
+wx\+Date\+Time {\bf D\+T1}
+\item 
+wx\+Date\+Time {\bf D\+T2}
+\item 
+wx\+Tree\+Item\+Id {\bf r\+Id}
+\item 
+wx\+Menu $\ast$ {\bf popup\+Menu}
+\item 
+int {\bf shown\+Plan}
+\item 
+{\bf Serie\+Viewer} $\ast$ {\bf viewer}
+\item 
+wx\+Tree\+Ctrl $\ast$ {\bf tc\+Series}
+\item 
+{\bf S\+I\+G\+A\+Grid} $\ast$ {\bf grid}
+\item 
+int {\bf active\+Element}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf select\+Serie} (wx\+Tree\+Item\+Id id, bool state)
+\item 
+void {\bf update\+All\+Cells} (std\+::string a\+\_\+value)
+\item 
+bool {\bf fix\+Double\+Value} (std\+::string \&a\+\_\+cell\+Value)
+\item 
+void {\bf on\+Select\+Serie} (wx\+Tree\+Event \&event)
+\item 
+void {\bf on\+Right\+Clicked} (wx\+Tree\+Event \&event)
+\item 
+void {\bf on\+Popup\+Menu} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Delete\+Item} (wx\+Tree\+Event \&event)
+\item 
+void {\bf on\+Set\+Interval} (wx\+Date\+Event \&event)
+\item 
+void {\bf on\+Set\+Start\+Hour} (wx\+Spin\+Event \&event)
+\item 
+void {\bf on\+Set\+End\+Hour} (wx\+Spin\+Event \&event)
+\item 
+void {\bf on\+Set\+DeltaT} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Radio} (wx\+Command\+Event \&)
+\item 
+void {\bf on\+Check} (wx\+Command\+Event \&)
+\item 
+void {\bf on\+Selected\+Tree\+Item} (wx\+Tree\+Event \&)
+\item 
+void {\bf on\+Apply\+All} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Copy\+Time\+Range} (wx\+Command\+Event \&event)
+\item 
+void {\bf update\+Tree\+Series} ()
+\item 
+void {\bf configure\+Serie} ({\bf Serie} $\ast$a\+\_\+serie)
+\item 
+void {\bf set\+Serie\+Interval\+From\+Datepicker} ({\bf Serie} \&serie)
+\item 
+void {\bf set\+All\+Items\+Null} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Radio\+Box $\ast$ {\bf r\+Types}
+\item 
+wx\+Static\+Text $\ast$ {\bf m\+\_\+apply\+All\+Text}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf m\+\_\+apply\+Text}
+\item 
+wx\+Button $\ast$ {\bf m\+\_\+btn\+Aplly}
+\item 
+wx\+Check\+Box $\ast$ {\bf cb\+Manual}
+\item 
+wx\+Button $\ast$ {\bf m\+\_\+copy\+Data\+Range\+Button}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf spin\+Start\+Hour}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf spin\+End\+Hour}
+\item 
+wx\+Choice $\ast$ {\bf cb\+DeltaT}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Interval}
+\item 
+wx\+Flex\+Grid\+Sizer $\ast$ {\bf grid\+Delta}
+\item 
+wx\+Flex\+Grid\+Sizer $\ast$ {\bf grid\+Interval}
+\item 
+wx\+Static\+Text $\ast$ {\bf st\+Empty}
+\item 
+wx\+Static\+Text $\ast$ {\bf st\+Date}
+\item 
+wx\+Static\+Text $\ast$ {\bf st\+Hour}
+\item 
+wx\+Tree\+Ctrl $\ast$ {\bf tree\+Elements}
+\item 
+wx\+Tree\+Item\+Id {\bf selected\+Item\+Tree\+Element}
+\item 
+std\+::vector$<$ std\+::string $>$ {\bf m\+\_\+text\+Filter}
+\item 
+{\bf Interval} {\bf interval}
+\item 
+wx\+Date\+Picker\+Ctrl $\ast$ {\bf dp\+Start\+Interval}
+\item 
+wx\+Date\+Picker\+Ctrl $\ast$ {\bf dp\+End\+Interval}
+\item 
+bool {\bf manual\+Values}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Serie\+Viewer}
+\item 
+class {\bf Serie\+Plan\+Grid}
+\item 
+class {\bf Serie\+Dialog\+Content}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descri√ß√£o Detalhada}
+Mostra as series de forma tabular 
+
+Defini√ß√£o na linha 123 do arquivo Serie\+Plan.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Serie\+Plan@{Serie\+Plan}!Serie\+Plan@{Serie\+Plan}}
+\index{Serie\+Plan@{Serie\+Plan}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{Serie\+Plan(wx\+Frame $\ast$frame, wx\+Window $\ast$parent, Serie\+Viewer $\ast$viewer, bool editable, bool manual\+Inserction)}]{\setlength{\rightskip}{0pt plus 5cm}Serie\+Plan\+::\+Serie\+Plan (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{{\bf Serie\+Viewer} $\ast$}]{viewer, }
+\item[{bool}]{editable, }
+\item[{bool}]{manual\+Inserction}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_a1e6c8478c47e20e7d7e117b185fe925f}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em frame} & Frame que contem a interface  Pai da janela \\
+\hline
+{\em viewer} & Visualizador \\
+\hline
+{\em editable} & Grid editavel \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Plan@{Serie\+Plan}!````~Serie\+Plan@{$\sim$\+Serie\+Plan}}
+\index{````~Serie\+Plan@{$\sim$\+Serie\+Plan}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{$\sim$\+Serie\+Plan()}]{\setlength{\rightskip}{0pt plus 5cm}Serie\+Plan\+::$\sim$\+Serie\+Plan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_ab748f17dcbc49429f1f3f7fa8ccb9722}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Serie\+Plan@{Serie\+Plan}!clear@{clear}}
+\index{clear@{clear}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_ab06e5da481f2e22028b013da11a248a7}
+Limpa a planlha \index{Serie\+Plan@{Serie\+Plan}!clear\+Grid@{clear\+Grid}}
+\index{clear\+Grid@{clear\+Grid}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{clear\+Grid()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::clear\+Grid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_a19ec18e00466e2463967f8dcfd5b3517}
+Clear all data from tc\+Serie and grid \index{Serie\+Plan@{Serie\+Plan}!configure\+Serie@{configure\+Serie}}
+\index{configure\+Serie@{configure\+Serie}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{configure\+Serie(\+Serie $\ast$a\+\_\+serie)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::configure\+Serie (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie} $\ast$}]{a\+\_\+serie}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a1838dc9a353a6ed6733fc376e107c568}
+Recebe uma serie e configura os parametros da serieviwer \index{Serie\+Plan@{Serie\+Plan}!draw@{draw}}
+\index{draw@{draw}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{draw()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_af273b0d01835e4b5eae9e949fec6ba2a}
+Escreve os dados na tabela \index{Serie\+Plan@{Serie\+Plan}!draw\+Day@{draw\+Day}}
+\index{draw\+Day@{draw\+Day}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{draw\+Day()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::draw\+Day (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_abeaa1c6a8edda027c66c5a2575372938}
+Escreve os dados na tabela diariamente \index{Serie\+Plan@{Serie\+Plan}!draw\+Hour@{draw\+Hour}}
+\index{draw\+Hour@{draw\+Hour}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{draw\+Hour()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::draw\+Hour (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_a5fb518997ea66a87bd6ef8a83a3e8963}
+Escreve os dados na tabela horariamente \index{Serie\+Plan@{Serie\+Plan}!draw\+Month@{draw\+Month}}
+\index{draw\+Month@{draw\+Month}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{draw\+Month()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::draw\+Month (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_acc7f7253b8efd8bbb9c2755ede990caa}
+Escreve os dados na tabela mensalmente \index{Serie\+Plan@{Serie\+Plan}!draw\+One\+Serie\+Day@{draw\+One\+Serie\+Day}}
+\index{draw\+One\+Serie\+Day@{draw\+One\+Serie\+Day}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{draw\+One\+Serie\+Day()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::draw\+One\+Serie\+Day (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_a6f6fcb93facc108366154164a4831194}
+Desenha apenas uma serie com o intervalo do tipo diario \index{Serie\+Plan@{Serie\+Plan}!draw\+One\+Serie\+Hour@{draw\+One\+Serie\+Hour}}
+\index{draw\+One\+Serie\+Hour@{draw\+One\+Serie\+Hour}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{draw\+One\+Serie\+Hour()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::draw\+One\+Serie\+Hour (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_a95fd7a32c185088620247382389cdfa9}
+Desenha apenas uma serie com o intervalo do tipo horario \index{Serie\+Plan@{Serie\+Plan}!draw\+One\+Serie\+Month@{draw\+One\+Serie\+Month}}
+\index{draw\+One\+Serie\+Month@{draw\+One\+Serie\+Month}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{draw\+One\+Serie\+Month()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::draw\+One\+Serie\+Month (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_a24e57ef5152ecc489e54a06953cec760}
+Desenha apenas uma serie com o intervalo do tipo mensal \index{Serie\+Plan@{Serie\+Plan}!draw\+Year@{draw\+Year}}
+\index{draw\+Year@{draw\+Year}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{draw\+Year()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::draw\+Year (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_ac111e0cfd16c22f4c67506db20cdd6e8}
+Escreve os dados na tabela anualmente \index{Serie\+Plan@{Serie\+Plan}!Enable\+Radiobox\+Button@{Enable\+Radiobox\+Button}}
+\index{Enable\+Radiobox\+Button@{Enable\+Radiobox\+Button}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{Enable\+Radiobox\+Button()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::\+Enable\+Radiobox\+Button (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_aba30a2d1993dbaed5828391212b5e9df}
+\index{Serie\+Plan@{Serie\+Plan}!fill\+Tree\+Ctrl\+With\+Elements@{fill\+Tree\+Ctrl\+With\+Elements}}
+\index{fill\+Tree\+Ctrl\+With\+Elements@{fill\+Tree\+Ctrl\+With\+Elements}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{fill\+Tree\+Ctrl\+With\+Elements(wx\+Tree\+Ctrl $\ast$a\+\_\+tree)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::fill\+Tree\+Ctrl\+With\+Elements (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Ctrl $\ast$}]{a\+\_\+tree}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_a16640d088fa7fb94f43a87b66f397afe}
+\index{Serie\+Plan@{Serie\+Plan}!fix\+Double\+Value@{fix\+Double\+Value}}
+\index{fix\+Double\+Value@{fix\+Double\+Value}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{fix\+Double\+Value(std\+::string \&a\+\_\+cell\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Plan\+::fix\+Double\+Value (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+cell\+Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a0d0d0e44296858640d8cc8a701c6b896}
+Modify the cell value to acept only integer values 
+\begin{DoxyParams}{Par√¢metros}
+{\em a} & cell value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true if it\textquotesingle{}s all ok 
+\end{DoxyReturn}
+\index{Serie\+Plan@{Serie\+Plan}!get\+Active\+Element@{get\+Active\+Element}}
+\index{get\+Active\+Element@{get\+Active\+Element}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{get\+Active\+Element()}]{\setlength{\rightskip}{0pt plus 5cm}int Serie\+Plan\+::get\+Active\+Element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_a38660641dee6845d089cc1bd829f6ff8}
+Get the active element from treectrl of elements \index{Serie\+Plan@{Serie\+Plan}!get\+Interval@{get\+Interval}}
+\index{get\+Interval@{get\+Interval}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{get\+Interval()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Serie\+Plan\+::get\+Interval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_serie_plan_aa561d75ff4117dd957e3399348bad573}
+Retorna o intervalo 
+
+Defini√ß√£o na linha 397 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!has\+Section@{has\+Section}}
+\index{has\+Section@{has\+Section}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{has\+Section(wx\+Tree\+Item\+Id parent\+Id, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Item\+Id Serie\+Plan\+::has\+Section (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{parent\+Id, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_a04b0af74581cfc9486fb8f0c16e2e178}
+Verifica se existe uma seÁ„o com o nome enviado e retorna o identificador da seÁ„o ou (wx\+Tree\+Item\+Id)0 se n„o houver seÁ„o 
+\begin{DoxyParams}{Par√¢metros}
+{\em parent\+Id} & Id Ponto de inicio da busca \\
+\hline
+{\em section} & Nome da seÁ„o \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o identificador do nÛ para uma determinada section 
+\end{DoxyReturn}
+\index{Serie\+Plan@{Serie\+Plan}!insert\+Tree\+Item@{insert\+Tree\+Item}}
+\index{insert\+Tree\+Item@{insert\+Tree\+Item}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{insert\+Tree\+Item(wx\+Tree\+Item\+Id root, Draw\+Serie $\ast$d\+Serie)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::insert\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{root, }
+\item[{{\bf Draw\+Serie} $\ast$}]{d\+Serie}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_a0144e7caca706956ff16dc86414ae118}
+Insere uma serie no treectrl de acordo com a estrutura enviada 
+\begin{DoxyParams}{Par√¢metros}
+{\em root} & Identificador da raiz \\
+\hline
+{\em name} & Sub-\/seÁıes enviadas de forma 1/2/3/.../ \\
+\hline
+{\em serie} & Ponteiro para a serie \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Plan@{Serie\+Plan}!on\+Apply\+All@{on\+Apply\+All}}
+\index{on\+Apply\+All@{on\+Apply\+All}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{on\+Apply\+All(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::on\+Apply\+All (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a21cd8f89c89c2a182aee4384efb954bd}
+Evento de click no bot„o que aplica um valor ˙nico em toda a grid \index{Serie\+Plan@{Serie\+Plan}!on\+Check@{on\+Check}}
+\index{on\+Check@{on\+Check}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{on\+Check(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::on\+Check (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_ac29afc91a48789a8cd35f517c65ce277}
+Evento de ativaÁ„o e desativaÁ„o de entrada manual de serie \index{Serie\+Plan@{Serie\+Plan}!on\+Copy\+Time\+Range@{on\+Copy\+Time\+Range}}
+\index{on\+Copy\+Time\+Range@{on\+Copy\+Time\+Range}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{on\+Copy\+Time\+Range(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::on\+Copy\+Time\+Range (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a83157816c778e2bc26e8a584cf185d3c}
+Evento de click no bot„o que aplica copia o intervalo de simulaÁ„o configurada no cen·rio selecionado \index{Serie\+Plan@{Serie\+Plan}!on\+Delete\+Item@{on\+Delete\+Item}}
+\index{on\+Delete\+Item@{on\+Delete\+Item}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{on\+Delete\+Item(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::on\+Delete\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a7817287626d8b55bd86bdf56ba8cbcd6}
+Evento de deleÁ„o de itÈm do tc\+Series 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Plan@{Serie\+Plan}!on\+Popup\+Menu@{on\+Popup\+Menu}}
+\index{on\+Popup\+Menu@{on\+Popup\+Menu}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{on\+Popup\+Menu(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::on\+Popup\+Menu (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a09b28d8d87929ddc1c50868d05a2c0d6}
+Eventos do menu gerado pelo bot„o direito do mouse \index{Serie\+Plan@{Serie\+Plan}!on\+Radio@{on\+Radio}}
+\index{on\+Radio@{on\+Radio}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{on\+Radio(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::on\+Radio (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a9b08e32a03c6c8aaebd3da81277ba3bf}
+Evento de mudanÁa do tipo de intervalo \index{Serie\+Plan@{Serie\+Plan}!on\+Right\+Clicked@{on\+Right\+Clicked}}
+\index{on\+Right\+Clicked@{on\+Right\+Clicked}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{on\+Right\+Clicked(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::on\+Right\+Clicked (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a6d0aa306866bd8717d784bdfd84e2432}
+Evento do bot„o direito do mouse clicado sobre o treectrl \index{Serie\+Plan@{Serie\+Plan}!on\+Selected\+Tree\+Item@{on\+Selected\+Tree\+Item}}
+\index{on\+Selected\+Tree\+Item@{on\+Selected\+Tree\+Item}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{on\+Selected\+Tree\+Item(wx\+Tree\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::on\+Selected\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a2df83d44e436d316c066381fba04db1f}
+Evento de click na treectrl que lista os elementos dentro da serieviwer \index{Serie\+Plan@{Serie\+Plan}!on\+Select\+Serie@{on\+Select\+Serie}}
+\index{on\+Select\+Serie@{on\+Select\+Serie}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{on\+Select\+Serie(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::on\+Select\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_aa4a7faac9dce0022d9c3f788e726820e}
+Evento de seleÁ„o de serie 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Plan@{Serie\+Plan}!on\+Set\+DeltaT@{on\+Set\+DeltaT}}
+\index{on\+Set\+DeltaT@{on\+Set\+DeltaT}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{on\+Set\+Delta\+T(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::on\+Set\+DeltaT (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a37a221a900c2a58c27ed5a7f1b5de592}
+Define o delta t \index{Serie\+Plan@{Serie\+Plan}!on\+Set\+End\+Hour@{on\+Set\+End\+Hour}}
+\index{on\+Set\+End\+Hour@{on\+Set\+End\+Hour}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{on\+Set\+End\+Hour(wx\+Spin\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::on\+Set\+End\+Hour (
+\begin{DoxyParamCaption}
+\item[{wx\+Spin\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a190d81ff51730eea4e208846d4cdbdaa}
+\index{Serie\+Plan@{Serie\+Plan}!on\+Set\+Interval@{on\+Set\+Interval}}
+\index{on\+Set\+Interval@{on\+Set\+Interval}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{on\+Set\+Interval(wx\+Date\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::on\+Set\+Interval (
+\begin{DoxyParamCaption}
+\item[{wx\+Date\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a089639dad0da34b4f4c4dd7696e94e63}
+Evento de mudanÁa do intervalo 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Plan@{Serie\+Plan}!on\+Set\+Start\+Hour@{on\+Set\+Start\+Hour}}
+\index{on\+Set\+Start\+Hour@{on\+Set\+Start\+Hour}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{on\+Set\+Start\+Hour(wx\+Spin\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::on\+Set\+Start\+Hour (
+\begin{DoxyParamCaption}
+\item[{wx\+Spin\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_aaed10ef83049f0b7c138ba955cd37678}
+\index{Serie\+Plan@{Serie\+Plan}!remove\+Tree\+Item@{remove\+Tree\+Item}}
+\index{remove\+Tree\+Item@{remove\+Tree\+Item}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{remove\+Tree\+Item(wx\+Tree\+Item\+Id root, Draw\+Serie $\ast$d\+Serie)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::remove\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{root, }
+\item[{{\bf Draw\+Serie} $\ast$}]{d\+Serie}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_a4d034d471614aeb6bc20ffde892e0fc8}
+Remove uma serie do treectrl de acordo com a estrutura enviada 
+\begin{DoxyParams}{Par√¢metros}
+{\em root} & Identificador da raiz \\
+\hline
+{\em name} & Sub-\/seÁıes enviadas de forma 1/2/3/.../ \\
+\hline
+{\em serie} & Ponteiro para a serie \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Plan@{Serie\+Plan}!remove\+Tree\+Item\+Serie@{remove\+Tree\+Item\+Serie}}
+\index{remove\+Tree\+Item\+Serie@{remove\+Tree\+Item\+Serie}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{remove\+Tree\+Item\+Serie(const wx\+Tree\+Item\+Id \&id)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::remove\+Tree\+Item\+Serie (
+\begin{DoxyParamCaption}
+\item[{const wx\+Tree\+Item\+Id \&}]{id}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_af9276a6d887928f3dcc14a20be0ed9f5}
+Remove uma serie do treectrl de acordo com a section enviada 
+\begin{DoxyParams}{Par√¢metros}
+{\em section} & Local onde a serie se encontra \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Plan@{Serie\+Plan}!select\+Serie@{select\+Serie}}
+\index{select\+Serie@{select\+Serie}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{select\+Serie(wx\+Tree\+Item\+Id id, bool state)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::select\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{id, }
+\item[{bool}]{state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_ad20157f982130513416ba68d4dd3f706}
+Seleciona ou deseleciona as series contidas no grupo (este È um mÈtodo recursivo que supoe que todas as sÈries s„o folhas no Tree\+Ctrl)
+
+
+\begin{DoxyParams}{Par√¢metros}
+{\em id} & Identificador do Grupo \\
+\hline
+{\em state} & Seleciona se true e deseleciona se for false \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Plan@{Serie\+Plan}!set\+Active\+Element@{set\+Active\+Element}}
+\index{set\+Active\+Element@{set\+Active\+Element}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{set\+Active\+Element(int a\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::set\+Active\+Element (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_af2492fcedc2c5884a5607a21be70fa7d}
+Set the active element from treectrl of elements \index{Serie\+Plan@{Serie\+Plan}!set\+All\+Items\+Null@{set\+All\+Items\+Null}}
+\index{set\+All\+Items\+Null@{set\+All\+Items\+Null}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{set\+All\+Items\+Null()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::set\+All\+Items\+Null (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a52349d1c0cadf3d793fa96bdd8e86118}
+\index{Serie\+Plan@{Serie\+Plan}!set\+Interval@{set\+Interval}}
+\index{set\+Interval@{set\+Interval}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{set\+Interval(\+Interval inter)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::set\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{inter}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_ab9ee678a3fcd6c7895851a8fcab07cb4}
+Define o intervalo \index{Serie\+Plan@{Serie\+Plan}!set\+Serie\+Interval\+From\+Datepicker@{set\+Serie\+Interval\+From\+Datepicker}}
+\index{set\+Serie\+Interval\+From\+Datepicker@{set\+Serie\+Interval\+From\+Datepicker}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{set\+Serie\+Interval\+From\+Datepicker(\+Serie \&serie)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::set\+Serie\+Interval\+From\+Datepicker (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie} \&}]{serie}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a5e19f5acf3a5714bc2286e7e52979331}
+Gets the \doxyref{Interval}{pag.}{class_interval} from the interface and sets it to the serie \index{Serie\+Plan@{Serie\+Plan}!update\+All\+Cells@{update\+All\+Cells}}
+\index{update\+All\+Cells@{update\+All\+Cells}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{update\+All\+Cells(std\+::string a\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::update\+All\+Cells (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{a\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a1ced9d7875c1ae6acecb46af90448817}
+Aplica um valor ˙nico em toda a grid considerando o perÌodo definido \index{Serie\+Plan@{Serie\+Plan}!update\+Draw\+Serie@{update\+Draw\+Serie}}
+\index{update\+Draw\+Serie@{update\+Draw\+Serie}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{update\+Draw\+Serie()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::update\+Draw\+Serie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_plan_aa5da70053f7a7ae0168545ad2ee22138}
+Update \doxyref{Draw\+Serie}{pag.}{class_draw_serie} in case of grid have been modified \index{Serie\+Plan@{Serie\+Plan}!update\+Tree\+Series@{update\+Tree\+Series}}
+\index{update\+Tree\+Series@{update\+Tree\+Series}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{update\+Tree\+Series()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Plan\+::update\+Tree\+Series (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a2e68ce57a171c1120d0e6e8701900e9b}
+FunÁao respons·vel por atualizar os dados da treectrl 
+
+\subsection{Amigas e Fun√ß√µes Relacionadas}
+\index{Serie\+Plan@{Serie\+Plan}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{Serie\+Dialog\+Content}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Serie\+Dialog\+Content}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_serie_plan_a0367f04b14737e126adfadb76844b277}
+
+
+Defini√ß√£o na linha 130 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!Serie\+Plan\+Grid@{Serie\+Plan\+Grid}}
+\index{Serie\+Plan\+Grid@{Serie\+Plan\+Grid}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{Serie\+Plan\+Grid}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Serie\+Plan\+Grid}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_serie_plan_aa383768ff001e12f6d0902c37c879142}
+
+
+Defini√ß√£o na linha 129 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!Serie\+Viewer@{Serie\+Viewer}}
+\index{Serie\+Viewer@{Serie\+Viewer}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{Serie\+Viewer}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Serie\+Viewer}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_serie_plan_af08e3895573ce2332eaf783b4cebaad0}
+DeclaraÁ„o de classe amiga 
+
+Defini√ß√£o na linha 128 do arquivo Serie\+Plan.\+h.
+
+
+
+\subsection{Atributos}
+\index{Serie\+Plan@{Serie\+Plan}!active\+Element@{active\+Element}}
+\index{active\+Element@{active\+Element}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{active\+Element}]{\setlength{\rightskip}{0pt plus 5cm}int Serie\+Plan\+::active\+Element}\label{class_serie_plan_a108b92d39c17f187dfeb22b3e4076031}
+Has the ID of active element from treectrl elements 
+
+Defini√ß√£o na linha 319 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!cb\+DeltaT@{cb\+DeltaT}}
+\index{cb\+DeltaT@{cb\+DeltaT}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{cb\+DeltaT}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Serie\+Plan\+::cb\+DeltaT\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_affbd4a15a1671d9df032e96b2936c156}
+Define a variaÁ„o de tempo 
+
+Defini√ß√£o na linha 158 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!cb\+Manual@{cb\+Manual}}
+\index{cb\+Manual@{cb\+Manual}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{cb\+Manual}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ Serie\+Plan\+::cb\+Manual\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_aacd15006a917fb2cecde386fe3957ffd}
+Checkbox utilizado para dizer se a series ser· inserida manualmente 
+
+Defini√ß√£o na linha 147 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!dp\+End\+Interval@{dp\+End\+Interval}}
+\index{dp\+End\+Interval@{dp\+End\+Interval}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{dp\+End\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Picker\+Ctrl $\ast$ Serie\+Plan\+::dp\+End\+Interval\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_adce707f31be749b373980c71ffb64068}
+
+
+Defini√ß√£o na linha 262 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!dp\+Start\+Interval@{dp\+Start\+Interval}}
+\index{dp\+Start\+Interval@{dp\+Start\+Interval}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{dp\+Start\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Picker\+Ctrl$\ast$ Serie\+Plan\+::dp\+Start\+Interval\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a15b8aece1ed3913a1fda6dd187725c64}
+Controlador de inicio e fim do intervalo 
+
+Defini√ß√£o na linha 262 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!D\+T1@{D\+T1}}
+\index{D\+T1@{D\+T1}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{D\+T1}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Time Serie\+Plan\+::\+D\+T1}\label{class_serie_plan_accdefd7d0075d998624052efe229377b}
+
+
+Defini√ß√£o na linha 290 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!D\+T2@{D\+T2}}
+\index{D\+T2@{D\+T2}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{D\+T2}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Time Serie\+Plan\+::\+D\+T2}\label{class_serie_plan_af07f1050bf4b7a0c6a0efc2926966bd6}
+
+
+Defini√ß√£o na linha 290 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!edited@{edited}}
+\index{edited@{edited}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{edited}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Plan\+::edited}\label{class_serie_plan_af65e78c0a2e1e68f114735c0d2cffa74}
+Diz se a serie foi editada 
+
+Defini√ß√£o na linha 289 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!grid@{grid}}
+\index{grid@{grid}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{grid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Grid}$\ast$ Serie\+Plan\+::grid}\label{class_serie_plan_a30ea27b822dd41d8df30652a16789b80}
+Aponta para a grade 
+
+Defini√ß√£o na linha 314 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!grid\+Delta@{grid\+Delta}}
+\index{grid\+Delta@{grid\+Delta}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{grid\+Delta}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Flex\+Grid\+Sizer$\ast$ Serie\+Plan\+::grid\+Delta\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a6522743d02c2e0c5fb42a3a5f0e761f8}
+
+
+Defini√ß√£o na linha 161 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!grid\+Interval@{grid\+Interval}}
+\index{grid\+Interval@{grid\+Interval}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{grid\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Flex\+Grid\+Sizer $\ast$ Serie\+Plan\+::grid\+Interval\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a7e4aa3feb3c81c3c1cc60feffa71b07c}
+
+
+Defini√ß√£o na linha 161 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!interval@{interval}}
+\index{interval@{interval}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Serie\+Plan\+::interval\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_af9dba2f08e0cf2a63a828e14d408ce47}
+Intervalo 
+
+Defini√ß√£o na linha 258 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!m\+\_\+apply\+All\+Text@{m\+\_\+apply\+All\+Text}}
+\index{m\+\_\+apply\+All\+Text@{m\+\_\+apply\+All\+Text}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{m\+\_\+apply\+All\+Text}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Serie\+Plan\+::m\+\_\+apply\+All\+Text\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a6920c5f1b1997bfec72a368b5e4b079a}
+Elementos respons·veis pela funÁ„o de aplicar na grid toda um valor ˙nico 
+
+Defini√ß√£o na linha 140 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!m\+\_\+apply\+Text@{m\+\_\+apply\+Text}}
+\index{m\+\_\+apply\+Text@{m\+\_\+apply\+Text}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{m\+\_\+apply\+Text}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl$\ast$ Serie\+Plan\+::m\+\_\+apply\+Text\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a5ecc660f20f8a89524e9036905874a6b}
+
+
+Defini√ß√£o na linha 141 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!m\+\_\+btn\+Aplly@{m\+\_\+btn\+Aplly}}
+\index{m\+\_\+btn\+Aplly@{m\+\_\+btn\+Aplly}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{m\+\_\+btn\+Aplly}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Serie\+Plan\+::m\+\_\+btn\+Aplly\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a482b30b0a7822d556b6aeaaa9a8b8136}
+
+
+Defini√ß√£o na linha 142 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!m\+\_\+copy\+Data\+Range\+Button@{m\+\_\+copy\+Data\+Range\+Button}}
+\index{m\+\_\+copy\+Data\+Range\+Button@{m\+\_\+copy\+Data\+Range\+Button}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{m\+\_\+copy\+Data\+Range\+Button}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Serie\+Plan\+::m\+\_\+copy\+Data\+Range\+Button\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_aba74c0563f58d18b42b21e43b8ad6c22}
+
+
+Defini√ß√£o na linha 148 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!m\+\_\+text\+Filter@{m\+\_\+text\+Filter}}
+\index{m\+\_\+text\+Filter@{m\+\_\+text\+Filter}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{m\+\_\+text\+Filter}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ Serie\+Plan\+::m\+\_\+text\+Filter\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_adbe6cb7ab1048503298788ab632106c5}
+
+
+Defini√ß√£o na linha 168 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!manual\+Values@{manual\+Values}}
+\index{manual\+Values@{manual\+Values}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{manual\+Values}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Plan\+::manual\+Values\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_ac21ad9a40ebec73b53a2a440f4bb0588}
+Diz se deve ter uma interface de inserÁ„o de serie manual. Utilizado para inserire manualmente os valores de uma serie. 
+
+Defini√ß√£o na linha 267 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!popup\+Menu@{popup\+Menu}}
+\index{popup\+Menu@{popup\+Menu}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{popup\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Menu$\ast$ Serie\+Plan\+::popup\+Menu}\label{class_serie_plan_a8a9a50d81ab891e61e5cf714c44ee601}
+Menu de popup 
+
+Defini√ß√£o na linha 298 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!r\+Id@{r\+Id}}
+\index{r\+Id@{r\+Id}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{r\+Id}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Item\+Id Serie\+Plan\+::r\+Id}\label{class_serie_plan_a1abdee0f5933017f60dfe64cff601014}
+Identificador do treectrl da serie selecionada 
+
+Defini√ß√£o na linha 294 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!r\+Types@{r\+Types}}
+\index{r\+Types@{r\+Types}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{r\+Types}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box$\ast$ Serie\+Plan\+::r\+Types\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_adac0d349a1a739a40abd26b906f236e7}
+Radio\+Box para mudanÁa de tipo de intervalo 
+
+Defini√ß√£o na linha 135 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!selected\+Item\+Tree\+Element@{selected\+Item\+Tree\+Element}}
+\index{selected\+Item\+Tree\+Element@{selected\+Item\+Tree\+Element}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{selected\+Item\+Tree\+Element}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Item\+Id Serie\+Plan\+::selected\+Item\+Tree\+Element\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_ac8cea112b11fd9ae04743624e562b967}
+
+
+Defini√ß√£o na linha 166 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!shown\+Plan@{shown\+Plan}}
+\index{shown\+Plan@{shown\+Plan}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{shown\+Plan}]{\setlength{\rightskip}{0pt plus 5cm}int Serie\+Plan\+::shown\+Plan}\label{class_serie_plan_a055a464e7d8254df75442a24ea40b3fd}
+Diz a quantidade de series mostradas na planilha 
+
+Defini√ß√£o na linha 302 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!s\+Interval@{s\+Interval}}
+\index{s\+Interval@{s\+Interval}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{s\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer$\ast$ Serie\+Plan\+::s\+Interval\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a99c160a101270718d196dfa6a2b36191}
+
+
+Defini√ß√£o na linha 160 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!spin\+End\+Hour@{spin\+End\+Hour}}
+\index{spin\+End\+Hour@{spin\+End\+Hour}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{spin\+End\+Hour}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl $\ast$ Serie\+Plan\+::spin\+End\+Hour\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_abe11ca9adf201e9b49b30319924a906e}
+
+
+Defini√ß√£o na linha 154 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!spin\+Start\+Hour@{spin\+Start\+Hour}}
+\index{spin\+Start\+Hour@{spin\+Start\+Hour}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{spin\+Start\+Hour}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl$\ast$ Serie\+Plan\+::spin\+Start\+Hour\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a56b5caa0e4246288e8b2121c7027f1e4}
+Controla a hora 
+\begin{DoxyParams}{Par√¢metros}
+{\em spin\+Start\+Hour} & Hora de inicio \\
+\hline
+{\em spin\+End\+Hour} & Hora de fim \\
+\hline
+\end{DoxyParams}
+
+
+Defini√ß√£o na linha 154 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!st\+Date@{st\+Date}}
+\index{st\+Date@{st\+Date}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{st\+Date}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text $\ast$ Serie\+Plan\+::st\+Date\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a518061534ec082ab02b36ea07a5fec59}
+
+
+Defini√ß√£o na linha 162 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!st\+Empty@{st\+Empty}}
+\index{st\+Empty@{st\+Empty}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{st\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Serie\+Plan\+::st\+Empty\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a24d2cd3ed3afacbe2d5b55899eaafba6}
+
+
+Defini√ß√£o na linha 162 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!st\+Hour@{st\+Hour}}
+\index{st\+Hour@{st\+Hour}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{st\+Hour}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text $\ast$ Serie\+Plan\+::st\+Hour\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a4ef1537dbb02c23a7ee52b5bf1c30ebd}
+
+
+Defini√ß√£o na linha 162 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!tc\+Series@{tc\+Series}}
+\index{tc\+Series@{tc\+Series}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{tc\+Series}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Ctrl$\ast$ Serie\+Plan\+::tc\+Series}\label{class_serie_plan_ac0684c065e38717ca46ca7aa69fccc73}
+Tree\+Ctrl que contem as series 
+
+Defini√ß√£o na linha 310 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!tree\+Elements@{tree\+Elements}}
+\index{tree\+Elements@{tree\+Elements}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{tree\+Elements}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Ctrl$\ast$ Serie\+Plan\+::tree\+Elements\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_plan_a80c5c17f587276b261b89b85add01b72}
+
+
+Defini√ß√£o na linha 164 do arquivo Serie\+Plan.\+h.
+
+\index{Serie\+Plan@{Serie\+Plan}!viewer@{viewer}}
+\index{viewer@{viewer}!Serie\+Plan@{Serie\+Plan}}
+\subsubsection[{viewer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie\+Viewer}$\ast$ Serie\+Plan\+::viewer}\label{class_serie_plan_a71b6138dfba47cc828b2c9ede9f53624}
+Aponta poara o visualizador 
+
+Defini√ß√£o na linha 306 do arquivo Serie\+Plan.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Serie\+Plan.\+h}\end{DoxyCompactItemize}

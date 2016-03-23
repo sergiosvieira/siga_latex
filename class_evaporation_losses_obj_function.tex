@@ -1,0 +1,298 @@
+\section{ReferÃªncia da Classe Evaporation\+Losses\+Obj\+Function}
+\label{class_evaporation_losses_obj_function}\index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+
+
+{\ttfamily \#include $<$Evaporation\+Losses\+Obj\+Function.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Obj\+Function} e {\bf Res\+Op\+Obj\+Function}.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Evaporation\+Losses\+Obj\+Function} ()
+\item 
+{\bf $\sim$\+Evaporation\+Losses\+Obj\+Function} ()
+\item 
+double {\bf run} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+bool {\bf Check\+Limits} ({\bf Matrix} \&swarm\+Line)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+{\bf Evaporation\+Losses\+Obj\+Function} (bool {\bf minimize}=true)
+\item 
+{\bf $\sim$\+Evaporation\+Losses\+Obj\+Function} ()
+\item 
+double {\bf run} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements)
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+bool {\bf Check\+Limits} ({\bf Matrix} \&swarm\+Line)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String section)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String section)
+\end{DoxyCompactItemize}
+\subsection*{Atributos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ unsigned int $>$ {\bf id\+Sel\+Reservoirs}
+\item 
+vector$<$ {\bf Element\+ID} $>$ {\bf id\+Sel\+Reservoirs}
+\end{DoxyCompactItemize}
+\subsection*{MÃ©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Obj\+Function} $\ast$ {\bf do\+Copy} ()
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+Classe para função objetivo Perdas por Evaporação 
+
+DefiniÃ§Ã£o na linha 9 do arquivo Obj\+Function/\+Evaporation\+Losses/\+Evaporation\+Losses\+Obj\+Function.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}!Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+\index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}!Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+\subsubsection[{Evaporation\+Losses\+Obj\+Function()}]{\setlength{\rightskip}{0pt plus 5cm}Evaporation\+Losses\+Obj\+Function\+::\+Evaporation\+Losses\+Obj\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_evaporation_losses_obj_function_a3b686ebfd2861c0476c891597f4faed8}
+Construtor \index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}!````~Evaporation\+Losses\+Obj\+Function@{$\sim$\+Evaporation\+Losses\+Obj\+Function}}
+\index{````~Evaporation\+Losses\+Obj\+Function@{$\sim$\+Evaporation\+Losses\+Obj\+Function}!Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+\subsubsection[{$\sim$\+Evaporation\+Losses\+Obj\+Function()}]{\setlength{\rightskip}{0pt plus 5cm}Evaporation\+Losses\+Obj\+Function\+::$\sim$\+Evaporation\+Losses\+Obj\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_evaporation_losses_obj_function_aa3db040b102b7107ce4b2ea447aea552}
+Destrutor \index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}!Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+\index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}!Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+\subsubsection[{Evaporation\+Losses\+Obj\+Function(bool minimize=true)}]{\setlength{\rightskip}{0pt plus 5cm}Evaporation\+Losses\+Obj\+Function\+::\+Evaporation\+Losses\+Obj\+Function (
+\begin{DoxyParamCaption}
+\item[{bool}]{minimize = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_evaporation_losses_obj_function_af5cdb0e1e7a24ea538141c18f6b4c81c}
+Construtor \index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}!````~Evaporation\+Losses\+Obj\+Function@{$\sim$\+Evaporation\+Losses\+Obj\+Function}}
+\index{````~Evaporation\+Losses\+Obj\+Function@{$\sim$\+Evaporation\+Losses\+Obj\+Function}!Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+\subsubsection[{$\sim$\+Evaporation\+Losses\+Obj\+Function()}]{\setlength{\rightskip}{0pt plus 5cm}Evaporation\+Losses\+Obj\+Function\+::$\sim$\+Evaporation\+Losses\+Obj\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_evaporation_losses_obj_function_aa3db040b102b7107ce4b2ea447aea552}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Evaporation\+Losses\+Obj\+Function\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_evaporation_losses_obj_function_a980f589d5b1fefab3c166f3e9c6925ba}
+Checa se as informações estão completas 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a10a132bc689a51c9aecaa60de7983331}.
+
+\index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Evaporation\+Losses\+Obj\+Function\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_evaporation_losses_obj_function_a980f589d5b1fefab3c166f3e9c6925ba}
+Checa se as informações estão completas 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a10a132bc689a51c9aecaa60de7983331}.
+
+\index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}!Check\+Limits@{Check\+Limits}}
+\index{Check\+Limits@{Check\+Limits}!Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+\subsubsection[{Check\+Limits(\+Matrix \&swarm\+Line)}]{\setlength{\rightskip}{0pt plus 5cm}bool Evaporation\+Losses\+Obj\+Function\+::\+Check\+Limits (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{swarm\+Line}
+\end{DoxyParamCaption}
+)}\label{class_evaporation_losses_obj_function_ad86a3b2f6d9aa9528ddea6e7de43a108}
+Verifica se swarm\+Line estoura os limites (0 $<$= swarm\+Line[i] $<$= 1) 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em swarm\+Line} & ... \\
+\hline
+\end{DoxyParams}
+\index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}!Check\+Limits@{Check\+Limits}}
+\index{Check\+Limits@{Check\+Limits}!Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+\subsubsection[{Check\+Limits(\+Matrix \&swarm\+Line)}]{\setlength{\rightskip}{0pt plus 5cm}bool Evaporation\+Losses\+Obj\+Function\+::\+Check\+Limits (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{swarm\+Line}
+\end{DoxyParamCaption}
+)}\label{class_evaporation_losses_obj_function_ad86a3b2f6d9aa9528ddea6e7de43a108}
+Verifica se swarm\+Line estoura os limites (0 $<$= swarm\+Line[i] $<$= 1) 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em swarm\+Line} & ... \\
+\hline
+\end{DoxyParams}
+\index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}!clear@{clear}}
+\index{clear@{clear}!Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Evaporation\+Losses\+Obj\+Function\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_evaporation_losses_obj_function_ab106b3f94d8b51d4245eb82108d2b6bc}
+Limpa Dados 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a0a924a09921115d1aaf93d716eef0f02}.
+
+\index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}!clear@{clear}}
+\index{clear@{clear}!Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Evaporation\+Losses\+Obj\+Function\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_evaporation_losses_obj_function_ab106b3f94d8b51d4245eb82108d2b6bc}
+Limpa Dados 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a0a924a09921115d1aaf93d716eef0f02}.
+
+\index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+\subsubsection[{do\+Copy()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Obj\+Function}$\ast$ Evaporation\+Losses\+Obj\+Function\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_evaporation_losses_obj_function_ad90eca917e71a07a38348d457010adc8}
+Copia a função Objetivo corretamente 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a11780e26a00ee5abf1304dfa872026f6}.
+
+\index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Evaporation\+Losses\+Obj\+Function\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_evaporation_losses_obj_function_a2aac1de55fff09c55922e9a36f4e7b1e}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_aa5cf9b1f0a157e6571ab2d6a29aa4885}.
+
+\index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Evaporation\+Losses\+Obj\+Function\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_evaporation_losses_obj_function_a0f1868cc27e4492408b939311d275597}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_abf817a6bd51617b6381e627336a8b15d}.
+
+\index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Evaporation\+Losses\+Obj\+Function\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_evaporation_losses_obj_function_a649671b90db70a49423955aa4564761f}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a0adda529d70cc0557f7f700c944c52b9}.
+
+\index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Evaporation\+Losses\+Obj\+Function\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_evaporation_losses_obj_function_a6747573a0aebecfd6181b6f76afb0073}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a98425e92f67bc4f282c62c4b1c38a472}.
+
+\index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}!run@{run}}
+\index{run@{run}!Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}double Evaporation\+Losses\+Obj\+Function\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_evaporation_losses_obj_function_a873a2704210fb7f596dca41caf274842}
+Executa a função objetivo 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a4454977f68f8b6f3565e1f6e1c016f56}.
+
+\index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}!run@{run}}
+\index{run@{run}!Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+\subsubsection[{run(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements)}]{\setlength{\rightskip}{0pt plus 5cm}double Evaporation\+Losses\+Obj\+Function\+::run (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_evaporation_losses_obj_function_a4f4fd28d440f6940cff6d968d1821aa2}
+Executa a função objetivo 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_ae8e96c0de73af8d11c6095f752de7fd4}.
+
+
+
+\subsection{Atributos}
+\index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}!id\+Sel\+Reservoirs@{id\+Sel\+Reservoirs}}
+\index{id\+Sel\+Reservoirs@{id\+Sel\+Reservoirs}!Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+\subsubsection[{id\+Sel\+Reservoirs}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$unsigned int$>$ Evaporation\+Losses\+Obj\+Function\+::id\+Sel\+Reservoirs}\label{class_evaporation_losses_obj_function_a95976b97f4212e1cade8597bd7270b82}
+Reservatórios do sistema utilizados para cálculo da evaporação total 
+
+DefiniÃ§Ã£o na linha 16 do arquivo Obj\+Function/\+Evaporation\+Losses/\+Evaporation\+Losses\+Obj\+Function.\+h.
+
+\index{Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}!id\+Sel\+Reservoirs@{id\+Sel\+Reservoirs}}
+\index{id\+Sel\+Reservoirs@{id\+Sel\+Reservoirs}!Evaporation\+Losses\+Obj\+Function@{Evaporation\+Losses\+Obj\+Function}}
+\subsubsection[{id\+Sel\+Reservoirs}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Element\+ID}$>$ Evaporation\+Losses\+Obj\+Function\+::id\+Sel\+Reservoirs}\label{class_evaporation_losses_obj_function_acf04901b6d5ed88ea5cc3668f47f78f3}
+Reservatórios do sistema utilizados para cálculo da evaporação total 
+
+DefiniÃ§Ã£o na linha 28 do arquivo /\+Obj\+Function/\+Evaporation\+Losses/\+Evaporation\+Losses\+Obj\+Function.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Obj\+Function/\+Evaporation\+Losses/\+Evaporation\+Losses\+Obj\+Function.\+h}\end{DoxyCompactItemize}

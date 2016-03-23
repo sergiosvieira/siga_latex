@@ -1,0 +1,691 @@
+\section{Refer√™ncia da Classe Serie\+Graph}
+\label{class_serie_graph}\index{Serie\+Graph@{Serie\+Graph}}
+
+
+{\ttfamily \#include $<$Serie\+Graph.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf erase} (int i)
+\item 
+void {\bf show\+Select\+Error} (wx\+Tree\+Item\+Id i)
+\item 
+{\bf Serie\+Graph} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent}, {\bf Serie\+Viewer} $\ast${\bf viewer})
+\item 
+{\bf $\sim$\+Serie\+Graph} ()
+\item 
+void {\bf set\+Interval} ({\bf Interval} inter, bool force\+Set=false)
+\item 
+{\bf Interval} {\bf get\+Interval} ()
+\item 
+void {\bf Enable\+Radiobox\+Button} ()
+\item 
+bool {\bf draw} (int i)
+\item 
+void {\bf clear} ()
+\item 
+wx\+Tree\+Item\+Id {\bf has\+Section} (wx\+Tree\+Item\+Id parent\+Id, wx\+String section)
+\item 
+void {\bf insert\+Tree\+Item} (wx\+Tree\+Item\+Id root, {\bf Draw\+Serie} $\ast$d\+Serie)
+\item 
+void {\bf remove\+Tree\+Item} (wx\+Tree\+Item\+Id root, {\bf Draw\+Serie} $\ast$d\+Serie)
+\item 
+void {\bf remove\+Tree\+Item\+Serie} (const wx\+Tree\+Item\+Id \&id)
+\item 
+void {\bf scroll\+Update} ()
+\item 
+void {\bf on\+Scroll} (wx\+Scroll\+Event \&event)
+\item 
+void {\bf on\+Mouse} (wx\+Mouse\+Event \&event)
+\item 
+void {\bf redraw\+All} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Menu $\ast$ {\bf popup\+Menu}
+\item 
+int {\bf shown\+Graph}
+\item 
+wx\+Tree\+Item\+Id {\bf r\+Id}
+\item 
+wx\+Plot\+Ctrl $\ast$ {\bf plot}
+\item 
+{\bf Interval} {\bf interval}
+\item 
+wx\+Tree\+Ctrl $\ast$ {\bf tc\+Series}
+\item 
+{\bf Serie\+Viewer} $\ast$ {\bf viewer}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf select\+Serie} (wx\+Tree\+Item\+Id id, bool state)
+\item 
+void {\bf on\+Select\+Serie} (wx\+Tree\+Event \&event)
+\item 
+void {\bf on\+Right\+Clicked} (wx\+Tree\+Event \&event)
+\item 
+void {\bf on\+Popup\+Menu} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Changed\+Intem} (wx\+Tree\+Event \&event)
+\item 
+void {\bf on\+Delete\+Item} (wx\+Tree\+Event \&event)
+\item 
+void {\bf on\+Set\+Interval} (wx\+Date\+Event \&event)
+\item 
+void {\bf on\+Radio} (wx\+Command\+Event \&)
+\item 
+void {\bf on\+Subtitle} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Zoom} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Zoom\+Minus} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Zoom\+Plus} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Grid} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Conf\+Graph} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Combo\+Box} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Check} (wx\+Command\+Event \&event)
+\item 
+void {\bf plot\+Clicked} (wx\+Plot\+Ctrl\+Event \&event)
+\item 
+void {\bf enable\+Conf\+Graph} ()
+\item 
+void {\bf dot\+Activeted} (wx\+Plot\+Ctrl\+Event \&event)
+\item 
+int {\bf get\+Index\+Dot} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf index\+Dot}
+\item 
+wx\+Radio\+Box $\ast$ {\bf r\+Types}
+\item 
+wx\+Date\+Picker\+Ctrl $\ast$ {\bf dp\+Start\+Interval}
+\item 
+wx\+Date\+Picker\+Ctrl $\ast$ {\bf dp\+End\+Interval}
+\item 
+wx\+Bitmap\+Combo\+Box $\ast$ {\bf choice\+Colour}
+\item 
+wx\+Bitmap\+Combo\+Box $\ast$ {\bf choice\+Symbol}
+\item 
+wx\+Panel $\ast$ {\bf conf}
+\item 
+wx\+Check\+Box $\ast$ {\bf dot}
+\item 
+wx\+Check\+Box $\ast$ {\bf line}
+\item 
+wx\+Check\+Box $\ast$ {\bf fit}
+\item 
+wx\+Check\+Box $\ast$ {\bf spline}
+\item 
+wx\+Radio\+Box $\ast$ {\bf r\+Fit}
+\item 
+wx\+Sizer $\ast$ {\bf sp\+Conf}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Conf}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Tools}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Fit}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Serie\+Viewer}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descri√ß√£o Detalhada}
+Mostra as series de forma grafica 
+
+Defini√ß√£o na linha 82 do arquivo Serie\+Graph.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Serie\+Graph@{Serie\+Graph}!Serie\+Graph@{Serie\+Graph}}
+\index{Serie\+Graph@{Serie\+Graph}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{Serie\+Graph(wx\+Frame $\ast$frame, wx\+Window $\ast$parent, Serie\+Viewer $\ast$viewer)}]{\setlength{\rightskip}{0pt plus 5cm}Serie\+Graph\+::\+Serie\+Graph (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{{\bf Serie\+Viewer} $\ast$}]{viewer}
+\end{DoxyParamCaption}
+)}\label{class_serie_graph_a2eee3fcc5f6bb22a38ad946699aa9607}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em frame} & Janela onde ser· inserida a interface \\
+\hline
+{\em parent} & Componente a que pertence \\
+\hline
+{\em viewer} & Visualizador \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Graph@{Serie\+Graph}!````~Serie\+Graph@{$\sim$\+Serie\+Graph}}
+\index{````~Serie\+Graph@{$\sim$\+Serie\+Graph}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{$\sim$\+Serie\+Graph()}]{\setlength{\rightskip}{0pt plus 5cm}Serie\+Graph\+::$\sim$\+Serie\+Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_graph_a5b6f1ad6e450a24e2f5bdfbea38cd628}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Serie\+Graph@{Serie\+Graph}!clear@{clear}}
+\index{clear@{clear}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_graph_a0f4ffeb3a13edc779214c04bb9a0201d}
+Limpa o gr·fico \index{Serie\+Graph@{Serie\+Graph}!dot\+Activeted@{dot\+Activeted}}
+\index{dot\+Activeted@{dot\+Activeted}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{dot\+Activeted(wx\+Plot\+Ctrl\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::dot\+Activeted (
+\begin{DoxyParamCaption}
+\item[{wx\+Plot\+Ctrl\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a80d92d4491654b84079602bbcdada804}
+\index{Serie\+Graph@{Serie\+Graph}!draw@{draw}}
+\index{draw@{draw}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{draw(int i)}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Graph\+::draw (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\label{class_serie_graph_a1c7c4d8d6c25ae42ff8d1d4330ba105a}
+Desenha o grafico diacordo com o identificador da serie 
+\begin{DoxyParams}{Par√¢metros}
+{\em i} & Identificador da serie \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Graph@{Serie\+Graph}!enable\+Conf\+Graph@{enable\+Conf\+Graph}}
+\index{enable\+Conf\+Graph@{enable\+Conf\+Graph}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{enable\+Conf\+Graph()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::enable\+Conf\+Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_acb4d50f6ac506974547bfeaa59513c5b}
+\index{Serie\+Graph@{Serie\+Graph}!Enable\+Radiobox\+Button@{Enable\+Radiobox\+Button}}
+\index{Enable\+Radiobox\+Button@{Enable\+Radiobox\+Button}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{Enable\+Radiobox\+Button()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::\+Enable\+Radiobox\+Button (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_graph_a6cf7d12274dfc2db25f235d83a8aa8ca}
+Abilita seleÁ„o do radiobox de acordo com o tipo de intervalo \index{Serie\+Graph@{Serie\+Graph}!erase@{erase}}
+\index{erase@{erase}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{erase(int i)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::erase (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\label{class_serie_graph_a75a7643ac07c5017d80416aca31e718c}
+Apaga o grafico pelo identificador \index{Serie\+Graph@{Serie\+Graph}!get\+Index\+Dot@{get\+Index\+Dot}}
+\index{get\+Index\+Dot@{get\+Index\+Dot}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{get\+Index\+Dot()}]{\setlength{\rightskip}{0pt plus 5cm}int Serie\+Graph\+::get\+Index\+Dot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a4fe78125320e0d46a8014f5cd4070a6d}
+\index{Serie\+Graph@{Serie\+Graph}!get\+Interval@{get\+Interval}}
+\index{get\+Interval@{get\+Interval}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{get\+Interval()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Serie\+Graph\+::get\+Interval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_serie_graph_a596fa0817d3610cb5a4ec48772bcb3b6}
+Retorna o intervalo 
+
+Defini√ß√£o na linha 285 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!has\+Section@{has\+Section}}
+\index{has\+Section@{has\+Section}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{has\+Section(wx\+Tree\+Item\+Id parent\+Id, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Item\+Id Serie\+Graph\+::has\+Section (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{parent\+Id, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)}\label{class_serie_graph_a1bc6fde3f9fc5754377923f15d0a0207}
+Verifica se existe uma seÁ„o com o nome enviado e retorna o identificador da seÁ„o ou (wx\+Tree\+Item\+Id)0 se n„o houver seÁ„o 
+\begin{DoxyParams}{Par√¢metros}
+{\em parent\+Id} & Id da seÁ„o anterior \\
+\hline
+{\em section} & Nome da seÁ„o \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Graph@{Serie\+Graph}!insert\+Tree\+Item@{insert\+Tree\+Item}}
+\index{insert\+Tree\+Item@{insert\+Tree\+Item}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{insert\+Tree\+Item(wx\+Tree\+Item\+Id root, Draw\+Serie $\ast$d\+Serie)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::insert\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{root, }
+\item[{{\bf Draw\+Serie} $\ast$}]{d\+Serie}
+\end{DoxyParamCaption}
+)}\label{class_serie_graph_a871f5ecb26d5da6a8b1cf43b51aabb29}
+Insere uma serie no treectrl de acordo com a estrutura enviada 
+\begin{DoxyParams}{Par√¢metros}
+{\em root} & Identificador da raiz \\
+\hline
+{\em name} & Sub-\/seÁıes enviadas de forma 1/2/3/.../ \\
+\hline
+{\em serie} & Ponteiro para a serie \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Graph@{Serie\+Graph}!on\+Changed\+Intem@{on\+Changed\+Intem}}
+\index{on\+Changed\+Intem@{on\+Changed\+Intem}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{on\+Changed\+Intem(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::on\+Changed\+Intem (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a2018230a1806726a73f89874b7b301c6}
+Evento de mudanÁa de coluna 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Graph@{Serie\+Graph}!on\+Check@{on\+Check}}
+\index{on\+Check@{on\+Check}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{on\+Check(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::on\+Check (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a11a28d0aea02efdda58d460932c3bc92}
+Eventos de checkbox \index{Serie\+Graph@{Serie\+Graph}!on\+Combo\+Box@{on\+Combo\+Box}}
+\index{on\+Combo\+Box@{on\+Combo\+Box}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{on\+Combo\+Box(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::on\+Combo\+Box (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a89166a0b8a9e841720bfe7182d879240}
+Eventos do combobox \index{Serie\+Graph@{Serie\+Graph}!on\+Conf\+Graph@{on\+Conf\+Graph}}
+\index{on\+Conf\+Graph@{on\+Conf\+Graph}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{on\+Conf\+Graph(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::on\+Conf\+Graph (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a7d4b2f136305ad2e14c58769abae0dc8}
+Evento de precionado o bot„o de configuraÁıes do Gr·fico \index{Serie\+Graph@{Serie\+Graph}!on\+Delete\+Item@{on\+Delete\+Item}}
+\index{on\+Delete\+Item@{on\+Delete\+Item}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{on\+Delete\+Item(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::on\+Delete\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a6c968e5acd3f118d239d5c3ca50e0334}
+Evento de deleÁ„o de itÈm do tc\+Series 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Graph@{Serie\+Graph}!on\+Grid@{on\+Grid}}
+\index{on\+Grid@{on\+Grid}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{on\+Grid(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::on\+Grid (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a24fd4d8ed099c5f146310a58924bc564}
+Evento de mostrar/esconder o grid do grafico \index{Serie\+Graph@{Serie\+Graph}!on\+Mouse@{on\+Mouse}}
+\index{on\+Mouse@{on\+Mouse}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{on\+Mouse(wx\+Mouse\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::on\+Mouse (
+\begin{DoxyParamCaption}
+\item[{wx\+Mouse\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_serie_graph_aa94f135c9cdba90f65859fa1b5114479}
+Evento do mouse Atualmente sendo utilizado somente para atualizar a data \index{Serie\+Graph@{Serie\+Graph}!on\+Popup\+Menu@{on\+Popup\+Menu}}
+\index{on\+Popup\+Menu@{on\+Popup\+Menu}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{on\+Popup\+Menu(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::on\+Popup\+Menu (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_abb634275adf801e8878155621d1237e1}
+Eventos do menu gerado pelo bot„o direito do mouse \index{Serie\+Graph@{Serie\+Graph}!on\+Radio@{on\+Radio}}
+\index{on\+Radio@{on\+Radio}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{on\+Radio(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::on\+Radio (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a0def732974255c41dd340263694fb7a5}
+Evento de mudanÁa do tipo de intervalo \index{Serie\+Graph@{Serie\+Graph}!on\+Right\+Clicked@{on\+Right\+Clicked}}
+\index{on\+Right\+Clicked@{on\+Right\+Clicked}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{on\+Right\+Clicked(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::on\+Right\+Clicked (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_ad703e73af2a0cb07cd9f8d7382f0951d}
+Evento do bot„o direito do mouse clicado sobre o treectrl \index{Serie\+Graph@{Serie\+Graph}!on\+Scroll@{on\+Scroll}}
+\index{on\+Scroll@{on\+Scroll}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{on\+Scroll(wx\+Scroll\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::on\+Scroll (
+\begin{DoxyParamCaption}
+\item[{wx\+Scroll\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_serie_graph_a16fb9f3bcf9ca948834259a83b73cb72}
+\index{Serie\+Graph@{Serie\+Graph}!on\+Select\+Serie@{on\+Select\+Serie}}
+\index{on\+Select\+Serie@{on\+Select\+Serie}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{on\+Select\+Serie(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::on\+Select\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a57ef259c11af9361b33d521ce09bf944}
+Evento de seleÁ„o de serie 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Graph@{Serie\+Graph}!on\+Set\+Interval@{on\+Set\+Interval}}
+\index{on\+Set\+Interval@{on\+Set\+Interval}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{on\+Set\+Interval(wx\+Date\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::on\+Set\+Interval (
+\begin{DoxyParamCaption}
+\item[{wx\+Date\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a88aceb50511c2fc549468b3b63416fe7}
+Evento de seleÁ„o de intervalo 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Graph@{Serie\+Graph}!on\+Subtitle@{on\+Subtitle}}
+\index{on\+Subtitle@{on\+Subtitle}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{on\+Subtitle(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::on\+Subtitle (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_ad4ec3b9e7cffc883695656ebea097cb6}
+Evento de esconder/mostrar a legenda do grafico \index{Serie\+Graph@{Serie\+Graph}!on\+Zoom@{on\+Zoom}}
+\index{on\+Zoom@{on\+Zoom}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{on\+Zoom(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::on\+Zoom (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_ab5c83bdfcfb4f7b2934137e6d4b1b515}
+Evento de ajustar o zoom para vizializar os graficos desenhados \index{Serie\+Graph@{Serie\+Graph}!on\+Zoom\+Minus@{on\+Zoom\+Minus}}
+\index{on\+Zoom\+Minus@{on\+Zoom\+Minus}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{on\+Zoom\+Minus(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::on\+Zoom\+Minus (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a6da49f4ccecc560fe9d6b92eaa25882c}
+Evento para deixar todas as curvas visiveis \index{Serie\+Graph@{Serie\+Graph}!on\+Zoom\+Plus@{on\+Zoom\+Plus}}
+\index{on\+Zoom\+Plus@{on\+Zoom\+Plus}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{on\+Zoom\+Plus(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::on\+Zoom\+Plus (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_aa7c139155193f069c1cd91e1d95d53bd}
+Evento para deixar todas as curvas visiveis \index{Serie\+Graph@{Serie\+Graph}!plot\+Clicked@{plot\+Clicked}}
+\index{plot\+Clicked@{plot\+Clicked}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{plot\+Clicked(wx\+Plot\+Ctrl\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::plot\+Clicked (
+\begin{DoxyParamCaption}
+\item[{wx\+Plot\+Ctrl\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a19c9b075a599a3576895b89c1f3ac5b4}
+\index{Serie\+Graph@{Serie\+Graph}!redraw\+All@{redraw\+All}}
+\index{redraw\+All@{redraw\+All}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{redraw\+All()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::redraw\+All (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_graph_a7c9382082591489dafe366e937df4d9e}
+Re-\/desenha todas curvas \index{Serie\+Graph@{Serie\+Graph}!remove\+Tree\+Item@{remove\+Tree\+Item}}
+\index{remove\+Tree\+Item@{remove\+Tree\+Item}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{remove\+Tree\+Item(wx\+Tree\+Item\+Id root, Draw\+Serie $\ast$d\+Serie)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::remove\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{root, }
+\item[{{\bf Draw\+Serie} $\ast$}]{d\+Serie}
+\end{DoxyParamCaption}
+)}\label{class_serie_graph_a72e83308d8f65950d727fae8875aad0d}
+Remove uma serie do treectrl de acordo com a estrutura enviada 
+\begin{DoxyParams}{Par√¢metros}
+{\em root} & Identificador da raiz \\
+\hline
+{\em name} & Sub-\/seÁıes enviadas de forma 1/2/3/.../ \\
+\hline
+{\em serie} & Ponteiro para a serie \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Graph@{Serie\+Graph}!remove\+Tree\+Item\+Serie@{remove\+Tree\+Item\+Serie}}
+\index{remove\+Tree\+Item\+Serie@{remove\+Tree\+Item\+Serie}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{remove\+Tree\+Item\+Serie(const wx\+Tree\+Item\+Id \&id)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::remove\+Tree\+Item\+Serie (
+\begin{DoxyParamCaption}
+\item[{const wx\+Tree\+Item\+Id \&}]{id}
+\end{DoxyParamCaption}
+)}\label{class_serie_graph_ab90a34ecd1e68e5025fe38444d09f96e}
+Remove uma serie do treectrl de acordo com a section enviada 
+\begin{DoxyParams}{Par√¢metros}
+{\em section} & Local onde a serie se encontra \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Graph@{Serie\+Graph}!scroll\+Update@{scroll\+Update}}
+\index{scroll\+Update@{scroll\+Update}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{scroll\+Update()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::scroll\+Update (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_graph_abc2c4c1fbd6f3267e87f0a782da30586}
+Evento de movimentaÁ„o da barra de rolagem \index{Serie\+Graph@{Serie\+Graph}!select\+Serie@{select\+Serie}}
+\index{select\+Serie@{select\+Serie}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{select\+Serie(wx\+Tree\+Item\+Id id, bool state)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::select\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{id, }
+\item[{bool}]{state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a3f332c44866b3ea5b2d91f2fb4d386ea}
+Seleciona ou deseleciona as series contidas no grupo 
+\begin{DoxyParams}{Par√¢metros}
+{\em id} & Identificador do Grupo \\
+\hline
+{\em state} & Seleciona se true e deseleciona se for false \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Graph@{Serie\+Graph}!set\+Interval@{set\+Interval}}
+\index{set\+Interval@{set\+Interval}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{set\+Interval(\+Interval inter, bool force\+Set=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::set\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{inter, }
+\item[{bool}]{force\+Set = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_serie_graph_a4292ab2459fcc4bff4e2829b319ba32b}
+Define o intervalo 
+\begin{DoxyParams}{Par√¢metros}
+{\em inter} & Intervalo \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Graph@{Serie\+Graph}!show\+Select\+Error@{show\+Select\+Error}}
+\index{show\+Select\+Error@{show\+Select\+Error}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{show\+Select\+Error(wx\+Tree\+Item\+Id i)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Graph\+::show\+Select\+Error (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{i}
+\end{DoxyParamCaption}
+)}\label{class_serie_graph_aea7c7ba0e70c72d743f721336d30d6ad}
+Mostra mensagem de erro caso haja mais de dois tipos de grafico 
+\begin{DoxyParams}{Par√¢metros}
+{\em i} & Identificador do tc\+Series \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Amigas e Fun√ß√µes Relacionadas}
+\index{Serie\+Graph@{Serie\+Graph}!Serie\+Viewer@{Serie\+Viewer}}
+\index{Serie\+Viewer@{Serie\+Viewer}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{Serie\+Viewer}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Serie\+Viewer}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_serie_graph_af08e3895573ce2332eaf783b4cebaad0}
+DeclaraÁ„o de classe amiga 
+
+Defini√ß√£o na linha 87 do arquivo Serie\+Graph.\+h.
+
+
+
+\subsection{Atributos}
+\index{Serie\+Graph@{Serie\+Graph}!choice\+Colour@{choice\+Colour}}
+\index{choice\+Colour@{choice\+Colour}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{choice\+Colour}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Combo\+Box$\ast$ Serie\+Graph\+::choice\+Colour\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a319ff992cb2ad03fa1b0770407416864}
+Seletor de Cor 
+
+Defini√ß√£o na linha 190 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!choice\+Symbol@{choice\+Symbol}}
+\index{choice\+Symbol@{choice\+Symbol}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{choice\+Symbol}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Combo\+Box$\ast$ Serie\+Graph\+::choice\+Symbol\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_ab9ab43ffac43348b982dc1493b5f8eac}
+Seletor de Tipo de Simbolo 
+
+Defini√ß√£o na linha 194 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!conf@{conf}}
+\index{conf@{conf}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{conf}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel$\ast$ Serie\+Graph\+::conf\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a5ccc1d701560b65d005110e2088776f8}
+Panel de ConfiguraÁ„o do Gr·fico 
+
+Defini√ß√£o na linha 198 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!dot@{dot}}
+\index{dot@{dot}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{dot}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ Serie\+Graph\+::dot\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a5bc2d70a1268deb767002625868daa83}
+Checkbox Para Desenhar Tipo de Simbolo, Linha e Spline no Gr·fico 
+
+Defini√ß√£o na linha 202 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!dp\+End\+Interval@{dp\+End\+Interval}}
+\index{dp\+End\+Interval@{dp\+End\+Interval}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{dp\+End\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Picker\+Ctrl $\ast$ Serie\+Graph\+::dp\+End\+Interval\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a2d7ca3323258f9f1c5a1c060975916ea}
+
+
+Defini√ß√£o na linha 100 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!dp\+Start\+Interval@{dp\+Start\+Interval}}
+\index{dp\+Start\+Interval@{dp\+Start\+Interval}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{dp\+Start\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Picker\+Ctrl$\ast$ Serie\+Graph\+::dp\+Start\+Interval\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a67fc67be4cadc3dea05203e4c237834f}
+Controlador de inicio e fim do intervalo 
+
+Defini√ß√£o na linha 100 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!fit@{fit}}
+\index{fit@{fit}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{fit}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box $\ast$ Serie\+Graph\+::fit\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a6f347ff1c699039014cb5bc017524987}
+
+
+Defini√ß√£o na linha 202 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!index\+Dot@{index\+Dot}}
+\index{index\+Dot@{index\+Dot}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{index\+Dot}]{\setlength{\rightskip}{0pt plus 5cm}int Serie\+Graph\+::index\+Dot\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a5f1208e7200ae594b1bcd83605b7b2ff}
+
+
+Defini√ß√£o na linha 92 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!interval@{interval}}
+\index{interval@{interval}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Serie\+Graph\+::interval}\label{class_serie_graph_aecebb4b39a7adc56098b4b412846148e}
+Intervalo 
+
+Defini√ß√£o na linha 257 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!line@{line}}
+\index{line@{line}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{line}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box $\ast$ Serie\+Graph\+::line\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_ac06f161204277afd2a00a94830584007}
+
+
+Defini√ß√£o na linha 202 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!plot@{plot}}
+\index{plot@{plot}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{plot}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Plot\+Ctrl$\ast$ Serie\+Graph\+::plot}\label{class_serie_graph_ae919f43bcf6593bbb4b3d3bdaeafcbe0}
+Controlador de desenho do grafico 
+
+Defini√ß√£o na linha 253 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!popup\+Menu@{popup\+Menu}}
+\index{popup\+Menu@{popup\+Menu}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{popup\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Menu$\ast$ Serie\+Graph\+::popup\+Menu}\label{class_serie_graph_a6b133f32c9c8ff16f2c72215f6753314}
+Menu de popup 
+
+Defini√ß√£o na linha 232 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!r\+Fit@{r\+Fit}}
+\index{r\+Fit@{r\+Fit}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{r\+Fit}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box$\ast$ Serie\+Graph\+::r\+Fit\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_af425051d5a31fd4163271a98efe8d213}
+
+
+Defini√ß√£o na linha 206 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!r\+Id@{r\+Id}}
+\index{r\+Id@{r\+Id}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{r\+Id}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Item\+Id Serie\+Graph\+::r\+Id}\label{class_serie_graph_a94dc028a9c8cc670786ac9699bdfbd70}
+Identificador do treectrl da serie selecionada 
+
+Defini√ß√£o na linha 240 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!r\+Types@{r\+Types}}
+\index{r\+Types@{r\+Types}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{r\+Types}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box$\ast$ Serie\+Graph\+::r\+Types\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a51ac8d3ede99c16358c91e38e0cef50c}
+Radio\+Box para mudanÁa de tipo de intervalo 
+
+Defini√ß√£o na linha 96 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!s\+Conf@{s\+Conf}}
+\index{s\+Conf@{s\+Conf}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{s\+Conf}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Serie\+Graph\+::s\+Conf\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_acd0bc350d8a80434e33780f1a0fc55e3}
+
+
+Defini√ß√£o na linha 210 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!s\+Fit@{s\+Fit}}
+\index{s\+Fit@{s\+Fit}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{s\+Fit}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Serie\+Graph\+::s\+Fit\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a576166d78ad51e69bccd100d2bd62257}
+
+
+Defini√ß√£o na linha 210 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!shown\+Graph@{shown\+Graph}}
+\index{shown\+Graph@{shown\+Graph}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{shown\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}int Serie\+Graph\+::shown\+Graph}\label{class_serie_graph_a7b55b39f88b2a5259e2cec4e110e1961}
+Diz a quantidade de series mostradas no gr·fico 
+
+Defini√ß√£o na linha 236 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!sp\+Conf@{sp\+Conf}}
+\index{sp\+Conf@{sp\+Conf}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{sp\+Conf}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer$\ast$ Serie\+Graph\+::sp\+Conf\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_afe32288ca3b90856100c0834b5ab639e}
+Sizer do Painel de ConfiguraÁ„o e do Painel de ferramentas 
+
+Defini√ß√£o na linha 210 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!spline@{spline}}
+\index{spline@{spline}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{spline}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box $\ast$ Serie\+Graph\+::spline\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a12e6e4dcd36c632cbc1efcc2c8e07919}
+
+
+Defini√ß√£o na linha 202 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!s\+Tools@{s\+Tools}}
+\index{s\+Tools@{s\+Tools}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{s\+Tools}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Serie\+Graph\+::s\+Tools\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_graph_a6d77486ca87af1b34124710d3f13cd25}
+
+
+Defini√ß√£o na linha 210 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!tc\+Series@{tc\+Series}}
+\index{tc\+Series@{tc\+Series}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{tc\+Series}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Ctrl$\ast$ Serie\+Graph\+::tc\+Series}\label{class_serie_graph_a09f491e446d6d183879ef685bb0875bb}
+Tree\+Ctrl que contem as series 
+
+Defini√ß√£o na linha 261 do arquivo Serie\+Graph.\+h.
+
+\index{Serie\+Graph@{Serie\+Graph}!viewer@{viewer}}
+\index{viewer@{viewer}!Serie\+Graph@{Serie\+Graph}}
+\subsubsection[{viewer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie\+Viewer}$\ast$ Serie\+Graph\+::viewer}\label{class_serie_graph_a246ab79caa0e2d63db5db35f8a64baa0}
+Aponta para o visualizador 
+
+Defini√ß√£o na linha 265 do arquivo Serie\+Graph.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Serie\+Graph.\+h}\end{DoxyCompactItemize}

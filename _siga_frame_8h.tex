@@ -1,0 +1,396 @@
+\section{Referência do Arquivo Siga\+Frame.\+h}
+\label{_siga_frame_8h}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}}
+{\ttfamily \#include $<$wx/choicebk.\+h$>$}\\*
+{\ttfamily \#include $<$wx/button.\+h$>$}\\*
+{\ttfamily \#include $<$wx/aui/aui.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}wx/toolbar.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$wx/progdlg.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}Globals.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Date.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+Extension.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A/\+S\+I\+G\+A\+Tree\+Ctrl.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Core/\+Core\+Structs.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$wx/timer.\+h$>$}\\*
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf S\+I\+G\+A\+Frame}
+\end{DoxyCompactItemize}
+\subsection*{Enumerações}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+{\bf Minimal\+\_\+\+Quit} = wx\+I\+D\+\_\+\+E\+X\+IT, 
+{\bf Minimal\+\_\+\+About} = wx\+I\+D\+\_\+\+A\+B\+O\+UT, 
+{\bf I\+D\+\_\+\+L\+EG} = wx\+I\+D\+\_\+\+H\+I\+G\+H\+E\+ST + 1, 
+{\bf I\+D\+\_\+\+S\+P\+L\+A\+SH}, 
+\\*
+{\bf I\+D\+\_\+\+E\+D\+I\+T\+\_\+\+U\+N\+DO}, 
+{\bf I\+D\+\_\+\+E\+D\+I\+T\+\_\+\+R\+E\+DO}, 
+{\bf I\+D\+\_\+\+U\+N\+S\+E\+L\+E\+CT}, 
+{\bf I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+A\+LL}, 
+\\*
+{\bf I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+N\+O\+D\+ES}, 
+{\bf I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+N\+O\+D\+ES}, 
+{\bf I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+N\+O\+D\+ES}, 
+{\bf I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+L\+I\+N\+KS}, 
+\\*
+{\bf I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+I\+GA}, 
+{\bf I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+M\+OD}, 
+{\bf I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+LS}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+A\+B\+E\+LS}, 
+\\*
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+I\+NK}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+A\+LL}, 
+{\bf I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+PE}, 
+{\bf I\+D\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+S\+E\+L\+E\+C\+T\+ED}, 
+\\*
+{\bf I\+D\+\_\+\+S\+E\+R\+I\+E\+\_\+\+M\+A\+N\+A\+G\+ER}, 
+{\bf I\+D\+\_\+\+L\+A\+N\+G\+U\+A\+GE}, 
+{\bf I\+D\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+P\+T\+\_\+\+BR}, 
+{\bf I\+D\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+E\+N\+\_\+\+US}, 
+\\*
+{\bf I\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL}, 
+{\bf I\+D\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+P\+R\+O\+J\+E\+CT}, 
+{\bf I\+D\+\_\+\+J\+O\+I\+N\+\_\+\+P\+R\+O\+J\+E\+CT}, 
+{\bf I\+D\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+P\+R\+O\+J\+E\+C\+T\+\_\+\+A\+U\+T\+O\+\_\+\+S\+A\+VE}, 
+\\*
+{\bf I\+D\+\_\+\+N\+E\+W\+\_\+\+P\+R\+O\+J\+E\+CT}, 
+{\bf I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+P\+R\+O\+J\+E\+CT}, 
+{\bf I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+P\+R\+O\+J\+E\+CT}, 
+{\bf I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+P\+R\+O\+J\+E\+C\+T\+\_\+\+AS}, 
+\\*
+{\bf I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+A\+S\+\_\+\+P\+R\+O\+J\+E\+CT}, 
+{\bf I\+D\+\_\+\+C\+L\+O\+S\+E\+\_\+\+P\+R\+O\+J\+E\+CT}, 
+{\bf I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+IE}, 
+{\bf I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+O\+L\+D\+\_\+\+F\+O\+R\+M\+AT}, 
+\\*
+{\bf I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+F\+U\+N\+C\+E\+M\+E\+\_\+\+P\+L\+UV}, 
+{\bf I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+F\+U\+N\+C\+E\+M\+E\+\_\+\+BD}, 
+{\bf I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+A\+N\+A\+\_\+\+P\+L\+UV}, 
+{\bf I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+A\+N\+A\+\_\+\+L\+EV}, 
+\\*
+{\bf I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+A\+N\+A\+\_\+Q}, 
+{\bf I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+M\+A\+T\+R\+IX}, 
+{\bf I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+C\+AV}, 
+{\bf I\+D\+\_\+\+H\+E\+LP}, 
+\\*
+{\bf I\+D\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+EE}, 
+{\bf I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+\+M\+E\+NU}, 
+{\bf I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+01}, 
+{\bf I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+02}, 
+\\*
+{\bf I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+03}, 
+{\bf I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+04}, 
+{\bf I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+05}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+I\+GA}, 
+\\*
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+ET}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+F\+A\+S\+T\+\_\+\+E\+L\+E\+M\+E\+NT}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+O\+P\+EN}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+S\+A\+VE}, 
+\\*
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+B\+I\+T\+M\+AP}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+D\+E\+L\+E\+TE}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+M\+AP}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+PE}, 
+\\*
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+IN}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+O\+UT}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+L\+A\+ST}, 
+\\*
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+N\+E\+XT}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+C\+E\+N\+T\+R\+A\+L\+I\+ZE}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+LS}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+UP}, 
+\\*
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+D\+O\+WN}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+F\+O\+N\+T\+\_\+\+UP}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+F\+O\+N\+T\+\_\+\+D\+O\+WN}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+MP}, 
+\\*
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+E\+N\+C\+O\+NF}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+S\+A\+V\+E\+C\+O\+NF}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+R\+UN}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+R\+U\+N\+\_\+\+A\+LL}, 
+\\*
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+S\+H\+O\+W\+R\+ES}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+SA}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+M\+OD}, 
+{\bf I\+D\+\_\+\+L\+A\+Y\+E\+RS}, 
+\\*
+{\bf I\+D\+\_\+\+A\+U\+T\+O\+S\+A\+VE}, 
+{\bf I\+D\+\_\+\+S\+U\+B\+\_\+\+N\+E\+T\+W\+O\+R\+KS}, 
+{\bf I\+D\+\_\+\+T\+H\+I\+E\+S\+S\+EN}, 
+{\bf I\+D\+\_\+\+T\+H\+I\+E\+S\+S\+E\+N\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+G\+E\+N\+E\+R\+A\+T\+OR}, 
+\\*
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+S\+H\+O\+W\+\_\+\+A\+L\+L\+\_\+\+R\+E\+S\+U\+L\+TS}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+G\+U\+A\+R\+A\+N\+T\+E\+E\+\_\+\+C\+U\+R\+VE}, 
+{\bf I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+P\+R\+O\+J\+E\+CT}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+B\+A\+S\+IN}, 
+\\*
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+R\+E\+S\+E\+R\+V\+OR}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+L\+A\+KE}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+D\+E\+M\+A\+IN}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+J\+U\+N\+T\+I\+ON}, 
+\\*
+{\bf T\+I\+M\+E\+R\+\_\+\+ID}, 
+{\bf T\+I\+M\+E\+R\+\_\+\+I\+D\+\_\+\+E\+R\+RO}, 
+{\bf I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+A\+U\+T\+O\+S\+A\+V\+E\+\_\+\+ON}, 
+{\bf I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+A\+U\+T\+O\+S\+A\+V\+E\+\_\+\+O\+FF}, 
+\\*
+{\bf I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+A\+L\+L\+\_\+\+S\+E\+R\+I\+ES}
+ \}
+\item 
+enum \{ {\bf I\+D\+\_\+\+N\+O\+T\+E\+C\+O\+M\+P\+O\+N\+E\+NT}
+ \}
+\item 
+enum \{ \\*
+{\bf I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+N\+ET} = 9001, 
+{\bf I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+H\+I\+D\+RO} = 9002, 
+{\bf I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+O\+PT} = 9003, 
+{\bf I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+R\+E\+S\+OP} = 9004, 
+\\*
+{\bf I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+O\+UT} = 9005
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1}
+Enumerador contendo os identificadores de menu \begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{Minimal\+\_\+\+Quit@{Minimal\+\_\+\+Quit}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!Minimal\+\_\+\+Quit@{Minimal\+\_\+\+Quit}}\item[{\em 
+Minimal\+\_\+\+Quit\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a1067fa55a0facb88f86c0a106e405113}
+}]\index{Minimal\+\_\+\+About@{Minimal\+\_\+\+About}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!Minimal\+\_\+\+About@{Minimal\+\_\+\+About}}\item[{\em 
+Minimal\+\_\+\+About\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a1b979efeca8832afd3e065bfe5454664}
+}]\index{I\+D\+\_\+\+L\+EG@{I\+D\+\_\+\+L\+EG}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+L\+EG@{I\+D\+\_\+\+L\+EG}}\item[{\em 
+I\+D\+\_\+\+L\+EG\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a6c1724a65468c3b2055b79da2bd7d834}
+}]\index{I\+D\+\_\+\+S\+P\+L\+A\+SH@{I\+D\+\_\+\+S\+P\+L\+A\+SH}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+S\+P\+L\+A\+SH@{I\+D\+\_\+\+S\+P\+L\+A\+SH}}\item[{\em 
+I\+D\+\_\+\+S\+P\+L\+A\+SH\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a0959a9b28d31c98817a159a9825db197}
+}]\index{I\+D\+\_\+\+E\+D\+I\+T\+\_\+\+U\+N\+DO@{I\+D\+\_\+\+E\+D\+I\+T\+\_\+\+U\+N\+DO}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+E\+D\+I\+T\+\_\+\+U\+N\+DO@{I\+D\+\_\+\+E\+D\+I\+T\+\_\+\+U\+N\+DO}}\item[{\em 
+I\+D\+\_\+\+E\+D\+I\+T\+\_\+\+U\+N\+DO\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1ad941fd2007faa073abe141d5405d9127}
+}]\index{I\+D\+\_\+\+E\+D\+I\+T\+\_\+\+R\+E\+DO@{I\+D\+\_\+\+E\+D\+I\+T\+\_\+\+R\+E\+DO}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+E\+D\+I\+T\+\_\+\+R\+E\+DO@{I\+D\+\_\+\+E\+D\+I\+T\+\_\+\+R\+E\+DO}}\item[{\em 
+I\+D\+\_\+\+E\+D\+I\+T\+\_\+\+R\+E\+DO\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a6ccd8509773e13107235efa76a6b0a9a}
+}]\index{I\+D\+\_\+\+U\+N\+S\+E\+L\+E\+CT@{I\+D\+\_\+\+U\+N\+S\+E\+L\+E\+CT}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+U\+N\+S\+E\+L\+E\+CT@{I\+D\+\_\+\+U\+N\+S\+E\+L\+E\+CT}}\item[{\em 
+I\+D\+\_\+\+U\+N\+S\+E\+L\+E\+CT\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1aa95ea2b6909e5002f4b8f671d843961f}
+}]\index{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+A\+LL@{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+A\+LL}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+A\+LL@{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+A\+LL}}\item[{\em 
+I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+A\+LL\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a19316ca7695547425cb11fd3af85ed5d}
+}]\index{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+N\+O\+D\+ES@{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+N\+O\+D\+ES}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+N\+O\+D\+ES@{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+N\+O\+D\+ES}}\item[{\em 
+I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+N\+O\+D\+ES\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a6abf0cbf3894e8770e39bc1b7edb6e7d}
+}]\index{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+N\+O\+D\+ES@{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+N\+O\+D\+ES}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+N\+O\+D\+ES@{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+N\+O\+D\+ES}}\item[{\em 
+I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+D\+E\+M\+A\+N\+D\+\_\+\+N\+O\+D\+ES\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a3f8f6db87e4f0b2d8ce054fc2e82db04}
+}]\index{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+N\+O\+D\+ES@{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+N\+O\+D\+ES}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+N\+O\+D\+ES@{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+N\+O\+D\+ES}}\item[{\em 
+I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+N\+O\+D\+ES\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a42355a310b12b57aa0d7263d28d75e6f}
+}]\index{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+L\+I\+N\+KS@{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+L\+I\+N\+KS}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+L\+I\+N\+KS@{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+L\+I\+N\+KS}}\item[{\em 
+I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+L\+I\+N\+KS\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1aeb50b2e1d1dbf1e40683558a5d2cafdc}
+}]\index{I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+I\+GA@{I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+I\+GA}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+I\+GA@{I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+I\+GA}}\item[{\em 
+I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+I\+GA\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a8c8da41719af48584adbaf5c3b544d14}
+}]\index{I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+M\+OD@{I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+M\+OD}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+M\+OD@{I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+M\+OD}}\item[{\em 
+I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+M\+OD\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a1863cdd65d23c3c16e5f19e269fa1e9a}
+}]\index{I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+LS@{I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+LS}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+LS@{I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+LS}}\item[{\em 
+I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+LS\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a1ff1c8ae53191af33c10c1170c573cfb}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+A\+B\+E\+LS@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+A\+B\+E\+LS}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+A\+B\+E\+LS@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+A\+B\+E\+LS}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+A\+B\+E\+LS\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a504639bda4d89672d88ea10e20250eea}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+I\+NK@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+I\+NK}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+I\+NK@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+I\+NK}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+L\+I\+NK\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a9a9b3ad8c67ee2fcbf31d08b66a750e1}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+A\+LL@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+A\+LL}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+A\+LL@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+A\+LL}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+W\+O\+R\+K\+\_\+\+S\+H\+O\+W\+\_\+\+H\+I\+D\+E\+\_\+\+A\+LL\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a65e1bf710bc61a2d46d2b6a03a0dcf98}
+}]\index{I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+PE@{I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+PE}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+PE@{I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+PE}}\item[{\em 
+I\+D\+\_\+\+S\+H\+O\+W\+H\+I\+D\+E\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+PE\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a960ad528823efeaca51493945705b044}
+}]\index{I\+D\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+S\+E\+L\+E\+C\+T\+ED@{I\+D\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+S\+E\+L\+E\+C\+T\+ED}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+S\+E\+L\+E\+C\+T\+ED@{I\+D\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+S\+E\+L\+E\+C\+T\+ED}}\item[{\em 
+I\+D\+\_\+\+D\+E\+L\+E\+T\+E\+\_\+\+S\+E\+L\+E\+C\+T\+ED\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1aa089b6ffee4eb8d02e43e9e829cefff8}
+}]\index{I\+D\+\_\+\+S\+E\+R\+I\+E\+\_\+\+M\+A\+N\+A\+G\+ER@{I\+D\+\_\+\+S\+E\+R\+I\+E\+\_\+\+M\+A\+N\+A\+G\+ER}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+S\+E\+R\+I\+E\+\_\+\+M\+A\+N\+A\+G\+ER@{I\+D\+\_\+\+S\+E\+R\+I\+E\+\_\+\+M\+A\+N\+A\+G\+ER}}\item[{\em 
+I\+D\+\_\+\+S\+E\+R\+I\+E\+\_\+\+M\+A\+N\+A\+G\+ER\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1adc78ea2622e49ce82fd84e43520bbea1}
+}]\index{I\+D\+\_\+\+L\+A\+N\+G\+U\+A\+GE@{I\+D\+\_\+\+L\+A\+N\+G\+U\+A\+GE}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+L\+A\+N\+G\+U\+A\+GE@{I\+D\+\_\+\+L\+A\+N\+G\+U\+A\+GE}}\item[{\em 
+I\+D\+\_\+\+L\+A\+N\+G\+U\+A\+GE\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1ae94a14ac9b8b02c322e301f66d1f3008}
+}]\index{I\+D\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+P\+T\+\_\+\+BR@{I\+D\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+P\+T\+\_\+\+BR}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+P\+T\+\_\+\+BR@{I\+D\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+P\+T\+\_\+\+BR}}\item[{\em 
+I\+D\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+P\+T\+\_\+\+BR\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1ab5c8f54f6b9c3682fc7fa9f30dbb2f59}
+}]\index{I\+D\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+E\+N\+\_\+\+US@{I\+D\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+E\+N\+\_\+\+US}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+E\+N\+\_\+\+US@{I\+D\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+E\+N\+\_\+\+US}}\item[{\em 
+I\+D\+\_\+\+L\+A\+N\+G\+U\+A\+G\+E\+\_\+\+E\+N\+\_\+\+US\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a077c269ca8ca6a6090689098e9e47310}
+}]\index{I\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{I\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL@{I\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL}}\item[{\em 
+I\+D\+\_\+\+I\+N\+T\+E\+R\+V\+AL\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a9a52d26e8f65e42233fb13d86057526a}
+}]\index{I\+D\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+P\+R\+O\+J\+E\+CT@{I\+D\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+P\+R\+O\+J\+E\+CT}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+P\+R\+O\+J\+E\+CT@{I\+D\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+P\+R\+O\+J\+E\+CT}}\item[{\em 
+I\+D\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+P\+R\+O\+J\+E\+CT\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1ace63543196b29e1d64f6f15956090351}
+}]\index{I\+D\+\_\+\+J\+O\+I\+N\+\_\+\+P\+R\+O\+J\+E\+CT@{I\+D\+\_\+\+J\+O\+I\+N\+\_\+\+P\+R\+O\+J\+E\+CT}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+J\+O\+I\+N\+\_\+\+P\+R\+O\+J\+E\+CT@{I\+D\+\_\+\+J\+O\+I\+N\+\_\+\+P\+R\+O\+J\+E\+CT}}\item[{\em 
+I\+D\+\_\+\+J\+O\+I\+N\+\_\+\+P\+R\+O\+J\+E\+CT\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a7f24222040f9e5a73ed790a0f549a875}
+}]\index{I\+D\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+P\+R\+O\+J\+E\+C\+T\+\_\+\+A\+U\+T\+O\+\_\+\+S\+A\+VE@{I\+D\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+P\+R\+O\+J\+E\+C\+T\+\_\+\+A\+U\+T\+O\+\_\+\+S\+A\+VE}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+P\+R\+O\+J\+E\+C\+T\+\_\+\+A\+U\+T\+O\+\_\+\+S\+A\+VE@{I\+D\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+P\+R\+O\+J\+E\+C\+T\+\_\+\+A\+U\+T\+O\+\_\+\+S\+A\+VE}}\item[{\em 
+I\+D\+\_\+\+P\+R\+O\+P\+E\+R\+T\+Y\+\_\+\+P\+R\+O\+J\+E\+C\+T\+\_\+\+A\+U\+T\+O\+\_\+\+S\+A\+VE\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1ac9fb797ab425a3a3837a730ac0621922}
+}]\index{I\+D\+\_\+\+N\+E\+W\+\_\+\+P\+R\+O\+J\+E\+CT@{I\+D\+\_\+\+N\+E\+W\+\_\+\+P\+R\+O\+J\+E\+CT}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+N\+E\+W\+\_\+\+P\+R\+O\+J\+E\+CT@{I\+D\+\_\+\+N\+E\+W\+\_\+\+P\+R\+O\+J\+E\+CT}}\item[{\em 
+I\+D\+\_\+\+N\+E\+W\+\_\+\+P\+R\+O\+J\+E\+CT\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1abdc63a652ccd8e5f62dede58d7667d30}
+}]\index{I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+P\+R\+O\+J\+E\+CT@{I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+P\+R\+O\+J\+E\+CT}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+P\+R\+O\+J\+E\+CT@{I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+P\+R\+O\+J\+E\+CT}}\item[{\em 
+I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+P\+R\+O\+J\+E\+CT\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a62db5360da4ac660e36cc89f1039c52d}
+}]\index{I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+P\+R\+O\+J\+E\+CT@{I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+P\+R\+O\+J\+E\+CT}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+P\+R\+O\+J\+E\+CT@{I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+P\+R\+O\+J\+E\+CT}}\item[{\em 
+I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+P\+R\+O\+J\+E\+CT\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1aa31ec4cd31f82e1b044f6bd09a9e7050}
+}]\index{I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+P\+R\+O\+J\+E\+C\+T\+\_\+\+AS@{I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+P\+R\+O\+J\+E\+C\+T\+\_\+\+AS}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+P\+R\+O\+J\+E\+C\+T\+\_\+\+AS@{I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+P\+R\+O\+J\+E\+C\+T\+\_\+\+AS}}\item[{\em 
+I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+P\+R\+O\+J\+E\+C\+T\+\_\+\+AS\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1aecf090b99742556a39b0e9af339ad6ad}
+}]\index{I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+A\+S\+\_\+\+P\+R\+O\+J\+E\+CT@{I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+A\+S\+\_\+\+P\+R\+O\+J\+E\+CT}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+A\+S\+\_\+\+P\+R\+O\+J\+E\+CT@{I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+A\+S\+\_\+\+P\+R\+O\+J\+E\+CT}}\item[{\em 
+I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+A\+S\+\_\+\+P\+R\+O\+J\+E\+CT\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a1904edb0cc2526825cf05a4470097a87}
+}]\index{I\+D\+\_\+\+C\+L\+O\+S\+E\+\_\+\+P\+R\+O\+J\+E\+CT@{I\+D\+\_\+\+C\+L\+O\+S\+E\+\_\+\+P\+R\+O\+J\+E\+CT}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+C\+L\+O\+S\+E\+\_\+\+P\+R\+O\+J\+E\+CT@{I\+D\+\_\+\+C\+L\+O\+S\+E\+\_\+\+P\+R\+O\+J\+E\+CT}}\item[{\em 
+I\+D\+\_\+\+C\+L\+O\+S\+E\+\_\+\+P\+R\+O\+J\+E\+CT\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a604f3c6ab6c924710f61a02f833299bb}
+}]\index{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+IE@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+IE}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+IE@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+IE}}\item[{\em 
+I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+IE\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a70193a2392bf0a98bfe8e8e6e05ce37b}
+}]\index{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+O\+L\+D\+\_\+\+F\+O\+R\+M\+AT@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+O\+L\+D\+\_\+\+F\+O\+R\+M\+AT}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+O\+L\+D\+\_\+\+F\+O\+R\+M\+AT@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+O\+L\+D\+\_\+\+F\+O\+R\+M\+AT}}\item[{\em 
+I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+O\+L\+D\+\_\+\+F\+O\+R\+M\+AT\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1ac0bcd9bb372fa7ef21855df873c67300}
+}]\index{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+F\+U\+N\+C\+E\+M\+E\+\_\+\+P\+L\+UV@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+F\+U\+N\+C\+E\+M\+E\+\_\+\+P\+L\+UV}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+F\+U\+N\+C\+E\+M\+E\+\_\+\+P\+L\+UV@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+F\+U\+N\+C\+E\+M\+E\+\_\+\+P\+L\+UV}}\item[{\em 
+I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+F\+U\+N\+C\+E\+M\+E\+\_\+\+P\+L\+UV\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a3141bf20a5ad079ae25313552ec75db3}
+}]\index{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+F\+U\+N\+C\+E\+M\+E\+\_\+\+BD@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+F\+U\+N\+C\+E\+M\+E\+\_\+\+BD}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+F\+U\+N\+C\+E\+M\+E\+\_\+\+BD@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+F\+U\+N\+C\+E\+M\+E\+\_\+\+BD}}\item[{\em 
+I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+F\+U\+N\+C\+E\+M\+E\+\_\+\+BD\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1ad3cf3bc0eeb047b23a1f497f01d8a87e}
+}]\index{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+A\+N\+A\+\_\+\+P\+L\+UV@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+A\+N\+A\+\_\+\+P\+L\+UV}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+A\+N\+A\+\_\+\+P\+L\+UV@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+A\+N\+A\+\_\+\+P\+L\+UV}}\item[{\em 
+I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+A\+N\+A\+\_\+\+P\+L\+UV\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1aa8a7a2483276d818d776d5ef72a3be23}
+}]\index{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+A\+N\+A\+\_\+\+L\+EV@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+A\+N\+A\+\_\+\+L\+EV}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+A\+N\+A\+\_\+\+L\+EV@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+A\+N\+A\+\_\+\+L\+EV}}\item[{\em 
+I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+A\+N\+A\+\_\+\+L\+EV\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1aeb492630fe1e29cf05fca3d2e3bdabc2}
+}]\index{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+A\+N\+A\+\_\+Q@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+A\+N\+A\+\_\+Q}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+A\+N\+A\+\_\+Q@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+A\+N\+A\+\_\+Q}}\item[{\em 
+I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+S\+E\+R\+I\+E\+\_\+\+A\+N\+A\+\_\+Q\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a0d19b9e9705de7b123f8450ffed85044}
+}]\index{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+M\+A\+T\+R\+IX@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+M\+A\+T\+R\+IX}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+M\+A\+T\+R\+IX@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+M\+A\+T\+R\+IX}}\item[{\em 
+I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+M\+A\+T\+R\+IX\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a2d594234d19c381816dae74db45a78a8}
+}]\index{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+C\+AV@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+C\+AV}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+C\+AV@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+C\+AV}}\item[{\em 
+I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+C\+AV\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a6426d7b1dfde29c635ae7b7ffb2579f1}
+}]\index{I\+D\+\_\+\+H\+E\+LP@{I\+D\+\_\+\+H\+E\+LP}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+H\+E\+LP@{I\+D\+\_\+\+H\+E\+LP}}\item[{\em 
+I\+D\+\_\+\+H\+E\+LP\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1adb04d39ee1215e9958071f12b987e206}
+}]\index{I\+D\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+EE@{I\+D\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+EE}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+EE@{I\+D\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+EE}}\item[{\em 
+I\+D\+\_\+\+D\+A\+T\+A\+\_\+\+T\+R\+EE\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1ae08f09325f7e9dd8a0ab8b8c74c043cf}
+}]\index{I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+\+M\+E\+NU@{I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+\+M\+E\+NU}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+\+M\+E\+NU@{I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+\+M\+E\+NU}}\item[{\em 
+I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+\+M\+E\+NU\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a07c435b832872a0a92ef6f36b60e1a38}
+}]\index{I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+01@{I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+01}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+01@{I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+01}}\item[{\em 
+I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+01\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a35f4bcef1cb650d9423f835070f81857}
+}]\index{I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+02@{I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+02}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+02@{I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+02}}\item[{\em 
+I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+02\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a6e984cb41f9c571de620d24554106590}
+}]\index{I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+03@{I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+03}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+03@{I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+03}}\item[{\em 
+I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+03\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1aa9968195602d9fc7e9c4496ede673451}
+}]\index{I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+04@{I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+04}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+04@{I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+04}}\item[{\em 
+I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+04\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a7bf711e0120263eaa6b6c4ea0ff63970}
+}]\index{I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+05@{I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+05}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+05@{I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+05}}\item[{\em 
+I\+D\+\_\+\+R\+E\+C\+E\+N\+T\+\_\+05\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1ae50e460c5efefbda92953d87cd493d49}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+I\+GA@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+I\+GA}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+I\+GA@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+I\+GA}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+I\+GA\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a22e75a59aa1f0bd93b74ef11761c51e8}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+ET@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+ET}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+ET@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+ET}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+ET\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1ab44518d9817266708cd012f506e1b93a}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+F\+A\+S\+T\+\_\+\+E\+L\+E\+M\+E\+NT@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+F\+A\+S\+T\+\_\+\+E\+L\+E\+M\+E\+NT}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+F\+A\+S\+T\+\_\+\+E\+L\+E\+M\+E\+NT@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+F\+A\+S\+T\+\_\+\+E\+L\+E\+M\+E\+NT}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+F\+A\+S\+T\+\_\+\+E\+L\+E\+M\+E\+NT\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a5fdbb13fa68ba29eda3389a287e4c941}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+O\+P\+EN@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+O\+P\+EN}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+O\+P\+EN@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+O\+P\+EN}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+O\+P\+EN\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a9b04c9c475d758824e751b979bbf0132}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+S\+A\+VE@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+S\+A\+VE}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+S\+A\+VE@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+S\+A\+VE}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+S\+A\+VE\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a713a60fd0ae491de8a0ebbbe83bd0b02}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+B\+I\+T\+M\+AP@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+B\+I\+T\+M\+AP}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+B\+I\+T\+M\+AP@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+B\+I\+T\+M\+AP}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+B\+I\+T\+M\+AP\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a21e3282e891bb50816e5c44f3eb1b72c}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+D\+E\+L\+E\+TE@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+D\+E\+L\+E\+TE}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+D\+E\+L\+E\+TE@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+D\+E\+L\+E\+TE}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+D\+E\+L\+E\+TE\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a6dadd4f8751fc78bd1401bd5b1d930dc}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+M\+AP@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+M\+AP}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+M\+AP@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+M\+AP}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+M\+AP\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a3f6c92eaf5e9e976237b79cd4d9ce212}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+PE@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+PE}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+PE@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+PE}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+PE\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a1df0450783e85e57b9698480d5b73bad}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a6b864e1c8de009b2b8d3b7bf00471c54}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+IN@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+IN}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+IN@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+IN}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+IN\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1ac326fefe409d37158ed63a27aeb0c5ff}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+O\+UT@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+O\+UT}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+O\+UT@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+O\+UT}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+O\+UT\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a8261ebef337ed914dd664ab4a8f66e92}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+L\+A\+ST@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+L\+A\+ST}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+L\+A\+ST@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+L\+A\+ST}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+L\+A\+ST\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a171cf02ad65ac0b999b358bef7278c65}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+N\+E\+XT@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+N\+E\+XT}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+N\+E\+XT@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+N\+E\+XT}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+Z\+O\+O\+M\+\_\+\+N\+E\+XT\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1ab2e60aa6390075dedba576e97233f7d1}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+C\+E\+N\+T\+R\+A\+L\+I\+ZE@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+C\+E\+N\+T\+R\+A\+L\+I\+ZE}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+C\+E\+N\+T\+R\+A\+L\+I\+ZE@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+C\+E\+N\+T\+R\+A\+L\+I\+ZE}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+S\+H\+A\+P\+E\+\_\+\+C\+E\+N\+T\+R\+A\+L\+I\+ZE\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1aec31e821ed98b0501253613060965baf}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+LS@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+LS}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+LS@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+LS}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+LS\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a8395ad90dc4168296197f1031c17f5f6}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+UP@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+UP}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+UP@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+UP}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+UP\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a490941e006043ebffbd064f7bbd3232d}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+D\+O\+WN@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+D\+O\+WN}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+D\+O\+WN@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+D\+O\+WN}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+S\+C\+A\+L\+E\+\_\+\+D\+O\+WN\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a0d4fa150867f083ef1c4ca327bcf23bc}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+F\+O\+N\+T\+\_\+\+UP@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+F\+O\+N\+T\+\_\+\+UP}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+F\+O\+N\+T\+\_\+\+UP@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+F\+O\+N\+T\+\_\+\+UP}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+F\+O\+N\+T\+\_\+\+UP\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a187516dccf080f6bc1cb4d6143d84fd4}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+F\+O\+N\+T\+\_\+\+D\+O\+WN@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+F\+O\+N\+T\+\_\+\+D\+O\+WN}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+F\+O\+N\+T\+\_\+\+D\+O\+WN@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+F\+O\+N\+T\+\_\+\+D\+O\+WN}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+T\+O\+O\+L\+S\+\_\+\+F\+O\+N\+T\+\_\+\+D\+O\+WN\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1ac746dc23691ddfc0076d40e68281cd52}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+MP@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+MP}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+MP@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+MP}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+MP\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a96b99518e1ac8f1565afcbd930a2b0ae}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+E\+N\+C\+O\+NF@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+E\+N\+C\+O\+NF}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+E\+N\+C\+O\+NF@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+E\+N\+C\+O\+NF}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+O\+P\+E\+N\+C\+O\+NF\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a12502d428dbc96563ebe8dc6e1708c7b}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+S\+A\+V\+E\+C\+O\+NF@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+S\+A\+V\+E\+C\+O\+NF}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+S\+A\+V\+E\+C\+O\+NF@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+S\+A\+V\+E\+C\+O\+NF}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+S\+A\+V\+E\+C\+O\+NF\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1af120267740a91e1184fb582243c12ff7}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+R\+UN@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+R\+UN}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+R\+UN@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+R\+UN}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+R\+UN\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a11e97e9b0f3dc2a767660845365a33b6}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+R\+U\+N\+\_\+\+A\+LL@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+R\+U\+N\+\_\+\+A\+LL}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+R\+U\+N\+\_\+\+A\+LL@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+R\+U\+N\+\_\+\+A\+LL}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+R\+U\+N\+\_\+\+A\+LL\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a63bba5d10ac26fb8335f8f6700c4d852}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+S\+H\+O\+W\+R\+ES@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+S\+H\+O\+W\+R\+ES}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+S\+H\+O\+W\+R\+ES@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+S\+H\+O\+W\+R\+ES}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+S\+H\+O\+W\+R\+ES\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1aa63299c405826a5e4823d1a6e57d9b8d}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+SA@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+SA}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+SA@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+SA}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+SA\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a2a65b341f77bfa0a19e1a76455225545}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+M\+OD@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+M\+OD}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+M\+OD@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+M\+OD}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+M\+OD\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a1a05cbc109fa1342dd2696125cae4089}
+}]\index{I\+D\+\_\+\+L\+A\+Y\+E\+RS@{I\+D\+\_\+\+L\+A\+Y\+E\+RS}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+L\+A\+Y\+E\+RS@{I\+D\+\_\+\+L\+A\+Y\+E\+RS}}\item[{\em 
+I\+D\+\_\+\+L\+A\+Y\+E\+RS\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1adfafaf5a1689de2c71032849755eb485}
+}]\index{I\+D\+\_\+\+A\+U\+T\+O\+S\+A\+VE@{I\+D\+\_\+\+A\+U\+T\+O\+S\+A\+VE}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+A\+U\+T\+O\+S\+A\+VE@{I\+D\+\_\+\+A\+U\+T\+O\+S\+A\+VE}}\item[{\em 
+I\+D\+\_\+\+A\+U\+T\+O\+S\+A\+VE\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a48f17e99a34d2baa0b1dfbf765a0338b}
+}]\index{I\+D\+\_\+\+S\+U\+B\+\_\+\+N\+E\+T\+W\+O\+R\+KS@{I\+D\+\_\+\+S\+U\+B\+\_\+\+N\+E\+T\+W\+O\+R\+KS}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+S\+U\+B\+\_\+\+N\+E\+T\+W\+O\+R\+KS@{I\+D\+\_\+\+S\+U\+B\+\_\+\+N\+E\+T\+W\+O\+R\+KS}}\item[{\em 
+I\+D\+\_\+\+S\+U\+B\+\_\+\+N\+E\+T\+W\+O\+R\+KS\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a9e21a379f713c76c177e456e0d00799e}
+}]\index{I\+D\+\_\+\+T\+H\+I\+E\+S\+S\+EN@{I\+D\+\_\+\+T\+H\+I\+E\+S\+S\+EN}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+H\+I\+E\+S\+S\+EN@{I\+D\+\_\+\+T\+H\+I\+E\+S\+S\+EN}}\item[{\em 
+I\+D\+\_\+\+T\+H\+I\+E\+S\+S\+EN\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1aad56cd501af22d257be023ef0dfd41a5}
+}]\index{I\+D\+\_\+\+T\+H\+I\+E\+S\+S\+E\+N\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+G\+E\+N\+E\+R\+A\+T\+OR@{I\+D\+\_\+\+T\+H\+I\+E\+S\+S\+E\+N\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+G\+E\+N\+E\+R\+A\+T\+OR}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+H\+I\+E\+S\+S\+E\+N\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+G\+E\+N\+E\+R\+A\+T\+OR@{I\+D\+\_\+\+T\+H\+I\+E\+S\+S\+E\+N\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+G\+E\+N\+E\+R\+A\+T\+OR}}\item[{\em 
+I\+D\+\_\+\+T\+H\+I\+E\+S\+S\+E\+N\+\_\+\+M\+A\+T\+R\+I\+X\+\_\+\+G\+E\+N\+E\+R\+A\+T\+OR\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a4dc244333c695a183454243537091f60}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+S\+H\+O\+W\+\_\+\+A\+L\+L\+\_\+\+R\+E\+S\+U\+L\+TS@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+S\+H\+O\+W\+\_\+\+A\+L\+L\+\_\+\+R\+E\+S\+U\+L\+TS}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+S\+H\+O\+W\+\_\+\+A\+L\+L\+\_\+\+R\+E\+S\+U\+L\+TS@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+S\+H\+O\+W\+\_\+\+A\+L\+L\+\_\+\+R\+E\+S\+U\+L\+TS}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+C\+O\+M\+P\+\_\+\+S\+H\+O\+W\+\_\+\+A\+L\+L\+\_\+\+R\+E\+S\+U\+L\+TS\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1ae580d3a42a236677b89f19e4e07c04d6}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+G\+U\+A\+R\+A\+N\+T\+E\+E\+\_\+\+C\+U\+R\+VE@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+G\+U\+A\+R\+A\+N\+T\+E\+E\+\_\+\+C\+U\+R\+VE}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+G\+U\+A\+R\+A\+N\+T\+E\+E\+\_\+\+C\+U\+R\+VE@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+G\+U\+A\+R\+A\+N\+T\+E\+E\+\_\+\+C\+U\+R\+VE}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+G\+U\+A\+R\+A\+N\+T\+E\+E\+\_\+\+C\+U\+R\+VE\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1ad518f8dc3a14e2737ed6caf92479fb8c}
+}]\index{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+P\+R\+O\+J\+E\+CT@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+P\+R\+O\+J\+E\+CT}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+P\+R\+O\+J\+E\+CT@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+P\+R\+O\+J\+E\+CT}}\item[{\em 
+I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+P\+R\+O\+J\+E\+CT\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a411af9303095ba3dc3b46ddd83b42d00}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+B\+A\+S\+IN@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+B\+A\+S\+IN}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+B\+A\+S\+IN@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+B\+A\+S\+IN}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+B\+A\+S\+IN\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a7e3ae9b35b33446fd97f5537a27e5b25}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+R\+E\+S\+E\+R\+V\+OR@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+R\+E\+S\+E\+R\+V\+OR}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+R\+E\+S\+E\+R\+V\+OR@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+R\+E\+S\+E\+R\+V\+OR}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+R\+E\+S\+E\+R\+V\+OR\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a017ec4c2bcd1b64a8fc4748b79acc40d}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+L\+A\+KE@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+L\+A\+KE}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+L\+A\+KE@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+L\+A\+KE}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+L\+A\+KE\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a39cea66af5ac5f45136109bbe35f8511}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+D\+E\+M\+A\+IN@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+D\+E\+M\+A\+IN}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+D\+E\+M\+A\+IN@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+D\+E\+M\+A\+IN}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+D\+E\+M\+A\+IN\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a8127bb28c60c7c5e261fcf688cfc3210}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+J\+U\+N\+T\+I\+ON@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+J\+U\+N\+T\+I\+ON}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+J\+U\+N\+T\+I\+ON@{I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+J\+U\+N\+T\+I\+ON}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+B\+A\+R\+\_\+\+N\+E\+T\+\_\+\+E\+L\+E\+\_\+\+J\+U\+N\+T\+I\+ON\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1aea0c6fba00d2e130215635da0e151039}
+}]\index{T\+I\+M\+E\+R\+\_\+\+ID@{T\+I\+M\+E\+R\+\_\+\+ID}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!T\+I\+M\+E\+R\+\_\+\+ID@{T\+I\+M\+E\+R\+\_\+\+ID}}\item[{\em 
+T\+I\+M\+E\+R\+\_\+\+ID\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a3c0d74ddc292766c5fbea5372eab77a7}
+}]\index{T\+I\+M\+E\+R\+\_\+\+I\+D\+\_\+\+E\+R\+RO@{T\+I\+M\+E\+R\+\_\+\+I\+D\+\_\+\+E\+R\+RO}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!T\+I\+M\+E\+R\+\_\+\+I\+D\+\_\+\+E\+R\+RO@{T\+I\+M\+E\+R\+\_\+\+I\+D\+\_\+\+E\+R\+RO}}\item[{\em 
+T\+I\+M\+E\+R\+\_\+\+I\+D\+\_\+\+E\+R\+RO\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a742efb9148a6c907731c9bc53b81aab9}
+}]\index{I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+A\+U\+T\+O\+S\+A\+V\+E\+\_\+\+ON@{I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+A\+U\+T\+O\+S\+A\+V\+E\+\_\+\+ON}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+A\+U\+T\+O\+S\+A\+V\+E\+\_\+\+ON@{I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+A\+U\+T\+O\+S\+A\+V\+E\+\_\+\+ON}}\item[{\em 
+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+A\+U\+T\+O\+S\+A\+V\+E\+\_\+\+ON\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1ae7c67dd885c8fe80b24003f74794778f}
+}]\index{I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+A\+U\+T\+O\+S\+A\+V\+E\+\_\+\+O\+FF@{I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+A\+U\+T\+O\+S\+A\+V\+E\+\_\+\+O\+FF}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+A\+U\+T\+O\+S\+A\+V\+E\+\_\+\+O\+FF@{I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+A\+U\+T\+O\+S\+A\+V\+E\+\_\+\+O\+FF}}\item[{\em 
+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+A\+U\+T\+O\+S\+A\+V\+E\+\_\+\+O\+FF\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1a8dbd0a780dd7ed6c8e19891ffbc5500a}
+}]\index{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+A\+L\+L\+\_\+\+S\+E\+R\+I\+ES@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+A\+L\+L\+\_\+\+S\+E\+R\+I\+ES}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+A\+L\+L\+\_\+\+S\+E\+R\+I\+ES@{I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+A\+L\+L\+\_\+\+S\+E\+R\+I\+ES}}\item[{\em 
+I\+D\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+A\+L\+L\+\_\+\+S\+E\+R\+I\+ES\label{_siga_frame_8h_a29d44341ce767c5dfc737d622fc97ba1ac0ab8dae80b3797f9bad52a34d051921}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 482 do arquivo Siga\+Frame.\+h.
+
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_siga_frame_8h_a1b7b7893d940926615b39239ac05829d}
+Enumerador com indentificar do choicebook \begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+N\+O\+T\+E\+C\+O\+M\+P\+O\+N\+E\+NT@{I\+D\+\_\+\+N\+O\+T\+E\+C\+O\+M\+P\+O\+N\+E\+NT}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+N\+O\+T\+E\+C\+O\+M\+P\+O\+N\+E\+NT@{I\+D\+\_\+\+N\+O\+T\+E\+C\+O\+M\+P\+O\+N\+E\+NT}}\item[{\em 
+I\+D\+\_\+\+N\+O\+T\+E\+C\+O\+M\+P\+O\+N\+E\+NT\label{_siga_frame_8h_a1b7b7893d940926615b39239ac05829da57bbb323318719874749ac8f94e2dd82}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 598 do arquivo Siga\+Frame.\+h.
+
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{_siga_frame_8h_a098384b0034af0daa7c9c5c82b563567}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+N\+ET@{I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+N\+ET}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+N\+ET@{I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+N\+ET}}\item[{\em 
+I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+N\+ET\label{_siga_frame_8h_a098384b0034af0daa7c9c5c82b563567ad51a009ca0dad1849f95e0b1392d537d}
+}]\index{I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+H\+I\+D\+RO@{I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+H\+I\+D\+RO}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+H\+I\+D\+RO@{I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+H\+I\+D\+RO}}\item[{\em 
+I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+H\+I\+D\+RO\label{_siga_frame_8h_a098384b0034af0daa7c9c5c82b563567a5f9339d55122cabfed644e56ac359639}
+}]\index{I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+O\+PT@{I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+O\+PT}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+O\+PT@{I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+O\+PT}}\item[{\em 
+I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+O\+PT\label{_siga_frame_8h_a098384b0034af0daa7c9c5c82b563567aa5ec2dc958e21e1a4bc70cb97ce6b5bf}
+}]\index{I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+R\+E\+S\+OP@{I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+R\+E\+S\+OP}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+R\+E\+S\+OP@{I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+R\+E\+S\+OP}}\item[{\em 
+I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+R\+E\+S\+OP\label{_siga_frame_8h_a098384b0034af0daa7c9c5c82b563567a44e1da14baa4210a549a6d4e75c39e11}
+}]\index{I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+O\+UT@{I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+O\+UT}!Siga\+Frame.\+h@{Siga\+Frame.\+h}}\index{Siga\+Frame.\+h@{Siga\+Frame.\+h}!I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+O\+UT@{I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+O\+UT}}\item[{\em 
+I\+D\+\_\+\+C\+O\+M\+P\+O\+N\+E\+N\+T\+\_\+\+O\+UT\label{_siga_frame_8h_a098384b0034af0daa7c9c5c82b563567a38fb227e0a7754ae4fa9cd4836410cda}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 602 do arquivo Siga\+Frame.\+h.
+

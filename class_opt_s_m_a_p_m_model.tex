@@ -1,0 +1,261 @@
+\section{Refer√™ncia da Classe Opt\+S\+M\+A\+P\+M\+Model}
+\label{class_opt_s_m_a_p_m_model}\index{Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}}
+
+
+{\ttfamily \#include $<$Opt\+S\+M\+A\+P\+M\+Model.\+h$>$}
+
+
+
+Herdeiro de {\bf Opt\+Model}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+S\+M\+A\+P\+M\+Model} ({\bf Date} interval\+Begin, {\bf Date} interval\+End, {\bf Node} $\ast${\bf node})
+\item 
+virtual {\bf $\sim$\+Opt\+S\+M\+A\+P\+M\+Model} ()
+\item 
+void {\bf update\+Tree\+Item} ({\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$)
+\item 
+{\bf Serie} $\ast$ {\bf run} ({\bf Matrix} matrix\+Param)
+\item 
+bool {\bf empty} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+{\bf Matrix} {\bf true\+Parameters} ({\bf Matrix} std\+Par)
+\item 
+wx\+String {\bf get\+Name} (int i)
+\item 
+wx\+String {\bf get\+Unit} (int i)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+M\+A\+P\+M\+Model} $\ast$ {\bf smap}
+\item 
+double {\bf Sat\+Range} [2]
+\item 
+double {\bf Crec\+Range} [2]
+\item 
+double {\bf Pes\+Range} [2]
+\item 
+double {\bf K\+Range} [2]
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 21 do arquivo Opt\+S\+M\+A\+P\+M\+Model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}!Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}}
+\index{Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}!Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}}
+\subsubsection[{Opt\+S\+M\+A\+P\+M\+Model(\+Date interval\+Begin, Date interval\+End, Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}Opt\+S\+M\+A\+P\+M\+Model\+::\+Opt\+S\+M\+A\+P\+M\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{interval\+Begin, }
+\item[{{\bf Date}}]{interval\+End, }
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_opt_s_m_a_p_m_model_ad2da50eff4b55583cde0656d0c6106fb}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em interval\+Begin} & Inicio do intervalo \\
+\hline
+{\em interval\+End} & Fim do intervalo \\
+\hline
+{\em node} & NÛ \\
+\hline
+\end{DoxyParams}
+\index{Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}!````~Opt\+S\+M\+A\+P\+M\+Model@{$\sim$\+Opt\+S\+M\+A\+P\+M\+Model}}
+\index{````~Opt\+S\+M\+A\+P\+M\+Model@{$\sim$\+Opt\+S\+M\+A\+P\+M\+Model}!Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}}
+\subsubsection[{$\sim$\+Opt\+S\+M\+A\+P\+M\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Opt\+S\+M\+A\+P\+M\+Model\+::$\sim$\+Opt\+S\+M\+A\+P\+M\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_s_m_a_p_m_model_a1fdb9c92673a3afa9e4ed644cae3e68d}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Opt\+S\+M\+A\+P\+M\+Model\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_s_m_a_p_m_model_a35c46cf34eb44ed15d36b0c995dfbd30}
+Avalia se todas as informaÁıes importantes para o modelo formam informadas 
+
+Implementa {\bf Opt\+Model} \doxyref{}{pag.}{class_opt_model_abd2a3e713cfaee563403c4d4227a202e}.
+
+\index{Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}!clear@{clear}}
+\index{clear@{clear}!Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+S\+M\+A\+P\+M\+Model\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_s_m_a_p_m_model_a4bd2e0633a48fdd8baec3ae900dd5b51}
+Limpa os valores e retorna ao estado pÛs-\/construÁ„o 
+
+Implementa {\bf Opt\+Model} \doxyref{}{pag.}{class_opt_model_abff7299deb4bd6e646cc23f1332935f5}.
+
+\index{Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}!empty@{empty}}
+\index{empty@{empty}!Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool Opt\+S\+M\+A\+P\+M\+Model\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_s_m_a_p_m_model_a6558d4c71602bad531ccee759bb83225}
+retorna se existe algum valor no modelo 
+
+Implementa {\bf Opt\+Model} \doxyref{}{pag.}{class_opt_model_a54f2f72cc2fdb5d3056bcdd650630879}.
+
+\index{Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}}
+\subsubsection[{get\+Name(int i)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Opt\+S\+M\+A\+P\+M\+Model\+::get\+Name (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_s_m_a_p_m_model_a6a9f1826b6c10182d43c82203c9d80df}
+Retorna nome dos par‚metros em forma de texto 
+
+Implementa {\bf Opt\+Model} \doxyref{}{pag.}{class_opt_model_ae003d1d402dfc5883e4bab3504eaa8e6}.
+
+\index{Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}!get\+Unit@{get\+Unit}}
+\index{get\+Unit@{get\+Unit}!Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}}
+\subsubsection[{get\+Unit(int i)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Opt\+S\+M\+A\+P\+M\+Model\+::get\+Unit (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_s_m_a_p_m_model_a9e4975dffd72eef6777bfdea4594364b}
+Retorna unidade dos par‚metros em forma de texto 
+
+Implementa {\bf Opt\+Model} \doxyref{}{pag.}{class_opt_model_acc0d0aadf9834d93aadda4ac1f3cebf5}.
+
+\index{Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+S\+M\+A\+P\+M\+Model\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_s_m_a_p_m_model_a32a10c1c55aed7d7e4a0e48ada23e39f}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Opt\+Model} \doxyref{}{pag.}{class_opt_model_a6240f3f81b50ccdfdf6f35d4ae6f659b}.
+
+\index{Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+S\+M\+A\+P\+M\+Model\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_s_m_a_p_m_model_a0d08ccda690d9ee1b29fa259bd66d42a}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Opt\+Model} \doxyref{}{pag.}{class_opt_model_aebc12b925e33853242513a3c769a5e37}.
+
+\index{Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}!run@{run}}
+\index{run@{run}!Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}}
+\subsubsection[{run(\+Matrix matrix\+Param)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ Opt\+S\+M\+A\+P\+M\+Model\+::run (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{matrix\+Param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_s_m_a_p_m_model_a6a759f7ad1afc1e443b0f606fbd89991}
+Executar o modelo S\+M\+A\+PM 
+\begin{DoxyParams}{Par√¢metros}
+{\em matrix\+Param} & \doxyref{Matrix}{pag.}{class_matrix} de parametros normalizados entre 0 e 1. estes valores ser„o reescalados para dentro do intervalo real de cada vari·vel antes da execuÁ„o. exemplo matrix\+Param = [0.\+5, 0.\+5, 0.\+5, 0.\+5], sendo o range do Crec entre 0 e 20, o par‚metro usado ser· 10 \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Opt\+Model} \doxyref{}{pag.}{class_opt_model_a26c9b4e527c19ff213fc79c12ef28a6f}.
+
+\index{Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}!true\+Parameters@{true\+Parameters}}
+\index{true\+Parameters@{true\+Parameters}!Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}}
+\subsubsection[{true\+Parameters(\+Matrix std\+Par)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Opt\+S\+M\+A\+P\+M\+Model\+::true\+Parameters (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{std\+Par}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_s_m_a_p_m_model_a2635e2dba67a24e87b334822d252cd60}
+Transforma matrix de par‚metros padronizada em matrix de par‚metros reais 
+\begin{DoxyParams}{Par√¢metros}
+{\em std\+Par} & \doxyref{Matrix}{pag.}{class_matrix} de par‚metros padronizados \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Opt\+Model} \doxyref{}{pag.}{class_opt_model_a272f11431b12be58877e02eaf1e1e823}.
+
+\index{Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}!update\+Tree\+Item@{update\+Tree\+Item}}
+\index{update\+Tree\+Item@{update\+Tree\+Item}!Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}}
+\subsubsection[{update\+Tree\+Item(\+S\+I\+G\+A\+Tree\+Ctrl $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+S\+M\+A\+P\+M\+Model\+::update\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_s_m_a_p_m_model_ae0b12a00263b02fbc5d7974ec5acf80d}
+Atualiza os ponteiros das suas series no Tree\+Ctrl de integraÁ„o 
+
+Implementa {\bf Opt\+Model} \doxyref{}{pag.}{class_opt_model_a5660656d37a90a2e8942451b513244fd}.
+
+
+
+\subsection{Atributos}
+\index{Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}!Crec\+Range@{Crec\+Range}}
+\index{Crec\+Range@{Crec\+Range}!Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}}
+\subsubsection[{Crec\+Range}]{\setlength{\rightskip}{0pt plus 5cm}double Opt\+S\+M\+A\+P\+M\+Model\+::\+Crec\+Range[2]}\label{class_opt_s_m_a_p_m_model_a2830c906c3e45472c790f0171065affe}
+Crec Range 
+
+Defini√ß√£o na linha 39 do arquivo Opt\+S\+M\+A\+P\+M\+Model.\+h.
+
+\index{Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}!K\+Range@{K\+Range}}
+\index{K\+Range@{K\+Range}!Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}}
+\subsubsection[{K\+Range}]{\setlength{\rightskip}{0pt plus 5cm}double Opt\+S\+M\+A\+P\+M\+Model\+::\+K\+Range[2]}\label{class_opt_s_m_a_p_m_model_a2df14862af0852df0a8a393c3d380766}
+K Range 
+
+Defini√ß√£o na linha 49 do arquivo Opt\+S\+M\+A\+P\+M\+Model.\+h.
+
+\index{Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}!Pes\+Range@{Pes\+Range}}
+\index{Pes\+Range@{Pes\+Range}!Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}}
+\subsubsection[{Pes\+Range}]{\setlength{\rightskip}{0pt plus 5cm}double Opt\+S\+M\+A\+P\+M\+Model\+::\+Pes\+Range[2]}\label{class_opt_s_m_a_p_m_model_a33779c56b7c1acddac8618cb071b5270}
+P\+ES Range 
+
+Defini√ß√£o na linha 44 do arquivo Opt\+S\+M\+A\+P\+M\+Model.\+h.
+
+\index{Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}!Sat\+Range@{Sat\+Range}}
+\index{Sat\+Range@{Sat\+Range}!Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}}
+\subsubsection[{Sat\+Range}]{\setlength{\rightskip}{0pt plus 5cm}double Opt\+S\+M\+A\+P\+M\+Model\+::\+Sat\+Range[2]}\label{class_opt_s_m_a_p_m_model_af920bb004cc44906fc515510b9b84700}
+Sat Range 
+
+Defini√ß√£o na linha 34 do arquivo Opt\+S\+M\+A\+P\+M\+Model.\+h.
+
+\index{Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}!smap@{smap}}
+\index{smap@{smap}!Opt\+S\+M\+A\+P\+M\+Model@{Opt\+S\+M\+A\+P\+M\+Model}}
+\subsubsection[{smap}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+M\+A\+P\+M\+Model}$\ast$ Opt\+S\+M\+A\+P\+M\+Model\+::smap}\label{class_opt_s_m_a_p_m_model_a025cf646f09df94ea830ad58d2937619}
+Ponteiro para Modelo S\+M\+A\+PM 
+
+Defini√ß√£o na linha 29 do arquivo Opt\+S\+M\+A\+P\+M\+Model.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+S\+M\+A\+P\+M\+Model.\+h}\end{DoxyCompactItemize}

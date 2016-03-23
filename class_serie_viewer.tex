@@ -1,0 +1,696 @@
+\section{Refer√™ncia da Classe Serie\+Viewer}
+\label{class_serie_viewer}\index{Serie\+Viewer@{Serie\+Viewer}}
+
+
+{\ttfamily \#include $<$Serie\+Viewer.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+\subsection*{Tipos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Tree\+Image} \{ {\bf U\+N\+C\+H\+E\+CK} = 0, 
+{\bf C\+H\+E\+CK}, 
+{\bf F\+O\+L\+D\+ER}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf init\+Ui} (wx\+Frame $\ast$a\+\_\+frame, bool a\+\_\+editable, bool a\+\_\+adv\+Inserction, bool a\+\_\+show\+Statistics)
+\item 
+bool {\bf is\+Edited} ()
+\item 
+void {\bf grid\+Was\+Modfied} ()
+\item 
+{\bf Serie} $\ast$ {\bf get\+Serie\+By\+Map} (int a\+\_\+id\+Element)
+\item 
+bool {\bf view\+Elements\+Tree\+Ctrl} ()
+\item 
+void {\bf set\+Name\+Original\+Serie} (wx\+String a\+\_\+name=wxT(\char`\"{}\char`\"{}))
+\item 
+wx\+String {\bf get\+Name\+Original\+Serie} ()
+\item 
+{\bf Serie\+Graph} $\ast$ {\bf get\+Graph} ()
+\item 
+{\bf Serie\+Plan} $\ast$ {\bf get\+Plan} ()
+\item 
+wx\+Bitmap {\bf create\+Symbol} (int symbol, int colour, int size)
+\item 
+int {\bf get\+Selected\+Page} ()
+\item 
+int {\bf get\+Shown\+Plan} ()
+\item 
+{\bf Serie\+Viewer} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent}, bool show\+Statistics, int options={\bf B\+U\+T\+T\+O\+N\+\_\+\+S\+A\+VE}, bool editable=false, bool adv\+Inserction=false, bool show\+Tree\+Elements\+Plan=false, wx\+String type\+Serie=\char`\"{}\char`\"{})
+\item 
+virtual {\bf $\sim$\+Serie\+Viewer} ()
+\item 
+void {\bf insert\+Serie} ({\bf Serie} $\ast$serie, bool inverse=false, bool show\+Plan=true, bool show\+Graph=false, wx\+String section=\char`\"{}\char`\"{}, bool draw\+Symbols=true, bool draw\+Lines=true)
+\item 
+void {\bf set\+All\+Serie\+Plan\+Data\+Null} ()
+\item 
+void {\bf set\+All\+Serie\+Graph\+Data\+Null} ()
+\item 
+void {\bf release\+Series} ()
+\item 
+void {\bf set\+Content\+Serie\+Unit} (wx\+String a\+\_\+choisen\+Serie\+Unit)
+\item 
+wx\+String {\bf content\+Serie\+Unit} ()
+\item 
+bool {\bf calculate\+Interval} ()
+\item 
+bool {\bf remove\+Serie} ({\bf Serie} $\ast$serie)
+\item 
+bool {\bf remove\+Serie} (const wx\+String \&section, wx\+Tree\+Item\+Id parent\+Id=(wx\+Tree\+Item\+Id) 0)
+\item 
+bool {\bf remove\+Provisional\+Serie} ({\bf Serie} $\ast$a\+\_\+serie)
+\item 
+int {\bf update\+Serie} (const wx\+String \&section, {\bf Serie} $\ast$serie)
+\item 
+void {\bf reconfigure\+Serie} (int a\+\_\+element\+Id, {\bf Serie} $\ast$a\+\_\+serie={\bf N\+U\+LL})
+\item 
+void {\bf add\+Element\+And\+Serie\+In\+The\+Map} (int a\+\_\+id\+Element, {\bf Serie} $\ast$a\+\_\+serie)
+\item 
+void {\bf set\+Conversion\+Type} (int a\+\_\+conversion)
+\item 
+bool {\bf change\+Serie\+Name} (const wx\+String \&old\+Name, const wx\+String \&new\+Name)
+\item 
+void {\bf save\+Conf} ()
+\item 
+void {\bf clear} ()
+\item 
+vector$<$ {\bf Draw\+Serie} $\ast$ $>$ {\bf get\+Selected\+Series} () const 
+\item 
+void {\bf force\+Plan\+Draw} (bool a\+\_\+force)
+\item 
+bool {\bf export\+Selected\+Series\+To\+Thiessen\+Matrix} (const wx\+String \&output\+File\+Path) const 
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Colour {\bf colors\+Opt} [16]
+\item 
+vector$<$ {\bf Draw\+Serie} $\ast$ $>$ {\bf series}
+\item 
+{\bf Date} {\bf begin\+Date}
+\item 
+{\bf Date} {\bf end\+Date}
+\item 
+{\bf Date\+::\+Time\+Interval} {\bf time\+Interval}
+\item 
+wx\+String {\bf m\+\_\+choisen\+Serie\+Unit\+Window}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ int, {\bf Serie} $\ast$ $>$ {\bf get\+Map\+Elements\+Series} ()
+\item 
+void {\bf remove\+Serie\+By\+Map} (int a\+\_\+id\+Element)
+\item 
+void {\bf clear\+Map\+Of\+Element\+Serie} ()
+\item 
+void {\bf set\+View\+Elements\+Tree\+Ctrl} (bool a\+\_\+show=false)
+\item 
+void {\bf visit\+Tree\+Item\+To\+List\+Serie} (const wx\+Tree\+Ctrl \&tree\+Ctrl, const wx\+Tree\+Item\+Id \&node, vector$<$ {\bf Draw\+Serie} $\ast$ $>$ \&serie\+List) const 
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf serie\+Seed}
+\item 
+wx\+Notebook $\ast$ {\bf note}
+\item 
+short {\bf selected\+Color}
+\item 
+{\bf Serie\+Graph} $\ast$ {\bf graph}
+\item 
+{\bf Serie\+Plan} $\ast$ {\bf plan}
+\item 
+{\bf Serie\+Statistics} $\ast$ {\bf statistics}
+\item 
+int {\bf convert\+Serie\+Type}
+\item 
+bool {\bf show\+Tree\+Elements}
+\item 
+map$<$ int, {\bf Serie} $\ast$ $>$ {\bf m\+\_\+hash\+Element\+Serie}
+\item 
+wx\+String {\bf name\+Original\+Serie}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Serie\+Dialog\+Content}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+Visualizador de series Possui visualizacao por planilha e por grafico 
+
+Defini√ß√£o na linha 69 do arquivo Serie\+Viewer.\+h.
+
+
+
+\subsection{Enumera√ß√µes}
+\index{Serie\+Viewer@{Serie\+Viewer}!Tree\+Image@{Tree\+Image}}
+\index{Tree\+Image@{Tree\+Image}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{Tree\+Image}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Serie\+Viewer\+::\+Tree\+Image}}\label{class_serie_viewer_a6c75481ebd18147816c007eebadc9ff7}
+\begin{Desc}
+\item[Valores de enumera√ß√µes]\par
+\begin{description}
+\index{U\+N\+C\+H\+E\+CK@{U\+N\+C\+H\+E\+CK}!Serie\+Viewer@{Serie\+Viewer}}\index{Serie\+Viewer@{Serie\+Viewer}!U\+N\+C\+H\+E\+CK@{U\+N\+C\+H\+E\+CK}}\item[{\em 
+U\+N\+C\+H\+E\+CK\label{class_serie_viewer_a6c75481ebd18147816c007eebadc9ff7a1bb6ca3d7f6769fa8a4fa7052aa10019}
+}]\index{C\+H\+E\+CK@{C\+H\+E\+CK}!Serie\+Viewer@{Serie\+Viewer}}\index{Serie\+Viewer@{Serie\+Viewer}!C\+H\+E\+CK@{C\+H\+E\+CK}}\item[{\em 
+C\+H\+E\+CK\label{class_serie_viewer_a6c75481ebd18147816c007eebadc9ff7a3f5f9cd8ebd7136af2b78db6cb8ff658}
+}]\index{F\+O\+L\+D\+ER@{F\+O\+L\+D\+ER}!Serie\+Viewer@{Serie\+Viewer}}\index{Serie\+Viewer@{Serie\+Viewer}!F\+O\+L\+D\+ER@{F\+O\+L\+D\+ER}}\item[{\em 
+F\+O\+L\+D\+ER\label{class_serie_viewer_a6c75481ebd18147816c007eebadc9ff7ade8a3217d537ff59b24eab25adeef6e1}
+}]\end{description}
+\end{Desc}
+
+
+Defini√ß√£o na linha 200 do arquivo Serie\+Viewer.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Serie\+Viewer@{Serie\+Viewer}!Serie\+Viewer@{Serie\+Viewer}}
+\index{Serie\+Viewer@{Serie\+Viewer}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{Serie\+Viewer(wx\+Frame $\ast$frame, wx\+Window $\ast$parent, bool show\+Statistics, int options=\+B\+U\+T\+T\+O\+N\+\_\+\+S\+A\+V\+E, bool editable=false, bool adv\+Inserction=false, bool show\+Tree\+Elements\+Plan=false, wx\+String type\+Serie="""")}]{\setlength{\rightskip}{0pt plus 5cm}Serie\+Viewer\+::\+Serie\+Viewer (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{bool}]{show\+Statistics, }
+\item[{int}]{options = {\ttfamily {\bf B\+U\+T\+T\+O\+N\+\_\+\+S\+A\+VE}}, }
+\item[{bool}]{editable = {\ttfamily false}, }
+\item[{bool}]{adv\+Inserction = {\ttfamily false}, }
+\item[{bool}]{show\+Tree\+Elements\+Plan = {\ttfamily false}, }
+\item[{wx\+String}]{type\+Serie = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_a216d47e3c4f47c85d7e4cda7f64774be}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em frame} & Frame que contem a interface \\
+\hline
+{\em parent} & Pai da janela \\
+\hline
+{\em show\+Statistics} & flag que indica se o \doxyref{Serie\+Viewer}{pag.}{class_serie_viewer} dever· mostrar a aba de estatÌsticas \\
+\hline
+{\em options} & Botıes a serem desenhados \\
+\hline
+{\em editable} & Permite ou n„o a modificaÁ„o das celulas da planilha \\
+\hline
+{\em time\+Interval} & Tipo de intervalo \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Viewer@{Serie\+Viewer}!````~Serie\+Viewer@{$\sim$\+Serie\+Viewer}}
+\index{````~Serie\+Viewer@{$\sim$\+Serie\+Viewer}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{$\sim$\+Serie\+Viewer()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Serie\+Viewer\+::$\sim$\+Serie\+Viewer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_serie_viewer_a333cfa531832a65b93d9e42e36d324eb}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Serie\+Viewer@{Serie\+Viewer}!add\+Element\+And\+Serie\+In\+The\+Map@{add\+Element\+And\+Serie\+In\+The\+Map}}
+\index{add\+Element\+And\+Serie\+In\+The\+Map@{add\+Element\+And\+Serie\+In\+The\+Map}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{add\+Element\+And\+Serie\+In\+The\+Map(int a\+\_\+id\+Element, Serie $\ast$a\+\_\+serie)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Viewer\+::add\+Element\+And\+Serie\+In\+The\+Map (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+id\+Element, }
+\item[{{\bf Serie} $\ast$}]{a\+\_\+serie}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_ad0b9f636b5bcd071d288426e1f3ebf3f}
+Adicona ao map o elemento e sua sÈrie correspondente \index{Serie\+Viewer@{Serie\+Viewer}!calculate\+Interval@{calculate\+Interval}}
+\index{calculate\+Interval@{calculate\+Interval}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{calculate\+Interval()}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Viewer\+::calculate\+Interval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_ad4e89c6e0d3bfb14b76d6a89df994093}
+Calcula o intervalo \index{Serie\+Viewer@{Serie\+Viewer}!change\+Serie\+Name@{change\+Serie\+Name}}
+\index{change\+Serie\+Name@{change\+Serie\+Name}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{change\+Serie\+Name(const wx\+String \&old\+Name, const wx\+String \&new\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Viewer\+::change\+Serie\+Name (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{old\+Name, }
+\item[{const wx\+String \&}]{new\+Name}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_a8af6920acf74d7c06e147840486cb6e8}
+Renomeia uma sÈrie de nome \textquotesingle{}old\+Name\textquotesingle{} para \textquotesingle{}new\+Name\textquotesingle{}, atualizando a instancia da sÈrie em \textquotesingle{}series[]\textquotesingle{}, no \doxyref{Serie\+Plan}{pag.}{class_serie_plan} e no \doxyref{Serie\+Graph}{pag.}{class_serie_graph}.
+
+
+\begin{DoxyParams}{Par√¢metros}
+{\em old\+Name} & Nome antigo (ser· feita uma busca em \textquotesingle{}series[]\textquotesingle{} e nos Tree\+Ctrl a partir dessa string) \\
+\hline
+{\em new\+Name} & Novo nome return um booleano indicando se a atualizacao se deu com sucesso \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Viewer@{Serie\+Viewer}!clear@{clear}}
+\index{clear@{clear}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Viewer\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_aee23a33a33401ee867cc01a6c0580b9b}
+Limpa os dados \index{Serie\+Viewer@{Serie\+Viewer}!clear\+Map\+Of\+Element\+Serie@{clear\+Map\+Of\+Element\+Serie}}
+\index{clear\+Map\+Of\+Element\+Serie@{clear\+Map\+Of\+Element\+Serie}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{clear\+Map\+Of\+Element\+Serie()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Viewer\+::clear\+Map\+Of\+Element\+Serie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_viewer_abd36b2492a967ea9da1e0b9406b8b0db}
+This function delete the \doxyref{Serie}{pag.}{class_serie} $\ast$ from map of elements and after clear the same map \index{Serie\+Viewer@{Serie\+Viewer}!content\+Serie\+Unit@{content\+Serie\+Unit}}
+\index{content\+Serie\+Unit@{content\+Serie\+Unit}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{content\+Serie\+Unit()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Serie\+Viewer\+::content\+Serie\+Unit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_ac38599c97fdbe1c1f4a5e1eeacdced4c}
+Return the new value form wx\+Choice from \doxyref{Serie\+Dialog\+Content}{pag.}{class_serie_dialog_content}, choisen for user. This value affects the display of the serie \index{Serie\+Viewer@{Serie\+Viewer}!create\+Symbol@{create\+Symbol}}
+\index{create\+Symbol@{create\+Symbol}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{create\+Symbol(int symbol, int colour, int size)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Serie\+Viewer\+::create\+Symbol (
+\begin{DoxyParamCaption}
+\item[{int}]{symbol, }
+\item[{int}]{colour, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_a98e2145198eef957d432832e8f94709d}
+Cria um bitmap para ser usado como simbolo pelo gr·fico 
+\begin{DoxyParams}{Par√¢metros}
+{\em symbol} & Simbolo a ser desenhado \\
+\hline
+{\em colour} & Cor do simbolo \\
+\hline
+{\em size} & Tamanho do simbolo \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Viewer@{Serie\+Viewer}!export\+Selected\+Series\+To\+Thiessen\+Matrix@{export\+Selected\+Series\+To\+Thiessen\+Matrix}}
+\index{export\+Selected\+Series\+To\+Thiessen\+Matrix@{export\+Selected\+Series\+To\+Thiessen\+Matrix}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{export\+Selected\+Series\+To\+Thiessen\+Matrix(const wx\+String \&output\+File\+Path) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Viewer\+::export\+Selected\+Series\+To\+Thiessen\+Matrix (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{output\+File\+Path}
+\end{DoxyParamCaption}
+) const}\label{class_serie_viewer_abf2b30f714414dc82eb98c7e8c9765a1}
+Gera uma matriz de \doxyref{Thiessen}{pag.}{class_thiessen} a partir das sÈries selecionadas.
+
+
+\begin{DoxyParams}{Par√¢metros}
+{\em output\+File\+Path} & Path onde ser· criado o arquivo de saÌda Thiessen\+Matrix \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Viewer@{Serie\+Viewer}!force\+Plan\+Draw@{force\+Plan\+Draw}}
+\index{force\+Plan\+Draw@{force\+Plan\+Draw}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{force\+Plan\+Draw(bool a\+\_\+force)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Viewer\+::force\+Plan\+Draw (
+\begin{DoxyParamCaption}
+\item[{bool}]{a\+\_\+force}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_a19d5a554664d8e4c91bb00bbfbf9534b}
+\index{Serie\+Viewer@{Serie\+Viewer}!get\+Graph@{get\+Graph}}
+\index{get\+Graph@{get\+Graph}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{get\+Graph()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie\+Graph}$\ast$ Serie\+Viewer\+::get\+Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_a0b7a379ddc77328aca2fc3242e3c390c}
+Identificador para Imagem do Tree\+Ctrl Retorna o gr·fico da Serie\+Viwer \index{Serie\+Viewer@{Serie\+Viewer}!get\+Map\+Elements\+Series@{get\+Map\+Elements\+Series}}
+\index{get\+Map\+Elements\+Series@{get\+Map\+Elements\+Series}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{get\+Map\+Elements\+Series()}]{\setlength{\rightskip}{0pt plus 5cm}map$<$int, {\bf Serie}$\ast$$>$ Serie\+Viewer\+::get\+Map\+Elements\+Series (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_viewer_a121fa2871a595ab1c8ba6cdfd1b37a0a}
+Return map of elements and series configured by treectrl of elements from serieplan \index{Serie\+Viewer@{Serie\+Viewer}!get\+Name\+Original\+Serie@{get\+Name\+Original\+Serie}}
+\index{get\+Name\+Original\+Serie@{get\+Name\+Original\+Serie}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{get\+Name\+Original\+Serie()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Serie\+Viewer\+::get\+Name\+Original\+Serie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_a64a160e4fe24271bcbe566607f4dfb11}
+\index{Serie\+Viewer@{Serie\+Viewer}!get\+Plan@{get\+Plan}}
+\index{get\+Plan@{get\+Plan}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{get\+Plan()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie\+Plan}$\ast$ Serie\+Viewer\+::get\+Plan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_add78b99331a436ac94df061c06103127}
+Retorna a planilha da Serie\+Viwer \index{Serie\+Viewer@{Serie\+Viewer}!get\+Selected\+Page@{get\+Selected\+Page}}
+\index{get\+Selected\+Page@{get\+Selected\+Page}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{get\+Selected\+Page()}]{\setlength{\rightskip}{0pt plus 5cm}int Serie\+Viewer\+::get\+Selected\+Page (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_serie_viewer_a60fef06b62f2d0ff65c817bd6e54635d}
+Retorna a pagina selecionada 
+
+Defini√ß√£o na linha 220 do arquivo Serie\+Viewer.\+h.
+
+\index{Serie\+Viewer@{Serie\+Viewer}!get\+Selected\+Series@{get\+Selected\+Series}}
+\index{get\+Selected\+Series@{get\+Selected\+Series}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{get\+Selected\+Series() const }]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Draw\+Serie}$\ast$$>$ Serie\+Viewer\+::get\+Selected\+Series (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_serie_viewer_a29f49207b5d2f82118ed9472a373cb59}
+Retornar a lista de series selecionadas \index{Serie\+Viewer@{Serie\+Viewer}!get\+Serie\+By\+Map@{get\+Serie\+By\+Map}}
+\index{get\+Serie\+By\+Map@{get\+Serie\+By\+Map}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{get\+Serie\+By\+Map(int a\+\_\+id\+Element)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ Serie\+Viewer\+::get\+Serie\+By\+Map (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+id\+Element}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_ae6d72518194cb67c55bdfe95efdd9eee}
+Retorna a \doxyref{Serie}{pag.}{class_serie} referente ao elemento selecionado, capturando direto do map \index{Serie\+Viewer@{Serie\+Viewer}!get\+Shown\+Plan@{get\+Shown\+Plan}}
+\index{get\+Shown\+Plan@{get\+Shown\+Plan}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{get\+Shown\+Plan()}]{\setlength{\rightskip}{0pt plus 5cm}int Serie\+Viewer\+::get\+Shown\+Plan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_a385c5031b6787134b355456abf86b611}
+Retorna a quantidade de serires mostradas na planilha \index{Serie\+Viewer@{Serie\+Viewer}!grid\+Was\+Modfied@{grid\+Was\+Modfied}}
+\index{grid\+Was\+Modfied@{grid\+Was\+Modfied}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{grid\+Was\+Modfied()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Viewer\+::grid\+Was\+Modfied (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_adc519929135cecc9466f2a53a3f20f78}
+Diz se a Grid teve alguma alteraÁ„o. Utilizado para quando for Copy/ Paste \index{Serie\+Viewer@{Serie\+Viewer}!init\+Ui@{init\+Ui}}
+\index{init\+Ui@{init\+Ui}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{init\+Ui(wx\+Frame $\ast$a\+\_\+frame, bool a\+\_\+editable, bool a\+\_\+adv\+Inserction, bool a\+\_\+show\+Statistics)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Viewer\+::init\+Ui (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{a\+\_\+frame, }
+\item[{bool}]{a\+\_\+editable, }
+\item[{bool}]{a\+\_\+adv\+Inserction, }
+\item[{bool}]{a\+\_\+show\+Statistics}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_aaeaca55248136c029224ad47323800c4}
+Initialize UI \index{Serie\+Viewer@{Serie\+Viewer}!insert\+Serie@{insert\+Serie}}
+\index{insert\+Serie@{insert\+Serie}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{insert\+Serie(\+Serie $\ast$serie, bool inverse=false, bool show\+Plan=true, bool show\+Graph=false, wx\+String section="""", bool draw\+Symbols=true, bool draw\+Lines=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Viewer\+::insert\+Serie (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie} $\ast$}]{serie, }
+\item[{bool}]{inverse = {\ttfamily false}, }
+\item[{bool}]{show\+Plan = {\ttfamily true}, }
+\item[{bool}]{show\+Graph = {\ttfamily false}, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{bool}]{draw\+Symbols = {\ttfamily true}, }
+\item[{bool}]{draw\+Lines = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_af07d780092a0e1ee12869c72525e0a39}
+Insere serie 
+\begin{DoxyParams}{Par√¢metros}
+{\em serie} & \doxyref{Serie}{pag.}{class_serie} a ser inserida \\
+\hline
+{\em inverse} & Se a serie deve ser desenhada invertida \\
+\hline
+{\em show} & Se a serie deve iniciar desenhada \\
+\hline
+{\em show\+Plan} & Mostra a planilha \\
+\hline
+{\em show\+Graph} & Mostra a graph \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Viewer@{Serie\+Viewer}!is\+Edited@{is\+Edited}}
+\index{is\+Edited@{is\+Edited}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{is\+Edited()}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Viewer\+::is\+Edited (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_a2e857f7a0edacb663fc5c51840d03a48}
+Diz se a serie foi editada \index{Serie\+Viewer@{Serie\+Viewer}!reconfigure\+Serie@{reconfigure\+Serie}}
+\index{reconfigure\+Serie@{reconfigure\+Serie}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{reconfigure\+Serie(int a\+\_\+element\+Id, Serie $\ast$a\+\_\+serie=\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Viewer\+::reconfigure\+Serie (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+element\+Id, }
+\item[{{\bf Serie} $\ast$}]{a\+\_\+serie = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_ae52c7e79e8a3bc377538137608817133}
+Recebe os dados da wx\+Tree\+Ctrl de elementos da \doxyref{Serie\+Plan}{pag.}{class_serie_plan}, carrega a serie do elemento selecionado e recondigura no Plan e Graph  element\+Id = Id do elemento selecionado \index{Serie\+Viewer@{Serie\+Viewer}!release\+Series@{release\+Series}}
+\index{release\+Series@{release\+Series}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{release\+Series()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Viewer\+::release\+Series (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_a41a03f60f1a4f328bc3f544ea8b3af9a}
+\index{Serie\+Viewer@{Serie\+Viewer}!remove\+Provisional\+Serie@{remove\+Provisional\+Serie}}
+\index{remove\+Provisional\+Serie@{remove\+Provisional\+Serie}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{remove\+Provisional\+Serie(\+Serie $\ast$a\+\_\+serie)}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Viewer\+::remove\+Provisional\+Serie (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie} $\ast$}]{a\+\_\+serie}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_a0c31005640415feaedc38de20fcd4e07}
+Remove the main \doxyref{Serie}{pag.}{class_serie} charged in the \doxyref{Serie\+Plan}{pag.}{class_serie_plan} and \doxyref{Serie\+Graph}{pag.}{class_serie_graph} without delete the Draw\+Serie$\ast$ This method has function do clear the \doxyref{Serie\+Plan}{pag.}{class_serie_plan} and \doxyref{Serie\+Graph}{pag.}{class_serie_graph} elements to wait new \doxyref{Serie}{pag.}{class_serie} be configurated \index{Serie\+Viewer@{Serie\+Viewer}!remove\+Serie@{remove\+Serie}}
+\index{remove\+Serie@{remove\+Serie}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{remove\+Serie(\+Serie $\ast$serie)}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Viewer\+::remove\+Serie (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie} $\ast$}]{serie}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_ae8bb8c49eee51685475acc85479526b2}
+Remove a serie 
+\begin{DoxyParams}{Par√¢metros}
+{\em serie} & \doxyref{Serie}{pag.}{class_serie} a ser removida \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Viewer@{Serie\+Viewer}!remove\+Serie@{remove\+Serie}}
+\index{remove\+Serie@{remove\+Serie}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{remove\+Serie(const wx\+String \&section, wx\+Tree\+Item\+Id parent\+Id=(wx\+Tree\+Item\+Id) 0)}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Viewer\+::remove\+Serie (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{section, }
+\item[{wx\+Tree\+Item\+Id}]{parent\+Id = {\ttfamily (wxTreeItemId)~0}}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_a2005a42f42f0c8f6578998f352d098f5}
+Remove as series contidas num dado section, tanto no vetor do \doxyref{Serie\+Viewer}{pag.}{class_serie_viewer} como nas arvores do \doxyref{Serie\+Plan}{pag.}{class_serie_plan} e do \doxyref{Serie\+Graph}{pag.}{class_serie_graph} 
+\begin{DoxyParams}{Par√¢metros}
+{\em section} & Caminho que deve ser removido. Este pode ser ate uma folha (series) ou ate um ramon (seÁ„o que contem series) \\
+\hline
+{\em parent\+Id} & NÛ de inicio da busca \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Viewer@{Serie\+Viewer}!remove\+Serie\+By\+Map@{remove\+Serie\+By\+Map}}
+\index{remove\+Serie\+By\+Map@{remove\+Serie\+By\+Map}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{remove\+Serie\+By\+Map(int a\+\_\+id\+Element)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Viewer\+::remove\+Serie\+By\+Map (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+id\+Element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_viewer_a7a6d354bf27d7c7b610206c8afdece46}
+Delete the Serie$\ast$ of map based selected element \index{Serie\+Viewer@{Serie\+Viewer}!save\+Conf@{save\+Conf}}
+\index{save\+Conf@{save\+Conf}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{save\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Viewer\+::save\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_serie_viewer_a819f894fddb9c7c7e7eabe0ab08e8e0c}
+Salva configuraÁıes 
+
+Reimplementa√ß√£o de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abcef0436251918c1eab033a80b40c626}.
+
+\index{Serie\+Viewer@{Serie\+Viewer}!set\+All\+Serie\+Graph\+Data\+Null@{set\+All\+Serie\+Graph\+Data\+Null}}
+\index{set\+All\+Serie\+Graph\+Data\+Null@{set\+All\+Serie\+Graph\+Data\+Null}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{set\+All\+Serie\+Graph\+Data\+Null()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Viewer\+::set\+All\+Serie\+Graph\+Data\+Null (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_a5e2a1ebd96c4f196659009bdd8b3f411}
+\index{Serie\+Viewer@{Serie\+Viewer}!set\+All\+Serie\+Plan\+Data\+Null@{set\+All\+Serie\+Plan\+Data\+Null}}
+\index{set\+All\+Serie\+Plan\+Data\+Null@{set\+All\+Serie\+Plan\+Data\+Null}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{set\+All\+Serie\+Plan\+Data\+Null()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Viewer\+::set\+All\+Serie\+Plan\+Data\+Null (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_abb85377d5087fefbf9c196739a9e5114}
+\index{Serie\+Viewer@{Serie\+Viewer}!set\+Content\+Serie\+Unit@{set\+Content\+Serie\+Unit}}
+\index{set\+Content\+Serie\+Unit@{set\+Content\+Serie\+Unit}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{set\+Content\+Serie\+Unit(wx\+String a\+\_\+choisen\+Serie\+Unit)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Viewer\+::set\+Content\+Serie\+Unit (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{a\+\_\+choisen\+Serie\+Unit}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_a5b5e82a364a376b2e6df537e8ffa8c0f}
+Info the variable \textquotesingle{}m\+\_\+choisen\+Serie\+Unit\+Window\textquotesingle{} which the new serie\textquotesingle{}s unit choisen by wx\+Choice \index{Serie\+Viewer@{Serie\+Viewer}!set\+Conversion\+Type@{set\+Conversion\+Type}}
+\index{set\+Conversion\+Type@{set\+Conversion\+Type}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{set\+Conversion\+Type(int a\+\_\+conversion)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Viewer\+::set\+Conversion\+Type (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+conversion}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_a726f607a6330e5e2c62c4ec27c1116c9}
+FunÁ„o que guarda o valor de convers„o da sÈrie, passafo pela \doxyref{Serie\+Dialog\+Content}{pag.}{class_serie_dialog_content}, informa principalmente se È uma sÈrie da A\+NA \index{Serie\+Viewer@{Serie\+Viewer}!set\+Name\+Original\+Serie@{set\+Name\+Original\+Serie}}
+\index{set\+Name\+Original\+Serie@{set\+Name\+Original\+Serie}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{set\+Name\+Original\+Serie(wx\+String a\+\_\+name=wx\+T(""""))}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Viewer\+::set\+Name\+Original\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{a\+\_\+name = {\ttfamily wxT(\char`\"{}\char`\"{})}}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_a05b69a10b41e7bff1ad4e06dfa2c7eee}
+Bring the name of first serie required, ex\+: if the user cliked on \textquotesingle{}PrecipitaÁ„o\textquotesingle{} button, the name will bring \textquotesingle{}PrecipitaÁ„o\textquotesingle{}. This way, the tree of elements will be filled with the correspondent elements based on type of rule. \index{Serie\+Viewer@{Serie\+Viewer}!set\+View\+Elements\+Tree\+Ctrl@{set\+View\+Elements\+Tree\+Ctrl}}
+\index{set\+View\+Elements\+Tree\+Ctrl@{set\+View\+Elements\+Tree\+Ctrl}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{set\+View\+Elements\+Tree\+Ctrl(bool a\+\_\+show=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Viewer\+::set\+View\+Elements\+Tree\+Ctrl (
+\begin{DoxyParamCaption}
+\item[{bool}]{a\+\_\+show = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_viewer_a437a8a84e4a7a09fd70fd925c4a95bec}
+Set visibility to Tree\+Ctrl of elements from network inside of \doxyref{Serie\+Plan}{pag.}{class_serie_plan} by default \index{Serie\+Viewer@{Serie\+Viewer}!update\+Serie@{update\+Serie}}
+\index{update\+Serie@{update\+Serie}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{update\+Serie(const wx\+String \&section, Serie $\ast$serie)}]{\setlength{\rightskip}{0pt plus 5cm}int Serie\+Viewer\+::update\+Serie (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{section, }
+\item[{{\bf Serie} $\ast$}]{serie}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_aed656dc3bb6e53054c04753f1b431af4}
+Remove as series contidas num dado section, tanto no vetor do \doxyref{Serie\+Viewer}{pag.}{class_serie_viewer} como nas arvores do \doxyref{Serie\+Plan}{pag.}{class_serie_plan} e do \doxyref{Serie\+Graph}{pag.}{class_serie_graph} \begin{DoxyReturn}{Retorna}
+Retorna 0 para atualizado com sucesso, 1 se a serie a ser atualizada for a mesma, 
+
+2 caso n„o encontre um \doxyref{Draw\+Serie}{pag.}{class_draw_serie} e 3 quando n„o tiver encontrado a section enviada 
+\end{DoxyReturn}
+\index{Serie\+Viewer@{Serie\+Viewer}!view\+Elements\+Tree\+Ctrl@{view\+Elements\+Tree\+Ctrl}}
+\index{view\+Elements\+Tree\+Ctrl@{view\+Elements\+Tree\+Ctrl}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{view\+Elements\+Tree\+Ctrl()}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Viewer\+::view\+Elements\+Tree\+Ctrl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_viewer_af2321202333dccccd3afc0e7619a46d3}
+Return true if the Tree\+Ctrl of Elements are visible, otherwise false \index{Serie\+Viewer@{Serie\+Viewer}!visit\+Tree\+Item\+To\+List\+Serie@{visit\+Tree\+Item\+To\+List\+Serie}}
+\index{visit\+Tree\+Item\+To\+List\+Serie@{visit\+Tree\+Item\+To\+List\+Serie}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{visit\+Tree\+Item\+To\+List\+Serie(const wx\+Tree\+Ctrl \&tree\+Ctrl, const wx\+Tree\+Item\+Id \&node, vector$<$ Draw\+Serie $\ast$ $>$ \&serie\+List) const }]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Viewer\+::visit\+Tree\+Item\+To\+List\+Serie (
+\begin{DoxyParamCaption}
+\item[{const wx\+Tree\+Ctrl \&}]{tree\+Ctrl, }
+\item[{const wx\+Tree\+Item\+Id \&}]{node, }
+\item[{vector$<$ {\bf Draw\+Serie} $\ast$ $>$ \&}]{serie\+List}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_viewer_a89e04fa0806d9d436ad4f6505080e211}
+MÈtodo recursivo de visita ao tree\+Ctrl que lista todas as sÈries \char`\"{}selecionadas\char`\"{} (desenhadas)
+
+
+\begin{DoxyParams}{Par√¢metros}
+{\em tree\+Ctrl} & Tree\+Ctrl onde ser· feita a busca pelas sÈries \\
+\hline
+{\em node} & No que representa a sub-\/arvore onde se iniciar· a busca (Se quiser fazer uma busca em todo o tree\+Ctrl, use tree\+Ctrl-\/$>$Get\+Root\+Item() \\
+\hline
+{\em serie\+List} & O\+UT Lista de resultado da busca que conter· todas as sÈries \char`\"{}selecionadas\char`\"{}(desenhadas) do tree\+Ctrl \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Amigas e Fun√ß√µes Relacionadas}
+\index{Serie\+Viewer@{Serie\+Viewer}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{Serie\+Dialog\+Content}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Serie\+Dialog\+Content}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_serie_viewer_a0367f04b14737e126adfadb76844b277}
+
+
+Defini√ß√£o na linha 71 do arquivo Serie\+Viewer.\+h.
+
+
+
+\subsection{Atributos}
+\index{Serie\+Viewer@{Serie\+Viewer}!begin\+Date@{begin\+Date}}
+\index{begin\+Date@{begin\+Date}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{begin\+Date}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Date} Serie\+Viewer\+::begin\+Date}\label{class_serie_viewer_a2cd9927515fae7b1624d32fce5de8814}
+Dia de inicio e fim 
+
+Defini√ß√£o na linha 228 do arquivo Serie\+Viewer.\+h.
+
+\index{Serie\+Viewer@{Serie\+Viewer}!colors\+Opt@{colors\+Opt}}
+\index{colors\+Opt@{colors\+Opt}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{colors\+Opt}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Colour Serie\+Viewer\+::colors\+Opt[16]}\label{class_serie_viewer_aae5cade2bbaa20e88698dc8951329bc5}
+Cores para o grafico 
+
+Defini√ß√£o na linha 185 do arquivo Serie\+Viewer.\+h.
+
+\index{Serie\+Viewer@{Serie\+Viewer}!convert\+Serie\+Type@{convert\+Serie\+Type}}
+\index{convert\+Serie\+Type@{convert\+Serie\+Type}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{convert\+Serie\+Type}]{\setlength{\rightskip}{0pt plus 5cm}int Serie\+Viewer\+::convert\+Serie\+Type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_viewer_a1ce3795cacda655d640a697b869f6b20}
+guarda a informaÁ„o de tipo de convers„o da sÈrie, ver Serie\+Dialog\+Content\+::content 
+
+Defini√ß√£o na linha 101 do arquivo Serie\+Viewer.\+h.
+
+\index{Serie\+Viewer@{Serie\+Viewer}!end\+Date@{end\+Date}}
+\index{end\+Date@{end\+Date}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{end\+Date}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Date} Serie\+Viewer\+::end\+Date}\label{class_serie_viewer_a70953cb9532b195e34723cc6c8f8cbd7}
+
+
+Defini√ß√£o na linha 228 do arquivo Serie\+Viewer.\+h.
+
+\index{Serie\+Viewer@{Serie\+Viewer}!graph@{graph}}
+\index{graph@{graph}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{graph}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie\+Graph}$\ast$ Serie\+Viewer\+::graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_viewer_a7efe317b885a75c6acc81c39914750a8}
+Aponta para a classe \doxyref{Serie\+Graph}{pag.}{class_serie_graph} 
+
+Defini√ß√£o na linha 88 do arquivo Serie\+Viewer.\+h.
+
+\index{Serie\+Viewer@{Serie\+Viewer}!m\+\_\+choisen\+Serie\+Unit\+Window@{m\+\_\+choisen\+Serie\+Unit\+Window}}
+\index{m\+\_\+choisen\+Serie\+Unit\+Window@{m\+\_\+choisen\+Serie\+Unit\+Window}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{m\+\_\+choisen\+Serie\+Unit\+Window}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Serie\+Viewer\+::m\+\_\+choisen\+Serie\+Unit\+Window}\label{class_serie_viewer_af58981a163401ed425d4e0e1f7581533}
+Stores information about unit type os serie has choisen for the user in the interface 
+
+Defini√ß√£o na linha 237 do arquivo Serie\+Viewer.\+h.
+
+\index{Serie\+Viewer@{Serie\+Viewer}!m\+\_\+hash\+Element\+Serie@{m\+\_\+hash\+Element\+Serie}}
+\index{m\+\_\+hash\+Element\+Serie@{m\+\_\+hash\+Element\+Serie}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{m\+\_\+hash\+Element\+Serie}]{\setlength{\rightskip}{0pt plus 5cm}map$<$int, {\bf Serie}$\ast$$>$ Serie\+Viewer\+::m\+\_\+hash\+Element\+Serie\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_viewer_a4a166a58cca2685324e167b3ee467ff9}
+guarda as sÈries dos elementos selecinados na treectrl de dentro da 
+
+Defini√ß√£o na linha 111 do arquivo Serie\+Viewer.\+h.
+
+\index{Serie\+Viewer@{Serie\+Viewer}!name\+Original\+Serie@{name\+Original\+Serie}}
+\index{name\+Original\+Serie@{name\+Original\+Serie}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{name\+Original\+Serie}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Serie\+Viewer\+::name\+Original\+Serie\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_viewer_aeaf72150509fc25547cde34f10d7a821}
+The name of original serie, it\textquotesingle{}s important to indentificate the type of serie was opened, like \textquotesingle{}PrecipitaÁ„o, EvaporaÁao, Vaz„o, ...\textquotesingle{} 
+
+Defini√ß√£o na linha 121 do arquivo Serie\+Viewer.\+h.
+
+\index{Serie\+Viewer@{Serie\+Viewer}!note@{note}}
+\index{note@{note}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{note}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Notebook$\ast$ Serie\+Viewer\+::note\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_viewer_ad313767601705b65142d343fb486d72c}
+Caderno com a planilha e o gr·fico 
+
+Defini√ß√£o na linha 80 do arquivo Serie\+Viewer.\+h.
+
+\index{Serie\+Viewer@{Serie\+Viewer}!plan@{plan}}
+\index{plan@{plan}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{plan}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie\+Plan}$\ast$ Serie\+Viewer\+::plan\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_viewer_aa0e79d42fb0cb9033a17a62cebc91003}
+Aponta para a classe \doxyref{Serie\+Plan}{pag.}{class_serie_plan} 
+
+Defini√ß√£o na linha 92 do arquivo Serie\+Viewer.\+h.
+
+\index{Serie\+Viewer@{Serie\+Viewer}!selected\+Color@{selected\+Color}}
+\index{selected\+Color@{selected\+Color}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{selected\+Color}]{\setlength{\rightskip}{0pt plus 5cm}short Serie\+Viewer\+::selected\+Color\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_viewer_a271e46009fb134d8d7afd00ff734c946}
+Cor selecionada 
+
+Defini√ß√£o na linha 84 do arquivo Serie\+Viewer.\+h.
+
+\index{Serie\+Viewer@{Serie\+Viewer}!series@{series}}
+\index{series@{series}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{series}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Draw\+Serie} $\ast$$>$ Serie\+Viewer\+::series}\label{class_serie_viewer_a7900062163f03e81cdae7d6b20d2a763}
+Series a serem desenhadas 
+
+Defini√ß√£o na linha 209 do arquivo Serie\+Viewer.\+h.
+
+\index{Serie\+Viewer@{Serie\+Viewer}!serie\+Seed@{serie\+Seed}}
+\index{serie\+Seed@{serie\+Seed}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{serie\+Seed}]{\setlength{\rightskip}{0pt plus 5cm}int Serie\+Viewer\+::serie\+Seed\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_viewer_ad2fd17cbee2154526e1b46da73895250}
+Gerador de Identificador para as Series Inseridas 
+
+Defini√ß√£o na linha 76 do arquivo Serie\+Viewer.\+h.
+
+\index{Serie\+Viewer@{Serie\+Viewer}!show\+Tree\+Elements@{show\+Tree\+Elements}}
+\index{show\+Tree\+Elements@{show\+Tree\+Elements}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{show\+Tree\+Elements}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Viewer\+::show\+Tree\+Elements\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_viewer_aeee1e8492f83552b25c86dfa86a8944d}
+Show or not show Tree\+Ctrl of elemets inside \doxyref{Serie\+Plan}{pag.}{class_serie_plan} 
+
+Defini√ß√£o na linha 106 do arquivo Serie\+Viewer.\+h.
+
+\index{Serie\+Viewer@{Serie\+Viewer}!statistics@{statistics}}
+\index{statistics@{statistics}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{statistics}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie\+Statistics}$\ast$ Serie\+Viewer\+::statistics\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_viewer_a7704d8c76129005f522471079a825f9f}
+Aponta para a classe \doxyref{Serie\+Statistics}{pag.}{class_serie_statistics} 
+
+Defini√ß√£o na linha 96 do arquivo Serie\+Viewer.\+h.
+
+\index{Serie\+Viewer@{Serie\+Viewer}!time\+Interval@{time\+Interval}}
+\index{time\+Interval@{time\+Interval}!Serie\+Viewer@{Serie\+Viewer}}
+\subsubsection[{time\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Date\+::\+Time\+Interval} Serie\+Viewer\+::time\+Interval}\label{class_serie_viewer_a03c5f076e07ba8ce9b15c0f84dbd0b2a}
+Tipo de intervalo de tempo 
+
+Defini√ß√£o na linha 232 do arquivo Serie\+Viewer.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Serie\+Viewer.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,143 @@
+\section{Referência da Classe Convex\+Hull}
+\label{class_convex_hull}\index{Convex\+Hull@{Convex\+Hull}}
+
+
+The \doxyref{Convex\+Hull}{pag.}{class_convex_hull} class.  
+
+
+
+
+{\ttfamily \#include $<$convex-\/hull.\+h$>$}
+
+
+
+Herdeiro de {\bf Selection\+Interface}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Convex\+Hull} ()
+\item 
+void {\bf create\+Convex\+Hull\+Shapefile} (const char $\ast$a\+\_\+outputfilename, {\bf Shapefile} $\ast$a\+\_\+input\+Shapefile, double a\+\_\+distance, int a\+\_\+quadrant=30, int $\ast$a\+\_\+error={\bf N\+U\+LL}, {\bf Progress\+Callback} a\+\_\+callback={\bf N\+U\+LL})
+\begin{DoxyCompactList}\small\item\em create a convex hull shapefile based on a\+\_\+input\+Shapefile \end{DoxyCompactList}\item 
+O\+G\+R\+Geometry $\ast$ {\bf create\+Convex\+Hull} ({\bf Shapefile} $\ast$a\+\_\+input\+Shapefile, double a\+\_\+distance, int a\+\_\+quadrant=30, int $\ast$a\+\_\+error={\bf N\+U\+LL}, {\bf Progress\+Callback} a\+\_\+callback={\bf N\+U\+LL})
+\begin{DoxyCompactList}\small\item\em create a convex hull geometry based on a\+\_\+input\+Shapefile \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ O\+G\+R\+Point $\ast$ $>$ {\bf selected\+Points} ({\bf Shapefile} $\ast$a\+\_\+basin\+Shapefile, {\bf Shapefile} $\ast$a\+\_\+station\+Shapefile, double a\+\_\+distance, int a\+\_\+quadrant=30)
+\item 
+virtual std\+::vector$<$ O\+G\+R\+Feature $\ast$ $>$ {\bf selected\+Features} ({\bf Shapefile} $\ast$a\+\_\+basin\+Shapefile, {\bf Shapefile} $\ast$a\+\_\+station\+Shapefile, double a\+\_\+distance, int a\+\_\+quadrant=30)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+The \doxyref{Convex\+Hull}{pag.}{class_convex_hull} class. 
+
+Definição na linha 19 do arquivo convex-\/hull.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Convex\+Hull@{Convex\+Hull}!Convex\+Hull@{Convex\+Hull}}
+\index{Convex\+Hull@{Convex\+Hull}!Convex\+Hull@{Convex\+Hull}}
+\subsubsection[{Convex\+Hull()}]{\setlength{\rightskip}{0pt plus 5cm}Convex\+Hull\+::\+Convex\+Hull (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_convex_hull_a6ace975a2080ff5ae5adc731db76155c}
+
+
+\subsection{Métodos}
+\index{Convex\+Hull@{Convex\+Hull}!create\+Convex\+Hull@{create\+Convex\+Hull}}
+\index{create\+Convex\+Hull@{create\+Convex\+Hull}!Convex\+Hull@{Convex\+Hull}}
+\subsubsection[{create\+Convex\+Hull(\+Shapefile $\ast$a\+\_\+input\+Shapefile, double a\+\_\+distance, int a\+\_\+quadrant=30, int $\ast$a\+\_\+error=\+N\+U\+L\+L, Progress\+Callback a\+\_\+callback=\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}O\+G\+R\+Geometry$\ast$ Convex\+Hull\+::create\+Convex\+Hull (
+\begin{DoxyParamCaption}
+\item[{{\bf Shapefile} $\ast$}]{a\+\_\+input\+Shapefile, }
+\item[{double}]{a\+\_\+distance, }
+\item[{int}]{a\+\_\+quadrant = {\ttfamily 30}, }
+\item[{int $\ast$}]{a\+\_\+error = {\ttfamily {\bf N\+U\+LL}}, }
+\item[{{\bf Progress\+Callback}}]{a\+\_\+callback = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)}\label{class_convex_hull_aa15251573c71d4e11205eedad2df5c42}
+
+
+create a convex hull geometry based on a\+\_\+input\+Shapefile 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+input\+Shapefile} & \\
+\hline
+{\em a\+\_\+distance} & \\
+\hline
+{\em a\+\_\+quadrant} & \\
+\hline
+{\em a\+\_\+error} & \\
+\hline
+{\em a\+\_\+callback} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+O\+G\+R\+Geometry 
+\end{DoxyReturn}
+\index{Convex\+Hull@{Convex\+Hull}!create\+Convex\+Hull\+Shapefile@{create\+Convex\+Hull\+Shapefile}}
+\index{create\+Convex\+Hull\+Shapefile@{create\+Convex\+Hull\+Shapefile}!Convex\+Hull@{Convex\+Hull}}
+\subsubsection[{create\+Convex\+Hull\+Shapefile(const char $\ast$a\+\_\+outputfilename, Shapefile $\ast$a\+\_\+input\+Shapefile, double a\+\_\+distance, int a\+\_\+quadrant=30, int $\ast$a\+\_\+error=\+N\+U\+L\+L, Progress\+Callback a\+\_\+callback=\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}void Convex\+Hull\+::create\+Convex\+Hull\+Shapefile (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+outputfilename, }
+\item[{{\bf Shapefile} $\ast$}]{a\+\_\+input\+Shapefile, }
+\item[{double}]{a\+\_\+distance, }
+\item[{int}]{a\+\_\+quadrant = {\ttfamily 30}, }
+\item[{int $\ast$}]{a\+\_\+error = {\ttfamily {\bf N\+U\+LL}}, }
+\item[{{\bf Progress\+Callback}}]{a\+\_\+callback = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)}\label{class_convex_hull_aaf04639ca460b6719e1ffabfc9d3e37c}
+
+
+create a convex hull shapefile based on a\+\_\+input\+Shapefile 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+outputfilename} & \\
+\hline
+{\em a\+\_\+input\+Shapefile} & \\
+\hline
+{\em a\+\_\+distance} & \\
+\hline
+{\em a\+\_\+quadrant} & \\
+\hline
+{\em a\+\_\+error} & \\
+\hline
+{\em a\+\_\+callback} & \\
+\hline
+\end{DoxyParams}
+\index{Convex\+Hull@{Convex\+Hull}!selected\+Features@{selected\+Features}}
+\index{selected\+Features@{selected\+Features}!Convex\+Hull@{Convex\+Hull}}
+\subsubsection[{selected\+Features(\+Shapefile $\ast$a\+\_\+basin\+Shapefile, Shapefile $\ast$a\+\_\+station\+Shapefile, double a\+\_\+distance, int a\+\_\+quadrant=30)}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::vector$<$O\+G\+R\+Feature$\ast$$>$ Convex\+Hull\+::selected\+Features (
+\begin{DoxyParamCaption}
+\item[{{\bf Shapefile} $\ast$}]{a\+\_\+basin\+Shapefile, }
+\item[{{\bf Shapefile} $\ast$}]{a\+\_\+station\+Shapefile, }
+\item[{double}]{a\+\_\+distance, }
+\item[{int}]{a\+\_\+quadrant = {\ttfamily 30}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_convex_hull_acfa41114b06a44f9fa59f9886d1216d1}
+
+
+Implementa {\bf Selection\+Interface} \doxyref{}{pag.}{class_selection_interface_aa31ddbc788db569cfe888cff8af541c6}.
+
+\index{Convex\+Hull@{Convex\+Hull}!selected\+Points@{selected\+Points}}
+\index{selected\+Points@{selected\+Points}!Convex\+Hull@{Convex\+Hull}}
+\subsubsection[{selected\+Points(\+Shapefile $\ast$a\+\_\+basin\+Shapefile, Shapefile $\ast$a\+\_\+station\+Shapefile, double a\+\_\+distance, int a\+\_\+quadrant=30)}]{\setlength{\rightskip}{0pt plus 5cm}virtual std\+::vector$<$O\+G\+R\+Point$\ast$$>$ Convex\+Hull\+::selected\+Points (
+\begin{DoxyParamCaption}
+\item[{{\bf Shapefile} $\ast$}]{a\+\_\+basin\+Shapefile, }
+\item[{{\bf Shapefile} $\ast$}]{a\+\_\+station\+Shapefile, }
+\item[{double}]{a\+\_\+distance, }
+\item[{int}]{a\+\_\+quadrant = {\ttfamily 30}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_convex_hull_a4086ab786f27129b13694e34e3ac63a7}
+Override 
+
+Implementa {\bf Selection\+Interface} \doxyref{}{pag.}{class_selection_interface_a4554d00952a946ca50fa42003f00cffa}.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf convex-\/hull.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,630 @@
+\section{Refer√™ncia da Classe Thiessen\+Graph}
+\label{class_thiessen_graph}\index{Thiessen\+Graph@{Thiessen\+Graph}}
+
+
+{\ttfamily \#include $<$Thiessen\+Graph.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Thiessen\+Graph} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent}, {\bf Thiessen\+Viewer} $\ast${\bf viewer})
+\item 
+{\bf $\sim$\+Thiessen\+Graph} ()
+\item 
+void {\bf insert\+Matrix} ({\bf Draw\+Matrix} $\ast$matrix)
+\item 
+bool {\bf draw} (int id)
+\item 
+void {\bf remove\+Matrix} ({\bf Draw\+Matrix} $\ast$d\+Matrix, wx\+String name)
+\item 
+bool {\bf erase} (int)
+\item 
+void {\bf clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Plot\+Ctrl $\ast$ {\bf plot}
+\item 
+{\bf Thiessen\+Viewer} $\ast$ {\bf viewer}
+\end{DoxyCompactItemize}
+\subsection*{Tipos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+{\bf I\+D\+\_\+\+C\+H\+A\+N\+GE}, 
+{\bf I\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+I\+NT}, 
+{\bf I\+D\+\_\+\+E\+N\+D\+\_\+\+I\+NT}, 
+{\bf I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+M\+A\+T\+R\+IX}, 
+\\*
+{\bf I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+C\+O\+L\+U\+MN}, 
+{\bf I\+D\+\_\+\+TB}, 
+{\bf I\+D\+\_\+\+S\+U\+B\+T\+I\+T\+LE}, 
+{\bf I\+D\+\_\+\+Z\+O\+O\+M\+\_\+\+C\+E\+N\+T\+ER}, 
+\\*
+{\bf I\+D\+\_\+\+Z\+O\+O\+M\+\_\+\+P\+L\+US}, 
+{\bf I\+D\+\_\+\+Z\+O\+O\+M\+\_\+\+M\+I\+N\+US}, 
+{\bf I\+D\+\_\+\+G\+R\+ID}, 
+{\bf I\+D\+\_\+\+C\+O\+N\+FG}, 
+\\*
+{\bf I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+O\+UR}, 
+{\bf I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+Y\+M\+B\+OL}, 
+{\bf I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+D\+OT}, 
+{\bf I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+L\+I\+NE}, 
+\\*
+{\bf I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+F\+IT}, 
+{\bf I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+RB}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+G}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+G}, 
+\\*
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+L\+A\+P\+S\+E\+\_\+G}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+G}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+\_\+G}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+\_\+G}, 
+\\*
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+N\+F\+\_\+G}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf insert\+Tree\+Item} (wx\+Tree\+Item\+Id root, {\bf Draw\+Matrix} $\ast$d\+Matrix)
+\item 
+void {\bf remove\+Tree\+Item} (wx\+Tree\+Item\+Id root, wx\+String name, {\bf Draw\+Matrix} $\ast$d\+Matrix)
+\item 
+wx\+Tree\+Item\+Id {\bf has\+Section} (wx\+Tree\+Item\+Id parent\+Id, wx\+String section)
+\item 
+void {\bf on\+Zoom} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Zoom\+Minus} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Zoom\+Plus} (wx\+Command\+Event \&event)
+\item 
+void {\bf plot\+Clicked} (wx\+Plot\+Ctrl\+Event \&event)
+\item 
+void {\bf enable\+Conf\+Graph} ()
+\item 
+void {\bf dot\+Activated} (wx\+Plot\+Ctrl\+Event \&event)
+\item 
+void {\bf on\+Changed\+Item} (wx\+Tree\+Event \&event)
+\item 
+void {\bf on\+Grid} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Subtitle} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Conf\+Graph} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Combo\+Box} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Delete\+Item} (wx\+Tree\+Event \&event)
+\item 
+void {\bf on\+Right\+Clicked} (wx\+Tree\+Event \&event)
+\item 
+void {\bf on\+Popup\+Menu} (wx\+Command\+Event \&event)
+\item 
+void {\bf select\+Matrix} (wx\+Tree\+Item\+Id id, bool state)
+\item 
+void {\bf on\+Select\+Matrix} (wx\+Tree\+Event \&event)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf index\+Dot}
+\item 
+int {\bf matrix\+X\+Axis}
+\item 
+int {\bf matrix\+Y\+Axis}
+\item 
+int {\bf x\+Axis}
+\item 
+int {\bf y\+Axis}
+\item 
+wx\+Tree\+Item\+Id {\bf x\+Id}
+\item 
+wx\+Tree\+Item\+Id {\bf y\+Id}
+\item 
+wx\+Tree\+Ctrl $\ast$ {\bf tc\+Series}
+\item 
+wx\+Sizer $\ast$ {\bf sp\+Conf}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Conf}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Tools}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Fit}
+\item 
+wx\+Panel $\ast$ {\bf conf}
+\item 
+wx\+Bitmap\+Combo\+Box $\ast$ {\bf choice\+Colour}
+\item 
+wx\+Bitmap\+Combo\+Box $\ast$ {\bf choice\+Symbol}
+\item 
+wx\+Menu $\ast$ {\bf popup\+Menu}
+\item 
+wx\+Tree\+Item\+Id {\bf r\+Id}
+\item 
+wx\+Plot\+Data {\bf xy\+\_\+data}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descri√ß√£o Detalhada}
+Mostra as matrizes de \doxyref{Thiessen}{pag.}{class_thiessen} de forma gr·fica 
+
+Defini√ß√£o na linha 22 do arquivo Thiessen\+Graph.\+h.
+
+
+
+\subsection{Enumera√ß√µes}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02}
+Enumerador gr·fico \begin{Desc}
+\item[Valores de enumera√ß√µes]\par
+\begin{description}
+\index{I\+D\+\_\+\+C\+H\+A\+N\+GE@{I\+D\+\_\+\+C\+H\+A\+N\+GE}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!I\+D\+\_\+\+C\+H\+A\+N\+GE@{I\+D\+\_\+\+C\+H\+A\+N\+GE}}\item[{\em 
+I\+D\+\_\+\+C\+H\+A\+N\+GE\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02ae9432bd673d125c9cacb90a9a67978bf}
+}]\index{I\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+I\+NT@{I\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+I\+NT}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!I\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+I\+NT@{I\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+I\+NT}}\item[{\em 
+I\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+I\+NT\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02a89942cfa5b9f23555c441a29190bd0ca}
+}]\index{I\+D\+\_\+\+E\+N\+D\+\_\+\+I\+NT@{I\+D\+\_\+\+E\+N\+D\+\_\+\+I\+NT}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!I\+D\+\_\+\+E\+N\+D\+\_\+\+I\+NT@{I\+D\+\_\+\+E\+N\+D\+\_\+\+I\+NT}}\item[{\em 
+I\+D\+\_\+\+E\+N\+D\+\_\+\+I\+NT\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02adc683968afe610f9fbd9e077f2bfc3b8}
+}]\index{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+M\+A\+T\+R\+IX@{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+M\+A\+T\+R\+IX}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+M\+A\+T\+R\+IX@{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+M\+A\+T\+R\+IX}}\item[{\em 
+I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+M\+A\+T\+R\+IX\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02ae779227504449ae58e09ac900987ad4d}
+}]\index{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+C\+O\+L\+U\+MN@{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+C\+O\+L\+U\+MN}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+C\+O\+L\+U\+MN@{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+C\+O\+L\+U\+MN}}\item[{\em 
+I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+C\+O\+L\+U\+MN\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02ade4f5fb4f4cd62de81d7ab8b8a0d9be9}
+}]\index{I\+D\+\_\+\+TB@{I\+D\+\_\+\+TB}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!I\+D\+\_\+\+TB@{I\+D\+\_\+\+TB}}\item[{\em 
+I\+D\+\_\+\+TB\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02a31f811d8af8195841f8556a35f1b677f}
+}]\index{I\+D\+\_\+\+S\+U\+B\+T\+I\+T\+LE@{I\+D\+\_\+\+S\+U\+B\+T\+I\+T\+LE}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!I\+D\+\_\+\+S\+U\+B\+T\+I\+T\+LE@{I\+D\+\_\+\+S\+U\+B\+T\+I\+T\+LE}}\item[{\em 
+I\+D\+\_\+\+S\+U\+B\+T\+I\+T\+LE\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02ae9f9719aba85caf8c0b69a4d55cd027b}
+}]\index{I\+D\+\_\+\+Z\+O\+O\+M\+\_\+\+C\+E\+N\+T\+ER@{I\+D\+\_\+\+Z\+O\+O\+M\+\_\+\+C\+E\+N\+T\+ER}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!I\+D\+\_\+\+Z\+O\+O\+M\+\_\+\+C\+E\+N\+T\+ER@{I\+D\+\_\+\+Z\+O\+O\+M\+\_\+\+C\+E\+N\+T\+ER}}\item[{\em 
+I\+D\+\_\+\+Z\+O\+O\+M\+\_\+\+C\+E\+N\+T\+ER\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02a602e218ce92beffa1c57ac23b959e2cc}
+}]\index{I\+D\+\_\+\+Z\+O\+O\+M\+\_\+\+P\+L\+US@{I\+D\+\_\+\+Z\+O\+O\+M\+\_\+\+P\+L\+US}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!I\+D\+\_\+\+Z\+O\+O\+M\+\_\+\+P\+L\+US@{I\+D\+\_\+\+Z\+O\+O\+M\+\_\+\+P\+L\+US}}\item[{\em 
+I\+D\+\_\+\+Z\+O\+O\+M\+\_\+\+P\+L\+US\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02a053bfc86d5f5811f94ec918d36e08812}
+}]\index{I\+D\+\_\+\+Z\+O\+O\+M\+\_\+\+M\+I\+N\+US@{I\+D\+\_\+\+Z\+O\+O\+M\+\_\+\+M\+I\+N\+US}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!I\+D\+\_\+\+Z\+O\+O\+M\+\_\+\+M\+I\+N\+US@{I\+D\+\_\+\+Z\+O\+O\+M\+\_\+\+M\+I\+N\+US}}\item[{\em 
+I\+D\+\_\+\+Z\+O\+O\+M\+\_\+\+M\+I\+N\+US\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02a7c114c113567af2f5cebab0b3768a3c8}
+}]\index{I\+D\+\_\+\+G\+R\+ID@{I\+D\+\_\+\+G\+R\+ID}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!I\+D\+\_\+\+G\+R\+ID@{I\+D\+\_\+\+G\+R\+ID}}\item[{\em 
+I\+D\+\_\+\+G\+R\+ID\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02a1c920039924757ab47556196ab665de6}
+}]\index{I\+D\+\_\+\+C\+O\+N\+FG@{I\+D\+\_\+\+C\+O\+N\+FG}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!I\+D\+\_\+\+C\+O\+N\+FG@{I\+D\+\_\+\+C\+O\+N\+FG}}\item[{\em 
+I\+D\+\_\+\+C\+O\+N\+FG\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02af0f1746051dec108ba8b9ff33bda7003}
+}]\index{I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+O\+UR@{I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+O\+UR}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+O\+UR@{I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+O\+UR}}\item[{\em 
+I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+C\+O\+L\+O\+UR\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02ab7f480db8fa77351cb7bc234e71bf4af}
+}]\index{I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+Y\+M\+B\+OL@{I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+Y\+M\+B\+OL}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+Y\+M\+B\+OL@{I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+Y\+M\+B\+OL}}\item[{\em 
+I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+Y\+M\+B\+OL\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02a9f900da4fb9b316181b8cb6450bdf239}
+}]\index{I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+D\+OT@{I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+D\+OT}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+D\+OT@{I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+D\+OT}}\item[{\em 
+I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+D\+OT\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02ab8dc25fb2eb642de5dd045c3e07e6a7a}
+}]\index{I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+L\+I\+NE@{I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+L\+I\+NE}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+L\+I\+NE@{I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+L\+I\+NE}}\item[{\em 
+I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+L\+I\+NE\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02a9b08e97a7bfe8338003fb582c54cd2b7}
+}]\index{I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+F\+IT@{I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+F\+IT}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+F\+IT@{I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+F\+IT}}\item[{\em 
+I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+F\+IT\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02ac84df0cb0f293013b01609df0222541b}
+}]\index{I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+RB@{I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+RB}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+RB@{I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+RB}}\item[{\em 
+I\+D\+\_\+\+C\+O\+N\+F\+G\+\_\+\+RB\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02a0f2a23525b525d73f43fc2b5bb5a4677}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+G@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+G}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+G@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+G}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+G\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02a435c724f2ccb0b7649c5a8dbb65cb509}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+G@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+G}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+G@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+G}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+G\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02adfae75ea40d6c28be81b626fb1f9b4ee}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+L\+A\+P\+S\+E\+\_\+G@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+L\+A\+P\+S\+E\+\_\+G}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+L\+A\+P\+S\+E\+\_\+G@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+L\+A\+P\+S\+E\+\_\+G}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+L\+A\+P\+S\+E\+\_\+G\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02a51f13cc5ca7045ebad7a0b11e521e902}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+G@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+G}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+G@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+G}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+G\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02aa9deb65655de3e4a506b948ae9245d21}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+\_\+G@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+\_\+G}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+\_\+G@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+\_\+G}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+\_\+G\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02a4be637a52cdd3a8978f45c9cf20eb4d7}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+\_\+G@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+\_\+G}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+\_\+G@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+\_\+G}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+\_\+G\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02a113f73ec16990cf111d07780e6ae7a5a}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+N\+F\+\_\+G@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+N\+F\+\_\+G}!Thiessen\+Graph@{Thiessen\+Graph}}\index{Thiessen\+Graph@{Thiessen\+Graph}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+N\+F\+\_\+G@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+N\+F\+\_\+G}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+N\+F\+\_\+G\label{class_thiessen_graph_a2ff3dcad6f5485ee08809aa04a23ff02aabfc2d70460bfba3801915ac29cff3c4}
+}]\end{description}
+\end{Desc}
+
+
+Defini√ß√£o na linha 32 do arquivo Thiessen\+Graph.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Thiessen\+Graph@{Thiessen\+Graph}!Thiessen\+Graph@{Thiessen\+Graph}}
+\index{Thiessen\+Graph@{Thiessen\+Graph}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{Thiessen\+Graph(wx\+Frame $\ast$frame, wx\+Window $\ast$parent, Thiessen\+Viewer $\ast$viewer)}]{\setlength{\rightskip}{0pt plus 5cm}Thiessen\+Graph\+::\+Thiessen\+Graph (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{{\bf Thiessen\+Viewer} $\ast$}]{viewer}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_graph_aaec08338a09f4e31014566aaecb3eb40}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em frame} & Frame que possui a interface \\
+\hline
+{\em parent} & Pai da janela \\
+\hline
+{\em viewer} & Janela de interface \\
+\hline
+\end{DoxyParams}
+\index{Thiessen\+Graph@{Thiessen\+Graph}!````~Thiessen\+Graph@{$\sim$\+Thiessen\+Graph}}
+\index{````~Thiessen\+Graph@{$\sim$\+Thiessen\+Graph}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{$\sim$\+Thiessen\+Graph()}]{\setlength{\rightskip}{0pt plus 5cm}Thiessen\+Graph\+::$\sim$\+Thiessen\+Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_graph_a0e15b3b0b15e14d183a0b430e21970de}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Thiessen\+Graph@{Thiessen\+Graph}!clear@{clear}}
+\index{clear@{clear}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Graph\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_graph_a467a154f0bf088239b2b4dd9c031c66f}
+Limpa o gr·fico \index{Thiessen\+Graph@{Thiessen\+Graph}!dot\+Activated@{dot\+Activated}}
+\index{dot\+Activated@{dot\+Activated}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{dot\+Activated(wx\+Plot\+Ctrl\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Graph\+::dot\+Activated (
+\begin{DoxyParamCaption}
+\item[{wx\+Plot\+Ctrl\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_afbf6e4852ac2c62dc08197e5861eb312}
+\index{Thiessen\+Graph@{Thiessen\+Graph}!draw@{draw}}
+\index{draw@{draw}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{draw(int id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Thiessen\+Graph\+::draw (
+\begin{DoxyParamCaption}
+\item[{int}]{id}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_graph_a4a51e49108c0379dffb8e0f280cc1a50}
+Desenha \index{Thiessen\+Graph@{Thiessen\+Graph}!enable\+Conf\+Graph@{enable\+Conf\+Graph}}
+\index{enable\+Conf\+Graph@{enable\+Conf\+Graph}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{enable\+Conf\+Graph()}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Graph\+::enable\+Conf\+Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a7577d6a711ed72413b1522f6c8915f93}
+\index{Thiessen\+Graph@{Thiessen\+Graph}!erase@{erase}}
+\index{erase@{erase}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{erase(int)}]{\setlength{\rightskip}{0pt plus 5cm}bool Thiessen\+Graph\+::erase (
+\begin{DoxyParamCaption}
+\item[{int}]{}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_graph_ab0f35420f8189feba264be8cd882a69b}
+Apaga \index{Thiessen\+Graph@{Thiessen\+Graph}!has\+Section@{has\+Section}}
+\index{has\+Section@{has\+Section}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{has\+Section(wx\+Tree\+Item\+Id parent\+Id, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Item\+Id Thiessen\+Graph\+::has\+Section (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{parent\+Id, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a087123755c9e54f0954742234de9a7dd}
+Verifica se existe uma seÁ„o com o nome enviado e retorna o identificador da seÁ„o ou (wx\+Tree\+Item\+Id)0 se n„o houver seÁ„o 
+\begin{DoxyParams}{Par√¢metros}
+{\em parent\+Id} & Id da seÁ„o anterior \\
+\hline
+{\em section} & Nome da seÁ„o \\
+\hline
+\end{DoxyParams}
+\index{Thiessen\+Graph@{Thiessen\+Graph}!insert\+Matrix@{insert\+Matrix}}
+\index{insert\+Matrix@{insert\+Matrix}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{insert\+Matrix(\+Draw\+Matrix $\ast$matrix)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Graph\+::insert\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Matrix} $\ast$}]{matrix}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_graph_a7e5b6c105dd795f93e8940e538c6f144}
+Insere matriz 
+\begin{DoxyParams}{Par√¢metros}
+{\em matrix} & Matriz a ser inserida \\
+\hline
+\end{DoxyParams}
+\index{Thiessen\+Graph@{Thiessen\+Graph}!insert\+Tree\+Item@{insert\+Tree\+Item}}
+\index{insert\+Tree\+Item@{insert\+Tree\+Item}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{insert\+Tree\+Item(wx\+Tree\+Item\+Id root, Draw\+Matrix $\ast$d\+Matrix)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Graph\+::insert\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{root, }
+\item[{{\bf Draw\+Matrix} $\ast$}]{d\+Matrix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a462eec04e77c45845c9499a63ef2a39b}
+Insere uma serie no treectrl de acordo com a estrutura enviada 
+\begin{DoxyParams}{Par√¢metros}
+{\em root} & Identificador da raiz \\
+\hline
+{\em name} & Sub-\/seÁıes enviadas de forma 1/2/3/.../ \\
+\hline
+\end{DoxyParams}
+\index{Thiessen\+Graph@{Thiessen\+Graph}!on\+Changed\+Item@{on\+Changed\+Item}}
+\index{on\+Changed\+Item@{on\+Changed\+Item}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{on\+Changed\+Item(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Graph\+::on\+Changed\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a731dc5389fd5e14543e65d2737396107}
+Evento de mudanÁa de coluna 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Thiessen\+Graph@{Thiessen\+Graph}!on\+Combo\+Box@{on\+Combo\+Box}}
+\index{on\+Combo\+Box@{on\+Combo\+Box}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{on\+Combo\+Box(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Graph\+::on\+Combo\+Box (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a54d1489dbd4a43320e70f85352bbc02b}
+Eventos do combobox \index{Thiessen\+Graph@{Thiessen\+Graph}!on\+Conf\+Graph@{on\+Conf\+Graph}}
+\index{on\+Conf\+Graph@{on\+Conf\+Graph}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{on\+Conf\+Graph(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Graph\+::on\+Conf\+Graph (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_ad29c8946bdab6ed4511761ac49fb41e1}
+Evento de precionado o bot„o de configuraÁıes do Gr·fico \index{Thiessen\+Graph@{Thiessen\+Graph}!on\+Delete\+Item@{on\+Delete\+Item}}
+\index{on\+Delete\+Item@{on\+Delete\+Item}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{on\+Delete\+Item(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Graph\+::on\+Delete\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_abab7a1692b9a3346713d2b3656f3068b}
+Evento de deleÁ„o de itÈm do tc\+Series 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Thiessen\+Graph@{Thiessen\+Graph}!on\+Grid@{on\+Grid}}
+\index{on\+Grid@{on\+Grid}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{on\+Grid(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Graph\+::on\+Grid (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a9d2b34c487c57eaf4d09b38c18bc8f1f}
+Evento para mostrar/esconder a grid. \index{Thiessen\+Graph@{Thiessen\+Graph}!on\+Popup\+Menu@{on\+Popup\+Menu}}
+\index{on\+Popup\+Menu@{on\+Popup\+Menu}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{on\+Popup\+Menu(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Graph\+::on\+Popup\+Menu (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_ace7ef9cb43943ee0893fa8f66fb92286}
+Eventos do menu gerado pelo bot„o direito do mouse \index{Thiessen\+Graph@{Thiessen\+Graph}!on\+Right\+Clicked@{on\+Right\+Clicked}}
+\index{on\+Right\+Clicked@{on\+Right\+Clicked}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{on\+Right\+Clicked(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Graph\+::on\+Right\+Clicked (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_af67142ad0ac676a6bc7ac2ab06827c18}
+Evento do bot„o direito do mouse clicado sobre o treectrl \index{Thiessen\+Graph@{Thiessen\+Graph}!on\+Select\+Matrix@{on\+Select\+Matrix}}
+\index{on\+Select\+Matrix@{on\+Select\+Matrix}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{on\+Select\+Matrix(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Graph\+::on\+Select\+Matrix (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a28139f3ef42242174007fbdbbb294a94}
+Evento de seleÁ„o de coluna da matriz 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Thiessen\+Graph@{Thiessen\+Graph}!on\+Subtitle@{on\+Subtitle}}
+\index{on\+Subtitle@{on\+Subtitle}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{on\+Subtitle(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Graph\+::on\+Subtitle (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a06eb57a8e4b22c36f6c18c89fed63002}
+Evento para mostrar/esconder a legenda \index{Thiessen\+Graph@{Thiessen\+Graph}!on\+Zoom@{on\+Zoom}}
+\index{on\+Zoom@{on\+Zoom}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{on\+Zoom(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Graph\+::on\+Zoom (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a37176556d66828b1ab112706543855cd}
+Evento para deixar todas as curvas visiveis \index{Thiessen\+Graph@{Thiessen\+Graph}!on\+Zoom\+Minus@{on\+Zoom\+Minus}}
+\index{on\+Zoom\+Minus@{on\+Zoom\+Minus}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{on\+Zoom\+Minus(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Graph\+::on\+Zoom\+Minus (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a3a3d4fb8550aaf1e31f075e366a70adf}
+Evento para deixar todas as curvas visiveis \index{Thiessen\+Graph@{Thiessen\+Graph}!on\+Zoom\+Plus@{on\+Zoom\+Plus}}
+\index{on\+Zoom\+Plus@{on\+Zoom\+Plus}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{on\+Zoom\+Plus(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Graph\+::on\+Zoom\+Plus (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_ad93817ae2ec02f2ece053de9fd060830}
+Evento para deixar todas as curvas visiveis \index{Thiessen\+Graph@{Thiessen\+Graph}!plot\+Clicked@{plot\+Clicked}}
+\index{plot\+Clicked@{plot\+Clicked}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{plot\+Clicked(wx\+Plot\+Ctrl\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Graph\+::plot\+Clicked (
+\begin{DoxyParamCaption}
+\item[{wx\+Plot\+Ctrl\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a91d7118e7c8a4fe0a2c2e8469ed131a0}
+\index{Thiessen\+Graph@{Thiessen\+Graph}!remove\+Matrix@{remove\+Matrix}}
+\index{remove\+Matrix@{remove\+Matrix}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{remove\+Matrix(\+Draw\+Matrix $\ast$d\+Matrix, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Graph\+::remove\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Matrix} $\ast$}]{d\+Matrix, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_thiessen_graph_a6665cd30596a099cfc8b6ac7364b1740}
+Remove matriz 
+\begin{DoxyParams}{Par√¢metros}
+{\em matrix} & Matriz a ser inserida \\
+\hline
+\end{DoxyParams}
+\index{Thiessen\+Graph@{Thiessen\+Graph}!remove\+Tree\+Item@{remove\+Tree\+Item}}
+\index{remove\+Tree\+Item@{remove\+Tree\+Item}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{remove\+Tree\+Item(wx\+Tree\+Item\+Id root, wx\+String name, Draw\+Matrix $\ast$d\+Matrix)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Graph\+::remove\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{root, }
+\item[{wx\+String}]{name, }
+\item[{{\bf Draw\+Matrix} $\ast$}]{d\+Matrix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a071882d3aaff0d87f99426c4340c4725}
+Remove uma serie do treectrl de acordo com a estrutura enviada 
+\begin{DoxyParams}{Par√¢metros}
+{\em root} & Identificador da raiz \\
+\hline
+{\em name} & Sub-\/seÁıes enviadas de forma 1/2/3/.../ \\
+\hline
+{\em serie} & Ponteiro para a serie \\
+\hline
+\end{DoxyParams}
+\index{Thiessen\+Graph@{Thiessen\+Graph}!select\+Matrix@{select\+Matrix}}
+\index{select\+Matrix@{select\+Matrix}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{select\+Matrix(wx\+Tree\+Item\+Id id, bool state)}]{\setlength{\rightskip}{0pt plus 5cm}void Thiessen\+Graph\+::select\+Matrix (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{id, }
+\item[{bool}]{state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_acd261d4ad41acb5f1c7896ceeade3689}
+Seleciona ou deseleciona as series contidas no grupo 
+\begin{DoxyParams}{Par√¢metros}
+{\em id} & Identificador do Grupo \\
+\hline
+{\em state} & Seleciona se true e deseleciona se for false \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{Thiessen\+Graph@{Thiessen\+Graph}!choice\+Colour@{choice\+Colour}}
+\index{choice\+Colour@{choice\+Colour}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{choice\+Colour}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Combo\+Box$\ast$ Thiessen\+Graph\+::choice\+Colour\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a44d5088df21e1e925adf1bb6402c0691}
+Seletor de Cor 
+
+Defini√ß√£o na linha 87 do arquivo Thiessen\+Graph.\+h.
+
+\index{Thiessen\+Graph@{Thiessen\+Graph}!choice\+Symbol@{choice\+Symbol}}
+\index{choice\+Symbol@{choice\+Symbol}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{choice\+Symbol}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Combo\+Box$\ast$ Thiessen\+Graph\+::choice\+Symbol\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a76f47e77c7897748f774286b710031df}
+Seletor de Tipo de Simbolo 
+
+Defini√ß√£o na linha 91 do arquivo Thiessen\+Graph.\+h.
+
+\index{Thiessen\+Graph@{Thiessen\+Graph}!conf@{conf}}
+\index{conf@{conf}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{conf}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel$\ast$ Thiessen\+Graph\+::conf\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a90d172563a0c62b9900ab57734279de9}
+Panel de ConfiguraÁ„o do Gr·fico 
+
+Defini√ß√£o na linha 83 do arquivo Thiessen\+Graph.\+h.
+
+\index{Thiessen\+Graph@{Thiessen\+Graph}!index\+Dot@{index\+Dot}}
+\index{index\+Dot@{index\+Dot}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{index\+Dot}]{\setlength{\rightskip}{0pt plus 5cm}int Thiessen\+Graph\+::index\+Dot\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_af7a28337e421ca97f6e6034557832499}
+
+
+Defini√ß√£o na linha 28 do arquivo Thiessen\+Graph.\+h.
+
+\index{Thiessen\+Graph@{Thiessen\+Graph}!matrix\+X\+Axis@{matrix\+X\+Axis}}
+\index{matrix\+X\+Axis@{matrix\+X\+Axis}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{matrix\+X\+Axis}]{\setlength{\rightskip}{0pt plus 5cm}int Thiessen\+Graph\+::matrix\+X\+Axis\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a2f5d0abd0a9488645787d2f495f995c9}
+Matrizes selecionadas para eixo x e y 
+
+Defini√ß√£o na linha 63 do arquivo Thiessen\+Graph.\+h.
+
+\index{Thiessen\+Graph@{Thiessen\+Graph}!matrix\+Y\+Axis@{matrix\+Y\+Axis}}
+\index{matrix\+Y\+Axis@{matrix\+Y\+Axis}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{matrix\+Y\+Axis}]{\setlength{\rightskip}{0pt plus 5cm}int Thiessen\+Graph\+::matrix\+Y\+Axis\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_ae855ec4657733e3168b5699f45787c32}
+
+
+Defini√ß√£o na linha 63 do arquivo Thiessen\+Graph.\+h.
+
+\index{Thiessen\+Graph@{Thiessen\+Graph}!plot@{plot}}
+\index{plot@{plot}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{plot}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Plot\+Ctrl$\ast$ Thiessen\+Graph\+::plot}\label{class_thiessen_graph_abcc2c01ea2c53ca6b36a37f3efa78b78}
+Regi„o de desenho 
+
+Defini√ß√£o na linha 197 do arquivo Thiessen\+Graph.\+h.
+
+\index{Thiessen\+Graph@{Thiessen\+Graph}!popup\+Menu@{popup\+Menu}}
+\index{popup\+Menu@{popup\+Menu}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{popup\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Menu$\ast$ Thiessen\+Graph\+::popup\+Menu\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_aa85be51c902a28718545078fd4214c73}
+Menu de popup 
+
+Defini√ß√£o na linha 95 do arquivo Thiessen\+Graph.\+h.
+
+\index{Thiessen\+Graph@{Thiessen\+Graph}!r\+Id@{r\+Id}}
+\index{r\+Id@{r\+Id}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{r\+Id}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Item\+Id Thiessen\+Graph\+::r\+Id\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a42c18b9bfddba05ecba120572968fc4a}
+Identificador do treectrl da informaÁ„o da coluna selecionada 
+
+Defini√ß√£o na linha 99 do arquivo Thiessen\+Graph.\+h.
+
+\index{Thiessen\+Graph@{Thiessen\+Graph}!s\+Conf@{s\+Conf}}
+\index{s\+Conf@{s\+Conf}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{s\+Conf}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Thiessen\+Graph\+::s\+Conf\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a4c586dd65442ddfdfd495512632bfc30}
+
+
+Defini√ß√£o na linha 79 do arquivo Thiessen\+Graph.\+h.
+
+\index{Thiessen\+Graph@{Thiessen\+Graph}!s\+Fit@{s\+Fit}}
+\index{s\+Fit@{s\+Fit}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{s\+Fit}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Thiessen\+Graph\+::s\+Fit\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_acf61795cbff2bfdb171295789a6f6987}
+
+
+Defini√ß√£o na linha 79 do arquivo Thiessen\+Graph.\+h.
+
+\index{Thiessen\+Graph@{Thiessen\+Graph}!sp\+Conf@{sp\+Conf}}
+\index{sp\+Conf@{sp\+Conf}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{sp\+Conf}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer$\ast$ Thiessen\+Graph\+::sp\+Conf\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a0501581bb431b45a4dc518840d02f8bd}
+Sizer do Painel de ConfiguraÁ„o e do Painel de ferramentas 
+
+Defini√ß√£o na linha 79 do arquivo Thiessen\+Graph.\+h.
+
+\index{Thiessen\+Graph@{Thiessen\+Graph}!s\+Tools@{s\+Tools}}
+\index{s\+Tools@{s\+Tools}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{s\+Tools}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Thiessen\+Graph\+::s\+Tools\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_ada4b9f0a57f3d4c025f0c1f1afc0eba0}
+
+
+Defini√ß√£o na linha 79 do arquivo Thiessen\+Graph.\+h.
+
+\index{Thiessen\+Graph@{Thiessen\+Graph}!tc\+Series@{tc\+Series}}
+\index{tc\+Series@{tc\+Series}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{tc\+Series}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Ctrl$\ast$ Thiessen\+Graph\+::tc\+Series\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a3f2678e2a7a5d49681a1d72d0a1cb5b9}
+Tree\+Ctrl que contem as series 
+
+Defini√ß√£o na linha 75 do arquivo Thiessen\+Graph.\+h.
+
+\index{Thiessen\+Graph@{Thiessen\+Graph}!viewer@{viewer}}
+\index{viewer@{viewer}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{viewer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Thiessen\+Viewer}$\ast$ Thiessen\+Graph\+::viewer}\label{class_thiessen_graph_aee9cb6caec5c3af0ab5cf8cc59f59b01}
+Aponta para a janela de interface 
+
+Defini√ß√£o na linha 201 do arquivo Thiessen\+Graph.\+h.
+
+\index{Thiessen\+Graph@{Thiessen\+Graph}!x\+Axis@{x\+Axis}}
+\index{x\+Axis@{x\+Axis}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{x\+Axis}]{\setlength{\rightskip}{0pt plus 5cm}int Thiessen\+Graph\+::x\+Axis\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a8039122d9e66b675fcb33d9908eab671}
+PosiÁ„o das colunas selecionadas 
+
+Defini√ß√£o na linha 67 do arquivo Thiessen\+Graph.\+h.
+
+\index{Thiessen\+Graph@{Thiessen\+Graph}!x\+Id@{x\+Id}}
+\index{x\+Id@{x\+Id}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{x\+Id}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Item\+Id Thiessen\+Graph\+::x\+Id\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_aacdad634f9dde5b6cd2da1f6dc893ef9}
+
+
+Defini√ß√£o na linha 71 do arquivo Thiessen\+Graph.\+h.
+
+\index{Thiessen\+Graph@{Thiessen\+Graph}!xy\+\_\+data@{xy\+\_\+data}}
+\index{xy\+\_\+data@{xy\+\_\+data}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{xy\+\_\+data}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Plot\+Data Thiessen\+Graph\+::xy\+\_\+data\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_af90bf512dbcbb7baaa28d62cef20863a}
+Dados da curva 
+
+Defini√ß√£o na linha 103 do arquivo Thiessen\+Graph.\+h.
+
+\index{Thiessen\+Graph@{Thiessen\+Graph}!y\+Axis@{y\+Axis}}
+\index{y\+Axis@{y\+Axis}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{y\+Axis}]{\setlength{\rightskip}{0pt plus 5cm}int Thiessen\+Graph\+::y\+Axis\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_addf810cf9daf4123adc214b7f1a129d7}
+
+
+Defini√ß√£o na linha 67 do arquivo Thiessen\+Graph.\+h.
+
+\index{Thiessen\+Graph@{Thiessen\+Graph}!y\+Id@{y\+Id}}
+\index{y\+Id@{y\+Id}!Thiessen\+Graph@{Thiessen\+Graph}}
+\subsubsection[{y\+Id}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Item\+Id Thiessen\+Graph\+::y\+Id\hspace{0.3cm}{\ttfamily [protected]}}\label{class_thiessen_graph_a9ea83904b96d79b9b75efb1f791ba5cc}
+
+
+Defini√ß√£o na linha 71 do arquivo Thiessen\+Graph.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Thiessen\+Graph.\+h}\end{DoxyCompactItemize}

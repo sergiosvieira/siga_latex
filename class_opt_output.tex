@@ -1,0 +1,185 @@
+\section{ReferÃªncia da Classe Opt\+Output}
+\label{class_opt_output}\index{Opt\+Output@{Opt\+Output}}
+
+
+{\ttfamily \#include $<$Opt\+Output.\+h$>$}
+
+
+
+Herdeiro de {\bf Output}.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Output} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast$parent\+Win, {\bf Out\+Main} $\ast${\bf parent}, wx\+String section\+Type)
+\item 
+virtual {\bf $\sim$\+Opt\+Output} ()
+\item 
+virtual void {\bf on\+Selected\+Element} ()
+\item 
+virtual void {\bf selected\+Nodes} ()
+\item 
+virtual void {\bf on\+Selected\+Links} ()
+\item 
+virtual bool {\bf check\+Results} ()
+\item 
+virtual int {\bf get\+Section\+Id} (wx\+String {\bf name})
+\item 
+virtual wx\+String {\bf get\+Chain} ()
+\item 
+virtual void {\bf on\+Changing\+Time\+Interval} ({\bf Date\+::\+Time\+Interval} time\+Interval)
+\item 
+void {\bf on\+Changing\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ element\+Ids)
+\item 
+void {\bf on\+Changed\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ elemet\+Ids)
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 19 do arquivo Opt\+Output.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Opt\+Output@{Opt\+Output}!Opt\+Output@{Opt\+Output}}
+\index{Opt\+Output@{Opt\+Output}!Opt\+Output@{Opt\+Output}}
+\subsubsection[{Opt\+Output(wx\+Frame $\ast$frame, wx\+Window $\ast$parent\+Win, Out\+Main $\ast$parent, wx\+String section\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}Opt\+Output\+::\+Opt\+Output (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent\+Win, }
+\item[{{\bf Out\+Main} $\ast$}]{parent, }
+\item[{wx\+String}]{section\+Type}
+\end{DoxyParamCaption}
+)}\label{class_opt_output_a31fb62aec10bb9ed04f38e5ce5dca853}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em frame} & Janela onde será inserida a interface \\
+\hline
+{\em parent\+Win} & Componente a que pertence a interface \\
+\hline
+{\em parent} & Ponteiro para \doxyref{Out\+Main}{pag.}{class_out_main} \\
+\hline
+{\em section\+Type} & Tipo de seção \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Output@{Opt\+Output}!````~Opt\+Output@{$\sim$\+Opt\+Output}}
+\index{````~Opt\+Output@{$\sim$\+Opt\+Output}!Opt\+Output@{Opt\+Output}}
+\subsubsection[{$\sim$\+Opt\+Output()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Opt\+Output\+::$\sim$\+Opt\+Output (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_output_aba230b41c9d1bbe502adec35e4589d92}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{Opt\+Output@{Opt\+Output}!check\+Results@{check\+Results}}
+\index{check\+Results@{check\+Results}!Opt\+Output@{Opt\+Output}}
+\subsubsection[{check\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Opt\+Output\+::check\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_output_ac1c525fe8908980288a6080eda4ca0d3}
+Verifica se há resultados para abilitar ou desabilitar a interface 
+
+Implementa {\bf Output} \doxyref{}{pag.}{class_output_a0bc41722a48612f3947c85595d08e2cd}.
+
+\index{Opt\+Output@{Opt\+Output}!get\+Chain@{get\+Chain}}
+\index{get\+Chain@{get\+Chain}!Opt\+Output@{Opt\+Output}}
+\subsubsection[{get\+Chain()}]{\setlength{\rightskip}{0pt plus 5cm}virtual wx\+String Opt\+Output\+::get\+Chain (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_output_a2bd8b52d4ff2a25927009e1b49e76e4e}
+Retorna a estrutura para inserir/remover as series do treectrl 
+
+Implementa {\bf Output} \doxyref{}{pag.}{class_output_ab8eae45c5aa9498e650866f184aaeff7}.
+
+\index{Opt\+Output@{Opt\+Output}!get\+Section\+Id@{get\+Section\+Id}}
+\index{get\+Section\+Id@{get\+Section\+Id}!Opt\+Output@{Opt\+Output}}
+\subsubsection[{get\+Section\+Id(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Opt\+Output\+::get\+Section\+Id (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_output_aa9adfd78220d7a2b08b9aa0f8bb3063c}
+Retorna o identificador da seção pelo nome fornecido 
+
+ReimplementaÃ§Ã£o de {\bf Output} \doxyref{}{pag.}{class_output_a36f26c3a0ade3fee90e8776b464af80e}.
+
+\index{Opt\+Output@{Opt\+Output}!on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}}
+\index{on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}!Opt\+Output@{Opt\+Output}}
+\subsubsection[{on\+Changed\+Element\+Type(vector$<$ Element\+I\+D $>$ elemet\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Output\+::on\+Changed\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{elemet\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_output_ac65170e7d4e2a7704cf8f33c1e9da763}
+
+
+Implementa {\bf Output} \doxyref{}{pag.}{class_output_ad4d608d78d6d5e2324fa64ba9aa85fb9}.
+
+\index{Opt\+Output@{Opt\+Output}!on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}}
+\index{on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}!Opt\+Output@{Opt\+Output}}
+\subsubsection[{on\+Changing\+Element\+Type(vector$<$ Element\+I\+D $>$ element\+Ids)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Output\+::on\+Changing\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{element\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_output_a41d5e3ea4ffa53c2a470ce810239e10f}
+Evento de mudança de tipo do elemento 
+
+Implementa {\bf Output} \doxyref{}{pag.}{class_output_addc3b605d368623bed09c322b0f4e7b4}.
+
+\index{Opt\+Output@{Opt\+Output}!on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}}
+\index{on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}!Opt\+Output@{Opt\+Output}}
+\subsubsection[{on\+Changing\+Time\+Interval(\+Date\+::\+Time\+Interval time\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Output\+::on\+Changing\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_output_aa783cc957f2cc3b7fdd1020c149deac3}
+Evento chamado quando o sistema muda de intervalo de tempo O modulo adapta os modelos de acordo com o intervalo de tempo definido 
+
+ReimplementaÃ§Ã£o de {\bf Output} \doxyref{}{pag.}{class_output_a3e51174cbed13a4407d4eccee839a4ce}.
+
+\index{Opt\+Output@{Opt\+Output}!on\+Selected\+Element@{on\+Selected\+Element}}
+\index{on\+Selected\+Element@{on\+Selected\+Element}!Opt\+Output@{Opt\+Output}}
+\subsubsection[{on\+Selected\+Element()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Output\+::on\+Selected\+Element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_output_abbd015fcbce8ad3a9631df4403da39c8}
+Evento de seleção de nó Deve ser re-\/implementado 
+
+Implementa {\bf Output} \doxyref{}{pag.}{class_output_a4b8586aca4bb328726aa7dfab9b39728}.
+
+\index{Opt\+Output@{Opt\+Output}!on\+Selected\+Links@{on\+Selected\+Links}}
+\index{on\+Selected\+Links@{on\+Selected\+Links}!Opt\+Output@{Opt\+Output}}
+\subsubsection[{on\+Selected\+Links()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Output\+::on\+Selected\+Links (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_opt_output_a69c680c8ad238da6285138068a415ca1}
+Evento de seleção de trecho Deve ser re-\/implementado 
+
+ReimplementaÃ§Ã£o de {\bf Output} \doxyref{}{pag.}{class_output_aa89184577eb7477628bea81d9f582c6a}.
+
+
+
+DefiniÃ§Ã£o na linha 46 do arquivo Opt\+Output.\+h.
+
+\index{Opt\+Output@{Opt\+Output}!selected\+Nodes@{selected\+Nodes}}
+\index{selected\+Nodes@{selected\+Nodes}!Opt\+Output@{Opt\+Output}}
+\subsubsection[{selected\+Nodes()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Output\+::selected\+Nodes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_output_a117e73efe604aa01dddaed6ad7def0c5}
+Evento de seleção de nó Deve ser re-\/implementado 
+
+Implementa {\bf Output} \doxyref{}{pag.}{class_output_aa432f06b5a38b14dac777a11215ab0d7}.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Output.\+h}\end{DoxyCompactItemize}

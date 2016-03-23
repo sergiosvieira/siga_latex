@@ -1,0 +1,193 @@
+\section{Referência da Classe G\+W\+L\+F\+Sediment}
+\label{class_g_w_l_f_sediment}\index{G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}}
+
+
+{\ttfamily \#include $<$G\+W\+L\+F\+Sediment.\+h$>$}
+
+
+
+Herdeiro de {\bf Sediment\+Pollutant}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf G\+W\+L\+F\+Sediment} ({\bf G\+W\+L\+F\+Basin\+W\+Q\+Model} $\ast${\bf model})
+\item 
+{\bf $\sim$\+G\+W\+L\+F\+Sediment} ()
+\item 
+{\bf Serie} $\ast$ {\bf run\+Erosion} ({\bf G\+W\+L\+F\+Model} $\ast${\bf model})
+\item 
+{\bf Serie} $\ast$ {\bf run} ({\bf G\+W\+L\+F\+Model} $\ast${\bf model})
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Month} {\bf beg\+Warm}
+\item 
+{\bf Month} {\bf end\+Warm}
+\item 
+double {\bf r\+Eros\+Cold}
+\item 
+double {\bf r\+Eros\+Warm}
+\item 
+double {\bf ann\+Eros}
+\item 
+double {\bf sdr}
+\item 
+double {\bf T\+C\+Power}
+\item 
+map$<$ unsigned int, double $>$ {\bf sa\+K\+L\+S\+CP}
+\item 
+map$<$ unsigned int, double $>$ {\bf sa\+Ann\+Eros}
+\item 
+map$<$ unsigned int, double $>$ {\bf sa\+Urb\+Sed\+Accum}
+\item 
+{\bf Serie} $\ast$ {\bf t\+Capacity}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 13 do arquivo G\+W\+L\+F\+Sediment.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}!G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}}
+\index{G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}!G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}}
+\subsubsection[{G\+W\+L\+F\+Sediment(\+G\+W\+L\+F\+Basin\+W\+Q\+Model $\ast$model)}]{\setlength{\rightskip}{0pt plus 5cm}G\+W\+L\+F\+Sediment\+::\+G\+W\+L\+F\+Sediment (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+W\+L\+F\+Basin\+W\+Q\+Model} $\ast$}]{model}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_sediment_abf9c6f73c1e3639cdc89848ffdc8e0af}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em model} & Modelo \\
+\hline
+\end{DoxyParams}
+\index{G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}!````~G\+W\+L\+F\+Sediment@{$\sim$\+G\+W\+L\+F\+Sediment}}
+\index{````~G\+W\+L\+F\+Sediment@{$\sim$\+G\+W\+L\+F\+Sediment}!G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}}
+\subsubsection[{$\sim$\+G\+W\+L\+F\+Sediment()}]{\setlength{\rightskip}{0pt plus 5cm}G\+W\+L\+F\+Sediment\+::$\sim$\+G\+W\+L\+F\+Sediment (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_sediment_a2d03be76f707bdd919a737b5d99d8bed}
+Destrutor 
+
+\subsection{Métodos}
+\index{G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}!run@{run}}
+\index{run@{run}!G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}}
+\subsubsection[{run(\+G\+W\+L\+F\+Model $\ast$model)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ G\+W\+L\+F\+Sediment\+::run (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+W\+L\+F\+Model} $\ast$}]{model}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_sediment_af00b98e61898c49f95a37867de83bd0e}
+Calc Sediment \begin{DoxyReturn}{Retorna}
+Retorna a serie de sedimentos 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parâmetros}
+{\em model} & Modelo \\
+\hline
+\end{DoxyParams}
+\index{G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}!run\+Erosion@{run\+Erosion}}
+\index{run\+Erosion@{run\+Erosion}!G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}}
+\subsubsection[{run\+Erosion(\+G\+W\+L\+F\+Model $\ast$model)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ G\+W\+L\+F\+Sediment\+::run\+Erosion (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+W\+L\+F\+Model} $\ast$}]{model}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_sediment_ad103add21c2b23ac46e0fea52d0b3ee7}
+Executa o modelo \begin{DoxyReturn}{Retorna}
+Retorna a serie com os resultados 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parâmetros}
+{\em model} & Modelo \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}!ann\+Eros@{ann\+Eros}}
+\index{ann\+Eros@{ann\+Eros}!G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}}
+\subsubsection[{ann\+Eros}]{\setlength{\rightskip}{0pt plus 5cm}double G\+W\+L\+F\+Sediment\+::ann\+Eros}\label{class_g_w_l_f_sediment_a11660673d4be51b8ff53ea8197d28b47}
+Eros�o anual de longo prazo 
+
+Definição na linha 34 do arquivo G\+W\+L\+F\+Sediment.\+h.
+
+\index{G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}!beg\+Warm@{beg\+Warm}}
+\index{beg\+Warm@{beg\+Warm}!G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}}
+\subsubsection[{beg\+Warm}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Month} G\+W\+L\+F\+Sediment\+::beg\+Warm}\label{class_g_w_l_f_sediment_a40b3a5519b2de767a079ad6d7f1a086f}
+M�s inicial da esta��o quente 
+
+Definição na linha 18 do arquivo G\+W\+L\+F\+Sediment.\+h.
+
+\index{G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}!end\+Warm@{end\+Warm}}
+\index{end\+Warm@{end\+Warm}!G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}}
+\subsubsection[{end\+Warm}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Month} G\+W\+L\+F\+Sediment\+::end\+Warm}\label{class_g_w_l_f_sediment_af748b52fabba5af8272b0301eff73170}
+M�s final da esta��o quente 
+
+Definição na linha 22 do arquivo G\+W\+L\+F\+Sediment.\+h.
+
+\index{G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}!r\+Eros\+Cold@{r\+Eros\+Cold}}
+\index{r\+Eros\+Cold@{r\+Eros\+Cold}!G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}}
+\subsubsection[{r\+Eros\+Cold}]{\setlength{\rightskip}{0pt plus 5cm}double G\+W\+L\+F\+Sediment\+::r\+Eros\+Cold}\label{class_g_w_l_f_sediment_a998e50debbfd5085316a99654acafc7c}
+Erodibilidade -\/ esta��o fria 
+
+Definição na linha 26 do arquivo G\+W\+L\+F\+Sediment.\+h.
+
+\index{G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}!r\+Eros\+Warm@{r\+Eros\+Warm}}
+\index{r\+Eros\+Warm@{r\+Eros\+Warm}!G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}}
+\subsubsection[{r\+Eros\+Warm}]{\setlength{\rightskip}{0pt plus 5cm}double G\+W\+L\+F\+Sediment\+::r\+Eros\+Warm}\label{class_g_w_l_f_sediment_ae0bfbf246555c478f19ad8e2c80f1af0}
+Erodibilidade -\/ esta��o quente 
+
+Definição na linha 30 do arquivo G\+W\+L\+F\+Sediment.\+h.
+
+\index{G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}!sa\+Ann\+Eros@{sa\+Ann\+Eros}}
+\index{sa\+Ann\+Eros@{sa\+Ann\+Eros}!G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}}
+\subsubsection[{sa\+Ann\+Eros}]{\setlength{\rightskip}{0pt plus 5cm}map$<$unsigned int,double$>$ G\+W\+L\+F\+Sediment\+::sa\+Ann\+Eros}\label{class_g_w_l_f_sediment_a318674bf773b71611cb1fe6f4b887e9c}
+Eros�o anual de longo prazo por area fonte 
+
+Definição na linha 50 do arquivo G\+W\+L\+F\+Sediment.\+h.
+
+\index{G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}!sa\+K\+L\+S\+CP@{sa\+K\+L\+S\+CP}}
+\index{sa\+K\+L\+S\+CP@{sa\+K\+L\+S\+CP}!G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}}
+\subsubsection[{sa\+K\+L\+S\+CP}]{\setlength{\rightskip}{0pt plus 5cm}map$<$unsigned int,double$>$ G\+W\+L\+F\+Sediment\+::sa\+K\+L\+S\+CP}\label{class_g_w_l_f_sediment_a1cc0e23a413ecb2ea970dae0f923e1a7}
+... 
+
+Definição na linha 46 do arquivo G\+W\+L\+F\+Sediment.\+h.
+
+\index{G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}!sa\+Urb\+Sed\+Accum@{sa\+Urb\+Sed\+Accum}}
+\index{sa\+Urb\+Sed\+Accum@{sa\+Urb\+Sed\+Accum}!G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}}
+\subsubsection[{sa\+Urb\+Sed\+Accum}]{\setlength{\rightskip}{0pt plus 5cm}map$<$unsigned int,double$>$ G\+W\+L\+F\+Sediment\+::sa\+Urb\+Sed\+Accum}\label{class_g_w_l_f_sediment_acc9ecdcf5536e99f24adf1b47cc4b219}
+Accumulation rate of Sediment in urban areas -\/ Taxa de acumula��o de sedimento por area fonte (urbano) 
+
+Definição na linha 54 do arquivo G\+W\+L\+F\+Sediment.\+h.
+
+\index{G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}!sdr@{sdr}}
+\index{sdr@{sdr}!G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}}
+\subsubsection[{sdr}]{\setlength{\rightskip}{0pt plus 5cm}double G\+W\+L\+F\+Sediment\+::sdr}\label{class_g_w_l_f_sediment_aa6e97796fd090a4378be1769b45006b9}
+Sediment Delivery Ratio 
+
+Definição na linha 38 do arquivo G\+W\+L\+F\+Sediment.\+h.
+
+\index{G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}!t\+Capacity@{t\+Capacity}}
+\index{t\+Capacity@{t\+Capacity}!G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}}
+\subsubsection[{t\+Capacity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ G\+W\+L\+F\+Sediment\+::t\+Capacity}\label{class_g_w_l_f_sediment_a1b90d163237437738e99928f59a9e7be}
+Capacidade de sedimenta��o 
+
+Definição na linha 79 do arquivo G\+W\+L\+F\+Sediment.\+h.
+
+\index{G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}!T\+C\+Power@{T\+C\+Power}}
+\index{T\+C\+Power@{T\+C\+Power}!G\+W\+L\+F\+Sediment@{G\+W\+L\+F\+Sediment}}
+\subsubsection[{T\+C\+Power}]{\setlength{\rightskip}{0pt plus 5cm}double G\+W\+L\+F\+Sediment\+::\+T\+C\+Power}\label{class_g_w_l_f_sediment_a13eebc796870c1d477edd2303dec47fa}
+Coeficiente de capacidade de Transporte de Sedimento 
+
+Definição na linha 42 do arquivo G\+W\+L\+F\+Sediment.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf G\+W\+L\+F\+Sediment.\+h}\end{DoxyCompactItemize}

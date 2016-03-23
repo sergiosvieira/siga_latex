@@ -1,0 +1,326 @@
+\section{Resultados}
+\label{group___resultados}\index{Resultados@{Resultados}}
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Graphic}
+\item 
+class {\bf Hydro\+Output}
+\item 
+class {\bf Opt\+Output}
+\item 
+class {\bf Out\+Text\+Ctrl}
+\item 
+class {\bf Out\+Zone\+Const}
+\item 
+class {\bf Out\+Zone\+Var}
+\item 
+class {\bf Out\+Zones}
+\item 
+class {\bf Out\+Interface}
+\item 
+class {\bf Out\+Main}
+\item 
+class {\bf Output}
+\item 
+class {\bf Out\+Section}
+\item 
+class {\bf Out\+Zone\+Conf\+File}
+\item 
+class {\bf Quali\+Output}
+\item 
+class {\bf Report}
+\item 
+class {\bf Res\+Matrix}
+\item 
+class {\bf Res\+Op\+Output}
+\item 
+class {\bf Res\+Output}
+\item 
+class {\bf Res\+Serie}
+\item 
+class {\bf Statistic}
+\end{DoxyCompactItemize}
+\subsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef map$<$ unsigned int, vector$<$ {\bf Res\+Output} $\ast$ $>$ $>$ {\bf node\+Series}
+\end{DoxyCompactItemize}
+\subsection*{Enumerações}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf hydro\+Sections} \{ \\*
+{\bf I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+G\+W\+LF}, 
+{\bf I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+S\+M\+AP}, 
+{\bf I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+H\+Y\+M\+OD}, 
+{\bf I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+S\+A\+CR}, 
+\\*
+{\bf I\+D\+\_\+\+H\+I\+D\+R\+O\+O\+U\+T\+P\+U\+T\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+C\+EN}
+ \}
+\item 
+enum {\bf opt\+Sections} \{ {\bf I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+M\+O\+P\+S\+O\+\_\+\+S\+M\+AP}, 
+{\bf I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+M\+O\+P\+S\+O\+\_\+\+H\+Y\+M\+OD}
+ \}
+\item 
+enum \{ \\*
+{\bf I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+G\+R\+A\+P\+H\+IC}, 
+{\bf I\+D\+\_\+\+R\+E\+S\+U\+L\+T\+S\+\_\+\+C\+H\+O\+I\+CE}, 
+{\bf I\+D\+\_\+\+T\+R\+E\+E\+\_\+\+A\+D\+D\+ED}, 
+{\bf I\+D\+\_\+\+T\+O\+O\+L\+\_\+\+T\+R\+EE}, 
+\\*
+{\bf I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+A\+DD}, 
+{\bf I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+T\+R\+EE}, 
+{\bf I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+BT}, 
+{\bf I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+B\+T\+\_\+\+OK}, 
+\\*
+{\bf I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+B\+T\+\_\+\+C\+A\+N\+C\+EL}, 
+{\bf I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+R\+A\+D\+IO}, 
+{\bf I\+D\+\_\+\+Z\+O\+N\+E\+\_\+S}, 
+{\bf I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+XS}, 
+\\*
+{\bf I\+D\+\_\+\+Z\+O\+N\+E\+\_\+L}, 
+{\bf I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+XL}
+ \}
+\item 
+enum \{ {\bf O\+U\+T\+\_\+\+H\+Y\+D\+R\+O\+L\+O\+GY}, 
+{\bf O\+U\+T\+\_\+\+O\+PT}, 
+{\bf O\+U\+T\+\_\+\+Q\+U\+A\+L\+I\+TY}, 
+{\bf O\+U\+T\+\_\+\+R\+E\+S\+OP}
+ \}
+\item 
+enum \{ \\*
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+E\+C\+T\+I\+O\+NS}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+LL}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+A\+LL}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+L\+A\+P\+SE}, 
+\\*
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+E\+X\+P\+A\+ND}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+CK}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+CK}
+ \}
+\item 
+enum \{ {\bf I\+D\+\_\+\+C\+H\+E\+C\+K\+\_\+\+R\+E\+S\+U\+L\+TS}
+ \}
+\item 
+enum {\bf quali\+Sections} \{ {\bf I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+B\+A\+S\+I\+N\+\_\+\+G\+W\+LF}, 
+{\bf I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+M\+E\+NU}, 
+{\bf I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+M\+E\+CA}, 
+{\bf I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+R\+I\+V\+E\+R\+\_\+\+T\+AL}
+ \}
+\item 
+enum {\bf res\+Op\+Sections} \{ {\bf I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+IR}, 
+{\bf I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+D\+E\+\_\+\+B\+A\+S\+IN}, 
+{\bf I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+M\+A\+ND}, 
+{\bf I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+L\+I\+NK}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+const wx\+String {\bf str\+Out} = \+\_\+(\char`\"{}Resultados\char`\"{})
+\item 
+const wx\+String {\bf str\+In} = \+\_\+(\char`\"{}Dados de Entrada\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+\subsection{Definições dos tipos}
+\index{Resultados@{Resultados}!node\+Series@{node\+Series}}
+\index{node\+Series@{node\+Series}!Resultados@{Resultados}}
+\subsubsection[{node\+Series}]{\setlength{\rightskip}{0pt plus 5cm}typedef map$<$ unsigned int,vector$<${\bf Res\+Output}$\ast$$>$ $>$ {\bf node\+Series}}\label{group___resultados_gafff37dbb0ccb17d33eada3fc6d1381cf}
+
+
+Definição na linha 11 do arquivo Hydro\+Output.\+h.
+
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{group___resultados_ga634f9f55e799f3052a34590f08100017}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+G\+R\+A\+P\+H\+IC@{I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+G\+R\+A\+P\+H\+IC}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+G\+R\+A\+P\+H\+IC@{I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+G\+R\+A\+P\+H\+IC}}\item[{\em 
+I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+G\+R\+A\+P\+H\+IC\label{group___resultados_gga634f9f55e799f3052a34590f08100017a6248d271e90e8e19fdd729f0a183f10c}
+}]\index{I\+D\+\_\+\+R\+E\+S\+U\+L\+T\+S\+\_\+\+C\+H\+O\+I\+CE@{I\+D\+\_\+\+R\+E\+S\+U\+L\+T\+S\+\_\+\+C\+H\+O\+I\+CE}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+R\+E\+S\+U\+L\+T\+S\+\_\+\+C\+H\+O\+I\+CE@{I\+D\+\_\+\+R\+E\+S\+U\+L\+T\+S\+\_\+\+C\+H\+O\+I\+CE}}\item[{\em 
+I\+D\+\_\+\+R\+E\+S\+U\+L\+T\+S\+\_\+\+C\+H\+O\+I\+CE\label{group___resultados_gga634f9f55e799f3052a34590f08100017a7f73b33a4c650ef73b57bf13f51a081e}
+}]\index{I\+D\+\_\+\+T\+R\+E\+E\+\_\+\+A\+D\+D\+ED@{I\+D\+\_\+\+T\+R\+E\+E\+\_\+\+A\+D\+D\+ED}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+T\+R\+E\+E\+\_\+\+A\+D\+D\+ED@{I\+D\+\_\+\+T\+R\+E\+E\+\_\+\+A\+D\+D\+ED}}\item[{\em 
+I\+D\+\_\+\+T\+R\+E\+E\+\_\+\+A\+D\+D\+ED\label{group___resultados_gga634f9f55e799f3052a34590f08100017a4f78d6e5f7bbbe3da689bc6eab11c4a0}
+}]\index{I\+D\+\_\+\+T\+O\+O\+L\+\_\+\+T\+R\+EE@{I\+D\+\_\+\+T\+O\+O\+L\+\_\+\+T\+R\+EE}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+T\+O\+O\+L\+\_\+\+T\+R\+EE@{I\+D\+\_\+\+T\+O\+O\+L\+\_\+\+T\+R\+EE}}\item[{\em 
+I\+D\+\_\+\+T\+O\+O\+L\+\_\+\+T\+R\+EE\label{group___resultados_gga634f9f55e799f3052a34590f08100017ae77dbe9cc525cecc664b3bd1ec72f39f}
+}]\index{I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+A\+DD@{I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+A\+DD}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+A\+DD@{I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+A\+DD}}\item[{\em 
+I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+A\+DD\label{group___resultados_gga634f9f55e799f3052a34590f08100017a0c3fbe8c6f42f29b22ac682d4fed8284}
+}]\index{I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+T\+R\+EE@{I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+T\+R\+EE}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+T\+R\+EE@{I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+T\+R\+EE}}\item[{\em 
+I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+T\+R\+EE\label{group___resultados_gga634f9f55e799f3052a34590f08100017a7e7da79de5fa8bab98d95bfe2b4a78bc}
+}]\index{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+BT@{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+BT}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+BT@{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+BT}}\item[{\em 
+I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+BT\label{group___resultados_gga634f9f55e799f3052a34590f08100017ab8b0740654fc4255f6129942e44d010b}
+}]\index{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+B\+T\+\_\+\+OK@{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+B\+T\+\_\+\+OK}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+B\+T\+\_\+\+OK@{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+B\+T\+\_\+\+OK}}\item[{\em 
+I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+B\+T\+\_\+\+OK\label{group___resultados_gga634f9f55e799f3052a34590f08100017aa63f5e799c5be777800188252882f521}
+}]\index{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+B\+T\+\_\+\+C\+A\+N\+C\+EL@{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+B\+T\+\_\+\+C\+A\+N\+C\+EL}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+B\+T\+\_\+\+C\+A\+N\+C\+EL@{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+B\+T\+\_\+\+C\+A\+N\+C\+EL}}\item[{\em 
+I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+B\+T\+\_\+\+C\+A\+N\+C\+EL\label{group___resultados_gga634f9f55e799f3052a34590f08100017a040eb2952b4c647e604906c9ad2516a2}
+}]\index{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+R\+A\+D\+IO@{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+R\+A\+D\+IO}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+R\+A\+D\+IO@{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+R\+A\+D\+IO}}\item[{\em 
+I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+R\+A\+D\+IO\label{group___resultados_gga634f9f55e799f3052a34590f08100017ab3c1056fa70b55fbf51243d083cce001}
+}]\index{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+S@{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+S}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+Z\+O\+N\+E\+\_\+S@{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+S}}\item[{\em 
+I\+D\+\_\+\+Z\+O\+N\+E\+\_\+S\label{group___resultados_gga634f9f55e799f3052a34590f08100017a3f686716eadfdbcaef516f84ff30a86d}
+}]\index{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+XS@{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+XS}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+XS@{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+XS}}\item[{\em 
+I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+XS\label{group___resultados_gga634f9f55e799f3052a34590f08100017ae1ba7d6f420783de0481d3efdbf89b4c}
+}]\index{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+L@{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+L}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+Z\+O\+N\+E\+\_\+L@{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+L}}\item[{\em 
+I\+D\+\_\+\+Z\+O\+N\+E\+\_\+L\label{group___resultados_gga634f9f55e799f3052a34590f08100017ae3062d0f1d3a597ca2c4be7c7f697c44}
+}]\index{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+XL@{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+XL}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+XL@{I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+XL}}\item[{\em 
+I\+D\+\_\+\+Z\+O\+N\+E\+\_\+\+XL\label{group___resultados_gga634f9f55e799f3052a34590f08100017ae2f86dbc11dfc1d0d37df96e3075d54e}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 25 do arquivo Out\+Interface.\+h.
+
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{group___resultados_gab39a415800ebd0d977c477376649649b}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{O\+U\+T\+\_\+\+H\+Y\+D\+R\+O\+L\+O\+GY@{O\+U\+T\+\_\+\+H\+Y\+D\+R\+O\+L\+O\+GY}!Resultados@{Resultados}}\index{Resultados@{Resultados}!O\+U\+T\+\_\+\+H\+Y\+D\+R\+O\+L\+O\+GY@{O\+U\+T\+\_\+\+H\+Y\+D\+R\+O\+L\+O\+GY}}\item[{\em 
+O\+U\+T\+\_\+\+H\+Y\+D\+R\+O\+L\+O\+GY\label{group___resultados_ggab39a415800ebd0d977c477376649649ba6305df929faff60db26d8f287e28e757}
+}]\index{O\+U\+T\+\_\+\+O\+PT@{O\+U\+T\+\_\+\+O\+PT}!Resultados@{Resultados}}\index{Resultados@{Resultados}!O\+U\+T\+\_\+\+O\+PT@{O\+U\+T\+\_\+\+O\+PT}}\item[{\em 
+O\+U\+T\+\_\+\+O\+PT\label{group___resultados_ggab39a415800ebd0d977c477376649649ba1766f9c1fef0771f5aa4c4e498b15c29}
+}]\index{O\+U\+T\+\_\+\+Q\+U\+A\+L\+I\+TY@{O\+U\+T\+\_\+\+Q\+U\+A\+L\+I\+TY}!Resultados@{Resultados}}\index{Resultados@{Resultados}!O\+U\+T\+\_\+\+Q\+U\+A\+L\+I\+TY@{O\+U\+T\+\_\+\+Q\+U\+A\+L\+I\+TY}}\item[{\em 
+O\+U\+T\+\_\+\+Q\+U\+A\+L\+I\+TY\label{group___resultados_ggab39a415800ebd0d977c477376649649bac578565596a0ae206857da57976aaf21}
+}]\index{O\+U\+T\+\_\+\+R\+E\+S\+OP@{O\+U\+T\+\_\+\+R\+E\+S\+OP}!Resultados@{Resultados}}\index{Resultados@{Resultados}!O\+U\+T\+\_\+\+R\+E\+S\+OP@{O\+U\+T\+\_\+\+R\+E\+S\+OP}}\item[{\em 
+O\+U\+T\+\_\+\+R\+E\+S\+OP\label{group___resultados_ggab39a415800ebd0d977c477376649649ba7100429fc1a7393eb8fa8f0ae12bd339}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 20 do arquivo Out\+Main.\+h.
+
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{group___resultados_gae33c78feb670de33d2abf21ec0624531}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+E\+C\+T\+I\+O\+NS@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+E\+C\+T\+I\+O\+NS}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+E\+C\+T\+I\+O\+NS@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+E\+C\+T\+I\+O\+NS}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+E\+C\+T\+I\+O\+NS\label{group___resultados_ggae33c78feb670de33d2abf21ec0624531a2de4d33d8207c1dd443d49bdbc96d166}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+LL@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+LL}!Resultados@{Resultados}}\index{Resultados@{Resultados}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+LL@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+LL}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+LL\label{group___resultados_ggae33c78feb670de33d2abf21ec0624531a93fef3fa2594278e7818a512106a7661}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+A\+LL@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+A\+LL}!Resultados@{Resultados}}\index{Resultados@{Resultados}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+A\+LL@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+A\+LL}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+A\+LL\label{group___resultados_ggae33c78feb670de33d2abf21ec0624531a933f5b2a6735746ee03a532337b51587}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+L\+A\+P\+SE@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+L\+A\+P\+SE}!Resultados@{Resultados}}\index{Resultados@{Resultados}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+L\+A\+P\+SE@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+L\+A\+P\+SE}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+L\+A\+P\+SE\label{group___resultados_ggae33c78feb670de33d2abf21ec0624531aec9ceabb189807bc71106425e6ee54ad}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+E\+X\+P\+A\+ND@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+E\+X\+P\+A\+ND}!Resultados@{Resultados}}\index{Resultados@{Resultados}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+E\+X\+P\+A\+ND@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+E\+X\+P\+A\+ND}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+E\+X\+P\+A\+ND\label{group___resultados_ggae33c78feb670de33d2abf21ec0624531ac1e21c4f956c244813b5b8c54e23c8e7}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+CK@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+CK}!Resultados@{Resultados}}\index{Resultados@{Resultados}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+CK@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+CK}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+CK\label{group___resultados_ggae33c78feb670de33d2abf21ec0624531ac7f0594dfdd3c908cc3b83a2f75063ae}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+CK@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+CK}!Resultados@{Resultados}}\index{Resultados@{Resultados}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+CK@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+CK}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+CK\label{group___resultados_ggae33c78feb670de33d2abf21ec0624531addda4e0406ebb10b751b7c857301f008}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 25 do arquivo Output.\+h.
+
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{group___resultados_ga950bf8e3371138ceb9649d45e9a96340}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+C\+H\+E\+C\+K\+\_\+\+R\+E\+S\+U\+L\+TS@{I\+D\+\_\+\+C\+H\+E\+C\+K\+\_\+\+R\+E\+S\+U\+L\+TS}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+C\+H\+E\+C\+K\+\_\+\+R\+E\+S\+U\+L\+TS@{I\+D\+\_\+\+C\+H\+E\+C\+K\+\_\+\+R\+E\+S\+U\+L\+TS}}\item[{\em 
+I\+D\+\_\+\+C\+H\+E\+C\+K\+\_\+\+R\+E\+S\+U\+L\+TS\label{group___resultados_gga950bf8e3371138ceb9649d45e9a96340a9c1ca4b4c9bb64cee190e152b46a6781}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 15 do arquivo Out\+Section.\+h.
+
+\index{Resultados@{Resultados}!hydro\+Sections@{hydro\+Sections}}
+\index{hydro\+Sections@{hydro\+Sections}!Resultados@{Resultados}}
+\subsubsection[{hydro\+Sections}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf hydro\+Sections}}\label{group___resultados_ga2e403e43353515f21a7f9445d82b6c1c}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+G\+W\+LF@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+G\+W\+LF}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+G\+W\+LF@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+G\+W\+LF}}\item[{\em 
+I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+G\+W\+LF\label{group___resultados_gga2e403e43353515f21a7f9445d82b6c1ca38940d68492719945d700536c2fecd75}
+}]\index{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+S\+M\+AP@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+S\+M\+AP}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+S\+M\+AP@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+S\+M\+AP}}\item[{\em 
+I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+S\+M\+AP\label{group___resultados_gga2e403e43353515f21a7f9445d82b6c1ca1bb14d9adde560cbffeda5521a566e98}
+}]\index{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+H\+Y\+M\+OD@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+H\+Y\+M\+OD}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+H\+Y\+M\+OD@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+H\+Y\+M\+OD}}\item[{\em 
+I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+H\+Y\+M\+OD\label{group___resultados_gga2e403e43353515f21a7f9445d82b6c1ca2ba25537387afeaad11928c589b0f1dc}
+}]\index{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+S\+A\+CR@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+S\+A\+CR}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+S\+A\+CR@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+S\+A\+CR}}\item[{\em 
+I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+S\+A\+CR\label{group___resultados_gga2e403e43353515f21a7f9445d82b6c1ca8403d8f4ef6c61dd64aafc6cee9cdc96}
+}]\index{I\+D\+\_\+\+H\+I\+D\+R\+O\+O\+U\+T\+P\+U\+T\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+C\+EN@{I\+D\+\_\+\+H\+I\+D\+R\+O\+O\+U\+T\+P\+U\+T\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+C\+EN}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+H\+I\+D\+R\+O\+O\+U\+T\+P\+U\+T\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+C\+EN@{I\+D\+\_\+\+H\+I\+D\+R\+O\+O\+U\+T\+P\+U\+T\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+C\+EN}}\item[{\em 
+I\+D\+\_\+\+H\+I\+D\+R\+O\+O\+U\+T\+P\+U\+T\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+S\+C\+EN\label{group___resultados_gga2e403e43353515f21a7f9445d82b6c1ca9d78ff4480c255b3c706b9e9e0d806c3}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 13 do arquivo Hydro\+Output.\+h.
+
+\index{Resultados@{Resultados}!opt\+Sections@{opt\+Sections}}
+\index{opt\+Sections@{opt\+Sections}!Resultados@{Resultados}}
+\subsubsection[{opt\+Sections}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf opt\+Sections}}\label{group___resultados_ga09b116af351f747c2153e80c100cbf6f}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+M\+O\+P\+S\+O\+\_\+\+S\+M\+AP@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+M\+O\+P\+S\+O\+\_\+\+S\+M\+AP}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+M\+O\+P\+S\+O\+\_\+\+S\+M\+AP@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+M\+O\+P\+S\+O\+\_\+\+S\+M\+AP}}\item[{\em 
+I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+M\+O\+P\+S\+O\+\_\+\+S\+M\+AP\label{group___resultados_gga09b116af351f747c2153e80c100cbf6fa05d634f98fbb9050f063b1b50201d19a}
+}]\index{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+M\+O\+P\+S\+O\+\_\+\+H\+Y\+M\+OD@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+M\+O\+P\+S\+O\+\_\+\+H\+Y\+M\+OD}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+M\+O\+P\+S\+O\+\_\+\+H\+Y\+M\+OD@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+M\+O\+P\+S\+O\+\_\+\+H\+Y\+M\+OD}}\item[{\em 
+I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+M\+O\+P\+S\+O\+\_\+\+H\+Y\+M\+OD\label{group___resultados_gga09b116af351f747c2153e80c100cbf6faf342811aab61a6e5e25b277b5550d75a}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 11 do arquivo Opt\+Output.\+h.
+
+\index{Resultados@{Resultados}!quali\+Sections@{quali\+Sections}}
+\index{quali\+Sections@{quali\+Sections}!Resultados@{Resultados}}
+\subsubsection[{quali\+Sections}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf quali\+Sections}}\label{group___resultados_gad58fbda73b96ea0eb0ab8eb6b972e2cb}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+B\+A\+S\+I\+N\+\_\+\+G\+W\+LF@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+B\+A\+S\+I\+N\+\_\+\+G\+W\+LF}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+B\+A\+S\+I\+N\+\_\+\+G\+W\+LF@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+B\+A\+S\+I\+N\+\_\+\+G\+W\+LF}}\item[{\em 
+I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+B\+A\+S\+I\+N\+\_\+\+G\+W\+LF\label{group___resultados_ggad58fbda73b96ea0eb0ab8eb6b972e2cbaa2e587c1ecbb7c2bd60327b97a59bc81}
+}]\index{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+M\+E\+NU@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+M\+E\+NU}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+M\+E\+NU@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+M\+E\+NU}}\item[{\em 
+I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+M\+E\+NU\label{group___resultados_ggad58fbda73b96ea0eb0ab8eb6b972e2cba061986cf8d0611334d64fddf155ff933}
+}]\index{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+M\+E\+CA@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+M\+E\+CA}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+M\+E\+CA@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+M\+E\+CA}}\item[{\em 
+I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+M\+E\+CA\label{group___resultados_ggad58fbda73b96ea0eb0ab8eb6b972e2cba5ba1d278445eb2f477b9be86dc20faeb}
+}]\index{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+R\+I\+V\+E\+R\+\_\+\+T\+AL@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+R\+I\+V\+E\+R\+\_\+\+T\+AL}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+R\+I\+V\+E\+R\+\_\+\+T\+AL@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+R\+I\+V\+E\+R\+\_\+\+T\+AL}}\item[{\em 
+I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+R\+I\+V\+E\+R\+\_\+\+T\+AL\label{group___resultados_ggad58fbda73b96ea0eb0ab8eb6b972e2cba06c8c4afeb36a94172ba341e1c339a1e}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 14 do arquivo Quali\+Output.\+h.
+
+\index{Resultados@{Resultados}!res\+Op\+Sections@{res\+Op\+Sections}}
+\index{res\+Op\+Sections@{res\+Op\+Sections}!Resultados@{Resultados}}
+\subsubsection[{res\+Op\+Sections}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf res\+Op\+Sections}}\label{group___resultados_ga4d5a3802ac6f59cdb3e0cf7254535892}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+IR@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+IR}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+IR@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+IR}}\item[{\em 
+I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+D\+E\+\_\+\+R\+E\+S\+E\+R\+V\+O\+IR\label{group___resultados_gga4d5a3802ac6f59cdb3e0cf7254535892a5589537fab7e94f37aa19ae8d0514b01}
+}]\index{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+D\+E\+\_\+\+B\+A\+S\+IN@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+D\+E\+\_\+\+B\+A\+S\+IN}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+D\+E\+\_\+\+B\+A\+S\+IN@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+D\+E\+\_\+\+B\+A\+S\+IN}}\item[{\em 
+I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+D\+E\+\_\+\+B\+A\+S\+IN\label{group___resultados_gga4d5a3802ac6f59cdb3e0cf7254535892ae33dd099975e67ff01fbf72df3fe7e6d}
+}]\index{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+M\+A\+ND@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+M\+A\+ND}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+M\+A\+ND@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+M\+A\+ND}}\item[{\em 
+I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+N\+O\+D\+E\+\_\+\+D\+E\+M\+A\+ND\label{group___resultados_gga4d5a3802ac6f59cdb3e0cf7254535892aee9fa5e92a1327ed34d25b078bce9dbd}
+}]\index{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+L\+I\+NK@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+L\+I\+NK}!Resultados@{Resultados}}\index{Resultados@{Resultados}!I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+L\+I\+NK@{I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+L\+I\+NK}}\item[{\em 
+I\+D\+\_\+\+S\+E\+C\+T\+I\+O\+N\+\_\+\+L\+I\+NK\label{group___resultados_gga4d5a3802ac6f59cdb3e0cf7254535892ac86c2c4c47014dbc11b5c6dc49c05f2b}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 14 do arquivo Res\+Op\+Output.\+h.
+
+
+
+\subsection{Variáveis}
+\index{Resultados@{Resultados}!str\+In@{str\+In}}
+\index{str\+In@{str\+In}!Resultados@{Resultados}}
+\subsubsection[{str\+In}]{\setlength{\rightskip}{0pt plus 5cm}const wx\+String str\+In = \+\_\+(\char`\"{}Dados de Entrada\char`\"{})}\label{group___resultados_ga371824451af1b573359f9e648c6f17ff}
+
+
+Definição na linha 23 do arquivo Output.\+h.
+
+\index{Resultados@{Resultados}!str\+Out@{str\+Out}}
+\index{str\+Out@{str\+Out}!Resultados@{Resultados}}
+\subsubsection[{str\+Out}]{\setlength{\rightskip}{0pt plus 5cm}const wx\+String str\+Out = \+\_\+(\char`\"{}Resultados\char`\"{})}\label{group___resultados_ga04b44e92884a01907cdedb310ee5a4e8}
+
+
+Definição na linha 22 do arquivo Output.\+h.
+

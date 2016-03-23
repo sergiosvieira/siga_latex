@@ -1,0 +1,362 @@
+\section{Refer√™ncia da Classe Pumping\+Costs\+Obj\+Function}
+\label{class_pumping_costs_obj_function}\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+
+
+{\ttfamily \#include $<$Pumping\+Costs\+Obj\+Function.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Obj\+Function} e {\bf Res\+Op\+Obj\+Function}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Pumping\+Costs\+Obj\+Function} ()
+\item 
+{\bf $\sim$\+Pumping\+Costs\+Obj\+Function} ()
+\item 
+double {\bf run} ()
+\item 
+double {\bf calc\+Cost} (double value, int id\+Matrix, {\bf Date} date, double vol)
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+bool {\bf Check\+Limits} ({\bf Matrix} \&swarm\+Line)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+{\bf Pumping\+Costs\+Obj\+Function} (bool {\bf minimize}=true)
+\item 
+{\bf $\sim$\+Pumping\+Costs\+Obj\+Function} ()
+\item 
+double {\bf run} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements)
+\item 
+double {\bf calc\+Cost} (double value, int id\+Matrix, {\bf Date} date, double vol)
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+bool {\bf Check\+Limits} ({\bf Matrix} \&swarm\+Line)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String section)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String section)
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ {\bf Matrix} $\ast$ $>$ {\bf costs}
+\item 
+vector$<$ bool $>$ {\bf wet\+Months}
+\item 
+vector$<$ unsigned int $>$ {\bf id\+Sel\+Links}
+\item 
+vector$<$ {\bf Element\+ID} $>$ {\bf id\+Sel\+Links}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Obj\+Function} $\ast$ {\bf do\+Copy} ()
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descri√ß√£o Detalhada}
+Classe para funÁ„o objetivo Custo de Bombeamento 
+
+Defini√ß√£o na linha 9 do arquivo Obj\+Function/\+Pumping\+Costs/\+Pumping\+Costs\+Obj\+Function.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{Pumping\+Costs\+Obj\+Function()}]{\setlength{\rightskip}{0pt plus 5cm}Pumping\+Costs\+Obj\+Function\+::\+Pumping\+Costs\+Obj\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_obj_function_add42fc0ec3aa0f8814f017bf0af28d06}
+Construtor \index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!````~Pumping\+Costs\+Obj\+Function@{$\sim$\+Pumping\+Costs\+Obj\+Function}}
+\index{````~Pumping\+Costs\+Obj\+Function@{$\sim$\+Pumping\+Costs\+Obj\+Function}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{$\sim$\+Pumping\+Costs\+Obj\+Function()}]{\setlength{\rightskip}{0pt plus 5cm}Pumping\+Costs\+Obj\+Function\+::$\sim$\+Pumping\+Costs\+Obj\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_obj_function_a99a76e3038f015f73571f01e68c2291f}
+Destrutor \index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{Pumping\+Costs\+Obj\+Function(bool minimize=true)}]{\setlength{\rightskip}{0pt plus 5cm}Pumping\+Costs\+Obj\+Function\+::\+Pumping\+Costs\+Obj\+Function (
+\begin{DoxyParamCaption}
+\item[{bool}]{minimize = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_obj_function_a593380705d456f1426628975dc1b2853}
+Construtor \index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!````~Pumping\+Costs\+Obj\+Function@{$\sim$\+Pumping\+Costs\+Obj\+Function}}
+\index{````~Pumping\+Costs\+Obj\+Function@{$\sim$\+Pumping\+Costs\+Obj\+Function}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{$\sim$\+Pumping\+Costs\+Obj\+Function()}]{\setlength{\rightskip}{0pt plus 5cm}Pumping\+Costs\+Obj\+Function\+::$\sim$\+Pumping\+Costs\+Obj\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_obj_function_a99a76e3038f015f73571f01e68c2291f}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!calc\+Cost@{calc\+Cost}}
+\index{calc\+Cost@{calc\+Cost}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{calc\+Cost(double value, int id\+Matrix, Date date, double vol)}]{\setlength{\rightskip}{0pt plus 5cm}double Pumping\+Costs\+Obj\+Function\+::calc\+Cost (
+\begin{DoxyParamCaption}
+\item[{double}]{value, }
+\item[{int}]{id\+Matrix, }
+\item[{{\bf Date}}]{date, }
+\item[{double}]{vol}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_obj_function_ab0e94fc86eec29947fc56c3f690350c4}
+Retorna custo para um bombeamento dado 
+\begin{DoxyParams}{Par√¢metros}
+{\em value} & \\
+\hline
+{\em id\+Matrix} & Identificador da matriz a ser calculado \\
+\hline
+{\em date} & Dia do calculo do custo \\
+\hline
+{\em vol} & \\
+\hline
+\end{DoxyParams}
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!calc\+Cost@{calc\+Cost}}
+\index{calc\+Cost@{calc\+Cost}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{calc\+Cost(double value, int id\+Matrix, Date date, double vol)}]{\setlength{\rightskip}{0pt plus 5cm}double Pumping\+Costs\+Obj\+Function\+::calc\+Cost (
+\begin{DoxyParamCaption}
+\item[{double}]{value, }
+\item[{int}]{id\+Matrix, }
+\item[{{\bf Date}}]{date, }
+\item[{double}]{vol}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_obj_function_ab0e94fc86eec29947fc56c3f690350c4}
+Retorna custo para um bombeamento dado 
+\begin{DoxyParams}{Par√¢metros}
+{\em value} & \\
+\hline
+{\em id\+Matrix} & Identificador da matriz a ser calculado \\
+\hline
+{\em date} & Dia do calculo do custo \\
+\hline
+{\em vol} & \\
+\hline
+\end{DoxyParams}
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Pumping\+Costs\+Obj\+Function\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_pumping_costs_obj_function_a219a32df1e284992257e21496e559200}
+Checa se as informaÁıes est„o completas 
+\begin{DoxyParams}{Par√¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a10a132bc689a51c9aecaa60de7983331}.
+
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Pumping\+Costs\+Obj\+Function\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_pumping_costs_obj_function_a219a32df1e284992257e21496e559200}
+Checa se as informaÁıes est„o completas 
+\begin{DoxyParams}{Par√¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a10a132bc689a51c9aecaa60de7983331}.
+
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!Check\+Limits@{Check\+Limits}}
+\index{Check\+Limits@{Check\+Limits}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{Check\+Limits(\+Matrix \&swarm\+Line)}]{\setlength{\rightskip}{0pt plus 5cm}bool Pumping\+Costs\+Obj\+Function\+::\+Check\+Limits (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{swarm\+Line}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_obj_function_a5e978460b80863199ea21ed8d21d1e57}
+Verifica se swarm\+Line estoura os limites (0 $<$= swarm\+Line[i] $<$= 1) 
+\begin{DoxyParams}{Par√¢metros}
+{\em swarm\+Line} & ... \\
+\hline
+\end{DoxyParams}
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!Check\+Limits@{Check\+Limits}}
+\index{Check\+Limits@{Check\+Limits}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{Check\+Limits(\+Matrix \&swarm\+Line)}]{\setlength{\rightskip}{0pt plus 5cm}bool Pumping\+Costs\+Obj\+Function\+::\+Check\+Limits (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{swarm\+Line}
+\end{DoxyParamCaption}
+)}\label{class_pumping_costs_obj_function_a5e978460b80863199ea21ed8d21d1e57}
+Verifica se swarm\+Line estoura os limites (0 $<$= swarm\+Line[i] $<$= 1) 
+\begin{DoxyParams}{Par√¢metros}
+{\em swarm\+Line} & ... \\
+\hline
+\end{DoxyParams}
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!clear@{clear}}
+\index{clear@{clear}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Obj\+Function\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_pumping_costs_obj_function_a497513a91909b72fb08d89eaafa7ec42}
+Limpa Dados 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a0a924a09921115d1aaf93d716eef0f02}.
+
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!clear@{clear}}
+\index{clear@{clear}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Obj\+Function\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_pumping_costs_obj_function_a497513a91909b72fb08d89eaafa7ec42}
+Limpa Dados 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a0a924a09921115d1aaf93d716eef0f02}.
+
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{do\+Copy()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Obj\+Function}$\ast$ Pumping\+Costs\+Obj\+Function\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_pumping_costs_obj_function_a9d88de4a9229c19e9423e528a4018a63}
+Copia a funÁ„o Objetivo corretamente 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a11780e26a00ee5abf1304dfa872026f6}.
+
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Obj\+Function\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_pumping_costs_obj_function_a64561b190a6a77535a4010882b4b42e4}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_aa5cf9b1f0a157e6571ab2d6a29aa4885}.
+
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Obj\+Function\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_pumping_costs_obj_function_a9a6e9d006ec64d17204573cabdf58eb6}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_abf817a6bd51617b6381e627336a8b15d}.
+
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Obj\+Function\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_pumping_costs_obj_function_aed168153435eaf566ba70c7c484b3264}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a0adda529d70cc0557f7f700c944c52b9}.
+
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Pumping\+Costs\+Obj\+Function\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_pumping_costs_obj_function_aec17258e06a15ec56b4cf1f1226e057e}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a98425e92f67bc4f282c62c4b1c38a472}.
+
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!run@{run}}
+\index{run@{run}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}double Pumping\+Costs\+Obj\+Function\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_pumping_costs_obj_function_a25c2029aae64234b426e0ab47e88ef4e}
+Executa a funÁ„o objetivo 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a4454977f68f8b6f3565e1f6e1c016f56}.
+
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!run@{run}}
+\index{run@{run}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{run(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements)}]{\setlength{\rightskip}{0pt plus 5cm}double Pumping\+Costs\+Obj\+Function\+::run (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_pumping_costs_obj_function_a755e70e5dec40f6d9e9576577310a4c1}
+Executa a funÁ„o objetivo 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_ae8e96c0de73af8d11c6095f752de7fd4}.
+
+
+
+\subsection{Atributos}
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!costs@{costs}}
+\index{costs@{costs}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{costs}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ {\bf Matrix} $\ast$ $>$ Pumping\+Costs\+Obj\+Function\+::costs}\label{class_pumping_costs_obj_function_a93ffa800853b2ca04f6668d6601c2e2d}
+Matrizes de custo das estaÁıes de bombeamento 
+
+Defini√ß√£o na linha 16 do arquivo Obj\+Function/\+Pumping\+Costs/\+Pumping\+Costs\+Obj\+Function.\+h.
+
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!id\+Sel\+Links@{id\+Sel\+Links}}
+\index{id\+Sel\+Links@{id\+Sel\+Links}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{id\+Sel\+Links}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$unsigned int$>$ Pumping\+Costs\+Obj\+Function\+::id\+Sel\+Links}\label{class_pumping_costs_obj_function_a294e86c0c9968a2dbbe9d9972ea9323f}
+Trechos com bombeamento do sistema utilizados para c·lculo do custo total 
+
+Defini√ß√£o na linha 25 do arquivo Obj\+Function/\+Pumping\+Costs/\+Pumping\+Costs\+Obj\+Function.\+h.
+
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!id\+Sel\+Links@{id\+Sel\+Links}}
+\index{id\+Sel\+Links@{id\+Sel\+Links}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{id\+Sel\+Links}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Element\+ID}$>$ Pumping\+Costs\+Obj\+Function\+::id\+Sel\+Links}\label{class_pumping_costs_obj_function_abbcbe2b05a929e69f15cc411f23a7dcf}
+Trechos com bombeamento do sistema utilizados para c·lculo do custo total 
+
+Defini√ß√£o na linha 37 do arquivo /\+Obj\+Function/\+Pumping\+Costs/\+Pumping\+Costs\+Obj\+Function.\+h.
+
+\index{Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}!wet\+Months@{wet\+Months}}
+\index{wet\+Months@{wet\+Months}!Pumping\+Costs\+Obj\+Function@{Pumping\+Costs\+Obj\+Function}}
+\subsubsection[{wet\+Months}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ bool $>$ Pumping\+Costs\+Obj\+Function\+::wet\+Months}\label{class_pumping_costs_obj_function_aac39e0adb8ddb52d3ec5df86963b58a2}
+Matrizes de Meses com umidade 
+
+Defini√ß√£o na linha 20 do arquivo Obj\+Function/\+Pumping\+Costs/\+Pumping\+Costs\+Obj\+Function.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Obj\+Function/\+Pumping\+Costs/\+Pumping\+Costs\+Obj\+Function.\+h}\end{DoxyCompactItemize}

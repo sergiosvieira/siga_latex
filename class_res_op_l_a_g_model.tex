@@ -1,0 +1,179 @@
+\section{Referência da Classe Res\+Op\+L\+A\+G\+Model}
+\label{class_res_op_l_a_g_model}\index{Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}}
+
+
+{\ttfamily \#include $<$Res\+Op\+L\+A\+G\+Model.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Routing}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+L\+A\+G\+Model} ({\bf Link} $\ast${\bf link})
+\item 
+{\bf Res\+Op\+L\+A\+G\+Model} (const {\bf Res\+Op\+L\+A\+G\+Model} \&object)
+\item 
+virtual {\bf $\sim$\+Res\+Op\+L\+A\+G\+Model} ()
+\item 
+virtual double {\bf calc\+Outflow} ({\bf Date} date, {\bf Res\+Op\+Element} $\ast$element)
+\item 
+virtual bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+virtual void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String)
+\item 
+virtual void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+L\+A\+G\+Param} $\ast$ {\bf param}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf Res\+Op\+Routing} $\ast$ {\bf do\+Copy} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 13 do arquivo Res\+Op\+L\+A\+G\+Model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}!Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}}
+\index{Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}!Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}}
+\subsubsection[{Res\+Op\+L\+A\+G\+Model(\+Link $\ast$link)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+L\+A\+G\+Model\+::\+Res\+Op\+L\+A\+G\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link}
+\end{DoxyParamCaption}
+)}\label{class_res_op_l_a_g_model_afd5b1a0933aad6f77117d988a4a62193}
+Construtor padr�o da classe \doxyref{Res\+Op\+Element}{pag.}{class_res_op_element} 
+\begin{DoxyParams}{Parâmetros}
+{\em initial\+Date} & Inicio do intervalo \\
+\hline
+{\em final\+Date} & Final do Intervalo \\
+\hline
+{\em link} & Trecho de interesse \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}!Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}}
+\index{Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}!Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}}
+\subsubsection[{Res\+Op\+L\+A\+G\+Model(const Res\+Op\+L\+A\+G\+Model \&object)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+L\+A\+G\+Model\+::\+Res\+Op\+L\+A\+G\+Model (
+\begin{DoxyParamCaption}
+\item[{const {\bf Res\+Op\+L\+A\+G\+Model} \&}]{object}
+\end{DoxyParamCaption}
+)}\label{class_res_op_l_a_g_model_a980fad8082cf42e4479f64f1568fbcfc}
+Construtor de c�pia.
+
+O\+BS.\+: Realiza c�pia recursiva em \textquotesingle{}param\textquotesingle{}. \index{Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}!````~Res\+Op\+L\+A\+G\+Model@{$\sim$\+Res\+Op\+L\+A\+G\+Model}}
+\index{````~Res\+Op\+L\+A\+G\+Model@{$\sim$\+Res\+Op\+L\+A\+G\+Model}!Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}}
+\subsubsection[{$\sim$\+Res\+Op\+L\+A\+G\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+L\+A\+G\+Model\+::$\sim$\+Res\+Op\+L\+A\+G\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_l_a_g_model_a073423a7d5a695468c96844ec495e410}
+Destrutor 
+
+\subsection{Métodos}
+\index{Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}!calc\+Outflow@{calc\+Outflow}}
+\index{calc\+Outflow@{calc\+Outflow}!Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}}
+\subsubsection[{calc\+Outflow(\+Date date, Res\+Op\+Element $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}virtual double Res\+Op\+L\+A\+G\+Model\+::calc\+Outflow (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{date, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_l_a_g_model_a03a3852201ea7c461911a3ada46d5dac}
+Retorna valor da libera��o para a data fornecida 
+\begin{DoxyParams}{Parâmetros}
+{\em date} & Dia de consulta \\
+\hline
+{\em element} & Elemento \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Routing} \doxyref{}{pag.}{class_res_op_routing_ac7dee2a0ccc65d278e5798c424bbfb3f}.
+
+\index{Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+L\+A\+G\+Model\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_l_a_g_model_a036075fd769936f72cbbfb0af34bbb78}
+Verifica se todas as informa��es necess�rias foram fornecidas 
+\begin{DoxyParams}{Parâmetros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Routing} \doxyref{}{pag.}{class_res_op_routing_aa10d101e3437b3e2ea1ffb69bd0bbece}.
+
+\index{Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}}
+\subsubsection[{do\+Copy()}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Res\+Op\+Routing}$\ast$ Res\+Op\+L\+A\+G\+Model\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_op_l_a_g_model_a173c352ddb7970b9b238e2ae7f705e80}
+Copia a regra.
+
+Memory Ownership\+: caller (usu�rio) 
+
+Reimplementação de {\bf Res\+Op\+Routing} \doxyref{}{pag.}{class_res_op_routing_a1cfd74f67768bb5515d338c13e9cb0b2}.
+
+\index{Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+L\+A\+G\+Model\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_l_a_g_model_a89044f4c2b60cd240d78a01067fe2be4}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Routing} \doxyref{}{pag.}{class_res_op_routing_a88260f8b0c4449be9ddfd454c52ca176}.
+
+\index{Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+L\+A\+G\+Model\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_l_a_g_model_ad9d0340320eceb36d05ac86409441c9f}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Routing} \doxyref{}{pag.}{class_res_op_routing_af00ad0a420d79507cbd5fcfa575d61be}.
+
+
+
+\subsection{Atributos}
+\index{Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}!param@{param}}
+\index{param@{param}!Res\+Op\+L\+A\+G\+Model@{Res\+Op\+L\+A\+G\+Model}}
+\subsubsection[{param}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+L\+A\+G\+Param}$\ast$ Res\+Op\+L\+A\+G\+Model\+::param}\label{class_res_op_l_a_g_model_a81e4c4d14f2e87e05aebf071b52afe57}
+Par�metros do modelo L\+AG 
+
+Definição na linha 27 do arquivo Res\+Op\+L\+A\+G\+Model.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+L\+A\+G\+Model.\+h}\end{DoxyCompactItemize}

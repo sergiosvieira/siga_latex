@@ -1,0 +1,221 @@
+\section{Referência da Classe Separator\+Model}
+\label{class_separator_model}\index{Separator\+Model@{Separator\+Model}}
+
+
+{\ttfamily \#include $<$separator-\/model.\+h$>$}
+
+
+
+Herdeiro de {\bf Interface\+Model}.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf k\+Symbols} \{ \\*
+{\bf T\+AB}, 
+{\bf C\+O\+M\+MA}, 
+{\bf S\+E\+M\+I\+C\+O\+L\+ON}, 
+{\bf S\+P\+A\+CE}, 
+\\*
+{\bf O\+T\+H\+ER}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Separator\+Model} ()
+\item 
+void {\bf selected\+Symbols} (std\+::vector$<$ char $>$ \&a\+\_\+symbols)
+\item 
+void {\bf select\+Symbol} ({\bf k\+Symbols} a\+\_\+type, char a\+\_\+symbol= \textquotesingle{}\textbackslash{}0\textquotesingle{})
+\item 
+void {\bf unselect\+Symbol} ({\bf k\+Symbols} a\+\_\+type)
+\item 
+bool {\bf is\+Selected} ({\bf k\+Symbols} a\+\_\+type)
+\item 
+char {\bf symbol} ({\bf k\+Symbols} a\+\_\+type)
+\item 
+void {\bf delimiter} (char a\+\_\+delimiter)
+\item 
+char {\bf delimiter} ()
+\item 
+void {\bf first\+Field\+Header} (const bool \&a\+\_\+value)
+\item 
+bool {\bf is\+First\+Field\+Header} () const 
+\item 
+Json\+::\+Value {\bf json} ()
+\item 
+void {\bf load} (Json\+::\+Value \&a\+\_\+value)
+\item 
+const char $\ast$ {\bf root} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Estáticos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ {\bf k\+Root}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ {\bf k\+Symbols}, bool $>$ {\bf m\+\_\+selected\+Symbols}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Classe usada pela class \doxyref{Import\+Window}{pag.}{class_import_window} 
+
+Definição na linha 25 do arquivo separator-\/model.\+h.
+
+
+
+\subsection{Enumerações}
+\index{Separator\+Model@{Separator\+Model}!k\+Symbols@{k\+Symbols}}
+\index{k\+Symbols@{k\+Symbols}!Separator\+Model@{Separator\+Model}}
+\subsubsection[{k\+Symbols}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Separator\+Model\+::k\+Symbols}}\label{class_separator_model_a3c811881fdb6f27e87916e606a919f50}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{T\+AB@{T\+AB}!Separator\+Model@{Separator\+Model}}\index{Separator\+Model@{Separator\+Model}!T\+AB@{T\+AB}}\item[{\em 
+T\+AB\label{class_separator_model_a3c811881fdb6f27e87916e606a919f50a6811a816ce141a72a16a80a322d20502}
+}]\index{C\+O\+M\+MA@{C\+O\+M\+MA}!Separator\+Model@{Separator\+Model}}\index{Separator\+Model@{Separator\+Model}!C\+O\+M\+MA@{C\+O\+M\+MA}}\item[{\em 
+C\+O\+M\+MA\label{class_separator_model_a3c811881fdb6f27e87916e606a919f50a1aba0b00178bb48f97dfe3f49fb5204d}
+}]\index{S\+E\+M\+I\+C\+O\+L\+ON@{S\+E\+M\+I\+C\+O\+L\+ON}!Separator\+Model@{Separator\+Model}}\index{Separator\+Model@{Separator\+Model}!S\+E\+M\+I\+C\+O\+L\+ON@{S\+E\+M\+I\+C\+O\+L\+ON}}\item[{\em 
+S\+E\+M\+I\+C\+O\+L\+ON\label{class_separator_model_a3c811881fdb6f27e87916e606a919f50a21c311fba4f805804ada9709d5f17f2e}
+}]\index{S\+P\+A\+CE@{S\+P\+A\+CE}!Separator\+Model@{Separator\+Model}}\index{Separator\+Model@{Separator\+Model}!S\+P\+A\+CE@{S\+P\+A\+CE}}\item[{\em 
+S\+P\+A\+CE\label{class_separator_model_a3c811881fdb6f27e87916e606a919f50ac07f19591e3f186e9ff881ea463d8fd6}
+}]\index{O\+T\+H\+ER@{O\+T\+H\+ER}!Separator\+Model@{Separator\+Model}}\index{Separator\+Model@{Separator\+Model}!O\+T\+H\+ER@{O\+T\+H\+ER}}\item[{\em 
+O\+T\+H\+ER\label{class_separator_model_a3c811881fdb6f27e87916e606a919f50ae9900e27164234b2cfb40dc37fe950f6}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 28 do arquivo separator-\/model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Separator\+Model@{Separator\+Model}!Separator\+Model@{Separator\+Model}}
+\index{Separator\+Model@{Separator\+Model}!Separator\+Model@{Separator\+Model}}
+\subsubsection[{Separator\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Separator\+Model\+::\+Separator\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_separator_model_ab53aebb1fade79ac0e5db04d00d65ee1}
+
+
+\subsection{Métodos}
+\index{Separator\+Model@{Separator\+Model}!delimiter@{delimiter}}
+\index{delimiter@{delimiter}!Separator\+Model@{Separator\+Model}}
+\subsubsection[{delimiter(char a\+\_\+delimiter)}]{\setlength{\rightskip}{0pt plus 5cm}void Separator\+Model\+::delimiter (
+\begin{DoxyParamCaption}
+\item[{char}]{a\+\_\+delimiter}
+\end{DoxyParamCaption}
+)}\label{class_separator_model_ae0d791e5e7cd0ce094ef0075ebef12a2}
+\index{Separator\+Model@{Separator\+Model}!delimiter@{delimiter}}
+\index{delimiter@{delimiter}!Separator\+Model@{Separator\+Model}}
+\subsubsection[{delimiter()}]{\setlength{\rightskip}{0pt plus 5cm}char Separator\+Model\+::delimiter (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_separator_model_ac5e4681bdd73dd384e91682113a15bff}
+\index{Separator\+Model@{Separator\+Model}!first\+Field\+Header@{first\+Field\+Header}}
+\index{first\+Field\+Header@{first\+Field\+Header}!Separator\+Model@{Separator\+Model}}
+\subsubsection[{first\+Field\+Header(const bool \&a\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}void Separator\+Model\+::first\+Field\+Header (
+\begin{DoxyParamCaption}
+\item[{const bool \&}]{a\+\_\+value}
+\end{DoxyParamCaption}
+)}\label{class_separator_model_ab5f9483677c711e8255f543d47b21d25}
+\index{Separator\+Model@{Separator\+Model}!is\+First\+Field\+Header@{is\+First\+Field\+Header}}
+\index{is\+First\+Field\+Header@{is\+First\+Field\+Header}!Separator\+Model@{Separator\+Model}}
+\subsubsection[{is\+First\+Field\+Header() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Separator\+Model\+::is\+First\+Field\+Header (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_separator_model_a8388c832ab4baa8c99d07edbc702c813}
+\index{Separator\+Model@{Separator\+Model}!is\+Selected@{is\+Selected}}
+\index{is\+Selected@{is\+Selected}!Separator\+Model@{Separator\+Model}}
+\subsubsection[{is\+Selected(k\+Symbols a\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}bool Separator\+Model\+::is\+Selected (
+\begin{DoxyParamCaption}
+\item[{{\bf k\+Symbols}}]{a\+\_\+type}
+\end{DoxyParamCaption}
+)}\label{class_separator_model_abd0e08476a9e9745515d2cf14c9b2ee1}
+\index{Separator\+Model@{Separator\+Model}!json@{json}}
+\index{json@{json}!Separator\+Model@{Separator\+Model}}
+\subsubsection[{json()}]{\setlength{\rightskip}{0pt plus 5cm}Json\+::\+Value Separator\+Model\+::json (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_separator_model_a55373fae45d48599c32a8e825fe6ddd9}
+\{ \char`\"{}separator\char`\"{}\+: \{ \char`\"{}tab\char`\"{}\+: 0, \char`\"{}comma\char`\"{}\+: 0, \char`\"{}semicolon\char`\"{}\+: 1, \char`\"{}space\char`\"{}\+: 0, \char`\"{}other\char`\"{}\+: \{ \char`\"{}checked\char`\"{}\+: 1, \char`\"{}value\char`\"{}\+: \char`\"{}/\char`\"{} \}, \char`\"{}first\+\_\+field\+\_\+header\char`\"{}\+: true \} \} \index{Separator\+Model@{Separator\+Model}!load@{load}}
+\index{load@{load}!Separator\+Model@{Separator\+Model}}
+\subsubsection[{load(\+Json\+::\+Value \&a\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}void Separator\+Model\+::load (
+\begin{DoxyParamCaption}
+\item[{Json\+::\+Value \&}]{a\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_separator_model_a90f9c4299aaf0810ad9d79c0a77529f7}
+
+
+Implementa {\bf Interface\+Model} \doxyref{}{pag.}{class_interface_model_aabefd64dd681b6adf84eeaa3ba35e381}.
+
+\index{Separator\+Model@{Separator\+Model}!root@{root}}
+\index{root@{root}!Separator\+Model@{Separator\+Model}}
+\subsubsection[{root()}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Separator\+Model\+::root (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_separator_model_a7b7e950bb19889f1f97e3e49efe5dc8e}
+
+
+Implementa {\bf Interface\+Model} \doxyref{}{pag.}{class_interface_model_a48cdeaf2173330586130269911a91596}.
+
+\index{Separator\+Model@{Separator\+Model}!selected\+Symbols@{selected\+Symbols}}
+\index{selected\+Symbols@{selected\+Symbols}!Separator\+Model@{Separator\+Model}}
+\subsubsection[{selected\+Symbols(std\+::vector$<$ char $>$ \&a\+\_\+symbols)}]{\setlength{\rightskip}{0pt plus 5cm}void Separator\+Model\+::selected\+Symbols (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ char $>$ \&}]{a\+\_\+symbols}
+\end{DoxyParamCaption}
+)}\label{class_separator_model_a5ad62b06efc5ca905a686e1c3eefee39}
+\index{Separator\+Model@{Separator\+Model}!select\+Symbol@{select\+Symbol}}
+\index{select\+Symbol@{select\+Symbol}!Separator\+Model@{Separator\+Model}}
+\subsubsection[{select\+Symbol(k\+Symbols a\+\_\+type, char a\+\_\+symbol= \textquotesingle{}\textbackslash{}0\textquotesingle{})}]{\setlength{\rightskip}{0pt plus 5cm}void Separator\+Model\+::select\+Symbol (
+\begin{DoxyParamCaption}
+\item[{{\bf k\+Symbols}}]{a\+\_\+type, }
+\item[{char}]{a\+\_\+symbol = {\ttfamily \textquotesingle{}\textbackslash{}0\textquotesingle{}}}
+\end{DoxyParamCaption}
+)}\label{class_separator_model_a2fdb2c88e8afb7dcb4885e9e49ff7819}
+\index{Separator\+Model@{Separator\+Model}!symbol@{symbol}}
+\index{symbol@{symbol}!Separator\+Model@{Separator\+Model}}
+\subsubsection[{symbol(k\+Symbols a\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}char Separator\+Model\+::symbol (
+\begin{DoxyParamCaption}
+\item[{{\bf k\+Symbols}}]{a\+\_\+type}
+\end{DoxyParamCaption}
+)}\label{class_separator_model_a3e1483663ee6f91a51178d7f98d88d0c}
+\index{Separator\+Model@{Separator\+Model}!unselect\+Symbol@{unselect\+Symbol}}
+\index{unselect\+Symbol@{unselect\+Symbol}!Separator\+Model@{Separator\+Model}}
+\subsubsection[{unselect\+Symbol(k\+Symbols a\+\_\+type)}]{\setlength{\rightskip}{0pt plus 5cm}void Separator\+Model\+::unselect\+Symbol (
+\begin{DoxyParamCaption}
+\item[{{\bf k\+Symbols}}]{a\+\_\+type}
+\end{DoxyParamCaption}
+)}\label{class_separator_model_aa57e9091a114417695b0361219d6a993}
+
+
+\subsection{Atributos}
+\index{Separator\+Model@{Separator\+Model}!k\+Root@{k\+Root}}
+\index{k\+Root@{k\+Root}!Separator\+Model@{Separator\+Model}}
+\subsubsection[{k\+Root}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Separator\+Model\+::k\+Root\hspace{0.3cm}{\ttfamily [static]}}\label{class_separator_model_ad855f8d2693f06d51e3b9396d4917a88}
+
+
+Definição na linha 36 do arquivo separator-\/model.\+h.
+
+\index{Separator\+Model@{Separator\+Model}!m\+\_\+selected\+Symbols@{m\+\_\+selected\+Symbols}}
+\index{m\+\_\+selected\+Symbols@{m\+\_\+selected\+Symbols}!Separator\+Model@{Separator\+Model}}
+\subsubsection[{m\+\_\+selected\+Symbols}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<${\bf k\+Symbols}, bool$>$ Separator\+Model\+::m\+\_\+selected\+Symbols\hspace{0.3cm}{\ttfamily [protected]}}\label{class_separator_model_a509a2bfa827fb52d1e1ecdb46f8fab1f}
+
+
+Definição na linha 69 do arquivo separator-\/model.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf separator-\/model.\+h}\end{DoxyCompactItemize}

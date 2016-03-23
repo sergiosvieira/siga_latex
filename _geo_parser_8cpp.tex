@@ -1,0 +1,137 @@
+\section{Referência do Arquivo Geo\+Parser.\+cpp}
+\label{_geo_parser_8cpp}\index{Geo\+Parser.\+cpp@{Geo\+Parser.\+cpp}}
+{\ttfamily \#include \char`\"{}Network/\+Geo\+Rref/\+Geo\+Parser.\+h\char`\"{}}\\*
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+Geo\+Parser\+Token $\ast$ {\bf create\+Token} (Geo\+Parser\+Type a\+\_\+type, const std\+::string \&a\+\_\+label)
+\item 
+void {\bf update\+Token} (Geo\+Parser\+Token \&a\+\_\+token, Geo\+Parser\+Type a\+\_\+type, const std\+::string \&a\+\_\+label)
+\item 
+bool {\bf skip} (const char \&a\+\_\+char)
+\item 
+Geo\+Parser\+Error {\bf process\+Alpha} (std\+::string \&a\+\_\+alpha, {\bf std\+::string\+::const\+\_\+iterator} \&a\+\_\+it, const {\bf std\+::string\+::const\+\_\+iterator} \&a\+\_\+end)
+\item 
+Geo\+Parser\+Error {\bf process\+Digit} (std\+::string \&a\+\_\+digit, {\bf std\+::string\+::const\+\_\+iterator} \&a\+\_\+it, const {\bf std\+::string\+::const\+\_\+iterator} \&a\+\_\+end)
+\item 
+Geo\+Parser\+Error {\bf process\+String} (std\+::string \&a\+\_\+string, {\bf std\+::string\+::const\+\_\+iterator} \&a\+\_\+it, const {\bf std\+::string\+::const\+\_\+iterator} \&a\+\_\+end)
+\item 
+void {\bf pop\+And\+Push\+Token} (std\+::stack$<$ Geo\+Parser\+Token $\ast$ $>$ \&a\+\_\+stack)
+\item 
+Geo\+Parser\+Error {\bf geo\+\_\+parser} (const std\+::string a\+\_\+input, Geo\+Parser\+Token \&a\+\_\+root)
+\item 
+Geo\+Parser\+Token $\ast$ {\bf geo\+\_\+find} (Geo\+Parser\+Token $\ast$a\+\_\+node, const std\+::string \&a\+\_\+key)
+\end{DoxyCompactItemize}
+
+
+\subsection{Funções}
+\index{Geo\+Parser.\+cpp@{Geo\+Parser.\+cpp}!create\+Token@{create\+Token}}
+\index{create\+Token@{create\+Token}!Geo\+Parser.\+cpp@{Geo\+Parser.\+cpp}}
+\subsubsection[{create\+Token(\+Geo\+Parser\+Type a\+\_\+type, const std\+::string \&a\+\_\+label)}]{\setlength{\rightskip}{0pt plus 5cm}Geo\+Parser\+Token$\ast$ create\+Token (
+\begin{DoxyParamCaption}
+\item[{Geo\+Parser\+Type}]{a\+\_\+type, }
+\item[{const std\+::string \&}]{a\+\_\+label}
+\end{DoxyParamCaption}
+)}\label{_geo_parser_8cpp_a14099cd79d5501fb55f22a852f464fce}
+
+
+Definição na linha 3 do arquivo Geo\+Parser.\+cpp.
+
+\index{Geo\+Parser.\+cpp@{Geo\+Parser.\+cpp}!geo\+\_\+find@{geo\+\_\+find}}
+\index{geo\+\_\+find@{geo\+\_\+find}!Geo\+Parser.\+cpp@{Geo\+Parser.\+cpp}}
+\subsubsection[{geo\+\_\+find(\+Geo\+Parser\+Token $\ast$a\+\_\+node, const std\+::string \&a\+\_\+key)}]{\setlength{\rightskip}{0pt plus 5cm}Geo\+Parser\+Token$\ast$ geo\+\_\+find (
+\begin{DoxyParamCaption}
+\item[{Geo\+Parser\+Token $\ast$}]{a\+\_\+node, }
+\item[{const std\+::string \&}]{a\+\_\+key}
+\end{DoxyParamCaption}
+)}\label{_geo_parser_8cpp_a79275bea0dd8c1a089d9626773a8031b}
+
+
+Definição na linha 216 do arquivo Geo\+Parser.\+cpp.
+
+\index{Geo\+Parser.\+cpp@{Geo\+Parser.\+cpp}!geo\+\_\+parser@{geo\+\_\+parser}}
+\index{geo\+\_\+parser@{geo\+\_\+parser}!Geo\+Parser.\+cpp@{Geo\+Parser.\+cpp}}
+\subsubsection[{geo\+\_\+parser(const std\+::string a\+\_\+input, Geo\+Parser\+Token \&a\+\_\+root)}]{\setlength{\rightskip}{0pt plus 5cm}Geo\+Parser\+Error geo\+\_\+parser (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{a\+\_\+input, }
+\item[{Geo\+Parser\+Token \&}]{a\+\_\+root}
+\end{DoxyParamCaption}
+)}\label{_geo_parser_8cpp_ad312106b8bd1f94c37f58570974d6860}
+
+
+Definição na linha 135 do arquivo Geo\+Parser.\+cpp.
+
+\index{Geo\+Parser.\+cpp@{Geo\+Parser.\+cpp}!pop\+And\+Push\+Token@{pop\+And\+Push\+Token}}
+\index{pop\+And\+Push\+Token@{pop\+And\+Push\+Token}!Geo\+Parser.\+cpp@{Geo\+Parser.\+cpp}}
+\subsubsection[{pop\+And\+Push\+Token(std\+::stack$<$ Geo\+Parser\+Token $\ast$ $>$ \&a\+\_\+stack)}]{\setlength{\rightskip}{0pt plus 5cm}void pop\+And\+Push\+Token (
+\begin{DoxyParamCaption}
+\item[{std\+::stack$<$ Geo\+Parser\+Token $\ast$ $>$ \&}]{a\+\_\+stack}
+\end{DoxyParamCaption}
+)}\label{_geo_parser_8cpp_aa2f2b9af289aeacf3403f15acfde84a4}
+
+
+Definição na linha 126 do arquivo Geo\+Parser.\+cpp.
+
+\index{Geo\+Parser.\+cpp@{Geo\+Parser.\+cpp}!process\+Alpha@{process\+Alpha}}
+\index{process\+Alpha@{process\+Alpha}!Geo\+Parser.\+cpp@{Geo\+Parser.\+cpp}}
+\subsubsection[{process\+Alpha(std\+::string \&a\+\_\+alpha, std\+::string\+::const\+\_\+iterator \&a\+\_\+it, const std\+::string\+::const\+\_\+iterator \&a\+\_\+end)}]{\setlength{\rightskip}{0pt plus 5cm}Geo\+Parser\+Error process\+Alpha (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+alpha, }
+\item[{{\bf std\+::string\+::const\+\_\+iterator} \&}]{a\+\_\+it, }
+\item[{const {\bf std\+::string\+::const\+\_\+iterator} \&}]{a\+\_\+end}
+\end{DoxyParamCaption}
+)}\label{_geo_parser_8cpp_a89cd5e269659235fff8f9504f35a6de3}
+
+
+Definição na linha 36 do arquivo Geo\+Parser.\+cpp.
+
+\index{Geo\+Parser.\+cpp@{Geo\+Parser.\+cpp}!process\+Digit@{process\+Digit}}
+\index{process\+Digit@{process\+Digit}!Geo\+Parser.\+cpp@{Geo\+Parser.\+cpp}}
+\subsubsection[{process\+Digit(std\+::string \&a\+\_\+digit, std\+::string\+::const\+\_\+iterator \&a\+\_\+it, const std\+::string\+::const\+\_\+iterator \&a\+\_\+end)}]{\setlength{\rightskip}{0pt plus 5cm}Geo\+Parser\+Error process\+Digit (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+digit, }
+\item[{{\bf std\+::string\+::const\+\_\+iterator} \&}]{a\+\_\+it, }
+\item[{const {\bf std\+::string\+::const\+\_\+iterator} \&}]{a\+\_\+end}
+\end{DoxyParamCaption}
+)}\label{_geo_parser_8cpp_a8b9e2196a208093ec72f9fbd5d59ec5e}
+
+
+Definição na linha 66 do arquivo Geo\+Parser.\+cpp.
+
+\index{Geo\+Parser.\+cpp@{Geo\+Parser.\+cpp}!process\+String@{process\+String}}
+\index{process\+String@{process\+String}!Geo\+Parser.\+cpp@{Geo\+Parser.\+cpp}}
+\subsubsection[{process\+String(std\+::string \&a\+\_\+string, std\+::string\+::const\+\_\+iterator \&a\+\_\+it, const std\+::string\+::const\+\_\+iterator \&a\+\_\+end)}]{\setlength{\rightskip}{0pt plus 5cm}Geo\+Parser\+Error process\+String (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+string, }
+\item[{{\bf std\+::string\+::const\+\_\+iterator} \&}]{a\+\_\+it, }
+\item[{const {\bf std\+::string\+::const\+\_\+iterator} \&}]{a\+\_\+end}
+\end{DoxyParamCaption}
+)}\label{_geo_parser_8cpp_a7e401d6691e7b9a4e37b779d2fdc5e09}
+
+
+Definição na linha 97 do arquivo Geo\+Parser.\+cpp.
+
+\index{Geo\+Parser.\+cpp@{Geo\+Parser.\+cpp}!skip@{skip}}
+\index{skip@{skip}!Geo\+Parser.\+cpp@{Geo\+Parser.\+cpp}}
+\subsubsection[{skip(const char \&a\+\_\+char)}]{\setlength{\rightskip}{0pt plus 5cm}bool skip (
+\begin{DoxyParamCaption}
+\item[{const char \&}]{a\+\_\+char}
+\end{DoxyParamCaption}
+)}\label{_geo_parser_8cpp_ad16658ae0a36ff07cb83cafc9400a8a0}
+
+
+Definição na linha 24 do arquivo Geo\+Parser.\+cpp.
+
+\index{Geo\+Parser.\+cpp@{Geo\+Parser.\+cpp}!update\+Token@{update\+Token}}
+\index{update\+Token@{update\+Token}!Geo\+Parser.\+cpp@{Geo\+Parser.\+cpp}}
+\subsubsection[{update\+Token(\+Geo\+Parser\+Token \&a\+\_\+token, Geo\+Parser\+Type a\+\_\+type, const std\+::string \&a\+\_\+label)}]{\setlength{\rightskip}{0pt plus 5cm}void update\+Token (
+\begin{DoxyParamCaption}
+\item[{Geo\+Parser\+Token \&}]{a\+\_\+token, }
+\item[{Geo\+Parser\+Type}]{a\+\_\+type, }
+\item[{const std\+::string \&}]{a\+\_\+label}
+\end{DoxyParamCaption}
+)}\label{_geo_parser_8cpp_a3848587b7f27079c4d852f46796dae44}
+
+
+Definição na linha 18 do arquivo Geo\+Parser.\+cpp.
+

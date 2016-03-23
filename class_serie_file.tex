@@ -1,0 +1,262 @@
+\section{Referência da Classe Serie\+File}
+\label{class_serie_file}\index{Serie\+File@{Serie\+File}}
+
+
+{\ttfamily \#include $<$Serie\+File.\+h$>$}
+
+
+
+Herdeiro de {\bf S\+I\+G\+A\+File}.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Error\+Code} \{ {\bf E\+R\+R\+O\+R\+\_\+\+N\+O\+NE}, 
+{\bf E\+R\+R\+O\+R\+\_\+\+C\+R\+E\+A\+T\+E\+S\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE}, 
+{\bf E\+R\+R\+O\+R\+\_\+\+C\+A\+N\+C\+E\+L\+E\+D\+\_\+\+B\+Y\+\_\+\+U\+S\+ER}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf conv\+To\+S\+I\+G\+A\+FF} ()
+\item 
+bool {\bf conv\+F\+U\+N\+C\+E\+M\+E\+To\+S\+I\+G\+A\+FF} ()
+\item 
+bool {\bf conv\+A\+N\+A\+Pluv\+To\+S\+I\+G\+A\+FF} (bool s0, bool s1, bool s2, bool s3, bool s4, bool s5, bool s6)
+\item 
+bool {\bf conv\+A\+N\+A\+Lev\+To\+S\+I\+G\+A\+FF} (bool s0, bool s1, bool s2, bool s3, bool s4, bool s5, bool s6)
+\item 
+bool {\bf conv\+A\+N\+A\+Q\+To\+S\+I\+G\+A\+FF} (bool s0, bool s1, bool s2, bool s3, bool s4, bool s5, bool s6)
+\item 
+bool {\bf load\+Time\+Based\+Series} (int time\+Format=0)
+\item 
+{\bf Serie\+File} (const wx\+String \&{\bf name}, {\bf Serie} $\ast$serie, bool old\+Style=true)
+\item 
+virtual {\bf $\sim$\+Serie\+File} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bf convert\+To\+Series} (const std\+::string \&a\+\_\+output\+Directory, {\bf Draw\+Matrix} $\ast$a\+\_\+draw\+Matrix, {\bf Error\+Code} $\ast$a\+\_\+error=nullptr, {\bf Progress\+Callback} a\+\_\+callback=nullptr)
+\begin{DoxyCompactList}\small\item\em Convert matrix to series saving in specified directory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf S\+I\+G\+A\+Project}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 19 do arquivo Serie\+File.\+h.
+
+
+
+\subsection{Enumerações}
+\index{Serie\+File@{Serie\+File}!Error\+Code@{Error\+Code}}
+\index{Error\+Code@{Error\+Code}!Serie\+File@{Serie\+File}}
+\subsubsection[{Error\+Code}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Serie\+File\+::\+Error\+Code}}\label{class_serie_file_ac32ab9c16b4d3166b8854b2a3c144b72}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{E\+R\+R\+O\+R\+\_\+\+N\+O\+NE@{E\+R\+R\+O\+R\+\_\+\+N\+O\+NE}!Serie\+File@{Serie\+File}}\index{Serie\+File@{Serie\+File}!E\+R\+R\+O\+R\+\_\+\+N\+O\+NE@{E\+R\+R\+O\+R\+\_\+\+N\+O\+NE}}\item[{\em 
+E\+R\+R\+O\+R\+\_\+\+N\+O\+NE\label{class_serie_file_ac32ab9c16b4d3166b8854b2a3c144b72a5b8952cfc8ba5b1f4e3b35a0a9510904}
+}]\index{E\+R\+R\+O\+R\+\_\+\+C\+R\+E\+A\+T\+E\+S\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE@{E\+R\+R\+O\+R\+\_\+\+C\+R\+E\+A\+T\+E\+S\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE}!Serie\+File@{Serie\+File}}\index{Serie\+File@{Serie\+File}!E\+R\+R\+O\+R\+\_\+\+C\+R\+E\+A\+T\+E\+S\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE@{E\+R\+R\+O\+R\+\_\+\+C\+R\+E\+A\+T\+E\+S\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE}}\item[{\em 
+E\+R\+R\+O\+R\+\_\+\+C\+R\+E\+A\+T\+E\+S\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+F\+I\+LE\label{class_serie_file_ac32ab9c16b4d3166b8854b2a3c144b72a2746ed4e460162fdf9c96052e60a3675}
+}]\index{E\+R\+R\+O\+R\+\_\+\+C\+A\+N\+C\+E\+L\+E\+D\+\_\+\+B\+Y\+\_\+\+U\+S\+ER@{E\+R\+R\+O\+R\+\_\+\+C\+A\+N\+C\+E\+L\+E\+D\+\_\+\+B\+Y\+\_\+\+U\+S\+ER}!Serie\+File@{Serie\+File}}\index{Serie\+File@{Serie\+File}!E\+R\+R\+O\+R\+\_\+\+C\+A\+N\+C\+E\+L\+E\+D\+\_\+\+B\+Y\+\_\+\+U\+S\+ER@{E\+R\+R\+O\+R\+\_\+\+C\+A\+N\+C\+E\+L\+E\+D\+\_\+\+B\+Y\+\_\+\+U\+S\+ER}}\item[{\em 
+E\+R\+R\+O\+R\+\_\+\+C\+A\+N\+C\+E\+L\+E\+D\+\_\+\+B\+Y\+\_\+\+U\+S\+ER\label{class_serie_file_ac32ab9c16b4d3166b8854b2a3c144b72a895cfdbb0b5a16f6c251d8190ffb33c1}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 274 do arquivo Serie\+File.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Serie\+File@{Serie\+File}!Serie\+File@{Serie\+File}}
+\index{Serie\+File@{Serie\+File}!Serie\+File@{Serie\+File}}
+\subsubsection[{Serie\+File(const wx\+String \&name, Serie $\ast$serie, bool old\+Style=true)}]{\setlength{\rightskip}{0pt plus 5cm}Serie\+File\+::\+Serie\+File (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{name, }
+\item[{{\bf Serie} $\ast$}]{serie, }
+\item[{bool}]{old\+Style = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_serie_file_a238c0baee63d84a234a82608112d0cd6}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em name} & nome da se��o \\
+\hline
+{\em serie} & \doxyref{Serie}{pag.}{class_serie} \\
+\hline
+\end{DoxyParams}
+\index{Serie\+File@{Serie\+File}!````~Serie\+File@{$\sim$\+Serie\+File}}
+\index{````~Serie\+File@{$\sim$\+Serie\+File}!Serie\+File@{Serie\+File}}
+\subsubsection[{$\sim$\+Serie\+File()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Serie\+File\+::$\sim$\+Serie\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_serie_file_a024e4ec2424e8aec4989c48252b2865f}
+Destrutor 
+
+\subsection{Métodos}
+\index{Serie\+File@{Serie\+File}!conv\+A\+N\+A\+Lev\+To\+S\+I\+G\+A\+FF@{conv\+A\+N\+A\+Lev\+To\+S\+I\+G\+A\+FF}}
+\index{conv\+A\+N\+A\+Lev\+To\+S\+I\+G\+A\+FF@{conv\+A\+N\+A\+Lev\+To\+S\+I\+G\+A\+FF}!Serie\+File@{Serie\+File}}
+\subsubsection[{conv\+A\+N\+A\+Lev\+To\+S\+I\+G\+A\+F\+F(bool s0, bool s1, bool s2, bool s3, bool s4, bool s5, bool s6)}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+File\+::conv\+A\+N\+A\+Lev\+To\+S\+I\+G\+A\+FF (
+\begin{DoxyParamCaption}
+\item[{bool}]{s0, }
+\item[{bool}]{s1, }
+\item[{bool}]{s2, }
+\item[{bool}]{s3, }
+\item[{bool}]{s4, }
+\item[{bool}]{s5, }
+\item[{bool}]{s6}
+\end{DoxyParamCaption}
+)}\label{class_serie_file_a304167da13ba8deaeaa16e90e82c479d}
+Utilizado para importar series do formato antigo
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em s0} & ? \\
+\hline
+{\em s1} & ? \\
+\hline
+{\em s2} & ? \\
+\hline
+{\em s3} & ? \\
+\hline
+{\em s4} & ? \\
+\hline
+{\em s5} & ? \\
+\hline
+{\em s6} & ? \\
+\hline
+\end{DoxyParams}
+\index{Serie\+File@{Serie\+File}!conv\+A\+N\+A\+Pluv\+To\+S\+I\+G\+A\+FF@{conv\+A\+N\+A\+Pluv\+To\+S\+I\+G\+A\+FF}}
+\index{conv\+A\+N\+A\+Pluv\+To\+S\+I\+G\+A\+FF@{conv\+A\+N\+A\+Pluv\+To\+S\+I\+G\+A\+FF}!Serie\+File@{Serie\+File}}
+\subsubsection[{conv\+A\+N\+A\+Pluv\+To\+S\+I\+G\+A\+F\+F(bool s0, bool s1, bool s2, bool s3, bool s4, bool s5, bool s6)}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+File\+::conv\+A\+N\+A\+Pluv\+To\+S\+I\+G\+A\+FF (
+\begin{DoxyParamCaption}
+\item[{bool}]{s0, }
+\item[{bool}]{s1, }
+\item[{bool}]{s2, }
+\item[{bool}]{s3, }
+\item[{bool}]{s4, }
+\item[{bool}]{s5, }
+\item[{bool}]{s6}
+\end{DoxyParamCaption}
+)}\label{class_serie_file_aff3d0ba2f1a8c3d00ace9dfed94bb92e}
+Utilizado para importar series do formato antigo
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em s0} & ? \\
+\hline
+{\em s1} & ? \\
+\hline
+{\em s2} & ? \\
+\hline
+{\em s3} & ? \\
+\hline
+{\em s4} & ? \\
+\hline
+{\em s5} & ? \\
+\hline
+{\em s6} & ? \\
+\hline
+\end{DoxyParams}
+\index{Serie\+File@{Serie\+File}!conv\+A\+N\+A\+Q\+To\+S\+I\+G\+A\+FF@{conv\+A\+N\+A\+Q\+To\+S\+I\+G\+A\+FF}}
+\index{conv\+A\+N\+A\+Q\+To\+S\+I\+G\+A\+FF@{conv\+A\+N\+A\+Q\+To\+S\+I\+G\+A\+FF}!Serie\+File@{Serie\+File}}
+\subsubsection[{conv\+A\+N\+A\+Q\+To\+S\+I\+G\+A\+F\+F(bool s0, bool s1, bool s2, bool s3, bool s4, bool s5, bool s6)}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+File\+::conv\+A\+N\+A\+Q\+To\+S\+I\+G\+A\+FF (
+\begin{DoxyParamCaption}
+\item[{bool}]{s0, }
+\item[{bool}]{s1, }
+\item[{bool}]{s2, }
+\item[{bool}]{s3, }
+\item[{bool}]{s4, }
+\item[{bool}]{s5, }
+\item[{bool}]{s6}
+\end{DoxyParamCaption}
+)}\label{class_serie_file_aa1051ad2a466a1b953c1458f6b2ec8bc}
+Utilizado para importar series do formato antigo
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em s0} & ? \\
+\hline
+{\em s1} & ? \\
+\hline
+{\em s2} & ? \\
+\hline
+{\em s3} & ? \\
+\hline
+{\em s4} & ? \\
+\hline
+{\em s5} & ? \\
+\hline
+{\em s6} & ? \\
+\hline
+\end{DoxyParams}
+\index{Serie\+File@{Serie\+File}!convert\+To\+Series@{convert\+To\+Series}}
+\index{convert\+To\+Series@{convert\+To\+Series}!Serie\+File@{Serie\+File}}
+\subsubsection[{convert\+To\+Series(const std\+::string \&a\+\_\+output\+Directory, Draw\+Matrix $\ast$a\+\_\+draw\+Matrix, Error\+Code $\ast$a\+\_\+error=nullptr, Progress\+Callback a\+\_\+callback=nullptr)}]{\setlength{\rightskip}{0pt plus 5cm}static void Serie\+File\+::convert\+To\+Series (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+\_\+output\+Directory, }
+\item[{{\bf Draw\+Matrix} $\ast$}]{a\+\_\+draw\+Matrix, }
+\item[{{\bf Error\+Code} $\ast$}]{a\+\_\+error = {\ttfamily nullptr}, }
+\item[{{\bf Progress\+Callback}}]{a\+\_\+callback = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_serie_file_a54fb57543f8c460b227299de9ab6d081}
+
+
+Convert matrix to series saving in specified directory. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em const} & std\+::string\& -\/ \doxyref{Output}{pag.}{class_output} directory \\
+\hline
+{\em Draw\+Matrix$\ast$} & \\
+\hline
+{\em Error\+Code$\ast$} & \\
+\hline
+{\em Progress\+Callback} & \\
+\hline
+\end{DoxyParams}
+\index{Serie\+File@{Serie\+File}!conv\+F\+U\+N\+C\+E\+M\+E\+To\+S\+I\+G\+A\+FF@{conv\+F\+U\+N\+C\+E\+M\+E\+To\+S\+I\+G\+A\+FF}}
+\index{conv\+F\+U\+N\+C\+E\+M\+E\+To\+S\+I\+G\+A\+FF@{conv\+F\+U\+N\+C\+E\+M\+E\+To\+S\+I\+G\+A\+FF}!Serie\+File@{Serie\+File}}
+\subsubsection[{conv\+F\+U\+N\+C\+E\+M\+E\+To\+S\+I\+G\+A\+F\+F()}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+File\+::conv\+F\+U\+N\+C\+E\+M\+E\+To\+S\+I\+G\+A\+FF (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_file_ae5a02fbc696203598234008f77da13fd}
+Utilizado para importar series do formato antigo \index{Serie\+File@{Serie\+File}!conv\+To\+S\+I\+G\+A\+FF@{conv\+To\+S\+I\+G\+A\+FF}}
+\index{conv\+To\+S\+I\+G\+A\+FF@{conv\+To\+S\+I\+G\+A\+FF}!Serie\+File@{Serie\+File}}
+\subsubsection[{conv\+To\+S\+I\+G\+A\+F\+F()}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+File\+::conv\+To\+S\+I\+G\+A\+FF (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_file_a8042423f3f0ef760ba0eb6ed680f0246}
+Utilizado para importar series do formato antigo \index{Serie\+File@{Serie\+File}!load\+Time\+Based\+Series@{load\+Time\+Based\+Series}}
+\index{load\+Time\+Based\+Series@{load\+Time\+Based\+Series}!Serie\+File@{Serie\+File}}
+\subsubsection[{load\+Time\+Based\+Series(int time\+Format=0)}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+File\+::load\+Time\+Based\+Series (
+\begin{DoxyParamCaption}
+\item[{int}]{time\+Format = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_serie_file_ab649d66a428a396a0c38a7e54d530a44}
+Leitura de series horarias 
+
+\subsection{Amigas e Funções Relacionadas}
+\index{Serie\+File@{Serie\+File}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!Serie\+File@{Serie\+File}}
+\subsubsection[{S\+I\+G\+A\+Project}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf S\+I\+G\+A\+Project}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_serie_file_a1cd9954f0d975ab99a08e9fbf505e632}
+
+
+Definição na linha 353 do arquivo Serie\+File.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Serie\+File.\+h}\end{DoxyCompactItemize}

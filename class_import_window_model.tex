@@ -1,0 +1,299 @@
+\section{Referência da Classe Import\+Window\+Model}
+\label{class_import_window_model}\index{Import\+Window\+Model@{Import\+Window\+Model}}
+
+
+{\ttfamily \#include $<$import-\/window-\/model.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Import\+Window\+Model} ()
+\item 
+{\bf Import\+Window\+Model} (const char $\ast$a\+\_\+filename, char $\ast$a\+\_\+error=nullptr)
+\item 
+{\bf $\sim$\+Import\+Window\+Model} ()
+\item 
+int {\bf rows} ()
+\item 
+int {\bf cols} (char a\+\_\+delimiter)
+\item 
+int {\bf cols} ()
+\item 
+std\+::vector$<$ std\+::string $>$\+::const\+\_\+iterator {\bf first\+Row} ()
+\item 
+std\+::vector$<$ std\+::string $>$\+::const\+\_\+iterator {\bf last\+Row} ()
+\item 
+void {\bf filename} (const char $\ast$a\+\_\+filename)
+\begin{DoxyCompactList}\small\item\em Update parse filename. \end{DoxyCompactList}\item 
+void {\bf update\+Delimiters} (std\+::vector$<$ char $>$ \&\&a\+\_\+delimiters)
+\begin{DoxyCompactList}\small\item\em Update parse delimiters. \end{DoxyCompactList}\item 
+void {\bf update\+Comments\+Symbols} (std\+::vector$<$ std\+::string $>$ \&\&a\+\_\+comments)
+\begin{DoxyCompactList}\small\item\em Update parse comment symbols. \end{DoxyCompactList}\item 
+void {\bf update\+Enclosed\+Char} (const char \&a\+\_\+enclosed\+Char)
+\item 
+csv\+\_\+parser $\ast$ {\bf parser} ()
+\item 
+csv\+\_\+parser $\ast$ {\bf parser\+File} (const char $\ast$a\+\_\+filename, char $\ast$a\+\_\+error=nullptr)
+\item 
+bool {\bf load} (std\+::string \&a\+\_\+filename)
+\item 
+void {\bf add\+Value} (Json\+::\+Value m\+\_\+value)
+\item 
+Json\+::\+Value {\bf json} ()
+\item 
+void {\bf reset\+Parser} (char $\ast$a\+\_\+error=nullptr)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Estáticos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+static const char {\bf k\+Output\+Delimiter}
+\item 
+static const char $\ast$ {\bf k\+Root}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf m\+\_\+last\+Cols}
+\item 
+std\+::vector$<$ std\+::string $>$ {\bf m\+\_\+rows}
+\item 
+std\+::vector$<$ char $>$ {\bf m\+\_\+delimiters}
+\item 
+std\+::string {\bf m\+\_\+filename}
+\item 
+csv\+\_\+parser $\ast$ {\bf m\+\_\+parser}
+\item 
+Json\+::\+Value {\bf m\+\_\+json}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 18 do arquivo import-\/window-\/model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Import\+Window\+Model@{Import\+Window\+Model}!Import\+Window\+Model@{Import\+Window\+Model}}
+\index{Import\+Window\+Model@{Import\+Window\+Model}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{Import\+Window\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Import\+Window\+Model\+::\+Import\+Window\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_import_window_model_aec62cea144b38424bbd30f75a0fbf17a}
+\index{Import\+Window\+Model@{Import\+Window\+Model}!Import\+Window\+Model@{Import\+Window\+Model}}
+\index{Import\+Window\+Model@{Import\+Window\+Model}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{Import\+Window\+Model(const char $\ast$a\+\_\+filename, char $\ast$a\+\_\+error=nullptr)}]{\setlength{\rightskip}{0pt plus 5cm}Import\+Window\+Model\+::\+Import\+Window\+Model (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+filename, }
+\item[{char $\ast$}]{a\+\_\+error = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)}\label{class_import_window_model_aeb18e72909c1ee47078125fb3038e9a3}
+\index{Import\+Window\+Model@{Import\+Window\+Model}!````~Import\+Window\+Model@{$\sim$\+Import\+Window\+Model}}
+\index{````~Import\+Window\+Model@{$\sim$\+Import\+Window\+Model}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{$\sim$\+Import\+Window\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Import\+Window\+Model\+::$\sim$\+Import\+Window\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_import_window_model_abe9b02b740084e5951937b4ec8397f6a}
+
+
+\subsection{Métodos}
+\index{Import\+Window\+Model@{Import\+Window\+Model}!add\+Value@{add\+Value}}
+\index{add\+Value@{add\+Value}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{add\+Value(\+Json\+::\+Value m\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}void Import\+Window\+Model\+::add\+Value (
+\begin{DoxyParamCaption}
+\item[{Json\+::\+Value}]{m\+\_\+value}
+\end{DoxyParamCaption}
+)}\label{class_import_window_model_abc5f34688c4e00f5079d5d4ad9f2aa5f}
+\index{Import\+Window\+Model@{Import\+Window\+Model}!cols@{cols}}
+\index{cols@{cols}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{cols(char a\+\_\+delimiter)}]{\setlength{\rightskip}{0pt plus 5cm}int Import\+Window\+Model\+::cols (
+\begin{DoxyParamCaption}
+\item[{char}]{a\+\_\+delimiter}
+\end{DoxyParamCaption}
+)}\label{class_import_window_model_ab7fc29d37bb9d8f664d7383c4eb70f9a}
+\index{Import\+Window\+Model@{Import\+Window\+Model}!cols@{cols}}
+\index{cols@{cols}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{cols()}]{\setlength{\rightskip}{0pt plus 5cm}int Import\+Window\+Model\+::cols (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_import_window_model_a3387a3d614af02a1095ff8143e4ee8ec}
+\index{Import\+Window\+Model@{Import\+Window\+Model}!filename@{filename}}
+\index{filename@{filename}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{filename(const char $\ast$a\+\_\+filename)}]{\setlength{\rightskip}{0pt plus 5cm}void Import\+Window\+Model\+::filename (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+filename}
+\end{DoxyParamCaption}
+)}\label{class_import_window_model_ab7b85f4470ded2eff859cf4ba7fc575f}
+
+
+Update parse filename. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em const} & char$\ast$ -\/ Input file name \\
+\hline
+\end{DoxyParams}
+\index{Import\+Window\+Model@{Import\+Window\+Model}!first\+Row@{first\+Row}}
+\index{first\+Row@{first\+Row}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{first\+Row()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$\+::const\+\_\+iterator Import\+Window\+Model\+::first\+Row (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_import_window_model_a5284548185b952983e2bad2b36dcf884}
+\index{Import\+Window\+Model@{Import\+Window\+Model}!json@{json}}
+\index{json@{json}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{json()}]{\setlength{\rightskip}{0pt plus 5cm}Json\+::\+Value Import\+Window\+Model\+::json (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_import_window_model_a739a3174463b3c78f5ca20110e494004}
+\index{Import\+Window\+Model@{Import\+Window\+Model}!last\+Row@{last\+Row}}
+\index{last\+Row@{last\+Row}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{last\+Row()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$\+::const\+\_\+iterator Import\+Window\+Model\+::last\+Row (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_import_window_model_a01eb9cef75fb736d7664822b8b897823}
+\index{Import\+Window\+Model@{Import\+Window\+Model}!load@{load}}
+\index{load@{load}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{load(std\+::string \&a\+\_\+filename)}]{\setlength{\rightskip}{0pt plus 5cm}bool Import\+Window\+Model\+::load (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+filename}
+\end{DoxyParamCaption}
+)}\label{class_import_window_model_a4f51e61988f7a7d7c60682d14842c9e6}
+\index{Import\+Window\+Model@{Import\+Window\+Model}!parser@{parser}}
+\index{parser@{parser}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{parser()}]{\setlength{\rightskip}{0pt plus 5cm}csv\+\_\+parser$\ast$ Import\+Window\+Model\+::parser (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_import_window_model_a30382c3d349201fd166448b7278279e7}
+\index{Import\+Window\+Model@{Import\+Window\+Model}!parser\+File@{parser\+File}}
+\index{parser\+File@{parser\+File}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{parser\+File(const char $\ast$a\+\_\+filename, char $\ast$a\+\_\+error=nullptr)}]{\setlength{\rightskip}{0pt plus 5cm}csv\+\_\+parser$\ast$ Import\+Window\+Model\+::parser\+File (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+filename, }
+\item[{char $\ast$}]{a\+\_\+error = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)}\label{class_import_window_model_a1a2f5bf420d4c17fbb3a49a92699515c}
+\index{Import\+Window\+Model@{Import\+Window\+Model}!reset\+Parser@{reset\+Parser}}
+\index{reset\+Parser@{reset\+Parser}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{reset\+Parser(char $\ast$a\+\_\+error=nullptr)}]{\setlength{\rightskip}{0pt plus 5cm}void Import\+Window\+Model\+::reset\+Parser (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{a\+\_\+error = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)}\label{class_import_window_model_ad94e06b08b36ef504729590d36f0f372}
+\index{Import\+Window\+Model@{Import\+Window\+Model}!rows@{rows}}
+\index{rows@{rows}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{rows()}]{\setlength{\rightskip}{0pt plus 5cm}int Import\+Window\+Model\+::rows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_import_window_model_a8f34e12857a835640009a3c171b09f4f}
+\index{Import\+Window\+Model@{Import\+Window\+Model}!update\+Comments\+Symbols@{update\+Comments\+Symbols}}
+\index{update\+Comments\+Symbols@{update\+Comments\+Symbols}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{update\+Comments\+Symbols(std\+::vector$<$ std\+::string $>$ \&\&a\+\_\+comments)}]{\setlength{\rightskip}{0pt plus 5cm}void Import\+Window\+Model\+::update\+Comments\+Symbols (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ std\+::string $>$ \&\&}]{a\+\_\+comments}
+\end{DoxyParamCaption}
+)}\label{class_import_window_model_af5426728cedbf542fd3123cd8fcf2f28}
+
+
+Update parse comment symbols. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em std\+::vector$<$std\+::string$>$\&\&} & -\/ Vector of comment symbols \\
+\hline
+\end{DoxyParams}
+\index{Import\+Window\+Model@{Import\+Window\+Model}!update\+Delimiters@{update\+Delimiters}}
+\index{update\+Delimiters@{update\+Delimiters}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{update\+Delimiters(std\+::vector$<$ char $>$ \&\&a\+\_\+delimiters)}]{\setlength{\rightskip}{0pt plus 5cm}void Import\+Window\+Model\+::update\+Delimiters (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ char $>$ \&\&}]{a\+\_\+delimiters}
+\end{DoxyParamCaption}
+)}\label{class_import_window_model_add54cc35aed13117c7f5adbbdfe163b4}
+
+
+Update parse delimiters. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em std\+::vector$<$char$>$\&\&} & -\/ Vector of delimiters \\
+\hline
+\end{DoxyParams}
+\index{Import\+Window\+Model@{Import\+Window\+Model}!update\+Enclosed\+Char@{update\+Enclosed\+Char}}
+\index{update\+Enclosed\+Char@{update\+Enclosed\+Char}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{update\+Enclosed\+Char(const char \&a\+\_\+enclosed\+Char)}]{\setlength{\rightskip}{0pt plus 5cm}void Import\+Window\+Model\+::update\+Enclosed\+Char (
+\begin{DoxyParamCaption}
+\item[{const char \&}]{a\+\_\+enclosed\+Char}
+\end{DoxyParamCaption}
+)}\label{class_import_window_model_a0ac7fc4811c0e713fb8bdb220d74a37e}
+
+
+\subsection{Atributos}
+\index{Import\+Window\+Model@{Import\+Window\+Model}!k\+Output\+Delimiter@{k\+Output\+Delimiter}}
+\index{k\+Output\+Delimiter@{k\+Output\+Delimiter}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{k\+Output\+Delimiter}]{\setlength{\rightskip}{0pt plus 5cm}const char Import\+Window\+Model\+::k\+Output\+Delimiter\hspace{0.3cm}{\ttfamily [static]}}\label{class_import_window_model_a46e8e36d5f9e57d29ca496c469c0ce37}
+
+
+Definição na linha 21 do arquivo import-\/window-\/model.\+h.
+
+\index{Import\+Window\+Model@{Import\+Window\+Model}!k\+Root@{k\+Root}}
+\index{k\+Root@{k\+Root}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{k\+Root}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Import\+Window\+Model\+::k\+Root\hspace{0.3cm}{\ttfamily [static]}}\label{class_import_window_model_ada497b2fa3081d174dd2defeaf76953d}
+
+
+Definição na linha 22 do arquivo import-\/window-\/model.\+h.
+
+\index{Import\+Window\+Model@{Import\+Window\+Model}!m\+\_\+delimiters@{m\+\_\+delimiters}}
+\index{m\+\_\+delimiters@{m\+\_\+delimiters}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{m\+\_\+delimiters}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$char$>$ Import\+Window\+Model\+::m\+\_\+delimiters\hspace{0.3cm}{\ttfamily [protected]}}\label{class_import_window_model_a73a61fa55c53ffa5458130cbe8bccae8}
+
+
+Definição na linha 58 do arquivo import-\/window-\/model.\+h.
+
+\index{Import\+Window\+Model@{Import\+Window\+Model}!m\+\_\+filename@{m\+\_\+filename}}
+\index{m\+\_\+filename@{m\+\_\+filename}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{m\+\_\+filename}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Import\+Window\+Model\+::m\+\_\+filename\hspace{0.3cm}{\ttfamily [protected]}}\label{class_import_window_model_a585fc322e320947ebc9a97cbe265faa5}
+
+
+Definição na linha 59 do arquivo import-\/window-\/model.\+h.
+
+\index{Import\+Window\+Model@{Import\+Window\+Model}!m\+\_\+json@{m\+\_\+json}}
+\index{m\+\_\+json@{m\+\_\+json}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{m\+\_\+json}]{\setlength{\rightskip}{0pt plus 5cm}Json\+::\+Value Import\+Window\+Model\+::m\+\_\+json\hspace{0.3cm}{\ttfamily [protected]}}\label{class_import_window_model_a5fab576f116d351419b4e1fd6ad6d2b6}
+
+
+Definição na linha 61 do arquivo import-\/window-\/model.\+h.
+
+\index{Import\+Window\+Model@{Import\+Window\+Model}!m\+\_\+last\+Cols@{m\+\_\+last\+Cols}}
+\index{m\+\_\+last\+Cols@{m\+\_\+last\+Cols}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{m\+\_\+last\+Cols}]{\setlength{\rightskip}{0pt plus 5cm}int Import\+Window\+Model\+::m\+\_\+last\+Cols\hspace{0.3cm}{\ttfamily [protected]}}\label{class_import_window_model_a0202bdcfa6aa15d7fb2c0e08f2b8480d}
+
+
+Definição na linha 56 do arquivo import-\/window-\/model.\+h.
+
+\index{Import\+Window\+Model@{Import\+Window\+Model}!m\+\_\+parser@{m\+\_\+parser}}
+\index{m\+\_\+parser@{m\+\_\+parser}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{m\+\_\+parser}]{\setlength{\rightskip}{0pt plus 5cm}csv\+\_\+parser$\ast$ Import\+Window\+Model\+::m\+\_\+parser\hspace{0.3cm}{\ttfamily [protected]}}\label{class_import_window_model_a34c198a55b69959ebb6e60e654107cca}
+
+
+Definição na linha 60 do arquivo import-\/window-\/model.\+h.
+
+\index{Import\+Window\+Model@{Import\+Window\+Model}!m\+\_\+rows@{m\+\_\+rows}}
+\index{m\+\_\+rows@{m\+\_\+rows}!Import\+Window\+Model@{Import\+Window\+Model}}
+\subsubsection[{m\+\_\+rows}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ Import\+Window\+Model\+::m\+\_\+rows\hspace{0.3cm}{\ttfamily [protected]}}\label{class_import_window_model_af441fbb16e2ee68c01736bf99555ff3a}
+
+
+Definição na linha 57 do arquivo import-\/window-\/model.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf import-\/window-\/model.\+h}\end{DoxyCompactItemize}

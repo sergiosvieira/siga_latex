@@ -1,0 +1,260 @@
+\section{ReferÃªncia da Classe Shortage\+Volume\+Obj\+Function}
+\label{class_shortage_volume_obj_function}\index{Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}}
+
+
+{\ttfamily \#include $<$Shortage\+Volume\+Obj\+Function.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Obj\+Function} e {\bf Res\+Op\+Obj\+Function}.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Shortage\+Volume\+Obj\+Function} ()
+\item 
+{\bf $\sim$\+Shortage\+Volume\+Obj\+Function} ()
+\item 
+double {\bf run} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+{\bf Shortage\+Volume\+Obj\+Function} (bool {\bf minimize}=true)
+\item 
+{\bf $\sim$\+Shortage\+Volume\+Obj\+Function} ()
+\item 
+double {\bf run} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements)
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String section)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$, wx\+String section)
+\end{DoxyCompactItemize}
+\subsection*{Atributos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ unsigned int $>$ {\bf id\+Sel\+Demands}
+\item 
+vector$<$ {\bf Element\+ID} $>$ {\bf id\+Sel\+Demands}
+\end{DoxyCompactItemize}
+\subsection*{MÃ©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Obj\+Function} $\ast$ {\bf do\+Copy} ()
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+Classe para função objetivo Volume Não-\/\+Atendido 
+
+DefiniÃ§Ã£o na linha 9 do arquivo Obj\+Function/\+Shortage\+Volume/\+Shortage\+Volume\+Obj\+Function.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}!Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}}
+\index{Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}!Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}}
+\subsubsection[{Shortage\+Volume\+Obj\+Function()}]{\setlength{\rightskip}{0pt plus 5cm}Shortage\+Volume\+Obj\+Function\+::\+Shortage\+Volume\+Obj\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_shortage_volume_obj_function_a9cb1a14d552009ec1601279aba0ea832}
+Construtor \index{Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}!````~Shortage\+Volume\+Obj\+Function@{$\sim$\+Shortage\+Volume\+Obj\+Function}}
+\index{````~Shortage\+Volume\+Obj\+Function@{$\sim$\+Shortage\+Volume\+Obj\+Function}!Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}}
+\subsubsection[{$\sim$\+Shortage\+Volume\+Obj\+Function()}]{\setlength{\rightskip}{0pt plus 5cm}Shortage\+Volume\+Obj\+Function\+::$\sim$\+Shortage\+Volume\+Obj\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_shortage_volume_obj_function_a23eaa6526ac3be4df32c17bd3c25f813}
+Destrutor \index{Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}!Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}}
+\index{Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}!Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}}
+\subsubsection[{Shortage\+Volume\+Obj\+Function(bool minimize=true)}]{\setlength{\rightskip}{0pt plus 5cm}Shortage\+Volume\+Obj\+Function\+::\+Shortage\+Volume\+Obj\+Function (
+\begin{DoxyParamCaption}
+\item[{bool}]{minimize = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_shortage_volume_obj_function_a5dd2c50c9c5972b1573c7761a3c3dbdc}
+Construtor \index{Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}!````~Shortage\+Volume\+Obj\+Function@{$\sim$\+Shortage\+Volume\+Obj\+Function}}
+\index{````~Shortage\+Volume\+Obj\+Function@{$\sim$\+Shortage\+Volume\+Obj\+Function}!Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}}
+\subsubsection[{$\sim$\+Shortage\+Volume\+Obj\+Function()}]{\setlength{\rightskip}{0pt plus 5cm}Shortage\+Volume\+Obj\+Function\+::$\sim$\+Shortage\+Volume\+Obj\+Function (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_shortage_volume_obj_function_a23eaa6526ac3be4df32c17bd3c25f813}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Shortage\+Volume\+Obj\+Function\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_shortage_volume_obj_function_ae9710bff2cb632c22819b7d3d339ee17}
+Checa se as informações estão completas 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a10a132bc689a51c9aecaa60de7983331}.
+
+\index{Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Shortage\+Volume\+Obj\+Function\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_shortage_volume_obj_function_ae9710bff2cb632c22819b7d3d339ee17}
+Checa se as informações estão completas 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a10a132bc689a51c9aecaa60de7983331}.
+
+\index{Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}!clear@{clear}}
+\index{clear@{clear}!Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Shortage\+Volume\+Obj\+Function\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_shortage_volume_obj_function_aa2fcb89075800351cbfa3624e03e269c}
+Limpa Dados 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a0a924a09921115d1aaf93d716eef0f02}.
+
+\index{Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}!clear@{clear}}
+\index{clear@{clear}!Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Shortage\+Volume\+Obj\+Function\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_shortage_volume_obj_function_aa2fcb89075800351cbfa3624e03e269c}
+Limpa Dados 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a0a924a09921115d1aaf93d716eef0f02}.
+
+\index{Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}}
+\subsubsection[{do\+Copy()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Obj\+Function}$\ast$ Shortage\+Volume\+Obj\+Function\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_shortage_volume_obj_function_abce74dcf078c62ed6f71a0b6e14b7fd4}
+Copia a função Objetivo corretamente 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a11780e26a00ee5abf1304dfa872026f6}.
+
+\index{Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Shortage\+Volume\+Obj\+Function\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_shortage_volume_obj_function_ad6020e64f59a2b6512cec6689f60f0f7}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_aa5cf9b1f0a157e6571ab2d6a29aa4885}.
+
+\index{Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Shortage\+Volume\+Obj\+Function\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_shortage_volume_obj_function_a1459a08d38062812b24edc42c7a4a938}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_abf817a6bd51617b6381e627336a8b15d}.
+
+\index{Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Shortage\+Volume\+Obj\+Function\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_shortage_volume_obj_function_afb074ccb973dfc3d8dc224d57b20e3ec}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a0adda529d70cc0557f7f700c944c52b9}.
+
+\index{Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Shortage\+Volume\+Obj\+Function\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_shortage_volume_obj_function_a999929281b3a2699132d0c04f186fa18}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a98425e92f67bc4f282c62c4b1c38a472}.
+
+\index{Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}!run@{run}}
+\index{run@{run}!Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}double Shortage\+Volume\+Obj\+Function\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_shortage_volume_obj_function_af3ccb27c18e87c06e00dcbf25dce7eca}
+Executa a função objetivo 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_a4454977f68f8b6f3565e1f6e1c016f56}.
+
+\index{Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}!run@{run}}
+\index{run@{run}!Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}}
+\subsubsection[{run(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements)}]{\setlength{\rightskip}{0pt plus 5cm}double Shortage\+Volume\+Obj\+Function\+::run (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_shortage_volume_obj_function_a6858aaae4c8d95857ae080a4ee3d12c4}
+Executa a função objetivo 
+
+Implementa {\bf Res\+Op\+Obj\+Function} \doxyref{}{pag.}{class_res_op_obj_function_ae8e96c0de73af8d11c6095f752de7fd4}.
+
+
+
+\subsection{Atributos}
+\index{Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}!id\+Sel\+Demands@{id\+Sel\+Demands}}
+\index{id\+Sel\+Demands@{id\+Sel\+Demands}!Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}}
+\subsubsection[{id\+Sel\+Demands}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$unsigned int$>$ Shortage\+Volume\+Obj\+Function\+::id\+Sel\+Demands}\label{class_shortage_volume_obj_function_ae202f5bb6aaabf081e1b0fc8fe900e30}
+Demandas do sistema utilizadas para cálculo do volume não-\/atendido 
+
+DefiniÃ§Ã£o na linha 16 do arquivo Obj\+Function/\+Shortage\+Volume/\+Shortage\+Volume\+Obj\+Function.\+h.
+
+\index{Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}!id\+Sel\+Demands@{id\+Sel\+Demands}}
+\index{id\+Sel\+Demands@{id\+Sel\+Demands}!Shortage\+Volume\+Obj\+Function@{Shortage\+Volume\+Obj\+Function}}
+\subsubsection[{id\+Sel\+Demands}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Element\+ID}$>$ Shortage\+Volume\+Obj\+Function\+::id\+Sel\+Demands}\label{class_shortage_volume_obj_function_a9890db89cb2d1ed8e60144e65841e902}
+Demandas do sistema utilizadas para cálculo do volume não-\/atendido 
+
+DefiniÃ§Ã£o na linha 28 do arquivo /\+Obj\+Function/\+Shortage\+Volume/\+Shortage\+Volume\+Obj\+Function.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Obj\+Function/\+Shortage\+Volume/\+Shortage\+Volume\+Obj\+Function.\+h}\end{DoxyCompactItemize}

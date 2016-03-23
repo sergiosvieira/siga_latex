@@ -1,0 +1,62 @@
+\section{Refer√™ncia do Arquivo import-\/window-\/utils.h}
+\label{import-window-utils_8h}\index{import-\/window-\/utils.\+h@{import-\/window-\/utils.\+h}}
+{\ttfamily \#include $<$cassert$>$}\\*
+\subsection*{Enumera√ß√µes}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Data\+Layout} \{ {\bf P\+O\+R\+T\+R\+A\+IT}, 
+{\bf L\+A\+N\+D\+S\+C\+A\+PE}
+ \}
+\item 
+enum {\bf Date\+Column} \{ {\bf O\+N\+E\+\_\+\+C\+O\+L\+U\+MN}, 
+{\bf U\+P\+\_\+\+T\+O\+\_\+\+T\+H\+R\+E\+E\+\_\+\+C\+O\+L\+U\+M\+NS}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumera√ß√µes}
+\index{import-\/window-\/utils.\+h@{import-\/window-\/utils.\+h}!Data\+Layout@{Data\+Layout}}
+\index{Data\+Layout@{Data\+Layout}!import-\/window-\/utils.\+h@{import-\/window-\/utils.\+h}}
+\subsubsection[{Data\+Layout}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Data\+Layout}}\label{import-window-utils_8h_ad1d5cce2d9e9a5d61c243e5c989112e0}
+\subsection*{Layout dos dados }
+
+P\+O\+R\+T\+R\+A\+IT (SÈrie Temporal, Matrizes do Siga)
+\begin{DoxyItemize}
+\item Os valores est„o dispostos de cima para baixo para cada estaÁ„o
+\item Existe 1 data por linha (As datas s„o explÌcitas)
+\item O cÛdigo de todas as estaÁıes est„o em uma ˙nica linha EstaÁ„o 1 EstaÁ„o 2 EstaÁ„o 3 $\vert$ $\vert$ $\vert$ v v v 01011912 0.\+1 0.\+2 0.\+3 $\vert$ $\vert$ $\vert$ v v v 02011912 0.\+4 0.\+5 0.\+6 \begin{DoxyVerb}LANDSCAPE (Arquivos da ANA - Hidroweb)
+- Os valores est„o dispostos da esquerda para direita
+- Existe 1 data por coluna (data inicial). Com exceÁ„o da data inicial, a data de cada valor È implÌcita.
+- 1 cÛdigo de estaÁ„o por linha
+                    01011912    02011912 -> Estes valores s„o implÌcitos, ou seja, n„o existem no arquivo de entrada
+\end{DoxyVerb}
+ EstaÁ„o 1 -\/$>$ 01011912 -\/$>$ 0.\+1 -\/$>$ 0.\+4 EstaÁ„o 2 -\/$>$ 01011912 -\/$>$ 0.\+2 -\/$>$ 0.\+5 EstaÁ„o 3 -\/$>$ 01011912 -\/$>$ 0.\+3 -\/$>$ 0.\+6 
+\end{DoxyItemize}\begin{Desc}
+\item[Valores de enumera√ß√µes]\par
+\begin{description}
+\index{P\+O\+R\+T\+R\+A\+IT@{P\+O\+R\+T\+R\+A\+IT}!import-\/window-\/utils.\+h@{import-\/window-\/utils.\+h}}\index{import-\/window-\/utils.\+h@{import-\/window-\/utils.\+h}!P\+O\+R\+T\+R\+A\+IT@{P\+O\+R\+T\+R\+A\+IT}}\item[{\em 
+P\+O\+R\+T\+R\+A\+IT\label{import-window-utils_8h_ad1d5cce2d9e9a5d61c243e5c989112e0af824fcbdaf7ede37030e39a2156f51e1}
+}]\index{L\+A\+N\+D\+S\+C\+A\+PE@{L\+A\+N\+D\+S\+C\+A\+PE}!import-\/window-\/utils.\+h@{import-\/window-\/utils.\+h}}\index{import-\/window-\/utils.\+h@{import-\/window-\/utils.\+h}!L\+A\+N\+D\+S\+C\+A\+PE@{L\+A\+N\+D\+S\+C\+A\+PE}}\item[{\em 
+L\+A\+N\+D\+S\+C\+A\+PE\label{import-window-utils_8h_ad1d5cce2d9e9a5d61c243e5c989112e0aad82a3dd15e2be2845cecf9a97017a4a}
+}]\end{description}
+\end{Desc}
+
+
+Defini√ß√£o na linha 30 do arquivo import-\/window-\/utils.\+h.
+
+\index{import-\/window-\/utils.\+h@{import-\/window-\/utils.\+h}!Date\+Column@{Date\+Column}}
+\index{Date\+Column@{Date\+Column}!import-\/window-\/utils.\+h@{import-\/window-\/utils.\+h}}
+\subsubsection[{Date\+Column}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Date\+Column}}\label{import-window-utils_8h_a4cd1ee55e995ac6b6aa1bad1c9d07d31}
+\begin{Desc}
+\item[Valores de enumera√ß√µes]\par
+\begin{description}
+\index{O\+N\+E\+\_\+\+C\+O\+L\+U\+MN@{O\+N\+E\+\_\+\+C\+O\+L\+U\+MN}!import-\/window-\/utils.\+h@{import-\/window-\/utils.\+h}}\index{import-\/window-\/utils.\+h@{import-\/window-\/utils.\+h}!O\+N\+E\+\_\+\+C\+O\+L\+U\+MN@{O\+N\+E\+\_\+\+C\+O\+L\+U\+MN}}\item[{\em 
+O\+N\+E\+\_\+\+C\+O\+L\+U\+MN\label{import-window-utils_8h_a4cd1ee55e995ac6b6aa1bad1c9d07d31a5242ac563fe675391bd42cb56cac1a1d}
+}]\index{U\+P\+\_\+\+T\+O\+\_\+\+T\+H\+R\+E\+E\+\_\+\+C\+O\+L\+U\+M\+NS@{U\+P\+\_\+\+T\+O\+\_\+\+T\+H\+R\+E\+E\+\_\+\+C\+O\+L\+U\+M\+NS}!import-\/window-\/utils.\+h@{import-\/window-\/utils.\+h}}\index{import-\/window-\/utils.\+h@{import-\/window-\/utils.\+h}!U\+P\+\_\+\+T\+O\+\_\+\+T\+H\+R\+E\+E\+\_\+\+C\+O\+L\+U\+M\+NS@{U\+P\+\_\+\+T\+O\+\_\+\+T\+H\+R\+E\+E\+\_\+\+C\+O\+L\+U\+M\+NS}}\item[{\em 
+U\+P\+\_\+\+T\+O\+\_\+\+T\+H\+R\+E\+E\+\_\+\+C\+O\+L\+U\+M\+NS\label{import-window-utils_8h_a4cd1ee55e995ac6b6aa1bad1c9d07d31a1fb71cc57c2a5b9b6b7d77c07b55ba21}
+}]\end{description}
+\end{Desc}
+
+
+Defini√ß√£o na linha 36 do arquivo import-\/window-\/utils.\+h.
+

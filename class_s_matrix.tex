@@ -1,0 +1,909 @@
+\section{Referência da Template de Classe S\+Matrix$<$ T $>$}
+\label{class_s_matrix}\index{S\+Matrix$<$ T $>$@{S\+Matrix$<$ T $>$}}
+
+
+{\ttfamily \#include $<$S\+Matrix.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+Matrix} (unsigned int row=0, unsigned int col=0)
+\item 
+virtual {\bf $\sim$\+S\+Matrix} ()
+\item 
+unsigned int {\bf n\+Lin} () const 
+\item 
+unsigned int {\bf n\+Col} () const 
+\item 
+const vector$<$ T $>$ \& {\bf get\+Data} () const 
+\item 
+bool {\bf empty} () const 
+\item 
+void {\bf set\+Value} (unsigned int row, unsigned int col, T value)
+\item 
+T {\bf get\+Value} (unsigned int row, unsigned int col) const 
+\item 
+void {\bf set\+Col} (unsigned int col, const {\bf S\+Matrix}$<$ T $>$ \&Other)
+\item 
+void {\bf set\+Lin} (unsigned int row, const {\bf S\+Matrix}$<$ T $>$ \&Other)
+\item 
+void {\bf set\+Min\+Value} (T value)
+\item 
+void {\bf set\+Max\+Value} (T value)
+\item 
+T {\bf get\+Min\+Value} (unsigned int \&row, unsigned int \&col) const 
+\item 
+T {\bf get\+Max\+Value} (unsigned int \&row, unsigned int \&col) const 
+\item 
+T {\bf get\+Min\+Value\+Col} (unsigned int col, unsigned int \&i\+Row) const 
+\item 
+T {\bf get\+Max\+Value\+Col} (unsigned int col, unsigned int \&i\+Row) const 
+\item 
+T {\bf sum} () const 
+\item 
+virtual unsigned int {\bf add\+Line} ()
+\item 
+virtual unsigned int {\bf add\+Col} ()
+\item 
+void {\bf remove\+Line} (unsigned int line, bool to\+End=true)
+\item 
+void {\bf remove\+Line} ()
+\item 
+void {\bf remove\+Col} (unsigned int col)
+\item 
+void {\bf set\+Size} (unsigned int x, unsigned int y)
+\item 
+void {\bf size} (unsigned int \&x, unsigned int \&y) const 
+\item 
+void {\bf random} (double {\bf n}=1)
+\item 
+void {\bf rep\+Line} (const {\bf S\+Matrix}$<$ T $>$ \&Other, unsigned int line)
+\item 
+void {\bf copy\+Line} (const {\bf S\+Matrix}$<$ T $>$ \&Other, unsigned int other\+Line, unsigned int this\+Line)
+\item 
+void {\bf copy\+Col} (const {\bf S\+Matrix}$<$ T $>$ \&Other, unsigned int other\+Col, unsigned int this\+Col)
+\item 
+void {\bf clear} ()
+\item 
+{\bf S\+Matrix}$<$ T $>$ {\bf transpose} () const 
+\item 
+{\bf S\+Matrix}$<$ T $>$ {\bf get\+Col} (unsigned int col) const 
+\item 
+{\bf S\+Matrix}$<$ T $>$ {\bf get\+Line} (unsigned int line) const 
+\item 
+{\bf S\+Matrix}$<$ T $>$ {\bf operator+} (const {\bf S\+Matrix}$<$ T $>$ \&Other) const 
+\item 
+{\bf S\+Matrix}$<$ T $>$ {\bf operator+} (T value) const 
+\item 
+{\bf S\+Matrix}$<$ T $>$ {\bf operator-\/} (const {\bf S\+Matrix}$<$ T $>$ \&Other) const 
+\item 
+{\bf S\+Matrix}$<$ T $>$ {\bf operator-\/} (T value) const 
+\item 
+{\bf S\+Matrix}$<$ T $>$ {\bf operator$\ast$} (const {\bf S\+Matrix}$<$ T $>$ \&Other) const 
+\item 
+{\bf S\+Matrix}$<$ T $>$ {\bf operator$\ast$} (T value) const 
+\item 
+{\bf S\+Matrix}$<$ T $>$ {\bf operator/} (T value) const 
+\item 
+bool {\bf operator==} (const {\bf S\+Matrix}$<$ T $>$ \&other) const 
+\item 
+bool {\bf operator!=} (const {\bf S\+Matrix}$<$ T $>$ \&other) const 
+\item 
+void {\bf sum\+Value} (T value)
+\item 
+void {\bf subt\+Value} (T value)
+\item 
+void {\bf mult\+Value} (T value)
+\item 
+void {\bf mult\+Value} (T value, unsigned int col)
+\item 
+void {\bf div\+Value} (T value)
+\item 
+T {\bf media} (unsigned int col) const 
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ T $>$ {\bf content}
+\item 
+unsigned int {\bf n}
+\item 
+unsigned int {\bf m}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+\subsubsection*{template$<$class T = double$>$\\*
+class S\+Matrix$<$ T $>$}
+
+
+
+Definição na linha 16 do arquivo S\+Matrix.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{S\+Matrix@{S\+Matrix}!S\+Matrix@{S\+Matrix}}
+\index{S\+Matrix@{S\+Matrix}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{S\+Matrix(unsigned int row=0, unsigned int col=0)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ {\bf S\+Matrix}$<$ T $>$\+::{\bf S\+Matrix} (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{row = {\ttfamily 0}, }
+\item[{unsigned int}]{col = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_ad7c7260e1d6e38ab4e406b499428f6a8}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em x} & N�mero de linhas \\
+\hline
+{\em y} & N�mero de colunas \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 37 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!````~S\+Matrix@{$\sim$\+S\+Matrix}}
+\index{````~S\+Matrix@{$\sim$\+S\+Matrix}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{$\sim$\+S\+Matrix()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ virtual {\bf S\+Matrix}$<$ T $>$\+::$\sim${\bf S\+Matrix} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_matrix_a6aa4c77e9c20483b62a3d63d992672cc}
+Destrutor 
+
+Definição na linha 56 do arquivo S\+Matrix.\+h.
+
+
+
+\subsection{Métodos}
+\index{S\+Matrix@{S\+Matrix}!add\+Col@{add\+Col}}
+\index{add\+Col@{add\+Col}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{add\+Col()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ virtual unsigned int {\bf S\+Matrix}$<$ T $>$\+::add\+Col (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_matrix_ad64ada3bf6dfcae4377b735e72ac42f5}
+Adicionar coluna na matriz 
+
+Definição na linha 277 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!add\+Line@{add\+Line}}
+\index{add\+Line@{add\+Line}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{add\+Line()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ virtual unsigned int {\bf S\+Matrix}$<$ T $>$\+::add\+Line (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_matrix_a7d26780069dc98b8d9fb124ede6e28da}
+Adicionar linha na matriz 
+
+Definição na linha 266 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!clear@{clear}}
+\index{clear@{clear}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf S\+Matrix}$<$ T $>$\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a082495e7d72047f496f6fb34bd8def1c}
+Limpa matriz 
+
+Definição na linha 424 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!copy\+Col@{copy\+Col}}
+\index{copy\+Col@{copy\+Col}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{copy\+Col(const S\+Matrix$<$ T $>$ \&\+Other, unsigned int other\+Col, unsigned int this\+Col)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf S\+Matrix}$<$ T $>$\+::copy\+Col (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+Matrix}$<$ T $>$ \&}]{Other, }
+\item[{unsigned int}]{other\+Col, }
+\item[{unsigned int}]{this\+Col}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a8da42dda9774822198dccd023f704ed0}
+Copia coluna 
+\begin{DoxyParams}{Parâmetros}
+{\em Other} & Matriz com os valores de referencia \\
+\hline
+{\em other\+Line} & Coluna de origem \\
+\hline
+{\em this\+Line} & Coluna de destino \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 411 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!copy\+Line@{copy\+Line}}
+\index{copy\+Line@{copy\+Line}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{copy\+Line(const S\+Matrix$<$ T $>$ \&\+Other, unsigned int other\+Line, unsigned int this\+Line)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf S\+Matrix}$<$ T $>$\+::copy\+Line (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+Matrix}$<$ T $>$ \&}]{Other, }
+\item[{unsigned int}]{other\+Line, }
+\item[{unsigned int}]{this\+Line}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a440c86f842d3beecee3428b1c499506a}
+Copia linha 
+\begin{DoxyParams}{Parâmetros}
+{\em Other} & Matriz com os valores de referencia \\
+\hline
+{\em other\+Line} & Linha de origem \\
+\hline
+{\em this\+Line} & Linha de destino \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 399 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!div\+Value@{div\+Value}}
+\index{div\+Value@{div\+Value}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{div\+Value(\+T value)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf S\+Matrix}$<$ T $>$\+::div\+Value (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_ad9acaed0f43c50e5d05c873c7edd0a9f}
+Divide elementos da matriz por escalar 
+\begin{DoxyParams}{Parâmetros}
+{\em value} & Valor a ser dividido \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 649 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!empty@{empty}}
+\index{empty@{empty}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{empty() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ bool {\bf S\+Matrix}$<$ T $>$\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_aaa007ff8c9cea30e5740d6515ccad410}
+Retorna true se n�o houver valores na matrix 
+
+Definição na linha 84 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!get\+Col@{get\+Col}}
+\index{get\+Col@{get\+Col}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{get\+Col(unsigned int col) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ {\bf S\+Matrix}$<$T$>$ {\bf S\+Matrix}$<$ T $>$\+::get\+Col (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{col}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a9cb17fb010a1f17e18668670abf32715}
+Retorna matriz coluna com base na presente matriz 
+\begin{DoxyParams}{Parâmetros}
+{\em col} & Coluna de origem dos dados \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 450 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{get\+Data() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ const vector$<$T$>$\& {\bf S\+Matrix}$<$ T $>$\+::get\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_aad13064054b5fd13fcff8cd7333c7c83}
+
+
+Definição na linha 76 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!get\+Line@{get\+Line}}
+\index{get\+Line@{get\+Line}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{get\+Line(unsigned int line) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ {\bf S\+Matrix}$<$T$>$ {\bf S\+Matrix}$<$ T $>$\+::get\+Line (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{line}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a0b90c74c4bade73daba48b21d45f348b}
+Retorna matriz linha com base na presente matriz 
+\begin{DoxyParams}{Parâmetros}
+{\em line} & Linha de origem dos dados \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 462 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!get\+Max\+Value@{get\+Max\+Value}}
+\index{get\+Max\+Value@{get\+Max\+Value}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{get\+Max\+Value(unsigned int \&row, unsigned int \&col) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ T {\bf S\+Matrix}$<$ T $>$\+::get\+Max\+Value (
+\begin{DoxyParamCaption}
+\item[{unsigned int \&}]{row, }
+\item[{unsigned int \&}]{col}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_abff600ad5dc6b3911798c8b67348280f}
+Retorna maior valor 
+\begin{DoxyParams}{Parâmetros}
+{\em x} & Linha \\
+\hline
+{\em y} & Coluna \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 191 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!get\+Max\+Value\+Col@{get\+Max\+Value\+Col}}
+\index{get\+Max\+Value\+Col@{get\+Max\+Value\+Col}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{get\+Max\+Value\+Col(unsigned int col, unsigned int \&i\+Row) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ T {\bf S\+Matrix}$<$ T $>$\+::get\+Max\+Value\+Col (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{col, }
+\item[{unsigned int \&}]{i\+Row}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a7d2fe334b10e2d1a55005627a11a9906}
+Retorna maior valor da coluna e respectivo �ndice da linha 
+\begin{DoxyParams}{Parâmetros}
+{\em x} & Indice da linha \\
+\hline
+{\em col} & Coluna \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 235 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!get\+Min\+Value@{get\+Min\+Value}}
+\index{get\+Min\+Value@{get\+Min\+Value}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{get\+Min\+Value(unsigned int \&row, unsigned int \&col) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ T {\bf S\+Matrix}$<$ T $>$\+::get\+Min\+Value (
+\begin{DoxyParamCaption}
+\item[{unsigned int \&}]{row, }
+\item[{unsigned int \&}]{col}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a03a67706a71995544d58a1cda1de4f9a}
+Retorna menor valor 
+\begin{DoxyParams}{Parâmetros}
+{\em x} & Linha \\
+\hline
+{\em y} & Coluna \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 167 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!get\+Min\+Value\+Col@{get\+Min\+Value\+Col}}
+\index{get\+Min\+Value\+Col@{get\+Min\+Value\+Col}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{get\+Min\+Value\+Col(unsigned int col, unsigned int \&i\+Row) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ T {\bf S\+Matrix}$<$ T $>$\+::get\+Min\+Value\+Col (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{col, }
+\item[{unsigned int \&}]{i\+Row}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a44640790a78fab59f7f79678d69aef1b}
+Retorna menor valor da coluna e respectivo �ndice da linha 
+\begin{DoxyParams}{Parâmetros}
+{\em x} & Indice da linha \\
+\hline
+{\em col} & Coluna \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 215 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{get\+Value(unsigned int row, unsigned int col) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ T {\bf S\+Matrix}$<$ T $>$\+::get\+Value (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{row, }
+\item[{unsigned int}]{col}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a84984c931bcc6694e507fa13710e9941}
+Retorna valor 
+\begin{DoxyParams}{Parâmetros}
+{\em x} & Linha \\
+\hline
+{\em y} & Coluna \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 105 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!media@{media}}
+\index{media@{media}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{media(unsigned int col) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ T {\bf S\+Matrix}$<$ T $>$\+::media (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{col}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a7a88d425f3f3f8850500323a34c7ec3f}
+Retorna m�dia dos elementos da matriz 
+\begin{DoxyParams}{Parâmetros}
+{\em col} & N�mero de colunas da matriz \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 660 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!mult\+Value@{mult\+Value}}
+\index{mult\+Value@{mult\+Value}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{mult\+Value(\+T value)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf S\+Matrix}$<$ T $>$\+::mult\+Value (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a537394bd4584fd0bb45ac58544fc5b19}
+Multiplica elementos da matriz por escalar 
+\begin{DoxyParams}{Parâmetros}
+{\em value} & Valor a ser multiplicado \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 626 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!mult\+Value@{mult\+Value}}
+\index{mult\+Value@{mult\+Value}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{mult\+Value(\+T value, unsigned int col)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf S\+Matrix}$<$ T $>$\+::mult\+Value (
+\begin{DoxyParamCaption}
+\item[{T}]{value, }
+\item[{unsigned int}]{col}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a3c668552a941ece6c6294cd9a8449ce6}
+Multiplica elementos de uma coluna da matriz por um escalar 
+\begin{DoxyParams}{Parâmetros}
+{\em value} & Valor a ser multiplicado \\
+\hline
+{\em col} & Coluna a ser multilicada \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 638 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!n\+Col@{n\+Col}}
+\index{n\+Col@{n\+Col}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{n\+Col() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ unsigned int {\bf S\+Matrix}$<$ T $>$\+::n\+Col (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_afef6cae58de3581773c0bca9d84cbcb2}
+Informa n�mero de colunas da matriz 
+
+Definição na linha 71 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!n\+Lin@{n\+Lin}}
+\index{n\+Lin@{n\+Lin}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{n\+Lin() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ unsigned int {\bf S\+Matrix}$<$ T $>$\+::n\+Lin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_ae61e574fab6e283089b3411e716a235f}
+Informa n�mero de linhas da matriz 
+
+Definição na linha 63 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{operator"!=(const S\+Matrix$<$ T $>$ \&other) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ bool {\bf S\+Matrix}$<$ T $>$\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+Matrix}$<$ T $>$ \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_acd7bbc0c849fc53f6be025ba2de8d2d8}
+Divis�o de matrize com constante 
+\begin{DoxyParams}{Parâmetros}
+{\em value} & Valor a ser dividido \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 595 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{operator$\ast$(const S\+Matrix$<$ T $>$ \&\+Other) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ {\bf S\+Matrix}$<$T$>$ {\bf S\+Matrix}$<$ T $>$\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+Matrix}$<$ T $>$ \&}]{Other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_ac301e24c257546a9310c0234a08fb822}
+Produto duas matrizes 
+\begin{DoxyParams}{Parâmetros}
+{\em Other} & Matriz com a qual ser� realizada a opera��o \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 529 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{operator$\ast$(\+T value) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ {\bf S\+Matrix}$<$T$>$ {\bf S\+Matrix}$<$ T $>$\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_ad26813e008c042c16bbe0325f8548976}
+Produto de matrize com constante 
+\begin{DoxyParams}{Parâmetros}
+{\em value} & Valor a ser multiplicado \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 552 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{operator+(const S\+Matrix$<$ T $>$ \&\+Other) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ {\bf S\+Matrix}$<$T$>$ {\bf S\+Matrix}$<$ T $>$\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+Matrix}$<$ T $>$ \&}]{Other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_ae3f60c94fac6746c43ecdfaf27ff0092}
+Opera��es matem�ticas Soma duas matrizes 
+\begin{DoxyParams}{Parâmetros}
+{\em Other} & Matriz com a qual ser� realizada a opera��o \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 477 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{operator+(\+T value) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ {\bf S\+Matrix}$<$T$>$ {\bf S\+Matrix}$<$ T $>$\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a7cb5137b6398f715933b16753db53bb9}
+Soma de matrize com constante 
+\begin{DoxyParams}{Parâmetros}
+{\em value} & Valor a ser somado \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 490 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{operator-\/(const S\+Matrix$<$ T $>$ \&\+Other) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ {\bf S\+Matrix}$<$T$>$ {\bf S\+Matrix}$<$ T $>$\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+Matrix}$<$ T $>$ \&}]{Other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a1cc7bfb681d56cabddf2899701e9e6ee}
+Subtra��o duas matrizes 
+\begin{DoxyParams}{Parâmetros}
+{\em Other} & Matriz com a qual ser� realizada a opera��o \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 503 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{operator-\/(\+T value) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ {\bf S\+Matrix}$<$T$>$ {\bf S\+Matrix}$<$ T $>$\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_aec4c1046208d804a28a2ab73d4009a71}
+Subtra��o de matrize com constante 
+\begin{DoxyParams}{Parâmetros}
+{\em value} & Valor a ser somado \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 516 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!operator/@{operator/}}
+\index{operator/@{operator/}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{operator/(\+T value) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ {\bf S\+Matrix}$<$T$>$ {\bf S\+Matrix}$<$ T $>$\+::operator/ (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_aced538c6b8738bbea16b4d36c2047b39}
+Divis�o de matrize com constante 
+\begin{DoxyParams}{Parâmetros}
+{\em value} & Valor a ser dividido \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 565 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!operator==@{operator==}}
+\index{operator==@{operator==}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{operator==(const S\+Matrix$<$ T $>$ \&other) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ bool {\bf S\+Matrix}$<$ T $>$\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+Matrix}$<$ T $>$ \&}]{other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_ad7321d31709a7bb648238712edb547b5}
+Operador de comparacao entre matrizes 
+\begin{DoxyParams}{Parâmetros}
+{\em value} & Valor a ser dividido \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 578 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!random@{random}}
+\index{random@{random}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{random(double n=1)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf S\+Matrix}$<$ T $>$\+::random (
+\begin{DoxyParamCaption}
+\item[{double}]{n = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_ab3cfb787dfc77125f8919147cf26a671}
+Preenche matriz com valores aleat�rios 
+\begin{DoxyParams}{Parâmetros}
+{\em n} & Semente \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 374 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!remove\+Col@{remove\+Col}}
+\index{remove\+Col@{remove\+Col}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{remove\+Col(unsigned int col)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf S\+Matrix}$<$ T $>$\+::remove\+Col (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{col}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a9953511652acc06d6cce04bbb660f89b}
+Remove coluna da matriz 
+\begin{DoxyParams}{Parâmetros}
+{\em col} & Coluna \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 335 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!remove\+Line@{remove\+Line}}
+\index{remove\+Line@{remove\+Line}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{remove\+Line(unsigned int line, bool to\+End=true)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf S\+Matrix}$<$ T $>$\+::remove\+Line (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{line, }
+\item[{bool}]{to\+End = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_afabe0a08c35e957027af01701147082d}
+Remove linha da matriz 
+\begin{DoxyParams}{Parâmetros}
+{\em line} & Linha \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 303 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!remove\+Line@{remove\+Line}}
+\index{remove\+Line@{remove\+Line}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{remove\+Line()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf S\+Matrix}$<$ T $>$\+::remove\+Line (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_aa19efc97215a1194ab9c1d96210ade2d}
+Remove a ultima linha 
+
+Definição na linha 319 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!rep\+Line@{rep\+Line}}
+\index{rep\+Line@{rep\+Line}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{rep\+Line(const S\+Matrix$<$ T $>$ \&\+Other, unsigned int line)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf S\+Matrix}$<$ T $>$\+::rep\+Line (
+\begin{DoxyParamCaption}
+\item[{const {\bf S\+Matrix}$<$ T $>$ \&}]{Other, }
+\item[{unsigned int}]{line}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a89c567eec02036fa6cbd332177f7a23c}
+Preenche uma matriz com linhas repetidas 
+\begin{DoxyParams}{Parâmetros}
+{\em Other} & Matriz com os valores de referencia \\
+\hline
+{\em line} & Linha de origem \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 386 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!set\+Col@{set\+Col}}
+\index{set\+Col@{set\+Col}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{set\+Col(unsigned int col, const S\+Matrix$<$ T $>$ \&\+Other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf S\+Matrix}$<$ T $>$\+::set\+Col (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{col, }
+\item[{const {\bf S\+Matrix}$<$ T $>$ \&}]{Other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_ada0fe58a95a4c125379955067b1225ac}
+Inclui Coluna 
+\begin{DoxyParams}{Parâmetros}
+{\em y} & Coluna \\
+\hline
+{\em Other} & Matriz com os valores de referencia \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 121 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!set\+Lin@{set\+Lin}}
+\index{set\+Lin@{set\+Lin}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{set\+Lin(unsigned int row, const S\+Matrix$<$ T $>$ \&\+Other)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf S\+Matrix}$<$ T $>$\+::set\+Lin (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{row, }
+\item[{const {\bf S\+Matrix}$<$ T $>$ \&}]{Other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a565300291f47941210507ec8e3b19b64}
+Inclui linha 
+\begin{DoxyParams}{Parâmetros}
+{\em x} & Linha \\
+\hline
+{\em Other} & Matriz com os valores de referencia \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 132 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!set\+Max\+Value@{set\+Max\+Value}}
+\index{set\+Max\+Value@{set\+Max\+Value}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{set\+Max\+Value(\+T value)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf S\+Matrix}$<$ T $>$\+::set\+Max\+Value (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a352e45390c89d5ede31b7aa465addbc9}
+Inclui valor m�ximo aceit�vel 
+\begin{DoxyParams}{Parâmetros}
+{\em value} & Maximo valor aceitavel \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 154 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!set\+Min\+Value@{set\+Min\+Value}}
+\index{set\+Min\+Value@{set\+Min\+Value}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{set\+Min\+Value(\+T value)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf S\+Matrix}$<$ T $>$\+::set\+Min\+Value (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a257fd7ece98a8db04c9b1feb16c9042c}
+Inclui valor m�nimo aceit�vel 
+\begin{DoxyParams}{Parâmetros}
+{\em value} & Minimo valor aceitavel \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 142 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!set\+Size@{set\+Size}}
+\index{set\+Size@{set\+Size}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{set\+Size(unsigned int x, unsigned int y)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf S\+Matrix}$<$ T $>$\+::set\+Size (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{x, }
+\item[{unsigned int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a083f6cff8f286be530bda1f1e06500c0}
+Atribui dimens�es da matriz 
+\begin{DoxyParams}{Parâmetros}
+{\em x} & Linha \\
+\hline
+{\em y} & Coluna \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 352 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{set\+Value(unsigned int row, unsigned int col, T value)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf S\+Matrix}$<$ T $>$\+::set\+Value (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{row, }
+\item[{unsigned int}]{col, }
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_ae09f42bf94e053396bd7148dd7f21f48}
+Inclui valor 
+\begin{DoxyParams}{Parâmetros}
+{\em x} & Linha \\
+\hline
+{\em y} & Coluna \\
+\hline
+{\em z} & Valor \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 95 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!size@{size}}
+\index{size@{size}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{size(unsigned int \&x, unsigned int \&y) const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf S\+Matrix}$<$ T $>$\+::size (
+\begin{DoxyParamCaption}
+\item[{unsigned int \&}]{x, }
+\item[{unsigned int \&}]{y}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a84eaae225735a20a4068aad160bb949a}
+Informa tamanho da matriz 
+\begin{DoxyParams}{Parâmetros}
+{\em x} & Linha \\
+\hline
+{\em y} & Coluna \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 364 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!subt\+Value@{subt\+Value}}
+\index{subt\+Value@{subt\+Value}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{subt\+Value(\+T value)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf S\+Matrix}$<$ T $>$\+::subt\+Value (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a3b532bb6f8f5675e2cbfc00623cdcaad}
+Subtrai valor dos elementos da matriz 
+\begin{DoxyParams}{Parâmetros}
+{\em value} & Valor a ser subtra�do \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 615 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!sum@{sum}}
+\index{sum@{sum}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{sum() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ T {\bf S\+Matrix}$<$ T $>$\+::sum (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a9147a1641242d26244da5caa7ad40666}
+Soma valores da matriz 
+
+Definição na linha 253 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!sum\+Value@{sum\+Value}}
+\index{sum\+Value@{sum\+Value}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{sum\+Value(\+T value)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ void {\bf S\+Matrix}$<$ T $>$\+::sum\+Value (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a838bb33767c56369d1ba6a06d5eb803b}
+Soma valor ao elementos da matriz 
+\begin{DoxyParams}{Parâmetros}
+{\em value} & Valor a ser somado \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 604 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!transpose@{transpose}}
+\index{transpose@{transpose}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{transpose() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ {\bf S\+Matrix}$<$T$>$ {\bf S\+Matrix}$<$ T $>$\+::transpose (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_matrix_a1247ce24676f50fa777a02f198685284}
+Transp�e matriz 
+
+Definição na linha 437 do arquivo S\+Matrix.\+h.
+
+
+
+\subsection{Atributos}
+\index{S\+Matrix@{S\+Matrix}!content@{content}}
+\index{content@{content}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{content}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ vector$<$T$>$ {\bf S\+Matrix}$<$ T $>$\+::content\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_matrix_a6d7df4f89864562398f3b6a287b55331}
+Vector de armazenamento dos valores da matriz 
+
+Definição na linha 23 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!m@{m}}
+\index{m@{m}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{m}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ unsigned int {\bf S\+Matrix}$<$ T $>$\+::m\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_matrix_a61d3253bdc3608940996bc77857bcaab}
+
+
+Definição na linha 28 do arquivo S\+Matrix.\+h.
+
+\index{S\+Matrix@{S\+Matrix}!n@{n}}
+\index{n@{n}!S\+Matrix@{S\+Matrix}}
+\subsubsection[{n}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T = double$>$ unsigned int {\bf S\+Matrix}$<$ T $>$\+::n\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_matrix_ab2c68b906461e6c464e45f121384f3da}
+N�mero de linhas (x) e colunas (y) da matriz 
+
+Definição na linha 28 do arquivo S\+Matrix.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+Matrix.\+h}\end{DoxyCompactItemize}

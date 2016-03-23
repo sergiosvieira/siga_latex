@@ -1,0 +1,243 @@
+\section{Referência do Arquivo cdate.\+cpp}
+\label{cdate_8cpp}\index{cdate.\+cpp@{cdate.\+cpp}}
+{\ttfamily \#include $<$assert.\+h$>$}\\*
+{\ttfamily \#include $<$regex$>$}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A\textbackslash{}\+Date\textbackslash{}cdate.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}S\+I\+G\+A\textbackslash{}\+Date\textbackslash{}cdatecalc.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$set$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$locale$>$}\\*
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf R\+E\+P\+A\+S\+JD}(obj)
+\item 
+\#define {\bf R\+E\+P\+A\+S\+D\+A\+TE}(obj)
+\item 
+\#define {\bf B\+I\+T\+O\+F\+F\+S\+E\+T\+Y\+E\+AR}~0
+\item 
+\#define {\bf B\+I\+T\+S\+I\+Z\+E\+Y\+E\+AR}~10
+\item 
+\#define {\bf B\+I\+T\+O\+F\+F\+S\+E\+T\+W\+E\+E\+K\+O\+F\+Y\+E\+AR}~10
+\item 
+\#define {\bf B\+I\+T\+S\+I\+Z\+E\+W\+E\+E\+K\+O\+F\+Y\+E\+AR}~6
+\item 
+\#define {\bf B\+I\+T\+O\+F\+F\+S\+E\+T\+D\+AY}~16
+\item 
+\#define {\bf B\+I\+T\+S\+I\+Z\+E\+D\+AY}~5
+\item 
+\#define {\bf B\+I\+T\+O\+F\+F\+S\+E\+T\+D\+A\+Y\+O\+F\+W\+E\+EK}~21
+\item 
+\#define {\bf B\+I\+T\+S\+I\+Z\+E\+D\+A\+Y\+O\+F\+W\+E\+EK}~3
+\item 
+\#define {\bf B\+I\+T\+O\+F\+F\+S\+E\+T\+M\+O\+N\+TH}~24
+\item 
+\#define {\bf B\+I\+T\+S\+I\+Z\+E\+M\+O\+N\+TH}~4
+\item 
+\#define {\bf B\+I\+T\+O\+F\+F\+S\+E\+T\+W\+E\+E\+K\+Y\+E\+A\+R\+D\+IF}~28
+\item 
+\#define {\bf B\+I\+T\+S\+I\+Z\+E\+W\+E\+E\+K\+Y\+E\+A\+R\+D\+IF}~2
+\item 
+\#define {\bf B\+I\+T\+O\+F\+F\+S\+E\+T\+I\+S\+L\+E\+A\+P\+Y\+E\+AR}~30
+\item 
+\#define {\bf B\+I\+T\+S\+I\+Z\+E\+I\+S\+L\+E\+A\+P\+Y\+E\+AR}~1
+\item 
+\#define {\bf M\+I\+N\+I\+M\+U\+M\+Y\+E\+AR}~1500
+\item 
+\#define {\bf G\+E\+T\+C\+O\+M\+P\+O\+N\+E\+NT}(v,  offset,  length)~( (v)$>$$>$(offset) \& ((1$<$$<$(length))-\/1) )
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bf replace} (std\+::string \&a\+\_\+string, const std\+::string \&a\+\_\+from, std\+::string \&a\+\_\+to)
+\item 
+Int32 {\bf extract} (const std\+::string \&a\+\_\+string, const std\+::string \&a\+\_\+format, const std\+::string \&a\+\_\+substring, int a\+\_\+size)
+\end{DoxyCompactItemize}
+
+
+\subsection{Definições e macros}
+\index{cdate.\+cpp@{cdate.\+cpp}!B\+I\+T\+O\+F\+F\+S\+E\+T\+D\+AY@{B\+I\+T\+O\+F\+F\+S\+E\+T\+D\+AY}}
+\index{B\+I\+T\+O\+F\+F\+S\+E\+T\+D\+AY@{B\+I\+T\+O\+F\+F\+S\+E\+T\+D\+AY}!cdate.\+cpp@{cdate.\+cpp}}
+\subsubsection[{B\+I\+T\+O\+F\+F\+S\+E\+T\+D\+AY}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+I\+T\+O\+F\+F\+S\+E\+T\+D\+AY~16}\label{cdate_8cpp_a0873dc16ccef477cfd7f4f6be72c7c7a}
+
+
+Definição na linha 32 do arquivo cdate.\+cpp.
+
+\index{cdate.\+cpp@{cdate.\+cpp}!B\+I\+T\+O\+F\+F\+S\+E\+T\+D\+A\+Y\+O\+F\+W\+E\+EK@{B\+I\+T\+O\+F\+F\+S\+E\+T\+D\+A\+Y\+O\+F\+W\+E\+EK}}
+\index{B\+I\+T\+O\+F\+F\+S\+E\+T\+D\+A\+Y\+O\+F\+W\+E\+EK@{B\+I\+T\+O\+F\+F\+S\+E\+T\+D\+A\+Y\+O\+F\+W\+E\+EK}!cdate.\+cpp@{cdate.\+cpp}}
+\subsubsection[{B\+I\+T\+O\+F\+F\+S\+E\+T\+D\+A\+Y\+O\+F\+W\+E\+EK}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+I\+T\+O\+F\+F\+S\+E\+T\+D\+A\+Y\+O\+F\+W\+E\+EK~21}\label{cdate_8cpp_a5239a64b06e4adca782ad93fcd555ce1}
+
+
+Definição na linha 34 do arquivo cdate.\+cpp.
+
+\index{cdate.\+cpp@{cdate.\+cpp}!B\+I\+T\+O\+F\+F\+S\+E\+T\+I\+S\+L\+E\+A\+P\+Y\+E\+AR@{B\+I\+T\+O\+F\+F\+S\+E\+T\+I\+S\+L\+E\+A\+P\+Y\+E\+AR}}
+\index{B\+I\+T\+O\+F\+F\+S\+E\+T\+I\+S\+L\+E\+A\+P\+Y\+E\+AR@{B\+I\+T\+O\+F\+F\+S\+E\+T\+I\+S\+L\+E\+A\+P\+Y\+E\+AR}!cdate.\+cpp@{cdate.\+cpp}}
+\subsubsection[{B\+I\+T\+O\+F\+F\+S\+E\+T\+I\+S\+L\+E\+A\+P\+Y\+E\+AR}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+I\+T\+O\+F\+F\+S\+E\+T\+I\+S\+L\+E\+A\+P\+Y\+E\+AR~30}\label{cdate_8cpp_a992af1b12727397a68353be204b7e3c2}
+
+
+Definição na linha 40 do arquivo cdate.\+cpp.
+
+\index{cdate.\+cpp@{cdate.\+cpp}!B\+I\+T\+O\+F\+F\+S\+E\+T\+M\+O\+N\+TH@{B\+I\+T\+O\+F\+F\+S\+E\+T\+M\+O\+N\+TH}}
+\index{B\+I\+T\+O\+F\+F\+S\+E\+T\+M\+O\+N\+TH@{B\+I\+T\+O\+F\+F\+S\+E\+T\+M\+O\+N\+TH}!cdate.\+cpp@{cdate.\+cpp}}
+\subsubsection[{B\+I\+T\+O\+F\+F\+S\+E\+T\+M\+O\+N\+TH}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+I\+T\+O\+F\+F\+S\+E\+T\+M\+O\+N\+TH~24}\label{cdate_8cpp_ad95fc7bc5dab1cf8d71453a3e1425a61}
+
+
+Definição na linha 36 do arquivo cdate.\+cpp.
+
+\index{cdate.\+cpp@{cdate.\+cpp}!B\+I\+T\+O\+F\+F\+S\+E\+T\+W\+E\+E\+K\+O\+F\+Y\+E\+AR@{B\+I\+T\+O\+F\+F\+S\+E\+T\+W\+E\+E\+K\+O\+F\+Y\+E\+AR}}
+\index{B\+I\+T\+O\+F\+F\+S\+E\+T\+W\+E\+E\+K\+O\+F\+Y\+E\+AR@{B\+I\+T\+O\+F\+F\+S\+E\+T\+W\+E\+E\+K\+O\+F\+Y\+E\+AR}!cdate.\+cpp@{cdate.\+cpp}}
+\subsubsection[{B\+I\+T\+O\+F\+F\+S\+E\+T\+W\+E\+E\+K\+O\+F\+Y\+E\+AR}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+I\+T\+O\+F\+F\+S\+E\+T\+W\+E\+E\+K\+O\+F\+Y\+E\+AR~10}\label{cdate_8cpp_a057db5b2163faa141c0da621b7cf32b2}
+
+
+Definição na linha 30 do arquivo cdate.\+cpp.
+
+\index{cdate.\+cpp@{cdate.\+cpp}!B\+I\+T\+O\+F\+F\+S\+E\+T\+W\+E\+E\+K\+Y\+E\+A\+R\+D\+IF@{B\+I\+T\+O\+F\+F\+S\+E\+T\+W\+E\+E\+K\+Y\+E\+A\+R\+D\+IF}}
+\index{B\+I\+T\+O\+F\+F\+S\+E\+T\+W\+E\+E\+K\+Y\+E\+A\+R\+D\+IF@{B\+I\+T\+O\+F\+F\+S\+E\+T\+W\+E\+E\+K\+Y\+E\+A\+R\+D\+IF}!cdate.\+cpp@{cdate.\+cpp}}
+\subsubsection[{B\+I\+T\+O\+F\+F\+S\+E\+T\+W\+E\+E\+K\+Y\+E\+A\+R\+D\+IF}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+I\+T\+O\+F\+F\+S\+E\+T\+W\+E\+E\+K\+Y\+E\+A\+R\+D\+IF~28}\label{cdate_8cpp_a620424b6531adcbfbffafc7ed5f3a1d8}
+
+
+Definição na linha 38 do arquivo cdate.\+cpp.
+
+\index{cdate.\+cpp@{cdate.\+cpp}!B\+I\+T\+O\+F\+F\+S\+E\+T\+Y\+E\+AR@{B\+I\+T\+O\+F\+F\+S\+E\+T\+Y\+E\+AR}}
+\index{B\+I\+T\+O\+F\+F\+S\+E\+T\+Y\+E\+AR@{B\+I\+T\+O\+F\+F\+S\+E\+T\+Y\+E\+AR}!cdate.\+cpp@{cdate.\+cpp}}
+\subsubsection[{B\+I\+T\+O\+F\+F\+S\+E\+T\+Y\+E\+AR}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+I\+T\+O\+F\+F\+S\+E\+T\+Y\+E\+AR~0}\label{cdate_8cpp_a83b35cf37c359571e99f964043c763ec}
+
+
+Definição na linha 28 do arquivo cdate.\+cpp.
+
+\index{cdate.\+cpp@{cdate.\+cpp}!B\+I\+T\+S\+I\+Z\+E\+D\+AY@{B\+I\+T\+S\+I\+Z\+E\+D\+AY}}
+\index{B\+I\+T\+S\+I\+Z\+E\+D\+AY@{B\+I\+T\+S\+I\+Z\+E\+D\+AY}!cdate.\+cpp@{cdate.\+cpp}}
+\subsubsection[{B\+I\+T\+S\+I\+Z\+E\+D\+AY}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+I\+T\+S\+I\+Z\+E\+D\+AY~5}\label{cdate_8cpp_abd857d6cefd94708f55f1dece0b7d4ff}
+
+
+Definição na linha 33 do arquivo cdate.\+cpp.
+
+\index{cdate.\+cpp@{cdate.\+cpp}!B\+I\+T\+S\+I\+Z\+E\+D\+A\+Y\+O\+F\+W\+E\+EK@{B\+I\+T\+S\+I\+Z\+E\+D\+A\+Y\+O\+F\+W\+E\+EK}}
+\index{B\+I\+T\+S\+I\+Z\+E\+D\+A\+Y\+O\+F\+W\+E\+EK@{B\+I\+T\+S\+I\+Z\+E\+D\+A\+Y\+O\+F\+W\+E\+EK}!cdate.\+cpp@{cdate.\+cpp}}
+\subsubsection[{B\+I\+T\+S\+I\+Z\+E\+D\+A\+Y\+O\+F\+W\+E\+EK}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+I\+T\+S\+I\+Z\+E\+D\+A\+Y\+O\+F\+W\+E\+EK~3}\label{cdate_8cpp_aca9b0ed2a61a0dca424464a719fe1c57}
+
+
+Definição na linha 35 do arquivo cdate.\+cpp.
+
+\index{cdate.\+cpp@{cdate.\+cpp}!B\+I\+T\+S\+I\+Z\+E\+I\+S\+L\+E\+A\+P\+Y\+E\+AR@{B\+I\+T\+S\+I\+Z\+E\+I\+S\+L\+E\+A\+P\+Y\+E\+AR}}
+\index{B\+I\+T\+S\+I\+Z\+E\+I\+S\+L\+E\+A\+P\+Y\+E\+AR@{B\+I\+T\+S\+I\+Z\+E\+I\+S\+L\+E\+A\+P\+Y\+E\+AR}!cdate.\+cpp@{cdate.\+cpp}}
+\subsubsection[{B\+I\+T\+S\+I\+Z\+E\+I\+S\+L\+E\+A\+P\+Y\+E\+AR}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+I\+T\+S\+I\+Z\+E\+I\+S\+L\+E\+A\+P\+Y\+E\+AR~1}\label{cdate_8cpp_ad7d01d325f4dd3c6714f856078f7768f}
+
+
+Definição na linha 41 do arquivo cdate.\+cpp.
+
+\index{cdate.\+cpp@{cdate.\+cpp}!B\+I\+T\+S\+I\+Z\+E\+M\+O\+N\+TH@{B\+I\+T\+S\+I\+Z\+E\+M\+O\+N\+TH}}
+\index{B\+I\+T\+S\+I\+Z\+E\+M\+O\+N\+TH@{B\+I\+T\+S\+I\+Z\+E\+M\+O\+N\+TH}!cdate.\+cpp@{cdate.\+cpp}}
+\subsubsection[{B\+I\+T\+S\+I\+Z\+E\+M\+O\+N\+TH}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+I\+T\+S\+I\+Z\+E\+M\+O\+N\+TH~4}\label{cdate_8cpp_a6f25d69ecbffddda04f580eed98332b3}
+
+
+Definição na linha 37 do arquivo cdate.\+cpp.
+
+\index{cdate.\+cpp@{cdate.\+cpp}!B\+I\+T\+S\+I\+Z\+E\+W\+E\+E\+K\+O\+F\+Y\+E\+AR@{B\+I\+T\+S\+I\+Z\+E\+W\+E\+E\+K\+O\+F\+Y\+E\+AR}}
+\index{B\+I\+T\+S\+I\+Z\+E\+W\+E\+E\+K\+O\+F\+Y\+E\+AR@{B\+I\+T\+S\+I\+Z\+E\+W\+E\+E\+K\+O\+F\+Y\+E\+AR}!cdate.\+cpp@{cdate.\+cpp}}
+\subsubsection[{B\+I\+T\+S\+I\+Z\+E\+W\+E\+E\+K\+O\+F\+Y\+E\+AR}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+I\+T\+S\+I\+Z\+E\+W\+E\+E\+K\+O\+F\+Y\+E\+AR~6}\label{cdate_8cpp_a2a67d04f878f738a2a3724cbd26172cb}
+
+
+Definição na linha 31 do arquivo cdate.\+cpp.
+
+\index{cdate.\+cpp@{cdate.\+cpp}!B\+I\+T\+S\+I\+Z\+E\+W\+E\+E\+K\+Y\+E\+A\+R\+D\+IF@{B\+I\+T\+S\+I\+Z\+E\+W\+E\+E\+K\+Y\+E\+A\+R\+D\+IF}}
+\index{B\+I\+T\+S\+I\+Z\+E\+W\+E\+E\+K\+Y\+E\+A\+R\+D\+IF@{B\+I\+T\+S\+I\+Z\+E\+W\+E\+E\+K\+Y\+E\+A\+R\+D\+IF}!cdate.\+cpp@{cdate.\+cpp}}
+\subsubsection[{B\+I\+T\+S\+I\+Z\+E\+W\+E\+E\+K\+Y\+E\+A\+R\+D\+IF}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+I\+T\+S\+I\+Z\+E\+W\+E\+E\+K\+Y\+E\+A\+R\+D\+IF~2}\label{cdate_8cpp_af199f73f44735b1837501110b677ec58}
+
+
+Definição na linha 39 do arquivo cdate.\+cpp.
+
+\index{cdate.\+cpp@{cdate.\+cpp}!B\+I\+T\+S\+I\+Z\+E\+Y\+E\+AR@{B\+I\+T\+S\+I\+Z\+E\+Y\+E\+AR}}
+\index{B\+I\+T\+S\+I\+Z\+E\+Y\+E\+AR@{B\+I\+T\+S\+I\+Z\+E\+Y\+E\+AR}!cdate.\+cpp@{cdate.\+cpp}}
+\subsubsection[{B\+I\+T\+S\+I\+Z\+E\+Y\+E\+AR}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+I\+T\+S\+I\+Z\+E\+Y\+E\+AR~10}\label{cdate_8cpp_a414d0054196161162f86fc94e582eeb3}
+
+
+Definição na linha 29 do arquivo cdate.\+cpp.
+
+\index{cdate.\+cpp@{cdate.\+cpp}!G\+E\+T\+C\+O\+M\+P\+O\+N\+E\+NT@{G\+E\+T\+C\+O\+M\+P\+O\+N\+E\+NT}}
+\index{G\+E\+T\+C\+O\+M\+P\+O\+N\+E\+NT@{G\+E\+T\+C\+O\+M\+P\+O\+N\+E\+NT}!cdate.\+cpp@{cdate.\+cpp}}
+\subsubsection[{G\+E\+T\+C\+O\+M\+P\+O\+N\+E\+NT}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+E\+T\+C\+O\+M\+P\+O\+N\+E\+NT(
+\begin{DoxyParamCaption}
+\item[{}]{v, }
+\item[{}]{offset, }
+\item[{}]{length}
+\end{DoxyParamCaption}
+)~( (v)$>$$>$(offset) \& ((1$<$$<$(length))-\/1) )}\label{cdate_8cpp_aaa6f1ab716c89cba0bb41393ba762828}
+
+
+Definição na linha 47 do arquivo cdate.\+cpp.
+
+\index{cdate.\+cpp@{cdate.\+cpp}!M\+I\+N\+I\+M\+U\+M\+Y\+E\+AR@{M\+I\+N\+I\+M\+U\+M\+Y\+E\+AR}}
+\index{M\+I\+N\+I\+M\+U\+M\+Y\+E\+AR@{M\+I\+N\+I\+M\+U\+M\+Y\+E\+AR}!cdate.\+cpp@{cdate.\+cpp}}
+\subsubsection[{M\+I\+N\+I\+M\+U\+M\+Y\+E\+AR}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+I\+N\+I\+M\+U\+M\+Y\+E\+AR~1500}\label{cdate_8cpp_ab98b1c33b827151bacb5d7ccdd391ab7}
+
+
+Definição na linha 44 do arquivo cdate.\+cpp.
+
+\index{cdate.\+cpp@{cdate.\+cpp}!R\+E\+P\+A\+S\+D\+A\+TE@{R\+E\+P\+A\+S\+D\+A\+TE}}
+\index{R\+E\+P\+A\+S\+D\+A\+TE@{R\+E\+P\+A\+S\+D\+A\+TE}!cdate.\+cpp@{cdate.\+cpp}}
+\subsubsection[{R\+E\+P\+A\+S\+D\+A\+TE}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+P\+A\+S\+D\+A\+TE(
+\begin{DoxyParamCaption}
+\item[{}]{obj}
+\end{DoxyParamCaption}
+)}\label{cdate_8cpp_a64c8a5733f1389e8614af56ea682850e}
+{\bfseries Valor\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+    if ((obj).m\_Date >= 0) \(\backslash\)
+        (obj).InternalToDate(); \(\backslash\)
+\} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+
+
+Definição na linha 22 do arquivo cdate.\+cpp.
+
+\index{cdate.\+cpp@{cdate.\+cpp}!R\+E\+P\+A\+S\+JD@{R\+E\+P\+A\+S\+JD}}
+\index{R\+E\+P\+A\+S\+JD@{R\+E\+P\+A\+S\+JD}!cdate.\+cpp@{cdate.\+cpp}}
+\subsubsection[{R\+E\+P\+A\+S\+JD}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+E\+P\+A\+S\+JD(
+\begin{DoxyParamCaption}
+\item[{}]{obj}
+\end{DoxyParamCaption}
+)}\label{cdate_8cpp_a424f2b0a26120fac0288d1649c7fb1b0}
+{\bfseries Valor\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+    if ((obj).m\_Date <  0) \(\backslash\)
+        (obj).InternalToJD(); \(\backslash\)
+\} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+
+
+Definição na linha 15 do arquivo cdate.\+cpp.
+
+
+
+\subsection{Funções}
+\index{cdate.\+cpp@{cdate.\+cpp}!extract@{extract}}
+\index{extract@{extract}!cdate.\+cpp@{cdate.\+cpp}}
+\subsubsection[{extract(const std\+::string \&a\+\_\+string, const std\+::string \&a\+\_\+format, const std\+::string \&a\+\_\+substring, int a\+\_\+size)}]{\setlength{\rightskip}{0pt plus 5cm}Int32 extract (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{a\+\_\+string, }
+\item[{const std\+::string \&}]{a\+\_\+format, }
+\item[{const std\+::string \&}]{a\+\_\+substring, }
+\item[{int}]{a\+\_\+size}
+\end{DoxyParamCaption}
+)}\label{cdate_8cpp_ad20afa05783bead98adeaf76aeb14705}
+
+
+Definição na linha 327 do arquivo cdate.\+cpp.
+
+\index{cdate.\+cpp@{cdate.\+cpp}!replace@{replace}}
+\index{replace@{replace}!cdate.\+cpp@{cdate.\+cpp}}
+\subsubsection[{replace(std\+::string \&a\+\_\+string, const std\+::string \&a\+\_\+from, std\+::string \&a\+\_\+to)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string replace (
+\begin{DoxyParamCaption}
+\item[{std\+::string \&}]{a\+\_\+string, }
+\item[{const std\+::string \&}]{a\+\_\+from, }
+\item[{std\+::string \&}]{a\+\_\+to}
+\end{DoxyParamCaption}
+)}\label{cdate_8cpp_a18fa8d8ef55c7777d6f617ebc2bab77c}
+
+
+Definição na linha 229 do arquivo cdate.\+cpp.
+

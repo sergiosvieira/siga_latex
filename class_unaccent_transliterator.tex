@@ -1,0 +1,117 @@
+\section{Referência da Classe Unaccent\+Transliterator}
+\label{class_unaccent_transliterator}\index{Unaccent\+Transliterator@{Unaccent\+Transliterator}}
+
+
+{\ttfamily \#include $<$unaccent.\+h$>$}
+
+
+
+Herdeiro de Transliterator.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Unaccent\+Transliterator} ()
+\item 
+virtual {\bf $\sim$\+Unaccent\+Transliterator} ()
+\item 
+virtual U\+Class\+ID {\bf get\+Dynamic\+Class\+ID} (void) const 
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static U\+Class\+ID {\bf get\+Static\+Class\+ID} (void)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf handle\+Transliterate} (Replaceable \&text, U\+Trans\+Position \&index, U\+Bool incremental) const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 10 do arquivo unaccent.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Unaccent\+Transliterator@{Unaccent\+Transliterator}!Unaccent\+Transliterator@{Unaccent\+Transliterator}}
+\index{Unaccent\+Transliterator@{Unaccent\+Transliterator}!Unaccent\+Transliterator@{Unaccent\+Transliterator}}
+\subsubsection[{Unaccent\+Transliterator()}]{\setlength{\rightskip}{0pt plus 5cm}Unaccent\+Transliterator\+::\+Unaccent\+Transliterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_unaccent_transliterator_aa7ca6d2714e9e33df2494ee7a056fc7c}
+Constructor \index{Unaccent\+Transliterator@{Unaccent\+Transliterator}!````~Unaccent\+Transliterator@{$\sim$\+Unaccent\+Transliterator}}
+\index{````~Unaccent\+Transliterator@{$\sim$\+Unaccent\+Transliterator}!Unaccent\+Transliterator@{Unaccent\+Transliterator}}
+\subsubsection[{$\sim$\+Unaccent\+Transliterator()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Unaccent\+Transliterator\+::$\sim$\+Unaccent\+Transliterator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_unaccent_transliterator_a45d0cc694efd6d84eba5e0018389f2fa}
+Destructor 
+
+\subsection{Métodos}
+\index{Unaccent\+Transliterator@{Unaccent\+Transliterator}!get\+Dynamic\+Class\+ID@{get\+Dynamic\+Class\+ID}}
+\index{get\+Dynamic\+Class\+ID@{get\+Dynamic\+Class\+ID}!Unaccent\+Transliterator@{Unaccent\+Transliterator}}
+\subsubsection[{get\+Dynamic\+Class\+I\+D(void) const }]{\setlength{\rightskip}{0pt plus 5cm}virtual U\+Class\+ID Unaccent\+Transliterator\+::get\+Dynamic\+Class\+ID (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_unaccent_transliterator_a10db07170b0cceffc75d20b61c3e99f7}
+Returns a unique class ID {\bfseries polymorphically}. This method is to implement a simple version of R\+T\+TI, since not all C++ compilers support genuine R\+T\+TI. Polymorphic operator==() and clone() methods call this method.
+
+Concrete subclasses of Transliterator that wish clients to be able to identify them should implement \doxyref{get\+Dynamic\+Class\+I\+D()}{pag.}{class_unaccent_transliterator_a10db07170b0cceffc75d20b61c3e99f7} and also a static method and data member\+:
+
+
+\begin{DoxyPre}
+static UClassID \doxyref{getStaticClassID()}{pag.}{class_unaccent_transliterator_a70d8836205fe6662eb8645488981e209} \{ return (UClassID) \}
+static char fgClassID;
+\end{DoxyPre}
+
+
+Subclasses that do not implement this method will have a dynamic class ID of Transliterator\+::get\+Statis\+Class\+I\+D().
+
+\begin{DoxyReturn}{Retorna}
+The class ID for this object. All objects of a given class have the same class ID. Objects of other classes have different class I\+Ds.  I\+CU 2.\+0 
+\end{DoxyReturn}
+
+
+Definição na linha 80 do arquivo unaccent.\+h.
+
+\index{Unaccent\+Transliterator@{Unaccent\+Transliterator}!get\+Static\+Class\+ID@{get\+Static\+Class\+ID}}
+\index{get\+Static\+Class\+ID@{get\+Static\+Class\+ID}!Unaccent\+Transliterator@{Unaccent\+Transliterator}}
+\subsubsection[{get\+Static\+Class\+I\+D(void)}]{\setlength{\rightskip}{0pt plus 5cm}static U\+Class\+ID Unaccent\+Transliterator\+::get\+Static\+Class\+ID (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_unaccent_transliterator_a70d8836205fe6662eb8645488981e209}
+Return the class ID for this class. This is useful only for comparing to a return value from \doxyref{get\+Dynamic\+Class\+I\+D()}{pag.}{class_unaccent_transliterator_a10db07170b0cceffc75d20b61c3e99f7}. For example\+: 
+\begin{DoxyPre}
+.      Base* polymorphic\_pointer = createPolymorphicObject();
+.      if (polymorphic\_pointer->\doxyref{getDynamicClassID()}{pag.}{class_unaccent_transliterator_a10db07170b0cceffc75d20b61c3e99f7} ==
+.          Derived::getStaticClassID()) ...
+\end{DoxyPre}
+ \begin{DoxyReturn}{Retorna}
+The class ID for all objects of this class.  I\+CU 2.\+0 
+\end{DoxyReturn}
+
+
+Definição na linha 55 do arquivo unaccent.\+h.
+
+\index{Unaccent\+Transliterator@{Unaccent\+Transliterator}!handle\+Transliterate@{handle\+Transliterate}}
+\index{handle\+Transliterate@{handle\+Transliterate}!Unaccent\+Transliterator@{Unaccent\+Transliterator}}
+\subsubsection[{handle\+Transliterate(\+Replaceable \&text, U\+Trans\+Position \&index, U\+Bool incremental) const }]{\setlength{\rightskip}{0pt plus 5cm}virtual void Unaccent\+Transliterator\+::handle\+Transliterate (
+\begin{DoxyParamCaption}
+\item[{Replaceable \&}]{text, }
+\item[{U\+Trans\+Position \&}]{index, }
+\item[{U\+Bool}]{incremental}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_unaccent_transliterator_a7e4c28cc8638733c8206836aa9bd19fb}
+Implement Transliterator A\+PI 
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf unaccent.\+h}\end{DoxyCompactItemize}

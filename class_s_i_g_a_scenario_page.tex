@@ -1,0 +1,478 @@
+\section{Referência da Classe S\+I\+G\+A\+Scenario\+Page}
+\label{class_s_i_g_a_scenario_page}\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+
+
+{\ttfamily \#include $<$S\+I\+G\+A\+Scenario\+Page.\+h$>$}
+
+
+
+Herdeiro de wx\+Scrolled\+Window.
+
+
+
+Superclasse de {\bf Hidro\+Scenario\+Page} e {\bf Res\+Op\+Scenario\+Page}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Radio\+Box $\ast$ {\bf get\+Main\+Radio\+Box} ()
+\item 
+{\bf S\+I\+G\+A\+Scenario\+Page} (wx\+Window $\ast$pai, wx\+Window\+ID id=wx\+I\+D\+\_\+\+A\+NY, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=wx\+T\+A\+B\+\_\+\+T\+R\+A\+V\+E\+R\+S\+AL, const wx\+String \&name=\char`\"{}Scenario\+Page\char`\"{})
+\item 
+virtual {\bf $\sim$\+S\+I\+G\+A\+Scenario\+Page} ()
+\item 
+void {\bf set\+Page\+Name} (const wx\+String \&{\bf page\+Name})
+\item 
+void {\bf set\+Parameters} (const wx\+String \&{\bf sb\+Radio\+Boxes\+Title}, const wx\+String \&{\bf rb\+Title}, const wx\+Array\+String \&opcoes, const wx\+String \&{\bf sb\+Interfaces\+Title})
+\item 
+void {\bf disable\+Main\+Radio\+Box\+Item} (int index)
+\item 
+const wx\+String \& {\bf get\+Page\+Name} () const 
+\item 
+bool {\bf is\+Main\+Radio\+Box\+Shown} () const 
+\item 
+void {\bf hide\+Main\+Radio\+Box} ()
+\item 
+virtual void {\bf show\+Main\+Radio\+Box} (bool show=true)
+\item 
+virtual void {\bf set\+Main\+Radio\+Box\+Selection} (int selection\+Index)=0
+\item 
+int {\bf get\+Main\+Radio\+Box\+Selection} () const 
+\item 
+wx\+String {\bf get\+Main\+Radio\+Box\+String\+Selection} () const 
+\item 
+virtual void {\bf create\+Interface} ()
+\item 
+virtual void {\bf change\+Date} (const {\bf Interval} \&intervalo)=0
+\item 
+virtual void {\bf select\+Main\+Radio\+Box} (wx\+Command\+Event \&evento)
+\item 
+virtual void {\bf adjust\+Interval\+Range} (const {\bf Interval} \&interval)
+\item 
+virtual void {\bf set\+Date\+Values} (const {\bf Interval} \&interval)
+\item 
+virtual {\bf Interval} {\bf get\+Date\+Values} () const 
+\item 
+virtual int {\bf get\+Old\+Radio\+Selected} ()
+\item 
+virtual void {\bf set\+Old\+Radio\+Selected} (int before\+Radio\+Selected=0)
+\item 
+virtual void {\bf refresh} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf on\+Changing\+Start\+Date} (wx\+Date\+Event \&evento)
+\item 
+void {\bf on\+Changing\+End\+Date} (wx\+Date\+Event \&evento)
+\item 
+void {\bf on\+Changing\+Start\+Hour} (wx\+Spin\+Event \&event)
+\item 
+void {\bf on\+Changing\+End\+Hour} (wx\+Spin\+Event \&event)
+\item 
+void {\bf on\+Selecting\+Main\+Radio\+Box} (wx\+Command\+Event \&evento)
+\item 
+void {\bf on\+Check\+Demand\+Assurance\+Curve} (wx\+Command\+Event \&a\+\_\+event)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+String {\bf page\+Name}
+\item 
+wx\+Date\+Picker\+Ctrl $\ast$ {\bf dp\+Start\+Interval}
+\item 
+wx\+Date\+Picker\+Ctrl $\ast$ {\bf dp\+End\+Interval}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf sc\+Start\+Hour}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf sc\+End\+Hour}
+\item 
+wx\+Radio\+Box $\ast$ {\bf main\+Radio\+Box}
+\item 
+wx\+String {\bf sb\+Radio\+Boxes\+Title}
+\item 
+wx\+String {\bf rb\+Title}
+\item 
+wx\+Array\+String {\bf opcoes\+Main\+Radio\+Box}
+\item 
+wx\+String {\bf sb\+Interfaces\+Title}
+\item 
+wx\+Box\+Sizer $\ast$ {\bf main\+Box\+Sizer}
+\item 
+wx\+Box\+Sizer $\ast$ {\bf sb\+Radio\+Boxes}
+\item 
+wx\+Box\+Sizer $\ast$ {\bf sb\+Main\+Interfaces}
+\item 
+wx\+Notebook $\ast$ {\bf nb\+Main\+Interfaces}
+\item 
+int {\bf old\+Radio\+Selected} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 37 do arquivo S\+I\+G\+A\+Scenario\+Page.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{S\+I\+G\+A\+Scenario\+Page(wx\+Window $\ast$pai, wx\+Window\+I\+D id=wx\+I\+D\+\_\+\+A\+N\+Y, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=wx\+T\+A\+B\+\_\+\+T\+R\+A\+V\+E\+R\+S\+A\+L, const wx\+String \&name=""Scenario\+Page"")}]{\setlength{\rightskip}{0pt plus 5cm}S\+I\+G\+A\+Scenario\+Page\+::\+S\+I\+G\+A\+Scenario\+Page (
+\begin{DoxyParamCaption}
+\item[{wx\+Window $\ast$}]{pai, }
+\item[{wx\+Window\+ID}]{id = {\ttfamily wxID\+\_\+ANY}, }
+\item[{const wx\+Point \&}]{pos = {\ttfamily wxDefaultPosition}, }
+\item[{const wx\+Size \&}]{size = {\ttfamily wxDefaultSize}, }
+\item[{long}]{style = {\ttfamily wxTAB\+\_\+TRAVERSAL}, }
+\item[{const wx\+String \&}]{name = {\ttfamily \char`\"{}ScenarioPage\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_scenario_page_a89dc00ec7ed5e44bb612388987b1116c}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!````~S\+I\+G\+A\+Scenario\+Page@{$\sim$\+S\+I\+G\+A\+Scenario\+Page}}
+\index{````~S\+I\+G\+A\+Scenario\+Page@{$\sim$\+S\+I\+G\+A\+Scenario\+Page}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{$\sim$\+S\+I\+G\+A\+Scenario\+Page()}]{\setlength{\rightskip}{0pt plus 5cm}virtual S\+I\+G\+A\+Scenario\+Page\+::$\sim$\+S\+I\+G\+A\+Scenario\+Page (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_i_g_a_scenario_page_a8e4714fcad557e2d808cce4173f1d7f4}
+
+
+\subsection{Métodos}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!adjust\+Interval\+Range@{adjust\+Interval\+Range}}
+\index{adjust\+Interval\+Range@{adjust\+Interval\+Range}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{adjust\+Interval\+Range(const Interval \&interval)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+I\+G\+A\+Scenario\+Page\+::adjust\+Interval\+Range (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interval} \&}]{interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_i_g_a_scenario_page_aacfb2ecddc588b17abad6a404dcb7b5c}
+
+
+Reimplementado por {\bf Res\+Op\+Scenario\+Page} \doxyref{}{pag.}{class_res_op_scenario_page_a2fdfb624cbca1ef4d7b35fc1856e6986}.
+
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!change\+Date@{change\+Date}}
+\index{change\+Date@{change\+Date}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{change\+Date(const Interval \&intervalo)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+I\+G\+A\+Scenario\+Page\+::change\+Date (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interval} \&}]{intervalo}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_i_g_a_scenario_page_a9a8ef11fd984c9ad188bef8e1eac6bd0}
+
+
+Implementado por {\bf Res\+Op\+Scenario\+Page} \doxyref{}{pag.}{class_res_op_scenario_page_a929c63972de21a5f7f676daa0e419a47} e {\bf Hidro\+Scenario\+Page} \doxyref{}{pag.}{class_hidro_scenario_page_a120730cd7e312fdbdda9f4fea213d707}.
+
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!create\+Interface@{create\+Interface}}
+\index{create\+Interface@{create\+Interface}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{create\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+I\+G\+A\+Scenario\+Page\+::create\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_i_g_a_scenario_page_a2582c1b3c09f5de36206223334812aa4}
+
+
+Reimplementado por {\bf Res\+Op\+Scenario\+Page} \doxyref{}{pag.}{class_res_op_scenario_page_a8638f97322c5463a205f9b12fca14fbe}, {\bf Diary\+Hidro\+Scenario\+Page} \doxyref{}{pag.}{class_diary_hidro_scenario_page_ac9f2037b425d29416ccc743870cb1071}, {\bf Hourly\+Hidro\+Scenario\+Page} \doxyref{}{pag.}{class_hourly_hidro_scenario_page_a5cadf9ab22812055b9a9011ea1b260fe}, {\bf Monthly\+Hidro\+Scenario\+Page} \doxyref{}{pag.}{class_monthly_hidro_scenario_page_a7ae14f448dff917778807778008ace52}, {\bf Hidro\+Scenario\+Page} \doxyref{}{pag.}{class_hidro_scenario_page_a19caa0bd5b2c12664656100e8aae1b78}, {\bf Res\+Op\+Scenario\+Wizard\+Dialog\+Page} \doxyref{}{pag.}{class_res_op_scenario_wizard_dialog_page_a6c25be8cf581da27a2905bfbefbd6bff} e {\bf Res\+Op\+Batch\+Scenario\+Page} \doxyref{}{pag.}{class_res_op_batch_scenario_page_acc17518b1dca718e9995528d9f35a0ab}.
+
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!disable\+Main\+Radio\+Box\+Item@{disable\+Main\+Radio\+Box\+Item}}
+\index{disable\+Main\+Radio\+Box\+Item@{disable\+Main\+Radio\+Box\+Item}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{disable\+Main\+Radio\+Box\+Item(int index)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Scenario\+Page\+::disable\+Main\+Radio\+Box\+Item (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_scenario_page_ad72572c49bb67a8c9da69d56f63c0ca0}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!get\+Date\+Values@{get\+Date\+Values}}
+\index{get\+Date\+Values@{get\+Date\+Values}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{get\+Date\+Values() const }]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Interval} S\+I\+G\+A\+Scenario\+Page\+::get\+Date\+Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_i_g_a_scenario_page_a78c0503df8b1cf461228a300d49bf6bf}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!get\+Main\+Radio\+Box@{get\+Main\+Radio\+Box}}
+\index{get\+Main\+Radio\+Box@{get\+Main\+Radio\+Box}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{get\+Main\+Radio\+Box()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box$\ast$ S\+I\+G\+A\+Scenario\+Page\+::get\+Main\+Radio\+Box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_i_g_a_scenario_page_a47fea9b73df95f1f9364b88a838b0b72}
+
+
+Definição na linha 88 do arquivo S\+I\+G\+A\+Scenario\+Page.\+h.
+
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!get\+Main\+Radio\+Box\+Selection@{get\+Main\+Radio\+Box\+Selection}}
+\index{get\+Main\+Radio\+Box\+Selection@{get\+Main\+Radio\+Box\+Selection}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{get\+Main\+Radio\+Box\+Selection() const }]{\setlength{\rightskip}{0pt plus 5cm}int S\+I\+G\+A\+Scenario\+Page\+::get\+Main\+Radio\+Box\+Selection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_s_i_g_a_scenario_page_abddb3720f81b6fde392447d75aa91f81}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!get\+Main\+Radio\+Box\+String\+Selection@{get\+Main\+Radio\+Box\+String\+Selection}}
+\index{get\+Main\+Radio\+Box\+String\+Selection@{get\+Main\+Radio\+Box\+String\+Selection}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{get\+Main\+Radio\+Box\+String\+Selection() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Scenario\+Page\+::get\+Main\+Radio\+Box\+String\+Selection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_s_i_g_a_scenario_page_a1b0d2d0ac833dafe1b8637d625cec4f1}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!get\+Old\+Radio\+Selected@{get\+Old\+Radio\+Selected}}
+\index{get\+Old\+Radio\+Selected@{get\+Old\+Radio\+Selected}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{get\+Old\+Radio\+Selected()}]{\setlength{\rightskip}{0pt plus 5cm}virtual int S\+I\+G\+A\+Scenario\+Page\+::get\+Old\+Radio\+Selected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_i_g_a_scenario_page_a8549d1b6e89b0f0008700fa4c8159158}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!get\+Page\+Name@{get\+Page\+Name}}
+\index{get\+Page\+Name@{get\+Page\+Name}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{get\+Page\+Name() const }]{\setlength{\rightskip}{0pt plus 5cm}const wx\+String\& S\+I\+G\+A\+Scenario\+Page\+::get\+Page\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_s_i_g_a_scenario_page_a2d11a91ece01475d3d30a1ff3b150b40}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!hide\+Main\+Radio\+Box@{hide\+Main\+Radio\+Box}}
+\index{hide\+Main\+Radio\+Box@{hide\+Main\+Radio\+Box}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{hide\+Main\+Radio\+Box()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Scenario\+Page\+::hide\+Main\+Radio\+Box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_scenario_page_a926da7e21dfdb81c90a351020034928f}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!is\+Main\+Radio\+Box\+Shown@{is\+Main\+Radio\+Box\+Shown}}
+\index{is\+Main\+Radio\+Box\+Shown@{is\+Main\+Radio\+Box\+Shown}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{is\+Main\+Radio\+Box\+Shown() const }]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Scenario\+Page\+::is\+Main\+Radio\+Box\+Shown (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_s_i_g_a_scenario_page_a3549bdf8ed473f34648cdb1fc18baf88}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!on\+Changing\+End\+Date@{on\+Changing\+End\+Date}}
+\index{on\+Changing\+End\+Date@{on\+Changing\+End\+Date}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{on\+Changing\+End\+Date(wx\+Date\+Event \&evento)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Scenario\+Page\+::on\+Changing\+End\+Date (
+\begin{DoxyParamCaption}
+\item[{wx\+Date\+Event \&}]{evento}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_scenario_page_a0f5a3918724a89a6479090f8e08e68fc}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!on\+Changing\+End\+Hour@{on\+Changing\+End\+Hour}}
+\index{on\+Changing\+End\+Hour@{on\+Changing\+End\+Hour}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{on\+Changing\+End\+Hour(wx\+Spin\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Scenario\+Page\+::on\+Changing\+End\+Hour (
+\begin{DoxyParamCaption}
+\item[{wx\+Spin\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_scenario_page_aa24ae7aab7a8c6fbbf713002a5d92eef}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!on\+Changing\+Start\+Date@{on\+Changing\+Start\+Date}}
+\index{on\+Changing\+Start\+Date@{on\+Changing\+Start\+Date}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{on\+Changing\+Start\+Date(wx\+Date\+Event \&evento)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Scenario\+Page\+::on\+Changing\+Start\+Date (
+\begin{DoxyParamCaption}
+\item[{wx\+Date\+Event \&}]{evento}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_scenario_page_a56263313b3b40df0a3b6d47b12f06f30}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!on\+Changing\+Start\+Hour@{on\+Changing\+Start\+Hour}}
+\index{on\+Changing\+Start\+Hour@{on\+Changing\+Start\+Hour}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{on\+Changing\+Start\+Hour(wx\+Spin\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Scenario\+Page\+::on\+Changing\+Start\+Hour (
+\begin{DoxyParamCaption}
+\item[{wx\+Spin\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_scenario_page_a662f98e65e492220dd8fe35692863cc3}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!on\+Check\+Demand\+Assurance\+Curve@{on\+Check\+Demand\+Assurance\+Curve}}
+\index{on\+Check\+Demand\+Assurance\+Curve@{on\+Check\+Demand\+Assurance\+Curve}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{on\+Check\+Demand\+Assurance\+Curve(wx\+Command\+Event \&a\+\_\+event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Scenario\+Page\+::on\+Check\+Demand\+Assurance\+Curve (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{a\+\_\+event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_scenario_page_aa448d53eace629303ed808487ca20a19}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!on\+Selecting\+Main\+Radio\+Box@{on\+Selecting\+Main\+Radio\+Box}}
+\index{on\+Selecting\+Main\+Radio\+Box@{on\+Selecting\+Main\+Radio\+Box}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{on\+Selecting\+Main\+Radio\+Box(wx\+Command\+Event \&evento)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Scenario\+Page\+::on\+Selecting\+Main\+Radio\+Box (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{evento}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_scenario_page_ae35994afd3aaadfcbacb50d3a46a5ea4}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!refresh@{refresh}}
+\index{refresh@{refresh}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{refresh()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+I\+G\+A\+Scenario\+Page\+::refresh (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_i_g_a_scenario_page_a88c954c5d92736d0faddf25729e6a429}
+
+
+Reimplementado por {\bf Res\+Op\+Scenario\+Page} \doxyref{}{pag.}{class_res_op_scenario_page_a87ff8c1bce195cf15b76019569347c4b} e {\bf Res\+Op\+Scenario\+Wizard\+Dialog\+Page} \doxyref{}{pag.}{class_res_op_scenario_wizard_dialog_page_a14ec584b5011256a69a8daa20fb5f10a}.
+
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!select\+Main\+Radio\+Box@{select\+Main\+Radio\+Box}}
+\index{select\+Main\+Radio\+Box@{select\+Main\+Radio\+Box}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{select\+Main\+Radio\+Box(wx\+Command\+Event \&evento)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+I\+G\+A\+Scenario\+Page\+::select\+Main\+Radio\+Box (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{evento}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_i_g_a_scenario_page_ab6a19eae8ba3d5a68f56479bcdbd8fd8}
+
+
+Reimplementado por {\bf Res\+Op\+Scenario\+Page} \doxyref{}{pag.}{class_res_op_scenario_page_ac62adc4ee647d619b07988b54d635cf2}.
+
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!set\+Date\+Values@{set\+Date\+Values}}
+\index{set\+Date\+Values@{set\+Date\+Values}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{set\+Date\+Values(const Interval \&interval)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+I\+G\+A\+Scenario\+Page\+::set\+Date\+Values (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interval} \&}]{interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_i_g_a_scenario_page_a5a544278f9a2f8adcabe31d5fa9e2b1c}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!set\+Main\+Radio\+Box\+Selection@{set\+Main\+Radio\+Box\+Selection}}
+\index{set\+Main\+Radio\+Box\+Selection@{set\+Main\+Radio\+Box\+Selection}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{set\+Main\+Radio\+Box\+Selection(int selection\+Index)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+I\+G\+A\+Scenario\+Page\+::set\+Main\+Radio\+Box\+Selection (
+\begin{DoxyParamCaption}
+\item[{int}]{selection\+Index}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_s_i_g_a_scenario_page_ae016a197443fe3b88df0a05d9d71b9e9}
+
+
+Implementado por {\bf Res\+Op\+Scenario\+Page} \doxyref{}{pag.}{class_res_op_scenario_page_a6a9dccfef048f50a5f4c1ed986832683}, {\bf Res\+Op\+Scenario\+Wizard\+Dialog\+Page} \doxyref{}{pag.}{class_res_op_scenario_wizard_dialog_page_aa6eaa0a135754c962899d1f0efcb96b7} e {\bf Hidro\+Scenario\+Page} \doxyref{}{pag.}{class_hidro_scenario_page_aa0e33abdc4c1251bd9411ad8869fbf9d}.
+
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!set\+Old\+Radio\+Selected@{set\+Old\+Radio\+Selected}}
+\index{set\+Old\+Radio\+Selected@{set\+Old\+Radio\+Selected}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{set\+Old\+Radio\+Selected(int before\+Radio\+Selected=0)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+I\+G\+A\+Scenario\+Page\+::set\+Old\+Radio\+Selected (
+\begin{DoxyParamCaption}
+\item[{int}]{before\+Radio\+Selected = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_i_g_a_scenario_page_aa6a3b0d70487dfd18c7cc5a3b5e4c4ed}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!set\+Page\+Name@{set\+Page\+Name}}
+\index{set\+Page\+Name@{set\+Page\+Name}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{set\+Page\+Name(const wx\+String \&page\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Scenario\+Page\+::set\+Page\+Name (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{page\+Name}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_scenario_page_af79540331e0ca784c1824b1af2f3aef2}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!set\+Parameters@{set\+Parameters}}
+\index{set\+Parameters@{set\+Parameters}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{set\+Parameters(const wx\+String \&sb\+Radio\+Boxes\+Title, const wx\+String \&rb\+Title, const wx\+Array\+String \&opcoes, const wx\+String \&sb\+Interfaces\+Title)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Scenario\+Page\+::set\+Parameters (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{sb\+Radio\+Boxes\+Title, }
+\item[{const wx\+String \&}]{rb\+Title, }
+\item[{const wx\+Array\+String \&}]{opcoes, }
+\item[{const wx\+String \&}]{sb\+Interfaces\+Title}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_scenario_page_a3db392e030296c067d905423cb93fa2d}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!show\+Main\+Radio\+Box@{show\+Main\+Radio\+Box}}
+\index{show\+Main\+Radio\+Box@{show\+Main\+Radio\+Box}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{show\+Main\+Radio\+Box(bool show=true)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void S\+I\+G\+A\+Scenario\+Page\+::show\+Main\+Radio\+Box (
+\begin{DoxyParamCaption}
+\item[{bool}]{show = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_i_g_a_scenario_page_aeed48c81aa90789bb4a0e6d70467d345}
+
+
+Reimplementado por {\bf Res\+Op\+Scenario\+Page} \doxyref{}{pag.}{class_res_op_scenario_page_a4de227fbefc1d428a8ee11ef780c0a11}.
+
+
+
+\subsection{Atributos}
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!dp\+End\+Interval@{dp\+End\+Interval}}
+\index{dp\+End\+Interval@{dp\+End\+Interval}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{dp\+End\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Picker\+Ctrl$\ast$ S\+I\+G\+A\+Scenario\+Page\+::dp\+End\+Interval\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_scenario_page_a785b7bc554a6b8eda7f6b561284689f9}
+
+
+Definição na linha 45 do arquivo S\+I\+G\+A\+Scenario\+Page.\+h.
+
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!dp\+Start\+Interval@{dp\+Start\+Interval}}
+\index{dp\+Start\+Interval@{dp\+Start\+Interval}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{dp\+Start\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Picker\+Ctrl$\ast$ S\+I\+G\+A\+Scenario\+Page\+::dp\+Start\+Interval\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_scenario_page_a4da151adee753b044c59a50379b45663}
+
+
+Definição na linha 44 do arquivo S\+I\+G\+A\+Scenario\+Page.\+h.
+
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!main\+Box\+Sizer@{main\+Box\+Sizer}}
+\index{main\+Box\+Sizer@{main\+Box\+Sizer}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{main\+Box\+Sizer}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Box\+Sizer$\ast$ S\+I\+G\+A\+Scenario\+Page\+::main\+Box\+Sizer\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_scenario_page_a6b18879fa06579afecf58fb3b411c90c}
+
+
+Definição na linha 62 do arquivo S\+I\+G\+A\+Scenario\+Page.\+h.
+
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!main\+Radio\+Box@{main\+Radio\+Box}}
+\index{main\+Radio\+Box@{main\+Radio\+Box}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{main\+Radio\+Box}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box$\ast$ S\+I\+G\+A\+Scenario\+Page\+::main\+Radio\+Box\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_scenario_page_af4eca35a7681b259d5c39afe87d3adaf}
+
+
+Definição na linha 55 do arquivo S\+I\+G\+A\+Scenario\+Page.\+h.
+
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!nb\+Main\+Interfaces@{nb\+Main\+Interfaces}}
+\index{nb\+Main\+Interfaces@{nb\+Main\+Interfaces}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{nb\+Main\+Interfaces}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Notebook$\ast$ S\+I\+G\+A\+Scenario\+Page\+::nb\+Main\+Interfaces\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_scenario_page_ab4e4bd7a1f3377b4b90c5b17bfc01b01}
+
+
+Definição na linha 71 do arquivo S\+I\+G\+A\+Scenario\+Page.\+h.
+
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!old\+Radio\+Selected@{old\+Radio\+Selected}}
+\index{old\+Radio\+Selected@{old\+Radio\+Selected}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{old\+Radio\+Selected}]{\setlength{\rightskip}{0pt plus 5cm}int S\+I\+G\+A\+Scenario\+Page\+::old\+Radio\+Selected = 0\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_scenario_page_a60aac4cde5478a7739dc74192b9a58aa}
+
+
+Definição na linha 85 do arquivo S\+I\+G\+A\+Scenario\+Page.\+h.
+
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!opcoes\+Main\+Radio\+Box@{opcoes\+Main\+Radio\+Box}}
+\index{opcoes\+Main\+Radio\+Box@{opcoes\+Main\+Radio\+Box}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{opcoes\+Main\+Radio\+Box}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Array\+String S\+I\+G\+A\+Scenario\+Page\+::opcoes\+Main\+Radio\+Box\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_scenario_page_a30f80c4e2bf3d9175ce15390f2da922a}
+
+
+Definição na linha 58 do arquivo S\+I\+G\+A\+Scenario\+Page.\+h.
+
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!page\+Name@{page\+Name}}
+\index{page\+Name@{page\+Name}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{page\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Scenario\+Page\+::page\+Name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_scenario_page_abdf20fa21f44b9b2e6d32fc857390c92}
+
+
+Definição na linha 41 do arquivo S\+I\+G\+A\+Scenario\+Page.\+h.
+
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!rb\+Title@{rb\+Title}}
+\index{rb\+Title@{rb\+Title}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{rb\+Title}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Scenario\+Page\+::rb\+Title\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_scenario_page_a24418edce1e5bc014c6bfd4bbd950f2b}
+
+
+Definição na linha 57 do arquivo S\+I\+G\+A\+Scenario\+Page.\+h.
+
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!sb\+Interfaces\+Title@{sb\+Interfaces\+Title}}
+\index{sb\+Interfaces\+Title@{sb\+Interfaces\+Title}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{sb\+Interfaces\+Title}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Scenario\+Page\+::sb\+Interfaces\+Title\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_scenario_page_a365bd52b77fd52c18c77a9dc62d2bcf2}
+
+
+Definição na linha 59 do arquivo S\+I\+G\+A\+Scenario\+Page.\+h.
+
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!sb\+Main\+Interfaces@{sb\+Main\+Interfaces}}
+\index{sb\+Main\+Interfaces@{sb\+Main\+Interfaces}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{sb\+Main\+Interfaces}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Box\+Sizer$\ast$ S\+I\+G\+A\+Scenario\+Page\+::sb\+Main\+Interfaces\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_scenario_page_a566544aa4ca7a0747e5bb8c0ca74ad16}
+
+
+Definição na linha 68 do arquivo S\+I\+G\+A\+Scenario\+Page.\+h.
+
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!sb\+Radio\+Boxes@{sb\+Radio\+Boxes}}
+\index{sb\+Radio\+Boxes@{sb\+Radio\+Boxes}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{sb\+Radio\+Boxes}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Box\+Sizer$\ast$ S\+I\+G\+A\+Scenario\+Page\+::sb\+Radio\+Boxes\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_scenario_page_afd845b2ee26cf3ca670c9a38c4425677}
+
+
+Definição na linha 65 do arquivo S\+I\+G\+A\+Scenario\+Page.\+h.
+
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!sb\+Radio\+Boxes\+Title@{sb\+Radio\+Boxes\+Title}}
+\index{sb\+Radio\+Boxes\+Title@{sb\+Radio\+Boxes\+Title}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{sb\+Radio\+Boxes\+Title}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Scenario\+Page\+::sb\+Radio\+Boxes\+Title\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_scenario_page_a504e4ccbf218e7132517bba0a2dd7a59}
+
+
+Definição na linha 56 do arquivo S\+I\+G\+A\+Scenario\+Page.\+h.
+
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!sc\+End\+Hour@{sc\+End\+Hour}}
+\index{sc\+End\+Hour@{sc\+End\+Hour}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{sc\+End\+Hour}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl $\ast$ S\+I\+G\+A\+Scenario\+Page\+::sc\+End\+Hour\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_scenario_page_a14147ae89f125146f318302899c4d146}
+
+
+Definição na linha 51 do arquivo S\+I\+G\+A\+Scenario\+Page.\+h.
+
+\index{S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}!sc\+Start\+Hour@{sc\+Start\+Hour}}
+\index{sc\+Start\+Hour@{sc\+Start\+Hour}!S\+I\+G\+A\+Scenario\+Page@{S\+I\+G\+A\+Scenario\+Page}}
+\subsubsection[{sc\+Start\+Hour}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl$\ast$ S\+I\+G\+A\+Scenario\+Page\+::sc\+Start\+Hour\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_scenario_page_ac7063e55f45f5c00c1c8a480cfddc18a}
+Spin\+Ctrl para controlar a hora 
+\begin{DoxyParams}{Parâmetros}
+{\em sc\+Start\+Hour} & Hora de inicio \\
+\hline
+{\em sc\+End\+Hour} & Hora de fim \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 51 do arquivo S\+I\+G\+A\+Scenario\+Page.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+G\+A\+Scenario\+Page.\+h}\end{DoxyCompactItemize}

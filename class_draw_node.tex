@@ -1,0 +1,340 @@
+\section{Referência da Classe Draw\+Node}
+\label{class_draw_node}\index{Draw\+Node@{Draw\+Node}}
+
+
+{\ttfamily \#include $<$Draw\+Node.\+h$>$}
+
+
+
+Herdeiro de {\bf Draw\+Element}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Draw\+Node} ({\bf Element\+ID} {\bf id}, {\bf Node\+Type} {\bf type}, std\+::string {\bf name}, const wx\+Point \&{\bf position}, double {\bf scale}=1.\+0, {\bf Demand\+Type} demand\+\_\+type={\bf Demand\+Type\+::\+Human\+Consume})
+\item 
+{\bf $\sim$\+Draw\+Node} ()
+\item 
+void {\bf draw} (wx\+DC \&dc, bool draw\+\_\+label=true)
+\begin{DoxyCompactList}\small\item\em desenha o no \end{DoxyCompactList}\item 
+bool {\bf hit\+Test} (const wx\+Point \&point)
+\begin{DoxyCompactList}\small\item\em tests if the point passed intersects the node \end{DoxyCompactList}\item 
+wx\+Point {\bf position} ()
+\begin{DoxyCompactList}\small\item\em return node position \end{DoxyCompactList}\item 
+void {\bf set\+Position} (const wx\+Point \&{\bf position})
+\begin{DoxyCompactList}\small\item\em sets node position \end{DoxyCompactList}\item 
+wx\+Rect {\bf get\+Rect} ()
+\begin{DoxyCompactList}\small\item\em return the bounding box related to the node draw \end{DoxyCompactList}\item 
+{\bf Node\+Type} {\bf type} ()
+\begin{DoxyCompactList}\small\item\em return node type \end{DoxyCompactList}\item 
+void {\bf set\+Type} ({\bf Node\+Type} {\bf type})
+\begin{DoxyCompactList}\small\item\em sets node type \end{DoxyCompactList}\item 
+{\bf Demand\+Type} {\bf demand\+Type} ()
+\item 
+void {\bf set\+Demand\+Type} ({\bf Demand\+Type} {\bf type})
+\item 
+int {\bf size} ()
+\begin{DoxyCompactList}\small\item\em return node size \end{DoxyCompactList}\item 
+bool {\bf set\+Scale} (double value)
+\begin{DoxyCompactList}\small\item\em sets node scale \end{DoxyCompactList}\item 
+wx\+Point {\bf last\+Position} ()
+\item 
+void {\bf last\+Position} (const wx\+Point \&a\+\_\+point)
+\item 
+wx\+Real\+Point {\bf last\+Coordinate} ()
+\item 
+void {\bf last\+Coordinate} (const wx\+Real\+Point \&a\+\_\+point)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf calculate\+Object\+Points} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Real\+Point {\bf m\+\_\+last\+Coordinates}
+\item 
+wx\+Point {\bf m\+\_\+last\+Position}
+\item 
+wx\+Colour {\bf m\+\_\+color\+\_\+fill}
+\begin{DoxyCompactList}\small\item\em fill (preenchimento) color \end{DoxyCompactList}\item 
+wx\+Point {\bf m\+\_\+position}
+\begin{DoxyCompactList}\small\item\em node position \end{DoxyCompactList}\item 
+int {\bf m\+\_\+size}
+\begin{DoxyCompactList}\small\item\em size \end{DoxyCompactList}\item 
+wx\+Point {\bf points} [10]
+\begin{DoxyCompactList}\small\item\em points to draw \end{DoxyCompactList}\item 
+{\bf Node\+Type} {\bf m\+\_\+type}
+\item 
+{\bf Demand\+Type} {\bf m\+\_\+demand\+\_\+type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 17 do arquivo Draw\+Node.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Draw\+Node@{Draw\+Node}!Draw\+Node@{Draw\+Node}}
+\index{Draw\+Node@{Draw\+Node}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{Draw\+Node(\+Element\+I\+D id, Node\+Type type, std\+::string name, const wx\+Point \&position, double scale=1.\+0, Demand\+Type demand\+\_\+type=\+Demand\+Type\+::\+Human\+Consume)}]{\setlength{\rightskip}{0pt plus 5cm}Draw\+Node\+::\+Draw\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{{\bf Node\+Type}}]{type, }
+\item[{std\+::string}]{name, }
+\item[{const wx\+Point \&}]{position, }
+\item[{double}]{scale = {\ttfamily 1.0}, }
+\item[{{\bf Demand\+Type}}]{demand\+\_\+type = {\ttfamily {\bf Demand\+Type\+::\+Human\+Consume}}}
+\end{DoxyParamCaption}
+)}\label{class_draw_node_ad5e2d8a5e710fd816639bacbea3a003b}
+\index{Draw\+Node@{Draw\+Node}!````~Draw\+Node@{$\sim$\+Draw\+Node}}
+\index{````~Draw\+Node@{$\sim$\+Draw\+Node}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{$\sim$\+Draw\+Node()}]{\setlength{\rightskip}{0pt plus 5cm}Draw\+Node\+::$\sim$\+Draw\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_node_a4f65fb96b7cc02e5cc29ea5a0195357e}
+
+
+\subsection{Métodos}
+\index{Draw\+Node@{Draw\+Node}!calculate\+Object\+Points@{calculate\+Object\+Points}}
+\index{calculate\+Object\+Points@{calculate\+Object\+Points}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{calculate\+Object\+Points()}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Node\+::calculate\+Object\+Points (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_node_a665e3da520a08cd1656e4f64cc6666f1}
+\index{Draw\+Node@{Draw\+Node}!demand\+Type@{demand\+Type}}
+\index{demand\+Type@{demand\+Type}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{demand\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Demand\+Type} Draw\+Node\+::demand\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_node_a9ed68a5305844e2b6f43a245ebdae749}
+\index{Draw\+Node@{Draw\+Node}!draw@{draw}}
+\index{draw@{draw}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{draw(wx\+D\+C \&dc, bool draw\+\_\+label=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Node\+::draw (
+\begin{DoxyParamCaption}
+\item[{wx\+DC \&}]{dc, }
+\item[{bool}]{draw\+\_\+label = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_draw_node_ab23e6ab8eec7476f06f978235dcd30e1}
+
+
+desenha o no 
+
+
+
+Implementa {\bf Draw\+Element} \doxyref{}{pag.}{class_draw_element_aedbc12a3e68d98089eda003a4b39a298}.
+
+\index{Draw\+Node@{Draw\+Node}!get\+Rect@{get\+Rect}}
+\index{get\+Rect@{get\+Rect}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{get\+Rect()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Rect Draw\+Node\+::get\+Rect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_node_a49bb6302db44e06ad69458225cbbd2e5}
+
+
+return the bounding box related to the node draw 
+
+\index{Draw\+Node@{Draw\+Node}!hit\+Test@{hit\+Test}}
+\index{hit\+Test@{hit\+Test}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{hit\+Test(const wx\+Point \&point)}]{\setlength{\rightskip}{0pt plus 5cm}bool Draw\+Node\+::hit\+Test (
+\begin{DoxyParamCaption}
+\item[{const wx\+Point \&}]{point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_draw_node_aa00869e53bafc62013ea949798b624ab}
+
+
+tests if the point passed intersects the node 
+
+
+
+Implementa {\bf Draw\+Element} \doxyref{}{pag.}{class_draw_element_a45023dd33ca511fcb32b86e4dc50de67}.
+
+\index{Draw\+Node@{Draw\+Node}!last\+Coordinate@{last\+Coordinate}}
+\index{last\+Coordinate@{last\+Coordinate}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{last\+Coordinate()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Real\+Point Draw\+Node\+::last\+Coordinate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_node_aa12f806a5b0c44a77a1375c2da1fa103}
+\index{Draw\+Node@{Draw\+Node}!last\+Coordinate@{last\+Coordinate}}
+\index{last\+Coordinate@{last\+Coordinate}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{last\+Coordinate(const wx\+Real\+Point \&a\+\_\+point)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Node\+::last\+Coordinate (
+\begin{DoxyParamCaption}
+\item[{const wx\+Real\+Point \&}]{a\+\_\+point}
+\end{DoxyParamCaption}
+)}\label{class_draw_node_a3c06dc399cf7ff3c9589baa352861cea}
+\index{Draw\+Node@{Draw\+Node}!last\+Position@{last\+Position}}
+\index{last\+Position@{last\+Position}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{last\+Position()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point Draw\+Node\+::last\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_node_ae95871124c388b51c955ec8033678855}
+\index{Draw\+Node@{Draw\+Node}!last\+Position@{last\+Position}}
+\index{last\+Position@{last\+Position}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{last\+Position(const wx\+Point \&a\+\_\+point)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Node\+::last\+Position (
+\begin{DoxyParamCaption}
+\item[{const wx\+Point \&}]{a\+\_\+point}
+\end{DoxyParamCaption}
+)}\label{class_draw_node_aaddfe104c49fa6c7f8bc71139f6d438c}
+\index{Draw\+Node@{Draw\+Node}!position@{position}}
+\index{position@{position}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{position()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point Draw\+Node\+::position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_node_a7d8d86ccc40fa07b06adfaa81b65ec43}
+
+
+return node position 
+
+\index{Draw\+Node@{Draw\+Node}!set\+Demand\+Type@{set\+Demand\+Type}}
+\index{set\+Demand\+Type@{set\+Demand\+Type}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{set\+Demand\+Type(\+Demand\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Node\+::set\+Demand\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Demand\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_draw_node_a524a31ac8a855e19ab0a7d976b2846be}
+\index{Draw\+Node@{Draw\+Node}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{set\+Position(const wx\+Point \&position)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Node\+::set\+Position (
+\begin{DoxyParamCaption}
+\item[{const wx\+Point \&}]{position}
+\end{DoxyParamCaption}
+)}\label{class_draw_node_a96af377d1a673df900085414a50eb024}
+
+
+sets node position 
+
+\index{Draw\+Node@{Draw\+Node}!set\+Scale@{set\+Scale}}
+\index{set\+Scale@{set\+Scale}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{set\+Scale(double value)}]{\setlength{\rightskip}{0pt plus 5cm}bool Draw\+Node\+::set\+Scale (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_draw_node_ae777d3862aa88375e2436d6f33119ce6}
+
+
+sets node scale 
+
+\index{Draw\+Node@{Draw\+Node}!set\+Type@{set\+Type}}
+\index{set\+Type@{set\+Type}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{set\+Type(\+Node\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Node\+::set\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Node\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_draw_node_a8ce273e612d7b3743e8d14437ce78b40}
+
+
+sets node type 
+
+\index{Draw\+Node@{Draw\+Node}!size@{size}}
+\index{size@{size}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{size()}]{\setlength{\rightskip}{0pt plus 5cm}int Draw\+Node\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_node_acc59b0e787216d272ee05af0b835a742}
+
+
+return node size 
+
+\index{Draw\+Node@{Draw\+Node}!type@{type}}
+\index{type@{type}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{type()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node\+Type} Draw\+Node\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_node_a10450c0d2a778fb71feec2e4c855592f}
+
+
+return node type 
+
+
+
+\subsection{Atributos}
+\index{Draw\+Node@{Draw\+Node}!m\+\_\+color\+\_\+fill@{m\+\_\+color\+\_\+fill}}
+\index{m\+\_\+color\+\_\+fill@{m\+\_\+color\+\_\+fill}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{m\+\_\+color\+\_\+fill}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Colour Draw\+Node\+::m\+\_\+color\+\_\+fill\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_node_a3598d936762751a59d442fb3ca35adef}
+
+
+fill (preenchimento) color 
+
+
+
+Definição na linha 51 do arquivo Draw\+Node.\+h.
+
+\index{Draw\+Node@{Draw\+Node}!m\+\_\+demand\+\_\+type@{m\+\_\+demand\+\_\+type}}
+\index{m\+\_\+demand\+\_\+type@{m\+\_\+demand\+\_\+type}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{m\+\_\+demand\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Demand\+Type} Draw\+Node\+::m\+\_\+demand\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_node_a57b4ed7351fc9a7a69e09e33823db241}
+
+
+Definição na linha 57 do arquivo Draw\+Node.\+h.
+
+\index{Draw\+Node@{Draw\+Node}!m\+\_\+last\+Coordinates@{m\+\_\+last\+Coordinates}}
+\index{m\+\_\+last\+Coordinates@{m\+\_\+last\+Coordinates}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{m\+\_\+last\+Coordinates}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Real\+Point Draw\+Node\+::m\+\_\+last\+Coordinates\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_node_a6994079f0ff7f1d8bcc608a75421e979}
+
+
+Definição na linha 48 do arquivo Draw\+Node.\+h.
+
+\index{Draw\+Node@{Draw\+Node}!m\+\_\+last\+Position@{m\+\_\+last\+Position}}
+\index{m\+\_\+last\+Position@{m\+\_\+last\+Position}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{m\+\_\+last\+Position}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point Draw\+Node\+::m\+\_\+last\+Position\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_node_a87a5ac28688e8c86ff97f1d319a4bdb9}
+
+
+Definição na linha 49 do arquivo Draw\+Node.\+h.
+
+\index{Draw\+Node@{Draw\+Node}!m\+\_\+position@{m\+\_\+position}}
+\index{m\+\_\+position@{m\+\_\+position}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{m\+\_\+position}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point Draw\+Node\+::m\+\_\+position\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_node_ad17e27199b2a91cc3288bc2f6c9798f5}
+
+
+node position 
+
+
+
+Definição na linha 52 do arquivo Draw\+Node.\+h.
+
+\index{Draw\+Node@{Draw\+Node}!m\+\_\+size@{m\+\_\+size}}
+\index{m\+\_\+size@{m\+\_\+size}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{m\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}int Draw\+Node\+::m\+\_\+size\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_node_ae6ef897f1a286159045704235e536cc3}
+
+
+size 
+
+
+
+Definição na linha 53 do arquivo Draw\+Node.\+h.
+
+\index{Draw\+Node@{Draw\+Node}!m\+\_\+type@{m\+\_\+type}}
+\index{m\+\_\+type@{m\+\_\+type}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{m\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node\+Type} Draw\+Node\+::m\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_node_a4445622cdbb7d2d9ea8e136f5fce9987}
+
+
+Definição na linha 56 do arquivo Draw\+Node.\+h.
+
+\index{Draw\+Node@{Draw\+Node}!points@{points}}
+\index{points@{points}!Draw\+Node@{Draw\+Node}}
+\subsubsection[{points}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point Draw\+Node\+::points[10]\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_node_a31c8285e9b061fc0dc7fa3c7480af19d}
+
+
+points to draw 
+
+
+
+Definição na linha 54 do arquivo Draw\+Node.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Draw\+Node.\+h}\end{DoxyCompactItemize}

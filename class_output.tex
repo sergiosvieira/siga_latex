@@ -1,0 +1,887 @@
+\section{ReferÃªncia da Classe Output}
+\label{class_output}\index{Output@{Output}}
+
+
+{\ttfamily \#include $<$Output.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+
+
+Superclasse de {\bf Graphic}, {\bf Hydro\+Output}, {\bf Opt\+Output}, {\bf Quali\+Output}, {\bf Report} e {\bf Res\+Op\+Output}.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Output} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast$parent\+Win, {\bf Out\+Main} $\ast${\bf parent}, wx\+String section\+Type, wx\+String {\bf name})
+\item 
+virtual {\bf $\sim$\+Output} ()
+\item 
+bool {\bf insert\+Section} (unsigned int page, wx\+String {\bf name})
+\item 
+bool {\bf remove\+Section} (unsigned int page)
+\item 
+bool {\bf delete\+Section} (unsigned int page)
+\item 
+bool {\bf add\+Serie} (unsigned int page, {\bf Serie} $\ast$serie, bool inverse=false, bool show\+Plan=true, bool show\+Graph=false, wx\+String {\bf name}=\char`\"{}\char`\"{}, bool draw\+Symbols=true, bool draw\+Lines=true)
+\item 
+bool {\bf add\+Matrix} (unsigned int page, {\bf Matrix} matrix, wx\+String {\bf name}, map$<$ unsigned int, {\bf Column\+Information} $\ast$ $>$ infos, wx\+String section, unsigned int type)
+\item 
+void {\bf update\+Series} (unsigned int page, unsigned int pos, {\bf Serie} $\ast$serie, wx\+String section={\bf str\+Out})
+\item 
+void {\bf update\+Matrixes} (unsigned int page, unsigned int pos, {\bf Matrix} matrix, wx\+String section={\bf str\+Out}, int type=0)
+\item 
+virtual void {\bf selected\+Nodes} ()=0
+\item 
+virtual void {\bf on\+Selected\+Element} ()=0
+\item 
+virtual void {\bf on\+Selected\+Links} ()
+\item 
+void {\bf on\+Select\+Item} (wx\+Tree\+Event \&event)
+\item 
+void {\bf select\+Serie} (wx\+Tree\+Item\+Id parent\+Id=(wx\+Tree\+Item\+Id) 0, wx\+Tree\+Ctrl $\ast$tc\+Results={\bf N\+U\+LL})
+\item 
+void {\bf select\+Matrix} ()
+\item 
+void {\bf on\+Right\+Clicked} (wx\+Tree\+Event \&event)
+\item 
+void {\bf on\+Popup\+Menu} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Check\+Item} (wx\+Tree\+Event \&event)
+\item 
+void {\bf on\+Check\+Serie} (wx\+Tree\+Event \&event)
+\item 
+void {\bf on\+Check\+Matrix} (wx\+Tree\+Event \&event)
+\item 
+void {\bf check\+Element} (wx\+Tree\+Ctrl $\ast$tc\+Results, wx\+Tree\+Item\+Id parent\+Id, bool state)
+\item 
+void {\bf check\+Serie} (wx\+Tree\+Ctrl $\ast$tc\+Results, wx\+Tree\+Item\+Id parent\+Id, bool state)
+\item 
+void {\bf check\+Matrix} (wx\+Tree\+Ctrl $\ast$tc\+Results, wx\+Tree\+Item\+Id parent\+Id, bool state)
+\item 
+void {\bf on\+Choicebook} (wx\+Choicebook\+Event \&event)
+\item 
+virtual void {\bf on\+Changing\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ element\+Ids)=0
+\item 
+virtual void {\bf on\+Changed\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ elemet\+Ids)=0
+\item 
+virtual void {\bf changing\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ element\+Ids, int section)
+\item 
+virtual void {\bf changed\+Element\+Type} (vector$<$ {\bf Element\+ID} $>$ element\+Ids, int section)
+\item 
+virtual bool {\bf check\+Results} ()=0
+\item 
+virtual wx\+String {\bf get\+Chain} ()=0
+\item 
+virtual int {\bf get\+Section\+Id} (wx\+String {\bf name})
+\item 
+virtual void {\bf on\+Changing\+Time\+Interval} ({\bf Date\+::\+Time\+Interval})
+\item 
+void {\bf selected\+Results} ()
+\item 
+{\bf Res\+Serie} $\ast$ {\bf get\+Res\+Serie} ()
+\item 
+{\bf Res\+Matrix} $\ast$ {\bf get\+Res\+Matrix} ()
+\item 
+{\bf Res\+Serie} $\ast$ {\bf get\+Res\+Serie} (wx\+Tree\+Item\+Id selection)
+\item 
+{\bf Res\+Matrix} $\ast$ {\bf get\+Res\+Matrix} (wx\+Tree\+Item\+Id selection)
+\item 
+{\bf Res\+Serie} $\ast$ {\bf get\+Res\+Serie} (wx\+Tree\+Ctrl $\ast$tc\+Results, wx\+Tree\+Item\+Id selection)
+\item 
+{\bf Res\+Matrix} $\ast$ {\bf get\+Res\+Matrix} (wx\+Tree\+Ctrl $\ast$tc\+Results, wx\+Tree\+Item\+Id selection)
+\item 
+void {\bf adv\+Statistics} ({\bf Res\+Serie} $\ast$r\+Serie)
+\item 
+void {\bf on\+Delete\+Item} (wx\+Tree\+Event \&event)
+\item 
+wx\+Tree\+Item\+Id {\bf has\+Section} (wx\+Tree\+Ctrl $\ast$tc\+Result, wx\+Tree\+Item\+Id parent\+Id, wx\+String section)
+\item 
+void {\bf insert\+Tree\+Item} (wx\+Tree\+Ctrl $\ast$tc\+Result, {\bf S\+I\+G\+A\+Tree\+Item\+Data} $\ast$d\+Data)
+\item 
+void {\bf insert\+Tree\+Serie} (wx\+Tree\+Ctrl $\ast$tc\+Result, {\bf Draw\+Serie} $\ast$d\+Serie)
+\item 
+void {\bf insert\+Tree\+Matrix} (wx\+Tree\+Ctrl $\ast$tc\+Result, {\bf Draw\+Matrix} $\ast$d\+Matrix)
+\item 
+void {\bf remove\+Tree\+Item} (wx\+Tree\+Ctrl $\ast$tc\+Result, wx\+String {\bf name}, {\bf S\+I\+G\+A\+Tree\+Item\+Data} $\ast$d\+Data)
+\item 
+void {\bf remove\+Tree\+Serie} (wx\+Tree\+Ctrl $\ast$tc\+Result, wx\+String {\bf name}, {\bf Draw\+Serie} $\ast$d\+Serie)
+\item 
+void {\bf remove\+Tree\+Matrix} (wx\+Tree\+Ctrl $\ast$tc\+Result, wx\+String {\bf name}, {\bf Draw\+Matrix} $\ast$d\+Matrix)
+\item 
+void {\bf check\+Tree\+Item} (wx\+Tree\+Ctrl $\ast$tc\+Result, wx\+Tree\+Item\+Id parent\+Id, bool {\bf check}, {\bf Res\+Output} $\ast$res\+Output={\bf N\+U\+LL})
+\item 
+void {\bf check\+Tree\+Item\+Serie} (wx\+Tree\+Ctrl $\ast$tc\+Result, wx\+Tree\+Item\+Id parent\+Id, bool {\bf check}, {\bf Serie} $\ast$serie={\bf N\+U\+LL})
+\item 
+void {\bf check\+Tree\+Item\+Matrix} (wx\+Tree\+Ctrl $\ast$tc\+Result, wx\+Tree\+Item\+Id parent\+Id, bool {\bf check}, {\bf Matrix} matrix={\bf Matrix}())
+\end{DoxyCompactItemize}
+\subsection*{Atributos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Choice $\ast$ {\bf cb\+Scen}
+\item 
+wx\+Tree\+Item\+Id {\bf r\+Id}
+\item 
+wx\+Tree\+Ctrl $\ast$ {\bf r\+Tree\+Ctrl}
+\item 
+wx\+Menu $\ast$ {\bf popup\+Menu}
+\item 
+wx\+Static\+Text $\ast$ {\bf text\+Section\+Type}
+\item 
+wx\+String {\bf name}
+\item 
+{\bf Out\+Main} $\ast$ {\bf out\+Main}
+\item 
+wx\+Choicebook $\ast$ {\bf cb\+Sections}
+\item 
+map$<$ unsigned int, {\bf Out\+Section} $\ast$ $>$ {\bf sections}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 40 do arquivo Output.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Output@{Output}!Output@{Output}}
+\index{Output@{Output}!Output@{Output}}
+\subsubsection[{Output(wx\+Frame $\ast$frame, wx\+Window $\ast$parent\+Win, Out\+Main $\ast$parent, wx\+String section\+Type, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}Output\+::\+Output (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent\+Win, }
+\item[{{\bf Out\+Main} $\ast$}]{parent, }
+\item[{wx\+String}]{section\+Type, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_output_a721d3055b8d79b37dc08c0d49865c0da}
+
+\begin{DoxyParams}{ParÃ¢metros}
+{\em frame} & Janela onde a interface será inserida \\
+\hline
+{\em parent\+Win} & Componente a que pertence \\
+\hline
+{\em parent} & Ponteiro para classe principal \\
+\hline
+{\em section\+Type} & Tipo de seção \\
+\hline
+{\em name} & Nome \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!````~Output@{$\sim$\+Output}}
+\index{````~Output@{$\sim$\+Output}!Output@{Output}}
+\subsubsection[{$\sim$\+Output()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Output\+::$\sim$\+Output (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_output_a0162ebdc8e5b13917788692fa9a753a0}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{Output@{Output}!add\+Matrix@{add\+Matrix}}
+\index{add\+Matrix@{add\+Matrix}!Output@{Output}}
+\subsubsection[{add\+Matrix(unsigned int page, Matrix matrix, wx\+String name, map$<$ unsigned int, Column\+Information $\ast$ $>$ infos, wx\+String section, unsigned int type)}]{\setlength{\rightskip}{0pt plus 5cm}bool Output\+::add\+Matrix (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{page, }
+\item[{{\bf Matrix}}]{matrix, }
+\item[{wx\+String}]{name, }
+\item[{map$<$ unsigned int, {\bf Column\+Information} $\ast$ $>$}]{infos, }
+\item[{wx\+String}]{section, }
+\item[{unsigned int}]{type}
+\end{DoxyParamCaption}
+)}\label{class_output_a994f4db59619acd894416192c3588fae}
+Adciona series de resultados na classe Out\+Sectins 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em page} & Pagina \\
+\hline
+{\em serie} & \doxyref{Serie}{pag.}{class_serie} de resultados \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!add\+Serie@{add\+Serie}}
+\index{add\+Serie@{add\+Serie}!Output@{Output}}
+\subsubsection[{add\+Serie(unsigned int page, Serie $\ast$serie, bool inverse=false, bool show\+Plan=true, bool show\+Graph=false, wx\+String name="""", bool draw\+Symbols=true, bool draw\+Lines=true)}]{\setlength{\rightskip}{0pt plus 5cm}bool Output\+::add\+Serie (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{page, }
+\item[{{\bf Serie} $\ast$}]{serie, }
+\item[{bool}]{inverse = {\ttfamily false}, }
+\item[{bool}]{show\+Plan = {\ttfamily true}, }
+\item[{bool}]{show\+Graph = {\ttfamily false}, }
+\item[{wx\+String}]{name = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{bool}]{draw\+Symbols = {\ttfamily true}, }
+\item[{bool}]{draw\+Lines = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_output_a261a90e7150c5b4bf768a51d1f61f67d}
+Adciona series de resultados na classe Out\+Sectins 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em page} & Pagina \\
+\hline
+{\em serie} & \doxyref{Serie}{pag.}{class_serie} de resultados \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!adv\+Statistics@{adv\+Statistics}}
+\index{adv\+Statistics@{adv\+Statistics}!Output@{Output}}
+\subsubsection[{adv\+Statistics(\+Res\+Serie $\ast$r\+Serie)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::adv\+Statistics (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Serie} $\ast$}]{r\+Serie}
+\end{DoxyParamCaption}
+)}\label{class_output_aa44ecb873278e82bbdbfadb4d7327516}
+Calcula as estatisticas avançadas \index{Output@{Output}!changed\+Element\+Type@{changed\+Element\+Type}}
+\index{changed\+Element\+Type@{changed\+Element\+Type}!Output@{Output}}
+\subsubsection[{changed\+Element\+Type(vector$<$ Element\+I\+D $>$ element\+Ids, int section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+::changed\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{element\+Ids, }
+\item[{int}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_output_a7d149d3f8d6b32a04a454fa69b8f0a7f}
+\index{Output@{Output}!changing\+Element\+Type@{changing\+Element\+Type}}
+\index{changing\+Element\+Type@{changing\+Element\+Type}!Output@{Output}}
+\subsubsection[{changing\+Element\+Type(vector$<$ Element\+I\+D $>$ element\+Ids, int section)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+::changing\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{element\+Ids, }
+\item[{int}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_output_a264cec49226489591d4b1db465fc8a51}
+\index{Output@{Output}!check\+Element@{check\+Element}}
+\index{check\+Element@{check\+Element}!Output@{Output}}
+\subsubsection[{check\+Element(wx\+Tree\+Ctrl $\ast$tc\+Results, wx\+Tree\+Item\+Id parent\+Id, bool state)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::check\+Element (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Ctrl $\ast$}]{tc\+Results, }
+\item[{wx\+Tree\+Item\+Id}]{parent\+Id, }
+\item[{bool}]{state}
+\end{DoxyParamCaption}
+)}\label{class_output_ae917a3f36afbf23134228383c4b1bc81}
+Marca e insere ou desmarca e remove um conjunto de elementos ou apenas um. Utilizado pelo evento de popup. Quando enviado um identificador de um elemento especifico marca apenas ele. Para um identificador de um grupo, a marcação será feita em todos os elementos contidos nele 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em tc\+Results} & Tree\+Ctrl que contem o elemento \\
+\hline
+{\em parent\+Id} & Identificador do ponto de inicio de busca \\
+\hline
+{\em state} & Marcar para true e desmarcar para false \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!check\+Matrix@{check\+Matrix}}
+\index{check\+Matrix@{check\+Matrix}!Output@{Output}}
+\subsubsection[{check\+Matrix(wx\+Tree\+Ctrl $\ast$tc\+Results, wx\+Tree\+Item\+Id parent\+Id, bool state)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::check\+Matrix (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Ctrl $\ast$}]{tc\+Results, }
+\item[{wx\+Tree\+Item\+Id}]{parent\+Id, }
+\item[{bool}]{state}
+\end{DoxyParamCaption}
+)}\label{class_output_a2ea0424b85adbf4de46b6b3d5d1eedc9}
+Marca um elemento do tipo res\+Matrix Utilizado pelo evento de popup. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em tc\+Results} & Tree\+Ctrl que contem o elemento \\
+\hline
+{\em parent\+Id} & Identificador do elemento \\
+\hline
+{\em state} & Marcar para true e desmarcar para false \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!check\+Results@{check\+Results}}
+\index{check\+Results@{check\+Results}!Output@{Output}}
+\subsubsection[{check\+Results()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Output\+::check\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_a0bc41722a48612f3947c85595d08e2cd}
+Verifica se existem resultados 
+
+Implementado por {\bf Hydro\+Output} \doxyref{}{pag.}{class_hydro_output_a36cbb065b33f0bde6e0a6888568c1129}, {\bf Res\+Op\+Output} \doxyref{}{pag.}{class_res_op_output_a29d061e405c420a4b53d5bfd3471467e}, {\bf Quali\+Output} \doxyref{}{pag.}{class_quali_output_a5bb8f497cddb4b0f1e3d7c30cab75539} e {\bf Opt\+Output} \doxyref{}{pag.}{class_opt_output_ac1c525fe8908980288a6080eda4ca0d3}.
+
+\index{Output@{Output}!check\+Serie@{check\+Serie}}
+\index{check\+Serie@{check\+Serie}!Output@{Output}}
+\subsubsection[{check\+Serie(wx\+Tree\+Ctrl $\ast$tc\+Results, wx\+Tree\+Item\+Id parent\+Id, bool state)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::check\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Ctrl $\ast$}]{tc\+Results, }
+\item[{wx\+Tree\+Item\+Id}]{parent\+Id, }
+\item[{bool}]{state}
+\end{DoxyParamCaption}
+)}\label{class_output_a73f3b06a007768b0903019dbb039aeb3}
+Marca um elemento do tipo res\+Serie Utilizado pelo evento de popup. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em tc\+Results} & Tree\+Ctrl que contem o elemento \\
+\hline
+{\em parent\+Id} & Identificador do elemento \\
+\hline
+{\em state} & Marcar para true e desmarcar para false \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!check\+Tree\+Item@{check\+Tree\+Item}}
+\index{check\+Tree\+Item@{check\+Tree\+Item}!Output@{Output}}
+\subsubsection[{check\+Tree\+Item(wx\+Tree\+Ctrl $\ast$tc\+Result, wx\+Tree\+Item\+Id parent\+Id, bool check, Res\+Output $\ast$res\+Output=\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::check\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Ctrl $\ast$}]{tc\+Result, }
+\item[{wx\+Tree\+Item\+Id}]{parent\+Id, }
+\item[{bool}]{check, }
+\item[{{\bf Res\+Output} $\ast$}]{res\+Output = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)}\label{class_output_a928da465e9a0fd3450af90fb1dc0f9d5}
+Marca/desmarca o item do tree. Usado quando muda a seleção do nó. \index{Output@{Output}!check\+Tree\+Item\+Matrix@{check\+Tree\+Item\+Matrix}}
+\index{check\+Tree\+Item\+Matrix@{check\+Tree\+Item\+Matrix}!Output@{Output}}
+\subsubsection[{check\+Tree\+Item\+Matrix(wx\+Tree\+Ctrl $\ast$tc\+Result, wx\+Tree\+Item\+Id parent\+Id, bool check, Matrix matrix=\+Matrix())}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::check\+Tree\+Item\+Matrix (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Ctrl $\ast$}]{tc\+Result, }
+\item[{wx\+Tree\+Item\+Id}]{parent\+Id, }
+\item[{bool}]{check, }
+\item[{{\bf Matrix}}]{matrix = {\ttfamily {\bf Matrix}()}}
+\end{DoxyParamCaption}
+)}\label{class_output_a44ecc66ef5640d0a092b24a2fe01768f}
+Marca/desmarca uma matriz do tree. \index{Output@{Output}!check\+Tree\+Item\+Serie@{check\+Tree\+Item\+Serie}}
+\index{check\+Tree\+Item\+Serie@{check\+Tree\+Item\+Serie}!Output@{Output}}
+\subsubsection[{check\+Tree\+Item\+Serie(wx\+Tree\+Ctrl $\ast$tc\+Result, wx\+Tree\+Item\+Id parent\+Id, bool check, Serie $\ast$serie=\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::check\+Tree\+Item\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Ctrl $\ast$}]{tc\+Result, }
+\item[{wx\+Tree\+Item\+Id}]{parent\+Id, }
+\item[{bool}]{check, }
+\item[{{\bf Serie} $\ast$}]{serie = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)}\label{class_output_afce14e0d4acee33a4f8d375f672aa35c}
+Marca/desmarca uma serie do tree. \index{Output@{Output}!delete\+Section@{delete\+Section}}
+\index{delete\+Section@{delete\+Section}!Output@{Output}}
+\subsubsection[{delete\+Section(unsigned int page)}]{\setlength{\rightskip}{0pt plus 5cm}bool Output\+::delete\+Section (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{page}
+\end{DoxyParamCaption}
+)}\label{class_output_a3c2fb3a3fe1a153d54fd060e5f5053cb}
+Deleta uma pagina em cb\+Sections deacordo com o identificador da pagina 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em page} & Identificador da pagina \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!get\+Chain@{get\+Chain}}
+\index{get\+Chain@{get\+Chain}!Output@{Output}}
+\subsubsection[{get\+Chain()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual wx\+String Output\+::get\+Chain (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_ab8eae45c5aa9498e650866f184aaeff7}
+Retorna a estrutura para inserção/deleção do treectrl 
+
+Implementado por {\bf Hydro\+Output} \doxyref{}{pag.}{class_hydro_output_aca3298c0a5105d562a616b818f65dcb6}, {\bf Res\+Op\+Output} \doxyref{}{pag.}{class_res_op_output_ad778a89d075ba4093e6c2c890932c1c7}, {\bf Quali\+Output} \doxyref{}{pag.}{class_quali_output_ac24280865b0e979edc217823bd3aaa9e} e {\bf Opt\+Output} \doxyref{}{pag.}{class_opt_output_a2bd8b52d4ff2a25927009e1b49e76e4e}.
+
+\index{Output@{Output}!get\+Res\+Matrix@{get\+Res\+Matrix}}
+\index{get\+Res\+Matrix@{get\+Res\+Matrix}!Output@{Output}}
+\subsubsection[{get\+Res\+Matrix()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Matrix}$\ast$ Output\+::get\+Res\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_output_aa64643b398f036251163c9928fb27c7f}
+Retorna a \doxyref{Res\+Serie}{pag.}{class_res_serie} selecionada \index{Output@{Output}!get\+Res\+Matrix@{get\+Res\+Matrix}}
+\index{get\+Res\+Matrix@{get\+Res\+Matrix}!Output@{Output}}
+\subsubsection[{get\+Res\+Matrix(wx\+Tree\+Item\+Id selection)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Matrix}$\ast$ Output\+::get\+Res\+Matrix (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{selection}
+\end{DoxyParamCaption}
+)}\label{class_output_a24f0ddeb22ecc5809fb68da4fc1ca071}
+Retorna a \doxyref{Res\+Serie}{pag.}{class_res_serie} recebendo a posição no checklistbox 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em selection} & Posição no checklist \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!get\+Res\+Matrix@{get\+Res\+Matrix}}
+\index{get\+Res\+Matrix@{get\+Res\+Matrix}!Output@{Output}}
+\subsubsection[{get\+Res\+Matrix(wx\+Tree\+Ctrl $\ast$tc\+Results, wx\+Tree\+Item\+Id selection)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Matrix}$\ast$ Output\+::get\+Res\+Matrix (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Ctrl $\ast$}]{tc\+Results, }
+\item[{wx\+Tree\+Item\+Id}]{selection}
+\end{DoxyParamCaption}
+)}\label{class_output_a340e2f53240f837ae29f78b9d5b6f887}
+Retorna a \doxyref{Res\+Serie}{pag.}{class_res_serie} recebendo a posição no checklistbox 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em selection} & Posição no checklist \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!get\+Res\+Serie@{get\+Res\+Serie}}
+\index{get\+Res\+Serie@{get\+Res\+Serie}!Output@{Output}}
+\subsubsection[{get\+Res\+Serie()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Serie}$\ast$ Output\+::get\+Res\+Serie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_output_a0be8086047d8533fc28bd3f58a8e81ec}
+Retorna a \doxyref{Res\+Serie}{pag.}{class_res_serie} selecionada \index{Output@{Output}!get\+Res\+Serie@{get\+Res\+Serie}}
+\index{get\+Res\+Serie@{get\+Res\+Serie}!Output@{Output}}
+\subsubsection[{get\+Res\+Serie(wx\+Tree\+Item\+Id selection)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Serie}$\ast$ Output\+::get\+Res\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{selection}
+\end{DoxyParamCaption}
+)}\label{class_output_a6d386e1a4de5f0ff5089de3a2f9784d9}
+Retorna a \doxyref{Res\+Serie}{pag.}{class_res_serie} recebendo a posição no checklistbox 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em selection} & Posição no checklist \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!get\+Res\+Serie@{get\+Res\+Serie}}
+\index{get\+Res\+Serie@{get\+Res\+Serie}!Output@{Output}}
+\subsubsection[{get\+Res\+Serie(wx\+Tree\+Ctrl $\ast$tc\+Results, wx\+Tree\+Item\+Id selection)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Serie}$\ast$ Output\+::get\+Res\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Ctrl $\ast$}]{tc\+Results, }
+\item[{wx\+Tree\+Item\+Id}]{selection}
+\end{DoxyParamCaption}
+)}\label{class_output_aad22c50663d2b0c3fc23bc7c54b74483}
+Retorna a \doxyref{Res\+Serie}{pag.}{class_res_serie} recebendo a posição no checklistbox 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em selection} & Posição no checklist \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!get\+Section\+Id@{get\+Section\+Id}}
+\index{get\+Section\+Id@{get\+Section\+Id}!Output@{Output}}
+\subsubsection[{get\+Section\+Id(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}virtual int Output\+::get\+Section\+Id (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_output_a36f26c3a0ade3fee90e8776b464af80e}
+Retorna o identificador da seção pelo nome fornecido 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em name} & Nome da seção \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado por {\bf Hydro\+Output} \doxyref{}{pag.}{class_hydro_output_ac996322ebc889d5bfc04a0bc5aba00fc}, {\bf Res\+Op\+Output} \doxyref{}{pag.}{class_res_op_output_a2753f2600484f7c160443392fca7a397}, {\bf Quali\+Output} \doxyref{}{pag.}{class_quali_output_abc34d423e4ffb0ad610309862478c37c} e {\bf Opt\+Output} \doxyref{}{pag.}{class_opt_output_aa9adfd78220d7a2b08b9aa0f8bb3063c}.
+
+
+
+DefiniÃ§Ã£o na linha 234 do arquivo Output.\+h.
+
+\index{Output@{Output}!has\+Section@{has\+Section}}
+\index{has\+Section@{has\+Section}!Output@{Output}}
+\subsubsection[{has\+Section(wx\+Tree\+Ctrl $\ast$tc\+Result, wx\+Tree\+Item\+Id parent\+Id, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Item\+Id Output\+::has\+Section (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Ctrl $\ast$}]{tc\+Result, }
+\item[{wx\+Tree\+Item\+Id}]{parent\+Id, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)}\label{class_output_a4b47ea0f3ff6d44682640c7b41fe5e95}
+Verifica se existe uma seção com o nome enviado e retorna o identificador da seção ou (wx\+Tree\+Item\+Id)0 se não houver seção 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em parent\+Id} & Id da seção anterior \\
+\hline
+{\em section} & Nome da seção \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!insert\+Section@{insert\+Section}}
+\index{insert\+Section@{insert\+Section}!Output@{Output}}
+\subsubsection[{insert\+Section(unsigned int page, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}bool Output\+::insert\+Section (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{page, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_output_ab5cb6498e836f0bc85ed8814a6982355}
+Insere uma pagina em cb\+Sections 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em page} & Pagina de inserção \\
+\hline
+{\em name} & Nome da pagina \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!insert\+Tree\+Item@{insert\+Tree\+Item}}
+\index{insert\+Tree\+Item@{insert\+Tree\+Item}!Output@{Output}}
+\subsubsection[{insert\+Tree\+Item(wx\+Tree\+Ctrl $\ast$tc\+Result, S\+I\+G\+A\+Tree\+Item\+Data $\ast$d\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::insert\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Ctrl $\ast$}]{tc\+Result, }
+\item[{{\bf S\+I\+G\+A\+Tree\+Item\+Data} $\ast$}]{d\+Data}
+\end{DoxyParamCaption}
+)}\label{class_output_ae9a0a42f00f9bbec582b319420f5ef5b}
+Insere uma serie no treectrl de acordo com a estrutura enviada 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em root} & Identificador da raiz \\
+\hline
+{\em name} & Sub-\/seções enviadas de forma 1/2/3/.../ \\
+\hline
+{\em serie} & Ponteiro para a serie \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!insert\+Tree\+Matrix@{insert\+Tree\+Matrix}}
+\index{insert\+Tree\+Matrix@{insert\+Tree\+Matrix}!Output@{Output}}
+\subsubsection[{insert\+Tree\+Matrix(wx\+Tree\+Ctrl $\ast$tc\+Result, Draw\+Matrix $\ast$d\+Matrix)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::insert\+Tree\+Matrix (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Ctrl $\ast$}]{tc\+Result, }
+\item[{{\bf Draw\+Matrix} $\ast$}]{d\+Matrix}
+\end{DoxyParamCaption}
+)}\label{class_output_a3ceae1cf7b379e38ae9991a5263f5e94}
+Insere uma serie no treectrl de acordo com a estrutura enviada 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em root} & Identificador da raiz \\
+\hline
+{\em name} & Sub-\/seções enviadas de forma 1/2/3/.../ \\
+\hline
+{\em serie} & Ponteiro para a serie \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!insert\+Tree\+Serie@{insert\+Tree\+Serie}}
+\index{insert\+Tree\+Serie@{insert\+Tree\+Serie}!Output@{Output}}
+\subsubsection[{insert\+Tree\+Serie(wx\+Tree\+Ctrl $\ast$tc\+Result, Draw\+Serie $\ast$d\+Serie)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::insert\+Tree\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Ctrl $\ast$}]{tc\+Result, }
+\item[{{\bf Draw\+Serie} $\ast$}]{d\+Serie}
+\end{DoxyParamCaption}
+)}\label{class_output_a5a1acb7b4111c74dcab6225f7ec8d68a}
+Insere uma serie no treectrl de acordo com a estrutura enviada 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em root} & Identificador da raiz \\
+\hline
+{\em name} & Sub-\/seções enviadas de forma 1/2/3/.../ \\
+\hline
+{\em serie} & Ponteiro para a serie \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}}
+\index{on\+Changed\+Element\+Type@{on\+Changed\+Element\+Type}!Output@{Output}}
+\subsubsection[{on\+Changed\+Element\+Type(vector$<$ Element\+I\+D $>$ elemet\+Ids)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+::on\+Changed\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{elemet\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_ad4d608d78d6d5e2324fa64ba9aa85fb9}
+
+
+Implementado por {\bf Hydro\+Output} \doxyref{}{pag.}{class_hydro_output_a12b61611720a6cda0f31f7b9a893e631}, {\bf Res\+Op\+Output} \doxyref{}{pag.}{class_res_op_output_af65f2482fa25d05fb5b29319099fcb29}, {\bf Quali\+Output} \doxyref{}{pag.}{class_quali_output_a7efc6370ea511f49e15943c2a9ef699f} e {\bf Opt\+Output} \doxyref{}{pag.}{class_opt_output_ac65170e7d4e2a7704cf8f33c1e9da763}.
+
+\index{Output@{Output}!on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}}
+\index{on\+Changing\+Element\+Type@{on\+Changing\+Element\+Type}!Output@{Output}}
+\subsubsection[{on\+Changing\+Element\+Type(vector$<$ Element\+I\+D $>$ element\+Ids)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+::on\+Changing\+Element\+Type (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Element\+ID} $>$}]{element\+Ids}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_addc3b605d368623bed09c322b0f4e7b4}
+Evento de mudança de tipo do elemento 
+
+Implementado por {\bf Hydro\+Output} \doxyref{}{pag.}{class_hydro_output_a6c90dd08d6399139ef82c1ffdd72dbd3}, {\bf Res\+Op\+Output} \doxyref{}{pag.}{class_res_op_output_a82890aca0a6eb5bbcbfef9531869b155}, {\bf Quali\+Output} \doxyref{}{pag.}{class_quali_output_ac335f26c9c824f0f6a9227093351941e} e {\bf Opt\+Output} \doxyref{}{pag.}{class_opt_output_a41d5e3ea4ffa53c2a470ce810239e10f}.
+
+\index{Output@{Output}!on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}}
+\index{on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}!Output@{Output}}
+\subsubsection[{on\+Changing\+Time\+Interval(\+Date\+::\+Time\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+::on\+Changing\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_output_a3e51174cbed13a4407d4eccee839a4ce}
+Evento chamado quando o sistema muda de intervalo de tempo O modulo adapta os modelos de acordo com o intervalo de tempo definido 
+
+Reimplementado por {\bf Hydro\+Output} \doxyref{}{pag.}{class_hydro_output_a9a8458c33f48dfe6e9f16c38d1c741de}, {\bf Res\+Op\+Output} \doxyref{}{pag.}{class_res_op_output_af6fe52421cd89d7445cd2fa58c5c48ea}, {\bf Quali\+Output} \doxyref{}{pag.}{class_quali_output_a6d567cb6f47aa15c25a53deee3bcb20b} e {\bf Opt\+Output} \doxyref{}{pag.}{class_opt_output_aa783cc957f2cc3b7fdd1020c149deac3}.
+
+
+
+DefiniÃ§Ã£o na linha 239 do arquivo Output.\+h.
+
+\index{Output@{Output}!on\+Check\+Item@{on\+Check\+Item}}
+\index{on\+Check\+Item@{on\+Check\+Item}!Output@{Output}}
+\subsubsection[{on\+Check\+Item(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::on\+Check\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_output_a026b42ee67a3b73b56563b909aa2a976}
+Marca e insere ou desmarca e remove selecinada no viewer 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em event} & Evento gerado \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!on\+Check\+Matrix@{on\+Check\+Matrix}}
+\index{on\+Check\+Matrix@{on\+Check\+Matrix}!Output@{Output}}
+\subsubsection[{on\+Check\+Matrix(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::on\+Check\+Matrix (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_output_a23d28b78c58a76b10d90c6231db57737}
+Marca e insere ou desmarca e remove uma matrix \index{Output@{Output}!on\+Check\+Serie@{on\+Check\+Serie}}
+\index{on\+Check\+Serie@{on\+Check\+Serie}!Output@{Output}}
+\subsubsection[{on\+Check\+Serie(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::on\+Check\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_output_af66539efa37dbf1442051c05c3dd5c0f}
+Marca e insere ou desmarca e remove uma serie \index{Output@{Output}!on\+Choicebook@{on\+Choicebook}}
+\index{on\+Choicebook@{on\+Choicebook}!Output@{Output}}
+\subsubsection[{on\+Choicebook(wx\+Choicebook\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::on\+Choicebook (
+\begin{DoxyParamCaption}
+\item[{wx\+Choicebook\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_output_a0a44a6a235ea673198b4bf2a70e59697}
+Verifica as series marcadas pelo usuario para serem mostradas 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em event} & Evento gerado \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!on\+Delete\+Item@{on\+Delete\+Item}}
+\index{on\+Delete\+Item@{on\+Delete\+Item}!Output@{Output}}
+\subsubsection[{on\+Delete\+Item(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::on\+Delete\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_output_af3eb3ae1184d5ec0d3fd5a9a596eac8d}
+Evento de deleção de itém do tc\+Series 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!on\+Popup\+Menu@{on\+Popup\+Menu}}
+\index{on\+Popup\+Menu@{on\+Popup\+Menu}!Output@{Output}}
+\subsubsection[{on\+Popup\+Menu(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::on\+Popup\+Menu (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_output_afbde1167469cbfda662cd5f5ebf2a787}
+Eventos do menu gerado pelo botão direito do mouse \index{Output@{Output}!on\+Right\+Clicked@{on\+Right\+Clicked}}
+\index{on\+Right\+Clicked@{on\+Right\+Clicked}!Output@{Output}}
+\subsubsection[{on\+Right\+Clicked(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::on\+Right\+Clicked (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_output_a1f6c81f859a612b7486a4757b678e641}
+Evento do botão direito do mouse clicado sobre o treectrl \index{Output@{Output}!on\+Selected\+Element@{on\+Selected\+Element}}
+\index{on\+Selected\+Element@{on\+Selected\+Element}!Output@{Output}}
+\subsubsection[{on\+Selected\+Element()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+::on\+Selected\+Element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_a4b8586aca4bb328726aa7dfab9b39728}
+
+
+Implementado por {\bf Hydro\+Output} \doxyref{}{pag.}{class_hydro_output_ae7cf22a7f1987df771a76717e820b421}, {\bf Res\+Op\+Output} \doxyref{}{pag.}{class_res_op_output_ae1abd6c2b6e9f91fdf1882e89e1c2a63}, {\bf Quali\+Output} \doxyref{}{pag.}{class_quali_output_a2f656b26a85fff0225f80ddb60285fbe} e {\bf Opt\+Output} \doxyref{}{pag.}{class_opt_output_abbd015fcbce8ad3a9631df4403da39c8}.
+
+\index{Output@{Output}!on\+Selected\+Links@{on\+Selected\+Links}}
+\index{on\+Selected\+Links@{on\+Selected\+Links}!Output@{Output}}
+\subsubsection[{on\+Selected\+Links()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+::on\+Selected\+Links (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_output_aa89184577eb7477628bea81d9f582c6a}
+Evento de seleção de trecho Deve ser re-\/implementado 
+
+Reimplementado por {\bf Hydro\+Output} \doxyref{}{pag.}{class_hydro_output_a5480047ef29bd7bb79bed0135615b368}, {\bf Res\+Op\+Output} \doxyref{}{pag.}{class_res_op_output_a600d9aab5c21892ea81c82eb53556b8c}, {\bf Quali\+Output} \doxyref{}{pag.}{class_quali_output_afe2434d6fac560975e3c60283e327dcc} e {\bf Opt\+Output} \doxyref{}{pag.}{class_opt_output_a69c680c8ad238da6285138068a415ca1}.
+
+
+
+DefiniÃ§Ã£o na linha 149 do arquivo Output.\+h.
+
+\index{Output@{Output}!on\+Select\+Item@{on\+Select\+Item}}
+\index{on\+Select\+Item@{on\+Select\+Item}!Output@{Output}}
+\subsubsection[{on\+Select\+Item(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::on\+Select\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_output_af84e782f9b7101aaf1df21495e416b3a}
+Calcula as estatsticas e atualiza na interface 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em event} & Evento gerado \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!remove\+Section@{remove\+Section}}
+\index{remove\+Section@{remove\+Section}!Output@{Output}}
+\subsubsection[{remove\+Section(unsigned int page)}]{\setlength{\rightskip}{0pt plus 5cm}bool Output\+::remove\+Section (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{page}
+\end{DoxyParamCaption}
+)}\label{class_output_ab270756e85f4286e6d24d04e9f330bf2}
+Remove uma pagina em cb\+Sections deacordo com o identificador da pagina 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em page} & Identificador da pagina \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!remove\+Tree\+Item@{remove\+Tree\+Item}}
+\index{remove\+Tree\+Item@{remove\+Tree\+Item}!Output@{Output}}
+\subsubsection[{remove\+Tree\+Item(wx\+Tree\+Ctrl $\ast$tc\+Result, wx\+String name, S\+I\+G\+A\+Tree\+Item\+Data $\ast$d\+Data)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::remove\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Ctrl $\ast$}]{tc\+Result, }
+\item[{wx\+String}]{name, }
+\item[{{\bf S\+I\+G\+A\+Tree\+Item\+Data} $\ast$}]{d\+Data}
+\end{DoxyParamCaption}
+)}\label{class_output_a5858fec3edc0edcad04a0ee977060a60}
+Remove uma serie do treectrl de acordo com a estrutura enviada 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em root} & Identificador da raiz \\
+\hline
+{\em name} & Sub-\/seções enviadas de forma 1/2/3/.../ \\
+\hline
+{\em serie} & Ponteiro para a serie \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!remove\+Tree\+Matrix@{remove\+Tree\+Matrix}}
+\index{remove\+Tree\+Matrix@{remove\+Tree\+Matrix}!Output@{Output}}
+\subsubsection[{remove\+Tree\+Matrix(wx\+Tree\+Ctrl $\ast$tc\+Result, wx\+String name, Draw\+Matrix $\ast$d\+Matrix)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::remove\+Tree\+Matrix (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Ctrl $\ast$}]{tc\+Result, }
+\item[{wx\+String}]{name, }
+\item[{{\bf Draw\+Matrix} $\ast$}]{d\+Matrix}
+\end{DoxyParamCaption}
+)}\label{class_output_a60101ad1ef981381a306438dc4e0295d}
+Remove uma serie do treectrl de acordo com a estrutura enviada 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em root} & Identificador da raiz \\
+\hline
+{\em name} & Sub-\/seções enviadas de forma 1/2/3/.../ \\
+\hline
+{\em serie} & Ponteiro para a serie \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!remove\+Tree\+Serie@{remove\+Tree\+Serie}}
+\index{remove\+Tree\+Serie@{remove\+Tree\+Serie}!Output@{Output}}
+\subsubsection[{remove\+Tree\+Serie(wx\+Tree\+Ctrl $\ast$tc\+Result, wx\+String name, Draw\+Serie $\ast$d\+Serie)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::remove\+Tree\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Ctrl $\ast$}]{tc\+Result, }
+\item[{wx\+String}]{name, }
+\item[{{\bf Draw\+Serie} $\ast$}]{d\+Serie}
+\end{DoxyParamCaption}
+)}\label{class_output_a7af7e3c4f2ed2d31c88097eb242a9f08}
+Remove uma serie do treectrl de acordo com a estrutura enviada 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em root} & Identificador da raiz \\
+\hline
+{\em name} & Sub-\/seções enviadas de forma 1/2/3/.../ \\
+\hline
+{\em serie} & Ponteiro para a serie \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!selected\+Nodes@{selected\+Nodes}}
+\index{selected\+Nodes@{selected\+Nodes}!Output@{Output}}
+\subsubsection[{selected\+Nodes()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Output\+::selected\+Nodes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_output_aa432f06b5a38b14dac777a11215ab0d7}
+Evento de seleção de nó Deve ser re-\/implementado 
+
+Implementado por {\bf Hydro\+Output} \doxyref{}{pag.}{class_hydro_output_a853e4fe8d53f7a01868fed4b96702bba}, {\bf Res\+Op\+Output} \doxyref{}{pag.}{class_res_op_output_acccd8f96f76c8b6139cbf6e25437b5f5}, {\bf Quali\+Output} \doxyref{}{pag.}{class_quali_output_a5ec69c4995d330897416dd8fe10a2064} e {\bf Opt\+Output} \doxyref{}{pag.}{class_opt_output_a117e73efe604aa01dddaed6ad7def0c5}.
+
+\index{Output@{Output}!selected\+Results@{selected\+Results}}
+\index{selected\+Results@{selected\+Results}!Output@{Output}}
+\subsubsection[{selected\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::selected\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_output_a79d5bfcff89969543d896febec0f8b61}
+Verifica as series marcadas pelo usuario para serem mostradas \index{Output@{Output}!select\+Matrix@{select\+Matrix}}
+\index{select\+Matrix@{select\+Matrix}!Output@{Output}}
+\subsubsection[{select\+Matrix()}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::select\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_output_adf4140fbb52770ac6f98b8c2574f29fc}
+Calcula as estatsticas e atualiza na interface \index{Output@{Output}!select\+Serie@{select\+Serie}}
+\index{select\+Serie@{select\+Serie}!Output@{Output}}
+\subsubsection[{select\+Serie(wx\+Tree\+Item\+Id parent\+Id=(wx\+Tree\+Item\+Id) 0, wx\+Tree\+Ctrl $\ast$tc\+Results=\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::select\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{parent\+Id = {\ttfamily (wxTreeItemId)~0}, }
+\item[{wx\+Tree\+Ctrl $\ast$}]{tc\+Results = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)}\label{class_output_ac96ebaa5791c160d706fb5df0423137e}
+Calcula as estatsticas e atualiza na interface \index{Output@{Output}!update\+Matrixes@{update\+Matrixes}}
+\index{update\+Matrixes@{update\+Matrixes}!Output@{Output}}
+\subsubsection[{update\+Matrixes(unsigned int page, unsigned int pos, Matrix matrix, wx\+String section=str\+Out, int type=0)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::update\+Matrixes (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{page, }
+\item[{unsigned int}]{pos, }
+\item[{{\bf Matrix}}]{matrix, }
+\item[{wx\+String}]{section = {\ttfamily {\bf str\+Out}}, }
+\item[{int}]{type = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_output_ae9778f9837d69a44052f7ec83103eb90}
+Atualiza os ponteiros das series 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em page} & Pagina da seção \\
+\hline
+{\em pos} & Posição da serie \\
+\hline
+{\em serie} & Novo ponteiro para a serie \\
+\hline
+\end{DoxyParams}
+\index{Output@{Output}!update\+Series@{update\+Series}}
+\index{update\+Series@{update\+Series}!Output@{Output}}
+\subsubsection[{update\+Series(unsigned int page, unsigned int pos, Serie $\ast$serie, wx\+String section=str\+Out)}]{\setlength{\rightskip}{0pt plus 5cm}void Output\+::update\+Series (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{page, }
+\item[{unsigned int}]{pos, }
+\item[{{\bf Serie} $\ast$}]{serie, }
+\item[{wx\+String}]{section = {\ttfamily {\bf str\+Out}}}
+\end{DoxyParamCaption}
+)}\label{class_output_a6fe917e43ad3ec3ee45c9df8efef1de2}
+Mostra ou não a serie 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em name} & Nome da serie \\
+\hline
+{\em serie} & \doxyref{Serie}{pag.}{class_serie} de resultados\\
+\hline
+\end{DoxyParams}
+bool serie\+Show(unsigned int page, unsigned int pos, bool show); Atualiza os ponteiros das series 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em page} & Pagina da seção \\
+\hline
+{\em pos} & Posição da serie \\
+\hline
+{\em serie} & Novo ponteiro para a serie \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{Output@{Output}!cb\+Scen@{cb\+Scen}}
+\index{cb\+Scen@{cb\+Scen}!Output@{Output}}
+\subsubsection[{cb\+Scen}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Output\+::cb\+Scen}\label{class_output_a643701c249220b51c36c8b6ebf8b7590}
+Cenarios 
+
+DefiniÃ§Ã£o na linha 46 do arquivo Output.\+h.
+
+\index{Output@{Output}!cb\+Sections@{cb\+Sections}}
+\index{cb\+Sections@{cb\+Sections}!Output@{Output}}
+\subsubsection[{cb\+Sections}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choicebook$\ast$ Output\+::cb\+Sections}\label{class_output_aee02537b7341f60daa29c78d58d87f92}
+Choice\+Book contendo as seções de cada modulo 
+
+DefiniÃ§Ã£o na linha 86 do arquivo Output.\+h.
+
+\index{Output@{Output}!name@{name}}
+\index{name@{name}!Output@{Output}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Output\+::name}\label{class_output_a86aa49a0a060087f08015616e26c1d4b}
+Nome do \doxyref{Output}{pag.}{class_output} 
+
+DefiniÃ§Ã£o na linha 66 do arquivo Output.\+h.
+
+\index{Output@{Output}!out\+Main@{out\+Main}}
+\index{out\+Main@{out\+Main}!Output@{Output}}
+\subsubsection[{out\+Main}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Out\+Main}$\ast$ Output\+::out\+Main}\label{class_output_a4bad9aeff5bd90ceb39db6d7b5703fc9}
+Aponta para classe principal 
+
+DefiniÃ§Ã£o na linha 70 do arquivo Output.\+h.
+
+\index{Output@{Output}!popup\+Menu@{popup\+Menu}}
+\index{popup\+Menu@{popup\+Menu}!Output@{Output}}
+\subsubsection[{popup\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Menu$\ast$ Output\+::popup\+Menu}\label{class_output_a0fdda19001bdee7e6f080c5d75477e77}
+Menu de popup 
+
+DefiniÃ§Ã£o na linha 58 do arquivo Output.\+h.
+
+\index{Output@{Output}!r\+Id@{r\+Id}}
+\index{r\+Id@{r\+Id}!Output@{Output}}
+\subsubsection[{r\+Id}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Item\+Id Output\+::r\+Id}\label{class_output_aba727f6da6c6f0b3010403955576c8f2}
+Identificador do treectrl da serie selecionada 
+
+DefiniÃ§Ã£o na linha 50 do arquivo Output.\+h.
+
+\index{Output@{Output}!r\+Tree\+Ctrl@{r\+Tree\+Ctrl}}
+\index{r\+Tree\+Ctrl@{r\+Tree\+Ctrl}!Output@{Output}}
+\subsubsection[{r\+Tree\+Ctrl}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Ctrl$\ast$ Output\+::r\+Tree\+Ctrl}\label{class_output_a27bb54099ae296fcd2d10e3dff79e02f}
+
+
+DefiniÃ§Ã£o na linha 54 do arquivo Output.\+h.
+
+\index{Output@{Output}!sections@{sections}}
+\index{sections@{sections}!Output@{Output}}
+\subsubsection[{sections}]{\setlength{\rightskip}{0pt plus 5cm}map$<$unsigned int,{\bf Out\+Section}$\ast$$>$ Output\+::sections}\label{class_output_a52bf2399e3a4d8e8bd2b700b4eb88656}
+Mapa contendo os checklistboxs para cada seção 
+
+DefiniÃ§Ã£o na linha 90 do arquivo Output.\+h.
+
+\index{Output@{Output}!text\+Section\+Type@{text\+Section\+Type}}
+\index{text\+Section\+Type@{text\+Section\+Type}!Output@{Output}}
+\subsubsection[{text\+Section\+Type}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Output\+::text\+Section\+Type}\label{class_output_ac59cfede7addb96beaba49e943d5c00a}
+Texto da seção 
+
+DefiniÃ§Ã£o na linha 62 do arquivo Output.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Output.\+h}\end{DoxyCompactItemize}

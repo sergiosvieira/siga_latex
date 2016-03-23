@@ -1,0 +1,212 @@
+\section{Refer√™ncia da Classe Serie\+Dialog}
+\label{class_serie_dialog}\index{Serie\+Dialog@{Serie\+Dialog}}
+
+
+{\ttfamily \#include $<$Serie\+Dialog.\+h$>$}
+
+
+
+Herdeiro de {\bf S\+I\+G\+A\+Dialog}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Serie\+Dialog} ({\bf Serie} $\ast$$\ast$serie, wx\+String token, wx\+String serie\+Name, wx\+String unit, wx\+String serie\+Ext, wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent}, wx\+Window\+ID id, const wx\+String \&title, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, bool show\+Adv=false, int convert\+FF=0, int id\+Element=0, bool show\+Tree\+Ctrl\+Element\+Plan=false)
+\item 
+{\bf $\sim$\+Serie\+Dialog} ()
+\item 
+void {\bf on\+Ok} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Cancel} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Clear} (wx\+Command\+Event \&event)
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+String {\bf main\+Title}
+\item 
+wx\+String {\bf s\+Name}
+\item 
+wx\+String {\bf s\+Unit}
+\item 
+bool {\bf s\+Draw\+Lines}
+\item 
+bool {\bf s\+Draw\+Symbols}
+\item 
+bool {\bf s\+Inverse}
+\item 
+wx\+String {\bf file\+Path}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 12 do arquivo Serie\+Dialog.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Serie\+Dialog@{Serie\+Dialog}!Serie\+Dialog@{Serie\+Dialog}}
+\index{Serie\+Dialog@{Serie\+Dialog}!Serie\+Dialog@{Serie\+Dialog}}
+\subsubsection[{Serie\+Dialog(\+Serie $\ast$$\ast$serie, wx\+String token, wx\+String serie\+Name, wx\+String unit, wx\+String serie\+Ext, wx\+Frame $\ast$frame, wx\+Window $\ast$parent, wx\+Window\+I\+D id, const wx\+String \&title, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, bool show\+Adv=false, int convert\+F\+F=0, int id\+Element=0, bool show\+Tree\+Ctrl\+Element\+Plan=false)}]{\setlength{\rightskip}{0pt plus 5cm}Serie\+Dialog\+::\+Serie\+Dialog (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie} $\ast$$\ast$}]{serie, }
+\item[{wx\+String}]{token, }
+\item[{wx\+String}]{serie\+Name, }
+\item[{wx\+String}]{unit, }
+\item[{wx\+String}]{serie\+Ext, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{wx\+Window\+ID}]{id, }
+\item[{const wx\+String \&}]{title, }
+\item[{const wx\+Point \&}]{pos = {\ttfamily wxDefaultPosition}, }
+\item[{const wx\+Size \&}]{size = {\ttfamily wxDefaultSize}, }
+\item[{bool}]{show\+Adv = {\ttfamily false}, }
+\item[{int}]{convert\+FF = {\ttfamily 0}, }
+\item[{int}]{id\+Element = {\ttfamily 0}, }
+\item[{bool}]{show\+Tree\+Ctrl\+Element\+Plan = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_serie_dialog_a4294663382f06f83b7c8720f9048c3bd}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em serie} & \doxyref{Serie}{pag.}{class_serie} de dados \\
+\hline
+{\em token} & ??? \\
+\hline
+{\em serie\+Name} & ??? \\
+\hline
+{\em unit} & ??? \\
+\hline
+{\em serie\+Ext} & ??? \\
+\hline
+{\em frame} & Frame que contem a interface \\
+\hline
+{\em parent} & Pai da janela \\
+\hline
+{\em id} & Identificador da janela \\
+\hline
+{\em title} & Titulo da janela \\
+\hline
+{\em pos} & PosiÁ„o inicial da janela \\
+\hline
+{\em size} & Tamanho inicial da janela \\
+\hline
+{\em show\+Adv} & Booleano que indica se deve ser mostrado o sizer com opÁıes avanÁadas \\
+\hline
+{\em convert\+FF} & Inteiro que indica qual o tipo de importaÁ„o a dialog d· suporte (use 0 nos casos em que importaÁ„o n„o ser„o tratados). Vide tabela do atributo \textquotesingle{}convert\textquotesingle{} em \doxyref{Serie\+Dialog\+Content.\+h}{pag.}{_serie_dialog_content_8h} \\
+\hline
+{\em id\+Element} & Guarda o valor do id do elemento selecionado no cen·rio, objetivo de guardar no map da Serie\+Viwer junto com a sÈrie correspondente \\
+\hline
+{\em show\+Tree\+Ctrl\+Element\+Plan} & Possiblita que a \doxyref{Serie\+Plan}{pag.}{class_serie_plan} exiba uma lista dos elementos de acordo com o tipo de entrada de dados, assim pode-\/se adicionar v·rias sÈries de uma ˙nica vez \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Dialog@{Serie\+Dialog}!````~Serie\+Dialog@{$\sim$\+Serie\+Dialog}}
+\index{````~Serie\+Dialog@{$\sim$\+Serie\+Dialog}!Serie\+Dialog@{Serie\+Dialog}}
+\subsubsection[{$\sim$\+Serie\+Dialog()}]{\setlength{\rightskip}{0pt plus 5cm}Serie\+Dialog\+::$\sim$\+Serie\+Dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_dialog_adf24b67c4a7e6a1788a83507d092adc5}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Serie\+Dialog@{Serie\+Dialog}!on\+Cancel@{on\+Cancel}}
+\index{on\+Cancel@{on\+Cancel}!Serie\+Dialog@{Serie\+Dialog}}
+\subsubsection[{on\+Cancel(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Dialog\+::on\+Cancel (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_serie_dialog_ae215b822f9cc0dd0864bef3863de7c76}
+Evento que ocorre ao clicar em Cancelar 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Dialog@{Serie\+Dialog}!on\+Clear@{on\+Clear}}
+\index{on\+Clear@{on\+Clear}!Serie\+Dialog@{Serie\+Dialog}}
+\subsubsection[{on\+Clear(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Dialog\+::on\+Clear (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_serie_dialog_a84fa22cca01ed284fd089e8a707fcff8}
+Evento que ocorre ao clicar em Cancelar 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Serie\+Dialog@{Serie\+Dialog}!on\+Ok@{on\+Ok}}
+\index{on\+Ok@{on\+Ok}!Serie\+Dialog@{Serie\+Dialog}}
+\subsubsection[{on\+Ok(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Dialog\+::on\+Ok (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_serie_dialog_a7d626d2cd0330b3bffd6b8e65f9bc9cc}
+Defini o nome e extenÁ„o do arquivo 
+\begin{DoxyParams}{Par√¢metros}
+{\em serie\+Name} & Nome da serie \\
+\hline
+{\em serie\+Ext} & ExtenÁ„o do arquivo Evento que ocorre ao clicar em OK \\
+\hline
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{Serie\+Dialog@{Serie\+Dialog}!file\+Path@{file\+Path}}
+\index{file\+Path@{file\+Path}!Serie\+Dialog@{Serie\+Dialog}}
+\subsubsection[{file\+Path}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Serie\+Dialog\+::file\+Path}\label{class_serie_dialog_a3073bad057abe4ccc6281da6bf4dab27}
+
+
+Defini√ß√£o na linha 43 do arquivo Serie\+Dialog.\+h.
+
+\index{Serie\+Dialog@{Serie\+Dialog}!main\+Title@{main\+Title}}
+\index{main\+Title@{main\+Title}!Serie\+Dialog@{Serie\+Dialog}}
+\subsubsection[{main\+Title}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Serie\+Dialog\+::main\+Title}\label{class_serie_dialog_a7c13397358e594038aa5d905ce52193e}
+Titulo principal 
+
+Defini√ß√£o na linha 27 do arquivo Serie\+Dialog.\+h.
+
+\index{Serie\+Dialog@{Serie\+Dialog}!s\+Draw\+Lines@{s\+Draw\+Lines}}
+\index{s\+Draw\+Lines@{s\+Draw\+Lines}!Serie\+Dialog@{Serie\+Dialog}}
+\subsubsection[{s\+Draw\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Dialog\+::s\+Draw\+Lines}\label{class_serie_dialog_af154953e3f653778ce6e22ddaed3c373}
+Desenhar linhas, simbolos e invertida 
+
+Defini√ß√£o na linha 39 do arquivo Serie\+Dialog.\+h.
+
+\index{Serie\+Dialog@{Serie\+Dialog}!s\+Draw\+Symbols@{s\+Draw\+Symbols}}
+\index{s\+Draw\+Symbols@{s\+Draw\+Symbols}!Serie\+Dialog@{Serie\+Dialog}}
+\subsubsection[{s\+Draw\+Symbols}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Dialog\+::s\+Draw\+Symbols}\label{class_serie_dialog_af167bc4a5822e1d30d2662f70d82b503}
+
+
+Defini√ß√£o na linha 39 do arquivo Serie\+Dialog.\+h.
+
+\index{Serie\+Dialog@{Serie\+Dialog}!s\+Inverse@{s\+Inverse}}
+\index{s\+Inverse@{s\+Inverse}!Serie\+Dialog@{Serie\+Dialog}}
+\subsubsection[{s\+Inverse}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+Dialog\+::s\+Inverse}\label{class_serie_dialog_a0a31500c4ae36943322f71246e40cd23}
+
+
+Defini√ß√£o na linha 39 do arquivo Serie\+Dialog.\+h.
+
+\index{Serie\+Dialog@{Serie\+Dialog}!s\+Name@{s\+Name}}
+\index{s\+Name@{s\+Name}!Serie\+Dialog@{Serie\+Dialog}}
+\subsubsection[{s\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Serie\+Dialog\+::s\+Name}\label{class_serie_dialog_a7ccfc2028ba5330eb0efc458ee79532d}
+Nome da serie 
+
+Defini√ß√£o na linha 31 do arquivo Serie\+Dialog.\+h.
+
+\index{Serie\+Dialog@{Serie\+Dialog}!s\+Unit@{s\+Unit}}
+\index{s\+Unit@{s\+Unit}!Serie\+Dialog@{Serie\+Dialog}}
+\subsubsection[{s\+Unit}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Serie\+Dialog\+::s\+Unit}\label{class_serie_dialog_aca5d143142e2c018ba4e894fb8db2791}
+Unidade da serie 
+
+Defini√ß√£o na linha 35 do arquivo Serie\+Dialog.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Serie\+Dialog.\+h}\end{DoxyCompactItemize}

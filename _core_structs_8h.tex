@@ -1,0 +1,161 @@
+\section{Referência do Arquivo Core\+Structs.\+h}
+\label{_core_structs_8h}\index{Core\+Structs.\+h@{Core\+Structs.\+h}}
+{\ttfamily \#include $<$cstdint$>$}\\*
+\subsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint32\+\_\+t {\bf Element\+ID}
+\end{DoxyCompactItemize}
+\subsection*{Enumerações}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Unit} \+: char \{ \\*
+{\bf Unit\+::\+No\+Unit}, 
+{\bf Unit\+::\+Meter}, 
+{\bf Unit\+::\+Hectometer}, 
+{\bf Unit\+::\+Hectometer\+Cubic}, 
+\\*
+{\bf Unit\+::\+Meter\+Cubic}, 
+{\bf Unit\+::\+Millimiter}
+ \}
+\item 
+enum {\bf Element\+Type} \{ {\bf Element\+Type\+::\+Link}, 
+{\bf Element\+Type\+::\+Node}
+ \}
+\item 
+enum {\bf Demand\+Type} \{ {\bf Demand\+Type\+::\+Animal\+Consume}, 
+{\bf Demand\+Type\+::\+Human\+Consume}, 
+{\bf Demand\+Type\+::\+Industrial}, 
+{\bf Demand\+Type\+::\+Irrigation}
+ \}
+\item 
+enum {\bf Link\+Type} \+: int \{ {\bf Link\+Type\+::\+Default}, 
+{\bf Link\+Type\+::\+Routing}, 
+{\bf Link\+Type\+::\+Pumping}, 
+{\bf Link\+Type\+::\+Separator}
+ \}
+\item 
+enum {\bf Node\+Type} \+: int \{ \\*
+{\bf Node\+Type\+::\+Basin} = 0, 
+{\bf Node\+Type\+::\+Demand} = 4, 
+{\bf Node\+Type\+::\+Junction} = 1, 
+{\bf Node\+Type\+::\+Lake} = 3, 
+\\*
+{\bf Node\+Type\+::\+Reservoir} = 2
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Definições dos tipos}
+\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Element\+ID@{Element\+ID}}
+\index{Element\+ID@{Element\+ID}!Core\+Structs.\+h@{Core\+Structs.\+h}}
+\subsubsection[{Element\+ID}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint32\+\_\+t {\bf Element\+ID}}\label{_core_structs_8h_a8da464d5f205835d6bfbecc5a23ab389}
+
+
+Definição na linha 42 do arquivo Core\+Structs.\+h.
+
+
+
+\subsection{Enumerações}
+\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Demand\+Type@{Demand\+Type}}
+\index{Demand\+Type@{Demand\+Type}!Core\+Structs.\+h@{Core\+Structs.\+h}}
+\subsubsection[{Demand\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Demand\+Type}\hspace{0.3cm}{\ttfamily [strong]}}\label{_core_structs_8h_aa22c61640d74e9053199e26eea12b8af}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{Animal\+Consume@{Animal\+Consume}!Core\+Structs.\+h@{Core\+Structs.\+h}}\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Animal\+Consume@{Animal\+Consume}}\item[{\em 
+Animal\+Consume\label{_core_structs_8h_aa22c61640d74e9053199e26eea12b8afafbd82b01bdd1920423d8fa5cd00ee9ff}
+}]\index{Human\+Consume@{Human\+Consume}!Core\+Structs.\+h@{Core\+Structs.\+h}}\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Human\+Consume@{Human\+Consume}}\item[{\em 
+Human\+Consume\label{_core_structs_8h_aa22c61640d74e9053199e26eea12b8afaad6404a60ffb9376bfc494e5b4fba72c}
+}]\index{Industrial@{Industrial}!Core\+Structs.\+h@{Core\+Structs.\+h}}\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Industrial@{Industrial}}\item[{\em 
+Industrial\label{_core_structs_8h_aa22c61640d74e9053199e26eea12b8afa1228cccc06ee274e1cb8025a60b73388}
+}]\index{Irrigation@{Irrigation}!Core\+Structs.\+h@{Core\+Structs.\+h}}\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Irrigation@{Irrigation}}\item[{\em 
+Irrigation\label{_core_structs_8h_aa22c61640d74e9053199e26eea12b8afa8ec3b2bd9db1c506fbd1103c64a7c9c6}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 20 do arquivo Core\+Structs.\+h.
+
+\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Element\+Type@{Element\+Type}}
+\index{Element\+Type@{Element\+Type}!Core\+Structs.\+h@{Core\+Structs.\+h}}
+\subsubsection[{Element\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Element\+Type}\hspace{0.3cm}{\ttfamily [strong]}}\label{_core_structs_8h_a16b11be27a8e9362dd122c4d879e01ae}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{Link@{Link}!Core\+Structs.\+h@{Core\+Structs.\+h}}\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Link@{Link}}\item[{\em 
+Link\label{_core_structs_8h_a16b11be27a8e9362dd122c4d879e01aea97e7c9a7d06eac006a28bf05467fcc8b}
+}]\index{Node@{Node}!Core\+Structs.\+h@{Core\+Structs.\+h}}\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Node@{Node}}\item[{\em 
+Node\label{_core_structs_8h_a16b11be27a8e9362dd122c4d879e01aea6c3a6944a808a7c0bbb6788dbec54a9f}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 15 do arquivo Core\+Structs.\+h.
+
+\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Link\+Type@{Link\+Type}}
+\index{Link\+Type@{Link\+Type}!Core\+Structs.\+h@{Core\+Structs.\+h}}
+\subsubsection[{Link\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Link\+Type} \+: int\hspace{0.3cm}{\ttfamily [strong]}}\label{_core_structs_8h_aa2204f72b10e35defe566b961f76159f}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{Default@{Default}!Core\+Structs.\+h@{Core\+Structs.\+h}}\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Default@{Default}}\item[{\em 
+Default\label{_core_structs_8h_aa2204f72b10e35defe566b961f76159fa7a1920d61156abc05a60135aefe8bc67}
+}]Trecho padr�o \index{Routing@{Routing}!Core\+Structs.\+h@{Core\+Structs.\+h}}\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Routing@{Routing}}\item[{\em 
+Routing\label{_core_structs_8h_aa2204f72b10e35defe566b961f76159fa786c4135070aa1910d2f4ac8b2253235}
+}]Trecho com propaga��o. \index{Pumping@{Pumping}!Core\+Structs.\+h@{Core\+Structs.\+h}}\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Pumping@{Pumping}}\item[{\em 
+Pumping\label{_core_structs_8h_aa2204f72b10e35defe566b961f76159fa6c491cd552c0b0e2da7fcdfad2713704}
+}]Trecho com bombeamento. \index{Separator@{Separator}!Core\+Structs.\+h@{Core\+Structs.\+h}}\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Separator@{Separator}}\item[{\em 
+Separator\label{_core_structs_8h_aa2204f72b10e35defe566b961f76159fa04b2e4188d4ef8051e4699da8af01335}
+}]Trecho separador para resultados diferentes. \end{description}
+\end{Desc}
+
+
+Definição na linha 27 do arquivo Core\+Structs.\+h.
+
+\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Node\+Type@{Node\+Type}}
+\index{Node\+Type@{Node\+Type}!Core\+Structs.\+h@{Core\+Structs.\+h}}
+\subsubsection[{Node\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Node\+Type} \+: int\hspace{0.3cm}{\ttfamily [strong]}}\label{_core_structs_8h_a119a3d4f9be5662d390f8e7d5e0080d5}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{Basin@{Basin}!Core\+Structs.\+h@{Core\+Structs.\+h}}\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Basin@{Basin}}\item[{\em 
+Basin\label{_core_structs_8h_a119a3d4f9be5662d390f8e7d5e0080d5a9c6f3bb62d70de5361aa51fdc68fdd8e}
+}]\index{Demand@{Demand}!Core\+Structs.\+h@{Core\+Structs.\+h}}\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Demand@{Demand}}\item[{\em 
+Demand\label{_core_structs_8h_a119a3d4f9be5662d390f8e7d5e0080d5ac4d73b22e1efa7b4cf555a4268c99720}
+}]\index{Junction@{Junction}!Core\+Structs.\+h@{Core\+Structs.\+h}}\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Junction@{Junction}}\item[{\em 
+Junction\label{_core_structs_8h_a119a3d4f9be5662d390f8e7d5e0080d5a4fdd42cf46bfe3e21da13ee6e0f7d308}
+}]\index{Lake@{Lake}!Core\+Structs.\+h@{Core\+Structs.\+h}}\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Lake@{Lake}}\item[{\em 
+Lake\label{_core_structs_8h_a119a3d4f9be5662d390f8e7d5e0080d5abc03219e367d3a4b7b1758c8af598174}
+}]\index{Reservoir@{Reservoir}!Core\+Structs.\+h@{Core\+Structs.\+h}}\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Reservoir@{Reservoir}}\item[{\em 
+Reservoir\label{_core_structs_8h_a119a3d4f9be5662d390f8e7d5e0080d5ac79f7a034eca687f6ba06bc74bd51ca4}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 34 do arquivo Core\+Structs.\+h.
+
+\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Unit@{Unit}}
+\index{Unit@{Unit}!Core\+Structs.\+h@{Core\+Structs.\+h}}
+\subsubsection[{Unit}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Unit} \+: char\hspace{0.3cm}{\ttfamily [strong]}}\label{_core_structs_8h_aa5a23406ae0e7d969b980e50c4e94889}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{No\+Unit@{No\+Unit}!Core\+Structs.\+h@{Core\+Structs.\+h}}\index{Core\+Structs.\+h@{Core\+Structs.\+h}!No\+Unit@{No\+Unit}}\item[{\em 
+No\+Unit\label{_core_structs_8h_aa5a23406ae0e7d969b980e50c4e94889a8fe08af921d0e376989ff57402b2885b}
+}]\index{Meter@{Meter}!Core\+Structs.\+h@{Core\+Structs.\+h}}\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Meter@{Meter}}\item[{\em 
+Meter\label{_core_structs_8h_aa5a23406ae0e7d969b980e50c4e94889a17c9c40b9db5a0983d1075a012c1f90a}
+}]\index{Hectometer@{Hectometer}!Core\+Structs.\+h@{Core\+Structs.\+h}}\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Hectometer@{Hectometer}}\item[{\em 
+Hectometer\label{_core_structs_8h_aa5a23406ae0e7d969b980e50c4e94889aefa941a4dbec20cd9a00ebf8bc37c72d}
+}]\index{Hectometer\+Cubic@{Hectometer\+Cubic}!Core\+Structs.\+h@{Core\+Structs.\+h}}\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Hectometer\+Cubic@{Hectometer\+Cubic}}\item[{\em 
+Hectometer\+Cubic\label{_core_structs_8h_aa5a23406ae0e7d969b980e50c4e94889af0e7efbfdd1499f8d8386e80d07c8d27}
+}]\index{Meter\+Cubic@{Meter\+Cubic}!Core\+Structs.\+h@{Core\+Structs.\+h}}\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Meter\+Cubic@{Meter\+Cubic}}\item[{\em 
+Meter\+Cubic\label{_core_structs_8h_aa5a23406ae0e7d969b980e50c4e94889a9df80ba8f536a6982632ef7cb49c7e80}
+}]\index{Millimiter@{Millimiter}!Core\+Structs.\+h@{Core\+Structs.\+h}}\index{Core\+Structs.\+h@{Core\+Structs.\+h}!Millimiter@{Millimiter}}\item[{\em 
+Millimiter\label{_core_structs_8h_aa5a23406ae0e7d969b980e50c4e94889a29d69c58adfe84b8fac742420e73a3e0}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 6 do arquivo Core\+Structs.\+h.
+

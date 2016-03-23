@@ -1,0 +1,146 @@
+\section{Referência da Classe G\+W\+L\+F\+Runoff}
+\label{class_g_w_l_f_runoff}\index{G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}}
+
+
+{\ttfamily \#include $<$G\+W\+L\+F\+Runoff.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf G\+W\+L\+F\+Runoff} ({\bf G\+W\+L\+F\+Model} $\ast$parent)
+\item 
+{\bf $\sim$\+G\+W\+L\+F\+Runoff} ()
+\item 
+double {\bf ant\+Moisture} ({\bf Date} day)
+\item 
+void {\bf run} ()
+\item 
+double {\bf get\+A\+M1} ({\bf Date} number)
+\item 
+double {\bf get\+A\+M2} ({\bf Date} number)
+\item 
+double {\bf get\+C\+N\+Day} (int source\+Area, double melt, double moist5, double A\+M1, double A\+M2)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ double $>$ {\bf am\+Grow}
+\item 
+vector$<$ double $>$ {\bf am\+Dorm}
+\item 
+set$<$ {\bf Month} $>$ {\bf month\+Grow}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 18 do arquivo G\+W\+L\+F\+Runoff.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}!G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}}
+\index{G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}!G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}}
+\subsubsection[{G\+W\+L\+F\+Runoff(\+G\+W\+L\+F\+Model $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}G\+W\+L\+F\+Runoff\+::\+G\+W\+L\+F\+Runoff (
+\begin{DoxyParamCaption}
+\item[{{\bf G\+W\+L\+F\+Model} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_runoff_a42c9f0748c696697e94d374c0445d3b7}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em parent} & Ponteiro para o modelo G\+W\+LF \\
+\hline
+\end{DoxyParams}
+\index{G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}!````~G\+W\+L\+F\+Runoff@{$\sim$\+G\+W\+L\+F\+Runoff}}
+\index{````~G\+W\+L\+F\+Runoff@{$\sim$\+G\+W\+L\+F\+Runoff}!G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}}
+\subsubsection[{$\sim$\+G\+W\+L\+F\+Runoff()}]{\setlength{\rightskip}{0pt plus 5cm}G\+W\+L\+F\+Runoff\+::$\sim$\+G\+W\+L\+F\+Runoff (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_g_w_l_f_runoff_ad0d409ca5670ad1d2bb75d213a80a0a2}
+Destrutor 
+
+Definição na linha 46 do arquivo G\+W\+L\+F\+Runoff.\+h.
+
+
+
+\subsection{Métodos}
+\index{G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}!ant\+Moisture@{ant\+Moisture}}
+\index{ant\+Moisture@{ant\+Moisture}!G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}}
+\subsubsection[{ant\+Moisture(\+Date day)}]{\setlength{\rightskip}{0pt plus 5cm}double G\+W\+L\+F\+Runoff\+::ant\+Moisture (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{day}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_runoff_aaf7019494835a4d068cd06f8e6e1c25a}
+\index{G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}!get\+A\+M1@{get\+A\+M1}}
+\index{get\+A\+M1@{get\+A\+M1}!G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}}
+\subsubsection[{get\+A\+M1(\+Date number)}]{\setlength{\rightskip}{0pt plus 5cm}double G\+W\+L\+F\+Runoff\+::get\+A\+M1 (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{number}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_runoff_aea6f162bafe26d70a3c2dd7e9b0ae456}
+Retorna a umidade correspondente a cultura (dormente ou crescente) 
+\begin{DoxyParams}{Parâmetros}
+{\em number} & N�mero inteiro que representa uma data \\
+\hline
+\end{DoxyParams}
+\index{G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}!get\+A\+M2@{get\+A\+M2}}
+\index{get\+A\+M2@{get\+A\+M2}!G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}}
+\subsubsection[{get\+A\+M2(\+Date number)}]{\setlength{\rightskip}{0pt plus 5cm}double G\+W\+L\+F\+Runoff\+::get\+A\+M2 (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{number}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_runoff_aa6446dd63cfadf00c3610f185267d0fd}
+Retorna a umidade correspondente a cultura (dormente ou crescente) 
+\begin{DoxyParams}{Parâmetros}
+{\em number} & N�mero inteiro que representa uma data \\
+\hline
+\end{DoxyParams}
+\index{G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}!get\+C\+N\+Day@{get\+C\+N\+Day}}
+\index{get\+C\+N\+Day@{get\+C\+N\+Day}!G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}}
+\subsubsection[{get\+C\+N\+Day(int source\+Area, double melt, double moist5, double A\+M1, double A\+M2)}]{\setlength{\rightskip}{0pt plus 5cm}double G\+W\+L\+F\+Runoff\+::get\+C\+N\+Day (
+\begin{DoxyParamCaption}
+\item[{int}]{source\+Area, }
+\item[{double}]{melt, }
+\item[{double}]{moist5, }
+\item[{double}]{A\+M1, }
+\item[{double}]{A\+M2}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_runoff_a16b8c993c0af6e374d6d37b8062bba50}
+\index{G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}!run@{run}}
+\index{run@{run}!G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}void G\+W\+L\+F\+Runoff\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_g_w_l_f_runoff_a72d394163a9933607775f397cc379c8f}
+Executar o modelo G\+W\+LF 
+
+\subsection{Atributos}
+\index{G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}!am\+Dorm@{am\+Dorm}}
+\index{am\+Dorm@{am\+Dorm}!G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}}
+\subsubsection[{am\+Dorm}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ G\+W\+L\+F\+Runoff\+::am\+Dorm}\label{class_g_w_l_f_runoff_acd716daeb8ce197702d46c90f1abe067}
+Umidade antecedente dormente 
+
+Definição na linha 32 do arquivo G\+W\+L\+F\+Runoff.\+h.
+
+\index{G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}!am\+Grow@{am\+Grow}}
+\index{am\+Grow@{am\+Grow}!G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}}
+\subsubsection[{am\+Grow}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ G\+W\+L\+F\+Runoff\+::am\+Grow}\label{class_g_w_l_f_runoff_ae99fd51ae23babc7c213a901b6fa1b19}
+UA crescente 
+
+Definição na linha 28 do arquivo G\+W\+L\+F\+Runoff.\+h.
+
+\index{G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}!month\+Grow@{month\+Grow}}
+\index{month\+Grow@{month\+Grow}!G\+W\+L\+F\+Runoff@{G\+W\+L\+F\+Runoff}}
+\subsubsection[{month\+Grow}]{\setlength{\rightskip}{0pt plus 5cm}set$<${\bf Month}$>$ G\+W\+L\+F\+Runoff\+::month\+Grow}\label{class_g_w_l_f_runoff_a8cd56d874e49f57499ce99c1fda4475a}
+Guarda os meses de cultura crescente Ser um conjunto S\+ET 
+
+Definição na linha 37 do arquivo G\+W\+L\+F\+Runoff.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf G\+W\+L\+F\+Runoff.\+h}\end{DoxyCompactItemize}

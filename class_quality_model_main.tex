@@ -1,0 +1,313 @@
+\section{Refer√™ncia da Classe Quality\+Model\+Main}
+\label{class_quality_model_main}\index{Quality\+Model\+Main@{Quality\+Model\+Main}}
+
+
+{\ttfamily \#include $<$Quality\+Model\+Main.\+h$>$}
+
+
+
+Superclasse de {\bf G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main}, {\bf M\+E\+C\+A\+Res\+W\+Q\+Model\+Main}, {\bf M\+E\+N\+U\+Res\+W\+Q\+Model\+Main} e {\bf T\+A\+L\+River\+W\+Q\+Model\+Main}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Quality\+Model\+Main} ({\bf Quality\+Interface} $\ast${\bf main\+Inter})
+\item 
+virtual {\bf $\sim$\+Quality\+Model\+Main} ()
+\item 
+virtual void {\bf update\+Tree\+Item} ({\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$)=0
+\item 
+virtual void {\bf on\+Choice\+Model} ()
+\item 
+virtual void {\bf set\+Info} ()=0
+\item 
+virtual {\bf W\+Q\+Model} $\ast$ {\bf create\+Model} ({\bf Element} $\ast$)=0
+\item 
+virtual void {\bf show\+Results} (bool change)=0
+\item 
+virtual void {\bf set\+Default\+Values} (char $\ast$file\+Name)=0
+\item 
+virtual void {\bf save\+Default\+Values} (char $\ast$file\+Name)=0
+\item 
+virtual void {\bf on\+Changing\+Time\+Interval} ({\bf Date\+::\+Time\+Interval} time\+Interval)=0
+\item 
+virtual void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+virtual void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+virtual void {\bf enable\+Model\+Interface} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+String {\bf name}
+\item 
+{\bf Component\+Interface} $\ast$ {\bf inter}
+\item 
+map$<$ unsigned int, {\bf Component\+Interface} $\ast$ $>$ {\bf pollutants\+Inter}
+\item 
+{\bf Quality\+Interface} $\ast$ {\bf main\+Inter}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 15 do arquivo Quality\+Model\+Main.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Quality\+Model\+Main@{Quality\+Model\+Main}!Quality\+Model\+Main@{Quality\+Model\+Main}}
+\index{Quality\+Model\+Main@{Quality\+Model\+Main}!Quality\+Model\+Main@{Quality\+Model\+Main}}
+\subsubsection[{Quality\+Model\+Main(\+Quality\+Interface $\ast$main\+Inter)}]{\setlength{\rightskip}{0pt plus 5cm}Quality\+Model\+Main\+::\+Quality\+Model\+Main (
+\begin{DoxyParamCaption}
+\item[{{\bf Quality\+Interface} $\ast$}]{main\+Inter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_quality_model_main_a97ae58d3bd375cceb7869a44a9144404}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em main\+Inter} & Interface que pertence \\
+\hline
+\end{DoxyParams}
+
+
+Defini√ß√£o na linha 49 do arquivo Quality\+Model\+Main.\+h.
+
+\index{Quality\+Model\+Main@{Quality\+Model\+Main}!````~Quality\+Model\+Main@{$\sim$\+Quality\+Model\+Main}}
+\index{````~Quality\+Model\+Main@{$\sim$\+Quality\+Model\+Main}!Quality\+Model\+Main@{Quality\+Model\+Main}}
+\subsubsection[{$\sim$\+Quality\+Model\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Quality\+Model\+Main\+::$\sim$\+Quality\+Model\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_quality_model_main_a0f5fa0acf048a46088cb49a465605939}
+Limpa as variaveis e as deixa no estado de pÛs-\/construÁ„o
+
+virtual void clear() \{ for(map$<$int,\+W\+Q\+Model$\ast$$>$\+::iterator it = models.\+begin(); it != models.\+end(); it++) \{ W\+Q\+Model$\ast$ model = it-\/$>$second; if(model) \{ model-\/$>$clear(); delete model; \} \} models.\+erase(models.\+begin(),models.\+end()); \} Destrutor 
+
+Defini√ß√£o na linha 69 do arquivo Quality\+Model\+Main.\+h.
+
+
+
+\subsection{M√©todos}
+\index{Quality\+Model\+Main@{Quality\+Model\+Main}!create\+Model@{create\+Model}}
+\index{create\+Model@{create\+Model}!Quality\+Model\+Main@{Quality\+Model\+Main}}
+\subsubsection[{create\+Model(\+Element $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf W\+Q\+Model}$\ast$ Quality\+Model\+Main\+::create\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Element} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_quality_model_main_a15bca1f7d1a3fff3fedaa455c07031ef}
+
+
+Implementado por {\bf T\+A\+L\+River\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_t_a_l_river_w_q_model_main_a33e3185eb257790f6c83fa47fab76fde}.
+
+\index{Quality\+Model\+Main@{Quality\+Model\+Main}!enable\+Model\+Interface@{enable\+Model\+Interface}}
+\index{enable\+Model\+Interface@{enable\+Model\+Interface}!Quality\+Model\+Main@{Quality\+Model\+Main}}
+\subsubsection[{enable\+Model\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Quality\+Model\+Main\+::enable\+Model\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_quality_model_main_aaf9dbf58cb5ab79ac8eddb9fa521ec11}
+Limpa os valores e retorna ao estado pÛs-\/construÁ„o verifica se a interface ser· habilitada ou n„o 
+
+Reimplementado por {\bf T\+A\+L\+River\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_t_a_l_river_w_q_model_main_a3e194afa682d421012c79c7c40f4e3c8}, {\bf G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_g_w_l_f_basin_w_q_model_main_ab2fba8f5808119921644f6a4864138ac}, {\bf M\+E\+C\+A\+Res\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_m_e_c_a_res_w_q_model_main_a4cf34e9265ce0f5aa2a4d9fa714abe8c} e {\bf M\+E\+N\+U\+Res\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_m_e_n_u_res_w_q_model_main_a2229b660aee7b34880d0a2f522f52aa0}.
+
+
+
+Defini√ß√£o na linha 150 do arquivo Quality\+Model\+Main.\+h.
+
+\index{Quality\+Model\+Main@{Quality\+Model\+Main}!on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}}
+\index{on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}!Quality\+Model\+Main@{Quality\+Model\+Main}}
+\subsubsection[{on\+Changing\+Time\+Interval(\+Date\+::\+Time\+Interval time\+Interval)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Quality\+Model\+Main\+::on\+Changing\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_quality_model_main_ae3b9579a006273fb4a627f20bb7600cc}
+Executa o modelo 
+\begin{DoxyParams}{Par√¢metros}
+{\em node} & NÛ\\
+\hline
+\end{DoxyParams}
+virtual bool run(\+Node$\ast$ ) \{ return false;\}; Executa o modelo 
+\begin{DoxyParams}{Par√¢metros}
+{\em link} & \doxyref{Link}{pag.}{class_link}\\
+\hline
+\end{DoxyParams}
+virtual bool run(\+Link$\ast$) \{ return false;\}; Executa o modelo
+
+virtual bool run() \{return false;\}; 
+
+Implementado por {\bf T\+A\+L\+River\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_t_a_l_river_w_q_model_main_ad0064e84dc6724976d69e01dc13112ec}, {\bf G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_g_w_l_f_basin_w_q_model_main_aa3971a9fa66d570e6447c37e264d3efc}, {\bf M\+E\+C\+A\+Res\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_m_e_c_a_res_w_q_model_main_adc4e3e168253c715df2179694968b13b} e {\bf M\+E\+N\+U\+Res\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_m_e_n_u_res_w_q_model_main_af70c841095f5a068401b38ab5e1eedf1}.
+
+\index{Quality\+Model\+Main@{Quality\+Model\+Main}!on\+Choice\+Model@{on\+Choice\+Model}}
+\index{on\+Choice\+Model@{on\+Choice\+Model}!Quality\+Model\+Main@{Quality\+Model\+Main}}
+\subsubsection[{on\+Choice\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Quality\+Model\+Main\+::on\+Choice\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_quality_model_main_aff6775123ae0267b61ce86097d17afad}
+Evento de escolha de modelo 
+
+Reimplementado por {\bf G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_g_w_l_f_basin_w_q_model_main_a766ffa7c54f53c3dcd76545b43ce2845}, {\bf M\+E\+C\+A\+Res\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_m_e_c_a_res_w_q_model_main_a7adb29e077a94043f522fcbefda334b1} e {\bf M\+E\+N\+U\+Res\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_m_e_n_u_res_w_q_model_main_a109e8bc6c5f78d26d47e5a47d455b1c7}.
+
+
+
+Defini√ß√£o na linha 89 do arquivo Quality\+Model\+Main.\+h.
+
+\index{Quality\+Model\+Main@{Quality\+Model\+Main}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Quality\+Model\+Main@{Quality\+Model\+Main}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Quality\+Model\+Main\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_quality_model_main_afba3483d930bf899d041840f944aec37}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado por {\bf T\+A\+L\+River\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_t_a_l_river_w_q_model_main_a92833dabe67b290467157126ab5d8c7b}, {\bf G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_g_w_l_f_basin_w_q_model_main_a1459f4524b2e427317d97cafdb9ba33d}, {\bf M\+E\+C\+A\+Res\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_m_e_c_a_res_w_q_model_main_ab186b353f5a1d17b33e3f2e18d83198b} e {\bf M\+E\+N\+U\+Res\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_m_e_n_u_res_w_q_model_main_a4b131f6b38653207d530912d8838959f}.
+
+
+
+Defini√ß√£o na linha 142 do arquivo Quality\+Model\+Main.\+h.
+
+\index{Quality\+Model\+Main@{Quality\+Model\+Main}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Quality\+Model\+Main@{Quality\+Model\+Main}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Quality\+Model\+Main\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_quality_model_main_acb46815e597066b3841fdfb5b9c2ec2c}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado por {\bf T\+A\+L\+River\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_t_a_l_river_w_q_model_main_a8e517689efce1a386b0e1ed0acfc6963}, {\bf G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_g_w_l_f_basin_w_q_model_main_ae90f1130dc329172b2067a2a2fd8b96d}, {\bf M\+E\+C\+A\+Res\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_m_e_c_a_res_w_q_model_main_ac406b19ddbbda4ce896835d33084b8cc} e {\bf M\+E\+N\+U\+Res\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_m_e_n_u_res_w_q_model_main_a20c0cc1693a351a83996276bd6b9736c}.
+
+
+
+Defini√ß√£o na linha 137 do arquivo Quality\+Model\+Main.\+h.
+
+\index{Quality\+Model\+Main@{Quality\+Model\+Main}!save\+Default\+Values@{save\+Default\+Values}}
+\index{save\+Default\+Values@{save\+Default\+Values}!Quality\+Model\+Main@{Quality\+Model\+Main}}
+\subsubsection[{save\+Default\+Values(char $\ast$file\+Name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Quality\+Model\+Main\+::save\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_quality_model_main_a3589117ef1789e3b9cef3896ae647a72}
+Salva informaÁıes em um arquivo 
+\begin{DoxyParams}{Par√¢metros}
+{\em file\+Name} & Nome do arquivo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf T\+A\+L\+River\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_t_a_l_river_w_q_model_main_a061d813f9c40b10808e3be75a9ba5a67}, {\bf G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_g_w_l_f_basin_w_q_model_main_a941fa6b47c5d20c8f6d576067990a309}, {\bf M\+E\+C\+A\+Res\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_m_e_c_a_res_w_q_model_main_a810339c1938776102feaa9f0188c3c88} e {\bf M\+E\+N\+U\+Res\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_m_e_n_u_res_w_q_model_main_aa16153be5176fe75bbab3d3000eed331}.
+
+\index{Quality\+Model\+Main@{Quality\+Model\+Main}!set\+Default\+Values@{set\+Default\+Values}}
+\index{set\+Default\+Values@{set\+Default\+Values}!Quality\+Model\+Main@{Quality\+Model\+Main}}
+\subsubsection[{set\+Default\+Values(char $\ast$file\+Name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Quality\+Model\+Main\+::set\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_quality_model_main_ad70de3c9dd61112372f6d21a7df86a23}
+Recebe informaÁıes de um arquivo 
+\begin{DoxyParams}{Par√¢metros}
+{\em file\+Name} & Nome do arquivo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf T\+A\+L\+River\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_t_a_l_river_w_q_model_main_a13c2816eb4f28d85444505e108194c22}, {\bf G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_g_w_l_f_basin_w_q_model_main_a2662ccc0966499a0ae150d215bae2757}, {\bf M\+E\+C\+A\+Res\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_m_e_c_a_res_w_q_model_main_a1a300374846e59e7ec6c67467a22b0a9} e {\bf M\+E\+N\+U\+Res\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_m_e_n_u_res_w_q_model_main_a5caa1d39b0f18dcca3d678b2675c5e02}.
+
+\index{Quality\+Model\+Main@{Quality\+Model\+Main}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Quality\+Model\+Main@{Quality\+Model\+Main}}
+\subsubsection[{set\+Info()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Quality\+Model\+Main\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_quality_model_main_af1172adf8afc6b492ac5dfd05ebf2856}
+Insere informaÁoes na interface 
+\begin{DoxyParams}{Par√¢metros}
+{\em node} & NÛ \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf T\+A\+L\+River\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_t_a_l_river_w_q_model_main_afcfea32c279d5d2242d8a9113a4e9b3d}, {\bf G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_g_w_l_f_basin_w_q_model_main_aece833a77290810c947d6a03f810e271}, {\bf M\+E\+C\+A\+Res\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_m_e_c_a_res_w_q_model_main_a448cde81384c77850a843a5a4a215e2c} e {\bf M\+E\+N\+U\+Res\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_m_e_n_u_res_w_q_model_main_a0930025bbf40fd64519bd09a59acda7e}.
+
+\index{Quality\+Model\+Main@{Quality\+Model\+Main}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!Quality\+Model\+Main@{Quality\+Model\+Main}}
+\subsubsection[{show\+Results(bool change)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Quality\+Model\+Main\+::show\+Results (
+\begin{DoxyParamCaption}
+\item[{bool}]{change}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_quality_model_main_a4490ca873d4397cc4420a14290a5d2d0}
+Apresenta resultados 
+\begin{DoxyParams}{Par√¢metros}
+{\em node} & NÛ \\
+\hline
+{\em change} & Boleano que diz se dever ser montada/mostrada a janela de resultados \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf T\+A\+L\+River\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_t_a_l_river_w_q_model_main_a89d6e87cf10b008d694f0807bcb53c0f}, {\bf G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_g_w_l_f_basin_w_q_model_main_a46bf783ae07230caaa5777ac580244d7}, {\bf M\+E\+C\+A\+Res\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_m_e_c_a_res_w_q_model_main_ab15f6eaae9aea353db2e59808b14103e} e {\bf M\+E\+N\+U\+Res\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_m_e_n_u_res_w_q_model_main_a63bb675634c2d15c955a7afcaabe27bd}.
+
+\index{Quality\+Model\+Main@{Quality\+Model\+Main}!update\+Tree\+Item@{update\+Tree\+Item}}
+\index{update\+Tree\+Item@{update\+Tree\+Item}!Quality\+Model\+Main@{Quality\+Model\+Main}}
+\subsubsection[{update\+Tree\+Item(\+S\+I\+G\+A\+Tree\+Ctrl $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Quality\+Model\+Main\+::update\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_quality_model_main_af04d77b05c16827f1efe571a5cb3b04e}
+Atualiza os ponteiros das suas series no Tree\+Ctrl de integraÁ„o 
+
+Implementado por {\bf T\+A\+L\+River\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_t_a_l_river_w_q_model_main_a18496c0d98d8bc850a53684a7071a55f}, {\bf G\+W\+L\+F\+Basin\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_g_w_l_f_basin_w_q_model_main_ac8f1f44148707d5e70880fe113dce8de}, {\bf M\+E\+C\+A\+Res\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_m_e_c_a_res_w_q_model_main_a980d2cf8f45896862e71e4618575a00d} e {\bf M\+E\+N\+U\+Res\+W\+Q\+Model\+Main} \doxyref{}{pag.}{class_m_e_n_u_res_w_q_model_main_a3a9c1baf7525360ba8b3c3b2154466cb}.
+
+
+
+\subsection{Atributos}
+\index{Quality\+Model\+Main@{Quality\+Model\+Main}!inter@{inter}}
+\index{inter@{inter}!Quality\+Model\+Main@{Quality\+Model\+Main}}
+\subsubsection[{inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component\+Interface}$\ast$ Quality\+Model\+Main\+::inter}\label{class_quality_model_main_a519b57c128a108a81834618831e5e313}
+Intervalo de simulacao
+
+\doxyref{Interval}{pag.}{class_interval} interval; Instancias dos modelos para cada nÛ  \doxyref{W\+Q\+Model}{pag.}{class_w_q_model}
+
+map$<$int,\+W\+Q\+Model$\ast$$>$ models; Interface para cada tipo de modelo Ser· inserida na interface geral do modulo de qualidade 
+
+Defini√ß√£o na linha 35 do arquivo Quality\+Model\+Main.\+h.
+
+\index{Quality\+Model\+Main@{Quality\+Model\+Main}!main\+Inter@{main\+Inter}}
+\index{main\+Inter@{main\+Inter}!Quality\+Model\+Main@{Quality\+Model\+Main}}
+\subsubsection[{main\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quality\+Interface}$\ast$ Quality\+Model\+Main\+::main\+Inter}\label{class_quality_model_main_a74d82f0472f010a722227b833b2e44f7}
+Aponta para a classe da interafce principal do modulo 
+
+Defini√ß√£o na linha 44 do arquivo Quality\+Model\+Main.\+h.
+
+\index{Quality\+Model\+Main@{Quality\+Model\+Main}!name@{name}}
+\index{name@{name}!Quality\+Model\+Main@{Quality\+Model\+Main}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Quality\+Model\+Main\+::name}\label{class_quality_model_main_aa138c321e21caa9f9fb6bc658fa82e67}
+Nome do modelo 
+
+Defini√ß√£o na linha 21 do arquivo Quality\+Model\+Main.\+h.
+
+\index{Quality\+Model\+Main@{Quality\+Model\+Main}!pollutants\+Inter@{pollutants\+Inter}}
+\index{pollutants\+Inter@{pollutants\+Inter}!Quality\+Model\+Main@{Quality\+Model\+Main}}
+\subsubsection[{pollutants\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}map$<$unsigned int,{\bf Component\+Interface}$\ast$$>$ Quality\+Model\+Main\+::pollutants\+Inter}\label{class_quality_model_main_ab1aa31b0beaeab428924ba4634ac4710}
+Interfaces dos poluentes Ser· inserida na interface geral do mÛdulo de qualidade 
+
+Defini√ß√£o na linha 40 do arquivo Quality\+Model\+Main.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Quality\+Model\+Main.\+h}\end{DoxyCompactItemize}

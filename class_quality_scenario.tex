@@ -1,0 +1,227 @@
+\section{Referência da Classe Quality\+Scenario}
+\label{class_quality_scenario}\index{Quality\+Scenario@{Quality\+Scenario}}
+
+
+{\ttfamily \#include $<$Quality\+Scenario.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Quality\+Scenario} ({\bf Date} interval\+Begin, {\bf Date} interval\+End)
+\item 
+{\bf $\sim$\+Quality\+Scenario} ()
+\item 
+void {\bf show\+Results} (bool change=false)
+\item 
+void {\bf create\+Results} (int id={\bf E\+M\+P\+TY})
+\item 
+void {\bf set\+Default\+Values} (char $\ast$file\+Name)
+\item 
+void {\bf save\+Default\+Values} (char $\ast$file\+Name)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+bool {\bf run} (unsigned int id)
+\item 
+{\bf Quality\+Scenario} $\ast$ {\bf copy} ()
+\item 
+int {\bf change\+Model\+Type} (int elem\+Id, int model\+Type)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Interval} {\bf interval}
+\item 
+wx\+String {\bf name}
+\item 
+map$<$ int, {\bf W\+Q\+Model} $\ast$ $>$ {\bf models}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf create\+All\+Models} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 14 do arquivo Quality\+Scenario.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Quality\+Scenario@{Quality\+Scenario}!Quality\+Scenario@{Quality\+Scenario}}
+\index{Quality\+Scenario@{Quality\+Scenario}!Quality\+Scenario@{Quality\+Scenario}}
+\subsubsection[{Quality\+Scenario(\+Date interval\+Begin, Date interval\+End)}]{\setlength{\rightskip}{0pt plus 5cm}Quality\+Scenario\+::\+Quality\+Scenario (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{interval\+Begin, }
+\item[{{\bf Date}}]{interval\+End}
+\end{DoxyParamCaption}
+)}\label{class_quality_scenario_a1a421bf3245a8a018cb379df52c4a980}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em main\+Inter} & Interface que pertence \\
+\hline
+\end{DoxyParams}
+\index{Quality\+Scenario@{Quality\+Scenario}!````~Quality\+Scenario@{$\sim$\+Quality\+Scenario}}
+\index{````~Quality\+Scenario@{$\sim$\+Quality\+Scenario}!Quality\+Scenario@{Quality\+Scenario}}
+\subsubsection[{$\sim$\+Quality\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}Quality\+Scenario\+::$\sim$\+Quality\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_quality_scenario_a41b56cf7720a7b01c5a2c49f9bae2de7}
+Destrutor 
+
+\subsection{Métodos}
+\index{Quality\+Scenario@{Quality\+Scenario}!change\+Model\+Type@{change\+Model\+Type}}
+\index{change\+Model\+Type@{change\+Model\+Type}!Quality\+Scenario@{Quality\+Scenario}}
+\subsubsection[{change\+Model\+Type(int elem\+Id, int model\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}int Quality\+Scenario\+::change\+Model\+Type (
+\begin{DoxyParamCaption}
+\item[{int}]{elem\+Id, }
+\item[{int}]{model\+Type}
+\end{DoxyParamCaption}
+)}\label{class_quality_scenario_ac7b39a838dbf339d9ff7b0bb2d7fcfa2}
+Modifica o modelo do elemento passado \begin{DoxyReturn}{Retorna}
+Retorna o erro 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parâmetros}
+{\em model\+Id} & Identificador do elemento \\
+\hline
+{\em type} & Tipo do modelo para o qual deve ser mudado \\
+\hline
+\end{DoxyParams}
+\index{Quality\+Scenario@{Quality\+Scenario}!copy@{copy}}
+\index{copy@{copy}!Quality\+Scenario@{Quality\+Scenario}}
+\subsubsection[{copy()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Quality\+Scenario}$\ast$ Quality\+Scenario\+::copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_quality_scenario_ae4093a62b7ecc27a61661c87d3b06264}
+\index{Quality\+Scenario@{Quality\+Scenario}!create\+All\+Models@{create\+All\+Models}}
+\index{create\+All\+Models@{create\+All\+Models}!Quality\+Scenario@{Quality\+Scenario}}
+\subsubsection[{create\+All\+Models()}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Scenario\+::create\+All\+Models (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_quality_scenario_a8534dc8b110fe83e4622606ae4466f58}
+Cria todos os modelos do cen�rio \index{Quality\+Scenario@{Quality\+Scenario}!create\+Results@{create\+Results}}
+\index{create\+Results@{create\+Results}!Quality\+Scenario@{Quality\+Scenario}}
+\subsubsection[{create\+Results(int id=\+E\+M\+P\+T\+Y)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Scenario\+::create\+Results (
+\begin{DoxyParamCaption}
+\item[{int}]{id = {\ttfamily {\bf E\+M\+P\+TY}}}
+\end{DoxyParamCaption}
+)}\label{class_quality_scenario_af9166d2817eacb8507a511eeb027c345}
+Mostra os resultados correspondentes ao modelo hidrol�gico G\+W\+LF
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\index{Quality\+Scenario@{Quality\+Scenario}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Quality\+Scenario@{Quality\+Scenario}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Scenario\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_quality_scenario_a5d681802ef13817a8f917b3c4b037b0d}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{Quality\+Scenario@{Quality\+Scenario}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Quality\+Scenario@{Quality\+Scenario}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Scenario\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_quality_scenario_aa60fc5bb6a528304a249835eaa89bc7c}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{Quality\+Scenario@{Quality\+Scenario}!run@{run}}
+\index{run@{run}!Quality\+Scenario@{Quality\+Scenario}}
+\subsubsection[{run(unsigned int id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Quality\+Scenario\+::run (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{id}
+\end{DoxyParamCaption}
+)}\label{class_quality_scenario_a3a47e1ebf3f95688019450fc8fd87d69}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{Quality\+Scenario@{Quality\+Scenario}!save\+Default\+Values@{save\+Default\+Values}}
+\index{save\+Default\+Values@{save\+Default\+Values}!Quality\+Scenario@{Quality\+Scenario}}
+\subsubsection[{save\+Default\+Values(char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Scenario\+::save\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{class_quality_scenario_a5533a3c5757cf3557ebb2079e4c26e31}
+Salva os dados do modelo hidrol�gico G\+W\+LF de um n� para um arquivo 
+\begin{DoxyParams}{Parâmetros}
+{\em file\+Name} & Nome do arquivo \\
+\hline
+\end{DoxyParams}
+\index{Quality\+Scenario@{Quality\+Scenario}!set\+Default\+Values@{set\+Default\+Values}}
+\index{set\+Default\+Values@{set\+Default\+Values}!Quality\+Scenario@{Quality\+Scenario}}
+\subsubsection[{set\+Default\+Values(char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Scenario\+::set\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)}\label{class_quality_scenario_a518a479e65503e2ebee01fec81506b56}
+Recebe os dados do modelo hidrol�gico G\+W\+LF de um arquivo para um n� 
+\begin{DoxyParams}{Parâmetros}
+{\em file\+Name} & Nome do arquivo \\
+\hline
+\end{DoxyParams}
+\index{Quality\+Scenario@{Quality\+Scenario}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!Quality\+Scenario@{Quality\+Scenario}}
+\subsubsection[{show\+Results(bool change=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Quality\+Scenario\+::show\+Results (
+\begin{DoxyParamCaption}
+\item[{bool}]{change = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_quality_scenario_a344388e31a09c52d9b0acb228675cb9a}
+Mostra os resultados correspondentes ao modelo hidrol�gico G\+W\+LF 
+\begin{DoxyParams}{Parâmetros}
+{\em node} & N� \\
+\hline
+{\em change} & Diferencia se a chamada foi feita atraves do bot�o de visualiza��o ou de rodar o modelo \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{Quality\+Scenario@{Quality\+Scenario}!interval@{interval}}
+\index{interval@{interval}!Quality\+Scenario@{Quality\+Scenario}}
+\subsubsection[{interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Quality\+Scenario\+::interval}\label{class_quality_scenario_a71cda2f4530cd97c99452dcab4c2952d}
+Intervalo de simulacao 
+
+Definição na linha 25 do arquivo Quality\+Scenario.\+h.
+
+\index{Quality\+Scenario@{Quality\+Scenario}!models@{models}}
+\index{models@{models}!Quality\+Scenario@{Quality\+Scenario}}
+\subsubsection[{models}]{\setlength{\rightskip}{0pt plus 5cm}map$<$int,{\bf W\+Q\+Model}$\ast$$>$ Quality\+Scenario\+::models}\label{class_quality_scenario_a46ffd7c230b5d47b252eb2396483101b}
+Instancias dos modelos para cada n�  \doxyref{W\+Q\+Model}{pag.}{class_w_q_model} 
+
+Definição na linha 32 do arquivo Quality\+Scenario.\+h.
+
+\index{Quality\+Scenario@{Quality\+Scenario}!name@{name}}
+\index{name@{name}!Quality\+Scenario@{Quality\+Scenario}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Quality\+Scenario\+::name}\label{class_quality_scenario_a18ea7fefd3c16248cada9b3d209b2190}
+
+
+Definição na linha 27 do arquivo Quality\+Scenario.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Quality\+Scenario.\+h}\end{DoxyCompactItemize}

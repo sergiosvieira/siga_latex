@@ -1,0 +1,211 @@
+\section{Referência da Classe C\+Timestamp}
+\label{class_c_timestamp}\index{C\+Timestamp@{C\+Timestamp}}
+
+
+{\ttfamily \#include $<$ctimestamp.\+h$>$}
+
+
+
+Herdeiro de {\bf C\+Date} e {\bf C\+Time}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf C\+Timestamp} (const {\bf C\+Timestamp} \&copy)
+\item 
+{\bf C\+Timestamp} (Int64 extended\+JD=0)
+\item 
+{\bf C\+Timestamp} ({\bf Int32} year, {\bf Int32} month, {\bf Int32} day, {\bf Int32} hour, {\bf Int32} minute, {\bf Int32} second, {\bf Int32} millisecond=0)
+\item 
+{\bf C\+Timestamp} ({\bf Int32} year, {\bf Int32} year\+Day, {\bf Int32} hour, {\bf Int32} minute, {\bf Int32} second, {\bf Int32} millisecond=0)
+\item 
+{\bf C\+Timestamp} (const {\bf C\+Date} \&date)
+\item 
+{\bf C\+Timestamp} (const {\bf C\+Date} \&date, const {\bf C\+Time} \&time)
+\item 
+{\bf $\sim$\+C\+Timestamp} ()
+\item 
+{\bf C\+Timestamp} \& {\bf operator=} (const {\bf C\+Timestamp} \&assign)
+\item 
+bool {\bf operator==} (const {\bf C\+Timestamp} \&compare) const 
+\item 
+bool {\bf operator$<$} (const {\bf C\+Timestamp} \&compare) const 
+\item 
+{\bf C\+Timestamp} {\bf operator+} (Int64 timestamp\+Offset) const 
+\item 
+{\bf C\+Timestamp} {\bf operator-\/} (Int64 timestamp\+Offset) const 
+\item 
+Int64 {\bf operator-\/} (const {\bf C\+Timestamp} \&other\+Timestamp) const 
+\item 
+{\bf C\+Timestamp} \& {\bf operator+=} (Int64 timestamp\+Offset)
+\item 
+{\bf C\+Timestamp} \& {\bf operator-\/=} (Int64 timestamp\+Offset)
+\item 
+Int64 {\bf Get\+Extended\+Julian\+Day} () const 
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static {\bf C\+Timestamp} {\bf Get\+System\+Timestamp} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 37 do arquivo ctimestamp.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{C\+Timestamp@{C\+Timestamp}!C\+Timestamp@{C\+Timestamp}}
+\index{C\+Timestamp@{C\+Timestamp}!C\+Timestamp@{C\+Timestamp}}
+\subsubsection[{C\+Timestamp(const C\+Timestamp \&copy)}]{\setlength{\rightskip}{0pt plus 5cm}C\+Timestamp\+::\+C\+Timestamp (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Timestamp} \&}]{copy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c_timestamp_ab9e5f09fde66d4f14bd883025ba26c8d}
+
+
+Definição na linha 54 do arquivo ctimestamp.\+h.
+
+\index{C\+Timestamp@{C\+Timestamp}!C\+Timestamp@{C\+Timestamp}}
+\index{C\+Timestamp@{C\+Timestamp}!C\+Timestamp@{C\+Timestamp}}
+\subsubsection[{C\+Timestamp(\+Int64 extended\+J\+D=0)}]{\setlength{\rightskip}{0pt plus 5cm}C\+Timestamp\+::\+C\+Timestamp (
+\begin{DoxyParamCaption}
+\item[{Int64}]{extended\+JD = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_c_timestamp_a6445002942ff136e09f7da8ccc04e90c}
+\index{C\+Timestamp@{C\+Timestamp}!C\+Timestamp@{C\+Timestamp}}
+\index{C\+Timestamp@{C\+Timestamp}!C\+Timestamp@{C\+Timestamp}}
+\subsubsection[{C\+Timestamp(\+Int32 year, Int32 month, Int32 day, Int32 hour, Int32 minute, Int32 second, Int32 millisecond=0)}]{\setlength{\rightskip}{0pt plus 5cm}C\+Timestamp\+::\+C\+Timestamp (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{year, }
+\item[{{\bf Int32}}]{month, }
+\item[{{\bf Int32}}]{day, }
+\item[{{\bf Int32}}]{hour, }
+\item[{{\bf Int32}}]{minute, }
+\item[{{\bf Int32}}]{second, }
+\item[{{\bf Int32}}]{millisecond = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_c_timestamp_af3cb12b58b2283641fed8182fbd5cbe4}
+\index{C\+Timestamp@{C\+Timestamp}!C\+Timestamp@{C\+Timestamp}}
+\index{C\+Timestamp@{C\+Timestamp}!C\+Timestamp@{C\+Timestamp}}
+\subsubsection[{C\+Timestamp(\+Int32 year, Int32 year\+Day, Int32 hour, Int32 minute, Int32 second, Int32 millisecond=0)}]{\setlength{\rightskip}{0pt plus 5cm}C\+Timestamp\+::\+C\+Timestamp (
+\begin{DoxyParamCaption}
+\item[{{\bf Int32}}]{year, }
+\item[{{\bf Int32}}]{year\+Day, }
+\item[{{\bf Int32}}]{hour, }
+\item[{{\bf Int32}}]{minute, }
+\item[{{\bf Int32}}]{second, }
+\item[{{\bf Int32}}]{millisecond = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_c_timestamp_afe04851bee2e4af94c52281ee9943c23}
+\index{C\+Timestamp@{C\+Timestamp}!C\+Timestamp@{C\+Timestamp}}
+\index{C\+Timestamp@{C\+Timestamp}!C\+Timestamp@{C\+Timestamp}}
+\subsubsection[{C\+Timestamp(const C\+Date \&date)}]{\setlength{\rightskip}{0pt plus 5cm}C\+Timestamp\+::\+C\+Timestamp (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Date} \&}]{date}
+\end{DoxyParamCaption}
+)}\label{class_c_timestamp_aeacb7af81182f2b75b45cbf0bc7e0e54}
+\index{C\+Timestamp@{C\+Timestamp}!C\+Timestamp@{C\+Timestamp}}
+\index{C\+Timestamp@{C\+Timestamp}!C\+Timestamp@{C\+Timestamp}}
+\subsubsection[{C\+Timestamp(const C\+Date \&date, const C\+Time \&time)}]{\setlength{\rightskip}{0pt plus 5cm}C\+Timestamp\+::\+C\+Timestamp (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Date} \&}]{date, }
+\item[{const {\bf C\+Time} \&}]{time}
+\end{DoxyParamCaption}
+)}\label{class_c_timestamp_a42bbddebc964f7611437bbc972f4df0c}
+\index{C\+Timestamp@{C\+Timestamp}!````~C\+Timestamp@{$\sim$\+C\+Timestamp}}
+\index{````~C\+Timestamp@{$\sim$\+C\+Timestamp}!C\+Timestamp@{C\+Timestamp}}
+\subsubsection[{$\sim$\+C\+Timestamp()}]{\setlength{\rightskip}{0pt plus 5cm}C\+Timestamp\+::$\sim$\+C\+Timestamp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c_timestamp_ae2ea8309b3e6afa269844b05b60ec400}
+
+
+Definição na linha 67 do arquivo ctimestamp.\+h.
+
+
+
+\subsection{Métodos}
+\index{C\+Timestamp@{C\+Timestamp}!Get\+Extended\+Julian\+Day@{Get\+Extended\+Julian\+Day}}
+\index{Get\+Extended\+Julian\+Day@{Get\+Extended\+Julian\+Day}!C\+Timestamp@{C\+Timestamp}}
+\subsubsection[{Get\+Extended\+Julian\+Day() const }]{\setlength{\rightskip}{0pt plus 5cm}Int64 C\+Timestamp\+::\+Get\+Extended\+Julian\+Day (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_c_timestamp_a12be07d73c33a921baa0d5360331935f}
+\index{C\+Timestamp@{C\+Timestamp}!Get\+System\+Timestamp@{Get\+System\+Timestamp}}
+\index{Get\+System\+Timestamp@{Get\+System\+Timestamp}!C\+Timestamp@{C\+Timestamp}}
+\subsubsection[{Get\+System\+Timestamp()}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf C\+Timestamp} C\+Timestamp\+::\+Get\+System\+Timestamp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_c_timestamp_a9b32a8d8a9ae94203dd90ca5fdc40eb7}
+\index{C\+Timestamp@{C\+Timestamp}!operator+@{operator+}}
+\index{operator+@{operator+}!C\+Timestamp@{C\+Timestamp}}
+\subsubsection[{operator+(\+Int64 timestamp\+Offset) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Timestamp} C\+Timestamp\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{Int64}]{timestamp\+Offset}
+\end{DoxyParamCaption}
+) const}\label{class_c_timestamp_a1df1f1cd9982228caaa209733e39f630}
+\index{C\+Timestamp@{C\+Timestamp}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!C\+Timestamp@{C\+Timestamp}}
+\subsubsection[{operator+=(\+Int64 timestamp\+Offset)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Timestamp}\& C\+Timestamp\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{Int64}]{timestamp\+Offset}
+\end{DoxyParamCaption}
+)}\label{class_c_timestamp_af2095811dfcab891c89ae058e655a1f2}
+\index{C\+Timestamp@{C\+Timestamp}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!C\+Timestamp@{C\+Timestamp}}
+\subsubsection[{operator-\/(\+Int64 timestamp\+Offset) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Timestamp} C\+Timestamp\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{Int64}]{timestamp\+Offset}
+\end{DoxyParamCaption}
+) const}\label{class_c_timestamp_a5575f77648da451629e26ba0d6cad388}
+\index{C\+Timestamp@{C\+Timestamp}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!C\+Timestamp@{C\+Timestamp}}
+\subsubsection[{operator-\/(const C\+Timestamp \&other\+Timestamp) const }]{\setlength{\rightskip}{0pt plus 5cm}Int64 C\+Timestamp\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Timestamp} \&}]{other\+Timestamp}
+\end{DoxyParamCaption}
+) const}\label{class_c_timestamp_a19dbb4fa81a0188286e070e80dbd3fb2}
+\index{C\+Timestamp@{C\+Timestamp}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!C\+Timestamp@{C\+Timestamp}}
+\subsubsection[{operator-\/=(\+Int64 timestamp\+Offset)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Timestamp}\& C\+Timestamp\+::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{Int64}]{timestamp\+Offset}
+\end{DoxyParamCaption}
+)}\label{class_c_timestamp_a7de5996cd49f6bab57822ffb2cae29cb}
+\index{C\+Timestamp@{C\+Timestamp}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!C\+Timestamp@{C\+Timestamp}}
+\subsubsection[{operator$<$(const C\+Timestamp \&compare) const }]{\setlength{\rightskip}{0pt plus 5cm}bool C\+Timestamp\+::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Timestamp} \&}]{compare}
+\end{DoxyParamCaption}
+) const}\label{class_c_timestamp_a2535eb0525e42a939c5ebf3344cbbbdc}
+\index{C\+Timestamp@{C\+Timestamp}!operator=@{operator=}}
+\index{operator=@{operator=}!C\+Timestamp@{C\+Timestamp}}
+\subsubsection[{operator=(const C\+Timestamp \&assign)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+Timestamp}\& C\+Timestamp\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Timestamp} \&}]{assign}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_c_timestamp_a6af64fc7289c04111cc10ed01d4d8ec3}
+
+
+Definição na linha 72 do arquivo ctimestamp.\+h.
+
+\index{C\+Timestamp@{C\+Timestamp}!operator==@{operator==}}
+\index{operator==@{operator==}!C\+Timestamp@{C\+Timestamp}}
+\subsubsection[{operator==(const C\+Timestamp \&compare) const }]{\setlength{\rightskip}{0pt plus 5cm}bool C\+Timestamp\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf C\+Timestamp} \&}]{compare}
+\end{DoxyParamCaption}
+) const}\label{class_c_timestamp_a890fde3f69d6d863d8a60f7196ba8c1b}
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf ctimestamp.\+h}\end{DoxyCompactItemize}

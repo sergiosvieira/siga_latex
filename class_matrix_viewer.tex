@@ -1,0 +1,597 @@
+\section{Referência da Classe Matrix\+Viewer}
+\label{class_matrix_viewer}\index{Matrix\+Viewer@{Matrix\+Viewer}}
+
+
+{\ttfamily \#include $<$Matrix\+Viewer.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+
+
+Superclasse de {\bf Opt\+Node\+Result}, {\bf Res\+Op\+Tecnique\+Dialog\+Result}, {\bf Res\+Op\+Tecnique\+Dialog\+Result} e {\bf Thiessen\+Viewer}.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bf I\+D\+\_\+\+N\+O\+T\+E\+\_\+\+M\+A\+T\+V\+I\+E\+W\+ER}
+ \}
+\item 
+enum {\bf Tree\+Image} \{ {\bf U\+N\+C\+H\+E\+CK} = 0, 
+{\bf C\+H\+E\+CK}, 
+{\bf F\+O\+L\+D\+ER}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ {\bf Draw\+Matrix} $\ast$ $>$ \& {\bf matrices} ()
+\item 
+void {\bf set\+Button\+Select\+All} (bool m\+\_\+attr)
+\item 
+void {\bf set\+Pair\+Value} (std\+::pair$<$ double, double $>$ a\+\_\+pair)
+\item 
+bool {\bf is\+Edited} ()
+\item 
+int {\bf get\+Selected\+Page} ()
+\item 
+wx\+Bitmap {\bf create\+Symbol} (int symbol, int colour, int size)
+\item 
+{\bf Matrix\+Viewer} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent}, int options={\bf B\+U\+T\+T\+O\+N\+\_\+\+S\+A\+VE}, bool any\+Matrix=true, bool just\+One=true, bool editable=false, bool fit=false, bool manual\+Inserction=false, bool draw\+Graph=true)
+\item 
+virtual {\bf $\sim$\+Matrix\+Viewer} ()
+\item 
+void {\bf insert\+Matrix} ({\bf Matrix} matrix, wx\+String name, map$<$ unsigned int, {\bf Column\+Information} $\ast$ $>$, wx\+String section=\char`\"{}\char`\"{}, unsigned int type=0)
+\item 
+{\bf Draw\+Matrix} $\ast$ {\bf get\+Selected\+Matrix} ()
+\item 
+{\bf Draw\+Matrix} $\ast$ {\bf get\+Matrix} (std\+::vector$<$ wx\+String $>$ \&m\+\_\+names, std\+::vector$<$ wx\+String $>$ \&m\+\_\+types)
+\item 
+wx\+Point {\bf get\+Selected\+Label} ()
+\item 
+void {\bf set\+Selected\+Label} (int index)
+\item 
+int {\bf get\+Index\+Dot} ()
+\item 
+void {\bf set\+Index\+Dot} (int index)
+\item 
+void {\bf Set\+Selection\+Mode} (wx\+Grid\+::wx\+Grid\+Selection\+Modes mode)
+\item 
+bool {\bf remove\+Matrix} ({\bf Matrix} matrix, wx\+String name=\char`\"{}\char`\"{})
+\item 
+void {\bf set\+Curve} ({\bf Matrix} matrix, map$<$ unsigned int, {\bf Column\+Information} $\ast$ $>$ infos, {\bf Fit\+Curve} $\ast$fit)
+\item 
+void {\bf open\+Conf} ()
+\item 
+void {\bf save\+Conf} ()
+\item 
+void {\bf clear} ()
+\item 
+void {\bf set\+Fixed\+X\+Axis} (bool fixedX, {\bf Matrix} fixed\+Matrix, {\bf Column\+Information} $\ast$fixed\+X\+Col\+Info, int fixed\+X\+Col)
+\item 
+{\bf Draw\+Matrix} $\ast$ {\bf get\+Fixed\+X\+Axis} ()
+\item 
+void {\bf redraw\+Graph} ()
+\item 
+void {\bf on\+Change\+Viewer} (wx\+Notebook\+Event \&evento)
+\item 
+wx\+Notebook $\ast$ {\bf get\+Notebook} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Colour {\bf colors\+Opt} [16]
+\item 
+{\bf Draw\+Matrix} $\ast$ {\bf fixed\+X\+Matrix}
+\item 
+bool {\bf x\+Axis\+Fixed}
+\item 
+{\bf Draw\+Matrix} $\ast$ {\bf fit\+Curve}
+\item 
+{\bf Fit\+Curve} $\ast$ {\bf fit\+Data}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix\+Viewer} (int options, wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent})
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix\+Graph} $\ast$ {\bf graph}
+\item 
+{\bf Matrix\+Plan} $\ast$ {\bf plan}
+\item 
+wx\+Notebook $\ast$ {\bf note}
+\item 
+wx\+Window $\ast$ {\bf parent}
+\item 
+wx\+Frame $\ast$ {\bf frame}
+\item 
+short {\bf selected\+Color}
+\item 
+wx\+String {\bf matrix\+Name}
+\item 
+wx\+String {\bf matrix\+Ext}
+\item 
+unsigned int {\bf seed\+Id}
+\item 
+std\+::pair$<$ double, double $>$ {\bf m\+\_\+pair\+Values\+Plot}
+\item 
+vector$<$ {\bf Draw\+Matrix} $\ast$ $>$ {\bf m\+\_\+matrices}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf T\+A\+L\+River\+W\+Q\+Model\+Main}
+\item 
+class {\bf Res\+C\+A\+V\+Dialog\+Content}
+\item 
+class {\bf C\+A\+V\+Import\+Dialog\+Content}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Visualizador de series Possui visualizacao por planilha e por grafico 
+
+Definição na linha 30 do arquivo Matrix\+Viewer.\+h.
+
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{class_matrix_viewer_a005ab5c9723101e76d6982a60e3431be}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+N\+O\+T\+E\+\_\+\+M\+A\+T\+V\+I\+E\+W\+ER@{I\+D\+\_\+\+N\+O\+T\+E\+\_\+\+M\+A\+T\+V\+I\+E\+W\+ER}!Matrix\+Viewer@{Matrix\+Viewer}}\index{Matrix\+Viewer@{Matrix\+Viewer}!I\+D\+\_\+\+N\+O\+T\+E\+\_\+\+M\+A\+T\+V\+I\+E\+W\+ER@{I\+D\+\_\+\+N\+O\+T\+E\+\_\+\+M\+A\+T\+V\+I\+E\+W\+ER}}\item[{\em 
+I\+D\+\_\+\+N\+O\+T\+E\+\_\+\+M\+A\+T\+V\+I\+E\+W\+ER\label{class_matrix_viewer_a005ab5c9723101e76d6982a60e3431bea2b4f55d178e6f7e5c657806fe06fe028}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 111 do arquivo Matrix\+Viewer.\+h.
+
+\index{Matrix\+Viewer@{Matrix\+Viewer}!Tree\+Image@{Tree\+Image}}
+\index{Tree\+Image@{Tree\+Image}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{Tree\+Image}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Matrix\+Viewer\+::\+Tree\+Image}}\label{class_matrix_viewer_a0b1dab7588b696acb0b88c5d034d8e4d}
+Enumerador para Imagem do Tree\+Ctrl \begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{U\+N\+C\+H\+E\+CK@{U\+N\+C\+H\+E\+CK}!Matrix\+Viewer@{Matrix\+Viewer}}\index{Matrix\+Viewer@{Matrix\+Viewer}!U\+N\+C\+H\+E\+CK@{U\+N\+C\+H\+E\+CK}}\item[{\em 
+U\+N\+C\+H\+E\+CK\label{class_matrix_viewer_a0b1dab7588b696acb0b88c5d034d8e4dad68e1dc13af026334ac557351597ba0b}
+}]\index{C\+H\+E\+CK@{C\+H\+E\+CK}!Matrix\+Viewer@{Matrix\+Viewer}}\index{Matrix\+Viewer@{Matrix\+Viewer}!C\+H\+E\+CK@{C\+H\+E\+CK}}\item[{\em 
+C\+H\+E\+CK\label{class_matrix_viewer_a0b1dab7588b696acb0b88c5d034d8e4da022699f569951a60167f4a738d314f3a}
+}]\index{F\+O\+L\+D\+ER@{F\+O\+L\+D\+ER}!Matrix\+Viewer@{Matrix\+Viewer}}\index{Matrix\+Viewer@{Matrix\+Viewer}!F\+O\+L\+D\+ER@{F\+O\+L\+D\+ER}}\item[{\em 
+F\+O\+L\+D\+ER\label{class_matrix_viewer_a0b1dab7588b696acb0b88c5d034d8e4dadb36fec5bef4debd814d5429d96ae120}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 118 do arquivo Matrix\+Viewer.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Matrix\+Viewer@{Matrix\+Viewer}!Matrix\+Viewer@{Matrix\+Viewer}}
+\index{Matrix\+Viewer@{Matrix\+Viewer}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{Matrix\+Viewer(int options, wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Matrix\+Viewer\+::\+Matrix\+Viewer (
+\begin{DoxyParamCaption}
+\item[{int}]{options, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_viewer_a5f7e585d147a1abb3decb39dfcd7de23}
+Construtor usado para a implementa��o do \doxyref{Thiessen\+Viewer}{pag.}{class_thiessen_viewer} \index{Matrix\+Viewer@{Matrix\+Viewer}!Matrix\+Viewer@{Matrix\+Viewer}}
+\index{Matrix\+Viewer@{Matrix\+Viewer}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{Matrix\+Viewer(wx\+Frame $\ast$frame, wx\+Window $\ast$parent, int options=\+B\+U\+T\+T\+O\+N\+\_\+\+S\+A\+V\+E, bool any\+Matrix=true, bool just\+One=true, bool editable=false, bool fit=false, bool manual\+Inserction=false, bool draw\+Graph=true)}]{\setlength{\rightskip}{0pt plus 5cm}Matrix\+Viewer\+::\+Matrix\+Viewer (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{int}]{options = {\ttfamily {\bf B\+U\+T\+T\+O\+N\+\_\+\+S\+A\+VE}}, }
+\item[{bool}]{any\+Matrix = {\ttfamily true}, }
+\item[{bool}]{just\+One = {\ttfamily true}, }
+\item[{bool}]{editable = {\ttfamily false}, }
+\item[{bool}]{fit = {\ttfamily false}, }
+\item[{bool}]{manual\+Inserction = {\ttfamily false}, }
+\item[{bool}]{draw\+Graph = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_aabc62154a9e9f987de9931c726c8ca42}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & Frame que contem a interface \\
+\hline
+{\em parent} & Pai da janela \\
+\hline
+{\em options} & Bot�es a serem desenhados \\
+\hline
+{\em matrix} & Matriz a ser visualizada \\
+\hline
+{\em any\+Matrix} & Pode colocar qualquer coluna de qualquer matriz com a coluna de qualquer outra no \doxyref{Matrix\+Graph}{pag.}{class_matrix_graph} \\
+\hline
+{\em just\+One} & Permite apenas um gr�fico no Matrox\+Graph \\
+\hline
+{\em draw\+Graph} & Informa se quer adicionar a aba de gr�fico \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Viewer@{Matrix\+Viewer}!````~Matrix\+Viewer@{$\sim$\+Matrix\+Viewer}}
+\index{````~Matrix\+Viewer@{$\sim$\+Matrix\+Viewer}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{$\sim$\+Matrix\+Viewer()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Matrix\+Viewer\+::$\sim$\+Matrix\+Viewer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_matrix_viewer_a4fd75f5bfc449fca59b8ca5145a47e32}
+Destrutor 
+
+\subsection{Métodos}
+\index{Matrix\+Viewer@{Matrix\+Viewer}!clear@{clear}}
+\index{clear@{clear}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Viewer\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_a87e0fcafcf17b4c1822a57be01fc79cd}
+Limpa os dados \index{Matrix\+Viewer@{Matrix\+Viewer}!create\+Symbol@{create\+Symbol}}
+\index{create\+Symbol@{create\+Symbol}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{create\+Symbol(int symbol, int colour, int size)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Matrix\+Viewer\+::create\+Symbol (
+\begin{DoxyParamCaption}
+\item[{int}]{symbol, }
+\item[{int}]{colour, }
+\item[{int}]{size}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_a3e43d8cadbff0c5ca5285bf63d005b75}
+Cria um bitmap para ser usado como simbolo pelo gr�fico 
+\begin{DoxyParams}{Parâmetros}
+{\em symbol} & Simbolo a ser desenhado \\
+\hline
+{\em colour} & Cor do simbolo \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Viewer@{Matrix\+Viewer}!get\+Fixed\+X\+Axis@{get\+Fixed\+X\+Axis}}
+\index{get\+Fixed\+X\+Axis@{get\+Fixed\+X\+Axis}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{get\+Fixed\+X\+Axis()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Matrix}$\ast$ Matrix\+Viewer\+::get\+Fixed\+X\+Axis (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_aa7d17009e2fc36ee0a2e6538c7a491b3}
+Retorna a matriz fixa \index{Matrix\+Viewer@{Matrix\+Viewer}!get\+Index\+Dot@{get\+Index\+Dot}}
+\index{get\+Index\+Dot@{get\+Index\+Dot}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{get\+Index\+Dot()}]{\setlength{\rightskip}{0pt plus 5cm}int Matrix\+Viewer\+::get\+Index\+Dot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_a7450de5bba667f42e202b2076a5f77d6}
+Retorna o Indice do ponto na curva \index{Matrix\+Viewer@{Matrix\+Viewer}!get\+Matrix@{get\+Matrix}}
+\index{get\+Matrix@{get\+Matrix}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{get\+Matrix(std\+::vector$<$ wx\+String $>$ \&m\+\_\+names, std\+::vector$<$ wx\+String $>$ \&m\+\_\+types)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Matrix}$\ast$ Matrix\+Viewer\+::get\+Matrix (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ wx\+String $>$ \&}]{m\+\_\+names, }
+\item[{std\+::vector$<$ wx\+String $>$ \&}]{m\+\_\+types}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_a7b966c95e3f2f4e5bb1bfeeff1287b25}
+\index{Matrix\+Viewer@{Matrix\+Viewer}!get\+Notebook@{get\+Notebook}}
+\index{get\+Notebook@{get\+Notebook}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{get\+Notebook()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Notebook$\ast$ Matrix\+Viewer\+::get\+Notebook (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_a82d014a42dd951749ac68d39cc3a617a}
+Retorna o notebook \index{Matrix\+Viewer@{Matrix\+Viewer}!get\+Selected\+Label@{get\+Selected\+Label}}
+\index{get\+Selected\+Label@{get\+Selected\+Label}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{get\+Selected\+Label()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point Matrix\+Viewer\+::get\+Selected\+Label (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_acc9c1c711fbcc9b95167d657d71b0c0b}
+Retorna o r�tulo selecionado \index{Matrix\+Viewer@{Matrix\+Viewer}!get\+Selected\+Matrix@{get\+Selected\+Matrix}}
+\index{get\+Selected\+Matrix@{get\+Selected\+Matrix}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{get\+Selected\+Matrix()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Matrix}$\ast$ Matrix\+Viewer\+::get\+Selected\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_affe767a4d0a32888297daf6a2b7a867c}
+\index{Matrix\+Viewer@{Matrix\+Viewer}!get\+Selected\+Page@{get\+Selected\+Page}}
+\index{get\+Selected\+Page@{get\+Selected\+Page}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{get\+Selected\+Page()}]{\setlength{\rightskip}{0pt plus 5cm}int Matrix\+Viewer\+::get\+Selected\+Page (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_matrix_viewer_aec79a4432c623de7c0ea276194cbdc61}
+Retorna a pagina selecionada 
+
+Definição na linha 98 do arquivo Matrix\+Viewer.\+h.
+
+\index{Matrix\+Viewer@{Matrix\+Viewer}!insert\+Matrix@{insert\+Matrix}}
+\index{insert\+Matrix@{insert\+Matrix}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{insert\+Matrix(\+Matrix matrix, wx\+String name, map$<$ unsigned int, Column\+Information $\ast$ $>$, wx\+String section="""", unsigned int type=0)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Viewer\+::insert\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{matrix, }
+\item[{wx\+String}]{name, }
+\item[{map$<$ unsigned int, {\bf Column\+Information} $\ast$ $>$}]{, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{unsigned int}]{type = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_a51f7ef4d118bef38c02f6c9997112f91}
+Insere matriz 
+\begin{DoxyParams}{Parâmetros}
+{\em matrix} & Matriz a ser inserida \\
+\hline
+{\em name} & Nome da matriz inserida \\
+\hline
+{\em infos} & Informa��es sobre as colunas \\
+\hline
+{\em drawdot} & Se deve desenhar os pontos do gr�fico \\
+\hline
+{\em drawline} & Se deve desenhar as linhas entre os pontos do gr�fico \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Viewer@{Matrix\+Viewer}!is\+Edited@{is\+Edited}}
+\index{is\+Edited@{is\+Edited}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{is\+Edited()}]{\setlength{\rightskip}{0pt plus 5cm}bool Matrix\+Viewer\+::is\+Edited (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_a101a6f68d9c991514cf4e2d22e6d2d72}
+Retorna se a matriz foi editada \index{Matrix\+Viewer@{Matrix\+Viewer}!matrices@{matrices}}
+\index{matrices@{matrices}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{matrices()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Draw\+Matrix}$\ast$$>$\& Matrix\+Viewer\+::matrices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_a6c1668ebf8e5e6dfe6148c934a76db3d}
+\index{Matrix\+Viewer@{Matrix\+Viewer}!on\+Change\+Viewer@{on\+Change\+Viewer}}
+\index{on\+Change\+Viewer@{on\+Change\+Viewer}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{on\+Change\+Viewer(wx\+Notebook\+Event \&evento)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Viewer\+::on\+Change\+Viewer (
+\begin{DoxyParamCaption}
+\item[{wx\+Notebook\+Event \&}]{evento}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_a45a7bb98bad72d2fe1f9c5e51ac283f7}
+\index{Matrix\+Viewer@{Matrix\+Viewer}!open\+Conf@{open\+Conf}}
+\index{open\+Conf@{open\+Conf}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{open\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Viewer\+::open\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_matrix_viewer_aaef1beffd429b3f7b72785455629d7f8}
+Abre configura��es 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abf3660e2c31c95afab763b4b520e26e9}.
+
+\index{Matrix\+Viewer@{Matrix\+Viewer}!redraw\+Graph@{redraw\+Graph}}
+\index{redraw\+Graph@{redraw\+Graph}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{redraw\+Graph()}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Viewer\+::redraw\+Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_a09a6aefec094546b5bbbd970261fef09}
+\index{Matrix\+Viewer@{Matrix\+Viewer}!remove\+Matrix@{remove\+Matrix}}
+\index{remove\+Matrix@{remove\+Matrix}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{remove\+Matrix(\+Matrix matrix, wx\+String name="""")}]{\setlength{\rightskip}{0pt plus 5cm}bool Matrix\+Viewer\+::remove\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{matrix, }
+\item[{wx\+String}]{name = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_a6dc93bcba28b22a6bb2c0e16f369a75b}
+Remove a Matriz 
+\begin{DoxyParams}{Parâmetros}
+{\em serie} & \doxyref{Serie}{pag.}{class_serie} a ser removida \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Viewer@{Matrix\+Viewer}!save\+Conf@{save\+Conf}}
+\index{save\+Conf@{save\+Conf}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{save\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Viewer\+::save\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_matrix_viewer_accd506b46e8acc194b7ace7b2f8838b0}
+Salva configura��es 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abcef0436251918c1eab033a80b40c626}.
+
+
+
+Reimplementado por {\bf Thiessen\+Viewer} \doxyref{}{pag.}{class_thiessen_viewer_ac81939dde6def74708664ace000cdeb2}.
+
+\index{Matrix\+Viewer@{Matrix\+Viewer}!set\+Button\+Select\+All@{set\+Button\+Select\+All}}
+\index{set\+Button\+Select\+All@{set\+Button\+Select\+All}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{set\+Button\+Select\+All(bool m\+\_\+attr)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Viewer\+::set\+Button\+Select\+All (
+\begin{DoxyParamCaption}
+\item[{bool}]{m\+\_\+attr}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_a09cb4fc5c76e68de65b12370d55c7e2b}
+\index{Matrix\+Viewer@{Matrix\+Viewer}!set\+Curve@{set\+Curve}}
+\index{set\+Curve@{set\+Curve}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{set\+Curve(\+Matrix matrix, map$<$ unsigned int, Column\+Information $\ast$ $>$ infos, Fit\+Curve $\ast$fit)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Viewer\+::set\+Curve (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{matrix, }
+\item[{map$<$ unsigned int, {\bf Column\+Information} $\ast$ $>$}]{infos, }
+\item[{{\bf Fit\+Curve} $\ast$}]{fit}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_a5c76b6e7adfee1804025bdc8fc1d2a61}
+Define a curva 
+\begin{DoxyParams}{Parâmetros}
+{\em matrix} & Matriz \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Viewer@{Matrix\+Viewer}!set\+Fixed\+X\+Axis@{set\+Fixed\+X\+Axis}}
+\index{set\+Fixed\+X\+Axis@{set\+Fixed\+X\+Axis}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{set\+Fixed\+X\+Axis(bool fixed\+X, Matrix fixed\+Matrix, Column\+Information $\ast$fixed\+X\+Col\+Info, int fixed\+X\+Col)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Viewer\+::set\+Fixed\+X\+Axis (
+\begin{DoxyParamCaption}
+\item[{bool}]{fixedX, }
+\item[{{\bf Matrix}}]{fixed\+Matrix, }
+\item[{{\bf Column\+Information} $\ast$}]{fixed\+X\+Col\+Info, }
+\item[{int}]{fixed\+X\+Col}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_a23b18d5358bed20877c99d9207746a31}
+Define uma matriz que sera o eixo x para todas as matrizes que foram e forem inseridas \index{Matrix\+Viewer@{Matrix\+Viewer}!set\+Index\+Dot@{set\+Index\+Dot}}
+\index{set\+Index\+Dot@{set\+Index\+Dot}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{set\+Index\+Dot(int index)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Viewer\+::set\+Index\+Dot (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_a4c7bcb0cd41a26eccb43bdb69ef5c341}
+Define o ponto selecionado \index{Matrix\+Viewer@{Matrix\+Viewer}!set\+Pair\+Value@{set\+Pair\+Value}}
+\index{set\+Pair\+Value@{set\+Pair\+Value}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{set\+Pair\+Value(std\+::pair$<$ double, double $>$ a\+\_\+pair)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Viewer\+::set\+Pair\+Value (
+\begin{DoxyParamCaption}
+\item[{std\+::pair$<$ double, double $>$}]{a\+\_\+pair}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_afea6149537f50fbfa1e7b9010de3e954}
+Captura os valores do Plot e prepara a Plan para selecionar a linha correspondente \index{Matrix\+Viewer@{Matrix\+Viewer}!set\+Selected\+Label@{set\+Selected\+Label}}
+\index{set\+Selected\+Label@{set\+Selected\+Label}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{set\+Selected\+Label(int index)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Viewer\+::set\+Selected\+Label (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_a3595690a3a56dad3ee184ef31eeefbdf}
+Define uma linha para ser selecionada \index{Matrix\+Viewer@{Matrix\+Viewer}!Set\+Selection\+Mode@{Set\+Selection\+Mode}}
+\index{Set\+Selection\+Mode@{Set\+Selection\+Mode}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{Set\+Selection\+Mode(wx\+Grid\+::wx\+Grid\+Selection\+Modes mode)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Viewer\+::\+Set\+Selection\+Mode (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+::wx\+Grid\+Selection\+Modes}]{mode}
+\end{DoxyParamCaption}
+)}\label{class_matrix_viewer_ad7d4fbca02008a8a53a5e9548cdcda5e}
+
+
+\subsection{Amigas e Funções Relacionadas}
+\index{Matrix\+Viewer@{Matrix\+Viewer}!C\+A\+V\+Import\+Dialog\+Content@{C\+A\+V\+Import\+Dialog\+Content}}
+\index{C\+A\+V\+Import\+Dialog\+Content@{C\+A\+V\+Import\+Dialog\+Content}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{C\+A\+V\+Import\+Dialog\+Content}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf C\+A\+V\+Import\+Dialog\+Content}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_matrix_viewer_a6cdadf80617314ebf95852e78bad5ed7}
+
+
+Definição na linha 34 do arquivo Matrix\+Viewer.\+h.
+
+\index{Matrix\+Viewer@{Matrix\+Viewer}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{Res\+C\+A\+V\+Dialog\+Content}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Res\+C\+A\+V\+Dialog\+Content}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_matrix_viewer_ad807b5b885ee5bf7047eee84e8790d84}
+
+
+Definição na linha 33 do arquivo Matrix\+Viewer.\+h.
+
+\index{Matrix\+Viewer@{Matrix\+Viewer}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{T\+A\+L\+River\+W\+Q\+Model\+Main}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf T\+A\+L\+River\+W\+Q\+Model\+Main}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_matrix_viewer_a425ca00c1d9d774c3697cb7c400d40de}
+
+
+Definição na linha 32 do arquivo Matrix\+Viewer.\+h.
+
+
+
+\subsection{Atributos}
+\index{Matrix\+Viewer@{Matrix\+Viewer}!colors\+Opt@{colors\+Opt}}
+\index{colors\+Opt@{colors\+Opt}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{colors\+Opt}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Colour Matrix\+Viewer\+::colors\+Opt[16]}\label{class_matrix_viewer_a43d89f477ebee7b3d1734b5dea407de3}
+Cor com a qual a matriz sera desenhada 
+
+Definição na linha 98 do arquivo Matrix\+Viewer.\+h.
+
+\index{Matrix\+Viewer@{Matrix\+Viewer}!fit\+Curve@{fit\+Curve}}
+\index{fit\+Curve@{fit\+Curve}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{fit\+Curve}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Matrix}$\ast$ Matrix\+Viewer\+::fit\+Curve}\label{class_matrix_viewer_ac35c32de84cf180cf9672977b230070c}
+Curva de ajuste 
+
+Definição na linha 127 do arquivo Matrix\+Viewer.\+h.
+
+\index{Matrix\+Viewer@{Matrix\+Viewer}!fit\+Data@{fit\+Data}}
+\index{fit\+Data@{fit\+Data}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{fit\+Data}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Fit\+Curve}$\ast$ Matrix\+Viewer\+::fit\+Data}\label{class_matrix_viewer_a72cdbc9f81431da7ee84f676b218c77f}
+Fit Data 
+
+Definição na linha 131 do arquivo Matrix\+Viewer.\+h.
+
+\index{Matrix\+Viewer@{Matrix\+Viewer}!fixed\+X\+Matrix@{fixed\+X\+Matrix}}
+\index{fixed\+X\+Matrix@{fixed\+X\+Matrix}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{fixed\+X\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Matrix}$\ast$ Matrix\+Viewer\+::fixed\+X\+Matrix}\label{class_matrix_viewer_a94001ba05109af8e6feecc78e4c2f51d}
+Matriz com uma coluna para ser utilizada caso deseje o eixo x fixo 
+
+Definição na linha 106 do arquivo Matrix\+Viewer.\+h.
+
+\index{Matrix\+Viewer@{Matrix\+Viewer}!frame@{frame}}
+\index{frame@{frame}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{frame}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Frame$\ast$ Matrix\+Viewer\+::frame\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_viewer_a426fefc8f767a25bc933cd72c5715230}
+Janela em que ser� inserida a interface 
+
+Definição na linha 56 do arquivo Matrix\+Viewer.\+h.
+
+\index{Matrix\+Viewer@{Matrix\+Viewer}!graph@{graph}}
+\index{graph@{graph}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{graph}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix\+Graph}$\ast$ Matrix\+Viewer\+::graph\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_viewer_a658be4c235f7cef793e735c6d332b7ea}
+Ponteiro para \doxyref{Matrix\+Graph}{pag.}{class_matrix_graph} 
+
+Definição na linha 39 do arquivo Matrix\+Viewer.\+h.
+
+\index{Matrix\+Viewer@{Matrix\+Viewer}!m\+\_\+matrices@{m\+\_\+matrices}}
+\index{m\+\_\+matrices@{m\+\_\+matrices}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{m\+\_\+matrices}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Draw\+Matrix}$\ast$$>$ Matrix\+Viewer\+::m\+\_\+matrices\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_viewer_a94714652f94f0430dceccbacb477f3ba}
+Matrizes a serem desenhadas 
+
+Definição na linha 83 do arquivo Matrix\+Viewer.\+h.
+
+\index{Matrix\+Viewer@{Matrix\+Viewer}!m\+\_\+pair\+Values\+Plot@{m\+\_\+pair\+Values\+Plot}}
+\index{m\+\_\+pair\+Values\+Plot@{m\+\_\+pair\+Values\+Plot}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{m\+\_\+pair\+Values\+Plot}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$double, double$>$ Matrix\+Viewer\+::m\+\_\+pair\+Values\+Plot\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_viewer_a786f066eaf67a8925cd2bd3d13da4d38}
+
+
+Definição na linha 74 do arquivo Matrix\+Viewer.\+h.
+
+\index{Matrix\+Viewer@{Matrix\+Viewer}!matrix\+Ext@{matrix\+Ext}}
+\index{matrix\+Ext@{matrix\+Ext}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{matrix\+Ext}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Matrix\+Viewer\+::matrix\+Ext\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_viewer_a18b7316444fec0b222b3512a612519b6}
+
+
+Definição na linha 68 do arquivo Matrix\+Viewer.\+h.
+
+\index{Matrix\+Viewer@{Matrix\+Viewer}!matrix\+Name@{matrix\+Name}}
+\index{matrix\+Name@{matrix\+Name}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{matrix\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Matrix\+Viewer\+::matrix\+Name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_viewer_a05361ddd4b9d36a854865a91cbdc81bc}
+
+
+Definição na linha 64 do arquivo Matrix\+Viewer.\+h.
+
+\index{Matrix\+Viewer@{Matrix\+Viewer}!note@{note}}
+\index{note@{note}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{note}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Notebook$\ast$ Matrix\+Viewer\+::note\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_viewer_a2ed085e978c6c5b2e485c05e766793d5}
+Caderno com a planilha e o gr�fico 
+
+Definição na linha 47 do arquivo Matrix\+Viewer.\+h.
+
+\index{Matrix\+Viewer@{Matrix\+Viewer}!parent@{parent}}
+\index{parent@{parent}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Window$\ast$ Matrix\+Viewer\+::parent\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_viewer_a3abe5223e9630fd3d0bf05e77ce6bc0f}
+Componente a que pertence 
+
+Definição na linha 52 do arquivo Matrix\+Viewer.\+h.
+
+\index{Matrix\+Viewer@{Matrix\+Viewer}!plan@{plan}}
+\index{plan@{plan}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{plan}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix\+Plan}$\ast$ Matrix\+Viewer\+::plan\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_viewer_a5a39420996fbdb909e28088371244553}
+
+
+Definição na linha 43 do arquivo Matrix\+Viewer.\+h.
+
+\index{Matrix\+Viewer@{Matrix\+Viewer}!seed\+Id@{seed\+Id}}
+\index{seed\+Id@{seed\+Id}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{seed\+Id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Matrix\+Viewer\+::seed\+Id\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_viewer_a2d66d9d3653eb5c7786a7cc0ed69f287}
+Semente para indentificador 
+
+Definição na linha 72 do arquivo Matrix\+Viewer.\+h.
+
+\index{Matrix\+Viewer@{Matrix\+Viewer}!selected\+Color@{selected\+Color}}
+\index{selected\+Color@{selected\+Color}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{selected\+Color}]{\setlength{\rightskip}{0pt plus 5cm}short Matrix\+Viewer\+::selected\+Color\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_viewer_a66d73f2cbcdcbbff35c47d7634cdb5de}
+Cor selecionada 
+
+Definição na linha 60 do arquivo Matrix\+Viewer.\+h.
+
+\index{Matrix\+Viewer@{Matrix\+Viewer}!x\+Axis\+Fixed@{x\+Axis\+Fixed}}
+\index{x\+Axis\+Fixed@{x\+Axis\+Fixed}!Matrix\+Viewer@{Matrix\+Viewer}}
+\subsubsection[{x\+Axis\+Fixed}]{\setlength{\rightskip}{0pt plus 5cm}bool Matrix\+Viewer\+::x\+Axis\+Fixed}\label{class_matrix_viewer_a950f9cd5acae68e2b498f6537edf3c32}
+Usar a matriz fixa para o eixo x 
+
+Definição na linha 110 do arquivo Matrix\+Viewer.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix\+Viewer.\+h}\end{DoxyCompactItemize}

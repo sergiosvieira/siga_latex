@@ -1,0 +1,329 @@
+\section{Referência da Classe Module\+Element\+Info}
+\label{class_module_element_info}\index{Module\+Element\+Info@{Module\+Element\+Info}}
+
+
+{\ttfamily \#include $<$Module\+Element\+Info.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Module\+Element\+Info} ()
+\item 
+virtual {\bf $\sim$\+Module\+Element\+Info} ()
+\item 
+void {\bf set\+Double} (const std\+::string \&name, double value)
+\item 
+bool {\bf get\+Double} (const std\+::string \&name, double \&result)
+\item 
+bool {\bf remove\+Double} (const std\+::string \&name)
+\item 
+void {\bf clear\+Doubles} ()
+\item 
+void {\bf set\+String} (const std\+::string \&name, std\+::string value)
+\item 
+bool {\bf get\+String} (const std\+::string \&name, std\+::string \&result)
+\item 
+bool {\bf remove\+String} (const std\+::string \&name)
+\item 
+void {\bf clear\+Strings} ()
+\item 
+void {\bf set\+Serie} (const std\+::string \&name, {\bf SerieX}$<$ double, double $>$ \&value)
+\item 
+bool {\bf get\+Serie} (const std\+::string \&name, {\bf SerieX}$<$ double, double $>$ $\ast$\&result)
+\item 
+bool {\bf remove\+Serie} (const std\+::string \&name)
+\item 
+void {\bf clear\+Series} ()
+\item 
+void {\bf set\+Date\+Serie} (const std\+::string \&name, {\bf Date\+Serie}$<$ double $>$ \&value)
+\item 
+bool {\bf get\+Date\+Serie} (const std\+::string \&name, {\bf Date\+Serie}$<$ double $>$ $\ast$\&result)
+\item 
+bool {\bf remove\+Date\+Serie} (const std\+::string \&name)
+\item 
+void {\bf clear\+Date\+Series} ()
+\item 
+const std\+::map$<$ std\+::string, double $>$ \& {\bf doubles\+Map} ()
+\item 
+const std\+::map$<$ std\+::string, {\bf SerieX}$<$ double, double $>$ $\ast$ $>$ \& {\bf series\+Map} ()
+\item 
+const std\+::map$<$ std\+::string, {\bf Date\+Serie}$<$ double $>$ $\ast$ $>$ \& {\bf date\+Series\+Map} ()
+\item 
+bool {\bf element} ({\bf Element} $\ast$\&result)
+\item 
+void {\bf clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf set\+Element} ({\bf Element} \&{\bf element})
+\item 
+virtual void {\bf additional\+Clear} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ std\+::string, double $>$ {\bf m\+\_\+double\+\_\+map}
+\item 
+std\+::map$<$ std\+::string, std\+::string $>$ {\bf m\+\_\+string\+\_\+map}
+\item 
+std\+::map$<$ std\+::string, {\bf SerieX}$<$ double, double $>$ $\ast$ $>$ {\bf m\+\_\+serie\+\_\+map}
+\item 
+std\+::map$<$ std\+::string, {\bf Date\+Serie}$<$ double $>$ $\ast$ $>$ {\bf m\+\_\+date\+\_\+serie\+\_\+map}
+\item 
+{\bf Element} $\ast$ {\bf m\+\_\+element}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Element}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 12 do arquivo Module\+Element\+Info.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!Module\+Element\+Info@{Module\+Element\+Info}}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{Module\+Element\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}Module\+Element\+Info\+::\+Module\+Element\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_a646a668dfc79bec70c3fbb0d85ef37f7}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!````~Module\+Element\+Info@{$\sim$\+Module\+Element\+Info}}
+\index{````~Module\+Element\+Info@{$\sim$\+Module\+Element\+Info}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{$\sim$\+Module\+Element\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Module\+Element\+Info\+::$\sim$\+Module\+Element\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_module_element_info_a078008eca5fa46201bcc530121bb9eba}
+
+
+\subsection{Métodos}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!additional\+Clear@{additional\+Clear}}
+\index{additional\+Clear@{additional\+Clear}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{additional\+Clear()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Module\+Element\+Info\+::additional\+Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{class_module_element_info_a4ed45b9d38b9dc67a6b0471bf023f796}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!clear@{clear}}
+\index{clear@{clear}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Module\+Element\+Info\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_a9370e72fc9cabc956c46dadea5cdb2bd}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!clear\+Date\+Series@{clear\+Date\+Series}}
+\index{clear\+Date\+Series@{clear\+Date\+Series}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{clear\+Date\+Series()}]{\setlength{\rightskip}{0pt plus 5cm}void Module\+Element\+Info\+::clear\+Date\+Series (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_a56095588bb2994c7adc7792c596d3191}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!clear\+Doubles@{clear\+Doubles}}
+\index{clear\+Doubles@{clear\+Doubles}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{clear\+Doubles()}]{\setlength{\rightskip}{0pt plus 5cm}void Module\+Element\+Info\+::clear\+Doubles (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_a5c7e7e9cab43fff0a8d00b1cb7bcae3d}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!clear\+Series@{clear\+Series}}
+\index{clear\+Series@{clear\+Series}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{clear\+Series()}]{\setlength{\rightskip}{0pt plus 5cm}void Module\+Element\+Info\+::clear\+Series (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_a41473e6c3828d0ed062cf5826d18cba7}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!clear\+Strings@{clear\+Strings}}
+\index{clear\+Strings@{clear\+Strings}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{clear\+Strings()}]{\setlength{\rightskip}{0pt plus 5cm}void Module\+Element\+Info\+::clear\+Strings (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_ab99811efb332b744b1bf54ee898f35d7}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!date\+Series\+Map@{date\+Series\+Map}}
+\index{date\+Series\+Map@{date\+Series\+Map}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{date\+Series\+Map()}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::map$<$ std\+::string, {\bf Date\+Serie}$<$ double $>$$\ast$ $>$\& Module\+Element\+Info\+::date\+Series\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_af759dfd82975c09f65c477fd96743cfc}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!doubles\+Map@{doubles\+Map}}
+\index{doubles\+Map@{doubles\+Map}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{doubles\+Map()}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::map$<$ std\+::string, double $>$\& Module\+Element\+Info\+::doubles\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_ac6851c81a8e3d0acd1d8667c91262bc9}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!element@{element}}
+\index{element@{element}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{element(\+Element $\ast$\&result)}]{\setlength{\rightskip}{0pt plus 5cm}bool Module\+Element\+Info\+::element (
+\begin{DoxyParamCaption}
+\item[{{\bf Element} $\ast$\&}]{result}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_a9b8ab62d9c14d5317ed24b84b6dacf11}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!get\+Date\+Serie@{get\+Date\+Serie}}
+\index{get\+Date\+Serie@{get\+Date\+Serie}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{get\+Date\+Serie(const std\+::string \&name, Date\+Serie$<$ double $>$ $\ast$\&result)}]{\setlength{\rightskip}{0pt plus 5cm}bool Module\+Element\+Info\+::get\+Date\+Serie (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Date\+Serie}$<$ double $>$ $\ast$\&}]{result}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_ae97d451e543662069b6ec8779e78a980}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!get\+Double@{get\+Double}}
+\index{get\+Double@{get\+Double}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{get\+Double(const std\+::string \&name, double \&result)}]{\setlength{\rightskip}{0pt plus 5cm}bool Module\+Element\+Info\+::get\+Double (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{double \&}]{result}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_a4a6f4d815549ef0199a12205dec76694}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!get\+Serie@{get\+Serie}}
+\index{get\+Serie@{get\+Serie}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{get\+Serie(const std\+::string \&name, Serie\+X$<$ double, double $>$ $\ast$\&result)}]{\setlength{\rightskip}{0pt plus 5cm}bool Module\+Element\+Info\+::get\+Serie (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf SerieX}$<$ double, double $>$ $\ast$\&}]{result}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_a4dca018bc88f148b49feed98799ebb5d}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{get\+String(const std\+::string \&name, std\+::string \&result)}]{\setlength{\rightskip}{0pt plus 5cm}bool Module\+Element\+Info\+::get\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{std\+::string \&}]{result}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_a2815c0c526731f0d7474e45870cdadf5}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!remove\+Date\+Serie@{remove\+Date\+Serie}}
+\index{remove\+Date\+Serie@{remove\+Date\+Serie}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{remove\+Date\+Serie(const std\+::string \&name)}]{\setlength{\rightskip}{0pt plus 5cm}bool Module\+Element\+Info\+::remove\+Date\+Serie (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_aa6a84ed97554cb6760cafecfe5fc0a2a}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!remove\+Double@{remove\+Double}}
+\index{remove\+Double@{remove\+Double}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{remove\+Double(const std\+::string \&name)}]{\setlength{\rightskip}{0pt plus 5cm}bool Module\+Element\+Info\+::remove\+Double (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_af701427f03e926ca4ecdffddc65c6080}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!remove\+Serie@{remove\+Serie}}
+\index{remove\+Serie@{remove\+Serie}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{remove\+Serie(const std\+::string \&name)}]{\setlength{\rightskip}{0pt plus 5cm}bool Module\+Element\+Info\+::remove\+Serie (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_a67798c1105e6ce7ace53fc4df7eac63c}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!remove\+String@{remove\+String}}
+\index{remove\+String@{remove\+String}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{remove\+String(const std\+::string \&name)}]{\setlength{\rightskip}{0pt plus 5cm}bool Module\+Element\+Info\+::remove\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_a556de42ce520116286af732c4cc3b323}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!series\+Map@{series\+Map}}
+\index{series\+Map@{series\+Map}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{series\+Map()}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::map$<$ std\+::string, {\bf SerieX}$<$ double, double $>$$\ast$ $>$\& Module\+Element\+Info\+::series\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_acc1f3f2791ef5358d6880a2c19b01944}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!set\+Date\+Serie@{set\+Date\+Serie}}
+\index{set\+Date\+Serie@{set\+Date\+Serie}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{set\+Date\+Serie(const std\+::string \&name, Date\+Serie$<$ double $>$ \&value)}]{\setlength{\rightskip}{0pt plus 5cm}void Module\+Element\+Info\+::set\+Date\+Serie (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf Date\+Serie}$<$ double $>$ \&}]{value}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_afa083ab631ad6a813c42ab777c561568}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!set\+Double@{set\+Double}}
+\index{set\+Double@{set\+Double}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{set\+Double(const std\+::string \&name, double value)}]{\setlength{\rightskip}{0pt plus 5cm}void Module\+Element\+Info\+::set\+Double (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_af89e07a0b2ba78508db8d26fea82766f}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!set\+Element@{set\+Element}}
+\index{set\+Element@{set\+Element}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{set\+Element(\+Element \&element)}]{\setlength{\rightskip}{0pt plus 5cm}void Module\+Element\+Info\+::set\+Element (
+\begin{DoxyParamCaption}
+\item[{{\bf Element} \&}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_module_element_info_abd01ee87c4a98f6c144e3ee80eb29cd9}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!set\+Serie@{set\+Serie}}
+\index{set\+Serie@{set\+Serie}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{set\+Serie(const std\+::string \&name, Serie\+X$<$ double, double $>$ \&value)}]{\setlength{\rightskip}{0pt plus 5cm}void Module\+Element\+Info\+::set\+Serie (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{{\bf SerieX}$<$ double, double $>$ \&}]{value}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_a1aa67e237bfa0c8667f44290c923d3f5}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!set\+String@{set\+String}}
+\index{set\+String@{set\+String}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{set\+String(const std\+::string \&name, std\+::string value)}]{\setlength{\rightskip}{0pt plus 5cm}void Module\+Element\+Info\+::set\+String (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{name, }
+\item[{std\+::string}]{value}
+\end{DoxyParamCaption}
+)}\label{class_module_element_info_ac8df185ad3eb2833c31e5d5a178be1f3}
+
+
+\subsection{Amigas e Funções Relacionadas}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!Element@{Element}}
+\index{Element@{Element}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{Element}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Element}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_module_element_info_a016b821f88c7c0a2de1451c175cefbf9}
+
+
+Definição na linha 13 do arquivo Module\+Element\+Info.\+h.
+
+
+
+\subsection{Atributos}
+\index{Module\+Element\+Info@{Module\+Element\+Info}!m\+\_\+date\+\_\+serie\+\_\+map@{m\+\_\+date\+\_\+serie\+\_\+map}}
+\index{m\+\_\+date\+\_\+serie\+\_\+map@{m\+\_\+date\+\_\+serie\+\_\+map}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{m\+\_\+date\+\_\+serie\+\_\+map}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ std\+::string, {\bf Date\+Serie}$<$ double $>$$\ast$ $>$ Module\+Element\+Info\+::m\+\_\+date\+\_\+serie\+\_\+map\hspace{0.3cm}{\ttfamily [protected]}}\label{class_module_element_info_a23f6c88ec78695d8a2986d8dade433d0}
+
+
+Definição na linha 54 do arquivo Module\+Element\+Info.\+h.
+
+\index{Module\+Element\+Info@{Module\+Element\+Info}!m\+\_\+double\+\_\+map@{m\+\_\+double\+\_\+map}}
+\index{m\+\_\+double\+\_\+map@{m\+\_\+double\+\_\+map}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{m\+\_\+double\+\_\+map}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ std\+::string, double $>$ Module\+Element\+Info\+::m\+\_\+double\+\_\+map\hspace{0.3cm}{\ttfamily [protected]}}\label{class_module_element_info_ab21dafdcd1d637cf88e54348e993fcde}
+
+
+Definição na linha 51 do arquivo Module\+Element\+Info.\+h.
+
+\index{Module\+Element\+Info@{Module\+Element\+Info}!m\+\_\+element@{m\+\_\+element}}
+\index{m\+\_\+element@{m\+\_\+element}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{m\+\_\+element}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Element}$\ast$ Module\+Element\+Info\+::m\+\_\+element\hspace{0.3cm}{\ttfamily [protected]}}\label{class_module_element_info_a2bd05a7ce05ffc600869c1c2caa1da06}
+
+
+Definição na linha 56 do arquivo Module\+Element\+Info.\+h.
+
+\index{Module\+Element\+Info@{Module\+Element\+Info}!m\+\_\+serie\+\_\+map@{m\+\_\+serie\+\_\+map}}
+\index{m\+\_\+serie\+\_\+map@{m\+\_\+serie\+\_\+map}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{m\+\_\+serie\+\_\+map}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ std\+::string, {\bf SerieX}$<$ double, double $>$$\ast$ $>$ Module\+Element\+Info\+::m\+\_\+serie\+\_\+map\hspace{0.3cm}{\ttfamily [protected]}}\label{class_module_element_info_a40a77589dd37d5a7fec54e9a77a31740}
+
+
+Definição na linha 53 do arquivo Module\+Element\+Info.\+h.
+
+\index{Module\+Element\+Info@{Module\+Element\+Info}!m\+\_\+string\+\_\+map@{m\+\_\+string\+\_\+map}}
+\index{m\+\_\+string\+\_\+map@{m\+\_\+string\+\_\+map}!Module\+Element\+Info@{Module\+Element\+Info}}
+\subsubsection[{m\+\_\+string\+\_\+map}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ std\+::string, std\+::string $>$ Module\+Element\+Info\+::m\+\_\+string\+\_\+map\hspace{0.3cm}{\ttfamily [protected]}}\label{class_module_element_info_ab14153ccb07cf29b247ab6a8cb8b7640}
+
+
+Definição na linha 52 do arquivo Module\+Element\+Info.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Module\+Element\+Info.\+h}\end{DoxyCompactItemize}

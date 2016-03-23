@@ -1,0 +1,356 @@
+\section{Referência da Classe Wnd\+Sequential\+Model\+Ctrl}
+\label{class_wnd_sequential_model_ctrl}\index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+
+
+{\ttfamily \#include $<$Wnd\+Sequential\+Model\+Ctrl.\+h$>$}
+
+
+
+Herdeiro de {\bf Sequential\+Model\+Ctrl}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Wnd\+Sequential\+Model\+Ctrl} ({\bf Res\+Op\+Interface} $\ast${\bf main\+Inter})
+\item 
+virtual {\bf $\sim$\+Wnd\+Sequential\+Model\+Ctrl} ()
+\item 
+bool {\bf run} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, {\bf Res\+Op\+Scenario} $\ast$scen)
+\item 
+virtual bool {\bf run\+Isolated} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&dependency\+\_\+map, {\bf Res\+Op\+Scenario} $\ast$scen, {\bf Element\+ID} network\+\_\+id)
+\item 
+bool {\bf check\+Completeness} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, {\bf Res\+Op\+Scenario} $\ast$scen)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Element} $\ast$element, wx\+String section)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Element} $\ast$element, wx\+String section)
+\item 
+void {\bf update\+Results\+Series\+In} ({\bf Res\+Op\+Element} $\ast$element, const wx\+String \&scenario\+Name)
+\item 
+void {\bf update\+Results\+Series\+Out} ({\bf Res\+Op\+Element} $\ast$element, const wx\+String \&scenario\+Name)
+\item 
+void {\bf remove\+Results\+Series\+Out} ({\bf Res\+Op\+Element} $\ast$element, const wx\+String \&scenario\+Name)
+\item 
+void {\bf clear\+Old\+Results} (vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&sequence, const {\bf Interval} \&interval)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf calc\+Prctiles} (map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements)
+\item 
+vector$<$ {\bf Interval} $>$ {\bf create\+Windows} ({\bf Res\+Op\+Scenario} $\ast$scen)
+\item 
+void {\bf check\+Completeness\+Reservoir} ({\bf Res\+Op\+Sequential\+Reservoir} $\ast$reservoir, const {\bf Interval} \&exec\+Interval, {\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf check\+Completeness\+Basin} ({\bf Res\+Op\+Sequential\+Basin} $\ast$basin, const {\bf Interval} \&exec\+Interval, {\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf check\+Completeness\+Junction} ({\bf Res\+Op\+Sequential\+Junction} $\ast$junction, const {\bf Interval} \&exec\+Interval, {\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf check\+Completeness\+Demand} ({\bf Res\+Op\+Sequential\+Demand} $\ast$demand, const {\bf Interval} \&exec\+Interval, {\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf check\+Completeness\+Link} ({\bf Res\+Op\+Sequential\+Link} $\ast$link, const {\bf Interval} \&exec\+Interval, {\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf save\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Wnd\+Reservoir} $\ast$element, wx\+String section)
+\item 
+void {\bf load\+Element\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj, {\bf Res\+Op\+Sequential\+Wnd\+Reservoir} $\ast$element, wx\+String section)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+set$<$ {\bf Date} $>$ {\bf date\+Black\+List}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 22 do arquivo Wnd\+Sequential\+Model\+Ctrl.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\subsubsection[{Wnd\+Sequential\+Model\+Ctrl(\+Res\+Op\+Interface $\ast$main\+Inter)}]{\setlength{\rightskip}{0pt plus 5cm}Wnd\+Sequential\+Model\+Ctrl\+::\+Wnd\+Sequential\+Model\+Ctrl (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Interface} $\ast$}]{main\+Inter}
+\end{DoxyParamCaption}
+)}\label{class_wnd_sequential_model_ctrl_a234a0814caa4bcc6a89750130ef54c9a}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em main\+Inter} & Interface principal \\
+\hline
+\end{DoxyParams}
+\index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!````~Wnd\+Sequential\+Model\+Ctrl@{$\sim$\+Wnd\+Sequential\+Model\+Ctrl}}
+\index{````~Wnd\+Sequential\+Model\+Ctrl@{$\sim$\+Wnd\+Sequential\+Model\+Ctrl}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\subsubsection[{$\sim$\+Wnd\+Sequential\+Model\+Ctrl()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Wnd\+Sequential\+Model\+Ctrl\+::$\sim$\+Wnd\+Sequential\+Model\+Ctrl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_wnd_sequential_model_ctrl_a91207e08724c1eda6699792817e4b508}
+Destrutor 
+
+\subsection{Métodos}
+\index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!calc\+Prctiles@{calc\+Prctiles}}
+\index{calc\+Prctiles@{calc\+Prctiles}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\subsubsection[{calc\+Prctiles(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Sequential\+Model\+Ctrl\+::calc\+Prctiles (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wnd_sequential_model_ctrl_a99698f9ae67663efab90634b7191662c}
+Calcula os percentis para cada elemento \index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\subsubsection[{check\+Completeness(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, Res\+Op\+Scenario $\ast$scen)}]{\setlength{\rightskip}{0pt plus 5cm}bool Wnd\+Sequential\+Model\+Ctrl\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_wnd_sequential_model_ctrl_a4fbf4835a35acbdb2ed8ebef1749f67d}
+M�todo que checa se as informa��es necess�rias foram preenchidas. 
+\begin{DoxyParams}{Parâmetros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_ab6466b9954061cd8406ee93748bf7c81}.
+
+\index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!check\+Completeness\+Basin@{check\+Completeness\+Basin}}
+\index{check\+Completeness\+Basin@{check\+Completeness\+Basin}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\subsubsection[{check\+Completeness\+Basin(\+Res\+Op\+Sequential\+Basin $\ast$basin, const Interval \&exec\+Interval, S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Sequential\+Model\+Ctrl\+::check\+Completeness\+Basin (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Basin} $\ast$}]{basin, }
+\item[{const {\bf Interval} \&}]{exec\+Interval, }
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_wnd_sequential_model_ctrl_ac0b61fe5b7e03c0a09386d9e8df5a78c}
+
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_acd21ded7ae98cf17c742e0374008c7fe}.
+
+\index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!check\+Completeness\+Demand@{check\+Completeness\+Demand}}
+\index{check\+Completeness\+Demand@{check\+Completeness\+Demand}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\subsubsection[{check\+Completeness\+Demand(\+Res\+Op\+Sequential\+Demand $\ast$demand, const Interval \&exec\+Interval, S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Sequential\+Model\+Ctrl\+::check\+Completeness\+Demand (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Demand} $\ast$}]{demand, }
+\item[{const {\bf Interval} \&}]{exec\+Interval, }
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_wnd_sequential_model_ctrl_ac392cfd590cc0ae4db77b9ea118019a4}
+
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a2ef0fa4a694bba8f909d786af7b54300}.
+
+\index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!check\+Completeness\+Junction@{check\+Completeness\+Junction}}
+\index{check\+Completeness\+Junction@{check\+Completeness\+Junction}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\subsubsection[{check\+Completeness\+Junction(\+Res\+Op\+Sequential\+Junction $\ast$junction, const Interval \&exec\+Interval, S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Sequential\+Model\+Ctrl\+::check\+Completeness\+Junction (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Junction} $\ast$}]{junction, }
+\item[{const {\bf Interval} \&}]{exec\+Interval, }
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_wnd_sequential_model_ctrl_ab5b64c6de288029edf7554696b5c8fd0}
+
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a2dae2787918db5c3b8aade4566874a07}.
+
+\index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!check\+Completeness\+Link@{check\+Completeness\+Link}}
+\index{check\+Completeness\+Link@{check\+Completeness\+Link}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\subsubsection[{check\+Completeness\+Link(\+Res\+Op\+Sequential\+Link $\ast$link, const Interval \&exec\+Interval, S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Sequential\+Model\+Ctrl\+::check\+Completeness\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Link} $\ast$}]{link, }
+\item[{const {\bf Interval} \&}]{exec\+Interval, }
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_wnd_sequential_model_ctrl_a1de6803059a1da50ac8c4d0ed4f53de8}
+
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a20a18746ff32b7b67aad1b2998afccc5}.
+
+\index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!check\+Completeness\+Reservoir@{check\+Completeness\+Reservoir}}
+\index{check\+Completeness\+Reservoir@{check\+Completeness\+Reservoir}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\subsubsection[{check\+Completeness\+Reservoir(\+Res\+Op\+Sequential\+Reservoir $\ast$reservoir, const Interval \&exec\+Interval, S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Sequential\+Model\+Ctrl\+::check\+Completeness\+Reservoir (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Sequential\+Reservoir} $\ast$}]{reservoir, }
+\item[{const {\bf Interval} \&}]{exec\+Interval, }
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_wnd_sequential_model_ctrl_a23ce10c5b020156e312c0b2bde8db4ec}
+M�todo que checa se as informa��es necess�rias foram preenchidas. 
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a3cd232412ae6b530236700d94b7bfbe6}.
+
+\index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!clear\+Old\+Results@{clear\+Old\+Results}}
+\index{clear\+Old\+Results@{clear\+Old\+Results}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\subsubsection[{clear\+Old\+Results(vector$<$ Res\+Op\+Element $\ast$ $>$ \&sequence, const Interval \&interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Sequential\+Model\+Ctrl\+::clear\+Old\+Results (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{sequence, }
+\item[{const {\bf Interval} \&}]{interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_wnd_sequential_model_ctrl_a6433fb1e415b5c582fb01e1963a9b049}
+Limpa os resultados anteriores para todos os elementos da sequencia 
+\begin{DoxyParams}{Parâmetros}
+{\em sequence} & Sequencia de elementos da rede \\
+\hline
+{\em interval} & Intervalo de tempo da execu��o \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a0ba7def2eff197e85c42ef344d55cd89}.
+
+\index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!create\+Windows@{create\+Windows}}
+\index{create\+Windows@{create\+Windows}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\subsubsection[{create\+Windows(\+Res\+Op\+Scenario $\ast$scen)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Interval}$>$ Wnd\+Sequential\+Model\+Ctrl\+::create\+Windows (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wnd_sequential_model_ctrl_a492f6587e88225b69bebdb855abe63af}
+Gera os intervalos das janelas de execu��o \index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!load\+Element\+Project@{load\+Element\+Project}}
+\index{load\+Element\+Project@{load\+Element\+Project}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\subsubsection[{load\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Wnd\+Reservoir $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Sequential\+Model\+Ctrl\+::load\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Wnd\+Reservoir} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wnd_sequential_model_ctrl_a08fde079a8f4601bb7ae9e0fa90d0ee2}
+Salva uma bacia no projeto
+
+void \doxyref{load\+Element\+Project(\+S\+I\+G\+A\+Project$\ast$ proj, Res\+Op\+Sequential\+Basin$\ast$ element, wx\+String section)}{pag.}{class_sequential_model_ctrl_ad5e880b216e2b8a11ae4a395e9ceea29}; Salva uma Demanda no projeto
+
+void \doxyref{load\+Element\+Project(\+S\+I\+G\+A\+Project$\ast$ proj, Res\+Op\+Sequential\+Demand$\ast$ element, wx\+String section)}{pag.}{class_sequential_model_ctrl_a5ee68ae2df30e9ebd289eea3684a7915}; Salva uma jun��o no projeto
+
+virtual void \doxyref{load\+Element\+Project(\+S\+I\+G\+A\+Project$\ast$ proj, Res\+Op\+Sequential\+Junction$\ast$ element, wx\+String section)}{pag.}{class_sequential_model_ctrl_a3b9d2604e74e94bc1e305c50a5e20480}; Salva um trecho no projeto
+
+void \doxyref{load\+Element\+Project(\+S\+I\+G\+A\+Project$\ast$ proj, Res\+Op\+Sequential\+Link$\ast$ element, wx\+String section)}{pag.}{class_sequential_model_ctrl_afdf6883c502eaf5b1502e0a169499c4e}; Salva um reservatorio no projeto \index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Element $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Sequential\+Model\+Ctrl\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_wnd_sequential_model_ctrl_a78ddbd6c33c6dc7410d72cb732437779}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a95c27eb2fadc30bc4125b6b98d98af60}.
+
+\index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Element $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Sequential\+Model\+Ctrl\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_wnd_sequential_model_ctrl_a6effdf6b3d93ea38a9cda73600e8e6a7}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a3c069ea2a8bd558a51b1263debd4be21}.
+
+\index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!remove\+Results\+Series\+Out@{remove\+Results\+Series\+Out}}
+\index{remove\+Results\+Series\+Out@{remove\+Results\+Series\+Out}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\subsubsection[{remove\+Results\+Series\+Out(\+Res\+Op\+Element $\ast$element, const wx\+String \&scenario\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Sequential\+Model\+Ctrl\+::remove\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_wnd_sequential_model_ctrl_a6e16c42baf0b2cf8e1a90cc54e79be07}
+
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a09317165d8a530334c8a6ab6a6bf04f3}.
+
+\index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!run@{run}}
+\index{run@{run}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\subsubsection[{run(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, Res\+Op\+Scenario $\ast$scen)}]{\setlength{\rightskip}{0pt plus 5cm}bool Wnd\+Sequential\+Model\+Ctrl\+::run (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_wnd_sequential_model_ctrl_a56d5ddd6f0c281a4f57d5f92e05d0ad2}
+M�todo abstrato que executa a tecnica 
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a6473739febbf5714e21fc9d84bf5dc1b}.
+
+\index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!run\+Isolated@{run\+Isolated}}
+\index{run\+Isolated@{run\+Isolated}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\subsubsection[{run\+Isolated(map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, std\+::map$<$ Element\+I\+D, std\+::vector$<$ Res\+Op\+Element $\ast$ $>$ $>$ \&dependency\+\_\+map, Res\+Op\+Scenario $\ast$scen, Element\+I\+D network\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Wnd\+Sequential\+Model\+Ctrl\+::run\+Isolated (
+\begin{DoxyParamCaption}
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&}]{dependency\+\_\+map, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen, }
+\item[{{\bf Element\+ID}}]{network\+\_\+id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_wnd_sequential_model_ctrl_a3e305554e664d10cfb0edafca3dac860}
+
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a4df78d34e8be3743175013142b2a7d77}.
+
+\index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!save\+Element\+Project@{save\+Element\+Project}}
+\index{save\+Element\+Project@{save\+Element\+Project}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\subsubsection[{save\+Element\+Project(\+S\+I\+G\+A\+Project $\ast$proj, Res\+Op\+Sequential\+Wnd\+Reservoir $\ast$element, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Sequential\+Model\+Ctrl\+::save\+Element\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj, }
+\item[{{\bf Res\+Op\+Sequential\+Wnd\+Reservoir} $\ast$}]{element, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wnd_sequential_model_ctrl_a86ab4be7acd97a483fa586adf8a78f49}
+Salva uma bacia no projeto
+
+void \doxyref{save\+Element\+Project(\+S\+I\+G\+A\+Project$\ast$ proj, Res\+Op\+Sequential\+Basin$\ast$ element, wx\+String section)}{pag.}{class_sequential_model_ctrl_a2989dd3b87fa6c06595983707c6e9002}; Salva uma Demanda no projeto
+
+void \doxyref{save\+Element\+Project(\+S\+I\+G\+A\+Project$\ast$ proj, Res\+Op\+Sequential\+Demand$\ast$ element, wx\+String section)}{pag.}{class_sequential_model_ctrl_a6b518decbb8f6fc18f270dd644b38ab4}; Salva uma jun��o no projeto
+
+void \doxyref{save\+Element\+Project(\+S\+I\+G\+A\+Project$\ast$ proj, Res\+Op\+Sequential\+Junction$\ast$ element, wx\+String section)}{pag.}{class_sequential_model_ctrl_acb6d04404fdb32312a2f094768512a59}; Salva um trecho no projeto
+
+void \doxyref{save\+Element\+Project(\+S\+I\+G\+A\+Project$\ast$ proj, Res\+Op\+Sequential\+Link$\ast$ element, wx\+String section)}{pag.}{class_sequential_model_ctrl_af8337e2d3b45e64c347ba06e8cfb9549}; Salva um reservatorio no projeto \index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!update\+Results\+Series\+In@{update\+Results\+Series\+In}}
+\index{update\+Results\+Series\+In@{update\+Results\+Series\+In}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+In(\+Res\+Op\+Element $\ast$element, const wx\+String \&scenario\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Sequential\+Model\+Ctrl\+::update\+Results\+Series\+In (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_wnd_sequential_model_ctrl_abdf99a49f3615d9c2602eb51b5d98789}
+Adciona as series que existirem daquele modelo no modulo de Resultados Lembrete\+: Caso haja uma altera��o no nome ou na unidade da serie ser� necessario mudar neste metodo tamb�m 
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a1ee8984ad133648dbd693c30264b0bc8}.
+
+\index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!update\+Results\+Series\+Out@{update\+Results\+Series\+Out}}
+\index{update\+Results\+Series\+Out@{update\+Results\+Series\+Out}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\subsubsection[{update\+Results\+Series\+Out(\+Res\+Op\+Element $\ast$element, const wx\+String \&scenario\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Wnd\+Sequential\+Model\+Ctrl\+::update\+Results\+Series\+Out (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{const wx\+String \&}]{scenario\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_wnd_sequential_model_ctrl_a874ee7d553fab150e74c72c611345123}
+
+
+Reimplementação de {\bf Sequential\+Model\+Ctrl} \doxyref{}{pag.}{class_sequential_model_ctrl_a02aeb41e81b93f371c9a8823bd1d7eb2}.
+
+
+
+\subsection{Atributos}
+\index{Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}!date\+Black\+List@{date\+Black\+List}}
+\index{date\+Black\+List@{date\+Black\+List}!Wnd\+Sequential\+Model\+Ctrl@{Wnd\+Sequential\+Model\+Ctrl}}
+\subsubsection[{date\+Black\+List}]{\setlength{\rightskip}{0pt plus 5cm}set$<${\bf Date}$>$ Wnd\+Sequential\+Model\+Ctrl\+::date\+Black\+List\hspace{0.3cm}{\ttfamily [protected]}}\label{class_wnd_sequential_model_ctrl_a3032afdc290055564d3141ca6cf673e4}
+Conjunto de datas que n�o tem valor 
+
+Definição na linha 97 do arquivo Wnd\+Sequential\+Model\+Ctrl.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Wnd\+Sequential\+Model\+Ctrl.\+h}\end{DoxyCompactItemize}

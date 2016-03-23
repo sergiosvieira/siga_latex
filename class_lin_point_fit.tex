@@ -1,0 +1,360 @@
+\section{Referência da Classe Lin\+Point\+Fit}
+\label{class_lin_point_fit}\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+
+
+{\ttfamily \#include $<$Lin\+Point\+Fit.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Lin\+Point\+Fit} (vector$<$ double $>$ {\bf x}, vector$<$ double $>$ {\bf y}, {\bf Matrix} points, {\bf Matrix} coef={\bf Matrix}(0, 3), wx\+Real\+Point fit\+Range=wx\+Real\+Point({\bf E\+M\+P\+TY}, {\bf E\+M\+P\+TY}), double {\bf dx}=1)
+\item 
+{\bf Lin\+Point\+Fit} ({\bf Matrix} matrix, int colX, int colY, {\bf Matrix} points, {\bf Matrix} coef={\bf Matrix}(0, 3), wx\+Real\+Point fit\+Range=wx\+Real\+Point({\bf E\+M\+P\+TY}, {\bf E\+M\+P\+TY}), double {\bf dx}=1)
+\item 
+{\bf Lin\+Point\+Fit} ({\bf Matrix} points, {\bf Matrix} coef)
+\item 
+{\bf $\sim$\+Lin\+Point\+Fit} ()
+\item 
+void {\bf set\+Lim\+Lines} ({\bf Matrix} points)
+\item 
+{\bf Matrix} {\bf get\+Lim\+Lines} ()
+\item 
+void {\bf set\+Coef\+Lines} ({\bf Matrix} coef)
+\item 
+{\bf Matrix} {\bf get\+Coef\+Lines} ()
+\item 
+void {\bf set\+Dx} (double value)
+\item 
+void {\bf set\+Range} (wx\+Real\+Point power\+Range)
+\item 
+void {\bf fit\+Curve} ()
+\item 
+void {\bf calc\+Curve} ()
+\item 
+double {\bf calc\+Value} (double valueX)
+\item 
+vector$<$ double $>$ {\bf get\+X\+Values} ()
+\item 
+vector$<$ double $>$ {\bf get\+Y\+Values} ()
+\item 
+void {\bf set\+X\+Values} (vector$<$ double $>$ x1)
+\item 
+void {\bf set\+Y\+Values} (vector$<$ double $>$ y1)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void {\bf calc\+Curve} (vector$<$ double $>$ \&x1, vector$<$ double $>$ \&y1, {\bf Matrix} points, {\bf Matrix} coef, wx\+Real\+Point range1, double dx1)
+\item 
+static double {\bf calc\+Value} ({\bf Matrix} points, {\bf Matrix} coef, double valueX)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix} {\bf lim\+Lines}
+\item 
+{\bf Matrix} {\bf coef\+Lines}
+\item 
+double {\bf dx}
+\item 
+wx\+Real\+Point {\bf range}
+\item 
+vector$<$ double $>$ {\bf x}
+\item 
+vector$<$ double $>$ {\bf y}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 18 do arquivo Lin\+Point\+Fit.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{Lin\+Point\+Fit(vector$<$ double $>$ x, vector$<$ double $>$ y, Matrix points, Matrix coef=\+Matrix(0, 3), wx\+Real\+Point fit\+Range=wx\+Real\+Point(\+E\+M\+P\+T\+Y, E\+M\+P\+T\+Y), double dx=1)}]{\setlength{\rightskip}{0pt plus 5cm}Lin\+Point\+Fit\+::\+Lin\+Point\+Fit (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{x, }
+\item[{vector$<$ double $>$}]{y, }
+\item[{{\bf Matrix}}]{points, }
+\item[{{\bf Matrix}}]{coef = {\ttfamily {\bf Matrix}(0,~3)}, }
+\item[{wx\+Real\+Point}]{fit\+Range = {\ttfamily wxRealPoint({\bf E\+M\+P\+TY},~{\bf E\+M\+P\+TY})}, }
+\item[{double}]{dx = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\label{class_lin_point_fit_a746685db623343b502bb4e52513ff7be}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em x} & Vetor contendo os valores de x \\
+\hline
+{\em y} & Vetor contendo os valores de y \\
+\hline
+{\em range} & Valores maximo e minimo da curva de ajuste \\
+\hline
+{\em dx} & Incremento de valor em x. Usado pra calcular a curva de ajuste \\
+\hline
+\end{DoxyParams}
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{Lin\+Point\+Fit(\+Matrix matrix, int col\+X, int col\+Y, Matrix points, Matrix coef=\+Matrix(0, 3), wx\+Real\+Point fit\+Range=wx\+Real\+Point(\+E\+M\+P\+T\+Y, E\+M\+P\+T\+Y), double dx=1)}]{\setlength{\rightskip}{0pt plus 5cm}Lin\+Point\+Fit\+::\+Lin\+Point\+Fit (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{matrix, }
+\item[{int}]{colX, }
+\item[{int}]{colY, }
+\item[{{\bf Matrix}}]{points, }
+\item[{{\bf Matrix}}]{coef = {\ttfamily {\bf Matrix}(0,~3)}, }
+\item[{wx\+Real\+Point}]{fit\+Range = {\ttfamily wxRealPoint({\bf E\+M\+P\+TY},~{\bf E\+M\+P\+TY})}, }
+\item[{double}]{dx = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\label{class_lin_point_fit_a4e2a1e443e84101a5af5b06a62cb14cc}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em matrix} & Matriz contendo a curva ser ajustada \\
+\hline
+{\em colX} & Posi��o da coluna para valores de x \\
+\hline
+{\em colY} & Posi��o da coluna para valores de y \\
+\hline
+{\em range} & Valores maximo e minimo da curva de ajuste \\
+\hline
+{\em dx} & Incremento de valor em x. Usado pra calcular a curva de ajuste \\
+\hline
+\end{DoxyParams}
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{Lin\+Point\+Fit(\+Matrix points, Matrix coef)}]{\setlength{\rightskip}{0pt plus 5cm}Lin\+Point\+Fit\+::\+Lin\+Point\+Fit (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{points, }
+\item[{{\bf Matrix}}]{coef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_lin_point_fit_a42649a3acee4ac5424f1aefd65aee3e1}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em serie} & \doxyref{Serie}{pag.}{class_serie} contendo a curva a ser ajustada \\
+\hline
+{\em range} & Valores maximo e minimo da curva de ajuste \\
+\hline
+{\em dx} & Incremento de valor em x. Usado pra calcular a curva de ajuste\\
+\hline
+\end{DoxyParams}
+\doxyref{Power\+Fit}{pag.}{class_power_fit}(\doxyref{Serie}{pag.}{class_serie} $\ast$serie, wx\+Real\+Point range = wx\+Real\+Point(\+E\+M\+P\+T\+Y, E\+M\+P\+T\+Y), double dx = 1); Construtor Esse construtor deve ser usado apenas para calcular valor apartir dos valores dos coeficientes e dos limites das retas 
+\begin{DoxyParams}{Parâmetros}
+{\em alfa} & Valor de alfa \\
+\hline
+{\em beta} & Valor de beta \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 76 do arquivo Lin\+Point\+Fit.\+h.
+
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!````~Lin\+Point\+Fit@{$\sim$\+Lin\+Point\+Fit}}
+\index{````~Lin\+Point\+Fit@{$\sim$\+Lin\+Point\+Fit}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{$\sim$\+Lin\+Point\+Fit()}]{\setlength{\rightskip}{0pt plus 5cm}Lin\+Point\+Fit\+::$\sim$\+Lin\+Point\+Fit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_lin_point_fit_aa67a77fd415b4144a3d0c839bab37380}
+Destrutor 
+
+\subsection{Métodos}
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!calc\+Curve@{calc\+Curve}}
+\index{calc\+Curve@{calc\+Curve}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{calc\+Curve()}]{\setlength{\rightskip}{0pt plus 5cm}void Lin\+Point\+Fit\+::calc\+Curve (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_lin_point_fit_a57c2442f7ce9bc90aa483a51ec876025}
+Calcula a curva de ajuste \index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!calc\+Curve@{calc\+Curve}}
+\index{calc\+Curve@{calc\+Curve}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{calc\+Curve(vector$<$ double $>$ \&x1, vector$<$ double $>$ \&y1, Matrix points, Matrix coef, wx\+Real\+Point range1, double dx1)}]{\setlength{\rightskip}{0pt plus 5cm}static void Lin\+Point\+Fit\+::calc\+Curve (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$ \&}]{x1, }
+\item[{vector$<$ double $>$ \&}]{y1, }
+\item[{{\bf Matrix}}]{points, }
+\item[{{\bf Matrix}}]{coef, }
+\item[{wx\+Real\+Point}]{range1, }
+\item[{double}]{dx1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_lin_point_fit_a37548c9742aa7a1d023361a1ba892208}
+Calcula a curva de ajuste \index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!calc\+Value@{calc\+Value}}
+\index{calc\+Value@{calc\+Value}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{calc\+Value(double value\+X)}]{\setlength{\rightskip}{0pt plus 5cm}double Lin\+Point\+Fit\+::calc\+Value (
+\begin{DoxyParamCaption}
+\item[{double}]{valueX}
+\end{DoxyParamCaption}
+)}\label{class_lin_point_fit_aca210bcd1a1a6dd0b132faab10444ca3}
+Calcula e retorna o valor de y com base no alfa e beta da classe \index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!calc\+Value@{calc\+Value}}
+\index{calc\+Value@{calc\+Value}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{calc\+Value(\+Matrix points, Matrix coef, double value\+X)}]{\setlength{\rightskip}{0pt plus 5cm}static double Lin\+Point\+Fit\+::calc\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{points, }
+\item[{{\bf Matrix}}]{coef, }
+\item[{double}]{valueX}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_lin_point_fit_a182d62e9c987a6c7503512338eb2cffa}
+Calcula e retorna o valor de y com o alfa e beta enviado \index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!fit\+Curve@{fit\+Curve}}
+\index{fit\+Curve@{fit\+Curve}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{fit\+Curve()}]{\setlength{\rightskip}{0pt plus 5cm}void Lin\+Point\+Fit\+::fit\+Curve (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_lin_point_fit_a945b7e16b7fcf2f3765a57749e12513a}
+Calcula alfa e beta da fun��o \index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!get\+Coef\+Lines@{get\+Coef\+Lines}}
+\index{get\+Coef\+Lines@{get\+Coef\+Lines}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{get\+Coef\+Lines()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Lin\+Point\+Fit\+::get\+Coef\+Lines (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_lin_point_fit_a5774e594f1af08b1a1a81467fe4842a2}
+Retorna o coeficiente alfa 
+
+Definição na linha 100 do arquivo Lin\+Point\+Fit.\+h.
+
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!get\+Lim\+Lines@{get\+Lim\+Lines}}
+\index{get\+Lim\+Lines@{get\+Lim\+Lines}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{get\+Lim\+Lines()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Lin\+Point\+Fit\+::get\+Lim\+Lines (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_lin_point_fit_a5821e8fd48eaa05a12fd7b16e222354b}
+Retorna o coeficiente alfa 
+
+Definição na linha 88 do arquivo Lin\+Point\+Fit.\+h.
+
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!get\+X\+Values@{get\+X\+Values}}
+\index{get\+X\+Values@{get\+X\+Values}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{get\+X\+Values()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Lin\+Point\+Fit\+::get\+X\+Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_lin_point_fit_add92ba1bc80a167514134e3b238d6b66}
+Retorna os valores de x 
+
+Definição na linha 129 do arquivo Lin\+Point\+Fit.\+h.
+
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!get\+Y\+Values@{get\+Y\+Values}}
+\index{get\+Y\+Values@{get\+Y\+Values}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{get\+Y\+Values()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Lin\+Point\+Fit\+::get\+Y\+Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_lin_point_fit_a43db2d67068d7b3516f424c56bb57a0d}
+Retorna os valores de y 
+
+Definição na linha 133 do arquivo Lin\+Point\+Fit.\+h.
+
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!set\+Coef\+Lines@{set\+Coef\+Lines}}
+\index{set\+Coef\+Lines@{set\+Coef\+Lines}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{set\+Coef\+Lines(\+Matrix coef)}]{\setlength{\rightskip}{0pt plus 5cm}void Lin\+Point\+Fit\+::set\+Coef\+Lines (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{coef}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_lin_point_fit_a16a4dd964c9c268be70ef8d7e1c22fd2}
+Define o coeficiente alfa 
+
+Definição na linha 92 do arquivo Lin\+Point\+Fit.\+h.
+
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!set\+Dx@{set\+Dx}}
+\index{set\+Dx@{set\+Dx}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{set\+Dx(double value)}]{\setlength{\rightskip}{0pt plus 5cm}void Lin\+Point\+Fit\+::set\+Dx (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_lin_point_fit_a3c0c1a987b1ca954adab7c789b8e1ce9}
+Define dx 
+
+Definição na linha 104 do arquivo Lin\+Point\+Fit.\+h.
+
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!set\+Lim\+Lines@{set\+Lim\+Lines}}
+\index{set\+Lim\+Lines@{set\+Lim\+Lines}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{set\+Lim\+Lines(\+Matrix points)}]{\setlength{\rightskip}{0pt plus 5cm}void Lin\+Point\+Fit\+::set\+Lim\+Lines (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{points}
+\end{DoxyParamCaption}
+)}\label{class_lin_point_fit_ab05dac6533f0db67b8f175664fdc70bc}
+Define o coeficiente alfa \index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!set\+Range@{set\+Range}}
+\index{set\+Range@{set\+Range}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{set\+Range(wx\+Real\+Point power\+Range)}]{\setlength{\rightskip}{0pt plus 5cm}void Lin\+Point\+Fit\+::set\+Range (
+\begin{DoxyParamCaption}
+\item[{wx\+Real\+Point}]{power\+Range}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_lin_point_fit_a8625e1dc32260c5d99ace527a8a6e2a6}
+
+
+Definição na linha 105 do arquivo Lin\+Point\+Fit.\+h.
+
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!set\+X\+Values@{set\+X\+Values}}
+\index{set\+X\+Values@{set\+X\+Values}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{set\+X\+Values(vector$<$ double $>$ x1)}]{\setlength{\rightskip}{0pt plus 5cm}void Lin\+Point\+Fit\+::set\+X\+Values (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{x1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_lin_point_fit_ab3f9768a74303e5bd7ce4aa79fd4f032}
+
+
+Definição na linha 137 do arquivo Lin\+Point\+Fit.\+h.
+
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!set\+Y\+Values@{set\+Y\+Values}}
+\index{set\+Y\+Values@{set\+Y\+Values}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{set\+Y\+Values(vector$<$ double $>$ y1)}]{\setlength{\rightskip}{0pt plus 5cm}void Lin\+Point\+Fit\+::set\+Y\+Values (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{y1}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_lin_point_fit_ad80d1fdb9f1a7da081b7a2dede43a8a8}
+
+
+Definição na linha 141 do arquivo Lin\+Point\+Fit.\+h.
+
+
+
+\subsection{Atributos}
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!coef\+Lines@{coef\+Lines}}
+\index{coef\+Lines@{coef\+Lines}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{coef\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Lin\+Point\+Fit\+::coef\+Lines\hspace{0.3cm}{\ttfamily [protected]}}\label{class_lin_point_fit_a2a9ce4ddce368b79b8ad6014e06c2473}
+\doxyref{Matrix}{pag.}{class_matrix} de xoeficientes 
+
+Definição na linha 28 do arquivo Lin\+Point\+Fit.\+h.
+
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!dx@{dx}}
+\index{dx@{dx}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{dx}]{\setlength{\rightskip}{0pt plus 5cm}double Lin\+Point\+Fit\+::dx\hspace{0.3cm}{\ttfamily [protected]}}\label{class_lin_point_fit_af6acf611ef33cdc342456d3c61dc9e64}
+Varia��o de x 
+
+Definição na linha 32 do arquivo Lin\+Point\+Fit.\+h.
+
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!lim\+Lines@{lim\+Lines}}
+\index{lim\+Lines@{lim\+Lines}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{lim\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Lin\+Point\+Fit\+::lim\+Lines\hspace{0.3cm}{\ttfamily [protected]}}\label{class_lin_point_fit_a7237212531f06866150b35f31f6f3c12}
+\doxyref{Matrix}{pag.}{class_matrix} de limites para as retas 
+
+Definição na linha 24 do arquivo Lin\+Point\+Fit.\+h.
+
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!range@{range}}
+\index{range@{range}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{range}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Real\+Point Lin\+Point\+Fit\+::range\hspace{0.3cm}{\ttfamily [protected]}}\label{class_lin_point_fit_a96e515978fb895359c2cc55deb71b91e}
+Valor minimo e maximo de x 
+
+Definição na linha 36 do arquivo Lin\+Point\+Fit.\+h.
+
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!x@{x}}
+\index{x@{x}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Lin\+Point\+Fit\+::x\hspace{0.3cm}{\ttfamily [protected]}}\label{class_lin_point_fit_ae9f81aa70e9db01ff19f49cec9110fa8}
+Valores ajustados de x 
+
+Definição na linha 40 do arquivo Lin\+Point\+Fit.\+h.
+
+\index{Lin\+Point\+Fit@{Lin\+Point\+Fit}!y@{y}}
+\index{y@{y}!Lin\+Point\+Fit@{Lin\+Point\+Fit}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$ double $>$ Lin\+Point\+Fit\+::y\hspace{0.3cm}{\ttfamily [protected]}}\label{class_lin_point_fit_a1d5d823e6ab2a6884f0b9fbdb12b79ae}
+Valores ajustados de y 
+
+Definição na linha 44 do arquivo Lin\+Point\+Fit.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Lin\+Point\+Fit.\+h}\end{DoxyCompactItemize}

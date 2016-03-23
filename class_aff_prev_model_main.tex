@@ -1,0 +1,358 @@
+\section{Refer√™ncia da Classe Aff\+Prev\+Model\+Main}
+\label{class_aff_prev_model_main}\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+
+
+{\ttfamily \#include $<$Aff\+Prev\+Model\+Main.\+h$>$}
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Aff\+Prev\+Model\+Main} ({\bf Aff\+Prev\+Interface} $\ast$main\+Inter)
+\item 
+{\bf $\sim$\+Aff\+Prev\+Model\+Main} ()
+\item 
+virtual void {\bf set\+Info} ()
+\item 
+void {\bf update\+Tree\+Item} ({\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$)
+\item 
+virtual void {\bf insert\+Model} ({\bf Draw\+Node} $\ast$)
+\item 
+void {\bf add\+Scenario} (bool copy=false, bool incrementa=true)
+\item 
+void {\bf remove\+Scenario} (bool recreate=true)
+\item 
+void {\bf remove\+All\+Scenerios} ()
+\item 
+virtual void {\bf remove\+Model} (unsigned int node\+Id)
+\item 
+virtual void {\bf show\+Results} ({\bf Node} $\ast$node, bool change=false)
+\item 
+void {\bf show\+Results} (bool change)
+\item 
+virtual void {\bf set\+Default\+Values} (char $\ast$file\+Name)
+\item 
+virtual void {\bf save\+Default\+Values} (char $\ast$file\+Name)
+\item 
+virtual bool {\bf run} ()
+\item 
+virtual void {\bf on\+Changing\+Time\+Interval} ({\bf Date\+::\+Time\+Interval} time\+Interval)
+\item 
+bool {\bf empty} ()
+\item 
+void {\bf clear} ()
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+int {\bf get\+Selected\+Scenario} ()
+\item 
+void {\bf set\+Selected\+Scenario} (unsigned int x)
+\item 
+void {\bf get\+Res\+Up} ()
+\item 
+bool {\bf find\+Res\+Up} ({\bf Draw\+Node} $\ast$nd, {\bf Draw\+Node} $\ast$nd2={\bf N\+U\+LL})
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf num\+Demand}
+\item 
+{\bf Month} {\bf s\+Month}
+\item 
+{\bf Interval} {\bf interval}
+\item 
+map$<$ unsigned int, {\bf Aff\+Prev\+Model} $\ast$ $>$ {\bf models}
+\item 
+unsigned int {\bf num\+Scenario}
+\item 
+int {\bf selected\+Scenario}
+\item 
+unsigned int {\bf scenario\+Seed}
+\item 
+map$<$ unsigned int, wx\+String $>$ {\bf scenario\+Name}
+\item 
+map$<$ unsigned int, {\bf Aff\+Prev\+Scenario\+Result} $\ast$ $>$ {\bf scenario\+Results}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 17 do arquivo Aff\+Prev\+Model\+Main.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{Aff\+Prev\+Model\+Main(\+Aff\+Prev\+Interface $\ast$main\+Inter)}]{\setlength{\rightskip}{0pt plus 5cm}Aff\+Prev\+Model\+Main\+::\+Aff\+Prev\+Model\+Main (
+\begin{DoxyParamCaption}
+\item[{{\bf Aff\+Prev\+Interface} $\ast$}]{main\+Inter}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_model_main_ae41c60968629763f508cf06dad380d3a}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em main\+Inter} & Ponteiro para interface principal \\
+\hline
+\end{DoxyParams}
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!````~Aff\+Prev\+Model\+Main@{$\sim$\+Aff\+Prev\+Model\+Main}}
+\index{````~Aff\+Prev\+Model\+Main@{$\sim$\+Aff\+Prev\+Model\+Main}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{$\sim$\+Aff\+Prev\+Model\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}Aff\+Prev\+Model\+Main\+::$\sim$\+Aff\+Prev\+Model\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_model_main_af5338abfa0cdb1d7e77ac91f346e4ce1}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!add\+Scenario@{add\+Scenario}}
+\index{add\+Scenario@{add\+Scenario}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{add\+Scenario(bool copy=false, bool incrementa=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Model\+Main\+::add\+Scenario (
+\begin{DoxyParamCaption}
+\item[{bool}]{copy = {\ttfamily false}, }
+\item[{bool}]{incrementa = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_model_main_af3ae19d099ad14140db884e5b1204d83}
+Adiciona um cen·rio 
+\begin{DoxyParams}{Par√¢metros}
+{\em copy} & valor boleano que indica se o cen·rio a ser adicionado È uma cÛpia do cen·rio selecionado \\
+\hline
+\end{DoxyParams}
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Aff\+Prev\+Model\+Main\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_model_main_a9da784313445a10aa640e5780284d869}
+Verifica se todos os dados foram inseridos de maneira correta 
+\begin{DoxyParams}{Par√¢metros}
+{\em dialog} & Ponteiro para caixa de dialogo onde ser„o mostradas as informaÁıes \\
+\hline
+\end{DoxyParams}
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!clear@{clear}}
+\index{clear@{clear}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Model\+Main\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_model_main_ad804c8146921a991e5836b025588f785}
+Limpa o Model\+Main \index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!empty@{empty}}
+\index{empty@{empty}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool Aff\+Prev\+Model\+Main\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_model_main_ae997b9f2a95f3a7d6d6f077513c03d5f}
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!find\+Res\+Up@{find\+Res\+Up}}
+\index{find\+Res\+Up@{find\+Res\+Up}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{find\+Res\+Up(\+Draw\+Node $\ast$nd, Draw\+Node $\ast$nd2=\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}bool Aff\+Prev\+Model\+Main\+::find\+Res\+Up (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Node} $\ast$}]{nd, }
+\item[{{\bf Draw\+Node} $\ast$}]{nd2 = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_model_main_ad724fe520eaf4d3ec4005c864184f94c}
+Percorre a rede e preenche o mapa de reservatÛrios acima \index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!get\+Res\+Up@{get\+Res\+Up}}
+\index{get\+Res\+Up@{get\+Res\+Up}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{get\+Res\+Up()}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Model\+Main\+::get\+Res\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_model_main_a0df7f96362bff3f380b0d52868dfef2c}
+Preenche o mapa de reservatÛrios acima \index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!get\+Selected\+Scenario@{get\+Selected\+Scenario}}
+\index{get\+Selected\+Scenario@{get\+Selected\+Scenario}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{get\+Selected\+Scenario()}]{\setlength{\rightskip}{0pt plus 5cm}int Aff\+Prev\+Model\+Main\+::get\+Selected\+Scenario (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_model_main_a63abc58c837a91fc5722740e39a7b621}
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!insert\+Model@{insert\+Model}}
+\index{insert\+Model@{insert\+Model}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{insert\+Model(\+Draw\+Node $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Aff\+Prev\+Model\+Main\+::insert\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Node} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_model_main_ad0e090cfe7f6dc20ebacdd85afb500b2}
+Cria o modelo para nÛs e trechos do rio \index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}}
+\index{on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{on\+Changing\+Time\+Interval(\+Date\+::\+Time\+Interval time\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Aff\+Prev\+Model\+Main\+::on\+Changing\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_model_main_a5c85dedce5b239fbb5fd4d0692dee0c0}
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Model\+Main\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_model_main_ad531f370a91cc962ae4f302208a60bd1}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Model\+Main\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_model_main_a518f2ee198434200fc378f61c67164c4}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!remove\+All\+Scenerios@{remove\+All\+Scenerios}}
+\index{remove\+All\+Scenerios@{remove\+All\+Scenerios}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{remove\+All\+Scenerios()}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Model\+Main\+::remove\+All\+Scenerios (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_model_main_aaf7ce69c06fe1e52f6c9e809aa402864}
+Remove todos dos cen·rios existentes \index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!remove\+Model@{remove\+Model}}
+\index{remove\+Model@{remove\+Model}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{remove\+Model(unsigned int node\+Id)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Aff\+Prev\+Model\+Main\+::remove\+Model (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{node\+Id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_model_main_a36fa2365838bab92fa6251ebea4bff7f}
+Destroi um modelo de um no que nao importa mais (deletado, por exemplo) \index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!remove\+Scenario@{remove\+Scenario}}
+\index{remove\+Scenario@{remove\+Scenario}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{remove\+Scenario(bool recreate=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Model\+Main\+::remove\+Scenario (
+\begin{DoxyParamCaption}
+\item[{bool}]{recreate = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_model_main_abe5a5315e30989a50d51bdd6cd15ccc2}
+Remove o cen·rio selecionado de cada modelo \index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!run@{run}}
+\index{run@{run}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Aff\+Prev\+Model\+Main\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_model_main_aeb5b74b82a627874308a87aae28127b5}
+Executa o modelo \index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!save\+Default\+Values@{save\+Default\+Values}}
+\index{save\+Default\+Values@{save\+Default\+Values}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{save\+Default\+Values(char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Aff\+Prev\+Model\+Main\+::save\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_model_main_a500d18d78fcca0b28b15ecb0e5734bda}
+Salva informaÁıes em um arquivo \index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!set\+Default\+Values@{set\+Default\+Values}}
+\index{set\+Default\+Values@{set\+Default\+Values}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{set\+Default\+Values(char $\ast$file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Aff\+Prev\+Model\+Main\+::set\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_model_main_aaba9454ca6b8fc72592359abaa5ea0a9}
+Recebe informaÁıes de um arquivo \index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Aff\+Prev\+Model\+Main\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_model_main_accf6b0066910ae4e9fa7b184e288c285}
+Insere informaÁoes na interface \index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!set\+Selected\+Scenario@{set\+Selected\+Scenario}}
+\index{set\+Selected\+Scenario@{set\+Selected\+Scenario}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{set\+Selected\+Scenario(unsigned int x)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Model\+Main\+::set\+Selected\+Scenario (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{x}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_model_main_aa9b28e09de22e9820640b40d18be0454}
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{show\+Results(\+Node $\ast$node, bool change=false)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Aff\+Prev\+Model\+Main\+::show\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node, }
+\item[{bool}]{change = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_model_main_a0778888546a40521401e0eac9bee0471}
+Apresenta resultados \index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{show\+Results(bool change)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Model\+Main\+::show\+Results (
+\begin{DoxyParamCaption}
+\item[{bool}]{change}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_model_main_a9dcbfc1f882a1421d162c4a8385f64ca}
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!update\+Tree\+Item@{update\+Tree\+Item}}
+\index{update\+Tree\+Item@{update\+Tree\+Item}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{update\+Tree\+Item(\+S\+I\+G\+A\+Tree\+Ctrl $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Model\+Main\+::update\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$}]{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_model_main_a7b9973798684e5c45e5774182804d6e0}
+Atualiza os ponteiros das suas series no Tree\+Ctrl de integraÁ„o 
+
+\subsection{Atributos}
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!interval@{interval}}
+\index{interval@{interval}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Aff\+Prev\+Model\+Main\+::interval}\label{class_aff_prev_model_main_a02a4820255572f2d5494a534885b4b6d}
+Intervalo de tempo 
+
+Defini√ß√£o na linha 32 do arquivo Aff\+Prev\+Model\+Main.\+h.
+
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!models@{models}}
+\index{models@{models}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{models}]{\setlength{\rightskip}{0pt plus 5cm}map$<$unsigned int, {\bf Aff\+Prev\+Model}$\ast$$>$ Aff\+Prev\+Model\+Main\+::models}\label{class_aff_prev_model_main_a9524d1eed86e4443f269d940f4ea4357}
+Modelos 
+
+Defini√ß√£o na linha 36 do arquivo Aff\+Prev\+Model\+Main.\+h.
+
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!num\+Demand@{num\+Demand}}
+\index{num\+Demand@{num\+Demand}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{num\+Demand}]{\setlength{\rightskip}{0pt plus 5cm}int Aff\+Prev\+Model\+Main\+::num\+Demand}\label{class_aff_prev_model_main_a1cf00f669b8f2cc7a476975a1031cbd2}
+N˙mero de nÛs do tipo demanda 
+
+Defini√ß√£o na linha 24 do arquivo Aff\+Prev\+Model\+Main.\+h.
+
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!num\+Scenario@{num\+Scenario}}
+\index{num\+Scenario@{num\+Scenario}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{num\+Scenario}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Aff\+Prev\+Model\+Main\+::num\+Scenario}\label{class_aff_prev_model_main_a9a873e3783a2d14ef1f193ddaf80dcc0}
+
+
+Defini√ß√£o na linha 40 do arquivo Aff\+Prev\+Model\+Main.\+h.
+
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!scenario\+Name@{scenario\+Name}}
+\index{scenario\+Name@{scenario\+Name}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{scenario\+Name}]{\setlength{\rightskip}{0pt plus 5cm}map$<$ unsigned int, wx\+String $>$ Aff\+Prev\+Model\+Main\+::scenario\+Name}\label{class_aff_prev_model_main_a8286a7c266b32e27f41a6400cca5d4d9}
+Nome dos cenarios 
+
+Defini√ß√£o na linha 52 do arquivo Aff\+Prev\+Model\+Main.\+h.
+
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!scenario\+Results@{scenario\+Results}}
+\index{scenario\+Results@{scenario\+Results}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{scenario\+Results}]{\setlength{\rightskip}{0pt plus 5cm}map$<$ unsigned int, {\bf Aff\+Prev\+Scenario\+Result}$\ast$ $>$ Aff\+Prev\+Model\+Main\+::scenario\+Results}\label{class_aff_prev_model_main_a401fce42f266a148f1bc58b176ba5f00}
+Resultados dos cenarios 
+
+Defini√ß√£o na linha 56 do arquivo Aff\+Prev\+Model\+Main.\+h.
+
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!scenario\+Seed@{scenario\+Seed}}
+\index{scenario\+Seed@{scenario\+Seed}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{scenario\+Seed}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Aff\+Prev\+Model\+Main\+::scenario\+Seed}\label{class_aff_prev_model_main_abf1d4603c838d41138f974d6a9fb84e2}
+Identificador dos cenerarios 
+
+Defini√ß√£o na linha 48 do arquivo Aff\+Prev\+Model\+Main.\+h.
+
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!selected\+Scenario@{selected\+Scenario}}
+\index{selected\+Scenario@{selected\+Scenario}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{selected\+Scenario}]{\setlength{\rightskip}{0pt plus 5cm}int Aff\+Prev\+Model\+Main\+::selected\+Scenario}\label{class_aff_prev_model_main_ac12f16d8dfd31cfbe7b3d4e7b01e2df4}
+
+
+Defini√ß√£o na linha 44 do arquivo Aff\+Prev\+Model\+Main.\+h.
+
+\index{Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}!s\+Month@{s\+Month}}
+\index{s\+Month@{s\+Month}!Aff\+Prev\+Model\+Main@{Aff\+Prev\+Model\+Main}}
+\subsubsection[{s\+Month}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Month} Aff\+Prev\+Model\+Main\+::s\+Month}\label{class_aff_prev_model_main_a533a8f4e7db01563050da743f57af76e}
+MÍs inicial 
+
+Defini√ß√£o na linha 28 do arquivo Aff\+Prev\+Model\+Main.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Aff\+Prev\+Model\+Main.\+h}\end{DoxyCompactItemize}

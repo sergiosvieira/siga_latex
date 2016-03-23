@@ -1,0 +1,131 @@
+\section{Referência da Classe Opt\+C\+N3\+S\+Interface}
+\label{class_opt_c_n3_s_interface}\index{Opt\+C\+N3\+S\+Interface@{Opt\+C\+N3\+S\+Interface}}
+
+
+{\ttfamily \#include $<$Opt\+C\+N3\+S\+Interface.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+C\+N3\+S\+Interface} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent})
+\item 
+{\bf $\sim$\+Opt\+C\+N3\+S\+Interface} (void)
+\item 
+void {\bf on\+Open\+P\+R\+EC} (wx\+Command\+Event \&)
+\item 
+void {\bf on\+Open\+O\+BS} (wx\+Command\+Event \&)
+\item 
+void {\bf set\+Info} ({\bf Opt\+C\+N3\+S\+Model} $\ast$model)
+\item 
+void {\bf show\+SA} (void)
+\item 
+void {\bf on\+Select\+Param} (wx\+Command\+Event \&event)
+\item 
+void {\bf set\+Interval} ({\bf Interval} interval)
+\item 
+void {\bf on\+Changing\+Time\+Interval} ({\bf Date\+::\+Time\+Interval} time\+Interval)
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 88 do arquivo Opt\+C\+N3\+S\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Opt\+C\+N3\+S\+Interface@{Opt\+C\+N3\+S\+Interface}!Opt\+C\+N3\+S\+Interface@{Opt\+C\+N3\+S\+Interface}}
+\index{Opt\+C\+N3\+S\+Interface@{Opt\+C\+N3\+S\+Interface}!Opt\+C\+N3\+S\+Interface@{Opt\+C\+N3\+S\+Interface}}
+\subsubsection[{Opt\+C\+N3\+S\+Interface(wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Opt\+C\+N3\+S\+Interface\+::\+Opt\+C\+N3\+S\+Interface (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_opt_c_n3_s_interface_a74e66f789a7650634bb43cdba4d6d75d}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & Janela onde sera inserido \\
+\hline
+{\em parent} & Componente a que pertence \\
+\hline
+\end{DoxyParams}
+\index{Opt\+C\+N3\+S\+Interface@{Opt\+C\+N3\+S\+Interface}!````~Opt\+C\+N3\+S\+Interface@{$\sim$\+Opt\+C\+N3\+S\+Interface}}
+\index{````~Opt\+C\+N3\+S\+Interface@{$\sim$\+Opt\+C\+N3\+S\+Interface}!Opt\+C\+N3\+S\+Interface@{Opt\+C\+N3\+S\+Interface}}
+\subsubsection[{$\sim$\+Opt\+C\+N3\+S\+Interface(void)}]{\setlength{\rightskip}{0pt plus 5cm}Opt\+C\+N3\+S\+Interface\+::$\sim$\+Opt\+C\+N3\+S\+Interface (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_opt_c_n3_s_interface_ab7127be4fe36b073a63171333f42f0da}
+Destrutor 
+
+\subsection{Métodos}
+\index{Opt\+C\+N3\+S\+Interface@{Opt\+C\+N3\+S\+Interface}!on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}}
+\index{on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}!Opt\+C\+N3\+S\+Interface@{Opt\+C\+N3\+S\+Interface}}
+\subsubsection[{on\+Changing\+Time\+Interval(\+Date\+::\+Time\+Interval time\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+C\+N3\+S\+Interface\+::on\+Changing\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval}
+\end{DoxyParamCaption}
+)}\label{class_opt_c_n3_s_interface_aa050e32be700c4c5d2123806e3bfae0a}
+Evento chamado quando o sistema muda de intervalo de tempo O modulo adapta os modelos de acordo com o intervalo de tempo definido \index{Opt\+C\+N3\+S\+Interface@{Opt\+C\+N3\+S\+Interface}!on\+Open\+O\+BS@{on\+Open\+O\+BS}}
+\index{on\+Open\+O\+BS@{on\+Open\+O\+BS}!Opt\+C\+N3\+S\+Interface@{Opt\+C\+N3\+S\+Interface}}
+\subsubsection[{on\+Open\+O\+B\+S(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+C\+N3\+S\+Interface\+::on\+Open\+O\+BS (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_opt_c_n3_s_interface_a93ba497a0107750dfd83217e3d5b8105}
+Evento de abertura de serie observada \index{Opt\+C\+N3\+S\+Interface@{Opt\+C\+N3\+S\+Interface}!on\+Open\+P\+R\+EC@{on\+Open\+P\+R\+EC}}
+\index{on\+Open\+P\+R\+EC@{on\+Open\+P\+R\+EC}!Opt\+C\+N3\+S\+Interface@{Opt\+C\+N3\+S\+Interface}}
+\subsubsection[{on\+Open\+P\+R\+E\+C(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+C\+N3\+S\+Interface\+::on\+Open\+P\+R\+EC (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_opt_c_n3_s_interface_a07b8b1abb212fbe65f564fcb22ffe089}
+Evento de abertura de serie de precipita��o \index{Opt\+C\+N3\+S\+Interface@{Opt\+C\+N3\+S\+Interface}!on\+Select\+Param@{on\+Select\+Param}}
+\index{on\+Select\+Param@{on\+Select\+Param}!Opt\+C\+N3\+S\+Interface@{Opt\+C\+N3\+S\+Interface}}
+\subsubsection[{on\+Select\+Param(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+C\+N3\+S\+Interface\+::on\+Select\+Param (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_opt_c_n3_s_interface_ab93d03cf9babdda8a8ff8ff9d691509f}
+Evento de escolha de parametro \index{Opt\+C\+N3\+S\+Interface@{Opt\+C\+N3\+S\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Opt\+C\+N3\+S\+Interface@{Opt\+C\+N3\+S\+Interface}}
+\subsubsection[{set\+Info(\+Opt\+C\+N3\+S\+Model $\ast$model)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+C\+N3\+S\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Opt\+C\+N3\+S\+Model} $\ast$}]{model}
+\end{DoxyParamCaption}
+)}\label{class_opt_c_n3_s_interface_a2911621530836c04c83041cabcb61ede}
+Insere as informa�es no modelo 
+\begin{DoxyParams}{Parâmetros}
+{\em model} & Modelo \\
+\hline
+\end{DoxyParams}
+\index{Opt\+C\+N3\+S\+Interface@{Opt\+C\+N3\+S\+Interface}!set\+Interval@{set\+Interval}}
+\index{set\+Interval@{set\+Interval}!Opt\+C\+N3\+S\+Interface@{Opt\+C\+N3\+S\+Interface}}
+\subsubsection[{set\+Interval(\+Interval interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+C\+N3\+S\+Interface\+::set\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)}\label{class_opt_c_n3_s_interface_ae5dea10d9cc0cc73459bd597ebf22b8e}
+Inserir intervalo de simula��o 
+\begin{DoxyParams}{Parâmetros}
+{\em interval} & Intervalo \\
+\hline
+\end{DoxyParams}
+\index{Opt\+C\+N3\+S\+Interface@{Opt\+C\+N3\+S\+Interface}!show\+SA@{show\+SA}}
+\index{show\+SA@{show\+SA}!Opt\+C\+N3\+S\+Interface@{Opt\+C\+N3\+S\+Interface}}
+\subsubsection[{show\+S\+A(void)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+C\+N3\+S\+Interface\+::show\+SA (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_opt_c_n3_s_interface_af2193f5131c5898dd589cba233e769c9}
+Mostrar/esconder analize de sensibilidade 
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+C\+N3\+S\+Interface.\+h}\end{DoxyCompactItemize}

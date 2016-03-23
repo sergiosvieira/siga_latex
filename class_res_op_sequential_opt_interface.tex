@@ -1,0 +1,268 @@
+\section{Referência da Classe Res\+Op\+Sequential\+Opt\+Interface}
+\label{class_res_op_sequential_opt_interface}\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Sequential\+Opt\+Interface.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Sequential\+Interface}.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Visibility\+State} \{ {\bf H\+I\+D\+D\+EN}, 
+{\bf O\+N\+L\+Y\+\_\+\+T\+E\+C\+H\+N\+I\+Q\+U\+E\+S\+\_\+\+A\+N\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS}, 
+{\bf A\+LL}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Sequential\+Opt\+Interface} ({\bf S\+I\+GA} $\ast${\bf main}, wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent})
+\item 
+{\bf $\sim$\+Res\+Op\+Sequential\+Opt\+Interface} ()
+\item 
+void {\bf set\+Info} ()
+\item 
+void {\bf set\+Info} ({\bf Res\+Op\+Element} $\ast$a\+\_\+element, {\bf Res\+Op\+Algorithm} $\ast$a\+\_\+algorithm)
+\item 
+{\bf Res\+Op\+Rule\+Type} {\bf get\+Rule\+Type} (int selection)
+\item 
+void {\bf show\+Results} ()
+\item 
+void {\bf set\+Visibility\+State} ({\bf Visibility\+State} new\+State)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf on\+Choice\+Algorithm} (wx\+Book\+Ctrl\+Event \&event)
+\item 
+void {\bf add\+More\+Pages} (const {\bf Res\+Op\+Element} \&element)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Notebook $\ast$ {\bf tec\+And\+Functions\+Notebook}
+\item 
+wx\+Panel $\ast$ {\bf p\+Tec}
+\item 
+wx\+Panel $\ast$ {\bf p\+Fun}
+\item 
+{\bf Res\+Op\+Obj\+Function\+Interface} $\ast$ {\bf obj\+Inter}
+\item 
+{\bf Res\+Op\+M\+O\+P\+S\+O\+Interface} $\ast$ {\bf mopso\+Inter}
+\item 
+wx\+Box\+Sizer $\ast$ {\bf s\+Tec}
+\item 
+wx\+Box\+Sizer $\ast$ {\bf s\+Fun}
+\item 
+wx\+Choicebook $\ast$ {\bf cb\+Alg}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 17 do arquivo Res\+Op\+Sequential\+Opt\+Interface.\+h.
+
+
+
+\subsection{Enumerações}
+\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!Visibility\+State@{Visibility\+State}}
+\index{Visibility\+State@{Visibility\+State}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}
+\subsubsection[{Visibility\+State}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Res\+Op\+Sequential\+Opt\+Interface\+::\+Visibility\+State}}\label{class_res_op_sequential_opt_interface_a1127acd3587c1c58ae55fbd540e7ff96}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{H\+I\+D\+D\+EN@{H\+I\+D\+D\+EN}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!H\+I\+D\+D\+EN@{H\+I\+D\+D\+EN}}\item[{\em 
+H\+I\+D\+D\+EN\label{class_res_op_sequential_opt_interface_a1127acd3587c1c58ae55fbd540e7ff96a63fa417dddd4da90903cf8bead346e0e}
+}]\index{O\+N\+L\+Y\+\_\+\+T\+E\+C\+H\+N\+I\+Q\+U\+E\+S\+\_\+\+A\+N\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS@{O\+N\+L\+Y\+\_\+\+T\+E\+C\+H\+N\+I\+Q\+U\+E\+S\+\_\+\+A\+N\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!O\+N\+L\+Y\+\_\+\+T\+E\+C\+H\+N\+I\+Q\+U\+E\+S\+\_\+\+A\+N\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS@{O\+N\+L\+Y\+\_\+\+T\+E\+C\+H\+N\+I\+Q\+U\+E\+S\+\_\+\+A\+N\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS}}\item[{\em 
+O\+N\+L\+Y\+\_\+\+T\+E\+C\+H\+N\+I\+Q\+U\+E\+S\+\_\+\+A\+N\+D\+\_\+\+F\+U\+N\+C\+T\+I\+O\+NS\label{class_res_op_sequential_opt_interface_a1127acd3587c1c58ae55fbd540e7ff96a65de2d3ee81d76fd122ceaff2a9da8d4}
+}]\index{A\+LL@{A\+LL}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!A\+LL@{A\+LL}}\item[{\em 
+A\+LL\label{class_res_op_sequential_opt_interface_a1127acd3587c1c58ae55fbd540e7ff96af12d4511489a13d5f0b4885c02d11e5b}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 100 do arquivo Res\+Op\+Sequential\+Opt\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}
+\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}
+\subsubsection[{Res\+Op\+Sequential\+Opt\+Interface(\+S\+I\+G\+A $\ast$main, wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Sequential\+Opt\+Interface\+::\+Res\+Op\+Sequential\+Opt\+Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+GA} $\ast$}]{main, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_res_op_sequential_opt_interface_ad829b6888d9bf2126f28823fe3274684}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em main} & Aplicativo \\
+\hline
+{\em frame} & Janela principal \\
+\hline
+{\em parent} & Janela onde est� contida a interface \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!````~Res\+Op\+Sequential\+Opt\+Interface@{$\sim$\+Res\+Op\+Sequential\+Opt\+Interface}}
+\index{````~Res\+Op\+Sequential\+Opt\+Interface@{$\sim$\+Res\+Op\+Sequential\+Opt\+Interface}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}
+\subsubsection[{$\sim$\+Res\+Op\+Sequential\+Opt\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Sequential\+Opt\+Interface\+::$\sim$\+Res\+Op\+Sequential\+Opt\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_sequential_opt_interface_aab5d741d82b478bb44769b31f4e17966}
+Destrutor 
+
+\subsection{Métodos}
+\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!add\+More\+Pages@{add\+More\+Pages}}
+\index{add\+More\+Pages@{add\+More\+Pages}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}
+\subsubsection[{add\+More\+Pages(const Res\+Op\+Element \&element)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Sequential\+Opt\+Interface\+::add\+More\+Pages (
+\begin{DoxyParamCaption}
+\item[{const {\bf Res\+Op\+Element} \&}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_op_sequential_opt_interface_a55819078bdaa410e4c4073aa9055ae2d}
+A virtual method imlementation used to add custom pages for this notebook. This method is called right before adjust\+Notebook\+For\+Element finish. 
+
+Reimplementação de {\bf Res\+Op\+Sequential\+Interface} \doxyref{}{pag.}{class_res_op_sequential_interface_aeaa497f2ee7abfd6c3a71ef829909325}.
+
+\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!get\+Rule\+Type@{get\+Rule\+Type}}
+\index{get\+Rule\+Type@{get\+Rule\+Type}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}
+\subsubsection[{get\+Rule\+Type(int selection)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Rule\+Type} Res\+Op\+Sequential\+Opt\+Interface\+::get\+Rule\+Type (
+\begin{DoxyParamCaption}
+\item[{int}]{selection}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_sequential_opt_interface_a426d569a8c329ef7106202b3154fcb0e}
+Diz o tipo de regra de acordo com a sele��o 
+\begin{DoxyParams}{Parâmetros}
+{\em selection} & Sele��o \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Tipo de regra 
+\end{DoxyReturn}
+
+
+Reimplementação de {\bf Res\+Op\+Sequential\+Interface} \doxyref{}{pag.}{class_res_op_sequential_interface_acbb9e6edeb5d23871cc6810f2673f144}.
+
+\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!on\+Choice\+Algorithm@{on\+Choice\+Algorithm}}
+\index{on\+Choice\+Algorithm@{on\+Choice\+Algorithm}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}
+\subsubsection[{on\+Choice\+Algorithm(wx\+Book\+Ctrl\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Sequential\+Opt\+Interface\+::on\+Choice\+Algorithm (
+\begin{DoxyParamCaption}
+\item[{wx\+Book\+Ctrl\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_opt_interface_ad6210b2545fc67bc853f6ef78e19c495}
+Chamado quando um algoritimo � escolhida. \index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Sequential\+Opt\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_sequential_opt_interface_a2c36323caa11ef94e3a109029978b1d2}
+Carega os dados do elemento na interface 
+
+Reimplementação de {\bf Res\+Op\+Sequential\+Interface} \doxyref{}{pag.}{class_res_op_sequential_interface_a26bdf00f02ad82bba87ebdf4bf801f0a}.
+
+\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}
+\subsubsection[{set\+Info(\+Res\+Op\+Element $\ast$a\+\_\+element, Res\+Op\+Algorithm $\ast$a\+\_\+algorithm)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Sequential\+Opt\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{a\+\_\+element, }
+\item[{{\bf Res\+Op\+Algorithm} $\ast$}]{a\+\_\+algorithm}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_sequential_opt_interface_a70ee9d28e8b138f306dee11bf7bee571}
+
+
+Reimplementação de {\bf Res\+Op\+Component\+Interface} \doxyref{}{pag.}{class_res_op_component_interface_a2c9199b88cf20e4d91d5fbfabf0737ab}.
+
+\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!set\+Visibility\+State@{set\+Visibility\+State}}
+\index{set\+Visibility\+State@{set\+Visibility\+State}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}
+\subsubsection[{set\+Visibility\+State(\+Visibility\+State new\+State)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Sequential\+Opt\+Interface\+::set\+Visibility\+State (
+\begin{DoxyParamCaption}
+\item[{{\bf Visibility\+State}}]{new\+State}
+\end{DoxyParamCaption}
+)}\label{class_res_op_sequential_opt_interface_ad5037620d9d9467bf38a5a16ff065909}
+\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}
+\subsubsection[{show\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Sequential\+Opt\+Interface\+::show\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_sequential_opt_interface_a101116d6882379adad94dfe2eddc2fee}
+Apresenta resultados do modelo para o n� fornecido. (m�todo abstrato) 
+\begin{DoxyParams}{Parâmetros}
+{\em cahnge} & Montar os resultados caso seja true. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Res\+Op\+Sequential\+Interface} \doxyref{}{pag.}{class_res_op_sequential_interface_a36e8d32a355755b467617a8fe869b612}.
+
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!cb\+Alg@{cb\+Alg}}
+\index{cb\+Alg@{cb\+Alg}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}
+\subsubsection[{cb\+Alg}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choicebook$\ast$ Res\+Op\+Sequential\+Opt\+Interface\+::cb\+Alg\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_opt_interface_a3816846578a0af520ea9daf5a8239bf0}
+Seletor de tecnicas 
+
+Definição na linha 52 do arquivo Res\+Op\+Sequential\+Opt\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!mopso\+Inter@{mopso\+Inter}}
+\index{mopso\+Inter@{mopso\+Inter}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}
+\subsubsection[{mopso\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+M\+O\+P\+S\+O\+Interface}$\ast$ Res\+Op\+Sequential\+Opt\+Interface\+::mopso\+Inter\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_opt_interface_a3f3e4833e8fc685c420a549db22def7c}
+Interface dos algoritimos de otimiza��o 
+
+Definição na linha 42 do arquivo Res\+Op\+Sequential\+Opt\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!obj\+Inter@{obj\+Inter}}
+\index{obj\+Inter@{obj\+Inter}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}
+\subsubsection[{obj\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Obj\+Function\+Interface}$\ast$ Res\+Op\+Sequential\+Opt\+Interface\+::obj\+Inter\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_opt_interface_a30a91cd78a1d8e15f91b22e882528eb7}
+Interface das fun��es objetivo 
+
+Definição na linha 37 do arquivo Res\+Op\+Sequential\+Opt\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!p\+Fun@{p\+Fun}}
+\index{p\+Fun@{p\+Fun}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}
+\subsubsection[{p\+Fun}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel$\ast$ Res\+Op\+Sequential\+Opt\+Interface\+::p\+Fun\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_opt_interface_abedfc651c0a566235f75aa52bbef4918}
+
+
+Definição na linha 32 do arquivo Res\+Op\+Sequential\+Opt\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!p\+Tec@{p\+Tec}}
+\index{p\+Tec@{p\+Tec}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}
+\subsubsection[{p\+Tec}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel$\ast$ Res\+Op\+Sequential\+Opt\+Interface\+::p\+Tec\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_opt_interface_a6d6aa0d519a3616f16f1f3f56da3486d}
+
+
+Definição na linha 31 do arquivo Res\+Op\+Sequential\+Opt\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!s\+Fun@{s\+Fun}}
+\index{s\+Fun@{s\+Fun}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}
+\subsubsection[{s\+Fun}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Box\+Sizer $\ast$ Res\+Op\+Sequential\+Opt\+Interface\+::s\+Fun\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_opt_interface_ae3139ec70d6b2de4aaaa83d49212a970}
+
+
+Definição na linha 47 do arquivo Res\+Op\+Sequential\+Opt\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!s\+Tec@{s\+Tec}}
+\index{s\+Tec@{s\+Tec}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}
+\subsubsection[{s\+Tec}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Box\+Sizer$\ast$ Res\+Op\+Sequential\+Opt\+Interface\+::s\+Tec\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_opt_interface_a888a06e6b3387a63a1b3e88d22ee211a}
+Sizer das tecnicas e fun��es objetivo 
+
+Definição na linha 47 do arquivo Res\+Op\+Sequential\+Opt\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}!tec\+And\+Functions\+Notebook@{tec\+And\+Functions\+Notebook}}
+\index{tec\+And\+Functions\+Notebook@{tec\+And\+Functions\+Notebook}!Res\+Op\+Sequential\+Opt\+Interface@{Res\+Op\+Sequential\+Opt\+Interface}}
+\subsubsection[{tec\+And\+Functions\+Notebook}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Notebook$\ast$ Res\+Op\+Sequential\+Opt\+Interface\+::tec\+And\+Functions\+Notebook\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_opt_interface_a3c79d826a28375fc50f1c652166a4412}
+Notebook contendo as paginas de T�cnicas e Fun��es Objetivo 
+
+Definição na linha 29 do arquivo Res\+Op\+Sequential\+Opt\+Interface.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Sequential\+Opt\+Interface.\+h}\end{DoxyCompactItemize}

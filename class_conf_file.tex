@@ -1,0 +1,210 @@
+\section{Referência da Classe Conf\+File}
+\label{class_conf_file}\index{Conf\+File@{Conf\+File}}
+
+
+{\ttfamily \#include $<$Conf\+File.\+h$>$}
+
+
+
+Superclasse de {\bf Aff\+Prev\+Conf\+File}, {\bf Aff\+Prev\+Demand\+Model\+Conf\+File}, {\bf Basin\+Model\+Conf\+File}, {\bf C\+N3\+S\+Conf\+File}, {\bf Const\+Release\+Conf\+File}, {\bf Demand\+Model\+Conf\+File}, {\bf Demand\+Release\+Conf\+File}, {\bf Generic\+Conf\+File}, {\bf G\+W\+L\+F\+Conf\+File}, {\bf G\+W\+L\+F\+Quality\+Conf\+File}, {\bf H\+B\+M\+M\+O\+Conf\+File}, {\bf H\+Y\+M\+O\+D\+Conf\+File}, {\bf Junction\+Model\+Conf\+File}, {\bf Link\+Model\+Conf\+File}, {\bf M\+E\+C\+A\+Res\+Conf\+File}, {\bf M\+E\+N\+U\+Res\+Conf\+File}, {\bf M\+O\+P\+S\+O\+Conf\+File}, {\bf M\+U\+S\+K\+Conf\+File}, {\bf Net\+Conf\+File}, {\bf One\+Priority\+Conf\+File}, {\bf Opt\+C\+N3\+S\+Conf\+File}, {\bf Opt\+H\+Y\+M\+O\+D\+Conf\+File}, {\bf Opt\+S\+M\+A\+P\+Conf\+File}, {\bf Opt\+S\+M\+A\+P\+M\+Conf\+File}, {\bf Out\+Zone\+Conf\+File}, {\bf Periodic\+Release\+Conf\+File}, {\bf Reservoir\+Model\+Conf\+File}, {\bf Res\+Op\+Basin\+Conf\+File}, {\bf Res\+Op\+Demand\+Conf\+File}, {\bf Res\+Op\+Junction\+Conf\+File}, {\bf Res\+Op\+L\+A\+G\+Conf\+File}, {\bf Res\+Op\+Link\+Conf\+File}, {\bf Res\+Op\+M\+O\+P\+S\+O\+Conf\+File}, {\bf Res\+Op\+M\+O\+P\+S\+O\+Conf\+File}, {\bf Res\+Op\+M\+U\+S\+K\+Conf\+File}, {\bf Res\+Op\+Reservoir\+Conf\+File}, {\bf S\+A\+C\+R\+Conf\+File}, {\bf S\+I\+G\+A\+Conf\+File}, {\bf S\+I\+G\+A\+Project\+Conf\+File}{\ttfamily  [private]}, {\bf S\+M\+A\+P\+Conf\+File}, {\bf S\+M\+A\+P\+H\+Conf\+File}, {\bf S\+M\+A\+P\+M\+Conf\+File}, {\bf T\+A\+L\+River\+Conf\+File}, {\bf Vol\+Dep\+Release\+Conf\+File}, {\bf W\+A\+S\+A\+Conf\+File} e {\bf Zones\+Priority\+Conf\+File}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Conf\+File} (wx\+String {\bf name}, void $\ast${\bf element})
+\item 
+{\bf Conf\+File} (wx\+String {\bf name})
+\item 
+virtual {\bf $\sim$\+Conf\+File} ()
+\item 
+void {\bf load} ()
+\item 
+int {\bf load\+Language} ()
+\item 
+void {\bf save} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bf make\+Save} (wx\+File\+Config $\ast$p\+Config)=0
+\item 
+virtual void {\bf make\+Load} (wx\+File\+Config $\ast$p\+Config)=0
+\item 
+virtual void {\bf joinmake\+Load} (wx\+File\+Config $\ast$p\+Config)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+String {\bf name}
+\item 
+{\bf S\+I\+G\+A\+::\+Version\+Log} {\bf project\+Version}
+\item 
+void $\ast$ {\bf element}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf S\+I\+G\+A\+Project}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 12 do arquivo Conf\+File.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Conf\+File@{Conf\+File}!Conf\+File@{Conf\+File}}
+\index{Conf\+File@{Conf\+File}!Conf\+File@{Conf\+File}}
+\subsubsection[{Conf\+File(wx\+String name, void $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}Conf\+File\+::\+Conf\+File (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name, }
+\item[{void $\ast$}]{element}
+\end{DoxyParamCaption}
+)}\label{class_conf_file_a431c48ef2373bf64c73ec1a469ab293a}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em name} & Nome do arquivo \\
+\hline
+\end{DoxyParams}
+\index{Conf\+File@{Conf\+File}!Conf\+File@{Conf\+File}}
+\index{Conf\+File@{Conf\+File}!Conf\+File@{Conf\+File}}
+\subsubsection[{Conf\+File(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}Conf\+File\+::\+Conf\+File (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_conf_file_a4bc4e97677c7ffc0ced64ad3701caa1b}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em name} & Nome do arquivo \\
+\hline
+\end{DoxyParams}
+\index{Conf\+File@{Conf\+File}!````~Conf\+File@{$\sim$\+Conf\+File}}
+\index{````~Conf\+File@{$\sim$\+Conf\+File}!Conf\+File@{Conf\+File}}
+\subsubsection[{$\sim$\+Conf\+File()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Conf\+File\+::$\sim$\+Conf\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_conf_file_a38aa3dbba21c3f30644a811dbf87f575}
+Destrutor 
+
+Definição na linha 61 do arquivo Conf\+File.\+h.
+
+
+
+\subsection{Métodos}
+\index{Conf\+File@{Conf\+File}!joinmake\+Load@{joinmake\+Load}}
+\index{joinmake\+Load@{joinmake\+Load}!Conf\+File@{Conf\+File}}
+\subsubsection[{joinmake\+Load(wx\+File\+Config $\ast$p\+Config)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Conf\+File\+::joinmake\+Load (
+\begin{DoxyParamCaption}
+\item[{wx\+File\+Config $\ast$}]{p\+Config}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_conf_file_aaf599071f2f6519cea5da1342749c8ec}
+
+
+Definição na linha 45 do arquivo Conf\+File.\+h.
+
+\index{Conf\+File@{Conf\+File}!load@{load}}
+\index{load@{load}!Conf\+File@{Conf\+File}}
+\subsubsection[{load()}]{\setlength{\rightskip}{0pt plus 5cm}void Conf\+File\+::load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_conf_file_a587c7b9e5384021dece71bd8b325b2ef}
+Abrir 
+\begin{DoxyParams}{Parâmetros}
+{\em configure\+Language} & True Se � para configurar somente o idioma, False Caso contr�rio \\
+\hline
+\end{DoxyParams}
+\index{Conf\+File@{Conf\+File}!load\+Language@{load\+Language}}
+\index{load\+Language@{load\+Language}!Conf\+File@{Conf\+File}}
+\subsubsection[{load\+Language()}]{\setlength{\rightskip}{0pt plus 5cm}int Conf\+File\+::load\+Language (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_conf_file_a742130dcbebb7a09a11cb8b07a945794}
+Responsavel pela leitura do arquivo de configura��o (configura��o do idioma) 
+\begin{DoxyParams}{Parâmetros}
+{\em p\+Config} & Ponteiro para o arquivo \\
+\hline
+\end{DoxyParams}
+\index{Conf\+File@{Conf\+File}!make\+Load@{make\+Load}}
+\index{make\+Load@{make\+Load}!Conf\+File@{Conf\+File}}
+\subsubsection[{make\+Load(wx\+File\+Config $\ast$p\+Config)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Conf\+File\+::make\+Load (
+\begin{DoxyParamCaption}
+\item[{wx\+File\+Config $\ast$}]{p\+Config}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{class_conf_file_ab181f6d5c94e11b60d215220d1b321f6}
+Configura como carregar os arquivos Deve ser reimplementado no m�dulo se deseja realizar algo 
+\begin{DoxyParams}{Parâmetros}
+{\em element} & Classe que receber� as informa��es lidas \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Res\+Op\+Demand\+Conf\+File} \doxyref{}{pag.}{class_res_op_demand_conf_file_a8dedd724c876a0c7566f5bbeda848cd3}, {\bf Res\+Op\+Junction\+Conf\+File} \doxyref{}{pag.}{class_res_op_junction_conf_file_a7dda23aabf450beac3e3d4d8d77c5db1}, {\bf Res\+Op\+Reservoir\+Conf\+File} \doxyref{}{pag.}{class_res_op_reservoir_conf_file_a0163baf00f3ff109dc8e440113c12316}, {\bf Const\+Release\+Conf\+File} \doxyref{}{pag.}{class_const_release_conf_file_a0b253eb66deb41fe740498565b7ffac1}, {\bf Opt\+Const\+Release\+Conf\+File} \doxyref{}{pag.}{class_opt_const_release_conf_file_a6becc6652eca7d7e350568b84a540555}, {\bf Demand\+Release\+Conf\+File} \doxyref{}{pag.}{class_demand_release_conf_file_abc6bcb7cae54cb5eb04cfed8b31a7323}, {\bf One\+Priority\+Conf\+File} \doxyref{}{pag.}{class_one_priority_conf_file_a84a8b591dae9dddc0f7062099c4ef7a6}, {\bf Opt\+Periodic\+Release\+Conf\+File} \doxyref{}{pag.}{class_opt_periodic_release_conf_file_a1476cfe7a423464d9ea452a087f2626a}, {\bf Periodic\+Release\+Conf\+File} \doxyref{}{pag.}{class_periodic_release_conf_file_ac60e74809dfb5fcb8a7c1ead9b04c88a}, {\bf Opt\+Vol\+Dep\+Release\+Conf\+File} \doxyref{}{pag.}{class_opt_vol_dep_release_conf_file_a9062ab93ac5eec48f74307490e9d972e}, {\bf Vol\+Dep\+Release\+Conf\+File} \doxyref{}{pag.}{class_vol_dep_release_conf_file_a683bf57aa6d90745280046918d4817f4}, {\bf Zones\+Priority\+Conf\+File} \doxyref{}{pag.}{class_zones_priority_conf_file_a339f597f089ebd162c84ea09f56621ae}, {\bf Res\+Op\+Basin\+Conf\+File} \doxyref{}{pag.}{class_res_op_basin_conf_file_a933805817c621eab79a0de5d7dc9aa52} e {\bf Res\+Op\+Link\+Conf\+File} \doxyref{}{pag.}{class_res_op_link_conf_file_ae6d9d0dff0a97757221ec335756cb5b0}.
+
+\index{Conf\+File@{Conf\+File}!make\+Save@{make\+Save}}
+\index{make\+Save@{make\+Save}!Conf\+File@{Conf\+File}}
+\subsubsection[{make\+Save(wx\+File\+Config $\ast$p\+Config)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Conf\+File\+::make\+Save (
+\begin{DoxyParamCaption}
+\item[{wx\+File\+Config $\ast$}]{p\+Config}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{class_conf_file_a224d6ddc5b9020fb0fc4cef3ef5ea5a8}
+Configura como salvar os arquivos Deve ser reimplementado no m�dulo se deseja realizar algo 
+\begin{DoxyParams}{Parâmetros}
+{\em element} & Classe que receber� as informa��es lidas \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Const\+Release\+Conf\+File} \doxyref{}{pag.}{class_const_release_conf_file_a8da7aab47a10dccee9427b3b4ae2f18d}, {\bf Opt\+Const\+Release\+Conf\+File} \doxyref{}{pag.}{class_opt_const_release_conf_file_a53e1efe7e7048d4778a784c86f9a011e}, {\bf Demand\+Release\+Conf\+File} \doxyref{}{pag.}{class_demand_release_conf_file_a30c0c42d6a08f020d558352f4aa34a4a}, {\bf One\+Priority\+Conf\+File} \doxyref{}{pag.}{class_one_priority_conf_file_a167b775820487632274f8afa9fed53a5}, {\bf Opt\+Periodic\+Release\+Conf\+File} \doxyref{}{pag.}{class_opt_periodic_release_conf_file_aa50b59b4dde1ef10d18b73b0f0bede78}, {\bf Periodic\+Release\+Conf\+File} \doxyref{}{pag.}{class_periodic_release_conf_file_ac7bc7d1e2087e98a504cc9973352c52c}, {\bf Opt\+Vol\+Dep\+Release\+Conf\+File} \doxyref{}{pag.}{class_opt_vol_dep_release_conf_file_a518a79dd2c6903d39fa3b599a1ee867b}, {\bf Vol\+Dep\+Release\+Conf\+File} \doxyref{}{pag.}{class_vol_dep_release_conf_file_acca4baaf8917008016bc3b4269b1cb9f}, {\bf Zones\+Priority\+Conf\+File} \doxyref{}{pag.}{class_zones_priority_conf_file_a23b0cb9b1c3028140f6567c7d9d5c407}, {\bf Res\+Op\+Basin\+Conf\+File} \doxyref{}{pag.}{class_res_op_basin_conf_file_a280aadbadd0e5bb733a422369fdec992}, {\bf Res\+Op\+Link\+Conf\+File} \doxyref{}{pag.}{class_res_op_link_conf_file_ada72ae13d3622f19c980e7c7391cb299}, {\bf Res\+Op\+Demand\+Conf\+File} \doxyref{}{pag.}{class_res_op_demand_conf_file_ae4ae7a523ecac101d6087f0ea7023b38}, {\bf Res\+Op\+Junction\+Conf\+File} \doxyref{}{pag.}{class_res_op_junction_conf_file_a3a98aff060ba125ab09a79448bbbb045} e {\bf Res\+Op\+Reservoir\+Conf\+File} \doxyref{}{pag.}{class_res_op_reservoir_conf_file_afd3b1dc897e2916bdb99319ab1bb19d1}.
+
+\index{Conf\+File@{Conf\+File}!save@{save}}
+\index{save@{save}!Conf\+File@{Conf\+File}}
+\subsubsection[{save()}]{\setlength{\rightskip}{0pt plus 5cm}void Conf\+File\+::save (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_conf_file_ac5183601d62472f09fb4f87e08a976bf}
+Salvar 
+
+\subsection{Amigas e Funções Relacionadas}
+\index{Conf\+File@{Conf\+File}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!Conf\+File@{Conf\+File}}
+\subsubsection[{S\+I\+G\+A\+Project}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf S\+I\+G\+A\+Project}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_conf_file_a1cd9954f0d975ab99a08e9fbf505e632}
+Classe amiga 
+
+Definição na linha 79 do arquivo Conf\+File.\+h.
+
+
+
+\subsection{Atributos}
+\index{Conf\+File@{Conf\+File}!element@{element}}
+\index{element@{element}!Conf\+File@{Conf\+File}}
+\subsubsection[{element}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ Conf\+File\+::element\hspace{0.3cm}{\ttfamily [protected]}}\label{class_conf_file_af73cf6d05a86a7841c1a5cce6e113dd4}
+Elemento que ira receber as informacoes do arquivo de configuracao, ou ser lido para preencher o arquivo de configuracao 
+
+Definição na linha 31 do arquivo Conf\+File.\+h.
+
+\index{Conf\+File@{Conf\+File}!name@{name}}
+\index{name@{name}!Conf\+File@{Conf\+File}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Conf\+File\+::name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_conf_file_a223b7b70a4422e90c9ead53cace9d2a9}
+Nome do arquivo 
+
+Definição na linha 21 do arquivo Conf\+File.\+h.
+
+\index{Conf\+File@{Conf\+File}!project\+Version@{project\+Version}}
+\index{project\+Version@{project\+Version}!Conf\+File@{Conf\+File}}
+\subsubsection[{project\+Version}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+::\+Version\+Log} Conf\+File\+::project\+Version\hspace{0.3cm}{\ttfamily [protected]}}\label{class_conf_file_a5885c31907dfd68fbeef20b7dd64c928}
+Vers�o do arquivo 
+
+Definição na linha 25 do arquivo Conf\+File.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Conf\+File.\+h}\end{DoxyCompactItemize}

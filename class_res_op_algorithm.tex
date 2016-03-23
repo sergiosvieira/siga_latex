@@ -1,0 +1,167 @@
+\section{Referência da Classe Res\+Op\+Algorithm}
+\label{class_res_op_algorithm}\index{Res\+Op\+Algorithm@{Res\+Op\+Algorithm}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Algorithm.\+h$>$}
+
+
+
+Superclasse de {\bf Res\+Op\+M\+O\+P\+SO}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Algorithm} ()
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Algorithm} ()
+\item 
+virtual bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog, {\bf Res\+Op\+Scenario} \&scenario, {\bf Element\+ID} network\+\_\+id)=0
+\item 
+virtual bool {\bf run} ({\bf Res\+Op\+Model\+Ctrl} $\ast$model\+Ctrl, {\bf Res\+Op\+Scenario} $\ast$scen)=0
+\item 
+virtual bool {\bf run\+Isolated} ({\bf Res\+Op\+Model\+Ctrl} $\ast$model\+Ctrl, {\bf Res\+Op\+Scenario} $\ast$scen, map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&dependency\+\_\+map, {\bf Element\+ID} network\+\_\+id)
+\item 
+{\bf Res\+Op\+Algorithm} $\ast$ {\bf copy} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Algorithm\+Type} {\bf type}
+\item 
+{\bf Res\+Op\+Tecnique\+Result} $\ast$ {\bf results}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf Res\+Op\+Algorithm} $\ast$ {\bf do\+Copy} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Cada instancia de t�cnica eh feita para o sistema como um todo 
+
+Definição na linha 19 do arquivo Res\+Op\+Algorithm.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Algorithm@{Res\+Op\+Algorithm}!Res\+Op\+Algorithm@{Res\+Op\+Algorithm}}
+\index{Res\+Op\+Algorithm@{Res\+Op\+Algorithm}!Res\+Op\+Algorithm@{Res\+Op\+Algorithm}}
+\subsubsection[{Res\+Op\+Algorithm()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Algorithm\+::\+Res\+Op\+Algorithm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_op_algorithm_a8306e32db4022385b6ee4b47a3d409a3}
+Ponteiro para Classe de fun��es objetivo
+
+Res\+Op\+Obj\+Function\+Ctrl$\ast$ function\+Main; Construtor 
+
+Definição na linha 45 do arquivo Res\+Op\+Algorithm.\+h.
+
+\index{Res\+Op\+Algorithm@{Res\+Op\+Algorithm}!````~Res\+Op\+Algorithm@{$\sim$\+Res\+Op\+Algorithm}}
+\index{````~Res\+Op\+Algorithm@{$\sim$\+Res\+Op\+Algorithm}!Res\+Op\+Algorithm@{Res\+Op\+Algorithm}}
+\subsubsection[{$\sim$\+Res\+Op\+Algorithm()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Algorithm\+::$\sim$\+Res\+Op\+Algorithm (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_res_op_algorithm_abb13630f403a09c38dc6c0b104f5ad51}
+Destrutor 
+
+Definição na linha 50 do arquivo Res\+Op\+Algorithm.\+h.
+
+
+
+\subsection{Métodos}
+\index{Res\+Op\+Algorithm@{Res\+Op\+Algorithm}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Res\+Op\+Algorithm@{Res\+Op\+Algorithm}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog, Res\+Op\+Scenario \&scenario, Element\+I\+D network\+\_\+id)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+Algorithm\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog, }
+\item[{{\bf Res\+Op\+Scenario} \&}]{scenario, }
+\item[{{\bf Element\+ID}}]{network\+\_\+id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_algorithm_a2c1db96b91c7aac5a427b295db5b4e9c}
+Checa se todas as informa��es para a t�cnica foram inseridas 
+\begin{DoxyParams}{Parâmetros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Res\+Op\+M\+O\+P\+SO} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_a0b06ec5db0c70beb782b5e97cf99bb45}.
+
+\index{Res\+Op\+Algorithm@{Res\+Op\+Algorithm}!copy@{copy}}
+\index{copy@{copy}!Res\+Op\+Algorithm@{Res\+Op\+Algorithm}}
+\subsubsection[{copy()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Algorithm}$\ast$ Res\+Op\+Algorithm\+::copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_op_algorithm_ae1f278508cbcfe6a5b9b940a687ecda4}
+Copia a si 
+
+Definição na linha 70 do arquivo Res\+Op\+Algorithm.\+h.
+
+\index{Res\+Op\+Algorithm@{Res\+Op\+Algorithm}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!Res\+Op\+Algorithm@{Res\+Op\+Algorithm}}
+\subsubsection[{do\+Copy()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Res\+Op\+Algorithm}$\ast$ Res\+Op\+Algorithm\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{class_res_op_algorithm_a64fc6295bba45f988941d0385f7f440e}
+Copia a si 
+
+Implementado por {\bf Res\+Op\+M\+O\+P\+SO} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_a8ec01434eea4b7eb0997c612c2489f9c}.
+
+\index{Res\+Op\+Algorithm@{Res\+Op\+Algorithm}!run@{run}}
+\index{run@{run}!Res\+Op\+Algorithm@{Res\+Op\+Algorithm}}
+\subsubsection[{run(\+Res\+Op\+Model\+Ctrl $\ast$model\+Ctrl, Res\+Op\+Scenario $\ast$scen)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+Algorithm\+::run (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Model\+Ctrl} $\ast$}]{model\+Ctrl, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_algorithm_a5219eee24a40d05c471ad3ff40af1171}
+Executa a t�cnica 
+
+Implementado por {\bf Res\+Op\+M\+O\+P\+SO} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_a7e53657466ad6c2dc94489019821e112}.
+
+\index{Res\+Op\+Algorithm@{Res\+Op\+Algorithm}!run\+Isolated@{run\+Isolated}}
+\index{run\+Isolated@{run\+Isolated}!Res\+Op\+Algorithm@{Res\+Op\+Algorithm}}
+\subsubsection[{run\+Isolated(\+Res\+Op\+Model\+Ctrl $\ast$model\+Ctrl, Res\+Op\+Scenario $\ast$scen, map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, std\+::map$<$ Element\+I\+D, std\+::vector$<$ Res\+Op\+Element $\ast$ $>$ $>$ \&dependency\+\_\+map, Element\+I\+D network\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+Algorithm\+::run\+Isolated (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Model\+Ctrl} $\ast$}]{model\+Ctrl, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen, }
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&}]{dependency\+\_\+map, }
+\item[{{\bf Element\+ID}}]{network\+\_\+id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_res_op_algorithm_ab590c2e8c9df0dcb7baf3210602e291f}
+
+
+Reimplementado por {\bf Res\+Op\+M\+O\+P\+SO} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_a0ba082ce842816b493b7ff55aa12dcdc}.
+
+
+
+Definição na linha 63 do arquivo Res\+Op\+Algorithm.\+h.
+
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Algorithm@{Res\+Op\+Algorithm}!results@{results}}
+\index{results@{results}!Res\+Op\+Algorithm@{Res\+Op\+Algorithm}}
+\subsubsection[{results}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Tecnique\+Result}$\ast$ Res\+Op\+Algorithm\+::results}\label{class_res_op_algorithm_a577572a7fe948c9921f9c4b8a8956499}
+Ponteiro de resultados da rede que foi otmizada 
+
+Definição na linha 35 do arquivo Res\+Op\+Algorithm.\+h.
+
+\index{Res\+Op\+Algorithm@{Res\+Op\+Algorithm}!type@{type}}
+\index{type@{type}!Res\+Op\+Algorithm@{Res\+Op\+Algorithm}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Algorithm\+Type} Res\+Op\+Algorithm\+::type}\label{class_res_op_algorithm_af0d4ee16f6aee077a7ae454940d97b2f}
+Tipo de algoritimo de otimiza��o 
+
+Definição na linha 30 do arquivo Res\+Op\+Algorithm.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Algorithm.\+h}\end{DoxyCompactItemize}

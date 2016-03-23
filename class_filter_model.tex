@@ -1,0 +1,199 @@
+\section{Referência da Classe Filter\+Model}
+\label{class_filter_model}\index{Filter\+Model@{Filter\+Model}}
+
+
+{\ttfamily \#include $<$filter-\/model.\+h$>$}
+
+
+
+Herdeiro de {\bf Interface\+Model}.
+
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bf k\+Filter}
+\item 
+struct {\bf k\+Record}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Filter\+Model} ()
+\item 
+{\bf $\sim$\+Filter\+Model} ()
+\item 
+int {\bf size} ()
+\item 
+void {\bf load} (const char $\ast$a\+\_\+filename)
+\item 
+void {\bf clear} ()
+\item 
+void {\bf add} ({\bf k\+Record} a\+\_\+record)
+\item 
+{\bf k\+Record} {\bf record} (int a\+\_\+index)
+\item 
+void {\bf remove} (int a\+\_\+index)
+\item 
+{\bf k\+Record} $\ast$ {\bf find\+By\+Title} (const char $\ast$a\+\_\+title)
+\item 
+std\+::vector$<$ {\bf k\+Record} $>$\+::const\+\_\+iterator {\bf begin} ()
+\item 
+std\+::vector$<$ {\bf k\+Record} $>$\+::const\+\_\+iterator {\bf end} ()
+\item 
+Json\+::\+Value {\bf json} ()
+\item 
+void {\bf load} (Json\+::\+Value \&a\+\_\+value)
+\item 
+const char $\ast$ {\bf root} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Estáticos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ {\bf k\+Root}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ {\bf k\+Record} $>$ {\bf m\+\_\+records}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+C++ S\+TL Extends \doxyref{S\+I\+GA}{pag.}{class_s_i_g_a} 
+
+Definição na linha 17 do arquivo filter-\/model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Filter\+Model@{Filter\+Model}!Filter\+Model@{Filter\+Model}}
+\index{Filter\+Model@{Filter\+Model}!Filter\+Model@{Filter\+Model}}
+\subsubsection[{Filter\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Filter\+Model\+::\+Filter\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_filter_model_a5d304b3634fbce4387441d47a7d241ef}
+\index{Filter\+Model@{Filter\+Model}!````~Filter\+Model@{$\sim$\+Filter\+Model}}
+\index{````~Filter\+Model@{$\sim$\+Filter\+Model}!Filter\+Model@{Filter\+Model}}
+\subsubsection[{$\sim$\+Filter\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Filter\+Model\+::$\sim$\+Filter\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_filter_model_a37165d7fa9e4087ca979e301f32ec122}
+
+
+\subsection{Métodos}
+\index{Filter\+Model@{Filter\+Model}!add@{add}}
+\index{add@{add}!Filter\+Model@{Filter\+Model}}
+\subsubsection[{add(k\+Record a\+\_\+record)}]{\setlength{\rightskip}{0pt plus 5cm}void Filter\+Model\+::add (
+\begin{DoxyParamCaption}
+\item[{{\bf k\+Record}}]{a\+\_\+record}
+\end{DoxyParamCaption}
+)}\label{class_filter_model_a4448ec1fb08d22f970df688d5755bdd7}
+\index{Filter\+Model@{Filter\+Model}!begin@{begin}}
+\index{begin@{begin}!Filter\+Model@{Filter\+Model}}
+\subsubsection[{begin()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf k\+Record}$>$\+::const\+\_\+iterator Filter\+Model\+::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_filter_model_a75ea5576283d59497a3ef11b9f043af5}
+\index{Filter\+Model@{Filter\+Model}!clear@{clear}}
+\index{clear@{clear}!Filter\+Model@{Filter\+Model}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Filter\+Model\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_filter_model_a7351ce517415970202677a895a649a55}
+\index{Filter\+Model@{Filter\+Model}!end@{end}}
+\index{end@{end}!Filter\+Model@{Filter\+Model}}
+\subsubsection[{end()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf k\+Record}$>$\+::const\+\_\+iterator Filter\+Model\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_filter_model_afbe2fbc65f407adb1e7eafb8c6539475}
+\index{Filter\+Model@{Filter\+Model}!find\+By\+Title@{find\+By\+Title}}
+\index{find\+By\+Title@{find\+By\+Title}!Filter\+Model@{Filter\+Model}}
+\subsubsection[{find\+By\+Title(const char $\ast$a\+\_\+title)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf k\+Record}$\ast$ Filter\+Model\+::find\+By\+Title (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+title}
+\end{DoxyParamCaption}
+)}\label{class_filter_model_af38402a500c10e39707d0d875d898c0b}
+\index{Filter\+Model@{Filter\+Model}!json@{json}}
+\index{json@{json}!Filter\+Model@{Filter\+Model}}
+\subsubsection[{json()}]{\setlength{\rightskip}{0pt plus 5cm}Json\+::\+Value Filter\+Model\+::json (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_filter_model_a5306bfaae120d293125b03a9fbb943e5}
+Exemplo de Json gerado \char`\"{}filter\char`\"{}\+: \{ \char`\"{}records\char`\"{}\+: [ \char`\"{}\+Tipo de Medi��o de Chuva\char`\"{}\+: \{ \char`\"{}main\+\_\+col\char`\"{}\+: 3, \char`\"{}values\char`\"{}\+: [ \char`\"{}\+Pluviometro\char`\"{}\+: \{ \char`\"{}selected\+:\char`\"{}\+: 1, \char`\"{}value\char`\"{}\+: 1 \}, \char`\"{}\+Pluviografo\char`\"{}\+: \{ \char`\"{}selected\char`\"{}\+: 0, \char`\"{}value\char`\"{}\+: 2 \}, \char`\"{}\+Data Logger\char`\"{}\+: 3 ] \char`\"{}associate\char`\"{}\+: \{ \char`\"{}checked\char`\"{}\+: 0, \char`\"{}from\+\_\+col\char`\"{}\+: 0, \char`\"{}to\+\_\+col\char`\"{}\+: 0 \} \}, \char`\"{}\+N�vel de Consist�ncia\char`\"{}\+: \{ \char`\"{}main\+\_\+col\char`\"{}\+: 1, \char`\"{}values\char`\"{}\+: [ \char`\"{}\+Bruto\char`\"{}\+: 1, \char`\"{}\+Consistido\char`\"{}\+: 2, ] \char`\"{}associate\char`\"{}\+: \{ \char`\"{}checked\char`\"{}\+: 0, \char`\"{}from\+\_\+col\char`\"{}\+: 0, \char`\"{}to\+\_\+col\char`\"{}\+: 0 \} \}, \char`\"{}\+Status\char`\"{}\+: \{ \char`\"{}main\+\_\+col\char`\"{}\+: 0, \char`\"{}values\char`\"{}\+: [ \char`\"{}\+Branco\char`\"{}\+: 0, \char`\"{}\+Real\char`\"{}\+: 1, \char`\"{}\+Estimado\char`\"{}\+: 2, \char`\"{}\+Duvidoso\char`\"{}\+: 1, ] \char`\"{}associate\char`\"{}\+: \{ \char`\"{}checked\char`\"{}\+: 0, \char`\"{}from\+\_\+col\char`\"{}\+: 0, \char`\"{}to\+\_\+col\char`\"{}\+: 0 \} \} ] \} \} \index{Filter\+Model@{Filter\+Model}!load@{load}}
+\index{load@{load}!Filter\+Model@{Filter\+Model}}
+\subsubsection[{load(const char $\ast$a\+\_\+filename)}]{\setlength{\rightskip}{0pt plus 5cm}void Filter\+Model\+::load (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+filename}
+\end{DoxyParamCaption}
+)}\label{class_filter_model_a4ab5c0d47648d7fa78981d4b5d18c178}
+\index{Filter\+Model@{Filter\+Model}!load@{load}}
+\index{load@{load}!Filter\+Model@{Filter\+Model}}
+\subsubsection[{load(\+Json\+::\+Value \&a\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}void Filter\+Model\+::load (
+\begin{DoxyParamCaption}
+\item[{Json\+::\+Value \&}]{a\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_filter_model_a6ba2df6af95dc37b441edfb42cb4af16}
+
+
+Implementa {\bf Interface\+Model} \doxyref{}{pag.}{class_interface_model_aabefd64dd681b6adf84eeaa3ba35e381}.
+
+\index{Filter\+Model@{Filter\+Model}!record@{record}}
+\index{record@{record}!Filter\+Model@{Filter\+Model}}
+\subsubsection[{record(int a\+\_\+index)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf k\+Record} Filter\+Model\+::record (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+index}
+\end{DoxyParamCaption}
+)}\label{class_filter_model_acc9844e693b00719d7edefebd008983d}
+\index{Filter\+Model@{Filter\+Model}!remove@{remove}}
+\index{remove@{remove}!Filter\+Model@{Filter\+Model}}
+\subsubsection[{remove(int a\+\_\+index)}]{\setlength{\rightskip}{0pt plus 5cm}void Filter\+Model\+::remove (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+index}
+\end{DoxyParamCaption}
+)}\label{class_filter_model_a02ec46a86f08960fcb8e34ec71b2e272}
+\index{Filter\+Model@{Filter\+Model}!root@{root}}
+\index{root@{root}!Filter\+Model@{Filter\+Model}}
+\subsubsection[{root()}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Filter\+Model\+::root (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_filter_model_a8c8badbbd0833a7b108d24ce3bbf0591}
+
+
+Implementa {\bf Interface\+Model} \doxyref{}{pag.}{class_interface_model_a48cdeaf2173330586130269911a91596}.
+
+\index{Filter\+Model@{Filter\+Model}!size@{size}}
+\index{size@{size}!Filter\+Model@{Filter\+Model}}
+\subsubsection[{size()}]{\setlength{\rightskip}{0pt plus 5cm}int Filter\+Model\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_filter_model_a258ab61f9de96f7004f083ffbf62cd18}
+
+
+\subsection{Atributos}
+\index{Filter\+Model@{Filter\+Model}!k\+Root@{k\+Root}}
+\index{k\+Root@{k\+Root}!Filter\+Model@{Filter\+Model}}
+\subsubsection[{k\+Root}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Filter\+Model\+::k\+Root\hspace{0.3cm}{\ttfamily [static]}}\label{class_filter_model_a2b74530864706e13adb04192c981d66f}
+
+
+Definição na linha 40 do arquivo filter-\/model.\+h.
+
+\index{Filter\+Model@{Filter\+Model}!m\+\_\+records@{m\+\_\+records}}
+\index{m\+\_\+records@{m\+\_\+records}!Filter\+Model@{Filter\+Model}}
+\subsubsection[{m\+\_\+records}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf k\+Record}$>$ Filter\+Model\+::m\+\_\+records\hspace{0.3cm}{\ttfamily [protected]}}\label{class_filter_model_ae0bdb1ac76f4db07ad2fd7bd9a5d06a6}
+
+
+Definição na linha 121 do arquivo filter-\/model.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf filter-\/model.\+h}\end{DoxyCompactItemize}

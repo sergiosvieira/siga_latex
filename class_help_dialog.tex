@@ -1,0 +1,249 @@
+\section{Referência da Classe Help\+Dialog}
+\label{class_help_dialog}\index{Help\+Dialog@{Help\+Dialog}}
+
+
+{\ttfamily \#include $<$Help\+Dialog.\+h$>$}
+
+
+
+Herdeiro de wx\+Object.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Help\+Dialog} (std\+::string a\+\_\+title=\char`\"{}\char`\"{}, std\+::string a\+\_\+description=\char`\"{}\char`\"{}, std\+::string a\+\_\+window\+Title=\char`\"{}Ajuda\char`\"{})
+\item 
+{\bf $\sim$\+Help\+Dialog} ()
+\item 
+void {\bf set\+Window\+Title} (std\+::string a\+\_\+window\+Title)
+\item 
+void {\bf set\+Title} (std\+::string a\+\_\+title)
+\item 
+void {\bf set\+Description} (std\+::string a\+\_\+description)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf init\+Ui} ()
+\item 
+void {\bf set\+Ui\+Components} ()
+\item 
+void {\bf get\+Ui\+Components} (wx\+Dialog $\ast$a\+\_\+dialog)
+\item 
+void {\bf get\+Binds} ()
+\item 
+void {\bf get\+Un\+Binds} ()
+\item 
+bool {\bf check} ()
+\item 
+void {\bf on\+Close} (wx\+Command\+Event \&event)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ {\bf main\+Dialog} = \char`\"{}Help\+Dialog\char`\"{}
+\item 
+char $\ast$ {\bf st\+Title} = \char`\"{}m\+\_\+st\+Title\char`\"{}
+\item 
+char $\ast$ {\bf st\+Description} = \char`\"{}m\+\_\+st\+Description\char`\"{}
+\item 
+char $\ast$ {\bf btn\+Close} = \char`\"{}m\+\_\+btn\+Close\char`\"{}
+\item 
+std\+::string {\bf m\+\_\+window\+Title}
+\item 
+std\+::string {\bf m\+\_\+title}
+\item 
+std\+::string {\bf m\+\_\+description}
+\item 
+wx\+Dialog {\bf m\+\_\+help\+Dialog}
+\item 
+wx\+Static\+Text $\ast$ {\bf m\+\_\+st\+Title}
+\item 
+wx\+Static\+Text $\ast$ {\bf m\+\_\+st\+Description}
+\item 
+wx\+Button $\ast$ {\bf m\+\_\+btn\+Close}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 10 do arquivo Help\+Dialog.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Help\+Dialog@{Help\+Dialog}!Help\+Dialog@{Help\+Dialog}}
+\index{Help\+Dialog@{Help\+Dialog}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{Help\+Dialog(std\+::string a\+\_\+title="""", std\+::string a\+\_\+description="""", std\+::string a\+\_\+window\+Title=""Ajuda"")}]{\setlength{\rightskip}{0pt plus 5cm}Help\+Dialog\+::\+Help\+Dialog (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{a\+\_\+title = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{std\+::string}]{a\+\_\+description = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{std\+::string}]{a\+\_\+window\+Title = {\ttfamily \char`\"{}Ajuda\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_help_dialog_a9516e76bec7ddea8a9a65983db85452c}
+\index{Help\+Dialog@{Help\+Dialog}!````~Help\+Dialog@{$\sim$\+Help\+Dialog}}
+\index{````~Help\+Dialog@{$\sim$\+Help\+Dialog}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{$\sim$\+Help\+Dialog()}]{\setlength{\rightskip}{0pt plus 5cm}Help\+Dialog\+::$\sim$\+Help\+Dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_help_dialog_ac5a870136e6629b27f4dc99878359ab5}
+
+
+\subsection{Métodos}
+\index{Help\+Dialog@{Help\+Dialog}!check@{check}}
+\index{check@{check}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{check()}]{\setlength{\rightskip}{0pt plus 5cm}bool Help\+Dialog\+::check (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_help_dialog_ac572b1b03a13d2e54e28682d6f1a4d26}
+\index{Help\+Dialog@{Help\+Dialog}!get\+Binds@{get\+Binds}}
+\index{get\+Binds@{get\+Binds}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{get\+Binds()}]{\setlength{\rightskip}{0pt plus 5cm}void Help\+Dialog\+::get\+Binds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_help_dialog_ae6b629d0058d824118c84537f4e09f95}
+\index{Help\+Dialog@{Help\+Dialog}!get\+Ui\+Components@{get\+Ui\+Components}}
+\index{get\+Ui\+Components@{get\+Ui\+Components}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{get\+Ui\+Components(wx\+Dialog $\ast$a\+\_\+dialog)}]{\setlength{\rightskip}{0pt plus 5cm}void Help\+Dialog\+::get\+Ui\+Components (
+\begin{DoxyParamCaption}
+\item[{wx\+Dialog $\ast$}]{a\+\_\+dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_help_dialog_aa61b9c5239161e6cd681a438aad53558}
+\index{Help\+Dialog@{Help\+Dialog}!get\+Un\+Binds@{get\+Un\+Binds}}
+\index{get\+Un\+Binds@{get\+Un\+Binds}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{get\+Un\+Binds()}]{\setlength{\rightskip}{0pt plus 5cm}void Help\+Dialog\+::get\+Un\+Binds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_help_dialog_ab69b98c2ced45b081ad514aa5cfb36cb}
+\index{Help\+Dialog@{Help\+Dialog}!init\+Ui@{init\+Ui}}
+\index{init\+Ui@{init\+Ui}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{init\+Ui()}]{\setlength{\rightskip}{0pt plus 5cm}void Help\+Dialog\+::init\+Ui (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_help_dialog_a505342852129e4b29fb0d6298f6880ad}
+\index{Help\+Dialog@{Help\+Dialog}!on\+Close@{on\+Close}}
+\index{on\+Close@{on\+Close}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{on\+Close(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Help\+Dialog\+::on\+Close (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_help_dialog_a8a9a11d3f435e8fff0838dd9ac04abf4}
+\index{Help\+Dialog@{Help\+Dialog}!set\+Description@{set\+Description}}
+\index{set\+Description@{set\+Description}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{set\+Description(std\+::string a\+\_\+description)}]{\setlength{\rightskip}{0pt plus 5cm}void Help\+Dialog\+::set\+Description (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{a\+\_\+description}
+\end{DoxyParamCaption}
+)}\label{class_help_dialog_a435e55e34e9df7563a11ca4821593a1d}
+\index{Help\+Dialog@{Help\+Dialog}!set\+Title@{set\+Title}}
+\index{set\+Title@{set\+Title}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{set\+Title(std\+::string a\+\_\+title)}]{\setlength{\rightskip}{0pt plus 5cm}void Help\+Dialog\+::set\+Title (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{a\+\_\+title}
+\end{DoxyParamCaption}
+)}\label{class_help_dialog_a2cf667328e5b33f2944b2cfc31a2ddfa}
+\index{Help\+Dialog@{Help\+Dialog}!set\+Ui\+Components@{set\+Ui\+Components}}
+\index{set\+Ui\+Components@{set\+Ui\+Components}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{set\+Ui\+Components()}]{\setlength{\rightskip}{0pt plus 5cm}void Help\+Dialog\+::set\+Ui\+Components (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_help_dialog_af36e5cf3102b9e512dd98bab1277f22f}
+\index{Help\+Dialog@{Help\+Dialog}!set\+Window\+Title@{set\+Window\+Title}}
+\index{set\+Window\+Title@{set\+Window\+Title}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{set\+Window\+Title(std\+::string a\+\_\+window\+Title)}]{\setlength{\rightskip}{0pt plus 5cm}void Help\+Dialog\+::set\+Window\+Title (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{a\+\_\+window\+Title}
+\end{DoxyParamCaption}
+)}\label{class_help_dialog_a924063eb2d797f887d699756c81c0808}
+
+
+\subsection{Atributos}
+\index{Help\+Dialog@{Help\+Dialog}!btn\+Close@{btn\+Close}}
+\index{btn\+Close@{btn\+Close}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{btn\+Close}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Help\+Dialog\+::btn\+Close = \char`\"{}m\+\_\+btn\+Close\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_help_dialog_a9c065ea1622859c886f0fc533e9135b9}
+
+
+Definição na linha 17 do arquivo Help\+Dialog.\+h.
+
+\index{Help\+Dialog@{Help\+Dialog}!m\+\_\+btn\+Close@{m\+\_\+btn\+Close}}
+\index{m\+\_\+btn\+Close@{m\+\_\+btn\+Close}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{m\+\_\+btn\+Close}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Help\+Dialog\+::m\+\_\+btn\+Close\hspace{0.3cm}{\ttfamily [protected]}}\label{class_help_dialog_a69a51deec5b75b5566c43302b17426a2}
+
+
+Definição na linha 28 do arquivo Help\+Dialog.\+h.
+
+\index{Help\+Dialog@{Help\+Dialog}!m\+\_\+description@{m\+\_\+description}}
+\index{m\+\_\+description@{m\+\_\+description}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{m\+\_\+description}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Help\+Dialog\+::m\+\_\+description\hspace{0.3cm}{\ttfamily [protected]}}\label{class_help_dialog_a42df2e3ecb28845603007446d46ec5fe}
+
+
+Definição na linha 22 do arquivo Help\+Dialog.\+h.
+
+\index{Help\+Dialog@{Help\+Dialog}!m\+\_\+help\+Dialog@{m\+\_\+help\+Dialog}}
+\index{m\+\_\+help\+Dialog@{m\+\_\+help\+Dialog}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{m\+\_\+help\+Dialog}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Dialog Help\+Dialog\+::m\+\_\+help\+Dialog\hspace{0.3cm}{\ttfamily [protected]}}\label{class_help_dialog_a6a137719a3f83fbab4e08a15b72217d9}
+
+
+Definição na linha 25 do arquivo Help\+Dialog.\+h.
+
+\index{Help\+Dialog@{Help\+Dialog}!m\+\_\+st\+Description@{m\+\_\+st\+Description}}
+\index{m\+\_\+st\+Description@{m\+\_\+st\+Description}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{m\+\_\+st\+Description}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Help\+Dialog\+::m\+\_\+st\+Description\hspace{0.3cm}{\ttfamily [protected]}}\label{class_help_dialog_a7a602b81e6e2c736b7a8f4a776529e17}
+
+
+Definição na linha 27 do arquivo Help\+Dialog.\+h.
+
+\index{Help\+Dialog@{Help\+Dialog}!m\+\_\+st\+Title@{m\+\_\+st\+Title}}
+\index{m\+\_\+st\+Title@{m\+\_\+st\+Title}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{m\+\_\+st\+Title}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Help\+Dialog\+::m\+\_\+st\+Title\hspace{0.3cm}{\ttfamily [protected]}}\label{class_help_dialog_a5f5bb9ed09ecdea9dfc92c6a41e8fbd5}
+
+
+Definição na linha 26 do arquivo Help\+Dialog.\+h.
+
+\index{Help\+Dialog@{Help\+Dialog}!m\+\_\+title@{m\+\_\+title}}
+\index{m\+\_\+title@{m\+\_\+title}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{m\+\_\+title}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Help\+Dialog\+::m\+\_\+title\hspace{0.3cm}{\ttfamily [protected]}}\label{class_help_dialog_ae404d97144e2817f41d8d30f06591b78}
+
+
+Definição na linha 21 do arquivo Help\+Dialog.\+h.
+
+\index{Help\+Dialog@{Help\+Dialog}!m\+\_\+window\+Title@{m\+\_\+window\+Title}}
+\index{m\+\_\+window\+Title@{m\+\_\+window\+Title}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{m\+\_\+window\+Title}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Help\+Dialog\+::m\+\_\+window\+Title\hspace{0.3cm}{\ttfamily [protected]}}\label{class_help_dialog_acf16ee1354f2739a1f0654fe19193fe2}
+
+
+Definição na linha 20 do arquivo Help\+Dialog.\+h.
+
+\index{Help\+Dialog@{Help\+Dialog}!main\+Dialog@{main\+Dialog}}
+\index{main\+Dialog@{main\+Dialog}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{main\+Dialog}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Help\+Dialog\+::main\+Dialog = \char`\"{}Help\+Dialog\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_help_dialog_a13a81c1852528bfe7768f44f1e9eeff9}
+
+
+Definição na linha 14 do arquivo Help\+Dialog.\+h.
+
+\index{Help\+Dialog@{Help\+Dialog}!st\+Description@{st\+Description}}
+\index{st\+Description@{st\+Description}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{st\+Description}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Help\+Dialog\+::st\+Description = \char`\"{}m\+\_\+st\+Description\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_help_dialog_a108333ebf21aa4c077427ba107ac93cc}
+
+
+Definição na linha 16 do arquivo Help\+Dialog.\+h.
+
+\index{Help\+Dialog@{Help\+Dialog}!st\+Title@{st\+Title}}
+\index{st\+Title@{st\+Title}!Help\+Dialog@{Help\+Dialog}}
+\subsubsection[{st\+Title}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Help\+Dialog\+::st\+Title = \char`\"{}m\+\_\+st\+Title\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_help_dialog_abec7e24408174c0d9897ff7e7361ebcb}
+
+
+Definição na linha 15 do arquivo Help\+Dialog.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Help\+Dialog.\+h}\end{DoxyCompactItemize}

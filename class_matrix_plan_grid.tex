@@ -1,0 +1,208 @@
+\section{Refer√™ncia da Classe Matrix\+Plan\+Grid}
+\label{class_matrix_plan_grid}\index{Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}}
+
+
+{\ttfamily \#include $<$Matrix\+Plan\+Grid.\+h$>$}
+
+
+
+Herdeiro de {\bf S\+I\+G\+A\+Grid}.
+
+\subsection*{Tipos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bf G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+A\+L\+L\+\_\+\+T\+O\+\_\+\+L\+I\+N\+E\+A\+R\+F\+IT} = G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+P\+A\+S\+TE + 1, 
+{\bf G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+S\+E\+L\+E\+C\+T\+\_\+\+A\+L\+L\+\_\+\+F\+R\+O\+M\+\_\+\+L\+I\+N\+E\+A\+R\+F\+IT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix\+Plan\+Grid} (wx\+Window $\ast$parent, wx\+Window\+ID id, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=0)
+\item 
+void {\bf on\+Change} (wx\+Grid\+Event \&event)
+\item 
+virtual void {\bf on\+Right\+Up} (wx\+Grid\+Event \&event)
+\item 
+virtual void {\bf on\+Popup\+Menu} (wx\+Command\+Event \&event)
+\item 
+void {\bf select\+All\+To\+Linear\+Fit} (bool set\+Status=true)
+\item 
+void {\bf Change\+Cel\+Value} (int row, int col, int current\+Cell\+Size)
+\item 
+virtual void {\bf paste\+Cell\+Value} ()
+\item 
+void {\bf on\+Select} (wx\+Grid\+Event \&event)
+\item 
+void {\bf update\+Spin\+Value} ()
+\item 
+void {\bf criou\+Coluna\+Extra\+Na\+Matrix} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Point {\bf selected\+Label}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix\+Plan} $\ast$ {\bf m\+\_\+matrix\+Plan}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 8 do arquivo Matrix\+Plan\+Grid.\+h.
+
+
+
+\subsection{Enumera√ß√µes}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{class_matrix_plan_grid_ac02c75c830ae36682a91827c26b9fb0a}
+\begin{Desc}
+\item[Valores de enumera√ß√µes]\par
+\begin{description}
+\index{G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+A\+L\+L\+\_\+\+T\+O\+\_\+\+L\+I\+N\+E\+A\+R\+F\+IT@{G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+A\+L\+L\+\_\+\+T\+O\+\_\+\+L\+I\+N\+E\+A\+R\+F\+IT}!Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}}\index{Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}!G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+A\+L\+L\+\_\+\+T\+O\+\_\+\+L\+I\+N\+E\+A\+R\+F\+IT@{G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+A\+L\+L\+\_\+\+T\+O\+\_\+\+L\+I\+N\+E\+A\+R\+F\+IT}}\item[{\em 
+G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+A\+L\+L\+\_\+\+T\+O\+\_\+\+L\+I\+N\+E\+A\+R\+F\+IT\label{class_matrix_plan_grid_ac02c75c830ae36682a91827c26b9fb0aa5cc134ad6dc5420f5fc07ce3ee7288a9}
+}]\index{G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+S\+E\+L\+E\+C\+T\+\_\+\+A\+L\+L\+\_\+\+F\+R\+O\+M\+\_\+\+L\+I\+N\+E\+A\+R\+F\+IT@{G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+S\+E\+L\+E\+C\+T\+\_\+\+A\+L\+L\+\_\+\+F\+R\+O\+M\+\_\+\+L\+I\+N\+E\+A\+R\+F\+IT}!Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}}\index{Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}!G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+S\+E\+L\+E\+C\+T\+\_\+\+A\+L\+L\+\_\+\+F\+R\+O\+M\+\_\+\+L\+I\+N\+E\+A\+R\+F\+IT@{G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+S\+E\+L\+E\+C\+T\+\_\+\+A\+L\+L\+\_\+\+F\+R\+O\+M\+\_\+\+L\+I\+N\+E\+A\+R\+F\+IT}}\item[{\em 
+G\+R\+I\+D\+\_\+\+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+D\+E\+S\+E\+L\+E\+C\+T\+\_\+\+A\+L\+L\+\_\+\+F\+R\+O\+M\+\_\+\+L\+I\+N\+E\+A\+R\+F\+IT\label{class_matrix_plan_grid_ac02c75c830ae36682a91827c26b9fb0aa503b2413c161892da72b6e7c6038f61f}
+}]\end{description}
+\end{Desc}
+
+
+Defini√ß√£o na linha 18 do arquivo Matrix\+Plan\+Grid.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}!Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}}
+\index{Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}!Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}}
+\subsubsection[{Matrix\+Plan\+Grid(wx\+Window $\ast$parent, wx\+Window\+I\+D id, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=0)}]{\setlength{\rightskip}{0pt plus 5cm}Matrix\+Plan\+Grid\+::\+Matrix\+Plan\+Grid (
+\begin{DoxyParamCaption}
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{wx\+Window\+ID}]{id, }
+\item[{const wx\+Point \&}]{pos = {\ttfamily wxDefaultPosition}, }
+\item[{const wx\+Size \&}]{size = {\ttfamily wxDefaultSize}, }
+\item[{long}]{style = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_matrix_plan_grid_a7362457cac1807b9b9ecf3d15658f358}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em parent} & Pai do frame \\
+\hline
+{\em id} & Identificador da janela \\
+\hline
+{\em pos} & PosiÁ„o inicial da janela \\
+\hline
+{\em size} & Tamanho inicial da janela \\
+\hline
+{\em style} & Estilo da janela \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{M√©todos}
+\index{Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}!Change\+Cel\+Value@{Change\+Cel\+Value}}
+\index{Change\+Cel\+Value@{Change\+Cel\+Value}!Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}}
+\subsubsection[{Change\+Cel\+Value(int row, int col, int current\+Cell\+Size)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+Grid\+::\+Change\+Cel\+Value (
+\begin{DoxyParamCaption}
+\item[{int}]{row, }
+\item[{int}]{col, }
+\item[{int}]{current\+Cell\+Size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_matrix_plan_grid_a547602837cb5c2bbcf4f6de72c7cf3d2}
+
+
+Reimplementa√ß√£o de {\bf S\+I\+G\+A\+Grid} \doxyref{}{pag.}{class_s_i_g_a_grid_a56cfe84868d6b4eedcec9e5afe35d396}.
+
+\index{Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}!criou\+Coluna\+Extra\+Na\+Matrix@{criou\+Coluna\+Extra\+Na\+Matrix}}
+\index{criou\+Coluna\+Extra\+Na\+Matrix@{criou\+Coluna\+Extra\+Na\+Matrix}!Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}}
+\subsubsection[{criou\+Coluna\+Extra\+Na\+Matrix()}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+Grid\+::criou\+Coluna\+Extra\+Na\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_matrix_plan_grid_a51c879f71ef5de55cd8c87cb9956b75b}
+\index{Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}!on\+Change@{on\+Change}}
+\index{on\+Change@{on\+Change}!Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}}
+\subsubsection[{on\+Change(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+Grid\+::on\+Change (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_matrix_plan_grid_ad4e9fbfaa0388c3e981f108218e2230c}
+Evento de mudanÁa de grid 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}!on\+Popup\+Menu@{on\+Popup\+Menu}}
+\index{on\+Popup\+Menu@{on\+Popup\+Menu}!Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}}
+\subsubsection[{on\+Popup\+Menu(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Matrix\+Plan\+Grid\+::on\+Popup\+Menu (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_matrix_plan_grid_ae7127e96793c676d1f48ec42f7170123}
+MÈtodo de sobrescrita. Adiciona mais um tratamento de aÁ„o de click de menu\+: SeleÁ„o/\+DeseleÁ„o de todas as linhas para ajuste linear 
+
+Reimplementa√ß√£o de {\bf S\+I\+G\+A\+Grid} \doxyref{}{pag.}{class_s_i_g_a_grid_a628bc26cc8a7ebf5fd090b56e84f3072}.
+
+\index{Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}!on\+Right\+Up@{on\+Right\+Up}}
+\index{on\+Right\+Up@{on\+Right\+Up}!Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}}
+\subsubsection[{on\+Right\+Up(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Matrix\+Plan\+Grid\+::on\+Right\+Up (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_matrix_plan_grid_a3e632991806d3d088777995a53ccf5db}
+MÈtodo de sobrescrita. Adiciona mais uma opÁ„o ao menu do bot„o direito\+: Selecionar/\+Deselecionar todas as linhas para ajuste linear 
+
+Reimplementa√ß√£o de {\bf S\+I\+G\+A\+Grid} \doxyref{}{pag.}{class_s_i_g_a_grid_af9afdaa66f784f2a9e203cd9f9c0f5a2}.
+
+\index{Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}!on\+Select@{on\+Select}}
+\index{on\+Select@{on\+Select}!Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}}
+\subsubsection[{on\+Select(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+Grid\+::on\+Select (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_matrix_plan_grid_a1f495333e13ffef40ef785d81522269d}
+\index{Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}!paste\+Cell\+Value@{paste\+Cell\+Value}}
+\index{paste\+Cell\+Value@{paste\+Cell\+Value}!Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}}
+\subsubsection[{paste\+Cell\+Value()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Matrix\+Plan\+Grid\+::paste\+Cell\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_matrix_plan_grid_a6764c1f48bd58e9b116c2b0ceea34be2}
+\index{Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}!select\+All\+To\+Linear\+Fit@{select\+All\+To\+Linear\+Fit}}
+\index{select\+All\+To\+Linear\+Fit@{select\+All\+To\+Linear\+Fit}!Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}}
+\subsubsection[{select\+All\+To\+Linear\+Fit(bool set\+Status=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+Grid\+::select\+All\+To\+Linear\+Fit (
+\begin{DoxyParamCaption}
+\item[{bool}]{set\+Status = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_matrix_plan_grid_a52e9366e6dd4846eb6543ceb0f4db096}
+MÈtodo que seleciona ou deseleciona todas as linhas da grid para ajuste linear \index{Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}!update\+Spin\+Value@{update\+Spin\+Value}}
+\index{update\+Spin\+Value@{update\+Spin\+Value}!Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}}
+\subsubsection[{update\+Spin\+Value()}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+Grid\+::update\+Spin\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_matrix_plan_grid_af73377e6d532beec88490aed97ef9ec3}
+ajusta o valor do wx\+Spin\+Ctrl considerando o n˙mero de linhas do Siga\+Grid 
+
+\subsection{Atributos}
+\index{Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}!m\+\_\+matrix\+Plan@{m\+\_\+matrix\+Plan}}
+\index{m\+\_\+matrix\+Plan@{m\+\_\+matrix\+Plan}!Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}}
+\subsubsection[{m\+\_\+matrix\+Plan}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix\+Plan}$\ast$ Matrix\+Plan\+Grid\+::m\+\_\+matrix\+Plan\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_grid_a51f490d2b40aae29fb5a8eec2a5efd73}
+Aponta para a planilha 
+
+Defini√ß√£o na linha 14 do arquivo Matrix\+Plan\+Grid.\+h.
+
+\index{Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}!selected\+Label@{selected\+Label}}
+\index{selected\+Label@{selected\+Label}!Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}}
+\subsubsection[{selected\+Label}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point Matrix\+Plan\+Grid\+::selected\+Label}\label{class_matrix_plan_grid_a8a6e0a30270db4df0ff7361290a5cc12}
+
+
+Defini√ß√£o na linha 26 do arquivo Matrix\+Plan\+Grid.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix\+Plan\+Grid.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,159 @@
+\section{Referência da Classe Opt\+Hydrology\+Interface}
+\label{class_opt_hydrology_interface}\index{Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}}
+
+
+{\ttfamily \#include $<$Opt\+Hydrology\+Interface.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Hydrology\+Interface} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent})
+\item 
+{\bf $\sim$\+Opt\+Hydrology\+Interface} ()
+\item 
+void {\bf on\+Choice\+Model} (wx\+Choicebook\+Event \&event)
+\item 
+void {\bf on\+Changing\+Time\+Interval} ({\bf Date\+::\+Time\+Interval} time\+Interval)
+\item 
+int {\bf get\+Model\+Id} (wx\+String name)
+\item 
+int {\bf get\+Model\+Idby\+Choice} (wx\+String name)
+\item 
+void {\bf set\+Visible\+Model} (wx\+String name, bool show)
+\item 
+void {\bf recreate\+Interface\+Model} (wx\+String name)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ {\bf opt\+Model\+Type}, {\bf Component\+Interface} $\ast$ $>$ {\bf model\+Inter}
+\item 
+wx\+Choicebook $\ast$ {\bf cb\+Model}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 22 do arquivo Opt\+Hydrology\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}!Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}}
+\index{Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}!Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}}
+\subsubsection[{Opt\+Hydrology\+Interface(wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Opt\+Hydrology\+Interface\+::\+Opt\+Hydrology\+Interface (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_opt_hydrology_interface_a1703eabb71da66b080baf693ec3cce9b}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & Janela onde ser� inserido \\
+\hline
+{\em parent} & componente ao qual pertence \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}!````~Opt\+Hydrology\+Interface@{$\sim$\+Opt\+Hydrology\+Interface}}
+\index{````~Opt\+Hydrology\+Interface@{$\sim$\+Opt\+Hydrology\+Interface}!Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}}
+\subsubsection[{$\sim$\+Opt\+Hydrology\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}Opt\+Hydrology\+Interface\+::$\sim$\+Opt\+Hydrology\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_opt_hydrology_interface_ab1adf928fd5643b41de32dd650e6d5a3}
+Destrutor 
+
+\subsection{Métodos}
+\index{Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}!get\+Model\+Id@{get\+Model\+Id}}
+\index{get\+Model\+Id@{get\+Model\+Id}!Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}}
+\subsubsection[{get\+Model\+Id(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}int Opt\+Hydrology\+Interface\+::get\+Model\+Id (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_opt_hydrology_interface_a3fe99e99c196fa167ceb3a76a1c2f395}
+Retorna o identificador pelo nome 
+\begin{DoxyParams}{Parâmetros}
+{\em name} & Nome \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}!get\+Model\+Idby\+Choice@{get\+Model\+Idby\+Choice}}
+\index{get\+Model\+Idby\+Choice@{get\+Model\+Idby\+Choice}!Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}}
+\subsubsection[{get\+Model\+Idby\+Choice(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}int Opt\+Hydrology\+Interface\+::get\+Model\+Idby\+Choice (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_opt_hydrology_interface_a6bca5c8596e23b78d22e10d2d2282016}
+Retorna o identificador pelo nome no choicebook 
+\begin{DoxyParams}{Parâmetros}
+{\em name} & Nome \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}!on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}}
+\index{on\+Changing\+Time\+Interval@{on\+Changing\+Time\+Interval}!Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}}
+\subsubsection[{on\+Changing\+Time\+Interval(\+Date\+::\+Time\+Interval time\+Interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Hydrology\+Interface\+::on\+Changing\+Time\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval}
+\end{DoxyParamCaption}
+)}\label{class_opt_hydrology_interface_ac9a635d68fc8043c6c2e2bb301e95200}
+Evento chamado quando o sistema muda de intervalo de tempo O modulo adapta os modelos de acordo com o intervalo de tempo definido \index{Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}!on\+Choice\+Model@{on\+Choice\+Model}}
+\index{on\+Choice\+Model@{on\+Choice\+Model}!Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}}
+\subsubsection[{on\+Choice\+Model(wx\+Choicebook\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Hydrology\+Interface\+::on\+Choice\+Model (
+\begin{DoxyParamCaption}
+\item[{wx\+Choicebook\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_opt_hydrology_interface_a2b1724e8fb54488769b34743eef0d794}
+Evento de escolha de modelo \index{Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}!recreate\+Interface\+Model@{recreate\+Interface\+Model}}
+\index{recreate\+Interface\+Model@{recreate\+Interface\+Model}!Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}}
+\subsubsection[{recreate\+Interface\+Model(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Hydrology\+Interface\+::recreate\+Interface\+Model (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_opt_hydrology_interface_a1e581408c17ef2859133020338cd1672}
+Recria a interface 
+\begin{DoxyParams}{Parâmetros}
+{\em name} & Nome do modelo \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}!set\+Visible\+Model@{set\+Visible\+Model}}
+\index{set\+Visible\+Model@{set\+Visible\+Model}!Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}}
+\subsubsection[{set\+Visible\+Model(wx\+String name, bool show)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Hydrology\+Interface\+::set\+Visible\+Model (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name, }
+\item[{bool}]{show}
+\end{DoxyParamCaption}
+)}\label{class_opt_hydrology_interface_a82b11773c6a658ee09bf6fef4b10fcdc}
+Abilita/desabilita a visualiza��o de um modelo 
+\begin{DoxyParams}{Parâmetros}
+{\em name} & Nome do modelo \\
+\hline
+{\em show} & Flag para mostrar/esconder \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}!cb\+Model@{cb\+Model}}
+\index{cb\+Model@{cb\+Model}!Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}}
+\subsubsection[{cb\+Model}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choicebook$\ast$ Opt\+Hydrology\+Interface\+::cb\+Model}\label{class_opt_hydrology_interface_a7c9fa4c487c272ba11d3d121ffd07f4e}
+Choicebook comos modelos 
+
+Definição na linha 31 do arquivo Opt\+Hydrology\+Interface.\+h.
+
+\index{Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}!model\+Inter@{model\+Inter}}
+\index{model\+Inter@{model\+Inter}!Opt\+Hydrology\+Interface@{Opt\+Hydrology\+Interface}}
+\subsubsection[{model\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf opt\+Model\+Type},{\bf Component\+Interface}$\ast$$>$ Opt\+Hydrology\+Interface\+::model\+Inter}\label{class_opt_hydrology_interface_abe26377bb46ad159f3f9e21caeb50ff4}
+Interface para o modelo 
+
+Definição na linha 27 do arquivo Opt\+Hydrology\+Interface.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Hydrology\+Interface.\+h}\end{DoxyCompactItemize}

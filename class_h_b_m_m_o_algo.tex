@@ -1,0 +1,245 @@
+\section{Referência da Classe H\+B\+M\+M\+O\+Algo}
+\label{class_h_b_m_m_o_algo}\index{H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}}
+
+
+{\ttfamily \#include $<$H\+B\+M\+M\+O\+Algo.\+h$>$}
+
+
+
+Herdeiro de {\bf Opt\+Algo}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf H\+B\+M\+M\+O\+Algo} ({\bf Node} $\ast${\bf node})
+\item 
+virtual {\bf $\sim$\+H\+B\+M\+M\+O\+Algo} ()
+\item 
+virtual bool {\bf run} ()
+\item 
+{\bf Matrix} {\bf par\+Rank} ({\bf Matrix} fhive, int n\+Rank)
+\item 
+void {\bf select\+Queens} ({\bf Matrix} \&h, {\bf Matrix} \&fH, {\bf Matrix} \&r, {\bf Matrix} \&Par, {\bf Matrix} \&f\+Par, {\bf Matrix} \&q, {\bf Matrix} \&fQ)
+\item 
+void {\bf mating\+Flight} ({\bf Matrix} \&q, {\bf Matrix} \&fQ, {\bf Matrix} \&d, {\bf Matrix} \&fD, {\bf Matrix} \&spmt, {\bf Matrix} \&f\+Spmt)
+\item 
+void {\bf simulated\+Annealing\+MO} ({\bf Matrix} \&q, {\bf Matrix} \&fQ, {\bf Matrix} \&d, {\bf Matrix} \&fD, {\bf Matrix} \&sel\+Drone, {\bf Matrix} \&sel\+F\+Drone)
+\item 
+void {\bf pareto} ({\bf Matrix} \&{\bf par}, {\bf Matrix} \&f\+Par, {\bf Matrix} \&bees, {\bf Matrix} \&fbees)
+\item 
+vector$<$ int $>$ {\bf randperm} (int n)
+\item 
+{\bf Matrix} {\bf Arithmetic\+Crossover} (int n, {\bf Matrix} \&q, {\bf Matrix} \&spmt)
+\item 
+{\bf Matrix} {\bf Blend\+Crossover} (int n, {\bf Matrix} \&q, {\bf Matrix} \&spmt)
+\item 
+vector$<$ int $>$ {\bf kmeans} ({\bf Matrix} \&f)
+\item 
+virtual bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf H\+B\+M\+M\+O\+Var} $\ast$ {\bf var}
+\item 
+{\bf H\+B\+M\+M\+O\+Par} $\ast$ {\bf par}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+possible 
+
+Definição na linha 17 do arquivo H\+B\+M\+M\+O\+Algo.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}!H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}}
+\index{H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}!H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}}
+\subsubsection[{H\+B\+M\+M\+O\+Algo(\+Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}H\+B\+M\+M\+O\+Algo\+::\+H\+B\+M\+M\+O\+Algo (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_h_b_m_m_o_algo_ab4a43c2cd759fef942572506f7e48271}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em node} & N� \\
+\hline
+\end{DoxyParams}
+\index{H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}!````~H\+B\+M\+M\+O\+Algo@{$\sim$\+H\+B\+M\+M\+O\+Algo}}
+\index{````~H\+B\+M\+M\+O\+Algo@{$\sim$\+H\+B\+M\+M\+O\+Algo}!H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}}
+\subsubsection[{$\sim$\+H\+B\+M\+M\+O\+Algo()}]{\setlength{\rightskip}{0pt plus 5cm}virtual H\+B\+M\+M\+O\+Algo\+::$\sim$\+H\+B\+M\+M\+O\+Algo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_h_b_m_m_o_algo_a658350acbe68d0cd4a31942f99644035}
+Destrutor 
+
+\subsection{Métodos}
+\index{H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}!Arithmetic\+Crossover@{Arithmetic\+Crossover}}
+\index{Arithmetic\+Crossover@{Arithmetic\+Crossover}!H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}}
+\subsubsection[{Arithmetic\+Crossover(int n, Matrix \&q, Matrix \&spmt)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} H\+B\+M\+M\+O\+Algo\+::\+Arithmetic\+Crossover (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{{\bf Matrix} \&}]{q, }
+\item[{{\bf Matrix} \&}]{spmt}
+\end{DoxyParamCaption}
+)}\label{class_h_b_m_m_o_algo_ae173090cd9461a1cdc7790bd887fe965}
+Cruzamento Arithmetic\+Crossover \index{H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}!Blend\+Crossover@{Blend\+Crossover}}
+\index{Blend\+Crossover@{Blend\+Crossover}!H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}}
+\subsubsection[{Blend\+Crossover(int n, Matrix \&q, Matrix \&spmt)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} H\+B\+M\+M\+O\+Algo\+::\+Blend\+Crossover (
+\begin{DoxyParamCaption}
+\item[{int}]{n, }
+\item[{{\bf Matrix} \&}]{q, }
+\item[{{\bf Matrix} \&}]{spmt}
+\end{DoxyParamCaption}
+)}\label{class_h_b_m_m_o_algo_a1f788846439b591670077225aa033f51}
+Cruzamento Blend\+Crossover \index{H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool H\+B\+M\+M\+O\+Algo\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_h_b_m_m_o_algo_a829d611f6939182e74e8851b3bbf48aa}
+Avalia se todas as informa��es importantes para o algoritmo formam informadas 
+
+Implementa {\bf Opt\+Algo} \doxyref{}{pag.}{class_opt_algo_aabc7e1153b2660f512d8edbb70d57330}.
+
+\index{H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}!kmeans@{kmeans}}
+\index{kmeans@{kmeans}!H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}}
+\subsubsection[{kmeans(\+Matrix \&f)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ H\+B\+M\+M\+O\+Algo\+::kmeans (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{f}
+\end{DoxyParamCaption}
+)}\label{class_h_b_m_m_o_algo_a34ad5aadda45a520f21d1ec4d90a6e23}
+K-\/means Algorithm \index{H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}!mating\+Flight@{mating\+Flight}}
+\index{mating\+Flight@{mating\+Flight}!H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}}
+\subsubsection[{mating\+Flight(\+Matrix \&q, Matrix \&f\+Q, Matrix \&d, Matrix \&f\+D, Matrix \&spmt, Matrix \&f\+Spmt)}]{\setlength{\rightskip}{0pt plus 5cm}void H\+B\+M\+M\+O\+Algo\+::mating\+Flight (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{q, }
+\item[{{\bf Matrix} \&}]{fQ, }
+\item[{{\bf Matrix} \&}]{d, }
+\item[{{\bf Matrix} \&}]{fD, }
+\item[{{\bf Matrix} \&}]{spmt, }
+\item[{{\bf Matrix} \&}]{f\+Spmt}
+\end{DoxyParamCaption}
+)}\label{class_h_b_m_m_o_algo_a5521efc43d4c2ea8ca79a30b9c426eb6}
+V�o de acasalemento \index{H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void H\+B\+M\+M\+O\+Algo\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_h_b_m_m_o_algo_a0cedb19e2e107f3a063d98c89263101e}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Opt\+Algo} \doxyref{}{pag.}{class_opt_algo_a09e7258470be1fa588994a69269e68eb}.
+
+\index{H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void H\+B\+M\+M\+O\+Algo\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_h_b_m_m_o_algo_a9cac306996fefe2b5092f02c71bdc462}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Opt\+Algo} \doxyref{}{pag.}{class_opt_algo_a91fbc45d16961652337fff0c02eb0bdd}.
+
+\index{H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}!pareto@{pareto}}
+\index{pareto@{pareto}!H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}}
+\subsubsection[{pareto(\+Matrix \&par, Matrix \&f\+Par, Matrix \&bees, Matrix \&fbees)}]{\setlength{\rightskip}{0pt plus 5cm}void H\+B\+M\+M\+O\+Algo\+::pareto (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{par, }
+\item[{{\bf Matrix} \&}]{f\+Par, }
+\item[{{\bf Matrix} \&}]{bees, }
+\item[{{\bf Matrix} \&}]{fbees}
+\end{DoxyParamCaption}
+)}\label{class_h_b_m_m_o_algo_ae92d63807e6538e7e8a2ec8df7d31371}
+Compose Pareto Front \index{H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}!par\+Rank@{par\+Rank}}
+\index{par\+Rank@{par\+Rank}!H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}}
+\subsubsection[{par\+Rank(\+Matrix fhive, int n\+Rank)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} H\+B\+M\+M\+O\+Algo\+::par\+Rank (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{fhive, }
+\item[{int}]{n\+Rank}
+\end{DoxyParamCaption}
+)}\label{class_h_b_m_m_o_algo_a92482b8beec37583ffce240fe3170401}
+Performs Pareto Ranking of population of points having multiple objectives \index{H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}!randperm@{randperm}}
+\index{randperm@{randperm}!H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}}
+\subsubsection[{randperm(int n)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ H\+B\+M\+M\+O\+Algo\+::randperm (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}\label{class_h_b_m_m_o_algo_a25dc55600f92e50e6098eaba757027c2}
+randperm \index{H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}!run@{run}}
+\index{run@{run}!H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool H\+B\+M\+M\+O\+Algo\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_h_b_m_m_o_algo_abf451f3631bc0f92f9b810a39d982471}
+Executar o algoritmo H\+B\+M\+MO 
+
+Implementa {\bf Opt\+Algo} \doxyref{}{pag.}{class_opt_algo_aee3a5a4a437ef1b60537456ca46ec8ee}.
+
+\index{H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}!select\+Queens@{select\+Queens}}
+\index{select\+Queens@{select\+Queens}!H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}}
+\subsubsection[{select\+Queens(\+Matrix \&h, Matrix \&f\+H, Matrix \&r, Matrix \&\+Par, Matrix \&f\+Par, Matrix \&q, Matrix \&f\+Q)}]{\setlength{\rightskip}{0pt plus 5cm}void H\+B\+M\+M\+O\+Algo\+::select\+Queens (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{h, }
+\item[{{\bf Matrix} \&}]{fH, }
+\item[{{\bf Matrix} \&}]{r, }
+\item[{{\bf Matrix} \&}]{Par, }
+\item[{{\bf Matrix} \&}]{f\+Par, }
+\item[{{\bf Matrix} \&}]{q, }
+\item[{{\bf Matrix} \&}]{fQ}
+\end{DoxyParamCaption}
+)}\label{class_h_b_m_m_o_algo_ad96cf0c545dc55d5a18d5ca18652dc45}
+Sele��o das rainhas \index{H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}!simulated\+Annealing\+MO@{simulated\+Annealing\+MO}}
+\index{simulated\+Annealing\+MO@{simulated\+Annealing\+MO}!H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}}
+\subsubsection[{simulated\+Annealing\+M\+O(\+Matrix \&q, Matrix \&f\+Q, Matrix \&d, Matrix \&f\+D, Matrix \&sel\+Drone, Matrix \&sel\+F\+Drone)}]{\setlength{\rightskip}{0pt plus 5cm}void H\+B\+M\+M\+O\+Algo\+::simulated\+Annealing\+MO (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{q, }
+\item[{{\bf Matrix} \&}]{fQ, }
+\item[{{\bf Matrix} \&}]{d, }
+\item[{{\bf Matrix} \&}]{fD, }
+\item[{{\bf Matrix} \&}]{sel\+Drone, }
+\item[{{\bf Matrix} \&}]{sel\+F\+Drone}
+\end{DoxyParamCaption}
+)}\label{class_h_b_m_m_o_algo_af4a683549cb37c3cd2772a8aaca22278}
+Simulated Annealing 
+
+\subsection{Atributos}
+\index{H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}!par@{par}}
+\index{par@{par}!H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}}
+\subsubsection[{par}]{\setlength{\rightskip}{0pt plus 5cm}{\bf H\+B\+M\+M\+O\+Par}$\ast$ H\+B\+M\+M\+O\+Algo\+::par}\label{class_h_b_m_m_o_algo_a64597223fddbedba6e29afcd3e0871f3}
+Ponteiro para Par�metros 
+
+Definição na linha 27 do arquivo H\+B\+M\+M\+O\+Algo.\+h.
+
+\index{H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}!var@{var}}
+\index{var@{var}!H\+B\+M\+M\+O\+Algo@{H\+B\+M\+M\+O\+Algo}}
+\subsubsection[{var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf H\+B\+M\+M\+O\+Var}$\ast$ H\+B\+M\+M\+O\+Algo\+::var}\label{class_h_b_m_m_o_algo_abc602bb26ff5327944ae64f47d480f57}
+Ponteiro para Vari�veis 
+
+Definição na linha 23 do arquivo H\+B\+M\+M\+O\+Algo.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf H\+B\+M\+M\+O\+Algo.\+h}\end{DoxyCompactItemize}

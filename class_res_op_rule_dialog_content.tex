@@ -1,0 +1,263 @@
+\section{Referência da Classe Res\+Op\+Rule\+Dialog\+Content}
+\label{class_res_op_rule_dialog_content}\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Rule\+Dialog\+Content.\+h$>$}
+
+
+
+Herdeiro de {\bf S\+I\+G\+A\+Dialog\+Content} e {\bf S\+I\+G\+A\+Dialog\+Content}.
+
+
+
+Superclasse de {\bf Const\+Release\+Dialog\+Content}, {\bf Const\+Release\+Dialog\+Content}, {\bf Demand\+Release\+Dialog\+Content}, {\bf One\+Priority\+Dialog\+Content}, {\bf Periodic\+Release\+Dialog\+Content}, {\bf Periodic\+Release\+Dialog\+Content}, {\bf Vol\+Dep\+Release\+Dialog\+Content}, {\bf Vol\+Dep\+Release\+Dialog\+Content} e {\bf Zones\+Priority\+Dialog\+Content}.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bf I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+EL} = 10, 
+{\bf I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+EL}, 
+{\bf I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+L\+NK}, 
+{\bf I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+R\+EL}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Rule\+Dialog\+Content} ({\bf Res\+Op\+Rule} $\ast${\bf rule}, {\bf S\+I\+G\+A\+Dialog} $\ast$dialog)
+\item 
+{\bf $\sim$\+Res\+Op\+Rule\+Dialog\+Content} ()
+\item 
+void {\bf set\+Info} ()
+\item 
+void {\bf on\+Choice\+Link} (wx\+Command\+Event \&event)
+\item 
+virtual void {\bf on\+Change\+Grid} (wx\+Grid\+Event \&event)=0
+\item 
+{\bf Res\+Op\+Rule\+Dialog\+Content} ({\bf Res\+Op\+Rule} $\ast${\bf rule}, {\bf S\+I\+G\+A\+Dialog} $\ast$dialog)
+\item 
+{\bf $\sim$\+Res\+Op\+Rule\+Dialog\+Content} ()
+\item 
+virtual void {\bf set\+Info} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Panel $\ast$ {\bf p\+Rel}
+\item 
+wx\+Sizer $\ast$ {\bf bs\+Rel}
+\item 
+wx\+Sizer $\ast$ {\bf bs\+Alloc}
+\item 
+{\bf S\+I\+G\+A\+Grid} $\ast$ {\bf grid\+Allocation}
+\item 
+wx\+Check\+List\+Box $\ast$ {\bf clb\+Links}
+\item 
+vector$<$ wx\+String $>$ {\bf checked\+Link}
+\item 
+wx\+Notebook $\ast$ {\bf note}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Rule} $\ast$ {\bf rule}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+Identificares de para elementos da interface do cont�udo da caixa de dialogo 
+
+Definição na linha 23 do arquivo Rule/\+Res\+Op\+Rule\+Dialog\+Content.\+h.
+
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{class_res_op_rule_dialog_content_a1a6c32affc4db66977d11d495b9c19ed}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+EL@{I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+EL}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+EL@{I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+EL}}\item[{\em 
+I\+D\+\_\+\+I\+N\+S\+E\+R\+T\+\_\+\+R\+EL\label{class_res_op_rule_dialog_content_a1a6c32affc4db66977d11d495b9c19edacae864d408720a08ac527601473b8243}
+}]\index{I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+EL@{I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+EL}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+EL@{I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+EL}}\item[{\em 
+I\+D\+\_\+\+R\+E\+M\+O\+V\+E\+\_\+\+R\+EL\label{class_res_op_rule_dialog_content_a1a6c32affc4db66977d11d495b9c19eda78dfbedd3a522b20b803310659164db5}
+}]\index{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+L\+NK@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+L\+NK}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+L\+NK@{I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+L\+NK}}\item[{\em 
+I\+D\+\_\+\+C\+H\+O\+I\+C\+E\+\_\+\+L\+NK\label{class_res_op_rule_dialog_content_a1a6c32affc4db66977d11d495b9c19edab5bcf7878484bb838f8cf5ab0c3ca11b}
+}]\index{I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+R\+EL@{I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+R\+EL}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+R\+EL@{I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+R\+EL}}\item[{\em 
+I\+D\+\_\+\+G\+R\+I\+D\+\_\+\+R\+EL\label{class_res_op_rule_dialog_content_a1a6c32affc4db66977d11d495b9c19eda34b254b7adf65289d1854c09c59e60b9}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 28 do arquivo /\+Rule/\+Res\+Op\+Rule\+Dialog\+Content.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}
+\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}
+\subsubsection[{Res\+Op\+Rule\+Dialog\+Content(\+Res\+Op\+Rule $\ast$rule, S\+I\+G\+A\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Rule\+Dialog\+Content\+::\+Res\+Op\+Rule\+Dialog\+Content (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Rule} $\ast$}]{rule, }
+\item[{{\bf S\+I\+G\+A\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_res_op_rule_dialog_content_a05213ef95fa930e7c72cea1877c57946}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em rule} & Regra de opera��o \\
+\hline
+{\em Caixa} & de dialogo a que pertence \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!````~Res\+Op\+Rule\+Dialog\+Content@{$\sim$\+Res\+Op\+Rule\+Dialog\+Content}}
+\index{````~Res\+Op\+Rule\+Dialog\+Content@{$\sim$\+Res\+Op\+Rule\+Dialog\+Content}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}
+\subsubsection[{$\sim$\+Res\+Op\+Rule\+Dialog\+Content()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Rule\+Dialog\+Content\+::$\sim$\+Res\+Op\+Rule\+Dialog\+Content (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_op_rule_dialog_content_a87332141f9cea688cf9f71eb2e2a9161}
+Destrutor 
+
+Definição na linha 68 do arquivo Rule/\+Res\+Op\+Rule\+Dialog\+Content.\+h.
+
+\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}
+\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}
+\subsubsection[{Res\+Op\+Rule\+Dialog\+Content(\+Res\+Op\+Rule $\ast$rule, S\+I\+G\+A\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Rule\+Dialog\+Content\+::\+Res\+Op\+Rule\+Dialog\+Content (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Rule} $\ast$}]{rule, }
+\item[{{\bf S\+I\+G\+A\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_res_op_rule_dialog_content_a05213ef95fa930e7c72cea1877c57946}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em rule} & Regra de opera��o \\
+\hline
+{\em Caixa} & de dialogo a que pertence \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!````~Res\+Op\+Rule\+Dialog\+Content@{$\sim$\+Res\+Op\+Rule\+Dialog\+Content}}
+\index{````~Res\+Op\+Rule\+Dialog\+Content@{$\sim$\+Res\+Op\+Rule\+Dialog\+Content}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}
+\subsubsection[{$\sim$\+Res\+Op\+Rule\+Dialog\+Content()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Rule\+Dialog\+Content\+::$\sim$\+Res\+Op\+Rule\+Dialog\+Content (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_op_rule_dialog_content_a87332141f9cea688cf9f71eb2e2a9161}
+Destrutor 
+
+Definição na linha 54 do arquivo /\+Rule/\+Res\+Op\+Rule\+Dialog\+Content.\+h.
+
+
+
+\subsection{Métodos}
+\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!on\+Change\+Grid@{on\+Change\+Grid}}
+\index{on\+Change\+Grid@{on\+Change\+Grid}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}
+\subsubsection[{on\+Change\+Grid(wx\+Grid\+Event \&event)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+Dialog\+Content\+::on\+Change\+Grid (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_dialog_content_a62a6dfd063fc5ddb7ea9af463300e8f1}
+Evento chamado quando ocorre modifi��o nos dados da libera��o ou aloca��o. 
+
+Implementado por {\bf Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_vol_dep_release_dialog_content_ab84a4db1f6c0cf3ed87eb9c11998722f}, {\bf Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_vol_dep_release_dialog_content_ab84a4db1f6c0cf3ed87eb9c11998722f}, {\bf Const\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_const_release_dialog_content_a2af4c6b2d4233ff5db877bee12163e56}, {\bf Opt\+Periodic\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_periodic_release_dialog_content_a02d1651c9dfa418403d1581a14ec6489}, {\bf Periodic\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_periodic_release_dialog_content_aedfa378ac050c40c171212d3b157f7b7} e {\bf Periodic\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_periodic_release_dialog_content_aedfa378ac050c40c171212d3b157f7b7}.
+
+\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!on\+Choice\+Link@{on\+Choice\+Link}}
+\index{on\+Choice\+Link@{on\+Choice\+Link}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}
+\subsubsection[{on\+Choice\+Link(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Rule\+Dialog\+Content\+::on\+Choice\+Link (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_res_op_rule_dialog_content_a7403a7f3209da18208d3da5a9aa0b329}
+Insere ou remove libera��es ou trechos \index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}
+\subsubsection[{set\+Info()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Rule\+Dialog\+Content\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_rule_dialog_content_ae91ac03d1b5448e8c3c09d59029d8e0c}
+Atualiza a interface 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_aced556e5caf584b7335135d337895154}.
+
+
+
+Implementado por {\bf Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_vol_dep_release_dialog_content_a0d523ea0cb85f62206d05f0e1924f408}, {\bf Zones\+Priority\+Dialog\+Content} \doxyref{}{pag.}{class_zones_priority_dialog_content_ad5878f3560a9d9fbad60fb1673fcb392}, {\bf Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_vol_dep_release_dialog_content_af6e69e8269dd08979c968d2b4fea4056}, {\bf Opt\+Const\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_const_release_dialog_content_a17f45317d10e672463f7e737352dd333}, {\bf Const\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_const_release_dialog_content_a18c98a3dee6d681cbf732c7695329102}, {\bf Const\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_const_release_dialog_content_a18c98a3dee6d681cbf732c7695329102}, {\bf Demand\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_demand_release_dialog_content_a1362ff17bf705ee9aa3063c31dcf5779}, {\bf One\+Priority\+Dialog\+Content} \doxyref{}{pag.}{class_one_priority_dialog_content_a43f9c6844b0d27d5f0a462a048997a6a}, {\bf Opt\+Periodic\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_periodic_release_dialog_content_a46769c6a4c8007902180c2c5246a4c86}, {\bf Opt\+Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_vol_dep_release_dialog_content_abc00841fc1aa1350a438d72138800f7b}, {\bf Periodic\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_periodic_release_dialog_content_a0a22e0f0cdd0cf7353b186221f111668} e {\bf Periodic\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_periodic_release_dialog_content_a0a22e0f0cdd0cf7353b186221f111668}.
+
+\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Rule\+Dialog\+Content\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_rule_dialog_content_a836a256a089fd38f217bcf220c037d3a}
+Atualiza a interface 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_aced556e5caf584b7335135d337895154}.
+
+
+
+Reimplementado por {\bf Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_vol_dep_release_dialog_content_a0d523ea0cb85f62206d05f0e1924f408}, {\bf Zones\+Priority\+Dialog\+Content} \doxyref{}{pag.}{class_zones_priority_dialog_content_ad5878f3560a9d9fbad60fb1673fcb392}, {\bf Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_vol_dep_release_dialog_content_af6e69e8269dd08979c968d2b4fea4056}, {\bf Opt\+Const\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_const_release_dialog_content_a17f45317d10e672463f7e737352dd333}, {\bf Const\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_const_release_dialog_content_a18c98a3dee6d681cbf732c7695329102}, {\bf Demand\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_demand_release_dialog_content_a1362ff17bf705ee9aa3063c31dcf5779}, {\bf One\+Priority\+Dialog\+Content} \doxyref{}{pag.}{class_one_priority_dialog_content_a43f9c6844b0d27d5f0a462a048997a6a}, {\bf Opt\+Periodic\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_periodic_release_dialog_content_a46769c6a4c8007902180c2c5246a4c86}, {\bf Opt\+Vol\+Dep\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_opt_vol_dep_release_dialog_content_abc00841fc1aa1350a438d72138800f7b} e {\bf Periodic\+Release\+Dialog\+Content} \doxyref{}{pag.}{class_periodic_release_dialog_content_a0a22e0f0cdd0cf7353b186221f111668}.
+
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!bs\+Alloc@{bs\+Alloc}}
+\index{bs\+Alloc@{bs\+Alloc}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}
+\subsubsection[{bs\+Alloc}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Res\+Op\+Rule\+Dialog\+Content\+::bs\+Alloc}\label{class_res_op_rule_dialog_content_ab4345e0464a4ef425d16800bf944ba27}
+
+
+Definição na linha 40 do arquivo Rule/\+Res\+Op\+Rule\+Dialog\+Content.\+h.
+
+\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!bs\+Rel@{bs\+Rel}}
+\index{bs\+Rel@{bs\+Rel}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}
+\subsubsection[{bs\+Rel}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Res\+Op\+Rule\+Dialog\+Content\+::bs\+Rel}\label{class_res_op_rule_dialog_content_a8109ff83f6f43d7901a15266e2bf17d1}
+Sizers para ... 
+
+Definição na linha 40 do arquivo Rule/\+Res\+Op\+Rule\+Dialog\+Content.\+h.
+
+\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!checked\+Link@{checked\+Link}}
+\index{checked\+Link@{checked\+Link}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}
+\subsubsection[{checked\+Link}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$wx\+String$>$ Res\+Op\+Rule\+Dialog\+Content\+::checked\+Link}\label{class_res_op_rule_dialog_content_a81680c2cb43bb7e024fa8a834f955586}
+Trechos marcados ... (De quem?) 
+
+Definição na linha 52 do arquivo Rule/\+Res\+Op\+Rule\+Dialog\+Content.\+h.
+
+\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!clb\+Links@{clb\+Links}}
+\index{clb\+Links@{clb\+Links}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}
+\subsubsection[{clb\+Links}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+List\+Box$\ast$ Res\+Op\+Rule\+Dialog\+Content\+::clb\+Links}\label{class_res_op_rule_dialog_content_aa0596fd6fe1265968bafaf91ad88711f}
+Check\+List\+Box contendo os trechos alocaveis e os canais naturais 
+
+Definição na linha 48 do arquivo Rule/\+Res\+Op\+Rule\+Dialog\+Content.\+h.
+
+\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!grid\+Allocation@{grid\+Allocation}}
+\index{grid\+Allocation@{grid\+Allocation}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}
+\subsubsection[{grid\+Allocation}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Grid}$\ast$ Res\+Op\+Rule\+Dialog\+Content\+::grid\+Allocation}\label{class_res_op_rule_dialog_content_a2d4fe6bd91c032bbffe7cd1dc74ff041}
+Tabela de aloca��o 
+
+Definição na linha 44 do arquivo Rule/\+Res\+Op\+Rule\+Dialog\+Content.\+h.
+
+\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!note@{note}}
+\index{note@{note}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}
+\subsubsection[{note}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Notebook$\ast$ Res\+Op\+Rule\+Dialog\+Content\+::note}\label{class_res_op_rule_dialog_content_a95d502820724fa7690bb356f83ac7c84}
+Caderno com abas libera��o e aloca��o 
+
+Definição na linha 56 do arquivo Rule/\+Res\+Op\+Rule\+Dialog\+Content.\+h.
+
+\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!p\+Rel@{p\+Rel}}
+\index{p\+Rel@{p\+Rel}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}
+\subsubsection[{p\+Rel}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel $\ast$ Res\+Op\+Rule\+Dialog\+Content\+::p\+Rel}\label{class_res_op_rule_dialog_content_aacfd303bfe182f134601bd162fd8b9f8}
+Painel ... 
+
+Definição na linha 36 do arquivo Rule/\+Res\+Op\+Rule\+Dialog\+Content.\+h.
+
+\index{Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}!rule@{rule}}
+\index{rule@{rule}!Res\+Op\+Rule\+Dialog\+Content@{Res\+Op\+Rule\+Dialog\+Content}}
+\subsubsection[{rule}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Rule} $\ast$ Res\+Op\+Rule\+Dialog\+Content\+::rule\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_rule_dialog_content_a7416bde611b91c0709be27e04ef0e79d}
+Ponteiro para \doxyref{Res\+Op\+Rule}{pag.}{class_res_op_rule} 
+
+Definição na linha 30 do arquivo Rule/\+Res\+Op\+Rule\+Dialog\+Content.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Rule/\+Res\+Op\+Rule\+Dialog\+Content.\+h}\end{DoxyCompactItemize}

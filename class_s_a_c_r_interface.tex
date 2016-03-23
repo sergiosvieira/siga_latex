@@ -1,0 +1,501 @@
+\section{Referência da Classe S\+A\+C\+R\+Interface}
+\label{class_s_a_c_r_interface}\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+
+
+{\ttfamily \#include $<$S\+A\+C\+R\+Interface.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+A\+C\+R\+Interface} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent})
+\item 
+{\bf $\sim$\+S\+A\+C\+R\+Interface} (void)
+\item 
+void {\bf on\+Open\+Prec} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Open\+P\+ET} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Open\+Unit\+Hid} (wx\+Command\+Event \&event)
+\item 
+void {\bf set\+Info} ()
+\item 
+void {\bf radio\+Box} ()
+\item 
+void {\bf show\+Results} ()
+\item 
+void {\bf create\+Results} ({\bf Element\+ID} id)
+\item 
+void {\bf set\+Interval} (const {\bf Interval} \&interval)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ {\bf tc\+Riva}
+\item 
+{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ {\bf tc\+Rserv}
+\item 
+{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ {\bf tc\+Side}
+\item 
+{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ {\bf tc\+Uztwm}
+\item 
+{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ {\bf tc\+Uzfwm}
+\item 
+{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ {\bf tc\+Uzk}
+\item 
+{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ {\bf tc\+Pctim}
+\item 
+{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ {\bf tc\+Adimp}
+\item 
+{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ {\bf tc\+Zperc}
+\item 
+{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ {\bf tc\+Rexp}
+\item 
+{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ {\bf tc\+Lztwm}
+\item 
+{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ {\bf tc\+Lzfsm}
+\item 
+{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ {\bf tc\+Lzfpm}
+\item 
+{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ {\bf tc\+Lzsk}
+\item 
+{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ {\bf tc\+Lzpk}
+\item 
+{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ {\bf tc\+Pfree}
+\item 
+{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ {\bf tc\+Node\+Area}
+\item 
+wx\+Bitmap {\bf bitmap\+Ok}
+\item 
+wx\+Bitmap {\bf bitmap\+Empty}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf bitmap\+P\+ET}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf bitmap\+Prec}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf bitmap\+Unit\+Hid}
+\item 
+wx\+Button $\ast$ {\bf bt\+P\+ET}
+\item 
+wx\+Button $\ast$ {\bf bt\+Prec}
+\item 
+wx\+Button $\ast$ {\bf bt\+Unit\+Hid}
+\item 
+wx\+Sizer $\ast$ {\bf basin\+Int}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Interval}
+\item 
+wx\+Flex\+Grid\+Sizer $\ast$ {\bf grid\+Delta}
+\item 
+wx\+Flex\+Grid\+Sizer $\ast$ {\bf grid\+Interval}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf S\+A\+C\+R\+Model\+Main}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 84 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{S\+A\+C\+R\+Interface(wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}S\+A\+C\+R\+Interface\+::\+S\+A\+C\+R\+Interface (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_s_a_c_r_interface_a472f62f3ef370ef07624ddff0d607bf2}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & \\
+\hline
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!````~S\+A\+C\+R\+Interface@{$\sim$\+S\+A\+C\+R\+Interface}}
+\index{````~S\+A\+C\+R\+Interface@{$\sim$\+S\+A\+C\+R\+Interface}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{$\sim$\+S\+A\+C\+R\+Interface(void)}]{\setlength{\rightskip}{0pt plus 5cm}S\+A\+C\+R\+Interface\+::$\sim$\+S\+A\+C\+R\+Interface (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_s_a_c_r_interface_a66ae128fd9f91e1d93999f4d7518d357}
+Destrutor 
+
+\subsection{Métodos}
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!create\+Results@{create\+Results}}
+\index{create\+Results@{create\+Results}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{create\+Results(\+Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+C\+R\+Interface\+::create\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)}\label{class_s_a_c_r_interface_a356cbad9a137bc6794739c98f61dfeed}
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!on\+Open\+P\+ET@{on\+Open\+P\+ET}}
+\index{on\+Open\+P\+ET@{on\+Open\+P\+ET}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{on\+Open\+P\+E\+T(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+C\+R\+Interface\+::on\+Open\+P\+ET (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_a_c_r_interface_a264a520e97c8fa4de17ff66fda06fb25}
+Abre arquivo com dados de P\+ET para o modelo S\+A\+CR. 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!on\+Open\+Prec@{on\+Open\+Prec}}
+\index{on\+Open\+Prec@{on\+Open\+Prec}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{on\+Open\+Prec(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+C\+R\+Interface\+::on\+Open\+Prec (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_a_c_r_interface_a45b6441765b332e331d432129083bfe2}
+Abre arquivo com dados de temperatura para o modelo G\+W\+LF. 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada\\
+\hline
+\end{DoxyParams}
+void on\+Open\+Temper(wx\+Command\+Event\& event); Abre arquivo com dados de precipita��o para o modelo S\+A\+CR. 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!on\+Open\+Unit\+Hid@{on\+Open\+Unit\+Hid}}
+\index{on\+Open\+Unit\+Hid@{on\+Open\+Unit\+Hid}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{on\+Open\+Unit\+Hid(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+C\+R\+Interface\+::on\+Open\+Unit\+Hid (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_a_c_r_interface_a96d2690f66b44c815df0363f606ed5ae}
+Abre arquivo com dados de hidrograma unit�rio para o modelo S\+A\+CR. 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!radio\+Box@{radio\+Box}}
+\index{radio\+Box@{radio\+Box}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{radio\+Box()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+C\+R\+Interface\+::radio\+Box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_a_c_r_interface_a415147ba57497ef40036bd38e8de960a}
+
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_a202fd862c10d339ae7d7e83d80b248bd}.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+C\+R\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_a_c_r_interface_a8e14aa0714ad63241c8a85952a5ef82b}
+Chamado quando � setado a data inicial do periodo de simula��o correspondente ao modelo G\+W\+LF 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada Chamado quando � setado a data final do periodo de simula��o correspondente ao modelo G\+W\+LF \\
+\hline
+{\em event} & Evento gerador da chamada Define o delta t Seta os par�metros para calculo do modelo hidrologico G\+W\+LF \\
+\hline
+{\em model} & Inst�ncia do modelo G\+W\+LF \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_aced556e5caf584b7335135d337895154}.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!set\+Interval@{set\+Interval}}
+\index{set\+Interval@{set\+Interval}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{set\+Interval(const Interval \&interval)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+C\+R\+Interface\+::set\+Interval (
+\begin{DoxyParamCaption}
+\item[{const {\bf Interval} \&}]{interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_a_c_r_interface_a9652560b529b44c1ea930d8242d62832}
+Inserir intervalo de simula��o 
+\begin{DoxyParams}{Parâmetros}
+{\em interval} & Intervalo Calcula a interse��o entre temper e prec \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_ad1498cd36a41f88924a92d1a66f74947}.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{show\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+C\+R\+Interface\+::show\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_a_c_r_interface_adfa47553bc5a1585f7ae35161c9ab9fe}
+Resultados para o modelo G\+W\+LF 
+\begin{DoxyParams}{Parâmetros}
+{\em results} & Aponta para os resultados \\
+\hline
+{\em change} & Diferencia se a chamada foi feita atraves do bot�o de visualiza��o ou de rodar o modelo \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Amigas e Funções Relacionadas}
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!S\+A\+C\+R\+Model\+Main@{S\+A\+C\+R\+Model\+Main}}
+\index{S\+A\+C\+R\+Model\+Main@{S\+A\+C\+R\+Model\+Main}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{S\+A\+C\+R\+Model\+Main}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf S\+A\+C\+R\+Model\+Main}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_a_c_r_interface_a2228622917a97b69d9297a1d522ae476}
+
+
+Definição na linha 87 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+
+
+\subsection{Atributos}
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!basin\+Int@{basin\+Int}}
+\index{basin\+Int@{basin\+Int}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{basin\+Int}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer$\ast$ S\+A\+C\+R\+Interface\+::basin\+Int\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_a870c57e3b5414cd48a322dfa4aff335e}
+
+
+Definição na linha 186 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!bitmap\+Empty@{bitmap\+Empty}}
+\index{bitmap\+Empty@{bitmap\+Empty}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{bitmap\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap S\+A\+C\+R\+Interface\+::bitmap\+Empty\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_a3696c89e87290f5391281bf59975ae72}
+
+
+Definição na linha 150 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!bitmap\+Ok@{bitmap\+Ok}}
+\index{bitmap\+Ok@{bitmap\+Ok}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{bitmap\+Ok}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap S\+A\+C\+R\+Interface\+::bitmap\+Ok\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_ade68494cda96a7f57b944b52d417d25e}
+Bitmap para os bot�es 
+\begin{DoxyParams}{Parâmetros}
+{\em bitmap\+Ok} & Dados preenchidos \\
+\hline
+{\em bitmap\+Empty} & Dados n�o preenchidos \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 150 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!bitmap\+P\+ET@{bitmap\+P\+ET}}
+\index{bitmap\+P\+ET@{bitmap\+P\+ET}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{bitmap\+P\+ET}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ S\+A\+C\+R\+Interface\+::bitmap\+P\+ET\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_a0b23af7e6c1f9e19541dee5ce3b457a0}
+Controlado de data inicial e final 
+\begin{DoxyParams}{Parâmetros}
+{\em dp\+Start\+Interval} & Data inicial \\
+\hline
+{\em dp\+End\+Interval} & Data final Controla a hora \\
+\hline
+{\em cb\+Star\+Hour} & Hora de inicio \\
+\hline
+{\em cb\+End\+Hour} & Hora de fim Define a varia��o de tempo Define se a area de um link antecessor ser� utilizada\\
+\hline
+\end{DoxyParams}
+wx\+Check\+Box $\ast$cb\+Use\+Node; Bot�es da interface 
+\begin{DoxyParams}{Parâmetros}
+{\em bitmap\+SA} & Bot�o de areas fonte \\
+\hline
+{\em bitmap\+Temper} & Bot�o de temperatura \\
+\hline
+{\em bitmap\+Prec} & Bot�o de precipita��o \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 177 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!bitmap\+Prec@{bitmap\+Prec}}
+\index{bitmap\+Prec@{bitmap\+Prec}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{bitmap\+Prec}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button $\ast$ S\+A\+C\+R\+Interface\+::bitmap\+Prec\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_a29f5531f6051fb9d3922b39f0d08d193}
+
+
+Definição na linha 177 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!bitmap\+Unit\+Hid@{bitmap\+Unit\+Hid}}
+\index{bitmap\+Unit\+Hid@{bitmap\+Unit\+Hid}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{bitmap\+Unit\+Hid}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button $\ast$ S\+A\+C\+R\+Interface\+::bitmap\+Unit\+Hid\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_aa516d9db1f7b94d2daad7874728ab48c}
+
+
+Definição na linha 177 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!bt\+P\+ET@{bt\+P\+ET}}
+\index{bt\+P\+ET@{bt\+P\+ET}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{bt\+P\+ET}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ S\+A\+C\+R\+Interface\+::bt\+P\+ET\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_a45dececdc7b0406ed75665acf3575aa5}
+Bot�es da interface 
+\begin{DoxyParams}{Parâmetros}
+{\em bt\+Subbasin} & Bot�o para areas fontes \\
+\hline
+{\em bt\+Temper} & Bot�o para temperatura \\
+\hline
+{\em bt\+Prec} & Bot�o para precipita��o \\
+\hline
+\end{DoxyParams}
+
+
+Definição na linha 184 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!bt\+Prec@{bt\+Prec}}
+\index{bt\+Prec@{bt\+Prec}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{bt\+Prec}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button $\ast$ S\+A\+C\+R\+Interface\+::bt\+Prec\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_adbed21b27f8b0b15f8c95a4584b0c834}
+
+
+Definição na linha 184 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!bt\+Unit\+Hid@{bt\+Unit\+Hid}}
+\index{bt\+Unit\+Hid@{bt\+Unit\+Hid}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{bt\+Unit\+Hid}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button $\ast$ S\+A\+C\+R\+Interface\+::bt\+Unit\+Hid\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_a5d7520701f9837a3d51d13d8e7fe0949}
+
+
+Definição na linha 184 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!grid\+Delta@{grid\+Delta}}
+\index{grid\+Delta@{grid\+Delta}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{grid\+Delta}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Flex\+Grid\+Sizer$\ast$ S\+A\+C\+R\+Interface\+::grid\+Delta\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_a8f72986817c6e70457fb0a0a55d3f7ca}
+
+
+Definição na linha 187 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!grid\+Interval@{grid\+Interval}}
+\index{grid\+Interval@{grid\+Interval}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{grid\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Flex\+Grid\+Sizer $\ast$ S\+A\+C\+R\+Interface\+::grid\+Interval\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_a9ce03cacc8fc8da1d673d29b008272db}
+
+
+Definição na linha 187 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!s\+Interval@{s\+Interval}}
+\index{s\+Interval@{s\+Interval}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{s\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ S\+A\+C\+R\+Interface\+::s\+Interval\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_a591d85816bd1203b8144b431a53c0c80}
+
+
+Definição na linha 186 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!tc\+Adimp@{tc\+Adimp}}
+\index{tc\+Adimp@{tc\+Adimp}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{tc\+Adimp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ S\+A\+C\+R\+Interface\+::tc\+Adimp\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_ac9d29b282fcd650f0dd169d7f52a3747}
+
+
+Definição na linha 142 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!tc\+Lzfpm@{tc\+Lzfpm}}
+\index{tc\+Lzfpm@{tc\+Lzfpm}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{tc\+Lzfpm}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ S\+A\+C\+R\+Interface\+::tc\+Lzfpm\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_ae67aaaebb73919fb929317dfca72c036}
+
+
+Definição na linha 142 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!tc\+Lzfsm@{tc\+Lzfsm}}
+\index{tc\+Lzfsm@{tc\+Lzfsm}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{tc\+Lzfsm}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ S\+A\+C\+R\+Interface\+::tc\+Lzfsm\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_a0ddf108ef9dd210986383a2c05545402}
+
+
+Definição na linha 142 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!tc\+Lzpk@{tc\+Lzpk}}
+\index{tc\+Lzpk@{tc\+Lzpk}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{tc\+Lzpk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ S\+A\+C\+R\+Interface\+::tc\+Lzpk\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_a5f25589ed0a9e072ca1f87a7745b943f}
+
+
+Definição na linha 142 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!tc\+Lzsk@{tc\+Lzsk}}
+\index{tc\+Lzsk@{tc\+Lzsk}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{tc\+Lzsk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ S\+A\+C\+R\+Interface\+::tc\+Lzsk\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_add938073064d31670db2695890ce76c5}
+
+
+Definição na linha 142 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!tc\+Lztwm@{tc\+Lztwm}}
+\index{tc\+Lztwm@{tc\+Lztwm}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{tc\+Lztwm}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ S\+A\+C\+R\+Interface\+::tc\+Lztwm\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_ab7cfa365bfed7ab4ed8f14c0cb5962a0}
+
+
+Definição na linha 142 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!tc\+Node\+Area@{tc\+Node\+Area}}
+\index{tc\+Node\+Area@{tc\+Node\+Area}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{tc\+Node\+Area}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ S\+A\+C\+R\+Interface\+::tc\+Node\+Area\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_a887c7a5b2b2672b0e90c388987f6191c}
+
+
+Definição na linha 142 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!tc\+Pctim@{tc\+Pctim}}
+\index{tc\+Pctim@{tc\+Pctim}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{tc\+Pctim}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ S\+A\+C\+R\+Interface\+::tc\+Pctim\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_a26f1325b17772649a1d2458ee539bd61}
+
+
+Definição na linha 142 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!tc\+Pfree@{tc\+Pfree}}
+\index{tc\+Pfree@{tc\+Pfree}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{tc\+Pfree}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ S\+A\+C\+R\+Interface\+::tc\+Pfree\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_adc8b1df5474e4916e03a2145b670f663}
+
+
+Definição na linha 142 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!tc\+Rexp@{tc\+Rexp}}
+\index{tc\+Rexp@{tc\+Rexp}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{tc\+Rexp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ S\+A\+C\+R\+Interface\+::tc\+Rexp\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_a36429e437e8aafbb47d4abdd0c09b040}
+
+
+Definição na linha 142 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!tc\+Riva@{tc\+Riva}}
+\index{tc\+Riva@{tc\+Riva}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{tc\+Riva}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+A\+C\+R\+Text\+Ctrl}$\ast$ S\+A\+C\+R\+Interface\+::tc\+Riva\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_a8e3d88141c4b030298649f4eafa87e00}
+Choice\+Book contendo os cen�rios Evento de ad��o de cenario Adi��o de pagina do cenario$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$$\ast$ Text\+Ctrls para parametros 
+
+Definição na linha 142 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!tc\+Rserv@{tc\+Rserv}}
+\index{tc\+Rserv@{tc\+Rserv}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{tc\+Rserv}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ S\+A\+C\+R\+Interface\+::tc\+Rserv\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_a9cc1c3ba442715f9cb9a0eb06abf198c}
+
+
+Definição na linha 142 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!tc\+Side@{tc\+Side}}
+\index{tc\+Side@{tc\+Side}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{tc\+Side}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ S\+A\+C\+R\+Interface\+::tc\+Side\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_a2f46c96fef9251662877038483e3bc91}
+
+
+Definição na linha 142 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!tc\+Uzfwm@{tc\+Uzfwm}}
+\index{tc\+Uzfwm@{tc\+Uzfwm}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{tc\+Uzfwm}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ S\+A\+C\+R\+Interface\+::tc\+Uzfwm\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_ad55ea3e0c249f431a2a920dfe2313f30}
+
+
+Definição na linha 142 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!tc\+Uzk@{tc\+Uzk}}
+\index{tc\+Uzk@{tc\+Uzk}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{tc\+Uzk}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ S\+A\+C\+R\+Interface\+::tc\+Uzk\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_ac11f9070dd0885a57d50afa769012c0c}
+
+
+Definição na linha 142 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!tc\+Uztwm@{tc\+Uztwm}}
+\index{tc\+Uztwm@{tc\+Uztwm}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{tc\+Uztwm}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ S\+A\+C\+R\+Interface\+::tc\+Uztwm\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_a2810b5728b49ba9f52f94a4ea3e5330f}
+
+
+Definição na linha 142 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+\index{S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}!tc\+Zperc@{tc\+Zperc}}
+\index{tc\+Zperc@{tc\+Zperc}!S\+A\+C\+R\+Interface@{S\+A\+C\+R\+Interface}}
+\subsubsection[{tc\+Zperc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+A\+C\+R\+Text\+Ctrl} $\ast$ S\+A\+C\+R\+Interface\+::tc\+Zperc\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_a_c_r_interface_abcb5a75b284c98ac88aa4c7768215aa6}
+
+
+Definição na linha 142 do arquivo S\+A\+C\+R\+Interface.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+A\+C\+R\+Interface.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,162 @@
+\section{Referência da Classe Aff\+Prev\+Res\+Model}
+\label{class_aff_prev_res_model}\index{Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}}
+
+
+{\ttfamily \#include $<$Aff\+Prev\+Res\+Model.\+h$>$}
+
+
+
+Herdeiro de {\bf Aff\+Prev\+Model}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Aff\+Prev\+Res\+Model} ({\bf Date} interval\+Start, {\bf Date} interval\+End, {\bf Node} $\ast${\bf node})
+\item 
+{\bf $\sim$\+Aff\+Prev\+Res\+Model} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+void {\bf run} ({\bf Date} i)
+\item 
+void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj)
+\item 
+void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$proj)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix} {\bf q\+Prev}
+\item 
+{\bf Matrix} {\bf q\+Pers}
+\item 
+wx\+String {\bf q\+Prev\+File\+Name}
+\item 
+wx\+String {\bf q\+Pers\+File\+Name}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 6 do arquivo Aff\+Prev\+Res\+Model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}!Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}}
+\index{Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}!Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}}
+\subsubsection[{Aff\+Prev\+Res\+Model(\+Date interval\+Start, Date interval\+End, Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}Aff\+Prev\+Res\+Model\+::\+Aff\+Prev\+Res\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{interval\+Start, }
+\item[{{\bf Date}}]{interval\+End, }
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_res_model_afb077b24f12e6b39c3993714286efcef}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em interval\+Start} & Inicio do intervalo \\
+\hline
+{\em interval\+End} & Fim do intervalo \\
+\hline
+\end{DoxyParams}
+\index{Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}!````~Aff\+Prev\+Res\+Model@{$\sim$\+Aff\+Prev\+Res\+Model}}
+\index{````~Aff\+Prev\+Res\+Model@{$\sim$\+Aff\+Prev\+Res\+Model}!Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}}
+\subsubsection[{$\sim$\+Aff\+Prev\+Res\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}Aff\+Prev\+Res\+Model\+::$\sim$\+Aff\+Prev\+Res\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_res_model_afbff59387e07d372ec66ca905dc4f565}
+Destrutor 
+
+\subsection{Métodos}
+\index{Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Aff\+Prev\+Res\+Model\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_res_model_aa99b0076dc12c824047b8f89a10a8581}
+Verifica se as informa��es do m�dulo est�o completas para que ele possa ser executado 
+
+Implementa {\bf Aff\+Prev\+Model} \doxyref{}{pag.}{class_aff_prev_model_aec2a88cdc3322dd3235434b69fa735cf}.
+
+\index{Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$proj)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Res\+Model\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_res_model_a1e36649af90ecc9cfd34fdf587ac1334}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Aff\+Prev\+Model} \doxyref{}{pag.}{class_aff_prev_model_a9015ec4524ee1beeffecd00b5c462d9b}.
+
+\index{Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$proj)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Res\+Model\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{proj}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_res_model_a3906f9f7bf0c71d109bddd126910915e}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Aff\+Prev\+Model} \doxyref{}{pag.}{class_aff_prev_model_af17dbd6ddd9ebea2b45dc91a273b471e}.
+
+\index{Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}!run@{run}}
+\index{run@{run}!Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}}
+\subsubsection[{run(\+Date i)}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Res\+Model\+::run (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_res_model_abe60e30641584d7e4d325e515a972fc7}
+Roda para um dia o modelo de reservatorio 
+
+Reimplementação de {\bf Aff\+Prev\+Model} \doxyref{}{pag.}{class_aff_prev_model_ab4ffcc380a832bb002b4f0bf3af894bb}.
+
+
+
+\subsection{Atributos}
+\index{Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}!q\+Pers@{q\+Pers}}
+\index{q\+Pers@{q\+Pers}!Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}}
+\subsubsection[{q\+Pers}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Aff\+Prev\+Res\+Model\+::q\+Pers}\label{class_aff_prev_res_model_a5349b0418d18637fabd35a6dd53008f5}
+
+
+Definição na linha 13 do arquivo Aff\+Prev\+Res\+Model.\+h.
+
+\index{Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}!q\+Pers\+File\+Name@{q\+Pers\+File\+Name}}
+\index{q\+Pers\+File\+Name@{q\+Pers\+File\+Name}!Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}}
+\subsubsection[{q\+Pers\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Aff\+Prev\+Res\+Model\+::q\+Pers\+File\+Name}\label{class_aff_prev_res_model_a7748ca93975317362bb37fae871d583a}
+
+
+Definição na linha 17 do arquivo Aff\+Prev\+Res\+Model.\+h.
+
+\index{Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}!q\+Prev@{q\+Prev}}
+\index{q\+Prev@{q\+Prev}!Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}}
+\subsubsection[{q\+Prev}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Aff\+Prev\+Res\+Model\+::q\+Prev}\label{class_aff_prev_res_model_ab676728f8dc20842f747b4b7a3d579d8}
+Matrizes de vaz�es prevista e persistida 
+
+Definição na linha 13 do arquivo Aff\+Prev\+Res\+Model.\+h.
+
+\index{Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}!q\+Prev\+File\+Name@{q\+Prev\+File\+Name}}
+\index{q\+Prev\+File\+Name@{q\+Prev\+File\+Name}!Aff\+Prev\+Res\+Model@{Aff\+Prev\+Res\+Model}}
+\subsubsection[{q\+Prev\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Aff\+Prev\+Res\+Model\+::q\+Prev\+File\+Name}\label{class_aff_prev_res_model_a4c589844ad46d821477535f5c345d095}
+Nome do arquivo para vaz�o prevista e permisiva 
+
+Definição na linha 17 do arquivo Aff\+Prev\+Res\+Model.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Aff\+Prev\+Res\+Model.\+h}\end{DoxyCompactItemize}

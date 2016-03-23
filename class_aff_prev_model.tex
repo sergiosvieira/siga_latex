@@ -1,0 +1,212 @@
+\section{Referência da Classe Aff\+Prev\+Model}
+\label{class_aff_prev_model}\index{Aff\+Prev\+Model@{Aff\+Prev\+Model}}
+
+
+{\ttfamily \#include $<$Aff\+Prev\+Model.\+h$>$}
+
+
+
+Superclasse de {\bf Aff\+Prev\+Demand\+Model} e {\bf Aff\+Prev\+Res\+Model}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Aff\+Prev\+Model} ({\bf Date} interval\+Start, {\bf Date} interval\+End, {\bf Node} $\ast${\bf node})
+\item 
+virtual {\bf $\sim$\+Aff\+Prev\+Model} ()
+\item 
+bool {\bf empty} ()
+\item 
+virtual bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)=0
+\item 
+virtual void {\bf run} ({\bf Date})
+\item 
+void {\bf clear} ()
+\item 
+virtual void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\item 
+virtual void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf aff\+Prev\+Model} {\bf model\+Type}
+\item 
+vector$<$ unsigned int $>$ {\bf res\+Up}
+\item 
+{\bf Node} $\ast$ {\bf node}
+\item 
+{\bf Interval} {\bf interval}
+\item 
+map$<$ unsigned int, {\bf Aff\+Prev\+Scenario} $\ast$ $>$ {\bf scenario}
+\item 
+{\bf Aff\+Prev\+Scenario\+Result} $\ast$ {\bf s\+Result}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 22 do arquivo Aff\+Prev\+Model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Aff\+Prev\+Model@{Aff\+Prev\+Model}!Aff\+Prev\+Model@{Aff\+Prev\+Model}}
+\index{Aff\+Prev\+Model@{Aff\+Prev\+Model}!Aff\+Prev\+Model@{Aff\+Prev\+Model}}
+\subsubsection[{Aff\+Prev\+Model(\+Date interval\+Start, Date interval\+End, Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}Aff\+Prev\+Model\+::\+Aff\+Prev\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{interval\+Start, }
+\item[{{\bf Date}}]{interval\+End, }
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_model_ade901dfbe18bb1ebeaef0dd920f6d5cc}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em node} & N� \\
+\hline
+\end{DoxyParams}
+\index{Aff\+Prev\+Model@{Aff\+Prev\+Model}!````~Aff\+Prev\+Model@{$\sim$\+Aff\+Prev\+Model}}
+\index{````~Aff\+Prev\+Model@{$\sim$\+Aff\+Prev\+Model}!Aff\+Prev\+Model@{Aff\+Prev\+Model}}
+\subsubsection[{$\sim$\+Aff\+Prev\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Aff\+Prev\+Model\+::$\sim$\+Aff\+Prev\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_aff_prev_model_a068520daa680d3556a66a03502e19794}
+Destrutor 
+
+\subsection{Métodos}
+\index{Aff\+Prev\+Model@{Aff\+Prev\+Model}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Aff\+Prev\+Model@{Aff\+Prev\+Model}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Aff\+Prev\+Model\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_aff_prev_model_aec2a88cdc3322dd3235434b69fa735cf}
+Verifica se as informa��es do m�dulo est�o completas para que ele possa ser executado 
+
+Implementado por {\bf Aff\+Prev\+Demand\+Model} \doxyref{}{pag.}{class_aff_prev_demand_model_adeb3738c5f79dc98ab6f4b4f865fcf45} e {\bf Aff\+Prev\+Res\+Model} \doxyref{}{pag.}{class_aff_prev_res_model_aa99b0076dc12c824047b8f89a10a8581}.
+
+\index{Aff\+Prev\+Model@{Aff\+Prev\+Model}!clear@{clear}}
+\index{clear@{clear}!Aff\+Prev\+Model@{Aff\+Prev\+Model}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Aff\+Prev\+Model\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_model_afc57a5c1f5c29a021d36d0af8bd81693}
+Limpa as variaveis e as deixa no estado de p�s-\/constru��o \index{Aff\+Prev\+Model@{Aff\+Prev\+Model}!empty@{empty}}
+\index{empty@{empty}!Aff\+Prev\+Model@{Aff\+Prev\+Model}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool Aff\+Prev\+Model\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_aff_prev_model_aed9c407b4cdabca390cbd9daafd79693}
+retorna se existe algum valor no modelo \index{Aff\+Prev\+Model@{Aff\+Prev\+Model}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Aff\+Prev\+Model@{Aff\+Prev\+Model}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Aff\+Prev\+Model\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_aff_prev_model_a9015ec4524ee1beeffecd00b5c462d9b}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado por {\bf Aff\+Prev\+Demand\+Model} \doxyref{}{pag.}{class_aff_prev_demand_model_ac15bbf0d7d93bd4eb8367e8396c632d7} e {\bf Aff\+Prev\+Res\+Model} \doxyref{}{pag.}{class_aff_prev_res_model_a1e36649af90ecc9cfd34fdf587ac1334}.
+
+
+
+Definição na linha 93 do arquivo Aff\+Prev\+Model.\+h.
+
+\index{Aff\+Prev\+Model@{Aff\+Prev\+Model}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Aff\+Prev\+Model@{Aff\+Prev\+Model}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Aff\+Prev\+Model\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_aff_prev_model_af17dbd6ddd9ebea2b45dc91a273b471e}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Parâmetros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado por {\bf Aff\+Prev\+Demand\+Model} \doxyref{}{pag.}{class_aff_prev_demand_model_ab9e9fdfe7348cdf63a3e8505789edd62} e {\bf Aff\+Prev\+Res\+Model} \doxyref{}{pag.}{class_aff_prev_res_model_a3906f9f7bf0c71d109bddd126910915e}.
+
+
+
+Definição na linha 88 do arquivo Aff\+Prev\+Model.\+h.
+
+\index{Aff\+Prev\+Model@{Aff\+Prev\+Model}!run@{run}}
+\index{run@{run}!Aff\+Prev\+Model@{Aff\+Prev\+Model}}
+\subsubsection[{run(\+Date)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Aff\+Prev\+Model\+::run (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_aff_prev_model_ab4ffcc380a832bb002b4f0bf3af894bb}
+Executa o modelo juntamente com o poluente selecionado no choicebook dos poluentes 
+
+Reimplementado por {\bf Aff\+Prev\+Res\+Model} \doxyref{}{pag.}{class_aff_prev_res_model_abe60e30641584d7e4d325e515a972fc7}.
+
+
+
+Definição na linha 79 do arquivo Aff\+Prev\+Model.\+h.
+
+
+
+\subsection{Atributos}
+\index{Aff\+Prev\+Model@{Aff\+Prev\+Model}!interval@{interval}}
+\index{interval@{interval}!Aff\+Prev\+Model@{Aff\+Prev\+Model}}
+\subsubsection[{interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Aff\+Prev\+Model\+::interval}\label{class_aff_prev_model_a9882049d64a0f5d30c5abb8b53f5a5f2}
+Intervalo de simula��o 
+
+Definição na linha 50 do arquivo Aff\+Prev\+Model.\+h.
+
+\index{Aff\+Prev\+Model@{Aff\+Prev\+Model}!model\+Type@{model\+Type}}
+\index{model\+Type@{model\+Type}!Aff\+Prev\+Model@{Aff\+Prev\+Model}}
+\subsubsection[{model\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf aff\+Prev\+Model} Aff\+Prev\+Model\+::model\+Type}\label{class_aff_prev_model_a6a5b2e1971b4ee40f55e1eac4ba98139}
+Tipo de modelo 
+
+Definição na linha 30 do arquivo Aff\+Prev\+Model.\+h.
+
+\index{Aff\+Prev\+Model@{Aff\+Prev\+Model}!node@{node}}
+\index{node@{node}!Aff\+Prev\+Model@{Aff\+Prev\+Model}}
+\subsubsection[{node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ Aff\+Prev\+Model\+::node}\label{class_aff_prev_model_ab837b120a3f26e19bbf4c2913503904b}
+Nome do arquivo lido vaz�o natural da bacia incremental
+
+wx\+String nat\+Inflow\+File\+Name; N� 
+
+Definição na linha 46 do arquivo Aff\+Prev\+Model.\+h.
+
+\index{Aff\+Prev\+Model@{Aff\+Prev\+Model}!res\+Up@{res\+Up}}
+\index{res\+Up@{res\+Up}!Aff\+Prev\+Model@{Aff\+Prev\+Model}}
+\subsubsection[{res\+Up}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$unsigned int$>$ Aff\+Prev\+Model\+::res\+Up}\label{class_aff_prev_model_a199c2ce458f17fc03a6679fec184bf57}
+Vaz�o natural da bacia incremental
+
+Serie$\ast$ nat\+Inflow; Reservat�rios de Montante 
+
+Definição na linha 38 do arquivo Aff\+Prev\+Model.\+h.
+
+\index{Aff\+Prev\+Model@{Aff\+Prev\+Model}!scenario@{scenario}}
+\index{scenario@{scenario}!Aff\+Prev\+Model@{Aff\+Prev\+Model}}
+\subsubsection[{scenario}]{\setlength{\rightskip}{0pt plus 5cm}map$<$ unsigned int, {\bf Aff\+Prev\+Scenario}$\ast$$>$ Aff\+Prev\+Model\+::scenario}\label{class_aff_prev_model_af44c23d6d2b031a8193a2999ba1328e4}
+Mapa de cenarios 
+
+Definição na linha 54 do arquivo Aff\+Prev\+Model.\+h.
+
+\index{Aff\+Prev\+Model@{Aff\+Prev\+Model}!s\+Result@{s\+Result}}
+\index{s\+Result@{s\+Result}!Aff\+Prev\+Model@{Aff\+Prev\+Model}}
+\subsubsection[{s\+Result}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Aff\+Prev\+Scenario\+Result}$\ast$ Aff\+Prev\+Model\+::s\+Result}\label{class_aff_prev_model_a424161ce203a84646c1123db38b06e3b}
+Resultados 
+
+Definição na linha 71 do arquivo Aff\+Prev\+Model.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Aff\+Prev\+Model.\+h}\end{DoxyCompactItemize}

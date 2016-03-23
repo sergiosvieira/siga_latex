@@ -1,0 +1,589 @@
+\section{Network}
+\label{group___network}\index{Network@{Network}}
+\subsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf G\+D\+A\+L\+Raster}
+\item 
+class {\bf LayerM}
+\item 
+class {\bf Attr\+Table\+Column}
+\item 
+class {\bf O\+G\+R\+Vector}
+\item 
+class {\bf Port\+Methods}
+\item 
+struct {\bf imagem}
+\item 
+class {\bf Raster\+Layer}
+\item 
+class {\bf Real\+Rect}
+\item 
+class {\bf Real\+Size}
+\item 
+class {\bf Vector\+LayerM}
+\item 
+class {\bf Net\+Canvas}
+\item 
+class {\bf Lat\+Lon\+Text\+Ctrl}
+\item 
+class {\bf Net\+Text\+Ctrl}
+\item 
+class {\bf Net\+Interface}
+\item 
+class {\bf Net\+Main}
+\item 
+class {\bf Shape\+Errors\+Dialog}
+\item 
+class {\bf Source\+Area}
+\item 
+class {\bf Stored\+Node}
+\item 
+class {\bf Subbasin}
+\end{DoxyCompactItemize}
+\subsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bf PI}~3.\+14159265359
+\item 
+\#define {\bf S\+A\+T\+\_\+\+H\+E\+I\+G\+HT}~42164.\+0             /$\ast$ distancia do centro da Terra para o satelite     $\ast$/
+\item 
+\#define {\bf R\+\_\+\+EQ}~6378.\+169           /$\ast$ raio do centro da Terra ao equador               $\ast$/
+\item 
+\#define {\bf R\+\_\+\+P\+OL}~6356.\+5838          /$\ast$ raio do centro da Terra ao polo                  $\ast$/
+\item 
+\#define {\bf S\+U\+B\+\_\+\+L\+ON}~0.\+0             /$\ast$ longitude do ponto abaixo do satelite            $\ast$/
+\item 
+\#define {\bf C\+O\+L\+F\+I\+GL}~3712               /$\ast$ numero de colunas para figuras L\+R\+IT              $\ast$/
+\item 
+\#define {\bf C\+O\+L\+F\+I\+GH}~11136               /$\ast$ numero de colunas para figuras H\+R\+IT              $\ast$/
+\item 
+\#define {\bf T\+A\+M\+S\+E\+GL}~464               /$\ast$ tamanho do segmento em pixels para figuras L\+R\+IT  $\ast$/
+\item 
+\#define {\bf T\+A\+M\+S\+E\+GH}~464               /$\ast$ tamanho do segmento em pixels para figuras H\+R\+IT  $\ast$/
+\item 
+\#define {\bf N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+L\+O\+RS}~10
+\end{DoxyCompactItemize}
+\subsection*{Definições de Tipos}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char {\bf byte}
+\end{DoxyCompactItemize}
+\subsection*{Enumerações}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Attr\+Table\+Column\+Type} \{ {\bf C\+O\+L\+\_\+\+S\+T\+R\+I\+NG} =1, 
+{\bf C\+O\+L\+\_\+\+D\+O\+U\+B\+LE}, 
+{\bf C\+O\+L\+\_\+\+I\+N\+T\+E\+G\+ER}
+ \}
+\item 
+enum \{ \\*
+{\bf I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+M\+AP}, 
+{\bf I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+N\+ET}, 
+{\bf I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+N\+ET}, 
+{\bf I\+D\+\_\+\+D\+E\+L\+\_\+\+N\+O\+DE}, 
+\\*
+{\bf I\+D\+\_\+\+D\+E\+L\+\_\+\+N\+O\+D\+E\+\_\+\+L\+I\+NK}, 
+{\bf I\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+N\+ET}, 
+{\bf I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+T\+Y\+PE}, 
+{\bf I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+S\+L\+O\+PE}, 
+\\*
+{\bf I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+A\+R\+EA}, 
+{\bf I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+V\+O\+L\+U\+ME}, 
+{\bf I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+N\+A\+ME}, 
+{\bf I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+L\+AT}, 
+\\*
+{\bf I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+L\+O\+NG}, 
+{\bf I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+T\+Y\+PE}, 
+{\bf I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+QL}, 
+{\bf I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+BI}, 
+\\*
+{\bf I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+S\+L\+O\+PE}, 
+{\bf I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+L\+E\+N\+G\+TH}, 
+{\bf I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+D\+E\+P\+TH}, 
+{\bf I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+V\+O\+L\+U\+ME}, 
+\\*
+{\bf I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+E\+T\+\_\+\+N\+A\+ME}, 
+{\bf I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+N\+A\+ME}, 
+{\bf I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+C\+B\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}, 
+{\bf I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+C\+B\+\_\+\+L\+I\+N\+K\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}, 
+\\*
+{\bf I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+\+E\+L\+E\+M\+E\+NT}
+ \}
+\item 
+enum {\bf type\+SA} \{ {\bf S\+A\+\_\+\+A\+G\+RI}, 
+{\bf S\+A\+\_\+\+U\+R\+B\+AN}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf ler\+Imagem} (wx\+Image \&, {\bf imagem} $\ast$)
+\item 
+void {\bf ler\+Imagem} (char $\ast$, {\bf imagem} $\ast$)
+\item 
+void {\bf escrever\+Imagem} (char $\ast$, {\bf imagem} $\ast$)
+\item 
+long {\bf pega\+Imagem\+Info} (F\+I\+LE $\ast$, long, long)
+\item 
+int {\bf ninto} (double val)
+\item 
+int {\bf geocoord2pixcoord} (double latitude, double longitude, int coff, int loff, double cfac, double lfac, int $\ast$column, int $\ast$row)
+\item 
+int {\bf geocoord2pixcoord2} (double latitude, double longitude, int first\+PixelX, int first\+PixelY, int coff, int loff, double cfac, double lfac, int $\ast$column, int $\ast$row)
+\item 
+int {\bf geocoord2mercator} (double latitude, double longitude, int coff, int loff, double cfac, double lfac, int $\ast$column, int $\ast$row)
+\item 
+int {\bf mercator2geocoord} (int column, int row, int coff, int loff, double cfac, double lfac, double $\ast$latitude, double $\ast$longitude)
+\item 
+void {\bf aloca\+Mem} (long, {\bf imagem} $\ast$)
+\item 
+void {\bf libera\+Mem} ({\bf imagem} $\ast$)
+\item 
+void {\bf preenche\+Cab} (int, int, {\bf imagem} $\ast$, {\bf imagem} $\ast$)
+\item 
+void {\bf mensagem} (char $\ast$)
+\item 
+wx\+Image {\bf mercator} (wx\+String resolution, int first\+PixelX, int first\+PixelY, wx\+Image \&in\+Image, double lat1, double lon1, double lat2, double lon2)
+\item 
+wx\+Image {\bf mercator} (wx\+String resolution, {\bf G\+D\+A\+L\+Raster} $\ast$in\+Image, double lat1, double lon1, double lat2, double lon2)
+\item 
+wx\+Image {\bf mercator} (wx\+String resolution, {\bf G\+D\+A\+L\+Raster} $\ast$in\+Image, double lat1, double lon1, double lat2, double lon2, double pixel\+Factor)
+\item 
+int {\bf pixcoord2geocoord} (int column, int row, int coff, int loff, double $\ast$latitude, double $\ast$longitude)
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+\subsection{Definições e macros}
+\index{Network@{Network}!C\+O\+L\+F\+I\+GH@{C\+O\+L\+F\+I\+GH}}
+\index{C\+O\+L\+F\+I\+GH@{C\+O\+L\+F\+I\+GH}!Network@{Network}}
+\subsubsection[{C\+O\+L\+F\+I\+GH}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+L\+F\+I\+GH~11136               /$\ast$ numero de colunas para figuras H\+R\+IT              $\ast$/}\label{group___network_gaf6973920457df6c8a0709d09f8a4e9c0}
+
+
+Definição na linha 76 do arquivo projection.\+h.
+
+\index{Network@{Network}!C\+O\+L\+F\+I\+GL@{C\+O\+L\+F\+I\+GL}}
+\index{C\+O\+L\+F\+I\+GL@{C\+O\+L\+F\+I\+GL}!Network@{Network}}
+\subsubsection[{C\+O\+L\+F\+I\+GL}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+L\+F\+I\+GL~3712               /$\ast$ numero de colunas para figuras L\+R\+IT              $\ast$/}\label{group___network_ga07b0fc8834356f059a9023d1b31f3487}
+
+
+Definição na linha 75 do arquivo projection.\+h.
+
+\index{Network@{Network}!N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+L\+O\+RS@{N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+L\+O\+RS}}
+\index{N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+L\+O\+RS@{N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+L\+O\+RS}!Network@{Network}}
+\subsubsection[{N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+L\+O\+RS}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+U\+M\+\_\+\+O\+F\+\_\+\+C\+O\+L\+O\+RS~10}\label{group___network_gaeb03416903eb28620662b479e7d7be19}
+
+
+Definição na linha 65 do arquivo Net\+Interface.\+h.
+
+\index{Network@{Network}!PI@{PI}}
+\index{PI@{PI}!Network@{Network}}
+\subsubsection[{PI}]{\setlength{\rightskip}{0pt plus 5cm}\#define PI~3.\+14159265359}\label{group___network_ga598a3330b3c21701223ee0ca14316eca}
+
+
+Definição na linha 70 do arquivo projection.\+h.
+
+\index{Network@{Network}!R\+\_\+\+EQ@{R\+\_\+\+EQ}}
+\index{R\+\_\+\+EQ@{R\+\_\+\+EQ}!Network@{Network}}
+\subsubsection[{R\+\_\+\+EQ}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+\_\+\+EQ~6378.\+169           /$\ast$ raio do centro da Terra ao equador               $\ast$/}\label{group___network_ga4781739f52b3000874380adae8279eaa}
+
+
+Definição na linha 72 do arquivo projection.\+h.
+
+\index{Network@{Network}!R\+\_\+\+P\+OL@{R\+\_\+\+P\+OL}}
+\index{R\+\_\+\+P\+OL@{R\+\_\+\+P\+OL}!Network@{Network}}
+\subsubsection[{R\+\_\+\+P\+OL}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+\_\+\+P\+OL~6356.\+5838          /$\ast$ raio do centro da Terra ao polo                  $\ast$/}\label{group___network_ga01e90bb100712e6e798f8babd7c31fb6}
+
+
+Definição na linha 73 do arquivo projection.\+h.
+
+\index{Network@{Network}!S\+A\+T\+\_\+\+H\+E\+I\+G\+HT@{S\+A\+T\+\_\+\+H\+E\+I\+G\+HT}}
+\index{S\+A\+T\+\_\+\+H\+E\+I\+G\+HT@{S\+A\+T\+\_\+\+H\+E\+I\+G\+HT}!Network@{Network}}
+\subsubsection[{S\+A\+T\+\_\+\+H\+E\+I\+G\+HT}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+A\+T\+\_\+\+H\+E\+I\+G\+HT~42164.\+0             /$\ast$ distancia do centro da Terra para o satelite     $\ast$/}\label{group___network_ga6084f5ed03536c34d1f6a18a426ad5eb}
+
+
+Definição na linha 71 do arquivo projection.\+h.
+
+\index{Network@{Network}!S\+U\+B\+\_\+\+L\+ON@{S\+U\+B\+\_\+\+L\+ON}}
+\index{S\+U\+B\+\_\+\+L\+ON@{S\+U\+B\+\_\+\+L\+ON}!Network@{Network}}
+\subsubsection[{S\+U\+B\+\_\+\+L\+ON}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+U\+B\+\_\+\+L\+ON~0.\+0             /$\ast$ longitude do ponto abaixo do satelite            $\ast$/}\label{group___network_ga68c229eef5fa622bca6d5f6c2f6c8e79}
+
+
+Definição na linha 74 do arquivo projection.\+h.
+
+\index{Network@{Network}!T\+A\+M\+S\+E\+GH@{T\+A\+M\+S\+E\+GH}}
+\index{T\+A\+M\+S\+E\+GH@{T\+A\+M\+S\+E\+GH}!Network@{Network}}
+\subsubsection[{T\+A\+M\+S\+E\+GH}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+A\+M\+S\+E\+GH~464               /$\ast$ tamanho do segmento em pixels para figuras H\+R\+IT  $\ast$/}\label{group___network_ga1be6923b9a8c661cc95dac55074f9651}
+
+
+Definição na linha 78 do arquivo projection.\+h.
+
+\index{Network@{Network}!T\+A\+M\+S\+E\+GL@{T\+A\+M\+S\+E\+GL}}
+\index{T\+A\+M\+S\+E\+GL@{T\+A\+M\+S\+E\+GL}!Network@{Network}}
+\subsubsection[{T\+A\+M\+S\+E\+GL}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+A\+M\+S\+E\+GL~464               /$\ast$ tamanho do segmento em pixels para figuras L\+R\+IT  $\ast$/}\label{group___network_ga881b683bf2175f9c90054cf29b067d33}
+
+
+Definição na linha 77 do arquivo projection.\+h.
+
+
+
+\subsection{Definições dos tipos}
+\index{Network@{Network}!byte@{byte}}
+\index{byte@{byte}!Network@{Network}}
+\subsubsection[{byte}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned char {\bf byte}}\label{group___network_ga0c8186d9b9b7880309c27230bbb5e69d}
+
+
+Definição na linha 80 do arquivo projection.\+h.
+
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{group___network_gaf9bdc3014f3d54c426b6d2df10de4960}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+M\+AP@{I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+M\+AP}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+M\+AP@{I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+M\+AP}}\item[{\em 
+I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+M\+AP\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960a5b40c2c14851367e42f48ff6a7fafeb7}
+}]\index{I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+N\+ET@{I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+N\+ET}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+N\+ET@{I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+N\+ET}}\item[{\em 
+I\+D\+\_\+\+S\+A\+V\+E\+\_\+\+N\+ET\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960ae99d873aef4102373dd0b794d57445c0}
+}]\index{I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+N\+ET@{I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+N\+ET}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+N\+ET@{I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+N\+ET}}\item[{\em 
+I\+D\+\_\+\+O\+P\+E\+N\+\_\+\+N\+ET\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960a6b354d02f44475614e822444f9014dc7}
+}]\index{I\+D\+\_\+\+D\+E\+L\+\_\+\+N\+O\+DE@{I\+D\+\_\+\+D\+E\+L\+\_\+\+N\+O\+DE}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+D\+E\+L\+\_\+\+N\+O\+DE@{I\+D\+\_\+\+D\+E\+L\+\_\+\+N\+O\+DE}}\item[{\em 
+I\+D\+\_\+\+D\+E\+L\+\_\+\+N\+O\+DE\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960ae6635d4f51fac909ee9e42f0a8c6b334}
+}]\index{I\+D\+\_\+\+D\+E\+L\+\_\+\+N\+O\+D\+E\+\_\+\+L\+I\+NK@{I\+D\+\_\+\+D\+E\+L\+\_\+\+N\+O\+D\+E\+\_\+\+L\+I\+NK}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+D\+E\+L\+\_\+\+N\+O\+D\+E\+\_\+\+L\+I\+NK@{I\+D\+\_\+\+D\+E\+L\+\_\+\+N\+O\+D\+E\+\_\+\+L\+I\+NK}}\item[{\em 
+I\+D\+\_\+\+D\+E\+L\+\_\+\+N\+O\+D\+E\+\_\+\+L\+I\+NK\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960acdf49adab581cbeecf8125e52e458c3c}
+}]\index{I\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+N\+ET@{I\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+N\+ET}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+N\+ET@{I\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+N\+ET}}\item[{\em 
+I\+D\+\_\+\+E\+R\+A\+S\+E\+\_\+\+N\+ET\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960a814d3e45db9d5cb4b19ed9ea2fff6ad7}
+}]\index{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+T\+Y\+PE@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+T\+Y\+PE}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+T\+Y\+PE@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+T\+Y\+PE}}\item[{\em 
+I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+T\+Y\+PE\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960a85755df3a0313cecf68a6c14ea6cab14}
+}]\index{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+S\+L\+O\+PE@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+S\+L\+O\+PE}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+S\+L\+O\+PE@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+S\+L\+O\+PE}}\item[{\em 
+I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+S\+L\+O\+PE\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960a0d7e2b002e21ec76adbe51ba2e72f95b}
+}]\index{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+A\+R\+EA@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+A\+R\+EA}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+A\+R\+EA@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+A\+R\+EA}}\item[{\em 
+I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+A\+R\+EA\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960a91ce7a01693a376c049eadf11d17e757}
+}]\index{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+V\+O\+L\+U\+ME@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+V\+O\+L\+U\+ME}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+V\+O\+L\+U\+ME@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+V\+O\+L\+U\+ME}}\item[{\em 
+I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+V\+O\+L\+U\+ME\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960a4b7b1f221ad35165de9a6c1ae449e1d3}
+}]\index{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+N\+A\+ME@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+N\+A\+ME}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+N\+A\+ME@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+N\+A\+ME}}\item[{\em 
+I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+N\+A\+ME\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960ac34c69f39eb119a99ebd3f933d70a7aa}
+}]\index{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+L\+AT@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+L\+AT}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+L\+AT@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+L\+AT}}\item[{\em 
+I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+L\+AT\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960af2ca2172a957da6f0465f805c9812697}
+}]\index{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+L\+O\+NG@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+L\+O\+NG}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+L\+O\+NG@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+L\+O\+NG}}\item[{\em 
+I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+O\+D\+E\+\_\+\+L\+O\+NG\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960afd187a639d9ea0ff1726af1562b1b419}
+}]\index{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+T\+Y\+PE@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+T\+Y\+PE}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+T\+Y\+PE@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+T\+Y\+PE}}\item[{\em 
+I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+T\+Y\+PE\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960ac466c6353a7d7dd44f11c30c8fe94cb7}
+}]\index{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+QL@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+QL}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+QL@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+QL}}\item[{\em 
+I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+T\+Y\+P\+E\+QL\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960a9b992824eb0323fce8d9a661953a63be}
+}]\index{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+BI@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+BI}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+BI@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+BI}}\item[{\em 
+I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+BI\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960a71f344b4fe5d1ab735967c84b51f4402}
+}]\index{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+S\+L\+O\+PE@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+S\+L\+O\+PE}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+S\+L\+O\+PE@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+S\+L\+O\+PE}}\item[{\em 
+I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+S\+L\+O\+PE\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960a0b42f627637ae19c329e3eb354446d66}
+}]\index{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+L\+E\+N\+G\+TH@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+L\+E\+N\+G\+TH}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+L\+E\+N\+G\+TH@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+L\+E\+N\+G\+TH}}\item[{\em 
+I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+L\+E\+N\+G\+TH\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960a8aa21bad52a1c159b85c1aba75bd1884}
+}]\index{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+D\+E\+P\+TH@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+D\+E\+P\+TH}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+D\+E\+P\+TH@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+D\+E\+P\+TH}}\item[{\em 
+I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+D\+E\+P\+TH\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960a00d2ba69fcd726f137f49f8930188590}
+}]\index{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+V\+O\+L\+U\+ME@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+V\+O\+L\+U\+ME}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+V\+O\+L\+U\+ME@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+V\+O\+L\+U\+ME}}\item[{\em 
+I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+V\+O\+L\+U\+ME\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960a31aac218ce3abf5d39841ceafaa51bb7}
+}]\index{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+E\+T\+\_\+\+N\+A\+ME@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+E\+T\+\_\+\+N\+A\+ME}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+E\+T\+\_\+\+N\+A\+ME@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+E\+T\+\_\+\+N\+A\+ME}}\item[{\em 
+I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+N\+E\+T\+\_\+\+N\+A\+ME\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960a9ec0a5cc4661d1f2426830f2a1782e96}
+}]\index{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+N\+A\+ME@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+N\+A\+ME}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+N\+A\+ME@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+N\+A\+ME}}\item[{\em 
+I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+L\+I\+N\+K\+\_\+\+N\+A\+ME\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960a2ef461bd727f7283f328fd3502d4ef44}
+}]\index{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+C\+B\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+C\+B\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+C\+B\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+C\+B\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}}\item[{\em 
+I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+C\+B\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960a6d597592407aa1fafed64b5d546fca35}
+}]\index{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+C\+B\+\_\+\+L\+I\+N\+K\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+C\+B\+\_\+\+L\+I\+N\+K\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+C\+B\+\_\+\+L\+I\+N\+K\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON@{I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+C\+B\+\_\+\+L\+I\+N\+K\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON}}\item[{\em 
+I\+D\+\_\+\+A\+L\+T\+E\+R\+\_\+\+C\+B\+\_\+\+L\+I\+N\+K\+\_\+\+S\+E\+L\+E\+C\+T\+I\+ON\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960abb09959d97a6b10d78c04b4c6405bae0}
+}]\index{I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+\+E\+L\+E\+M\+E\+NT@{I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+\+E\+L\+E\+M\+E\+NT}!Network@{Network}}\index{Network@{Network}!I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+\+E\+L\+E\+M\+E\+NT@{I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+\+E\+L\+E\+M\+E\+NT}}\item[{\em 
+I\+D\+\_\+\+B\+T\+N\+\_\+\+C\+E\+N\+T\+E\+R\+\_\+\+E\+L\+E\+M\+E\+NT\label{group___network_ggaf9bdc3014f3d54c426b6d2df10de4960a1e551192bc43a799f50ec885cf4f0757}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 105 do arquivo Net\+Interface.\+h.
+
+\index{Network@{Network}!Attr\+Table\+Column\+Type@{Attr\+Table\+Column\+Type}}
+\index{Attr\+Table\+Column\+Type@{Attr\+Table\+Column\+Type}!Network@{Network}}
+\subsubsection[{Attr\+Table\+Column\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Attr\+Table\+Column\+Type}}\label{group___network_gaf8d5970de0f120d50ca0a15b32405304}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{C\+O\+L\+\_\+\+S\+T\+R\+I\+NG@{C\+O\+L\+\_\+\+S\+T\+R\+I\+NG}!Network@{Network}}\index{Network@{Network}!C\+O\+L\+\_\+\+S\+T\+R\+I\+NG@{C\+O\+L\+\_\+\+S\+T\+R\+I\+NG}}\item[{\em 
+C\+O\+L\+\_\+\+S\+T\+R\+I\+NG\label{group___network_ggaf8d5970de0f120d50ca0a15b32405304a1828cfd02bc84ba87c86a7fa6ba23baa}
+}]\index{C\+O\+L\+\_\+\+D\+O\+U\+B\+LE@{C\+O\+L\+\_\+\+D\+O\+U\+B\+LE}!Network@{Network}}\index{Network@{Network}!C\+O\+L\+\_\+\+D\+O\+U\+B\+LE@{C\+O\+L\+\_\+\+D\+O\+U\+B\+LE}}\item[{\em 
+C\+O\+L\+\_\+\+D\+O\+U\+B\+LE\label{group___network_ggaf8d5970de0f120d50ca0a15b32405304a5d5f9b2a2faaad44755b7b7a46d51069}
+}]\index{C\+O\+L\+\_\+\+I\+N\+T\+E\+G\+ER@{C\+O\+L\+\_\+\+I\+N\+T\+E\+G\+ER}!Network@{Network}}\index{Network@{Network}!C\+O\+L\+\_\+\+I\+N\+T\+E\+G\+ER@{C\+O\+L\+\_\+\+I\+N\+T\+E\+G\+ER}}\item[{\em 
+C\+O\+L\+\_\+\+I\+N\+T\+E\+G\+ER\label{group___network_ggaf8d5970de0f120d50ca0a15b32405304ac29b0e8d35db39ed7c576537a317215b}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 17 do arquivo ogrvector.\+h.
+
+\index{Network@{Network}!type\+SA@{type\+SA}}
+\index{type\+SA@{type\+SA}!Network@{Network}}
+\subsubsection[{type\+SA}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf type\+SA}}\label{group___network_ga17f5ae2753dbe136fb5fe22086eeab41}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{S\+A\+\_\+\+A\+G\+RI@{S\+A\+\_\+\+A\+G\+RI}!Network@{Network}}\index{Network@{Network}!S\+A\+\_\+\+A\+G\+RI@{S\+A\+\_\+\+A\+G\+RI}}\item[{\em 
+S\+A\+\_\+\+A\+G\+RI\label{group___network_gga17f5ae2753dbe136fb5fe22086eeab41a15a18efe69c0f581ff0a09c77d024f56}
+}]\index{S\+A\+\_\+\+U\+R\+B\+AN@{S\+A\+\_\+\+U\+R\+B\+AN}!Network@{Network}}\index{Network@{Network}!S\+A\+\_\+\+U\+R\+B\+AN@{S\+A\+\_\+\+U\+R\+B\+AN}}\item[{\em 
+S\+A\+\_\+\+U\+R\+B\+AN\label{group___network_gga17f5ae2753dbe136fb5fe22086eeab41a1404c66653107b927e31fdfca3e691f9}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 11 do arquivo Source\+Area.\+h.
+
+
+
+\subsection{Funções}
+\index{Network@{Network}!aloca\+Mem@{aloca\+Mem}}
+\index{aloca\+Mem@{aloca\+Mem}!Network@{Network}}
+\subsubsection[{aloca\+Mem(long, imagem $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void aloca\+Mem (
+\begin{DoxyParamCaption}
+\item[{long}]{tam, }
+\item[{{\bf imagem} $\ast$}]{bitmap}
+\end{DoxyParamCaption}
+)}\label{group___network_ga5e9c425d80f9d360dfba29482187b33f}
+
+
+Definição na linha 1441 do arquivo projection.\+h.
+
+\index{Network@{Network}!escrever\+Imagem@{escrever\+Imagem}}
+\index{escrever\+Imagem@{escrever\+Imagem}!Network@{Network}}
+\subsubsection[{escrever\+Imagem(char $\ast$, imagem $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void escrever\+Imagem (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+In, }
+\item[{{\bf imagem} $\ast$}]{bitmap}
+\end{DoxyParamCaption}
+)}\label{group___network_gaeafacc12741b76e8afb0aacabd92a54d}
+
+
+Definição na linha 862 do arquivo projection.\+h.
+
+\index{Network@{Network}!geocoord2mercator@{geocoord2mercator}}
+\index{geocoord2mercator@{geocoord2mercator}!Network@{Network}}
+\subsubsection[{geocoord2mercator(double latitude, double longitude, int coff, int loff, double cfac, double lfac, int $\ast$column, int $\ast$row)}]{\setlength{\rightskip}{0pt plus 5cm}int geocoord2mercator (
+\begin{DoxyParamCaption}
+\item[{double}]{latitude, }
+\item[{double}]{longitude, }
+\item[{int}]{coff, }
+\item[{int}]{loff, }
+\item[{double}]{cfac, }
+\item[{double}]{lfac, }
+\item[{int $\ast$}]{column, }
+\item[{int $\ast$}]{row}
+\end{DoxyParamCaption}
+)}\label{group___network_ga9d171b5b28f1f917855bab370a29a2ca}
+
+
+Definição na linha 1390 do arquivo projection.\+h.
+
+\index{Network@{Network}!geocoord2pixcoord@{geocoord2pixcoord}}
+\index{geocoord2pixcoord@{geocoord2pixcoord}!Network@{Network}}
+\subsubsection[{geocoord2pixcoord(double latitude, double longitude, int coff, int loff, double cfac, double lfac, int $\ast$column, int $\ast$row)}]{\setlength{\rightskip}{0pt plus 5cm}int geocoord2pixcoord (
+\begin{DoxyParamCaption}
+\item[{double}]{latitude, }
+\item[{double}]{longitude, }
+\item[{int}]{coff, }
+\item[{int}]{loff, }
+\item[{double}]{cfac, }
+\item[{double}]{lfac, }
+\item[{int $\ast$}]{column, }
+\item[{int $\ast$}]{row}
+\end{DoxyParamCaption}
+)}\label{group___network_ga35922d64269ee2dfcacbe32f43d5796c}
+
+
+Definição na linha 1146 do arquivo projection.\+h.
+
+\index{Network@{Network}!geocoord2pixcoord2@{geocoord2pixcoord2}}
+\index{geocoord2pixcoord2@{geocoord2pixcoord2}!Network@{Network}}
+\subsubsection[{geocoord2pixcoord2(double latitude, double longitude, int first\+Pixel\+X, int first\+Pixel\+Y, int coff, int loff, double cfac, double lfac, int $\ast$column, int $\ast$row)}]{\setlength{\rightskip}{0pt plus 5cm}int geocoord2pixcoord2 (
+\begin{DoxyParamCaption}
+\item[{double}]{latitude, }
+\item[{double}]{longitude, }
+\item[{int}]{first\+PixelX, }
+\item[{int}]{first\+PixelY, }
+\item[{int}]{coff, }
+\item[{int}]{loff, }
+\item[{double}]{cfac, }
+\item[{double}]{lfac, }
+\item[{int $\ast$}]{column, }
+\item[{int $\ast$}]{row}
+\end{DoxyParamCaption}
+)}\label{group___network_gae8edbb789fda8b834f9f025f285809d0}
+
+
+Definição na linha 1020 do arquivo projection.\+h.
+
+\index{Network@{Network}!ler\+Imagem@{ler\+Imagem}}
+\index{ler\+Imagem@{ler\+Imagem}!Network@{Network}}
+\subsubsection[{ler\+Imagem(wx\+Image \&, imagem $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void ler\+Imagem (
+\begin{DoxyParamCaption}
+\item[{wx\+Image \&}]{image, }
+\item[{{\bf imagem} $\ast$}]{bitmap}
+\end{DoxyParamCaption}
+)}\label{group___network_ga4fd32659ee56464e9a444894531cb9ad}
+
+
+Definição na linha 787 do arquivo projection.\+h.
+
+\index{Network@{Network}!ler\+Imagem@{ler\+Imagem}}
+\index{ler\+Imagem@{ler\+Imagem}!Network@{Network}}
+\subsubsection[{ler\+Imagem(char $\ast$, imagem $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void ler\+Imagem (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+In, }
+\item[{{\bf imagem} $\ast$}]{bitmap}
+\end{DoxyParamCaption}
+)}\label{group___network_gacb621ad1a5930ef685b1160f47fe6a50}
+
+
+Definição na linha 686 do arquivo projection.\+h.
+
+\index{Network@{Network}!libera\+Mem@{libera\+Mem}}
+\index{libera\+Mem@{libera\+Mem}!Network@{Network}}
+\subsubsection[{libera\+Mem(imagem $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void libera\+Mem (
+\begin{DoxyParamCaption}
+\item[{{\bf imagem} $\ast$}]{bitmap}
+\end{DoxyParamCaption}
+)}\label{group___network_ga5420efba71858c377eddbbff8e910694}
+
+
+Definição na linha 1469 do arquivo projection.\+h.
+
+\index{Network@{Network}!mensagem@{mensagem}}
+\index{mensagem@{mensagem}!Network@{Network}}
+\subsubsection[{mensagem(char $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void mensagem (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{argumento}
+\end{DoxyParamCaption}
+)}\label{group___network_gafee794a118dbaf6daeff4e47fe47bfb0}
+
+
+Definição na linha 1590 do arquivo projection.\+h.
+
+\index{Network@{Network}!mercator@{mercator}}
+\index{mercator@{mercator}!Network@{Network}}
+\subsubsection[{mercator(wx\+String resolution, int first\+Pixel\+X, int first\+Pixel\+Y, wx\+Image \&in\+Image, double lat1, double lon1, double lat2, double lon2)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Image mercator (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{resolution, }
+\item[{int}]{first\+PixelX, }
+\item[{int}]{first\+PixelY, }
+\item[{wx\+Image \&}]{in\+Image, }
+\item[{double}]{lat1, }
+\item[{double}]{lon1, }
+\item[{double}]{lat2, }
+\item[{double}]{lon2}
+\end{DoxyParamCaption}
+)}\label{group___network_gadb7f4bb3728f528809857daae0023a52}
+
+
+Definição na linha 137 do arquivo projection.\+h.
+
+\index{Network@{Network}!mercator@{mercator}}
+\index{mercator@{mercator}!Network@{Network}}
+\subsubsection[{mercator(wx\+String resolution, G\+D\+A\+L\+Raster $\ast$in\+Image, double lat1, double lon1, double lat2, double lon2)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Image mercator (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{resolution, }
+\item[{{\bf G\+D\+A\+L\+Raster} $\ast$}]{in\+Image, }
+\item[{double}]{lat1, }
+\item[{double}]{lon1, }
+\item[{double}]{lat2, }
+\item[{double}]{lon2}
+\end{DoxyParamCaption}
+)}\label{group___network_gabeb913077ab3e435165c94f4d316259f}
+
+
+Definição na linha 311 do arquivo projection.\+h.
+
+\index{Network@{Network}!mercator@{mercator}}
+\index{mercator@{mercator}!Network@{Network}}
+\subsubsection[{mercator(wx\+String resolution, G\+D\+A\+L\+Raster $\ast$in\+Image, double lat1, double lon1, double lat2, double lon2, double pixel\+Factor)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Image mercator (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{resolution, }
+\item[{{\bf G\+D\+A\+L\+Raster} $\ast$}]{in\+Image, }
+\item[{double}]{lat1, }
+\item[{double}]{lon1, }
+\item[{double}]{lat2, }
+\item[{double}]{lon2, }
+\item[{double}]{pixel\+Factor}
+\end{DoxyParamCaption}
+)}\label{group___network_ga6e97d93e6d6b6d31ba73688f07d8437d}
+
+
+Definição na linha 492 do arquivo projection.\+h.
+
+\index{Network@{Network}!mercator2geocoord@{mercator2geocoord}}
+\index{mercator2geocoord@{mercator2geocoord}!Network@{Network}}
+\subsubsection[{mercator2geocoord(int column, int row, int coff, int loff, double cfac, double lfac, double $\ast$latitude, double $\ast$longitude)}]{\setlength{\rightskip}{0pt plus 5cm}int mercator2geocoord (
+\begin{DoxyParamCaption}
+\item[{int}]{column, }
+\item[{int}]{row, }
+\item[{int}]{coff, }
+\item[{int}]{loff, }
+\item[{double}]{cfac, }
+\item[{double}]{lfac, }
+\item[{double $\ast$}]{latitude, }
+\item[{double $\ast$}]{longitude}
+\end{DoxyParamCaption}
+)}\label{group___network_ga054062a95fe6813ea071781c8508f794}
+
+
+Definição na linha 1554 do arquivo projection.\+h.
+
+\index{Network@{Network}!ninto@{ninto}}
+\index{ninto@{ninto}!Network@{Network}}
+\subsubsection[{ninto(double val)}]{\setlength{\rightskip}{0pt plus 5cm}int ninto (
+\begin{DoxyParamCaption}
+\item[{double}]{val}
+\end{DoxyParamCaption}
+)}\label{group___network_ga6a6ff5155d878491dd819f744800e506}
+
+
+Definição na linha 965 do arquivo projection.\+h.
+
+\index{Network@{Network}!pega\+Imagem\+Info@{pega\+Imagem\+Info}}
+\index{pega\+Imagem\+Info@{pega\+Imagem\+Info}!Network@{Network}}
+\subsubsection[{pega\+Imagem\+Info(\+F\+I\+L\+E $\ast$, long, long)}]{\setlength{\rightskip}{0pt plus 5cm}long pega\+Imagem\+Info (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{input\+File, }
+\item[{long}]{offset, }
+\item[{long}]{num\+Chars}
+\end{DoxyParamCaption}
+)}\label{group___network_ga9bdf1e0ec3a52b6ca55dfe5f430afa84}
+
+
+Definição na linha 937 do arquivo projection.\+h.
+
+\index{Network@{Network}!pixcoord2geocoord@{pixcoord2geocoord}}
+\index{pixcoord2geocoord@{pixcoord2geocoord}!Network@{Network}}
+\subsubsection[{pixcoord2geocoord(int column, int row, int coff, int loff, double $\ast$latitude, double $\ast$longitude)}]{\setlength{\rightskip}{0pt plus 5cm}int pixcoord2geocoord (
+\begin{DoxyParamCaption}
+\item[{int}]{column, }
+\item[{int}]{row, }
+\item[{int}]{coff, }
+\item[{int}]{loff, }
+\item[{double $\ast$}]{latitude, }
+\item[{double $\ast$}]{longitude}
+\end{DoxyParamCaption}
+)}\label{group___network_ga4745423e15afcccc22584727c8463745}
+
+
+Definição na linha 1278 do arquivo projection.\+h.
+
+\index{Network@{Network}!preenche\+Cab@{preenche\+Cab}}
+\index{preenche\+Cab@{preenche\+Cab}!Network@{Network}}
+\subsubsection[{preenche\+Cab(int, int, imagem $\ast$, imagem $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void preenche\+Cab (
+\begin{DoxyParamCaption}
+\item[{int}]{col, }
+\item[{int}]{lin, }
+\item[{{\bf imagem} $\ast$}]{bitmap\+In, }
+\item[{{\bf imagem} $\ast$}]{bitmap\+Out}
+\end{DoxyParamCaption}
+)}\label{group___network_ga4a786acd55b6697a5621f30a99fb3639}
+
+
+Definição na linha 1483 do arquivo projection.\+h.
+

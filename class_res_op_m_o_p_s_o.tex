@@ -1,0 +1,189 @@
+\section{Referência da Classe Res\+Op\+M\+O\+P\+SO}
+\label{class_res_op_m_o_p_s_o}\index{Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}}
+
+
+{\ttfamily \#include $<$Res\+Op\+M\+O\+P\+S\+O.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Algorithm} e {\bf Res\+Op\+Tecnique}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+M\+O\+P\+SO} ()
+\item 
+{\bf $\sim$\+Res\+Op\+M\+O\+P\+SO} ()
+\item 
+void {\bf run} ()
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\item 
+{\bf Res\+Op\+M\+O\+P\+SO} ()
+\item 
+{\bf $\sim$\+Res\+Op\+M\+O\+P\+SO} ()
+\item 
+bool {\bf run} ({\bf Res\+Op\+Model\+Ctrl} $\ast$model\+Ctrl, {\bf Res\+Op\+Scenario} $\ast$scen)
+\item 
+bool {\bf run\+Isolated} ({\bf Res\+Op\+Model\+Ctrl} $\ast$model\+Ctrl, {\bf Res\+Op\+Scenario} $\ast$scen, map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&elements, std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&dependency\+\_\+map, {\bf Element\+ID} network\+\_\+id)
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog, {\bf Res\+Op\+Scenario} \&scenario, {\bf Element\+ID} network\+\_\+id)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+M\+O\+P\+S\+O\+Var} $\ast$ {\bf var}
+\item 
+{\bf Res\+Op\+M\+O\+P\+S\+O\+Par} $\ast$ {\bf par}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Algorithm} $\ast$ {\bf do\+Copy} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 118 do arquivo Tecniques/\+M\+O\+P\+S\+O/\+Res\+Op\+M\+O\+P\+S\+O.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}!Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}}
+\index{Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}!Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}}
+\subsubsection[{Res\+Op\+M\+O\+P\+S\+O()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+M\+O\+P\+S\+O\+::\+Res\+Op\+M\+O\+P\+SO (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_m_o_p_s_o_a7f664e06f196c95f7b22ffa16f2434fd}
+Construtor \index{Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}!````~Res\+Op\+M\+O\+P\+SO@{$\sim$\+Res\+Op\+M\+O\+P\+SO}}
+\index{````~Res\+Op\+M\+O\+P\+SO@{$\sim$\+Res\+Op\+M\+O\+P\+SO}!Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}}
+\subsubsection[{$\sim$\+Res\+Op\+M\+O\+P\+S\+O()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+M\+O\+P\+S\+O\+::$\sim$\+Res\+Op\+M\+O\+P\+SO (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_m_o_p_s_o_a90bf89c6ff0f40884caaa47209b9b06d}
+Destrutor \index{Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}!Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}}
+\index{Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}!Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}}
+\subsubsection[{Res\+Op\+M\+O\+P\+S\+O()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+M\+O\+P\+S\+O\+::\+Res\+Op\+M\+O\+P\+SO (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_m_o_p_s_o_a7f664e06f196c95f7b22ffa16f2434fd}
+Construtor \index{Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}!````~Res\+Op\+M\+O\+P\+SO@{$\sim$\+Res\+Op\+M\+O\+P\+SO}}
+\index{````~Res\+Op\+M\+O\+P\+SO@{$\sim$\+Res\+Op\+M\+O\+P\+SO}!Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}}
+\subsubsection[{$\sim$\+Res\+Op\+M\+O\+P\+S\+O()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+M\+O\+P\+S\+O\+::$\sim$\+Res\+Op\+M\+O\+P\+SO (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_m_o_p_s_o_a90bf89c6ff0f40884caaa47209b9b06d}
+Destrutor 
+
+\subsection{Métodos}
+\index{Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+M\+O\+P\+S\+O\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_m_o_p_s_o_a4ee183cc006336d7c1528845efbec2fd}
+Avalia se todas as informa��es importantes para o algoritmo formam informadas 
+\begin{DoxyParams}{Parâmetros}
+{\em Caixa} & de dialogo que contem os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Tecnique} \doxyref{}{pag.}{class_res_op_tecnique_a6637d51649b7f86d102998aa77f60687}.
+
+\index{Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog, Res\+Op\+Scenario \&scenario, Element\+I\+D network\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+M\+O\+P\+S\+O\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog, }
+\item[{{\bf Res\+Op\+Scenario} \&}]{scenario, }
+\item[{{\bf Element\+ID}}]{network\+\_\+id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_m_o_p_s_o_a0b06ec5db0c70beb782b5e97cf99bb45}
+Avalia se todas as informa��es importantes para o algoritmo formam informadas 
+\begin{DoxyParams}{Parâmetros}
+{\em Caixa} & de dialogo que contem os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Res\+Op\+Algorithm} \doxyref{}{pag.}{class_res_op_algorithm_a2c1db96b91c7aac5a427b295db5b4e9c}.
+
+\index{Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}}
+\subsubsection[{do\+Copy()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Algorithm}$\ast$ Res\+Op\+M\+O\+P\+S\+O\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_op_m_o_p_s_o_a8ec01434eea4b7eb0997c612c2489f9c}
+Copia a si 
+
+Implementa {\bf Res\+Op\+Algorithm} \doxyref{}{pag.}{class_res_op_algorithm_a64fc6295bba45f988941d0385f7f440e}.
+
+\index{Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}!run@{run}}
+\index{run@{run}!Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+M\+O\+P\+S\+O\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_m_o_p_s_o_a007e455f630130081e081242588aeae4}
+Executar o algoritmo M\+O\+P\+SO 
+
+Implementa {\bf Res\+Op\+Tecnique} \doxyref{}{pag.}{class_res_op_tecnique_a40f465c937ee201be8fdb8d01997c381}.
+
+\index{Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}!run@{run}}
+\index{run@{run}!Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}}
+\subsubsection[{run(\+Res\+Op\+Model\+Ctrl $\ast$model\+Ctrl, Res\+Op\+Scenario $\ast$scen)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+M\+O\+P\+S\+O\+::run (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Model\+Ctrl} $\ast$}]{model\+Ctrl, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_m_o_p_s_o_a7e53657466ad6c2dc94489019821e112}
+Executar o algoritmo M\+O\+P\+SO 
+
+Implementa {\bf Res\+Op\+Algorithm} \doxyref{}{pag.}{class_res_op_algorithm_a5219eee24a40d05c471ad3ff40af1171}.
+
+\index{Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}!run\+Isolated@{run\+Isolated}}
+\index{run\+Isolated@{run\+Isolated}!Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}}
+\subsubsection[{run\+Isolated(\+Res\+Op\+Model\+Ctrl $\ast$model\+Ctrl, Res\+Op\+Scenario $\ast$scen, map$<$ Element\+I\+D, Res\+Op\+Element $\ast$ $>$ \&elements, std\+::map$<$ Element\+I\+D, std\+::vector$<$ Res\+Op\+Element $\ast$ $>$ $>$ \&dependency\+\_\+map, Element\+I\+D network\+\_\+id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+M\+O\+P\+S\+O\+::run\+Isolated (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Model\+Ctrl} $\ast$}]{model\+Ctrl, }
+\item[{{\bf Res\+Op\+Scenario} $\ast$}]{scen, }
+\item[{map$<$ {\bf Element\+ID}, {\bf Res\+Op\+Element} $\ast$ $>$ \&}]{elements, }
+\item[{std\+::map$<$ {\bf Element\+ID}, std\+::vector$<$ {\bf Res\+Op\+Element} $\ast$ $>$ $>$ \&}]{dependency\+\_\+map, }
+\item[{{\bf Element\+ID}}]{network\+\_\+id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_m_o_p_s_o_a0ba082ce842816b493b7ff55aa12dcdc}
+
+
+Reimplementação de {\bf Res\+Op\+Algorithm} \doxyref{}{pag.}{class_res_op_algorithm_ab590c2e8c9df0dcb7baf3210602e291f}.
+
+
+
+\subsection{Atributos}
+\index{Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}!par@{par}}
+\index{par@{par}!Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}}
+\subsubsection[{par}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+M\+O\+P\+S\+O\+Par} $\ast$ Res\+Op\+M\+O\+P\+S\+O\+::par}\label{class_res_op_m_o_p_s_o_a3f4d0dd77da07abc1d5396bf89568ff1}
+Ponteiro para Par�metros 
+
+Definição na linha 130 do arquivo Tecniques/\+M\+O\+P\+S\+O/\+Res\+Op\+M\+O\+P\+S\+O.\+h.
+
+\index{Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}!var@{var}}
+\index{var@{var}!Res\+Op\+M\+O\+P\+SO@{Res\+Op\+M\+O\+P\+SO}}
+\subsubsection[{var}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+M\+O\+P\+S\+O\+Var} $\ast$ Res\+Op\+M\+O\+P\+S\+O\+::var}\label{class_res_op_m_o_p_s_o_ae0043f1bf9f62ac5844e093def0f8bc1}
+Ponteiro para Vari�veis 
+
+Definição na linha 125 do arquivo Tecniques/\+M\+O\+P\+S\+O/\+Res\+Op\+M\+O\+P\+S\+O.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Tecniques/\+M\+O\+P\+S\+O/\+Res\+Op\+M\+O\+P\+S\+O.\+h}\end{DoxyCompactItemize}

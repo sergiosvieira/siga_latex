@@ -1,0 +1,516 @@
+\section{Referência da Classe W\+A\+S\+A\+Do\+Panel}
+\label{class_w_a_s_a_do_panel}\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+
+
+{\ttfamily \#include $<$W\+A\+S\+A\+Do\+Panel.\+h$>$}
+
+
+
+Herdeiro de wx\+Panel.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf W\+A\+S\+A\+Do\+Panel} (wx\+Window $\ast$parent, wx\+Window\+ID id=wx\+I\+D\+\_\+\+A\+NY, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Size(800, 600), long style=wx\+T\+A\+B\+\_\+\+T\+R\+A\+V\+E\+R\+S\+AL)
+\item 
+virtual {\bf $\sim$\+W\+A\+S\+A\+Do\+Panel} ()
+\item 
+bool {\bf save\+To\+Entry} ({\bf Do\+Entry} \&do\+Entry) const 
+\item 
+void {\bf set\+Receive\+Path\+Imput} (wx\+String input\+Path)
+\item 
+wx\+String {\bf get\+Receive\+Path\+Input} ()
+\item 
+void {\bf save\+To\+Window} (const {\bf Do\+Entry} \&do\+Entry)
+\end{DoxyCompactItemize}
+\subsection*{Tipos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+{\bf I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+H\+Y\+D\+R\+A\+U\+L\+I\+C\+\_\+\+C\+O\+N\+D\+U\+C\+T\+\_\+\+F\+A\+C\+T\+OR}, 
+{\bf I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+I\+N\+T\+E\+R\+C\+E\+P\+T\+I\+O\+N\+\_\+\+C\+A\+P\+A\+C\+I\+TY}, 
+{\bf I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+\_\+\+F\+A\+C\+T\+OR}, 
+{\bf I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+EP}, 
+\\*
+{\bf I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+G\+R\+A\+I\+N\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+U\+M\+B\+ER}, 
+{\bf I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE}, 
+{\bf I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf validate\+Spin\+Ctrl\+Dbl} (wx\+Spin\+Event \&event)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Static\+Text $\ast$ {\bf lbl\+Input\+Dir}
+\item 
+wx\+Dir\+Picker\+Ctrl $\ast$ {\bf dir\+Picker\+Ctrl\+Input}
+\item 
+wx\+Static\+Text $\ast$ {\bf lbl\+Output\+Dir}
+\item 
+wx\+Dir\+Picker\+Ctrl $\ast$ {\bf dir\+Picker\+Ctrl\+Output}
+\item 
+wx\+Static\+Text $\ast$ {\bf lbl\+Simulation\+Date\+Range}
+\item 
+wx\+Date\+Picker\+Ctrl $\ast$ {\bf dp\+Simulation\+Start}
+\item 
+wx\+Date\+Picker\+Ctrl $\ast$ {\bf dp\+Simulation\+End}
+\item 
+wx\+Static\+Text $\ast$ {\bf lbl\+Flags}
+\item 
+wx\+Check\+Box $\ast$ {\bf chk\+Reservoir\+Calculations}
+\item 
+wx\+Check\+Box $\ast$ {\bf chk\+Include\+Dam\+Calculations}
+\item 
+wx\+Check\+Box $\ast$ {\bf chk\+Latflow\+Between\+TC}
+\item 
+wx\+Check\+Box $\ast$ {\bf chk\+Rout\+Latflow}
+\item 
+wx\+Check\+Box $\ast$ {\bf chk\+Surface\+Runoff}
+\item 
+wx\+Check\+Box $\ast$ {\bf chk\+Subsurface\+Runoff}
+\item 
+wx\+Check\+Box $\ast$ {\bf chk\+Water\+Transpositions}
+\item 
+wx\+Check\+Box $\ast$ {\bf chk\+Hourly\+Version}
+\item 
+wx\+Check\+Box $\ast$ {\bf chk\+Scaling}
+\item 
+wx\+Check\+Box $\ast$ {\bf chk\+Derived\+Rainfall\+Input}
+\item 
+wx\+Check\+Box $\ast$ {\bf chk\+Sediment}
+\item 
+wx\+Check\+Box $\ast$ {\bf chk\+Load\+Storage\+State}
+\item 
+wx\+Check\+Box $\ast$ {\bf chk\+Save\+Storage\+State}
+\item 
+wx\+Radio\+Box $\ast$ {\bf rb\+Scenario}
+\item 
+wx\+Radio\+Box $\ast$ {\bf rb\+Precipitation\+Interpolation\+Type}
+\item 
+wx\+Radio\+Box $\ast$ {\bf rb\+Interception\+Routine\+Type}
+\item 
+wx\+Radio\+Box $\ast$ {\bf rb\+River\+Sediment\+Model\+Type}
+\item 
+wx\+Static\+Text $\ast$ {\bf lbl\+Hydraulic\+Conduct\+Factor}
+\item 
+wx\+Spin\+Ctrl\+Dbl $\ast$ {\bf spin\+Hydraulic\+Conduct\+Factor}
+\item 
+wx\+Static\+Text $\ast$ {\bf lbl\+Interception\+Capacity}
+\item 
+wx\+Spin\+Ctrl\+Dbl $\ast$ {\bf spin\+Interception\+Capacity}
+\item 
+wx\+Static\+Text $\ast$ {\bf lbl\+Sensitivity\+Factor}
+\item 
+wx\+Spin\+Ctrl\+Dbl $\ast$ {\bf spin\+Sensitivity\+Factor}
+\item 
+wx\+Static\+Text $\ast$ {\bf lbl\+Time\+Step}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf spin\+Time\+Step}
+\item 
+wx\+Static\+Text $\ast$ {\bf lbl\+Grain\+Class\+Number}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf spin\+Grain\+Class\+Number}
+\item 
+wx\+Static\+Text $\ast$ {\bf lbl\+Sediment\+Transport\+Model\+Type}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf spin\+Sediment\+Transport\+Model\+Type}
+\item 
+wx\+Static\+Text $\ast$ {\bf lbl\+Reservoir\+Sediment\+Model\+Type}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf spin\+Reservoir\+Sediment\+Model\+Type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Class que contem o painel para a interface dos par�metros necess�rios para a gera��o do arquivo do.\+dat 
+
+Definição na linha 24 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a6c2592956761691f78481c8dd9345350}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+H\+Y\+D\+R\+A\+U\+L\+I\+C\+\_\+\+C\+O\+N\+D\+U\+C\+T\+\_\+\+F\+A\+C\+T\+OR@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+H\+Y\+D\+R\+A\+U\+L\+I\+C\+\_\+\+C\+O\+N\+D\+U\+C\+T\+\_\+\+F\+A\+C\+T\+OR}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+H\+Y\+D\+R\+A\+U\+L\+I\+C\+\_\+\+C\+O\+N\+D\+U\+C\+T\+\_\+\+F\+A\+C\+T\+OR@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+H\+Y\+D\+R\+A\+U\+L\+I\+C\+\_\+\+C\+O\+N\+D\+U\+C\+T\+\_\+\+F\+A\+C\+T\+OR}}\item[{\em 
+I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+H\+Y\+D\+R\+A\+U\+L\+I\+C\+\_\+\+C\+O\+N\+D\+U\+C\+T\+\_\+\+F\+A\+C\+T\+OR\label{class_w_a_s_a_do_panel_a6c2592956761691f78481c8dd9345350af81aa7961507ee0cc13dc768114ca6a0}
+}]\index{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+I\+N\+T\+E\+R\+C\+E\+P\+T\+I\+O\+N\+\_\+\+C\+A\+P\+A\+C\+I\+TY@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+I\+N\+T\+E\+R\+C\+E\+P\+T\+I\+O\+N\+\_\+\+C\+A\+P\+A\+C\+I\+TY}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+I\+N\+T\+E\+R\+C\+E\+P\+T\+I\+O\+N\+\_\+\+C\+A\+P\+A\+C\+I\+TY@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+I\+N\+T\+E\+R\+C\+E\+P\+T\+I\+O\+N\+\_\+\+C\+A\+P\+A\+C\+I\+TY}}\item[{\em 
+I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+I\+N\+T\+E\+R\+C\+E\+P\+T\+I\+O\+N\+\_\+\+C\+A\+P\+A\+C\+I\+TY\label{class_w_a_s_a_do_panel_a6c2592956761691f78481c8dd9345350abe597102e3255f09874f2daed55e7850}
+}]\index{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+\_\+\+F\+A\+C\+T\+OR@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+\_\+\+F\+A\+C\+T\+OR}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+\_\+\+F\+A\+C\+T\+OR@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+\_\+\+F\+A\+C\+T\+OR}}\item[{\em 
+I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+\_\+\+F\+A\+C\+T\+OR\label{class_w_a_s_a_do_panel_a6c2592956761691f78481c8dd9345350a73230194537e6f7ca57fff925115a33c}
+}]\index{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+EP@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+EP}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+EP@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+EP}}\item[{\em 
+I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+T\+I\+M\+E\+\_\+\+S\+T\+EP\label{class_w_a_s_a_do_panel_a6c2592956761691f78481c8dd9345350ace741304de96c7f8da53ecca98cbb183}
+}]\index{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+G\+R\+A\+I\+N\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+U\+M\+B\+ER@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+G\+R\+A\+I\+N\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+U\+M\+B\+ER}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+G\+R\+A\+I\+N\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+U\+M\+B\+ER@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+G\+R\+A\+I\+N\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+U\+M\+B\+ER}}\item[{\em 
+I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+G\+R\+A\+I\+N\+\_\+\+C\+L\+A\+S\+S\+\_\+\+N\+U\+M\+B\+ER\label{class_w_a_s_a_do_panel_a6c2592956761691f78481c8dd9345350a9cac256fecc97b64b5d108a1ad3704a1}
+}]\index{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE}}\item[{\em 
+I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+T\+R\+A\+N\+S\+P\+O\+R\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE\label{class_w_a_s_a_do_panel_a6c2592956761691f78481c8dd9345350a874733353a37244f1a369b2e77e33453}
+}]\index{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE}}\item[{\em 
+I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+R\+E\+S\+E\+R\+V\+O\+I\+R\+\_\+\+S\+E\+D\+I\+M\+E\+N\+T\+\_\+\+M\+O\+D\+E\+L\+\_\+\+T\+Y\+PE\label{class_w_a_s_a_do_panel_a6c2592956761691f78481c8dd9345350ae59425619233d1e15c809d07abaa7da8}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 67 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{W\+A\+S\+A\+Do\+Panel(wx\+Window $\ast$parent, wx\+Window\+I\+D id=wx\+I\+D\+\_\+\+A\+N\+Y, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Size(800, 600), long style=wx\+T\+A\+B\+\_\+\+T\+R\+A\+V\+E\+R\+S\+A\+L)}]{\setlength{\rightskip}{0pt plus 5cm}W\+A\+S\+A\+Do\+Panel\+::\+W\+A\+S\+A\+Do\+Panel (
+\begin{DoxyParamCaption}
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{wx\+Window\+ID}]{id = {\ttfamily wxID\+\_\+ANY}, }
+\item[{const wx\+Point \&}]{pos = {\ttfamily wxDefaultPosition}, }
+\item[{const wx\+Size \&}]{size = {\ttfamily wxSize(800,~600)}, }
+\item[{long}]{style = {\ttfamily wxTAB\+\_\+TRAVERSAL}}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_do_panel_a6a18c6ffd0461b1a23c24c198cb0bffc}
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!````~W\+A\+S\+A\+Do\+Panel@{$\sim$\+W\+A\+S\+A\+Do\+Panel}}
+\index{````~W\+A\+S\+A\+Do\+Panel@{$\sim$\+W\+A\+S\+A\+Do\+Panel}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{$\sim$\+W\+A\+S\+A\+Do\+Panel()}]{\setlength{\rightskip}{0pt plus 5cm}virtual W\+A\+S\+A\+Do\+Panel\+::$\sim$\+W\+A\+S\+A\+Do\+Panel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_w_a_s_a_do_panel_a801dd5db27f15c523e19246643ab2e9e}
+
+
+\subsection{Métodos}
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!get\+Receive\+Path\+Input@{get\+Receive\+Path\+Input}}
+\index{get\+Receive\+Path\+Input@{get\+Receive\+Path\+Input}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{get\+Receive\+Path\+Input()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String W\+A\+S\+A\+Do\+Panel\+::get\+Receive\+Path\+Input (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_do_panel_a6a12114779625c734602a85b998cb929}
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!save\+To\+Entry@{save\+To\+Entry}}
+\index{save\+To\+Entry@{save\+To\+Entry}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{save\+To\+Entry(\+Do\+Entry \&do\+Entry) const }]{\setlength{\rightskip}{0pt plus 5cm}bool W\+A\+S\+A\+Do\+Panel\+::save\+To\+Entry (
+\begin{DoxyParamCaption}
+\item[{{\bf Do\+Entry} \&}]{do\+Entry}
+\end{DoxyParamCaption}
+) const}\label{class_w_a_s_a_do_panel_ac3cb1aa971375a9ee485c3f31bc09d32}
+Transfere as informa��es presentes na janela para dentro do modelo do\+Entry, passado como par�metro.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em do\+Entry} & O\+UT objeto que conter� as informa��es da interface \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true, caso a copia esteja OK. false, caso algum valor esteja errado (valida��o pr�via). 
+\end{DoxyReturn}
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!save\+To\+Window@{save\+To\+Window}}
+\index{save\+To\+Window@{save\+To\+Window}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{save\+To\+Window(const Do\+Entry \&do\+Entry)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Do\+Panel\+::save\+To\+Window (
+\begin{DoxyParamCaption}
+\item[{const {\bf Do\+Entry} \&}]{do\+Entry}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_do_panel_a7ac00a8bea8f646a137141eddc1c7c84}
+Transfere as informa��es presentes no objeto do\+Entry para a janela(interface).
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em do\+Entry} & IN objeto que contem as informa��es para serem extra�das e transferidas para a janela(interface) \\
+\hline
+\end{DoxyParams}
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!set\+Receive\+Path\+Imput@{set\+Receive\+Path\+Imput}}
+\index{set\+Receive\+Path\+Imput@{set\+Receive\+Path\+Imput}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{set\+Receive\+Path\+Imput(wx\+String input\+Path)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Do\+Panel\+::set\+Receive\+Path\+Imput (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{input\+Path}
+\end{DoxyParamCaption}
+)}\label{class_w_a_s_a_do_panel_a39b7523b2706e736d8570312ae28d11a}
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!validate\+Spin\+Ctrl\+Dbl@{validate\+Spin\+Ctrl\+Dbl}}
+\index{validate\+Spin\+Ctrl\+Dbl@{validate\+Spin\+Ctrl\+Dbl}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{validate\+Spin\+Ctrl\+Dbl(wx\+Spin\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void W\+A\+S\+A\+Do\+Panel\+::validate\+Spin\+Ctrl\+Dbl (
+\begin{DoxyParamCaption}
+\item[{wx\+Spin\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a81aef5d12fbb6303ebbabe1532dccda8}
+
+
+\subsection{Atributos}
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!chk\+Derived\+Rainfall\+Input@{chk\+Derived\+Rainfall\+Input}}
+\index{chk\+Derived\+Rainfall\+Input@{chk\+Derived\+Rainfall\+Input}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{chk\+Derived\+Rainfall\+Input}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ W\+A\+S\+A\+Do\+Panel\+::chk\+Derived\+Rainfall\+Input\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_af9ad4710a0975df23d0628655d18a271}
+
+
+Definição na linha 44 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!chk\+Hourly\+Version@{chk\+Hourly\+Version}}
+\index{chk\+Hourly\+Version@{chk\+Hourly\+Version}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{chk\+Hourly\+Version}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ W\+A\+S\+A\+Do\+Panel\+::chk\+Hourly\+Version\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_af8608ac0bbef675293988c3397ea3ccc}
+
+
+Definição na linha 42 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!chk\+Include\+Dam\+Calculations@{chk\+Include\+Dam\+Calculations}}
+\index{chk\+Include\+Dam\+Calculations@{chk\+Include\+Dam\+Calculations}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{chk\+Include\+Dam\+Calculations}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ W\+A\+S\+A\+Do\+Panel\+::chk\+Include\+Dam\+Calculations\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a447e49a9631602135aff5a5d69955dd8}
+
+
+Definição na linha 36 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!chk\+Latflow\+Between\+TC@{chk\+Latflow\+Between\+TC}}
+\index{chk\+Latflow\+Between\+TC@{chk\+Latflow\+Between\+TC}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{chk\+Latflow\+Between\+TC}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ W\+A\+S\+A\+Do\+Panel\+::chk\+Latflow\+Between\+TC\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_ac8d4226e907ea953a62a4dc432b7b5d9}
+
+
+Definição na linha 37 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!chk\+Load\+Storage\+State@{chk\+Load\+Storage\+State}}
+\index{chk\+Load\+Storage\+State@{chk\+Load\+Storage\+State}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{chk\+Load\+Storage\+State}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ W\+A\+S\+A\+Do\+Panel\+::chk\+Load\+Storage\+State\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_abe908ee2d98c6c933ba614cea3ef2054}
+
+
+Definição na linha 46 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!chk\+Reservoir\+Calculations@{chk\+Reservoir\+Calculations}}
+\index{chk\+Reservoir\+Calculations@{chk\+Reservoir\+Calculations}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{chk\+Reservoir\+Calculations}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ W\+A\+S\+A\+Do\+Panel\+::chk\+Reservoir\+Calculations\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a06771e6e4731943df898ef30ac826111}
+
+
+Definição na linha 35 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!chk\+Rout\+Latflow@{chk\+Rout\+Latflow}}
+\index{chk\+Rout\+Latflow@{chk\+Rout\+Latflow}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{chk\+Rout\+Latflow}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ W\+A\+S\+A\+Do\+Panel\+::chk\+Rout\+Latflow\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a6f065de75bc13eff42ad6745e3c27af1}
+
+
+Definição na linha 38 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!chk\+Save\+Storage\+State@{chk\+Save\+Storage\+State}}
+\index{chk\+Save\+Storage\+State@{chk\+Save\+Storage\+State}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{chk\+Save\+Storage\+State}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ W\+A\+S\+A\+Do\+Panel\+::chk\+Save\+Storage\+State\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a6b5ad1c0070c32c19f57ff7c27dc8dac}
+
+
+Definição na linha 47 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!chk\+Scaling@{chk\+Scaling}}
+\index{chk\+Scaling@{chk\+Scaling}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{chk\+Scaling}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ W\+A\+S\+A\+Do\+Panel\+::chk\+Scaling\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a8842b549d10d70b7b662c7c43b8c6160}
+
+
+Definição na linha 43 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!chk\+Sediment@{chk\+Sediment}}
+\index{chk\+Sediment@{chk\+Sediment}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{chk\+Sediment}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ W\+A\+S\+A\+Do\+Panel\+::chk\+Sediment\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_ae159d6c6007a2c63caa726d30ba097a2}
+
+
+Definição na linha 45 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!chk\+Subsurface\+Runoff@{chk\+Subsurface\+Runoff}}
+\index{chk\+Subsurface\+Runoff@{chk\+Subsurface\+Runoff}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{chk\+Subsurface\+Runoff}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ W\+A\+S\+A\+Do\+Panel\+::chk\+Subsurface\+Runoff\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a49d0c41e44403d8b33fa46720aa7cb84}
+
+
+Definição na linha 40 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!chk\+Surface\+Runoff@{chk\+Surface\+Runoff}}
+\index{chk\+Surface\+Runoff@{chk\+Surface\+Runoff}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{chk\+Surface\+Runoff}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ W\+A\+S\+A\+Do\+Panel\+::chk\+Surface\+Runoff\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_afb77a28f960a4d21a2a7b2832d8f451a}
+
+
+Definição na linha 39 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!chk\+Water\+Transpositions@{chk\+Water\+Transpositions}}
+\index{chk\+Water\+Transpositions@{chk\+Water\+Transpositions}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{chk\+Water\+Transpositions}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ W\+A\+S\+A\+Do\+Panel\+::chk\+Water\+Transpositions\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a9110eee63cc427aaf376da757b6714f5}
+
+
+Definição na linha 41 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!dir\+Picker\+Ctrl\+Input@{dir\+Picker\+Ctrl\+Input}}
+\index{dir\+Picker\+Ctrl\+Input@{dir\+Picker\+Ctrl\+Input}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{dir\+Picker\+Ctrl\+Input}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Dir\+Picker\+Ctrl$\ast$ W\+A\+S\+A\+Do\+Panel\+::dir\+Picker\+Ctrl\+Input\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a9dde0e6cadddec8c2adbf3fd5ab94d09}
+
+
+Definição na linha 28 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!dir\+Picker\+Ctrl\+Output@{dir\+Picker\+Ctrl\+Output}}
+\index{dir\+Picker\+Ctrl\+Output@{dir\+Picker\+Ctrl\+Output}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{dir\+Picker\+Ctrl\+Output}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Dir\+Picker\+Ctrl$\ast$ W\+A\+S\+A\+Do\+Panel\+::dir\+Picker\+Ctrl\+Output\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a5fd8f86a2db3c10a7814404bdb6285e8}
+
+
+Definição na linha 30 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!dp\+Simulation\+End@{dp\+Simulation\+End}}
+\index{dp\+Simulation\+End@{dp\+Simulation\+End}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{dp\+Simulation\+End}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Picker\+Ctrl$\ast$ W\+A\+S\+A\+Do\+Panel\+::dp\+Simulation\+End\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a489f225c406e56f9a161922e84e0c5bb}
+
+
+Definição na linha 33 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!dp\+Simulation\+Start@{dp\+Simulation\+Start}}
+\index{dp\+Simulation\+Start@{dp\+Simulation\+Start}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{dp\+Simulation\+Start}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Date\+Picker\+Ctrl$\ast$ W\+A\+S\+A\+Do\+Panel\+::dp\+Simulation\+Start\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_ae0ce9a696648b737ec6faca3f189d518}
+
+
+Definição na linha 32 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!lbl\+Flags@{lbl\+Flags}}
+\index{lbl\+Flags@{lbl\+Flags}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{lbl\+Flags}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ W\+A\+S\+A\+Do\+Panel\+::lbl\+Flags\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_ad7e48bef8517df7770ebbb88c070d001}
+
+
+Definição na linha 34 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!lbl\+Grain\+Class\+Number@{lbl\+Grain\+Class\+Number}}
+\index{lbl\+Grain\+Class\+Number@{lbl\+Grain\+Class\+Number}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{lbl\+Grain\+Class\+Number}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ W\+A\+S\+A\+Do\+Panel\+::lbl\+Grain\+Class\+Number\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a388e8fa03d97de555bf23e8b9ff1b9f1}
+
+
+Definição na linha 60 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!lbl\+Hydraulic\+Conduct\+Factor@{lbl\+Hydraulic\+Conduct\+Factor}}
+\index{lbl\+Hydraulic\+Conduct\+Factor@{lbl\+Hydraulic\+Conduct\+Factor}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{lbl\+Hydraulic\+Conduct\+Factor}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ W\+A\+S\+A\+Do\+Panel\+::lbl\+Hydraulic\+Conduct\+Factor\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a1c191ac91d9d77c1e5cab971fe7fcf05}
+
+
+Definição na linha 52 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!lbl\+Input\+Dir@{lbl\+Input\+Dir}}
+\index{lbl\+Input\+Dir@{lbl\+Input\+Dir}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{lbl\+Input\+Dir}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ W\+A\+S\+A\+Do\+Panel\+::lbl\+Input\+Dir\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_ac3052a3ab6b884c38fa6e6a97eeabb22}
+
+
+Definição na linha 27 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!lbl\+Interception\+Capacity@{lbl\+Interception\+Capacity}}
+\index{lbl\+Interception\+Capacity@{lbl\+Interception\+Capacity}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{lbl\+Interception\+Capacity}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ W\+A\+S\+A\+Do\+Panel\+::lbl\+Interception\+Capacity\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a6e731cc0463a92938b1c3db5dee92acb}
+
+
+Definição na linha 54 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!lbl\+Output\+Dir@{lbl\+Output\+Dir}}
+\index{lbl\+Output\+Dir@{lbl\+Output\+Dir}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{lbl\+Output\+Dir}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ W\+A\+S\+A\+Do\+Panel\+::lbl\+Output\+Dir\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_ad9cce085653eeacb02024870c02c0bdc}
+
+
+Definição na linha 29 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!lbl\+Reservoir\+Sediment\+Model\+Type@{lbl\+Reservoir\+Sediment\+Model\+Type}}
+\index{lbl\+Reservoir\+Sediment\+Model\+Type@{lbl\+Reservoir\+Sediment\+Model\+Type}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{lbl\+Reservoir\+Sediment\+Model\+Type}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ W\+A\+S\+A\+Do\+Panel\+::lbl\+Reservoir\+Sediment\+Model\+Type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a7ecdba9f53c48ddcd132da5adc3eb35c}
+
+
+Definição na linha 64 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!lbl\+Sediment\+Transport\+Model\+Type@{lbl\+Sediment\+Transport\+Model\+Type}}
+\index{lbl\+Sediment\+Transport\+Model\+Type@{lbl\+Sediment\+Transport\+Model\+Type}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{lbl\+Sediment\+Transport\+Model\+Type}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ W\+A\+S\+A\+Do\+Panel\+::lbl\+Sediment\+Transport\+Model\+Type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a3fac5d8f7e880a8d7470da833136f4c7}
+
+
+Definição na linha 62 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!lbl\+Sensitivity\+Factor@{lbl\+Sensitivity\+Factor}}
+\index{lbl\+Sensitivity\+Factor@{lbl\+Sensitivity\+Factor}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{lbl\+Sensitivity\+Factor}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ W\+A\+S\+A\+Do\+Panel\+::lbl\+Sensitivity\+Factor\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a8fb2ebfc22aa833420a271f6a82a8d50}
+
+
+Definição na linha 56 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!lbl\+Simulation\+Date\+Range@{lbl\+Simulation\+Date\+Range}}
+\index{lbl\+Simulation\+Date\+Range@{lbl\+Simulation\+Date\+Range}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{lbl\+Simulation\+Date\+Range}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ W\+A\+S\+A\+Do\+Panel\+::lbl\+Simulation\+Date\+Range\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_aa76093dc797fb16977c41e01154f0f31}
+
+
+Definição na linha 31 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!lbl\+Time\+Step@{lbl\+Time\+Step}}
+\index{lbl\+Time\+Step@{lbl\+Time\+Step}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{lbl\+Time\+Step}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ W\+A\+S\+A\+Do\+Panel\+::lbl\+Time\+Step\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a18661562ce44b48d55aff28ed875315c}
+
+
+Definição na linha 58 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!rb\+Interception\+Routine\+Type@{rb\+Interception\+Routine\+Type}}
+\index{rb\+Interception\+Routine\+Type@{rb\+Interception\+Routine\+Type}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{rb\+Interception\+Routine\+Type}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box$\ast$ W\+A\+S\+A\+Do\+Panel\+::rb\+Interception\+Routine\+Type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_af2a10054d37f89d71e9e36be4954f898}
+
+
+Definição na linha 50 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!rb\+Precipitation\+Interpolation\+Type@{rb\+Precipitation\+Interpolation\+Type}}
+\index{rb\+Precipitation\+Interpolation\+Type@{rb\+Precipitation\+Interpolation\+Type}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{rb\+Precipitation\+Interpolation\+Type}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box$\ast$ W\+A\+S\+A\+Do\+Panel\+::rb\+Precipitation\+Interpolation\+Type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a54360d292f4f343d3719e6c4d27ada01}
+
+
+Definição na linha 49 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!rb\+River\+Sediment\+Model\+Type@{rb\+River\+Sediment\+Model\+Type}}
+\index{rb\+River\+Sediment\+Model\+Type@{rb\+River\+Sediment\+Model\+Type}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{rb\+River\+Sediment\+Model\+Type}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box$\ast$ W\+A\+S\+A\+Do\+Panel\+::rb\+River\+Sediment\+Model\+Type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a19e9bff4258abbc62138307b26f5e7c3}
+
+
+Definição na linha 51 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!rb\+Scenario@{rb\+Scenario}}
+\index{rb\+Scenario@{rb\+Scenario}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{rb\+Scenario}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box$\ast$ W\+A\+S\+A\+Do\+Panel\+::rb\+Scenario\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_aae27cb125ae2163203bfea04f96980c2}
+
+
+Definição na linha 48 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!spin\+Grain\+Class\+Number@{spin\+Grain\+Class\+Number}}
+\index{spin\+Grain\+Class\+Number@{spin\+Grain\+Class\+Number}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{spin\+Grain\+Class\+Number}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl$\ast$ W\+A\+S\+A\+Do\+Panel\+::spin\+Grain\+Class\+Number\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_acf96ba54be5dc229c85e47848ef3afdd}
+
+
+Definição na linha 61 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!spin\+Hydraulic\+Conduct\+Factor@{spin\+Hydraulic\+Conduct\+Factor}}
+\index{spin\+Hydraulic\+Conduct\+Factor@{spin\+Hydraulic\+Conduct\+Factor}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{spin\+Hydraulic\+Conduct\+Factor}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl\+Dbl$\ast$ W\+A\+S\+A\+Do\+Panel\+::spin\+Hydraulic\+Conduct\+Factor\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a46faddfe9011d51dbf3d1c295441e909}
+
+
+Definição na linha 53 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!spin\+Interception\+Capacity@{spin\+Interception\+Capacity}}
+\index{spin\+Interception\+Capacity@{spin\+Interception\+Capacity}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{spin\+Interception\+Capacity}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl\+Dbl$\ast$ W\+A\+S\+A\+Do\+Panel\+::spin\+Interception\+Capacity\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_ae383c23315ed23c88605eaa618414023}
+
+
+Definição na linha 55 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!spin\+Reservoir\+Sediment\+Model\+Type@{spin\+Reservoir\+Sediment\+Model\+Type}}
+\index{spin\+Reservoir\+Sediment\+Model\+Type@{spin\+Reservoir\+Sediment\+Model\+Type}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{spin\+Reservoir\+Sediment\+Model\+Type}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl$\ast$ W\+A\+S\+A\+Do\+Panel\+::spin\+Reservoir\+Sediment\+Model\+Type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_ac0ba0d21736d29061ae4d48aa36be27d}
+
+
+Definição na linha 65 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!spin\+Sediment\+Transport\+Model\+Type@{spin\+Sediment\+Transport\+Model\+Type}}
+\index{spin\+Sediment\+Transport\+Model\+Type@{spin\+Sediment\+Transport\+Model\+Type}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{spin\+Sediment\+Transport\+Model\+Type}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl$\ast$ W\+A\+S\+A\+Do\+Panel\+::spin\+Sediment\+Transport\+Model\+Type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_af7f971fa2b87557ae7d2d5b6abf3b150}
+
+
+Definição na linha 63 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!spin\+Sensitivity\+Factor@{spin\+Sensitivity\+Factor}}
+\index{spin\+Sensitivity\+Factor@{spin\+Sensitivity\+Factor}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{spin\+Sensitivity\+Factor}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl\+Dbl$\ast$ W\+A\+S\+A\+Do\+Panel\+::spin\+Sensitivity\+Factor\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_a86809eed1a62f3eebb690c41b879ea7f}
+
+
+Definição na linha 57 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+\index{W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}!spin\+Time\+Step@{spin\+Time\+Step}}
+\index{spin\+Time\+Step@{spin\+Time\+Step}!W\+A\+S\+A\+Do\+Panel@{W\+A\+S\+A\+Do\+Panel}}
+\subsubsection[{spin\+Time\+Step}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl$\ast$ W\+A\+S\+A\+Do\+Panel\+::spin\+Time\+Step\hspace{0.3cm}{\ttfamily [protected]}}\label{class_w_a_s_a_do_panel_af16848072aa837e5d228a1e277ac374d}
+
+
+Definição na linha 59 do arquivo W\+A\+S\+A\+Do\+Panel.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf W\+A\+S\+A\+Do\+Panel.\+h}\end{DoxyCompactItemize}

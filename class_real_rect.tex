@@ -1,0 +1,1005 @@
+\section{Referência da Classe Real\+Rect}
+\label{class_real_rect}\index{Real\+Rect@{Real\+Rect}}
+
+
+{\ttfamily \#include $<$realrect.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Real\+Rect} ()
+\item 
+{\bf Real\+Rect} (double xx, double yy, double ww, double hh)
+\item 
+{\bf Real\+Rect} (const wx\+Real\+Point \&top\+Left, const wx\+Real\+Point \&bottom\+Right)
+\item 
+{\bf Real\+Rect} (const wx\+Real\+Point \&pt, const {\bf Real\+Size} \&size)
+\item 
+{\bf Real\+Rect} (const {\bf Real\+Size} \&size)
+\item 
+double {\bf getX} () const 
+\item 
+void {\bf setX} (double xx)
+\item 
+double {\bf getY} () const 
+\item 
+void {\bf setY} (double yy)
+\item 
+double {\bf get\+Width} () const 
+\item 
+void {\bf set\+Width} (double w)
+\item 
+double {\bf get\+Height} () const 
+\item 
+void {\bf set\+Height} (double h)
+\item 
+wx\+Real\+Point {\bf get\+Position} () const 
+\item 
+void {\bf set\+Position} (const wx\+Real\+Point \&p)
+\item 
+{\bf Real\+Size} {\bf get\+Size} () const 
+\item 
+void {\bf set\+Size} (const {\bf Real\+Size} \&s)
+\item 
+bool {\bf is\+Same} (double a\+\_\+first, double a\+\_\+second) const 
+\item 
+bool {\bf is\+Empty} () const 
+\item 
+wx\+Real\+Point {\bf get\+Top\+Left} () const 
+\item 
+wx\+Real\+Point {\bf get\+Left\+Top} () const 
+\item 
+void {\bf set\+Top\+Left} (const wx\+Real\+Point \&p)
+\item 
+void {\bf set\+Left\+Top} (const wx\+Real\+Point \&p)
+\item 
+wx\+Real\+Point {\bf get\+Bottom\+Right} () const 
+\item 
+wx\+Real\+Point {\bf get\+Right\+Bottom} () const 
+\item 
+void {\bf set\+Bottom\+Right} (const wx\+Real\+Point \&p)
+\item 
+void {\bf set\+Right\+Bottom} (const wx\+Real\+Point \&p)
+\item 
+double {\bf get\+Left} () const 
+\item 
+double {\bf get\+Top} () const 
+\item 
+double {\bf get\+Bottom} () const 
+\item 
+double {\bf get\+Right} () const 
+\item 
+void {\bf set\+Left} (double left)
+\item 
+void {\bf set\+Right} (double right)
+\item 
+void {\bf set\+Top} (double top)
+\item 
+void {\bf set\+Bottom} (double bottom)
+\item 
+void {\bf set\+Absolute\+Left} (double left)
+\item 
+void {\bf set\+Absolute\+Right} (double right)
+\item 
+void {\bf set\+Absolute\+Top} (double top)
+\item 
+void {\bf set\+Absolute\+Bottom} (double bottom)
+\item 
+wx\+Real\+Point {\bf get\+Min} ()
+\item 
+wx\+Real\+Point {\bf get\+Max} ()
+\item 
+void {\bf set\+Min} (double xx, double yy)
+\item 
+void {\bf set\+Min} (wx\+Real\+Point min)
+\item 
+void {\bf set\+Max} (double xx, double yy)
+\item 
+void {\bf set\+Max} (wx\+Real\+Point max)
+\item 
+{\bf Real\+Rect} \& {\bf inflate} (double dx, double dy)
+\item 
+{\bf Real\+Rect} \& {\bf inflate} (double d)
+\item 
+{\bf Real\+Rect} {\bf inflate} (double dx, double dy) const 
+\item 
+{\bf Real\+Rect} \& {\bf deflate} (double dx, double dy)
+\item 
+{\bf Real\+Rect} \& {\bf deflate} (double d)
+\item 
+{\bf Real\+Rect} {\bf deflate} (double dx, double dy) const 
+\item 
+void {\bf offset} (double dx, double dy)
+\item 
+void {\bf offset} (const wx\+Real\+Point \&pt)
+\item 
+{\bf Real\+Rect} \& {\bf intersect} (const {\bf Real\+Rect} \&rect)
+\item 
+{\bf Real\+Rect} {\bf intersect} (const {\bf Real\+Rect} \&rect) const 
+\item 
+{\bf Real\+Rect} \& {\bf unionR} (const {\bf Real\+Rect} \&rect)
+\item 
+{\bf Real\+Rect} {\bf unionR} (const {\bf Real\+Rect} \&rect) const 
+\item 
+bool {\bf operator==} (const {\bf Real\+Rect} \&rect) const 
+\item 
+bool {\bf operator!=} (const {\bf Real\+Rect} \&rect) const 
+\item 
+bool {\bf inside} (double {\bf x}, double {\bf y}) const 
+\item 
+bool {\bf inside} (const wx\+Real\+Point \&pt) const 
+\item 
+bool {\bf intersects} (const {\bf Real\+Rect} \&rect) const 
+\item 
+{\bf Real\+Rect} {\bf operator+} (const {\bf Real\+Rect} \&rect) const 
+\item 
+{\bf Real\+Rect} \& {\bf operator+=} (const {\bf Real\+Rect} \&rect)
+\item 
+bool {\bf contains} (const {\bf Real\+Rect} \&a\+\_\+other) const 
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf x}
+\item 
+double {\bf y}
+\item 
+double {\bf width}
+\item 
+double {\bf height}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Representa um ret�ngulo em coordenadas reais. 
+
+Definição na linha 19 do arquivo realrect.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Real\+Rect@{Real\+Rect}!Real\+Rect@{Real\+Rect}}
+\index{Real\+Rect@{Real\+Rect}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{Real\+Rect()}]{\setlength{\rightskip}{0pt plus 5cm}Real\+Rect\+::\+Real\+Rect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_ab1a929c0cef659ff20502da9fd14c860}
+Default \doxyref{Real\+Rect}{pag.}{class_real_rect} Constructor.
+
+Sets default values for the attributes of \doxyref{Real\+Rect}{pag.}{class_real_rect}\textquotesingle{}s instance.
+\begin{DoxyItemize}
+\item Top Left point = (0,0).
+\item width = 0.
+\item height = 0.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em No} & parameters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+No return value. 
+\end{DoxyReturn}
+
+
+Definição na linha 32 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!Real\+Rect@{Real\+Rect}}
+\index{Real\+Rect@{Real\+Rect}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{Real\+Rect(double xx, double yy, double ww, double hh)}]{\setlength{\rightskip}{0pt plus 5cm}Real\+Rect\+::\+Real\+Rect (
+\begin{DoxyParamCaption}
+\item[{double}]{xx, }
+\item[{double}]{yy, }
+\item[{double}]{ww, }
+\item[{double}]{hh}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_ac6c5b4f18ba6acf85b380a3090191718}
+\doxyref{Real\+Rect}{pag.}{class_real_rect} Constructor.
+
+Sets initialization values for the attribute\textquotesingle{}s instance.
+\begin{DoxyItemize}
+\item Top Left point = (0,0).
+\item width = 0.
+\item height = 0.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em xx} & top left x coordinate. \\
+\hline
+{\em yy} & top left y coordinate. \\
+\hline
+{\em ww} & width. \\
+\hline
+{\em hh} & height. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+No return value. 
+\end{DoxyReturn}
+
+
+Definição na linha 49 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!Real\+Rect@{Real\+Rect}}
+\index{Real\+Rect@{Real\+Rect}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{Real\+Rect(const wx\+Real\+Point \&top\+Left, const wx\+Real\+Point \&bottom\+Right)}]{\setlength{\rightskip}{0pt plus 5cm}Real\+Rect\+::\+Real\+Rect (
+\begin{DoxyParamCaption}
+\item[{const wx\+Real\+Point \&}]{top\+Left, }
+\item[{const wx\+Real\+Point \&}]{bottom\+Right}
+\end{DoxyParamCaption}
+)}\label{class_real_rect_a1152b6855107407ce413ec315722540d}
+\doxyref{Real\+Rect}{pag.}{class_real_rect} Constructor.
+
+Sets initialization values for the attribute\textquotesingle{}s instance.
+\begin{DoxyItemize}
+\item Top Left point.
+\item Bottom Right.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em top\+Left} & top left coordinates. \\
+\hline
+{\em bottom\+Right} & bottom right coordinates. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+No return value. 
+\end{DoxyReturn}
+\index{Real\+Rect@{Real\+Rect}!Real\+Rect@{Real\+Rect}}
+\index{Real\+Rect@{Real\+Rect}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{Real\+Rect(const wx\+Real\+Point \&pt, const Real\+Size \&size)}]{\setlength{\rightskip}{0pt plus 5cm}Real\+Rect\+::\+Real\+Rect (
+\begin{DoxyParamCaption}
+\item[{const wx\+Real\+Point \&}]{pt, }
+\item[{const {\bf Real\+Size} \&}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a8e260160f52443112909769a825ce3ea}
+\doxyref{Real\+Rect}{pag.}{class_real_rect} Constructor.
+
+Sets initialization values for the attribute\textquotesingle{}s instance.
+\begin{DoxyItemize}
+\item Top Left point.
+\item Size.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em pt} & top left coordinates. \\
+\hline
+{\em size} & width and height values. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+No return value. 
+\end{DoxyReturn}
+
+
+Definição na linha 75 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!Real\+Rect@{Real\+Rect}}
+\index{Real\+Rect@{Real\+Rect}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{Real\+Rect(const Real\+Size \&size)}]{\setlength{\rightskip}{0pt plus 5cm}Real\+Rect\+::\+Real\+Rect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Real\+Size} \&}]{size}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a220605ad9cedf01fd7399675bca82971}
+\doxyref{Real\+Rect}{pag.}{class_real_rect} Constructor.
+
+Sets initialization values for the attribute\textquotesingle{}s instance.
+\begin{DoxyItemize}
+\item Bottom left point.
+\item Top Right point.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em min} & bottom left coordinates. \\
+\hline
+{\em max} & top right coordinates. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+No return value. \doxyref{Real\+Rect}{pag.}{class_real_rect} Constructor.
+\end{DoxyReturn}
+Sets default values for the attributes of \doxyref{Real\+Rect}{pag.}{class_real_rect}\textquotesingle{}s instance.
+\begin{DoxyItemize}
+\item Top Left point = (0,0).
+\item width = size.\+x.
+\item height = size.\+y.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em size} & width and height values. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+No return value. 
+\end{DoxyReturn}
+
+
+Definição na linha 103 do arquivo realrect.\+h.
+
+
+
+\subsection{Métodos}
+\index{Real\+Rect@{Real\+Rect}!contains@{contains}}
+\index{contains@{contains}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{contains(const Real\+Rect \&a\+\_\+other) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Real\+Rect\+::contains (
+\begin{DoxyParamCaption}
+\item[{const {\bf Real\+Rect} \&}]{a\+\_\+other}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_aeb53fdc46689951bbd6b4beb29ae357c}
+
+
+Definição na linha 228 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!deflate@{deflate}}
+\index{deflate@{deflate}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{deflate(double dx, double dy)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Real\+Rect}\& Real\+Rect\+::deflate (
+\begin{DoxyParamCaption}
+\item[{double}]{dx, }
+\item[{double}]{dy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_af2b15f3356560c5af92fd569e2a10b4e}
+
+
+Definição na linha 180 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!deflate@{deflate}}
+\index{deflate@{deflate}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{deflate(double d)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Real\+Rect}\& Real\+Rect\+::deflate (
+\begin{DoxyParamCaption}
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a8f32eab86ceec90436b930dee357f48a}
+
+
+Definição na linha 181 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!deflate@{deflate}}
+\index{deflate@{deflate}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{deflate(double dx, double dy) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Real\+Rect} Real\+Rect\+::deflate (
+\begin{DoxyParamCaption}
+\item[{double}]{dx, }
+\item[{double}]{dy}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a37515aa1a003d10658b35db03a5fb563}
+
+
+Definição na linha 182 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!get\+Bottom@{get\+Bottom}}
+\index{get\+Bottom@{get\+Bottom}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{get\+Bottom() const }]{\setlength{\rightskip}{0pt plus 5cm}double Real\+Rect\+::get\+Bottom (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a4b8aac386b3b5d5e6d7d976cd96bebe8}
+
+
+Definição na linha 149 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!get\+Bottom\+Right@{get\+Bottom\+Right}}
+\index{get\+Bottom\+Right@{get\+Bottom\+Right}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{get\+Bottom\+Right() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+Real\+Point Real\+Rect\+::get\+Bottom\+Right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_aa650b7b77641cb22bc8afe85f0fdb0c5}
+
+
+Definição na linha 142 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{get\+Height() const }]{\setlength{\rightskip}{0pt plus 5cm}double Real\+Rect\+::get\+Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_af626448f8de0372f46ab1c0b334feea7}
+
+
+Definição na linha 118 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!get\+Left@{get\+Left}}
+\index{get\+Left@{get\+Left}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{get\+Left() const }]{\setlength{\rightskip}{0pt plus 5cm}double Real\+Rect\+::get\+Left (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_ae53daf8f3942215db9ac36d63a3eb66e}
+
+
+Definição na linha 147 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!get\+Left\+Top@{get\+Left\+Top}}
+\index{get\+Left\+Top@{get\+Left\+Top}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{get\+Left\+Top() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+Real\+Point Real\+Rect\+::get\+Left\+Top (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a8cbb3dbc59108a7229c15b069062add8}
+
+
+Definição na linha 138 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!get\+Max@{get\+Max}}
+\index{get\+Max@{get\+Max}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{get\+Max()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Real\+Point Real\+Rect\+::get\+Max (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a9114680084b38ed8d776d316dba419eb}
+
+
+Definição na linha 163 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!get\+Min@{get\+Min}}
+\index{get\+Min@{get\+Min}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{get\+Min()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Real\+Point Real\+Rect\+::get\+Min (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_aca5b9310a275f31ae7bc57fe80f62b44}
+
+
+Definição na linha 162 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{get\+Position() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+Real\+Point Real\+Rect\+::get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a9c5449aa2f1508d34139c36f47165314}
+
+
+Definição na linha 121 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!get\+Right@{get\+Right}}
+\index{get\+Right@{get\+Right}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{get\+Right() const }]{\setlength{\rightskip}{0pt plus 5cm}double Real\+Rect\+::get\+Right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a07acc9ecf58e32884e505321c26a6b17}
+
+
+Definição na linha 150 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!get\+Right\+Bottom@{get\+Right\+Bottom}}
+\index{get\+Right\+Bottom@{get\+Right\+Bottom}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{get\+Right\+Bottom() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+Real\+Point Real\+Rect\+::get\+Right\+Bottom (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a44ac3656bf74a1e4977b5183b70f3c40}
+
+
+Definição na linha 143 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{get\+Size() const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Real\+Size} Real\+Rect\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_ae63153290c5ebd6ccb6eb7fb8b053361}
+
+
+Definição na linha 124 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!get\+Top@{get\+Top}}
+\index{get\+Top@{get\+Top}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{get\+Top() const }]{\setlength{\rightskip}{0pt plus 5cm}double Real\+Rect\+::get\+Top (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_ac299680fc87798623e5110e92cd0eed5}
+
+
+Definição na linha 148 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!get\+Top\+Left@{get\+Top\+Left}}
+\index{get\+Top\+Left@{get\+Top\+Left}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{get\+Top\+Left() const }]{\setlength{\rightskip}{0pt plus 5cm}wx\+Real\+Point Real\+Rect\+::get\+Top\+Left (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a92b50bd0ffa67239cff573895f890b73}
+
+
+Definição na linha 137 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{get\+Width() const }]{\setlength{\rightskip}{0pt plus 5cm}double Real\+Rect\+::get\+Width (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a93ad4a44455d5916231ec552802171c8}
+
+
+Definição na linha 115 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!getX@{getX}}
+\index{getX@{getX}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{get\+X() const }]{\setlength{\rightskip}{0pt plus 5cm}double Real\+Rect\+::getX (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a03d2884c23220ad038bfb0f028e50ecd}
+
+
+Definição na linha 109 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!getY@{getY}}
+\index{getY@{getY}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{get\+Y() const }]{\setlength{\rightskip}{0pt plus 5cm}double Real\+Rect\+::getY (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_ae063df7598d7be69f90fe48584a43978}
+
+
+Definição na linha 112 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!inflate@{inflate}}
+\index{inflate@{inflate}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{inflate(double dx, double dy)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Real\+Rect}\& Real\+Rect\+::inflate (
+\begin{DoxyParamCaption}
+\item[{double}]{dx, }
+\item[{double}]{dy}
+\end{DoxyParamCaption}
+)}\label{class_real_rect_a2a4e17cecb538bf75cb66d2b870f2301}
+\index{Real\+Rect@{Real\+Rect}!inflate@{inflate}}
+\index{inflate@{inflate}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{inflate(double d)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Real\+Rect}\& Real\+Rect\+::inflate (
+\begin{DoxyParamCaption}
+\item[{double}]{d}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a60e9efe4ec9c7c7e95a8801a823c0e37}
+
+
+Definição na linha 172 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!inflate@{inflate}}
+\index{inflate@{inflate}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{inflate(double dx, double dy) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Real\+Rect} Real\+Rect\+::inflate (
+\begin{DoxyParamCaption}
+\item[{double}]{dx, }
+\item[{double}]{dy}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a58cf57200787fbe0a4ab490a205d7177}
+
+
+Definição na linha 173 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!inside@{inside}}
+\index{inside@{inside}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{inside(double x, double y) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Real\+Rect\+::inside (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{y}
+\end{DoxyParamCaption}
+) const}\label{class_real_rect_afc144f1da46b463cc747d6b3ddcd48ed}
+\index{Real\+Rect@{Real\+Rect}!inside@{inside}}
+\index{inside@{inside}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{inside(const wx\+Real\+Point \&pt) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Real\+Rect\+::inside (
+\begin{DoxyParamCaption}
+\item[{const wx\+Real\+Point \&}]{pt}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_aec166cb50a50ae5ae4d1585c46f6b239}
+
+
+Definição na linha 215 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!intersect@{intersect}}
+\index{intersect@{intersect}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{intersect(const Real\+Rect \&rect)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Real\+Rect}\& Real\+Rect\+::intersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Real\+Rect} \&}]{rect}
+\end{DoxyParamCaption}
+)}\label{class_real_rect_a27e6bc57d00f6cb2fb53ae41c3fede4f}
+\index{Real\+Rect@{Real\+Rect}!intersect@{intersect}}
+\index{intersect@{intersect}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{intersect(const Real\+Rect \&rect) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Real\+Rect} Real\+Rect\+::intersect (
+\begin{DoxyParamCaption}
+\item[{const {\bf Real\+Rect} \&}]{rect}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_aee4934554b817d6c898c7f767f01cc79}
+
+
+Definição na linha 193 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!intersects@{intersects}}
+\index{intersects@{intersects}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{intersects(const Real\+Rect \&rect) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Real\+Rect\+::intersects (
+\begin{DoxyParamCaption}
+\item[{const {\bf Real\+Rect} \&}]{rect}
+\end{DoxyParamCaption}
+) const}\label{class_real_rect_add45d95c587444fbf83985a005522eb4}
+\index{Real\+Rect@{Real\+Rect}!is\+Empty@{is\+Empty}}
+\index{is\+Empty@{is\+Empty}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{is\+Empty() const }]{\setlength{\rightskip}{0pt plus 5cm}bool Real\+Rect\+::is\+Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_ab6676883e7eae046350e919832474a46}
+
+
+Definição na linha 132 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!is\+Same@{is\+Same}}
+\index{is\+Same@{is\+Same}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{is\+Same(double a\+\_\+first, double a\+\_\+second) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Real\+Rect\+::is\+Same (
+\begin{DoxyParamCaption}
+\item[{double}]{a\+\_\+first, }
+\item[{double}]{a\+\_\+second}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_ad7270190a05418617c53def08a5ffe5c}
+
+
+Definição na linha 127 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!offset@{offset}}
+\index{offset@{offset}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{offset(double dx, double dy)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::offset (
+\begin{DoxyParamCaption}
+\item[{double}]{dx, }
+\item[{double}]{dy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a81df308896da1298700170883c95677a}
+
+
+Definição na linha 189 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!offset@{offset}}
+\index{offset@{offset}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{offset(const wx\+Real\+Point \&pt)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::offset (
+\begin{DoxyParamCaption}
+\item[{const wx\+Real\+Point \&}]{pt}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_ab26f4ec8e61397e8d5895f7c584202f8}
+
+
+Definição na linha 190 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{operator"!=(const Real\+Rect \&rect) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Real\+Rect\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Real\+Rect} \&}]{rect}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_aa6ac6e7ebf7b4ec85e638cc31d4f4f07}
+
+
+Definição na linha 210 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!operator+@{operator+}}
+\index{operator+@{operator+}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{operator+(const Real\+Rect \&rect) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Real\+Rect} Real\+Rect\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf Real\+Rect} \&}]{rect}
+\end{DoxyParamCaption}
+) const}\label{class_real_rect_a64c79b1ca8d12bdc4942bf2a3d020603}
+\index{Real\+Rect@{Real\+Rect}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{operator+=(const Real\+Rect \&rect)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Real\+Rect}\& Real\+Rect\+::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Real\+Rect} \&}]{rect}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a9dfda5e992fef005db126d77db44e63a}
+
+
+Definição na linha 222 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!operator==@{operator==}}
+\index{operator==@{operator==}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{operator==(const Real\+Rect \&rect) const }]{\setlength{\rightskip}{0pt plus 5cm}bool Real\+Rect\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Real\+Rect} \&}]{rect}
+\end{DoxyParamCaption}
+) const}\label{class_real_rect_a5297e2b8f33745a24b3d5ab66d73bc3d}
+\index{Real\+Rect@{Real\+Rect}!set\+Absolute\+Bottom@{set\+Absolute\+Bottom}}
+\index{set\+Absolute\+Bottom@{set\+Absolute\+Bottom}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+Absolute\+Bottom(double bottom)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::set\+Absolute\+Bottom (
+\begin{DoxyParamCaption}
+\item[{double}]{bottom}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a81bff182944d8eafb6a4ad9fe1cfb58a}
+
+
+Definição na linha 160 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!set\+Absolute\+Left@{set\+Absolute\+Left}}
+\index{set\+Absolute\+Left@{set\+Absolute\+Left}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+Absolute\+Left(double left)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::set\+Absolute\+Left (
+\begin{DoxyParamCaption}
+\item[{double}]{left}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_aa24363c7a82669b954cae657485e109a}
+
+
+Definição na linha 157 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!set\+Absolute\+Right@{set\+Absolute\+Right}}
+\index{set\+Absolute\+Right@{set\+Absolute\+Right}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+Absolute\+Right(double right)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::set\+Absolute\+Right (
+\begin{DoxyParamCaption}
+\item[{double}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a1633e595135fa5a13beb240a0a00096b}
+
+
+Definição na linha 158 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!set\+Absolute\+Top@{set\+Absolute\+Top}}
+\index{set\+Absolute\+Top@{set\+Absolute\+Top}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+Absolute\+Top(double top)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::set\+Absolute\+Top (
+\begin{DoxyParamCaption}
+\item[{double}]{top}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a822c3cddb55362033fad593716d78cd2}
+
+
+Definição na linha 159 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!set\+Bottom@{set\+Bottom}}
+\index{set\+Bottom@{set\+Bottom}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+Bottom(double bottom)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::set\+Bottom (
+\begin{DoxyParamCaption}
+\item[{double}]{bottom}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_ae24646b2973478e389c41dca292d38bb}
+
+
+Definição na linha 155 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!set\+Bottom\+Right@{set\+Bottom\+Right}}
+\index{set\+Bottom\+Right@{set\+Bottom\+Right}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+Bottom\+Right(const wx\+Real\+Point \&p)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::set\+Bottom\+Right (
+\begin{DoxyParamCaption}
+\item[{const wx\+Real\+Point \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a453b58fbca42bd43ecd82c73dfdc103b}
+
+
+Definição na linha 144 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!set\+Height@{set\+Height}}
+\index{set\+Height@{set\+Height}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+Height(double h)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::set\+Height (
+\begin{DoxyParamCaption}
+\item[{double}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a94cc79fab5e72f7b656fe07b666d0f0d}
+
+
+Definição na linha 119 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!set\+Left@{set\+Left}}
+\index{set\+Left@{set\+Left}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+Left(double left)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::set\+Left (
+\begin{DoxyParamCaption}
+\item[{double}]{left}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a41a07873a33ae1bddf81eea3f2e82b17}
+
+
+Definição na linha 152 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!set\+Left\+Top@{set\+Left\+Top}}
+\index{set\+Left\+Top@{set\+Left\+Top}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+Left\+Top(const wx\+Real\+Point \&p)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::set\+Left\+Top (
+\begin{DoxyParamCaption}
+\item[{const wx\+Real\+Point \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_af2524fe594fab4a36011be718bae125f}
+
+
+Definição na linha 140 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!set\+Max@{set\+Max}}
+\index{set\+Max@{set\+Max}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+Max(double xx, double yy)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::set\+Max (
+\begin{DoxyParamCaption}
+\item[{double}]{xx, }
+\item[{double}]{yy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a8314ff70819504dd86cc547b103f513e}
+
+
+Definição na linha 167 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!set\+Max@{set\+Max}}
+\index{set\+Max@{set\+Max}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+Max(wx\+Real\+Point max)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::set\+Max (
+\begin{DoxyParamCaption}
+\item[{wx\+Real\+Point}]{max}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_aad0fa3c07d2bfe9006492850d599dc95}
+
+
+Definição na linha 168 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!set\+Min@{set\+Min}}
+\index{set\+Min@{set\+Min}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+Min(double xx, double yy)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::set\+Min (
+\begin{DoxyParamCaption}
+\item[{double}]{xx, }
+\item[{double}]{yy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a0fb39343c40f0126e3104dd5e8c32aee}
+
+
+Definição na linha 165 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!set\+Min@{set\+Min}}
+\index{set\+Min@{set\+Min}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+Min(wx\+Real\+Point min)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::set\+Min (
+\begin{DoxyParamCaption}
+\item[{wx\+Real\+Point}]{min}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a44e7d06678bae7f313e585ed57cafe25}
+
+
+Definição na linha 166 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+Position(const wx\+Real\+Point \&p)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::set\+Position (
+\begin{DoxyParamCaption}
+\item[{const wx\+Real\+Point \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a714cfdc3ab70970ab45d420bddef29ec}
+
+
+Definição na linha 122 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!set\+Right@{set\+Right}}
+\index{set\+Right@{set\+Right}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+Right(double right)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::set\+Right (
+\begin{DoxyParamCaption}
+\item[{double}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a9d46e53ebc80bc79d1893d4864a370ab}
+
+
+Definição na linha 153 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!set\+Right\+Bottom@{set\+Right\+Bottom}}
+\index{set\+Right\+Bottom@{set\+Right\+Bottom}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+Right\+Bottom(const wx\+Real\+Point \&p)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::set\+Right\+Bottom (
+\begin{DoxyParamCaption}
+\item[{const wx\+Real\+Point \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_aa4806bdd570983855e3d18629b07d0db}
+
+
+Definição na linha 145 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!set\+Size@{set\+Size}}
+\index{set\+Size@{set\+Size}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+Size(const Real\+Size \&s)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::set\+Size (
+\begin{DoxyParamCaption}
+\item[{const {\bf Real\+Size} \&}]{s}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_ac62a568639180ec427bce9a1df417d44}
+
+
+Definição na linha 125 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!set\+Top@{set\+Top}}
+\index{set\+Top@{set\+Top}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+Top(double top)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::set\+Top (
+\begin{DoxyParamCaption}
+\item[{double}]{top}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_abf87de89e2d7b735211d534202710ad8}
+
+
+Definição na linha 154 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!set\+Top\+Left@{set\+Top\+Left}}
+\index{set\+Top\+Left@{set\+Top\+Left}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+Top\+Left(const wx\+Real\+Point \&p)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::set\+Top\+Left (
+\begin{DoxyParamCaption}
+\item[{const wx\+Real\+Point \&}]{p}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a9a6bbbda5a0f9eaf5681f40861837ebc}
+
+
+Definição na linha 139 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!set\+Width@{set\+Width}}
+\index{set\+Width@{set\+Width}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+Width(double w)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::set\+Width (
+\begin{DoxyParamCaption}
+\item[{double}]{w}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a1c9c396cc8750d1d8dbd87d7d68a0508}
+
+
+Definição na linha 116 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!setX@{setX}}
+\index{setX@{setX}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+X(double xx)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::setX (
+\begin{DoxyParamCaption}
+\item[{double}]{xx}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_aff492d6b4ed202cd609f723f36854488}
+
+
+Definição na linha 110 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!setY@{setY}}
+\index{setY@{setY}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{set\+Y(double yy)}]{\setlength{\rightskip}{0pt plus 5cm}void Real\+Rect\+::setY (
+\begin{DoxyParamCaption}
+\item[{double}]{yy}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a49b62f99acc7850430eb091ce2f15b9c}
+
+
+Definição na linha 113 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!unionR@{unionR}}
+\index{unionR@{unionR}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{union\+R(const Real\+Rect \&rect)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Real\+Rect}\& Real\+Rect\+::unionR (
+\begin{DoxyParamCaption}
+\item[{const {\bf Real\+Rect} \&}]{rect}
+\end{DoxyParamCaption}
+)}\label{class_real_rect_aed19d919519e925d08a7da826ec0e835}
+\index{Real\+Rect@{Real\+Rect}!unionR@{unionR}}
+\index{unionR@{unionR}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{union\+R(const Real\+Rect \&rect) const }]{\setlength{\rightskip}{0pt plus 5cm}{\bf Real\+Rect} Real\+Rect\+::unionR (
+\begin{DoxyParamCaption}
+\item[{const {\bf Real\+Rect} \&}]{rect}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_real_rect_a3329ed66ef832cf21a10270f69d6d56d}
+
+
+Definição na linha 201 do arquivo realrect.\+h.
+
+
+
+\subsection{Atributos}
+\index{Real\+Rect@{Real\+Rect}!height@{height}}
+\index{height@{height}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{height}]{\setlength{\rightskip}{0pt plus 5cm}double Real\+Rect\+::height}\label{class_real_rect_afc0d4f36b14c11d03471658d30213828}
+Rect height. 
+
+Definição na linha 235 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!width@{width}}
+\index{width@{width}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{width}]{\setlength{\rightskip}{0pt plus 5cm}double Real\+Rect\+::width}\label{class_real_rect_a27413444833836ae78f7f766733161c2}
+Rect width. 
+
+Definição na linha 235 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!x@{x}}
+\index{x@{x}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}double Real\+Rect\+::x}\label{class_real_rect_aa429e709c5de8fdc78aba7ec8901e8e0}
+Top Left x position. 
+
+Definição na linha 235 do arquivo realrect.\+h.
+
+\index{Real\+Rect@{Real\+Rect}!y@{y}}
+\index{y@{y}!Real\+Rect@{Real\+Rect}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}double Real\+Rect\+::y}\label{class_real_rect_a07f1ce2d2a4a608593d1dd3f99ab60f1}
+Top Left y position. 
+
+Definição na linha 235 do arquivo realrect.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf realrect.\+h}\end{DoxyCompactItemize}

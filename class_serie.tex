@@ -1,0 +1,766 @@
+\section{ReferÃªncia da Classe Serie}
+\label{class_serie}\index{Serie@{Serie}}
+
+
+{\ttfamily \#include $<$Serie.\+h$>$}
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Serie} (wx\+String {\bf token}, {\bf Interval} {\bf interval}, wx\+String {\bf name}, wx\+String {\bf unit}=\char`\"{}\char`\"{}, wx\+String {\bf serie\+Ext}={\bf E\+X\+T\+\_\+\+S\+RS})
+\item 
+{\bf Serie} (wx\+String {\bf token}, {\bf Date} interval\+Begin, {\bf Date} interval\+End, wx\+String {\bf name}, wx\+String {\bf unit}=\char`\"{}\char`\"{}, wx\+String {\bf serie\+Ext}={\bf E\+X\+T\+\_\+\+S\+RS})
+\item 
+{\bf Serie} (wx\+String {\bf token}, wx\+String {\bf name}, wx\+String {\bf unit}=\char`\"{}\char`\"{}, wx\+String {\bf serie\+Ext}={\bf E\+X\+T\+\_\+\+S\+RS}, {\bf Date\+::\+Time\+Interval} time\+Interval={\bf Date\+::\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+D\+I\+A\+RY})
+\item 
+virtual {\bf $\sim$\+Serie} ()
+\item 
+void {\bf set\+Value} ({\bf Date} index, double value)
+\item 
+double {\bf get\+Value} (const {\bf Date} \&index) const 
+\item 
+void {\bf copy} ({\bf Serie} $\ast$serie)
+\item 
+void {\bf clear} ()
+\item 
+bool {\bf empty} ()
+\item 
+double {\bf min\+Value} ()
+\item 
+double {\bf max\+Value} ()
+\item 
+double {\bf sum} ()
+\item 
+double {\bf mean} ()
+\item 
+double {\bf median} ()
+\item 
+double {\bf var} ()
+\item 
+double {\bf std\+Dev} ()
+\item 
+double {\bf skew} ()
+\item 
+double {\bf kurt} ()
+\item 
+double {\bf reliability} ({\bf Zone\+Variable} $\ast$zone\+Serie, int type)
+\item 
+double {\bf reliability} ({\bf Zone\+Const} $\ast$zone\+Const, int type)
+\item 
+double {\bf resilience} ({\bf Zone\+Variable} $\ast$zone\+Serie, int type)
+\item 
+double {\bf resilience} ({\bf Zone\+Const} $\ast$zone\+Serie, int type)
+\item 
+double {\bf percent\+Days} ({\bf Zone\+Variable} $\ast$zone\+Serie, int type)
+\item 
+double {\bf percent\+Days} ({\bf Zone\+Const} $\ast$zone\+Serie, int type)
+\item 
+double {\bf maximum\+Consecutive\+Days} ({\bf Zone\+Variable} $\ast$zone\+Serie, int type)
+\item 
+double {\bf maximum\+Consecutive\+Days} ({\bf Zone\+Const} $\ast$zone\+Const, int type)
+\item 
+double {\bf maximum\+Extent} ({\bf Zone\+Variable} $\ast$zone\+Serie, int type)
+\item 
+double {\bf maximum\+Extent} ({\bf Zone\+Const} $\ast$zone\+Serie, int type)
+\item 
+unsigned int {\bf count\+Values} () const 
+\item 
+unsigned int {\bf count\+Zero\+Values} () const 
+\item 
+unsigned int {\bf count\+Less\+Than} (double x) const 
+\item 
+unsigned int {\bf count\+Equal\+Values} (double x, double {\bf epsilon}=0.\+00001) const 
+\item 
+vector$<$ double $>$ {\bf duration\+Curve} ({\bf Interval} {\bf interval})
+\item 
+void {\bf set\+Token} (wx\+String {\bf token})
+\item 
+wx\+String {\bf get\+Token} ()
+\item 
+bool {\bf reset\+Values} (double value={\bf E\+M\+P\+TY})
+\item 
+void {\bf recalculate\+Interval} ()
+\item 
+void {\bf escalar\+Multi} (double value)
+\item 
+{\bf Serie} {\bf operator+} ({\bf Serie} other)
+\item 
+{\bf Serie} {\bf operator-\/} ({\bf Serie} other)
+\item 
+{\bf Serie} {\bf operator$\ast$} (double value)
+\item 
+{\bf Serie} {\bf operator/} (double value)
+\item 
+void {\bf operator=} ({\bf Serie} other)
+\item 
+bool {\bf operator==} ({\bf Serie} other)
+\item 
+bool {\bf operator!=} ({\bf Serie} other)
+\item 
+string {\bf string\+Values} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+String {\bf name}
+\item 
+wx\+String {\bf unit}
+\item 
+wx\+String {\bf serie\+Ext}
+\item 
+{\bf Interval} {\bf interval}
+\item 
+double {\bf sum\+Serie}
+\item 
+double {\bf mean\+Serie}
+\item 
+double {\bf var\+Serie}
+\item 
+double {\bf std\+Dev\+Serie}
+\item 
+double {\bf skew\+Serie}
+\item 
+double {\bf kurt\+Serie}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+map$<$ unsigned int, double $>$ {\bf values}
+\item 
+wx\+String {\bf token}
+\item 
+double {\bf min\+Value\+\_\+}
+\item 
+double {\bf max\+Value\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Atributos EstÃ¡ticos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+static const int {\bf min\+Mon} = 20
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Serie\+Dialog\+Content}
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+N\+O\+TA\+: Se algum dia, esta classe precisar de atributos dinamicamente alocados, um construtor ou método de cópia precisará ser implementado. Este método deverá substituir as atuais formas de cópia \char`\"{}new Serie($\ast$serie)\char`\"{} 
+
+DefiniÃ§Ã£o na linha 105 do arquivo S\+I\+G\+A/\+Serie.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Serie@{Serie}!Serie@{Serie}}
+\index{Serie@{Serie}!Serie@{Serie}}
+\subsubsection[{Serie(wx\+String token, Interval interval, wx\+String name, wx\+String unit="""", wx\+String serie\+Ext=\+E\+X\+T\+\_\+\+S\+R\+S)}]{\setlength{\rightskip}{0pt plus 5cm}Serie\+::\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{token, }
+\item[{{\bf Interval}}]{interval, }
+\item[{wx\+String}]{name, }
+\item[{wx\+String}]{unit = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{wx\+String}]{serie\+Ext = {\ttfamily {\bf E\+X\+T\+\_\+\+S\+RS}}}
+\end{DoxyParamCaption}
+)}\label{class_serie_a796beda762a26909de7d14984f5f26c1}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em interval} & Intervalo de valores \\
+\hline
+{\em name} & Nome da serie \\
+\hline
+{\em unit} & Unidade de medida \\
+\hline
+\end{DoxyParams}
+\index{Serie@{Serie}!Serie@{Serie}}
+\index{Serie@{Serie}!Serie@{Serie}}
+\subsubsection[{Serie(wx\+String token, Date interval\+Begin, Date interval\+End, wx\+String name, wx\+String unit="""", wx\+String serie\+Ext=\+E\+X\+T\+\_\+\+S\+R\+S)}]{\setlength{\rightskip}{0pt plus 5cm}Serie\+::\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{token, }
+\item[{{\bf Date}}]{interval\+Begin, }
+\item[{{\bf Date}}]{interval\+End, }
+\item[{wx\+String}]{name, }
+\item[{wx\+String}]{unit = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{wx\+String}]{serie\+Ext = {\ttfamily {\bf E\+X\+T\+\_\+\+S\+RS}}}
+\end{DoxyParamCaption}
+)}\label{class_serie_adf8d3766f787afb182514ba032946d43}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em interval\+Begin} & Inicio do intervalo \\
+\hline
+{\em interval\+End} & Fim do intervalo \\
+\hline
+{\em name} & Nome da serie \\
+\hline
+{\em unit} & Unidade de medida \\
+\hline
+\end{DoxyParams}
+\index{Serie@{Serie}!Serie@{Serie}}
+\index{Serie@{Serie}!Serie@{Serie}}
+\subsubsection[{Serie(wx\+String token, wx\+String name, wx\+String unit="""", wx\+String serie\+Ext=\+E\+X\+T\+\_\+\+S\+R\+S, Date\+::\+Time\+Interval time\+Interval=\+Date\+::\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+D\+I\+A\+R\+Y)}]{\setlength{\rightskip}{0pt plus 5cm}Serie\+::\+Serie (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{token, }
+\item[{wx\+String}]{name, }
+\item[{wx\+String}]{unit = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{wx\+String}]{serie\+Ext = {\ttfamily {\bf E\+X\+T\+\_\+\+S\+RS}}, }
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval = {\ttfamily {\bf Date\+::\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+D\+I\+A\+RY}}}
+\end{DoxyParamCaption}
+)}\label{class_serie_a0c8bf34f3ed813fad85c0579f662fa90}
+Construtor \doxyref{Serie}{pag.}{class_serie} com intervalo inicial 0 e 1 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em name} & Nome da serie \\
+\hline
+{\em unit} & Unidade de medida \\
+\hline
+\end{DoxyParams}
+\index{Serie@{Serie}!````~Serie@{$\sim$\+Serie}}
+\index{````~Serie@{$\sim$\+Serie}!Serie@{Serie}}
+\subsubsection[{$\sim$\+Serie()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Serie\+::$\sim$\+Serie (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_serie_aaf9989ff6b3a61168281e08975c65636}
+
+
+\subsection{MÃ©todos}
+\index{Serie@{Serie}!clear@{clear}}
+\index{clear@{clear}!Serie@{Serie}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_ad47078e5b6839eed1db0d40faa958788}
+Apaga série \index{Serie@{Serie}!copy@{copy}}
+\index{copy@{copy}!Serie@{Serie}}
+\subsubsection[{copy(\+Serie $\ast$serie)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+::copy (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie} $\ast$}]{serie}
+\end{DoxyParamCaption}
+)}\label{class_serie_a7dbc1a923303255f1708ae17ebc4824b}
+Copia valores de outra série 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{Serie}{pag.}{class_serie}} & de origem \\
+\hline
+\end{DoxyParams}
+\index{Serie@{Serie}!count\+Equal\+Values@{count\+Equal\+Values}}
+\index{count\+Equal\+Values@{count\+Equal\+Values}!Serie@{Serie}}
+\subsubsection[{count\+Equal\+Values(double x, double epsilon=0.\+00001) const }]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Serie\+::count\+Equal\+Values (
+\begin{DoxyParamCaption}
+\item[{double}]{x, }
+\item[{double}]{epsilon = {\ttfamily 0.00001}}
+\end{DoxyParamCaption}
+) const}\label{class_serie_ac6539b0c11ee6edbf6a57e3b5bc2cd0d}
+Dado um certo valor x, conta quantos números são I\+G\+U\+A\+IS a x 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em x} & Número a ser comparado \\
+\hline
+{\em epsilon} & Precisão a ser usada no cálculo de comparação de double\textquotesingle{}s \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+retorna o número de valores iguais a x 
+\end{DoxyReturn}
+\index{Serie@{Serie}!count\+Less\+Than@{count\+Less\+Than}}
+\index{count\+Less\+Than@{count\+Less\+Than}!Serie@{Serie}}
+\subsubsection[{count\+Less\+Than(double x) const }]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Serie\+::count\+Less\+Than (
+\begin{DoxyParamCaption}
+\item[{double}]{x}
+\end{DoxyParamCaption}
+) const}\label{class_serie_ae0d515d44eb7152f2994b186ffc6c40d}
+Dado um certo valor x, conta quantos números são M\+E\+N\+O\+R\+ES OU I\+G\+U\+AL A ($<$=) x 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em x} & Numero a ser comparado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+retorna o número de valores menores ou iguais a x 
+\end{DoxyReturn}
+\index{Serie@{Serie}!count\+Values@{count\+Values}}
+\index{count\+Values@{count\+Values}!Serie@{Serie}}
+\subsubsection[{count\+Values() const }]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Serie\+::count\+Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_serie_afe9807fa92f60a74c10ce431d002c627}
+Conta quantos elementos tem no map de valores \begin{DoxyReturn}{Retorna}
+Número de elementos no map de valores 
+\end{DoxyReturn}
+\index{Serie@{Serie}!count\+Zero\+Values@{count\+Zero\+Values}}
+\index{count\+Zero\+Values@{count\+Zero\+Values}!Serie@{Serie}}
+\subsubsection[{count\+Zero\+Values() const }]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Serie\+::count\+Zero\+Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_serie_a8a8d93c289f979f1b23cae2d0a77b5cc}
+Conta quantos valores são iguais a zero ou iguais a E\+M\+P\+TY \begin{DoxyReturn}{Retorna}
+Retorna o número de valores iguais a 0 ou a E\+M\+P\+TY 
+\end{DoxyReturn}
+\index{Serie@{Serie}!duration\+Curve@{duration\+Curve}}
+\index{duration\+Curve@{duration\+Curve}!Serie@{Serie}}
+\subsubsection[{duration\+Curve(\+Interval interval)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ Serie\+::duration\+Curve (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)}\label{class_serie_aa09fa11df27ea56a68b71f4ef99dbeba}
+Curva de permanencia \index{Serie@{Serie}!empty@{empty}}
+\index{empty@{empty}!Serie@{Serie}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_a240072f3f318f9051524872ad8fa1f60}
+V\+E\+R\+D\+A\+D\+E\+I\+RO se a série é vazia, F\+A\+L\+SO senão \index{Serie@{Serie}!escalar\+Multi@{escalar\+Multi}}
+\index{escalar\+Multi@{escalar\+Multi}!Serie@{Serie}}
+\subsubsection[{escalar\+Multi(double value)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+::escalar\+Multi (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_serie_ad4ae53330e470f1e7ce8b5de6c21deb0}
+Operadores sobrecarregados \index{Serie@{Serie}!get\+Token@{get\+Token}}
+\index{get\+Token@{get\+Token}!Serie@{Serie}}
+\subsubsection[{get\+Token()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Serie\+::get\+Token (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_a2327e5f8ed60a6986132be1598a5c1ee}
+Retorna o token da \doxyref{Serie}{pag.}{class_serie} \index{Serie@{Serie}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Serie@{Serie}}
+\subsubsection[{get\+Value(const Date \&index) const }]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::get\+Value (
+\begin{DoxyParamCaption}
+\item[{const {\bf Date} \&}]{index}
+\end{DoxyParamCaption}
+) const}\label{class_serie_af8941d39fb65b62b6c2dfdd795cfc7d6}
+Retorna valor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em index} & Local de aquisição \\
+\hline
+\end{DoxyParams}
+\index{Serie@{Serie}!kurt@{kurt}}
+\index{kurt@{kurt}!Serie@{Serie}}
+\subsubsection[{kurt()}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::kurt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_aae28676951c34db232801be26e7496cd}
+Kurtosa \index{Serie@{Serie}!maximum\+Consecutive\+Days@{maximum\+Consecutive\+Days}}
+\index{maximum\+Consecutive\+Days@{maximum\+Consecutive\+Days}!Serie@{Serie}}
+\subsubsection[{maximum\+Consecutive\+Days(\+Zone\+Variable $\ast$zone\+Serie, int type)}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::maximum\+Consecutive\+Days (
+\begin{DoxyParamCaption}
+\item[{{\bf Zone\+Variable} $\ast$}]{zone\+Serie, }
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}\label{class_serie_a4cbafcc04f71a87ae9a0f50efc1c5fa8}
+Maximo de dias consecutivos em uma zona 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em zone\+Serie} & \doxyref{Serie}{pag.}{class_serie} com limites das zonas \\
+\hline
+{\em type} & Tipo de zona \\
+\hline
+\end{DoxyParams}
+\index{Serie@{Serie}!maximum\+Consecutive\+Days@{maximum\+Consecutive\+Days}}
+\index{maximum\+Consecutive\+Days@{maximum\+Consecutive\+Days}!Serie@{Serie}}
+\subsubsection[{maximum\+Consecutive\+Days(\+Zone\+Const $\ast$zone\+Const, int type)}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::maximum\+Consecutive\+Days (
+\begin{DoxyParamCaption}
+\item[{{\bf Zone\+Const} $\ast$}]{zone\+Const, }
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}\label{class_serie_a05343c6f5e088d2e168605f295f6ca13}
+Maximo de dias consecutivos em uma zona 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em zone\+Const} & Limites das zonas \\
+\hline
+{\em type} & Tipo de zona \\
+\hline
+\end{DoxyParams}
+\index{Serie@{Serie}!maximum\+Extent@{maximum\+Extent}}
+\index{maximum\+Extent@{maximum\+Extent}!Serie@{Serie}}
+\subsubsection[{maximum\+Extent(\+Zone\+Variable $\ast$zone\+Serie, int type)}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::maximum\+Extent (
+\begin{DoxyParamCaption}
+\item[{{\bf Zone\+Variable} $\ast$}]{zone\+Serie, }
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}\label{class_serie_ad09f7edd143e5c31ecde2b2d230ac3c8}
+Extenção do erro relativo a uma determinada zona 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em zone\+Serie} & \doxyref{Serie}{pag.}{class_serie} com limites das zonas \\
+\hline
+{\em type} & Tipo de zona \\
+\hline
+\end{DoxyParams}
+\index{Serie@{Serie}!maximum\+Extent@{maximum\+Extent}}
+\index{maximum\+Extent@{maximum\+Extent}!Serie@{Serie}}
+\subsubsection[{maximum\+Extent(\+Zone\+Const $\ast$zone\+Serie, int type)}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::maximum\+Extent (
+\begin{DoxyParamCaption}
+\item[{{\bf Zone\+Const} $\ast$}]{zone\+Serie, }
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}\label{class_serie_a0a3a18de147a89f25a215427b0ce3c5c}
+Extenção do erro relativo a uma determinada zona 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em zone\+Const} & Limites das zonas \\
+\hline
+{\em type} & Tipo de zona \\
+\hline
+\end{DoxyParams}
+\index{Serie@{Serie}!max\+Value@{max\+Value}}
+\index{max\+Value@{max\+Value}!Serie@{Serie}}
+\subsubsection[{max\+Value()}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::max\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_af543a85bca1c2366db110ea5ff7b0f3e}
+Valor máximo \index{Serie@{Serie}!mean@{mean}}
+\index{mean@{mean}!Serie@{Serie}}
+\subsubsection[{mean()}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::mean (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_acabf9384d0556811d4c41d5d9b3a2fbd}
+Media dos valores da serie \index{Serie@{Serie}!median@{median}}
+\index{median@{median}!Serie@{Serie}}
+\subsubsection[{median()}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::median (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_a01d0b99302cca8fb912a3de3b7cc19b2}
+Mediana dos valores da serie \index{Serie@{Serie}!min\+Value@{min\+Value}}
+\index{min\+Value@{min\+Value}!Serie@{Serie}}
+\subsubsection[{min\+Value()}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::min\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_a8885b7270a41c84793b46c99ec5fd322}
+Cálculo das estatísticas Valor mínimo \index{Serie@{Serie}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Serie@{Serie}}
+\subsubsection[{operator"!=(\+Serie other)}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie}}]{other}
+\end{DoxyParamCaption}
+)}\label{class_serie_abb410de6528e347eb9808637499d4018}
+\index{Serie@{Serie}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Serie@{Serie}}
+\subsubsection[{operator$\ast$(double value)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie} Serie\+::operator$\ast$ (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_serie_ad91b0772d8b928772b98605994167e4e}
+\index{Serie@{Serie}!operator+@{operator+}}
+\index{operator+@{operator+}!Serie@{Serie}}
+\subsubsection[{operator+(\+Serie other)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie} Serie\+::operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie}}]{other}
+\end{DoxyParamCaption}
+)}\label{class_serie_ac71716c99ea65a3c971d7c98f68c5efc}
+\index{Serie@{Serie}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Serie@{Serie}}
+\subsubsection[{operator-\/(\+Serie other)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie} Serie\+::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie}}]{other}
+\end{DoxyParamCaption}
+)}\label{class_serie_aab4635b659adc98de171e3ff3b08f144}
+\index{Serie@{Serie}!operator/@{operator/}}
+\index{operator/@{operator/}!Serie@{Serie}}
+\subsubsection[{operator/(double value)}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie} Serie\+::operator/ (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_serie_a308e9f24e64f0fced0f9c02a6026b604}
+\index{Serie@{Serie}!operator=@{operator=}}
+\index{operator=@{operator=}!Serie@{Serie}}
+\subsubsection[{operator=(\+Serie other)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+::operator= (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie}}]{other}
+\end{DoxyParamCaption}
+)}\label{class_serie_a578d79d0f17b7b23c3541030cdd68b75}
+\index{Serie@{Serie}!operator==@{operator==}}
+\index{operator==@{operator==}!Serie@{Serie}}
+\subsubsection[{operator==(\+Serie other)}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+::operator== (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie}}]{other}
+\end{DoxyParamCaption}
+)}\label{class_serie_a8f6c0451d21690aed434198e75024c47}
+\index{Serie@{Serie}!percent\+Days@{percent\+Days}}
+\index{percent\+Days@{percent\+Days}!Serie@{Serie}}
+\subsubsection[{percent\+Days(\+Zone\+Variable $\ast$zone\+Serie, int type)}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::percent\+Days (
+\begin{DoxyParamCaption}
+\item[{{\bf Zone\+Variable} $\ast$}]{zone\+Serie, }
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}\label{class_serie_a17b6408933240106ce193deca9009095}
+Percentual de dias em uma determinada zona 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em zone\+Serie} & \doxyref{Serie}{pag.}{class_serie} com limites das zonas \\
+\hline
+{\em type} & Tipo de zona \\
+\hline
+\end{DoxyParams}
+\index{Serie@{Serie}!percent\+Days@{percent\+Days}}
+\index{percent\+Days@{percent\+Days}!Serie@{Serie}}
+\subsubsection[{percent\+Days(\+Zone\+Const $\ast$zone\+Serie, int type)}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::percent\+Days (
+\begin{DoxyParamCaption}
+\item[{{\bf Zone\+Const} $\ast$}]{zone\+Serie, }
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}\label{class_serie_ad1d5895ab1d7e97c1de4f76dbcdb8568}
+Percentual de dias em uma determinada zona 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em zone\+Const} & Limites das zonas \\
+\hline
+{\em type} & Tipo de zona \\
+\hline
+\end{DoxyParams}
+\index{Serie@{Serie}!recalculate\+Interval@{recalculate\+Interval}}
+\index{recalculate\+Interval@{recalculate\+Interval}!Serie@{Serie}}
+\subsubsection[{recalculate\+Interval()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+::recalculate\+Interval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_a568f6319ae59724b43eef67a0aa51eb9}
+O interval está zuado? Seus problemas acabaram! Utilize esta função para que a série pegue a menor e a maior data entre todos os seus valores (values) \index{Serie@{Serie}!reliability@{reliability}}
+\index{reliability@{reliability}!Serie@{Serie}}
+\subsubsection[{reliability(\+Zone\+Variable $\ast$zone\+Serie, int type)}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::reliability (
+\begin{DoxyParamCaption}
+\item[{{\bf Zone\+Variable} $\ast$}]{zone\+Serie, }
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}\label{class_serie_a7af20e7508efc9f768c68fa723532c35}
+Confiabilidade 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em zone\+Serie} & \doxyref{Serie}{pag.}{class_serie} com limites das zonas \\
+\hline
+{\em type} & Define como adotar o intervalo (V $>$ L $\vert$$\vert$ S $<$ V $<$ L $\vert$$\vert$ V $<$ S) \\
+\hline
+\end{DoxyParams}
+\index{Serie@{Serie}!reliability@{reliability}}
+\index{reliability@{reliability}!Serie@{Serie}}
+\subsubsection[{reliability(\+Zone\+Const $\ast$zone\+Const, int type)}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::reliability (
+\begin{DoxyParamCaption}
+\item[{{\bf Zone\+Const} $\ast$}]{zone\+Const, }
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}\label{class_serie_a41a813799a1b2a8d338941c4efd43d7a}
+Confiabilidade 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em zone\+Const} & Limites das zonas \\
+\hline
+{\em type} & Define como adotar o intervalo (V $>$ L $\vert$$\vert$ S $<$ V $<$ L $\vert$$\vert$ V $<$ S) \\
+\hline
+\end{DoxyParams}
+\index{Serie@{Serie}!reset\+Values@{reset\+Values}}
+\index{reset\+Values@{reset\+Values}!Serie@{Serie}}
+\subsubsection[{reset\+Values(double value=\+E\+M\+P\+T\+Y)}]{\setlength{\rightskip}{0pt plus 5cm}bool Serie\+::reset\+Values (
+\begin{DoxyParamCaption}
+\item[{double}]{value = {\ttfamily {\bf E\+M\+P\+TY}}}
+\end{DoxyParamCaption}
+)}\label{class_serie_aba9db5daa9657062a259c69c6746b972}
+Torna todos os valoers da serie para uma constante \index{Serie@{Serie}!resilience@{resilience}}
+\index{resilience@{resilience}!Serie@{Serie}}
+\subsubsection[{resilience(\+Zone\+Variable $\ast$zone\+Serie, int type)}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::resilience (
+\begin{DoxyParamCaption}
+\item[{{\bf Zone\+Variable} $\ast$}]{zone\+Serie, }
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}\label{class_serie_a8a7365ecc1e3a3e7f9017761cc4e382f}
+Resiliencia 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em zone\+Serie} & \doxyref{Serie}{pag.}{class_serie} com limites das zonas \\
+\hline
+{\em type} & Define como adotar o intervalo (V $>$ L $\vert$$\vert$ S $<$ V $<$ L $\vert$$\vert$ V $<$ S) \\
+\hline
+\end{DoxyParams}
+\index{Serie@{Serie}!resilience@{resilience}}
+\index{resilience@{resilience}!Serie@{Serie}}
+\subsubsection[{resilience(\+Zone\+Const $\ast$zone\+Serie, int type)}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::resilience (
+\begin{DoxyParamCaption}
+\item[{{\bf Zone\+Const} $\ast$}]{zone\+Serie, }
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}\label{class_serie_ac53612b5b3b584598519dab9ffeb4b5b}
+Resiliencia 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em zone\+Const} & Limites das zonas \\
+\hline
+{\em type} & Tipo de resiliencia \\
+\hline
+\end{DoxyParams}
+\index{Serie@{Serie}!set\+Token@{set\+Token}}
+\index{set\+Token@{set\+Token}!Serie@{Serie}}
+\subsubsection[{set\+Token(wx\+String token)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+::set\+Token (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{token}
+\end{DoxyParamCaption}
+)}\label{class_serie_afa7a1f2265a059b204f10f6ab9eefca2}
+Define o token \index{Serie@{Serie}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!Serie@{Serie}}
+\subsubsection[{set\+Value(\+Date index, double value)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+::set\+Value (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{index, }
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_serie_a01ce822a25341b3760cf2fc3a9163585}
+Inclui valor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em index} & Local de incersão \\
+\hline
+{\em value} & Valor \\
+\hline
+\end{DoxyParams}
+\index{Serie@{Serie}!skew@{skew}}
+\index{skew@{skew}!Serie@{Serie}}
+\subsubsection[{skew()}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::skew (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_ad899b7cf621a8b3d05fb02e982d1724e}
+Asimetria \index{Serie@{Serie}!std\+Dev@{std\+Dev}}
+\index{std\+Dev@{std\+Dev}!Serie@{Serie}}
+\subsubsection[{std\+Dev()}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::std\+Dev (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_aa89ac2c542e508d439c24250f40c6819}
+Desvio padrão \index{Serie@{Serie}!string\+Values@{string\+Values}}
+\index{string\+Values@{string\+Values}!Serie@{Serie}}
+\subsubsection[{string\+Values()}]{\setlength{\rightskip}{0pt plus 5cm}string Serie\+::string\+Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_a861b0ee5173a763f904eb45c6f7341d1}
+returns a string of all values of the serie \index{Serie@{Serie}!sum@{sum}}
+\index{sum@{sum}!Serie@{Serie}}
+\subsubsection[{sum()}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::sum (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_a8c394319d1489b66965d8338248a6abf}
+Somatorio da \doxyref{Serie}{pag.}{class_serie} \index{Serie@{Serie}!var@{var}}
+\index{var@{var}!Serie@{Serie}}
+\subsubsection[{var()}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::var (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_a2ff00498ffdc2e774742c48e75135dfc}
+Variância 
+
+\subsection{Amigas e FunÃ§Ãµes Relacionadas}
+\index{Serie@{Serie}!Serie\+Dialog\+Content@{Serie\+Dialog\+Content}}
+\index{Serie\+Dialog\+Content@{Serie\+Dialog\+Content}!Serie@{Serie}}
+\subsubsection[{Serie\+Dialog\+Content}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Serie\+Dialog\+Content}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_serie_a0367f04b14737e126adfadb76844b277}
+
+
+DefiniÃ§Ã£o na linha 107 do arquivo S\+I\+G\+A/\+Serie.\+h.
+
+
+
+\subsection{Atributos}
+\index{Serie@{Serie}!interval@{interval}}
+\index{interval@{interval}!Serie@{Serie}}
+\subsubsection[{interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Serie\+::interval}\label{class_serie_ae25d2aa7f5cd2848af65e7c799e3d164}
+Intervalo de valores 
+
+DefiniÃ§Ã£o na linha 149 do arquivo S\+I\+G\+A/\+Serie.\+h.
+
+\index{Serie@{Serie}!kurt\+Serie@{kurt\+Serie}}
+\index{kurt\+Serie@{kurt\+Serie}!Serie@{Serie}}
+\subsubsection[{kurt\+Serie}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::kurt\+Serie}\label{class_serie_a1c2a5e5787e26f4cebf7d8a5224c11e6}
+
+
+DefiniÃ§Ã£o na linha 154 do arquivo S\+I\+G\+A/\+Serie.\+h.
+
+\index{Serie@{Serie}!max\+Value\+\_\+@{max\+Value\+\_\+}}
+\index{max\+Value\+\_\+@{max\+Value\+\_\+}!Serie@{Serie}}
+\subsubsection[{max\+Value\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::max\+Value\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_a5d99c687813ea7686f92dee83fe4633f}
+
+
+DefiniÃ§Ã£o na linha 128 do arquivo S\+I\+G\+A/\+Serie.\+h.
+
+\index{Serie@{Serie}!mean\+Serie@{mean\+Serie}}
+\index{mean\+Serie@{mean\+Serie}!Serie@{Serie}}
+\subsubsection[{mean\+Serie}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::mean\+Serie}\label{class_serie_a8e55d1866cf9ea9be1496505ea4e83af}
+
+
+DefiniÃ§Ã£o na linha 154 do arquivo S\+I\+G\+A/\+Serie.\+h.
+
+\index{Serie@{Serie}!min\+Mon@{min\+Mon}}
+\index{min\+Mon@{min\+Mon}!Serie@{Serie}}
+\subsubsection[{min\+Mon}]{\setlength{\rightskip}{0pt plus 5cm}const int Serie\+::min\+Mon = 20\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\label{class_serie_a2d276d853e0c2102ecf7d1d44a70040b}
+Número mínimo de meses válidos para a execução da calibração 
+
+DefiniÃ§Ã£o na linha 123 do arquivo S\+I\+G\+A/\+Serie.\+h.
+
+\index{Serie@{Serie}!min\+Value\+\_\+@{min\+Value\+\_\+}}
+\index{min\+Value\+\_\+@{min\+Value\+\_\+}!Serie@{Serie}}
+\subsubsection[{min\+Value\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::min\+Value\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_a13e6665fcbd93d62d68ee378b6beab54}
+Valores mínimo e máximo 
+
+DefiniÃ§Ã£o na linha 128 do arquivo S\+I\+G\+A/\+Serie.\+h.
+
+\index{Serie@{Serie}!name@{name}}
+\index{name@{name}!Serie@{Serie}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Serie\+::name}\label{class_serie_aacaadb2f18eebad53a11d8927db2deaf}
+Nome da serie 
+
+DefiniÃ§Ã£o na linha 134 do arquivo S\+I\+G\+A/\+Serie.\+h.
+
+\index{Serie@{Serie}!serie\+Ext@{serie\+Ext}}
+\index{serie\+Ext@{serie\+Ext}!Serie@{Serie}}
+\subsubsection[{serie\+Ext}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Serie\+::serie\+Ext}\label{class_serie_a3679937fbd0b74585957359d3a3a18f2}
+Extensão da serie 
+
+DefiniÃ§Ã£o na linha 144 do arquivo S\+I\+G\+A/\+Serie.\+h.
+
+\index{Serie@{Serie}!skew\+Serie@{skew\+Serie}}
+\index{skew\+Serie@{skew\+Serie}!Serie@{Serie}}
+\subsubsection[{skew\+Serie}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::skew\+Serie}\label{class_serie_a5849686f799efcaee773ad16c4f3bc41}
+
+
+DefiniÃ§Ã£o na linha 154 do arquivo S\+I\+G\+A/\+Serie.\+h.
+
+\index{Serie@{Serie}!std\+Dev\+Serie@{std\+Dev\+Serie}}
+\index{std\+Dev\+Serie@{std\+Dev\+Serie}!Serie@{Serie}}
+\subsubsection[{std\+Dev\+Serie}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::std\+Dev\+Serie}\label{class_serie_ad6edfd8403ef232aa56a17b1ca412706}
+
+
+DefiniÃ§Ã£o na linha 154 do arquivo S\+I\+G\+A/\+Serie.\+h.
+
+\index{Serie@{Serie}!sum\+Serie@{sum\+Serie}}
+\index{sum\+Serie@{sum\+Serie}!Serie@{Serie}}
+\subsubsection[{sum\+Serie}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::sum\+Serie}\label{class_serie_adc8d820b1f6d8f3e22023afb9e69be2e}
+Estátisticas 
+
+DefiniÃ§Ã£o na linha 154 do arquivo S\+I\+G\+A/\+Serie.\+h.
+
+\index{Serie@{Serie}!token@{token}}
+\index{token@{token}!Serie@{Serie}}
+\subsubsection[{token}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Serie\+::token\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_a9e10438da6578f1f1067ab539a7c1cee}
+Identificador para uso ao salvar arquivo 
+
+DefiniÃ§Ã£o na linha 118 do arquivo S\+I\+G\+A/\+Serie.\+h.
+
+\index{Serie@{Serie}!unit@{unit}}
+\index{unit@{unit}!Serie@{Serie}}
+\subsubsection[{unit}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Serie\+::unit}\label{class_serie_ae96e80b95958bceff1dc622ce24eb748}
+Unidade de medida 
+
+DefiniÃ§Ã£o na linha 139 do arquivo S\+I\+G\+A/\+Serie.\+h.
+
+\index{Serie@{Serie}!values@{values}}
+\index{values@{values}!Serie@{Serie}}
+\subsubsection[{values}]{\setlength{\rightskip}{0pt plus 5cm}map$<$unsigned int, double$>$ Serie\+::values\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_a1e3ee10a50b097f58d5ab913b90736cc}
+Mapa organizado por um J\+ND de valores da serie 
+
+DefiniÃ§Ã£o na linha 113 do arquivo S\+I\+G\+A/\+Serie.\+h.
+
+\index{Serie@{Serie}!var\+Serie@{var\+Serie}}
+\index{var\+Serie@{var\+Serie}!Serie@{Serie}}
+\subsubsection[{var\+Serie}]{\setlength{\rightskip}{0pt plus 5cm}double Serie\+::var\+Serie}\label{class_serie_a33519b8f5089da1bb92f968cab98f67a}
+
+
+DefiniÃ§Ã£o na linha 154 do arquivo S\+I\+G\+A/\+Serie.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+G\+A/\+Serie.\+h}\end{DoxyCompactItemize}

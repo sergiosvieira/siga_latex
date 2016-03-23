@@ -1,0 +1,162 @@
+\section{ReferÃªncia da Classe Shape\+Errors\+Dialog}
+\label{class_shape_errors_dialog}\index{Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}}
+
+
+{\ttfamily \#include $<$Shape\+Errors\+Dialog.\+h$>$}
+
+
+
+Herdeiro de wx\+Dialog.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Shape\+Errors\+Dialog} (wx\+Window $\ast$parent, wx\+Window\+ID id, const wx\+String \&title, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size)
+\item 
+{\bf $\sim$\+Shape\+Errors\+Dialog} ()
+\item 
+void {\bf add\+Error} (wx\+String error)
+\item 
+void {\bf add\+Section} (wx\+String title)
+\item 
+bool {\bf has\+Section} (wx\+String title)
+\item 
+void {\bf re\+Open} (wx\+Grid\+Event \&event)
+\item 
+void {\bf re\+Open\+Shape} (int row)
+\item 
+void {\bf re\+Open\+Raster} (int row)
+\item 
+void {\bf remove\+Section} (wx\+String title)
+\item 
+int {\bf get\+Errors\+Count} ()
+\item 
+{\bf D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 15 do arquivo Shape\+Errors\+Dialog.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}!Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}}
+\index{Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}!Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}}
+\subsubsection[{Shape\+Errors\+Dialog(wx\+Window $\ast$parent, wx\+Window\+I\+D id, const wx\+String \&title, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size)}]{\setlength{\rightskip}{0pt plus 5cm}Shape\+Errors\+Dialog\+::\+Shape\+Errors\+Dialog (
+\begin{DoxyParamCaption}
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{wx\+Window\+ID}]{id, }
+\item[{const wx\+String \&}]{title, }
+\item[{const wx\+Point \&}]{pos = {\ttfamily wxDefaultPosition}, }
+\item[{const wx\+Size \&}]{size = {\ttfamily wxDefaultSize}}
+\end{DoxyParamCaption}
+)}\label{class_shape_errors_dialog_aef208f2549d68f89dea145b2156272dc}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em parent} & Pai da janela \\
+\hline
+{\em id} & Identificador da Janela \\
+\hline
+{\em title} & Titulo da Janela \\
+\hline
+{\em pos} & Posição inicial da janela \\
+\hline
+{\em size} & Tamanho inicial da janela \\
+\hline
+\end{DoxyParams}
+\index{Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}!````~Shape\+Errors\+Dialog@{$\sim$\+Shape\+Errors\+Dialog}}
+\index{````~Shape\+Errors\+Dialog@{$\sim$\+Shape\+Errors\+Dialog}!Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}}
+\subsubsection[{$\sim$\+Shape\+Errors\+Dialog()}]{\setlength{\rightskip}{0pt plus 5cm}Shape\+Errors\+Dialog\+::$\sim$\+Shape\+Errors\+Dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_shape_errors_dialog_aefe3e329dd52e0d93cee996309b3380a}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}!add\+Error@{add\+Error}}
+\index{add\+Error@{add\+Error}!Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}}
+\subsubsection[{add\+Error(wx\+String error)}]{\setlength{\rightskip}{0pt plus 5cm}void Shape\+Errors\+Dialog\+::add\+Error (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{error}
+\end{DoxyParamCaption}
+)}\label{class_shape_errors_dialog_a3a884fa75fada9692d5fffdff5ef727b}
+Adiciona um erro 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em error} & Texto representando o erro \\
+\hline
+\end{DoxyParams}
+\index{Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}!add\+Section@{add\+Section}}
+\index{add\+Section@{add\+Section}!Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}}
+\subsubsection[{add\+Section(wx\+String title)}]{\setlength{\rightskip}{0pt plus 5cm}void Shape\+Errors\+Dialog\+::add\+Section (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{title}
+\end{DoxyParamCaption}
+)}\label{class_shape_errors_dialog_a075d353dc9b5f705d9a2b70926ba9d47}
+Adiciona uma seção 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em error} & Texto representando da seção \\
+\hline
+\end{DoxyParams}
+\index{Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}!D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}!Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}}
+\subsubsection[{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+L\+E()}]{\setlength{\rightskip}{0pt plus 5cm}Shape\+Errors\+Dialog\+::\+D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_shape_errors_dialog_afd880c337b37a869973e7c0b628de191}
+Tabela de eventos \index{Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}!get\+Errors\+Count@{get\+Errors\+Count}}
+\index{get\+Errors\+Count@{get\+Errors\+Count}!Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}}
+\subsubsection[{get\+Errors\+Count()}]{\setlength{\rightskip}{0pt plus 5cm}int Shape\+Errors\+Dialog\+::get\+Errors\+Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_shape_errors_dialog_afc4f7406cdadcf512a74a55bbe9754bd}
+Retorna a quantidade de erros escritos \index{Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}!has\+Section@{has\+Section}}
+\index{has\+Section@{has\+Section}!Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}}
+\subsubsection[{has\+Section(wx\+String title)}]{\setlength{\rightskip}{0pt plus 5cm}bool Shape\+Errors\+Dialog\+::has\+Section (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{title}
+\end{DoxyParamCaption}
+)}\label{class_shape_errors_dialog_afec77044de129bd232fbf39a407fd3c7}
+Retorna true se existir uma seção com esse nome \index{Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}!remove\+Section@{remove\+Section}}
+\index{remove\+Section@{remove\+Section}!Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}}
+\subsubsection[{remove\+Section(wx\+String title)}]{\setlength{\rightskip}{0pt plus 5cm}void Shape\+Errors\+Dialog\+::remove\+Section (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{title}
+\end{DoxyParamCaption}
+)}\label{class_shape_errors_dialog_ae8f81a3f96d417cfb672f46b8c5c546d}
+Remove uma seção. por exemplo caso não tenho erros na seção já adicionada 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em error} & Texto representando da seção \\
+\hline
+\end{DoxyParams}
+\index{Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}!re\+Open@{re\+Open}}
+\index{re\+Open@{re\+Open}!Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}}
+\subsubsection[{re\+Open(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Shape\+Errors\+Dialog\+::re\+Open (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_shape_errors_dialog_a4b8b8891c2810cc341ec348b68d5285c}
+Função para reabrir shapefiles ou rasterfiles \index{Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}!re\+Open\+Raster@{re\+Open\+Raster}}
+\index{re\+Open\+Raster@{re\+Open\+Raster}!Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}}
+\subsubsection[{re\+Open\+Raster(int row)}]{\setlength{\rightskip}{0pt plus 5cm}void Shape\+Errors\+Dialog\+::re\+Open\+Raster (
+\begin{DoxyParamCaption}
+\item[{int}]{row}
+\end{DoxyParamCaption}
+)}\label{class_shape_errors_dialog_a9e6deddf2d3e6eae09dddf1c1068b58b}
+Função para recarregar shape \index{Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}!re\+Open\+Shape@{re\+Open\+Shape}}
+\index{re\+Open\+Shape@{re\+Open\+Shape}!Shape\+Errors\+Dialog@{Shape\+Errors\+Dialog}}
+\subsubsection[{re\+Open\+Shape(int row)}]{\setlength{\rightskip}{0pt plus 5cm}void Shape\+Errors\+Dialog\+::re\+Open\+Shape (
+\begin{DoxyParamCaption}
+\item[{int}]{row}
+\end{DoxyParamCaption}
+)}\label{class_shape_errors_dialog_a098bd8803162c820a0c326ea39210573}
+Função para recarregar shape 
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Shape\+Errors\+Dialog.\+h}\end{DoxyCompactItemize}

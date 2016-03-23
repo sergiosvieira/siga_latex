@@ -1,0 +1,224 @@
+\section{Referência da Classe Res\+Op\+Reservoir}
+\label{class_res_op_reservoir}\index{Res\+Op\+Reservoir@{Res\+Op\+Reservoir}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Reservoir.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Element}.
+
+
+
+Superclasse de {\bf Res\+Op\+Network\+Flow\+Reservoir} e {\bf Res\+Op\+Sequential\+Reservoir}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Reservoir} ({\bf Date} initial\+Date, {\bf Date} final\+Date, {\bf Node} $\ast${\bf node})
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Reservoir} ()
+\item 
+virtual void {\bf update\+Allocation\+Matrix} ({\bf Node} $\ast${\bf node})=0
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Serie} $\ast$ {\bf etp}
+\item 
+{\bf Serie} $\ast$ {\bf prec}
+\item 
+wx\+String {\bf etp\+File\+Name}
+\item 
+wx\+String {\bf prec\+File\+Name}
+\item 
+wx\+String {\bf cav\+File\+Name}
+\item 
+double {\bf vol\+Max}
+\item 
+double {\bf vol\+Min}
+\item 
+double {\bf vol\+Init}
+\item 
+{\bf Res\+C\+AV} $\ast$ {\bf C\+AV}
+\item 
+double {\bf L\+Vert}
+\item 
+double {\bf C\+Vert}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bf Res\+Op\+Element} $\ast$ {\bf do\+Copy} ()=0
+\item 
+virtual void {\bf do\+Create\+Results} ({\bf Interval} interval)
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+Cada inst�ncia de modelo � feita para um n� espec�fico 
+
+Definição na linha 17 do arquivo Res\+Op\+Reservoir.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Reservoir@{Res\+Op\+Reservoir}!Res\+Op\+Reservoir@{Res\+Op\+Reservoir}}
+\index{Res\+Op\+Reservoir@{Res\+Op\+Reservoir}!Res\+Op\+Reservoir@{Res\+Op\+Reservoir}}
+\subsubsection[{Res\+Op\+Reservoir(\+Date initial\+Date, Date final\+Date, Node $\ast$node)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Reservoir\+::\+Res\+Op\+Reservoir (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{initial\+Date, }
+\item[{{\bf Date}}]{final\+Date, }
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}\label{class_res_op_reservoir_abf47d153e49812107875c1dab9fd1f7c}
+Construtor padr�o da classe \doxyref{Res\+Op\+Element}{pag.}{class_res_op_element} 
+\begin{DoxyParams}{Parâmetros}
+{\em initial\+Date} & Inicio do intervalo \\
+\hline
+{\em final\+Date} & Final do Intervalo \\
+\hline
+{\em node} & N� de interesse \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Reservoir@{Res\+Op\+Reservoir}!````~Res\+Op\+Reservoir@{$\sim$\+Res\+Op\+Reservoir}}
+\index{````~Res\+Op\+Reservoir@{$\sim$\+Res\+Op\+Reservoir}!Res\+Op\+Reservoir@{Res\+Op\+Reservoir}}
+\subsubsection[{$\sim$\+Res\+Op\+Reservoir()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Reservoir\+::$\sim$\+Res\+Op\+Reservoir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_reservoir_a92d15802d33ed93f35c48c3927ab3708}
+Destrutor padr�o da classe \doxyref{Res\+Op\+Element}{pag.}{class_res_op_element} 
+
+\subsection{Métodos}
+\index{Res\+Op\+Reservoir@{Res\+Op\+Reservoir}!do\+Copy@{do\+Copy}}
+\index{do\+Copy@{do\+Copy}!Res\+Op\+Reservoir@{Res\+Op\+Reservoir}}
+\subsubsection[{do\+Copy()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Res\+Op\+Element}$\ast$ Res\+Op\+Reservoir\+::do\+Copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}\label{class_res_op_reservoir_af91f15be0c2231ead9cc3a5f934205b1}
+Copia dos dados especificos 
+
+Implementa {\bf Res\+Op\+Element} \doxyref{}{pag.}{class_res_op_element_a88fe7190d68429d2f9623160df266dc9}.
+
+
+
+Implementado por {\bf Res\+Op\+Network\+Flow\+Reservoir} \doxyref{}{pag.}{class_res_op_network_flow_reservoir_a4ba9500b9217d2382f89884643289534}, {\bf Res\+Op\+Sequential\+Reservoir} \doxyref{}{pag.}{class_res_op_sequential_reservoir_a50f4b6ad7a55ee2666bbf4b5dce25064}, {\bf Res\+Op\+Network\+Flow\+Wnd\+Reservoir} \doxyref{}{pag.}{class_res_op_network_flow_wnd_reservoir_ad18be16323edfdc87cdc222a5f3de759} e {\bf Res\+Op\+Sequential\+Wnd\+Reservoir} \doxyref{}{pag.}{class_res_op_sequential_wnd_reservoir_a492b6dd9534fb99f0b4779255abf2625}.
+
+\index{Res\+Op\+Reservoir@{Res\+Op\+Reservoir}!do\+Create\+Results@{do\+Create\+Results}}
+\index{do\+Create\+Results@{do\+Create\+Results}!Res\+Op\+Reservoir@{Res\+Op\+Reservoir}}
+\subsubsection[{do\+Create\+Results(\+Interval interval)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Reservoir\+::do\+Create\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_op_reservoir_a3b9086bdf6e48a318b12d83e0737d0f6}
+
+
+Implementa {\bf Res\+Op\+Element} \doxyref{}{pag.}{class_res_op_element_a7733b727336bb90ee33299b55d46b335}.
+
+
+
+Reimplementado por {\bf Res\+Op\+Network\+Flow\+Reservoir} \doxyref{}{pag.}{class_res_op_network_flow_reservoir_a5e138d93b71778400451e7f81868b5d0}, {\bf Res\+Op\+Sequential\+Reservoir} \doxyref{}{pag.}{class_res_op_sequential_reservoir_a54e8b1c86719356ac618531b7c91d3fb}, {\bf Res\+Op\+Network\+Flow\+Wnd\+Reservoir} \doxyref{}{pag.}{class_res_op_network_flow_wnd_reservoir_af13a88abc3f68314d298d85e2c021828} e {\bf Res\+Op\+Sequential\+Wnd\+Reservoir} \doxyref{}{pag.}{class_res_op_sequential_wnd_reservoir_ad2bf024727f2be6f68e2968860c98188}.
+
+\index{Res\+Op\+Reservoir@{Res\+Op\+Reservoir}!update\+Allocation\+Matrix@{update\+Allocation\+Matrix}}
+\index{update\+Allocation\+Matrix@{update\+Allocation\+Matrix}!Res\+Op\+Reservoir@{Res\+Op\+Reservoir}}
+\subsubsection[{update\+Allocation\+Matrix(\+Node $\ast$node)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Reservoir\+::update\+Allocation\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_reservoir_a716f4a87aec746b7c2d5ee27210b318d}
+Define o cabe�alho da alloc; 
+
+Implementa {\bf Res\+Op\+Element} \doxyref{}{pag.}{class_res_op_element_ad75ced5fbb62038bec3e527d4730ebc4}.
+
+
+
+Implementado por {\bf Res\+Op\+Network\+Flow\+Reservoir} \doxyref{}{pag.}{class_res_op_network_flow_reservoir_abfe9fb0c3f3d1b4d8f4711a1bd7516ea} e {\bf Res\+Op\+Sequential\+Reservoir} \doxyref{}{pag.}{class_res_op_sequential_reservoir_a4ad3b886e14dc0b50eac63adce956522}.
+
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Reservoir@{Res\+Op\+Reservoir}!C\+AV@{C\+AV}}
+\index{C\+AV@{C\+AV}!Res\+Op\+Reservoir@{Res\+Op\+Reservoir}}
+\subsubsection[{C\+AV}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+C\+AV}$\ast$ Res\+Op\+Reservoir\+::\+C\+AV}\label{class_res_op_reservoir_ade1770049905f1bf3c869009d4d9c690}
+
+
+Definição na linha 44 do arquivo Res\+Op\+Reservoir.\+h.
+
+\index{Res\+Op\+Reservoir@{Res\+Op\+Reservoir}!cav\+File\+Name@{cav\+File\+Name}}
+\index{cav\+File\+Name@{cav\+File\+Name}!Res\+Op\+Reservoir@{Res\+Op\+Reservoir}}
+\subsubsection[{cav\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Res\+Op\+Reservoir\+::cav\+File\+Name}\label{class_res_op_reservoir_af0843fb6a169f1f2ca0421c8323a7737}
+
+
+Definição na linha 36 do arquivo Res\+Op\+Reservoir.\+h.
+
+\index{Res\+Op\+Reservoir@{Res\+Op\+Reservoir}!C\+Vert@{C\+Vert}}
+\index{C\+Vert@{C\+Vert}!Res\+Op\+Reservoir@{Res\+Op\+Reservoir}}
+\subsubsection[{C\+Vert}]{\setlength{\rightskip}{0pt plus 5cm}double Res\+Op\+Reservoir\+::\+C\+Vert}\label{class_res_op_reservoir_a2d246233d08b03d914bbe156e7aa7f88}
+
+
+Definição na linha 50 do arquivo Res\+Op\+Reservoir.\+h.
+
+\index{Res\+Op\+Reservoir@{Res\+Op\+Reservoir}!etp@{etp}}
+\index{etp@{etp}!Res\+Op\+Reservoir@{Res\+Op\+Reservoir}}
+\subsubsection[{etp}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ Res\+Op\+Reservoir\+::etp}\label{class_res_op_reservoir_a6091373e25a3ffcef9d1fd35c40293df}
+S�ries 
+
+Definição na linha 30 do arquivo Res\+Op\+Reservoir.\+h.
+
+\index{Res\+Op\+Reservoir@{Res\+Op\+Reservoir}!etp\+File\+Name@{etp\+File\+Name}}
+\index{etp\+File\+Name@{etp\+File\+Name}!Res\+Op\+Reservoir@{Res\+Op\+Reservoir}}
+\subsubsection[{etp\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Res\+Op\+Reservoir\+::etp\+File\+Name}\label{class_res_op_reservoir_a9994eeaf03fe2e1fc80fc785f0ad535b}
+Nome dos arquivos lidos de evapotranspira��p, precipita��o, vaz�o incremental e \doxyref{C\+A\+V( cota, area e volume )}{pag.}{_res_op_serie_constants_8h_af9306d1f384dd4697bbe88b8a156493da0bb9b8a5508d5b557b385d895d22b59e} 
+
+Definição na linha 36 do arquivo Res\+Op\+Reservoir.\+h.
+
+\index{Res\+Op\+Reservoir@{Res\+Op\+Reservoir}!L\+Vert@{L\+Vert}}
+\index{L\+Vert@{L\+Vert}!Res\+Op\+Reservoir@{Res\+Op\+Reservoir}}
+\subsubsection[{L\+Vert}]{\setlength{\rightskip}{0pt plus 5cm}double Res\+Op\+Reservoir\+::\+L\+Vert}\label{class_res_op_reservoir_aa54a7c4f1a5dffa073f1a849a745bb45}
+Dados do Vertedor 
+
+Definição na linha 49 do arquivo Res\+Op\+Reservoir.\+h.
+
+\index{Res\+Op\+Reservoir@{Res\+Op\+Reservoir}!prec@{prec}}
+\index{prec@{prec}!Res\+Op\+Reservoir@{Res\+Op\+Reservoir}}
+\subsubsection[{prec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ Res\+Op\+Reservoir\+::prec}\label{class_res_op_reservoir_a19907270e97c9e62534559f4adbcafaa}
+
+
+Definição na linha 31 do arquivo Res\+Op\+Reservoir.\+h.
+
+\index{Res\+Op\+Reservoir@{Res\+Op\+Reservoir}!prec\+File\+Name@{prec\+File\+Name}}
+\index{prec\+File\+Name@{prec\+File\+Name}!Res\+Op\+Reservoir@{Res\+Op\+Reservoir}}
+\subsubsection[{prec\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Res\+Op\+Reservoir\+::prec\+File\+Name}\label{class_res_op_reservoir_ab03b625d77c4eca36745a7db4f45346f}
+
+
+Definição na linha 36 do arquivo Res\+Op\+Reservoir.\+h.
+
+\index{Res\+Op\+Reservoir@{Res\+Op\+Reservoir}!vol\+Init@{vol\+Init}}
+\index{vol\+Init@{vol\+Init}!Res\+Op\+Reservoir@{Res\+Op\+Reservoir}}
+\subsubsection[{vol\+Init}]{\setlength{\rightskip}{0pt plus 5cm}double Res\+Op\+Reservoir\+::vol\+Init}\label{class_res_op_reservoir_afe111942b5167f88ac0493b0bd7a6d33}
+
+
+Definição na linha 43 do arquivo Res\+Op\+Reservoir.\+h.
+
+\index{Res\+Op\+Reservoir@{Res\+Op\+Reservoir}!vol\+Max@{vol\+Max}}
+\index{vol\+Max@{vol\+Max}!Res\+Op\+Reservoir@{Res\+Op\+Reservoir}}
+\subsubsection[{vol\+Max}]{\setlength{\rightskip}{0pt plus 5cm}double Res\+Op\+Reservoir\+::vol\+Max}\label{class_res_op_reservoir_ae13e779fbe472685ea0a8e975b074252}
+Caracter�sticas do Reservat�rio 
+
+Definição na linha 41 do arquivo Res\+Op\+Reservoir.\+h.
+
+\index{Res\+Op\+Reservoir@{Res\+Op\+Reservoir}!vol\+Min@{vol\+Min}}
+\index{vol\+Min@{vol\+Min}!Res\+Op\+Reservoir@{Res\+Op\+Reservoir}}
+\subsubsection[{vol\+Min}]{\setlength{\rightskip}{0pt plus 5cm}double Res\+Op\+Reservoir\+::vol\+Min}\label{class_res_op_reservoir_afd0d883e679a26c68bb5ff20d6abc9e9}
+
+
+Definição na linha 42 do arquivo Res\+Op\+Reservoir.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Reservoir.\+h}\end{DoxyCompactItemize}

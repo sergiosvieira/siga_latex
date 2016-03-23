@@ -1,0 +1,260 @@
+\section{Refer√™ncia da Classe S\+A\+Dialog}
+\label{class_s_a_dialog}\index{S\+A\+Dialog@{S\+A\+Dialog}}
+
+
+{\ttfamily \#include $<$G\+W\+L\+F\+Interface.\+h$>$}
+
+
+
+Herdeiro de wx\+Dialog.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+A\+Dialog} (wx\+Window $\ast$parent, wx\+Window\+ID id, const wx\+String \&title, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size)
+\item 
+void {\bf set\+Info} ({\bf Subbasin} $\ast$sub)
+\item 
+void {\bf save\+Info} ({\bf Subbasin} $\ast$sub)
+\item 
+void {\bf on\+Insert\+SA} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Remove\+SA} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Save\+SA} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Check\+Use\+Node} (wx\+Command\+Event \&)
+\item 
+void {\bf check\+Use\+Node} (bool {\bf check})
+\item 
+void {\bf on\+Load\+SA} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Change\+SA} (wx\+Grid\+Event \&event)
+\item 
+void {\bf save\+Info\+To\+File} ()
+\item 
+void {\bf load\+Info\+In\+File} ()
+\item 
+void {\bf Clear} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+G\+A\+Grid} $\ast$ {\bf grid\+Source\+Areas}
+\item 
+{\bf S\+I\+G\+A\+Text\+Ctrl} $\ast$ {\bf tc\+Total\+Area\+SA}
+\item 
+{\bf S\+I\+G\+A\+Text\+Ctrl} $\ast$ {\bf tc\+Area\+Sub}
+\item 
+wx\+String {\bf names} [14]
+\item 
+wx\+String {\bf types} [2]
+\item 
+double {\bf total\+Area\+SA}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+Classe de construÁ„o do painel das ¡reas Fontes do modelo G\+W\+LF 
+
+Defini√ß√£o na linha 111 do arquivo G\+W\+L\+F\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{S\+A\+Dialog@{S\+A\+Dialog}!S\+A\+Dialog@{S\+A\+Dialog}}
+\index{S\+A\+Dialog@{S\+A\+Dialog}!S\+A\+Dialog@{S\+A\+Dialog}}
+\subsubsection[{S\+A\+Dialog(wx\+Window $\ast$parent, wx\+Window\+I\+D id, const wx\+String \&title, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size)}]{\setlength{\rightskip}{0pt plus 5cm}S\+A\+Dialog\+::\+S\+A\+Dialog (
+\begin{DoxyParamCaption}
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{wx\+Window\+ID}]{id, }
+\item[{const wx\+String \&}]{title, }
+\item[{const wx\+Point \&}]{pos = {\ttfamily wxDefaultPosition}, }
+\item[{const wx\+Size \&}]{size = {\ttfamily wxDefaultSize}}
+\end{DoxyParamCaption}
+)}\label{class_s_a_dialog_a49976d62d99352164054b92e85dafd1e}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em parent} & Pai da janela \\
+\hline
+{\em id} & Identificador \\
+\hline
+{\em title} & Titulo da janela \\
+\hline
+{\em pos} & PosiÁ„o inicial da janela \\
+\hline
+{\em size} & Tamanho inicial da janela \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{M√©todos}
+\index{S\+A\+Dialog@{S\+A\+Dialog}!check\+Use\+Node@{check\+Use\+Node}}
+\index{check\+Use\+Node@{check\+Use\+Node}!S\+A\+Dialog@{S\+A\+Dialog}}
+\subsubsection[{check\+Use\+Node(bool check)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+Dialog\+::check\+Use\+Node (
+\begin{DoxyParamCaption}
+\item[{bool}]{check}
+\end{DoxyParamCaption}
+)}\label{class_s_a_dialog_a6aae861ef8da9335821f7e9bff04cbc3}
+\index{S\+A\+Dialog@{S\+A\+Dialog}!Clear@{Clear}}
+\index{Clear@{Clear}!S\+A\+Dialog@{S\+A\+Dialog}}
+\subsubsection[{Clear()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+Dialog\+::\+Clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_a_dialog_a5bc926554034bb322989a1b853b92800}
+Limpoa as areas fontes do grid \index{S\+A\+Dialog@{S\+A\+Dialog}!load\+Info\+In\+File@{load\+Info\+In\+File}}
+\index{load\+Info\+In\+File@{load\+Info\+In\+File}!S\+A\+Dialog@{S\+A\+Dialog}}
+\subsubsection[{load\+Info\+In\+File()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+Dialog\+::load\+Info\+In\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_a_dialog_a414430e35d8e86878e784c5748197bbe}
+Recupera dados de ¡rea de Fontes de um arquivo \index{S\+A\+Dialog@{S\+A\+Dialog}!on\+Change\+SA@{on\+Change\+SA}}
+\index{on\+Change\+SA@{on\+Change\+SA}!S\+A\+Dialog@{S\+A\+Dialog}}
+\subsubsection[{on\+Change\+S\+A(wx\+Grid\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+Dialog\+::on\+Change\+SA (
+\begin{DoxyParamCaption}
+\item[{wx\+Grid\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_a_dialog_a17343d305f48c61d3d699cd3de67b7d3}
+Chamado quando o dado de alguma linha de ¡rea de Fontes È alterado 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+A\+Dialog@{S\+A\+Dialog}!on\+Check\+Use\+Node@{on\+Check\+Use\+Node}}
+\index{on\+Check\+Use\+Node@{on\+Check\+Use\+Node}!S\+A\+Dialog@{S\+A\+Dialog}}
+\subsubsection[{on\+Check\+Use\+Node(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+Dialog\+::on\+Check\+Use\+Node (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_s_a_dialog_a013e0ff5007b54bf3b3c2bb629e63142}
+\index{S\+A\+Dialog@{S\+A\+Dialog}!on\+Insert\+SA@{on\+Insert\+SA}}
+\index{on\+Insert\+SA@{on\+Insert\+SA}!S\+A\+Dialog@{S\+A\+Dialog}}
+\subsubsection[{on\+Insert\+S\+A(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+Dialog\+::on\+Insert\+SA (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_a_dialog_a717497ce97c7cefd2ba5328fe412a8ce}
+Chamado quando se insere uma linha de dados para ¡rea de Fontes 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+A\+Dialog@{S\+A\+Dialog}!on\+Load\+SA@{on\+Load\+SA}}
+\index{on\+Load\+SA@{on\+Load\+SA}!S\+A\+Dialog@{S\+A\+Dialog}}
+\subsubsection[{on\+Load\+S\+A(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+Dialog\+::on\+Load\+SA (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_a_dialog_a303c6a72c131276f0c668a8cbdea1b4e}
+Chamado quando se deseja recuperar os dados da ¡rea de Fontes de um arquivo 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+A\+Dialog@{S\+A\+Dialog}!on\+Remove\+SA@{on\+Remove\+SA}}
+\index{on\+Remove\+SA@{on\+Remove\+SA}!S\+A\+Dialog@{S\+A\+Dialog}}
+\subsubsection[{on\+Remove\+S\+A(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+Dialog\+::on\+Remove\+SA (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_a_dialog_a7f6ec771d2e86e7cc7d33636e7d92f8f}
+Chamado quando se remove uma linha de dados para ¡rea de Fontes 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+A\+Dialog@{S\+A\+Dialog}!on\+Save\+SA@{on\+Save\+SA}}
+\index{on\+Save\+SA@{on\+Save\+SA}!S\+A\+Dialog@{S\+A\+Dialog}}
+\subsubsection[{on\+Save\+S\+A(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+Dialog\+::on\+Save\+SA (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_s_a_dialog_a4adc14a169308f10a8ec1ec14e4ad246}
+Chamado quando se deseja salvar os dados da ¡rea de Fontes para arquivo 
+\begin{DoxyParams}{Par√¢metros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{S\+A\+Dialog@{S\+A\+Dialog}!save\+Info@{save\+Info}}
+\index{save\+Info@{save\+Info}!S\+A\+Dialog@{S\+A\+Dialog}}
+\subsubsection[{save\+Info(\+Subbasin $\ast$sub)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+Dialog\+::save\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Subbasin} $\ast$}]{sub}
+\end{DoxyParamCaption}
+)}\label{class_s_a_dialog_a9a6d99fb30b15666abe00a88bd5c1367}
+Insere valores na area fonte 
+\begin{DoxyParams}{Par√¢metros}
+{\em sub} & Area fonte \\
+\hline
+\end{DoxyParams}
+\index{S\+A\+Dialog@{S\+A\+Dialog}!save\+Info\+To\+File@{save\+Info\+To\+File}}
+\index{save\+Info\+To\+File@{save\+Info\+To\+File}!S\+A\+Dialog@{S\+A\+Dialog}}
+\subsubsection[{save\+Info\+To\+File()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+Dialog\+::save\+Info\+To\+File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_a_dialog_a62d8ca6ca82ca9b2467de336747acea9}
+Salva dados de ¡rea de Fontes para arquivo \index{S\+A\+Dialog@{S\+A\+Dialog}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!S\+A\+Dialog@{S\+A\+Dialog}}
+\subsubsection[{set\+Info(\+Subbasin $\ast$sub)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+Dialog\+::set\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Subbasin} $\ast$}]{sub}
+\end{DoxyParamCaption}
+)}\label{class_s_a_dialog_a43f6b0587379ef83afb2273483174893}
+Insere valores no nÛ 
+\begin{DoxyParams}{Par√¢metros}
+{\em sub} & NÛ onde seram inserios os valores \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{S\+A\+Dialog@{S\+A\+Dialog}!grid\+Source\+Areas@{grid\+Source\+Areas}}
+\index{grid\+Source\+Areas@{grid\+Source\+Areas}!S\+A\+Dialog@{S\+A\+Dialog}}
+\subsubsection[{grid\+Source\+Areas}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Grid}$\ast$ S\+A\+Dialog\+::grid\+Source\+Areas}\label{class_s_a_dialog_a378115d879d4ab797cfbabad316536d7}
+Grids para as areas fontes 
+
+Defini√ß√£o na linha 117 do arquivo G\+W\+L\+F\+Interface.\+h.
+
+\index{S\+A\+Dialog@{S\+A\+Dialog}!names@{names}}
+\index{names@{names}!S\+A\+Dialog@{S\+A\+Dialog}}
+\subsubsection[{names}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+A\+Dialog\+::names[14]}\label{class_s_a_dialog_a2ec4efd731df9d0411b7f55dfd733a27}
+Nome de areas fontes padr„o 
+
+Defini√ß√£o na linha 125 do arquivo G\+W\+L\+F\+Interface.\+h.
+
+\index{S\+A\+Dialog@{S\+A\+Dialog}!tc\+Area\+Sub@{tc\+Area\+Sub}}
+\index{tc\+Area\+Sub@{tc\+Area\+Sub}!S\+A\+Dialog@{S\+A\+Dialog}}
+\subsubsection[{tc\+Area\+Sub}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Text\+Ctrl} $\ast$ S\+A\+Dialog\+::tc\+Area\+Sub}\label{class_s_a_dialog_a484e47f5f593feb9a3f297789c754193}
+
+
+Defini√ß√£o na linha 121 do arquivo G\+W\+L\+F\+Interface.\+h.
+
+\index{S\+A\+Dialog@{S\+A\+Dialog}!tc\+Total\+Area\+SA@{tc\+Total\+Area\+SA}}
+\index{tc\+Total\+Area\+SA@{tc\+Total\+Area\+SA}!S\+A\+Dialog@{S\+A\+Dialog}}
+\subsubsection[{tc\+Total\+Area\+SA}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Text\+Ctrl}$\ast$ S\+A\+Dialog\+::tc\+Total\+Area\+SA}\label{class_s_a_dialog_a9345cb777ccc74c2e807ec13177695a5}
+Caixas de texto para a janela de areas fontes 
+
+Defini√ß√£o na linha 121 do arquivo G\+W\+L\+F\+Interface.\+h.
+
+\index{S\+A\+Dialog@{S\+A\+Dialog}!total\+Area\+SA@{total\+Area\+SA}}
+\index{total\+Area\+SA@{total\+Area\+SA}!S\+A\+Dialog@{S\+A\+Dialog}}
+\subsubsection[{total\+Area\+SA}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+Dialog\+::total\+Area\+SA}\label{class_s_a_dialog_a36e8a3eb170457cf2702ba98d26fae23}
+Area total de areas fontes 
+
+Defini√ß√£o na linha 133 do arquivo G\+W\+L\+F\+Interface.\+h.
+
+\index{S\+A\+Dialog@{S\+A\+Dialog}!types@{types}}
+\index{types@{types}!S\+A\+Dialog@{S\+A\+Dialog}}
+\subsubsection[{types}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+A\+Dialog\+::types[2]}\label{class_s_a_dialog_a6bd8f61d67e2f24f7fcaa3968106f6d2}
+Tipo de areas fontes padr„o 
+
+Defini√ß√£o na linha 129 do arquivo G\+W\+L\+F\+Interface.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf G\+W\+L\+F\+Interface.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,264 @@
+\section{Referência da Classe Serie\+Import\+Dialog\+Content}
+\label{class_serie_import_dialog_content}\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+
+
+{\ttfamily \#include $<$Serie\+Import\+Dialog\+Content.\+h$>$}
+
+
+
+Herdeiro de {\bf Serie\+Dialog\+Content}.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bf V\+A\+Z\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+C\+H\+O\+I\+CE} = wx\+I\+D\+\_\+\+H\+I\+G\+H\+E\+ST + 1, 
+{\bf V\+A\+Z\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+B\+OX}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Serie\+Import\+Dialog\+Content} ({\bf Serie} $\ast${\bf serie}, {\bf Serie\+Dialog} $\ast$dialog)
+\item 
+{\bf $\sim$\+Serie\+Import\+Dialog\+Content} ()
+\item 
+void {\bf on\+Choice} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Radio} (wx\+Command\+Event \&event)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf clear\+Reservoirs} ()
+\item 
+void {\bf clear\+Choices} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Array\+String {\bf order\+By}
+\item 
+vector$<$ {\bf Draw\+Node} $\ast$ $>$ {\bf reservoirs}
+\item 
+P\+S\+Q\+L\+Reservoir $\ast$ {\bf reservoir\+D\+AO}
+\item 
+{\bf P\+S\+Q\+L\+Serie} $\ast$ {\bf serie\+D\+AO}
+\item 
+wx\+Panel $\ast$ {\bf m\+\_\+panel1}
+\item 
+wx\+Radio\+Box $\ast$ {\bf m\+\_\+radio\+Box1}
+\item 
+wx\+Choice $\ast$ {\bf m\+\_\+choice1}
+\item 
+wx\+Static\+Text $\ast$ {\bf m\+\_\+static\+Text4}
+\item 
+wx\+Static\+Text $\ast$ {\bf m\+\_\+static\+Text5}
+\item 
+wx\+Static\+Text $\ast$ {\bf m\+\_\+static\+Text6}
+\item 
+wx\+Static\+Text $\ast$ {\bf m\+\_\+static\+Text7}
+\item 
+wx\+Static\+Text $\ast$ {\bf m\+\_\+static\+Text8}
+\item 
+wx\+Static\+Text $\ast$ {\bf m\+\_\+static\+Text9}
+\item 
+wx\+Static\+Text $\ast$ {\bf m\+\_\+static\+Text10}
+\item 
+wx\+Static\+Text $\ast$ {\bf m\+\_\+static\+Text11}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf m\+\_\+bp\+Button1}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 32 do arquivo Serie\+Import\+Dialog\+Content.\+h.
+
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{class_serie_import_dialog_content_a3ebee16d2f54e53a9babd4aa1012bc9f}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{V\+A\+Z\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+C\+H\+O\+I\+CE@{V\+A\+Z\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+C\+H\+O\+I\+CE}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!V\+A\+Z\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+C\+H\+O\+I\+CE@{V\+A\+Z\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+C\+H\+O\+I\+CE}}\item[{\em 
+V\+A\+Z\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+C\+H\+O\+I\+CE\label{class_serie_import_dialog_content_a3ebee16d2f54e53a9babd4aa1012bc9fad1ad070ec7423f9be22c372a54e7371e}
+}]\index{V\+A\+Z\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+B\+OX@{V\+A\+Z\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+B\+OX}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!V\+A\+Z\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+B\+OX@{V\+A\+Z\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+B\+OX}}\item[{\em 
+V\+A\+Z\+\_\+\+I\+M\+P\+O\+R\+T\+\_\+\+R\+A\+D\+I\+O\+B\+OX\label{class_serie_import_dialog_content_a3ebee16d2f54e53a9babd4aa1012bc9fa30e576d0d46b934f0333d474677c616f}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 42 do arquivo Serie\+Import\+Dialog\+Content.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{Serie\+Import\+Dialog\+Content(\+Serie $\ast$serie, Serie\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}Serie\+Import\+Dialog\+Content\+::\+Serie\+Import\+Dialog\+Content (
+\begin{DoxyParamCaption}
+\item[{{\bf Serie} $\ast$}]{serie, }
+\item[{{\bf Serie\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)}\label{class_serie_import_dialog_content_aa4dfcfff5ca33e551bad3b2040b64b18}
+Construtor \index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!````~Serie\+Import\+Dialog\+Content@{$\sim$\+Serie\+Import\+Dialog\+Content}}
+\index{````~Serie\+Import\+Dialog\+Content@{$\sim$\+Serie\+Import\+Dialog\+Content}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{$\sim$\+Serie\+Import\+Dialog\+Content()}]{\setlength{\rightskip}{0pt plus 5cm}Serie\+Import\+Dialog\+Content\+::$\sim$\+Serie\+Import\+Dialog\+Content (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_serie_import_dialog_content_a7939e4c68c7d9e6426d1e34d312abf02}
+Destrutor 
+
+\subsection{Métodos}
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!clear\+Choices@{clear\+Choices}}
+\index{clear\+Choices@{clear\+Choices}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{clear\+Choices()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Import\+Dialog\+Content\+::clear\+Choices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_import_dialog_content_ac584c0dabd73c8b28c7c40ab0fd70aa3}
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!clear\+Reservoirs@{clear\+Reservoirs}}
+\index{clear\+Reservoirs@{clear\+Reservoirs}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{clear\+Reservoirs()}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Import\+Dialog\+Content\+::clear\+Reservoirs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_import_dialog_content_ac56f6117fcbb8bfff2461b92fbaf285b}
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!on\+Choice@{on\+Choice}}
+\index{on\+Choice@{on\+Choice}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{on\+Choice(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Import\+Dialog\+Content\+::on\+Choice (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_serie_import_dialog_content_aeb3b679964907ed43e050e2230290bf2}
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!on\+Radio@{on\+Radio}}
+\index{on\+Radio@{on\+Radio}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{on\+Radio(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Serie\+Import\+Dialog\+Content\+::on\+Radio (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_serie_import_dialog_content_a0330de272451a609fbcef0136a0e58d1}
+
+
+\subsection{Atributos}
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!m\+\_\+bp\+Button1@{m\+\_\+bp\+Button1}}
+\index{m\+\_\+bp\+Button1@{m\+\_\+bp\+Button1}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{m\+\_\+bp\+Button1}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Serie\+Import\+Dialog\+Content\+::m\+\_\+bp\+Button1\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_import_dialog_content_a01c400ebf491868144026e2f0602e79f}
+
+
+Definição na linha 150 do arquivo Serie\+Import\+Dialog\+Content.\+h.
+
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!m\+\_\+choice1@{m\+\_\+choice1}}
+\index{m\+\_\+choice1@{m\+\_\+choice1}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{m\+\_\+choice1}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Choice$\ast$ Serie\+Import\+Dialog\+Content\+::m\+\_\+choice1\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_import_dialog_content_a83094e365b3e69348657424285f86101}
+
+
+Definição na linha 105 do arquivo Serie\+Import\+Dialog\+Content.\+h.
+
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!m\+\_\+panel1@{m\+\_\+panel1}}
+\index{m\+\_\+panel1@{m\+\_\+panel1}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{m\+\_\+panel1}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel$\ast$ Serie\+Import\+Dialog\+Content\+::m\+\_\+panel1\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_import_dialog_content_a5e015bf6f000cdffc4ec8a75025e3d41}
+
+
+Definição na linha 95 do arquivo Serie\+Import\+Dialog\+Content.\+h.
+
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!m\+\_\+radio\+Box1@{m\+\_\+radio\+Box1}}
+\index{m\+\_\+radio\+Box1@{m\+\_\+radio\+Box1}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{m\+\_\+radio\+Box1}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Radio\+Box$\ast$ Serie\+Import\+Dialog\+Content\+::m\+\_\+radio\+Box1\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_import_dialog_content_a2c29aa33bf23ff049f8f5a64a162ca2d}
+
+
+Definição na linha 100 do arquivo Serie\+Import\+Dialog\+Content.\+h.
+
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!m\+\_\+static\+Text10@{m\+\_\+static\+Text10}}
+\index{m\+\_\+static\+Text10@{m\+\_\+static\+Text10}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{m\+\_\+static\+Text10}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Serie\+Import\+Dialog\+Content\+::m\+\_\+static\+Text10\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_import_dialog_content_af2ea4001bece476957cbf4bcba18354a}
+
+
+Definição na linha 140 do arquivo Serie\+Import\+Dialog\+Content.\+h.
+
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!m\+\_\+static\+Text11@{m\+\_\+static\+Text11}}
+\index{m\+\_\+static\+Text11@{m\+\_\+static\+Text11}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{m\+\_\+static\+Text11}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Serie\+Import\+Dialog\+Content\+::m\+\_\+static\+Text11\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_import_dialog_content_a075ee41a3d7b98957bab2e01d601baa6}
+
+
+Definição na linha 145 do arquivo Serie\+Import\+Dialog\+Content.\+h.
+
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!m\+\_\+static\+Text4@{m\+\_\+static\+Text4}}
+\index{m\+\_\+static\+Text4@{m\+\_\+static\+Text4}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{m\+\_\+static\+Text4}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Serie\+Import\+Dialog\+Content\+::m\+\_\+static\+Text4\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_import_dialog_content_a473f440e37b51f57ea5f6df0660bf58a}
+
+
+Definição na linha 110 do arquivo Serie\+Import\+Dialog\+Content.\+h.
+
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!m\+\_\+static\+Text5@{m\+\_\+static\+Text5}}
+\index{m\+\_\+static\+Text5@{m\+\_\+static\+Text5}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{m\+\_\+static\+Text5}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Serie\+Import\+Dialog\+Content\+::m\+\_\+static\+Text5\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_import_dialog_content_a7454a5e408db18440c83b2d586c33d11}
+
+
+Definição na linha 115 do arquivo Serie\+Import\+Dialog\+Content.\+h.
+
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!m\+\_\+static\+Text6@{m\+\_\+static\+Text6}}
+\index{m\+\_\+static\+Text6@{m\+\_\+static\+Text6}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{m\+\_\+static\+Text6}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Serie\+Import\+Dialog\+Content\+::m\+\_\+static\+Text6\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_import_dialog_content_aa40c60f643546499940f959ec4608fe8}
+
+
+Definição na linha 120 do arquivo Serie\+Import\+Dialog\+Content.\+h.
+
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!m\+\_\+static\+Text7@{m\+\_\+static\+Text7}}
+\index{m\+\_\+static\+Text7@{m\+\_\+static\+Text7}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{m\+\_\+static\+Text7}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Serie\+Import\+Dialog\+Content\+::m\+\_\+static\+Text7\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_import_dialog_content_aeaaa8ca974736f228a95dfbcae909fff}
+
+
+Definição na linha 125 do arquivo Serie\+Import\+Dialog\+Content.\+h.
+
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!m\+\_\+static\+Text8@{m\+\_\+static\+Text8}}
+\index{m\+\_\+static\+Text8@{m\+\_\+static\+Text8}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{m\+\_\+static\+Text8}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Serie\+Import\+Dialog\+Content\+::m\+\_\+static\+Text8\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_import_dialog_content_a19293a6ad0786a220c404b6bb3659ee7}
+
+
+Definição na linha 130 do arquivo Serie\+Import\+Dialog\+Content.\+h.
+
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!m\+\_\+static\+Text9@{m\+\_\+static\+Text9}}
+\index{m\+\_\+static\+Text9@{m\+\_\+static\+Text9}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{m\+\_\+static\+Text9}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Serie\+Import\+Dialog\+Content\+::m\+\_\+static\+Text9\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_import_dialog_content_a97a46e625d42c83f53667b5b65f8c007}
+
+
+Definição na linha 135 do arquivo Serie\+Import\+Dialog\+Content.\+h.
+
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!order\+By@{order\+By}}
+\index{order\+By@{order\+By}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{order\+By}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Array\+String Serie\+Import\+Dialog\+Content\+::order\+By\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_import_dialog_content_a8049fd5cc8cc4c77531ae7af3a63fac4}
+
+
+Definição na linha 75 do arquivo Serie\+Import\+Dialog\+Content.\+h.
+
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!reservoir\+D\+AO@{reservoir\+D\+AO}}
+\index{reservoir\+D\+AO@{reservoir\+D\+AO}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{reservoir\+D\+AO}]{\setlength{\rightskip}{0pt plus 5cm}P\+S\+Q\+L\+Reservoir$\ast$ Serie\+Import\+Dialog\+Content\+::reservoir\+D\+AO\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_import_dialog_content_acca4ff9e0f388a3f543a3dbbefd3f1fd}
+
+
+Definição na linha 85 do arquivo Serie\+Import\+Dialog\+Content.\+h.
+
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!reservoirs@{reservoirs}}
+\index{reservoirs@{reservoirs}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{reservoirs}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Draw\+Node}$\ast$$>$ Serie\+Import\+Dialog\+Content\+::reservoirs\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_import_dialog_content_a1f22da51463498c7af655385f7096689}
+
+
+Definição na linha 80 do arquivo Serie\+Import\+Dialog\+Content.\+h.
+
+\index{Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}!serie\+D\+AO@{serie\+D\+AO}}
+\index{serie\+D\+AO@{serie\+D\+AO}!Serie\+Import\+Dialog\+Content@{Serie\+Import\+Dialog\+Content}}
+\subsubsection[{serie\+D\+AO}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+S\+Q\+L\+Serie}$\ast$ Serie\+Import\+Dialog\+Content\+::serie\+D\+AO\hspace{0.3cm}{\ttfamily [protected]}}\label{class_serie_import_dialog_content_a2f566e7a70beddc6fbed63e5212585a8}
+
+
+Definição na linha 90 do arquivo Serie\+Import\+Dialog\+Content.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Serie\+Import\+Dialog\+Content.\+h}\end{DoxyCompactItemize}

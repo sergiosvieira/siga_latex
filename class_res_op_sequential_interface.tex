@@ -1,0 +1,395 @@
+\section{Referência da Classe Res\+Op\+Sequential\+Interface}
+\label{class_res_op_sequential_interface}\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Sequential\+Interface.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Component\+Interface}.
+
+
+
+Superclasse de {\bf Res\+Op\+Sequential\+Opt\+Interface} e {\bf Res\+Op\+Sequential\+Wnd\+Interface}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Sequential\+Interface} ({\bf S\+I\+GA} $\ast${\bf main}, wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent})
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Sequential\+Interface} ()
+\item 
+{\bf Res\+Op\+Rule\+Interface} $\ast$ {\bf get\+Rule\+Interface} ()
+\item 
+{\bf Res\+Op\+Routing\+Interface} $\ast$ {\bf get\+Routing\+Interface} ()
+\item 
+virtual void {\bf set\+Info} ()
+\item 
+virtual void {\bf set\+Info} ({\bf Res\+Op\+Element} $\ast$a\+\_\+element)
+\item 
+void {\bf on\+Open\+Alloc} (wx\+Command\+Event \&)
+\item 
+void {\bf update\+Interface} ({\bf Res\+Op\+Element} $\ast$element, size\+\_\+t pos=0)
+\item 
+virtual {\bf Res\+Op\+Rule\+Type} {\bf get\+Rule\+Type} (int selection)
+\item 
+virtual void {\bf show\+Results} ()
+\item 
+void {\bf disable\+Rule\+Panel} (wx\+Command\+Event \&a\+\_\+event)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+GA} $\ast$ {\bf main}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf radio\+Box} ()
+\item 
+void {\bf adjust\+Notebook\+For\+Element} ({\bf Res\+Op\+Element} $\ast$element)
+\item 
+virtual void {\bf add\+More\+Pages} (const {\bf Res\+Op\+Element} \&element)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Button $\ast$ {\bf bt\+Alloc}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf bitmap\+Alloc}
+\item 
+wx\+Bitmap {\bf bitmap\+Ok}
+\item 
+wx\+Bitmap {\bf bitmap\+Empty}
+\item 
+wx\+Notebook $\ast$ {\bf nb\+Main\+Interfaces}
+\item 
+{\bf Res\+Op\+Rule\+Interface} $\ast$ {\bf rule\+Inter}
+\item 
+{\bf Res\+Op\+Routing\+Interface} $\ast$ {\bf routing\+Inter}
+\item 
+wx\+Panel $\ast$ {\bf p\+Interfaces}
+\item 
+wx\+Panel $\ast$ {\bf p\+Alloc}
+\item 
+wx\+Panel $\ast$ {\bf p\+Rule}
+\item 
+wx\+Panel $\ast$ {\bf p\+Routing}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Rule}
+\item 
+wx\+Sizer $\ast$ {\bf bs\+Alloc}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Interfaces}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Otim}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Routing}
+\item 
+map$<$ {\bf Res\+Op\+Element\+Type}, {\bf Res\+Op\+Element\+Interface} $\ast$ $>$ {\bf element\+Interfaces}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+Classe que representa a interface a ser mostrada quando o Radio\+Box principal da Opera��o de Sistemas estiver selecionando o modelo Simulador (Regras) 
+
+Definição na linha 29 do arquivo Res\+Op\+Sequential\+Interface.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{Res\+Op\+Sequential\+Interface(\+S\+I\+G\+A $\ast$main, wx\+Frame $\ast$frame, wx\+Window $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Sequential\+Interface\+::\+Res\+Op\+Sequential\+Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+GA} $\ast$}]{main, }
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_res_op_sequential_interface_a3c3a640152e214fb877e3392a2e66fd8}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em main} & Aplicativo \\
+\hline
+{\em frame} & Janela principal \\
+\hline
+{\em parent} & Janela onde est� contida a interface \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!````~Res\+Op\+Sequential\+Interface@{$\sim$\+Res\+Op\+Sequential\+Interface}}
+\index{````~Res\+Op\+Sequential\+Interface@{$\sim$\+Res\+Op\+Sequential\+Interface}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{$\sim$\+Res\+Op\+Sequential\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Sequential\+Interface\+::$\sim$\+Res\+Op\+Sequential\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_sequential_interface_a6013ab7e941b6a9691b74c6d0fd71cfe}
+Destrutor 
+
+\subsection{Métodos}
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!add\+More\+Pages@{add\+More\+Pages}}
+\index{add\+More\+Pages@{add\+More\+Pages}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{add\+More\+Pages(const Res\+Op\+Element \&element)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Sequential\+Interface\+::add\+More\+Pages (
+\begin{DoxyParamCaption}
+\item[{const {\bf Res\+Op\+Element} \&}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_op_sequential_interface_aeaa497f2ee7abfd6c3a71ef829909325}
+A virtual method used for derived classes to add custom pages for this notebook. This method is called right before adjust\+Notebook\+For\+Element finish. 
+
+Reimplementado por {\bf Res\+Op\+Sequential\+Opt\+Interface} \doxyref{}{pag.}{class_res_op_sequential_opt_interface_a55819078bdaa410e4c4073aa9055ae2d}.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!adjust\+Notebook\+For\+Element@{adjust\+Notebook\+For\+Element}}
+\index{adjust\+Notebook\+For\+Element@{adjust\+Notebook\+For\+Element}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{adjust\+Notebook\+For\+Element(\+Res\+Op\+Element $\ast$element)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Sequential\+Interface\+::adjust\+Notebook\+For\+Element (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_interface_a51ba46d27515b96acaca8b77b7ea94d2}
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!disable\+Rule\+Panel@{disable\+Rule\+Panel}}
+\index{disable\+Rule\+Panel@{disable\+Rule\+Panel}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{disable\+Rule\+Panel(wx\+Command\+Event \&a\+\_\+event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Sequential\+Interface\+::disable\+Rule\+Panel (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{a\+\_\+event}
+\end{DoxyParamCaption}
+)}\label{class_res_op_sequential_interface_a4c3b8627181d200211ff6d0083fd2c61}
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!get\+Routing\+Interface@{get\+Routing\+Interface}}
+\index{get\+Routing\+Interface@{get\+Routing\+Interface}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{get\+Routing\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Routing\+Interface}$\ast$ Res\+Op\+Sequential\+Interface\+::get\+Routing\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_sequential_interface_ac1d6bcf85c1ce20c173ba43511c78604}
+Retorna a interface de propaga��o \index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!get\+Rule\+Interface@{get\+Rule\+Interface}}
+\index{get\+Rule\+Interface@{get\+Rule\+Interface}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{get\+Rule\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Rule\+Interface}$\ast$ Res\+Op\+Sequential\+Interface\+::get\+Rule\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_sequential_interface_a10a7eab07730af0a19a9f0b2c12aa1a5}
+Retorna a interface da regra \index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!get\+Rule\+Type@{get\+Rule\+Type}}
+\index{get\+Rule\+Type@{get\+Rule\+Type}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{get\+Rule\+Type(int selection)}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Res\+Op\+Rule\+Type} Res\+Op\+Sequential\+Interface\+::get\+Rule\+Type (
+\begin{DoxyParamCaption}
+\item[{int}]{selection}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_sequential_interface_acbb9e6edeb5d23871cc6810f2673f144}
+Diz o tipo de regra de acordo com a sele��o 
+\begin{DoxyParams}{Parâmetros}
+{\em selection} & Sele��o \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Tipo de regra 
+\end{DoxyReturn}
+
+
+Reimplementado por {\bf Res\+Op\+Sequential\+Opt\+Interface} \doxyref{}{pag.}{class_res_op_sequential_opt_interface_a426d569a8c329ef7106202b3154fcb0e}.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!on\+Open\+Alloc@{on\+Open\+Alloc}}
+\index{on\+Open\+Alloc@{on\+Open\+Alloc}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{on\+Open\+Alloc(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Sequential\+Interface\+::on\+Open\+Alloc (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_sequential_interface_adbe97280d1aa07f0414dbd7e7d17df04}
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!radio\+Box@{radio\+Box}}
+\index{radio\+Box@{radio\+Box}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{radio\+Box()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Sequential\+Interface\+::radio\+Box (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_op_sequential_interface_a6bc7ae5a05e7277479efa7cbc567c983}
+Evento de mudan�a de interface 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_a202fd862c10d339ae7d7e83d80b248bd}.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Sequential\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_sequential_interface_a26bdf00f02ad82bba87ebdf4bf801f0a}
+Carega os dados do elemento na interface 
+
+Reimplementação de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_aced556e5caf584b7335135d337895154}.
+
+
+
+Reimplementado por {\bf Res\+Op\+Sequential\+Opt\+Interface} \doxyref{}{pag.}{class_res_op_sequential_opt_interface_a2c36323caa11ef94e3a109029978b1d2} e {\bf Res\+Op\+Sequential\+Wnd\+Interface} \doxyref{}{pag.}{class_res_op_sequential_wnd_interface_a91eda865c083fcb1bda3b9db970d8e9f}.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{set\+Info(\+Res\+Op\+Element $\ast$a\+\_\+element)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Sequential\+Interface\+::set\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{a\+\_\+element}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_sequential_interface_a250d2db78270ebe4e6f41e8ba27ef4a7}
+Load data from the element passed as argument 
+
+Implementa {\bf Res\+Op\+Component\+Interface} \doxyref{}{pag.}{class_res_op_component_interface_a2b0a17cf42c4fab8d1353b1726e4a278}.
+
+
+
+Reimplementado por {\bf Res\+Op\+Sequential\+Wnd\+Interface} \doxyref{}{pag.}{class_res_op_sequential_wnd_interface_a0c6f024750efeb2f80575c230b774503}.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{show\+Results()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Sequential\+Interface\+::show\+Results (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_sequential_interface_a36e8d32a355755b467617a8fe869b612}
+Apresenta resultados do modelo para o n� fornecido. (m�todo abstrato) 
+\begin{DoxyParams}{Parâmetros}
+{\em cahnge} & Montar os resultados caso seja true. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementado por {\bf Res\+Op\+Sequential\+Opt\+Interface} \doxyref{}{pag.}{class_res_op_sequential_opt_interface_a101116d6882379adad94dfe2eddc2fee} e {\bf Res\+Op\+Sequential\+Wnd\+Interface} \doxyref{}{pag.}{class_res_op_sequential_wnd_interface_a5d611f3454490e4abd983be237d2369c}.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!update\+Interface@{update\+Interface}}
+\index{update\+Interface@{update\+Interface}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{update\+Interface(\+Res\+Op\+Element $\ast$element, size\+\_\+t pos=0)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Sequential\+Interface\+::update\+Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Element} $\ast$}]{element, }
+\item[{size\+\_\+t}]{pos = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_res_op_sequential_interface_a31925f77b31c9527370b43c030dc9fee}
+Atualiza a interface deacordo com o elemento selecionado 
+
+\subsection{Atributos}
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!bitmap\+Alloc@{bitmap\+Alloc}}
+\index{bitmap\+Alloc@{bitmap\+Alloc}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{bitmap\+Alloc}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Res\+Op\+Sequential\+Interface\+::bitmap\+Alloc\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_interface_ad54d5b2f303e0bb3aeeabe1814374d27}
+
+
+Definição na linha 35 do arquivo Res\+Op\+Sequential\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!bitmap\+Empty@{bitmap\+Empty}}
+\index{bitmap\+Empty@{bitmap\+Empty}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{bitmap\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Res\+Op\+Sequential\+Interface\+::bitmap\+Empty\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_interface_abe3c5dc2999c0bd66c2abb2fb64ff695}
+
+
+Definição na linha 37 do arquivo Res\+Op\+Sequential\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!bitmap\+Ok@{bitmap\+Ok}}
+\index{bitmap\+Ok@{bitmap\+Ok}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{bitmap\+Ok}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Res\+Op\+Sequential\+Interface\+::bitmap\+Ok\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_interface_ab9ea7a093edb1ae0cda07efc5636d4ce}
+
+
+Definição na linha 37 do arquivo Res\+Op\+Sequential\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!bs\+Alloc@{bs\+Alloc}}
+\index{bs\+Alloc@{bs\+Alloc}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{bs\+Alloc}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Res\+Op\+Sequential\+Interface\+::bs\+Alloc\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_interface_afe0a4334f32b648ba3616fe192d32f9d}
+
+
+Definição na linha 59 do arquivo Res\+Op\+Sequential\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!bt\+Alloc@{bt\+Alloc}}
+\index{bt\+Alloc@{bt\+Alloc}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{bt\+Alloc}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Res\+Op\+Sequential\+Interface\+::bt\+Alloc\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_interface_ad7993be18a2302b57299711825215a8c}
+
+
+Definição na linha 33 do arquivo Res\+Op\+Sequential\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!element\+Interfaces@{element\+Interfaces}}
+\index{element\+Interfaces@{element\+Interfaces}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{element\+Interfaces}]{\setlength{\rightskip}{0pt plus 5cm}map$<${\bf Res\+Op\+Element\+Type}, {\bf Res\+Op\+Element\+Interface}$\ast$$>$ Res\+Op\+Sequential\+Interface\+::element\+Interfaces\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_interface_ab5683e943102f6f55df8abbd3530fb5f}
+Sizer para interfaces dos elementos
+
+wx\+Sizer $\ast$s\+Elements; Interfaces para cada elemento 
+
+Definição na linha 69 do arquivo Res\+Op\+Sequential\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!main@{main}}
+\index{main@{main}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+GA}$\ast$ Res\+Op\+Sequential\+Interface\+::main}\label{class_res_op_sequential_interface_a0dc17a0e0b7c430ae635d754b4b2e02f}
+Ponteiro para o aplicativo 
+
+Definição na linha 89 do arquivo Res\+Op\+Sequential\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!nb\+Main\+Interfaces@{nb\+Main\+Interfaces}}
+\index{nb\+Main\+Interfaces@{nb\+Main\+Interfaces}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{nb\+Main\+Interfaces}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Notebook$\ast$ Res\+Op\+Sequential\+Interface\+::nb\+Main\+Interfaces\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_interface_adb3e261f5a491f46c4375e4e70a3cb74}
+
+
+Definição na linha 41 do arquivo Res\+Op\+Sequential\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!p\+Alloc@{p\+Alloc}}
+\index{p\+Alloc@{p\+Alloc}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{p\+Alloc}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel $\ast$ Res\+Op\+Sequential\+Interface\+::p\+Alloc\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_interface_abd35a162f2f57c55f5530d672670d42b}
+
+
+Definição na linha 54 do arquivo Res\+Op\+Sequential\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!p\+Interfaces@{p\+Interfaces}}
+\index{p\+Interfaces@{p\+Interfaces}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{p\+Interfaces}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel$\ast$ Res\+Op\+Sequential\+Interface\+::p\+Interfaces\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_interface_ab57b17979f31981b3f2cc9eebb13bd46}
+
+
+Definição na linha 54 do arquivo Res\+Op\+Sequential\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!p\+Routing@{p\+Routing}}
+\index{p\+Routing@{p\+Routing}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{p\+Routing}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel $\ast$ Res\+Op\+Sequential\+Interface\+::p\+Routing\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_interface_a156e7ac7a7d8ac8ae41237e42b07ec60}
+
+
+Definição na linha 54 do arquivo Res\+Op\+Sequential\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!p\+Rule@{p\+Rule}}
+\index{p\+Rule@{p\+Rule}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{p\+Rule}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel $\ast$ Res\+Op\+Sequential\+Interface\+::p\+Rule\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_interface_a576f39ace836b93a01e47dd052653fc7}
+
+
+Definição na linha 54 do arquivo Res\+Op\+Sequential\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!routing\+Inter@{routing\+Inter}}
+\index{routing\+Inter@{routing\+Inter}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{routing\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Routing\+Interface}$\ast$ Res\+Op\+Sequential\+Interface\+::routing\+Inter\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_interface_ad1aadaa65420b63e606581a38c1eafc7}
+Seletor da propaga��o 
+
+Definição na linha 51 do arquivo Res\+Op\+Sequential\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!rule\+Inter@{rule\+Inter}}
+\index{rule\+Inter@{rule\+Inter}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{rule\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Rule\+Interface}$\ast$ Res\+Op\+Sequential\+Interface\+::rule\+Inter\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_interface_a09f622dae7da88b31f43db643fc355d6}
+Seletor de regras 
+
+Definição na linha 46 do arquivo Res\+Op\+Sequential\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!s\+Interfaces@{s\+Interfaces}}
+\index{s\+Interfaces@{s\+Interfaces}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{s\+Interfaces}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Res\+Op\+Sequential\+Interface\+::s\+Interfaces\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_interface_a3ce6fabd5336daea1957557ffad39392}
+
+
+Definição na linha 59 do arquivo Res\+Op\+Sequential\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!s\+Otim@{s\+Otim}}
+\index{s\+Otim@{s\+Otim}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{s\+Otim}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Res\+Op\+Sequential\+Interface\+::s\+Otim\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_interface_af2acbef5ecc30485007d107a73b2ec2f}
+
+
+Definição na linha 59 do arquivo Res\+Op\+Sequential\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!s\+Routing@{s\+Routing}}
+\index{s\+Routing@{s\+Routing}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{s\+Routing}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer $\ast$ Res\+Op\+Sequential\+Interface\+::s\+Routing\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_interface_a8ef52371a7e9aaa3843b77cead5d43e4}
+
+
+Definição na linha 59 do arquivo Res\+Op\+Sequential\+Interface.\+h.
+
+\index{Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}!s\+Rule@{s\+Rule}}
+\index{s\+Rule@{s\+Rule}!Res\+Op\+Sequential\+Interface@{Res\+Op\+Sequential\+Interface}}
+\subsubsection[{s\+Rule}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer$\ast$ Res\+Op\+Sequential\+Interface\+::s\+Rule\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_sequential_interface_a46250af0fa4c6a831b771480b07605d3}
+Sizer da regra 
+
+Definição na linha 59 do arquivo Res\+Op\+Sequential\+Interface.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Sequential\+Interface.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,306 @@
+\section{ReferÃªncia da Classe Draw}
+\label{class_draw}\index{Draw@{Draw}}
+
+
+{\ttfamily \#include $<$Draw.\+h$>$}
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Draw} ({\bf S\+I\+G\+A\+Grid} $\ast$a\+\_\+grid, {\bf Serie\+Viewer} $\ast$a\+\_\+viewer, int a\+\_\+limit\+Fetch=7000)
+\item 
+{\bf $\sim$\+Draw} ()
+\item 
+void {\bf configure} (int a\+\_\+r\+Selection)
+\item 
+void {\bf refresh\+Model} (int a\+\_\+r\+Selection, int a\+\_\+shown\+Plan, std\+::pair$<$ long, long $>$ a\+\_\+spin\+Hour\+Pair, {\bf Interval} a\+\_\+interval, {\bf S\+I\+G\+A\+Grid} $\ast$a\+\_\+grid={\bf N\+U\+LL})
+\item 
+void {\bf redraw\+Grid} ()
+\item 
+void {\bf expand\+Grid} (size\+\_\+t a\+\_\+draw\+Type)
+\item 
+void {\bf set\+Paramiters} ({\bf S\+I\+G\+A\+Grid} $\ast$a\+\_\+grid, {\bf Serie\+Viewer} $\ast$a\+\_\+viewer={\bf N\+U\+LL})
+\item 
+void {\bf set\+Interval} ({\bf Interval} a\+\_\+interval)
+\item 
+vector$<$ std\+::string $>$ {\bf get\+Model} ()
+\item 
+vector$<$ std\+::string $>$ {\bf get\+Prepared\+Model} ()
+\item 
+{\bf S\+I\+G\+A\+Grid} $\ast$ {\bf grid} ()
+\item 
+int {\bf get\+Daw\+Type} ()
+\end{DoxyCompactItemize}
+\subsection*{MÃ©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf draw\+Hour} ()
+\item 
+void {\bf draw\+Day} ()
+\item 
+void {\bf draw\+Month} ()
+\item 
+void {\bf draw\+Year} ()
+\item 
+void {\bf draw\+One\+Serie\+Day} ()
+\item 
+void {\bf draw\+One\+Serie\+Month} ()
+\item 
+void {\bf insert\+Grid\+Values} ()
+\item 
+void {\bf append\+Grid\+Values} (int a\+\_\+row, int a\+\_\+col, std\+::string a\+\_\+str\+Value)
+\item 
+std\+::vector$<$ std\+::string $>$ {\bf split} (std\+::string a\+\_\+str, std\+::string a\+\_\+token)
+\item 
+void {\bf set\+Spin\+Start\+And\+End\+Hours} (std\+::pair$<$ long, long $>$ a\+\_\+spin\+Hour\+Pair)
+\item 
+void {\bf setlimit} (int a\+\_\+delimiter)
+\item 
+wx\+String {\bf check\+Serie\+Value} (double a\+\_\+value)
+\item 
+std\+::pair$<$ int, wx\+String $>$ {\bf get\+Col\+Info} ({\bf Draw\+Serie} $\ast$a\+\_\+draw\+Serie)
+\item 
+void {\bf gauge} (wx\+String a\+\_\+title=\char`\"{}\char`\"{}, bool a\+\_\+auto\+Hide=false)
+\item 
+void {\bf finishing\+Gauge} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 23 do arquivo Draw.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Draw@{Draw}!Draw@{Draw}}
+\index{Draw@{Draw}!Draw@{Draw}}
+\subsubsection[{Draw(\+S\+I\+G\+A\+Grid $\ast$a\+\_\+grid, Serie\+Viewer $\ast$a\+\_\+viewer, int a\+\_\+limit\+Fetch=7000)}]{\setlength{\rightskip}{0pt plus 5cm}Draw\+::\+Draw (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Grid} $\ast$}]{a\+\_\+grid, }
+\item[{{\bf Serie\+Viewer} $\ast$}]{a\+\_\+viewer, }
+\item[{int}]{a\+\_\+limit\+Fetch = {\ttfamily 7000}}
+\end{DoxyParamCaption}
+)}\label{class_draw_a32c0e4bc919fd019224ddc6bc636e6fa}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em a\+\_\+grid} & ponteiro para o \doxyref{S\+I\+G\+A\+Grid}{pag.}{class_s_i_g_a_grid} \\
+\hline
+{\em a\+\_\+viewer} & ponteiro para a Serie\+View ou Matrix\+View \\
+\hline
+{\em a\+\_\+limit\+Fetch} & guarda a hora inicio e a hora fim do período selecionado pelo usuário \\
+\hline
+\end{DoxyParams}
+\index{Draw@{Draw}!````~Draw@{$\sim$\+Draw}}
+\index{````~Draw@{$\sim$\+Draw}!Draw@{Draw}}
+\subsubsection[{$\sim$\+Draw()}]{\setlength{\rightskip}{0pt plus 5cm}Draw\+::$\sim$\+Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_a206415ad169356614a4ab0cf51116215}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{Draw@{Draw}!append\+Grid\+Values@{append\+Grid\+Values}}
+\index{append\+Grid\+Values@{append\+Grid\+Values}!Draw@{Draw}}
+\subsubsection[{append\+Grid\+Values(int a\+\_\+row, int a\+\_\+col, std\+::string a\+\_\+str\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+::append\+Grid\+Values (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+row, }
+\item[{int}]{a\+\_\+col, }
+\item[{std\+::string}]{a\+\_\+str\+Value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_aa6d948676f5b137baa1a249cce371b0b}
+Guarda no vetor os dados do arquivo \index{Draw@{Draw}!check\+Serie\+Value@{check\+Serie\+Value}}
+\index{check\+Serie\+Value@{check\+Serie\+Value}!Draw@{Draw}}
+\subsubsection[{check\+Serie\+Value(double a\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Draw\+::check\+Serie\+Value (
+\begin{DoxyParamCaption}
+\item[{double}]{a\+\_\+value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_a6111c26b18f26e0507ac637649239fd1}
+Verifica se o valor da célula na série está ok \index{Draw@{Draw}!configure@{configure}}
+\index{configure@{configure}!Draw@{Draw}}
+\subsubsection[{configure(int a\+\_\+r\+Selection)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+::configure (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+r\+Selection}
+\end{DoxyParamCaption}
+)}\label{class_draw_a52591e929f338c8c782dc30608ed955c}
+Função responsável por configurar o arquivos de série e montar a grid, a\+\_\+r\+Selection dirá qual o tipo da série\+: hora, dia, mês ou ano \index{Draw@{Draw}!draw\+Day@{draw\+Day}}
+\index{draw\+Day@{draw\+Day}!Draw@{Draw}}
+\subsubsection[{draw\+Day()}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+::draw\+Day (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_a813d2344bf623e595de9275a4e26d907}
+\index{Draw@{Draw}!draw\+Hour@{draw\+Hour}}
+\index{draw\+Hour@{draw\+Hour}!Draw@{Draw}}
+\subsubsection[{draw\+Hour()}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+::draw\+Hour (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_a4b9d0295087607e88379128e9b41d8ca}
+Funções para converção das séries e construção da gird \index{Draw@{Draw}!draw\+Month@{draw\+Month}}
+\index{draw\+Month@{draw\+Month}!Draw@{Draw}}
+\subsubsection[{draw\+Month()}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+::draw\+Month (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_a1c91152404aa3f929809f57f1cb932ef}
+\index{Draw@{Draw}!draw\+One\+Serie\+Day@{draw\+One\+Serie\+Day}}
+\index{draw\+One\+Serie\+Day@{draw\+One\+Serie\+Day}!Draw@{Draw}}
+\subsubsection[{draw\+One\+Serie\+Day()}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+::draw\+One\+Serie\+Day (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_a68000e3fc51ec610e388539e816e0db2}
+\index{Draw@{Draw}!draw\+One\+Serie\+Month@{draw\+One\+Serie\+Month}}
+\index{draw\+One\+Serie\+Month@{draw\+One\+Serie\+Month}!Draw@{Draw}}
+\subsubsection[{draw\+One\+Serie\+Month()}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+::draw\+One\+Serie\+Month (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_aa93b6f8d56e8325113bb0139881e52b4}
+\index{Draw@{Draw}!draw\+Year@{draw\+Year}}
+\index{draw\+Year@{draw\+Year}!Draw@{Draw}}
+\subsubsection[{draw\+Year()}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+::draw\+Year (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_ae20e314a1cd9de34749a8f73cc9d8236}
+\index{Draw@{Draw}!expand\+Grid@{expand\+Grid}}
+\index{expand\+Grid@{expand\+Grid}!Draw@{Draw}}
+\subsubsection[{expand\+Grid(size\+\_\+t a\+\_\+draw\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+::expand\+Grid (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{a\+\_\+draw\+Type}
+\end{DoxyParamCaption}
+)}\label{class_draw_a84637a1bfe6c715f1b2205094f9611bc}
+\index{Draw@{Draw}!finishing\+Gauge@{finishing\+Gauge}}
+\index{finishing\+Gauge@{finishing\+Gauge}!Draw@{Draw}}
+\subsubsection[{finishing\+Gauge()}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+::finishing\+Gauge (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_a31ba8b9f7720961a01c8b84b4e417638}
+Finaliza o gauge \index{Draw@{Draw}!gauge@{gauge}}
+\index{gauge@{gauge}!Draw@{Draw}}
+\subsubsection[{gauge(wx\+String a\+\_\+title="""", bool a\+\_\+auto\+Hide=false)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+::gauge (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{a\+\_\+title = {\ttfamily \char`\"{}\char`\"{}}, }
+\item[{bool}]{a\+\_\+auto\+Hide = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_a720f94bd112e13a57c74d57382568454}
+Controi uma progress bar para acompanhar a abertura das séries \index{Draw@{Draw}!get\+Col\+Info@{get\+Col\+Info}}
+\index{get\+Col\+Info@{get\+Col\+Info}!Draw@{Draw}}
+\subsubsection[{get\+Col\+Info(\+Draw\+Serie $\ast$a\+\_\+draw\+Serie)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$int, wx\+String$>$ Draw\+::get\+Col\+Info (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Serie} $\ast$}]{a\+\_\+draw\+Serie}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_acd38a2e70c006241ea4bb6712c78e061}
+Captura as informações dos nomes das colunas da grid \index{Draw@{Draw}!get\+Daw\+Type@{get\+Daw\+Type}}
+\index{get\+Daw\+Type@{get\+Daw\+Type}!Draw@{Draw}}
+\subsubsection[{get\+Daw\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}int Draw\+::get\+Daw\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_aeca1dcdefc24bbe666aa2b57047f4332}
+Retorna o tipo da série, se mensal, diária, horária ou anual. \index{Draw@{Draw}!get\+Model@{get\+Model}}
+\index{get\+Model@{get\+Model}!Draw@{Draw}}
+\subsubsection[{get\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$std\+::string$>$ Draw\+::get\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_a76697edc7dfae16fe0aeb8bdfc7fccab}
+Retorna todo o model, considerarando o que não foi carregado \index{Draw@{Draw}!get\+Prepared\+Model@{get\+Prepared\+Model}}
+\index{get\+Prepared\+Model@{get\+Prepared\+Model}!Draw@{Draw}}
+\subsubsection[{get\+Prepared\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$std\+::string$>$ Draw\+::get\+Prepared\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_a1fe88f5106629a10ead00985de194c3c}
+Retorna o model que está sendo exibido ao usuário, desconsiderando o dados que ainda não foram exibidos pelo grid \index{Draw@{Draw}!grid@{grid}}
+\index{grid@{grid}!Draw@{Draw}}
+\subsubsection[{grid()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf S\+I\+G\+A\+Grid}$\ast$ Draw\+::grid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_a19ecc89149a8658f4277a4f31e390e65}
+Retorna a grid manipulável \index{Draw@{Draw}!insert\+Grid\+Values@{insert\+Grid\+Values}}
+\index{insert\+Grid\+Values@{insert\+Grid\+Values}!Draw@{Draw}}
+\subsubsection[{insert\+Grid\+Values()}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+::insert\+Grid\+Values (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_a889adfeb97973399356388a59b136771}
+Recebe o valor a ser inserido na grid, guarda como model para ser manipulado e exibido por demanda \index{Draw@{Draw}!redraw\+Grid@{redraw\+Grid}}
+\index{redraw\+Grid@{redraw\+Grid}!Draw@{Draw}}
+\subsubsection[{redraw\+Grid()}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+::redraw\+Grid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_adcac19304e30ac8d9400b5dc23dd8ba2}
+\index{Draw@{Draw}!refresh\+Model@{refresh\+Model}}
+\index{refresh\+Model@{refresh\+Model}!Draw@{Draw}}
+\subsubsection[{refresh\+Model(int a\+\_\+r\+Selection, int a\+\_\+shown\+Plan, std\+::pair$<$ long, long $>$ a\+\_\+spin\+Hour\+Pair, Interval a\+\_\+interval, S\+I\+G\+A\+Grid $\ast$a\+\_\+grid=\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+::refresh\+Model (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+r\+Selection, }
+\item[{int}]{a\+\_\+shown\+Plan, }
+\item[{std\+::pair$<$ long, long $>$}]{a\+\_\+spin\+Hour\+Pair, }
+\item[{{\bf Interval}}]{a\+\_\+interval, }
+\item[{{\bf S\+I\+G\+A\+Grid} $\ast$}]{a\+\_\+grid = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)}\label{class_draw_a9cded2738e36e92e7ff2ec3bda735a65}
+Função responsável por resedenhar a grid de valores e controlar a exibição dos elementos na grid, também atualiza os indicadores 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em a\+\_\+r\+Selection} & seleção de edição de tabela, tipo de série\+: hora, dia, mês ou ano \\
+\hline
+{\em a\+\_\+show\+Plan} & informa se a grid será exibida também se, no caso de diário e mensal, define se será uma ou mais séries carregadas, chamando funções diferentes \\
+\hline
+{\em a\+\_\+spin\+Hour\+Pair} & guarda a hora inicio e a hora fim do período selecionado pelo usuário \\
+\hline
+{\em a\+\_\+interval} & interval da aplicação \\
+\hline
+{\em a\+\_\+grid} & ponteiro para o \doxyref{S\+I\+G\+A\+Grid}{pag.}{class_s_i_g_a_grid} \\
+\hline
+\end{DoxyParams}
+\index{Draw@{Draw}!set\+Interval@{set\+Interval}}
+\index{set\+Interval@{set\+Interval}!Draw@{Draw}}
+\subsubsection[{set\+Interval(\+Interval a\+\_\+interval)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+::set\+Interval (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{a\+\_\+interval}
+\end{DoxyParamCaption}
+)}\label{class_draw_a810d7bc257d227c87c7cdb3ad4155a0d}
+Atualiza o intervalo da Série exibida \index{Draw@{Draw}!setlimit@{setlimit}}
+\index{setlimit@{setlimit}!Draw@{Draw}}
+\subsubsection[{setlimit(int a\+\_\+delimiter)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+::setlimit (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+delimiter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_a6f9283115a510ba892138605b3c1aa0b}
+Seta o delimitador para informar a grid quando elementos poderão ser carregados com o buffer \index{Draw@{Draw}!set\+Paramiters@{set\+Paramiters}}
+\index{set\+Paramiters@{set\+Paramiters}!Draw@{Draw}}
+\subsubsection[{set\+Paramiters(\+S\+I\+G\+A\+Grid $\ast$a\+\_\+grid, Serie\+Viewer $\ast$a\+\_\+viewer=\+N\+U\+L\+L)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+::set\+Paramiters (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Grid} $\ast$}]{a\+\_\+grid, }
+\item[{{\bf Serie\+Viewer} $\ast$}]{a\+\_\+viewer = {\ttfamily {\bf N\+U\+LL}}}
+\end{DoxyParamCaption}
+)}\label{class_draw_a69ecf490030c7e27b2fcb07ed2c96444}
+Atualiza os ponteiros da grid e viewer \index{Draw@{Draw}!set\+Spin\+Start\+And\+End\+Hours@{set\+Spin\+Start\+And\+End\+Hours}}
+\index{set\+Spin\+Start\+And\+End\+Hours@{set\+Spin\+Start\+And\+End\+Hours}!Draw@{Draw}}
+\subsubsection[{set\+Spin\+Start\+And\+End\+Hours(std\+::pair$<$ long, long $>$ a\+\_\+spin\+Hour\+Pair)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+::set\+Spin\+Start\+And\+End\+Hours (
+\begin{DoxyParamCaption}
+\item[{std\+::pair$<$ long, long $>$}]{a\+\_\+spin\+Hour\+Pair}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_ada3be9d1a2fc6e0dbf87c8fe338173e7}
+Guarda o período selecionado \index{Draw@{Draw}!split@{split}}
+\index{split@{split}!Draw@{Draw}}
+\subsubsection[{split(std\+::string a\+\_\+str, std\+::string a\+\_\+token)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ Draw\+::split (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{a\+\_\+str, }
+\item[{std\+::string}]{a\+\_\+token}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_a6c18e61fc431d9f8d744deb2b5501583}
+Divide uma string de acordo com o caractere desejado contido no texto 
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Draw.\+h}\end{DoxyCompactItemize}

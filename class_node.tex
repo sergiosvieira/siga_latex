@@ -1,0 +1,376 @@
+\section{Referência da Classe Node}
+\label{class_node}\index{Node@{Node}}
+
+
+{\ttfamily \#include $<$Node.\+h$>$}
+
+
+
+Herdeiro de {\bf Element}.
+
+
+
+Superclasse de {\bf Stored\+Node}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::map$<$ {\bf Element\+ID}, {\bf Link} $\ast$ $>$ \& {\bf links\+Up} ()
+\begin{DoxyCompactList}\small\item\em get links up map -\/ Element\+ID (id of the node linked with) \end{DoxyCompactList}\item 
+std\+::map$<$ {\bf Element\+ID}, {\bf Link} $\ast$ $>$ \& {\bf links\+Down} ()
+\begin{DoxyCompactList}\small\item\em get links down map -\/ Element\+ID (id of the node linked with) \end{DoxyCompactList}\item 
+{\bf Node\+Type} {\bf type} ()
+\item 
+double {\bf longitude} ()
+\begin{DoxyCompactList}\small\item\em get longitude -\/ longitude is related to the x-\/axis \end{DoxyCompactList}\item 
+void {\bf set\+Longitude} (double value)
+\item 
+double {\bf latitude} ()
+\begin{DoxyCompactList}\small\item\em get latitude -\/ latitude is related to the y-\/axis \end{DoxyCompactList}\item 
+void {\bf set\+Latitude} (double value)
+\item 
+double {\bf area} ()
+\begin{DoxyCompactList}\small\item\em get node area \end{DoxyCompactList}\item 
+void {\bf set\+Area} (double {\bf area})
+\item 
+bool {\bf is\+Subnetwork\+Root} ()
+\item 
+void {\bf set\+Demand\+Type} ({\bf Demand\+Type} {\bf type})
+\item 
+{\bf Demand\+Type} {\bf demand\+Type} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Node} ({\bf Element\+ID} {\bf id}, std\+::string {\bf name}, {\bf Node\+Type} {\bf type}={\bf Node\+Type\+::\+Basin}, double {\bf latitude}=0.\+0, double {\bf longitude}=0.\+0)
+\item 
+virtual {\bf $\sim$\+Node} ()
+\item 
+bool {\bf insert\+Link\+Up} ({\bf Element\+ID} {\bf id}, {\bf Link} \&link)
+\item 
+bool {\bf insert\+Link\+Down} ({\bf Element\+ID} {\bf id}, {\bf Link} \&link)
+\item 
+bool {\bf remove\+Link\+Up} ({\bf Element\+ID} {\bf id})
+\begin{DoxyCompactList}\small\item\em remove the link up associated with the node referred by the id \end{DoxyCompactList}\item 
+bool {\bf remove\+Link\+Down} ({\bf Element\+ID} {\bf id})
+\begin{DoxyCompactList}\small\item\em remove the link down associated with the node referred by the id \end{DoxyCompactList}\item 
+bool {\bf set\+Type} ({\bf Node\+Type} {\bf type})
+\item 
+void {\bf set\+Subnetwork\+Root} (bool value)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+double {\bf m\+\_\+latitude}
+\item 
+double {\bf m\+\_\+longitude}
+\item 
+double {\bf m\+\_\+area}
+\item 
+bool {\bf m\+\_\+subnetwork\+\_\+root}
+\begin{DoxyCompactList}\small\item\em indicates if the node is a root of a sub network \end{DoxyCompactList}\item 
+std\+::map$<$ {\bf Element\+ID}, {\bf Link} $\ast$ $>$ {\bf m\+\_\+links\+\_\+up}
+\item 
+std\+::map$<$ {\bf Element\+ID}, {\bf Link} $\ast$ $>$ {\bf m\+\_\+links\+\_\+down}
+\item 
+{\bf Node\+Type} {\bf m\+\_\+type}
+\begin{DoxyCompactList}\small\item\em Tipo de n� \end{DoxyCompactList}\item 
+{\bf Demand\+Type} {\bf m\+\_\+demand\+\_\+type}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Network\+Node\+Handler}
+\item 
+class {\bf Network\+Link\+Handler}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 12 do arquivo Node.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection[{Node(\+Element\+I\+D id, std\+::string name, Node\+Type type=\+Node\+Type\+::\+Basin, double latitude=0.\+0, double longitude=0.\+0)}]{\setlength{\rightskip}{0pt plus 5cm}Node\+::\+Node (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{std\+::string}]{name, }
+\item[{{\bf Node\+Type}}]{type = {\ttfamily {\bf Node\+Type\+::\+Basin}}, }
+\item[{double}]{latitude = {\ttfamily 0.0}, }
+\item[{double}]{longitude = {\ttfamily 0.0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_node_a5936f426f42e0488b2e3e3c8114c636a}
+\index{Node@{Node}!````~Node@{$\sim$\+Node}}
+\index{````~Node@{$\sim$\+Node}!Node@{Node}}
+\subsubsection[{$\sim$\+Node()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Node\+::$\sim$\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_node_af5e3fa79300bf5f3f2f3ecae6e795a94}
+
+
+\subsection{Métodos}
+\index{Node@{Node}!area@{area}}
+\index{area@{area}!Node@{Node}}
+\subsubsection[{area()}]{\setlength{\rightskip}{0pt plus 5cm}double Node\+::area (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_node_aae0e586d4df29ffd0fe1762304f986d9}
+
+
+get node area 
+
+\index{Node@{Node}!demand\+Type@{demand\+Type}}
+\index{demand\+Type@{demand\+Type}!Node@{Node}}
+\subsubsection[{demand\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Demand\+Type} Node\+::demand\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_node_a6345428b4b1a17062c69e346f677358b}
+\index{Node@{Node}!insert\+Link\+Down@{insert\+Link\+Down}}
+\index{insert\+Link\+Down@{insert\+Link\+Down}!Node@{Node}}
+\subsubsection[{insert\+Link\+Down(\+Element\+I\+D id, Link \&link)}]{\setlength{\rightskip}{0pt plus 5cm}bool Node\+::insert\+Link\+Down (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{{\bf Link} \&}]{link}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_node_aeda5af33dd7be61325311ec2c3bc9235}
+Inserir Trecho abaixo do n� 
+\begin{DoxyParams}{Parâmetros}
+{\em id} & Identificador do n� \\
+\hline
+{\em link} & Aponta para o trecho \\
+\hline
+\end{DoxyParams}
+\index{Node@{Node}!insert\+Link\+Up@{insert\+Link\+Up}}
+\index{insert\+Link\+Up@{insert\+Link\+Up}!Node@{Node}}
+\subsubsection[{insert\+Link\+Up(\+Element\+I\+D id, Link \&link)}]{\setlength{\rightskip}{0pt plus 5cm}bool Node\+::insert\+Link\+Up (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{{\bf Link} \&}]{link}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_node_abf0669a5f7d44be3801db36c4a8d024f}
+Inserir Trecho acima do n� 
+\begin{DoxyParams}{Parâmetros}
+{\em id} & Identificador do n� \\
+\hline
+{\em link} & Aponta para o trecho \\
+\hline
+\end{DoxyParams}
+\index{Node@{Node}!is\+Subnetwork\+Root@{is\+Subnetwork\+Root}}
+\index{is\+Subnetwork\+Root@{is\+Subnetwork\+Root}!Node@{Node}}
+\subsubsection[{is\+Subnetwork\+Root()}]{\setlength{\rightskip}{0pt plus 5cm}bool Node\+::is\+Subnetwork\+Root (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_node_a9c40d62238106e4d9c5b7de30b9ee3eb}
+\index{Node@{Node}!latitude@{latitude}}
+\index{latitude@{latitude}!Node@{Node}}
+\subsubsection[{latitude()}]{\setlength{\rightskip}{0pt plus 5cm}double Node\+::latitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_node_ad6f32d931f5f1b6ccac43c75e8a13e24}
+
+
+get latitude -\/ latitude is related to the y-\/axis 
+
+\index{Node@{Node}!links\+Down@{links\+Down}}
+\index{links\+Down@{links\+Down}!Node@{Node}}
+\subsubsection[{links\+Down()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ {\bf Element\+ID}, {\bf Link}$\ast$ $>$\& Node\+::links\+Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_node_ab50308ff00c6107aacba469c40b35e38}
+
+
+get links down map -\/ Element\+ID (id of the node linked with) 
+
+\index{Node@{Node}!links\+Up@{links\+Up}}
+\index{links\+Up@{links\+Up}!Node@{Node}}
+\subsubsection[{links\+Up()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ {\bf Element\+ID}, {\bf Link}$\ast$ $>$\& Node\+::links\+Up (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_node_afd3bbf9529ac20721c67bb9166b140d1}
+
+
+get links up map -\/ Element\+ID (id of the node linked with) 
+
+\index{Node@{Node}!longitude@{longitude}}
+\index{longitude@{longitude}!Node@{Node}}
+\subsubsection[{longitude()}]{\setlength{\rightskip}{0pt plus 5cm}double Node\+::longitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_node_ae60c3f4945311eab1c817220f8c584fb}
+
+
+get longitude -\/ longitude is related to the x-\/axis 
+
+\index{Node@{Node}!remove\+Link\+Down@{remove\+Link\+Down}}
+\index{remove\+Link\+Down@{remove\+Link\+Down}!Node@{Node}}
+\subsubsection[{remove\+Link\+Down(\+Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Node\+::remove\+Link\+Down (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_node_a741f6ffe0bd527e80c4764ed5420e112}
+
+
+remove the link down associated with the node referred by the id 
+
+\index{Node@{Node}!remove\+Link\+Up@{remove\+Link\+Up}}
+\index{remove\+Link\+Up@{remove\+Link\+Up}!Node@{Node}}
+\subsubsection[{remove\+Link\+Up(\+Element\+I\+D id)}]{\setlength{\rightskip}{0pt plus 5cm}bool Node\+::remove\+Link\+Up (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_node_af4b5f3e7021dd8759cfc080b29355113}
+
+
+remove the link up associated with the node referred by the id 
+
+\index{Node@{Node}!set\+Area@{set\+Area}}
+\index{set\+Area@{set\+Area}!Node@{Node}}
+\subsubsection[{set\+Area(double area)}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::set\+Area (
+\begin{DoxyParamCaption}
+\item[{double}]{area}
+\end{DoxyParamCaption}
+)}\label{class_node_a0782feade421251dc61c7a57d0273126}
+\index{Node@{Node}!set\+Demand\+Type@{set\+Demand\+Type}}
+\index{set\+Demand\+Type@{set\+Demand\+Type}!Node@{Node}}
+\subsubsection[{set\+Demand\+Type(\+Demand\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::set\+Demand\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Demand\+Type}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_node_ad6b2e617e552d6b9db152bb26b60fbc1}
+\index{Node@{Node}!set\+Latitude@{set\+Latitude}}
+\index{set\+Latitude@{set\+Latitude}!Node@{Node}}
+\subsubsection[{set\+Latitude(double value)}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::set\+Latitude (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_node_a63bc3c40fd172292fd4072d189d38a18}
+\index{Node@{Node}!set\+Longitude@{set\+Longitude}}
+\index{set\+Longitude@{set\+Longitude}!Node@{Node}}
+\subsubsection[{set\+Longitude(double value)}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::set\+Longitude (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_node_ae9facaa600b6be5316e8a3a784923de6}
+\index{Node@{Node}!set\+Subnetwork\+Root@{set\+Subnetwork\+Root}}
+\index{set\+Subnetwork\+Root@{set\+Subnetwork\+Root}!Node@{Node}}
+\subsubsection[{set\+Subnetwork\+Root(bool value)}]{\setlength{\rightskip}{0pt plus 5cm}void Node\+::set\+Subnetwork\+Root (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_node_a77d0db3aceae08f5ce883570e278642e}
+\index{Node@{Node}!set\+Type@{set\+Type}}
+\index{set\+Type@{set\+Type}!Node@{Node}}
+\subsubsection[{set\+Type(\+Node\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}bool Node\+::set\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Node\+Type}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_node_a6e3e6c0151711363e62ce8354d91eecc}
+\index{Node@{Node}!type@{type}}
+\index{type@{type}!Node@{Node}}
+\subsubsection[{type()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node\+Type} Node\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_node_a2545bcddc15f4f09e41e83016d3127bf}
+
+
+\subsection{Amigas e Funções Relacionadas}
+\index{Node@{Node}!Network\+Link\+Handler@{Network\+Link\+Handler}}
+\index{Network\+Link\+Handler@{Network\+Link\+Handler}!Node@{Node}}
+\subsubsection[{Network\+Link\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Network\+Link\+Handler}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_node_ad10bb4cf449fbd24a72dc991deb40d8e}
+
+
+Definição na linha 14 do arquivo Node.\+h.
+
+\index{Node@{Node}!Network\+Node\+Handler@{Network\+Node\+Handler}}
+\index{Network\+Node\+Handler@{Network\+Node\+Handler}!Node@{Node}}
+\subsubsection[{Network\+Node\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Network\+Node\+Handler}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_node_acf998ac28c182cdd9130fe947302a1ff}
+
+
+Definição na linha 13 do arquivo Node.\+h.
+
+
+
+\subsection{Atributos}
+\index{Node@{Node}!m\+\_\+area@{m\+\_\+area}}
+\index{m\+\_\+area@{m\+\_\+area}!Node@{Node}}
+\subsubsection[{m\+\_\+area}]{\setlength{\rightskip}{0pt plus 5cm}double Node\+::m\+\_\+area\hspace{0.3cm}{\ttfamily [protected]}}\label{class_node_a9f5b46d2bd9e772381112ca368cb2665}
+
+
+Definição na linha 62 do arquivo Node.\+h.
+
+\index{Node@{Node}!m\+\_\+demand\+\_\+type@{m\+\_\+demand\+\_\+type}}
+\index{m\+\_\+demand\+\_\+type@{m\+\_\+demand\+\_\+type}!Node@{Node}}
+\subsubsection[{m\+\_\+demand\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Demand\+Type} Node\+::m\+\_\+demand\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_node_a99dfb39b0a5e7b91fd9cad2d12b4346a}
+
+
+Definição na linha 80 do arquivo Node.\+h.
+
+\index{Node@{Node}!m\+\_\+latitude@{m\+\_\+latitude}}
+\index{m\+\_\+latitude@{m\+\_\+latitude}!Node@{Node}}
+\subsubsection[{m\+\_\+latitude}]{\setlength{\rightskip}{0pt plus 5cm}double Node\+::m\+\_\+latitude\hspace{0.3cm}{\ttfamily [protected]}}\label{class_node_aedfeca4f7f76441e7c916f086330de1b}
+
+
+Definição na linha 60 do arquivo Node.\+h.
+
+\index{Node@{Node}!m\+\_\+links\+\_\+down@{m\+\_\+links\+\_\+down}}
+\index{m\+\_\+links\+\_\+down@{m\+\_\+links\+\_\+down}!Node@{Node}}
+\subsubsection[{m\+\_\+links\+\_\+down}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ {\bf Element\+ID}, {\bf Link}$\ast$ $>$ Node\+::m\+\_\+links\+\_\+down\hspace{0.3cm}{\ttfamily [protected]}}\label{class_node_a06330d88c1d588a42fdfec3de3c2abaf}
+Links abaixo do no Aqueles que ir�o receber �gua do n� 
+
+Definição na linha 76 do arquivo Node.\+h.
+
+\index{Node@{Node}!m\+\_\+links\+\_\+up@{m\+\_\+links\+\_\+up}}
+\index{m\+\_\+links\+\_\+up@{m\+\_\+links\+\_\+up}!Node@{Node}}
+\subsubsection[{m\+\_\+links\+\_\+up}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$ {\bf Element\+ID}, {\bf Link}$\ast$ $>$ Node\+::m\+\_\+links\+\_\+up\hspace{0.3cm}{\ttfamily [protected]}}\label{class_node_a4ff8a7221dd792afe0fca126caf5b1f3}
+Links acima do no Aqueles que despejam �gua no n� 
+
+Definição na linha 70 do arquivo Node.\+h.
+
+\index{Node@{Node}!m\+\_\+longitude@{m\+\_\+longitude}}
+\index{m\+\_\+longitude@{m\+\_\+longitude}!Node@{Node}}
+\subsubsection[{m\+\_\+longitude}]{\setlength{\rightskip}{0pt plus 5cm}double Node\+::m\+\_\+longitude\hspace{0.3cm}{\ttfamily [protected]}}\label{class_node_a0c703aa12cde37b7da0242783efd1dc9}
+
+
+Definição na linha 61 do arquivo Node.\+h.
+
+\index{Node@{Node}!m\+\_\+subnetwork\+\_\+root@{m\+\_\+subnetwork\+\_\+root}}
+\index{m\+\_\+subnetwork\+\_\+root@{m\+\_\+subnetwork\+\_\+root}!Node@{Node}}
+\subsubsection[{m\+\_\+subnetwork\+\_\+root}]{\setlength{\rightskip}{0pt plus 5cm}bool Node\+::m\+\_\+subnetwork\+\_\+root\hspace{0.3cm}{\ttfamily [protected]}}\label{class_node_a5e79867c59ce3e8d9c743d149af0b889}
+
+
+indicates if the node is a root of a sub network 
+
+
+
+Definição na linha 64 do arquivo Node.\+h.
+
+\index{Node@{Node}!m\+\_\+type@{m\+\_\+type}}
+\index{m\+\_\+type@{m\+\_\+type}!Node@{Node}}
+\subsubsection[{m\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node\+Type} Node\+::m\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_node_adb8b779991b624f8b289c479b55c095e}
+
+
+Tipo de n� 
+
+
+
+Definição na linha 78 do arquivo Node.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Node.\+h}\end{DoxyCompactItemize}

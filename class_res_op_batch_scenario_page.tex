@@ -1,0 +1,213 @@
+\section{Referência da Classe Res\+Op\+Batch\+Scenario\+Page}
+\label{class_res_op_batch_scenario_page}\index{Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Batch\+Scenario\+Page.\+h$>$}
+
+
+
+Herdeiro de {\bf Res\+Op\+Scenario\+Page}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Batch\+Scenario\+Page} (wx\+Window $\ast$pai, wx\+Window\+ID id=wx\+I\+D\+\_\+\+A\+NY, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=wx\+T\+A\+B\+\_\+\+T\+R\+A\+V\+E\+R\+S\+AL, const wx\+String \&name=\char`\"{}Scenario\+Batch\+Page\char`\"{})
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Batch\+Scenario\+Page} ()
+\item 
+virtual void {\bf create\+Interface} ()
+\item 
+virtual bool {\bf is\+Batch} () const 
+\item 
+virtual void {\bf show\+Exec\+Interface} ({\bf Res\+Op\+Model\+Type} selection\+Type)
+\item 
+void {\bf Show\+Interface} (bool show=true)
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf On\+Check\+Box\+Change\+Status} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+No\+Element\+Selected} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Static\+Box\+Sizer $\ast$ {\bf box\+\_\+sizer\+\_\+}
+\item 
+wx\+Static\+Box\+Sizer $\ast$ {\bf select\+\_\+scenario\+\_\+sizer\+\_\+}
+\item 
+wx\+Static\+Text $\ast$ {\bf scenarios\+\_\+text\+\_\+}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf scenarios\+\_\+spin\+\_\+ctrl\+\_\+}
+\item 
+wx\+Static\+Text $\ast$ {\bf select\+\_\+scenario\+\_\+text\+\_\+}
+\item 
+wx\+Check\+Box $\ast$ {\bf apply\+\_\+to\+\_\+all\+\_\+check\+\_\+box\+\_\+}
+\item 
+wx\+Combo\+Box $\ast$ {\bf scenario\+\_\+combo\+\_\+box\+\_\+}
+\item 
+bool {\bf showing\+\_\+elements\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 21 do arquivo Res\+Op\+Batch\+Scenario\+Page.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}!Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}}
+\index{Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}!Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}}
+\subsubsection[{Res\+Op\+Batch\+Scenario\+Page(wx\+Window $\ast$pai, wx\+Window\+I\+D id=wx\+I\+D\+\_\+\+A\+N\+Y, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=wx\+T\+A\+B\+\_\+\+T\+R\+A\+V\+E\+R\+S\+A\+L, const wx\+String \&name=""Scenario\+Batch\+Page"")}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Batch\+Scenario\+Page\+::\+Res\+Op\+Batch\+Scenario\+Page (
+\begin{DoxyParamCaption}
+\item[{wx\+Window $\ast$}]{pai, }
+\item[{wx\+Window\+ID}]{id = {\ttfamily wxID\+\_\+ANY}, }
+\item[{const wx\+Point \&}]{pos = {\ttfamily wxDefaultPosition}, }
+\item[{const wx\+Size \&}]{size = {\ttfamily wxDefaultSize}, }
+\item[{long}]{style = {\ttfamily wxTAB\+\_\+TRAVERSAL}, }
+\item[{const wx\+String \&}]{name = {\ttfamily \char`\"{}ScenarioBatchPage\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_res_op_batch_scenario_page_a2e61522c4e22645f2dc02cb75cae3c0a}
+Construtor \index{Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}!````~Res\+Op\+Batch\+Scenario\+Page@{$\sim$\+Res\+Op\+Batch\+Scenario\+Page}}
+\index{````~Res\+Op\+Batch\+Scenario\+Page@{$\sim$\+Res\+Op\+Batch\+Scenario\+Page}!Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}}
+\subsubsection[{$\sim$\+Res\+Op\+Batch\+Scenario\+Page()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Batch\+Scenario\+Page\+::$\sim$\+Res\+Op\+Batch\+Scenario\+Page (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_batch_scenario_page_ab9f4398e890a21d3680a59a70e1a1c16}
+Destrutor 
+
+\subsection{Métodos}
+\index{Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}!create\+Interface@{create\+Interface}}
+\index{create\+Interface@{create\+Interface}!Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}}
+\subsubsection[{create\+Interface()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Batch\+Scenario\+Page\+::create\+Interface (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_batch_scenario_page_acc17518b1dca718e9995528d9f35a0ab}
+Cria interface personalizada p/ cen�rios Batch 
+
+Reimplementação de {\bf Res\+Op\+Scenario\+Page} \doxyref{}{pag.}{class_res_op_scenario_page_a8638f97322c5463a205f9b12fca14fbe}.
+
+\index{Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}!is\+Batch@{is\+Batch}}
+\index{is\+Batch@{is\+Batch}!Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}}
+\subsubsection[{is\+Batch() const }]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+Batch\+Scenario\+Page\+::is\+Batch (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_batch_scenario_page_a94f55d39a32a5875ce65c3805560fc48}
+
+
+Reimplementação de {\bf Res\+Op\+Scenario\+Page} \doxyref{}{pag.}{class_res_op_scenario_page_adee651eed39eafc114254aab559bb93e}.
+
+\index{Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}!On\+Check\+Box\+Change\+Status@{On\+Check\+Box\+Change\+Status}}
+\index{On\+Check\+Box\+Change\+Status@{On\+Check\+Box\+Change\+Status}!Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}}
+\subsubsection[{On\+Check\+Box\+Change\+Status(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Batch\+Scenario\+Page\+::\+On\+Check\+Box\+Change\+Status (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_batch_scenario_page_ab38d8a7e12c131c00722d78c6f7cc2cc}
+\index{Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}!on\+No\+Element\+Selected@{on\+No\+Element\+Selected}}
+\index{on\+No\+Element\+Selected@{on\+No\+Element\+Selected}!Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}}
+\subsubsection[{on\+No\+Element\+Selected()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Batch\+Scenario\+Page\+::on\+No\+Element\+Selected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_res_op_batch_scenario_page_a0f0e1c7f5528498bd6eeaa09824d2100}
+M�todo chamado quando nenhum elemento estiver habilitado. Em quase todos os casos, toda a interface ser� desabilitada (enable\+Inter(false)), exceto pela interface de otimiza��o, que deve continuar mostrando as Abas de Fun��o Objetivo e T�cnicas de Otimiza��o 
+
+Reimplementação de {\bf Res\+Op\+Scenario\+Page} \doxyref{}{pag.}{class_res_op_scenario_page_aa439ff6d982d69e9e403f41f212df424}.
+
+\index{Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}!show\+Exec\+Interface@{show\+Exec\+Interface}}
+\index{show\+Exec\+Interface@{show\+Exec\+Interface}!Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}}
+\subsubsection[{show\+Exec\+Interface(\+Res\+Op\+Model\+Type selection\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Batch\+Scenario\+Page\+::show\+Exec\+Interface (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Model\+Type}}]{selection\+Type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_batch_scenario_page_a91a844c7e90448a4060ff613b78149ad}
+Mostra a interface do tipo \textquotesingle{}selection\+Type\textquotesingle{} e esconde todas as outras. trata o caso de haver ou n�o elemento selecionado, e verifica tamb�m se for Otimizador para adicionar ou n�o asbas necess�rias.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em selection\+Type} & Tipo da interface do m�todo de execu��o a ser mostrada. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplementação de {\bf Res\+Op\+Scenario\+Page} \doxyref{}{pag.}{class_res_op_scenario_page_a1c3784bb9763c9e20232761f86eb6a5a}.
+
+\index{Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}!Show\+Interface@{Show\+Interface}}
+\index{Show\+Interface@{Show\+Interface}!Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}}
+\subsubsection[{Show\+Interface(bool show=true)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Batch\+Scenario\+Page\+::\+Show\+Interface (
+\begin{DoxyParamCaption}
+\item[{bool}]{show = {\ttfamily true}}
+\end{DoxyParamCaption}
+)}\label{class_res_op_batch_scenario_page_a3b23499e7ad81e096d658b85d66fb712}
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}!apply\+\_\+to\+\_\+all\+\_\+check\+\_\+box\+\_\+@{apply\+\_\+to\+\_\+all\+\_\+check\+\_\+box\+\_\+}}
+\index{apply\+\_\+to\+\_\+all\+\_\+check\+\_\+box\+\_\+@{apply\+\_\+to\+\_\+all\+\_\+check\+\_\+box\+\_\+}!Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}}
+\subsubsection[{apply\+\_\+to\+\_\+all\+\_\+check\+\_\+box\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ Res\+Op\+Batch\+Scenario\+Page\+::apply\+\_\+to\+\_\+all\+\_\+check\+\_\+box\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_batch_scenario_page_a68945aa62f34616205ea0e616f680aba}
+
+
+Definição na linha 58 do arquivo Res\+Op\+Batch\+Scenario\+Page.\+h.
+
+\index{Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}!box\+\_\+sizer\+\_\+@{box\+\_\+sizer\+\_\+}}
+\index{box\+\_\+sizer\+\_\+@{box\+\_\+sizer\+\_\+}!Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}}
+\subsubsection[{box\+\_\+sizer\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Box\+Sizer$\ast$ Res\+Op\+Batch\+Scenario\+Page\+::box\+\_\+sizer\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_batch_scenario_page_ae391b07258dc8ff457dfd951081a45bd}
+
+
+Definição na linha 52 do arquivo Res\+Op\+Batch\+Scenario\+Page.\+h.
+
+\index{Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}!scenario\+\_\+combo\+\_\+box\+\_\+@{scenario\+\_\+combo\+\_\+box\+\_\+}}
+\index{scenario\+\_\+combo\+\_\+box\+\_\+@{scenario\+\_\+combo\+\_\+box\+\_\+}!Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}}
+\subsubsection[{scenario\+\_\+combo\+\_\+box\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Combo\+Box$\ast$ Res\+Op\+Batch\+Scenario\+Page\+::scenario\+\_\+combo\+\_\+box\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_batch_scenario_page_ae013c14f7dc26d6a84f13b800b0745c6}
+
+
+Definição na linha 59 do arquivo Res\+Op\+Batch\+Scenario\+Page.\+h.
+
+\index{Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}!scenarios\+\_\+spin\+\_\+ctrl\+\_\+@{scenarios\+\_\+spin\+\_\+ctrl\+\_\+}}
+\index{scenarios\+\_\+spin\+\_\+ctrl\+\_\+@{scenarios\+\_\+spin\+\_\+ctrl\+\_\+}!Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}}
+\subsubsection[{scenarios\+\_\+spin\+\_\+ctrl\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl$\ast$ Res\+Op\+Batch\+Scenario\+Page\+::scenarios\+\_\+spin\+\_\+ctrl\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_batch_scenario_page_af62e852e1dce2a54623d11a1c069c3fd}
+
+
+Definição na linha 55 do arquivo Res\+Op\+Batch\+Scenario\+Page.\+h.
+
+\index{Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}!scenarios\+\_\+text\+\_\+@{scenarios\+\_\+text\+\_\+}}
+\index{scenarios\+\_\+text\+\_\+@{scenarios\+\_\+text\+\_\+}!Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}}
+\subsubsection[{scenarios\+\_\+text\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Res\+Op\+Batch\+Scenario\+Page\+::scenarios\+\_\+text\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_batch_scenario_page_a968ce20a84d3204937b42951e19f26da}
+
+
+Definição na linha 54 do arquivo Res\+Op\+Batch\+Scenario\+Page.\+h.
+
+\index{Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}!select\+\_\+scenario\+\_\+sizer\+\_\+@{select\+\_\+scenario\+\_\+sizer\+\_\+}}
+\index{select\+\_\+scenario\+\_\+sizer\+\_\+@{select\+\_\+scenario\+\_\+sizer\+\_\+}!Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}}
+\subsubsection[{select\+\_\+scenario\+\_\+sizer\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Box\+Sizer$\ast$ Res\+Op\+Batch\+Scenario\+Page\+::select\+\_\+scenario\+\_\+sizer\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_batch_scenario_page_af2ffd0c03b89cc365d98affb7051c221}
+
+
+Definição na linha 53 do arquivo Res\+Op\+Batch\+Scenario\+Page.\+h.
+
+\index{Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}!select\+\_\+scenario\+\_\+text\+\_\+@{select\+\_\+scenario\+\_\+text\+\_\+}}
+\index{select\+\_\+scenario\+\_\+text\+\_\+@{select\+\_\+scenario\+\_\+text\+\_\+}!Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}}
+\subsubsection[{select\+\_\+scenario\+\_\+text\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Res\+Op\+Batch\+Scenario\+Page\+::select\+\_\+scenario\+\_\+text\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_batch_scenario_page_a34994c3f608a6856b58f87b5cf43313c}
+
+
+Definição na linha 57 do arquivo Res\+Op\+Batch\+Scenario\+Page.\+h.
+
+\index{Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}!showing\+\_\+elements\+\_\+@{showing\+\_\+elements\+\_\+}}
+\index{showing\+\_\+elements\+\_\+@{showing\+\_\+elements\+\_\+}!Res\+Op\+Batch\+Scenario\+Page@{Res\+Op\+Batch\+Scenario\+Page}}
+\subsubsection[{showing\+\_\+elements\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Batch\+Scenario\+Page\+::showing\+\_\+elements\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}\label{class_res_op_batch_scenario_page_a9f6a92a293aea0508974bbae1ed7d773}
+
+
+Definição na linha 61 do arquivo Res\+Op\+Batch\+Scenario\+Page.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Batch\+Scenario\+Page.\+h}\end{DoxyCompactItemize}

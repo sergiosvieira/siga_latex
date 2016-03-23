@@ -1,0 +1,791 @@
+\section{Referência da Classe S\+A\+C\+R\+Model}
+\label{class_s_a_c_r_model}\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+
+
+{\ttfamily \#include $<$S\+A\+C\+R\+Model.\+h$>$}
+
+
+
+Herdeiro de {\bf Hidro\+Model}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Hidro\+Model} $\ast$ {\bf copy} ()
+\item 
+{\bf S\+A\+C\+R\+Model} ({\bf Node} $\ast${\bf node}, wx\+String {\bf name})
+\item 
+{\bf S\+A\+C\+R\+Model} ({\bf Link} $\ast${\bf link}, wx\+String {\bf name})
+\item 
+virtual {\bf $\sim$\+S\+A\+C\+R\+Model} (void)
+\item 
+bool {\bf run} ()
+\item 
+bool {\bf run\+Acc} ()
+\item 
+bool {\bf run\+Acc\+Node} ()
+\item 
+bool {\bf run\+Acc\+Link} ()
+\item 
+void {\bf Fland1} ()
+\item 
+bool {\bf empty} ()
+\item 
+void {\bf clear} ()
+\item 
+void {\bf create\+Results} ({\bf Interval} interval)
+\item 
+bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix} {\bf unit\+Hid}
+\item 
+{\bf Serie} $\ast$ {\bf P\+ET}
+\item 
+{\bf Serie} $\ast$ {\bf prec}
+\item 
+wx\+String {\bf P\+E\+T\+File\+Name}
+\item 
+wx\+String {\bf prec\+File\+Name}
+\item 
+wx\+String {\bf unit\+Hid\+File\+Name}
+\item 
+int {\bf deltaT}
+\item 
+double {\bf uztwm}
+\item 
+double {\bf uzfwm}
+\item 
+double {\bf uzk}
+\item 
+double {\bf pctim}
+\item 
+double {\bf adimp}
+\item 
+double {\bf riva}
+\item 
+double {\bf zperc}
+\item 
+double {\bf rexp}
+\item 
+double {\bf lztwm}
+\item 
+double {\bf lzfsm}
+\item 
+double {\bf lzfpm}
+\item 
+double {\bf lzsk}
+\item 
+double {\bf lzpk}
+\item 
+double {\bf pfree}
+\item 
+double {\bf rserv}
+\item 
+double {\bf side}
+\item 
+double {\bf pxmlt}
+\item 
+double {\bf pemlt}
+\item 
+double {\bf mpemlt} [12]
+\item 
+double {\bf etmin}
+\item 
+double {\bf etshp}
+\item 
+double {\bf etrng}
+\item 
+double {\bf uztwc}
+\item 
+double {\bf uzfwc}
+\item 
+double {\bf lztwc}
+\item 
+double {\bf lzfsc}
+\item 
+double {\bf lzfpc}
+\item 
+double {\bf adimc}
+\item 
+double {\bf dt}
+\item 
+double {\bf pxv}
+\item 
+double {\bf ep}
+\item 
+double {\bf epdist}
+\item 
+double {\bf tlci}
+\item 
+{\bf Serie} $\ast$ {\bf tci\+\_\+total}
+\item 
+{\bf Serie} $\ast$ {\bf tci\+\_\+in}
+\item 
+{\bf Serie} $\ast$ {\bf tci\+\_\+out}
+\item 
+{\bf Serie} $\ast$ {\bf tci\+\_\+total\+\_\+convoluted}
+\item 
+{\bf Serie} $\ast$ {\bf tci\+\_\+area}
+\item 
+{\bf Serie} $\ast$ {\bf tci\+\_\+acc\+\_\+total}
+\item 
+{\bf Serie} $\ast$ {\bf tci\+\_\+acc\+\_\+total\+\_\+convoluted}
+\item 
+{\bf Serie} $\ast$ {\bf tci\+\_\+acc\+\_\+area}
+\item 
+double {\bf UH} [19]
+\item 
+double {\bf U\+H\+\_\+nord}
+\item 
+double {\bf tlci\+\_\+flows} [7]
+\item 
+double {\bf srot}
+\item 
+double {\bf simpvt}
+\item 
+double {\bf srodt}
+\item 
+double {\bf srost}
+\item 
+double {\bf sintft}
+\item 
+double {\bf sgwfp}
+\item 
+double {\bf sgwfs}
+\item 
+double {\bf srecht}
+\item 
+double {\bf sett}
+\item 
+double {\bf se1}
+\item 
+double {\bf se3}
+\item 
+double {\bf se4}
+\item 
+double {\bf se5}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 17 do arquivo S\+A\+C\+R\+Model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{S\+A\+C\+R\+Model(\+Node $\ast$node, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}S\+A\+C\+R\+Model\+::\+S\+A\+C\+R\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_s_a_c_r_model_a0e8991e8e1a4cd0e9c67aafce4924d0a}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em interval\+Begin} & Dia de inicio \\
+\hline
+{\em interval\+End} & Dia de fim \\
+\hline
+{\em node} & N� \\
+\hline
+\end{DoxyParams}
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{S\+A\+C\+R\+Model(\+Link $\ast$link, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}S\+A\+C\+R\+Model\+::\+S\+A\+C\+R\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Link} $\ast$}]{link, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_s_a_c_r_model_a63ec1329e448c896932bd46bfad3e782}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em interval\+Begin} & Dia de inicio \\
+\hline
+{\em interval\+End} & Dia de fim \\
+\hline
+{\em link} & Trecho \\
+\hline
+\end{DoxyParams}
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!````~S\+A\+C\+R\+Model@{$\sim$\+S\+A\+C\+R\+Model}}
+\index{````~S\+A\+C\+R\+Model@{$\sim$\+S\+A\+C\+R\+Model}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{$\sim$\+S\+A\+C\+R\+Model(void)}]{\setlength{\rightskip}{0pt plus 5cm}virtual S\+A\+C\+R\+Model\+::$\sim$\+S\+A\+C\+R\+Model (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_a_c_r_model_a5c3835f71bdeb86f15199525f4b0d693}
+Destrutor 
+
+\subsection{Métodos}
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+A\+C\+R\+Model\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_a_c_r_model_a52a9f34d1d492828a24d8ff8bf6628f7}
+Avalia se todas as informa��es importantes para o modelo formam informadas 
+\begin{DoxyParams}{Parâmetros}
+{\em dialog} & Caixa de dialogo onde os erros ser�o apresentados \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a9da83995bb3c4c4ab6eb3abe7dfcb431}.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!clear@{clear}}
+\index{clear@{clear}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+C\+R\+Model\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_a_c_r_model_a2a0340da88aceb92c8928e7aaa5a4e9f}
+Retorna o valor das variaveis para o estado p�s-\/constru��o 
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a7a59ac6ccde3e96019caa55bb9f3f859}.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!copy@{copy}}
+\index{copy@{copy}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{copy()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Hidro\+Model}$\ast$ S\+A\+C\+R\+Model\+::copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_a_c_r_model_a7e810cd4773fdc75a5e2fbb4a92f835f}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_afef4c70600b8f9224c4ad0040363c5dc}.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!create\+Results@{create\+Results}}
+\index{create\+Results@{create\+Results}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{create\+Results(\+Interval interval)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+C\+R\+Model\+::create\+Results (
+\begin{DoxyParamCaption}
+\item[{{\bf Interval}}]{interval}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_a_c_r_model_aeb095c2b3e452ec2a017cf768d6f9acd}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a8ba135e8d5c7e454fa3278355e2d6a92}.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!empty@{empty}}
+\index{empty@{empty}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{empty()}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+A\+C\+R\+Model\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_a_c_r_model_a1e44b9850bf05b418d831e3df8a7d823}
+retorna se existe algum valor no modelo 
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_aac45c150ea104ed44e2d3349b83fbd40}.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!Fland1@{Fland1}}
+\index{Fland1@{Fland1}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{Fland1()}]{\setlength{\rightskip}{0pt plus 5cm}void S\+A\+C\+R\+Model\+::\+Fland1 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_a_c_r_model_aefbeaf093d35e7dd4209a5388f25bbca}
+Fland1 \index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!run@{run}}
+\index{run@{run}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{run()}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+A\+C\+R\+Model\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_a_c_r_model_ae60754c2079fe84056fade115d956206}
+Executar o modelo S\+A\+CR 
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_ac4b3587518c76af9ad3200646e28a367}.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!run\+Acc@{run\+Acc}}
+\index{run\+Acc@{run\+Acc}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{run\+Acc()}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+A\+C\+R\+Model\+::run\+Acc (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_a_c_r_model_a37ca80f519396955b4e87ed0bccdeb60}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a41ed38d63fb34c6a08badaee94e38dbe}.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!run\+Acc\+Link@{run\+Acc\+Link}}
+\index{run\+Acc\+Link@{run\+Acc\+Link}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{run\+Acc\+Link()}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+A\+C\+R\+Model\+::run\+Acc\+Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_a_c_r_model_a123778c3766ba2a512fa53a2e4c79a0a}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a6f35f954579dbbe3216d270e2406437a}.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!run\+Acc\+Node@{run\+Acc\+Node}}
+\index{run\+Acc\+Node@{run\+Acc\+Node}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{run\+Acc\+Node()}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+A\+C\+R\+Model\+::run\+Acc\+Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_s_a_c_r_model_ac2c4a29659889533fdbffbc424f93718}
+
+
+Implementa {\bf Hidro\+Model} \doxyref{}{pag.}{class_hidro_model_a40997d872a7e0224915f2f8a92212d84}.
+
+
+
+\subsection{Atributos}
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!adimc@{adimc}}
+\index{adimc@{adimc}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{adimc}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::adimc}\label{class_s_a_c_r_model_a5f506cad45b9702e5da4e4bcb7b87edd}
+
+
+Definição na linha 44 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!adimp@{adimp}}
+\index{adimp@{adimp}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{adimp}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::adimp}\label{class_s_a_c_r_model_ac825a600213c43219a07f1ddf81838b3}
+
+
+Definição na linha 40 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!deltaT@{deltaT}}
+\index{deltaT@{deltaT}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{deltaT}]{\setlength{\rightskip}{0pt plus 5cm}int S\+A\+C\+R\+Model\+::deltaT}\label{class_s_a_c_r_model_a0c65bd6e8bba171eb4a04feebe688ee3}
+Varia��o do tempo 
+
+Definição na linha 33 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!dt@{dt}}
+\index{dt@{dt}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{dt}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::dt}\label{class_s_a_c_r_model_a275760174747c86a9de7ee4eeac9a5d8}
+
+
+Definição na linha 45 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!ep@{ep}}
+\index{ep@{ep}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{ep}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::ep}\label{class_s_a_c_r_model_a317933b5908764cb513599b624b9dd1b}
+
+
+Definição na linha 45 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!epdist@{epdist}}
+\index{epdist@{epdist}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{epdist}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::epdist}\label{class_s_a_c_r_model_ad6f83341c1ec06c4cdc18f3f5d217c56}
+
+
+Definição na linha 45 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!etmin@{etmin}}
+\index{etmin@{etmin}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{etmin}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::etmin}\label{class_s_a_c_r_model_a1e156e5ca8be13e5979a15b622f65086}
+
+
+Definição na linha 43 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!etrng@{etrng}}
+\index{etrng@{etrng}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{etrng}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::etrng}\label{class_s_a_c_r_model_ad366480c554a44114d9348b70c7b29e3}
+
+
+Definição na linha 43 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!etshp@{etshp}}
+\index{etshp@{etshp}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{etshp}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::etshp}\label{class_s_a_c_r_model_af3e74ec2462ad9eeaca9f4135deb6e2f}
+
+
+Definição na linha 43 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!lzfpc@{lzfpc}}
+\index{lzfpc@{lzfpc}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{lzfpc}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::lzfpc}\label{class_s_a_c_r_model_a45fcb3ec579ac19f41e7efc50a525c5f}
+
+
+Definição na linha 44 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!lzfpm@{lzfpm}}
+\index{lzfpm@{lzfpm}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{lzfpm}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::lzfpm}\label{class_s_a_c_r_model_ae42802af0e672eb9809996d58d5bf4f9}
+
+
+Definição na linha 41 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!lzfsc@{lzfsc}}
+\index{lzfsc@{lzfsc}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{lzfsc}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::lzfsc}\label{class_s_a_c_r_model_a368cf00c20d807534c714d1019e0e242}
+
+
+Definição na linha 44 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!lzfsm@{lzfsm}}
+\index{lzfsm@{lzfsm}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{lzfsm}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::lzfsm}\label{class_s_a_c_r_model_ac3f57b15463b23b4757e03b011968068}
+
+
+Definição na linha 41 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!lzpk@{lzpk}}
+\index{lzpk@{lzpk}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{lzpk}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::lzpk}\label{class_s_a_c_r_model_aaae2575e83fc546abedec372fa6f5f65}
+
+
+Definição na linha 41 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!lzsk@{lzsk}}
+\index{lzsk@{lzsk}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{lzsk}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::lzsk}\label{class_s_a_c_r_model_abcab61ec647757be4d85356a631a8fa2}
+
+
+Definição na linha 41 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!lztwc@{lztwc}}
+\index{lztwc@{lztwc}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{lztwc}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::lztwc}\label{class_s_a_c_r_model_a2dd3dcbfa391b0deda99e392958952d4}
+
+
+Definição na linha 44 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!lztwm@{lztwm}}
+\index{lztwm@{lztwm}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{lztwm}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::lztwm}\label{class_s_a_c_r_model_ae5960a5e2eb1500d8c9208ffe1ca159d}
+
+
+Definição na linha 41 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!mpemlt@{mpemlt}}
+\index{mpemlt@{mpemlt}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{mpemlt}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::mpemlt[12]}\label{class_s_a_c_r_model_ac05d37bba73013eed416ec23d10905c9}
+
+
+Definição na linha 42 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!pctim@{pctim}}
+\index{pctim@{pctim}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{pctim}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::pctim}\label{class_s_a_c_r_model_a79215502be0d74ece3053d2a20640aa4}
+
+
+Definição na linha 40 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!pemlt@{pemlt}}
+\index{pemlt@{pemlt}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{pemlt}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::pemlt}\label{class_s_a_c_r_model_ae94c451c250d844d335934ee5d3d7811}
+
+
+Definição na linha 42 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!P\+ET@{P\+ET}}
+\index{P\+ET@{P\+ET}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{P\+ET}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ S\+A\+C\+R\+Model\+::\+P\+ET}\label{class_s_a_c_r_model_a12165799934d1568694d50835b7a1c93}
+Series de entrada 
+
+Definição na linha 28 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!P\+E\+T\+File\+Name@{P\+E\+T\+File\+Name}}
+\index{P\+E\+T\+File\+Name@{P\+E\+T\+File\+Name}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{P\+E\+T\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+A\+C\+R\+Model\+::\+P\+E\+T\+File\+Name}\label{class_s_a_c_r_model_acd2073ba802fb2217628f302c1b6d8be}
+
+
+Definição na linha 29 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!pfree@{pfree}}
+\index{pfree@{pfree}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{pfree}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::pfree}\label{class_s_a_c_r_model_adb232d43192dd4142c28fda25767da6c}
+
+
+Definição na linha 41 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!prec@{prec}}
+\index{prec@{prec}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{prec}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie} $\ast$ S\+A\+C\+R\+Model\+::prec}\label{class_s_a_c_r_model_a8444605297d39eeb4e589b696f438f7c}
+
+
+Definição na linha 28 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!prec\+File\+Name@{prec\+File\+Name}}
+\index{prec\+File\+Name@{prec\+File\+Name}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{prec\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+A\+C\+R\+Model\+::prec\+File\+Name}\label{class_s_a_c_r_model_ad296c268ce21ac1bc02ce1a0a5226754}
+
+
+Definição na linha 29 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!pxmlt@{pxmlt}}
+\index{pxmlt@{pxmlt}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{pxmlt}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::pxmlt}\label{class_s_a_c_r_model_ab8f83d8b6264428cb7e435f7f02e4e4a}
+
+
+Definição na linha 42 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!pxv@{pxv}}
+\index{pxv@{pxv}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{pxv}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::pxv}\label{class_s_a_c_r_model_a4237a1a6e1c362a9c871f0e2cd9b7592}
+
+
+Definição na linha 45 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!rexp@{rexp}}
+\index{rexp@{rexp}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{rexp}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::rexp}\label{class_s_a_c_r_model_a4ce6c40fd050e12e1aed12a6267c8b9c}
+
+
+Definição na linha 40 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!riva@{riva}}
+\index{riva@{riva}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{riva}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::riva}\label{class_s_a_c_r_model_a0e4023e5dbe43d517e2d0d91f68d5122}
+
+
+Definição na linha 40 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!rserv@{rserv}}
+\index{rserv@{rserv}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{rserv}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::rserv}\label{class_s_a_c_r_model_a17fe9ae369d5bca986c7d9ae1597356e}
+
+
+Definição na linha 41 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!se1@{se1}}
+\index{se1@{se1}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{se1}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::se1}\label{class_s_a_c_r_model_af8e343889b2e29ec263037f607c341c0}
+
+
+Definição na linha 56 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!se3@{se3}}
+\index{se3@{se3}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{se3}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::se3}\label{class_s_a_c_r_model_a62afdcf8fa4c9a88ff48bc4b3166fafa}
+
+
+Definição na linha 56 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!se4@{se4}}
+\index{se4@{se4}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{se4}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::se4}\label{class_s_a_c_r_model_a6571d78a9d7a8e5aad4074d31085f02a}
+
+
+Definição na linha 56 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!se5@{se5}}
+\index{se5@{se5}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{se5}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::se5}\label{class_s_a_c_r_model_ac7a6124d97be2fc202afa012ac68cd18}
+
+
+Definição na linha 56 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!sett@{sett}}
+\index{sett@{sett}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{sett}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::sett}\label{class_s_a_c_r_model_a67cb43d0e1564d505e9f5efd3402c0c6}
+
+
+Definição na linha 56 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!sgwfp@{sgwfp}}
+\index{sgwfp@{sgwfp}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{sgwfp}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::sgwfp}\label{class_s_a_c_r_model_a527c08d02bb5a3c79ea7d520bf1ef321}
+
+
+Definição na linha 55 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!sgwfs@{sgwfs}}
+\index{sgwfs@{sgwfs}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{sgwfs}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::sgwfs}\label{class_s_a_c_r_model_acc4b700cc08c919cb4cc9026cad121f8}
+
+
+Definição na linha 55 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!side@{side}}
+\index{side@{side}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{side}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::side}\label{class_s_a_c_r_model_a2563005b56ce5b0cddacfd8029f3375f}
+
+
+Definição na linha 41 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!simpvt@{simpvt}}
+\index{simpvt@{simpvt}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{simpvt}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::simpvt}\label{class_s_a_c_r_model_ad92c46f3f5a7977c90a67cce15ff24a2}
+
+
+Definição na linha 55 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!sintft@{sintft}}
+\index{sintft@{sintft}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{sintft}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::sintft}\label{class_s_a_c_r_model_a5b3e184548f5fce49f943d2e5ab60b7e}
+
+
+Definição na linha 55 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!srecht@{srecht}}
+\index{srecht@{srecht}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{srecht}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::srecht}\label{class_s_a_c_r_model_ad44499219c77e7823338394df8e88839}
+
+
+Definição na linha 56 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!srodt@{srodt}}
+\index{srodt@{srodt}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{srodt}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::srodt}\label{class_s_a_c_r_model_ad6ac318a582f5e8c05409a4aae4d9533}
+
+
+Definição na linha 55 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!srost@{srost}}
+\index{srost@{srost}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{srost}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::srost}\label{class_s_a_c_r_model_ad1e9fe5d303827def29fd63a0faf7fca}
+
+
+Definição na linha 55 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!srot@{srot}}
+\index{srot@{srot}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{srot}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::srot}\label{class_s_a_c_r_model_a08dc7ceb02825a7011333c7415d9b6d7}
+
+
+Definição na linha 55 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!tci\+\_\+acc\+\_\+area@{tci\+\_\+acc\+\_\+area}}
+\index{tci\+\_\+acc\+\_\+area@{tci\+\_\+acc\+\_\+area}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{tci\+\_\+acc\+\_\+area}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ S\+A\+C\+R\+Model\+::tci\+\_\+acc\+\_\+area}\label{class_s_a_c_r_model_aa23d183af0e8e0abafa2a775641a21b1}
+
+
+Definição na linha 51 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!tci\+\_\+acc\+\_\+total@{tci\+\_\+acc\+\_\+total}}
+\index{tci\+\_\+acc\+\_\+total@{tci\+\_\+acc\+\_\+total}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{tci\+\_\+acc\+\_\+total}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ S\+A\+C\+R\+Model\+::tci\+\_\+acc\+\_\+total}\label{class_s_a_c_r_model_a2ee18675b2decee721ab91339d784144}
+
+
+Definição na linha 49 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!tci\+\_\+acc\+\_\+total\+\_\+convoluted@{tci\+\_\+acc\+\_\+total\+\_\+convoluted}}
+\index{tci\+\_\+acc\+\_\+total\+\_\+convoluted@{tci\+\_\+acc\+\_\+total\+\_\+convoluted}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{tci\+\_\+acc\+\_\+total\+\_\+convoluted}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ S\+A\+C\+R\+Model\+::tci\+\_\+acc\+\_\+total\+\_\+convoluted}\label{class_s_a_c_r_model_af47c7186b8b451e5fa9c177851948bb1}
+
+
+Definição na linha 50 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!tci\+\_\+area@{tci\+\_\+area}}
+\index{tci\+\_\+area@{tci\+\_\+area}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{tci\+\_\+area}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ S\+A\+C\+R\+Model\+::tci\+\_\+area}\label{class_s_a_c_r_model_a3ba59537dc4dc4eca6edc739ef769861}
+
+
+Definição na linha 48 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!tci\+\_\+in@{tci\+\_\+in}}
+\index{tci\+\_\+in@{tci\+\_\+in}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{tci\+\_\+in}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie} $\ast$ S\+A\+C\+R\+Model\+::tci\+\_\+in}\label{class_s_a_c_r_model_ad56a65d1cd96a254a871f4089715c0fd}
+
+
+Definição na linha 46 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!tci\+\_\+out@{tci\+\_\+out}}
+\index{tci\+\_\+out@{tci\+\_\+out}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{tci\+\_\+out}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie} $\ast$ S\+A\+C\+R\+Model\+::tci\+\_\+out}\label{class_s_a_c_r_model_a67fd0baab9d9ccd208b2c6b5ae0a004f}
+
+
+Definição na linha 46 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!tci\+\_\+total@{tci\+\_\+total}}
+\index{tci\+\_\+total@{tci\+\_\+total}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{tci\+\_\+total}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ S\+A\+C\+R\+Model\+::tci\+\_\+total}\label{class_s_a_c_r_model_a5b28e4ade14458e6db9a2fd4bb3e0474}
+
+
+Definição na linha 46 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!tci\+\_\+total\+\_\+convoluted@{tci\+\_\+total\+\_\+convoluted}}
+\index{tci\+\_\+total\+\_\+convoluted@{tci\+\_\+total\+\_\+convoluted}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{tci\+\_\+total\+\_\+convoluted}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ S\+A\+C\+R\+Model\+::tci\+\_\+total\+\_\+convoluted}\label{class_s_a_c_r_model_a69c5adc279f92d24cbb0273665f3fdde}
+
+
+Definição na linha 47 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!tlci@{tlci}}
+\index{tlci@{tlci}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{tlci}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::tlci}\label{class_s_a_c_r_model_a541a5b249b0e3a2b41b1d10ad8483854}
+
+
+Definição na linha 45 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!tlci\+\_\+flows@{tlci\+\_\+flows}}
+\index{tlci\+\_\+flows@{tlci\+\_\+flows}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{tlci\+\_\+flows}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::tlci\+\_\+flows[7]}\label{class_s_a_c_r_model_a874f3bec4a42e9f628f2501369a65412}
+
+
+Definição na linha 52 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!UH@{UH}}
+\index{UH@{UH}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{UH}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::\+UH[19]}\label{class_s_a_c_r_model_a9d56fd7715648f2384bfd29f918c7588}
+
+
+Definição na linha 52 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!U\+H\+\_\+nord@{U\+H\+\_\+nord}}
+\index{U\+H\+\_\+nord@{U\+H\+\_\+nord}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{U\+H\+\_\+nord}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::\+U\+H\+\_\+nord}\label{class_s_a_c_r_model_a78bcfe963023deb07466f9b894b19c76}
+
+
+Definição na linha 52 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!unit\+Hid@{unit\+Hid}}
+\index{unit\+Hid@{unit\+Hid}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{unit\+Hid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} S\+A\+C\+R\+Model\+::unit\+Hid}\label{class_s_a_c_r_model_a543728382cb8d6573a0dc55b8b9ac570}
+Hidrograma unitario 
+
+Definição na linha 24 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!unit\+Hid\+File\+Name@{unit\+Hid\+File\+Name}}
+\index{unit\+Hid\+File\+Name@{unit\+Hid\+File\+Name}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{unit\+Hid\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+A\+C\+R\+Model\+::unit\+Hid\+File\+Name}\label{class_s_a_c_r_model_ab67bb356f86c505f70e6ef16a5954dd8}
+
+
+Definição na linha 29 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!uzfwc@{uzfwc}}
+\index{uzfwc@{uzfwc}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{uzfwc}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::uzfwc}\label{class_s_a_c_r_model_acb8117d77b2dba1620c0131b07e658cd}
+
+
+Definição na linha 44 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!uzfwm@{uzfwm}}
+\index{uzfwm@{uzfwm}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{uzfwm}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::uzfwm}\label{class_s_a_c_r_model_a602db094528cc45569ab178369c2a561}
+
+
+Definição na linha 40 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!uzk@{uzk}}
+\index{uzk@{uzk}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{uzk}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::uzk}\label{class_s_a_c_r_model_a1f6418bfe4c37307753f438f9435b619}
+
+
+Definição na linha 40 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!uztwc@{uztwc}}
+\index{uztwc@{uztwc}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{uztwc}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::uztwc}\label{class_s_a_c_r_model_aa6c48feadaabd35243c9f17ea2f6e417}
+
+
+Definição na linha 44 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!uztwm@{uztwm}}
+\index{uztwm@{uztwm}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{uztwm}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::uztwm}\label{class_s_a_c_r_model_a4d0977c0b8f71fc24429494ed6204139}
+Parametros 
+
+Definição na linha 40 do arquivo S\+A\+C\+R\+Model.\+h.
+
+\index{S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}!zperc@{zperc}}
+\index{zperc@{zperc}!S\+A\+C\+R\+Model@{S\+A\+C\+R\+Model}}
+\subsubsection[{zperc}]{\setlength{\rightskip}{0pt plus 5cm}double S\+A\+C\+R\+Model\+::zperc}\label{class_s_a_c_r_model_ad900f75de2c92dd0bab1e191ceee4176}
+
+
+Definição na linha 40 do arquivo S\+A\+C\+R\+Model.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+A\+C\+R\+Model.\+h}\end{DoxyCompactItemize}

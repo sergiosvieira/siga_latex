@@ -1,0 +1,277 @@
+\section{ReferÃªncia da Classe Res\+Op\+Tecnique\+Main}
+\label{class_res_op_tecnique_main}\index{Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}}
+
+
+{\ttfamily \#include $<$Res\+Op\+Tecnique\+Main.\+h$>$}
+
+
+
+Superclasse de {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main}.
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Tecnique\+Main} ({\bf Res\+Op\+Interface} $\ast${\bf main\+Inter})
+\item 
+virtual {\bf $\sim$\+Res\+Op\+Tecnique\+Main} ()
+\item 
+virtual void {\bf set\+Info} ()=0
+\item 
+virtual void {\bf insert\+Tecnique} ()=0
+\item 
+virtual void {\bf remove\+Tecnique} ()=0
+\item 
+virtual void {\bf show\+Results} (bool change)=0
+\item 
+virtual void {\bf set\+Default\+Values} (char $\ast$file\+Name)=0
+\item 
+virtual void {\bf save\+Default\+Values} (char $\ast$file\+Name)=0
+\item 
+virtual void {\bf run} ()=0
+\item 
+double {\bf count\+Decisions\+Variables} ()
+\item 
+void {\bf set\+Decisions\+Variables} ({\bf Matrix} \&swarm\+Line)
+\item 
+virtual bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)=0
+\item 
+virtual void {\bf clear} ()=0
+\item 
+bool {\bf check\+Limits} ()
+\item 
+virtual void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)=0
+\item 
+virtual void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)=0
+\end{DoxyCompactItemize}
+\subsection*{Atributos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Tecnique} $\ast$ {\bf tecnique}
+\item 
+{\bf Component\+Interface} $\ast$ {\bf inter}
+\item 
+{\bf Res\+Op\+Interface} $\ast$ {\bf main\+Inter}
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 10 do arquivo Res\+Op\+Tecnique\+Main.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}!Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}}
+\index{Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}!Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}}
+\subsubsection[{Res\+Op\+Tecnique\+Main(\+Res\+Op\+Interface $\ast$main\+Inter)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+Op\+Tecnique\+Main\+::\+Res\+Op\+Tecnique\+Main (
+\begin{DoxyParamCaption}
+\item[{{\bf Res\+Op\+Interface} $\ast$}]{main\+Inter}
+\end{DoxyParamCaption}
+)}\label{class_res_op_tecnique_main_aca7332977ab85c809e292af3ee5ecc55}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em main\+Inter} & Interface da classe principal \\
+\hline
+\end{DoxyParams}
+\index{Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}!````~Res\+Op\+Tecnique\+Main@{$\sim$\+Res\+Op\+Tecnique\+Main}}
+\index{````~Res\+Op\+Tecnique\+Main@{$\sim$\+Res\+Op\+Tecnique\+Main}!Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}}
+\subsubsection[{$\sim$\+Res\+Op\+Tecnique\+Main()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+Op\+Tecnique\+Main\+::$\sim$\+Res\+Op\+Tecnique\+Main (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_op_tecnique_main_a5c33f38c80074c099bf3fe5c1b1fb577}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Res\+Op\+Tecnique\+Main\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_tecnique_main_a54bd9e44e5be807b47a610dc90938267}
+Método que checa se as informações necessárias foram preenchidas. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em dialog} & Caixa de dialogo contendo os erros \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_tecnique_main_a8b06ea0b219db88dc8c0621a42289d6b} e {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_tecnique_main_a8b06ea0b219db88dc8c0621a42289d6b}.
+
+\index{Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}!check\+Limits@{check\+Limits}}
+\index{check\+Limits@{check\+Limits}!Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}}
+\subsubsection[{check\+Limits()}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+Op\+Tecnique\+Main\+::check\+Limits (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_tecnique_main_a4fb56ef64514cfb902b7810291acd0c1}
+Verifica se os limites das variáveis estão corretos \index{Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}!clear@{clear}}
+\index{clear@{clear}!Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}}
+\subsubsection[{clear()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Tecnique\+Main\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_tecnique_main_afbcf895a9eb4b92c63bd9f9d222bb527}
+
+
+Implementado por {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_tecnique_main_afd2fa94761886ed0490eaa120486f973} e {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_tecnique_main_afd2fa94761886ed0490eaa120486f973}.
+
+\index{Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}!count\+Decisions\+Variables@{count\+Decisions\+Variables}}
+\index{count\+Decisions\+Variables@{count\+Decisions\+Variables}!Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}}
+\subsubsection[{count\+Decisions\+Variables()}]{\setlength{\rightskip}{0pt plus 5cm}double Res\+Op\+Tecnique\+Main\+::count\+Decisions\+Variables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_op_tecnique_main_abea6bf7b0f0ebea34b77df85e33dfcce}
+Método para contar as variáveis de decisão \index{Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}!insert\+Tecnique@{insert\+Tecnique}}
+\index{insert\+Tecnique@{insert\+Tecnique}!Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}}
+\subsubsection[{insert\+Tecnique()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Tecnique\+Main\+::insert\+Tecnique (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_tecnique_main_a1204ca01ddf70fff2d8962015b108c2a}
+Cria uma tecnica (método abstrato) 
+
+Implementado por {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_tecnique_main_ae921776368ef2d2af2d20507dab5df89} e {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_tecnique_main_ae921776368ef2d2af2d20507dab5df89}.
+
+\index{Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Tecnique\+Main\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_tecnique_main_a1efdf782bae4420087e39fbcc24eb292}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_tecnique_main_af999c166464d55a4c7d6056396d938fd} e {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_tecnique_main_af999c166464d55a4c7d6056396d938fd}.
+
+\index{Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Tecnique\+Main\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_tecnique_main_a46260c9a15873df948519d066280ee0d}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_tecnique_main_a2a99cf54e06b331912201bbed164abd4} e {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_tecnique_main_a2a99cf54e06b331912201bbed164abd4}.
+
+\index{Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}!remove\+Tecnique@{remove\+Tecnique}}
+\index{remove\+Tecnique@{remove\+Tecnique}!Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}}
+\subsubsection[{remove\+Tecnique()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Tecnique\+Main\+::remove\+Tecnique (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_tecnique_main_a80e0aeabf5dd7891730fad46557d6b3f}
+Destroi uma tecnica que nao importa mais (método abstrato) 
+
+Implementado por {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_tecnique_main_a397acb47e9552b2fe346bcb068d56b8b} e {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_tecnique_main_a397acb47e9552b2fe346bcb068d56b8b}.
+
+\index{Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}!run@{run}}
+\index{run@{run}!Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}}
+\subsubsection[{run()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Tecnique\+Main\+::run (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_tecnique_main_afd96e8df547c88ce39bb0ebd1c7c5c1a}
+Método abstrato que executa a tecnica 
+
+Implementado por {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_tecnique_main_a63f9810bcd9da2a997cf9d59ae67326c} e {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_tecnique_main_a63f9810bcd9da2a997cf9d59ae67326c}.
+
+\index{Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}!save\+Default\+Values@{save\+Default\+Values}}
+\index{save\+Default\+Values@{save\+Default\+Values}!Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}}
+\subsubsection[{save\+Default\+Values(char $\ast$file\+Name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Tecnique\+Main\+::save\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_tecnique_main_a0a14a2a72b812e4ab3b9ce66f52f1d90}
+Método abstrato que salva os dados da tecnica para um arquivo. 
+
+Implementado por {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_tecnique_main_a954f990ba861bca44c3a9c1f31ba86c4}.
+
+\index{Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}!set\+Decisions\+Variables@{set\+Decisions\+Variables}}
+\index{set\+Decisions\+Variables@{set\+Decisions\+Variables}!Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}}
+\subsubsection[{set\+Decisions\+Variables(\+Matrix \&swarm\+Line)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+Op\+Tecnique\+Main\+::set\+Decisions\+Variables (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} \&}]{swarm\+Line}
+\end{DoxyParamCaption}
+)}\label{class_res_op_tecnique_main_afae88ac6ef0a93633c3a94935a740245}
+Método para atribuir soluções as respectivas variáveis \index{Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}!set\+Default\+Values@{set\+Default\+Values}}
+\index{set\+Default\+Values@{set\+Default\+Values}!Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}}
+\subsubsection[{set\+Default\+Values(char $\ast$file\+Name)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Tecnique\+Main\+::set\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_tecnique_main_a1b71f160c1ff2f77c6988ae33bf3999e}
+Método abstrato que recebe os dados da tecnica de arquivo. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em file\+Name} & Nome do aquivo para salvar as informações. \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_tecnique_main_af8b4d462b3d5d17e8c1cb5609acbc53b}.
+
+\index{Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}}
+\subsubsection[{set\+Info()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Tecnique\+Main\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_tecnique_main_a66136a0e47ebee716b7d1c130647a16f}
+Insere informaçoes na interface (método abstrato) 
+
+Implementado por {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_tecnique_main_a778cbe5bab666b714bd8ab11114e56d0} e {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_tecnique_main_a778cbe5bab666b714bd8ab11114e56d0}.
+
+\index{Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}!show\+Results@{show\+Results}}
+\index{show\+Results@{show\+Results}!Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}}
+\subsubsection[{show\+Results(bool change)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Res\+Op\+Tecnique\+Main\+::show\+Results (
+\begin{DoxyParamCaption}
+\item[{bool}]{change}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_res_op_tecnique_main_a7774cb1a9ad17100737b0a60363d31f2}
+Apresenta resultados da tecnica. (método abstrato) 
+
+Implementado por {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_tecnique_main_a5c744d07300fe57d8e3247394a06d8c9} e {\bf Res\+Op\+M\+O\+P\+S\+O\+Tecnique\+Main} \doxyref{}{pag.}{class_res_op_m_o_p_s_o_tecnique_main_a5c744d07300fe57d8e3247394a06d8c9}.
+
+
+
+\subsection{Atributos}
+\index{Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}!inter@{inter}}
+\index{inter@{inter}!Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}}
+\subsubsection[{inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Component\+Interface}$\ast$ Res\+Op\+Tecnique\+Main\+::inter}\label{class_res_op_tecnique_main_abcfe7a0e8e678406ee079590352dc1a0}
+Interface para cada tipo de tecnica Será inserida na interface geral do modulo de operação de reservatório 
+
+DefiniÃ§Ã£o na linha 23 do arquivo Res\+Op\+Tecnique\+Main.\+h.
+
+\index{Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}!main\+Inter@{main\+Inter}}
+\index{main\+Inter@{main\+Inter}!Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}}
+\subsubsection[{main\+Inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Interface}$\ast$ Res\+Op\+Tecnique\+Main\+::main\+Inter}\label{class_res_op_tecnique_main_a8be77d4e5ba4d95eb5e3d632d9bbde33}
+Aponta para a classe da interafce principal do modulo 
+
+DefiniÃ§Ã£o na linha 28 do arquivo Res\+Op\+Tecnique\+Main.\+h.
+
+\index{Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}!tecnique@{tecnique}}
+\index{tecnique@{tecnique}!Res\+Op\+Tecnique\+Main@{Res\+Op\+Tecnique\+Main}}
+\subsubsection[{tecnique}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+Op\+Tecnique}$\ast$ Res\+Op\+Tecnique\+Main\+::tecnique}\label{class_res_op_tecnique_main_a59a3cea3557a92026ce8a6a0cc94b04b}
+Instância da tecnica 
+
+DefiniÃ§Ã£o na linha 17 do arquivo Res\+Op\+Tecnique\+Main.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+Op\+Tecnique\+Main.\+h}\end{DoxyCompactItemize}

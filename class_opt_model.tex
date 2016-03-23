@@ -1,0 +1,314 @@
+\section{Refer√™ncia da Classe Opt\+Model}
+\label{class_opt_model}\index{Opt\+Model@{Opt\+Model}}
+
+
+{\ttfamily \#include $<$Opt\+Model.\+h$>$}
+
+
+
+Superclasse de {\bf Opt\+C\+N3\+S\+Model}, {\bf Opt\+H\+Y\+M\+O\+D\+Model}, {\bf Opt\+S\+M\+A\+P\+M\+Model} e {\bf Opt\+S\+M\+A\+P\+Model}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Model} ({\bf Date} initial\+Date, {\bf Date} final\+Date, {\bf Node} $\ast${\bf node}, wx\+String {\bf name})
+\item 
+virtual {\bf $\sim$\+Opt\+Model} ()
+\item 
+virtual void {\bf update\+Tree\+Item} ({\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$)=0
+\item 
+int {\bf count\+Checked\+Par} ()
+\item 
+virtual bool {\bf empty} ()=0
+\item 
+virtual bool {\bf check\+Completeness} ({\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$dialog)=0
+\item 
+virtual {\bf Serie} $\ast$ {\bf run} ({\bf Matrix} matrix\+Param)=0
+\item 
+virtual {\bf Matrix} {\bf true\+Parameters} ({\bf Matrix} std\+Par)=0
+\item 
+virtual wx\+String {\bf get\+Name} (int i)=0
+\item 
+virtual wx\+String {\bf get\+Unit} (int i)=0
+\item 
+virtual void {\bf on\+Save\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)=0
+\item 
+virtual void {\bf on\+Load\+Project} ({\bf S\+I\+G\+A\+Project} $\ast$)=0
+\item 
+virtual void {\bf clear} ()=0
+\end{DoxyCompactItemize}
+\subsection*{Atributos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+String {\bf name}
+\item 
+{\bf Interval} {\bf esq\+Interval}
+\item 
+{\bf Interval} {\bf cal\+Interval}
+\item 
+{\bf Interval} {\bf val\+Interval}
+\item 
+bool {\bf option}
+\item 
+{\bf Serie} $\ast$ {\bf s\+Obs}
+\item 
+wx\+String {\bf s\+Obs\+File\+Name}
+\item 
+vector$<$ int $>$ {\bf Checked\+Par}
+\item 
+{\bf Node} $\ast$ {\bf node}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descri√ß√£o Detalhada}
+Cada instancia de modelo eh feita para um nÛ especÌfico 
+
+Defini√ß√£o na linha 29 do arquivo Opt\+Model.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Opt\+Model@{Opt\+Model}!Opt\+Model@{Opt\+Model}}
+\index{Opt\+Model@{Opt\+Model}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{Opt\+Model(\+Date initial\+Date, Date final\+Date, Node $\ast$node, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}Opt\+Model\+::\+Opt\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf Date}}]{initial\+Date, }
+\item[{{\bf Date}}]{final\+Date, }
+\item[{{\bf Node} $\ast$}]{node, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_opt_model_a7f1e80f0bee4c69b96a11a43e868bbfc}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em initial\+Date} & Data inicial \\
+\hline
+{\em final\+Date} & Data final \\
+\hline
+{\em node} & NÛ \\
+\hline
+{\em name} & Nome \\
+\hline
+\end{DoxyParams}
+
+
+Defini√ß√£o na linha 70 do arquivo Opt\+Model.\+h.
+
+\index{Opt\+Model@{Opt\+Model}!````~Opt\+Model@{$\sim$\+Opt\+Model}}
+\index{````~Opt\+Model@{$\sim$\+Opt\+Model}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{$\sim$\+Opt\+Model()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Opt\+Model\+::$\sim$\+Opt\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_opt_model_a07a18f304aa39140c2b259677ff03fb2}
+Destrutor 
+
+Defini√ß√£o na linha 78 do arquivo Opt\+Model.\+h.
+
+
+
+\subsection{M√©todos}
+\index{Opt\+Model@{Opt\+Model}!check\+Completeness@{check\+Completeness}}
+\index{check\+Completeness@{check\+Completeness}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{check\+Completeness(\+S\+I\+G\+A\+Errors\+Dialog $\ast$dialog)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Opt\+Model\+::check\+Completeness (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Errors\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_opt_model_abd2a3e713cfaee563403c4d4227a202e}
+Verifica se todas as informaÁıes est„o preenchidas corretamente 
+
+Implementado por {\bf Opt\+C\+N3\+S\+Model} \doxyref{}{pag.}{class_opt_c_n3_s_model_aefe57085e970b7e05ff8200a87463ccb}, {\bf Opt\+S\+M\+A\+P\+Model} \doxyref{}{pag.}{class_opt_s_m_a_p_model_a2ba738cd760c895a68962e48e261b79a}, {\bf Opt\+S\+M\+A\+P\+M\+Model} \doxyref{}{pag.}{class_opt_s_m_a_p_m_model_a35c46cf34eb44ed15d36b0c995dfbd30} e {\bf Opt\+H\+Y\+M\+O\+D\+Model} \doxyref{}{pag.}{class_opt_h_y_m_o_d_model_a8276726bb4fde6a6ab2e555e81f74caa}.
+
+\index{Opt\+Model@{Opt\+Model}!clear@{clear}}
+\index{clear@{clear}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{clear()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Model\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_opt_model_abff7299deb4bd6e646cc23f1332935f5}
+Limpa os valores e retorna ao estado pÛs-\/construÁ„o 
+
+Implementado por {\bf Opt\+C\+N3\+S\+Model} \doxyref{}{pag.}{class_opt_c_n3_s_model_a10ccea6dc184095244458424b4850c68}, {\bf Opt\+S\+M\+A\+P\+Model} \doxyref{}{pag.}{class_opt_s_m_a_p_model_a5075b1cf187da071783e10c6179c7795}, {\bf Opt\+S\+M\+A\+P\+M\+Model} \doxyref{}{pag.}{class_opt_s_m_a_p_m_model_a4bd2e0633a48fdd8baec3ae900dd5b51} e {\bf Opt\+H\+Y\+M\+O\+D\+Model} \doxyref{}{pag.}{class_opt_h_y_m_o_d_model_a0ab4b245f45dc38b3a3d3e5316b91d0d}.
+
+\index{Opt\+Model@{Opt\+Model}!count\+Checked\+Par@{count\+Checked\+Par}}
+\index{count\+Checked\+Par@{count\+Checked\+Par}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{count\+Checked\+Par()}]{\setlength{\rightskip}{0pt plus 5cm}int Opt\+Model\+::count\+Checked\+Par (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_opt_model_a5acf481f5e10a9858727d59889c8b6e2}
+Retorna a quantidade de parametros marcados 
+
+Defini√ß√£o na linha 91 do arquivo Opt\+Model.\+h.
+
+\index{Opt\+Model@{Opt\+Model}!empty@{empty}}
+\index{empty@{empty}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{empty()=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Opt\+Model\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_opt_model_a54f2f72cc2fdb5d3056bcdd650630879}
+retorna se existe algum valor no modelo 
+
+Implementado por {\bf Opt\+C\+N3\+S\+Model} \doxyref{}{pag.}{class_opt_c_n3_s_model_a4e74bb003872077070d21807b9111702}, {\bf Opt\+S\+M\+A\+P\+Model} \doxyref{}{pag.}{class_opt_s_m_a_p_model_af3b6133b776d2a42dced7a6c96c6dc75}, {\bf Opt\+S\+M\+A\+P\+M\+Model} \doxyref{}{pag.}{class_opt_s_m_a_p_m_model_a6558d4c71602bad531ccee759bb83225} e {\bf Opt\+H\+Y\+M\+O\+D\+Model} \doxyref{}{pag.}{class_opt_h_y_m_o_d_model_ad6e8e013ed5794e4519862319ff201c1}.
+
+\index{Opt\+Model@{Opt\+Model}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{get\+Name(int i)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual wx\+String Opt\+Model\+::get\+Name (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_opt_model_ae003d1d402dfc5883e4bab3504eaa8e6}
+Retorna o nome do parametro 
+
+Implementado por {\bf Opt\+C\+N3\+S\+Model} \doxyref{}{pag.}{class_opt_c_n3_s_model_a6597bdebbb472c761a73f4868e6aa0ca}, {\bf Opt\+S\+M\+A\+P\+Model} \doxyref{}{pag.}{class_opt_s_m_a_p_model_a1f8a97ecb4882d94f2b86d66159d9fcc}, {\bf Opt\+S\+M\+A\+P\+M\+Model} \doxyref{}{pag.}{class_opt_s_m_a_p_m_model_a6a9f1826b6c10182d43c82203c9d80df} e {\bf Opt\+H\+Y\+M\+O\+D\+Model} \doxyref{}{pag.}{class_opt_h_y_m_o_d_model_a54f5017d7f1cd92f0bed569ba9dabc5c}.
+
+\index{Opt\+Model@{Opt\+Model}!get\+Unit@{get\+Unit}}
+\index{get\+Unit@{get\+Unit}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{get\+Unit(int i)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual wx\+String Opt\+Model\+::get\+Unit (
+\begin{DoxyParamCaption}
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_opt_model_acc0d0aadf9834d93aadda4ac1f3cebf5}
+Retorna a unidade do parametro 
+
+Implementado por {\bf Opt\+C\+N3\+S\+Model} \doxyref{}{pag.}{class_opt_c_n3_s_model_a0cdb71b78799cd04d830fa83eb925d28}, {\bf Opt\+S\+M\+A\+P\+Model} \doxyref{}{pag.}{class_opt_s_m_a_p_model_a2d9effd1d5d7d24f7a6666ba9edf2ce7}, {\bf Opt\+S\+M\+A\+P\+M\+Model} \doxyref{}{pag.}{class_opt_s_m_a_p_m_model_a9e4975dffd72eef6777bfdea4594364b} e {\bf Opt\+H\+Y\+M\+O\+D\+Model} \doxyref{}{pag.}{class_opt_h_y_m_o_d_model_a025d57ab850ea271cc72642819a2b04a}.
+
+\index{Opt\+Model@{Opt\+Model}!on\+Load\+Project@{on\+Load\+Project}}
+\index{on\+Load\+Project@{on\+Load\+Project}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{on\+Load\+Project(\+S\+I\+G\+A\+Project $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Model\+::on\+Load\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_opt_model_a6240f3f81b50ccdfdf6f35d4ae6f659b}
+Evento chamado pelo usuario para abrir um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Opt\+C\+N3\+S\+Model} \doxyref{}{pag.}{class_opt_c_n3_s_model_af974462c84f9678e91817f851565fbf1}, {\bf Opt\+S\+M\+A\+P\+Model} \doxyref{}{pag.}{class_opt_s_m_a_p_model_aee620b46c1a8869346037116a86534e3}, {\bf Opt\+S\+M\+A\+P\+M\+Model} \doxyref{}{pag.}{class_opt_s_m_a_p_m_model_a32a10c1c55aed7d7e4a0e48ada23e39f} e {\bf Opt\+H\+Y\+M\+O\+D\+Model} \doxyref{}{pag.}{class_opt_h_y_m_o_d_model_a8016ccda1da83a8b07b8a2f4c6d12a26}.
+
+\index{Opt\+Model@{Opt\+Model}!on\+Save\+Project@{on\+Save\+Project}}
+\index{on\+Save\+Project@{on\+Save\+Project}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{on\+Save\+Project(\+S\+I\+G\+A\+Project $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Model\+::on\+Save\+Project (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Project} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_opt_model_aebc12b925e33853242513a3c769a5e37}
+Evento chamado pelo usuario para salvar um projeto 
+\begin{DoxyParams}{Par√¢metros}
+{\em \doxyref{S\+I\+G\+A\+Project}{pag.}{class_s_i_g_a_project}} & ponteiro para a estrutura do modelo \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Opt\+C\+N3\+S\+Model} \doxyref{}{pag.}{class_opt_c_n3_s_model_a4ea83f47c93250a37eda29a89c992eab}, {\bf Opt\+S\+M\+A\+P\+Model} \doxyref{}{pag.}{class_opt_s_m_a_p_model_a81820c8e8bfb8983e15e0125639018fd}, {\bf Opt\+S\+M\+A\+P\+M\+Model} \doxyref{}{pag.}{class_opt_s_m_a_p_m_model_a0d08ccda690d9ee1b29fa259bd66d42a} e {\bf Opt\+H\+Y\+M\+O\+D\+Model} \doxyref{}{pag.}{class_opt_h_y_m_o_d_model_aa17926a2452e621af5c973b238c46bc6}.
+
+\index{Opt\+Model@{Opt\+Model}!run@{run}}
+\index{run@{run}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{run(\+Matrix matrix\+Param)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Serie}$\ast$ Opt\+Model\+::run (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{matrix\+Param}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_opt_model_a26c9b4e527c19ff213fc79c12ef28a6f}
+Ececuta \begin{DoxyReturn}{Retorna}
+Retorna a serie de resultados 
+\end{DoxyReturn}
+
+
+Implementado por {\bf Opt\+C\+N3\+S\+Model} \doxyref{}{pag.}{class_opt_c_n3_s_model_a85ba42efe54083011c9b323dbda3f7fc}, {\bf Opt\+S\+M\+A\+P\+Model} \doxyref{}{pag.}{class_opt_s_m_a_p_model_a86f633598a7b02591e8c7499e93298cb}, {\bf Opt\+S\+M\+A\+P\+M\+Model} \doxyref{}{pag.}{class_opt_s_m_a_p_m_model_a6a759f7ad1afc1e443b0f606fbd89991} e {\bf Opt\+H\+Y\+M\+O\+D\+Model} \doxyref{}{pag.}{class_opt_h_y_m_o_d_model_a24c5bcfdd95a8a790dab27f12efa9178}.
+
+\index{Opt\+Model@{Opt\+Model}!true\+Parameters@{true\+Parameters}}
+\index{true\+Parameters@{true\+Parameters}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{true\+Parameters(\+Matrix std\+Par)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Matrix} Opt\+Model\+::true\+Parameters (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{std\+Par}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_opt_model_a272f11431b12be58877e02eaf1e1e823}
+Retorna a matrix com valor de parametros verdadeiros 
+
+Implementado por {\bf Opt\+C\+N3\+S\+Model} \doxyref{}{pag.}{class_opt_c_n3_s_model_ab8945d8dd1bae9de8c2c135a0fddbf93}, {\bf Opt\+S\+M\+A\+P\+Model} \doxyref{}{pag.}{class_opt_s_m_a_p_model_acac90d8f87d6bf618c25e69c591ad8e5}, {\bf Opt\+S\+M\+A\+P\+M\+Model} \doxyref{}{pag.}{class_opt_s_m_a_p_m_model_a2635e2dba67a24e87b334822d252cd60} e {\bf Opt\+H\+Y\+M\+O\+D\+Model} \doxyref{}{pag.}{class_opt_h_y_m_o_d_model_a647df95562b34139b66d5922863aaa8c}.
+
+\index{Opt\+Model@{Opt\+Model}!update\+Tree\+Item@{update\+Tree\+Item}}
+\index{update\+Tree\+Item@{update\+Tree\+Item}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{update\+Tree\+Item(\+S\+I\+G\+A\+Tree\+Ctrl $\ast$)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Model\+::update\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_opt_model_a5660656d37a90a2e8942451b513244fd}
+Atualiza os ponteiros das suas series no Tree\+Ctrl de integraÁ„o 
+
+Implementado por {\bf Opt\+C\+N3\+S\+Model} \doxyref{}{pag.}{class_opt_c_n3_s_model_a7d7ddf5a190994983ddbd1dfe2da6ce5}, {\bf Opt\+S\+M\+A\+P\+Model} \doxyref{}{pag.}{class_opt_s_m_a_p_model_a0d469006621b83f2f97ae2ed479a6426}, {\bf Opt\+S\+M\+A\+P\+M\+Model} \doxyref{}{pag.}{class_opt_s_m_a_p_m_model_ae0b12a00263b02fbc5d7974ec5acf80d} e {\bf Opt\+H\+Y\+M\+O\+D\+Model} \doxyref{}{pag.}{class_opt_h_y_m_o_d_model_ab8cd19a2ef1d0131de48530f60f83793}.
+
+
+
+\subsection{Atributos}
+\index{Opt\+Model@{Opt\+Model}!cal\+Interval@{cal\+Interval}}
+\index{cal\+Interval@{cal\+Interval}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{cal\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Opt\+Model\+::cal\+Interval}\label{class_opt_model_aac5b241a7abb2b39882b19180c147588}
+
+
+Defini√ß√£o na linha 38 do arquivo Opt\+Model.\+h.
+
+\index{Opt\+Model@{Opt\+Model}!Checked\+Par@{Checked\+Par}}
+\index{Checked\+Par@{Checked\+Par}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{Checked\+Par}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$ Opt\+Model\+::\+Checked\+Par}\label{class_opt_model_a26e26ebbc066ddd2617c31232a626ca2}
+Vetor seleÁ„o dos par‚metros a serem calibrados 
+
+Defini√ß√£o na linha 57 do arquivo Opt\+Model.\+h.
+
+\index{Opt\+Model@{Opt\+Model}!esq\+Interval@{esq\+Interval}}
+\index{esq\+Interval@{esq\+Interval}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{esq\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Opt\+Model\+::esq\+Interval}\label{class_opt_model_acc3ac5db1a1c8663c53830343e540f4f}
+Intervalo de tempo para esquentamento, calibraÁ„o e validaÁ„o 
+
+Defini√ß√£o na linha 38 do arquivo Opt\+Model.\+h.
+
+\index{Opt\+Model@{Opt\+Model}!name@{name}}
+\index{name@{name}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Opt\+Model\+::name}\label{class_opt_model_a8c7295eb52b028950d558240380636ee}
+Nome do modelo 
+
+Defini√ß√£o na linha 34 do arquivo Opt\+Model.\+h.
+
+\index{Opt\+Model@{Opt\+Model}!node@{node}}
+\index{node@{node}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ Opt\+Model\+::node}\label{class_opt_model_a61df8b57bc9479c3874a9a7f23c059f5}
+NÛ de interesse 
+
+Defini√ß√£o na linha 62 do arquivo Opt\+Model.\+h.
+
+\index{Opt\+Model@{Opt\+Model}!option@{option}}
+\index{option@{option}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{option}]{\setlength{\rightskip}{0pt plus 5cm}bool Opt\+Model\+::option}\label{class_opt_model_aebf84eccf3b65334a9880823a4c3b227}
+CalibraÁ„o (true) ou validaÁ„o (false) 
+
+Defini√ß√£o na linha 43 do arquivo Opt\+Model.\+h.
+
+\index{Opt\+Model@{Opt\+Model}!s\+Obs@{s\+Obs}}
+\index{s\+Obs@{s\+Obs}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{s\+Obs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ Opt\+Model\+::s\+Obs}\label{class_opt_model_ade890e4decb44b239f2186325d33f915}
+SÈrie Observada 
+
+Defini√ß√£o na linha 48 do arquivo Opt\+Model.\+h.
+
+\index{Opt\+Model@{Opt\+Model}!s\+Obs\+File\+Name@{s\+Obs\+File\+Name}}
+\index{s\+Obs\+File\+Name@{s\+Obs\+File\+Name}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{s\+Obs\+File\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Opt\+Model\+::s\+Obs\+File\+Name}\label{class_opt_model_a94eaeb935847c98cd87140a295d71f1a}
+Nome do arquivo de sÈrie observada 
+
+Defini√ß√£o na linha 52 do arquivo Opt\+Model.\+h.
+
+\index{Opt\+Model@{Opt\+Model}!val\+Interval@{val\+Interval}}
+\index{val\+Interval@{val\+Interval}!Opt\+Model@{Opt\+Model}}
+\subsubsection[{val\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Interval} Opt\+Model\+::val\+Interval}\label{class_opt_model_aafe7c97ef0d2581692194aa3b9d96342}
+
+
+Defini√ß√£o na linha 38 do arquivo Opt\+Model.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Model.\+h}\end{DoxyCompactItemize}

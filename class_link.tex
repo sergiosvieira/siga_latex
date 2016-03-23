@@ -1,0 +1,434 @@
+\section{Referência da Classe Link}
+\label{class_link}\index{Link@{Link}}
+
+
+{\ttfamily \#include $<$Link.\+h$>$}
+
+
+
+Herdeiro de {\bf Element}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf is\+Artificial} ()
+\item 
+void {\bf set\+Artificial} (bool value)
+\item 
+bool {\bf is\+Bidirectional} ()
+\item 
+void {\bf set\+Bidirectional} (bool value)
+\item 
+bool {\bf is\+Trapezoid} ()
+\item 
+void {\bf set\+Trapezoid} (bool value)
+\item 
+bool {\bf has\+Lateral\+Inflow} ()
+\item 
+void {\bf set\+Lateral\+Inflow} (bool value)
+\item 
+double {\bf length} ()
+\item 
+void {\bf set\+Length} (double value)
+\item 
+double {\bf depth} ()
+\item 
+void {\bf set\+Depth} (double value)
+\item 
+double {\bf div\+Point\+Longitude} ()
+\item 
+double {\bf div\+Point\+Latitude} ()
+\item 
+bool {\bf has\+Div\+Point} ()
+\item 
+void {\bf remove\+Div\+Point} ()
+\item 
+void {\bf set\+Div\+Point} (double longitude, double latitude)
+\item 
+{\bf Node} \& {\bf node\+Origin} ()
+\item 
+{\bf Node} \& {\bf node\+Destiny} ()
+\item 
+{\bf Link\+Type} {\bf type} ()
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Link} ({\bf Element\+ID} {\bf id}, std\+::string {\bf name}, {\bf Node} \&node\+\_\+origin, {\bf Node} \&node\+\_\+destiny, {\bf Link\+Type} {\bf type}={\bf Link\+Type\+::\+Default}, bool bidirectional=false, bool lateralinflow=false, bool trapezoidal=false, bool artificial=false)
+\item 
+virtual {\bf $\sim$\+Link} ()
+\item 
+bool {\bf set\+Type} ({\bf Link\+Type} {\bf type})
+\item 
+bool {\bf set\+Nodes} ({\bf Node} \&node\+\_\+origin, {\bf Node} \&node\+\_\+destiny)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf m\+\_\+artificial}
+\begin{DoxyCompactList}\small\item\em indicate that the link is or not artificial \end{DoxyCompactList}\item 
+bool {\bf m\+\_\+lateral\+\_\+inflow}
+\begin{DoxyCompactList}\small\item\em link releases lateral inflow \end{DoxyCompactList}\item 
+bool {\bf m\+\_\+trapezoid}
+\begin{DoxyCompactList}\small\item\em link has a trapezoid shape \end{DoxyCompactList}\item 
+{\bf Link\+Type} {\bf m\+\_\+type}
+\begin{DoxyCompactList}\small\item\em type \end{DoxyCompactList}\item 
+bool {\bf m\+\_\+bidirectional}
+\begin{DoxyCompactList}\small\item\em indicate that the link is bidirectional or not \end{DoxyCompactList}\item 
+bool {\bf m\+\_\+has\+\_\+div\+\_\+point}
+\item 
+double {\bf m\+\_\+div\+\_\+point\+\_\+latitude}
+\item 
+double {\bf m\+\_\+div\+\_\+point\+\_\+longitude}
+\item 
+double {\bf m\+\_\+length}
+\begin{DoxyCompactList}\small\item\em size of link \end{DoxyCompactList}\item 
+double {\bf m\+\_\+depth}
+\begin{DoxyCompactList}\small\item\em depth of link \end{DoxyCompactList}\item 
+{\bf Node} $\ast$ {\bf m\+\_\+node\+\_\+origin}
+\begin{DoxyCompactList}\small\item\em origin node; \end{DoxyCompactList}\item 
+{\bf Node} $\ast$ {\bf m\+\_\+node\+\_\+destiny}
+\begin{DoxyCompactList}\small\item\em destiny node \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Network\+Link\+Handler}
+\item 
+class {\bf Network\+Node\+Handler}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 10 do arquivo Link.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Link@{Link}!Link@{Link}}
+\index{Link@{Link}!Link@{Link}}
+\subsubsection[{Link(\+Element\+I\+D id, std\+::string name, Node \&node\+\_\+origin, Node \&node\+\_\+destiny, Link\+Type type=\+Link\+Type\+::\+Default, bool bidirectional=false, bool lateralinflow=false, bool trapezoidal=false, bool artificial=false)}]{\setlength{\rightskip}{0pt plus 5cm}Link\+::\+Link (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{std\+::string}]{name, }
+\item[{{\bf Node} \&}]{node\+\_\+origin, }
+\item[{{\bf Node} \&}]{node\+\_\+destiny, }
+\item[{{\bf Link\+Type}}]{type = {\ttfamily {\bf Link\+Type\+::\+Default}}, }
+\item[{bool}]{bidirectional = {\ttfamily false}, }
+\item[{bool}]{lateralinflow = {\ttfamily false}, }
+\item[{bool}]{trapezoidal = {\ttfamily false}, }
+\item[{bool}]{artificial = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_link_a2c122700b2b81abec4687dab5e2cfb33}
+\index{Link@{Link}!````~Link@{$\sim$\+Link}}
+\index{````~Link@{$\sim$\+Link}!Link@{Link}}
+\subsubsection[{$\sim$\+Link()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Link\+::$\sim$\+Link (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}\label{class_link_a0eb3b488dc57006d2b0af69ea45c80f0}
+
+
+\subsection{Métodos}
+\index{Link@{Link}!depth@{depth}}
+\index{depth@{depth}!Link@{Link}}
+\subsubsection[{depth()}]{\setlength{\rightskip}{0pt plus 5cm}double Link\+::depth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_link_ac94b87708a0a7670bd563858c1570ced}
+\index{Link@{Link}!div\+Point\+Latitude@{div\+Point\+Latitude}}
+\index{div\+Point\+Latitude@{div\+Point\+Latitude}!Link@{Link}}
+\subsubsection[{div\+Point\+Latitude()}]{\setlength{\rightskip}{0pt plus 5cm}double Link\+::div\+Point\+Latitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_link_a547658c882b1c7dc7f4c76aa203ccf0f}
+\index{Link@{Link}!div\+Point\+Longitude@{div\+Point\+Longitude}}
+\index{div\+Point\+Longitude@{div\+Point\+Longitude}!Link@{Link}}
+\subsubsection[{div\+Point\+Longitude()}]{\setlength{\rightskip}{0pt plus 5cm}double Link\+::div\+Point\+Longitude (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_link_a4de8e6628c130585878d546f4a172c96}
+\index{Link@{Link}!has\+Div\+Point@{has\+Div\+Point}}
+\index{has\+Div\+Point@{has\+Div\+Point}!Link@{Link}}
+\subsubsection[{has\+Div\+Point()}]{\setlength{\rightskip}{0pt plus 5cm}bool Link\+::has\+Div\+Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_link_a67c9178ea410d0cf3401ab934fcc468e}
+\index{Link@{Link}!has\+Lateral\+Inflow@{has\+Lateral\+Inflow}}
+\index{has\+Lateral\+Inflow@{has\+Lateral\+Inflow}!Link@{Link}}
+\subsubsection[{has\+Lateral\+Inflow()}]{\setlength{\rightskip}{0pt plus 5cm}bool Link\+::has\+Lateral\+Inflow (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_link_a9cea402db701a4f6087b810d892e69d6}
+\index{Link@{Link}!is\+Artificial@{is\+Artificial}}
+\index{is\+Artificial@{is\+Artificial}!Link@{Link}}
+\subsubsection[{is\+Artificial()}]{\setlength{\rightskip}{0pt plus 5cm}bool Link\+::is\+Artificial (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_link_ae7a999ab2c51152cee4814bcbc32e627}
+\index{Link@{Link}!is\+Bidirectional@{is\+Bidirectional}}
+\index{is\+Bidirectional@{is\+Bidirectional}!Link@{Link}}
+\subsubsection[{is\+Bidirectional()}]{\setlength{\rightskip}{0pt plus 5cm}bool Link\+::is\+Bidirectional (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_link_a16612e3354e68d94986a6398d0763949}
+\index{Link@{Link}!is\+Trapezoid@{is\+Trapezoid}}
+\index{is\+Trapezoid@{is\+Trapezoid}!Link@{Link}}
+\subsubsection[{is\+Trapezoid()}]{\setlength{\rightskip}{0pt plus 5cm}bool Link\+::is\+Trapezoid (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_link_a879755bb544bcb253e28aa5deb2d7ffd}
+\index{Link@{Link}!length@{length}}
+\index{length@{length}!Link@{Link}}
+\subsubsection[{length()}]{\setlength{\rightskip}{0pt plus 5cm}double Link\+::length (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_link_ac7f134c2f74ebea05000650b929c8aff}
+\index{Link@{Link}!node\+Destiny@{node\+Destiny}}
+\index{node\+Destiny@{node\+Destiny}!Link@{Link}}
+\subsubsection[{node\+Destiny()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}\& Link\+::node\+Destiny (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_link_a1714b805ca40ba6e137d2c82466c1fca}
+\index{Link@{Link}!node\+Origin@{node\+Origin}}
+\index{node\+Origin@{node\+Origin}!Link@{Link}}
+\subsubsection[{node\+Origin()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}\& Link\+::node\+Origin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_link_a4d4cd9e3a72d9af1b6f5cbb2506e5cb1}
+\index{Link@{Link}!remove\+Div\+Point@{remove\+Div\+Point}}
+\index{remove\+Div\+Point@{remove\+Div\+Point}!Link@{Link}}
+\subsubsection[{remove\+Div\+Point()}]{\setlength{\rightskip}{0pt plus 5cm}void Link\+::remove\+Div\+Point (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_link_a2ad12356d0ed615a90a081b1f5b086fa}
+\index{Link@{Link}!set\+Artificial@{set\+Artificial}}
+\index{set\+Artificial@{set\+Artificial}!Link@{Link}}
+\subsubsection[{set\+Artificial(bool value)}]{\setlength{\rightskip}{0pt plus 5cm}void Link\+::set\+Artificial (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\label{class_link_af42484ef1db118450af15733fdcca5da}
+\index{Link@{Link}!set\+Bidirectional@{set\+Bidirectional}}
+\index{set\+Bidirectional@{set\+Bidirectional}!Link@{Link}}
+\subsubsection[{set\+Bidirectional(bool value)}]{\setlength{\rightskip}{0pt plus 5cm}void Link\+::set\+Bidirectional (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\label{class_link_a6eb2cca6a3e5387f6894402e184dc892}
+\index{Link@{Link}!set\+Depth@{set\+Depth}}
+\index{set\+Depth@{set\+Depth}!Link@{Link}}
+\subsubsection[{set\+Depth(double value)}]{\setlength{\rightskip}{0pt plus 5cm}void Link\+::set\+Depth (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_link_a4bf3458d38c1f17bc7779484435c824f}
+\index{Link@{Link}!set\+Div\+Point@{set\+Div\+Point}}
+\index{set\+Div\+Point@{set\+Div\+Point}!Link@{Link}}
+\subsubsection[{set\+Div\+Point(double longitude, double latitude)}]{\setlength{\rightskip}{0pt plus 5cm}void Link\+::set\+Div\+Point (
+\begin{DoxyParamCaption}
+\item[{double}]{longitude, }
+\item[{double}]{latitude}
+\end{DoxyParamCaption}
+)}\label{class_link_a11090e1e85abb8d9055178efc2029f4f}
+\index{Link@{Link}!set\+Lateral\+Inflow@{set\+Lateral\+Inflow}}
+\index{set\+Lateral\+Inflow@{set\+Lateral\+Inflow}!Link@{Link}}
+\subsubsection[{set\+Lateral\+Inflow(bool value)}]{\setlength{\rightskip}{0pt plus 5cm}void Link\+::set\+Lateral\+Inflow (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\label{class_link_ae09fb05aeaf110953ed90bd84edd8653}
+\index{Link@{Link}!set\+Length@{set\+Length}}
+\index{set\+Length@{set\+Length}!Link@{Link}}
+\subsubsection[{set\+Length(double value)}]{\setlength{\rightskip}{0pt plus 5cm}void Link\+::set\+Length (
+\begin{DoxyParamCaption}
+\item[{double}]{value}
+\end{DoxyParamCaption}
+)}\label{class_link_a151f22f0f5a54c16f848c51c28bb9f1b}
+\index{Link@{Link}!set\+Nodes@{set\+Nodes}}
+\index{set\+Nodes@{set\+Nodes}!Link@{Link}}
+\subsubsection[{set\+Nodes(\+Node \&node\+\_\+origin, Node \&node\+\_\+destiny)}]{\setlength{\rightskip}{0pt plus 5cm}bool Link\+::set\+Nodes (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} \&}]{node\+\_\+origin, }
+\item[{{\bf Node} \&}]{node\+\_\+destiny}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_link_a2b767d54a50f007fa08b7120c40e0a4b}
+\index{Link@{Link}!set\+Trapezoid@{set\+Trapezoid}}
+\index{set\+Trapezoid@{set\+Trapezoid}!Link@{Link}}
+\subsubsection[{set\+Trapezoid(bool value)}]{\setlength{\rightskip}{0pt plus 5cm}void Link\+::set\+Trapezoid (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}\label{class_link_a9c3508337b27add352dc25fac47db25b}
+\index{Link@{Link}!set\+Type@{set\+Type}}
+\index{set\+Type@{set\+Type}!Link@{Link}}
+\subsubsection[{set\+Type(\+Link\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}bool Link\+::set\+Type (
+\begin{DoxyParamCaption}
+\item[{{\bf Link\+Type}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_link_abe4d47e2118909dc9c3f6c3d186b049d}
+\index{Link@{Link}!type@{type}}
+\index{type@{type}!Link@{Link}}
+\subsubsection[{type()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Link\+Type} Link\+::type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_link_a6386061aa8b7f2741de3f24d9bdd806e}
+
+
+\subsection{Amigas e Funções Relacionadas}
+\index{Link@{Link}!Network\+Link\+Handler@{Network\+Link\+Handler}}
+\index{Network\+Link\+Handler@{Network\+Link\+Handler}!Link@{Link}}
+\subsubsection[{Network\+Link\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Network\+Link\+Handler}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_link_ad10bb4cf449fbd24a72dc991deb40d8e}
+
+
+Definição na linha 11 do arquivo Link.\+h.
+
+\index{Link@{Link}!Network\+Node\+Handler@{Network\+Node\+Handler}}
+\index{Network\+Node\+Handler@{Network\+Node\+Handler}!Link@{Link}}
+\subsubsection[{Network\+Node\+Handler}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Network\+Node\+Handler}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_link_acf998ac28c182cdd9130fe947302a1ff}
+
+
+Definição na linha 12 do arquivo Link.\+h.
+
+
+
+\subsection{Atributos}
+\index{Link@{Link}!m\+\_\+artificial@{m\+\_\+artificial}}
+\index{m\+\_\+artificial@{m\+\_\+artificial}!Link@{Link}}
+\subsubsection[{m\+\_\+artificial}]{\setlength{\rightskip}{0pt plus 5cm}bool Link\+::m\+\_\+artificial\hspace{0.3cm}{\ttfamily [protected]}}\label{class_link_a4f3ac8ffe2733a7a37fe75905eaf2bf9}
+
+
+indicate that the link is or not artificial 
+
+
+
+Definição na linha 63 do arquivo Link.\+h.
+
+\index{Link@{Link}!m\+\_\+bidirectional@{m\+\_\+bidirectional}}
+\index{m\+\_\+bidirectional@{m\+\_\+bidirectional}!Link@{Link}}
+\subsubsection[{m\+\_\+bidirectional}]{\setlength{\rightskip}{0pt plus 5cm}bool Link\+::m\+\_\+bidirectional\hspace{0.3cm}{\ttfamily [protected]}}\label{class_link_a2bd9a394784e7eb7759b144f19953cef}
+
+
+indicate that the link is bidirectional or not 
+
+
+
+Definição na linha 69 do arquivo Link.\+h.
+
+\index{Link@{Link}!m\+\_\+depth@{m\+\_\+depth}}
+\index{m\+\_\+depth@{m\+\_\+depth}!Link@{Link}}
+\subsubsection[{m\+\_\+depth}]{\setlength{\rightskip}{0pt plus 5cm}double Link\+::m\+\_\+depth\hspace{0.3cm}{\ttfamily [protected]}}\label{class_link_a521ae4140f7b10c40f69f5895f48a62c}
+
+
+depth of link 
+
+
+
+Definição na linha 77 do arquivo Link.\+h.
+
+\index{Link@{Link}!m\+\_\+div\+\_\+point\+\_\+latitude@{m\+\_\+div\+\_\+point\+\_\+latitude}}
+\index{m\+\_\+div\+\_\+point\+\_\+latitude@{m\+\_\+div\+\_\+point\+\_\+latitude}!Link@{Link}}
+\subsubsection[{m\+\_\+div\+\_\+point\+\_\+latitude}]{\setlength{\rightskip}{0pt plus 5cm}double Link\+::m\+\_\+div\+\_\+point\+\_\+latitude\hspace{0.3cm}{\ttfamily [protected]}}\label{class_link_a0727d1e8c7e0ef0d4ceddd7799605ed0}
+
+
+Definição na linha 73 do arquivo Link.\+h.
+
+\index{Link@{Link}!m\+\_\+div\+\_\+point\+\_\+longitude@{m\+\_\+div\+\_\+point\+\_\+longitude}}
+\index{m\+\_\+div\+\_\+point\+\_\+longitude@{m\+\_\+div\+\_\+point\+\_\+longitude}!Link@{Link}}
+\subsubsection[{m\+\_\+div\+\_\+point\+\_\+longitude}]{\setlength{\rightskip}{0pt plus 5cm}double Link\+::m\+\_\+div\+\_\+point\+\_\+longitude\hspace{0.3cm}{\ttfamily [protected]}}\label{class_link_a609c3e894af74682573dbc1e12592e68}
+
+
+Definição na linha 74 do arquivo Link.\+h.
+
+\index{Link@{Link}!m\+\_\+has\+\_\+div\+\_\+point@{m\+\_\+has\+\_\+div\+\_\+point}}
+\index{m\+\_\+has\+\_\+div\+\_\+point@{m\+\_\+has\+\_\+div\+\_\+point}!Link@{Link}}
+\subsubsection[{m\+\_\+has\+\_\+div\+\_\+point}]{\setlength{\rightskip}{0pt plus 5cm}bool Link\+::m\+\_\+has\+\_\+div\+\_\+point\hspace{0.3cm}{\ttfamily [protected]}}\label{class_link_a88194c2ee75fc8a2fef1bf9fbe0d8cab}
+
+
+Definição na linha 71 do arquivo Link.\+h.
+
+\index{Link@{Link}!m\+\_\+lateral\+\_\+inflow@{m\+\_\+lateral\+\_\+inflow}}
+\index{m\+\_\+lateral\+\_\+inflow@{m\+\_\+lateral\+\_\+inflow}!Link@{Link}}
+\subsubsection[{m\+\_\+lateral\+\_\+inflow}]{\setlength{\rightskip}{0pt plus 5cm}bool Link\+::m\+\_\+lateral\+\_\+inflow\hspace{0.3cm}{\ttfamily [protected]}}\label{class_link_a32e0daf870debba80ca149012dcaa84e}
+
+
+link releases lateral inflow 
+
+
+
+Definição na linha 64 do arquivo Link.\+h.
+
+\index{Link@{Link}!m\+\_\+length@{m\+\_\+length}}
+\index{m\+\_\+length@{m\+\_\+length}!Link@{Link}}
+\subsubsection[{m\+\_\+length}]{\setlength{\rightskip}{0pt plus 5cm}double Link\+::m\+\_\+length\hspace{0.3cm}{\ttfamily [protected]}}\label{class_link_a57c501355ec7c05dc11d273702e58183}
+
+
+size of link 
+
+
+
+Definição na linha 76 do arquivo Link.\+h.
+
+\index{Link@{Link}!m\+\_\+node\+\_\+destiny@{m\+\_\+node\+\_\+destiny}}
+\index{m\+\_\+node\+\_\+destiny@{m\+\_\+node\+\_\+destiny}!Link@{Link}}
+\subsubsection[{m\+\_\+node\+\_\+destiny}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ Link\+::m\+\_\+node\+\_\+destiny\hspace{0.3cm}{\ttfamily [protected]}}\label{class_link_a0c4934134bba0faa12b8a4bd7eec334a}
+
+
+destiny node 
+
+
+
+Definição na linha 80 do arquivo Link.\+h.
+
+\index{Link@{Link}!m\+\_\+node\+\_\+origin@{m\+\_\+node\+\_\+origin}}
+\index{m\+\_\+node\+\_\+origin@{m\+\_\+node\+\_\+origin}!Link@{Link}}
+\subsubsection[{m\+\_\+node\+\_\+origin}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Node}$\ast$ Link\+::m\+\_\+node\+\_\+origin\hspace{0.3cm}{\ttfamily [protected]}}\label{class_link_a910d7a7da9e38e108eab3d5764b7f601}
+
+
+origin node; 
+
+
+
+Definição na linha 79 do arquivo Link.\+h.
+
+\index{Link@{Link}!m\+\_\+trapezoid@{m\+\_\+trapezoid}}
+\index{m\+\_\+trapezoid@{m\+\_\+trapezoid}!Link@{Link}}
+\subsubsection[{m\+\_\+trapezoid}]{\setlength{\rightskip}{0pt plus 5cm}bool Link\+::m\+\_\+trapezoid\hspace{0.3cm}{\ttfamily [protected]}}\label{class_link_ac5e7eab8da0db8f5054ca51fbfaa6420}
+
+
+link has a trapezoid shape 
+
+
+
+Definição na linha 65 do arquivo Link.\+h.
+
+\index{Link@{Link}!m\+\_\+type@{m\+\_\+type}}
+\index{m\+\_\+type@{m\+\_\+type}!Link@{Link}}
+\subsubsection[{m\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Link\+Type} Link\+::m\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_link_a721817097269ad74f7e1c5c9ce1bd192}
+
+
+type 
+
+
+
+Definição na linha 67 do arquivo Link.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Link.\+h}\end{DoxyCompactItemize}

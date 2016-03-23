@@ -1,0 +1,151 @@
+\section{ReferÃªncia da Classe Fatoration\+QR}
+\label{class_fatoration_q_r}\index{Fatoration\+QR@{Fatoration\+QR}}
+
+
+{\ttfamily \#include $<$Fatoration\+Q\+R.\+h$>$}
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Fatoration\+QR} ({\bf Matrix} A={\bf Matrix}(0, 0))
+\item 
+{\bf $\sim$\+Fatoration\+QR} ()
+\item 
+void {\bf dcmp\+QR} ({\bf Matrix} A)
+\item 
+vector$<$ double $>$ {\bf solve\+QR} (vector$<$ double $>$ b)
+\item 
+vector$<$ double $>$ {\bf Backsubstitution} (vector$<$ double $>$ b)
+\item 
+double {\bf norm} (vector$<$ double $>$ b)
+\item 
+{\bf Matrix} {\bf getQ} ()
+\item 
+void {\bf setQ} ({\bf Matrix} q)
+\item 
+{\bf Matrix} {\bf getR} ()
+\item 
+void {\bf setR} ({\bf Matrix} r)
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 13 do arquivo Fatoration\+Q\+R.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Fatoration\+QR@{Fatoration\+QR}!Fatoration\+QR@{Fatoration\+QR}}
+\index{Fatoration\+QR@{Fatoration\+QR}!Fatoration\+QR@{Fatoration\+QR}}
+\subsubsection[{Fatoration\+Q\+R(\+Matrix A=\+Matrix(0, 0))}]{\setlength{\rightskip}{0pt plus 5cm}Fatoration\+Q\+R\+::\+Fatoration\+QR (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{A = {\ttfamily {\bf Matrix}(0,~0)}}
+\end{DoxyParamCaption}
+)}\label{class_fatoration_q_r_add0cfcdcff255f3c4c1c145c05eac623}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em A} & Matriz para decomposição \\
+\hline
+\end{DoxyParams}
+\index{Fatoration\+QR@{Fatoration\+QR}!````~Fatoration\+QR@{$\sim$\+Fatoration\+QR}}
+\index{````~Fatoration\+QR@{$\sim$\+Fatoration\+QR}!Fatoration\+QR@{Fatoration\+QR}}
+\subsubsection[{$\sim$\+Fatoration\+Q\+R()}]{\setlength{\rightskip}{0pt plus 5cm}Fatoration\+Q\+R\+::$\sim$\+Fatoration\+QR (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_fatoration_q_r_a1980bac10aad345940cf32c7969aaddc}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{Fatoration\+QR@{Fatoration\+QR}!Backsubstitution@{Backsubstitution}}
+\index{Backsubstitution@{Backsubstitution}!Fatoration\+QR@{Fatoration\+QR}}
+\subsubsection[{Backsubstitution(vector$<$ double $>$ b)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ Fatoration\+Q\+R\+::\+Backsubstitution (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{b}
+\end{DoxyParamCaption}
+)}\label{class_fatoration_q_r_ac9cecef606c4f10dabd5fd9f06e6d001}
+Algoritimo Backsubstitution para resolver equações lineares do tipo R . x = b, com R sendo triangulo superior \index{Fatoration\+QR@{Fatoration\+QR}!dcmp\+QR@{dcmp\+QR}}
+\index{dcmp\+QR@{dcmp\+QR}!Fatoration\+QR@{Fatoration\+QR}}
+\subsubsection[{dcmp\+Q\+R(\+Matrix A)}]{\setlength{\rightskip}{0pt plus 5cm}void Fatoration\+Q\+R\+::dcmp\+QR (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{A}
+\end{DoxyParamCaption}
+)}\label{class_fatoration_q_r_a9b888bcaa8709a4dc68ce3a29189bf81}
+Efetua a decomposição de A(m,n) = Q(m,m) x R(m,n) 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em A} & Matriz para fatoração \\
+\hline
+\end{DoxyParams}
+\index{Fatoration\+QR@{Fatoration\+QR}!getQ@{getQ}}
+\index{getQ@{getQ}!Fatoration\+QR@{Fatoration\+QR}}
+\subsubsection[{get\+Q()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Fatoration\+Q\+R\+::getQ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_fatoration_q_r_a4362a0c1396ac8f043c9c777d18f86aa}
+Retorna/\+Define Q 
+
+DefiniÃ§Ã£o na linha 48 do arquivo Fatoration\+Q\+R.\+h.
+
+\index{Fatoration\+QR@{Fatoration\+QR}!getR@{getR}}
+\index{getR@{getR}!Fatoration\+QR@{Fatoration\+QR}}
+\subsubsection[{get\+R()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Fatoration\+Q\+R\+::getR (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_fatoration_q_r_aaa6505e13092c15f514dea3261c11609}
+Retorna/\+Define R 
+
+DefiniÃ§Ã£o na linha 53 do arquivo Fatoration\+Q\+R.\+h.
+
+\index{Fatoration\+QR@{Fatoration\+QR}!norm@{norm}}
+\index{norm@{norm}!Fatoration\+QR@{Fatoration\+QR}}
+\subsubsection[{norm(vector$<$ double $>$ b)}]{\setlength{\rightskip}{0pt plus 5cm}double Fatoration\+Q\+R\+::norm (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{b}
+\end{DoxyParamCaption}
+)}\label{class_fatoration_q_r_ac3de9dff1a04108d208d9d1b4d4b87e9}
+Calcula e retorna a norma de um vetor \index{Fatoration\+QR@{Fatoration\+QR}!setQ@{setQ}}
+\index{setQ@{setQ}!Fatoration\+QR@{Fatoration\+QR}}
+\subsubsection[{set\+Q(\+Matrix q)}]{\setlength{\rightskip}{0pt plus 5cm}void Fatoration\+Q\+R\+::setQ (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{q}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_fatoration_q_r_a698184a9352e9bc7330ac4481184f05c}
+
+
+DefiniÃ§Ã£o na linha 49 do arquivo Fatoration\+Q\+R.\+h.
+
+\index{Fatoration\+QR@{Fatoration\+QR}!setR@{setR}}
+\index{setR@{setR}!Fatoration\+QR@{Fatoration\+QR}}
+\subsubsection[{set\+R(\+Matrix r)}]{\setlength{\rightskip}{0pt plus 5cm}void Fatoration\+Q\+R\+::setR (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_fatoration_q_r_aef58cd095b65b1c751441e9e7793e585}
+
+
+DefiniÃ§Ã£o na linha 54 do arquivo Fatoration\+Q\+R.\+h.
+
+\index{Fatoration\+QR@{Fatoration\+QR}!solve\+QR@{solve\+QR}}
+\index{solve\+QR@{solve\+QR}!Fatoration\+QR@{Fatoration\+QR}}
+\subsubsection[{solve\+Q\+R(vector$<$ double $>$ b)}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$ Fatoration\+Q\+R\+::solve\+QR (
+\begin{DoxyParamCaption}
+\item[{vector$<$ double $>$}]{b}
+\end{DoxyParamCaption}
+)}\label{class_fatoration_q_r_a1940ec0e19eb5206f6253e1a72756192}
+Resolve uma equação linear do tipo A . x = b usando a fatoração QR. 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em b} & Vetor do lado direito da equação, b \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna o vetor solução x 
+\end{DoxyReturn}
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Fatoration\+Q\+R.\+h}\end{DoxyCompactItemize}

@@ -1,0 +1,165 @@
+\section{Referência da Classe Opt\+Hydrology}
+\label{class_opt_hydrology}\index{Opt\+Hydrology@{Opt\+Hydrology}}
+
+
+{\ttfamily \#include $<$Opt\+Hydrology.\+h$>$}
+
+
+
+Herdeiro de {\bf Opt\+Module}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Hydrology} ({\bf Node} $\ast${\bf node}, {\bf Opt\+Interface} $\ast$parent)
+\item 
+virtual {\bf $\sim$\+Opt\+Hydrology} ()
+\item 
+void {\bf set\+Info} ()
+\item 
+void {\bf update\+Tree\+Item} ({\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$)
+\item 
+virtual void {\bf show\+SA} ()
+\item 
+void {\bf insert\+Model} ({\bf opt\+Model\+Type} type)
+\item 
+void {\bf set\+Default\+Values} (const wx\+String \&file\+Name)
+\item 
+void {\bf save\+Default\+Values} (const wx\+String \&file\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Hydrology\+Interface} $\ast$ {\bf inter}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 16 do arquivo Opt\+Hydrology.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Opt\+Hydrology@{Opt\+Hydrology}!Opt\+Hydrology@{Opt\+Hydrology}}
+\index{Opt\+Hydrology@{Opt\+Hydrology}!Opt\+Hydrology@{Opt\+Hydrology}}
+\subsubsection[{Opt\+Hydrology(\+Node $\ast$node, Opt\+Interface $\ast$parent)}]{\setlength{\rightskip}{0pt plus 5cm}Opt\+Hydrology\+::\+Opt\+Hydrology (
+\begin{DoxyParamCaption}
+\item[{{\bf Node} $\ast$}]{node, }
+\item[{{\bf Opt\+Interface} $\ast$}]{parent}
+\end{DoxyParamCaption}
+)}\label{class_opt_hydrology_a272555b6df7a9aa3a74a3db6b1b9e047}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em node} & N� \\
+\hline
+{\em parente} & Componente a que pertence \\
+\hline
+\end{DoxyParams}
+\index{Opt\+Hydrology@{Opt\+Hydrology}!````~Opt\+Hydrology@{$\sim$\+Opt\+Hydrology}}
+\index{````~Opt\+Hydrology@{$\sim$\+Opt\+Hydrology}!Opt\+Hydrology@{Opt\+Hydrology}}
+\subsubsection[{$\sim$\+Opt\+Hydrology()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Opt\+Hydrology\+::$\sim$\+Opt\+Hydrology (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_hydrology_a1fc1ea333152db7f42d261a851fc62e9}
+Destrutor 
+
+\subsection{Métodos}
+\index{Opt\+Hydrology@{Opt\+Hydrology}!insert\+Model@{insert\+Model}}
+\index{insert\+Model@{insert\+Model}!Opt\+Hydrology@{Opt\+Hydrology}}
+\subsubsection[{insert\+Model(opt\+Model\+Type type)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Hydrology\+::insert\+Model (
+\begin{DoxyParamCaption}
+\item[{{\bf opt\+Model\+Type}}]{type}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_hydrology_a3445ef2cc69890c7dbc918ca07f4fa43}
+Insere modelo 
+\begin{DoxyParams}{Parâmetros}
+{\em type} & Tipo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Opt\+Module} \doxyref{}{pag.}{class_opt_module_a27badad18ac3d7107f28b1c350e343a9}.
+
+\index{Opt\+Hydrology@{Opt\+Hydrology}!save\+Default\+Values@{save\+Default\+Values}}
+\index{save\+Default\+Values@{save\+Default\+Values}!Opt\+Hydrology@{Opt\+Hydrology}}
+\subsubsection[{save\+Default\+Values(const wx\+String \&file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Hydrology\+::save\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_hydrology_a639d1d802839ff94e3de86234d227747}
+Salva os valores padr�o 
+\begin{DoxyParams}{Parâmetros}
+{\em file\+Name} & Nome do arquivo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Opt\+Module} \doxyref{}{pag.}{class_opt_module_a28cbd004d46da8f3602c7812b0abb42b}.
+
+\index{Opt\+Hydrology@{Opt\+Hydrology}!set\+Default\+Values@{set\+Default\+Values}}
+\index{set\+Default\+Values@{set\+Default\+Values}!Opt\+Hydrology@{Opt\+Hydrology}}
+\subsubsection[{set\+Default\+Values(const wx\+String \&file\+Name)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Hydrology\+::set\+Default\+Values (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{file\+Name}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_hydrology_abffc4f75e145de02af84a4ed61db7876}
+Define os valores padr�o 
+\begin{DoxyParams}{Parâmetros}
+{\em file\+Name} & Nome do arquivo \\
+\hline
+\end{DoxyParams}
+
+
+Implementa {\bf Opt\+Module} \doxyref{}{pag.}{class_opt_module_a583ed097de47c6b1a9198ec87804f0b2}.
+
+\index{Opt\+Hydrology@{Opt\+Hydrology}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Opt\+Hydrology@{Opt\+Hydrology}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Hydrology\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_hydrology_a988b2b648e8c2ef62fd801c3e1402074}
+Insere valores 
+
+Implementa {\bf Opt\+Module} \doxyref{}{pag.}{class_opt_module_a5213be1a34e164536157b8e8dda781ae}.
+
+\index{Opt\+Hydrology@{Opt\+Hydrology}!show\+SA@{show\+SA}}
+\index{show\+SA@{show\+SA}!Opt\+Hydrology@{Opt\+Hydrology}}
+\subsubsection[{show\+S\+A()}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Opt\+Hydrology\+::show\+SA (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_hydrology_a56e24a6a69ee197e6dc6d61dfd44ad0a}
+Mostra analise de sensibilidade 
+
+Implementa {\bf Opt\+Module} \doxyref{}{pag.}{class_opt_module_a380d10adaad95dcb0bf37f411daeec18}.
+
+\index{Opt\+Hydrology@{Opt\+Hydrology}!update\+Tree\+Item@{update\+Tree\+Item}}
+\index{update\+Tree\+Item@{update\+Tree\+Item}!Opt\+Hydrology@{Opt\+Hydrology}}
+\subsubsection[{update\+Tree\+Item(\+S\+I\+G\+A\+Tree\+Ctrl $\ast$)}]{\setlength{\rightskip}{0pt plus 5cm}void Opt\+Hydrology\+::update\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Tree\+Ctrl} $\ast$}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_opt_hydrology_a3e9caaf576ac827d1209966b6db6467f}
+Atualiza os ponteiros das suas series no Tree\+Ctrl de integra��o 
+
+Implementa {\bf Opt\+Module} \doxyref{}{pag.}{class_opt_module_a045cdbb7768151c0a744bedc061e060c}.
+
+
+
+\subsection{Atributos}
+\index{Opt\+Hydrology@{Opt\+Hydrology}!inter@{inter}}
+\index{inter@{inter}!Opt\+Hydrology@{Opt\+Hydrology}}
+\subsubsection[{inter}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Opt\+Hydrology\+Interface}$\ast$ Opt\+Hydrology\+::inter}\label{class_opt_hydrology_acb615b8fa9e0ee48cdfa21dc8c599604}
+Interface para o modulo 
+
+Definição na linha 22 do arquivo Opt\+Hydrology.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Opt\+Hydrology.\+h}\end{DoxyCompactItemize}

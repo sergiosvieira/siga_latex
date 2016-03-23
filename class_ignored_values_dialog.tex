@@ -1,0 +1,163 @@
+\section{Referência da Classe Ignored\+Values\+Dialog}
+\label{class_ignored_values_dialog}\index{Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}}
+
+
+{\ttfamily \#include $<$Ignored\+Values\+Dialog.\+h$>$}
+
+
+
+Herdeiro de wx\+Dialog.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Shape\+Type} \{ \\*
+{\bf S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+B\+A\+S\+IN}, 
+{\bf S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+LU}, 
+{\bf S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+S\+O\+IL}, 
+{\bf S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON}, 
+\\*
+{\bf S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+TC}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Ignored\+Values\+Dialog} (wx\+Window $\ast$parent, const wx\+Array\+String \&selection\+List, {\bf Shape\+Type} {\bf shape\+Type}, wx\+Window\+ID id=wx\+I\+D\+\_\+\+A\+NY)
+\item 
+virtual {\bf $\sim$\+Ignored\+Values\+Dialog} ()
+\item 
+void {\bf save\+In\+Model} () const 
+\item 
+void {\bf set\+Info} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+List\+Box $\ast$ {\bf list\+Box}
+\item 
+wx\+Std\+Dialog\+Button\+Sizer $\ast$ {\bf button\+Sizer}
+\item 
+wx\+Button $\ast$ {\bf button\+Sizer\+OK}
+\item 
+wx\+Button $\ast$ {\bf button\+Sizer\+Cancel}
+\item 
+{\bf Shape\+Type} {\bf shape\+Type}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 15 do arquivo Ignored\+Values\+Dialog.\+h.
+
+
+
+\subsection{Enumerações}
+\index{Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}!Shape\+Type@{Shape\+Type}}
+\index{Shape\+Type@{Shape\+Type}!Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}}
+\subsubsection[{Shape\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Ignored\+Values\+Dialog\+::\+Shape\+Type}}\label{class_ignored_values_dialog_a67704a9cc4fd52f22cfa338d25f192ec}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+B\+A\+S\+IN@{S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+B\+A\+S\+IN}!Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}}\index{Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}!S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+B\+A\+S\+IN@{S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+B\+A\+S\+IN}}\item[{\em 
+S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+B\+A\+S\+IN\label{class_ignored_values_dialog_a67704a9cc4fd52f22cfa338d25f192eca41a0ea33a64d6e4c3c53be371dbea92a}
+}]\index{S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+LU@{S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+LU}!Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}}\index{Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}!S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+LU@{S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+LU}}\item[{\em 
+S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+LU\label{class_ignored_values_dialog_a67704a9cc4fd52f22cfa338d25f192eca09e32260406c66179bc633acd5491c44}
+}]\index{S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+S\+O\+IL@{S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+S\+O\+IL}!Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}}\index{Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}!S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+S\+O\+IL@{S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+S\+O\+IL}}\item[{\em 
+S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+S\+O\+IL\label{class_ignored_values_dialog_a67704a9cc4fd52f22cfa338d25f192eca4b07b3f9fc619cb3216c46ad5a1a0977}
+}]\index{S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON@{S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON}!Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}}\index{Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}!S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON@{S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON}}\item[{\em 
+S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+V\+E\+G\+E\+T\+A\+T\+I\+ON\label{class_ignored_values_dialog_a67704a9cc4fd52f22cfa338d25f192eca0ade674c158489b3600b4f0629dc861e}
+}]\index{S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+TC@{S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+TC}!Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}}\index{Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}!S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+TC@{S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+TC}}\item[{\em 
+S\+H\+A\+P\+E\+T\+Y\+P\+E\+\_\+\+TC\label{class_ignored_values_dialog_a67704a9cc4fd52f22cfa338d25f192eca493092f53cd574aa8448fa316533055e}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 20 do arquivo Ignored\+Values\+Dialog.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}!Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}}
+\index{Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}!Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}}
+\subsubsection[{Ignored\+Values\+Dialog(wx\+Window $\ast$parent, const wx\+Array\+String \&selection\+List, Shape\+Type shape\+Type, wx\+Window\+I\+D id=wx\+I\+D\+\_\+\+A\+N\+Y)}]{\setlength{\rightskip}{0pt plus 5cm}Ignored\+Values\+Dialog\+::\+Ignored\+Values\+Dialog (
+\begin{DoxyParamCaption}
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{const wx\+Array\+String \&}]{selection\+List, }
+\item[{{\bf Shape\+Type}}]{shape\+Type, }
+\item[{wx\+Window\+ID}]{id = {\ttfamily wxID\+\_\+ANY}}
+\end{DoxyParamCaption}
+)}\label{class_ignored_values_dialog_a8c586ed330a5620ae7638063d797822b}
+Construtor
+
+\begin{DoxySeeAlso}{Veja também}
+\doxyref{Shape\+Type}{pag.}{class_ignored_values_dialog_a67704a9cc4fd52f22cfa338d25f192ec} 
+\end{DoxySeeAlso}
+\index{Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}!````~Ignored\+Values\+Dialog@{$\sim$\+Ignored\+Values\+Dialog}}
+\index{````~Ignored\+Values\+Dialog@{$\sim$\+Ignored\+Values\+Dialog}!Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}}
+\subsubsection[{$\sim$\+Ignored\+Values\+Dialog()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Ignored\+Values\+Dialog\+::$\sim$\+Ignored\+Values\+Dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_ignored_values_dialog_ad083be8816734a3101c0ee672d87c938}
+
+
+\subsection{Métodos}
+\index{Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}!save\+In\+Model@{save\+In\+Model}}
+\index{save\+In\+Model@{save\+In\+Model}!Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}}
+\subsubsection[{save\+In\+Model() const }]{\setlength{\rightskip}{0pt plus 5cm}void Ignored\+Values\+Dialog\+::save\+In\+Model (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}\label{class_ignored_values_dialog_aa7c0b293a223d757ad3f3fa1ab41670b}
+Salva a sele��o da list\+Box no modelo. \index{Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}!set\+Info@{set\+Info}}
+\index{set\+Info@{set\+Info}!Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}}
+\subsubsection[{set\+Info()}]{\setlength{\rightskip}{0pt plus 5cm}void Ignored\+Values\+Dialog\+::set\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_ignored_values_dialog_a6d41fd7500dd71896733d36e38806a66}
+Carrega as informa��es do modelo para a interface. No caso, carrega quais itens da list\+Box foram selecionados. 
+
+\subsection{Atributos}
+\index{Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}!button\+Sizer@{button\+Sizer}}
+\index{button\+Sizer@{button\+Sizer}!Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}}
+\subsubsection[{button\+Sizer}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Std\+Dialog\+Button\+Sizer$\ast$ Ignored\+Values\+Dialog\+::button\+Sizer\hspace{0.3cm}{\ttfamily [protected]}}\label{class_ignored_values_dialog_acbe511e3d699eefa8bdd9cceab599a89}
+
+
+Definição na linha 45 do arquivo Ignored\+Values\+Dialog.\+h.
+
+\index{Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}!button\+Sizer\+Cancel@{button\+Sizer\+Cancel}}
+\index{button\+Sizer\+Cancel@{button\+Sizer\+Cancel}!Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}}
+\subsubsection[{button\+Sizer\+Cancel}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Ignored\+Values\+Dialog\+::button\+Sizer\+Cancel\hspace{0.3cm}{\ttfamily [protected]}}\label{class_ignored_values_dialog_adbbc49b6a0370bf72be75c10a272975e}
+
+
+Definição na linha 47 do arquivo Ignored\+Values\+Dialog.\+h.
+
+\index{Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}!button\+Sizer\+OK@{button\+Sizer\+OK}}
+\index{button\+Sizer\+OK@{button\+Sizer\+OK}!Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}}
+\subsubsection[{button\+Sizer\+OK}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Ignored\+Values\+Dialog\+::button\+Sizer\+OK\hspace{0.3cm}{\ttfamily [protected]}}\label{class_ignored_values_dialog_ad289e05f24ff45df6492821fb3ace2b5}
+
+
+Definição na linha 46 do arquivo Ignored\+Values\+Dialog.\+h.
+
+\index{Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}!list\+Box@{list\+Box}}
+\index{list\+Box@{list\+Box}!Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}}
+\subsubsection[{list\+Box}]{\setlength{\rightskip}{0pt plus 5cm}wx\+List\+Box$\ast$ Ignored\+Values\+Dialog\+::list\+Box\hspace{0.3cm}{\ttfamily [protected]}}\label{class_ignored_values_dialog_a7bd97ed53106e1c37189ebfcf74a3ed1}
+
+
+Definição na linha 44 do arquivo Ignored\+Values\+Dialog.\+h.
+
+\index{Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}!shape\+Type@{shape\+Type}}
+\index{shape\+Type@{shape\+Type}!Ignored\+Values\+Dialog@{Ignored\+Values\+Dialog}}
+\subsubsection[{shape\+Type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Shape\+Type} Ignored\+Values\+Dialog\+::shape\+Type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_ignored_values_dialog_a93a66b07b32c8fb4b2421bde195b5a23}
+
+
+Definição na linha 49 do arquivo Ignored\+Values\+Dialog.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Ignored\+Values\+Dialog.\+h}\end{DoxyCompactItemize}

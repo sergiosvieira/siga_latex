@@ -1,0 +1,272 @@
+\section{Refer√™ncia da Classe Matrix\+Dialog\+Content}
+\label{class_matrix_dialog_content}\index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+
+
+{\ttfamily \#include $<$Matrix\+Dialog\+Content.\+h$>$}
+
+
+
+Herdeiro de {\bf S\+I\+G\+A\+Dialog\+Content}.
+
+
+
+Superclasse de {\bf Thiessen\+Dialog\+Content}.
+
+\subsection*{M√©todos P√∫blicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix\+Dialog\+Content} ({\bf Matrix} $\ast${\bf matrix}, {\bf S\+I\+G\+A\+Dialog} $\ast$dialog, bool {\bf check\+Num\+Col}, int {\bf type}=0, int {\bf pos\+FixedX}=1)
+\item 
+virtual {\bf $\sim$\+Matrix\+Dialog\+Content} ()
+\item 
+void {\bf set\+Strings} (wx\+String {\bf matrix\+Name}, wx\+String {\bf matrix\+Ext})
+\item 
+void {\bf set\+Matrix} ({\bf Matrix} {\bf matrix}, wx\+String name, map$<$ unsigned int, {\bf Column\+Information} $\ast$ $>$ infos)
+\item 
+void {\bf open\+Conf} ()
+\item 
+void {\bf save\+Conf} ()
+\end{DoxyCompactItemize}
+\subsection*{M√©todos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix\+Dialog\+Content} ({\bf S\+I\+G\+A\+Dialog} $\ast$dialog)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ wx\+String $>$ $\ast$ {\bf m\+\_\+columns\+Names}
+\item 
+std\+::vector$<$ wx\+String $>$ $\ast$ {\bf m\+\_\+columns\+Types}
+\item 
+bool {\bf check\+Num\+Col}
+\item 
+int {\bf type}
+\item 
+{\bf Matrix} $\ast$ {\bf matrix}
+\item 
+wx\+String {\bf matrix\+Name}
+\item 
+wx\+String {\bf matrix\+Ext}
+\item 
+{\bf Matrix\+Viewer} $\ast$ {\bf m\+\_\+matrix\+Viewer}
+\item 
+int {\bf pos\+FixedX}
+\item 
+{\bf Column\+Information} $\ast$ {\bf fixed\+Info}
+\item 
+{\bf Matrix} {\bf fixed\+X\+Matrix}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Matrix\+Dialog}
+\end{DoxyCompactItemize}
+\subsection*{Outros membros herdados}
+
+
+\subsection{Descri√ß√£o Detalhada}
+
+
+Defini√ß√£o na linha 13 do arquivo Matrix\+Dialog\+Content.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}!Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+\index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}!Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+\subsubsection[{Matrix\+Dialog\+Content(\+S\+I\+G\+A\+Dialog $\ast$dialog)}]{\setlength{\rightskip}{0pt plus 5cm}Matrix\+Dialog\+Content\+::\+Matrix\+Dialog\+Content (
+\begin{DoxyParamCaption}
+\item[{{\bf S\+I\+G\+A\+Dialog} $\ast$}]{dialog}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_dialog_content_a10b207a8feba1beafc8d7bf83ff33277}
+Construtor protegido, usado para a implementaÁ„o do \doxyref{Thiessen\+Dialog\+Content}{pag.}{class_thiessen_dialog_content}, que sobrescreve o construtor normal do \doxyref{Matrix\+Dialog\+Content}{pag.}{class_matrix_dialog_content} \index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}!Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+\index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}!Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+\subsubsection[{Matrix\+Dialog\+Content(\+Matrix $\ast$matrix, S\+I\+G\+A\+Dialog $\ast$dialog, bool check\+Num\+Col, int type=0, int pos\+Fixed\+X=1)}]{\setlength{\rightskip}{0pt plus 5cm}Matrix\+Dialog\+Content\+::\+Matrix\+Dialog\+Content (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix} $\ast$}]{matrix, }
+\item[{{\bf S\+I\+G\+A\+Dialog} $\ast$}]{dialog, }
+\item[{bool}]{check\+Num\+Col, }
+\item[{int}]{type = {\ttfamily 0}, }
+\item[{int}]{pos\+FixedX = {\ttfamily 1}}
+\end{DoxyParamCaption}
+)}\label{class_matrix_dialog_content_a02b311d0fd776d72b094810fb4c2d489}
+Construtor 
+\begin{DoxyParams}{Par√¢metros}
+{\em matrix} & Matriz passada para ser usada na exibiÁ„o dos dados \\
+\hline
+{\em dialog} & Caixa de dialogo ondo o conteudo ser· colocado \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}!````~Matrix\+Dialog\+Content@{$\sim$\+Matrix\+Dialog\+Content}}
+\index{````~Matrix\+Dialog\+Content@{$\sim$\+Matrix\+Dialog\+Content}!Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+\subsubsection[{$\sim$\+Matrix\+Dialog\+Content()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Matrix\+Dialog\+Content\+::$\sim$\+Matrix\+Dialog\+Content (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_matrix_dialog_content_a4e945076aaa4b6d89f23a8ad2f34a7fc}
+Destrutor 
+
+\subsection{M√©todos}
+\index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}!open\+Conf@{open\+Conf}}
+\index{open\+Conf@{open\+Conf}!Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+\subsubsection[{open\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Dialog\+Content\+::open\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_matrix_dialog_content_ae88b5c989c17029602e1b932600f053f}
+Abrir Matriz 
+
+Reimplementa√ß√£o de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abf3660e2c31c95afab763b4b520e26e9}.
+
+
+
+Reimplementado por {\bf Thiessen\+Dialog\+Content} \doxyref{}{pag.}{class_thiessen_dialog_content_a7e0ae7cd2b8c798fcfe03558da47359e}.
+
+\index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}!save\+Conf@{save\+Conf}}
+\index{save\+Conf@{save\+Conf}!Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+\subsubsection[{save\+Conf()}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Dialog\+Content\+::save\+Conf (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_matrix_dialog_content_ae34742cf649479d64e90dd1c40ea8142}
+Salvar Matriz 
+
+Reimplementa√ß√£o de {\bf Component\+Interface} \doxyref{}{pag.}{class_component_interface_abcef0436251918c1eab033a80b40c626}.
+
+
+
+Reimplementado por {\bf Thiessen\+Dialog\+Content} \doxyref{}{pag.}{class_thiessen_dialog_content_a2a228f35693e58d42ff3075c76efe7d6}.
+
+\index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}!set\+Matrix@{set\+Matrix}}
+\index{set\+Matrix@{set\+Matrix}!Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+\subsubsection[{set\+Matrix(\+Matrix matrix, wx\+String name, map$<$ unsigned int, Column\+Information $\ast$ $>$ infos)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Dialog\+Content\+::set\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{matrix, }
+\item[{wx\+String}]{name, }
+\item[{map$<$ unsigned int, {\bf Column\+Information} $\ast$ $>$}]{infos}
+\end{DoxyParamCaption}
+)}\label{class_matrix_dialog_content_a9c44c6116d5beab8e91f9f990098dac3}
+Insere matriz 
+\begin{DoxyParams}{Par√¢metros}
+{\em matrix} & Matriz a ser inserida \\
+\hline
+{\em name} & Nome da matriz inserida \\
+\hline
+{\em infos} & InformaÁıes sobre as colunas \\
+\hline
+{\em drawdot} & Se deve desenhar os pontos do gr·fico \\
+\hline
+{\em drawline} & Se deve desenhar as linhas entre os pontos do gr·fico \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}!set\+Strings@{set\+Strings}}
+\index{set\+Strings@{set\+Strings}!Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+\subsubsection[{set\+Strings(wx\+String matrix\+Name, wx\+String matrix\+Ext)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Dialog\+Content\+::set\+Strings (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{matrix\+Name, }
+\item[{wx\+String}]{matrix\+Ext}
+\end{DoxyParamCaption}
+)}\label{class_matrix_dialog_content_ad806c552e25f427e694e3da248c184b1}
+Alterar o tipo e extenÁ„o dos arquivos de configuraÁ„o 
+\begin{DoxyParams}{Par√¢metros}
+{\em matrix\+Name} & Tipo de matriz a ser salva/aberta \\
+\hline
+{\em matrix\+Ext} & ExtenÁ„o do arquivo \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Amigas e Fun√ß√µes Relacionadas}
+\index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}!Matrix\+Dialog@{Matrix\+Dialog}}
+\index{Matrix\+Dialog@{Matrix\+Dialog}!Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+\subsubsection[{Matrix\+Dialog}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Matrix\+Dialog}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_matrix_dialog_content_a220b53535327b5e1618398c31f4928d3}
+
+
+Defini√ß√£o na linha 15 do arquivo Matrix\+Dialog\+Content.\+h.
+
+
+
+\subsection{Atributos}
+\index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}!check\+Num\+Col@{check\+Num\+Col}}
+\index{check\+Num\+Col@{check\+Num\+Col}!Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+\subsubsection[{check\+Num\+Col}]{\setlength{\rightskip}{0pt plus 5cm}bool Matrix\+Dialog\+Content\+::check\+Num\+Col\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_dialog_content_ae5c3b21131be13b3e99206f70013fe2d}
+Checar o numero de colunas 
+
+Defini√ß√£o na linha 22 do arquivo Matrix\+Dialog\+Content.\+h.
+
+\index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}!fixed\+Info@{fixed\+Info}}
+\index{fixed\+Info@{fixed\+Info}!Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+\subsubsection[{fixed\+Info}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Column\+Information}$\ast$ Matrix\+Dialog\+Content\+::fixed\+Info\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_dialog_content_abeb716d3f96724e1861425b650946917}
+InformaÁıes para coluna fixa 
+
+Defini√ß√£o na linha 56 do arquivo Matrix\+Dialog\+Content.\+h.
+
+\index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}!fixed\+X\+Matrix@{fixed\+X\+Matrix}}
+\index{fixed\+X\+Matrix@{fixed\+X\+Matrix}!Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+\subsubsection[{fixed\+X\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Matrix\+Dialog\+Content\+::fixed\+X\+Matrix\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_dialog_content_a937c64d9af941fe34c0274c59eefb435}
+\doxyref{Matrix}{pag.}{class_matrix} com os valores de x fixo 
+
+Defini√ß√£o na linha 60 do arquivo Matrix\+Dialog\+Content.\+h.
+
+\index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}!m\+\_\+columns\+Names@{m\+\_\+columns\+Names}}
+\index{m\+\_\+columns\+Names@{m\+\_\+columns\+Names}!Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+\subsubsection[{m\+\_\+columns\+Names}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$wx\+String$>$$\ast$ Matrix\+Dialog\+Content\+::m\+\_\+columns\+Names\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_dialog_content_a2381699e7a0ed3b36791103906f0271b}
+
+
+Defini√ß√£o na linha 17 do arquivo Matrix\+Dialog\+Content.\+h.
+
+\index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}!m\+\_\+columns\+Types@{m\+\_\+columns\+Types}}
+\index{m\+\_\+columns\+Types@{m\+\_\+columns\+Types}!Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+\subsubsection[{m\+\_\+columns\+Types}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$wx\+String$>$$\ast$ Matrix\+Dialog\+Content\+::m\+\_\+columns\+Types\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_dialog_content_aba45e6e9f031a7789018572a64313943}
+
+
+Defini√ß√£o na linha 18 do arquivo Matrix\+Dialog\+Content.\+h.
+
+\index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}!m\+\_\+matrix\+Viewer@{m\+\_\+matrix\+Viewer}}
+\index{m\+\_\+matrix\+Viewer@{m\+\_\+matrix\+Viewer}!Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+\subsubsection[{m\+\_\+matrix\+Viewer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix\+Viewer}$\ast$ Matrix\+Dialog\+Content\+::m\+\_\+matrix\+Viewer\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_dialog_content_ae70555b361e93d3138bdd7daab947e60}
+Ponteiro para o visualizador da matriz 
+
+Defini√ß√£o na linha 47 do arquivo Matrix\+Dialog\+Content.\+h.
+
+\index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}!matrix@{matrix}}
+\index{matrix@{matrix}!Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+\subsubsection[{matrix}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix}$\ast$ Matrix\+Dialog\+Content\+::matrix\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_dialog_content_a1024e4282557d2e06d09ca4db6d33f72}
+Matriz usada na exibiÁ„o dos dados 
+
+Defini√ß√£o na linha 32 do arquivo Matrix\+Dialog\+Content.\+h.
+
+\index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}!matrix\+Ext@{matrix\+Ext}}
+\index{matrix\+Ext@{matrix\+Ext}!Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+\subsubsection[{matrix\+Ext}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Matrix\+Dialog\+Content\+::matrix\+Ext\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_dialog_content_a62ba66863b7cda4e3a018cbf9d192f09}
+Extens„o dos arquivos de configuraÁ„o da matriz 
+
+Defini√ß√£o na linha 42 do arquivo Matrix\+Dialog\+Content.\+h.
+
+\index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}!matrix\+Name@{matrix\+Name}}
+\index{matrix\+Name@{matrix\+Name}!Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+\subsubsection[{matrix\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Matrix\+Dialog\+Content\+::matrix\+Name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_dialog_content_a833621cce6c60e737c406ba47daa551b}
+Nome dos arquivos de configuraÁ„o da matriz 
+
+Defini√ß√£o na linha 37 do arquivo Matrix\+Dialog\+Content.\+h.
+
+\index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}!pos\+FixedX@{pos\+FixedX}}
+\index{pos\+FixedX@{pos\+FixedX}!Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+\subsubsection[{pos\+FixedX}]{\setlength{\rightskip}{0pt plus 5cm}int Matrix\+Dialog\+Content\+::pos\+FixedX\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_dialog_content_aea852f884839f953b9e6429e1ea61679}
+Coluna fixa 
+
+Defini√ß√£o na linha 52 do arquivo Matrix\+Dialog\+Content.\+h.
+
+\index{Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}!type@{type}}
+\index{type@{type}!Matrix\+Dialog\+Content@{Matrix\+Dialog\+Content}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}int Matrix\+Dialog\+Content\+::type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_dialog_content_ac103f5ce5616e58f2873edd3e9b5f567}
+Tipo de grafico 
+
+Defini√ß√£o na linha 27 do arquivo Matrix\+Dialog\+Content.\+h.
+
+
+
+A documenta√ß√£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix\+Dialog\+Content.\+h}\end{DoxyCompactItemize}

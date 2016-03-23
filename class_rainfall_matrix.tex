@@ -1,0 +1,421 @@
+\section{Referência da Classe Rainfall\+Matrix}
+\label{class_rainfall_matrix}\index{Rainfall\+Matrix@{Rainfall\+Matrix}}
+
+
+\doxyref{Rainfall\+Matrix}{pag.}{class_rainfall_matrix}.  
+
+
+
+
+{\ttfamily \#include $<$rainfall-\/matrix.\+h$>$}
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+{\bf E\+R\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR} = -\/1, 
+{\bf E\+R\+R\+\_\+\+C\+O\+N\+V\+E\+RT} = -\/2, 
+{\bf E\+R\+R\+\_\+\+C\+A\+N\+C\+E\+L\+ED} = -\/3, 
+{\bf E\+R\+R\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND} = -\/4, 
+\\*
+{\bf E\+R\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT} = -\/5
+ \}\begin{DoxyCompactList}\small\item\em Error codes used on load and save operations. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf $\sim$\+Rainfall\+Matrix} ()
+\item 
+bool {\bf load} (const char $\ast$a\+\_\+filename, int $\ast$a\+\_\+error=nullptr, {\bf Progress\+Callback} a\+\_\+callback=nullptr)
+\begin{DoxyCompactList}\small\item\em load a rainfall matrix file \end{DoxyCompactList}\item 
+void {\bf save} (const char $\ast$a\+\_\+filename, int $\ast$a\+\_\+error=nullptr, {\bf Progress\+Callback} a\+\_\+callback=nullptr)
+\begin{DoxyCompactList}\small\item\em [brief description] \end{DoxyCompactList}\item 
+void {\bf set} (long a\+\_\+row, long a\+\_\+col, float a\+\_\+value)
+\begin{DoxyCompactList}\small\item\em [brief description] \end{DoxyCompactList}\item 
+float {\bf get} (long a\+\_\+row, long a\+\_\+col)
+\begin{DoxyCompactList}\small\item\em [brief description] \end{DoxyCompactList}\item 
+void {\bf set\+Station\+Label} (long a\+\_\+col, const char $\ast$a\+\_\+label)
+\begin{DoxyCompactList}\small\item\em [brief description] \end{DoxyCompactList}\item 
+std\+::string {\bf station\+Label} (long a\+\_\+col)
+\begin{DoxyCompactList}\small\item\em station\+Label \end{DoxyCompactList}\item 
+void {\bf set\+Date\+Label} (long a\+\_\+row, const char $\ast$a\+\_\+label)
+\begin{DoxyCompactList}\small\item\em [brief description] \end{DoxyCompactList}\item 
+const std\+::string {\bf get\+Date\+Label} (long a\+\_\+row)
+\item 
+int {\bf rows} ()
+\begin{DoxyCompactList}\small\item\em [brief description] \end{DoxyCompactList}\item 
+int {\bf cols} ()
+\begin{DoxyCompactList}\small\item\em [brief description] \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::string $>$ {\bf stations} ()
+\begin{DoxyCompactList}\small\item\em [brief description] \end{DoxyCompactList}\item 
+std\+::vector$<$ int $>$ {\bf sorted\+Stations} ()
+\begin{DoxyCompactList}\small\item\em sorted Stations \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::string $>$ {\bf dates} ()
+\begin{DoxyCompactList}\small\item\em station\textquotesingle{}s labels \end{DoxyCompactList}\item 
+std\+::map$<$ std\+::string, float $>$ {\bf row\+From\+Date} (const char $\ast$a\+\_\+date\+Label, int $\ast$a\+\_\+error=nullptr)
+\begin{DoxyCompactList}\small\item\em [brief description] \end{DoxyCompactList}\item 
+float $\ast$ {\bf value} (const char $\ast$a\+\_\+date\+Label, const char $\ast$a\+\_\+station\+ID)
+\begin{DoxyCompactList}\small\item\em value \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributos Estáticos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ {\bf k\+Separator}
+\item 
+static enum Rainfall\+Matrix\+:: \{ ... \}  {\bf k\+Error\+Code}
+\begin{DoxyCompactList}\small\item\em Error codes used on load and save operations. \end{DoxyCompactList}\item 
+static const float {\bf k\+Empty}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+\doxyref{Rainfall\+Matrix}{pag.}{class_rainfall_matrix}. 
+
+L\+I\+BS S\+TL
+
+Class used to manager a rainfall matrix file 
+
+Definição na linha 17 do arquivo rainfall-\/matrix.\+h.
+
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{class_rainfall_matrix_a97da24404b1f6f72102f304780d9b4fa}
+
+
+Error codes used on load and save operations. 
+
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{E\+R\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR@{E\+R\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR}!Rainfall\+Matrix@{Rainfall\+Matrix}}\index{Rainfall\+Matrix@{Rainfall\+Matrix}!E\+R\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR@{E\+R\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR}}\item[{\em 
+E\+R\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+E\+P\+A\+R\+A\+T\+OR\label{class_rainfall_matrix_a97da24404b1f6f72102f304780d9b4faa00a7c1d10e1eb359f3ba2e8eda3efb6f}
+}]\index{E\+R\+R\+\_\+\+C\+O\+N\+V\+E\+RT@{E\+R\+R\+\_\+\+C\+O\+N\+V\+E\+RT}!Rainfall\+Matrix@{Rainfall\+Matrix}}\index{Rainfall\+Matrix@{Rainfall\+Matrix}!E\+R\+R\+\_\+\+C\+O\+N\+V\+E\+RT@{E\+R\+R\+\_\+\+C\+O\+N\+V\+E\+RT}}\item[{\em 
+E\+R\+R\+\_\+\+C\+O\+N\+V\+E\+RT\label{class_rainfall_matrix_a97da24404b1f6f72102f304780d9b4faa1d26198a81ff514193127816abe47312}
+}]\index{E\+R\+R\+\_\+\+C\+A\+N\+C\+E\+L\+ED@{E\+R\+R\+\_\+\+C\+A\+N\+C\+E\+L\+ED}!Rainfall\+Matrix@{Rainfall\+Matrix}}\index{Rainfall\+Matrix@{Rainfall\+Matrix}!E\+R\+R\+\_\+\+C\+A\+N\+C\+E\+L\+ED@{E\+R\+R\+\_\+\+C\+A\+N\+C\+E\+L\+ED}}\item[{\em 
+E\+R\+R\+\_\+\+C\+A\+N\+C\+E\+L\+ED\label{class_rainfall_matrix_a97da24404b1f6f72102f304780d9b4faa09d8ea66efc3e66d4496d7f11f864d93}
+}]\index{E\+R\+R\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND@{E\+R\+R\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}!Rainfall\+Matrix@{Rainfall\+Matrix}}\index{Rainfall\+Matrix@{Rainfall\+Matrix}!E\+R\+R\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND@{E\+R\+R\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}}\item[{\em 
+E\+R\+R\+\_\+\+F\+I\+L\+E\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND\label{class_rainfall_matrix_a97da24404b1f6f72102f304780d9b4faac133c9ce20b70c57fc21fcafdaa75102}
+}]\index{E\+R\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT@{E\+R\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT}!Rainfall\+Matrix@{Rainfall\+Matrix}}\index{Rainfall\+Matrix@{Rainfall\+Matrix}!E\+R\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT@{E\+R\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT}}\item[{\em 
+E\+R\+R\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+F\+O\+R\+M\+AT\label{class_rainfall_matrix_a97da24404b1f6f72102f304780d9b4faa0abfbb1738660e5845535b01264a54ea}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 43 do arquivo rainfall-\/matrix.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Rainfall\+Matrix@{Rainfall\+Matrix}!````~Rainfall\+Matrix@{$\sim$\+Rainfall\+Matrix}}
+\index{````~Rainfall\+Matrix@{$\sim$\+Rainfall\+Matrix}!Rainfall\+Matrix@{Rainfall\+Matrix}}
+\subsubsection[{$\sim$\+Rainfall\+Matrix()}]{\setlength{\rightskip}{0pt plus 5cm}Rainfall\+Matrix\+::$\sim$\+Rainfall\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_rainfall_matrix_a12d6ef66ba7863ce31d9874732913ade}
+
+
+\subsection{Métodos}
+\index{Rainfall\+Matrix@{Rainfall\+Matrix}!cols@{cols}}
+\index{cols@{cols}!Rainfall\+Matrix@{Rainfall\+Matrix}}
+\subsubsection[{cols()}]{\setlength{\rightskip}{0pt plus 5cm}int Rainfall\+Matrix\+::cols (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_rainfall_matrix_a360ee3e7ff08e92e4786dce030e15e9f}
+
+
+[brief description] 
+
+[long description] \begin{DoxyReturn}{Retorna}
+[description] 
+\end{DoxyReturn}
+\index{Rainfall\+Matrix@{Rainfall\+Matrix}!dates@{dates}}
+\index{dates@{dates}!Rainfall\+Matrix@{Rainfall\+Matrix}}
+\subsubsection[{dates()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ Rainfall\+Matrix\+::dates (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_rainfall_matrix_a074c907c1bd8d9f8294963b1d42f05e8}
+
+
+station\textquotesingle{}s labels 
+
+\begin{DoxyReturn}{Retorna}
+a vector of station labels 
+\end{DoxyReturn}
+\index{Rainfall\+Matrix@{Rainfall\+Matrix}!get@{get}}
+\index{get@{get}!Rainfall\+Matrix@{Rainfall\+Matrix}}
+\subsubsection[{get(long a\+\_\+row, long a\+\_\+col)}]{\setlength{\rightskip}{0pt plus 5cm}float Rainfall\+Matrix\+::get (
+\begin{DoxyParamCaption}
+\item[{long}]{a\+\_\+row, }
+\item[{long}]{a\+\_\+col}
+\end{DoxyParamCaption}
+)}\label{class_rainfall_matrix_a35ade91b61da2ad88bab255d5ac751ff}
+
+
+[brief description] 
+
+[long description]
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+row} & [description] \\
+\hline
+{\em a\+\_\+col} & [description] \\
+\hline
+{\em a\+\_\+value} & [description] \\
+\hline
+\end{DoxyParams}
+\index{Rainfall\+Matrix@{Rainfall\+Matrix}!get\+Date\+Label@{get\+Date\+Label}}
+\index{get\+Date\+Label@{get\+Date\+Label}!Rainfall\+Matrix@{Rainfall\+Matrix}}
+\subsubsection[{get\+Date\+Label(long a\+\_\+row)}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::string Rainfall\+Matrix\+::get\+Date\+Label (
+\begin{DoxyParamCaption}
+\item[{long}]{a\+\_\+row}
+\end{DoxyParamCaption}
+)}\label{class_rainfall_matrix_a5d6d6268984123e5aa67477c9a87986c}
+\index{Rainfall\+Matrix@{Rainfall\+Matrix}!load@{load}}
+\index{load@{load}!Rainfall\+Matrix@{Rainfall\+Matrix}}
+\subsubsection[{load(const char $\ast$a\+\_\+filename, int $\ast$a\+\_\+error=nullptr, Progress\+Callback a\+\_\+callback=nullptr)}]{\setlength{\rightskip}{0pt plus 5cm}bool Rainfall\+Matrix\+::load (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+filename, }
+\item[{int $\ast$}]{a\+\_\+error = {\ttfamily nullptr}, }
+\item[{{\bf Progress\+Callback}}]{a\+\_\+callback = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)}\label{class_rainfall_matrix_a4b0bfef7e84fd4c341df46483ec08f20}
+
+
+load a rainfall matrix file 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+filename} & \\
+\hline
+{\em a\+\_\+error} & \\
+\hline
+{\em a\+\_\+callback} & -\/ used to manager the load progress of the rainfall matrix file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true = success and false = canceled or error 
+\end{DoxyReturn}
+\index{Rainfall\+Matrix@{Rainfall\+Matrix}!row\+From\+Date@{row\+From\+Date}}
+\index{row\+From\+Date@{row\+From\+Date}!Rainfall\+Matrix@{Rainfall\+Matrix}}
+\subsubsection[{row\+From\+Date(const char $\ast$a\+\_\+date\+Label, int $\ast$a\+\_\+error=nullptr)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$std\+::string, float$>$ Rainfall\+Matrix\+::row\+From\+Date (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+date\+Label, }
+\item[{int $\ast$}]{a\+\_\+error = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)}\label{class_rainfall_matrix_a8638c61e58448810c6904cdaed1dbeeb}
+
+
+[brief description] 
+
+valid format ddmmyy -\/ Example \+:(01011978)
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+date\+Label} & [description] \\
+\hline
+{\em a\+\_\+error} & (0) -\/ Successfull (-\/1) -\/ Key not found\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+[description] 
+\end{DoxyReturn}
+\index{Rainfall\+Matrix@{Rainfall\+Matrix}!rows@{rows}}
+\index{rows@{rows}!Rainfall\+Matrix@{Rainfall\+Matrix}}
+\subsubsection[{rows()}]{\setlength{\rightskip}{0pt plus 5cm}int Rainfall\+Matrix\+::rows (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_rainfall_matrix_a50a7487e3b9c738aed460e93a3030dff}
+
+
+[brief description] 
+
+[long description] \begin{DoxyReturn}{Retorna}
+[description] 
+\end{DoxyReturn}
+\index{Rainfall\+Matrix@{Rainfall\+Matrix}!save@{save}}
+\index{save@{save}!Rainfall\+Matrix@{Rainfall\+Matrix}}
+\subsubsection[{save(const char $\ast$a\+\_\+filename, int $\ast$a\+\_\+error=nullptr, Progress\+Callback a\+\_\+callback=nullptr)}]{\setlength{\rightskip}{0pt plus 5cm}void Rainfall\+Matrix\+::save (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+filename, }
+\item[{int $\ast$}]{a\+\_\+error = {\ttfamily nullptr}, }
+\item[{{\bf Progress\+Callback}}]{a\+\_\+callback = {\ttfamily nullptr}}
+\end{DoxyParamCaption}
+)}\label{class_rainfall_matrix_a55b513abb3e78d151595a6269b62e931}
+
+
+[brief description] 
+
+[long description]
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+filename} & [description] \\
+\hline
+{\em a\+\_\+error} & [description] \\
+\hline
+{\em a\+\_\+callback} & [description] \\
+\hline
+\end{DoxyParams}
+\index{Rainfall\+Matrix@{Rainfall\+Matrix}!set@{set}}
+\index{set@{set}!Rainfall\+Matrix@{Rainfall\+Matrix}}
+\subsubsection[{set(long a\+\_\+row, long a\+\_\+col, float a\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}void Rainfall\+Matrix\+::set (
+\begin{DoxyParamCaption}
+\item[{long}]{a\+\_\+row, }
+\item[{long}]{a\+\_\+col, }
+\item[{float}]{a\+\_\+value}
+\end{DoxyParamCaption}
+)}\label{class_rainfall_matrix_ac506c1b07e5a1b60ef66dd6f79c6795c}
+
+
+[brief description] 
+
+[long description]
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+row} & [description] \\
+\hline
+{\em a\+\_\+col} & [description] \\
+\hline
+{\em a\+\_\+value} & [description] \\
+\hline
+\end{DoxyParams}
+\index{Rainfall\+Matrix@{Rainfall\+Matrix}!set\+Date\+Label@{set\+Date\+Label}}
+\index{set\+Date\+Label@{set\+Date\+Label}!Rainfall\+Matrix@{Rainfall\+Matrix}}
+\subsubsection[{set\+Date\+Label(long a\+\_\+row, const char $\ast$a\+\_\+label)}]{\setlength{\rightskip}{0pt plus 5cm}void Rainfall\+Matrix\+::set\+Date\+Label (
+\begin{DoxyParamCaption}
+\item[{long}]{a\+\_\+row, }
+\item[{const char $\ast$}]{a\+\_\+label}
+\end{DoxyParamCaption}
+)}\label{class_rainfall_matrix_a8ade1fde64baf9656d69ec57b3a2076d}
+
+
+[brief description] 
+
+[long description]
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+row} & [description] \\
+\hline
+{\em a\+\_\+label} & [description] \\
+\hline
+\end{DoxyParams}
+\index{Rainfall\+Matrix@{Rainfall\+Matrix}!set\+Station\+Label@{set\+Station\+Label}}
+\index{set\+Station\+Label@{set\+Station\+Label}!Rainfall\+Matrix@{Rainfall\+Matrix}}
+\subsubsection[{set\+Station\+Label(long a\+\_\+col, const char $\ast$a\+\_\+label)}]{\setlength{\rightskip}{0pt plus 5cm}void Rainfall\+Matrix\+::set\+Station\+Label (
+\begin{DoxyParamCaption}
+\item[{long}]{a\+\_\+col, }
+\item[{const char $\ast$}]{a\+\_\+label}
+\end{DoxyParamCaption}
+)}\label{class_rainfall_matrix_ac7c250f7fcd5df0dda6705948b20c914}
+
+
+[brief description] 
+
+[long description] \begin{DoxyReturn}{Retorna}
+[description] 
+\end{DoxyReturn}
+\index{Rainfall\+Matrix@{Rainfall\+Matrix}!sorted\+Stations@{sorted\+Stations}}
+\index{sorted\+Stations@{sorted\+Stations}!Rainfall\+Matrix@{Rainfall\+Matrix}}
+\subsubsection[{sorted\+Stations()}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$int$>$ Rainfall\+Matrix\+::sorted\+Stations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_rainfall_matrix_a94eb8ebf6d0a504380b08a642c4da3dc}
+
+
+sorted Stations 
+
+\begin{DoxyReturn}{Retorna}
+
+\end{DoxyReturn}
+\index{Rainfall\+Matrix@{Rainfall\+Matrix}!station\+Label@{station\+Label}}
+\index{station\+Label@{station\+Label}!Rainfall\+Matrix@{Rainfall\+Matrix}}
+\subsubsection[{station\+Label(long a\+\_\+col)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Rainfall\+Matrix\+::station\+Label (
+\begin{DoxyParamCaption}
+\item[{long}]{a\+\_\+col}
+\end{DoxyParamCaption}
+)}\label{class_rainfall_matrix_aa697ef2333d2e01e23df61d7f3774f5d}
+
+
+station\+Label 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+col} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+
+\end{DoxyReturn}
+\index{Rainfall\+Matrix@{Rainfall\+Matrix}!stations@{stations}}
+\index{stations@{stations}!Rainfall\+Matrix@{Rainfall\+Matrix}}
+\subsubsection[{stations()}]{\setlength{\rightskip}{0pt plus 5cm}const std\+::vector$<$std\+::string$>$ Rainfall\+Matrix\+::stations (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_rainfall_matrix_a7d88983e67e17f8eb8de3ebec9816e09}
+
+
+[brief description] 
+
+[long description] \begin{DoxyReturn}{Retorna}
+[description] 
+\end{DoxyReturn}
+\index{Rainfall\+Matrix@{Rainfall\+Matrix}!value@{value}}
+\index{value@{value}!Rainfall\+Matrix@{Rainfall\+Matrix}}
+\subsubsection[{value(const char $\ast$a\+\_\+date\+Label, const char $\ast$a\+\_\+station\+I\+D)}]{\setlength{\rightskip}{0pt plus 5cm}float$\ast$ Rainfall\+Matrix\+::value (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{a\+\_\+date\+Label, }
+\item[{const char $\ast$}]{a\+\_\+station\+ID}
+\end{DoxyParamCaption}
+)}\label{class_rainfall_matrix_a3858016237c1591c6891db91d9122476}
+
+
+value 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em a\+\_\+date\+Label} & \\
+\hline
+{\em a\+\_\+date\+Label} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+
+\end{DoxyReturn}
+
+
+\subsection{Atributos}
+\index{Rainfall\+Matrix@{Rainfall\+Matrix}!k\+Empty@{k\+Empty}}
+\index{k\+Empty@{k\+Empty}!Rainfall\+Matrix@{Rainfall\+Matrix}}
+\subsubsection[{k\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}const float Rainfall\+Matrix\+::k\+Empty\hspace{0.3cm}{\ttfamily [static]}}\label{class_rainfall_matrix_a64b30efdd753e9799fe8cf44d7e8a57b}
+Empty value -\/ -\/999 
+
+Definição na linha 54 do arquivo rainfall-\/matrix.\+h.
+
+\index{Rainfall\+Matrix@{Rainfall\+Matrix}!k\+Error\+Code@{k\+Error\+Code}}
+\index{k\+Error\+Code@{k\+Error\+Code}!Rainfall\+Matrix@{Rainfall\+Matrix}}
+\subsubsection[{k\+Error\+Code}]{\setlength{\rightskip}{0pt plus 5cm}enum \{ ... \}   Rainfall\+Matrix\+::k\+Error\+Code\hspace{0.3cm}{\ttfamily [static]}}\label{class_rainfall_matrix_a40a35026af2a8560a46e807863d61768}
+
+
+Error codes used on load and save operations. 
+
+\index{Rainfall\+Matrix@{Rainfall\+Matrix}!k\+Separator@{k\+Separator}}
+\index{k\+Separator@{k\+Separator}!Rainfall\+Matrix@{Rainfall\+Matrix}}
+\subsubsection[{k\+Separator}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ Rainfall\+Matrix\+::k\+Separator\hspace{0.3cm}{\ttfamily [static]}}\label{class_rainfall_matrix_a65cab7460d173bc9bd332671ab6df67c}
+
+
+Definição na linha 39 do arquivo rainfall-\/matrix.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf rainfall-\/matrix.\+h}\end{DoxyCompactItemize}

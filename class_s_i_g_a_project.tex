@@ -1,0 +1,741 @@
+\section{ReferÃªncia da Classe S\+I\+G\+A\+Project}
+\label{class_s_i_g_a_project}\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+
+
+{\ttfamily \#include $<$S\+I\+G\+A\+Project.\+h$>$}
+
+\subsection*{MÃ©todos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf is\+Zip\+Ok} ()
+\item 
+{\bf S\+I\+G\+A\+Project} (wx\+String {\bf name}, {\bf Date\+::\+Time\+Interval} {\bf time\+Interval}={\bf Date\+::\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+D\+I\+A\+RY})
+\item 
+{\bf $\sim$\+S\+I\+G\+A\+Project} ()
+\item 
+void {\bf add\+Serie} (int id, {\bf Serie} $\ast$serie, wx\+String section=\char`\"{}\char`\"{})
+\item 
+void {\bf add\+Matrix} (long id, {\bf Draw\+Matrix} $\ast$matrix, wx\+String ext, wx\+String section=\char`\"{}\char`\"{})
+\item 
+void {\bf add\+Vector} (long id, vector$<$ double $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section=\char`\"{}\char`\"{})
+\item 
+void {\bf add\+Vector} (long id, vector$<$ bool $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section=\char`\"{}\char`\"{})
+\item 
+void {\bf add\+Vector} (long id, vector$<$ int $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section=\char`\"{}\char`\"{})
+\item 
+void {\bf add\+Vector} (long id, vector$<$ unsigned int $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section=\char`\"{}\char`\"{})
+\item 
+void {\bf add\+Vector} (long id, vector$<$ uint64\+\_\+t $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section)
+\item 
+void {\bf add\+Vector} (long id, vector$<$ wx\+String $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section=\char`\"{}\char`\"{})
+\item 
+void {\bf add\+Vector} (long id, vector$<$ {\bf Matrix} $\ast$ $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section=\char`\"{}\char`\"{})
+\item 
+void {\bf add\+Conf\+File} (long id, {\bf Conf\+File} $\ast$file, wx\+String section=\char`\"{}\char`\"{})
+\item 
+void {\bf add\+Image} (wx\+Bitmap $\ast$image, wx\+String {\bf name}, wx\+String section=\char`\"{}\char`\"{})
+\item 
+void {\bf set\+Component} (wx\+String {\bf name})
+\item 
+{\bf Serie} $\ast$ {\bf load\+Serie} (long id, wx\+String token, wx\+String {\bf name}, wx\+String unit, wx\+String ext, wx\+String section=\char`\"{}\char`\"{})
+\item 
+bool {\bf load\+Serie} (long id, {\bf Serie} $\ast$serie, wx\+String section=\char`\"{}\char`\"{})
+\item 
+bool {\bf load\+Matrix} (long id, {\bf Draw\+Matrix} $\ast$matrix, wx\+String ext, wx\+String section=\char`\"{}\char`\"{})
+\item 
+{\bf Draw\+Matrix} $\ast$ {\bf load\+Matrix} (long id, wx\+String token, wx\+String {\bf name}, wx\+String ext, wx\+String section=\char`\"{}\char`\"{})
+\item 
+vector$<$ double $>$ $\ast$ {\bf load\+Vector} (long id, wx\+String v\+Name, wx\+String ext, wx\+String section=\char`\"{}\char`\"{})
+\item 
+bool {\bf load\+Vector} (long id, vector$<$ double $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section=\char`\"{}\char`\"{})
+\item 
+bool {\bf load\+Vector} (long id, vector$<$ bool $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section=\char`\"{}\char`\"{})
+\item 
+bool {\bf load\+Vector} (long id, vector$<$ int $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section=\char`\"{}\char`\"{})
+\item 
+bool {\bf load\+Vector} (long id, vector$<$ unsigned int $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section=\char`\"{}\char`\"{})
+\item 
+bool {\bf load\+Vector} (long id, vector$<$ uint64\+\_\+t $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section)
+\item 
+bool {\bf load\+Vector} (long id, vector$<$ wx\+String $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section=\char`\"{}\char`\"{})
+\item 
+bool {\bf load\+Vector} (long id, vector$<$ {\bf Matrix} $\ast$ $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section=\char`\"{}\char`\"{})
+\item 
+bool {\bf load\+Conf\+File} (long id, {\bf Conf\+File} $\ast$file, wx\+String section=\char`\"{}\char`\"{})
+\item 
+bool {\bf joinload\+Conf\+File} (long id, {\bf Conf\+File} $\ast$file, wx\+String section=\char`\"{}\char`\"{})
+\item 
+bool {\bf load\+Image} (wx\+Bitmap \&image, wx\+String {\bf name}, wx\+String section=\char`\"{}\char`\"{})
+\item 
+wx\+Bitmap {\bf load\+Image} (wx\+String {\bf name}, wx\+String section=\char`\"{}\char`\"{})
+\item 
+vector$<$ wx\+String $>$ {\bf get\+Saved\+Component\+Names} ()
+\item 
+wx\+String {\bf get\+Unit\+Code} (wx\+String unit)
+\item 
+wx\+F\+S\+File $\ast$ {\bf open\+File} (std\+::string path)
+\item 
+bool {\bf unzip\+Project} (wx\+String zip\+File, wx\+String output\+Dir)
+\end{DoxyCompactItemize}
+\subsection*{Atributos PÃºblicos}
+\begin{DoxyCompactItemize}
+\item 
+int {\bf project\+Version}
+\item 
+wx\+String {\bf name}
+\item 
+wx\+String {\bf m\+Temp\+Path}
+\item 
+{\bf Date\+::\+Time\+Interval} {\bf time\+Interval}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf modified}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf S\+I\+GA}
+\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o Detalhada}
+
+
+DefiniÃ§Ã£o na linha 23 do arquivo S\+I\+G\+A\+Project.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{S\+I\+G\+A\+Project(wx\+String name, Date\+::\+Time\+Interval time\+Interval=\+Date\+::\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+D\+I\+A\+R\+Y)}]{\setlength{\rightskip}{0pt plus 5cm}S\+I\+G\+A\+Project\+::\+S\+I\+G\+A\+Project (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name, }
+\item[{{\bf Date\+::\+Time\+Interval}}]{time\+Interval = {\ttfamily {\bf Date\+::\+I\+N\+T\+E\+R\+V\+A\+L\+\_\+\+D\+I\+A\+RY}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_afc58b42f261b35c0678a40fbc8b35719}
+Construtor 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em name} & Nome do projeto \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!````~S\+I\+G\+A\+Project@{$\sim$\+S\+I\+G\+A\+Project}}
+\index{````~S\+I\+G\+A\+Project@{$\sim$\+S\+I\+G\+A\+Project}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{$\sim$\+S\+I\+G\+A\+Project()}]{\setlength{\rightskip}{0pt plus 5cm}S\+I\+G\+A\+Project\+::$\sim$\+S\+I\+G\+A\+Project (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a00886e22ccc8798a0835c9273c323c18}
+Destrutor 
+
+\subsection{MÃ©todos}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!add\+Conf\+File@{add\+Conf\+File}}
+\index{add\+Conf\+File@{add\+Conf\+File}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{add\+Conf\+File(long id, Conf\+File $\ast$file, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Project\+::add\+Conf\+File (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{{\bf Conf\+File} $\ast$}]{file, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a469fa1a0ff8046db33726fa479e86587}
+Adiciona um arquivo de configuração ao projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em node\+Id} & Id do nó do qual a série pertence \\
+\hline
+{\em file} & Arquivo de configuração \\
+\hline
+{\em section} & Seção onde o arquivo será salva \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!add\+Image@{add\+Image}}
+\index{add\+Image@{add\+Image}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{add\+Image(wx\+Bitmap $\ast$image, wx\+String name, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Project\+::add\+Image (
+\begin{DoxyParamCaption}
+\item[{wx\+Bitmap $\ast$}]{image, }
+\item[{wx\+String}]{name, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a6e10d669a89eaa123bba88a9850cd36f}
+Adciona uma imagem ao projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em image} & Imagem \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!add\+Matrix@{add\+Matrix}}
+\index{add\+Matrix@{add\+Matrix}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{add\+Matrix(long id, Draw\+Matrix $\ast$matrix, wx\+String ext, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Project\+::add\+Matrix (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{{\bf Draw\+Matrix} $\ast$}]{matrix, }
+\item[{wx\+String}]{ext, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a88e5b526ecc9cef1b63b1811603af77b}
+Adiciona uma \doxyref{Matrix}{pag.}{class_matrix} ao projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em node\+Id} & Id do nó do qual a série pertence \\
+\hline
+{\em matrix} & Série \\
+\hline
+{\em section} & Seção onde a serie será salva \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!add\+Serie@{add\+Serie}}
+\index{add\+Serie@{add\+Serie}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{add\+Serie(int id, Serie $\ast$serie, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Project\+::add\+Serie (
+\begin{DoxyParamCaption}
+\item[{int}]{id, }
+\item[{{\bf Serie} $\ast$}]{serie, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a2d219b9a1f77080fc4036619d0dc619f}
+Adiciona uma serie ao projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em node\+Id} & Id do nó do qual a série pertence \\
+\hline
+{\em serie} & \doxyref{Serie}{pag.}{class_serie} que será inserida no projeto \\
+\hline
+{\em section} & Seção onde a serie será salva \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!add\+Vector@{add\+Vector}}
+\index{add\+Vector@{add\+Vector}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{add\+Vector(long id, vector$<$ double $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Project\+::add\+Vector (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{vector$<$ double $>$ $\ast$}]{v\+Data, }
+\item[{wx\+String}]{v\+Name, }
+\item[{wx\+String}]{ext, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_ad38bad1ab8dacda7c822eecf6b837d8b}
+Adiciona um vetor ao projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em id} & Id do nó/trecho do qual o vetor pertence \\
+\hline
+{\em v\+Data} & Vetor que será inserida no projeto \\
+\hline
+{\em section} & Seção onde a serie será salva \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!add\+Vector@{add\+Vector}}
+\index{add\+Vector@{add\+Vector}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{add\+Vector(long id, vector$<$ bool $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Project\+::add\+Vector (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{vector$<$ bool $>$ $\ast$}]{v\+Data, }
+\item[{wx\+String}]{v\+Name, }
+\item[{wx\+String}]{ext, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a48611e27112f8118a854bd8c79dce096}
+Adiciona um vetor ao projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em id} & Id do nó/trecho do qual o vetor pertence \\
+\hline
+{\em v\+Data} & Vetor que será inserida no projeto \\
+\hline
+{\em section} & Seção onde a serie será salva \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!add\+Vector@{add\+Vector}}
+\index{add\+Vector@{add\+Vector}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{add\+Vector(long id, vector$<$ int $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Project\+::add\+Vector (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{vector$<$ int $>$ $\ast$}]{v\+Data, }
+\item[{wx\+String}]{v\+Name, }
+\item[{wx\+String}]{ext, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a0f570a2e3a4d80746028eb462593c7d1}
+Adiciona um vetor ao projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em id} & Id do nó/trecho do qual o vetor pertence \\
+\hline
+{\em v\+Data} & Vetor que será inserida no projeto \\
+\hline
+{\em section} & Seção onde a serie será salva \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!add\+Vector@{add\+Vector}}
+\index{add\+Vector@{add\+Vector}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{add\+Vector(long id, vector$<$ unsigned int $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Project\+::add\+Vector (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{vector$<$ unsigned int $>$ $\ast$}]{v\+Data, }
+\item[{wx\+String}]{v\+Name, }
+\item[{wx\+String}]{ext, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a3b52a63aeaeed113b294a16f27bbbb5b}
+Adiciona um vetor ao projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em id} & Id do nó/trecho do qual o vetor pertence \\
+\hline
+{\em v\+Data} & Vetor que será inserida no projeto \\
+\hline
+{\em section} & Seção onde a serie será salva \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!add\+Vector@{add\+Vector}}
+\index{add\+Vector@{add\+Vector}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{add\+Vector(long id, vector$<$ uint64\+\_\+t $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Project\+::add\+Vector (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{vector$<$ uint64\+\_\+t $>$ $\ast$}]{v\+Data, }
+\item[{wx\+String}]{v\+Name, }
+\item[{wx\+String}]{ext, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_ae5e3c76ccf9d6ef08e9774d4035a2f98}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!add\+Vector@{add\+Vector}}
+\index{add\+Vector@{add\+Vector}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{add\+Vector(long id, vector$<$ wx\+String $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Project\+::add\+Vector (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{vector$<$ wx\+String $>$ $\ast$}]{v\+Data, }
+\item[{wx\+String}]{v\+Name, }
+\item[{wx\+String}]{ext, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a40a2e8f074c4ab98cf78ddc3549a6f33}
+Adiciona um vetor ao projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em id} & Id do nó/trecho do qual o vetor pertence \\
+\hline
+{\em v\+Data} & Vetor que será inserida no projeto \\
+\hline
+{\em section} & Seção onde a serie será salva \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!add\+Vector@{add\+Vector}}
+\index{add\+Vector@{add\+Vector}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{add\+Vector(long id, vector$<$ Matrix $\ast$ $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Project\+::add\+Vector (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{vector$<$ {\bf Matrix} $\ast$ $>$ $\ast$}]{v\+Data, }
+\item[{wx\+String}]{v\+Name, }
+\item[{wx\+String}]{ext, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a0acb44f857d6681d4dce1a6fc29bb301}
+Adiciona um vetor de Matrizes ao sistema 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em id} & Id do nó/trecho do qual o vetor pertence \\
+\hline
+{\em v\+Data} & Vetor que será inserida no projeto \\
+\hline
+{\em section} & Seção onde a serie será salva \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!get\+Saved\+Component\+Names@{get\+Saved\+Component\+Names}}
+\index{get\+Saved\+Component\+Names@{get\+Saved\+Component\+Names}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{get\+Saved\+Component\+Names()}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$wx\+String$>$ S\+I\+G\+A\+Project\+::get\+Saved\+Component\+Names (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_abf14dea6f5b463cd58d8b116cb5d64b3}
+Retorna o nome das pastas que estão salvas no projeto (9001, 9002... \index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!get\+Unit\+Code@{get\+Unit\+Code}}
+\index{get\+Unit\+Code@{get\+Unit\+Code}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{get\+Unit\+Code(wx\+String unit)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Project\+::get\+Unit\+Code (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{unit}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a1bd40437156dbc9c2ecacd1f81c31e21}
+Converte uma unidade de medida (m3, mm, etc) em um código definido em \doxyref{Unit.\+h}{pag.}{_unit_8h} 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em string} & da unidade \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!is\+Zip\+Ok@{is\+Zip\+Ok}}
+\index{is\+Zip\+Ok@{is\+Zip\+Ok}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{is\+Zip\+Ok()}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Project\+::is\+Zip\+Ok (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_afbfcb7b6dfb12d59eae719425b2128cf}
+Verifica se não houve erros ao tentar criar o wx\+Zip\+Output\+Stream \index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!joinload\+Conf\+File@{joinload\+Conf\+File}}
+\index{joinload\+Conf\+File@{joinload\+Conf\+File}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{joinload\+Conf\+File(long id, Conf\+File $\ast$file, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Project\+::joinload\+Conf\+File (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{{\bf Conf\+File} $\ast$}]{file, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a6cbc90fefa0da4a0a20940adf8383697}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!load\+Conf\+File@{load\+Conf\+File}}
+\index{load\+Conf\+File@{load\+Conf\+File}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{load\+Conf\+File(long id, Conf\+File $\ast$file, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Project\+::load\+Conf\+File (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{{\bf Conf\+File} $\ast$}]{file, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a3190bf778a7395f6e1de0ef49bd8ae4a}
+Carrega um arquivo de configuração no projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em node\+Id} & Id do nó do qual a série pertence \\
+\hline
+{\em file} & Arquivo de configuração \\
+\hline
+{\em section} & Seção onde o arquivo será lido \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!load\+Image@{load\+Image}}
+\index{load\+Image@{load\+Image}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{load\+Image(wx\+Bitmap \&image, wx\+String name, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Project\+::load\+Image (
+\begin{DoxyParamCaption}
+\item[{wx\+Bitmap \&}]{image, }
+\item[{wx\+String}]{name, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a4095da41fa453cfd1917e0a8880145cd}
+Carrega uma imagem no projeto 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em image} & Imagem \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!load\+Image@{load\+Image}}
+\index{load\+Image@{load\+Image}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{load\+Image(wx\+String name, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap S\+I\+G\+A\+Project\+::load\+Image (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_ad1f514e7f056f781c540c0bc9475604f}
+Retorna a imagem lida \index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!load\+Matrix@{load\+Matrix}}
+\index{load\+Matrix@{load\+Matrix}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{load\+Matrix(long id, Draw\+Matrix $\ast$matrix, wx\+String ext, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Project\+::load\+Matrix (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{{\bf Draw\+Matrix} $\ast$}]{matrix, }
+\item[{wx\+String}]{ext, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_ac747292957e2a6188dc9f346105ddd39}
+Carregar uma matrix existente 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em node\+Id} & Id do nó do qual a série pertence \\
+\hline
+{\em serie} & Série \\
+\hline
+{\em section} & Seção onde a serie será salva \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!load\+Matrix@{load\+Matrix}}
+\index{load\+Matrix@{load\+Matrix}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{load\+Matrix(long id, wx\+String token, wx\+String name, wx\+String ext, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Matrix}$\ast$ S\+I\+G\+A\+Project\+::load\+Matrix (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{wx\+String}]{token, }
+\item[{wx\+String}]{name, }
+\item[{wx\+String}]{ext, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_abd1488e9f87fc12810749f2d88181cf4}
+Retorna uma \doxyref{Draw\+Matrix}{pag.}{class_draw_matrix} carregada de acordo com os parâmetros enviados 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em node\+Id} & Id do nó do qual a série pertence \\
+\hline
+{\em name} & Nome da serie \\
+\hline
+{\em ext} & Extensão da série \\
+\hline
+{\em section} & Seção onde a serie será salva \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!load\+Serie@{load\+Serie}}
+\index{load\+Serie@{load\+Serie}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{load\+Serie(long id, wx\+String token, wx\+String name, wx\+String unit, wx\+String ext, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Serie}$\ast$ S\+I\+G\+A\+Project\+::load\+Serie (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{wx\+String}]{token, }
+\item[{wx\+String}]{name, }
+\item[{wx\+String}]{unit, }
+\item[{wx\+String}]{ext, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_aacbe8d81ea3ec4354ad8bd9711a2b8f4}
+Retorna uma série carregada de acordo com os parâmetros enviados 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em node\+Id} & Id do nó do qual a série pertence \\
+\hline
+{\em name} & Nome da serie \\
+\hline
+{\em unit} & Unidade da série \\
+\hline
+{\em ext} & Extensão da série \\
+\hline
+{\em section} & Seção onde a serie será salva \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!load\+Serie@{load\+Serie}}
+\index{load\+Serie@{load\+Serie}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{load\+Serie(long id, Serie $\ast$serie, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Project\+::load\+Serie (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{{\bf Serie} $\ast$}]{serie, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_ae7137c992abf6ea617e4ee38d2d23274}
+Carregar uma série existente 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em node\+Id} & Id do nó do qual a série pertence \\
+\hline
+{\em serie} & Série \\
+\hline
+{\em section} & Seção onde a serie será salva \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!load\+Vector@{load\+Vector}}
+\index{load\+Vector@{load\+Vector}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{load\+Vector(long id, wx\+String v\+Name, wx\+String ext, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$double$>$$\ast$ S\+I\+G\+A\+Project\+::load\+Vector (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{wx\+String}]{v\+Name, }
+\item[{wx\+String}]{ext, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a63455995adea629e2058b38fb5cfcd43}
+Retorna um vetor carregada de acordo com os parâmetros enviados 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em id} & Id do nó/trecho do qual o vetor pertence \\
+\hline
+{\em name} & Nome do vetor \\
+\hline
+{\em ext} & Extensão do vetor \\
+\hline
+{\em section} & Seção onde a serie será salva \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!load\+Vector@{load\+Vector}}
+\index{load\+Vector@{load\+Vector}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{load\+Vector(long id, vector$<$ double $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Project\+::load\+Vector (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{vector$<$ double $>$ $\ast$}]{v\+Data, }
+\item[{wx\+String}]{v\+Name, }
+\item[{wx\+String}]{ext, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a4f853ffde4ac20fc6a6433d02db56890}
+Retorna um vetor carregada de acordo com os parâmetros enviados 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em id} & Id do nó/trecho do qual o vetor pertence \\
+\hline
+{\em name} & Nome do vetor \\
+\hline
+{\em ext} & Extensão do vetor \\
+\hline
+{\em section} & Seção onde a serie será salva\\
+\hline
+\end{DoxyParams}
+vector$<$unsigned int$>$$\ast$ load\+Vector(int id, wx\+String v\+Name, wx\+String ext, wx\+String section = \char`\"{}\char`\"{}, bool is\+Node = true); Retorna um vetor carregada de acordo com os parâmetros enviados 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em id} & Id do nó/trecho do qual o vetor pertence \\
+\hline
+{\em name} & Nome do vetor \\
+\hline
+{\em ext} & Extensão do vetor \\
+\hline
+{\em section} & Seção onde a serie será salva\\
+\hline
+\end{DoxyParams}
+vector$<$int$>$$\ast$ load\+Vector(int id, wx\+String v\+Name, wx\+String ext, wx\+String section = \char`\"{}\char`\"{}, bool is\+Node = true); Carregar um vetor existente 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em id} & Id do nó/trecho do qual o vetor pertence \\
+\hline
+{\em v\+Data} & Vetor \\
+\hline
+{\em section} & Seção onde a serie será salva \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!load\+Vector@{load\+Vector}}
+\index{load\+Vector@{load\+Vector}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{load\+Vector(long id, vector$<$ bool $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Project\+::load\+Vector (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{vector$<$ bool $>$ $\ast$}]{v\+Data, }
+\item[{wx\+String}]{v\+Name, }
+\item[{wx\+String}]{ext, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a91d4b6c0cf2b49769542977b43fed4ea}
+Carregar um vetor existente 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em id} & Id do nó/trecho do qual o vetor pertence \\
+\hline
+{\em v\+Data} & Vetor \\
+\hline
+{\em section} & Seção onde a serie será salva \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!load\+Vector@{load\+Vector}}
+\index{load\+Vector@{load\+Vector}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{load\+Vector(long id, vector$<$ int $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Project\+::load\+Vector (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{vector$<$ int $>$ $\ast$}]{v\+Data, }
+\item[{wx\+String}]{v\+Name, }
+\item[{wx\+String}]{ext, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a63c29ed2411f0d7b375cec25b18877a6}
+Carregar um vetor existente 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em id} & Id do nó/trecho do qual o vetor pertence \\
+\hline
+{\em v\+Data} & Vetor \\
+\hline
+{\em section} & Seção onde a serie será salva \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!load\+Vector@{load\+Vector}}
+\index{load\+Vector@{load\+Vector}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{load\+Vector(long id, vector$<$ unsigned int $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Project\+::load\+Vector (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{vector$<$ unsigned int $>$ $\ast$}]{v\+Data, }
+\item[{wx\+String}]{v\+Name, }
+\item[{wx\+String}]{ext, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a72f94d71cd220bec3cc339cb7be18b91}
+Carregar um vetor existente 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em id} & Id do nó/trecho do qual o vetor pertence \\
+\hline
+{\em v\+Data} & Vetor \\
+\hline
+{\em section} & Seção onde a serie será salva \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!load\+Vector@{load\+Vector}}
+\index{load\+Vector@{load\+Vector}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{load\+Vector(long id, vector$<$ uint64\+\_\+t $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Project\+::load\+Vector (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{vector$<$ uint64\+\_\+t $>$ $\ast$}]{v\+Data, }
+\item[{wx\+String}]{v\+Name, }
+\item[{wx\+String}]{ext, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a31e8e96024bec694f60833e14c4745bf}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!load\+Vector@{load\+Vector}}
+\index{load\+Vector@{load\+Vector}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{load\+Vector(long id, vector$<$ wx\+String $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Project\+::load\+Vector (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{vector$<$ wx\+String $>$ $\ast$}]{v\+Data, }
+\item[{wx\+String}]{v\+Name, }
+\item[{wx\+String}]{ext, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a8794a8c47cf5266512f492d2ef39e5aa}
+Carregar um vetor existente 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em id} & Id do nó/trecho do qual o vetor pertence \\
+\hline
+{\em v\+Data} & Vetor \\
+\hline
+{\em section} & Seção onde a serie será salva \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!load\+Vector@{load\+Vector}}
+\index{load\+Vector@{load\+Vector}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{load\+Vector(long id, vector$<$ Matrix $\ast$ $>$ $\ast$v\+Data, wx\+String v\+Name, wx\+String ext, wx\+String section="""")}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Project\+::load\+Vector (
+\begin{DoxyParamCaption}
+\item[{long}]{id, }
+\item[{vector$<$ {\bf Matrix} $\ast$ $>$ $\ast$}]{v\+Data, }
+\item[{wx\+String}]{v\+Name, }
+\item[{wx\+String}]{ext, }
+\item[{wx\+String}]{section = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a1de03a5f8254f65af5e765a50dd2df62}
+Carregar um vetor existente 
+\begin{DoxyParams}{ParÃ¢metros}
+{\em id} & Id do nó/trecho do qual o vetor pertence \\
+\hline
+{\em v\+Data} & Vetor \\
+\hline
+{\em section} & Seção onde a serie será salva \\
+\hline
+\end{DoxyParams}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!open\+File@{open\+File}}
+\index{open\+File@{open\+File}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{open\+File(std\+::string path)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+F\+S\+File$\ast$ S\+I\+G\+A\+Project\+::open\+File (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{path}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_a4a76ffbdc618d4956cbe5f484e742e42}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!set\+Component@{set\+Component}}
+\index{set\+Component@{set\+Component}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{set\+Component(wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}void S\+I\+G\+A\+Project\+::set\+Component (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_abadb66d09b316e8f5451aea1adf562aa}
+Define o nome do componente do projeto \index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!unzip\+Project@{unzip\+Project}}
+\index{unzip\+Project@{unzip\+Project}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{unzip\+Project(wx\+String zip\+File, wx\+String output\+Dir)}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Project\+::unzip\+Project (
+\begin{DoxyParamCaption}
+\item[{wx\+String}]{zip\+File, }
+\item[{wx\+String}]{output\+Dir}
+\end{DoxyParamCaption}
+)}\label{class_s_i_g_a_project_ab463792e7f080da0dc593e89917ac8b7}
+
+
+\subsection{Amigas e FunÃ§Ãµes Relacionadas}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!S\+I\+GA@{S\+I\+GA}}
+\index{S\+I\+GA@{S\+I\+GA}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{S\+I\+GA}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf S\+I\+GA}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_s_i_g_a_project_aefed483c5256c9cfb8f37c77b14e8ebe}
+
+
+DefiniÃ§Ã£o na linha 25 do arquivo S\+I\+G\+A\+Project.\+h.
+
+
+
+\subsection{Atributos}
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!modified@{modified}}
+\index{modified@{modified}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{modified}]{\setlength{\rightskip}{0pt plus 5cm}bool S\+I\+G\+A\+Project\+::modified\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_project_ad1c9847f0482e2a05cea708b291a8915}
+Verifica se foi modificado 
+
+DefiniÃ§Ã£o na linha 44 do arquivo S\+I\+G\+A\+Project.\+h.
+
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!m\+Temp\+Path@{m\+Temp\+Path}}
+\index{m\+Temp\+Path@{m\+Temp\+Path}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{m\+Temp\+Path}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Project\+::m\+Temp\+Path}\label{class_s_i_g_a_project_a968f2531a5c8158f1c13771fc1ca88fb}
+
+
+DefiniÃ§Ã£o na linha 59 do arquivo S\+I\+G\+A\+Project.\+h.
+
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!name@{name}}
+\index{name@{name}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String S\+I\+G\+A\+Project\+::name}\label{class_s_i_g_a_project_abb7b8bd923c3f5597a2c099f5085c345}
+Nome do projeto 
+
+DefiniÃ§Ã£o na linha 57 do arquivo S\+I\+G\+A\+Project.\+h.
+
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!project\+Version@{project\+Version}}
+\index{project\+Version@{project\+Version}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{project\+Version}]{\setlength{\rightskip}{0pt plus 5cm}int S\+I\+G\+A\+Project\+::project\+Version}\label{class_s_i_g_a_project_a6b80fc827c248ad34fe71a9856b042f0}
+Versão do projeto 
+
+DefiniÃ§Ã£o na linha 49 do arquivo S\+I\+G\+A\+Project.\+h.
+
+\index{S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}!time\+Interval@{time\+Interval}}
+\index{time\+Interval@{time\+Interval}!S\+I\+G\+A\+Project@{S\+I\+G\+A\+Project}}
+\subsubsection[{time\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Date\+::\+Time\+Interval} S\+I\+G\+A\+Project\+::time\+Interval}\label{class_s_i_g_a_project_a56378872170187a8c5457c8254e6a58a}
+Intervalo de tempo do projeto 
+
+DefiniÃ§Ã£o na linha 63 do arquivo S\+I\+G\+A\+Project.\+h.
+
+
+
+A documentaÃ§Ã£o para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+G\+A\+Project.\+h}\end{DoxyCompactItemize}

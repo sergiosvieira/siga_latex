@@ -1,0 +1,272 @@
+\section{Referência da Classe Res\+C\+AV}
+\label{class_res_c_a_v}\index{Res\+C\+AV@{Res\+C\+AV}}
+
+
+{\ttfamily \#include $<$Res\+C\+A\+V.\+h$>$}
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Res\+C\+AV} ()
+\item 
+{\bf $\sim$\+Res\+C\+AV} ()
+\item 
+void {\bf set\+Value} (double cota, double area, double volume)
+\item 
+{\bf Matrix} {\bf get\+C\+AV} ()
+\item 
+void {\bf clear\+C\+AV} ()
+\item 
+void {\bf set\+C\+AV} ({\bf Matrix})
+\item 
+{\bf Res\+C\+AV} ()
+\item 
+{\bf Res\+C\+AV} (const {\bf Res\+C\+AV} \&object)
+\item 
+virtual {\bf $\sim$\+Res\+C\+AV} ()
+\item 
+void {\bf set\+Value} (double cota, double area, double volume)
+\item 
+{\bf Matrix} {\bf get\+C\+AV} ()
+\item 
+{\bf Matrix} $\ast$ {\bf get\+Cav\+Ptr} ()
+\item 
+void {\bf clear\+C\+AV} ()
+\item 
+void {\bf set\+C\+AV} ({\bf Matrix})
+\item 
+{\bf Res\+C\+AV} $\ast$ {\bf copy} ()
+\item 
+bool {\bf recalculate\+Fit\+Curves} ({\bf Fit\+Curve\+::fit\+Type} fit\+Type, int degree)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Fit\+Curve} $\ast$ {\bf res\+Fit\+Curve}
+\item 
+bool {\bf power}
+\item 
+{\bf Fit\+Curve} $\ast$ {\bf cv\+Fit\+Curve}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 8 do arquivo C\+A\+V/\+Res\+C\+A\+V.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Res\+C\+AV@{Res\+C\+AV}!Res\+C\+AV@{Res\+C\+AV}}
+\index{Res\+C\+AV@{Res\+C\+AV}!Res\+C\+AV@{Res\+C\+AV}}
+\subsubsection[{Res\+C\+A\+V()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+C\+A\+V\+::\+Res\+C\+AV (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_a8a120d92d59fa0e682542dde34a1c4f3}
+Construtor \index{Res\+C\+AV@{Res\+C\+AV}!````~Res\+C\+AV@{$\sim$\+Res\+C\+AV}}
+\index{````~Res\+C\+AV@{$\sim$\+Res\+C\+AV}!Res\+C\+AV@{Res\+C\+AV}}
+\subsubsection[{$\sim$\+Res\+C\+A\+V()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+C\+A\+V\+::$\sim$\+Res\+C\+AV (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_a03dbcbd6649c7cee2dad396e6fcb2269}
+Destrutor \index{Res\+C\+AV@{Res\+C\+AV}!Res\+C\+AV@{Res\+C\+AV}}
+\index{Res\+C\+AV@{Res\+C\+AV}!Res\+C\+AV@{Res\+C\+AV}}
+\subsubsection[{Res\+C\+A\+V()}]{\setlength{\rightskip}{0pt plus 5cm}Res\+C\+A\+V\+::\+Res\+C\+AV (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_a8a120d92d59fa0e682542dde34a1c4f3}
+Construtor \index{Res\+C\+AV@{Res\+C\+AV}!Res\+C\+AV@{Res\+C\+AV}}
+\index{Res\+C\+AV@{Res\+C\+AV}!Res\+C\+AV@{Res\+C\+AV}}
+\subsubsection[{Res\+C\+A\+V(const Res\+C\+A\+V \&object)}]{\setlength{\rightskip}{0pt plus 5cm}Res\+C\+A\+V\+::\+Res\+C\+AV (
+\begin{DoxyParamCaption}
+\item[{const {\bf Res\+C\+AV} \&}]{object}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_a772ec09b6e2a8fcb967d12990b694319}
+Construtor de c�pia
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em object} & Objeto a ser copiado \\
+\hline
+\end{DoxyParams}
+\index{Res\+C\+AV@{Res\+C\+AV}!````~Res\+C\+AV@{$\sim$\+Res\+C\+AV}}
+\index{````~Res\+C\+AV@{$\sim$\+Res\+C\+AV}!Res\+C\+AV@{Res\+C\+AV}}
+\subsubsection[{$\sim$\+Res\+C\+A\+V()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Res\+C\+A\+V\+::$\sim$\+Res\+C\+AV (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_res_c_a_v_afde48dadee288b674640267764dbbe4f}
+Destrutor 
+
+\subsection{Métodos}
+\index{Res\+C\+AV@{Res\+C\+AV}!clear\+C\+AV@{clear\+C\+AV}}
+\index{clear\+C\+AV@{clear\+C\+AV}!Res\+C\+AV@{Res\+C\+AV}}
+\subsubsection[{clear\+C\+A\+V()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+::clear\+C\+AV (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_c_a_v_ac8c64523dcb5f598cb176a2a5d75ea97}
+Limpa a matriz C\+AV 
+
+Definição na linha 56 do arquivo C\+A\+V/\+Res\+C\+A\+V.\+h.
+
+\index{Res\+C\+AV@{Res\+C\+AV}!clear\+C\+AV@{clear\+C\+AV}}
+\index{clear\+C\+AV@{clear\+C\+AV}!Res\+C\+AV@{Res\+C\+AV}}
+\subsubsection[{clear\+C\+A\+V()}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+::clear\+C\+AV (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_c_a_v_ac8c64523dcb5f598cb176a2a5d75ea97}
+Limpa a matriz C\+AV 
+
+Definição na linha 76 do arquivo /\+C\+A\+V/\+Res\+C\+A\+V.\+h.
+
+\index{Res\+C\+AV@{Res\+C\+AV}!copy@{copy}}
+\index{copy@{copy}!Res\+C\+AV@{Res\+C\+AV}}
+\subsubsection[{copy()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Res\+C\+AV}$\ast$ Res\+C\+A\+V\+::copy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_a6a7057201a8324e97e1cf472e02c3495}
+Copia de si \index{Res\+C\+AV@{Res\+C\+AV}!get\+C\+AV@{get\+C\+AV}}
+\index{get\+C\+AV@{get\+C\+AV}!Res\+C\+AV@{Res\+C\+AV}}
+\subsubsection[{get\+C\+A\+V()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Res\+C\+A\+V\+::get\+C\+AV (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_c_a_v_a610470031cefc2714997e7692a23c7e9}
+Ajusta curva A = alfa$\ast$\+V$^\wedge$beta
+
+void fit\+Curve(); Retorna a matriz contendo cota, area e volume 
+
+Definição na linha 51 do arquivo C\+A\+V/\+Res\+C\+A\+V.\+h.
+
+\index{Res\+C\+AV@{Res\+C\+AV}!get\+C\+AV@{get\+C\+AV}}
+\index{get\+C\+AV@{get\+C\+AV}!Res\+C\+AV@{Res\+C\+AV}}
+\subsubsection[{get\+C\+A\+V()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix} Res\+C\+A\+V\+::get\+C\+AV (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_c_a_v_a610470031cefc2714997e7692a23c7e9}
+Ajusta curva A = alfa$\ast$\+V$^\wedge$beta
+
+void fit\+Curve(); Retorna a matriz contendo cota, area e volume 
+
+Definição na linha 69 do arquivo /\+C\+A\+V/\+Res\+C\+A\+V.\+h.
+
+\index{Res\+C\+AV@{Res\+C\+AV}!get\+Cav\+Ptr@{get\+Cav\+Ptr}}
+\index{get\+Cav\+Ptr@{get\+Cav\+Ptr}!Res\+C\+AV@{Res\+C\+AV}}
+\subsubsection[{get\+Cav\+Ptr()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix}$\ast$ Res\+C\+A\+V\+::get\+Cav\+Ptr (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_res_c_a_v_ababfe4035590efc8c2ddbb932dce5d71}
+
+
+Definição na linha 71 do arquivo /\+C\+A\+V/\+Res\+C\+A\+V.\+h.
+
+\index{Res\+C\+AV@{Res\+C\+AV}!recalculate\+Fit\+Curves@{recalculate\+Fit\+Curves}}
+\index{recalculate\+Fit\+Curves@{recalculate\+Fit\+Curves}!Res\+C\+AV@{Res\+C\+AV}}
+\subsubsection[{recalculate\+Fit\+Curves(\+Fit\+Curve\+::fit\+Type fit\+Type, int degree)}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+C\+A\+V\+::recalculate\+Fit\+Curves (
+\begin{DoxyParamCaption}
+\item[{{\bf Fit\+Curve\+::fit\+Type}}]{fit\+Type, }
+\item[{int}]{degree}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_a8b912f6e11e04090ec77a3ff7913351b}
+Limpa os Fit\+Curves anteriores e recalcula um novo
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em fit\+Type} & Tipo de Ajuste \\
+\hline
+{\em degree} & O valor do grau do ajuste polinomial \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+retorna true, caso o calculo tenha corrido ok. False, em caso de erro. 
+\end{DoxyReturn}
+\index{Res\+C\+AV@{Res\+C\+AV}!set\+C\+AV@{set\+C\+AV}}
+\index{set\+C\+AV@{set\+C\+AV}!Res\+C\+AV@{Res\+C\+AV}}
+\subsubsection[{set\+C\+A\+V(\+Matrix)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+::set\+C\+AV (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_af53185c62535a812da534c6b4afc79bc}
+Define a matriz C\+AV \index{Res\+C\+AV@{Res\+C\+AV}!set\+C\+AV@{set\+C\+AV}}
+\index{set\+C\+AV@{set\+C\+AV}!Res\+C\+AV@{Res\+C\+AV}}
+\subsubsection[{set\+C\+A\+V(\+Matrix)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+::set\+C\+AV (
+\begin{DoxyParamCaption}
+\item[{{\bf Matrix}}]{}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_af53185c62535a812da534c6b4afc79bc}
+Define a matriz C\+AV \index{Res\+C\+AV@{Res\+C\+AV}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!Res\+C\+AV@{Res\+C\+AV}}
+\subsubsection[{set\+Value(double cota, double area, double volume)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+::set\+Value (
+\begin{DoxyParamCaption}
+\item[{double}]{cota, }
+\item[{double}]{area, }
+\item[{double}]{volume}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_a7d276cf6b41470ecc3cb99c6474ba7d3}
+Inserir valores no mapa Cota x �rea x Volume 
+\begin{DoxyParams}{Parâmetros}
+{\em cota} & Cota do reservat�rio \\
+\hline
+{\em area} & Area do reservat�rio \\
+\hline
+{\em volume} & Volume do reservat�rio \\
+\hline
+\end{DoxyParams}
+\index{Res\+C\+AV@{Res\+C\+AV}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!Res\+C\+AV@{Res\+C\+AV}}
+\subsubsection[{set\+Value(double cota, double area, double volume)}]{\setlength{\rightskip}{0pt plus 5cm}void Res\+C\+A\+V\+::set\+Value (
+\begin{DoxyParamCaption}
+\item[{double}]{cota, }
+\item[{double}]{area, }
+\item[{double}]{volume}
+\end{DoxyParamCaption}
+)}\label{class_res_c_a_v_a7d276cf6b41470ecc3cb99c6474ba7d3}
+Inserir valores no mapa Cota x �rea x Volume 
+\begin{DoxyParams}{Parâmetros}
+{\em cota} & Cota do reservat�rio \\
+\hline
+{\em area} & Area do reservat�rio \\
+\hline
+{\em volume} & Volume do reservat�rio \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Atributos}
+\index{Res\+C\+AV@{Res\+C\+AV}!cv\+Fit\+Curve@{cv\+Fit\+Curve}}
+\index{cv\+Fit\+Curve@{cv\+Fit\+Curve}!Res\+C\+AV@{Res\+C\+AV}}
+\subsubsection[{cv\+Fit\+Curve}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Fit\+Curve}$\ast$ Res\+C\+A\+V\+::cv\+Fit\+Curve}\label{class_res_c_a_v_a3eb4fbca2af8803c6d06078d46c9aa77}
+Ajuste da curva Cota x Volume 
+
+Definição na linha 30 do arquivo /\+C\+A\+V/\+Res\+C\+A\+V.\+h.
+
+\index{Res\+C\+AV@{Res\+C\+AV}!power@{power}}
+\index{power@{power}!Res\+C\+AV@{Res\+C\+AV}}
+\subsubsection[{power}]{\setlength{\rightskip}{0pt plus 5cm}bool Res\+C\+A\+V\+::power}\label{class_res_c_a_v_a7bcad5c4177b4231bfef7dbb0e2f4758}
+Utilizar fit potencial 
+
+Definição na linha 24 do arquivo C\+A\+V/\+Res\+C\+A\+V.\+h.
+
+\index{Res\+C\+AV@{Res\+C\+AV}!res\+Fit\+Curve@{res\+Fit\+Curve}}
+\index{res\+Fit\+Curve@{res\+Fit\+Curve}!Res\+C\+AV@{Res\+C\+AV}}
+\subsubsection[{res\+Fit\+Curve}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Fit\+Curve} $\ast$ Res\+C\+A\+V\+::res\+Fit\+Curve}\label{class_res_c_a_v_a4c00fbea73caae3613f39045e1921dcd}
+Ajuste de curva
+
+Ajuste de curva �rea x Volume 
+
+Definição na linha 20 do arquivo C\+A\+V/\+Res\+C\+A\+V.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf C\+A\+V/\+Res\+C\+A\+V.\+h}\end{DoxyCompactItemize}

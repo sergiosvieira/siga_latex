@@ -1,0 +1,510 @@
+\section{Referência da Classe Layer\+Panel}
+\label{class_layer_panel}\index{Layer\+Panel@{Layer\+Panel}}
+
+
+{\ttfamily \#include $<$Layer\+Panel.\+h$>$}
+
+
+
+Herdeiro de wx\+Panel.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+{\bf B\+T\+N\+\_\+\+A\+DD}, 
+{\bf B\+T\+N\+\_\+\+A\+D\+D\+\_\+\+R\+A\+S\+T\+ER}, 
+{\bf B\+T\+N\+\_\+\+R\+E\+M\+O\+VE}, 
+{\bf B\+T\+N\+\_\+\+UP}, 
+\\*
+{\bf B\+T\+N\+\_\+\+D\+O\+WN}, 
+{\bf B\+T\+N\+\_\+\+I\+N\+F\+O\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+ER}, 
+{\bf C\+H\+E\+C\+K\+\_\+\+V\+I\+S\+I\+ON}, 
+{\bf B\+T\+N\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+C\+O\+L\+O\+R\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+ER}, 
+\\*
+{\bf B\+T\+N\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+C\+O\+L\+O\+R\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+B\+K\+G\+R\+O\+U\+ND}, 
+{\bf B\+T\+N\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+C\+O\+L\+O\+R\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+B\+K\+G\+R\+O\+U\+N\+D\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT}, 
+{\bf B\+T\+N\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+F\+R\+O\+M\+\_\+\+T\+E\+XT}, 
+{\bf B\+T\+N\+\_\+\+R\+E\+S\+I\+Z\+E\+\_\+\+T\+O\+\_\+\+F\+IT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf update\+Buttons\+States} ()
+\item 
+{\bf Layer\+Panel} (wx\+Window $\ast$parent, wx\+Window\+ID id=-\/1, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=0)
+\item 
+void {\bf set\+U\+R\+Lof\+Check\+List\+Box} (const wx\+String \&new\+U\+RL, int position)
+\item 
+void {\bf insert\+U\+R\+L\+On\+Checklist\+Box} (const wx\+String \&a\+\_\+url)
+\item 
+{\bf $\sim$\+Layer\+Panel} ()
+\item 
+void {\bf on\+Create\+Layer\+Button\+Click} (wx\+Command\+Event \&a\+\_\+event)
+\item 
+void {\bf on\+Erase\+Background} (wx\+Erase\+Event \&event)
+\item 
+void {\bf add\+Shape} (const wx\+String \&shapefile\+U\+RL)
+\item 
+void {\bf add\+Raster} (const wx\+String \&rasterfile\+U\+RL)
+\item 
+void {\bf clear} (bool redraw\+Canvas=true) const 
+\item 
+{\bf D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Estáticos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+static wx\+Flex\+Grid\+Sizer $\ast$ {\bf grid\+Check\+Box}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+void {\bf On\+Click\+Static} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Add} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Add\+Raster} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Remove} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Up} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Down} (wx\+Command\+Event \&event)
+\item 
+void {\bf redraw\+Shapes} () const 
+\item 
+void {\bf redraw\+Shapes\+No\+Reposition} () const 
+\item 
+void {\bf on\+Info\+From\+Layer} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Check} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Chance\+Line\+Color\+From\+Layer} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Selected\+Layer} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Chance\+Color\+From\+Layer\+Back\+Ground} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Back\+Ground\+Transparent} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Resize\+To\+Fit\+Click} (wx\+Command\+Event \&event)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Box\+Sizer $\ast$ {\bf layer\+Box\+Sizer}
+\item 
+wx\+Box\+Sizer $\ast$ {\bf check\+Box\+Sizer}
+\item 
+wx\+Check\+List\+Box $\ast$ {\bf check\+List\+Box}
+\item 
+wx\+Button $\ast$ {\bf btn\+Add}
+\item 
+wx\+Button $\ast$ {\bf btn\+Add\+Raster}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf btn\+Up}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf btn\+Down}
+\item 
+wx\+Button $\ast$ {\bf btn\+Remove}
+\item 
+wx\+Button $\ast$ {\bf btn\+Info\+From\+Layer}
+\item 
+wx\+Button $\ast$ {\bf btn\+Chance\+Color\+From\+Layer}
+\item 
+wx\+Button $\ast$ {\bf btn\+Chance\+Color\+From\+Layer\+Back\+Ground}
+\item 
+wx\+Button $\ast$ {\bf btn\+Chance\+Color\+From\+Layer\+Back\+Ground\+Tranparent}
+\item 
+wx\+Button $\ast$ {\bf btn\+Import\+Layer\+From\+Text}
+\item 
+wx\+Button $\ast$ {\bf btn\+Resize\+To\+Fit}
+\item 
+wx\+Color {\bf old\+Selected\+Shape\+Pen\+Color} = wx\+Transparent\+Color
+\item 
+int {\bf old\+Selected\+Shape\+Index} = -\/1
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 11 do arquivo Layer\+Panel.\+h.
+
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}\label{class_layer_panel_a7223d1bdb8e647837a67e8e2c01a0f12}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{B\+T\+N\+\_\+\+A\+DD@{B\+T\+N\+\_\+\+A\+DD}!Layer\+Panel@{Layer\+Panel}}\index{Layer\+Panel@{Layer\+Panel}!B\+T\+N\+\_\+\+A\+DD@{B\+T\+N\+\_\+\+A\+DD}}\item[{\em 
+B\+T\+N\+\_\+\+A\+DD\label{class_layer_panel_a7223d1bdb8e647837a67e8e2c01a0f12a537511fb578eb75c2026254010e8e17b}
+}]\index{B\+T\+N\+\_\+\+A\+D\+D\+\_\+\+R\+A\+S\+T\+ER@{B\+T\+N\+\_\+\+A\+D\+D\+\_\+\+R\+A\+S\+T\+ER}!Layer\+Panel@{Layer\+Panel}}\index{Layer\+Panel@{Layer\+Panel}!B\+T\+N\+\_\+\+A\+D\+D\+\_\+\+R\+A\+S\+T\+ER@{B\+T\+N\+\_\+\+A\+D\+D\+\_\+\+R\+A\+S\+T\+ER}}\item[{\em 
+B\+T\+N\+\_\+\+A\+D\+D\+\_\+\+R\+A\+S\+T\+ER\label{class_layer_panel_a7223d1bdb8e647837a67e8e2c01a0f12abf0a59c7e0203e63e8a2907a9e4c5a5d}
+}]\index{B\+T\+N\+\_\+\+R\+E\+M\+O\+VE@{B\+T\+N\+\_\+\+R\+E\+M\+O\+VE}!Layer\+Panel@{Layer\+Panel}}\index{Layer\+Panel@{Layer\+Panel}!B\+T\+N\+\_\+\+R\+E\+M\+O\+VE@{B\+T\+N\+\_\+\+R\+E\+M\+O\+VE}}\item[{\em 
+B\+T\+N\+\_\+\+R\+E\+M\+O\+VE\label{class_layer_panel_a7223d1bdb8e647837a67e8e2c01a0f12ab465507442a24d1fd699956df7b6ea2a}
+}]\index{B\+T\+N\+\_\+\+UP@{B\+T\+N\+\_\+\+UP}!Layer\+Panel@{Layer\+Panel}}\index{Layer\+Panel@{Layer\+Panel}!B\+T\+N\+\_\+\+UP@{B\+T\+N\+\_\+\+UP}}\item[{\em 
+B\+T\+N\+\_\+\+UP\label{class_layer_panel_a7223d1bdb8e647837a67e8e2c01a0f12a8e4b10aae17239454669e751830aff1b}
+}]\index{B\+T\+N\+\_\+\+D\+O\+WN@{B\+T\+N\+\_\+\+D\+O\+WN}!Layer\+Panel@{Layer\+Panel}}\index{Layer\+Panel@{Layer\+Panel}!B\+T\+N\+\_\+\+D\+O\+WN@{B\+T\+N\+\_\+\+D\+O\+WN}}\item[{\em 
+B\+T\+N\+\_\+\+D\+O\+WN\label{class_layer_panel_a7223d1bdb8e647837a67e8e2c01a0f12a79c04d6166d157a9a834dda5a84b78cc}
+}]\index{B\+T\+N\+\_\+\+I\+N\+F\+O\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+ER@{B\+T\+N\+\_\+\+I\+N\+F\+O\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+ER}!Layer\+Panel@{Layer\+Panel}}\index{Layer\+Panel@{Layer\+Panel}!B\+T\+N\+\_\+\+I\+N\+F\+O\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+ER@{B\+T\+N\+\_\+\+I\+N\+F\+O\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+ER}}\item[{\em 
+B\+T\+N\+\_\+\+I\+N\+F\+O\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+ER\label{class_layer_panel_a7223d1bdb8e647837a67e8e2c01a0f12a62d7fa68eb33f47483f9d3c3271049ab}
+}]\index{C\+H\+E\+C\+K\+\_\+\+V\+I\+S\+I\+ON@{C\+H\+E\+C\+K\+\_\+\+V\+I\+S\+I\+ON}!Layer\+Panel@{Layer\+Panel}}\index{Layer\+Panel@{Layer\+Panel}!C\+H\+E\+C\+K\+\_\+\+V\+I\+S\+I\+ON@{C\+H\+E\+C\+K\+\_\+\+V\+I\+S\+I\+ON}}\item[{\em 
+C\+H\+E\+C\+K\+\_\+\+V\+I\+S\+I\+ON\label{class_layer_panel_a7223d1bdb8e647837a67e8e2c01a0f12a0eb4c5ff8164b7219fc36731dbb2128c}
+}]\index{B\+T\+N\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+C\+O\+L\+O\+R\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+ER@{B\+T\+N\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+C\+O\+L\+O\+R\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+ER}!Layer\+Panel@{Layer\+Panel}}\index{Layer\+Panel@{Layer\+Panel}!B\+T\+N\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+C\+O\+L\+O\+R\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+ER@{B\+T\+N\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+C\+O\+L\+O\+R\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+ER}}\item[{\em 
+B\+T\+N\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+C\+O\+L\+O\+R\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+ER\label{class_layer_panel_a7223d1bdb8e647837a67e8e2c01a0f12a7c5522656f11e070a8da95a1d9b0e20f}
+}]\index{B\+T\+N\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+C\+O\+L\+O\+R\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+B\+K\+G\+R\+O\+U\+ND@{B\+T\+N\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+C\+O\+L\+O\+R\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+B\+K\+G\+R\+O\+U\+ND}!Layer\+Panel@{Layer\+Panel}}\index{Layer\+Panel@{Layer\+Panel}!B\+T\+N\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+C\+O\+L\+O\+R\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+B\+K\+G\+R\+O\+U\+ND@{B\+T\+N\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+C\+O\+L\+O\+R\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+B\+K\+G\+R\+O\+U\+ND}}\item[{\em 
+B\+T\+N\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+C\+O\+L\+O\+R\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+B\+K\+G\+R\+O\+U\+ND\label{class_layer_panel_a7223d1bdb8e647837a67e8e2c01a0f12aafd852602c0b1aa1a95720882849af97}
+}]\index{B\+T\+N\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+C\+O\+L\+O\+R\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+B\+K\+G\+R\+O\+U\+N\+D\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT@{B\+T\+N\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+C\+O\+L\+O\+R\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+B\+K\+G\+R\+O\+U\+N\+D\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT}!Layer\+Panel@{Layer\+Panel}}\index{Layer\+Panel@{Layer\+Panel}!B\+T\+N\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+C\+O\+L\+O\+R\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+B\+K\+G\+R\+O\+U\+N\+D\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT@{B\+T\+N\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+C\+O\+L\+O\+R\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+B\+K\+G\+R\+O\+U\+N\+D\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT}}\item[{\em 
+B\+T\+N\+\_\+\+C\+H\+A\+N\+G\+E\+\_\+\+C\+O\+L\+O\+R\+\_\+\+F\+R\+O\+M\+\_\+\+L\+A\+Y\+E\+R\+\_\+\+B\+K\+G\+R\+O\+U\+N\+D\+\_\+\+T\+R\+A\+N\+S\+P\+A\+R\+E\+NT\label{class_layer_panel_a7223d1bdb8e647837a67e8e2c01a0f12a7460ba9e73904b2072be2dba61115b90}
+}]\index{B\+T\+N\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+F\+R\+O\+M\+\_\+\+T\+E\+XT@{B\+T\+N\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+F\+R\+O\+M\+\_\+\+T\+E\+XT}!Layer\+Panel@{Layer\+Panel}}\index{Layer\+Panel@{Layer\+Panel}!B\+T\+N\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+F\+R\+O\+M\+\_\+\+T\+E\+XT@{B\+T\+N\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+F\+R\+O\+M\+\_\+\+T\+E\+XT}}\item[{\em 
+B\+T\+N\+\_\+\+C\+R\+E\+A\+T\+E\+\_\+\+S\+H\+A\+P\+E\+\_\+\+F\+R\+O\+M\+\_\+\+T\+E\+XT\label{class_layer_panel_a7223d1bdb8e647837a67e8e2c01a0f12aad0b2c6ae8ef540c32c783051a5bf700}
+}]\index{B\+T\+N\+\_\+\+R\+E\+S\+I\+Z\+E\+\_\+\+T\+O\+\_\+\+F\+IT@{B\+T\+N\+\_\+\+R\+E\+S\+I\+Z\+E\+\_\+\+T\+O\+\_\+\+F\+IT}!Layer\+Panel@{Layer\+Panel}}\index{Layer\+Panel@{Layer\+Panel}!B\+T\+N\+\_\+\+R\+E\+S\+I\+Z\+E\+\_\+\+T\+O\+\_\+\+F\+IT@{B\+T\+N\+\_\+\+R\+E\+S\+I\+Z\+E\+\_\+\+T\+O\+\_\+\+F\+IT}}\item[{\em 
+B\+T\+N\+\_\+\+R\+E\+S\+I\+Z\+E\+\_\+\+T\+O\+\_\+\+F\+IT\label{class_layer_panel_a7223d1bdb8e647837a67e8e2c01a0f12a50805163556ebbb0c98720b015e02a37}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 63 do arquivo Layer\+Panel.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Layer\+Panel@{Layer\+Panel}!Layer\+Panel@{Layer\+Panel}}
+\index{Layer\+Panel@{Layer\+Panel}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{Layer\+Panel(wx\+Window $\ast$parent, wx\+Window\+I\+D id=-\/1, const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Default\+Size, long style=0)}]{\setlength{\rightskip}{0pt plus 5cm}Layer\+Panel\+::\+Layer\+Panel (
+\begin{DoxyParamCaption}
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{wx\+Window\+ID}]{id = {\ttfamily -\/1}, }
+\item[{const wx\+Point \&}]{pos = {\ttfamily wxDefaultPosition}, }
+\item[{const wx\+Size \&}]{size = {\ttfamily wxDefaultSize}, }
+\item[{long}]{style = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_layer_panel_a0412f6c912bcafcce7dd2fd546574170}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em parent} & Componente a que pertence \\
+\hline
+{\em id} & Identificador \\
+\hline
+{\em pos} & Posi��o inicial \\
+\hline
+{\em size} & Tamanho inicial \\
+\hline
+{\em style} & estilo \\
+\hline
+\end{DoxyParams}
+\index{Layer\+Panel@{Layer\+Panel}!````~Layer\+Panel@{$\sim$\+Layer\+Panel}}
+\index{````~Layer\+Panel@{$\sim$\+Layer\+Panel}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{$\sim$\+Layer\+Panel()}]{\setlength{\rightskip}{0pt plus 5cm}Layer\+Panel\+::$\sim$\+Layer\+Panel (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_layer_panel_a2782e937d675228dc11055849626076d}
+
+
+\subsection{Métodos}
+\index{Layer\+Panel@{Layer\+Panel}!add\+Raster@{add\+Raster}}
+\index{add\+Raster@{add\+Raster}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{add\+Raster(const wx\+String \&rasterfile\+U\+R\+L)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::add\+Raster (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{rasterfile\+U\+RL}
+\end{DoxyParamCaption}
+)}\label{class_layer_panel_a90fd615c3c5ef3c63c6ee05d69762421}
+\index{Layer\+Panel@{Layer\+Panel}!add\+Shape@{add\+Shape}}
+\index{add\+Shape@{add\+Shape}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{add\+Shape(const wx\+String \&shapefile\+U\+R\+L)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::add\+Shape (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{shapefile\+U\+RL}
+\end{DoxyParamCaption}
+)}\label{class_layer_panel_a9ee5e2b833f8aa7df4cc91b3c5ff0f91}
+\index{Layer\+Panel@{Layer\+Panel}!clear@{clear}}
+\index{clear@{clear}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{clear(bool redraw\+Canvas=true) const }]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::clear (
+\begin{DoxyParamCaption}
+\item[{bool}]{redraw\+Canvas = {\ttfamily true}}
+\end{DoxyParamCaption}
+) const}\label{class_layer_panel_a8226f05e51e713bf4b9a96283a123a3c}
+M�todo respons�vel por limpar o painel (remover os itens da List\+Box e limpar o canvas) \index{Layer\+Panel@{Layer\+Panel}!D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+L\+E()}]{\setlength{\rightskip}{0pt plus 5cm}Layer\+Panel\+::\+D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_layer_panel_a99f510f4872ff4476cf1d838e222d9c1}
+Tabela de eventos \index{Layer\+Panel@{Layer\+Panel}!insert\+U\+R\+L\+On\+Checklist\+Box@{insert\+U\+R\+L\+On\+Checklist\+Box}}
+\index{insert\+U\+R\+L\+On\+Checklist\+Box@{insert\+U\+R\+L\+On\+Checklist\+Box}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{insert\+U\+R\+L\+On\+Checklist\+Box(const wx\+String \&a\+\_\+url)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::insert\+U\+R\+L\+On\+Checklist\+Box (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{a\+\_\+url}
+\end{DoxyParamCaption}
+)}\label{class_layer_panel_a7de6de93ea2620305ae8e6e6c15693c8}
+\index{Layer\+Panel@{Layer\+Panel}!on\+Add@{on\+Add}}
+\index{on\+Add@{on\+Add}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{on\+Add(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::on\+Add (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_a275339cfa4d5e15c3a88a67203d8434b}
+\index{Layer\+Panel@{Layer\+Panel}!on\+Add\+Raster@{on\+Add\+Raster}}
+\index{on\+Add\+Raster@{on\+Add\+Raster}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{on\+Add\+Raster(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::on\+Add\+Raster (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_ac66d26208064c7f1c629c639e089e6cd}
+\index{Layer\+Panel@{Layer\+Panel}!on\+Back\+Ground\+Transparent@{on\+Back\+Ground\+Transparent}}
+\index{on\+Back\+Ground\+Transparent@{on\+Back\+Ground\+Transparent}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{on\+Back\+Ground\+Transparent(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::on\+Back\+Ground\+Transparent (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_ab97adca1f2c20ebe2803d79c0470a783}
+\index{Layer\+Panel@{Layer\+Panel}!on\+Chance\+Color\+From\+Layer\+Back\+Ground@{on\+Chance\+Color\+From\+Layer\+Back\+Ground}}
+\index{on\+Chance\+Color\+From\+Layer\+Back\+Ground@{on\+Chance\+Color\+From\+Layer\+Back\+Ground}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{on\+Chance\+Color\+From\+Layer\+Back\+Ground(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::on\+Chance\+Color\+From\+Layer\+Back\+Ground (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_a7b312d3e525eb735d67108fc716ebb5e}
+\index{Layer\+Panel@{Layer\+Panel}!on\+Chance\+Line\+Color\+From\+Layer@{on\+Chance\+Line\+Color\+From\+Layer}}
+\index{on\+Chance\+Line\+Color\+From\+Layer@{on\+Chance\+Line\+Color\+From\+Layer}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{on\+Chance\+Line\+Color\+From\+Layer(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::on\+Chance\+Line\+Color\+From\+Layer (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_a5b059202d303037ccaf4b0888cd5f16d}
+\index{Layer\+Panel@{Layer\+Panel}!on\+Check@{on\+Check}}
+\index{on\+Check@{on\+Check}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{on\+Check(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::on\+Check (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_a79d749ab2514af4e9b73c8b1affdad4c}
+\index{Layer\+Panel@{Layer\+Panel}!On\+Click\+Static@{On\+Click\+Static}}
+\index{On\+Click\+Static@{On\+Click\+Static}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{On\+Click\+Static(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::\+On\+Click\+Static (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_a9566365872c1b91ddfd3a4a8b486d1a5}
+\index{Layer\+Panel@{Layer\+Panel}!on\+Create\+Layer\+Button\+Click@{on\+Create\+Layer\+Button\+Click}}
+\index{on\+Create\+Layer\+Button\+Click@{on\+Create\+Layer\+Button\+Click}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{on\+Create\+Layer\+Button\+Click(wx\+Command\+Event \&a\+\_\+event)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::on\+Create\+Layer\+Button\+Click (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{a\+\_\+event}
+\end{DoxyParamCaption}
+)}\label{class_layer_panel_af4b77dadace1a9301eee019e02eeb045}
+\index{Layer\+Panel@{Layer\+Panel}!on\+Down@{on\+Down}}
+\index{on\+Down@{on\+Down}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{on\+Down(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::on\+Down (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_a51e3b8f991172c33fce4bebd9f3b159d}
+\index{Layer\+Panel@{Layer\+Panel}!on\+Erase\+Background@{on\+Erase\+Background}}
+\index{on\+Erase\+Background@{on\+Erase\+Background}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{on\+Erase\+Background(wx\+Erase\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::on\+Erase\+Background (
+\begin{DoxyParamCaption}
+\item[{wx\+Erase\+Event \&}]{event}
+\end{DoxyParamCaption}
+)}\label{class_layer_panel_a90e24e58836ba6ca6ca7515e55f32467}
+Evento responsavel por apagar a paisagem 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento recebido \\
+\hline
+\end{DoxyParams}
+\index{Layer\+Panel@{Layer\+Panel}!on\+Info\+From\+Layer@{on\+Info\+From\+Layer}}
+\index{on\+Info\+From\+Layer@{on\+Info\+From\+Layer}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{on\+Info\+From\+Layer(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::on\+Info\+From\+Layer (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_afcf3e6b1b8b38338ae51d27d86836587}
+\index{Layer\+Panel@{Layer\+Panel}!on\+Remove@{on\+Remove}}
+\index{on\+Remove@{on\+Remove}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{on\+Remove(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::on\+Remove (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_a567b91366e5197eb3bb25dceacbe00d0}
+\index{Layer\+Panel@{Layer\+Panel}!on\+Resize\+To\+Fit\+Click@{on\+Resize\+To\+Fit\+Click}}
+\index{on\+Resize\+To\+Fit\+Click@{on\+Resize\+To\+Fit\+Click}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{on\+Resize\+To\+Fit\+Click(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::on\+Resize\+To\+Fit\+Click (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_ae1b13b95a2f9819e960f8dcccd571cb7}
+\index{Layer\+Panel@{Layer\+Panel}!on\+Selected\+Layer@{on\+Selected\+Layer}}
+\index{on\+Selected\+Layer@{on\+Selected\+Layer}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{on\+Selected\+Layer(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::on\+Selected\+Layer (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_a9de8fd94e90bd0434aa91523cbc40652}
+\index{Layer\+Panel@{Layer\+Panel}!on\+Up@{on\+Up}}
+\index{on\+Up@{on\+Up}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{on\+Up(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::on\+Up (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_a5def72b684fefb34390540700f3b8b8e}
+\index{Layer\+Panel@{Layer\+Panel}!redraw\+Shapes@{redraw\+Shapes}}
+\index{redraw\+Shapes@{redraw\+Shapes}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{redraw\+Shapes() const }]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::redraw\+Shapes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_a7eb6c4a28052b8c017ca279b40d4bd8f}
+\index{Layer\+Panel@{Layer\+Panel}!redraw\+Shapes\+No\+Reposition@{redraw\+Shapes\+No\+Reposition}}
+\index{redraw\+Shapes\+No\+Reposition@{redraw\+Shapes\+No\+Reposition}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{redraw\+Shapes\+No\+Reposition() const }]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::redraw\+Shapes\+No\+Reposition (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_a82c23117d41a4d77567c0f0d7a8d552f}
+\index{Layer\+Panel@{Layer\+Panel}!set\+U\+R\+Lof\+Check\+List\+Box@{set\+U\+R\+Lof\+Check\+List\+Box}}
+\index{set\+U\+R\+Lof\+Check\+List\+Box@{set\+U\+R\+Lof\+Check\+List\+Box}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{set\+U\+R\+Lof\+Check\+List\+Box(const wx\+String \&new\+U\+R\+L, int position)}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::set\+U\+R\+Lof\+Check\+List\+Box (
+\begin{DoxyParamCaption}
+\item[{const wx\+String \&}]{new\+U\+RL, }
+\item[{int}]{position}
+\end{DoxyParamCaption}
+)}\label{class_layer_panel_a882467cf5407f2e3694c42ccce61b6d1}
+Modifica troca uma U\+RL de Layer Panel da posi��o \textquotesingle{}position\textquotesingle{} por new\+U\+RL \index{Layer\+Panel@{Layer\+Panel}!update\+Buttons\+States@{update\+Buttons\+States}}
+\index{update\+Buttons\+States@{update\+Buttons\+States}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{update\+Buttons\+States()}]{\setlength{\rightskip}{0pt plus 5cm}void Layer\+Panel\+::update\+Buttons\+States (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_layer_panel_a235a502d9b2700ce19ff4160455e0ea6}
+
+
+\subsection{Atributos}
+\index{Layer\+Panel@{Layer\+Panel}!btn\+Add@{btn\+Add}}
+\index{btn\+Add@{btn\+Add}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{btn\+Add}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Layer\+Panel\+::btn\+Add\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_a25eff46d33516ce4e0ca5349501ca0ee}
+
+
+Definição na linha 24 do arquivo Layer\+Panel.\+h.
+
+\index{Layer\+Panel@{Layer\+Panel}!btn\+Add\+Raster@{btn\+Add\+Raster}}
+\index{btn\+Add\+Raster@{btn\+Add\+Raster}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{btn\+Add\+Raster}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Layer\+Panel\+::btn\+Add\+Raster\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_abc46f7e4e8aa5c61f533760fa3f23562}
+
+
+Definição na linha 25 do arquivo Layer\+Panel.\+h.
+
+\index{Layer\+Panel@{Layer\+Panel}!btn\+Chance\+Color\+From\+Layer@{btn\+Chance\+Color\+From\+Layer}}
+\index{btn\+Chance\+Color\+From\+Layer@{btn\+Chance\+Color\+From\+Layer}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{btn\+Chance\+Color\+From\+Layer}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Layer\+Panel\+::btn\+Chance\+Color\+From\+Layer\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_af5ac44bab1c7c60275928772e4026f91}
+
+
+Definição na linha 30 do arquivo Layer\+Panel.\+h.
+
+\index{Layer\+Panel@{Layer\+Panel}!btn\+Chance\+Color\+From\+Layer\+Back\+Ground@{btn\+Chance\+Color\+From\+Layer\+Back\+Ground}}
+\index{btn\+Chance\+Color\+From\+Layer\+Back\+Ground@{btn\+Chance\+Color\+From\+Layer\+Back\+Ground}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{btn\+Chance\+Color\+From\+Layer\+Back\+Ground}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Layer\+Panel\+::btn\+Chance\+Color\+From\+Layer\+Back\+Ground\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_aa5349a93b40832c70208545e890cfbbf}
+
+
+Definição na linha 31 do arquivo Layer\+Panel.\+h.
+
+\index{Layer\+Panel@{Layer\+Panel}!btn\+Chance\+Color\+From\+Layer\+Back\+Ground\+Tranparent@{btn\+Chance\+Color\+From\+Layer\+Back\+Ground\+Tranparent}}
+\index{btn\+Chance\+Color\+From\+Layer\+Back\+Ground\+Tranparent@{btn\+Chance\+Color\+From\+Layer\+Back\+Ground\+Tranparent}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{btn\+Chance\+Color\+From\+Layer\+Back\+Ground\+Tranparent}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Layer\+Panel\+::btn\+Chance\+Color\+From\+Layer\+Back\+Ground\+Tranparent\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_a6a929122bc44d02d02c3cc540ec62a72}
+
+
+Definição na linha 32 do arquivo Layer\+Panel.\+h.
+
+\index{Layer\+Panel@{Layer\+Panel}!btn\+Down@{btn\+Down}}
+\index{btn\+Down@{btn\+Down}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{btn\+Down}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Layer\+Panel\+::btn\+Down\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_a704c644b0fa1514df4dde577fbc5b2cd}
+
+
+Definição na linha 27 do arquivo Layer\+Panel.\+h.
+
+\index{Layer\+Panel@{Layer\+Panel}!btn\+Import\+Layer\+From\+Text@{btn\+Import\+Layer\+From\+Text}}
+\index{btn\+Import\+Layer\+From\+Text@{btn\+Import\+Layer\+From\+Text}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{btn\+Import\+Layer\+From\+Text}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Layer\+Panel\+::btn\+Import\+Layer\+From\+Text\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_a0e58eaa5c8516f7204ce8200e2ff4c2f}
+
+
+Definição na linha 33 do arquivo Layer\+Panel.\+h.
+
+\index{Layer\+Panel@{Layer\+Panel}!btn\+Info\+From\+Layer@{btn\+Info\+From\+Layer}}
+\index{btn\+Info\+From\+Layer@{btn\+Info\+From\+Layer}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{btn\+Info\+From\+Layer}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Layer\+Panel\+::btn\+Info\+From\+Layer\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_aaa7a43cdef071c97199fed6d5e844d12}
+
+
+Definição na linha 29 do arquivo Layer\+Panel.\+h.
+
+\index{Layer\+Panel@{Layer\+Panel}!btn\+Remove@{btn\+Remove}}
+\index{btn\+Remove@{btn\+Remove}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{btn\+Remove}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Layer\+Panel\+::btn\+Remove\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_aa28dff2cad8c2699b0baa0218687aa07}
+
+
+Definição na linha 28 do arquivo Layer\+Panel.\+h.
+
+\index{Layer\+Panel@{Layer\+Panel}!btn\+Resize\+To\+Fit@{btn\+Resize\+To\+Fit}}
+\index{btn\+Resize\+To\+Fit@{btn\+Resize\+To\+Fit}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{btn\+Resize\+To\+Fit}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Layer\+Panel\+::btn\+Resize\+To\+Fit\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_ac112de6870c19f473533dcbaab6d8b5b}
+
+
+Definição na linha 34 do arquivo Layer\+Panel.\+h.
+
+\index{Layer\+Panel@{Layer\+Panel}!btn\+Up@{btn\+Up}}
+\index{btn\+Up@{btn\+Up}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{btn\+Up}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Layer\+Panel\+::btn\+Up\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_a1496d6f064414e91f406e7c8db7a231c}
+
+
+Definição na linha 26 do arquivo Layer\+Panel.\+h.
+
+\index{Layer\+Panel@{Layer\+Panel}!check\+Box\+Sizer@{check\+Box\+Sizer}}
+\index{check\+Box\+Sizer@{check\+Box\+Sizer}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{check\+Box\+Sizer}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Box\+Sizer$\ast$ Layer\+Panel\+::check\+Box\+Sizer\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_a2da07dd71e8c0e359c55c04bb07315c6}
+
+
+Definição na linha 18 do arquivo Layer\+Panel.\+h.
+
+\index{Layer\+Panel@{Layer\+Panel}!check\+List\+Box@{check\+List\+Box}}
+\index{check\+List\+Box@{check\+List\+Box}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{check\+List\+Box}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+List\+Box$\ast$ Layer\+Panel\+::check\+List\+Box\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_a1b9496b94e5185e4c0cf890450a0879f}
+
+
+Definição na linha 21 do arquivo Layer\+Panel.\+h.
+
+\index{Layer\+Panel@{Layer\+Panel}!grid\+Check\+Box@{grid\+Check\+Box}}
+\index{grid\+Check\+Box@{grid\+Check\+Box}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{grid\+Check\+Box}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Flex\+Grid\+Sizer$\ast$ Layer\+Panel\+::grid\+Check\+Box\hspace{0.3cm}{\ttfamily [static]}}\label{class_layer_panel_a2184d91e9fa17e294a4c5928b02033d2}
+
+
+Definição na linha 79 do arquivo Layer\+Panel.\+h.
+
+\index{Layer\+Panel@{Layer\+Panel}!layer\+Box\+Sizer@{layer\+Box\+Sizer}}
+\index{layer\+Box\+Sizer@{layer\+Box\+Sizer}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{layer\+Box\+Sizer}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Box\+Sizer$\ast$ Layer\+Panel\+::layer\+Box\+Sizer\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_a108bd66705146e36857eae5c0a8940a1}
+
+
+Definição na linha 15 do arquivo Layer\+Panel.\+h.
+
+\index{Layer\+Panel@{Layer\+Panel}!old\+Selected\+Shape\+Index@{old\+Selected\+Shape\+Index}}
+\index{old\+Selected\+Shape\+Index@{old\+Selected\+Shape\+Index}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{old\+Selected\+Shape\+Index}]{\setlength{\rightskip}{0pt plus 5cm}int Layer\+Panel\+::old\+Selected\+Shape\+Index = -\/1\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_a7fceb66c814e1b76c130812b71e9289b}
+
+
+Definição na linha 38 do arquivo Layer\+Panel.\+h.
+
+\index{Layer\+Panel@{Layer\+Panel}!old\+Selected\+Shape\+Pen\+Color@{old\+Selected\+Shape\+Pen\+Color}}
+\index{old\+Selected\+Shape\+Pen\+Color@{old\+Selected\+Shape\+Pen\+Color}!Layer\+Panel@{Layer\+Panel}}
+\subsubsection[{old\+Selected\+Shape\+Pen\+Color}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Color Layer\+Panel\+::old\+Selected\+Shape\+Pen\+Color = wx\+Transparent\+Color\hspace{0.3cm}{\ttfamily [protected]}}\label{class_layer_panel_a25677e42e61c11e04c7d9540dc4f8478}
+
+
+Definição na linha 37 do arquivo Layer\+Panel.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Layer\+Panel.\+h}\end{DoxyCompactItemize}

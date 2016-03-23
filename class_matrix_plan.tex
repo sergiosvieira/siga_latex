@@ -1,0 +1,783 @@
+\section{Referência da Classe Matrix\+Plan}
+\label{class_matrix_plan}\index{Matrix\+Plan@{Matrix\+Plan}}
+
+
+{\ttfamily \#include $<$Matrix\+Plan.\+h$>$}
+
+
+
+Herdeiro de {\bf Component\+Interface}.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Grid\+Type} \{ {\bf G\+E\+N\+E\+R\+AL}, 
+{\bf T\+H\+I\+E\+S\+S\+EN}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix\+Plan} (wx\+Frame $\ast${\bf frame}, wx\+Window $\ast${\bf parent}, {\bf Matrix\+Viewer} $\ast${\bf viewer}, bool editable, bool manual\+Inserction, {\bf Grid\+Type} {\bf type}={\bf G\+E\+N\+E\+R\+AL})
+\item 
+virtual {\bf $\sim$\+Matrix\+Plan} ()
+\item 
+void {\bf insert\+Matrix} ({\bf Draw\+Matrix} $\ast$matrix)
+\item 
+wx\+Point {\bf get\+Selected\+Label} ()
+\item 
+void {\bf set\+Selected\+Label} (int index)
+\item 
+void {\bf set\+D\+Matrix\+Of\+Actives\+Stations} ({\bf Draw\+Matrix} $\ast$d\+Matrix)
+\item 
+void {\bf remove\+Matrix} ({\bf Draw\+Matrix} $\ast$d\+Matrix, wx\+String name)
+\item 
+void {\bf draw} ()
+\item 
+void {\bf clear} ()
+\item 
+void {\bf hide\+Select\+All} (bool attr)
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf get\+Spin\+Lines} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bf criou\+Coluna\+Extra}
+\item 
+int {\bf total\+Rows\+Load\+File}
+\item 
+bool {\bf edited}
+\item 
+wx\+Menu $\ast$ {\bf popup\+Menu}
+\item 
+wx\+Tree\+Item\+Id {\bf r\+Id}
+\end{DoxyCompactItemize}
+\subsection*{Tipos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \\*
+{\bf I\+D\+\_\+\+C\+H\+A\+N\+GE}, 
+{\bf I\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+I\+NT}, 
+{\bf I\+D\+\_\+\+E\+N\+D\+\_\+\+I\+NT}, 
+{\bf I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+M\+A\+T\+R\+IX}, 
+\\*
+{\bf I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+C\+O\+L\+U\+MN}, 
+{\bf I\+D\+\_\+\+C\+H\+E\+C\+K\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+M}, 
+{\bf I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+M}, 
+{\bf I\+D\+\_\+\+A\+P\+P\+L\+Y\+\_\+\+B\+U\+T\+T\+ON}, 
+\\*
+{\bf I\+D\+\_\+\+N\+A\+M\+E\+\_\+\+C\+OL}, 
+{\bf I\+D\+\_\+\+N\+E\+W\+\_\+\+N\+A\+M\+E\+\_\+\+C\+O\+L\+U\+MN}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+P}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+P}, 
+\\*
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+L\+A\+P\+S\+E\+\_\+P}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+P}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+\_\+P}, 
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+\_\+P}, 
+\\*
+{\bf P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+N\+F\+\_\+P}, 
+{\bf I\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+M}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Tree\+Item\+Id {\bf has\+Section} (wx\+Tree\+Item\+Id parent\+Id, wx\+String section)
+\item 
+void {\bf insert\+Tree\+Item} (wx\+Tree\+Item\+Id root, {\bf Draw\+Matrix} $\ast$d\+Matrix)
+\item 
+void {\bf remove\+Tree\+Item} (wx\+Tree\+Item\+Id root, wx\+String name, {\bf Draw\+Matrix} $\ast$d\+Matrix)
+\item 
+void {\bf select\+Matrix} (wx\+Tree\+Item\+Id id, bool state)
+\item 
+void {\bf on\+Select\+Matrix} (wx\+Tree\+Event \&event)
+\item 
+void {\bf on\+Right\+Clicked} (wx\+Tree\+Event \&event)
+\item 
+void {\bf on\+Popup\+Menu} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Delete\+Item} (wx\+Tree\+Event \&event)
+\item 
+void {\bf on\+Check} (wx\+Command\+Event \&)
+\item 
+void {\bf on\+Spin\+Lineadd} (wx\+Spin\+Event \&event)
+\item 
+void {\bf on\+Spin\+Linesub} (wx\+Spin\+Event \&event)
+\item 
+void {\bf set\+Number\+Of\+Lin\+Or\+Col} (wx\+Command\+Event \&event)
+\item 
+void {\bf on\+Apply} (wx\+Command\+Event \&a\+\_\+event)
+\item 
+void {\bf set\+Columns\+On\+Matrix} (int n\+Columns)
+\item 
+void {\bf remove\+Columns\+Of\+Matrix} (int n\+Columns)
+\item 
+void {\bf set\+Lines\+On\+Matrix} (int n\+Lines)
+\item 
+void {\bf remove\+Lines\+Of\+Matrix} (int n\+Lines)
+\item 
+void {\bf select\+Line} (int a\+\_\+row)
+\item 
+void {\bf on\+Select\+All\+Line} (wx\+Command\+Event \&event)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Static\+Text $\ast$ {\bf edit\+Label\+Col}
+\item 
+wx\+Static\+Text $\ast$ {\bf add\+Line\+Text}
+\item 
+wx\+Static\+Text $\ast$ {\bf fill\+Column\+Number}
+\item 
+wx\+Static\+Text $\ast$ {\bf fill\+New\+Name\+Col}
+\item 
+wx\+Flex\+Grid\+Sizer $\ast$ {\bf fg\+Edit\+Name\+Col}
+\item 
+wx\+Box\+Sizer $\ast$ {\bf sizerT}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Tools}
+\item 
+wx\+Panel $\ast$ {\bf tools}
+\item 
+wx\+Sizer $\ast$ {\bf s\+Matrixes}
+\item 
+wx\+String {\bf marked\+All} = \char`\"{}1\char`\"{}
+\item 
+{\bf Draw\+Matrix} $\ast$ {\bf d\+Matrix\+Of\+Actives\+Stations}
+\item 
+wx\+Tree\+Ctrl $\ast$ {\bf tc\+Series}
+\item 
+wx\+Check\+Box $\ast$ {\bf cb\+Manual}
+\item 
+wx\+Button $\ast$ {\bf btn\+Select\+All}
+\item 
+wx\+Spin\+Ctrl $\ast$ {\bf spin\+Lines}
+\item 
+wx\+Button $\ast$ {\bf m\+\_\+line\+Button}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf desired\+Col}
+\item 
+wx\+Text\+Ctrl $\ast$ {\bf new\+Column\+Name}
+\item 
+int {\bf shown\+Plan}
+\item 
+{\bf Matrix\+Plan\+Grid} $\ast$ {\bf grid}
+\item 
+{\bf Matrix\+Viewer} $\ast$ {\bf viewer}
+\item 
+bool {\bf manual\+Values}
+\item 
+{\bf Grid\+Type} {\bf type}
+\end{DoxyCompactItemize}
+\subsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+class {\bf Matrix\+Plan\+Grid}
+\item 
+class {\bf Matrix\+Viewer}
+\item 
+class {\bf T\+A\+L\+River\+W\+Q\+Model\+Main}
+\item 
+class {\bf Res\+C\+A\+V\+Dialog\+Content}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+Mostra as series de forma tabular 
+
+Definição na linha 27 do arquivo Matrix\+Plan.\+h.
+
+
+
+\subsection{Enumerações}
+\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_ab6cf74af1282c696fc45d6cbd92c04a9}
+Enumerador gr�fico \begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{I\+D\+\_\+\+C\+H\+A\+N\+GE@{I\+D\+\_\+\+C\+H\+A\+N\+GE}!Matrix\+Plan@{Matrix\+Plan}}\index{Matrix\+Plan@{Matrix\+Plan}!I\+D\+\_\+\+C\+H\+A\+N\+GE@{I\+D\+\_\+\+C\+H\+A\+N\+GE}}\item[{\em 
+I\+D\+\_\+\+C\+H\+A\+N\+GE\label{class_matrix_plan_ab6cf74af1282c696fc45d6cbd92c04a9af71f492cb86461e0783a08082cb4becf}
+}]\index{I\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+I\+NT@{I\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+I\+NT}!Matrix\+Plan@{Matrix\+Plan}}\index{Matrix\+Plan@{Matrix\+Plan}!I\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+I\+NT@{I\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+I\+NT}}\item[{\em 
+I\+D\+\_\+\+S\+T\+A\+R\+T\+\_\+\+I\+NT\label{class_matrix_plan_ab6cf74af1282c696fc45d6cbd92c04a9a8befaf3e2a4a1abe6afef1033c277f2c}
+}]\index{I\+D\+\_\+\+E\+N\+D\+\_\+\+I\+NT@{I\+D\+\_\+\+E\+N\+D\+\_\+\+I\+NT}!Matrix\+Plan@{Matrix\+Plan}}\index{Matrix\+Plan@{Matrix\+Plan}!I\+D\+\_\+\+E\+N\+D\+\_\+\+I\+NT@{I\+D\+\_\+\+E\+N\+D\+\_\+\+I\+NT}}\item[{\em 
+I\+D\+\_\+\+E\+N\+D\+\_\+\+I\+NT\label{class_matrix_plan_ab6cf74af1282c696fc45d6cbd92c04a9a5a625be993a088e49f7ecf730269fd69}
+}]\index{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+M\+A\+T\+R\+IX@{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+M\+A\+T\+R\+IX}!Matrix\+Plan@{Matrix\+Plan}}\index{Matrix\+Plan@{Matrix\+Plan}!I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+M\+A\+T\+R\+IX@{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+M\+A\+T\+R\+IX}}\item[{\em 
+I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+M\+A\+T\+R\+IX\label{class_matrix_plan_ab6cf74af1282c696fc45d6cbd92c04a9aaa6ec83ccf49e3f3f81bee63502bfdd0}
+}]\index{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+C\+O\+L\+U\+MN@{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+C\+O\+L\+U\+MN}!Matrix\+Plan@{Matrix\+Plan}}\index{Matrix\+Plan@{Matrix\+Plan}!I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+C\+O\+L\+U\+MN@{I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+C\+O\+L\+U\+MN}}\item[{\em 
+I\+D\+\_\+\+S\+E\+L\+E\+C\+T\+\_\+\+C\+O\+L\+U\+MN\label{class_matrix_plan_ab6cf74af1282c696fc45d6cbd92c04a9a0296cf35bf7b2838b2351bcc33bda435}
+}]\index{I\+D\+\_\+\+C\+H\+E\+C\+K\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+M@{I\+D\+\_\+\+C\+H\+E\+C\+K\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+M}!Matrix\+Plan@{Matrix\+Plan}}\index{Matrix\+Plan@{Matrix\+Plan}!I\+D\+\_\+\+C\+H\+E\+C\+K\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+M@{I\+D\+\_\+\+C\+H\+E\+C\+K\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+M}}\item[{\em 
+I\+D\+\_\+\+C\+H\+E\+C\+K\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+M\label{class_matrix_plan_ab6cf74af1282c696fc45d6cbd92c04a9a11ff48351d541aecc45e99f11676f812}
+}]\index{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+M@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+M}!Matrix\+Plan@{Matrix\+Plan}}\index{Matrix\+Plan@{Matrix\+Plan}!I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+M@{I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+M}}\item[{\em 
+I\+D\+\_\+\+S\+P\+I\+N\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+M\label{class_matrix_plan_ab6cf74af1282c696fc45d6cbd92c04a9a58967441037524e4a76ad4797582174a}
+}]\index{I\+D\+\_\+\+A\+P\+P\+L\+Y\+\_\+\+B\+U\+T\+T\+ON@{I\+D\+\_\+\+A\+P\+P\+L\+Y\+\_\+\+B\+U\+T\+T\+ON}!Matrix\+Plan@{Matrix\+Plan}}\index{Matrix\+Plan@{Matrix\+Plan}!I\+D\+\_\+\+A\+P\+P\+L\+Y\+\_\+\+B\+U\+T\+T\+ON@{I\+D\+\_\+\+A\+P\+P\+L\+Y\+\_\+\+B\+U\+T\+T\+ON}}\item[{\em 
+I\+D\+\_\+\+A\+P\+P\+L\+Y\+\_\+\+B\+U\+T\+T\+ON\label{class_matrix_plan_ab6cf74af1282c696fc45d6cbd92c04a9a0df89cad21391ee4b369ffa79877297c}
+}]\index{I\+D\+\_\+\+N\+A\+M\+E\+\_\+\+C\+OL@{I\+D\+\_\+\+N\+A\+M\+E\+\_\+\+C\+OL}!Matrix\+Plan@{Matrix\+Plan}}\index{Matrix\+Plan@{Matrix\+Plan}!I\+D\+\_\+\+N\+A\+M\+E\+\_\+\+C\+OL@{I\+D\+\_\+\+N\+A\+M\+E\+\_\+\+C\+OL}}\item[{\em 
+I\+D\+\_\+\+N\+A\+M\+E\+\_\+\+C\+OL\label{class_matrix_plan_ab6cf74af1282c696fc45d6cbd92c04a9aa2899d7062f16ad0b209d429411c55fe}
+}]\index{I\+D\+\_\+\+N\+E\+W\+\_\+\+N\+A\+M\+E\+\_\+\+C\+O\+L\+U\+MN@{I\+D\+\_\+\+N\+E\+W\+\_\+\+N\+A\+M\+E\+\_\+\+C\+O\+L\+U\+MN}!Matrix\+Plan@{Matrix\+Plan}}\index{Matrix\+Plan@{Matrix\+Plan}!I\+D\+\_\+\+N\+E\+W\+\_\+\+N\+A\+M\+E\+\_\+\+C\+O\+L\+U\+MN@{I\+D\+\_\+\+N\+E\+W\+\_\+\+N\+A\+M\+E\+\_\+\+C\+O\+L\+U\+MN}}\item[{\em 
+I\+D\+\_\+\+N\+E\+W\+\_\+\+N\+A\+M\+E\+\_\+\+C\+O\+L\+U\+MN\label{class_matrix_plan_ab6cf74af1282c696fc45d6cbd92c04a9a00e4bcd9dcc7f31a5cf630c265b68314}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+P@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+P}!Matrix\+Plan@{Matrix\+Plan}}\index{Matrix\+Plan@{Matrix\+Plan}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+P@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+P}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+P\label{class_matrix_plan_ab6cf74af1282c696fc45d6cbd92c04a9acf3adbdf9fff20409d0501988940aec5}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+P@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+P}!Matrix\+Plan@{Matrix\+Plan}}\index{Matrix\+Plan@{Matrix\+Plan}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+P@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+P}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+A\+L\+L\+\_\+P\label{class_matrix_plan_ab6cf74af1282c696fc45d6cbd92c04a9aa4b8636224bbf7046298aab2ebfb3b4a}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+L\+A\+P\+S\+E\+\_\+P@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+L\+A\+P\+S\+E\+\_\+P}!Matrix\+Plan@{Matrix\+Plan}}\index{Matrix\+Plan@{Matrix\+Plan}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+L\+A\+P\+S\+E\+\_\+P@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+L\+A\+P\+S\+E\+\_\+P}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+L\+A\+P\+S\+E\+\_\+P\label{class_matrix_plan_ab6cf74af1282c696fc45d6cbd92c04a9aecc405b3084f0b0a2c76896cb82a44a3}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+P@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+P}!Matrix\+Plan@{Matrix\+Plan}}\index{Matrix\+Plan@{Matrix\+Plan}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+P@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+P}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+E\+X\+P\+A\+N\+D\+\_\+P\label{class_matrix_plan_ab6cf74af1282c696fc45d6cbd92c04a9a536d71c9caf540323dbb165e4ccfebf3}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+\_\+P@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+\_\+P}!Matrix\+Plan@{Matrix\+Plan}}\index{Matrix\+Plan@{Matrix\+Plan}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+\_\+P@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+\_\+P}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+H\+E\+C\+K\+\_\+P\label{class_matrix_plan_ab6cf74af1282c696fc45d6cbd92c04a9a4b9f197c9de40cce35b0ba35c6af74dd}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+\_\+P@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+\_\+P}!Matrix\+Plan@{Matrix\+Plan}}\index{Matrix\+Plan@{Matrix\+Plan}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+\_\+P@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+\_\+P}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+U\+N\+C\+H\+E\+C\+K\+\_\+P\label{class_matrix_plan_ab6cf74af1282c696fc45d6cbd92c04a9ae077633ec12ef5e491296ca045861c29}
+}]\index{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+N\+F\+\_\+P@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+N\+F\+\_\+P}!Matrix\+Plan@{Matrix\+Plan}}\index{Matrix\+Plan@{Matrix\+Plan}!P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+N\+F\+\_\+P@{P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+N\+F\+\_\+P}}\item[{\em 
+P\+O\+P\+U\+P\+M\+E\+N\+U\+\_\+\+C\+O\+N\+F\+\_\+P\label{class_matrix_plan_ab6cf74af1282c696fc45d6cbd92c04a9a4225ef887a710aa45b1b00b00546eb59}
+}]\index{I\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+M@{I\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+M}!Matrix\+Plan@{Matrix\+Plan}}\index{Matrix\+Plan@{Matrix\+Plan}!I\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+M@{I\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+M}}\item[{\em 
+I\+D\+\_\+\+B\+U\+T\+T\+O\+N\+\_\+\+M\+A\+N\+U\+A\+L\+\_\+M\label{class_matrix_plan_ab6cf74af1282c696fc45d6cbd92c04a9aa8a4396e5b0cdeddf890acc9bb75ba2d}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 45 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!Grid\+Type@{Grid\+Type}}
+\index{Grid\+Type@{Grid\+Type}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{Grid\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Matrix\+Plan\+::\+Grid\+Type}}\label{class_matrix_plan_ad363230bfa8ce018dedbc131a9c4da44}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{G\+E\+N\+E\+R\+AL@{G\+E\+N\+E\+R\+AL}!Matrix\+Plan@{Matrix\+Plan}}\index{Matrix\+Plan@{Matrix\+Plan}!G\+E\+N\+E\+R\+AL@{G\+E\+N\+E\+R\+AL}}\item[{\em 
+G\+E\+N\+E\+R\+AL\label{class_matrix_plan_ad363230bfa8ce018dedbc131a9c4da44a39c067eb822ec5d6c4eed89d803ced19}
+}]\index{T\+H\+I\+E\+S\+S\+EN@{T\+H\+I\+E\+S\+S\+EN}!Matrix\+Plan@{Matrix\+Plan}}\index{Matrix\+Plan@{Matrix\+Plan}!T\+H\+I\+E\+S\+S\+EN@{T\+H\+I\+E\+S\+S\+EN}}\item[{\em 
+T\+H\+I\+E\+S\+S\+EN\label{class_matrix_plan_ad363230bfa8ce018dedbc131a9c4da44ab047099815b6638f70aae4c35f2e1e19}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 211 do arquivo Matrix\+Plan.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Matrix\+Plan@{Matrix\+Plan}!Matrix\+Plan@{Matrix\+Plan}}
+\index{Matrix\+Plan@{Matrix\+Plan}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{Matrix\+Plan(wx\+Frame $\ast$frame, wx\+Window $\ast$parent, Matrix\+Viewer $\ast$viewer, bool editable, bool manual\+Inserction, Grid\+Type type=\+G\+E\+N\+E\+R\+A\+L)}]{\setlength{\rightskip}{0pt plus 5cm}Matrix\+Plan\+::\+Matrix\+Plan (
+\begin{DoxyParamCaption}
+\item[{wx\+Frame $\ast$}]{frame, }
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{{\bf Matrix\+Viewer} $\ast$}]{viewer, }
+\item[{bool}]{editable, }
+\item[{bool}]{manual\+Inserction, }
+\item[{{\bf Grid\+Type}}]{type = {\ttfamily {\bf G\+E\+N\+E\+R\+AL}}}
+\end{DoxyParamCaption}
+)}\label{class_matrix_plan_a0308c940e8d4a7e0adee34e404b3c951}
+Construtor 
+\begin{DoxyParams}{Parâmetros}
+{\em frame} & Frame que possui a interface \\
+\hline
+{\em parent} & Pai da janela \\
+\hline
+{\em viewer} & Janela de interface \\
+\hline
+{\em editable} & Se deve permitir edi��o dos valores \\
+\hline
+{\em manual\+Inserction} & Caso deva permitir modificar os valores das matrizes manualmente. \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Plan@{Matrix\+Plan}!````~Matrix\+Plan@{$\sim$\+Matrix\+Plan}}
+\index{````~Matrix\+Plan@{$\sim$\+Matrix\+Plan}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{$\sim$\+Matrix\+Plan()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Matrix\+Plan\+::$\sim$\+Matrix\+Plan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_matrix_plan_ad2741f29ef9041ada937b0d3b45a1bb4}
+Destrutor 
+
+\subsection{Métodos}
+\index{Matrix\+Plan@{Matrix\+Plan}!clear@{clear}}
+\index{clear@{clear}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{clear()}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_matrix_plan_a59e6bc2affd9893a1f5034b844864060}
+Limpa os dados \index{Matrix\+Plan@{Matrix\+Plan}!draw@{draw}}
+\index{draw@{draw}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{draw()}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_matrix_plan_a6ff2874dfedbda0d2d467878dfe31a4f}
+Escreve os dados nos grids \index{Matrix\+Plan@{Matrix\+Plan}!get\+Selected\+Label@{get\+Selected\+Label}}
+\index{get\+Selected\+Label@{get\+Selected\+Label}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{get\+Selected\+Label()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Point Matrix\+Plan\+::get\+Selected\+Label (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_matrix_plan_aa0b7e9b0f3850047999ef5f037e99cb9}
+\index{Matrix\+Plan@{Matrix\+Plan}!get\+Spin\+Lines@{get\+Spin\+Lines}}
+\index{get\+Spin\+Lines@{get\+Spin\+Lines}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{get\+Spin\+Lines()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl$\ast$ Matrix\+Plan\+::get\+Spin\+Lines (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_matrix_plan_abf6156bce7252e0917e419a826944faa}
+\index{Matrix\+Plan@{Matrix\+Plan}!has\+Section@{has\+Section}}
+\index{has\+Section@{has\+Section}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{has\+Section(wx\+Tree\+Item\+Id parent\+Id, wx\+String section)}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Item\+Id Matrix\+Plan\+::has\+Section (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{parent\+Id, }
+\item[{wx\+String}]{section}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_aae1ec3b4f9294888c6205c4743af640c}
+Verifica se existe uma se��o com o nome enviado e retorna o identificador da se��o ou (wx\+Tree\+Item\+Id)0 se n�o houver se��o 
+\begin{DoxyParams}{Parâmetros}
+{\em parent\+Id} & Id da se��o anterior \\
+\hline
+{\em section} & Nome da se��o \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Plan@{Matrix\+Plan}!hide\+Select\+All@{hide\+Select\+All}}
+\index{hide\+Select\+All@{hide\+Select\+All}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{hide\+Select\+All(bool attr)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::hide\+Select\+All (
+\begin{DoxyParamCaption}
+\item[{bool}]{attr}
+\end{DoxyParamCaption}
+)}\label{class_matrix_plan_a1f832247ea907e9d8b1db86e25193a10}
+Declara tabela de eventos \index{Matrix\+Plan@{Matrix\+Plan}!insert\+Matrix@{insert\+Matrix}}
+\index{insert\+Matrix@{insert\+Matrix}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{insert\+Matrix(\+Draw\+Matrix $\ast$matrix)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::insert\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Matrix} $\ast$}]{matrix}
+\end{DoxyParamCaption}
+)}\label{class_matrix_plan_ad8f045f80305c2e6dc4f588b1749f55f}
+Insere matriz 
+\begin{DoxyParams}{Parâmetros}
+{\em matrix} & Matriz a ser inserida \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Plan@{Matrix\+Plan}!insert\+Tree\+Item@{insert\+Tree\+Item}}
+\index{insert\+Tree\+Item@{insert\+Tree\+Item}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{insert\+Tree\+Item(wx\+Tree\+Item\+Id root, Draw\+Matrix $\ast$d\+Matrix)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::insert\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{root, }
+\item[{{\bf Draw\+Matrix} $\ast$}]{d\+Matrix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_a6035e13f3bc83228015f4ee28e406817}
+Insere uma serie no treectrl de acordo com a estrutura enviada 
+\begin{DoxyParams}{Parâmetros}
+{\em root} & Identificador da raiz \\
+\hline
+{\em name} & Sub-\/se��es enviadas de forma 1/2/3/.../ \\
+\hline
+{\em serie} & Ponteiro para a serie \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Plan@{Matrix\+Plan}!on\+Apply@{on\+Apply}}
+\index{on\+Apply@{on\+Apply}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{on\+Apply(wx\+Command\+Event \&a\+\_\+event)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::on\+Apply (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{a\+\_\+event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_a65a7c7bffce4d041726367f275225b4c}
+\index{Matrix\+Plan@{Matrix\+Plan}!on\+Check@{on\+Check}}
+\index{on\+Check@{on\+Check}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{on\+Check(wx\+Command\+Event \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::on\+Check (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_a631777868e6838a19decb0b7ebff1866}
+Evento de ativa��o e desativa��o de entrada manual de serie \index{Matrix\+Plan@{Matrix\+Plan}!on\+Delete\+Item@{on\+Delete\+Item}}
+\index{on\+Delete\+Item@{on\+Delete\+Item}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{on\+Delete\+Item(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::on\+Delete\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_a6a7b02ed4a3465919d569794d964b0df}
+Evento de dele��o de it�m do tc\+Series 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Plan@{Matrix\+Plan}!on\+Popup\+Menu@{on\+Popup\+Menu}}
+\index{on\+Popup\+Menu@{on\+Popup\+Menu}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{on\+Popup\+Menu(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::on\+Popup\+Menu (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_a9a34e83b24e3fc82673439623b89ecd1}
+Eventos do menu gerado pelo bot�o direito do mouse \index{Matrix\+Plan@{Matrix\+Plan}!on\+Right\+Clicked@{on\+Right\+Clicked}}
+\index{on\+Right\+Clicked@{on\+Right\+Clicked}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{on\+Right\+Clicked(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::on\+Right\+Clicked (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_a9f8bdf76c07136e0cdf019d5d0340928}
+Evento do bot�o direito do mouse clicado sobre o treectrl \index{Matrix\+Plan@{Matrix\+Plan}!on\+Select\+All\+Line@{on\+Select\+All\+Line}}
+\index{on\+Select\+All\+Line@{on\+Select\+All\+Line}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{on\+Select\+All\+Line(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::on\+Select\+All\+Line (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_a8dcd136d42c696648c865934d26ce186}
+\index{Matrix\+Plan@{Matrix\+Plan}!on\+Select\+Matrix@{on\+Select\+Matrix}}
+\index{on\+Select\+Matrix@{on\+Select\+Matrix}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{on\+Select\+Matrix(wx\+Tree\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::on\+Select\+Matrix (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_a2f6ed80c18e83ab2b91eb3743979c0fb}
+Evento de sele��o de matrix 
+\begin{DoxyParams}{Parâmetros}
+{\em event} & Evento gerador da chamada \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Plan@{Matrix\+Plan}!on\+Spin\+Lineadd@{on\+Spin\+Lineadd}}
+\index{on\+Spin\+Lineadd@{on\+Spin\+Lineadd}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{on\+Spin\+Lineadd(wx\+Spin\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::on\+Spin\+Lineadd (
+\begin{DoxyParamCaption}
+\item[{wx\+Spin\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_abb2886a801e6bdd49510359e043ac51f}
+\index{Matrix\+Plan@{Matrix\+Plan}!on\+Spin\+Linesub@{on\+Spin\+Linesub}}
+\index{on\+Spin\+Linesub@{on\+Spin\+Linesub}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{on\+Spin\+Linesub(wx\+Spin\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::on\+Spin\+Linesub (
+\begin{DoxyParamCaption}
+\item[{wx\+Spin\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_af80f8a9f476c84df2c4b6567d8df4d99}
+\index{Matrix\+Plan@{Matrix\+Plan}!remove\+Columns\+Of\+Matrix@{remove\+Columns\+Of\+Matrix}}
+\index{remove\+Columns\+Of\+Matrix@{remove\+Columns\+Of\+Matrix}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{remove\+Columns\+Of\+Matrix(int n\+Columns)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::remove\+Columns\+Of\+Matrix (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+Columns}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_ac4b877d6c0d03a74d29ed9e47a09d178}
+\index{Matrix\+Plan@{Matrix\+Plan}!remove\+Lines\+Of\+Matrix@{remove\+Lines\+Of\+Matrix}}
+\index{remove\+Lines\+Of\+Matrix@{remove\+Lines\+Of\+Matrix}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{remove\+Lines\+Of\+Matrix(int n\+Lines)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::remove\+Lines\+Of\+Matrix (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+Lines}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_aa5d9e6fb6f7e1c25bc1eda9413efb0e0}
+\index{Matrix\+Plan@{Matrix\+Plan}!remove\+Matrix@{remove\+Matrix}}
+\index{remove\+Matrix@{remove\+Matrix}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{remove\+Matrix(\+Draw\+Matrix $\ast$d\+Matrix, wx\+String name)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::remove\+Matrix (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Matrix} $\ast$}]{d\+Matrix, }
+\item[{wx\+String}]{name}
+\end{DoxyParamCaption}
+)}\label{class_matrix_plan_ad3ec58e5a26ff3a72727455ba1c22452}
+Remove matriz 
+\begin{DoxyParams}{Parâmetros}
+{\em matrix} & Matriz a ser inserida \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Plan@{Matrix\+Plan}!remove\+Tree\+Item@{remove\+Tree\+Item}}
+\index{remove\+Tree\+Item@{remove\+Tree\+Item}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{remove\+Tree\+Item(wx\+Tree\+Item\+Id root, wx\+String name, Draw\+Matrix $\ast$d\+Matrix)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::remove\+Tree\+Item (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{root, }
+\item[{wx\+String}]{name, }
+\item[{{\bf Draw\+Matrix} $\ast$}]{d\+Matrix}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_ae92e4f70f081bbea96a23c18637dda1b}
+Remove uma serie do treectrl de acordo com a estrutura enviada 
+\begin{DoxyParams}{Parâmetros}
+{\em root} & Identificador da raiz \\
+\hline
+{\em name} & Sub-\/se��es enviadas de forma 1/2/3/.../ \\
+\hline
+{\em serie} & Ponteiro para a serie \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Plan@{Matrix\+Plan}!select\+Line@{select\+Line}}
+\index{select\+Line@{select\+Line}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{select\+Line(int a\+\_\+row)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::select\+Line (
+\begin{DoxyParamCaption}
+\item[{int}]{a\+\_\+row}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_a743ee7661e96d557552cb974a80d4e84}
+Fun��o respons�vel por selecionar a linha correspondente na planilha \index{Matrix\+Plan@{Matrix\+Plan}!select\+Matrix@{select\+Matrix}}
+\index{select\+Matrix@{select\+Matrix}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{select\+Matrix(wx\+Tree\+Item\+Id id, bool state)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::select\+Matrix (
+\begin{DoxyParamCaption}
+\item[{wx\+Tree\+Item\+Id}]{id, }
+\item[{bool}]{state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_ad10fd4f2d77b262d08b2621d00df6475}
+Seleciona ou deseleciona as series contidas no grupo 
+\begin{DoxyParams}{Parâmetros}
+{\em id} & Identificador do Grupo \\
+\hline
+{\em state} & Seleciona se true e deseleciona se for false \\
+\hline
+\end{DoxyParams}
+\index{Matrix\+Plan@{Matrix\+Plan}!set\+Columns\+On\+Matrix@{set\+Columns\+On\+Matrix}}
+\index{set\+Columns\+On\+Matrix@{set\+Columns\+On\+Matrix}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{set\+Columns\+On\+Matrix(int n\+Columns)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::set\+Columns\+On\+Matrix (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+Columns}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_ad7e40d2fd3e70b7cfe9fcd1b54147c89}
+\index{Matrix\+Plan@{Matrix\+Plan}!set\+D\+Matrix\+Of\+Actives\+Stations@{set\+D\+Matrix\+Of\+Actives\+Stations}}
+\index{set\+D\+Matrix\+Of\+Actives\+Stations@{set\+D\+Matrix\+Of\+Actives\+Stations}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{set\+D\+Matrix\+Of\+Actives\+Stations(\+Draw\+Matrix $\ast$d\+Matrix)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::set\+D\+Matrix\+Of\+Actives\+Stations (
+\begin{DoxyParamCaption}
+\item[{{\bf Draw\+Matrix} $\ast$}]{d\+Matrix}
+\end{DoxyParamCaption}
+)}\label{class_matrix_plan_a601b004095d4b4b22e9ca71bd708be8a}
+Define a matriz de postos ativos (\doxyref{Thiessen}{pag.}{class_thiessen}) \index{Matrix\+Plan@{Matrix\+Plan}!set\+Lines\+On\+Matrix@{set\+Lines\+On\+Matrix}}
+\index{set\+Lines\+On\+Matrix@{set\+Lines\+On\+Matrix}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{set\+Lines\+On\+Matrix(int n\+Lines)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::set\+Lines\+On\+Matrix (
+\begin{DoxyParamCaption}
+\item[{int}]{n\+Lines}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_a13d6c6d5626e65759a953c35460574e7}
+\index{Matrix\+Plan@{Matrix\+Plan}!set\+Number\+Of\+Lin\+Or\+Col@{set\+Number\+Of\+Lin\+Or\+Col}}
+\index{set\+Number\+Of\+Lin\+Or\+Col@{set\+Number\+Of\+Lin\+Or\+Col}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{set\+Number\+Of\+Lin\+Or\+Col(wx\+Command\+Event \&event)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::set\+Number\+Of\+Lin\+Or\+Col (
+\begin{DoxyParamCaption}
+\item[{wx\+Command\+Event \&}]{event}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_acf818f4d0d39da666309af32969c3507}
+\index{Matrix\+Plan@{Matrix\+Plan}!set\+Selected\+Label@{set\+Selected\+Label}}
+\index{set\+Selected\+Label@{set\+Selected\+Label}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{set\+Selected\+Label(int index)}]{\setlength{\rightskip}{0pt plus 5cm}void Matrix\+Plan\+::set\+Selected\+Label (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\label{class_matrix_plan_a18d88b66679940031485f1ccd6494c91}
+Define uma linha para ser selecionada 
+
+\subsection{Amigas e Funções Relacionadas}
+\index{Matrix\+Plan@{Matrix\+Plan}!Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}}
+\index{Matrix\+Plan\+Grid@{Matrix\+Plan\+Grid}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{Matrix\+Plan\+Grid}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Matrix\+Plan\+Grid}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_matrix_plan_a44fc62462e295b8cf54e15d24a4734bb}
+Declara��o de classe amiga 
+
+Definição na linha 32 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!Matrix\+Viewer@{Matrix\+Viewer}}
+\index{Matrix\+Viewer@{Matrix\+Viewer}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{Matrix\+Viewer}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Matrix\+Viewer}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_matrix_plan_a0894d2e2d53cd19097ac52d5364c40e2}
+
+
+Definição na linha 33 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}}
+\index{Res\+C\+A\+V\+Dialog\+Content@{Res\+C\+A\+V\+Dialog\+Content}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{Res\+C\+A\+V\+Dialog\+Content}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf Res\+C\+A\+V\+Dialog\+Content}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_matrix_plan_ad807b5b885ee5bf7047eee84e8790d84}
+
+
+Definição na linha 35 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}}
+\index{T\+A\+L\+River\+W\+Q\+Model\+Main@{T\+A\+L\+River\+W\+Q\+Model\+Main}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{T\+A\+L\+River\+W\+Q\+Model\+Main}]{\setlength{\rightskip}{0pt plus 5cm}friend class {\bf T\+A\+L\+River\+W\+Q\+Model\+Main}\hspace{0.3cm}{\ttfamily [friend]}}\label{class_matrix_plan_a425ca00c1d9d774c3697cb7c400d40de}
+
+
+Definição na linha 34 do arquivo Matrix\+Plan.\+h.
+
+
+
+\subsection{Atributos}
+\index{Matrix\+Plan@{Matrix\+Plan}!add\+Line\+Text@{add\+Line\+Text}}
+\index{add\+Line\+Text@{add\+Line\+Text}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{add\+Line\+Text}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Matrix\+Plan\+::add\+Line\+Text\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_acee9bb15223360327d98bb4b7d9ffe5b}
+
+
+Definição na linha 70 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!btn\+Select\+All@{btn\+Select\+All}}
+\index{btn\+Select\+All@{btn\+Select\+All}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{btn\+Select\+All}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Matrix\+Plan\+::btn\+Select\+All\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_ace2885cc144463a24d474fddb22eb7f8}
+
+
+Definição na linha 94 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!cb\+Manual@{cb\+Manual}}
+\index{cb\+Manual@{cb\+Manual}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{cb\+Manual}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Check\+Box$\ast$ Matrix\+Plan\+::cb\+Manual\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_abd777c3cf0f4aa9ae1aeaf23befdf94b}
+Check\+Box utilizado para dizer se a matrix ser� inserida manualmente 
+
+Definição na linha 93 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!criou\+Coluna\+Extra@{criou\+Coluna\+Extra}}
+\index{criou\+Coluna\+Extra@{criou\+Coluna\+Extra}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{criou\+Coluna\+Extra}]{\setlength{\rightskip}{0pt plus 5cm}bool Matrix\+Plan\+::criou\+Coluna\+Extra}\label{class_matrix_plan_a04db19f8f2c39e2788b05ea5f64b1014}
+
+
+Definição na linha 38 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!desired\+Col@{desired\+Col}}
+\index{desired\+Col@{desired\+Col}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{desired\+Col}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl$\ast$ Matrix\+Plan\+::desired\+Col\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_a7aa8389529036dd1c25fba10f1829295}
+Serve para informar qual coluna o usu�rio quer modificar 
+
+Definição na linha 103 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!d\+Matrix\+Of\+Actives\+Stations@{d\+Matrix\+Of\+Actives\+Stations}}
+\index{d\+Matrix\+Of\+Actives\+Stations@{d\+Matrix\+Of\+Actives\+Stations}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{d\+Matrix\+Of\+Actives\+Stations}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Matrix}$\ast$ Matrix\+Plan\+::d\+Matrix\+Of\+Actives\+Stations\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_ad7bbcb711aa67eb756908495d556d505}
+\doxyref{Draw\+Matrix}{pag.}{class_draw_matrix} de matriz de postos ativos (T\+H\+I\+E\+S\+S\+EN) -- Essa matriz s� deve ser mostrada ao final do c�lculo de \doxyref{Thiessen}{pag.}{class_thiessen} como resultado. 
+
+Definição na linha 85 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!edited@{edited}}
+\index{edited@{edited}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{edited}]{\setlength{\rightskip}{0pt plus 5cm}bool Matrix\+Plan\+::edited}\label{class_matrix_plan_a2406a966cb4a0948458712c9b19d140e}
+Diz se a matriz foi alterada 
+
+Definição na linha 219 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!edit\+Label\+Col@{edit\+Label\+Col}}
+\index{edit\+Label\+Col@{edit\+Label\+Col}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{edit\+Label\+Col}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Matrix\+Plan\+::edit\+Label\+Col\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_ae09334d9d8e6e7add99ce4a1e46af475}
+Texto e grid usados no \doxyref{Thiessen}{pag.}{class_thiessen} para editar o label das colunas 
+
+Definição na linha 69 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!fg\+Edit\+Name\+Col@{fg\+Edit\+Name\+Col}}
+\index{fg\+Edit\+Name\+Col@{fg\+Edit\+Name\+Col}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{fg\+Edit\+Name\+Col}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Flex\+Grid\+Sizer$\ast$ Matrix\+Plan\+::fg\+Edit\+Name\+Col\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_a88380b0e5018991e4037fe685d165ed1}
+
+
+Definição na linha 73 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!fill\+Column\+Number@{fill\+Column\+Number}}
+\index{fill\+Column\+Number@{fill\+Column\+Number}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{fill\+Column\+Number}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Matrix\+Plan\+::fill\+Column\+Number\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_aeb381d308003f56f3569c08053cd3bf2}
+
+
+Definição na linha 71 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!fill\+New\+Name\+Col@{fill\+New\+Name\+Col}}
+\index{fill\+New\+Name\+Col@{fill\+New\+Name\+Col}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{fill\+New\+Name\+Col}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Matrix\+Plan\+::fill\+New\+Name\+Col\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_a7da24b4aa200cc87f8ab779b11b1771f}
+
+
+Definição na linha 72 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!grid@{grid}}
+\index{grid@{grid}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{grid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix\+Plan\+Grid}$\ast$ Matrix\+Plan\+::grid\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_a4e534096460f1974d1f4cd783da6daad}
+Aponta para o grid onde seram colocadas as informa��es da matriz 
+
+Definição na linha 136 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!m\+\_\+line\+Button@{m\+\_\+line\+Button}}
+\index{m\+\_\+line\+Button@{m\+\_\+line\+Button}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{m\+\_\+line\+Button}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Matrix\+Plan\+::m\+\_\+line\+Button\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_a9ce59890d107f80b32a925ffd68cecc0}
+
+
+Definição na linha 99 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!manual\+Values@{manual\+Values}}
+\index{manual\+Values@{manual\+Values}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{manual\+Values}]{\setlength{\rightskip}{0pt plus 5cm}bool Matrix\+Plan\+::manual\+Values\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_aa3471a426a49436ae9537c5c4bf25788}
+Diz se deve ter uma interface de inser��o de serie manual. Utilizado para inserire manualmente os valores de uma serie. 
+
+Definição na linha 145 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!marked\+All@{marked\+All}}
+\index{marked\+All@{marked\+All}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{marked\+All}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Matrix\+Plan\+::marked\+All = \char`\"{}1\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_ab46b1406260799208f9958a2412a8bf3}
+
+
+Definição na linha 79 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!new\+Column\+Name@{new\+Column\+Name}}
+\index{new\+Column\+Name@{new\+Column\+Name}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{new\+Column\+Name}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Text\+Ctrl$\ast$ Matrix\+Plan\+::new\+Column\+Name\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_ade245e2cf01685d49783ea43b41aad26}
+Armazena o novo valor para servir como nome de coluna 
+
+Definição na linha 107 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!popup\+Menu@{popup\+Menu}}
+\index{popup\+Menu@{popup\+Menu}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{popup\+Menu}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Menu$\ast$ Matrix\+Plan\+::popup\+Menu}\label{class_matrix_plan_a4f80d054212f6ee6558161059dc549e5}
+Menu de popup 
+
+Definição na linha 223 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!r\+Id@{r\+Id}}
+\index{r\+Id@{r\+Id}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{r\+Id}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Item\+Id Matrix\+Plan\+::r\+Id}\label{class_matrix_plan_aa6f6aca4df54b44c9bbc379db13ecb3f}
+Identificador do treectrl da serie selecionada 
+
+Definição na linha 227 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!shown\+Plan@{shown\+Plan}}
+\index{shown\+Plan@{shown\+Plan}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{shown\+Plan}]{\setlength{\rightskip}{0pt plus 5cm}int Matrix\+Plan\+::shown\+Plan\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_a09a8b43b7de0fa091e44a0c1827208dc}
+Diz a quantidade de series mostradas na planilha 
+
+Definição na linha 132 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!sizerT@{sizerT}}
+\index{sizerT@{sizerT}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{sizerT}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Box\+Sizer$\ast$ Matrix\+Plan\+::sizerT\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_a6a0e8ef171f970a6264ce12af94d0409}
+
+
+Definição na linha 75 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!s\+Matrixes@{s\+Matrixes}}
+\index{s\+Matrixes@{s\+Matrixes}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{s\+Matrixes}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer$\ast$ Matrix\+Plan\+::s\+Matrixes\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_acd031cec73005c6f3f520a75dd4e4889}
+
+
+Definição na linha 78 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!spin\+Lines@{spin\+Lines}}
+\index{spin\+Lines@{spin\+Lines}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{spin\+Lines}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Spin\+Ctrl$\ast$ Matrix\+Plan\+::spin\+Lines\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_ac63eabfeff83e6c619e8ade2704978e7}
+
+
+Definição na linha 98 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!s\+Tools@{s\+Tools}}
+\index{s\+Tools@{s\+Tools}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{s\+Tools}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Sizer$\ast$ Matrix\+Plan\+::s\+Tools\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_aeca0683f9ee82c5a27610c6fbb2256d7}
+
+
+Definição na linha 76 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!tc\+Series@{tc\+Series}}
+\index{tc\+Series@{tc\+Series}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{tc\+Series}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Tree\+Ctrl$\ast$ Matrix\+Plan\+::tc\+Series\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_a2aac90591b69a7bee976b9ef6b4aa017}
+Tree\+Ctrl que contem as series 
+
+Definição na linha 89 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!tools@{tools}}
+\index{tools@{tools}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{tools}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Panel$\ast$ Matrix\+Plan\+::tools\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_a2490916dcb37d60f5263abf950e8ff60}
+
+
+Definição na linha 77 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!total\+Rows\+Load\+File@{total\+Rows\+Load\+File}}
+\index{total\+Rows\+Load\+File@{total\+Rows\+Load\+File}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{total\+Rows\+Load\+File}]{\setlength{\rightskip}{0pt plus 5cm}int Matrix\+Plan\+::total\+Rows\+Load\+File}\label{class_matrix_plan_a5198b3ec7b995033eaeb90a3bac91475}
+
+
+Definição na linha 39 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!type@{type}}
+\index{type@{type}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Grid\+Type} Matrix\+Plan\+::type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_a3e13bcbb177d64b8c123177db3ece885}
+Define o tipo da grid\+: Matriz geral ou matriz de thiessen 
+
+Definição na linha 287 do arquivo Matrix\+Plan.\+h.
+
+\index{Matrix\+Plan@{Matrix\+Plan}!viewer@{viewer}}
+\index{viewer@{viewer}!Matrix\+Plan@{Matrix\+Plan}}
+\subsubsection[{viewer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Matrix\+Viewer}$\ast$ Matrix\+Plan\+::viewer\hspace{0.3cm}{\ttfamily [protected]}}\label{class_matrix_plan_ad0515f8b28d6168ec2fc0679902684ae}
+Aponta para a janela de interface 
+
+Definição na linha 140 do arquivo Matrix\+Plan.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Matrix\+Plan.\+h}\end{DoxyCompactItemize}

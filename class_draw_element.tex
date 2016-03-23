@@ -1,0 +1,260 @@
+\section{Referência da Classe Draw\+Element}
+\label{class_draw_element}\index{Draw\+Element@{Draw\+Element}}
+
+
+{\ttfamily \#include $<$Draw\+Element.\+h$>$}
+
+
+
+Superclasse de {\bf Draw\+Link} e {\bf Draw\+Node}.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Draw\+Element} ({\bf Element\+ID} {\bf id}, {\bf Element\+Type} type, double {\bf scale})
+\item 
+virtual {\bf $\sim$\+Draw\+Element} ()
+\item 
+bool {\bf is\+Selected} ()
+\item 
+void {\bf selected} (bool a\+\_\+flag)
+\item 
+double {\bf scale} ()
+\item 
+void {\bf set\+Scale} (double a\+\_\+value)
+\item 
+{\bf Element\+Type} {\bf element\+Type} ()
+\item 
+wx\+String {\bf name} ()
+\item 
+void {\bf set\+Name} (std\+::string {\bf name})
+\item 
+{\bf Draw\+Label} \& {\bf draw\+Label} ()
+\item 
+{\bf Element\+ID} {\bf id} ()
+\item 
+virtual bool {\bf hit\+Test} (const wx\+Point \&point)=0
+\item 
+virtual void {\bf draw} (wx\+DC \&dc, bool draw\+\_\+label=true)=0
+\item 
+void {\bf set\+Contour\+Color} (wx\+Colour color)
+\item 
+wx\+Colour {\bf contour\+Color} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Element\+ID} {\bf m\+\_\+id}
+\item 
+{\bf Element\+Type} {\bf m\+\_\+element\+\_\+type}
+\item 
+wx\+Colour {\bf m\+\_\+color\+\_\+pen}
+\begin{DoxyCompactList}\small\item\em Contour colour. \end{DoxyCompactList}\item 
+{\bf Draw\+Label} {\bf m\+\_\+draw\+\_\+label}
+\begin{DoxyCompactList}\small\item\em element label \end{DoxyCompactList}\item 
+double {\bf m\+\_\+scale}
+\begin{DoxyCompactList}\small\item\em Defines element\textquotesingle{}s draw proportion. \end{DoxyCompactList}\item 
+bool {\bf m\+\_\+selected}
+\begin{DoxyCompactList}\small\item\em Verify if the element is selected. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 9 do arquivo Draw\+Element.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Draw\+Element@{Draw\+Element}!Draw\+Element@{Draw\+Element}}
+\index{Draw\+Element@{Draw\+Element}!Draw\+Element@{Draw\+Element}}
+\subsubsection[{Draw\+Element(\+Element\+I\+D id, Element\+Type type, double scale)}]{\setlength{\rightskip}{0pt plus 5cm}Draw\+Element\+::\+Draw\+Element (
+\begin{DoxyParamCaption}
+\item[{{\bf Element\+ID}}]{id, }
+\item[{{\bf Element\+Type}}]{type, }
+\item[{double}]{scale}
+\end{DoxyParamCaption}
+)}\label{class_draw_element_ad36ac9bca7058947e16d36c2a0c25f42}
+\index{Draw\+Element@{Draw\+Element}!````~Draw\+Element@{$\sim$\+Draw\+Element}}
+\index{````~Draw\+Element@{$\sim$\+Draw\+Element}!Draw\+Element@{Draw\+Element}}
+\subsubsection[{$\sim$\+Draw\+Element()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Draw\+Element\+::$\sim$\+Draw\+Element (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_draw_element_a8a4500fd5e1a187334d0b85cf2570360}
+
+
+\subsection{Métodos}
+\index{Draw\+Element@{Draw\+Element}!contour\+Color@{contour\+Color}}
+\index{contour\+Color@{contour\+Color}!Draw\+Element@{Draw\+Element}}
+\subsubsection[{contour\+Color()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Colour Draw\+Element\+::contour\+Color (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_element_ad0717d8b01ef5b1f6cff0eaf6e7a0b3e}
+\index{Draw\+Element@{Draw\+Element}!draw@{draw}}
+\index{draw@{draw}!Draw\+Element@{Draw\+Element}}
+\subsubsection[{draw(wx\+D\+C \&dc, bool draw\+\_\+label=true)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Draw\+Element\+::draw (
+\begin{DoxyParamCaption}
+\item[{wx\+DC \&}]{dc, }
+\item[{bool}]{draw\+\_\+label = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_draw_element_aedbc12a3e68d98089eda003a4b39a298}
+Desenha Elemento 
+
+Implementado por {\bf Draw\+Node} \doxyref{}{pag.}{class_draw_node_ab23e6ab8eec7476f06f978235dcd30e1} e {\bf Draw\+Link} \doxyref{}{pag.}{class_draw_link_ad1707245132cda700be94e79a742f998}.
+
+\index{Draw\+Element@{Draw\+Element}!draw\+Label@{draw\+Label}}
+\index{draw\+Label@{draw\+Label}!Draw\+Element@{Draw\+Element}}
+\subsubsection[{draw\+Label()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Label}\& Draw\+Element\+::draw\+Label (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_element_a7816a16045ee509e25c9e206c6a215b2}
+\index{Draw\+Element@{Draw\+Element}!element\+Type@{element\+Type}}
+\index{element\+Type@{element\+Type}!Draw\+Element@{Draw\+Element}}
+\subsubsection[{element\+Type()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Element\+Type} Draw\+Element\+::element\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_element_ab5d4923e983a6747bacb69741209ae28}
+\index{Draw\+Element@{Draw\+Element}!hit\+Test@{hit\+Test}}
+\index{hit\+Test@{hit\+Test}!Draw\+Element@{Draw\+Element}}
+\subsubsection[{hit\+Test(const wx\+Point \&point)=0}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool Draw\+Element\+::hit\+Test (
+\begin{DoxyParamCaption}
+\item[{const wx\+Point \&}]{point}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_draw_element_a45023dd33ca511fcb32b86e4dc50de67}
+Testa se o ponto esta dentro do no 
+\begin{DoxyParams}{Parâmetros}
+{\em posx} & Posi��o X \\
+\hline
+{\em posy} & Posi��o Y \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por {\bf Draw\+Link} \doxyref{}{pag.}{class_draw_link_a7a5a119a4f93eb573810b890062cdc48} e {\bf Draw\+Node} \doxyref{}{pag.}{class_draw_node_aa00869e53bafc62013ea949798b624ab}.
+
+\index{Draw\+Element@{Draw\+Element}!id@{id}}
+\index{id@{id}!Draw\+Element@{Draw\+Element}}
+\subsubsection[{id()}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Element\+ID} Draw\+Element\+::id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_element_add9fdff54f7774209dd1caeb3cb9c175}
+\index{Draw\+Element@{Draw\+Element}!is\+Selected@{is\+Selected}}
+\index{is\+Selected@{is\+Selected}!Draw\+Element@{Draw\+Element}}
+\subsubsection[{is\+Selected()}]{\setlength{\rightskip}{0pt plus 5cm}bool Draw\+Element\+::is\+Selected (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_element_a8d3546d8f95e44170c6b768d398df31d}
+\index{Draw\+Element@{Draw\+Element}!name@{name}}
+\index{name@{name}!Draw\+Element@{Draw\+Element}}
+\subsubsection[{name()}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Draw\+Element\+::name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_element_ad5aafded94492d51c14b9feb18bc7043}
+\index{Draw\+Element@{Draw\+Element}!scale@{scale}}
+\index{scale@{scale}!Draw\+Element@{Draw\+Element}}
+\subsubsection[{scale()}]{\setlength{\rightskip}{0pt plus 5cm}double Draw\+Element\+::scale (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_draw_element_a9569f4c41690c8dd1952ed49a75f1736}
+\index{Draw\+Element@{Draw\+Element}!selected@{selected}}
+\index{selected@{selected}!Draw\+Element@{Draw\+Element}}
+\subsubsection[{selected(bool a\+\_\+flag)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Element\+::selected (
+\begin{DoxyParamCaption}
+\item[{bool}]{a\+\_\+flag}
+\end{DoxyParamCaption}
+)}\label{class_draw_element_a6bd759fc533157928aef287cba4b35c7}
+\index{Draw\+Element@{Draw\+Element}!set\+Contour\+Color@{set\+Contour\+Color}}
+\index{set\+Contour\+Color@{set\+Contour\+Color}!Draw\+Element@{Draw\+Element}}
+\subsubsection[{set\+Contour\+Color(wx\+Colour color)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Element\+::set\+Contour\+Color (
+\begin{DoxyParamCaption}
+\item[{wx\+Colour}]{color}
+\end{DoxyParamCaption}
+)}\label{class_draw_element_a0b6f3bc3ed0ea01a54943f02c961e711}
+\index{Draw\+Element@{Draw\+Element}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!Draw\+Element@{Draw\+Element}}
+\subsubsection[{set\+Name(std\+::string name)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Element\+::set\+Name (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name}
+\end{DoxyParamCaption}
+)}\label{class_draw_element_ae81b6ac2701db0df31162d62bcaf2293}
+\index{Draw\+Element@{Draw\+Element}!set\+Scale@{set\+Scale}}
+\index{set\+Scale@{set\+Scale}!Draw\+Element@{Draw\+Element}}
+\subsubsection[{set\+Scale(double a\+\_\+value)}]{\setlength{\rightskip}{0pt plus 5cm}void Draw\+Element\+::set\+Scale (
+\begin{DoxyParamCaption}
+\item[{double}]{a\+\_\+value}
+\end{DoxyParamCaption}
+)}\label{class_draw_element_adf58fac96049c1daa4f34dea5d6f2aec}
+
+
+\subsection{Atributos}
+\index{Draw\+Element@{Draw\+Element}!m\+\_\+color\+\_\+pen@{m\+\_\+color\+\_\+pen}}
+\index{m\+\_\+color\+\_\+pen@{m\+\_\+color\+\_\+pen}!Draw\+Element@{Draw\+Element}}
+\subsubsection[{m\+\_\+color\+\_\+pen}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Colour Draw\+Element\+::m\+\_\+color\+\_\+pen\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_element_a9961462008f9dfdd87883fc5a898b6aa}
+
+
+Contour colour. 
+
+
+
+Definição na linha 42 do arquivo Draw\+Element.\+h.
+
+\index{Draw\+Element@{Draw\+Element}!m\+\_\+draw\+\_\+label@{m\+\_\+draw\+\_\+label}}
+\index{m\+\_\+draw\+\_\+label@{m\+\_\+draw\+\_\+label}!Draw\+Element@{Draw\+Element}}
+\subsubsection[{m\+\_\+draw\+\_\+label}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Draw\+Label} Draw\+Element\+::m\+\_\+draw\+\_\+label\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_element_a5e15c31423ded3d37fd783da8404c015}
+
+
+element label 
+
+
+
+Definição na linha 44 do arquivo Draw\+Element.\+h.
+
+\index{Draw\+Element@{Draw\+Element}!m\+\_\+element\+\_\+type@{m\+\_\+element\+\_\+type}}
+\index{m\+\_\+element\+\_\+type@{m\+\_\+element\+\_\+type}!Draw\+Element@{Draw\+Element}}
+\subsubsection[{m\+\_\+element\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Element\+Type} Draw\+Element\+::m\+\_\+element\+\_\+type\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_element_a43fc4bb64c8de5ce0808d23c612cd04b}
+
+
+Definição na linha 40 do arquivo Draw\+Element.\+h.
+
+\index{Draw\+Element@{Draw\+Element}!m\+\_\+id@{m\+\_\+id}}
+\index{m\+\_\+id@{m\+\_\+id}!Draw\+Element@{Draw\+Element}}
+\subsubsection[{m\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Element\+ID} Draw\+Element\+::m\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_element_a62248afa9a4b184691bf8a6ac603dd55}
+
+
+Definição na linha 39 do arquivo Draw\+Element.\+h.
+
+\index{Draw\+Element@{Draw\+Element}!m\+\_\+scale@{m\+\_\+scale}}
+\index{m\+\_\+scale@{m\+\_\+scale}!Draw\+Element@{Draw\+Element}}
+\subsubsection[{m\+\_\+scale}]{\setlength{\rightskip}{0pt plus 5cm}double Draw\+Element\+::m\+\_\+scale\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_element_aa767cde48638ec9406bf15c0fc6bb4df}
+
+
+Defines element\textquotesingle{}s draw proportion. 
+
+
+
+Definição na linha 45 do arquivo Draw\+Element.\+h.
+
+\index{Draw\+Element@{Draw\+Element}!m\+\_\+selected@{m\+\_\+selected}}
+\index{m\+\_\+selected@{m\+\_\+selected}!Draw\+Element@{Draw\+Element}}
+\subsubsection[{m\+\_\+selected}]{\setlength{\rightskip}{0pt plus 5cm}bool Draw\+Element\+::m\+\_\+selected\hspace{0.3cm}{\ttfamily [protected]}}\label{class_draw_element_a31ed381ebb2a404fbeb5f2edd329c56d}
+
+
+Verify if the element is selected. 
+
+
+
+Definição na linha 46 do arquivo Draw\+Element.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf Draw\+Element.\+h}\end{DoxyCompactItemize}

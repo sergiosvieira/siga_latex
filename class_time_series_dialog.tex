@@ -1,0 +1,298 @@
+\section{Referência da Classe Time\+Series\+Dialog}
+\label{class_time_series_dialog}\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+
+
+{\ttfamily \#include $<$W\+A\+S\+A\+Time\+Series\+Dialog.\+h$>$}
+
+
+
+Herdeiro de wx\+Dialog.
+
+\subsection*{Tipos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bf Time\+Series\+File\+Type} \{ \\*
+{\bf T\+E\+M\+P\+E\+R\+A\+T\+U\+RE}, 
+{\bf R\+A\+I\+N\+\_\+\+D\+A\+I\+LY}, 
+{\bf H\+U\+M\+I\+D\+I\+TY}, 
+{\bf R\+A\+D\+I\+A\+T\+I\+ON}, 
+\\*
+{\bf E\+T\+\_\+\+R\+A\+D\+I\+A\+T\+I\+ON}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf Time\+Series\+Dialog} (wx\+Window $\ast$parent, wx\+Window\+ID id=wx\+I\+D\+\_\+\+A\+NY, const wx\+String \&title=\+\_\+(\char`\"{}Dialog de S�ries Temporais\char`\"{}), const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Size(450, 600), long style=wx\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+I\+A\+L\+O\+G\+\_\+\+S\+T\+Y\+LE$\vert$wx\+R\+E\+S\+I\+Z\+E\+\_\+\+B\+O\+R\+D\+ER)
+\item 
+virtual {\bf $\sim$\+Time\+Series\+Dialog} ()
+\item 
+void {\bf generate\+File} ({\bf Time\+Series\+File\+Type} file\+Type)
+\item 
+void {\bf generate\+E\+T\+Radiation} ()
+\item 
+{\bf D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE} ()
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ string $>$ $>$ {\bf temperature\+Matrix}
+\item 
+std\+::vector$<$ std\+::vector$<$ string $>$ $>$ {\bf rain\+Daily\+Matrix}
+\item 
+std\+::vector$<$ std\+::vector$<$ string $>$ $>$ {\bf humidity\+Matrix}
+\item 
+std\+::vector$<$ std\+::vector$<$ string $>$ $>$ {\bf radiation\+Matrix}
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Static\+Text $\ast$ {\bf lbl\+Whatever}
+\item 
+wx\+Static\+Text $\ast$ {\bf lbl\+E\+T\+Radiation}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf bitmap\+Temperature}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf bitmap\+Daily\+Rain}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf bitmap\+Humidity}
+\item 
+wx\+Bitmap\+Button $\ast$ {\bf bitmap\+Radiation}
+\item 
+wx\+Button $\ast$ {\bf bt\+Input\+Temperature}
+\item 
+wx\+Button $\ast$ {\bf bt\+Input\+Daily\+Rain}
+\item 
+wx\+Button $\ast$ {\bf bt\+Input\+Humidity}
+\item 
+wx\+Button $\ast$ {\bf bt\+Input\+Radiation}
+\item 
+wx\+Bitmap {\bf bitmap\+Ok}
+\item 
+wx\+Bitmap {\bf bitmap\+Empty}
+\item 
+wx\+Grid $\ast$ {\bf grid\+E\+T\+Radiation}
+\item 
+wx\+Button $\ast$ {\bf btn\+Ok}
+\item 
+wx\+String {\bf output\+Directory}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+
+
+Definição na linha 28 do arquivo W\+A\+S\+A\+Time\+Series\+Dialog.\+h.
+
+
+
+\subsection{Enumerações}
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!Time\+Series\+File\+Type@{Time\+Series\+File\+Type}}
+\index{Time\+Series\+File\+Type@{Time\+Series\+File\+Type}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{Time\+Series\+File\+Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Time\+Series\+Dialog\+::\+Time\+Series\+File\+Type}}\label{class_time_series_dialog_a8352afe18c95c04dfe52dcfdb00f866c}
+\begin{Desc}
+\item[Valores de enumerações]\par
+\begin{description}
+\index{T\+E\+M\+P\+E\+R\+A\+T\+U\+RE@{T\+E\+M\+P\+E\+R\+A\+T\+U\+RE}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!T\+E\+M\+P\+E\+R\+A\+T\+U\+RE@{T\+E\+M\+P\+E\+R\+A\+T\+U\+RE}}\item[{\em 
+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE\label{class_time_series_dialog_a8352afe18c95c04dfe52dcfdb00f866ca4e39fc4927811e4cae10a1c6b60dccc8}
+}]\index{R\+A\+I\+N\+\_\+\+D\+A\+I\+LY@{R\+A\+I\+N\+\_\+\+D\+A\+I\+LY}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!R\+A\+I\+N\+\_\+\+D\+A\+I\+LY@{R\+A\+I\+N\+\_\+\+D\+A\+I\+LY}}\item[{\em 
+R\+A\+I\+N\+\_\+\+D\+A\+I\+LY\label{class_time_series_dialog_a8352afe18c95c04dfe52dcfdb00f866cab03528959f855119eb03c0f57d3a5161}
+}]\index{H\+U\+M\+I\+D\+I\+TY@{H\+U\+M\+I\+D\+I\+TY}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!H\+U\+M\+I\+D\+I\+TY@{H\+U\+M\+I\+D\+I\+TY}}\item[{\em 
+H\+U\+M\+I\+D\+I\+TY\label{class_time_series_dialog_a8352afe18c95c04dfe52dcfdb00f866cae9e0f71b904e263e2ff069b23e265dff}
+}]\index{R\+A\+D\+I\+A\+T\+I\+ON@{R\+A\+D\+I\+A\+T\+I\+ON}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!R\+A\+D\+I\+A\+T\+I\+ON@{R\+A\+D\+I\+A\+T\+I\+ON}}\item[{\em 
+R\+A\+D\+I\+A\+T\+I\+ON\label{class_time_series_dialog_a8352afe18c95c04dfe52dcfdb00f866ca4429d3e0d2663f6adf6dd312c1505cb1}
+}]\index{E\+T\+\_\+\+R\+A\+D\+I\+A\+T\+I\+ON@{E\+T\+\_\+\+R\+A\+D\+I\+A\+T\+I\+ON}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!E\+T\+\_\+\+R\+A\+D\+I\+A\+T\+I\+ON@{E\+T\+\_\+\+R\+A\+D\+I\+A\+T\+I\+ON}}\item[{\em 
+E\+T\+\_\+\+R\+A\+D\+I\+A\+T\+I\+ON\label{class_time_series_dialog_a8352afe18c95c04dfe52dcfdb00f866cad7b52d4ff289573351d539710ff78877}
+}]\end{description}
+\end{Desc}
+
+
+Definição na linha 62 do arquivo W\+A\+S\+A\+Time\+Series\+Dialog.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{Time\+Series\+Dialog(wx\+Window $\ast$parent, wx\+Window\+I\+D id=wx\+I\+D\+\_\+\+A\+N\+Y, const wx\+String \&title=\+\_\+(""Dialog de S�ries Temporais""), const wx\+Point \&pos=wx\+Default\+Position, const wx\+Size \&size=wx\+Size(450, 600), long style=wx\+D\+E\+F\+A\+U\+L\+T\+\_\+\+D\+I\+A\+L\+O\+G\+\_\+\+S\+T\+Y\+LE\texttt{"|}wx\+R\+E\+S\+I\+Z\+E\+\_\+\+B\+O\+R\+D\+E\+R)}]{\setlength{\rightskip}{0pt plus 5cm}Time\+Series\+Dialog\+::\+Time\+Series\+Dialog (
+\begin{DoxyParamCaption}
+\item[{wx\+Window $\ast$}]{parent, }
+\item[{wx\+Window\+ID}]{id = {\ttfamily wxID\+\_\+ANY}, }
+\item[{const wx\+String \&}]{title = {\ttfamily \+\_\+(\char`\"{}Dialog~de~S�ries~Temporais\char`\"{})}, }
+\item[{const wx\+Point \&}]{pos = {\ttfamily wxDefaultPosition}, }
+\item[{const wx\+Size \&}]{size = {\ttfamily wxSize(450,~600)}, }
+\item[{long}]{style = {\ttfamily wxDEFAULT\+\_\+DIALOG\+\_\+STYLE$\vert$wxRESIZE\+\_\+BORDER}}
+\end{DoxyParamCaption}
+)}\label{class_time_series_dialog_a83779c18e9d391a5ce6bad9bf4f5b88a}
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!````~Time\+Series\+Dialog@{$\sim$\+Time\+Series\+Dialog}}
+\index{````~Time\+Series\+Dialog@{$\sim$\+Time\+Series\+Dialog}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{$\sim$\+Time\+Series\+Dialog()}]{\setlength{\rightskip}{0pt plus 5cm}virtual Time\+Series\+Dialog\+::$\sim$\+Time\+Series\+Dialog (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_time_series_dialog_a13cc1b2c596ff68d689357da01f5c321}
+
+
+\subsection{Métodos}
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}}
+\index{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE@{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+L\+E()}]{\setlength{\rightskip}{0pt plus 5cm}Time\+Series\+Dialog\+::\+D\+E\+C\+L\+A\+R\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+A\+B\+LE (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_time_series_dialog_a2231f5f61ebed15d437a51349d21f637}
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!generate\+E\+T\+Radiation@{generate\+E\+T\+Radiation}}
+\index{generate\+E\+T\+Radiation@{generate\+E\+T\+Radiation}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{generate\+E\+T\+Radiation()}]{\setlength{\rightskip}{0pt plus 5cm}void Time\+Series\+Dialog\+::generate\+E\+T\+Radiation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_time_series_dialog_adc5fbf746103df2fec472c314318a263}
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!generate\+File@{generate\+File}}
+\index{generate\+File@{generate\+File}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{generate\+File(\+Time\+Series\+File\+Type file\+Type)}]{\setlength{\rightskip}{0pt plus 5cm}void Time\+Series\+Dialog\+::generate\+File (
+\begin{DoxyParamCaption}
+\item[{{\bf Time\+Series\+File\+Type}}]{file\+Type}
+\end{DoxyParamCaption}
+)}\label{class_time_series_dialog_ac6dc9d6338f15ee393d6431ea8d0601b}
+
+
+\subsection{Atributos}
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!bitmap\+Daily\+Rain@{bitmap\+Daily\+Rain}}
+\index{bitmap\+Daily\+Rain@{bitmap\+Daily\+Rain}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{bitmap\+Daily\+Rain}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Time\+Series\+Dialog\+::bitmap\+Daily\+Rain\hspace{0.3cm}{\ttfamily [protected]}}\label{class_time_series_dialog_a3ad5a4611d88577affa7768de1ec41b9}
+
+
+Definição na linha 41 do arquivo W\+A\+S\+A\+Time\+Series\+Dialog.\+h.
+
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!bitmap\+Empty@{bitmap\+Empty}}
+\index{bitmap\+Empty@{bitmap\+Empty}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{bitmap\+Empty}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Time\+Series\+Dialog\+::bitmap\+Empty\hspace{0.3cm}{\ttfamily [protected]}}\label{class_time_series_dialog_a26f68562bb2756ab7255c2dbe48b886c}
+
+
+Definição na linha 50 do arquivo W\+A\+S\+A\+Time\+Series\+Dialog.\+h.
+
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!bitmap\+Humidity@{bitmap\+Humidity}}
+\index{bitmap\+Humidity@{bitmap\+Humidity}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{bitmap\+Humidity}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Time\+Series\+Dialog\+::bitmap\+Humidity\hspace{0.3cm}{\ttfamily [protected]}}\label{class_time_series_dialog_a3d3648a88aba6e9705bd7f3b3fea66d8}
+
+
+Definição na linha 42 do arquivo W\+A\+S\+A\+Time\+Series\+Dialog.\+h.
+
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!bitmap\+Ok@{bitmap\+Ok}}
+\index{bitmap\+Ok@{bitmap\+Ok}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{bitmap\+Ok}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap Time\+Series\+Dialog\+::bitmap\+Ok\hspace{0.3cm}{\ttfamily [protected]}}\label{class_time_series_dialog_ab707e628ab83c1d60007559b4c78f529}
+
+
+Definição na linha 50 do arquivo W\+A\+S\+A\+Time\+Series\+Dialog.\+h.
+
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!bitmap\+Radiation@{bitmap\+Radiation}}
+\index{bitmap\+Radiation@{bitmap\+Radiation}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{bitmap\+Radiation}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Time\+Series\+Dialog\+::bitmap\+Radiation\hspace{0.3cm}{\ttfamily [protected]}}\label{class_time_series_dialog_a626879cf819f40bd3d3181604aa13fd3}
+
+
+Definição na linha 43 do arquivo W\+A\+S\+A\+Time\+Series\+Dialog.\+h.
+
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!bitmap\+Temperature@{bitmap\+Temperature}}
+\index{bitmap\+Temperature@{bitmap\+Temperature}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{bitmap\+Temperature}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Bitmap\+Button$\ast$ Time\+Series\+Dialog\+::bitmap\+Temperature\hspace{0.3cm}{\ttfamily [protected]}}\label{class_time_series_dialog_aea729a9baec05c3f9c107b15b6ee4291}
+
+
+Definição na linha 40 do arquivo W\+A\+S\+A\+Time\+Series\+Dialog.\+h.
+
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!bt\+Input\+Daily\+Rain@{bt\+Input\+Daily\+Rain}}
+\index{bt\+Input\+Daily\+Rain@{bt\+Input\+Daily\+Rain}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{bt\+Input\+Daily\+Rain}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Time\+Series\+Dialog\+::bt\+Input\+Daily\+Rain\hspace{0.3cm}{\ttfamily [protected]}}\label{class_time_series_dialog_a38137df685831182785ad3dda7a3e76e}
+
+
+Definição na linha 46 do arquivo W\+A\+S\+A\+Time\+Series\+Dialog.\+h.
+
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!bt\+Input\+Humidity@{bt\+Input\+Humidity}}
+\index{bt\+Input\+Humidity@{bt\+Input\+Humidity}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{bt\+Input\+Humidity}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Time\+Series\+Dialog\+::bt\+Input\+Humidity\hspace{0.3cm}{\ttfamily [protected]}}\label{class_time_series_dialog_ae396cf37f3377c23e4f28010d8fecb52}
+
+
+Definição na linha 47 do arquivo W\+A\+S\+A\+Time\+Series\+Dialog.\+h.
+
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!bt\+Input\+Radiation@{bt\+Input\+Radiation}}
+\index{bt\+Input\+Radiation@{bt\+Input\+Radiation}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{bt\+Input\+Radiation}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Time\+Series\+Dialog\+::bt\+Input\+Radiation\hspace{0.3cm}{\ttfamily [protected]}}\label{class_time_series_dialog_a8e346cb58185d46c9b65f0056cc9e723}
+
+
+Definição na linha 48 do arquivo W\+A\+S\+A\+Time\+Series\+Dialog.\+h.
+
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!bt\+Input\+Temperature@{bt\+Input\+Temperature}}
+\index{bt\+Input\+Temperature@{bt\+Input\+Temperature}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{bt\+Input\+Temperature}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Time\+Series\+Dialog\+::bt\+Input\+Temperature\hspace{0.3cm}{\ttfamily [protected]}}\label{class_time_series_dialog_afba6a0ab34c6f69726bafc9c0f7f74b0}
+
+
+Definição na linha 45 do arquivo W\+A\+S\+A\+Time\+Series\+Dialog.\+h.
+
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!btn\+Ok@{btn\+Ok}}
+\index{btn\+Ok@{btn\+Ok}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{btn\+Ok}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Button$\ast$ Time\+Series\+Dialog\+::btn\+Ok\hspace{0.3cm}{\ttfamily [protected]}}\label{class_time_series_dialog_ad975e37e993fda22ecd41645c53e7f6a}
+
+
+Definição na linha 53 do arquivo W\+A\+S\+A\+Time\+Series\+Dialog.\+h.
+
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!grid\+E\+T\+Radiation@{grid\+E\+T\+Radiation}}
+\index{grid\+E\+T\+Radiation@{grid\+E\+T\+Radiation}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{grid\+E\+T\+Radiation}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Grid$\ast$ Time\+Series\+Dialog\+::grid\+E\+T\+Radiation\hspace{0.3cm}{\ttfamily [protected]}}\label{class_time_series_dialog_a6f31e63ccc80575bc202c2980a18b4ba}
+
+
+Definição na linha 52 do arquivo W\+A\+S\+A\+Time\+Series\+Dialog.\+h.
+
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!humidity\+Matrix@{humidity\+Matrix}}
+\index{humidity\+Matrix@{humidity\+Matrix}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{humidity\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::vector$<$string$>$ $>$ Time\+Series\+Dialog\+::humidity\+Matrix}\label{class_time_series_dialog_a599c391290b3e3aef123822958f7291b}
+
+
+Definição na linha 72 do arquivo W\+A\+S\+A\+Time\+Series\+Dialog.\+h.
+
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!lbl\+E\+T\+Radiation@{lbl\+E\+T\+Radiation}}
+\index{lbl\+E\+T\+Radiation@{lbl\+E\+T\+Radiation}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{lbl\+E\+T\+Radiation}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Time\+Series\+Dialog\+::lbl\+E\+T\+Radiation\hspace{0.3cm}{\ttfamily [protected]}}\label{class_time_series_dialog_a7f81200c7296e0b504606af5a3d805f5}
+
+
+Definição na linha 38 do arquivo W\+A\+S\+A\+Time\+Series\+Dialog.\+h.
+
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!lbl\+Whatever@{lbl\+Whatever}}
+\index{lbl\+Whatever@{lbl\+Whatever}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{lbl\+Whatever}]{\setlength{\rightskip}{0pt plus 5cm}wx\+Static\+Text$\ast$ Time\+Series\+Dialog\+::lbl\+Whatever\hspace{0.3cm}{\ttfamily [protected]}}\label{class_time_series_dialog_a2adf27b6cf7e7f1abb7aa8806286aa06}
+
+
+Definição na linha 37 do arquivo W\+A\+S\+A\+Time\+Series\+Dialog.\+h.
+
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!output\+Directory@{output\+Directory}}
+\index{output\+Directory@{output\+Directory}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{output\+Directory}]{\setlength{\rightskip}{0pt plus 5cm}wx\+String Time\+Series\+Dialog\+::output\+Directory\hspace{0.3cm}{\ttfamily [protected]}}\label{class_time_series_dialog_ac18519041c897cfce85c7d818a71c4a3}
+
+
+Definição na linha 55 do arquivo W\+A\+S\+A\+Time\+Series\+Dialog.\+h.
+
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!radiation\+Matrix@{radiation\+Matrix}}
+\index{radiation\+Matrix@{radiation\+Matrix}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{radiation\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::vector$<$string$>$ $>$ Time\+Series\+Dialog\+::radiation\+Matrix}\label{class_time_series_dialog_afb2168bb8c659221fc5f4cda2a95a52b}
+
+
+Definição na linha 73 do arquivo W\+A\+S\+A\+Time\+Series\+Dialog.\+h.
+
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!rain\+Daily\+Matrix@{rain\+Daily\+Matrix}}
+\index{rain\+Daily\+Matrix@{rain\+Daily\+Matrix}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{rain\+Daily\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::vector$<$string$>$ $>$ Time\+Series\+Dialog\+::rain\+Daily\+Matrix}\label{class_time_series_dialog_adedb792d32271efea3ef38627514d015}
+
+
+Definição na linha 71 do arquivo W\+A\+S\+A\+Time\+Series\+Dialog.\+h.
+
+\index{Time\+Series\+Dialog@{Time\+Series\+Dialog}!temperature\+Matrix@{temperature\+Matrix}}
+\index{temperature\+Matrix@{temperature\+Matrix}!Time\+Series\+Dialog@{Time\+Series\+Dialog}}
+\subsubsection[{temperature\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::vector$<$string$>$ $>$ Time\+Series\+Dialog\+::temperature\+Matrix}\label{class_time_series_dialog_a877751fc6adec586155bddb18e4b8e89}
+
+
+Definição na linha 70 do arquivo W\+A\+S\+A\+Time\+Series\+Dialog.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf W\+A\+S\+A\+Time\+Series\+Dialog.\+h}\end{DoxyCompactItemize}

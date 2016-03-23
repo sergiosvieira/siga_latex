@@ -1,0 +1,103 @@
+\section{Referência da Template de Classe S\+I\+G\+A\+Item\+Data$<$ T $>$}
+\label{class_s_i_g_a_item_data}\index{S\+I\+G\+A\+Item\+Data$<$ T $>$@{S\+I\+G\+A\+Item\+Data$<$ T $>$}}
+
+
+{\ttfamily \#include $<$S\+I\+G\+A\+Item\+Data.\+h$>$}
+
+
+
+Herdeiro de wx\+Tree\+Item\+Data.
+
+\subsection*{Métodos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+G\+A\+Item\+Data} (T value)
+\item 
+virtual {\bf $\sim$\+S\+I\+G\+A\+Item\+Data} ()
+\item 
+void {\bf set\+Value} (T value)
+\item 
+T {\bf get\+Value} () const 
+\end{DoxyCompactItemize}
+\subsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+T {\bf \+\_\+value}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição Detalhada}
+\subsubsection*{template$<$class T$>$\\*
+class S\+I\+G\+A\+Item\+Data$<$ T $>$}
+
+Esta classe tem a fun��o de ser usada para encapsular algum dado a ser usado como Item\+Data de um wx\+Tree\+Ctrl. Como os Tree\+Ctrl sempre destroem automaticamente os Item\+Data\textquotesingle{}s do seus itens, esta foi a solu��o encontrada para evitar que o nosso dado fosse desalocado por ele. Use esta classe caso queira que seu dado seja mantido ap�s ser passado como Item\+Data de um Tree\+Ctrl
+
+exemplo\+: tree\+Ctrl-\/$>$Set\+Item\+Data(meu\+Item\+Id, new S\+I\+G\+A\+Item\+Data$<$\+Draw\+Matrix$\ast$$>$(d\+Matrix) ); dessa forma, a matriz n�o ser� desalocada pelo tree\+Ctrl 
+
+Definição na linha 22 do arquivo S\+I\+G\+A\+Item\+Data.\+h.
+
+
+
+\subsection{Construtores \& Destrutores}
+\index{S\+I\+G\+A\+Item\+Data@{S\+I\+G\+A\+Item\+Data}!S\+I\+G\+A\+Item\+Data@{S\+I\+G\+A\+Item\+Data}}
+\index{S\+I\+G\+A\+Item\+Data@{S\+I\+G\+A\+Item\+Data}!S\+I\+G\+A\+Item\+Data@{S\+I\+G\+A\+Item\+Data}}
+\subsubsection[{S\+I\+G\+A\+Item\+Data(\+T value)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf S\+I\+G\+A\+Item\+Data}$<$ T $>$\+::{\bf S\+I\+G\+A\+Item\+Data} (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_i_g_a_item_data_af30133c910510109abb85ba5ddf9a539}
+
+
+Definição na linha 28 do arquivo S\+I\+G\+A\+Item\+Data.\+h.
+
+\index{S\+I\+G\+A\+Item\+Data@{S\+I\+G\+A\+Item\+Data}!````~S\+I\+G\+A\+Item\+Data@{$\sim$\+S\+I\+G\+A\+Item\+Data}}
+\index{````~S\+I\+G\+A\+Item\+Data@{$\sim$\+S\+I\+G\+A\+Item\+Data}!S\+I\+G\+A\+Item\+Data@{S\+I\+G\+A\+Item\+Data}}
+\subsubsection[{$\sim$\+S\+I\+G\+A\+Item\+Data()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ virtual {\bf S\+I\+G\+A\+Item\+Data}$<$ T $>$\+::$\sim${\bf S\+I\+G\+A\+Item\+Data} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{class_s_i_g_a_item_data_ae84121b40010be8b121f7af337274317}
+
+
+Definição na linha 32 do arquivo S\+I\+G\+A\+Item\+Data.\+h.
+
+
+
+\subsection{Métodos}
+\index{S\+I\+G\+A\+Item\+Data@{S\+I\+G\+A\+Item\+Data}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!S\+I\+G\+A\+Item\+Data@{S\+I\+G\+A\+Item\+Data}}
+\subsubsection[{get\+Value() const }]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T {\bf S\+I\+G\+A\+Item\+Data}$<$ T $>$\+::get\+Value (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_i_g_a_item_data_af39447386db368d265dfcd97b4847c96}
+
+
+Definição na linha 41 do arquivo S\+I\+G\+A\+Item\+Data.\+h.
+
+\index{S\+I\+G\+A\+Item\+Data@{S\+I\+G\+A\+Item\+Data}!set\+Value@{set\+Value}}
+\index{set\+Value@{set\+Value}!S\+I\+G\+A\+Item\+Data@{S\+I\+G\+A\+Item\+Data}}
+\subsubsection[{set\+Value(\+T value)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf S\+I\+G\+A\+Item\+Data}$<$ T $>$\+::set\+Value (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_s_i_g_a_item_data_aedb597dfe6a3c03b28cfe8ee0af5c0aa}
+
+
+Definição na linha 36 do arquivo S\+I\+G\+A\+Item\+Data.\+h.
+
+
+
+\subsection{Atributos}
+\index{S\+I\+G\+A\+Item\+Data@{S\+I\+G\+A\+Item\+Data}!\+\_\+value@{\+\_\+value}}
+\index{\+\_\+value@{\+\_\+value}!S\+I\+G\+A\+Item\+Data@{S\+I\+G\+A\+Item\+Data}}
+\subsubsection[{\+\_\+value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ T {\bf S\+I\+G\+A\+Item\+Data}$<$ T $>$\+::\+\_\+value\hspace{0.3cm}{\ttfamily [protected]}}\label{class_s_i_g_a_item_data_a9242e8343fa09c85210efa18ee139aa4}
+
+
+Definição na linha 25 do arquivo S\+I\+G\+A\+Item\+Data.\+h.
+
+
+
+A documentação para esta classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+{\bf S\+I\+G\+A\+Item\+Data.\+h}\end{DoxyCompactItemize}
